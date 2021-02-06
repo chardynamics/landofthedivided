@@ -2,6 +2,7 @@
 state={
 	id=125
 	name="STATE_125"
+
 	history={
 		owner = USA
 		buildings = {
@@ -10,8 +11,9 @@ state={
 		add_core_of = USA
 
 	}
+
 	provinces={
-		363 1260 1579 2501 2886 3001 3066 3945 4630 6443 12972 13114 13115 13116 
+		363 1260 2501 4630 12972 13114 13115 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
