@@ -2,19 +2,20 @@
 state={
 	id=186
 	name="STATE_186"
-	
+
 	history={
-		owner = USA
+		owner = PHI
 		buildings = {
 
 		}
-		add_core_of = USA
+		add_core_of = PHI
 
 	}
-	
+
 	provinces={
-		1014 3513 7844 7852 
+		1014 3513 6084 7836 7844 7852 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

@@ -1,19 +1,21 @@
+
 state={
 	id=184
 	name="STATE_184"
-	
+
 	history={
-		owner = USA
+		owner = NJA
 		buildings = {
 
 		}
-		add_core_of = USA
+		add_core_of = NJA
 
 	}
-	
+
 	provinces={
-		3980 
+		3033 3980 6503 8013 8035 8063 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
