@@ -1,20 +1,21 @@
 
 state={
-	id=152
-	name="STATE_152"
+	id=206
+	name="STATE_206"
 
 	history={
-		owner = NGM
+		owner = ITH
 		buildings = {
 
 		}
-		add_core_of = NGM
+		add_core_of = ITH
 
 	}
 
 	provinces={
-		1832 6237 13123 
+		2329 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

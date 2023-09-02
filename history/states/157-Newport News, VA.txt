@@ -1,19 +1,21 @@
+
 state={
-	id=84
-	name="STATE_84"
-	
+	id=157
+	name="STATE_157"
+
 	history={
-		owner = USR
+		owner = MCA
 		buildings = {
 
 		}
-		add_core_of = USR
+		add_core_of = MCA
 
 	}
-	
+
 	provinces={
-		4036 5813 7694 
+		2415 8561 8572 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
