@@ -4,18 +4,18 @@ state={
 	name="STATE_236"
 
 	history={
-		owner = KEY
+		owner = RWP
 		buildings = {
 
 		}
-		add_core_of = KEY
+		add_core_of = RWP
 
 	}
 
 	provinces={
 		2136 2267 3194 3954 4447 4493 5245 5538 5702 6238 8074 8104 8194 
 	}
-	manpower=0
+	manpower=1
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

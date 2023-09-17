@@ -4,18 +4,18 @@ state={
 	name="STATE_153"
 
 	history={
-		owner = NGM
+		owner = SVR
 		buildings = {
 
 		}
-		add_core_of = NGM
+		add_core_of = SVR
 
 	}
 
 	provinces={
 		1622 2456 2667 2854 2871 3943 4697 6414 8543 8569 8592 8599 8611 8620 
 	}
-	manpower=0
+	manpower=1
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -4,18 +4,19 @@ state={
 	name="STATE_142"
 
 	history={
-		owner = SNH
+		owner = SGA
 		buildings = {
 
 		}
-		add_core_of = SNH
+		add_core_of = SGA
 
 	}
 
 	provinces={
 		916 2285 2603 4323 4403 6461 6463 9615 9627 9637 9643 9645 9659 9663 9677 9681 9682 9691 9723 9729 
 	}
-	manpower=0
+	manpower=1
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
+z

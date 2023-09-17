@@ -2,10 +2,20 @@
 state={
 	id=260
 	name="STATE_260"
+
+	history={
+		owner = SVR
+		buildings = {
+
+		}
+		add_core_of = SVR
+
+	}
+
 	provinces={
 		855 1982 4297 5653 5681 5961 6546 8501 8531 8550 
 	}
-	manpower=0
+	manpower=1
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -2,10 +2,21 @@
 state={
 	id=254
 	name="STATE_254"
+
+	history={
+		owner = SWV
+		buildings = {
+
+		}
+		add_core_of = RWV
+
+	}
+
+
 	provinces={
 		2945 4656 4946 
 	}
-	manpower=0
+	manpower=1
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

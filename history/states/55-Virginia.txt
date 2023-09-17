@@ -4,18 +4,18 @@ state={
 	name="STATE_55"
 
 	history={
-		owner = USA
+		owner = SVR
 		buildings = {
 
 		}
-		add_core_of = USA
+		add_core_of = SVR
 
 	}
 
 	provinces={
 		1002 2035 2436 2749 3547 3816 4010 4045 4942 5215 6523 6614 6688 8637 8664 8672 8676 8682 8685 8706 8709 8716 13035 
 	}
-	manpower=0
+	manpower=1
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

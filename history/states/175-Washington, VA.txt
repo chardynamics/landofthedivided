@@ -4,18 +4,18 @@ state={
 	name="STATE_175"
 
 	history={
-		owner = VER
+		owner = SVR
 		buildings = {
 
 		}
-		add_core_of = VER
+		add_core_of = SVR
 
 	}
 
 	provinces={
 		307 1443 2490 3010 3079 3621 4725 4898 5121 5147 5318 6493 8675 8694 8696 8718 8727 8732 8745 8746 8752 8761 8772 
 	}
-	manpower=0
+	manpower=1
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
