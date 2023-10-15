@@ -18,6 +18,11 @@ replace_path="common/units"
 replace_path="common/scripted_guis"
 replace_path="common/bop"
 replace_path="common/on_actions"
+replace_path="common/national_focus"
+replace_path="common/dynamic_modifiers"
+replace_path="common/ai_strategy_plans"
+replace_path="common/ai_templates"
+replace_path="common/ai_strategy"
 tags={
 	"Map"
 }
