@@ -1,0 +1,34 @@
+
+state={
+	id=templateID
+	name="STATE_templateID"
+	manpower = templatePopulation
+	
+	state_category = templateStateCategory
+	resources={
+		aluminium=templatealuminium
+		chromium=templatechromium
+		oil=templateoil
+		rubber=templaterubber
+		steel=templatesteel
+		tungsten=templatetungsten
+	}
+
+	history={
+		owner = templateOwner
+		buildings = {
+			infrastructure = templateInfrastructure
+			air_base = templateAirbase
+			arms_factory = templateArmsFactory
+			industrial_complex = templateCivilianFactory
+			dockyard = templateDockyards
+			templateNavalBases
+		}
+		add_core_of = templateOwner
+	}
+
+	provinces={
+		template_provinces
+	}
+	local_supplies=0.0 
+}

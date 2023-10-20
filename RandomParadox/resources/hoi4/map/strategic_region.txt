@@ -1,0 +1,23 @@
+strategic_region={
+	id=templateID
+	name="STRATEGICREGION_templateID"
+	provinces={
+		template_provinces
+	}
+	
+	weather={
+		period={
+			between={ templateDateRange }
+			temperature={ templateTemperatureRange }
+			no_phenomenon=templateNoPhenomenon
+			rain_light=templateRainLightChance
+			rain_heavy=templateRainHeavyChance
+			snow=templateSnow
+			blizzard=templateBlizzard
+			arctic_water=0.000
+			mud=templateMud
+			sandstorm=templateSandStorm
+			min_snow_level=0.000
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"fastworldgen":
+	{
+		"loadMapsPath": "inputs//mapInputs//",
+		"heightMapName": "heightmap.bmp"
+	},
+	"hoi4":
+	{
+		"strategicRegionSize": 2,
+		"resourceFactor": 0.1,
+		"aluminiumFactor": 0.1,
+		"chromiumFactor": 0.1,
+		"oilFactor": 0.1,
+		"rubberFactor": 0.1,
+		"steelFactor": 0.1,
+		"tungstenFactor": 0.1,
+		"baseLightRainChance" : 0.1,
+		"baseHeavyRainChance" : 0.1,
+		"baseMudChance" : 0.1,
+		"baseBlizzardChance" : 0.1,
+		"baseSandstormChance" : 0.01,
+		"baseSnowChance" : 0.01
+	},
+	"scenario":
+	{
+		"numCountries" : 5,
+		"worldPopulationFactor" : 1.0,
+		"industryFactor" : 1.0
+	}
+}
