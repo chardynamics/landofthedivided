@@ -1,7 +1,7 @@
 {
 	"module": 
 	{
-		"debugLevel": 9,
+		"debugLevel": 0,
 		"interactive": false,
 		"loadMaps" : true,
 		"writeMaps" : true,
@@ -20,19 +20,19 @@
 		"heightMap" : true,
 		"terrainMap" : false,
 		"continentMap" : false,
-		"climateMap" : true,
+		"climateMap" : false,
 		"riverMap" : false,
 		"humidityMap" : false,
 		"habitabilityMap" : false,
 		"provinceMap" : false,
-		"regionMap" : true,
+		"regionMap" : false,
 		"modifyHeight": false,
 		"heightAdjustments": 0
 	},
 	"edit":
 	{
 		"editor" : "mspaint.exe",
-		"heightmap" : true,
+		"heightmap" : false,
 		"oceanHeatMap" : false,
 		"riverMap" : false,
 		"humidityMap" : false,
@@ -43,7 +43,7 @@
 	},
 	"map": 
 	{
-        "height" : 4608,
+        "height" : 1024,
 		"width" : 2816,
 		"landPercentage" : 40,
 		"seaLevel" : 94,
@@ -51,21 +51,21 @@
 		"sobelFactor": 8,
 		"rivers" : 
 		{
-			"numRivers" : 0
+			"numRivers" : 100
 		},
 		"trees" : 
 		{
-			"forestDensity" : 0.1,
-			"jungleDensity" : 0.1,
-			"savannahDensity" : 0.1,
-			"grasslandDensity" : 0.1,
-			"tundraDensity" : 0.1
+			"forestDensity" : 0.8,
+			"jungleDensity" : 0.9,
+			"savannahDensity" : 0.6,
+			"grasslandDensity" : 0.6,
+			"tundraDensity" : 0.6
 		},
 		"mountains" :
 		{
-			"peakFactor" : 0.3,
-			"mountainFactor" : 0.2,
-			"hillFactor" : 0.1
+			"peakFactor" : 0.98,
+			"mountainFactor" : 0.95,
+			"hillFactor" : 0.8
 		},
 		"heightmap" : {
 			"complexHeight" : true,
@@ -141,21 +141,21 @@
 				"auto" : true,
 				"landProvinceFactor" : 1.0,
 				"seaProvinceFactor" : 1.0,
-				"minProvSize" : 5,
-				"provinceDensityByHabitability" : 75,
+				"minProvSize" : 10,
+				"provinceDensityByHabitability" : 1.0,
 				"maxProvAmount" : 20000
 			},
 			"regions" :{
 				"auto" : true,
-				"minProvPerRegion" : 1,
+				"minProvPerRegion" : 8,
 				"minProvPerSeaRegion" : 8,
 				"targetLandRegionAmount" : 800,
 				"targetSeaRegionAmount" : 200
 			}
 		},
 		"humidity" : {
-			"latitudeLow" : 0.4,
-			"latitudeHigh" : 1.8,
+			"latitudeLow" : 1.2,
+			"latitudeHigh" : 1.6,
 			"riverHumidityFactor" : 0.2,
 			"riverEffectRangeFactor" : 1.0,
 			"baseHumidity": 0.7
