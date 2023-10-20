@@ -20,7 +20,7 @@
 		"heightMap" : true,
 		"terrainMap" : false,
 		"continentMap" : false,
-		"climateMap" : false,
+		"climateMap" : true,
 		"riverMap" : false,
 		"humidityMap" : false,
 		"habitabilityMap" : false,
@@ -32,7 +32,7 @@
 	"edit":
 	{
 		"editor" : "mspaint.exe",
-		"heightmap" : false,
+		"heightmap" : true,
 		"oceanHeatMap" : false,
 		"riverMap" : false,
 		"humidityMap" : false,
