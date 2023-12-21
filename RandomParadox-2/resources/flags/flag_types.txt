@@ -1,0 +1,19 @@
+#0 = tricolore, 1 = rotated tricolore, 2 = plain, 3 = bicolore, 4 = rotated bicolore, 5 =
+#symbols: 20-99 = generic symbols, 100-199 = fascism, 200 - 299 = communism, 300-399 = democracy, 400-499 = neutral
+#tricolores can stand by themselves
+0;;p1,p2,p1;
+0;;p2,p2,p1;
+0;20-25;p1,p2,p1,s1;
+1;;p1,p2,p1;
+1;20-25;p1,p2,p1,s1;
+# plain MUST have a symbol
+2;20-25;p1,p2,p1,s1;
+# plain triangle left MUST have a symbol
+3;;p1,p2,p1,s1;
+# bicolores are fine any way
+4;;p1,p2,p1;
+4;20-25;p1,p2,p1,s1;
+5;;p1,p2,p1;
+5;20-25;p1,p2,p1,s1;
+# bicolore WITH a triangle should not have a symbol
+6;;p1,p2,p1;

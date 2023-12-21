@@ -1,0 +1,287 @@
+{
+	"module": 
+	{
+		"debugLevel": 0,
+		"loadMaps" : false,
+		"writeMaps" : true,
+		"cut" : false,
+		"scale" : false,
+		"scaleFactor" : 1,
+		"seed" : 0
+	},
+	"paths":
+	{
+		"mapsPath": "Maps//",
+		"loadMapsPath" : "Maps//"
+	},
+	"loadMaps":
+	{
+		"heightMap" : false,
+		"terrainMap" : false,
+		"continentMap" : false,
+		"climateMap" : false,
+		"riverMap" : false,
+		"humidityMap" : false,
+		"habitabilityMap" : false,
+		"provinceMap" : false,
+		"regionMap" : false,
+		"modifyHeight": false,
+		"heightAdjustments": 0
+	},
+	"edit":
+	{
+		"editor" : "mspaint.exe",
+		"heightmap" : false,
+		"oceanHeatMap" : false,
+		"riverMap" : false,
+		"humidityMap" : false,
+		"habitabilityMap" : false
+	},
+	"cut":
+	{
+	},
+	"map": 
+	{
+		"height" : 2048,
+		"width" : 5632,
+		"landPercentage" : 40,
+		"seaLevel" : 94,
+		"accuracy": 100,
+		"sobelFactor": 4,
+		"rivers" : 
+		{
+			"riverFactor" : 1.0
+		},
+		"trees" : 
+		{
+			"forestDensity" : 0.8,
+			"jungleDensity" : 0.8,
+			"savannahDensity" : 0.8,
+			"grasslandDensity" : 0.8,
+			"tundraDensity" : 0.8
+		},
+		"mountains" :
+		{
+			"peakFactor" : 0.98,
+			"mountainFactor" : 0.95,
+			"hillFactor" : 0.8
+		},
+		"heightmap" : {
+			"complexHeight" : true,
+			"layerAmount" : 10,
+			"overallFrequencyModifier" : 1.0,
+			"removeChunkThreshold": 8,
+			"baseSeaLevel": 80,
+			"layers" :
+			{
+				"0" :
+				{
+					"type" : 2,
+					"landLayer" : false,
+					"seaLayer" : false,
+					"fractalFrequency" : 1.2,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.4,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 1.0,
+					"maxHeight" : 200,
+					"minHeight" : 0,
+					"tanFactor": 0.0
+				},
+				"1" :
+				{
+					"type" : 2,
+					"landLayer" : false,
+					"seaLayer" : false,
+					"fractalFrequency" : 0.7,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.4,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 0.5,
+					"maxHeight" : 100,
+					"minHeight" : 0,
+					"tanFactor": 0.0
+				},
+				"2" :
+				{
+					"type" : 8,
+					"landLayer" : false,
+					"seaLayer" : false,
+					"fractalFrequency" : 2,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.4,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 0.5,
+					"maxHeight" : 255,
+					"minHeight" : 0,
+					"tanFactor": 0.22
+				},
+				"3" :
+				{
+					"type" : 8,
+					"landLayer" : false,
+					"seaLayer" : false,
+					"fractalFrequency" : 4,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.4,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 1.0,
+					"maxHeight" : 100,
+					"minHeight" : 0,
+					"tanFactor": 0.21
+				},
+				"4" :
+				{
+					"type" : 8,
+					"landLayer" : true,
+					"seaLayer" : false,
+					"fractalFrequency" : 8,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.4,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 0.8,
+					"maxHeight" : 50,
+					"minHeight" : 0,
+					"tanFactor": 0.21
+				},
+				"5" :
+				{
+					"type" : 2,
+					"landLayer" : false,
+					"seaLayer" : false,
+					"fractalFrequency" : 8,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.6,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 0.5,
+					"maxHeight" : 30,
+					"minHeight" : 0,
+					"tanFactor": 0.0
+				},
+				"6" :
+				{
+					"type" : 2,
+					"landLayer" : false,
+					"seaLayer" : false,
+					"fractalFrequency" : 24,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.4,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 1.0,
+					"maxHeight" : 20,
+					"minHeight" : 0,
+					"tanFactor": 0.0
+				},
+				"7" :
+				{
+					"type" : 8,
+					"landLayer" : true,
+					"seaLayer" : false,
+					"fractalFrequency" : 4,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.4,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 0.5,
+					"maxHeight" : 255,
+					"minHeight" : 0,
+					"tanFactor": 0.22
+				},
+				"8" :
+				{
+					"type" : 8,
+					"landLayer" : true,
+					"seaLayer" : false,
+					"fractalFrequency" : 4,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.4,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 0.8,
+					"maxHeight" : 150,
+					"minHeight" : 0,
+					"tanFactor": 0.21
+				},
+				"9" :
+				{
+					"type" : 8,
+					"landLayer" : true,
+					"seaLayer" : false,
+					"fractalFrequency" : 4,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.5,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 0.5,
+					"maxHeight" : 10,
+					"minHeight" : 1,
+					"tanFactor": 0.0
+				},
+				"10" :
+				{
+					"type" : 1,
+					"landLayer" : true,
+					"seaLayer" : false,
+					"fractalFrequency" : 4,
+					"fractalOctaves" : 11,
+					"fractalGain" : 0.4,
+					"seed" : 0,
+					"widthEdge" : 10,
+					"heightEdge" : 0,
+					"weight" : 1.0,
+					"maxHeight" : 100,
+					"minHeight" : 0,
+					"tanFactor": 0.21
+				}
+			}
+		},
+		"areas" : {
+			"provinces" : {
+				"auto" : true,
+				"landProvinceFactor" : 1.0,
+				"seaProvinceFactor" : 1.0,
+				"minProvSize" : 20,
+				"provinceDensityEffects" : 1.0,
+				"maxProvAmount" : 15000
+			},
+			"regions" :{
+				"auto" : true,
+				"minProvPerRegion" : 8,
+				"minProvPerSeaRegion" : 8,
+				"targetLandRegionAmount" : 640,
+				"targetSeaRegionAmount" : 160
+			}
+		},
+		"humidity" : {
+			"latitudeLow" : 0.4,
+			"latitudeHigh" : 1.8,
+			"riverHumidityFactor" : 0.2,
+			"riverEffectRangeFactor" : 1.0,
+			"baseHumidity": 0.7,
+			"baseTemperature": 1.0
+		},
+		"weather":
+		{
+			"minimumDegCelcius": -20,
+			"deviationFactor": 10,
+			"temperatureRange": 60
+		}
+    }
+}
