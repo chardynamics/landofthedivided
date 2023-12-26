@@ -1,9 +1,0 @@
-
-	s:STATE_templateName = {
-		create_state = {
-			country = c:templateCountry
-			owned_provinces = { templateProvinces }
-		}
-		
-		add_homeland = templateCulture
-	}
