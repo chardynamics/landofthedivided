@@ -1,6 +1,13 @@
 state={
 	id=222
 	name="STATE_222"
+	history = {
+		owner = SPM
+		add_core_of = SPM
+		buildings = {
+			
+		}
+	}
 	provinces={
 		630 1080 1430 1905 2652 2888 5588 
 	}
