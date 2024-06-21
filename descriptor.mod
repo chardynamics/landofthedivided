@@ -1,5 +1,6 @@
 name="Land of the Divided"
 replace_path="history/states"
+replace_path="history/countries"
 replace_path="map/strategicregions"
 tags={
 	"Map"
