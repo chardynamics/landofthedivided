@@ -1,16 +1,21 @@
+
 state={
 	id=290
 	name="STATE_290"
-	history = {
+
+	history={
 		owner = WOL
 		add_core_of = WOL
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		2778 6736 
+		561 1582 1741 2776 2778 5645 6736 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

@@ -1,16 +1,21 @@
+
 state={
 	id=407
 	name="STATE_407"
-	history = {
+
+	history={
 		owner = SOH
 		add_core_of = SOH
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		773 1244 2630 2923 3010 3301 3516 3527 3528 4297 4335 4697 4774 5877 5908 5919 5928 
+		1244 2923 3516 3528 4297 4774 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

@@ -1,16 +1,21 @@
+
 state={
 	id=207
 	name="STATE_207"
-	history = {
+
+	history={
 		owner = CMM
 		add_core_of = CMM
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		581 1267 2822 4159 5526 5537 
+		581 1267 2822 5526 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

@@ -1,16 +1,21 @@
+
 state={
 	id=337
 	name="STATE_337"
-	history = {
+
+	history={
 		owner = HUD
 		add_core_of = HUD
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		285 703 4394 
+		285 703 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

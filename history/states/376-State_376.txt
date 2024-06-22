@@ -1,16 +1,21 @@
+
 state={
 	id=376
 	name="STATE_376"
-	history = {
+
+	history={
 		owner = PHI
 		add_core_of = PHI
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		1045 4650 4737 
+		1045 4737 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

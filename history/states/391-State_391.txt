@@ -1,16 +1,21 @@
+
 state={
 	id=391
 	name="STATE_391"
-	history = {
+
+	history={
 		owner = RWP
 		add_core_of = RWP
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		2143 5091 5858 5860 
+		2143 5091 5860 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

@@ -1,16 +1,21 @@
+
 state={
 	id=252
 	name="STATE_252"
-	history = {
+
+	history={
 		owner = CAN
 		add_core_of = CAN
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		3989 
+		3989 6724 6727 6730 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

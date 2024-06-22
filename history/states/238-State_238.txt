@@ -1,16 +1,21 @@
+
 state={
 	id=238
 	name="STATE_238"
-	history = {
+
+	history={
 		owner = SPM
 		add_core_of = SPM
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		809 1577 2524 2633 2770 3178 3580 4011 4072 4888 4909 5045 
+		809 1577 2524 2633 2770 3178 3580 4011 4072 4888 4909 5045 6723 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
