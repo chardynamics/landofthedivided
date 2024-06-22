@@ -1,9 +1,18 @@
+
 state={
 	id=111
 	name="STATE_111"
+	history = {
+		owner = BIR
+		add_core_of = BIR
+		buildings = {
+			
+		}
+	}
 	provinces={
-		6659 
+		104 2202 3075 3213 4066 4385 4547 6307 6327 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

@@ -2,8 +2,18 @@
 state={
 	id=144
 	name="STATE_144"
+
+	history={
+		owner = BAR
+		add_core_of = BAR
+		buildings = {
+
+		}
+
+	}
+
 	provinces={
-		3 502 1246 2993 3532 3891 4675 5719 5735 5739 8648 8649 
+		502 2993 3891 5719 8648 8649 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
