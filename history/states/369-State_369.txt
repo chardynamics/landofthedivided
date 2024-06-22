@@ -1,16 +1,21 @@
+
 state={
 	id=369
 	name="STATE_369"
-	history = {
+
+	history={
 		owner = EFG
 		add_core_of = EFG
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
 		1397 3160 3802 4822 5062 5803 5804 5812 5831 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

@@ -1,16 +1,21 @@
+
 state={
 	id=347
 	name="STATE_347"
-	history = {
+
+	history={
 		owner = SIA
 		add_core_of = SIA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		906 1396 1422 1860 1920 2236 3394 3610 4132 4515 5765 5792 5819 5830 5855 
+		906 1860 1920 5819 5830 5855 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

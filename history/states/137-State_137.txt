@@ -1,16 +1,21 @@
+
 state={
 	id=137
 	name="STATE_137"
-	history = {
+
+	history={
 		owner = SWA
 		add_core_of = SWA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		1685 4005 5402 
+		1685 4005 5402 6686 6687 6688 6689 6690 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

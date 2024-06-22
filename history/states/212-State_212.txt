@@ -1,16 +1,21 @@
+
 state={
 	id=212
 	name="STATE_212"
-	history = {
+
+	history={
 		owner = WAR
 		add_core_of = WAR
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		65 471 659 1364 1843 1877 2728 3068 3446 3575 3679 3689 4169 4516 4753 4926 5530 5546 5567 5594 5596 
+		65 1843 1877 3575 3689 4753 4926 5546 5567 5594 8598 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

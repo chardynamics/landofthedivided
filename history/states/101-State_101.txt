@@ -1,9 +1,21 @@
+
 state={
 	id=101
 	name="STATE_101"
+
+	history={
+		owner = EFG
+		add_core_of = EFG
+		buildings = {
+
+		}
+
+	}
+
 	provinces={
-		6650 
+		978 2051 4096 6253 6266 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

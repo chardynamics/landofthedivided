@@ -1,16 +1,21 @@
+
 state={
 	id=192
 	name="STATE_192"
-	history = {
+
+	history={
 		owner = SDA
 		add_core_of = SDA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		506 861 1116 1204 1599 1641 1717 2421 2557 2656 3071 3138 3369 4306 4550 4837 4919 5033 5489 5531 5541 5551 5590 
+		506 1599 1641 1717 2421 2557 3071 3369 4306 4550 4837 4919 5033 5541 5551 5590 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

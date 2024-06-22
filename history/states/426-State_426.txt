@@ -1,16 +1,21 @@
+
 state={
 	id=426
 	name="STATE_426"
-	history = {
+
+	history={
 		owner = USM
 		add_core_of = USM
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		6 30 178 299 395 602 972 1355 1537 2369 2405 2605 3139 3281 3541 3783 4352 4906 5922 5937 5955 5966 5984 6002 
+		178 299 395 972 2605 4352 6002 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
