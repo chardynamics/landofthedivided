@@ -1,16 +1,21 @@
+
 state={
 	id=545
 	name="STATE_545"
-	history = {
+
+	history={
 		owner = BIR
 		add_core_of = BIR
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		203 379 454 613 874 1384 1468 1733 1901 1912 2424 2461 2580 2596 3487 3782 4212 4463 4841 5056 6265 6270 6286 6310 6314 6338 
+		613 1733 2580 2596 3487 4212 4841 5056 6265 6270 6286 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
