@@ -2,7 +2,13 @@
 state={
 	id=20
 	name="STATE_20"
-	provinces={
+	history = {
+		owner = TMA
+		add_core_of = TMA
+		buildings = {
+			
+		}
+	}
 		4 4103 4248 4408 6064 
 	}
 	manpower=0
