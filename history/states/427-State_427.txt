@@ -1,16 +1,21 @@
+
 state={
 	id=427
 	name="STATE_427"
-	history = {
+
+	history={
 		owner = NGI
 		add_core_of = NGI
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
 		2301 4351 5962 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

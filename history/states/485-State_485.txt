@@ -1,16 +1,21 @@
+
 state={
 	id=485
 	name="STATE_485"
-	history = {
+
+	history={
 		owner = TMA
 		add_core_of = TMA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		1686 3335 4446 4740 4755 6107 6124 
+		1686 3096 3335 4446 4740 4755 6107 6124 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

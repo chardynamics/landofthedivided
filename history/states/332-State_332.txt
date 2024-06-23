@@ -1,16 +1,21 @@
+
 state={
 	id=332
 	name="STATE_332"
-	history = {
+
+	history={
 		owner = DET
 		add_core_of = DET
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		5087 5729 
+		4649 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
