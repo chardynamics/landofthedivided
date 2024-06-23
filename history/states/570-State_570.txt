@@ -1,16 +1,21 @@
+
 state={
 	id=570
 	name="STATE_570"
-	history = {
+
+	history={
 		owner = NOM
 		add_core_of = NOM
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		177 255 328 525 2542 3069 3368 3592 4087 4134 4457 4474 4670 4929 5085 6298 6299 6309 6317 6331 6335 
+		821 2901 3400 3456 6280 6300 6302 8745 8748 8749 8750 8751 8757 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
