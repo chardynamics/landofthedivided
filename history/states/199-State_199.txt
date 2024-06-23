@@ -1,16 +1,21 @@
+
 state={
 	id=199
 	name="STATE_199"
-	history = {
+
+	history={
 		owner = SMN
 		add_core_of = SMN
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		20 505 781 920 982 2548 2733 2841 2842 3733 3869 4098 4273 4410 5023 5493 5521 5532 5554 
+		982 3869 4273 5023 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

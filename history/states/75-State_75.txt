@@ -2,15 +2,18 @@
 state={
 	id=75
 	name="STATE_75"
-	history = {
+
+	history={
 		owner = SWI
 		add_core_of = SWI
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		258 1125 1276 2764 3781 3960 5656 5699 5714 
+		258 1125 1276 2764 2914 3781 3960 5656 5699 5714 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000

@@ -1,16 +1,21 @@
+
 state={
 	id=495
 	name="STATE_495"
-	history = {
+
+	history={
 		owner = OMA
 		add_core_of = OMA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		448 735 744 1131 1476 1489 2007 2060 2523 2777 3458 3594 4097 4882 6130 6132 
+		448 735 744 1131 1476 1489 2007 2060 2523 2777 3458 3594 4097 4882 6130 6132 8705 8709 8716 8717 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
