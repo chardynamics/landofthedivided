@@ -2,15 +2,18 @@
 state={
 	id=128
 	name="STATE_128"
-	history = {
+
+	history={
 		owner = DMA
 		add_core_of = DMA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		1285 2536 2746 4905 5051 5882 
+		1285 2536 4905 5051 5882 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000

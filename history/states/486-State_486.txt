@@ -1,16 +1,21 @@
+
 state={
 	id=486
 	name="STATE_486"
-	history = {
+
+	history={
 		owner = OKC
 		add_core_of = OKC
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		107 1737 3116 3672 4264 6106 6143 6180 
+		107 1406 1737 3116 3672 4264 4367 4814 6106 6143 6180 6208 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

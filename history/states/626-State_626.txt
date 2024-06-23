@@ -1,16 +1,21 @@
+
 state={
 	id=626
 	name="STATE_626"
-	history = {
+
+	history={
 		owner = AMF
 		add_core_of = AMF
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		461 4299 4425 6432 6439 
+		461 4299 4425 6432 6439 8797 8800 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

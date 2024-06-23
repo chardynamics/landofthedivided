@@ -1,16 +1,21 @@
+
 state={
 	id=428
 	name="STATE_428"
-	history = {
+
+	history={
 		owner = DMA
 		add_core_of = DMA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		307 787 862 997 1678 1896 1988 2061 2261 2286 3291 3642 3792 5972 5987 6010 6025 
+		307 787 862 997 1678 1896 1988 2061 2261 2286 3291 3642 3792 5972 5987 6010 6025 8681 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

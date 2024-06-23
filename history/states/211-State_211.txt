@@ -1,16 +1,21 @@
+
 state={
 	id=211
 	name="STATE_211"
-	history = {
+
+	history={
 		owner = MMS
 		add_core_of = MMS
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		55 792 4049 4475 5540 
+		309 1385 2212 3216 3484 4328 4443 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

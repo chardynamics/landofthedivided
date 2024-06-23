@@ -1,16 +1,21 @@
+
 state={
 	id=596
 	name="STATE_596"
-	history = {
+
+	history={
 		owner = HMA
 		add_core_of = HMA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		585 588 1233 1250 1302 1554 1867 2136 2324 2793 4022 4644 4911 6364 6366 6377 6379 6383 6398 
+		585 1250 1302 1554 1867 2793 4911 6377 6379 6398 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

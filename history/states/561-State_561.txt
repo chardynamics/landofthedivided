@@ -1,16 +1,21 @@
+
 state={
 	id=561
 	name="STATE_561"
-	history = {
+
+	history={
 		owner = STX
 		add_core_of = STX
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		857 1730 6268 
+		1144 1583 2556 3264 3376 6291 6323 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
