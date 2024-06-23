@@ -1,16 +1,21 @@
+
 state={
 	id=327
 	name="STATE_327"
-	history = {
+
+	history={
 		owner = ALB
 		add_core_of = ALB
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		3189 
+		3171 3189 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
