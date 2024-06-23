@@ -2,15 +2,18 @@
 state={
 	id=110
 	name="STATE_110"
-	history = {
-		owner = OMA
-		add_core_of = OMA
+
+	history={
+		owner = DMA
+		add_core_of = DMA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		816 871 896 1363 1564 1815 1852 2435 3472 4217 4255 4269 4925 5884 5973 
+		816 871 896 1363 1564 1815 1852 3472 4217 4255 4269 5884 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
