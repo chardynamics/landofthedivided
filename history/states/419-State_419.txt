@@ -1,16 +1,21 @@
+
 state={
 	id=419
 	name="STATE_419"
-	history = {
+
+	history={
 		owner = GBR
 		add_core_of = GBR
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		390 428 1703 5939 5971 
+		390 428 1703 5939 5971 8671 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

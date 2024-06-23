@@ -1,16 +1,21 @@
+
 state={
 	id=604
 	name="STATE_604"
-	history = {
+
+	history={
 		owner = CFC
 		add_core_of = CFC
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		239 2989 3397 4513 6396 
+		239 2989 3397 4513 6396 8790 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

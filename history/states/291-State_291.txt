@@ -1,16 +1,21 @@
+
 state={
 	id=291
 	name="STATE_291"
-	history = {
+
+	history={
 		owner = SYR
 		add_core_of = SYR
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		1313 2953 
+		1313 2953 8637 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

@@ -1,16 +1,21 @@
+
 state={
 	id=668
 	name="STATE_668"
-	history = {
+
+	history={
 		owner = MEX
 		add_core_of = MEX
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		1392 1700 1762 2748 2767 2903 3143 3470 3539 4013 6478 6485 6507 
+		1392 1700 1762 2748 2767 2903 3143 3470 3539 4013 6478 6485 6507 8809 8810 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

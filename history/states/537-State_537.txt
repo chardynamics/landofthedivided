@@ -1,16 +1,21 @@
+
 state={
 	id=537
 	name="STATE_537"
-	history = {
+
+	history={
 		owner = USG
 		add_core_of = USG
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		788 1776 4324 6226 6247 
+		788 1776 4324 6226 6247 8728 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

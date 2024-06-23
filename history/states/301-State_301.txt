@@ -1,16 +1,21 @@
+
 state={
 	id=301
 	name="STATE_301"
-	history = {
+
+	history={
 		owner = ROC
 		add_core_of = ROC
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		4130 4265 5669 5692 5704 
+		4130 4265 5669 5692 5704 8646 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

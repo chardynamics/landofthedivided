@@ -1,16 +1,21 @@
+
 state={
 	id=216
 	name="STATE_216"
-	history = {
+
+	history={
 		owner = MAR
 		add_core_of = MAR
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		609 615 1016 3690 4948 5545 5565 5576 
+		609 615 1016 3690 4948 5545 5565 5576 8588 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

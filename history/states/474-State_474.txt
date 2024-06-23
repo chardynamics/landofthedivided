@@ -1,16 +1,21 @@
+
 state={
 	id=474
 	name="STATE_474"
-	history = {
+
+	history={
 		owner = CHA
 		add_core_of = CHA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		3683 6081 6095 
+		3683 6081 6095 8696 8700 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

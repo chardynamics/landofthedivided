@@ -1,16 +1,21 @@
+
 state={
 	id=353
 	name="STATE_353"
-	history = {
+
+	history={
 		owner = ERE
 		add_core_of = ERE
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		18 1343 2753 4530 
+		18 1343 2753 4530 8659 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

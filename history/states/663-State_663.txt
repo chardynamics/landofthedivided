@@ -1,16 +1,21 @@
+
 state={
 	id=663
 	name="STATE_663"
-	history = {
+
+	history={
 		owner = BAH
 		add_core_of = BAH
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		6791 
+		6791 6799 6800 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

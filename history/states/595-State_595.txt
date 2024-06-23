@@ -1,16 +1,21 @@
+
 state={
 	id=595
 	name="STATE_595"
-	history = {
+
+	history={
 		owner = JMA
 		add_core_of = JMA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		1017 4062 
+		1017 4062 8773 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

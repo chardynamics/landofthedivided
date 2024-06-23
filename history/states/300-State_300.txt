@@ -1,16 +1,21 @@
+
 state={
 	id=300
 	name="STATE_300"
-	history = {
+
+	history={
 		owner = NGM
 		add_core_of = NGM
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		209 3248 4362 5661 5679 
+		209 3248 4362 5661 5679 8639 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
