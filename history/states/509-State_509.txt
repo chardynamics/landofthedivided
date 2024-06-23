@@ -1,16 +1,21 @@
+
 state={
 	id=509
 	name="STATE_509"
-	history = {
+
+	history={
 		owner = AMA
 		add_core_of = AMA
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		2451 4244 
+		2451 4244 8710 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
