@@ -1,9 +1,21 @@
+
 state={
 	id=90
 	name="STATE_90"
+
+	history={
+		owner = SCA
+		add_core_of = SCA
+		buildings = {
+
+		}
+
+	}
+
 	provinces={
-		6643 
+		327 481 2401 2566 3701 4684 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
