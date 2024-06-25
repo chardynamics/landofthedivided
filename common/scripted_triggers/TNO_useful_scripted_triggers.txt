@@ -1,41 +1,20 @@
 TNO_has_big_opening_screen = {
 	OR = {
-		tag = KOM
-		tag = USA
-		tag = GER
-		tag = CHL
-		tag = BRA
-		tag = YUN
-		tag = GNG
 	}
 }
 
 TNO_has_two_page_opening_screen = {
 	OR = {
-		tag = YUN
 	}
 }
 
 TNO_has_three_page_opening_screen = {
 	OR = {
-		tag = KOM
-		tag = USA
-		tag = GER
-		tag = CHL
-		tag = BRA
 	}
 }
 
 TNO_has_four_page_opening_screen = {
 	OR = {
-		tag = GNG
-	}
-}
-
-
-Is_BRG_Player = {
-	BRG = {
-		is_ai = no
 	}
 }
 
@@ -177,34 +156,14 @@ same_government_type_as_ROOT = {
 
 ### CHECK STATES IN CONTINENT ###
 # fire in STATE scope
-
-is_in_asia = {
-	is_on_continent = asia
-}
-
 is_in_europe = {
 	is_on_continent = europe
-}
-
-is_in_africa = {
-	is_on_continent = africa
 }
 
 is_in_north_america = {
 	is_on_continent = north_america
 }
 
-is_in_south_america = {
-	is_on_continent = south_america
-}
-
-is_in_middle_east = {
-	is_on_continent = middle_east
-}
-
-is_in_australia = {
-	is_on_continent = australia
-}
 
 # the following triggers will check if the country in scope is on a particular continent
 # note that these are continents as per the game - asia and middle-east are considered separate continents
@@ -213,32 +172,12 @@ is_in_australia = {
 same_continent_as_ROOT = {
 	OR = {
 		AND = {
-			is_in_asia = yes
-			ROOT = { is_in_asia = yes }
-		}
-		AND = {
 			is_in_europe = yes
 			ROOT = { is_in_europe = yes }
 		}
 		AND = {
-			is_in_africa = yes
-			ROOT = { is_in_africa = yes }
-		}
-		AND = {
 			is_in_north_america = yes
 			ROOT = { is_in_north_america = yes }
-		}
-		AND = {
-			is_in_south_america = yes
-			ROOT = { is_in_south_america = yes }
-		}
-		AND = {
-			is_in_middle_east = yes
-			ROOT = { is_in_middle_east = yes }
-		}
-		AND = {
-			is_in_australia = yes
-			ROOT = { is_in_australia = yes }
 		}
 	}
 }
@@ -247,202 +186,23 @@ same_continent_as_ROOT = {
 state_same_continent_as_ROOT = {
 	OR = {
 		AND = {
-			is_on_continent = asia
-			ROOT = { is_in_asia = yes }
-		}
-		AND = {
 			is_on_continent = europe
 			ROOT = { is_in_europe = yes }
-		}
-		AND = {
-			is_on_continent = africa
-			ROOT = { is_in_africa = yes }
 		}
 		AND = {
 			is_on_continent = north_america
 			ROOT = { is_in_north_america = yes }
 		}
-		AND = {
-			is_on_continent = south_america
-			ROOT = { is_in_south_america = yes }
-		}
-		AND = {
-			is_on_continent = middle_east
-			ROOT = { is_in_middle_east = yes }
-		}
-		AND = {
-			is_on_continent = australia
-			ROOT = { is_in_australia = yes }
-		}
 	}
 }
 #####################################################
-
-is_iberian_nation = {
-	#custom_trigger_tooltip = is_iberian_nation_tt
-	hidden_trigger = {
-		has_country_flag = is_iberian_nation
-	}
-}
 
 is_european_nation = {
 	#custom_trigger_tooltip = is_iberian_nation_tt
 	hidden_trigger = {
 		OR = {
-			original_tag = IBR
-			original_tag = GER
-			original_tag = OST
-			original_tag = ITA
-			original_tag = TUR
-			original_tag = SWI
-			original_tag = OST
-			original_tag = UKR
-			original_tag = SWE
-			original_tag = NOR
-			original_tag = ROM
-			original_tag = HUN
-			original_tag = HOL
-			original_tag = FRS
-			original_tag = BRG
-			original_tag = CRO
-			original_tag = SER
-			original_tag = BUL
-			original_tag = GRE
+			original_tag = FRA
 			original_tag = ENG
-			original_tag = FEN
-			original_tag = IRE
-			original_tag = SCO
-			original_tag = WAL
-			original_tag = BOS
-			original_tag = MNT
-			original_tag = PAD
-			original_tag = SNM
-			original_tag = MOC
-			original_tag = VAC
-			original_tag = SLO
-			original_tag = FIT
-			original_tag = FGR
-			original_tag = IBR
-			original_tag = SPR
-			original_tag = SPS
-			original_tag = FSR
-			original_tag = GNS
-			original_tag = FZL
-			original_tag = POR
-			original_tag = PPR
-			original_tag = RPP
-			original_tag = SPA
-			original_tag = ICE
-			original_tag = FAR
-		}
-	}
-}
-
-is_south_american_nation = {
-	OR = {
-		tag = ARG
-		tag = BRA
-		tag = CHL
-		tag = PAR
-		tag = STC
-		tag = PAC
-		tag = URG
-		tag = PRU
-		tag = BOL
-		tag = ECU
-		tag = GAX
-		tag = COL
-		tag = CLL
-		tag = CLC
-		tag = CLD
-		tag = VEN
-		tag = GUY
-		tag = SUR
-		tag = GUC
-
-		tag = TDF
-		tag = ARP
-		tag = BRP
-		tag = URP
-	}
-}
-
-is_west_african_nation = {
-	OR = {
-		tag = TRZ
-		tag = WOL
-		tag = JOL
-		tag = MLI
-		tag = KAY
-		tag = SUS
-		tag = MDI
-		tag = LIB
-		tag = FFR
-		tag = IVO
-		tag = HAU
-		tag = FTF
-		tag = ZAR
-		tag = SWB
-		tag = NGR
-		tag = BKF
-		tag = EWE
-		tag = CPP
-		tag = GBE
-		tag = YOR
-		tag = AZW
-		tag = AYR
-		tag = KNM
-		tag = CHF
-		tag = CHD
-		tag = GNB
-		tag = CAO
-		tag = NNG
-		tag = NGA
-		tag = BFR
-	}
-}
-
-is_indonesia_tag = {
-	OR = {
-		tag = INS
-		tag = FRI
-		tag = SRB
-		tag = MKS
-		tag = BKB
-		tag = DMP
-		tag = DMS
-		tag = PMT
-		tag = SLS
-		tag = NII
-		tag = ABD
-		tag = JJK
-	}
-}
-
-has_war_with_iberian_nation = {
-	#custom_trigger_tooltip = is_iberian_nation_tt
-	hidden_trigger = {
-		any_enemy_country = {
-			has_country_flag = is_iberian_nation
-		}
-	}
-}
-
-has_war_with_iberian_major = {
-	#custom_trigger_tooltip = is_iberian_nation_tt
-	hidden_trigger = {
-		OR = {
-			has_war_with = IBR
-			has_war_with = SPR
-			has_war_with = SPS
-			has_war_with = FSR
-			has_war_with = GNS
-			has_war_with = POR
-			has_war_with = PPR
-			has_war_with = RPP
-			has_war_with = MOR
-			has_war_with = RIF
-			has_war_with = TRZ
 		}
 	}
 }
@@ -451,181 +211,6 @@ owns_enemy_state = {
 	any_controlled_state = {
 		NOT = {
 			is_owned_by = ROOT
-		}
-	}
-}
-
-is_iberian_major = {
-	OR = {
-		original_tag = IBR
-		original_tag = SPR
-		original_tag = SPS
-		original_tag = FSR
-		original_tag = GNS
-		original_tag = FZL
-		original_tag = POR
-		original_tag = PPR
-		original_tag = RPP
-	}
-}
-
-is_iberian_minor = {
-	OR = {
-		original_tag = CTL
-		original_tag = CNT
-		original_tag = BSQ
-		original_tag = TBA
-		original_tag = GIB
-		original_tag = ADL
-		original_tag = GAL
-	}
-}
-claims_catalan_region = {
-	OR = {
-		1084 = {
-			is_claimed_by = ROOT
-		}
-		986 = {
-			is_claimed_by = ROOT
-		}
-		165 = {
-			is_claimed_by = ROOT
-		}
-	}
-}
-
-claims_basque_region = {
-	OR = {
-		1065 = {
-			is_claimed_by = ROOT
-		}
-		984 = {
-			is_claimed_by = ROOT
-		}
-	}
-}
-
-claims_galician_region = {
-	OR = {
-		171 = {
-			is_claimed_by = ROOT
-		}
-		982 = {
-			is_claimed_by = ROOT
-		}
-	}
-}
-
-claims_andalusian_region = {
-	OR = {
-		169 = {
-			is_claimed_by = ROOT
-		}
-		173 = {
-			is_claimed_by = ROOT
-		}
-		1075 = {
-			is_claimed_by = ROOT
-		}
-		988 = {
-			is_claimed_by = ROOT
-		}
-		1074 = {
-			is_claimed_by = ROOT
-		}
-		1073 = {
-			is_claimed_by = ROOT
-		}
-		168 = {
-			is_claimed_by = ROOT
-		}
-	}
-}
-
-claims_castillean_region = {
-	OR = {
-		166 = {
-			is_claimed_by = ROOT
-		}
-		175 = {
-			is_claimed_by = ROOT
-		}
-		170 = {
-			is_claimed_by = ROOT
-		}
-		1068 = {
-			is_claimed_by = ROOT
-		}
-		174 = {
-			is_claimed_by = ROOT
-		}
-		1067 = {
-			is_claimed_by = ROOT
-		}
-		172 = {
-			is_claimed_by = ROOT
-		}
-		176 = {
-			is_claimed_by = ROOT
-		}
-		1066 = {
-			is_claimed_by = ROOT
-		}
-		985 = {
-			is_claimed_by = ROOT
-		}
-	}
-}
-
-claims_nportuguese_region = {
-	OR = {
-		180 = {
-			is_claimed_by = ROOT
-		}
-		1069 = {
-			is_claimed_by = ROOT
-		}
-		1070 = {
-			is_claimed_by = ROOT
-		}
-		181 = {
-			is_claimed_by = ROOT
-		}
-	}
-}
-
-claims_sportuguese_region = {
-	OR = {
-		1072 = {
-			is_claimed_by = ROOT
-		}
-		112 = {
-			is_claimed_by = ROOT
-		}
-		179 = {
-			is_claimed_by = ROOT
-		}
-		1076 = {
-			is_claimed_by = ROOT
-		}
-	}
-}
-
-claims_valencian_region = {
-	OR = {
-		167 = {
-			is_claimed_by = ROOT
-		}
-		987 = {
-			is_claimed_by = ROOT
-		}
-	}
-}
-
-claims_madrid_region = {
-	OR = {
-		41 = {
-			is_claimed_by = ROOT
 		}
 	}
 }
