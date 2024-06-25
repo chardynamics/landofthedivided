@@ -48,59 +48,6 @@ on_actions = {
 
 			var:global.TNO_Superpowers^0 = {
 				add_to_variable = { TNO_Cold_War_GUI_Rankings_Tab_Superpower_Entries_Array_Frame = 1 }
-				save_global_event_target_as = Cold_War_GUI_Selected_Superpower
-			}
-			
-			# Sea Zone setup
-			GER = {
-				add_to_array = { CW_SeaZone_Status = 0 } # 0; East Pacific
-				add_to_array = { CW_SeaZone_Status = 0 } # 1; West Pacific
-				add_to_array = { CW_SeaZone_Status = 1 } # 2; South Atlantic
-				add_to_array = { CW_SeaZone_Status = 1 } # 3; North Atlantic
-				add_to_array = { CW_SeaZone_Status = 1 } # 4; North Sea
-				add_to_array = { CW_SeaZone_Status = 0 } # 5; Mediterranean
-				add_to_array = { CW_SeaZone_Status = 1 } # 6; Indian Ocean
-				Cold_War_GUI_PowerProjection_CalculateBonuses = yes
-
-				# This only exists because scripted loc is a fuck
-				add_to_array = { global.PowerProjection_Tags = THIS.id }
-				add_to_array = { global.PowerProjection_X = 277 }
-				add_to_array = { global.PowerProjection_Y = 47 }
-			}
-			USA = {
-				add_to_array = { CW_SeaZone_Status = 1 } # 0; East Pacific
-				add_to_array = { CW_SeaZone_Status = 0 } # 1; West Pacific
-				add_to_array = { CW_SeaZone_Status = 1 } # 2; South Atlantic
-				add_to_array = { CW_SeaZone_Status = 1 } # 3; North Atlantic
-				add_to_array = { CW_SeaZone_Status = 0 } # 4; North Sea
-				add_to_array = { CW_SeaZone_Status = 0 } # 5; Mediterranean
-				add_to_array = { CW_SeaZone_Status = 1 } # 6; Indian Ocean
-				Cold_War_GUI_PowerProjection_CalculateBonuses = yes
-
-				# This only exists because scripted loc is a fuck
-				add_to_array = { global.PowerProjection_Tags = THIS.id }
-				add_to_array = { global.PowerProjection_X = 9 }
-				add_to_array = { global.PowerProjection_Y = 8 }
-
-				set_variable = { USA_GUI_selected_tab = 1 }
-				set_variable = { USA_GUI_selected_tab_sub = 1 }
-				set_variable = { USA_GUI_selected_prev_year = 1960 }
-				USA_GUI_voting_setup = yes
-			}
-			JAP = {
-				add_to_array = { CW_SeaZone_Status = 1 } # 0; East Pacific
-				add_to_array = { CW_SeaZone_Status = 1 } # 1; West Pacific
-				add_to_array = { CW_SeaZone_Status = 0 } # 2; South Atlantic
-				add_to_array = { CW_SeaZone_Status = 0 } # 3; North Atlantic
-				add_to_array = { CW_SeaZone_Status = 0 } # 4; North Sea
-				add_to_array = { CW_SeaZone_Status = 0 } # 5; Mediterranean
-				add_to_array = { CW_SeaZone_Status = 1 } # 6; Indian Ocean
-				Cold_War_GUI_PowerProjection_CalculateBonuses = yes
-
-				# This only exists because scripted loc is a fuck
-				add_to_array = { global.PowerProjection_Tags = THIS.id }
-				add_to_array = { global.PowerProjection_X = 447 }
-				add_to_array = { global.PowerProjection_Y = 49 }
 			}
 			ITA = {
 				add_to_array = { CW_SeaZone_Status = 0 } # 0; East Pacific
