@@ -2,12 +2,6 @@ equipments = {
 
 	ship_hull_heavy = {
 
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
-
 		year = 1922
 
 		is_archetype = yes

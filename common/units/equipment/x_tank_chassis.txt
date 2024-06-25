@@ -213,13 +213,6 @@ equipments = {
 #########
 
 	kugelpanzer_equipment = {
-
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
-
 		is_archetype = yes
 		is_buildable = no
 		picture = archetype_light_tank_equipment
@@ -306,12 +299,6 @@ equipments = {
 	## APC ##
 
 	APC_equipment = {
-
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
 
 		is_archetype = yes
 		picture = archetype_motorized_equipment
@@ -578,12 +565,6 @@ equipments = {
 	## ARMORED CAR ##
 
 	armored_car_equipment = {
-
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
 
 		is_archetype = yes
 		is_buildable = no
@@ -867,12 +848,6 @@ equipments = {
 
 	heavy_tank_equipment = {
 
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
-
 		is_archetype = yes
 		is_buildable = no
 		picture = archetype_heavy_tank_equipment
@@ -1076,12 +1051,6 @@ equipments = {
 
 	superheavy_tank_equipment = {
 
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
-
 		is_archetype = yes
 		is_buildable = no
 		picture = archetype_super_heavy_tank_equipment
@@ -1242,13 +1211,6 @@ equipments = {
 	## IFV ##
 
 	IFV_equipment = {
-
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
-
 		is_archetype = yes
 		is_buildable = no
 		picture = archetype_light_tank_equipment
@@ -1374,12 +1336,6 @@ equipments = {
 	}
 
 	MBT_equipment = {
-
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
 
 		is_archetype = yes
 		is_buildable = no

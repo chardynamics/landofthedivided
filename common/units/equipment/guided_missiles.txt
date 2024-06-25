@@ -1,10 +1,5 @@
 equipments = {
 	guided_missile_equipment = {
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
 
 		allow_mission_type = {
 			strategic_bomber
