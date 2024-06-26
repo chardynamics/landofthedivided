@@ -121,7 +121,7 @@ guiTypes = {
 		iconType = {
 			name ="frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
-			position = { x = 000 y = 20 }
+			position = { x = 100 y = 40 }
 		}
 	}
 
@@ -154,7 +154,7 @@ guiTypes = {
 		iconType = {
 			name ="frontend_tno_logo"
 			spriteType = "GFX_frontend_tno_logo"
-			position = { x = -100 y = -20 }
+			position = { x = -200 y = 0 }
 			pdx_tooltip = TNO_ugly_american_icon_tt
 			pdx_tooltip_delayed = TNO_ugly_american_icon_tt_delayed
 		}
