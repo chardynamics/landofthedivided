@@ -499,11 +499,6 @@ guiTypes = {
 			size = { width = 330 height = 50 }
 			clipping = no
 
-			background = {
-				name = "Background"
-				spriteType ="GFX_pol_goal_bg"
-			}
-
 			buttonType = {
 				name = "add_national_goal_button"
 				position = { x = 100 y = 7 }
