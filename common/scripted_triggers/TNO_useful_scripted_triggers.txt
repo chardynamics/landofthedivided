@@ -515,7 +515,6 @@ is_rural_state = {
 	custom_trigger_tooltip = {
 		tooltip = is_rural_state_tt
 		OR = {
-			has_state_category = burgundian_mega_farm
 			has_state_category = town
 			has_state_category = rural
 			has_state_category = pastoral
