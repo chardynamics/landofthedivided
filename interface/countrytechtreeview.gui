@@ -647,7 +647,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "scout_helicopter_1960_tree"
-				position = { x = 25 y = 250 }
+				position = { x = 25 y = 200 }
 				size = { width = 200 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -655,7 +655,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "asw_helicopter_1960_tree"
-				position = { x = 25 y = 300 }
+				position = { x = 25 y = 200 }
 				size = { width = 200 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -663,7 +663,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "attack_helicopter_1960_tree"
-				position = { x = 25 y = 150 }
+				position = { x = 25 y = 200 }
 				size = { width = 200 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -2569,42 +2569,6 @@ guiTypes = {
 			}
 
 			instantTextBoxType = {
-				name = "light_air_year1"
-				position = { x = 82 y = 60 }
-				font = "aldrich_36_outline"
-				borderSize = {x = 0 y = 4}
-				text = "1936"
-				maxWidth = 170
-				maxHeight = 32
-				format = left
-				Orientation = "UPPER_LEFT"
-			}
-
-			instantTextBoxType = {
-				name = "light_air_year2"
-				position = { x = 362 y = 60 }
-				font = "aldrich_36_outline"
-				borderSize = {x = 0 y = 4}
-				text = "1945"
-				maxWidth = 170
-				maxHeight = 32
-				format = left
-				Orientation = "UPPER_LEFT"
-			}
-
-			instantTextBoxType = {
-				name = "light_air_year3"
-				position = { x = 646 y = 60 }
-				font = "aldrich_36_outline"
-				borderSize = {x = 0 y = 4}
-				text = "1950"
-				maxWidth = 170
-				maxHeight = 32
-				format = left
-				Orientation = "UPPER_LEFT"
-			}
-
-			instantTextBoxType = {
 				name = "light_air_year4"
 				position = { x = 921 y = 60 }
 				font = "aldrich_36_outline"
@@ -2665,7 +2629,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "airtech_subtitle_cas"
-				position = { x = 10 y = 554 }
+				position = { x = 400 y = 600 }
 				font = "aldrich_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "AIR_TITLE_CAS"
@@ -2677,7 +2641,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "airtech_subtitle_interceptors"
-				position = { x = 85 y = 135 }
+				position = { x = 350 y = 200 }
 				font = "aldrich_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "AIR_TITLE_INT"
@@ -2689,7 +2653,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "airtech_subtitle_fighters"
-				position = { x = 148 y = 275 }
+				position = { x = 400 y = 325 }
 				font = "aldrich_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "AIR_TITLE_NAV"
@@ -2763,6 +2727,13 @@ guiTypes = {
 				format = "UP"
 			}
 			gridboxtype = {
+				name = "CAS_1960_tree"
+				position = { x = 25 y = 450 }
+				size = { width = 200 height = 200 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
 				name = "fighter_1960_tree"
 				position = { x = 90 y = 453 }
 				size = { width = 70 height = 70 }
@@ -2817,42 +2788,6 @@ guiTypes = {
 			}
 
 			instantTextBoxType = {
-				name = "air_year1"
-				position = { x = 82 y = 60 }
-				font = "aldrich_36_outline"
-				borderSize = {x = 0 y = 4}
-				text = "1936"
-				maxWidth = 170
-				maxHeight = 32
-				format = left
-				Orientation = "UPPER_LEFT"
-			}
-
-			instantTextBoxType = {
-				name = "air_year2"
-				position = { x = 362 y = 60 }
-				font = "aldrich_36_outline"
-				borderSize = {x = 0 y = 4}
-				text = "1945"
-				maxWidth = 170
-				maxHeight = 32
-				format = left
-				Orientation = "UPPER_LEFT"
-			}
-
-			instantTextBoxType = {
-				name = "air_year3"
-				position = { x = 646 y = 60 }
-				font = "aldrich_36_outline"
-				borderSize = {x = 0 y = 4}
-				text = "1950"
-				maxWidth = 170
-				maxHeight = 32
-				format = left
-				Orientation = "UPPER_LEFT"
-			}
-
-			instantTextBoxType = {
 				name = "air_year4"
 				position = { x = 921 y = 60 }
 				font = "aldrich_36_outline"
@@ -2901,7 +2836,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "airtech_subtitle_tac"
-				position = { x = 0 y = 114 }
+				position = { x = 275 y = 200 }
 				font = "aldrich_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "tactical_bomber"
@@ -2913,7 +2848,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "airtech_subtitle_strat"
-				position = { x = 0 y = 258 }
+				position = { x = 250 y = 500 }
 				font = "aldrich_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "strategic_bomber"
@@ -2925,7 +2860,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "airtech_subtitle_transport"
-				position = { x = 0 y = 408 }
+				position = { x = 275 y = 350 }
 				font = "aldrich_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "AIR_TITLE_TRA"
@@ -2937,7 +2872,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "airtech_subtitle_scout_plane"
-				position = { x = 58 y = 883 }
+				position = { x = 275 y = 883 }
 				font = "aldrich_36_outline"
 				borderSize = {x = 0 y = 4}
 				text = "AIR_TITLE_SPY"

@@ -2,9 +2,6 @@
 state={
 	id=188
 	name="STATE_188"
-	manpower = 24843
-	state_category = pastoral
-
 	history={
 		owner = CMM
 		add_core_of = CMM
@@ -17,7 +14,9 @@ state={
 	provinces={
 		2200 2383 3085 5477 8533 8544 
 	}
-	manpower=0
+	manpower = 24843
+	state_category = pastoral
+
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

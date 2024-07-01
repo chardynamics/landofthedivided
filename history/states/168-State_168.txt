@@ -2,8 +2,6 @@
 state={
 	id=168
 	name="STATE_168"
-	manpower = 71234
-	state_category = pastoral
 
 	history={
 		owner = CMM
@@ -18,7 +16,8 @@ state={
 	provinces={
 		35 1731 2352 3361 3529 4663 4912 5436 5446 5468 8492 8496 8499 
 	}
-	manpower=0
+	manpower = 71234
+	state_category = pastoral
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
