@@ -647,7 +647,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "scout_helicopter_1960_tree"
-				position = { x = 25 y = 381 }
+				position = { x = 25 y = 250 }
 				size = { width = 200 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -655,7 +655,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "asw_helicopter_1960_tree"
-				position = { x = 25 y = 500 }
+				position = { x = 25 y = 300 }
 				size = { width = 200 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -663,7 +663,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "attack_helicopter_1960_tree"
-				position = { x = 25 y = 700 }
+				position = { x = 25 y = 150 }
 				size = { width = 200 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -671,14 +671,14 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "transport_helicopter_1960_tree"
-				position = { x = 25 y = 800 }
+				position = { x = 25 y = 150 }
 				size = { width = 200 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "helicopter_engines_tree"
-				position = { x = 25 y = 1000 }
+				position = { x = 25 y = 200 }
 				size = { width = 360 height = 705 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
