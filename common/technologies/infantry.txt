@@ -2375,11 +2375,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = infantry_at
+			leads_to_tech = infantry_at3
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = infantry_aa1
+			leads_to_tech = infantry_aa2
 			research_cost_coeff = 1
 		}
 		path = {
@@ -2440,7 +2440,7 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = support_weapons_arty_2
+			leads_to_tech = support_weapons_hmg_1
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -2456,6 +2456,129 @@ technologies = {
 
 		ai_will_do = {
 			factor = 60
+		}
+	}support_weapons_hmg_1 = {
+
+		category_all_infantry = {
+			defense = 0.05
+			breakthrough = 0.05
+			hard_attack = 0.025
+		}
+
+		path = {
+			leads_to_tech = support_weapons_arty_1
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1953
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 10 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		enable_equipment_modules = {
+			tank_grenade_launcher_1
+		}
+	}
+	support_weapons_arty_1 = {
+
+		category_all_infantry = {
+			defense = 0.05
+			breakthrough = 0.05
+			ap_attack = 0.025
+		}
+
+		path = {
+			leads_to_tech = combat_support_equipment_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1957
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 14 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		enable_equipment_modules = {
+			tank_auto_cannon_2
+		}
+	}
+	combat_support_equipment_2 = {
+
+		army_morale_factor = 0.2
+		army_org_factor = 0.025
+		acclimatization_cold_climate_gain_factor = 0.05
+		acclimatization_hot_climate_gain_factor = 0.05
+
+		category_special_forces = {
+			acclimatization_cold_climate_gain_factor = 0.05
+			acclimatization_hot_climate_gain_factor = 0.05
+		}
+
+		path = {
+			leads_to_tech = support_weapons_hmg_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1960
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 19 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 60
+		}
+	}
+	support_weapons_hmg_2 = {
+
+		category_all_infantry = {
+			defense = 0.05
+			breakthrough = 0.05
+			hard_attack = 0.025
+		}
+
+		path = {
+			leads_to_tech = support_weapons_arty_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1963
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 22 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		enable_equipment_modules = {
+			tank_grenade_launcher_2
 		}
 	}
 	support_weapons_arty_2 = {
@@ -2665,71 +2788,6 @@ technologies = {
 	}
 
 	###ANTI-AIR PATH###
-
-	infantry_aa1 = {
-
-		enable_equipments = {
-			anti_air_shoulder_equipment_0
-		}
-
-		enemy_army_bonus_air_superiority_factor = -0.04
-
-		infantry = {
-			need = {
-				anti_air_shoulder_equipment = 5
-			}
-		}
-		elite_infantry = {
-			need = {
-				anti_air_shoulder_equipment = 5
-			}
-		}
-		motorized = {
-			need = {
-				anti_air_shoulder_equipment = 5
-			}
-		}
-		air_assault = {
-			need = {
-				anti_air_shoulder_equipment = 5
-			}
-		}
-		mountaineers = {
-			need = {
-				anti_air_shoulder_equipment = 5
-			}
-		}
-		marine = {
-			need = {
-				anti_air_shoulder_equipment = 5
-			}
-		}
-		cavalry = {
-			need = {
-				anti_air_shoulder_equipment = 5
-			}
-		}
-
-		path = {
-			leads_to_tech = infantry_aa2
-			research_cost_coeff = 1
-		}
-		research_cost = 4
-		start_year = 1950
-		folder = {
-			name = infantry_folder
-			position = { x = 4 y = 7 }
-		}
-
-		categories = {
-			infantry_weapons
-			anti_air_tech
-		}
-
-		ai_will_do = {
-			factor = 5
-		}
-	}
 
 	infantry_aa2 = {
 
@@ -3166,6 +3224,24 @@ technologies = {
 
 	###ANTI-TANK PATH###
 	infantry_at3 = {
+
+
+		enable_equipments = {
+			anti_tank_equipment_2
+		}
+
+		enable_subunits = {
+			anti_tank
+			anti_tank_brigade
+			mot_anti_tank_brigade
+		}
+
+		infantry = {
+			need = {
+				anti_tank_equipment = 15
+			}
+		}
+
 
 		path = {
 			leads_to_tech = infantry_at_upgrade_3
