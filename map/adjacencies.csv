@@ -25,11 +25,11 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 392;5001;sea;8839;-1;-1;-1;-1;;Idaho
 4317;5474;sea;8839;-1;-1;-1;-1;;Montana
 792;1385;sea;8841;-1;-1;-1;-1;;Montana
-204;341;sea;8834;-1;-1;-1;-1;;Montana
+5579;341;sea;8834;-1;-1;-1;-1;;Montana
 1178;6303;sea;8821;-1;-1;-1;-1;;New Mexico
 3531;2792;sea;8846;-1;-1;-1;-1;;New Mexico
 297;5095;sea;8830;-1;-1;-1;-1;;Nebraska
-2810;2854;sea;8829;-1;-1;-1;-1;;Nebraska
+2180;2854;sea;8829;-1;-1;-1;-1;;Nebraska
 4529;4792;sea;8829;-1;-1;-1;-1;;Kansas
 4529;6013;sea;8829;-1;-1;-1;-1;;Kansas
 204;341;sea;8834;-1;-1;-1;-1;;Montana
@@ -52,13 +52,83 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 3756;1221;sea;8828;-1;-1;-1;-1;;Missouri-Illinois
 3756;299;sea;8828;-1;-1;-1;-1;;Missouri-Illinois
 5952;2405;sea;8835;-1;-1;-1;-1;;Missouri-Illinois
-5896;1271;sea;8828;-1;-1;-1;-1;;Illinois
+5896;1274;sea;8828;-1;-1;-1;-1;;Illinois
 516;4244;sea;8827;-1;-1;-1;-1;;Arkansas
 3442;4974;sea;8827;-1;-1;-1;-1;;Arkansas
 4910;4974;sea;8827;-1;-1;-1;-1;;Arkansas
 6350;255;sea;7228;-1;-1;-1;-1;;Louisiana
 6350;255;sea;7228;-1;-1;-1;-1;;Louisiana
-2552;4139;sea;7228;-1;-1;-1;-1;;Louisiana
+3069;4139;sea;7228;-1;-1;-1;-1;;Louisiana
 2606;6400;sea;7330;-1;-1;-1;-1;;Louisiana
 1374;222;sea;8827;-1;-1;-1;-1;;Arkansas
+6233;4841;sea;8843;-1;-1;-1;-1;;Alabama
+6359;725;sea;7377;-1;-1;-1;-1;;Alabama
+6359;6358;sea;7377;-1;-1;-1;-1;;Alabama
+4062;6348;sea;7545;-1;-1;-1;-1;;Florida
+6245;335;sea;7914;-1;-1;-1;-1;;South Carolina
+8864;3831;sea;8836;-1;-1;-1;-1;;Kentucky
+8864;4913;sea;8836;-1;-1;-1;-1;;Kentucky
+4248;6739;sea;8836;-1;-1;-1;-1;;Kentucky
+4248;4913;sea;8836;-1;-1;-1;-1;;Kentucky
+3881;6090;sea;8836;-1;-1;-1;-1;;Kentucky-Illinois
+2120;3881;sea;8836;-1;-1;-1;-1;;Kentucky-Illinois
+1874;1479;sea;8837;-1;-1;-1;-1;;Kentucky-Indiana
+4736;4072;sea;7756;-1;-1;-1;-1;;Michigan
+6729;4072;sea;7756;-1;-1;-1;-1;;Michigan
+4888;6721;sea;7771;-1;-1;-1;-1;;Michigan
+4888;5536;sea;7771;-1;-1;-1;-1;;Michigan-Ontario
+4442;6722;sea;7771;-1;-1;-1;-1;;Ontario
+6726;4888;sea;7768;-1;-1;-1;-1;;Michigan
+6724;3989;sea;7771;-1;-1;-1;-1;;Ontario
+6724;2727;sea;7668;-1;-1;-1;-1;;Ontario
+6727;3989;sea;7771;-1;-1;-1;-1;;Ontario
+4703;3989;sea;7575;-1;-1;-1;-1;;Ontario
+1582;6732;sea;7756;-1;-1;-1;-1;;Michigan
+3225;6735;sea;7291;-1;-1;-1;-1;;Wisconsin
+6733;6735;sea;7291;-1;-1;-1;-1;;Wisconsin
+5858;5863;sea;8838;-1;-1;-1;-1;;Pennslyvania
+5858;1157;sea;8838;-1;-1;-1;-1;;Pennslyvania
+1157;5863;sea;8838;-1;-1;-1;-1;;Pennslyvania
+4128;1347;sea;7327;-1;-1;-1;-1;;Virginia
+2022;3384;sea;7719;-1;-1;-1;-1;;Virginia-DC
+3384;5902;sea;7719;-1;-1;-1;-1;;Virginia-Maryland
+4981;4569;sea;7327;-1;-1;-1;-1;;Virginia
+1547;1790;sea;8853;-1;-1;-1;-1;;Pennslyvania
+1640;4737;sea;7727;-1;-1;-1;-1;;Pennslyvania-New Jersey
+5767;4394;sea;7841;-1;-1;-1;-1;;New York
+8868;8869;sea;7704;-1;-1;-1;-1;;New York
+8868;8863;sea;7704;-1;-1;-1;-1;;New York
+8867;8863;sea;7841;-1;-1;-1;-1;;New York
+5663;2919;sea;7841;-1;-1;-1;-1;;New York
+5663;3323;sea;7841;-1;-1;-1;-1;;New York
+931;3759;sea;8852;-1;-1;-1;-1;;Vermont-New Hampshire
+5577;5583;sea;8852;-1;-1;-1;-1;;Vermont-New Hampshire
+1183;3233;sea;7891;-1;-1;-1;-1;;Boston-New Hampshire
+6241;4048;sea;7562;-1;-1;-1;-1;;Baja California-Sonora
+6241;4048;sea;7562;-1;-1;-1;-1;;Baja California-Sonora
+6343;2973;sea;7368;-1;-1;-1;-1;;Baja California-Sonora
+3667;4189;sea;7844;-1;-1;-1;-1;;Manitoba
+5437;5449;sea;7844;-1;-1;-1;-1;;Manitoba
+5439;940;sea;7844;-1;-1;-1;-1;;Ontario
+6714;5564;sea;6896;-1;-1;-1;-1;;Quebec
+6714;6713;sea;6896;-1;-1;-1;-1;;Quebec
+6714;4179;sea;6896;-1;-1;-1;-1;;Quebec
+6714;6717;sea;6896;-1;-1;-1;-1;;Quebec
+6713;5034;sea;6896;-1;-1;-1;-1;;Quebec
+6713;2307;sea;7853;-1;-1;-1;-1;;Quebec
+6713;5034;sea;6896;-1;-1;-1;-1;;Quebec
+6720;5564;sea;6896;-1;-1;-1;-1;;Quebec
+6720;5564;sea;6896;-1;-1;-1;-1;;Quebec
+4179;3125;sea;8858;-1;-1;-1;-1;;Quebec
+4179;5534;sea;8858;-1;-1;-1;-1;;Quebec
+244;76;sea;7503;-1;-1;-1;-1;;New Brunswick
+3243;6538;sea;7507;-1;-1;-1;-1;;Veracruz
+2809;2299;sea;7813;-1;-1;-1;-1;;Jalisco-Nayarit
+2444;2299;sea;7813;-1;-1;-1;-1;;Sinaloa-Nayarit
+4678;503;sea;8839;-1;-1;-1;-1;;Idaho-Oregon
+6975;6794;sea;7249;-1;-1;-1;-1;;Florida
+6792;6794;sea;7249;-1;-1;-1;-1;;Florida
+6792;6789;sea;7249;-1;-1;-1;-1;;Florida
+6778;6789;sea;8031;-1;-1;-1;-1;;Florida
+6778;2399;sea;8031;-1;-1;-1;-1;;Florida
 -1;-1;;-1;-1;-1;-1;-1;-1
