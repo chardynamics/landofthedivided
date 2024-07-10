@@ -1,17 +1,24 @@
+
 state={
 	id=760
 	name="STATE_760"
-	history = {
+
+	history={
 		owner = HAI
 		add_core_of = HAI
 		buildings = {
-			
+
 		}
-		victory_points = { 6559 30 }
+		victory_points = {
+			6559 30 
+		}
+
 	}
+
 	provinces={
-		3777 4999 6555 6557 6559 6573 
+		3777 4999 6555 6557 6559 6573 8815 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

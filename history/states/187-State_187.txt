@@ -2,15 +2,17 @@
 state={
 	id=187
 	name="STATE_187"
-	history = {
-		owner = CAN
-		add_core_of = CAN
+
+	history={
+		owner = TMA
+		add_core_of = TMA
 		buildings = {
-			
+
 		}
+
 	}
 	provinces={
-		6700 6702 6703 
+		8891 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000

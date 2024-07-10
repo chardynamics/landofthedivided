@@ -1,16 +1,21 @@
+
 state={
 	id=729
 	name="STATE_729"
-	history = {
+
+	history={
 		owner = HAI
 		add_core_of = HAI
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		3198 
+		3198 6824 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

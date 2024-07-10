@@ -1,16 +1,21 @@
+
 state={
 	id=762
 	name="STATE_762"
-	history = {
+
+	history={
 		owner = DOM
 		add_core_of = DOM
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		2781 4971 
+		2781 4971 8816 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
