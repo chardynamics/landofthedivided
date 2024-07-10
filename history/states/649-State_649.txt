@@ -1,16 +1,21 @@
+
 state={
 	id=649
 	name="STATE_649"
-	history = {
-		owner = SFM
-		add_core_of = SFM
+
+	history={
+		owner = CKC
+		add_core_of = CKC
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		6778 
+		3433 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }
