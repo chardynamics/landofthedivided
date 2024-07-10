@@ -2,15 +2,18 @@
 state={
 	id=28
 	name="STATE_28"
-	history = {
+
+	history={
 		owner = USM
 		add_core_of = USM
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		30 2369 3541 3783 5937 5984 
+		30 3541 5937 5984 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000

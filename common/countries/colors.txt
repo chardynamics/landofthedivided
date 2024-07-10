@@ -209,8 +209,8 @@ GCC = {
 }
 
 CFC = {
-	color = rgb { 132 198 84 }
-	color_ui = rgb { 132 198 84 }
+	color = rgb { 132 198 167 }
+	color_ui = rgb { 132 198 167 }
 }
 
 SFM = {
@@ -219,8 +219,8 @@ SFM = {
 }
 
 TAL = {
-	color = rgb { 0 192 255 }
-	color_ui = rgb { 0 192 255 }
+	color = rgb { 0 66 66 }
+	color_ui = rgb { 0 66 66 }
 }
 
 JMA = {
@@ -314,8 +314,8 @@ SUT = {
 }
 
 GBR = {
-	color = rgb { 91 62 0 }
-	color_ui = rgb { 91 62 0 }
+	color = rgb { 62 43 0 }
+	color_ui = rgb { 62 43 0 }
 }
 
 MNV = {
@@ -413,6 +413,15 @@ FRA = {
 	color_ui = rgb { 74 147 255 }
 }
 
+CKC = {
+	color = rgb { 177 62 51 }
+	color_ui = rgb { 177 62 51 }
+}
+
+LMA = {
+	color = rgb { 192 192 192 }
+	color_ui = rgb { 192 192 192 }
+}
 
 ZZZ = {
 	color = rgb { 0 0 0 }
