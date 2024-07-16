@@ -64,4 +64,5 @@ tags={
 	"Utilities"
 }
 picture="blank_map_template_5632x2048.jpg"
-supported_version="1.10.*"
+path="C:/Users/aviat/Documents/Paradox Interactive/Hearts of Iron IV/mod/landofthedivided"
+supported_version="1.14.*"
