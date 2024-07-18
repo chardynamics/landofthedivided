@@ -1,16 +1,21 @@
+
 state={
 	id=625
 	name="STATE_625"
-	history = {
-		owner = HMA
-		add_core_of = HMA
+
+	history={
+		owner = NAV
+		add_core_of = NAV
 		buildings = {
-			
+
 		}
+
 	}
+
 	provinces={
-		6763 
+		2484 4950 
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
+	local_supplies=0.000
 }

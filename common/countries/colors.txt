@@ -204,7 +204,7 @@ DET = {
 }
 
 GCC = {
-	color = rgb { 115 160 0 }f
+	color = rgb { 115 160 0 }
 	color_ui = rgb { 115 160 0 }
 }
 
@@ -423,18 +423,18 @@ LMA = {
 	color_ui = rgb { 101 70 114 }
 }
 
-ZZZ = {
-	color = rgb { 0 0 0 }
-	color_ui = rgb { 0 0 0 }
-}
-
 SSD = {
 	color = rgb { 147 136 84 }
 	color_ui = rgb { 147 136 84 }
 }
 
 NAV = {
-	color = rgb { 132 62 83 }
-	color_ui = rgb { 132 62 83 }
+	color = rgb { 230 106 0 }
+	color_ui = rgb { 230 106 0 }
 }
 
+
+ZZZ = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
+}
