@@ -3,6 +3,65 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			SCA = {
+				add_to_faction = SOR
+				add_to_faction = SWA
+				add_to_faction = MNV
+				add_to_faction = SAZ
+				add_to_faction = NAV
+				add_to_faction = MNM
+			}
+			BAR = {
+				add_to_faction = WAR
+				add_to_faction = GBR
+			}
+			MEX = {
+				add_to_faction = AMO
+				add_to_faction = AMF
+			}
+			CAN = {
+				add_to_faction = MMS
+				add_to_faction = SDA
+				add_to_faction = SSD
+				add_to_faction = SMN
+				add_to_faction = SIA
+				add_to_faction = SWI
+				add_to_faction = DET
+				add_to_faction = WTB
+				add_to_faction = VER
+				add_to_faction = CMM
+			}
+			RWP = {
+				add_to_faction = REO
+				add_to_faction = RWV
+			}
+			DMA = {
+				add_to_faction = LMA
+				add_to_faction = SPM
+				add_to_faction = HMA
+				add_to_faction = AMA
+				add_to_faction = NOM
+				add_to_faction = SFM
+				add_to_faction = JMA
+				add_to_faction = TMA
+				add_to_faction = SWV
+				add_to_faction = IMA
+				add_to_faction = NJM
+				add_to_faction = ERE
+				add_to_faction = SRI
+				add_to_faction = USG
+				add_to_faction = LIS
+			}
+			PHI = {
+				add_to_faction = STX
+				add_to_faction = OKC
+				add_to_faction = OMA
+				add_to_faction = BIR
+				add_to_faction = TAL
+				add_to_faction = WOL
+				add_to_faction = MCA
+				add_to_faction = MAR
+			}
 			ZZZ = {
 				country_event = economy.0
 				country_event = { id = economy.2 days = 1 }
