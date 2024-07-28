@@ -2,10 +2,15 @@ capital = 284
 create_faction = july_fourth_movement
 
 # Vacant
-recruit_character = USA_Generic_Vacant
+recruit_character = PHI_Donald_Rumsfeld
 fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 
 add_ideas = {
+	PHI_The_Diverging_Movement
+	PHI_Aftermath_Of_The_Wolverine
+	PHI_The_American_Malaise
+	PHI_The_Southern_Problem
+
 	#political#
 	tno_political_parties_multiparty_system
 	tno_religious_rights_pluralism
@@ -55,21 +60,21 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = progressivism
+	ruling_party = paternalism
 	last_election = "1920.1.1"
 	election_frequency = 60
 	elections_allowed = no
 }
 
 set_popularities = {
-	communist = 5
-	socialist = 8
-	progressivism = 62
-	liberalism = 15
+	communist = 0
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
 	liberal_conservatism = 0
-	conservatism = 3
-	paternalism = 7
-	despotism = 0
+	conservatism = 30
+	paternalism = 50
+	despotism = 20
 	fascism = 0
 	national_socialism = 0
 	ultranationalism = 0

@@ -1,0 +1,76 @@
+characters = {
+	### Philadelphia ###
+	# Country leaders #
+	PHI_Donald_Rumsfeld = {
+		name = PHI_Donald_Rumsfeld
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PHI/Portrait_PHI_Donald_Rumsfeld.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DONALD_RUMSFELD_DESC"
+			expire = "2024.1.1"
+			ideology = paternalism_national_conservatism_subtype
+			traits = {
+				career_burocrat
+            }
+			id = -1
+		}
+	}
+	# Military Leaders
+
+	AST_Reginald_Pollard = {
+		name = AST_Reginald_Pollard
+		portraits = {
+			army = {
+				large = "gfx/leaders/AST/Portrait_AST_Reginald_Pollard.dds"
+			}
+		}
+		field_marshal = {
+			traits = {
+				career_officer
+				logistics_wizard
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	AST_John_Wilton = {
+		name = AST_John_Wilton
+		portraits = {
+			army = {
+				large = "gfx/leaders/AST/Portrait_AST_John_Wilton.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+				bearer_of_artillery
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	AST_Henry_Burrell = {
+		name = AST_Henry_Burrell
+		portraits = {
+			army = {
+				large = "gfx/leaders/AST/Portrait_AST_Henry_Burrell.dds"
+			}
+		}
+		navy_leader = {
+			traits = {
+				aviation_enthusiast
+				flight_deck_manager
+			}
+			skill = 3
+		}
+	}
+}

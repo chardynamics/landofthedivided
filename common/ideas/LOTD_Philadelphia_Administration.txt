@@ -1,0 +1,67 @@
+ideas = {
+	country = {
+		PHI_The_Diverging_Movement = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_The_Diverging_Movement" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = PHI_The_Diverging_Movement
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		PHI_Aftermath_Of_The_Wolverine = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_Aftermath_Of_The_Wolverine" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = PHI_Aftermath_Of_The_Wolverine
+
+			modifier = {
+				army_attack_factor = -0.1
+				army_core_defence_factor = 0.1
+				army_org_factor = -0.1
+				land_reinforce_rate = -0.1
+				military_expenditures_factor = -0.2
+			}
+		}
+		PHI_The_American_Malaise = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_Aftermath_Of_The_Wolverine" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = PHI_The_American_Malaise
+
+			modifier = {
+				production_speed_buildings_factor = -0.3
+				production_factory_max_efficiency_factor = -0.25
+				production_factory_efficiency_gain_factor = -0.1
+				gdp_growth_modifier = -1
+				research_speed_factor = -0.2
+				poverty_monthly_rate = -0.05
+			}
+		}
+		PHI_The_Southern_Problem = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_The_Southern_Problem" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = PHI_The_Southern_Problem
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+	}
+}
