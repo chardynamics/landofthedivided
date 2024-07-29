@@ -1184,72 +1184,9 @@ square_root_babylonian = {
 remove_faction_status = {
 	hidden_effect = {
 		remove_ideas = {
-			UA_Member
-			AS_Member
-			Pakt_Leader
-			Pakt_Military_Authority
-			Pakt_Protektorat
-			Pakt_Integrated_Reichskommissariat
-			Pakt_Autonomous_Reichskommissariat
-			Pakt_Reichsland
-			Pakt_Marionettenstaat
-			Pakt_Mitstreiter
-			Pakt_Bundnispartner
-			Pakt_Ordensstaat
-			Pakt_Observer
-			Anti_Heydrich_Pact
-			Sphere_Leader
-			Sphere_Core_Member
-			Sphere_Chinese_Warlord
-			Sphere_Corporate_Dependency
-			Sphere_Imp_Protectorate
-			Sphere_Fully_Dependent
-			Sphere_Economic_Dependent
-			Sphere_Coequal
-			Sphere_Observer
-			NLF_Leader
-			NLF_Member
-			OFN_Leader_of_The_Free_World
-			OFN_Independent_Member
-			OFN_Dependent_Member
-			OFN_Military_Government
-			OFN_Mandate
-			OFN_Observer
-			TRI_Founder_IT
-			TRI_Founder_IB
-			TRI_Founder_TR
-			TRI_Member
-			TRI_Member_Client
-			TRI_Observer
-			ITA_Mediterranean_Bloc_Leader
-			ITA_Imperial_Alliance_Leader
-			ITA_Rome_Pact_Leader
-			ITA_Mediterranean_Bloc_Member
-			ITA_Imperial_Alliance_Member
-			ITA_Rome_Pact_Member
-			LEV_UNION_Member
-			LEV_UNION_Mandate
-			UFF_Faction
-			HUF_Faction
-			HRF_Faction
-			PALF_Faction
-			PALF_Satellite
-			WAA_Faction
-			WAA_Protectorate
-			WAF_Faction
-			WAF_Supervised
-			FMA_Faction
-			FMA_Puppet
-			FRU_Faction
-			FRU_Associated
-			Mano_Member
-			UAS_Member
+			Movement_Leader
+			Movement_Administration
 		}
-		clr_country_flag = CADL_MEMBER
-		clr_country_flag = CASA_MEMBER
-		clr_country_flag = CAL_MEMBER
-		clr_country_flag = PER_RILF_MEMBER
-		clr_country_flag = SMAC_MEMBER
 	}
 }
 
