@@ -94,12 +94,38 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_afrika_schild"
-		textureFile = "gfx/interface/factions/AS.dds"
+		name = "GFX_militar_frontera"
+		textureFile = "gfx/interface/factions/Militar_Frontera.dds"
 	}
+
 	spriteType = {
-		name = "GFX_coprosperity"
-		textureFile = "gfx/interface/factions/CP.dds"
+		name = "GFX_american_commonwealth"
+		textureFile = "gfx/interface/factions/American_Commonwealth.dds"
+	}
+
+	spriteType = {
+		name = "GFX_free_territories"
+		textureFile = "gfx/interface/factions/Free_Territories.dds"
+	}
+
+	spriteType = {
+		name = "GFX_military_authority"
+		textureFile = "gfx/interface/factions/Military_Authority.dds"
+	}
+
+	spriteType = {
+		name = "GFX_northern_accord"
+		textureFile = "gfx/interface/factions/Northern_Accord.dds"
+	}
+
+	spriteType = {
+		name = "GFX_july_fourth_movement"
+		textureFile = "gfx/interface/factions/July_Fourth_Movement.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tripartite_pact"
+		textureFile = "gfx/interface/factions/Tripartite_Pact.dds"
 	}
 	spriteType = {
 		name = "GFX_generic_faction"
@@ -108,94 +134,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_generic_faction_small"
 		textureFile = "gfx/interface/factions/GF_small.dds"
-	}
-	spriteType = {
-		name = "GFX_OFN"
-		textureFile = "gfx/interface/factions/OFN.dds"
-	}
-	spriteType = {
-		name = "GFX_UA"
-		textureFile = "gfx/interface/factions/UA.dds"
-	}
-	spriteType = {
-		name = "GFX_einheitspakt"
-		textureFile = "gfx/interface/factions/EP.dds"
-	}
-	spriteType = {
-		name = "GFX_triumvirate"
-		textureFile = "gfx/interface/factions/T.dds"
-	}
-	spriteType = {
-		name = "GFX_mediterranean_bloc"
-		textureFile = "gfx/interface/factions/Mediterranean_Bloc.dds"
-	}
-	spriteType = {
-		name = "GFX_imperial_alliance"
-		textureFile = "gfx/interface/factions/Imperial_Alliance.dds"
-	}
-	spriteType = {
-		name = "GFX_rome_pact"
-		textureFile = "gfx/interface/factions/Rome_Pact.dds"
-	}
-	spriteType = {
-		name = "GFX_NLF"
-		textureFile = "gfx/interface/factions/NLF.dds"
-	}
-	spriteType = {
-		name = "GFX_FI"
-		textureFile = "gfx/interface/factions/FI.dds"
-	}
-	spriteType = {
-		name = "GFX_PALF_faction"
-		textureFile = "gfx/interface/factions/PALF.dds"
-	}
-	spriteType = {
-		name = "GFX_FMA_faction"
-		textureFile = "gfx/interface/factions/FMA.dds"
-	}
-	spriteType = {
-		name = "GFX_FRU_faction"
-		textureFile = "gfx/interface/factions/FRU.dds"
-	}
-	spriteType = {
-		name = "GFX_WAA_faction"
-		textureFile = "gfx/interface/factions/WAA.dds"
-	}
-	spriteType = {
-		name = "GFX_WAF_faction"
-		textureFile = "gfx/interface/factions/WAF.dds"
-	}
-	spriteType = {
-		name = "GFX_Mano_faction"
-		textureFile = "gfx/interface/factions/Mano.dds"
-	}
-	spriteType = {
-		name = "GFX_Haitian_United_Front_faction"
-		textureFile = "gfx/interface/factions/Haitian_Front.dds"
-	}
-	spriteType = {
-		name = "GFX_Hispaniola_Front_faction"
-		textureFile = "gfx/interface/factions/Hispaniola_Front.dds"
-	}
-	spriteType = {
-		name = "GFX_Central_Asia_Defence_League_faction"
-		textureFile = "gfx/interface/factions/Central_Asia_Defence_League.dds"
-	}
-	spriteType = {
-		name = "GFX_Central_Asian_Solidarity_Alliance_faction"
-		textureFile = "gfx/interface/factions/Central_Asian_Solidarity_Alliance.dds"
-	}
-	spriteType = {
-		name = "GFX_Orungu_Alliance_faction"
-		textureFile = "gfx/interface/factions/Orungu_Alliance.dds"
-	}
-	spriteType = {
-		name = "GFX_Revolutionary_Iranian_Liberation_Front_faction"
-		textureFile = "gfx/interface/factions/Revolutionary_Iranian_Liberation_Front.dds"
-	}
-	spriteType = {
-		name = "GFX_Siberian_Mutual_Assistance_Compact_faction"
-		textureFile = "gfx/interface/factions/Siberian_Mutual_Assistance_Compact.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_single_up_arrow"

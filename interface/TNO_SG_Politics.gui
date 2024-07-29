@@ -143,13 +143,54 @@ guiTypes = {
 			fixedsize = yesFACTION_STATUS_TT"
 			centerposition = yes
 		}
-
 		iconType = {
-			name = "faction_icon_einheitspakt"
+			name = "faction_icon_american_commonwealth"
 			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_einheitspakt"
+			quadTextureSprite = "GFX_american_commonwealth"
 			scale = 0.61334
-			pdx_tooltip = Einheitspakt
+			pdx_tooltip = american_commonwealth
+		}
+		iconType = {
+			name = "faction_icon_free_territories"
+			position = {x = -30 y = -26}
+			quadTextureSprite = "GFX_free_territories"
+			scale = 0.61334
+			pdx_tooltip = free_territories
+		}
+		iconType = {
+			name = "faction_icon_military_authority"
+			position = {x = -30 y = -26}
+			quadTextureSprite = "GFX_military_authority"
+			scale = 0.61334
+			pdx_tooltip = military_authority
+		}
+		iconType = {
+			name = "faction_icon_northern_accord"
+			position = {x = -30 y = -26}
+			quadTextureSprite = "GFX_northern_accord"
+			scale = 0.61334
+			pdx_tooltip = northern_accord
+		}
+		iconType = {
+			name = "faction_icon_july_fourth_movement"
+			position = {x = -30 y = -26}
+			quadTextureSprite = "GFX_july_fourth_movement"
+			scale = 0.61334
+			pdx_tooltip = july_fourth_movement
+		}
+		iconType = {
+			name = "faction_icon_militar_frontera"
+			position = {x = -30 y = -26}
+			quadTextureSprite = "GFX_militar_frontera"
+			scale = 0.61334
+			pdx_tooltip = militar_frontera
+		}
+		iconType = {
+			name = "faction_icon_tripartite_pact"
+			position = {x = -30 y = -26}
+			quadTextureSprite = "GFX_tripartite_pact"
+			scale = 0.61334
+			pdx_tooltip = tripartite_pact
 		}
 		iconType = {
 			name = "faction_icon_generic"
