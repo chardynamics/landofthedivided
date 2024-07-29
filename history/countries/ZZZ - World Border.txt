@@ -1,12 +1,10 @@
-capital = 252
-
+capital = 320
 
 # Vacant
 recruit_character = USA_Generic_Vacant
 fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 
 add_ideas = {
-	Accord_Member
 	#political#
 	tno_political_parties_multiparty_system
 	tno_religious_rights_pluralism
@@ -77,3 +75,4 @@ set_popularities = {
 }
 
 TNO_startup_nation = yes
+TNO_Spheres_init = yes

@@ -68,6 +68,10 @@ defined_text = {
 		localization_key = "GFX_Military_Authority_Head"
 	}
 	text = {
+		trigger = { has_idea = Military_Authority_Deputy_Head }
+		localization_key = "GFX_Military_Authority_Deputy_Head"
+	}
+	text = {
 		trigger = { has_idea = Military_Authority_State_Level }
 		localization_key = "GFX_Military_Authority_State_Level"
 	}
@@ -82,6 +86,14 @@ defined_text = {
 	text = {
 		trigger = { has_idea = Tripartite_Member }
 		localization_key = "GFX_Tripartite_Member"
+	}
+	text = {
+		trigger = { has_idea = Militar_Comandante }
+		localization_key = "GFX_Militar_Comandante"
+	}
+	text = {
+		trigger = { has_idea = Militar_Frontera }
+		localization_key = "GFX_Militar_Frontera"
 	}
 	#Generic
 	text = {
@@ -180,6 +192,10 @@ defined_text = {
 		localization_key = "Military_Authority_Head"
 	}
 	text = {
+		trigger = { has_idea = Military_Authority_Deputy_Head }
+		localization_key = "Military_Authority_Deputy_Head"
+	}
+	text = {
 		trigger = { has_idea = Military_Authority_State_Level }
 		localization_key = "Military_Authority_State_Level"
 	}
@@ -194,6 +210,14 @@ defined_text = {
 	text = {
 		trigger = { has_idea = Tripartite_Member }
 		localization_key = "Tripartite_Member"
+	}
+	text = {
+		trigger = { has_idea = Militar_Comandante }
+		localization_key = "Militar_Comandante"
+	}
+	text = {
+		trigger = { has_idea = Militar_Frontera }
+		localization_key = "Militar_Frontera"
 	}
 	### Fallback/generic faction
 	text = { localization_key = Generic_Faction }
@@ -269,6 +293,10 @@ defined_text = {
 		localization_key = "Military_Authority_Head_effect"
 	}
 	text = {
+		trigger = { has_idea = Military_Authority_Deputy_Head }
+		localization_key = "Military_Authority_Deputy_Head_effect"
+	}
+	text = {
 		trigger = { has_idea = Military_Authority_State_Level }
 		localization_key = "Military_Authority_State_Level_effect"
 	}
@@ -283,6 +311,14 @@ defined_text = {
 	text = {
 		trigger = { has_idea = Tripartite_Member }
 		localization_key = "Tripartite_Member_effect"
+	}
+	text = {
+		trigger = { has_idea = Militar_Comandante }
+		localization_key = "Militar_Comandante_effect"
+	}
+	text = {
+		trigger = { has_idea = Militar_Frontera }
+		localization_key = "Militar_Frontera_effect"
 	}
 }
 
@@ -355,6 +391,10 @@ defined_text = {
 		localization_key = "Military_Authority_Head_desc"
 	}
 	text = {
+		trigger = { has_idea = Military_Authority_Deputy_Head }
+		localization_key = "Military_Authority_Deputy_Head_desc"
+	}
+	text = {
 		trigger = { has_idea = Military_Authority_State_Level }
 		localization_key = "Military_Authority_State_Level_desc"
 	}
@@ -369,6 +409,14 @@ defined_text = {
 	text = {
 		trigger = { has_idea = Tripartite_Member }
 		localization_key = "Tripartite_Member_desc"
+	}
+	text = {
+		trigger = { has_idea = Militar_Comandante }
+		localization_key = "Militar_Comandante_desc"
+	}
+	text = {
+		trigger = { has_idea = Militar_Frontera }
+		localization_key = "Militar_Frontera_desc"
 	}
 	###Fallback/generic
 	text = {

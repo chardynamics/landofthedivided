@@ -162,6 +162,16 @@ ideas = {
 			}
 		}
 
+		#Military Authority Deputy Head
+		Military_Authority_Deputy_Head = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Militar_Comandante" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			modifier = {
+			}
+		}
+
 		#State-Level Military Authority
 		Military_Authority_State_Level = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Military_Authority_State_Level" }
@@ -195,6 +205,36 @@ ideas = {
 		#Tripartite Member
 		Tripartite_Member = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Tripartite_Member" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			modifier = {
+			}
+		}
+
+		#Tripartite Member
+		Tripartite_Member = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Tripartite_Member" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			modifier = {
+			}
+		}
+
+		#Militar Frontera
+		Militar_Frontera = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Militar_Frontera" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			modifier = {
+			}
+		}
+
+		#Comandante de las Fuerzas Armadas
+		Militar_Comandante = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Militar_Comandante" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 

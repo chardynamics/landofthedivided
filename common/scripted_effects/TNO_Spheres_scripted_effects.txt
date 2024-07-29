@@ -1,166 +1,136 @@
 ### Economic Spheres
 TNO_Spheres_init = {			
-	### GERMAN SPHERE
-	GER = { set_variable = { ECON_SPHERE_LEADER = GER } }
+	### Canadian SPHERE
+	CAN = { set_variable = { ECON_SPHERE_LEADER = CAN } }
 	for_each_scope_loop = {
-		array = GER.faction_members
-		set_variable = { ECON_SPHERE_LEADER = GER }
+		array = CAN.faction_members
+		set_variable = { ECON_SPHERE_LEADER = CAN }
 	}
 	for_each_scope_loop = {
-		array = GER.subjects
-		set_variable = { ECON_SPHERE_LEADER = GER }
+		array = CAN.subjects
+		set_variable = { ECON_SPHERE_LEADER = CAN }
 	}
 
 	every_country = {
 		limit = {
 			OR = {
-				tag = GER
-				tag = IRE
-				tag = ULS
-				tag = WAL
-				tag = SWE
-				tag = FIN
-				tag = PER
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = GER }
-	}
-
-	### AMERICAN SPHERE
-	for_each_scope_loop = {
-		array = USA.faction_members
-		set_variable = { ECON_SPHERE_LEADER = USA }
-	}
-	for_each_scope_loop = {
-		array = USA.subjects
-		set_variable = { ECON_SPHERE_LEADER = USA }
-	}
-
-	every_country = {
-		limit = {
-			OR = {
-				tag = USA
-				tag = SCO
-				tag = LIB
-				tag = SAF
-				tag = CLL
-				tag = COS
-				tag = PAN
-				tag = ECU
-				tag = HON
-				tag = GUA
-				tag = ELS
-				tag = NIC
-				tag = PRU
-				tag = VEN
-				tag = CHL
-				tag = URG
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = USA }
-	}
-	
-	### JAPANESE SPHERE
-	for_each_scope_loop = {
-		array = JAP.faction_members
-		set_variable = { ECON_SPHERE_LEADER = JAP }
-	}
-	for_each_scope_loop = {
-		array = JAP.subjects
-		set_variable = { ECON_SPHERE_LEADER = JAP }
-	}
-
-	every_country = {
-		limit = {
-			OR = {
-				tag = JAP
-				tag = AMR
-				tag = SHO
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = JAP }
-	}
-	
-	### ITALIAN SPHERE
-	for_each_scope_loop = {
-		array = ITA.subjects
-		set_variable = { ECON_SPHERE_LEADER = ITA }
-	}
-	
-	every_country = {
-		limit = {
-			OR = {
-				tag = MOC
-				tag = SNM
-				tag = VAC
-				tag = ITA
-				tag = SAU
-				tag = IRQ
-				tag = CRO
-				tag = OMA
-				tag = CLC
+				tag = CAN
+				tag = MMS
+				tag = SDA
+				tag = SSD
+				tag = SMN
+				tag = SIA
 				tag = SWI
+				tag = WTB
+				tag = VER
+				tag = CMM
+				tag = SOM
+				tag = DET
+				tag = SPM
 			}
 		}
-		set_variable = { ECON_SPHERE_LEADER = ITA }
-	}
-	
+		set_variable = { ECON_SPHERE_LEADER = CAN }
+	}		
+	### Mexican SPHERE
+	MEX = { set_variable = { ECON_SPHERE_LEADER = MEX } }
 	for_each_scope_loop = {
-		array = TUR.subjects
-		set_variable = { ECON_SPHERE_LEADER = TUR }
+		array = MEX.faction_members
+		set_variable = { ECON_SPHERE_LEADER = MEX }
 	}
-	
-	every_country = {
-		limit = {
-			OR = {
-				tag = SNS
-				tag = BKU
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = TUR }
-	}
-
-	### IBERIAN SPHERE 
 	for_each_scope_loop = {
-		array = IBR.subjects
-		set_variable = { ECON_SPHERE_LEADER = IBR }
-	}
-	
-	every_country = {
-		limit = {
-			OR = {
-				tag = PAD
-				tag = IBR
-				tag = COL
-				tag = DOM
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = IBR }
+		array = MEX.subjects
+		set_variable = { ECON_SPHERE_LEADER = MEX }
 	}
 
-	### BRAZILIAN SPHERE
 	every_country = {
 		limit = {
 			OR = {
-				tag = BRA
-				tag = GUC
+				tag = MEX
+				tag = AMO
+				tag = AMF
 			}
 		}
-		set_variable = { ECON_SPHERE_LEADER = BRA }
+		set_variable = { ECON_SPHERE_LEADER = MEX }
+	}	
+	### Commonwealth SPHERE
+	SCA = { set_variable = { ECON_SPHERE_LEADER = SCA } }
+	for_each_scope_loop = {
+		array = SCA.faction_members
+		set_variable = { ECON_SPHERE_LEADER = SCA }
+	}
+	for_each_scope_loop = {
+		array = SCA.subjects
+		set_variable = { ECON_SPHERE_LEADER = SCA }
 	}
 
-	### Argie sphere
-	ARG = { set_country_flag = HAS_ECON_SPHERE }
 	every_country = {
 		limit = {
 			OR = {
-				tag = ARG
-				tag = TDF
-				tag = PAR
-				tag = STC
+				tag = SCA
+				tag = SWA
+				tag = SOR
+				tag = SAZ
+				tag = MNM
+				tag = MNV
+				tag = NAV
 			}
 		}
-		set_variable = { ECON_SPHERE_LEADER = ARG }
+		set_variable = { ECON_SPHERE_LEADER = SCA }
+	}	
+	### Tripartite SPHERE
+	RWP = { set_variable = { ECON_SPHERE_LEADER = RWP } }
+	for_each_scope_loop = {
+		array = RWP.faction_members
+		set_variable = { ECON_SPHERE_LEADER = RWP }
+	}
+	for_each_scope_loop = {
+		array = RWP.subjects
+		set_variable = { ECON_SPHERE_LEADER = RWP }
+	}
+
+	every_country = {
+		limit = {
+			OR = {
+				tag = RWP
+				tag = REO
+				tag = RWV
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = RWP }
+	}	
+	### Military Authority SPHERE
+	DMA = { set_variable = { ECON_SPHERE_LEADER = DMA } }
+	for_each_scope_loop = {
+		array = DMA.faction_members
+		set_variable = { ECON_SPHERE_LEADER = DMA }
+	}
+	for_each_scope_loop = {
+		array = DMA.subjects
+		set_variable = { ECON_SPHERE_LEADER = DMA }
+	}
+
+	every_country = {
+		limit = {
+			OR = {
+				tag = DMA
+				tag = LMA
+				tag = AMA
+				tag = HMA
+				tag = NOM
+				tag = TMA
+				tag = IMA
+				tag = SWV
+				tag = USG
+				tag = JMA
+				tag = SFM
+				tag = ERE
+				tag = SRI
+				tag = NGM
+				tag = NGI
+				tag = USM
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = DMA }
 	}
 }
 
