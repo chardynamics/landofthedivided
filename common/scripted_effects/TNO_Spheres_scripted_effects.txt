@@ -131,6 +131,54 @@ TNO_Spheres_init = {
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = DMA }
+	}	
+	### Movement SPHERE
+	PHI = { set_variable = { ECON_SPHERE_LEADER = PHI } }
+	for_each_scope_loop = {
+		array = PHI.faction_members
+		set_variable = { ECON_SPHERE_LEADER = PHI }
+	}
+	for_each_scope_loop = {
+		array = PHI.subjects
+		set_variable = { ECON_SPHERE_LEADER = PHI }
+	}
+
+	every_country = {
+		limit = {
+			OR = {
+				tag = PHI
+				tag = OKC
+				tag = OMA
+				tag = BIR
+				tag = TAL
+				tag = WOL
+				tag = MCA
+				tag = MAR
+				tag = STX
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = PHI }
+	}
+	### Free SPHERE
+	BAR = { set_variable = { ECON_SPHERE_LEADER = BAR } }
+	for_each_scope_loop = {
+		array = BAR.faction_members
+		set_variable = { ECON_SPHERE_LEADER = BAR }
+	}
+	for_each_scope_loop = {
+		array = BAR.subjects
+		set_variable = { ECON_SPHERE_LEADER = BAR }
+	}
+
+	every_country = {
+		limit = {
+			OR = {
+				tag = BAR
+				tag = WAR
+				tag = GBR
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = BAR }
 	}
 }
 

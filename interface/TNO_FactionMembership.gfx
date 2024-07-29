@@ -20,7 +20,71 @@ spriteTypes = {
 		textureFile = "gfx/interface/factions/status/Accord_Mission.dds"
 	}
 	spriteType = {
+		name = "GFX_Commonwealth_Leader"
+		textureFile = "gfx/interface/factions/status/Commonwealth_Leader.dds"
+	}
+	spriteType = {
+		name = "GFX_Commonwealth_State"
+		textureFile = "gfx/interface/factions/status/Commonwealth_State.dds"
+	}
+	spriteType = {
+		name = "GFX_Commonwealth_Mandate"
+		textureFile = "gfx/interface/factions/status/Commonwealth_Mandate.dds"
+	}
+	spriteType = {
+		name = "GFX_Commonwealth_Tribal_Nation"
+		textureFile = "gfx/interface/factions/status/Commonwealth_Tribal_Nation.dds"
+	}
+	spriteType = {
+		name = "GFX_Free_Territory"
+		textureFile = "gfx/interface/factions/status/Free_Territory.dds"
+	}
+	spriteType = {
+		name = "GFX_Free_Territory_Insurrection"
+		textureFile = "gfx/interface/factions/status/Free_Territory_Insurrection.dds"
+	}
+	spriteType = {
+		name = "GFX_Military_Authority_Head"
+		textureFile = "gfx/interface/factions/status/Military_Authority_Head.dds"
+	}
+	spriteType = {
+		name = "GFX_Military_Authority_Deputy_Head"
+		textureFile = "gfx/interface/factions/status/Military_Authority_Deputy_Head.dds"
+	}
+	spriteType = {
+		name = "GFX_Military_Authority_Regional"
+		textureFile = "gfx/interface/factions/status/Military_Authority_Regional.dds"
+	}
+	spriteType = {
+		name = "GFX_Military_Authority_State_Level"
+		textureFile = "gfx/interface/factions/status/Military_Authority_State_Level.dds"
+	}
+	spriteType = {
 		name = "GFX_Military_Authority_Interim_State"
 		textureFile = "gfx/interface/factions/status/Military_Authority_Interim_State.dds"
+	}
+	spriteType = {
+		name = "GFX_Movement_Leader"
+		textureFile = "gfx/interface/factions/status/Movement_Leader.dds"
+	}
+	spriteType = {
+		name = "GFX_Movement_Administration"
+		textureFile = "gfx/interface/factions/status/Movement_Administration.dds"
+	}
+	spriteType = {
+		name = "GFX_Movement_Autonomous_State"
+		textureFile = "gfx/interface/factions/status/Movement_Autonomous_State.dds"
+	}
+	spriteType = {
+		name = "GFX_Movement_Insurrection"
+		textureFile = "gfx/interface/factions/status/Movement_Insurrection.dds"
+	}
+	spriteType = {
+		name = "GFX_Militar_Comandante"
+		textureFile = "gfx/interface/factions/status/Militar_Comandante.dds"
+	}
+	spriteType = {
+		name = "GFX_Militar_Frontera"
+		textureFile = "gfx/interface/factions/status/Militar_Frontera.dds"
 	}
 }
