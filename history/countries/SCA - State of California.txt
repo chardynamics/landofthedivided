@@ -76,4 +76,14 @@ set_popularities = {
 	ultranationalism = 0
 }
 
+set_autonomy = {
+	target = MNV
+	autonomous_state = autonomy_military_government
+}
+
+set_autonomy = {
+	target = MNM
+	autonomous_state = autonomy_military_government
+}
+
 TNO_startup_nation = yes

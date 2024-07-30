@@ -60,6 +60,11 @@ set_politics = {
 	elections_allowed = no
 }
 
+set_autonomy = {
+	target = DCO
+	autonomous_state = autonomy_satellite
+}
+
 set_popularities = {
 	communist = 5
 	socialist = 8

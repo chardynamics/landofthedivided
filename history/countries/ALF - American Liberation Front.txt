@@ -74,4 +74,11 @@ set_popularities = {
 	ultranationalism = 0
 }
 
+
+
+declare_war_on = {
+	target = BIR
+	type = annex_everything
+}
+
 TNO_startup_nation = yes

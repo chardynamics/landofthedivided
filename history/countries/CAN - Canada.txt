@@ -76,4 +76,9 @@ set_popularities = {
 	ultranationalism = 0
 }
 
+set_autonomy = {
+	target = CMM
+	autonomous_state = autonomy_military_government
+}
+
 TNO_startup_nation = yes

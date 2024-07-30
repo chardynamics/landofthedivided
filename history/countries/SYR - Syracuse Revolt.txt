@@ -60,6 +60,11 @@ set_politics = {
 	elections_allowed = no
 }
 
+declare_war_on = {
+	target = ALB
+	type = annex_everything
+}
+
 set_popularities = {
 	communist = 5
 	socialist = 8
