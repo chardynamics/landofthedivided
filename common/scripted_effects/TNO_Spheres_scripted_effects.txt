@@ -27,6 +27,7 @@ TNO_Spheres_init = {
 				tag = SOM
 				tag = DET
 				tag = SPM
+				tag = ROC
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = CAN }
@@ -128,6 +129,9 @@ TNO_Spheres_init = {
 				tag = NGM
 				tag = NGI
 				tag = USM
+				tag = LIS
+				tag = NJM
+				tag = NOR
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = DMA }
@@ -155,6 +159,7 @@ TNO_Spheres_init = {
 				tag = MCA
 				tag = MAR
 				tag = STX
+				tag = CHA
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = PHI }

@@ -15,6 +15,66 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.364 }
 					set_temp_variable = { blue = 0.447 }
 				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = { ECON_SPHERE_LEADER = CAN }
+						}
+					}
+					set_temp_variable = { red = 0.607 }
+					set_temp_variable = { green = 0.243 }
+					set_temp_variable = { blue = 0.2 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = { ECON_SPHERE_LEADER = SCA }
+						}
+					}
+					set_temp_variable = { red = 1 }
+					set_temp_variable = { green = 1 }
+					set_temp_variable = { blue = 0 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = { ECON_SPHERE_LEADER = DMA }
+						}
+					}
+					set_temp_variable = { red = 0.498 }
+					set_temp_variable = { green = 0.522 }
+					set_temp_variable = { blue = 0.875 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = { ECON_SPHERE_LEADER = BAR }
+						}
+					}
+					set_temp_variable = { red = 0.765 }
+					set_temp_variable = { green = 1 }
+					set_temp_variable = { blue = 0 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = { ECON_SPHERE_LEADER = MEX }
+						}
+					}
+					set_temp_variable = { red = 0.333 }
+					set_temp_variable = { green = 0.462 }
+					set_temp_variable = { blue = 0.357 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = { ECON_SPHERE_LEADER = RWP }
+						}
+					}
+					set_temp_variable = { red = 0.722 }
+					set_temp_variable = { green = 0.043 }
+					set_temp_variable = { blue = 0.431 }
+				}
 			}
 		}
 		far_text = country
