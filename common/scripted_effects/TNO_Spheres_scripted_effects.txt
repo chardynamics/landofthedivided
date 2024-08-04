@@ -1,7 +1,7 @@
 ### Economic Spheres
 TNO_Spheres_init = {			
 	### Canadian SPHERE
-	CAN = { set_variable = { ECON_SPHERE_LEADER = CAN } }
+	CAN = { set_variable = { ECON_SPHERE_LEADER = CAN } set_country_flag = HAS_ECON_SPHERE }
 	for_each_scope_loop = {
 		array = CAN.faction_members
 		set_variable = { ECON_SPHERE_LEADER = CAN }
@@ -33,7 +33,7 @@ TNO_Spheres_init = {
 		set_variable = { ECON_SPHERE_LEADER = CAN }
 	}		
 	### Mexican SPHERE
-	MEX = { set_variable = { ECON_SPHERE_LEADER = MEX } }
+	MEX = { set_variable = { ECON_SPHERE_LEADER = MEX } set_country_flag = HAS_ECON_SPHERE }
 	for_each_scope_loop = {
 		array = MEX.faction_members
 		set_variable = { ECON_SPHERE_LEADER = MEX }
@@ -54,7 +54,7 @@ TNO_Spheres_init = {
 		set_variable = { ECON_SPHERE_LEADER = MEX }
 	}	
 	### Commonwealth SPHERE
-	SCA = { set_variable = { ECON_SPHERE_LEADER = SCA } }
+	SCA = { set_variable = { ECON_SPHERE_LEADER = SCA } set_country_flag = HAS_ECON_SPHERE }
 	for_each_scope_loop = {
 		array = SCA.faction_members
 		set_variable = { ECON_SPHERE_LEADER = SCA }
@@ -79,7 +79,7 @@ TNO_Spheres_init = {
 		set_variable = { ECON_SPHERE_LEADER = SCA }
 	}	
 	### Tripartite SPHERE
-	RWP = { set_variable = { ECON_SPHERE_LEADER = RWP } }
+	RWP = { set_variable = { ECON_SPHERE_LEADER = RWP } set_country_flag = HAS_ECON_SPHERE }
 	for_each_scope_loop = {
 		array = RWP.faction_members
 		set_variable = { ECON_SPHERE_LEADER = RWP }
@@ -100,7 +100,7 @@ TNO_Spheres_init = {
 		set_variable = { ECON_SPHERE_LEADER = RWP }
 	}	
 	### Military Authority SPHERE
-	DMA = { set_variable = { ECON_SPHERE_LEADER = DMA } }
+	DMA = { set_variable = { ECON_SPHERE_LEADER = DMA } set_country_flag = HAS_ECON_SPHERE }
 	for_each_scope_loop = {
 		array = DMA.faction_members
 		set_variable = { ECON_SPHERE_LEADER = DMA }
@@ -137,7 +137,7 @@ TNO_Spheres_init = {
 		set_variable = { ECON_SPHERE_LEADER = DMA }
 	}	
 	### Movement SPHERE
-	PHI = { set_variable = { ECON_SPHERE_LEADER = PHI } }
+	PHI = { set_variable = { ECON_SPHERE_LEADER = PHI } set_country_flag = HAS_ECON_SPHERE }
 	for_each_scope_loop = {
 		array = PHI.faction_members
 		set_variable = { ECON_SPHERE_LEADER = PHI }
@@ -165,7 +165,7 @@ TNO_Spheres_init = {
 		set_variable = { ECON_SPHERE_LEADER = PHI }
 	}
 	### Free SPHERE
-	BAR = { set_variable = { ECON_SPHERE_LEADER = BAR } }
+	BAR = { set_variable = { ECON_SPHERE_LEADER = BAR } set_country_flag = HAS_ECON_SPHERE }
 	for_each_scope_loop = {
 		array = BAR.faction_members
 		set_variable = { ECON_SPHERE_LEADER = BAR }

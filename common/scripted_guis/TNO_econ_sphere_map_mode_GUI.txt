@@ -9,10 +9,6 @@ scripted_gui = {
 			target_trigger = {
 				FROM = {
 					has_country_flag = HAS_ECON_SPHERE
-					NOT = {
-						original_tag = CME
-						original_tag = ADN
-					}
 				}
 			}
 		}

@@ -4453,13 +4453,37 @@ defined_text = {
 		trigger = {
 			check_variable = { ECON_SPHERE_LEADER = MEX }
 		}
-		localization_key = "GFX_econ_sphere_icon_MEX"
+		localization_key = "GFX_econ_sphere_icon_MEX" 
 	}
 	text = {
 		trigger = {
 			check_variable = { ECON_SPHERE_LEADER = DMA }
 		}
-		localization_key = "GFX_econ_sphere_icon_CAN"
+		localization_key = "GFX_econ_sphere_icon_DMA"
+	}
+	text = {
+		trigger = {
+			check_variable = { ECON_SPHERE_LEADER = BAR }
+		}
+		localization_key = "GFX_econ_sphere_icon_BAR"
+	}
+	text = {
+		trigger = {
+			check_variable = { ECON_SPHERE_LEADER = PHI }
+		}
+		localization_key = "GFX_econ_sphere_icon_PHI"
+	}
+	text = {
+		trigger = {
+			check_variable = { ECON_SPHERE_LEADER = RWP }
+		}
+		localization_key = "GFX_econ_sphere_icon_RWP"
+	}
+	text = {
+		trigger = {
+			check_variable = { ECON_SPHERE_LEADER = SCA }
+		}
+		localization_key = "GFX_econ_sphere_icon_SCA"
 	}
 	text = {
 		localization_key = "GFX_econ_sphere_icon_none"

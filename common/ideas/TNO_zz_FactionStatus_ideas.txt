@@ -201,17 +201,6 @@ ideas = {
 			modifier = {
 			}
 		}
-
-		#Tripartite Member
-		Tripartite_Member = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Tripartite_Member" }
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-
-			modifier = {
-			}
-		}
-
 		#Tripartite Member
 		Tripartite_Member = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Tripartite_Member" }
