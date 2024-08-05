@@ -10,8 +10,9 @@ ideas = {
 			picture = WTB_Canadian_Assistance
 
 			modifier = {
-				political_power_gain = -0.2
+				stability_factor = 0.1
 				war_support_factor = -0.1
+				political_power_factor = -0.25
 			}
 		}
 		WTB_Island_Of_Stability = { 
@@ -25,7 +26,12 @@ ideas = {
 
 			modifier = {
 				political_power_gain = -0.2
-				war_support_factor = -0.1
+				production_speed_buildings_factor = -0.3
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				gdp_growth_modifier = 1
+				research_speed_factor = 0.1
+				poverty_monthly_rate = 0.02
 			}
 		}
 	}

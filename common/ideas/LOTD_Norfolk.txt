@@ -10,22 +10,8 @@ ideas = {
 			picture = NOR_Military_Civilian_Administration
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
-			}
-		}
-		NOR_Polar_Odds = { 
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_Polar_Odds" }
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-
-			picture = NOR_Polar_Odds
-
-			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				military_expenditures_factor = -0.2
+				admin_efficiency_monthly_rate = 0.01
 			}
 		}
 		NOR_A_Powderkeg = { 
@@ -38,8 +24,24 @@ ideas = {
 			picture = NOR_A_Powderkeg
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.2
+				army_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_factor = 0.1
+			}
+		}
+		NOR_Naval_Heritage = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_Naval_Heritage" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = NOR_Naval_Heritage
+
+			modifier = {
+				
 			}
 		}
 	}

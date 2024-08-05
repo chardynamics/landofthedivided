@@ -10,8 +10,10 @@ ideas = {
 			picture = GCC_Coast_Of_Prosperity
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				gdp_growth_modifier = 1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
 			}
 		}
 		GCC_Mercenary_Security = { 
@@ -24,8 +26,9 @@ ideas = {
 			picture = GCC_Mercenary_Security
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				army_attack_factor = 0.1
+				army_org_factor = 0.1
+				military_expenditures_factor = -0.2
 			}
 		}
 		GCC_Factional_Neutrality = { 
@@ -38,7 +41,8 @@ ideas = {
 			picture = GCC_Factional_Neutrality
 
 			modifier = {
-				political_power_gain = -0.2
+				political_power_gain = -0.1
+				stability_factor = 0.1
 				war_support_factor = -0.1
 			}
 		}

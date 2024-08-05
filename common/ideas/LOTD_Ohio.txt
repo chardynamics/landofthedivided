@@ -10,22 +10,21 @@ ideas = {
 			picture = SOH_Wounded_Neutrality
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				
 			}
 		}
-		SOH_Eastern_Thorn = { 
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SOH_Eastern_Thorn" }
+		SOH_Eastern_Threat = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SOH_Eastern_Threat" }
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 
-			picture = SOH_Eastern_Thorn
+			picture = SOH_Eastern_Threat
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				political_power_gain = 0.1
+				war_support_factor = 0.1
 			}
 		}
 	}

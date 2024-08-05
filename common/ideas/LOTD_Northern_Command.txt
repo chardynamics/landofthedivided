@@ -10,8 +10,7 @@ ideas = {
 			picture = DMA_Heirs_Of_A_Bygone_Time
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				political_power_gain = 0.1
 			}
 		}
 		DMA_Military_State = { 
@@ -24,8 +23,12 @@ ideas = {
 			picture = DMA_Military_State
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				army_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_factor = 0.1
+				military_expenditures_factor = -0.2
 			}
 		}
 	}

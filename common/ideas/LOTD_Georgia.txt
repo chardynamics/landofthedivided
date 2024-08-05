@@ -11,7 +11,7 @@ ideas = {
 
 			modifier = {
 				political_power_gain = -0.2
-				war_support_factor = -0.1
+				stability_factor = -0.1
 			}
 		}
 		USG_A_Herculean_Effort = { 
@@ -24,8 +24,6 @@ ideas = {
 			picture = USG_A_Herculean_Effort
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
 			}
 		}
 		USG_Southern_Military_Portal = { 
@@ -38,8 +36,10 @@ ideas = {
 			picture = USG_Southern_Military_Portal
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				army_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_factor = 0.1
+				military_expenditures_factor = -0.2
 			}
 		}
 	}

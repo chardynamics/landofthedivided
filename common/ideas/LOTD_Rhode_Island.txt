@@ -11,7 +11,7 @@ ideas = {
 
 			modifier = {
 				political_power_gain = -0.2
-				war_support_factor = -0.1
+				stability_factor = -0.1
 			}
 		}
 		SRI_Bastion_In_New_England = { ##Stable authority nation in ne
@@ -24,8 +24,8 @@ ideas = {
 			picture = SRI_Bastion_In_New_England
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				stability_factor = 0.25
+				political_power_gain = 0.1
 			}
 		}
 	}
