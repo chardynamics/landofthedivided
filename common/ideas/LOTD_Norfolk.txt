@@ -1,0 +1,46 @@
+ideas = {
+	country = {
+		NOR_Military_Civilian_Administration = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_Military_Civilian_Administration" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = NOR_Military_Civilian_Administration
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		NOR_Polar_Odds = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_Polar_Odds" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = NOR_Polar_Odds
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		NOR_A_Powderkeg = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_A_Powderkeg" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = NOR_A_Powderkeg
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}

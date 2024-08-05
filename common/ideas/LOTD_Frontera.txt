@@ -1,0 +1,46 @@
+ideas = {
+	country = {
+		AMF_Overextended_Administration = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AMF_Overextended_Administration" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = AMF_Overextended_Administration
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		AMF_Money_Black_Hole = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AMF_Money_Black_Hole" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = AMF_Money_Black_Hole
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		AMF_Teetering = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AMF_Teetering" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = AMF_Teetering
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}
