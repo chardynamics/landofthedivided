@@ -1,0 +1,18 @@
+ideas = {
+	country = {
+		SCA_State_Identity = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SCA_State_Identity" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SCA_State_Identity
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}

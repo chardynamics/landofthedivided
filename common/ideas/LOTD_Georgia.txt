@@ -1,0 +1,46 @@
+ideas = {
+	country = {
+		USG_Interim_Government = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USG_Interim_Government" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = USG_Interim_Government
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		USG_A_Herculean_Effort = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USG_A_Herculean_Effort" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = USG_A_Herculean_Effort
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		USG_Southern_Military_Portal = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USG_Southern_Military_Portal" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = USG_Southern_Military_Portal
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+ideas = {
+	country = {
+		GCC_Coast_Of_Prosperity = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GCC_Coast_Of_Prosperity" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = GCC_Coast_Of_Prosperity
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		GCC_Mercenary_Security = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GCC_Mercenary_Security" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = GCC_Mercenary_Security
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		GCC_Factional_Neutrality = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GCC_Factional_Neutrality" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = GCC_Factional_Neutrality
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}

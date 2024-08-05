@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+		SWV_State_Successor = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWV_State_Successor" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SWV_State_Successor
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		SWV_Split_State = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWV_Split_State" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SWV_Split_State
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}

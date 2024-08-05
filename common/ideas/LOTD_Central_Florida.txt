@@ -1,0 +1,18 @@
+ideas = {
+	country = {
+		CFC_The_Three_Cities = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CFC_The_Three_Cities" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = CFC_The_Three_Cities
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}

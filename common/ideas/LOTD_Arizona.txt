@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+		SAZ_Propped_Up_State = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SAZ_Propped_Up_State" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SAZ_Propped_Up_State
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		SAZ_Southern_Hole = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SAZ_Southern_Hole" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SAZ_Southern_Hole
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}
