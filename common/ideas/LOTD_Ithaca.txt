@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+		ITH_Between_Two_Giants = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ITH_Between_Two_Giants" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = ITH_Between_Two_Giants
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		ITH_Prospering_Around_Ashes = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ITH_Prospering_Around_Ashes" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = ITH_Prospering_Around_Ashes
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}

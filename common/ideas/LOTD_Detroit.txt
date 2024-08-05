@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+		DET_City_State = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea DET_City_State" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = DET_City_State
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		DET_Canadian_Influence = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea DET_Canadian_Influence" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = DET_Canadian_Influence
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+ideas = {
+	country = {
+		CMM_Symbol_Of_Canadian_Intervention = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CMM_Symbol_Of_Canadian_Intervention" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = CMM_Symbol_Of_Canadian_Intervention
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		CMM_Stable_Government = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CMM_Maine_Precipice" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = CMM_Maine_Precipice
+
+			modifier = {
+				army_attack_factor = -0.1
+				army_core_defence_factor = 0.1
+				army_org_factor = -0.1
+				land_reinforce_rate = -0.1
+				military_expenditures_factor = -0.2
+			}
+		}
+		CMM_Drawn_Out_Occupation = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CMM_Drawn_Out_Occupation" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = CMM_Drawn_Out_Occupation
+
+			modifier = {
+				land_reinforce_rate = -0.1
+				military_expenditures_factor = -0.2
+				production_speed_buildings_factor = -0.3
+				production_factory_max_efficiency_factor = -0.25
+				production_factory_efficiency_gain_factor = -0.1
+				gdp_growth_modifier = -1
+				research_speed_factor = -0.2
+				poverty_monthly_rate = -0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+		WTB_Canadian_Assistance = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WTB_Canadian_Assistance" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = WTB_Canadian_Assistance
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		WTB_Island_Of_Stability = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WTB_Island_Of_Stability" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = WTB_Island_Of_Stability
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}

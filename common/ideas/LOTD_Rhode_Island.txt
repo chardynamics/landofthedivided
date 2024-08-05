@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+		SRI_Transitioning_Government = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_Transitioning_Government" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SRI_Transitioning_Government
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		SRI_Bastion_In_New_England = { ##Stable authority nation in ne
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_Bastion_In_New_England" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SRI_Bastion_In_New_England
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+}
