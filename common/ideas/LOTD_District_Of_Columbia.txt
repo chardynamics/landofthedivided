@@ -10,8 +10,10 @@ ideas = {
 			picture = DCO_A_Frozen_City
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				gdp_growth_modifier = -1
+				research_speed_factor = -0.15
 			}
 		}
 		DCO_Crown_Jewel = { 
@@ -24,8 +26,8 @@ ideas = {
 			picture = DCO_Crown_Jewel
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				political_power_factor = 0.5
+				stability_factor = 0.2
 			}
 		}
 	}

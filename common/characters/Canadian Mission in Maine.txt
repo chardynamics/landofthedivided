@@ -1,0 +1,21 @@
+characters = {
+	### Canadian Maine ###
+	# Country leaders #
+	CMM_Walter_Natynczyk = {
+		name = CMM_Walter_Natynczyk
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CMM/Portrait_CMM_Walter_Natynczyk.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_WALTER_NATYNCZYK_DESC"
+			expire = "2024.1.1"
+			ideology = paternalism_national_conservatism_subtype
+			traits = {
+				the_general
+            }
+			id = -1
+		}
+	}
+}

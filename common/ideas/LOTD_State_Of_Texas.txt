@@ -1,13 +1,27 @@
 ideas = {
 	country = {
-		BAL_Widespread_Discontent = { 
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BAL_Widespread_Discontent" }
+		STX_The_Shell_State = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea STX_The_Shell_State" }
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 
-			picture = BAL_Widespread_Discontent
+			picture = STX_The_Shell_State
+
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		STX_Forefront_Leader = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea STX_Forefront_Leader" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = STX_Forefront_Leader
 
 			modifier = {
 				political_power_gain = -0.2

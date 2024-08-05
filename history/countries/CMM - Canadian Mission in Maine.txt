@@ -2,10 +2,13 @@ capital = 182
 
 
 # Vacant
-recruit_character = USA_Generic_Vacant
+recruit_character = CMM_Walter_Natynczyk
 fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 
 add_ideas = {
+	CMM_Symbol_Of_Canadian_Intervention
+	CMM_Drawn_Out_Occupation
+	CMM_Smooth_Administration
 	Accord_Mission
 	#political#
 	tno_political_parties_multiparty_system

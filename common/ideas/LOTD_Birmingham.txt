@@ -10,8 +10,11 @@ ideas = {
 			picture = BIR_Crumbling_Institution
 
 			modifier = {
+				defense = -0.2
+				offence = -0.2
 				political_power_gain = -0.2
-				war_support_factor = -0.1
+				war_support_factor = -0.25
+				army_org = -0.25
 			}
 		}
 	}

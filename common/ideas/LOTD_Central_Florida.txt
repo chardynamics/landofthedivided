@@ -10,7 +10,8 @@ ideas = {
 			picture = CFC_The_Three_Cities
 
 			modifier = {
-				political_power_gain = -0.2
+				stability_factor = 0.1
+				political_power_gain = -0.1
 				war_support_factor = -0.1
 			}
 		}
