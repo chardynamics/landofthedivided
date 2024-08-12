@@ -59,21 +59,20 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = progressivism
+	ruling_party = paternalism
 	last_election = "1920.1.1"
 	election_frequency = 60
 	elections_allowed = no
 }
 
-
 set_popularities = {
-	communist = 5
-	socialist = 8
-	progressivism = 62
+	communist = 0
+	socialist = 0
+	progressivism = 0
 	liberalism = 15
-	liberal_conservatism = 0
-	conservatism = 3
-	paternalism = 7
+	liberal_conservatism = 10
+	conservatism = 15
+	paternalism = 60
 	despotism = 0
 	fascism = 0
 	national_socialism = 0
