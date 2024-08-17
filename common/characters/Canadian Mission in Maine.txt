@@ -5,13 +5,13 @@ characters = {
 		name = CMM_Walter_Natynczyk
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/CMM/Portrait_CMM_Walter_Natynczyk.dds"
+				large = "GFX_portrait_CMM_Walter_Natynczyk"
 			}
 		}
 		country_leader = {
 			desc = "POLITICS_WALTER_NATYNCZYK_DESC"
 			expire = "2024.1.1"
-			ideology = progressivism_social_democracy_subtype
+			ideology = paternalism_military_mandate_subtype
 			traits = {
 				the_general
             }
