@@ -377,4 +377,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/career_profile/profile_picture_lock.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
+	
+	spriteType = {
+		name = "GFX_profile_lock"
+		texturefile = "gfx/interface/career_profile/profile_lock.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
 }

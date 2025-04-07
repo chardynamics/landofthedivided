@@ -190,11 +190,10 @@ guiTypes = {
 
 				iconType = {
 					name = "lock"
-					position = { x = -30 y = -30 }
-					spriteType = "GFX_icon_padlock"
-					scale = 0.75
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_profile_lock"
 					centerposition = yes
-					orientation = lower_right
+					orientation = center
 				}
 			}
 
@@ -259,8 +258,7 @@ guiTypes = {
 				iconType = {
 					name = "lock"
 					position = { x = -30 y = -30 }
-					spriteType = "GFX_icon_padlock"
-					scale = 0.75
+					spriteType = "GFX_profile_lock"
 					centerposition = yes
 					orientation = lower_right
 				}
