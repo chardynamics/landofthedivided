@@ -1,5 +1,7 @@
+NDefines_Graphics.NMapIcons.STRATEGIC_AIR_PRIORITY_AIR_MISSION = 290
 
 
+NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_TEXT_CUTOFF = {300, 500, 1500}
 
 --NDefines_Graphics.NGraphics.MAP_ICONS_GROUP_MAX_SIZE = 0
 NDefines_Graphics.NGraphics.MAP_ICONS_GROUP_CAM_DISTANCE = 100				--group moving and still units
@@ -26,8 +28,8 @@ NDefines_Graphics.NGraphics.COMMANDGROUP_PRESET_COLORS_HSV = {
 
 NDefines_Graphics.NGraphics.CAMERA_ZOOM_SPEED_DISTANCE_MULT = 20
 
---NDefines_Graphics.NGraphics.AIRBASE_ICON_DISTANCE_CUTOFF = 500
---NDefines_Graphics.NGraphics.NAVALBASE_ICON_DISTANCE_CUTOFF = 500
+NDefines_Graphics.NGraphics.AIRBASE_ICON_DISTANCE_CUTOFF = 900
+NDefines_Graphics.NGraphics.NAVALBASE_ICON_DISTANCE_CUTOFF = 900
 
 --NDefines_Graphics.NGraphics.UNIT_ARROW_DISTANCE_CUTOFF = 1000
 --NDefines_Graphics.NGraphics.UNITS_ICONS_DISTANCE_CUTOFF = 900
