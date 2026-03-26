@@ -4669,211 +4669,8 @@ guiTypes = {
 			### Left Container ###
 
 			containerWindowType = {
-				name = "column_dlc043"
-				position = { x = @LeftColumnPosX y = @ColumnPosY }
-				size = { width = @ColumnWidth height = @ColumnHeight }
-				orientation = center_up
-				origo = center_up
-
-				containerWindowType = {
-					name = "details"
-					position = { x = 0 y = 0 }
-					size = { width = 100% height = 100% }
-
-					background = {
-						name = "background"
-						quadTextureSprite = "GFX_bg_dlc043_owned"
-					}
-
-					instantTextboxType = {
-						name = "dlc_title"
-						position = { x = @DlcTitleX y = @DlcTitleY }
-						font = "aldrich_36_outline"
-						borderSize = { x = 0 y = 0 }
-						maxWidth = @DlcTitleW
-						maxHeight = @DlcTitleH
-						format = center
-						vertical_alignment = bottom
-						text = "GOTTERDAMMERUNG"
-						Orientation = center_up
-					}
-
-					containerWindowType = {
-						name = "special_projects_completed"
-						position = { x = @StatContainerCenterX y = @DlcStatsRow1Y }
-						size = { width = @StatContainerCenterW height = @StatContainerH }
-						Orientation = center_up
-						Origo = center_up
-						clipping = no
-
-						background = {
-							name = "background"
-							quadTextureSprite = "GFX_tiled_window_transparent"
-						}
-
-						instantTextboxType = {
-							name = "value"
-							position = { x = @StatTextCenterX y = @StatNumberTextY }
-							font = "aldrich_32_outline"
-							text = SPECIAL_PROJECTS_COMPLETED
-							format = center
-							maxWidth = @StatTextCenterW
-							multiline = no
-							Orientation = center_up
-							alwaysTransparent = yes
-						}
-
-						instantTextboxType = {
-							name = "label"
-							position = { x = @StatTextCenterX y = @StatLabelTextY }
-							font = "aldrich_18_outline"
-							text = CAREER_PROFILE_SPECIAL_PROJECTS_COMPLETED_LABEL
-							format = center
-							maxWidth = @StatTextCenterW
-							text_color_code = L
-							Orientation = center_up
-							alwaysTransparent = yes
-						}
-
-						iconType = {
-							name = "best_in_career_icon"
-							position = { x = @StarCenterX y = @StarCenterY }
-							spriteType = "GFX_icon_best_in_career"
-							tooltip = "CAREER_PROFILE_BEST_IN_CAREER_TOOLTIP"
-							Orientation = center
-							centerposition = yes
-						}
-
-						iconType = {
-							name = "compare_stats_difference_icon"
-							position = { x = @StarCenterX y = @StarCenterY }
-							spriteType = "GFX_icon_compare_stats_difference"
-							Orientation = center
-							centerposition = yes
-							alwaysTransparent = yes
-						}
-					}
-
-					containerWindowType = {
-						name = "launched_raids"
-						position = { x = @StatContainerCenterX y = @DlcStatsRow2Y }
-						size = { width = @StatContainerCenterW height = @StatContainerH }
-						Orientation = center_up
-						Origo = center_up
-						clipping = no
-
-						background = {
-							name = "background"
-							quadTextureSprite = "GFX_tiled_window_transparent"
-						}
-
-						instantTextboxType = {
-							name = "value"
-							position = { x = @StatTextCenterX y = @StatNumberTextY }
-							font = "aldrich_32_outline"
-							text = LAUNCHED_RAIDS
-							format = center
-							maxWidth = @StatTextCenterW
-							multiline = no
-							Orientation = center_up
-							alwaysTransparent = yes
-						}
-
-						instantTextboxType = {
-							name = "label"
-							position = { x = @StatTextCenterX y = @StatLabelTextY }
-							font = "aldrich_18_outline"
-							text =  CAREER_PROFILE_LAUNCHED_RAIDS_LABEL
-							format = center
-							maxWidth = @StatTextCenterW
-							text_color_code = L
-							Orientation = center_up
-							alwaysTransparent = yes
-
-						}
-
-						iconType = {
-							name = "best_in_career_icon"
-							position = { x = @StarCenterX y = @StarCenterY }
-							spriteType = "GFX_icon_best_in_career"
-							tooltip = "CAREER_PROFILE_BEST_IN_CAREER_TOOLTIP"
-							Orientation = center
-							centerposition = yes
-						}
-
-						iconType = {
-							name = "compare_stats_difference_icon"
-							position = { x = @StarCenterX y = @StarCenterY }
-							spriteType = "GFX_icon_compare_stats_difference"
-							Orientation = center
-							centerposition = yes
-							alwaysTransparent = yes
-						}
-					}
-
-					containerWindowType = {
-						name = "scientist_level_ups"
-						position = { x = @StatContainerCenterX y = @DlcStatsRow3Y }
-						size = { width = @StatContainerCenterW height = @StatContainerH }
-						Orientation = center_up
-						Origo = center_up
-						clipping = no
-
-						background = {
-							name = "background"
-							quadTextureSprite = "GFX_tiled_window_transparent"
-						}
-
-						instantTextboxType = {
-							name = "value"
-							position = { x = @StatTextCenterX y = @StatNumberTextY }
-							font = "aldrich_32_outline"
-							text = SCIENTIST_LEVEL_UPS
-							format = center
-							maxWidth = @StatTextCenterW
-							multiline = no
-							Orientation = center_up
-							alwaysTransparent = yes
-						}
-
-						instantTextboxType = {
-							name = "label"
-							position = { x = @StatTextCenterX y = @StatLabelTextY }
-							font = "aldrich_18_outline"
-							text =  CAREER_PROFILE_SCIENTIST_LEVEL_UPS_LABEL
-							format = center
-							maxWidth = @StatTextCenterW
-							text_color_code = L
-							Orientation = center_up
-							alwaysTransparent = yes
-						}
-
-						iconType = {
-							name = "best_in_career_icon"
-							position = { x = @StarCenterX y = @StarCenterY }
-							spriteType = "GFX_icon_best_in_career"
-							tooltip = "CAREER_PROFILE_BEST_IN_CAREER_TOOLTIP"
-							Orientation = center
-							centerposition = yes
-						}
-
-						iconType = {
-							name = "compare_stats_difference_icon"
-							position = { x = @StarCenterX y = @StarCenterY }
-							spriteType = "GFX_icon_compare_stats_difference"
-							Orientation = center
-							centerposition = yes
-							alwaysTransparent = yes
-						}
-					}
-				}
-			}
-
-			### Middle Container ###
-
-			containerWindowType = {
 				name = "column_dlc038"
-				position = { x = @MiddleColumnPosX y = @ColumnPosY }
+				position = { x = @LeftColumnPosX y = @ColumnPosY }
 				size = { width = @ColumnWidth height = @ColumnHeight }
 				orientation = center_up
 				origo = center_up
@@ -5072,11 +4869,11 @@ guiTypes = {
 				}
 			}
 
-			### Right Container ###
+			### Middle Container ###
 
 			containerWindowType = {
 				name = "column_dlc036"
-				position = { x = @RightColumnPosX y = @ColumnPosY }
+				position = { x = @MiddleColumnPosX y = @ColumnPosY }
 				size = { width = @ColumnWidth height = @ColumnHeight }
 				orientation = center_up
 				origo = center_up
@@ -5094,7 +4891,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "dlc_title"
 						position = { x = @DlcTitleX y = @DlcTitleY }
-						font = "aldrich_36_outline"
+						font = "hoi_36header"
 						borderSize = { x = 0 y = 0 }
 						maxWidth = @DlcTitleW
 						maxHeight = @DlcTitleH
@@ -5120,7 +4917,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "value"
 							position = { x = @StatTextCenterX y = @StatNumberTextY }
-							font = "aldrich_30_outline"
+							font = "hoi_30"
 							text = DESIGNED_PLANES
 							format = center
 							maxWidth = @StatTextCenterW
@@ -5132,7 +4929,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "label"
 							position = { x = @StatTextCenterX y = @StatLabelTextY }
-							font = "aldrich_18_outline"
+							font = "hoi_18"
 							text =  CAREER_PROFILE_DESIGNED_PLANES_LABEL
 							format = center
 							maxWidth = @StatTextCenterW
@@ -5190,7 +4987,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "value"
 							position = { x = @StatNumberTextLeftX y = @StatNumberTextY }
-							font = "aldrich_30_outline"
+							font = "hoi_30"
 							text = "XXX"
 							format = left
 							maxWidth = @StatNumberTextW
@@ -5200,7 +4997,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "label"
 							position = { x = @StatLabelTextLeftX y = @StatLabelTextY }
-							font = "aldrich_18_outline"
+							font = "hoi_18"
 							text = CAREER_PROFILE_FIELD_OFFICERS_PROMOTED_LABEL
 							format = left
 							maxWidth = @StatLabelTextW
@@ -5243,7 +5040,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "value"
 							position = { x = @StatNumberTextRightX y = @StatNumberTextY }
-							font = "aldrich_30_outline"
+							font = "hoi_30"
 							text = "XXX"
 							format = right
 							maxWidth = @StatNumberTextW
@@ -5254,7 +5051,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "label"
 							position = { x = @StatLabelTextRightX y = @StatLabelTextY }
-							font = "aldrich_18_outline"
+							font = "hoi_18"
 							text = CAREER_PROFILE_MUSSOLINI_MISSIONS_LABEL
 							format = right
 							maxWidth = @StatLabelTextW
@@ -5280,7 +5077,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "value"
 							position = { x = @StatTextCenterX y = @StatNumberTextY }
-							font = "aldrich_30_outline"
+							font = "hoi_30"
 							text = SHIPS_SUNK_BY_MARITIME
 							format = center
 							maxWidth = @StatTextCenterW
@@ -5292,7 +5089,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "label"
 							position = { x = @StatTextCenterX y = @StatLabelTextY }
-							font = "aldrich_18_outline"
+							font = "hoi_18"
 							text =  CAREER_PROFILE_SHIPS_SUNK_BY_MARITIME_LABEL
 							format = center
 							maxWidth = @StatTextCenterW
@@ -5321,18 +5118,12 @@ guiTypes = {
 					}
 				}
 			}
-		}
 
-		containerWindowType = {
-			name = "page6"
-			position = { x = 0 y = 0 }
-			size = { width = 100% height = 100% }
-
-			### Left Container ###
+			### Right Container ###
 
 			containerWindowType = {
 				name = "column_dlc034"
-				position = { x = @LeftColumnPosX y = @ColumnPosY }
+				position = { x = @RightColumnPosX y = @ColumnPosY }
 				size = { width = @ColumnWidth height = @ColumnHeight }
 				orientation = center_up
 				origo = center_up
@@ -5529,13 +5320,21 @@ guiTypes = {
 						}
 					}
 				}
-			}
 
-			### Middle Container ###
+
+			}
+		}
+
+		containerWindowType = {
+			name = "page6"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 100% }
+
+			### Left Container ###
 
 			containerWindowType = {
 				name = "column_dlc031"
-				position = { x = @MiddleColumnPosX y = @ColumnPosY }
+				position = { x = @RightColumnPosX y = @ColumnPosY }
 				size = { width = @ColumnWidth height = @ColumnHeight }
 				orientation = center_up
 				origo = center_up
@@ -5725,11 +5524,11 @@ guiTypes = {
 				}
 			}
 
-			### Right Container ###
+			### Middle Container ###
 
 			containerWindowType = {
 				name = "column_dlc028"
-				position = { x = @RightColumnPosX y = @ColumnPosY }
+				position = { x = @LeftColumnPosX y = @ColumnPosY }
 				size = { width = @ColumnWidth height = @ColumnHeight }
 				orientation = center_up
 				origo = center_up
@@ -5926,18 +5725,12 @@ guiTypes = {
 					}
 				}
 			}
-		}
 
-		containerWindowType = {
-			name = "page7"
-			position = { x = 0 y = 0 }
-			size = { width = 100% height = 100% }
-
-			### Left Container ###
+			### Right Container ###
 
 			containerWindowType = {
 				name = "column_dlc023"
-				position = { x = @LeftColumnPosX y = @ColumnPosY }
+				position = { x = @MiddleColumnPosX y = @ColumnPosY }
 				size = { width = @ColumnWidth height = @ColumnHeight }
 				orientation = center_up
 				origo = center_up
@@ -6182,12 +5975,18 @@ guiTypes = {
 					}
 				}
 			}
+		}
 
-			### Middle Container ###
+		containerWindowType = {
+			name = "page7"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 100% }
+
+			### Left Container ###
 
 			containerWindowType = {
 				name = "column_dlc022"
-				position = { x = @MiddleColumnPosX y = @ColumnPosY }
+				position = { x = @RightColumnPosX y = @ColumnPosY }
 				size = { width = @ColumnWidth height = @ColumnHeight }
 				orientation = center_up
 				origo = center_up
@@ -6385,11 +6184,11 @@ guiTypes = {
 				}
 			}
 
-			### Right Container ###
+			### Middle Container ###
 
 			containerWindowType = {
 				name = "column_dlc020"
-				position = { x = @RightColumnPosX y = @ColumnPosY }
+				position = { x = @LeftColumnPosX y = @ColumnPosY }
 				size = { width = @ColumnWidth height = @ColumnHeight }
 				orientation = center_up
 				origo = center_up
@@ -6578,18 +6377,12 @@ guiTypes = {
 					}
 				}
 			}
-		}
 
-		containerWindowType = {
-			name = "page8"
-			position = { x = 0 y = 0 }
-			size = { width = 100% height = 100% }
-
-			### Left Container ###
+			### Right Container ###
 
 			containerWindowType = {
 				name = "column_dlc018"
-				position = { x = @LeftColumnPosX y = @ColumnPosY }
+				position = { x = @MiddleColumnPosX y = @ColumnPosY }
 				size = { width = @ColumnWidth height = @ColumnHeight }
 				orientation = center_up
 				origo = center_up
@@ -6728,36 +6521,6 @@ guiTypes = {
 							alwaysTransparent = yes
 						}
 					}
-				}
-			}
-
-			### Middle Container ###
-
-			containerWindowType = {
-				name = "middle_numbers"
-				position = { x = @MiddleColumnPosX y = @ColumnPosY }
-				size = { width = @ColumnWidth height = @ColumnHeight }
-				orientation = center_up
-				origo = center_up
-
-				background = {
-					name = "background"
-					quadTextureSprite = "GFX_tiled_war_bg_overlay"
-				}
-			}
-
-			### Right Container ###
-
-			containerWindowType = {
-				name = "right_numbers"
-				position = { x = @RightColumnPosX y = @ColumnPosY }
-				size = { width = @ColumnWidth height = @ColumnHeight }
-				orientation = center_up
-				origo = center_up
-
-				background = {
-					name = "background"
-					quadTextureSprite = "GFX_tiled_war_bg_overlay"
 				}
 			}
 
