@@ -3,6 +3,24 @@
 ideas = {
 	tno_pollution = {
 		law = yes
+		tno_pollution_not_applicable = {
+			#default = yes
+			available = { always = no }
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_pollution_not_applicable"
+				#tno_pollution_no_controls_effect = yes
+				#TNO_update_policy_effectiveness = yes
+				#TNO_set_thermoelectric_plant_power = yes
+			}
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+				#custom_modifier_tooltip = tno_pollution_no_controls_tt
+			}
+			cancel_if_invalid = no
+		}
 		tno_pollution_no_controls = {
 			#default = yes
 			available = { always = no }
@@ -89,6 +107,18 @@ ideas = {
 	}
 	tno_safety = {
 		law = yes
+		tno_safety_not_applicable = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_safety_not_applicable"
+			}
+			#default = yes
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
 		tno_safety_no_regulations = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_safety_no_regulations"
@@ -245,6 +275,19 @@ ideas = {
 	}
 	tno_child_labor = {
 		law = yes
+		tno_child_labor_not_applicable = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_child_labor_not_applicable"
+				#tno_child_labor_legal_effect = yes
+				#TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
 		tno_child_labor_legal = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_child_labor_legal"
@@ -288,6 +331,20 @@ ideas = {
 	}
 	tno_minorities = {
 		law = yes
+		tno_minorities_not_applicable = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_minorities_not_applicable"
+				#tno_minorities_oppression_effect = yes
+				#TNO_update_policy_effectiveness = yes
+			}
+			#default = yes
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
 		tno_minorities_oppression = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_minorities_oppression"
@@ -357,6 +414,20 @@ ideas = {
 	}
 	tno_lgbt_rights = {
 		law = yes
+		tno_lgbt_rights_not_applicable = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_lgbt_rights_not_applicable"
+				#tno_lgbt_rights_lgbt_outlawed_effect = yes
+				#TNO_update_policy_effectiveness = yes
+			}
+			#default = yes
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
 		tno_lgbt_rights_lgbt_outlawed = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_lgbt_rights_lgbt_outlawed"

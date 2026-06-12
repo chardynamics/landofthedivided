@@ -88,24 +88,10 @@ ideas = {
 			modifier = {  }
 			cancel_if_invalid = no
 		}
-		tno_income_taxation_elite_tax_exemptions = {
+		tno_income_taxation_no_income_taxation = {
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_income_taxation_elite_tax_exemptions"
-				tno_income_taxation_elite_tax_exemptions_effect = yes
-				TNO_update_policy_effectiveness = yes
-			}
-			available = { always = no }
-			#cancel = { NOT = { econ_can_use_economy_system = yes } }
-
-			removal_cost = -1
-			ledger = civilian
-			modifier = {  }
-			cancel_if_invalid = no
-		}
-		tno_income_taxation_tax_havens = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_income_taxation_tax_havens"
-				tno_income_taxation_tax_havens_effect = yes
+				log = "[GetDateText]: [Root.GetName]: add idea tno_income_taxation_no_income_taxation"
+				tno_income_taxation_no_income_taxation_effect = yes
 				TNO_update_policy_effectiveness = yes
 			}
 			available = { always = no }
@@ -261,6 +247,19 @@ ideas = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_minimum_wage_annual_wage"
 				tno_minimum_wage_annual_wage_effect = yes
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_minimum_wage_collective_bargaining = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_minimum_wage_collective_bargaining"
+				tno_minimum_wage_collective_bargaining_effect = yes
 				TNO_update_policy_effectiveness = yes
 			}
 			available = { always = no }

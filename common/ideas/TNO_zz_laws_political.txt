@@ -57,6 +57,19 @@ ideas = {
 			modifier = {  }
 			cancel_if_invalid = no
 		}
+		tno_political_parties_dominant_party_system = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_political_parties_dominant_party_system"
+				tno_political_parties_dominant_party_system_effect = yes
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
 		tno_political_parties_multiparty_system = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_political_parties_multiparty_system"
@@ -118,6 +131,20 @@ ideas = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_religious_rights_secularism"
 				tno_religious_rights_secularism_effect = yes
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+				}
+			cancel_if_invalid = no
+		}
+		tno_religious_rights_laicism = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_religious_rights_laicism"
+				tno_religious_rights_laicism_effect = yes
 				TNO_update_policy_effectiveness = yes
 			}
 			available = { always = no }
@@ -239,19 +266,6 @@ ideas = {
 			modifier = {  }
 			cancel_if_invalid = no
 		}
-		tno_immigration_you_will_never_leave = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_immigration_you_will_never_leave"
-				tno_immigration_you_will_never_leave_effect = yes
-				TNO_update_policy_effectiveness = yes
-			}
-			available = { always = no }
-
-			removal_cost = -1
-			ledger = civilian
-			modifier = {  }
-			cancel_if_invalid = no
-		}
 		tno_immigration_closed_borders = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_immigration_closed_borders"
@@ -320,23 +334,10 @@ ideas = {
 			modifier = {  }
 			cancel_if_invalid = no
 		}
-		tno_immigration_subsidized_immigration = {
+		tno_immigration_ethnic_immigration = {
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_immigration_subsidized_immigration"
-				tno_immigration_subsidized_immigration_effect = yes
-				TNO_update_policy_effectiveness = yes
-			}
-			available = { always = no }
-
-			removal_cost = -1
-			ledger = civilian
-			modifier = {  }
-			cancel_if_invalid = no
-		}
-		tno_immigration_give_me_your_poor = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_immigration_give_me_your_poor"
-				tno_immigration_give_me_your_poor_effect = yes
+				log = "[GetDateText]: [Root.GetName]: add idea tno_immigration_ethnic_immigration"
+				tno_immigration_ethnic_immigration_effect = yes
 				TNO_update_policy_effectiveness = yes
 			}
 			available = { always = no }
@@ -349,36 +350,10 @@ ideas = {
 	}
 	tno_slavery = { #Forced Labor
 		law = yes
-		tno_slavery_not_applicable = {
+		tno_slavery_chattel = {
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_slavery_not_applicable"
-				tno_slavery_not_applicable_effect = yes
-				TNO_update_policy_effectiveness = yes
-			}
-			available = { always = no }
-
-			removal_cost = -1
-			ledger = civilian
-			modifier = {  }
-			cancel_if_invalid = no
-		}
-		tno_slavery_caste_systems = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_slavery_caste_systems"
-				tno_slavery_caste_systems_effect = yes
-				TNO_update_policy_effectiveness = yes
-			}
-			available = { always = no }
-
-			removal_cost = -1
-			ledger = civilian
-			modifier = {  }
-			cancel_if_invalid = no
-		}
-		tno_slavery_institutionalized = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_slavery_institutionalized"
-				tno_slavery_institutionalized_effect = yes
+				log = "[GetDateText]: [Root.GetName]: add idea tno_slavery_chattel"
+				tno_slavery_chattel_effect = yes
 				TNO_update_policy_effectiveness = yes
 			}
 			available = { always = no }
@@ -447,6 +422,19 @@ ideas = {
 				TNO_update_policy_effectiveness = yes
 			}
 			default = yes
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_slavery_not_applicable = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_slavery_not_applicable"
+				tno_slavery_not_applicable_effect = yes
+				TNO_update_policy_effectiveness = yes
+			}
 			available = { always = no }
 
 			removal_cost = -1

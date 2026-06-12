@@ -73,25 +73,9 @@ ideas = {
 			}
 			cancel_if_invalid = no
 		}
-		tno_income_taxation_elite_tax_exemptions_dummy = {
+		tno_income_taxation_no_income_taxation_dummy = {
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_income_taxation_elite_tax_exemptions_dummy"
-			}
-			available = { always = no }
-			#cancel = { NOT = { econ_can_use_economy_system = yes } }
-
-			removal_cost = -1
-			ledger = civilian
-			modifier = {
-				political_power_gain = -0.10
-				poverty_taxation_rate_modifier = 0.30
-				consumer_goods_use_modifier = -0.05
-			}
-			cancel_if_invalid = no
-		}
-		tno_income_taxation_tax_havens_dummy = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_income_taxation_tax_havens_dummy"
+				log = "[GetDateText]: [Root.GetName]: add idea tno_income_taxation_no_income_taxation_dummy"
 			}
 			available = { always = no }
 			#cancel = { NOT = { econ_can_use_economy_system = yes } }
@@ -263,6 +247,24 @@ ideas = {
 				poverty_monthly_rate = 0.05
 				industrial_expertise_monthly_rate = 0.55
 				consumer_goods_use_modifier = 0.06
+			}
+			cancel_if_invalid = no
+		}
+		tno_minimum_wage_collective_bargaining_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_minimum_wage_collective_bargaining_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+				stability_factor = 0.075
+				production_factory_max_efficiency_factor = -0.075
+				poverty_monthly_rate = 0.04
+				industrial_expertise_monthly_rate = 0.3
+				consumer_goods_use_modifier = 0.05
+				trade_unions_policy_monthly_rate = 0.4
 			}
 			cancel_if_invalid = no
 		}

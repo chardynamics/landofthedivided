@@ -364,6 +364,22 @@ ideas = {
 			}
 			cancel_if_invalid = no
 		}
+		tno_draft_exemptions_elite_exemptions_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_draft_exemptions_elite_exemptions_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+				conscription_factor = -0.05
+				war_support_factor = -0.075
+				political_power_factor = 0.05
+				stability_factor = 0.025
+			}
+			cancel_if_invalid = no
+		}
 		tno_draft_exemptions_educational_deferment_dummy = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_draft_exemptions_educational_deferment_dummy"

@@ -220,19 +220,6 @@ ideas = {
 			modifier = {  }
 			cancel_if_invalid = no
 		}
-		tno_penal_system_draconian_brutality = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_penal_system_draconian_brutality"
-				tno_penal_system_draconian_brutality_effect = yes
-				TNO_update_policy_effectiveness = yes
-			}
-			available = { always = no }
-
-			removal_cost = -1
-			ledger = civilian
-			modifier = {  }
-			cancel_if_invalid = no
-		}
 		tno_penal_system_overt_oppression = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_penal_system_overt_oppression"
@@ -452,10 +439,10 @@ ideas = {
 				factor = 0
 			}
 		}
-		tno_security_community_police = {
+		tno_security_resource_extraction = {
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_security_community_police"
-				tno_security_community_police_effect = yes
+				log = "[GetDateText]: [Root.GetName]: add idea tno_security_resource_extraction"
+				tno_security_resource_extraction_effect = yes
 				TNO_update_policy_effectiveness = yes
 			}
 			available = { always = no }
@@ -465,10 +452,10 @@ ideas = {
 			modifier = {  }
 			cancel_if_invalid = no
 		}
-		tno_security_regulated_police = {
+		tno_security_crime_prevention = {
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_security_regulated_police"
-				tno_security_regulated_police_effect = yes
+				log = "[GetDateText]: [Root.GetName]: add idea tno_security_crime_prevention"
+				tno_security_crime_prevention_effect = yes
 				TNO_update_policy_effectiveness = yes
 			}
 			default = yes
@@ -479,10 +466,10 @@ ideas = {
 			modifier = {  }
 			cancel_if_invalid = no
 		}
-		tno_security_oppressive_police = {
+		tno_security_maintenance_of_order = {
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_security_oppressive_police"
-				tno_security_oppressive_police_effect = yes
+				log = "[GetDateText]: [Root.GetName]: add idea tno_security_maintenance_of_order"
+				tno_security_maintenance_of_order_effect = yes
 				TNO_update_policy_effectiveness = yes
 			}
 			available = { always = no }
@@ -492,23 +479,10 @@ ideas = {
 			modifier = {  }
 			cancel_if_invalid = no
 		}
-		tno_security_totalitarian_police = {
+		tno_security_political_control = {
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_security_totalitarian_police"
-				tno_security_totalitarian_police_effect = yes
-				TNO_update_policy_effectiveness = yes
-			}
-			available = { always = no }
-
-			removal_cost = -1
-			ledger = civilian
-			modifier = {  }
-			cancel_if_invalid = no
-		}
-		tno_security_death_squads = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea tno_security_death_squads"
-				tno_security_death_squads_effect = yes
+				log = "[GetDateText]: [Root.GetName]: add idea tno_security_political_control"
+				tno_security_political_control_effect = yes
 				TNO_update_policy_effectiveness = yes
 			}
 			available = { always = no }

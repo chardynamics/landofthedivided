@@ -316,6 +316,19 @@ ideas = {
 			modifier = {  }
 			cancel_if_invalid = no
 		}
+		tno_draft_exemptions_elite_exemptions = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_draft_exemptions_elite_exemptions"
+				tno_draft_exemptions_elite_exemptions_effect = yes
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
 		tno_draft_exemptions_educational_deferment = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea tno_draft_exemptions_educational_deferment"
