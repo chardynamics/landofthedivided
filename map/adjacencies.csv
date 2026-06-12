@@ -1,10 +1,10 @@
 From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
-5418;3800;sea;8848;-1;-1;-1;-1;;Washington
-1658;4811;sea;8859;-1;-1;-1;-1;;Washington-Idaho
-3371;603;sea;8848;-1;-1;-1;-1;;Washington
-603;5428;sea;8848;-1;-1;-1;-1;;Washington
+5418;3800;sea;8884;-1;-1;-1;-1;;Washington
+1658;1779;sea;784;-1;-1;-1;-1;;Washington-Idaho
+3371;603;sea;8884;-1;-1;-1;-1;;Washington
+603;5428;sea;8884;-1;-1;-1;-1;;Washington
 2554;3239;sea;8859;-1;-1;-1;-1;;Idaho
-1238;3371;sea;8848;-1;-1;-1;-1;;Washington
+1238;3371;sea;8884;-1;-1;-1;-1;;Washington
 1557;3371;sea;8848;-1;-1;-1;-1;;Washington
 778;4319;sea;8848;-1;-1;-1;-1;;Washington
 1360;2280;sea;8848;-1;-1;-1;-1;;Washington
@@ -23,7 +23,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4691;466;sea;7300;-1;-1;-1;-1;;Washington-Oregon
 4691;4121;sea;7300;-1;-1;-1;-1;;Washington-Oregon
 392;5001;sea;8839;-1;-1;-1;-1;;Idaho
-4317;5474;sea;8839;-1;-1;-1;-1;;Montana
+4317;5474;sea;8859;-1;-1;-1;-1;;Montana
 792;1385;sea;8841;-1;-1;-1;-1;;Montana
 5579;341;sea;8834;-1;-1;-1;-1;;Montana
 1178;6303;sea;8821;-1;-1;-1;-1;;New Mexico
@@ -110,15 +110,13 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 3667;4189;sea;7844;-1;-1;-1;-1;;Manitoba
 5437;5449;sea;7844;-1;-1;-1;-1;;Manitoba
 5439;940;sea;7844;-1;-1;-1;-1;;Ontario
-6714;5564;sea;6896;-1;-1;-1;-1;;Quebec
-6714;6713;sea;6896;-1;-1;-1;-1;;Quebec
-6714;4179;sea;6896;-1;-1;-1;-1;;Quebec
-6714;6717;sea;6896;-1;-1;-1;-1;;Quebec
-6713;5034;sea;6896;-1;-1;-1;-1;;Quebec
+6714;5564;sea;6895;-1;-1;-1;-1;;Quebec
+6714;6713;sea;6895;-1;-1;-1;-1;;Quebec
+6714;4179;sea;6895;-1;-1;-1;-1;;Quebec
+6714;6717;sea;6895;-1;-1;-1;-1;;Quebec
+6713;5034;sea;6895;-1;-1;-1;-1;;Quebec
 6713;2307;sea;7853;-1;-1;-1;-1;;Quebec
-6713;5034;sea;6896;-1;-1;-1;-1;;Quebec
-6720;5564;sea;6896;-1;-1;-1;-1;;Quebec
-6720;5564;sea;6896;-1;-1;-1;-1;;Quebec
+6720;5564;sea;6895;-1;-1;-1;-1;;Quebec
 4179;3125;sea;8858;-1;-1;-1;-1;;Quebec
 4179;5534;sea;8858;-1;-1;-1;-1;;Quebec
 244;76;sea;7503;-1;-1;-1;-1;;New Brunswick
@@ -293,9 +291,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 5548;2841;sea;8861;-1;-1;-1;-1;;Minnesota-North Dakota
 5548;505;sea;8861;-1;-1;-1;-1;;Minnesota-North Dakota
 1971;505;sea;8861;-1;-1;-1;-1;;Minnesota-North Dakota
-1971;5521;sea;8861;-1;-1;-1;-1;;Minnesota-North Dakota
-4633;5521;sea;8861;-1;-1;-1;-1;;Minnesota-North Dakota
-5490;5493;sea;8861;-1;-1;-1;-1;;Minnesota-North Dakota
+1971;5521;sea;7844;-1;-1;-1;-1;;Minnesota-North Dakota
+4633;5521;sea;7844;-1;-1;-1;-1;;Minnesota-North Dakota
+5490;5493;sea;7844;-1;-1;-1;-1;;Minnesota-North Dakota
 5541;5535;sea;8847;-1;-1;-1;-1;;North Dakota
 5541;2132;sea;8847;-1;-1;-1;-1;;North Dakota
 4641;5551;sea;8847;-1;-1;-1;-1;;North Dakota
