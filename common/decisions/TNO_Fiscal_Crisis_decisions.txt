@@ -41,7 +41,7 @@ Fiscal_crisis_response_category = {
 		days_remove = 14
 		complete_effect = {
 			custom_effect_tooltip = FC_privatization
-			add_to_variable = { stability_fc = -0.15 }
+			add_to_variable = { stability_weekly_fc = -0.01 }
 			add_to_variable = { sales_tax_fc = -0.1 }
 			set_temp_variable = { temp_gdp_gained = 0.2 }
 			econ_money_reserves_change_percent_gdp = yes
@@ -95,7 +95,7 @@ Fiscal_crisis_response_category = {
 		}
 	}
 
-	print_emergency = {
+	print_emergency ={
 		icon = GFX_decision_generic_money
 		days_re_enable = 31
 		available = {
@@ -326,7 +326,7 @@ Fiscal_crisis_response_category = {
 		complete_effect = {
 		custom_effect_tooltip = FC_civ_cost_down
 			add_to_variable = { civilian_fc = -0.6 }
-			set_temp_variable = { gdp_growth_temp = -0.1 }
+			set_temp_variable= { gdp_growth_temp = -0.1 }
 			multiply_temp_variable = { gdp_growth_temp = gdp_growth }
 			if = { limit = { check_variable = { gdp_growth_temp > -3 } }
 				set_temp_variable = { gdp_growth_temp = -3 }
@@ -379,7 +379,7 @@ Fiscal_crisis_response_category = {
 		days_remove = 14
 		days_re_enable = 30
 		complete_effect = {
-			set_temp_variable = { temp_gdp_paid = 0.2 }
+			set_temp_variable = { temp_gdp_paid   = 0.2 }
 			set_temp_variable = { debt_temp = -0.1 }
 			multiply_temp_variable = { debt_temp = national_debt }
 			econ_spend_money_once_effect_GDP_percent = yes

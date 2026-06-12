@@ -1,0 +1,524 @@
+global_debug_decisions = {
+	show_hide_debug_decisions = {
+		icon = {
+			key = GFX_decision_generic_visibility
+			trigger = {
+				has_country_flag = hide_debug_decisions
+			}
+		}
+		icon = {
+			key = GFX_decision_generic_visibility_closed
+			trigger = {
+				NOT = { has_country_flag = hide_debug_decisions }
+			}
+		}
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision show_hide_debug_decisions"
+			if = {
+				limit = { has_country_flag = hide_debug_decisions }
+				clr_country_flag = hide_debug_decisions
+			}
+			else = {
+				set_country_flag = hide_debug_decisions
+			}
+		}
+	}
+
+	### US-Exclusive Debug Begin ###
+	debug_show_USA_debug_decisions = {
+		icon = {
+			key = GFX_decision_generic_visibility_closed
+			trigger = {
+				has_country_flag = USA_debug_decisions
+			}
+		}
+		icon = {
+			key = GFX_decision_generic_visibility
+			trigger = {
+				NOT = { has_country_flag = USA_debug_decisions }
+			}
+		}
+		allowed = {
+			tag = USA
+		}
+		visible = {
+			AND = {
+				NOT = { has_country_flag = hide_debug_decisions }
+				original_tag = USA
+			}
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_show_USA_debug_decisions"
+			if = {
+				limit = { has_country_flag = USA_debug_decisions }
+				clr_country_flag = USA_debug_decisions
+			}
+			else = {
+				set_country_flag = USA_debug_decisions
+			}
+		}
+	}
+
+	debug_show_US_var_display = {
+		icon = GFX_decision_generic_industry_indent
+		allowed = {
+			tag = USA
+		}
+		visible = {
+			has_country_flag = USA_debug_decisions
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_show_US_var_display"
+			if = {
+				limit = { has_country_flag = USA_debug_decisions }
+				clr_country_flag = USA_var_display_hidden
+			}
+			else = {
+				set_country_flag = USA_var_display_hidden
+			}
+		}
+	}
+
+	debug_USA_printing_show = {
+		icon = GFX_decision_generic_industry_indent
+
+		allowed = {
+			tag = USA
+		}
+		visible = {
+			has_country_flag = USA_debug_decisions
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_USA_printing_show"
+			if = {
+				limit = { has_country_flag = USA_debug_decisions }
+				clr_country_flag = USA_debug_printing_all
+			}
+			else = {
+				set_country_flag = USA_debug_printing_all
+				country_event = USA.10000
+			}
+		}
+	}
+	### US-Exclusive Debug End ###
+
+
+#### TT Econ Debug
+	debug_show_tt_econ_debug_decisions = {
+		icon = {
+			key = GFX_decision_generic_visibility_closed
+			trigger = {
+				has_country_flag = TT_econ_debug_decisions
+			}
+		}
+		icon = {
+			key = GFX_decision_generic_visibility
+			trigger = {
+				NOT = { has_country_flag = TT_econ_debug_decisions }
+			}
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_show_tt_econ_debug_decisions"
+			if = {
+				limit = { has_country_flag = TT_econ_debug_decisions }
+				clr_country_flag = TT_econ_debug_decisions
+			}
+			else = {
+				set_country_flag = TT_econ_debug_decisions
+			}
+		}
+	}
+	show_display_workforce = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: [?displayCurrentWorkforce]"
+
+		}
+	}
+	debug_tt_econ_socdev_update= {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_socdev_update"
+			societal_development_monthly_check = yes # update policy effectiveness first!
+		}
+	}
+	debug_tt_econ_scorer_test= {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_scorer_test"
+			clear_array = global.econ_countries
+			every_country = {
+				add_to_array = { global.econ_countries = THIS }
+			}
+		
+			get_sorted_scored_countries = {
+				scorer = GDP_rank_scorer
+				array = global.econ_countries
+			}
+		
+			# Set up ranking positions
+			for_each_scope_loop = {
+				array = global.econ_countries
+				add_to_variable = { global.econ_countries_index = 1 }
+				set_variable = { econ_ranking = global.econ_countries_index }
+			}
+			clear_variable = global.econ_countries_index
+
+			remove_dynamic_modifier = { modifier = TNO_fiscal_crisis_modifier }
+		}
+	}
+	debug_tt_econ_month_forward= {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_month_forward"
+			ZZZ_econ_inflation_cycling_calculation = yes
+			if = {
+				limit = { NOT = { has_idea = economy_multiplicative_modifiers_base } }
+				add_ideas = economy_multiplicative_modifiers_base
+			}
+			ZZZ_econ_inflation_cycling_calculation = yes
+			societal_development_monthly_check = yes # update policy effectiveness first!
+			econ_calculations_ON_MONTHLY = yes
+			calculate_consumer_goods_need = yes
+
+		}
+	}
+
+	debug_tt_econ_month_forward_all = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_month_forward_all"
+			ZZZ_econ_inflation_cycling_calculation = yes
+			every_country = {
+				societal_development_monthly_check = yes # update policy effectiveness first!
+				econ_calculations_ON_MONTHLY = yes
+				calculate_consumer_goods_need = yes
+			}
+
+		}
+	}
+
+	debug_tt_econ_six_month_forward= {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_six_month_forward"
+			ZZZ_econ_inflation_cycling_calculation = yes
+			add_to_temp_array = { six_loop = 1 }
+			add_to_temp_array = { six_loop = 1 }
+			add_to_temp_array = { six_loop = 1 }
+			add_to_temp_array = { six_loop = 1 }
+			add_to_temp_array = { six_loop = 1 }
+			add_to_temp_array = { six_loop = 1 }
+			for_each_loop = {
+				array = six_loop
+
+				if = {
+					limit = { NOT = { has_idea = economy_multiplicative_modifiers_base } }
+					add_ideas = economy_multiplicative_modifiers_base
+				}
+				ZZZ_econ_inflation_cycling_calculation = yes
+				societal_development_monthly_check = yes # update policy effectiveness first!
+				econ_calculations_ON_MONTHLY = yes
+				calculate_consumer_goods_need = yes
+			}
+
+		}
+	}
+
+	debug_tt_econ_twelve_month_forward= {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_twelve_month_forward"
+			ZZZ_econ_inflation_cycling_calculation = yes
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			add_to_temp_array = { twelve_loop = 1 }
+			for_each_loop = {
+				array = twelve_loop
+
+				if = {
+					limit = { NOT = { has_idea = economy_multiplicative_modifiers_base } }
+					add_ideas = economy_multiplicative_modifiers_base
+				}
+				ZZZ_econ_inflation_cycling_calculation = yes
+				societal_development_monthly_check = yes # update policy effectiveness first!
+				econ_calculations_ON_MONTHLY = yes
+				calculate_consumer_goods_need = yes
+			}
+
+		}
+	}
+
+	debug_tt_econ_test_scripted_effect_minus_flat = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_test_scripted_effect_minus_flat"
+			set_temp_variable = { temp_econ_GDP_boost_flat = -10 }
+			econ_GDP_boost_once_flat = yes
+		}
+	}
+
+	debug_tt_econ_test_scripted_effect_plus_flat = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_test_scripted_effect_plus_flat"
+			set_temp_variable = { temp_econ_GDP_boost_flat = 10 }
+			econ_GDP_boost_once_flat = yes
+		}
+	}
+	
+	debug_tt_econ_boost_centralization_5 = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_boost_centralization_5"
+			set_temp_variable = { econ_centralization_temp = 5 }
+			econ_centralization_change = yes
+		}
+	}
+	
+	debug_tt_econ_set_subtype_default = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_set_subtype_default"
+			set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_American_Capitalism }
+			econ_subtype_change = yes
+		}
+	}
+	
+	debug_tt_econ_test_scripted_effect_minus_percent = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_test_scripted_effect_minus_percent"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = -0.1 }
+			econ_GDP_boost_once_percentage = yes
+		}
+	}
+	debug_tt_econ_test_scripted_effect_plus_percent = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_test_scripted_effect_plus_percent"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.1 }
+			econ_GDP_boost_once_percentage = yes
+		}
+	}
+	debug_tt_econ_test_state_modifier_thingy= {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision test state_modifier_thingy"
+			64 = {
+				add_state_modifier = {
+					modifier = {
+						state_GDP_growth_modifier = 10.0
+					}
+				}
+			}
+		}
+	}
+	debug_tt_econ_test_recalculate_GDP_and_PUs_on_demand = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_tt_econ_test_recalculate_GDP_and_PUs_on_demand"
+			recalculate_GDP_and_PUs_on_demand = yes
+		}
+	}
+
+	debug_tt_econ_test_check_army_navy_spam = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: debug_tt_econ_test_check_army_navy_spam"
+			log = "[?army_idea_number] is army idea number and [?army_idea_number_set] is set army idea number"
+			log = "[?naval_idea_number] is naval idea number and [?naval_idea_number_set] is set naval idea number"
+
+		}
+	}
+	debug_tt_econ_test_econ_spending_money_effect = {
+		icon = GFX_decision_generic_industry_indent
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_econ_debug_decisions
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			set_temp_variable = { temp_econ_spending_amount = 2 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+	}
+#### Toolbox Theory Proxy Conflicts
+	debug_show_tt_debug_decisions = {
+		icon = {
+			key = GFX_decision_generic_visibility_closed
+			trigger = {
+				has_country_flag = TT_debug_decisions
+			}
+		}
+		icon = {
+			key = GFX_decision_generic_visibility
+			trigger = {
+				NOT = { has_country_flag = TT_debug_decisions }
+			}
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = no
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_show_tt_debug_decisions"
+			if = {
+				limit = { has_country_flag = TT_debug_decisions }
+				clr_country_flag = TT_debug_decisions
+			}
+			else = {
+				set_country_flag = TT_debug_decisions
+			}
+		}
+	}
+
+	debug_tt_command_power_cheat = {
+		icon = GFX_decision_generic_industry_indent_2
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+			has_country_flag = TT_debug_decisions
+		}
+
+		complete_effect = {
+			add_command_power = 999
+		}
+	}
+
+	debug_print_state_pops_country = {
+		icon = GFX_decision_generic_industry
+
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_print_state_pops_country"
+			every_owned_state = {
+				log = "[PREV.GetName], [THIS.GetName], [?THIS.state_population_k]"
+				add_to_variable = { PREV.TotalPop = THIS.state_population_k }
+			}
+			log = "[THIS.GetName], Total Pop: [?THIS.TotalPop]"
+			clear_variable = TotalPop
+		}
+	}
+}

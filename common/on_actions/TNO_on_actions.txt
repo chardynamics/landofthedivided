@@ -201,9 +201,6 @@ on_actions = {
 		}
 	}
 
-	# Monthly Espionage Budget Pulse
-	on_monthly_GER = { effect = { Espionage_Budget_Update = yes } }
-	on_monthly_USA = { effect = { Espionage_Budget_Update = yes } }
 
 	# Monthly pulse for everyone - NO LAMOUNIER BAD
 
