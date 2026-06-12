@@ -1,0 +1,3054 @@
+add_namespace = GUA_scripted
+add_namespace = GUA_forpol
+add_namespace = GUA_news
+
+country_event = {#1962 Election (Transition in 1963)
+	id = GUA_scripted.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_scripted.0" }
+	title = GUA_scripted.0.t
+	desc = GUA_scripted.0.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_scripted.0.a
+		ai_chance = { factor = 1 }
+		country_event = { id = GUA_scripted.1 days = 149 } #Path Choice
+		country_event = { id = GUA_scripted.2 days = 2325 } #War Check
+		MEX = { country_event = { id = GUA_forpol.24 days = 2323 } } #Fishermen Attacked by Guatemala if War is about to trigger
+
+		#Foreign Events
+		MEX = { country_event = { id = GUA_forpol.1 days = 78 } } #Smuggler's Dilemma
+		MEX = { country_event = { id = GUA_forpol.2 days = 100 } } #DFS Cooperation - forpol.8 Triggers as follow-up to this one
+		MEX = { country_event = { id = GUA_forpol.3 days = 132 } } #Border Control
+
+		USA = { country_event = { id = GUA_forpol.4 days = 101 } } #Dormant Coup Plot Revived
+		USA = { country_event = { id = GUA_forpol.5 days = 132 } } #Circle Tightens
+
+		JAP = { country_event = { id = GUA_forpol.6 days = 101 } } #Japanese Insight
+		JAP = { country_event = { id = GUA_forpol.7 days = 132 } } #Part-Time Paramilitant
+	}
+}
+
+country_event = {#1962 Election
+	id = GUA_scripted.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_scripted.1" }
+	title = GUA_scripted.1.t
+	desc = GUA_scripted.1.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+
+	option = { #Army Coup
+		name = GUA_scripted.1.a
+		ai_chance = {
+			factor = 12
+			modifier = {
+				add = -3
+				has_country_flag = GUA_MEX_Smuggling_Infiltration
+			}
+			modifier = {
+				add = 2
+				has_country_flag = GUA_Japan_Helped_Coup
+			}		
+			modifier = {
+				factor = 1.5
+				has_country_flag = GUA_USA_Helped_Coup
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = GUA_1962_ELECTION option = GUA_1962_ELECTION_PAR }
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+			last_election = "1962.11.10"
+			election_frequency = 72
+		}
+		set_popularities = {
+			socialist = 17
+			socialist_2 = 22
+			conservatism = 8
+			conservatism_1 = 13
+			despotism = 34
+			fascism = 6
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = GUA_junta_party_long
+			name = GUA_junta_party
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Corporate_Oligopoly }
+		econ_subtype_change = yes
+		set_temp_variable = { gdp_growth_temp = -1 }
+		econ_gdp_growth_change = yes
+		remove_ideas = {
+			GUA_20_Years_Of_Spring
+			GUA_That_Uncomfortable_Presence
+			GUA_Limited_Agrarian_Reform
+			GUA_Disloyal_Military
+		}
+		add_ideas = {
+			GUA_20_Years_Extinguished
+			GUA_Reign_Of_The_Fruit_Company
+			GUA_Unequal_Land_Distribution
+			GUA_The_Militarys_State
+		}
+		set_cosmetic_tag = GUA_axis
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereAmericasInterest = yes
+			}
+			news_event = {
+				id = GUA_news.1
+				hours = 4
+			}
+		}
+		clr_country_flag = GUA_MEX_Smuggling_Infiltration
+		clr_country_flag = GUA_MEX_Coup_1
+		clr_country_flag = GUA_MEX_Coup_2
+		#Foreign Events
+		MEX = { country_event = { id = GUA_forpol.9 } } #Immediate Reaction
+
+		#Border Incident Chain
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = GUA_news.3
+				days = 728
+				hours = 4
+			}
+		}
+		MEX = { country_event = { id = GUA_forpol.12 days = 728 } } #Border Incident Report
+		USA = { country_event = { id = GUA_forpol.13 days = 728 } } #Border Incident Report
+
+		MEX = { country_event = { id = GUA_forpol.10 days = 700 } } #Regime Profile
+		USA = { country_event = { id = GUA_forpol.11 days = 700 } } #Regime Profile
+
+		MEX = { country_event = { id = GUA_forpol.27 days = 760 } } #Leftist Insurgency | KD's Notes - I forgot about this one, my bad
+
+		MEX = { country_event = { id = GUA_forpol.14 days = 793 } } #Tensions Cool
+		USA = { country_event = { id = GUA_forpol.15 days = 793 } } #Memorandum on US-Guatemala Ties
+
+		MEX = { country_event = { id = GUA_forpol.16 days = 879 } } #Unpleasant Neighbour
+
+		MEX = { country_event = { id = GUA_forpol.17 days = 934 } } #MR-13 & The Dirty War
+		USA = { country_event = { id = GUA_forpol.18 days = 934 } } #Military Connections
+
+		MEX = { country_event = { id = GUA_forpol.19 days = 1298 } } #Cuban Proposal
+		USA = { country_event = { id = GUA_forpol.20 days = 1298 } } #Economic Leverage
+
+		JAP = { country_event = { id = GUA_forpol.21 days = 101 } } #Economic Opportunities
+		JAP = { country_event = { id = GUA_forpol.22 days = 132 } } #Guatemala City Embassy
+		#forpol.23 fires for follow-up of Cuban Proposal
+
+		add_opinion_modifier = {
+			target = MEX
+			modifier = GUA_harboring_insurgents
+		}
+		remove_opinion_modifier = {
+			target = MEX
+			modifier = MEX_revolutionary_ties
+		}
+		remove_opinion_modifier = {
+			target = COS
+			modifier = COS_fellow_revolutionaries
+		}
+		MEX = {
+			add_opinion_modifier = {
+				target = GUA
+				modifier = MEX_chaotic_dictatorship
+			}
+			remove_opinion_modifier = {
+				target = MEX
+				modifier = MEX_revolutionary_ties
+			}
+		}
+		COS = {
+			remove_opinion_modifier = {
+				target = GUA
+				modifier = COS_fellow_revolutionaries
+			}
+		}
+	}
+	option = { #Democracy
+		name = GUA_scripted.1.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				add = 2
+				has_country_flag = GUA_Japan_Helped_PAR
+			}	
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = GUA_1962_ELECTION option = GUA_1962_ELECTION_COUP }
+			}
+			modifier = {
+				factor = 1.5
+				has_country_flag = GUA_MEX_Coup_1
+			}
+			modifier = {
+				factor = 1.25
+				has_country_flag = GUA_MEX_Coup_2
+			}
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = socialist
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		every_country = { #Failed Coup
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = GUA_news.2
+			}
+		}
+		retire_country_leader = yes
+		promote_character = GUA_Jacobo_Arbenz
+		clr_country_flag = GUA_MEX_Smuggling_Infiltration
+		clr_country_flag = GUA_MEX_Coup_1
+		clr_country_flag = GUA_MEX_Coup_2
+		#Foreign Events
+		every_country = { #Border Incident
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = GUA_news.3
+				days = 728
+				hours = 4
+			}
+		}
+		MEX = { country_event = { id = GUA_forpol.49 } } #Coup Defeated
+		MEX = { country_event = { id = GUA_forpol.12 days = 728 } } #Incident Reaction
+		USA = { country_event = { id = GUA_forpol.51 days = 728 } } #Incident Reaction
+
+		MEX = { country_event = { id = GUA_forpol.52 days = 700 } } #Regime Profile
+		USA = { country_event = { id = GUA_forpol.53 days = 700 } } #Regime Profile
+
+		MEX = { country_event = { id = GUA_forpol.54 days = 760 } } #Botched assassination
+
+		MEX = { country_event = { id = GUA_forpol.55 days = 793 } } #Tensions Cool
+		USA = { country_event = { id = GUA_forpol.56 days = 793 } } #Tensions Cool
+
+		MEX = { country_event = { id = GUA_forpol.57 days = 934 } } #Enstranged Neighbour
+
+		MEX = { country_event = { id = GUA_forpol.59 days = 934 } }
+		USA = { country_event = { id = GUA_forpol.58 days = 934 } }
+
+		MEX = { country_event = { id = GUA_forpol.60 days = 1298 } }
+		USA = { country_event = { id = GUA_forpol.61 days = 1298 } }
+
+		JAP = { country_event = { id = GUA_forpol.62 days = 101 } }
+		JAP = { country_event = { id = GUA_forpol.63 days = 132 } }
+	}
+}
+
+country_event = {#War Check
+	id = GUA_scripted.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_scripted.2" }
+	title = GUA_scripted.2.t
+	desc = GUA_scripted.2.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		if = {
+			limit = { has_government = despotism }
+			set_variable = { 313.nationality = 501 }
+		}
+	}
+	option = { #Tinpot Alliance
+		trigger = { has_global_flag = CA_Tinpot_Alliance }
+		name = GUA_scripted.2.a
+		ai_chance = {
+			factor = 1
+		}
+		#War Check
+		random_list = { #Should fix the issue
+			50 = { #War
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = { rule = GUA_WAR_MEXICO option = GUA_WAR_MEXICO_PEACE }
+						check_variable = { GUA_War_Tension < 15 }
+					}
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = GUA_news.4
+						hours = 4
+					}
+				}
+				#Foreign Events
+				if = {
+					limit = { has_country_leader = { character = GUA_Miguel_Ydigoras_Fuentes ruling_only = yes } }
+					MEX = { country_event = { id = GUA_forpol.25 } }
+					USA = { country_event = { id = GUA_forpol.26 hours = 2 } }
+
+					MEX = { country_event = { id = GUA_forpol.28 days = 60 } } #Putting down a revolution - If you take too long, you get punished
+
+					#His Excellency Reacts to the War
+					MEX = { country_event = { id = GUA_forpol.29 days = 1 } }
+					MEX = { country_event = { id = GUA_forpol.30 days = 1 } }
+					MEX = { country_event = { id = GUA_forpol.31 days = 1 } }
+
+					#Calling the Veracruz Pact to War
+					MEX = { country_event = { id = GUA_forpol.32 days = 4 } }
+					MEX = { country_event = { id = GUA_forpol.33 days = 8 } }
+					MEX = { country_event = { id = GUA_forpol.34 days = 10 } }
+					MEX = { country_event = { id = GUA_forpol.35 days = 12 } }
+					MEX = { country_event = { id = GUA_forpol.36 days = 15 } }
+				}
+			}
+			50 = { #Peace
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GUA_WAR_MEXICO option = GUA_WAR_MEXICO_WAR }
+				}
+				#Foreign Events - Apparently nothing for this has been prompted
+				add_stability = 0.10 #I guess bro
+			}
+		}
+	}
+
+	option = { #War
+		trigger = {
+			check_variable = { GUA_War_Tension > 15 }
+			NOT = { has_global_flag = CA_Tinpot_Alliance }
+		}
+		name = GUA_scripted.2.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = GUA_WAR_MEXICO option = GUA_WAR_MEXICO_PEACE }
+			}
+		}
+
+		#Foreign Events
+		if = {
+			limit = { has_country_leader = { character = GUA_Miguel_Ydigoras_Fuentes ruling_only = yes } }
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = GUA_news.4
+					hours = 4
+				}
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.10
+			}
+			add_country_leader_role = {
+				character = GUA_Miguel_Ydigoras_Fuentes
+				promote_leader = yes
+				country_leader = {
+					expire = "1985.4.20"
+					#desc = ""
+					ideology = despotism_personalistic_dictatorship_subtype
+					traits = { }
+					id = -1
+				}
+			}
+			MEX = { country_event = { id = GUA_forpol.25 } }
+			USA = { country_event = { id = GUA_forpol.26 hours = 2 } }
+
+			MEX = { country_event = { id = GUA_forpol.28 days = 60 } } #Putting down a revolution - If you take too long, you get punished
+
+			#His Excellency Reacts to the War
+			MEX = { country_event = { id = GUA_forpol.29 days = 1 } }
+			MEX = { country_event = { id = GUA_forpol.30 days = 1 } }
+			MEX = { country_event = { id = GUA_forpol.31 days = 1 } }
+
+			#Calling the Veracruz Pact to War
+			MEX = { country_event = { id = GUA_forpol.32 days = 4 } }
+			MEX = { country_event = { id = GUA_forpol.33 days = 8 } }
+			MEX = { country_event = { id = GUA_forpol.34 days = 10 } }
+			MEX = { country_event = { id = GUA_forpol.35 days = 12 } }
+			MEX = { country_event = { id = GUA_forpol.36 days = 15 } }
+		}
+		else = { #Provisionally having this rough code, follows the chart well enough
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.03
+			}
+			set_politics = { ruling_party = despotism }
+			set_party_name = {
+				ideology = despotism
+				long_name = GUA_despotism_party_long
+				name = GUA_despotism_party
+			}
+			retire_country_leader = yes
+			promote_character = GUA_Carlos_Manuel_Arana_Osorio
+			set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Corporate_Oligopoly }
+			econ_subtype_change = yes
+
+			MEX = { country_event = { id = GUA_forpol.25 } }
+			MEX = { country_event = { id = GUA_forpol.28 days = 60 } } #Putting down a revolution - If you take too long, you get punished
+		}
+	}
+	option = { #Peace
+		trigger = {
+			check_variable = { GUA_War_Tension < 15 }
+			NOT = { has_global_flag = CA_Tinpot_Alliance }
+		}
+		name = GUA_scripted.2.c
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = GUA_WAR_MEXICO option = GUA_WAR_MEXICO_WAR }
+			}
+		}
+		#And now to check for Non-War Scenarios
+		if = { # unavoidable revolution if Ydigora is in charge. this was changed like two hours before the update because of the famous leftist bias of the crakkkas in the tno dev team.
+			limit = {
+				has_country_leader = { character = GUA_Miguel_Ydigoras_Fuentes ruling_only = yes }
+			}
+			country_event = { id = GUA_scripted.7 days = 1 }
+		}
+		else_if = { # another coup attempt if the PAR is in charge
+			limit = {
+				has_country_leader = { character = GUA_Jacobo_Arbenz ruling_only = yes }
+			}
+			random_list = {
+				50 = { #Pro-OFN Coup
+					modifier = {
+						factor = 0
+						has_game_rule = { rule = GUA_LINGERING_STORM option = GUA_LINGERING_STORM_STATUSQUO }
+					}
+					modifier = { #There should really be more modifiers than just this, way too random
+						factor = 0.3
+						has_country_flag = GUA_Cuban_Agents
+					}
+					country_event = { id = GUA_scripted.7 days = 1 }
+					clr_country_flag = GUA_Cuban_Agents
+				}
+				50 = { #Democracy Continues
+					modifier = {
+						factor = 0
+						has_game_rule = { rule = GUA_LINGERING_STORM option = GUA_LINGERING_STORM_COUP }
+					}
+					country_event = { id = GUA_scripted.3 days = 300 } #1968 Election
+					country_event = { id = GUA_scripted.4 days = 2184 } #1974 Election
+					USA = { country_event = { id = GUA_forpol.66 days = 2164 } } #FBI Connections
+					clr_country_flag = GUA_Cuban_Agents
+				}
+			}
+		}
+	}
+}
+
+country_event = { #1968 Election
+	id = GUA_scripted.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_scripted.3" }
+	title = GUA_scripted.3.t
+	desc = GUA_scripted.3.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Mijangos Elected
+		name = GUA_scripted.3.a
+		ai_chance = {
+			factor = 1
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = socialist
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_popularities = {
+			socialist_2 = 2
+			socialist = 33
+			progressivism = 7
+			liberalism = 12
+			liberalism_1 = 8
+			liberal_conservatism = 18
+			conservatism_2 = 6
+			conservatism = 6
+			paternalism = 8
+		}
+		retire_country_leader = yes
+		promote_character = GUA_Oscar_Adolfo_Mijangos_Lopez
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Social_Market }
+		econ_subtype_change = yes
+		remove_ideas = { 
+			GUA_That_Uncomfortable_Presence
+			GUA_Limited_Agrarian_Reform
+		}
+		add_ideas = { GUA_Men_Of_Maize }		
+		#Foreign Events
+		#MEX = { country_event = { id = GUA_forpol.64 } }
+		USA = { country_event = { id = GUA_forpol.65 } }
+	}
+}
+
+country_event = {#1974 Election
+	id = GUA_scripted.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_scripted.4" }
+	title = GUA_scripted.4.t
+	desc = GUA_scripted.4.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		#Foreign Events
+		#MEX = { country_event = { id = GUA_forpol.67 } }
+		remove_ideas = { 
+			GUA_20_Years_Of_Spring
+			GUA_Disloyal_Military
+		}
+		add_ideas = { GUA_Land_Of_Eternal_Spring }		
+	}
+
+	option = { #PAR-Left Victory
+		name = GUA_scripted.4.a
+		ai_chance = {
+			factor = 2.5
+			modifier = { #Letting go of claims on Belize is really unpopular
+				factor = 0.1
+				BLZ = { has_idea = BLZ_Compromise_Treaty }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_PAR_RIGHT }
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_DCG }
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_MLN }
+				}
+			}
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = socialist
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_popularities = {
+			socialist = 39
+			progressivism = 14
+			liberalism = 7
+			liberalism_1 = 9
+			liberal_conservatism = 19
+			conservatism_2 = 7
+			conservatism = 5
+		}
+		add_country_leader_role = {
+			character = GUA_Manuel_Colom_Argueta
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_GUA_Manuel_Colom_Argueta_soc_DESC"
+				expire = "1994.4.20"
+				ideology = socialist_social_democracy_subtype
+				traits = { }
+				id = -1
+			}
+		}
+		econ_join_sphere_MEX = yes
+		if = {
+			limit = { has_subject = BLZ }
+			BLZ = { econ_join_sphere_MEX = yes }
+		}
+		clr_country_flag = GUA_US_Helps_Mendez
+		clr_country_flag = GUA_US_Helps_Leon
+		clr_country_flag = GUA_US_Helps_Sandoval
+	}
+	
+	option = { #PAR-Right Victory
+		name = GUA_scripted.4.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				BLZ = { has_idea = BLZ_Compromise_Treaty }
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = GUA_US_Helps_Mendez
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_PAR_LEFT }
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_DCG }
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_MLN }
+				}
+			}
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = liberalism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_popularities = {
+			socialist = 19
+			progressivism = 14
+			liberalism = 27
+			liberalism_1 = 9
+			liberal_conservatism = 19
+			conservatism_2 = 7
+			conservatism = 5
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		clr_country_flag = GUA_US_Helps_Mendez
+		clr_country_flag = GUA_US_Helps_Leon
+		clr_country_flag = GUA_US_Helps_Sandoval
+	}
+	option = { #DCG Victory
+		name = GUA_scripted.4.c
+		ai_chance = {
+			factor = 1.5
+			modifier = {
+				factor = 0
+				OR = {
+					BLZ = { has_idea = BLZ_New_Masters }
+					owns_state = 311
+				}
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = GUA_US_Helps_Leon
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						BLZ = { has_idea = BLZ_New_Masters }
+						owns_state = 311
+					}
+				}
+				OR = {
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_PAR_LEFT }
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_PAR_RIGHT }
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_MLN }
+				}
+			}
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = liberal_conservatism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_popularities = {
+			socialist = 27
+			progressivism = 5
+			liberalism = 7
+			liberalism_1 = 14
+			liberal_conservatism = 28
+			conservatism_2 = 12
+			conservatism = 7
+		}
+		add_country_leader_role = {
+			character = GUA_Rene_de_Leon_Schlotter
+			promote_leader = yes
+			country_leader = {
+				expire = "1994.4.20"
+				ideology = progressivism_christian_progressivism_subtype
+				traits = { }
+				id = -1
+			}
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		clr_country_flag = GUA_US_Helps_Mendez
+		clr_country_flag = GUA_US_Helps_Leon
+		clr_country_flag = GUA_US_Helps_Sandoval
+	}
+
+	option = { #MLN Victory
+		name = GUA_scripted.4.c
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					BLZ = { has_idea = BLZ_New_Masters }
+					owns_state = 311
+				}
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = GUA_US_Helps_Sandoval
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						BLZ = { has_idea = BLZ_New_Masters }
+						owns_state = 311
+					}
+				}
+				OR = {
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_PAR_LEFT }
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_PAR_RIGHT }
+					has_game_rule = { rule = GUA_1974_ELECTION option = GUA_1974_ELECTION_DCG }
+				}
+			}
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = paternalism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_popularities = {
+			paternalism = 31
+			conservatism = 15
+			liberal_conservatism = 8
+			liberalism_1 = 12
+			liberalism = 4
+			progressivism = 8
+			socialist = 22
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = GUA_US_Helps_Mendez
+					has_country_flag = GUA_US_Helps_Leon
+				}
+			}
+			econ_leave_sphere = yes #Sandoval can't believe the US would betray the white race
+		}
+		clr_country_flag = GUA_US_Helps_Mendez
+		clr_country_flag = GUA_US_Helps_Leon
+		clr_country_flag = GUA_US_Helps_Sandoval
+	}
+}
+
+country_event = { #Revolutionary Election
+	id = GUA_scripted.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_scripted.5" }
+	title = GUA_scripted.5.t
+	desc = GUA_scripted.5.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #URD Elected
+		name = GUA_scripted.5.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = GUA_REV_ELECTION option = GUA_REV_ELECTION_SOC }
+			}
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = despotism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = GUA_pri_party_long
+			name = GUA_pri_party
+		}
+		set_party_name = {
+			ideology = socialist_1
+			long_name = GUA_socialist_party_long
+			name = GUA_socialist_party
+		}
+		set_party_name = {
+			ideology = socialist
+			long_name = GUA_PUR_party_long
+			name = GUA_PUR_party
+		}
+		set_cosmetic_tag = GUA_MEX
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = GUA_Manuel_Colom_Argueta
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_GUA_Manuel_Colom_Argueta_inst_dep_DESC"
+				expire = "1994.4.20"
+				ideology = despotism_institutional_despotism_subtype
+				traits = { }
+				id = -1
+			}
+		}
+		end_puppet = yes
+		random_list = {
+			65 = {
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GUA_MEX_RECONSTRUCTION option = GUA_MEX_RECONSTRUCTION_FAIL }
+				}
+				set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Stabilizing_Development }
+				econ_subtype_change = yes
+				MEX = { set_autonomy = { target = GUA autonomy_state = autonomy_client_state } }
+				econ_join_sphere_MEX = yes
+				set_popularities = {
+					despotism = 70
+					socialist = 14
+					socialist_1 = 10
+					progressivism = 6
+				}
+				add_stability = 0.15
+				set_temp_variable = { gdp_growth_temp = 0.5 }
+				econ_gdp_growth_change = yes
+				if = {
+					limit = { NOT = { has_country_flag = GUA_Soc_Rev } } #these natspirits reference the Mexican invasion in their loc, made it so they don't show up if that didn't happen
+					remove_ideas = {
+						GUA_Pleading_Pesos
+						GUA_Counterrevolutionary_Elements
+					}
+					add_ideas = { 
+						GUA_A_Fistful_Of_Pesos
+						GUA_Counterrevolutionary_Elements_2
+					}
+				}
+			}
+			35 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = { rule = GUA_MEX_RECONSTRUCTION option = GUA_MEX_RECONSTRUCTION_SUCCESS }
+						has_country_flag = GUA_Soc_Rev
+					}
+				}
+				set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Corporate_Oligopoly }
+				econ_subtype_change = yes
+				MEX = { set_autonomy = { target = GUA autonomy_state = autonomy_reliant } }
+				econ_join_sphere_MEX = yes
+				set_popularities = {
+					despotism = 60
+					socialist = 19
+					socialist_1 = 13
+					progressivism = 8
+				}
+				add_stability = 0.075
+				set_temp_variable = { gdp_growth_temp = 0.25 }
+				econ_gdp_growth_change = yes
+				MEX = {
+					set_temp_variable = { gdp_growth_temp = 0.05 }
+					econ_gdp_growth_change = yes
+				}
+				tno_worsen_admin_efficiency = yes
+				remove_ideas = {
+					GUA_Pleading_Pesos
+					GUA_Counterrevolutionary_Elements
+				}
+				add_ideas = { 
+					GUA_For_A_Few_Pesos_More
+					GUA_Counterrevolutionary_Elements_2
+				}
+			}
+		}
+	}
+	option = { #M13 Elected
+		trigger = { has_country_leader = { character = GUA_Marco_Antonio_Yon_Sosa ruling_only = yes } }
+		name = GUA_scripted.5.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = GUA_REV_ELECTION option = GUA_REV_ELECTION_URD }
+			}
+		}
+		set_party_name = {
+			ideology = socialist
+			long_name = GUA_PUR_party_long
+			name = GUA_PUR_party
+		}
+		econ_join_sphere_MEX = yes		
+	}
+}
+
+country_event = {#Post-War Set-Up
+	id = GUA_scripted.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_scripted.6" }
+	title = GUA_scripted.6.t
+	desc = GUA_scripted.6.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Mexican Army Government
+		name = GUA_scripted.6.a
+		ai_chance = {
+			factor = 1
+		}
+		country_event = { id = GUA_scripted.5 days = 200 } #Path Choice
+		MEX = { set_autonomy = { target = GUA autonomy_state = autonomy_liberated_government } }
+		set_politics = { ruling_party = despotism }
+		set_popularities = {
+			despotism = 70
+			socialist = 14
+			socialist_1 = 10
+			progressivism = 6
+		}
+		add_country_leader_role = {
+			character = GUA_Hermenegildo_Cuencia_Diaz
+			promote_leader = yes
+			country_leader = {
+				expire = "1994.4.20"
+				desc = "POLITICS_HERMENEGILDO_DIAZ"
+				ideology = despotism_interim_government_subtype
+				traits = { }
+				id = -1
+			}
+		}
+		add_country_leader_role = {
+			character = GUA_Marco_Antonio_Yon_Sosa
+			promote_leader = yes
+			country_leader = {
+				expire = "1994.4.20"
+				desc = "POLITICS_GUA_Marco_Antonio_Yon_Sosa_DESC"
+				ideology = socialist_left_wing_nationalism_subtype
+				traits = { }
+				id = -1
+			}
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = GUA_mex_party_long
+			name = GUA_mex_party
+		}
+		remove_ideas = {
+			GUA_20_Years_Extinguished
+			GUA_Reign_Of_The_Fruit_Company
+			GUA_Unequal_Land_Distribution
+			GUA_The_Militarys_State
+		}
+		add_ideas = {
+			GUA_Revolutionary_Tutelage
+			GUA_Pleading_Pesos
+			GUA_Counterrevolutionary_Elements
+		}
+		set_cosmetic_tag = GUA_MEX
+		econ_leave_sphere = yes
+		econ_join_sphere_MEX = yes
+		set_temp_variable = { gdp_growth_temp = -1 }
+		econ_gdp_growth_change = yes
+		add_stability = -0.25
+		set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Planned }
+		econ_type_change = yes
+		USA = { country_event = { id = GUA_forpol.42 days = 100 } } #Memorandum on American Presence
+		add_opinion_modifier = {
+			target = MEX
+			modifier = MEX_revolutionary_ties
+		}
+	}
+}
+
+country_event = { #Revolution in Guatemala
+	id = GUA_scripted.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_scripted.7" }
+	title = GUA_scripted.7.t
+	desc = GUA_scripted.7.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Couped by Socialists
+		trigger = {
+			has_country_leader = { character = GUA_Miguel_Ydigoras_Fuentes ruling_only = yes }
+		}
+		name = GUA_scripted.7.a
+		ai_chance = {
+			factor = 1
+		}
+		set_politics = { ruling_party = socialist }
+		set_party_name = {
+			ideology = socialist
+			long_name = GUA_socialist_2_party_long
+			name = GUA_socialist_2_party
+		}
+		set_party_name = {
+			ideology = socialist_1
+			long_name = GUA_socialist_party_long
+			name = GUA_socialist_party
+		}
+		add_country_leader_role = {
+			character = GUA_Marco_Antonio_Yon_Sosa
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_GUA_Marco_Antonio_Yon_Sosa_DESC"
+				expire = "1994.4.20"
+				ideology = socialist_left_wing_nationalism_subtype
+				traits = { }
+				id = -1
+			}
+		}
+		set_popularities = {
+			communist = 14
+			socialist = 38
+			socialist_1 = 10
+			progressivism = 9
+			liberalism = 5
+			liberal_conservatism = 10
+			conservatism = 10
+			paternalism = 4
+		}
+		set_cosmetic_tag = GUA_soc
+		set_country_flag = GUA_Soc_Rev
+		diplomatic_relation = {
+			country = NIC
+			relation = guarantee
+			active = no
+		}
+		diplomatic_relation = {
+			country = HON
+			relation = guarantee
+			active = no
+		}
+		diplomatic_relation = {
+			country = ELS
+			relation = guarantee
+			active = no
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		remove_ideas = {
+			GUA_20_Years_Extinguished
+			GUA_Reign_Of_The_Fruit_Company
+			GUA_Unequal_Land_Distribution
+			GUA_The_Militarys_State
+		}
+		add_ideas = {
+			GUA_Saker_Ti
+			GUA_The_Great_Uprooting
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = GUA_news.6
+			}
+		}
+
+		country_event = { id = GUA_scripted.5 days = 300 } #Elections
+		#Immediate Reaction
+		VEN = { VEN_commie_increase_small = yes }
+		#MEX = { country_event = { id = GUA_forpol.37 days = 1 } }
+		USA = { country_event = { id = GUA_forpol.38 days = 1 } }
+
+		#MEX = { country_event = { id = GUA_forpol.39 days = 128 } } #Meeting with Ambassador
+		#MEX = { country_event = { id = GUA_forpol.40 days = 128 } } #Meeting with Ambassador V2
+		USA = { country_event = { id = GUA_forpol.41 days = 128 } } #FBI Rebuilds Intelligence Network
+	}
+
+	option = { #Couped by Pro-OFN Army
+		trigger = {
+			has_country_leader = { character = GUA_Jacobo_Arbenz ruling_only = yes }
+		}
+		name = GUA_scripted.7.a
+		ai_chance = {
+			factor = 1
+		}
+		set_politics = { ruling_party = despotism }
+		set_popularities = {
+			despotism_2 = 18
+			despotism = 28
+			paternalism = 12
+			liberal_conservatism = 9
+			liberalism_1 = 9
+			liberalism = 3
+			socialist = 18
+			socialist_2 = 3
+		}
+		promote_character = GUA_Carlos_Manuel_Arana_Osorio
+		GUA_Carlos_Manuel_Arana_Osorio = {
+			set_portraits = {
+				civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Carlos_Arano_Osario_civ.png" }
+			}
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Corporate_Oligopoly }
+		econ_subtype_change = yes
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = GUA_news.7
+			}
+		}
+
+		#Immediate Reaction
+		#MEX = { country_event = { id = GUA_forpol.45 days = 1 } }
+		#USA = { country_event = { id = GUA_forpol.46 days = 1 } }
+
+		#MEX = { country_event = { id = GUA_forpol.47 days = 50 } }
+		USA = { country_event = { id = GUA_forpol.48 days = 63 } }
+		econ_join_sphere_USA = yes
+	}
+}
+
+###Flavour Events
+country_event = { #
+	id = GUA_forpol.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.1" }
+	title = GUA_forpol.1.t
+	desc = GUA_forpol.1.desc
+	picture = GFX_report_event_generic_guns_rifles_fal
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.1.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.2" }
+	title = GUA_forpol.2.t
+	desc = GUA_forpol.2.desc
+	picture = GFX_report_event_generic_gun_by_phone
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.2.a
+		ai_chance = { factor = 1 }
+		MEX_PRI_increase_power_dfs_very_low = yes
+		MEX_PRI_increase_corruption_dfs_very_low = yes
+		GUA = { set_country_flag = GUA_MEX_Smuggling_Infiltration }
+		custom_effect_tooltip = GUA_Coup_Affect_tt
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+		hidden_effect = { MEX = { country_event = { id = GUA_forpol.8 days = 10 } } }
+	}
+	option = {
+		name = GUA_forpol.2.b
+		ai_chance = { factor = 1 }
+		MEX_PRI_increase_loyalty_dfs_very_low = yes
+		hidden_effect = { MEX = { country_event = { id = GUA_forpol.8 days = 10 } } }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.3" }
+	title = GUA_forpol.3.t
+	desc = GUA_forpol.3.desc
+	picture = GFX_report_event_HIS_Search_And_Destroy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.3.a
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = GUA_forpol.3.b
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.4" }
+	title = GUA_forpol.4.t
+	desc = GUA_forpol.4.desc
+	picture = GFX_report_event_USA_cia
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.4.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.5" }
+	title = GUA_forpol.5.t
+	desc = GUA_forpol.5.desc
+	picture = GFX_report_event_generic_building_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.5.a
+		ai_chance = { factor = 1 }
+		add_political_power = -35
+		GUA = { add_stability = 0.1 }
+	}
+	option = {
+		name = GUA_forpol.5.b
+		ai_chance = { factor = 1 }
+		add_command_power = -10
+		GUA = {
+			set_country_flag = GUA_USA_Helped_Coup
+			add_stability = -0.1
+		}
+		custom_effect_tooltip = GUA_Coup_Chances_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.6" }
+	title = GUA_forpol.6.t
+	desc = GUA_forpol.6.desc
+	picture = GFX_report_event_GUA_palace
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.6.a
+		ai_chance = { factor = 1 }
+		add_command_power = -5
+		GUA = { set_country_flag = GUA_Japan_Helped_PAR }
+		custom_effect_tooltip = GUA_Coup_Affect_tt
+	}
+	option = {
+		name = GUA_forpol.6.b
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+		set_temp_variable = { temp_econ_spending_amount = 0.005 }
+		econ_spend_money_once_effect_raw_money = yes		
+		set_country_flag = GUA_Japan_Helped_Coup
+		custom_effect_tooltip = GUA_Coup_Chances_tt
+	}
+	option = {
+		name = GUA_forpol.6.c
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.7" }
+	title = GUA_forpol.7.t
+	desc = GUA_forpol.7.desc
+	picture = GFX_report_event_GUA_guerrillas_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.7.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = GUA_Coup_Chances_tt #KD's Notes - Flavor tooltip since this event always fires
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.8" }
+	title = GUA_forpol.8.t
+	desc = GUA_forpol.8.desc
+	picture = GFX_report_event_MEX_mateos_meeting
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.8.a
+		ai_chance = { factor = 1 }
+		add_political_power = -15
+		GUA = { set_country_flag = GUA_MEX_Coup_1 }
+		custom_effect_tooltip = GUA_Coup_Affect_tt
+	}
+	option = {
+		name = GUA_forpol.8.b
+		ai_chance = { factor = 1 }
+		GUA = { set_country_flag = GUA_MEX_Coup_2 }
+		custom_effect_tooltip = GUA_Coup_Affect_tt
+	}
+	option = {
+		name = GUA_forpol.8.c
+		ai_chance = { factor = 1 }
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_Coup_Affect_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.9" }
+	title = GUA_forpol.9.t
+	desc = GUA_forpol.9.desc
+	picture = GFX_report_event_GUA_arrest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.9.a
+		ai_chance = { factor = 1 }
+		add_political_power = -35
+		GUA = { add_to_variable = { GUA_War_Tension = 2 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.10" }
+	title = GUA_forpol.10.t
+	desc = GUA_forpol.10.desc
+	picture = GFX_report_event_GUA_ydigoras
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.10.a
+		ai_chance = { factor = 1 }
+		add_command_power = 10
+		TNO_improve_training_policy_effectiveness_low = yes
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.11" }
+	title = GUA_forpol.11.t
+	desc = GUA_forpol.11.desc
+	picture = GFX_report_event_GUA_ydigoras
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.11.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		GUA = {
+			add_stability = 0.075
+			add_war_support = 0.075
+			set_temp_variable = { gdp_growth_temp = 0.25 }
+			GUA = { add_to_variable = { GUA_War_Tension = 2 } }
+			econ_gdp_growth_change = yes
+		}
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.11.b
+		ai_chance = { factor = 1 }
+		set_temp_variable = { money_reserves_temp = 0.25 }
+		econ_money_reserves_change_raw_money = yes
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -500
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment
+			amount = -100
+			producer = USA
+		}
+		GUA = {
+			set_temp_variable = { gdp_growth_temp = 0.35 }
+			GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+			econ_gdp_growth_change = yes
+		}
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.11.c
+		ai_chance = { factor = 1 }
+		add_political_power = -15
+		GUA = {
+			add_stability = 0.05
+			add_war_support = -0.075
+			set_temp_variable = { gdp_growth_temp = 0.15 }
+			econ_gdp_growth_change = yes
+			GUA = { add_to_variable = { GUA_War_Tension = -1 } }
+		}
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.12" }
+	title = GUA_forpol.12.t
+	desc = GUA_forpol.12.desc
+	picture = GFX_report_event_GUA_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.12.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		custom_effect_tooltip = GUA_Fade_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.12.b
+		ai_chance = { factor = 1 }
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.12.c
+		ai_chance = { factor = 1 }
+		add_political_power = 15
+		GUA = { add_to_variable = { GUA_War_Tension = 3 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.12.d
+		ai_chance = { factor = 1 }
+		trigger = { command_power > 4.99 }
+		add_political_power = 25
+		add_command_power = -5
+		GUA = { add_to_variable = { GUA_War_Tension = 5 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.13" }
+	title = GUA_forpol.13.t
+	desc = GUA_forpol.13.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.13.a
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+		GUA = { subtract_from_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.13.b
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.13.c
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.14" }
+	title = GUA_forpol.14.t
+	desc = GUA_forpol.14.desc
+	picture = GFX_report_event_GUA_map
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.14.a
+		ai_chance = { factor = 1 }
+		GUA = { subtract_from_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_Fade_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.15" }
+	title = GUA_forpol.15.t
+	desc = GUA_forpol.15.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.15.a
+		ai_chance = { factor = 1 }
+		add_political_power = 5
+		add_command_power = 5
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.16" }
+	title = GUA_forpol.16.t
+	desc = GUA_forpol.16.desc
+	picture = GFX_report_event_GUA_ydigoras
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.16.a
+		ai_chance = { factor = 1 }
+		trigger = { command_power > 4.99 }
+		add_command_power = -5
+		GUA = { add_to_variable = { GUA_War_Tension = 3 } }
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.16.b
+		ai_chance = { factor = 1 }
+		GUA = { add_to_variable = { GUA_War_Tension = 2 } }
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.16.c
+		ai_chance = { factor = 1 }
+		add_command_power = 5
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.17" }
+	title = GUA_forpol.17.t
+	desc = GUA_forpol.17.desc
+	picture = GFX_report_event_GUA_guerrillas_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.17.a
+		ai_chance = { factor = 1 }
+		GUA = { subtract_from_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_Fade_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.17.b
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+	}
+	option = {
+		name = GUA_forpol.17.c
+		trigger = {
+			MEX = {
+				has_country_flag = MEX_supported_leftist_insurgency
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.18" }
+	title = GUA_forpol.18.t
+	desc = GUA_forpol.18.desc
+	picture = GFX_report_event_usa_army_training
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.18.a
+		ai_chance = { factor = 1 }
+		add_command_power = 5
+		TNO_improve_training_policy_effectiveness_low = yes
+		TNO_improve_army_professionalism_low = yes
+		GUA = {
+			313 = {
+				set_temp_variable = { building = token:barracks }
+				set_temp_variable = { building_amount = 1 }
+				dynamic_building_effect = yes
+				set_temp_variable = { state_value_multiplier_temp = 1.01 }
+				econ_state_value_change_multiply = yes
+			}
+			TNO_improve_training_policy_effectiveness_med = yes
+			TNO_improve_army_professionalism_med = yes
+		}
+		set_temp_variable = { debt_temp = 0.085 }
+		econ_national_debt_change = yes
+	}
+	option = {
+		name = GUA_forpol.18.b
+		ai_chance = { factor = 1 }
+		GUA = {
+			TNO_improve_training_policy_effectiveness_med = yes
+			TNO_improve_army_professionalism_med = yes
+		}
+		set_temp_variable = { debt_temp = 0.085 }
+		econ_national_debt_change = yes
+	}
+	option = {
+		name = GUA_forpol.18.c
+		ai_chance = { factor = 1 }
+		set_temp_variable = { money_reserves_temp = 0.085 }
+		econ_money_reserves_change_raw_money = yes
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.19" }
+	title = GUA_forpol.19.t
+	desc = GUA_forpol.19.desc
+	picture = GFX_report_event_MEX_fidel_castro
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.19.a
+		ai_chance = { factor = 1 }
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+		hidden_effect = { MEX = { country_event = { id = GUA_forpol.23 days = 30 } } }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.20" }
+	title = GUA_forpol.20.t
+	desc = GUA_forpol.20.desc
+	picture = GFX_report_event_generic_champagne_cheers
+	immediate = {
+		GUA = {
+			set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Corporate_Oligopoly }
+			econ_subtype_change = yes
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.20.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { gdp_growth_temp = 0.10 }
+		econ_gdp_growth_change = yes
+		GUA = {
+			set_temp_variable = { gdp_growth_temp = 0.75 }
+			add_to_variable = { GUA_War_Tension = 1 }
+			econ_gdp_growth_change = yes
+			TNO_improve_industrial_equipment_high = yes
+		}
+		TNO_worsen_regulations_policy_effectiveness_med = yes
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.20.b
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.20.c
+		ai_chance = { factor = 1 }
+		add_political_power = 15
+		TNO_improve_regulations_policy_effectiveness_low = yes
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.21" }
+	title = GUA_forpol.21.t
+	desc = GUA_forpol.21.desc
+	picture = GFX_report_event_generic_banana_republic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.21.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { gdp_growth_temp = 0.10 }
+		econ_gdp_growth_change = yes
+		GUA = {
+			set_temp_variable = { gdp_growth_temp = 0.50 }
+			econ_gdp_growth_change = yes
+			TNO_improve_industrial_equipment_high = yes
+		}
+		set_temp_variable = { debt_temp = 0.075 }
+		econ_national_debt_change = yes
+	}
+	option = {
+		name = GUA_forpol.21.b
+		ai_chance = { factor = 1 }
+		add_political_power = 25
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.22" }
+	title = GUA_forpol.22.t
+	desc = GUA_forpol.22.desc
+	picture = GFX_report_event_GUA_palace
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.22.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { GUA = { has_country_flag = GUA_Japan_Helped_Coup } }
+			set_temp_variable = { money_reserves_temp = 0.015 }
+			econ_money_reserves_change_raw_money = yes
+			GUA = {
+				set_temp_variable = { temp_modifier = 25 }
+				add_to_trade_modifier_PREV = yes
+			}
+			custom_effect_tooltip = GUA_Picked_Right_tt
+		}
+		add_political_power = 10
+		clr_country_flag = GUA_Japan_Helped_Coup
+		clr_country_flag = GUA_Japan_Helped_PAR
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.23" }
+	title = GUA_forpol.23.t
+	desc = GUA_forpol.23.desc
+	picture = GFX_report_event_GUA_map
+	trigger = { check_variable = { GUA_War_Tension > 9 } }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.23.a
+		ai_chance = { factor = 1 }
+		add_political_power = -20
+		add_command_power = -10
+		add_manpower = -147
+		GUA = { add_to_variable = { GUA_War_Tension = 3 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.24" }
+	title = GUA_forpol.24.t
+	desc = GUA_forpol.24.desc
+	picture = GFX_report_event_generic_boats
+	trigger = { check_variable = { GUA_War_Tension > 13 } }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.24.a
+		ai_chance = { factor = 1 }
+		add_political_power = -50
+		add_manpower = -24
+		add_war_support = 0.03
+		GUA = { add_to_variable = { GUA_War_Tension = 5 } }
+		custom_effect_tooltip = GUA_War_Invitable
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.25" }
+	title = GUA_forpol.25.t
+	desc = GUA_forpol.25.desc
+	picture = GFX_report_event_USA_saw_soldier9
+	immediate = {
+		hidden_effect = {
+			MEX = {
+				declare_war_on = {
+					target = GUA
+					type = annex_everything
+				}
+			}
+			USA = {
+				set_temp_variable = { Victory_ID = 50 }
+				set_temp_variable = { Victory_Outcome = 0 }
+				Cold_War_GUI_AddVictory = yes
+			}
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.25.a
+		ai_chance = { factor = 1 }
+		add_manpower = -134
+		add_war_support = 0.07
+		custom_effect_tooltip = GUA_War_Started
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.26" }
+	title = GUA_forpol.26.t
+	desc = GUA_forpol.26.desc
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.26.a
+		ai_chance = { factor = 1 }
+		add_political_power = -45
+		set_temp_variable = { gdp_growth_temp = -0.15 }
+		econ_gdp_growth_change = yes
+		TNO_worsen_trade_laws_policy_effectiveness_low = yes
+		GUA = { econ_leave_sphere = yes }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.27" }
+	title = GUA_forpol.27.t
+	desc = GUA_forpol.27.desc
+	picture = GFX_report_event_GUA_guerrillas_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.27.a
+		ai_chance = { factor = 1 }
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.27.b
+		ai_chance = { factor = 1 }
+		GUA = { add_to_variable = { GUA_War_Tension = 2 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+		hidden_effect = {
+			MEX = {
+				set_country_flag = MEX_supported_leftist_insurgency
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.28
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event GUA_forpol.28"
+		hidden_effect = {
+			GUA = { country_event = { id = GUA_scripted.6 } } #Triggers the Peace-Deal instantly
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = GUA_news.5
+					hours = 4
+				}
+			}
+		}
+	}
+	title = GUA_forpol.28.t
+	desc = GUA_forpol.28.desc
+	picture = GFX_report_event_BRA_army_urban_1
+	trigger = { has_war = yes }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.28.a
+		ai_chance = { factor = 1 }
+		add_political_power = -75
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.29" }
+	title = GUA_forpol.29.t
+	desc = GUA_forpol.29.desc
+	picture = GFX_report_event_MEX_ordaz_talking
+	trigger = { has_country_leader = { character = MEX_Gustavo_Ordaz ruling_only = yes } }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.29.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.30" }
+	title = GUA_forpol.30.t
+	desc = GUA_forpol.30.desc
+	picture = GFX_report_event_MEX_lozano_1
+	trigger = { has_country_leader = { character = MEX_Raul_Lozano ruling_only = yes } }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.30.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.31" }
+	title = GUA_forpol.31.t
+	desc = GUA_forpol.31.desc
+	picture = GFX_report_event_MEX_madrazo_1
+	trigger = { has_country_leader = { character = MEX_Carlos_Madrazo ruling_only = yes } }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.31.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.32" }
+	title = GUA_forpol.32.t
+	desc = GUA_forpol.32.desc
+	picture = GFX_report_event_GUA_map
+	trigger = {
+		AND = {
+			has_war = yes
+			CUB = { check_variable = { ECON_SPHERE_LEADER = MEX } }
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.32.a
+		ai_chance = { factor = 1 }
+		add_command_power = 10
+		CUB = {
+			declare_war_on = {
+				target = GUA
+				type = annex_everything
+			}
+		}
+		add_to_variable = { MEX_Allies = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.33" }
+	title = GUA_forpol.33.t
+	desc = GUA_forpol.33.desc
+	picture = GFX_report_event_GUA_map
+	trigger = {
+		AND = {
+			has_war = yes
+			ELS = { check_variable = { ECON_SPHERE_LEADER = MEX } }
+		}
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.33.a
+		ai_chance = { factor = 1 }
+		add_command_power = 10
+		ELS = {
+			declare_war_on = {
+				target = GUA
+				type = annex_everything
+			}
+		}
+		add_to_variable = { MEX_Allies = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.34" }
+	title = GUA_forpol.34.t
+	desc = GUA_forpol.34.desc
+	picture = GFX_report_event_generic_destroyer_navy_1960
+	trigger = {
+		AND = {
+			has_war = yes
+			DOM = { check_variable = { ECON_SPHERE_LEADER = MEX } }
+		}
+	}
+
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.34.a
+		ai_chance = { factor = 1 }
+		add_command_power = 10
+		DOM = {
+			declare_war_on = {
+				target = GUA
+				type = annex_everything
+			}
+		}
+		add_to_variable = { MEX_Allies = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.35
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.35" }
+	title = GUA_forpol.35.t
+	desc = GUA_forpol.35.desc
+	picture = GFX_report_event_generic_sign_treaty3
+	trigger = {
+		AND = {
+			has_war = yes
+			VEN = { check_variable = { ECON_SPHERE_LEADER = MEX } }
+		}
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.35.a
+		ai_chance = { factor = 1 }
+		add_political_power = 35
+		add_command_power = 10
+		add_to_variable = { MEX_Allies = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.36
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.36" }
+	title = GUA_forpol.36.t
+	desc = GUA_forpol.36.desc
+	picture = GFX_report_event_GUA_map
+	trigger = {
+		AND = {
+			check_variable = { MEX_Allies = 4 }
+		}
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.36.a
+		ai_chance = { factor = 1 }
+		add_political_power = 75
+		add_command_power = 20
+		
+	}
+}
+
+country_event = { #Deprecated
+	id = GUA_forpol.37
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.37" }
+	title = GUA_forpol.37.t
+	desc = GUA_forpol.37.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.37.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.38" }
+	title = GUA_forpol.38.t
+	desc = GUA_forpol.38.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.38.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		GUA = { set_temp_variable = { gdp_growth_temp = -0.20 } econ_gdp_growth_change = yes }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.39" }
+	title = GUA_forpol.39.t
+	desc = GUA_forpol.39.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.39.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.40" }
+	title = GUA_forpol.40.t
+	desc = GUA_forpol.40.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.40.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.41" }
+	title = GUA_forpol.41.t
+	desc = GUA_forpol.41.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.41.a
+		ai_chance = { factor = 1 }
+		add_command_power = -10
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.42" }
+	title = GUA_forpol.42.t
+	desc = GUA_forpol.42.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.42.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.43" }
+	title = GUA_forpol.43.t
+	desc = GUA_forpol.43.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.43.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.44" }
+	title = GUA_forpol.44.t
+	desc = GUA_forpol.44.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.44.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.45
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.45" }
+	title = GUA_forpol.45.t
+	desc = GUA_forpol.45.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.45.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.46
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.46" }
+	title = GUA_forpol.46.t
+	desc = GUA_forpol.46.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.46.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.47
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.47" }
+	title = GUA_forpol.47.t
+	desc = GUA_forpol.47.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.47.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.48
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event GUA_forpol.48"
+		hidden_effect = { set_variable = { 313.nationality = 501 } }
+	}
+	title = GUA_forpol.48.t
+	desc = GUA_forpol.48.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.48.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { gdp_growth_temp = 0.05 }
+		econ_gdp_growth_change = yes
+		GUA = {
+			set_temp_variable = { gdp_growth_temp = 0.25 }
+			econ_gdp_growth_change = yes
+			TNO_worsen_poverty_med = yes
+			TNO_improve_trade_laws_policy_effectiveness_med = yes
+			TNO_worsen_regulations_policy_effectiveness_high = yes
+		}
+	}
+	option = {
+		name = GUA_forpol.48.b
+		ai_chance = { factor = 1 }
+		set_temp_variable = { gdp_growth_temp = 0.10 }
+		econ_gdp_growth_change = yes
+		GUA = {
+			set_temp_variable = { gdp_growth_temp = 0.45 }
+			econ_gdp_growth_change = yes
+			TNO_worsen_poverty_high = yes
+			TNO_improve_trade_laws_policy_effectiveness_med = yes
+			TNO_worsen_regulations_policy_effectiveness_high = yes
+		}
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.49
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.49" }
+	title = GUA_forpol.49.t
+	desc = GUA_forpol.49.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.49.a
+		ai_chance = { factor = 1 }
+		add_political_power = 20
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.50
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.50" }
+	title = GUA_forpol.50.t
+	desc = GUA_forpol.50.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.50.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.51
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.51" }
+	title = GUA_forpol.51.t
+	desc = GUA_forpol.51.desc
+	picture = GFX_report_event_generic_apc_crew
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.51.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = GUA_forpol_51_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.52
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.52" }
+	title = GUA_forpol.52.t
+	desc = GUA_forpol.52.desc
+	picture = GFX_report_event_GUA_arbenz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.52.a
+		ai_chance = { factor = 1 }
+		MEX_PRI_decrease_loyalty_dfs_low = yes
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+		set_country_flag = GUA_Cuban_Agents
+	}
+	option = {
+		name = GUA_forpol.52.b
+		ai_chance = { factor = 1 }
+		add_political_power = 20
+		MEX_PRI_increase_loyalty_dfs_very_low = yes
+		GUA = { add_to_variable = { GUA_War_Tension = 2 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.52.c
+		ai_chance = { factor = 1 }
+		add_command_power = -10
+		MEX_PRI_increase_power_dfs_very_low = yes
+		GUA = { subtract_from_variable = { GUA_War_Tension = 2 } }
+		custom_effect_tooltip = GUA_Fade_Tensions_tt
+		set_country_flag = GUA_Cuban_Agents
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.53
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.53" }
+	title = GUA_forpol.53.t
+	desc = GUA_forpol.53.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.53.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.54
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.54" }
+	title = GUA_forpol.54.t
+	desc = GUA_forpol.54.desc
+	picture = GFX_report_event_UKR_writing_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.54.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			random_list = {
+				40 = { GUA = { add_to_variable = { GUA_War_Tension = 5 } } }
+				60 = { } #This event chain is a mess and probably gonna be done better whit Mexico content, rn just using this so Mexico can actually go to war with the PAR
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.55
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.55" }
+	title = GUA_forpol.55.t
+	desc = GUA_forpol.55.desc
+	picture = GFX_report_event_GUA_map
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.55.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.55.b
+		ai_chance = { factor = 1 }
+		GUA = { add_to_variable = { GUA_War_Tension = 2 } }
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.56
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.56" }
+	title = GUA_forpol.56.t
+	desc = GUA_forpol.56.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.56.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.57
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.57" }
+	title = GUA_forpol.57.t
+	desc = GUA_forpol.57.desc
+	picture = GFX_report_event_GER_documents
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.57.a
+		ai_chance = { factor = 1 }
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.58
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.58" }
+	title = GUA_forpol.58.t
+	desc = GUA_forpol.58.desc
+	picture = GFX_report_event_GUA_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.58.a
+		ai_chance = { factor = 1 }
+		GUA = {
+			TNO_improve_training_policy_effectiveness_med = yes
+			TNO_improve_army_professionalism_med = yes
+			313 = {
+				add_extra_state_shared_building_slots = 1
+				set_temp_variable = { building = token:barracks }
+				set_temp_variable = { building_amount = 1 }
+				dynamic_building_effect = yes
+				set_temp_variable = { state_value_multiplier_temp = 1.01 }
+				econ_state_value_change_multiply = yes
+			}
+		}
+		custom_effect_tooltip = GUA_War_Tensions_tt
+		set_temp_variable = { debt_temp = 0.085 }
+		econ_national_debt_change = yes
+	}
+	option = {
+		name = GUA_forpol.58.b
+		ai_chance = { factor = 1 }
+		GUA = { add_to_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.59
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.59" }
+	title = GUA_forpol.59.t
+	desc = GUA_forpol.59.desc
+	picture = GFX_report_event_generic_pillbox
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.59.a
+		ai_chance = { factor = 1 }
+		475 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+			}
+		}
+		GUA = { add_to_variable = { GUA_War_Tension = 2 } }
+		custom_effect_tooltip = GUA_War_Tensions_tt
+		set_temp_variable = { debt_temp = 0.05 }
+		econ_national_debt_change = yes
+	}
+	option = {
+		name = GUA_forpol.59.b
+		ai_chance = { factor = 1 }
+		GUA = {
+			313 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.015 }
+				econ_state_value_change_multiply = yes
+			}
+		}
+		GUA = { subtract_from_variable = { GUA_War_Tension = 1 } }
+		custom_effect_tooltip = GUA_Fade_Tensions_tt
+		set_temp_variable = { debt_temp = 0.05 }
+		econ_national_debt_change = yes
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.60
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.60" }
+	title = GUA_forpol.60.t
+	desc = GUA_forpol.60.desc
+	picture = GFX_report_event_generic_banana_republic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.60.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { gdp_growth_temp = -0.10 }
+		econ_gdp_growth_change = yes
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+	option = {
+		name = GUA_forpol.60.b
+		ai_chance = { factor = 1 }
+		set_temp_variable = { gdp_growth_temp = -0.10 }
+		econ_gdp_growth_change = yes
+		GUA = {
+			add_stability = -0.075
+			set_temp_variable = { gdp_growth_temp = -0.45 }
+			GUA = { add_to_variable = { GUA_War_Tension = 2 } }
+			econ_gdp_growth_change = yes
+			TNO_worsen_trade_laws_policy_effectiveness_med = yes
+
+		}
+		custom_effect_tooltip = GUA_Sanctions_tt
+		custom_effect_tooltip = GUA_USA_War_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.61
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.61" }
+	title = GUA_forpol.61.t
+	desc = GUA_forpol.61.desc
+	picture = GFX_report_event_generic_command_table
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.61.a
+		ai_chance = { factor = 1 }
+		GUA = { subtract_from_variable = { GUA_War_Tension = 5 } }
+		custom_effect_tooltip = GUA_Fade_Tensions_tt
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.62
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.62" }
+	title = GUA_forpol.62.t
+	desc = GUA_forpol.62.desc
+	picture = GFX_report_event_JAP_dinner
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.62.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { gdp_growth_temp = 0.10 }
+		econ_gdp_growth_change = yes
+		GUA = {
+			set_temp_variable = { gdp_growth_temp = 0.5 }
+			econ_gdp_growth_change = yes
+			TNO_improve_industrial_equipment_high = yes
+		}
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.63
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.63" }
+	title = GUA_forpol.63.t
+	desc = GUA_forpol.63.desc
+	picture = GFX_report_event_GUA_palace
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.63.a
+		ai_chance = { factor = 1 }
+		add_political_power = 15
+		GUA = {
+			set_temp_variable = { gdp_growth_temp = 0.75 }
+			econ_gdp_growth_change = yes
+			TNO_improve_academic_base_high = yes
+		}
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.64
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.64" }
+	title = GUA_forpol.64.t
+	desc = GUA_forpol.64.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.64.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.65
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.65" }
+	title = GUA_forpol.65.t
+	desc = GUA_forpol.65.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_forpol.65.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = GUA_forpol.66
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_forpol.66" }
+	title = GUA_forpol.66.t
+	desc = GUA_forpol.66.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Pro_Mendez
+		name = GUA_forpol.66.a
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+		set_temp_variable = { money_reserves_temp = -0.075 }
+		econ_money_reserves_change_raw_money = yes
+		set_country_flag = GUA_US_Helps_Mendez
+	}
+	option = { #Pro-de Leon
+		name = GUA_forpol.66.b
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		set_temp_variable = { money_reserves_temp = -0.025 }
+		econ_money_reserves_change_raw_money = yes
+		set_country_flag = GUA_US_Helps_Leon
+		if = {
+			limit = {
+				OR = {
+					BLZ = { has_idea = BLZ_New_Masters }
+					GUA = { owns_state = 311 }
+				}
+			}
+			custom_effect_tooltip = GUA_forpol_66_tt
+		}
+	}
+	option = { #Pro-Sandoval
+		name = GUA_forpol.66.c
+		ai_chance = { factor = 1 }
+		add_command_power = -10
+		set_country_flag = GUA_US_Helps_Sandoval
+		if = {
+			limit = {
+				OR = {
+					BLZ = { has_idea = BLZ_New_Masters }
+					GUA = { owns_state = 311 }
+				}
+			}
+			custom_effect_tooltip = GUA_forpol_66_tt
+		}
+	}
+	option = { #Nobody
+		name = GUA_forpol.66.d
+		ai_chance = { factor = 3 }
+		add_political_power = 20
+		set_country_flag = GUA_US_Does_Nothing
+	}
+}
+
+### News Events
+news_event = { #
+	id = GUA_news.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_news.1" }
+	title = GUA_news.1.t
+	desc = GUA_news.1.desc
+	picture = GFX_news_event_GUA_military_coup
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_news.1.a #USA
+		trigger = {
+			tag = USA
+		}
+	}
+	option = {
+		name = GUA_news.1.b #MEX
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = USA
+				tag = MEX
+			}
+		}
+		name = GUA_news.1.c
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #
+	id = GUA_news.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_news.2" }
+	title = GUA_news.2.t
+	desc = GUA_news.2.desc
+	picture = GFX_news_event_GUA_failed_coup
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_news.2.a #USA
+		trigger = {
+			tag = USA
+		}
+	}
+	option = {
+		name = GUA_news.2.b #MEX
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = USA
+				tag = MEX
+			}
+		}
+		name = GUA_news.2.c
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #
+	id = GUA_news.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_news.3" }
+	title = GUA_news.3.t
+	desc = GUA_news.3.desc
+	picture = GFX_news_event_GUA_border_incident
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_news.3.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #
+	id = GUA_news.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_news.4" }
+	title = GUA_news.4.t
+	desc = GUA_news.4.desc
+	picture = GFX_news_event_GUA_attack
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_news.4.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				tag = MEX
+				FROM = {
+					check_variable = { ECON_SPHERE_LEADER = MEX }
+				}
+				tag = USA
+				AND = {
+					is_in_faction_with = USA
+					NOT = {
+						FROM = { check_variable = { ECON_SPHERE_LEADER = MEX } }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = GUA_news.4.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				tag = MEX
+				FROM = {
+					check_variable = { ECON_SPHERE_LEADER = MEX }
+				}
+			}
+		}
+	}
+	option = {
+		name = GUA_news.4.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				tag = USA
+				AND = {
+					is_in_faction_with = USA
+					NOT = {
+						FROM = { check_variable = { ECON_SPHERE_LEADER = MEX } }
+					}
+				}
+			}
+		}
+	}
+}
+
+news_event = { #
+	id = GUA_news.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_news.5" }
+	title = GUA_news.5.t
+	desc = GUA_news.5.desc
+	picture = GFX_news_event_GUA_revoloution_put_down
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_news.5.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #
+	id = GUA_news.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_news.6" }
+	title = GUA_news.6.t
+	desc = GUA_news.6.desc
+	picture = GFX_news_event_GUA_revoloution
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_news.6.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				tag = MEX
+				tag = USA
+			}
+		}
+	}
+	option = {
+		name = GUA_news.6.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = {
+		name = GUA_news.6.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = USA
+		}
+	}
+}
+
+news_event = { #
+	id = GUA_news.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_news.7" }
+	title = GUA_news.7.t
+	desc = GUA_news.7.desc
+	picture = GFX_news_event_GUA_pro_american_coup
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_news.7.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #
+	id = GUA_news.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_news.8" }
+	title = GUA_news.8.t
+	desc = GUA_news.8.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_news.8.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #
+	id = GUA_news.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_news.9" }
+	title = GUA_news.9.t
+	desc = GUA_news.9.desc
+	picture = GFX_news_event_GUA_68_elections
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_news.9.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #
+	id = GUA_news.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GUA_news.10" }
+	title = GUA_news.10.t
+	desc = GUA_news.10.desc
+	picture = GFX_report_event_BRA_army_urban_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUA_news.10.a
+		ai_chance = { factor = 1 }
+	}
+}

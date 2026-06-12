@@ -1,0 +1,206 @@
+guiTypes = {
+	containerWindowType = {
+		name = "Antarctica_GUI_AAC_Marine"
+		position = { x = 0 y = 0 }
+		size = { width = 0 height = 288 }
+
+		containerWindowType = {
+			name = "AAC_Marine_Container"
+			position = { x = 11 y = -19 }
+
+			iconType = {
+				name = "AAC_Marine_Base_Frame"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_AAC_Marine_Base_Frame"
+			}
+			instantTextboxType = {
+				name = "AAC_Marine_Name"
+				position = { x = 0 y = 244 }
+				font = "aldrich_18_outline"
+				text = AAC_Marine_Name
+				maxWidth = 103
+				format = center
+			}
+			instantTextboxType = {
+				name = "AAC_Marine_Code"
+				position = { x = 105 y = 244 }
+				font = "aldrich_18_outline"
+				text = AAC_Marine_Code
+				maxWidth = 61
+				format = center
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "AAC_Marine_Available_XP"
+				position = { x = 0 y = 285 }
+				font = "aldrich_18_outline"
+				text = AAC_Marine_Available_XP
+				maxWidth = 166
+				format = center
+				pdx_tooltip = AAC_Marine_Available_XP_tt
+				pdx_tooltip_delayed = AAC_Marine_Available_XP_tt_2
+			}
+			iconType = {
+				name = "AAC_Marine_Display"
+				position = { x = 4 y = 8 }
+				quadTextureSprite = "GFX_AAC_Marine_Display"
+				pdx_tooltip = AAC_Marine_Display_tt
+			}
+
+			buttonType = {
+				name = "AAC_Marine_Active_Equipment_Icon"
+				position = { x = 209 y = 60 }
+				spriteType = "GFX_AAC_Marine_Equipment_USA_M19024A_Springfield"
+				pdx_tooltip = AAC_Marine_Active_Equipment_Icon_tt
+			}
+
+			# Skill progbars (progcircles?)
+
+			gridBoxType = {
+				name = "AAC_Marine_Skill_Grid_Box"
+				position = { x = 214 y = 235}
+				slotsize = {width=78 height=108 }
+				max_slots_vertical = 1
+			}
+
+			gridBoxType = {
+				name = "AAC_Marine_Equipment_Category_Grid_Box"
+				position = { x = 207 y = 5}
+				slotsize = {width=63 height=30 }
+				max_slots_vertical = 1
+			}
+		}		
+	}
+
+	containerWindowType = {
+		name = "Antarctica_GUI_AAC_Armory"
+		position = { x = 540 y = 125 }
+		size = { width = 522 height = 448 }
+		moveable = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_1b_no_border"
+			position = {x = 0 y = 0}
+		}
+
+		containerWindowType = {
+			name = "Antarctica_GUI_AAC_Armory"
+			position = { x = 15 y = 19 }
+			size = { width = 492 height = 413 }
+			moveable = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_Cold_War_GUI_Tiled_Window"
+				position = {x = 0 y = 0}
+			}
+
+			iconType = {
+				name = "AAC_Armory_Title_Card"
+				position = { x = 117 y = 5 }
+				quadTextureSprite = "GFX_AAC_Armory_Title_Card"
+			}
+
+			instantTextboxType = {
+				name = "AAC_Armory_Title"
+				position = { x = 117 y = 6 }
+				font = "aldrich_18_outline"
+				text = AAC_Armory_Title_Card_Text
+				maxWidth = 258
+				maxHeight = 40
+				format = center
+				vertical_alignment = center
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "AAC_Armory_close_button"
+				position = { x = -21 y = 2 }
+				quadTextureSprite ="GFX_crt_closebutton"
+				buttonFont = "Main_14_black"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_RIGHT"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+			}
+
+			gridBoxType = {
+				name = "AAC_Armory_Equipment_gridbox"
+				position = { x = 126 y = 49}
+				slotsize = {width=243 height=121 }
+				max_slots_horizontal = 2
+			}
+		}
+	}
+
+
+	containerWindowType = {
+		name = "AAC_Marine_Skill_Container"
+		position = { x=0 y=0 }
+		iconType = {
+			name = "bg"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_AAC_Marine_Skill_Frame"
+		}
+		iconType = {
+			name = "AAC_Marine_Skill_Bar"
+			position = { x = 6 y = 5 }
+			#quadTextureSprite = "GFX_AAC_Marine_Skill_0_Bar"
+			pdx_tooltip = AAC_Marine_Skill_Bar_tt
+			pdx_tooltip_delayed = AAC_Marine_Skill_Bar_Delay_tt
+		}
+		buttonType = {
+			name = "AAC_Marine_Skill_Pump"
+			position = { x = 12 y = -32 }
+			spriteType = "GFX_AAC_Marine_Skill_Pump"
+			pdx_tooltip = AAC_Marine_Skill_Pump_tt
+		}
+		iconType = {
+			name = "AAC_Marine_Skill_Pump_Locked"
+			position = { x = 12 y = -16 }
+			spriteType = "GFX_AAC_Marine_Skill_Pump_Locked"
+			pdx_tooltip = AAC_Marine_Skill_Pump_Locked_tt
+		}
+	}
+
+	containerWindowType = {
+		name = "AAC_Marine_Equipment_Category_Entry"
+		position = { x=0 y=0 }
+		buttonType = {
+			name = "AAC_Marine_Equipment_Category_Button"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_AAC_Marine_Equipment_USA_M19024A_Springfield"
+			pdx_tooltip = AAC_Marine_Equipment_Category_Entry_tt
+			pdx_tooltip_delayed = AAC_Marine_Equipment_Category_Entry_tt_2
+		}
+	}
+
+	containerWindowType = {
+		name = "AAC_Marine_Armory_Equipment_Entry"
+		position = { x=0 y=0 }
+
+		buttonType = {
+			name = "AAC_Marine_Armory_Equipment_Button"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_AAC_Marine_Equipment_USA_M19024A_Springfield"
+			pdx_tooltip = AAC_Marine_Armory_Equipment_Entry_tt
+		}
+
+		iconType = {
+			name = "AAC_Armory_Equipment_Locked"
+			position = { x = 167 y = 2 }
+			spriteType = "GFX_AAC_Armory_Equipment_Locked"
+		}
+
+		instantTextboxType = {
+			name = "AAC_Marine_Armory_Locked"
+			position = { x = 168 y = 6 }
+			font = "aldrich_18_outline"
+			text = AAC_Marine_Armory_Locked_text
+			maxWidth = 68
+			format = center
+			alwaystransparent = yes
+		}
+	}
+}

@@ -1,0 +1,195 @@
+﻿#################################################
+#### Government of National Salvation events ####
+#################################################
+
+add_namespace = GNS_wars
+
+
+country_event = {
+	id = GNS_wars.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNS_wars.1" }
+	title = GNS_wars.1.t
+	desc = GNS_wars.1.d
+	picture = GFX_report_event_iberian_wars_gns_1
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = GNS_wars.1.a
+	}
+}
+
+country_event = { 
+	id = GNS_wars.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNS_wars.2" }
+	title = GNS_wars.2.t
+	desc = GNS_wars.2.d
+	picture = GFX_report_event_iberian_wars_gns_kaulza_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = GNS_wars.2.a
+	}
+}
+
+country_event = { 
+	id = GNS_wars.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNS_wars.3" }
+	title = GNS_wars.3.t
+	desc = GNS_wars.3.d
+	picture = GFX_report_event_iberian_wars_gns_4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = GNS_wars.3.a
+	}
+}
+
+country_event = { 
+	id = GNS_wars.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNS_wars.4" }
+	title = GNS_wars.4.t
+	desc = GNS_wars.4.d
+	picture = GFX_report_event_SAF_arrest
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = GNS_wars.4.a
+		
+	}
+}
+
+country_event = { 
+	id = GNS_wars.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNS_wars.5" }
+	title = GNS_wars.5.t
+	desc = GNS_wars.5.d
+	picture = GFX_report_event_HIS_soldiers_jungle
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = GNS_wars.5.a
+		
+	}
+}
+
+#Invading Galicia
+country_event = { 
+	id = GNS_wars.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNS_wars.100" }
+	title = GNS_wars.100.t
+	desc = GNS_wars.100.d
+	picture = GFX_report_event_iberian_wars_6
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = GNS_wars.100.a
+		GAL = { every_owned_state = { add_claim_by = GNS } }
+		custom_effect_tooltip = GNS_Galicia_War_Ready
+	}
+}
+#Galicia doesn't exist, invasion cancelled
+country_event = { 
+	id = GNS_wars.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNS_wars.101" }
+	title = GNS_wars.101.t
+	desc = GNS_wars.101.d
+	picture = GFX_report_event_iberian_wars_6
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = GNS_wars.101.a
+	}
+}
+#Ceasefire option for Spanish-Portuguese War
+country_event = { 
+	id = GNS_wars.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNS_wars.102" }
+	title = GNS_wars.102.t
+	desc = GNS_wars.102.d
+	picture = GFX_report_event_iberian_wars_6
+	trigger = {
+		NOT = {
+			has_country_flag = GNS_ceasefire_offered
+		}
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {#Accept
+		name = GNS_wars.102.a
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD.30117 days = 1 }
+			}
+			if = {
+				limit = {
+					has_war_with = SPR
+				}
+				white_peace = SPR
+				SPR = {
+					TNO_Country_Closing_Screen_Show = yes
+					IBRWarsResign = yes
+				}
+				TNO_Country_Closing_Screen_Show = yes
+				IBRWarsResign = yes
+			}
+			else_if = {
+				limit = {
+					has_war_with = FSR
+				}
+				white_peace = FSR
+				FSR = {
+					TNO_Country_Closing_Screen_Show = yes
+					IBRWarsResign = yes
+				}
+				TNO_Country_Closing_Screen_Show = yes
+				IBRWarsResign = yes
+			}
+			else_if = {
+				limit = {
+					has_war_with = SPS
+				}
+				white_peace = SPS
+				SPS = {
+					TNO_Country_Closing_Screen_Show = yes
+					IBRWarsResign = yes
+				}
+				TNO_Country_Closing_Screen_Show = yes
+				IBRWarsResign = yes
+			}
+		}
+	}
+	option = {#Deny
+		name = GNS_wars.102.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}

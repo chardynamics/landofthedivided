@@ -13,22 +13,35 @@ ideas = {
 
 	#|=====[ OFN ]=====|#
 	hidden_ideas = {
+		GC_FrenchWestIndiesReferendum = {} # French West Indies Referendum
+		GC_Haitian_Civil_War = {} # The Haitian Civil War
+		GC_TrinidadRev = {} # Trinidad Black Power Revolution
 	}
 
 	#|=====[ LATIN AMERICA ]=====|#
 	hidden_ideas = {
-		GC_JamaicanReferendum = {} # Jamaican Independence Referendum
-		GC_JamaicanCrisis = {} # Jamaican Crisis
-		GC_TrinidadRev = {} # Trinidad Black Power Revolution
 		GC_PuertoPlata = {} # Ousting Trujillo / Protecting the Dominican Republic / The Puerto Plata Invasion
 		GC_ColombiaCW = {} # The Colombian Civil War
-		GC_Haitian_Civil_War = {} # The Haitian Civil War
-
+		GC_SalvadoranCoup = {} # Salvadoran Coup
+		GC_ParaguayanBushWar = {} # The Paraguayan Bush War
+		GC_CayenneReferendum = {} # Cayenne Independence Referendum
+		GC_BoliviaTreatyNegotiation = {} # Bolivia Andean Treaty of Cooperation
+		GC_BoliviaMiningWar = {} # Bolivian Mining War
+		GC_BoliviaSantaCruz = {} # Reconquest of the Orient
+		GC_BoliviaParaguay = {} # Fourth Chaco War
+		GC_BrazilNuclearNegotiation = {} # Brazilian Nuclear Negotiations with America
+		GC_SouthAtlanticWar = {} # South Atlantic War - Brazil vs Argentina
+		GC_EasterCoup = {} # Easter Coup
+		GC_CaracasNights = {} # Venezuela Coup
+		GC_KingstonRiots = {} # Kingston Riots
+		GC_Essequibo_Crisis = {} # Essequibo Crisis
+		GC_VenezuelanRevolution = {} # Venezuelan Revolution
 	}
 
 	#|=====[ MEDITERRANEAN ]=====|#
 	hidden_ideas = {
 		GC_IberianWars = {} # The Iberian Wars
+		GC_ThirdMoroccoWar = {} # Third Morocco War
 	}
 
 	#|=====[ MIDDLE EAST ]=====|#
@@ -61,10 +74,13 @@ ideas = {
 	#|=====[ ASIA ]=====|#
 	hidden_ideas = {
 		GC_IndonesiaCW = {} # Indonesian Civil War
-		GC_MalayanCW = {} # Malayan Civil War
+		GC_MalayanCW = {} # Malayan Emergency
 		GC_BalintawakBlitz = {} # The Balintawak Blitz
 		GC_PhilippinesWar = {} # The War for the Philippines
 		GC_PhilippinesReconstruction = {} # Reconstruction of the Philippines
+		GC_IndianCW = {} # Indian Civil War 
+		GC_OperationBQ = {} # Operation Bin Qasim
+		GC_SubcontinentalCrisis = {} # Subcontinental Crisis
 	}
 }
 

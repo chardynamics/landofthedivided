@@ -1,0 +1,40 @@
+scripted_gui = {
+	BRA_Riots_GUI = {
+		context_type = decision_category
+		window_name = "BRA_Riots_GUI"
+
+		properties = {
+			BRA_Econ_Damage_bar = { frame = BRA_Riots_Econ_Damage }
+			brazil_riots_sky = {
+				frame = BRA_Riots_sky_frame
+			}
+			brazil_riots_clouds = {
+				frame = BRA_Riots_cloud_frame
+			}
+		}
+
+		triggers = {
+			CGT_button_visible = {
+				check_variable = { BRA_selected_riot_group = 2 }
+			}
+			CGT_selected_visible = {
+				check_variable = { BRA_selected_riot_group = 1 }
+			}
+			MSD_button_visible = {
+				check_variable = { BRA_selected_riot_group = 1 }
+			}
+			MSD_selected_visible = {
+				check_variable = { BRA_selected_riot_group = 2 }
+			}
+		}
+
+		effects = {
+			CGT_button_click = {
+				set_variable = { BRA_selected_riot_group = 1 }
+			}
+			MSD_button_click = {
+				set_variable = { BRA_selected_riot_group = 2 }
+			}
+		}
+	}
+}

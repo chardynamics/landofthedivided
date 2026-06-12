@@ -1,0 +1,17 @@
+spriteTypes = {
+
+		###INFANTRY UNIFORM UPGRADES###
+
+	SpriteType = {
+		name = "GFX_TOM_infantry_kit_1_medium"
+		texturefile = "gfx/interface/technologies/RUS_36_KitB.dds"
+	}
+	SpriteType = {
+		name = "GFX_TOM_infantry_kit_2_medium"
+		texturefile = "gfx/interface/technologies/RUS_45_KitA.dds"
+	}
+	SpriteType = {
+		name = "GFX_TOM_infantry_kit_4_medium"
+		texturefile = "gfx/interface/technologies/TOM_58_Kit.dds"
+	}
+}

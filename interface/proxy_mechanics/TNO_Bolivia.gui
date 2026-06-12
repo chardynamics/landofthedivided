@@ -1,0 +1,244 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_bol_round_overlay"
+		iconType = {
+			name = "round_overlay"
+			position= { x = -49 y = 0 }
+			spriteType = "GFX_ATEC_rounds"
+			pdx_tooltip = round_overlay_init_tt
+		}
+	}
+	containerWindowType = {
+		name = "TNO_Bolivian_Treaty_Mechanic"
+		position = { x = 29 y = 131 }
+		size = { width = 496 height = 506 }
+
+		iconType = {
+			name = "description"
+			position = { x = 8 y = 112 }
+			spriteType = "GFX_bolivia_description"
+			pdx_tooltip = Bolivia_InfoBox_tt
+		}
+		iconType = {
+			name = "round_image"
+			position = { x = 8 y = 9 }
+			spriteType = "GFX_bolivia_round_image"
+			scale = 0.9
+		}
+		#iconType = {
+		#	name = "rounds"
+		#	position = { x = 290 y = 8 }
+		#	spriteType = "GFX_bolivia_rounds"
+		#}
+		iconType = {
+			name = "round_number_circle"
+			position = { x = 301 y = 112 }
+			spriteType = "GFX_bolivia_negotiation_round_number_circle"
+			alwaystransparent = yes
+		}
+		gridboxtype = {
+			name = "round_number"
+			position = { x = 250 y = 90 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 34 height = 28 }
+			max_slots_vertical = 6
+			max_slots_horizontal = 1
+		}
+		#iconType = {
+		#	name = "attitude"
+		#	position = { x = 290 y = 262 }
+		#	spriteType = "GFX_bolivia_attitude"
+		#}
+		#iconType = {
+		#	name = "attitude_value"
+		#	position = { x = 290 y = 329 }
+		#	spriteType = "GFX_bolivia_attitude_value"
+		#}
+		iconType = {
+			name = "tension_bar_border"
+			position = { x = 300 y = 287 }
+			spriteType = "GFX_bolivia_tension_progress_bar_border"
+		}
+		iconType = {
+			name = "tension_bar"
+			position = { x = 302 y = 289 }
+			spriteType = "GFX_bolivia_tension_progress_bar"
+			pdx_tooltip = "bolivia_tension_bar_tt"
+		}
+		#iconType = {
+		#	name = "info"
+		#	position = { x = 205 y = 400 }
+		#	spriteType = "GFX_bolivia_info_box"
+		#	pdx_tooltip = Bolivia_InfoBox_tt
+		#}
+		iconType = {
+			name = "rope"
+			position = { x = 78 y = 457 }
+			spriteType = "GFX_bolivia_rope"
+		}
+		iconType = {
+			name = "proarg_bar"
+			position = { x = 78 y = 465 }
+			spriteType = "GFX_proarg_bar"
+		}
+		iconType = {
+			name = "probrachl_bar"
+			position = { x = 78 y = 465 }
+			spriteType = "GFX_probrachl_bar"
+		}
+		iconType = {
+			name = "argflag"
+			position = { x = 418 y = 457 }
+			spriteType = "GFX_bolivia_argflag"
+		}
+		iconType = {
+			name = "argfav"
+			position = { x = 418 y = 400 }
+			spriteType = "GFX_bolivia_favours"
+		}
+		iconType = {
+			name = "brachlfav"
+			position = { x = 8 y = 400 }
+			spriteType = "GFX_bolivia_favours"
+		}
+		iconType = {
+			name = "chlbraflag"
+			position = { x = 8 y = 457 }
+			spriteType = "GFX_bolivia_chlbraflag"
+		}
+		iconType = {
+			name = "maneuvers_dot"
+			position = { x = 404 y = 327 }
+			spriteType = "GFX_bolivia_proxy_maneuvers_dot"
+		}
+		instantTextboxType = {
+			name = "argfavours"
+			position = { x = 418 y = 432 }
+			font = "aldrich_22_outline"
+			text = LATAM_andean_argfavourstext
+			maxWidth = 70
+			maxHeight = 18
+			format = center
+		}
+		instantTextboxType = {
+			name = "tension_text"
+			position = { x = 298 y = 265 }
+			font = "aldrich_20_outline"
+			text = LATAM_bolivian_treaty_tension
+			maxWidth = 80
+			maxHeight = 18
+			format = center
+		}
+		instantTextboxType = {
+			name = "maneuvers_text"
+			position = { x = 298 y = 330 }
+			font = "aldrich_20_outline"
+			text = LATAM_bolivian_treaty_maneuvers
+			maxWidth = 102
+			maxHeight = 18
+			format = center
+		}
+		instantTextboxType = {
+			name = "brachlfavours"
+			position = { x = 8 y = 432 }
+			font = "aldrich_22_outline"
+			text = LATAM_andean_brachlfavourstext
+			maxWidth = 70
+			maxHeight = 18
+			format = center
+		}
+		instantTextboxType = {
+			name = "bolivian_treaty_description_text"
+			position = { x = 13 y = 132 }
+			font = "aldrich_18_outline"
+			text = LATAM_andean_bolivian_treaty_text
+			maxWidth = 270
+			maxHeight = 378
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "bolivian_treaty_round_name"
+			position = { x = 8 y = 28 }
+			font = "aldrich_24_outline"
+			text = LATAM_bolivian_treaty_round_name_text
+			maxWidth = 479
+			maxHeight = 92
+			format = center
+		}
+
+		## Fake missions
+		containerWindowType = {
+			name = "fake_mission_1"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_1_background"
+				spriteType = "GFX_fopo_fake_mission_frame"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = BRA_BOL_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_title"
+				position = { x = 50 y = 9 }
+				text = BRA_BOL_FakeMission_1_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline"
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = BRA_BOL_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_duration"
+				position = { x = 136 y = 8 }
+				text = BRA_BOL_FakeMission_1_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline"
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = BRA_BOL_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "fake_mission_2"
+			position = { x = 527 y = 98 }
+
+			iconType = {
+				name = "fake_mission_2_background"
+				spriteType = "GFX_fopo_fake_mission_frame"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = BRA_BOL_FakeMission_2_tt
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_2_title"
+				position = { x = 50 y = 9 }
+				text = BRA_BOL_FakeMission_2_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline"
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = BRA_BOL_FakeMission_2_tt
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_2_duration"
+				position = { x = 136 y = 8 }
+				text = BRA_BOL_FakeMission_2_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline"
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = BRA_BOL_FakeMission_2_tt
+				alwaystransparent = yes
+			}
+		}
+	}
+}

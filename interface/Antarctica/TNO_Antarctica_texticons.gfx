@@ -1,0 +1,407 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Antarctica_texticon_LEG"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_LEG.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_whaling_texticon"
+		texturefile = "gfx/texticons/antarctica/Antarctica_whaling_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_MIL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_MIL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_SUP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_SUP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_legitimacy"
+		texturefile = "gfx/texticons/antarctica/Antarctica_LEG_texticon_small.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_militarization"
+		texturefile = "gfx/texticons/antarctica/Antarctica_MIL_texticon_small.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_supply"
+		texturefile = "gfx/texticons/antarctica/Antarctica_SUP_texticon_small.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTVAL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTVAL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTCAP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTCAP.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTCAPtoINTVAL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTCAPtoINTVAL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTCAPtoLEG"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTCAPtoLEG.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTCAPtoMIL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTCAPtoMIL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTCAPtoPP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTCAPtoPP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTCAPtoSUP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTCAPtoSUP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTVALtoINTCAP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTVALtoINTCAP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTVALtoLEG"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTVALtoLEG.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTVALtoMIL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTVALtoMIL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTVALtoPP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTVALtoPP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_INTVALtoSUP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_INTVALtoSUP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_LEGtoINTCAP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_LEGtoINTCAP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_LEGtoINTVAL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_LEGtoINTVAL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_LEGtoMIL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_LEGtoMIL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_LEGtoPP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_LEGtoPP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_LEGtoSUP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_LEGtoSUP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_MILtoINTCAP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_MILtoINTCAP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_MILtoINTVAL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_MILtoINTVAL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_MILtoLEG"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_MILtoLEG.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_MILtoPP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_MILtoPP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_MILtoSUP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_MILtoSUP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_PPtoINTCAP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_PPtoINTCAP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_PPtoINTVAL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_PPtoINTVAL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_PPtoLEG"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_PPtoLEG.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_PPtoMIL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_PPtoMIL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_PPtoSUP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_PPtoSUP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_SUPtoINTCAP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_SUPtoINTCAP.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_SUPtoINTVAL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_SUPtoINTVAL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_SUPtoLEG"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_SUPtoLEG.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_SUPtoMIL"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_SUPtoMIL.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_texticon_SUPtoPP"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_SUPtoPP.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_Antarctica_texticon_Closing_Banner"
+		texturefile = "gfx/texticons/antarctica/Antarctica_texticon_Closing_Banner.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_censor_char_texticon"
+		texturefile = "gfx/texticons/antarctica/censor_char_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+
+	## Equipment ##
+	# Guns
+
+	# Intantry Weapon
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_USA_M19024A_Springfield_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/USA_M19024A_Springfield.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_BRA_INA_Model_953_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/BRA_INA_Model_953.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_JAP_Arisaka_Type_15_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/JAP_Arisaka_Type_15.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CAN_Rifle_No_9_Mk_I_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CAN_Rifle_No_9_Mk_I.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_TUR_T58_Atmaca_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/TUR_T58_Atmaca.dds"
+		legacy_lazy_load = no
+	}
+
+	# Body Kit
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_USA_47_Winter_Parka_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/USA_47_Winter_Parka.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_AAC_Dry_Scuba_Kit_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/AAC_Dry_Scuba_Kit.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_BRA_M2_Flamethrower_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/BRA_M2_Flamethrower.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_JAP_Body_Armor_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/JAP_Body_Armor.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CAN_Inuit_Polar_Clothes_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CAN_Inuit_Polar_Clothes.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_TUR_makeshift_grenade_bandolier_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/TUR_makeshift_grenade_bandolier.dds"
+		legacy_lazy_load = no
+	}
+
+	# Support Weapon
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CHL_Mk2_Fragmentation_Grenade_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CHL_Mk2_Fragmentation_Grenade.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_USA_M18A1_Claymore_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/USA_M18A1_Claymore.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_BRA_RL_83_Blindicide_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/BRA_RL_83_Blindicide.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_JAP_Type_22_Kuyu_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/JAP_Type_22_Kuyu.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CAN_L21A1_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CAN_L21A1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_TUR_granatwerfer_34_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/TUR_granatwerfer_34.dds"
+		legacy_lazy_load = no
+	}
+
+	# Polar Warfare
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_AAC_Tucker_Snow_Cat_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/AAC_Tucker_Snow_Cat.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_AAC_Thiokol_Trackmaster_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/AAC_Thiokol_Trackmaster.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_AAC_High_Performance_Dog_Sled_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/AAC_High_Performance_Dog_Sled.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_AAC_Extra_Huskies_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/AAC_Extra_Huskies.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CAN_60_Ski_Doo_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CAN_60_Ski_Doo.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_USA_57_Polaris_Snow_Traveler_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/USA_57_Polaris_Snow_Traveler.dds"
+		legacy_lazy_load = no
+	}
+
+	# Creature Comforts
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_HON_Fresh_Bananas_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/HON_Fresh_Bananas.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_HAI_Frozen_Mangos_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/HAI_Frozen_Mangos.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CUB_Cigars_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CUB_Cigars.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_ELS_Deluxe_Coffee_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/ELS_Deluxe_Coffee.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CHL_Pisco_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CHL_Pisco.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_SWI_Rolex_Explorer_Watches_texticon"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/SWI_Rolex_Explorer_Watches.dds"
+		legacy_lazy_load = no
+	}
+
+}

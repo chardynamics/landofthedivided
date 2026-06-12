@@ -1,0 +1,164 @@
+ideas = {
+	country = {
+		SUR_1947_Constitution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_1947_Constitution" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_1947_constitution
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				drift_defence_factor = 0.1
+			}
+		}
+
+		SUR_1972_Dutch_Constitution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_1972_Dutch_Constitution" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_1972_Dutch_Constitution
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.2
+				stability_factor = -0.1
+				custom_modifier_tooltip = TNO_worsen_political_parties_policy_effectiveness_med_tt
+			}
+		}
+
+		SUR_1972_Surinamese_Constitution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_1972_Surinamese_Constitution" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_1972_Surinamese_Constitution
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				drift_defence_factor = 0.2
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_med_tt
+			}
+		}
+
+		SUR_One_Paramaribo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_One_Paramaribo" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_One_Paramaribo_Many_Peoples
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_low_tt
+			}
+		}
+
+		SUR_Runt_OFN = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_Runt_OFN" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_Runt_of_the_OFN
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.2
+				free_production_units_modifier = 4
+				hidden_modifier = { send_volunteer_divisions_required = -1 }
+			}
+		}
+
+		SUR_Fleeting_Dutch_Economic_Hegemony = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_Fleeting_Dutch_Economic_Hegemony" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_Fleeting_Dutch_Economic_Hegemony
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.1
+				free_production_units_modifier = 1
+				local_resources_factor = 0.075
+			}
+		}
+
+		SUR_Consolidated_Dutch_Economic_Hegemony = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_Consolidated_Dutch_Economic_Hegemony" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_Consolidated_Dutch_Economic_Hegemony
+			removal_cost = -1
+			modifier = {
+				free_production_units_modifier = 2
+				local_resources_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.1
+			}
+		}
+
+		SUR_Decolonizing_Economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_Decolonizing_Economy" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_Decolonizing_Economy
+			removal_cost = -1
+			modifier = {
+				free_production_units_modifier = 1
+				local_resources_factor = 0.15
+				misc_income_modifier = 0.1
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = -0.1
+			}
+		}
+
+		SUR_Countries_Within_a_Country = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_Countries_Within_a_Country" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_Countries_Within
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				drift_defence_factor = -0.15
+			}
+		}
+
+		SUR_Countries_Within_a_Country_Reformed = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_Countries_Within_a_Country_Reformed" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_Countries_Within_Reformed
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+
+		CUR_Exiles_in_the_Antilles = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CUR_Exiles_in_the_Antilles" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = generic_constitutional_monarchy
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.01
+			}
+		}
+		
+		CUR_Dependent_Economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SUR_Dependent_Economy" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SUR_Dependent_Economy
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				misc_income_modifier = 0.1
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.2
+			}
+		}
+	}
+} 

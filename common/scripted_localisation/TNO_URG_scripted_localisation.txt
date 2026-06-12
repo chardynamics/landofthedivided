@@ -1,0 +1,104 @@
+######## Sectarian Violence ########
+defined_text = {
+	name = GetURG_sectarian_violence
+	text = {
+		trigger = { check_variable = { Death_Squad_violence > 89 } }
+		localization_key = URG_Death_Squads_ohfuck
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { Death_Squad_violence > 89 } }
+			check_variable = { Death_Squad_violence > 79 }
+		}
+		localization_key = URG_Death_Squads_very_strong
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { Death_Squad_violence > 79 } }
+			check_variable = { Death_Squad_violence > 69 }
+		}
+		localization_key = URG_Death_Squads_strong
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { Death_Squad_violence > 69 } }
+			check_variable = { Death_Squad_violence > 39 }
+		}
+		localization_key = URG_Death_Squads_normal
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { Death_Squad_violence > 39 } }
+			check_variable = { Death_Squad_violence > 29 }
+		}
+		localization_key = URG_Death_Squads_weak
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { Death_Squad_violence > 19 } }
+			check_variable = { Death_Squad_violence > 9 }
+		}
+		localization_key = URG_Death_Squads_very_weak
+	}
+	text = {
+		trigger = {
+			check_variable = { Death_Squad_violence < 9 }
+		}
+		localization_key = URG_Death_Squads_nonexistant
+	}
+	text = {
+		localization_key = URG_Death_Squads_nonexistant
+	}
+}
+
+defined_text = {
+	name = GetTupamaros_are_dangerous
+	text = {
+		trigger = { check_variable = { Tupamaro_violence > 89 } }
+		localization_key = URG_Tupamaros_ohfuck
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { Tupamaro_violence > 89 } }
+			check_variable = { Tupamaro_violence > 79 }
+		}
+		localization_key = URG_Tupamaros_very_strong
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { Tupamaro_violence > 79 } }
+			check_variable = { Tupamaro_violence > 69 }
+		}
+		localization_key = URG_Tupamaros_strong
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { Tupamaro_violence > 69 } }
+			check_variable = { Tupamaro_violence > 39 }
+		}
+		localization_key = URG_Tupamaros_normal
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { Tupamaro_violence > 39 } }
+			check_variable = { Tupamaro_violence > 29 }
+		}
+		localization_key = URG_Tupamaros_weak
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { Tupamaro_violence > 19 } }
+			check_variable = { Tupamaro_violence > 9 }
+		}
+		localization_key = URG_Tupamaros_very_weak
+	}
+	text = {
+		trigger = {
+			check_variable = { Tupamaro_violence < 9 }
+		}
+		localization_key = URG_Tupamaros_nonexistant
+	}
+	text = {
+		localization_key = URG_Tupamaros_nonexistant
+	}
+}

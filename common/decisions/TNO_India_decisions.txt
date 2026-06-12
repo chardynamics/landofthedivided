@@ -1,0 +1,335 @@
+IND_debug_category = {
+	IND_debug_superevent_remix = {
+		icon = GFX_decision_debug
+		fire_only_once = yes
+		complete_effect = {
+			AZH = {
+				AZH_Abid_Hasan_Safrani = {
+					set_nationality = IND
+				}
+			}
+			annex_country = {
+				target = AZH
+				transfer_troops = yes
+			}
+			every_owned_state = {
+				remove_core_of = AZH
+				remove_claim_by = AZH
+				remove_claim_by = IND
+				add_core_of = IND
+			}
+			annex_country = {
+				target = KLT
+				transfer_troops = yes
+			}
+			every_owned_state = {
+				remove_core_of = KLT
+				remove_claim_by = KLT
+				add_core_of = IND
+			}
+			set_cosmetic_tag = IND_UNIFIED
+			set_global_flag = IND_peaceful_reunification
+			set_party_name = {
+				ideology = progressivism
+				long_name = IND_progressivism_party_INC_long
+				name = IND_progressivism_party_INC
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = IND_paternalism_party_HSS_long
+				name = IND_paternalism_party_HSS
+			}
+			set_party_name = {
+				ideology = paternalism_2
+				long_name = IND_paternalism_party_long
+				name = IND_paternalism_party
+			}
+			set_party_name = {
+				ideology = liberal_conservatism
+				long_name = IND_liberalism_swatantra_party_long
+				name = IND_liberalism_swatantra_party
+			}
+			econ_join_sphere_JAP = yes
+			set_popularities = {
+				communist = 8
+				socialist_1 = 3
+				progressivism = 45
+				liberal_conservatism = 10
+				paternalism = 25
+				paternalism_2 = 5
+				fascism = 2
+				ultranationalism = 2
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_INDIAN_PEACEFUL_REUNIFICATION_REMIX }
+			TNO_fire_super_event = yes
+		}
+	}
+	IND_debug_menon = {
+		icon = GFX_decision_debug
+		fire_only_once = yes
+		complete_effect = {
+			retire_character = IND_Jawaharlal_Nehru
+			set_popularities = {
+				communist = 8
+				socialist = 10
+				socialist_1 = 3
+				progressivism = 20
+				liberalism = 20
+				liberal_conservatism = 10
+				conservatism = 20
+				paternalism = 5
+				fascism = 2
+				ultranationalism = 2
+			}
+			swap_ideas = {
+				remove_idea = IND_Stroke_Of_The_Midnight_Hour
+				add_idea = IND_Tryst_With_Destiny
+			}
+		}
+	}
+	IND_debug_shastri = {
+		icon = GFX_decision_debug
+		fire_only_once = yes
+		complete_effect = {
+			retire_character = IND_VK_Krishna_Menon
+			set_popularities = {
+				communist = 8
+				socialist = 10
+				socialist_1 = 3
+				progressivism = 15
+				liberalism = 20
+				liberal_conservatism = 15
+				conservatism = 20
+				paternalism = 5
+				fascism = 2
+				ultranationalism = 2
+			}
+			set_party_name = {
+				ideology = liberalism
+				long_name = IND_liberalism_swatantra_party_long
+				name = IND_liberalism_swatantra_party
+			}
+			set_country_flag = IND_Cry_Havoc_prep
+			swap_ideas = {
+				remove_idea = IND_Tryst_With_Destiny
+				add_idea = IND_Cry_Havoc
+			}
+			swap_ideas = {
+				remove_idea = IND_Shadows_Of_Communalism
+				add_idea = IND_Embers_Of_Communalism
+			}
+		}
+	}
+	IND_debug_chavan = {
+		icon = GFX_decision_debug
+		fire_only_once = yes
+		complete_effect = {
+			retire_character = IND_Deendayal_Upadhyaya
+			IND_Atal_Bihari_Vajpayee = { promote_character = yes }
+			retire_character = IND_Lal_Bahadur_Shastri
+			retire_character = IND_Hirubhai_M_Patel
+			set_party_name = {
+				ideology = socialist
+				long_name = IND_socialist_forum_party_long
+				name = IND_socialist_forum_party
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = IND_paternalism_bjs2_party_long
+				name = IND_paternalism_bjs2_party
+			}
+			set_party_name = {
+				ideology = conservatism
+				long_name = IND_conservatism_2_party_long
+				name = IND_conservatism_2_party
+			}
+			remove_ideas = {
+				IND_Death_March_Downwards
+				IND_Embers_Of_Communalism
+				IND_Indias_Long_Night
+				IND_Friend_In_Need
+				IND_The_Behemoth_Shastri
+				IND_The_Behemoth_Shastri_OBQ
+			}
+			set_popularities = {
+				communist = 5
+				socialist = 10
+				socialist_1 = 3
+				progressivism = 20
+				progressivism_2 = 5
+				liberalism = 20
+				liberal_conservatism = 10
+				conservatism = 15
+				paternalism = 5
+				paternalism_1 = 3
+				fascism = 2
+				ultranationalism = 2
+			}
+			set_party_name = {
+				ideology = progressivism
+				long_name = IND_progressivism_socialist_party_long
+				name = IND_progressivism_socialist_party
+			}
+			add_ideas = {
+				IND_The_Behemoth_Chavan
+				IND_The_Nehruvian_Vision
+				IND_An_India_of_Light
+				IND_Look_Westwards
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = PAK } 
+				}
+				add_ideas = IND_My_Brothers_Keeper
+			}
+			else = {
+				add_ideas = IND_The_Partition
+			}
+		}
+	}
+	IND_debug_Morarji = {
+		icon = GFX_decision_debug
+		fire_only_once = yes
+		complete_effect = {
+			retire_character = IND_Deendayal_Upadhyaya
+			IND_Atal_Bihari_Vajpayee = { promote_character = yes }
+			retire_character = IND_Lal_Bahadur_Shastri
+			retire_character = IND_Hirubhai_M_Patel
+			set_party_name = {
+				ideology = socialist
+				long_name = IND_socialist_forum_party_long
+				name = IND_socialist_forum_party
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = IND_paternalism_bjs2_party_long
+				name = IND_paternalism_bjs2_party
+			}
+			set_party_name = {
+				ideology = conservatism
+				long_name = IND_conservatism_2_party_long
+				name = IND_conservatism_2_party
+			}
+			remove_ideas = {
+				IND_Death_March_Downwards
+				IND_Embers_Of_Communalism
+				IND_Indias_Long_Night
+				IND_Friend_In_Need
+				IND_The_Behemoth_Shastri
+				IND_The_Behemoth_Shastri_OBQ
+			}
+			set_politics = {
+				ruling_party = conservatism
+				elections_allowed = yes
+				last_election = "1967.7.25"
+				election_frequency = 60
+			}
+			set_popularities = {
+				communist = 10
+				socialist = 15
+				socialist_1 = 3
+				progressivism = 5
+				liberalism = 15
+				liberal_conservatism = 5
+				conservatism = 35
+				paternalism = 5
+				paternalism_1 = 3
+				fascism = 2
+				ultranationalism = 2
+			}
+			promote_character = {
+				character = IND_Ramaswamy_Venkataraman
+				ideology = progressivism_reformist_socialism_subtype
+			}
+			add_ideas = {
+				IND_The_Behemoth_Desai
+				IND_The_Indian_Vision
+				IND_An_India_of_Light
+				IND_Look_Westwards
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = PAK } 
+				}
+				add_ideas = IND_My_Brothers_Keeper
+			}
+			else = {
+				add_ideas = IND_The_Partition
+			}
+		}
+	}
+	IND_debug_Rajagopalachari = {
+		icon = GFX_decision_debug
+		fire_only_once = yes
+		complete_effect = {
+			retire_character = IND_Deendayal_Upadhyaya
+			IND_Atal_Bihari_Vajpayee = { promote_character = yes }
+			retire_character = IND_Lal_Bahadur_Shastri
+			retire_character = IND_Hirubhai_M_Patel
+			set_party_name = {
+				ideology = socialist
+				long_name = IND_socialist_forum_party_long
+				name = IND_socialist_forum_party
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = IND_paternalism_bjs2_party_long
+				name = IND_paternalism_bjs2_party
+			}
+			set_party_name = {
+				ideology = conservatism
+				long_name = IND_conservatism_2_party_long
+				name = IND_conservatism_2_party
+			}
+			remove_ideas = {
+				IND_Death_March_Downwards
+				IND_Embers_Of_Communalism
+				IND_Indias_Long_Night
+				IND_Friend_In_Need
+				IND_The_Behemoth_Shastri
+				IND_The_Behemoth_Shastri_OBQ
+			}
+			set_politics = {
+				ruling_party = liberalism
+				elections_allowed = yes
+				last_election = "1967.7.25"
+				election_frequency = 60
+			}
+			promote_character = IND_Chakravarti_Rajagopalachari
+			set_popularities = {
+				communist = 10
+				socialist = 15
+				socialist_1 = 3
+				progressivism = 5
+				liberalism = 40
+				liberal_conservatism = 5
+				conservatism = 10
+				paternalism = 5
+				paternalism_1 = 3
+				fascism = 2
+				ultranationalism = 2
+			}
+			promote_character = {
+				character = IND_Ramaswamy_Venkataraman
+				ideology = progressivism_reformist_socialism_subtype
+			}
+			add_ideas = {
+				IND_The_Behemoth_Rajaji
+				IND_The_Ganges_Unleashed
+				IND_An_India_of_Light
+				IND_Eastern_Bulwark
+			}
+			set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Capitalism }
+			econ_type_change = yes
+			if = {
+				limit = {
+					NOT = { country_exists = PAK } 
+				}
+				add_ideas = IND_My_Brothers_Keeper
+			}
+			else = {
+				add_ideas = IND_The_Partition
+			}
+		}
+	}
+}	

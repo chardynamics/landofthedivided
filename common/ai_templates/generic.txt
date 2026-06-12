@@ -1,0 +1,624 @@
+Equalizers = { #Because some people actually do want some challenging gameplay
+	
+	role = armor
+	
+	upgrade_prio = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = JAP
+				tag = USA
+				tag = GER
+				tag = ITA
+			}
+		}
+	}
+
+	equalizer_default = {
+		upgrade_prio = {
+			factor = 5
+
+		}
+
+		can_upgrade_in_field = {
+			AND = {
+				has_equipment = { MBT_chassis < 200 }
+				has_equipment = { attack_helicopter_equipment < 200 }
+			}
+		}
+
+		target_template = {
+			support = {
+				mbt_engineer = 1
+				recon = 1
+				signal_company = 1
+				air_assault = 1
+				attack_helicopter_company = 1
+			}
+
+			regiments = {
+				MBT = 2
+				elite_infantry = 6
+				mountaineers = 1
+				marine = 1
+			}
+		}
+	}
+
+	equalizer_japan = {
+		upgrade_prio = {
+			factor = 5
+			modifier = {
+				factor = 10
+				tag = JAP
+			}
+
+		}
+
+		can_upgrade_in_field = {
+			AND = {
+				has_equipment = { MBT_chassis < 200 }
+				has_equipment = { attack_helicopter_equipment < 200 }
+			}
+		}
+
+		target_template = {
+			support = {
+				mbt_engineer = 1
+				recon = 1
+				signal_company = 1
+				air_assault = 1
+				logistics_company = 1
+			}
+
+			regiments = {
+				MBT = 2
+				elite_infantry = 6
+				mountaineers = 1
+				marine = 1
+			}
+		}
+	}
+	equalizer_lategame = {
+		upgrade_prio = {
+			factor = 20
+			modifier = {
+				factor = 0
+				NOT = {
+					date > 1970.01.01 #All in for an Epic Finale
+				}
+			}
+		}
+
+		can_upgrade_in_field = {
+			AND = {
+				has_equipment = { MBT_chassis < 200 }
+				has_equipment = { attack_helicopter_equipment < 200 }
+			}
+		}
+
+		target_template = {
+			support = {
+				mbt_engineer = 1
+				mbt_recon = 1
+				signal_company = 1
+				air_assault = 1
+				attack_helicopter_company = 1
+			}
+
+			regiments = {
+				MBT = 4
+				elite_infantry = 6
+				mountaineers = 2
+				marine = 2
+			}
+		}
+	}
+}
+
+garrison_generic = {
+
+	role = garrison
+
+	upgrade_prio = {
+		factor = 80
+
+		modifier = {
+			factor = 0
+			ai_has_role_template = garrison
+		}
+	}
+
+	garrison_generic = {
+
+		reinforce_prio = 0
+		custom_icon = 7
+
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 1
+			}
+		}
+
+		target_template = {
+			regiments = {
+				light_infantry = 5
+			}
+		}
+	}
+}
+
+
+armor_AI = {
+
+	role = armor
+
+	upgrade_prio = {
+		factor = 10
+
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = JAP
+				tag = USA
+				tag = GER
+				tag = ITA
+			}
+		}
+	}
+
+	infantry_killer_smoll = {
+
+		upgrade_prio = {
+			factor = 10
+			modifier = {
+				factor = 35
+				OR = {
+					AND = {
+						tag = KOM
+						NOT = { has_government = communist }
+						NOT = { has_government = national_socialism }
+						NOT = { has_government = ultranationalism }
+					}
+					tag = IRK
+					tag = BRY
+					tag = CHI
+					tag = IBR
+					tag = MEX
+					tag = FIN
+				} 
+			}
+			modifier = {
+				factor = 0
+				num_of_factories < 15
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					num_of_factories > 30
+					has_tech = MBT_1960
+				}
+			}
+		}
+
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+				military_police = 1
+				logistics_company = 1
+			}
+
+			regiments = {
+				elite_infantry = 6
+				artillery_brigade = 1
+				IFV = 3
+			}
+		}
+	}
+	infantry_killer = {
+
+		upgrade_prio = {
+			factor = 10
+			modifier = {
+				factor = 0
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = MBT_1960 }
+			}
+		}
+
+		target_template = {
+			support = {
+				mbt_engineer = 1
+				recon = 1
+				military_police = 1
+				logistics_company = 1
+			}
+
+			regiments = {
+				elite_infantry = 6
+				artillery_brigade = 1
+				MBT = 3
+			}
+		}
+	}
+	infantry_richer_elite = {
+
+		upgrade_prio = {
+			factor = 100
+
+			modifier = {
+				factor = -100
+				num_of_factories < 30
+			}
+		}
+
+		target_template = {
+			support = {
+				mbt_engineer = 1
+				recon = 1
+				military_police = 1
+				logistics_company = 1
+				attack_helicopter_company = 1
+			}
+
+			regiments = {
+				elite_infantry = 6
+				artillery_brigade = 1
+				MBT = 3
+			}
+		}
+	}
+	infantry_killer_heavy = {
+
+		upgrade_prio = {
+			factor = 10
+
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						OR = {
+							has_tech = MBT_1960
+							has_tech = NSB_MBT_1960
+						}
+						NOT = { has_tech = NSB_heavy_1950 }
+					}
+					AND = {
+						OR = {
+							has_tech = MBT_1970
+							has_tech = NSB_MBT_1970
+						}
+						NOT = { has_tech = NSB_heavy_1960 }
+					}
+				}
+			}
+
+			#modifier = { #KD's Notes - I want the larp so badly but DAMN, that's 25% more expensive to make than Infantry Killed
+			#	factor = 10
+			#	OR = {
+			#		tag = OMS
+			#		tag = SAM
+			#	}
+			#}
+		}
+
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+				military_police = 1
+				air_assault = 1
+				attack_helicopter_company = 1
+			}
+
+			regiments = {
+				elite_infantry = 6
+				artillery_brigade = 1
+				heavy_tank = 2
+			}
+		}
+	}
+}
+
+infantry_generic = {
+
+	role = infantry
+
+	upgrade_prio = {
+		factor = 2
+
+		modifier = {
+			factor = 5
+		}
+	}
+
+
+	#infantry_poor = {
+	#
+	#	upgrade_prio = {
+	#		factor = 2
+	#
+	#		modifier = {
+	#			factor = 5
+	#		}
+	#	}
+	#
+	#	target_template = {
+	#		support = {
+	#			engineer = 1
+	#			recon = 1
+	#			artillery = 1
+	#		}
+	#
+	#		regiments = {
+	#			light_infantry = 10
+	#		}
+	#	}
+	#}
+
+	#infantry_basic = {
+	#
+	#	upgrade_prio = {
+	#		factor = 1
+	#
+	#		modifier = {
+	#			factor = 5
+	#		}
+	#	}
+	#
+	#	target_template = {
+	#		support = {
+	#			engineer = 1
+	#			recon = 1
+	#			anti_tank = 1
+	#			artillery = 1
+	#		}
+	#
+	#		regiments = {
+	#			infantry = 10
+	#		}
+	#	}
+	#} is_far_eastern_nation = yes
+
+	infantry_default = {
+
+		upgrade_prio = {
+			factor = 1
+
+			modifier = {
+				factor = 100
+				AND = {
+					is_far_eastern_nation = yes
+					has_country_flag = is_warlord
+				}
+			}
+		}
+
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+				logistics_company = 1
+			}
+
+			regiments = {
+				ligh_infantry = 7
+				artillery_brigade = 2
+			}
+		}
+	}
+
+	infantry_default = {
+
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 10
+			}
+		}
+
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+				logistics_company = 1
+			}
+
+			regiments = {
+				infantry = 7
+				artillery_brigade = 2
+			}
+		}
+	}
+
+	infantry_rich = {
+
+		upgrade_prio = {
+			factor = 3
+
+			modifier = {
+				factor = 10
+				
+			}
+		}
+
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+				military_police = 1
+				logistics_company = 1
+				artillery = 1
+			}
+
+			regiments = {
+				elite_infantry = 6
+				artillery_brigade = 2
+			}
+		}
+	}
+	infantry_rich_elite = {
+
+		upgrade_prio = {
+			factor = 1000
+
+			modifier = {
+				factor = -1000
+				num_of_factories < 30
+			}
+		}
+
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+				logistics_company = 1
+				artillery = 1
+				attack_helicopter_company = 1
+			}
+
+			regiments = {
+				elite_infantry = 6
+				artillery_brigade = 2
+			}
+		}
+	}
+}
+
+mountaineers_generic = {
+
+	role = mountaineers
+
+	upgrade_prio = {
+		factor = 2
+
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_tech = tech_mountaineers }
+				OR = {
+					tag = JAP
+					tag = USA
+					tag = GER
+				}
+			}
+		}
+	}
+
+	mountaineers_default = {
+
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 1
+			}
+		}
+
+		target_template = {
+			support = {
+				engineer = 1
+				military_police = 1
+				recon = 1
+				logistics_company = 1
+			}
+
+			regiments = {
+				mountaineers = 8
+				artillery_brigade = 2
+			}
+		}
+	}
+}
+
+marines_generic = {
+
+	role = marines
+
+	upgrade_prio = {
+		factor = 2
+
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					has_tech = marines
+				}
+				OR = {
+					tag = JAP
+					tag = USA
+					tag = GER
+				}
+			}
+		}
+	}
+
+
+	marine_default = {
+
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 1
+			}
+		}
+
+		target_template = {
+			support = {
+				military_police = 1
+				recon = 1
+				logistics_company = 1
+			}
+
+			regiments = {
+				marine = 9
+				artillery_brigade = 2
+			}
+		}
+	}
+}
+
+
+# REGIMENTS:
+#infantry
+#super_heavy_armor
+#heavy_tank
+#MBT
+#IFV
+#anti_tank
+#cavalry
+#motorized
+#marine
+#mountaineers
+#paratrooper
+#rocket_artillery
+#light_tank_destroyer
+#medium_tank_destroyer_brigade
+#heavy_tank_destroyer_brigade
+#super_heavy_tank_destroyer_brigade
+#modern_tank_destroyer_brigade
+#anti_air
+#artillery
+
+# SUPPORT:
+#engineer
+#recon
+#signal_company
+#maintenance_company
+#anti_tank_brigade
+#anti_air_brigade
+#artillery_brigade
+#field_hospital
+#logistics_company
+#military_police
+#light_sp_anti_air_brigade
+#light_sp_artillery_brigade

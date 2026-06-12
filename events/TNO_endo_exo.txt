@@ -1,0 +1,287 @@
+add_namespace = endo_exo
+
+@1964_date = 730
+@1969_date = 2557
+@1970_date = 2922
+@1972_date = 3652
+@1973_date = 4018
+
+#event nos. are based off the states affected
+
+country_event = { # startup event
+	id = endo_exo.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.0" }
+	title = endo_exo.0
+	desc = endo_exo.0
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.0.a
+		# Sort by date then by state id
+		##Generic dates
+		country_event = { id = endo_exo.1470 days = @1964_date }
+
+		country_event = { id = endo_exo.1471 days = @1964_date }
+
+		country_event = { id = endo_exo.1884 days = @1964_date }
+
+		country_event = { id = endo_exo.2186 days = @1964_date }
+
+		country_event = { id = endo_exo.2188 days = @1964_date }
+
+		country_event = { id = endo_exo.2193 days = @1964_date }
+
+		country_event = { id = endo_exo.2195 days = @1964_date }
+
+		country_event = { id = endo_exo.2194 days = @1969_date }
+
+		country_event = { id = endo_exo.412 days = @1970_date }
+
+		country_event = { id = endo_exo.2192 days = @1970_date }
+
+		country_event = { id = endo_exo.434 days = @1972_date }
+
+		country_event = { id = endo_exo.2188 days = @1972_date }
+
+		country_event = { id = endo_exo.701 days = @1973_date }
+
+		##Specific dates
+		country_event = { id = endo_exo.1142 days = 1580 } #April 30 1966
+	}
+}
+
+country_event = {
+	id = endo_exo.412
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.412" }
+	title = endo_exo.412
+	desc = endo_exo.412
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.412.a
+		412 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.434
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.434" }
+	title = endo_exo.434
+	desc = endo_exo.434
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.434.a
+		434 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.701
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.701" }
+	title = endo_exo.701
+	desc = endo_exo.701
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.701.a
+		701 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.1142
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.1142" }
+	title = endo_exo.1142
+	desc = endo_exo.1142
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.1142.a
+		1142 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.1470
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.1470" }
+	title = endo_exo.1470
+	desc = endo_exo.1470
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.1470.a
+		1470 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.1471
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.1471" }
+	title = endo_exo.1471
+	desc = endo_exo.1471
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.1471.a
+		1471 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.1884
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.1884" }
+	title = endo_exo.1884
+	desc = endo_exo.1884
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.1884.a
+		1884 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.2186
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.2186" }
+	title = endo_exo.2186
+	desc = endo_exo.2186
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.2186.a
+		2186 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.2188
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.2188" }
+	title = endo_exo.2188
+	desc = endo_exo.2188
+
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.2188.a
+		2188 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.2192
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.2192" }
+	title = endo_exo.2192
+	desc = endo_exo.2192
+
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.2192.a
+		2192 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.2193
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.2193" }
+	title = endo_exo.2193
+	desc = endo_exo.2193
+
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.2193.a
+		2193 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.2194
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.2194" }
+	title = endo_exo.2194
+	desc = endo_exo.2194
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.2194.a
+		2194 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}
+}
+
+country_event = {
+	id = endo_exo.2195
+	immediate = { log = "[GetDateText]: [Root.GetName]: event endo_exo.2195" }
+	title = endo_exo.2195
+	desc = endo_exo.2195
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = endo_exo.2195.a
+		2195 = {
+			TNO_force_update_renamings_single_state = yes 
+		}
+	}

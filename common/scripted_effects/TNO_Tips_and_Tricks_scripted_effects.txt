@@ -1,0 +1,73 @@
+# brought to you by mighty sap00
+TNO_Initialize_Tips_and_Tricks = {
+
+	add_to_array = { global.tip_category_array = 0 } # general introduction
+	add_to_array = { global.tip_category_array = 1 } # Economy introduction
+	add_to_array = { global.tip_category_array = 1 }
+	add_to_array = { global.tip_category_array = 1 }
+	add_to_array = { global.tip_category_array = 1 }
+	add_to_array = { global.tip_category_array = 1 }
+	add_to_array = { global.tip_category_array = 1 }
+	add_to_array = { global.tip_category_array = 1 }
+	add_to_array = { global.tip_category_array = 1 }
+	add_to_array = { global.tip_category_array = 1 } #Total of 10 Pages for the Economy
+	add_to_array = { global.tip_category_array = 2 } # Army & War introduction
+	add_to_array = { global.tip_category_array = 2 } 
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 }
+	add_to_array = { global.tip_category_array = 2 } #Total of 13 Pages for Army & War
+	add_to_array = { global.tip_category_array = 3 } # Construction introduction
+	add_to_array = { global.tip_category_array = 3 }
+	add_to_array = { global.tip_category_array = 3 }
+	add_to_array = { global.tip_category_array = 3 }
+	add_to_array = { global.tip_category_array = 3 } #Total of 6 Pages for Construction
+
+	add_to_array = { global.tip_contents_folder_array = 0 }
+	add_to_array = { global.tip_contents_folder_array = 1 }
+	add_to_array = { global.tip_contents_folder_array = 10 }
+	add_to_array = { global.tip_contents_folder_array = 24 }
+
+	
+}
+
+TNO_Tips_and_Tricks_overflow_solution = {
+	set_temp_variable = { temp = global.tip_category_array^num }
+	subtract_from_temp_variable = { temp = 1 }
+	if = {
+		limit = {
+			check_variable = { current_tip_id > temp }
+		}
+		set_variable = { current_tip_id = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { current_tip_id < 0 }
+		}
+		set_variable = { current_tip_id = temp }
+	}
+}
+
+TNO_Tips_and_Tricks_random_page = {
+	set_variable_to_random = {
+		var = current_tip_id
+		min = 2
+		max = var:global.tip_category_array^num
+		integer = yes
+	}
+	set_variable_to_random = {
+		var = global.tips_and_tricks_dice_number
+		min = 1
+		max = 6
+		integer = yes
+	}
+}

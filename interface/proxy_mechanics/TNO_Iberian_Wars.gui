@@ -1,0 +1,166 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_Iberian_Wars_GUI"
+		position = { x = 29 y = 131 }
+		size = { width = 496 height = 506 }
+
+		iconType = {
+			name = "seal"
+			position = { x = 100 y = 150 }
+			spriteType = "GFX_fopo_dept_of_state_seal"
+		}
+
+		iconType = {
+			name = "sidebar"
+			position = { x = 8 y = 8 }
+			spriteType = "GFX_TT_Jamaica_Sidebar"
+		}
+
+		instantTextboxType = {
+			name = "desc"
+			position = { x = 118 y = 8 }
+			font = "aldrich_18_outline"
+			text = [Get_fopo_desc]
+			maxWidth = 370
+			format = left
+		}
+
+		iconType = {
+			name = "supporter_outline"
+			position = { x = 115 y = 127 }
+			spriteType = "GFX_IBR_wars_supporters_line"
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+		name = "Iberian_Wars_supported_factions_List_Container"
+		size = { width = 370 height = 61 }
+		position = { x = 115 y = 127 }
+		clipping = yes
+		horizontalScrollbar = "Iberian_Wars_supported_factions_HorizontalSlider"
+		margin = { top = 0 left = 0 bottom = 0 right = 0 }
+
+		background = {
+			name = "Iberian_Wars_supported_factions_List_Background"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+
+		gridboxtype = {
+			name = "Iberian_Wars_supported_factions_List"
+			position = { x = 4 y = 0 }
+			size = { width = 1 height = 1 }
+			slotsize = { width = 1 height = 1 }
+			max_slots_vertical = 1
+			}
+		}
+
+		#Current supporter piechart 
+		iconType = {
+			name = "IBR_Wars_fopo_ITA_pie"
+			spriteType = "GFX_IBR_wars_influence_pie_ITA"
+			position = { x = 170 y = 190 }
+			pdx_tooltip = IBR_Wars_pie_distribution_tt
+		}
+
+		iconType = {
+			name = "IBR_Wars_fopo_GER_pie"
+			spriteType = "GFX_IBR_wars_influence_pie_GER"
+			position = { x = 170 y = 190 }
+			pdx_tooltip = IBR_Wars_pie_distribution_tt
+		}
+
+		iconType = {
+			name = "IBR_Wars_fopo_USA_pie"
+			spriteType = "GFX_IBR_wars_influence_pie_USA"
+			position = { x = 170 y = 190 }
+			pdx_tooltip = IBR_Wars_pie_distribution_tt
+		}
+
+		iconType = {
+			name = "IBR_Wars_fopo_independent_pie"
+			spriteType = "GFX_IBR_wars_influence_pie_SPR"
+			position = { x = 170 y = 190 }
+			pdx_tooltip = IBR_Wars_pie_distribution_tt
+		}
+
+		instantTextBoxType = {
+			name = "IBR_wars_fopo_faction_legitimacy_tooltip"
+			position = { x = 20 y = 380 }
+			maxHeight = 500
+			maxWidth = 450
+			font = "aldrich_22_outline"
+			text = IBR_wars_fopo_faction_legitimacy_tooltip_text
+			format = centre
+		}
+
+		instantTextBoxType = {
+			name = "IBR_wars_fopo_faction_internal_opposition_tooltip"
+			position = { x = 20 y = 430 }
+			maxHeight = 500
+			maxWidth = 450
+			font = "aldrich_22_outline"
+			text = IBR_wars_fopo_faction_internal_opposition_tooltip_text
+			format = centre
+		}
+
+	}
+	containerWindowType = {
+		name = "Iberian_Wars_supported_factions_Entry"
+		size = { width = 90 height = 56 }
+		position = { x = -4 y = 0 }
+		buttonType = {#The flag doesn't work as a button... in this instance
+			name = "Iberian_Wars_supported_factions_Entry_Flag"
+			position = { x = 47 y = 30 }
+			quadTextureSprite = "GFX_flag_medium_plain"
+		}
+		buttonType = {
+			name = "Iberian_Wars_supported_factions_Entry_Overlay"
+			position = { x = 4 y = 3 }
+			spriteType = "GFX_flag_overlay_stateview_large"
+		}
+	}
+	extendedScrollbarType = {
+		name = "Iberian_Wars_supported_factions_HorizontalSlider"
+		position = { x = 0 y = 20 }
+		size = { width = 100 height = 18 }
+		tileSize = { width = 0 height = 0 }
+		maxValue = 1
+		minValue = 0
+		stepSize = 0.1
+		startValue = 0
+		horizontal = yes
+		orientation = lower_left
+		origo = lower_left
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_scrollbar_horisontal_bg"
+		}
+
+		slider = {
+			name = "Slider"
+			quadTextureSprite = "GFX_scroll_drager"
+			position = { x = 0 y = -2 }
+		}
+
+		track = {
+			name = "Track"
+			quadTextureSprite = "GFX_scroll_track_horisontal"
+			position = { x = 0 y = 3 }
+			alwaystransparent = yes
+		}
+
+		decreaseButton = {
+			name = "Decrease"
+			quadTextureSprite = "GFX_scroll_left"
+			position = { x = 3 y = 1 }
+		}
+
+		increaseButton = {
+			name = "Increase"
+			quadTextureSprite = "GFX_scroll_right"
+			position = { x = -19 y = -17 }
+		}
+
+	}
+}

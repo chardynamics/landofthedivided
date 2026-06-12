@@ -1,0 +1,374 @@
+ideas = {
+	country = {
+		TNO_SATW_chemical_weapons = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_chemical_weapons" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_gas_mask
+			modifier = {
+				army_attack_factor = 0.15
+			}
+		}
+		TNO_SATW_tatically_nuked = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_tatically_nuked" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_nuclear_explosion
+			modifier = {
+				army_morale_factor = -0.15
+				army_defence_factor = -0.2
+			}
+		}
+		TNO_SATW_treaty_of_montevideo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_treaty_of_montevideo" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = ARG_treaty_of_montevideo
+			modifier = {
+				war_support_factor = -0.3
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				industrial_capacity_dockyard = -0.5
+				custom_modifier_tooltip = SATW_loss_treaty_restrictions_tt
+			}
+		}
+		TNO_SATW_treaty_of_asuncion = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_treaty_of_asuncion" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = BRA_treaty_of_asuncion
+			modifier = {
+				war_support_factor = -0.3
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				industrial_capacity_dockyard = -0.5
+				custom_modifier_tooltip = SATW_loss_treaty_restrictions_tt
+			}
+		}
+	}
+	hidden_ideas = {
+		TNO_SACW_Tension_Idea_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SACW_Tenson_Idea_1" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.1
+				stability_factor = 0.05
+				gdp_growth_modifier = 2
+			}
+		}
+		TNO_SACW_Tension_Idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SACW_Tenson_Idea_2" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.05
+				gdp_growth_modifier = 1
+			}
+		}
+		TNO_SACW_Tension_Idea_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SACW_Tenson_Idea_3" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				gdp_growth_modifier = -1
+				military_expenditures_factor = 0.05
+			}
+		}
+		TNO_SACW_Tension_Idea_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SACW_Tenson_Idea_4" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = -0.05
+				gdp_growth_modifier = -2
+				military_expenditures_factor = 0.1
+			}
+		}
+		TNO_SACW_Tension_Idea_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SACW_Tenson_Idea_5" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = -0.10
+				gdp_growth_modifier = -3
+				military_expenditures_factor = 0.15
+			}
+		}
+	}
+	hidden_ideas = {
+		TNO_SATW_Escalation_Idea_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Escalation_Idea_1" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_core_defence_factor = 0.3
+				war_support_factor = -0.2
+
+			}
+		}
+		TNO_SATW_Escalation_Idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Escalation_Idea_2" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		TNO_SATW_Escalation_Idea_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Escalation_Idea_3" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.1
+				war_support_factor = 0.2
+			}
+		}
+		TNO_SATW_Escalation_Idea_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Escalation_Idea_4" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.3
+				army_core_defence_factor = 0.3
+				production_speed_buildings_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.15
+				war_support_factor = 0.25
+			}
+		}
+		TNO_SATW_Escalation_Idea_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Escalation_Idea_5" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.35
+				army_core_defence_factor = 0.35
+				production_speed_buildings_factor = 0.15
+				production_factory_max_efficiency_factor = 0.2
+				industrial_capacity_factory = 0.2
+				war_support_factor = 0.3
+			}
+		}
+		TNO_SATW_Escalation_Idea_6 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Escalation_Idea_6" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.4
+				army_core_defence_factor = 0.4
+				production_speed_buildings_factor = 0.2
+				production_factory_max_efficiency_factor = 0.25
+				industrial_capacity_factory = 0.25
+				war_support_factor = 0.4
+			}
+		}
+		TNO_SATW_Escalation_Idea_7 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Escalation_Idea_7" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.5
+				army_defence_factor = -0.2
+			}
+		}
+	}
+	hidden_ideas = {
+		TNO_SATW_Exhaustion_Idea_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Exhaustion_Idea_1" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				conscription_factor = 0.2
+				army_morale_factor = 0.2
+			}
+		}
+		TNO_SATW_Exhaustion_Idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Exhaustion_Idea_2" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		TNO_SATW_Exhaustion_Idea_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Exhaustion_Idea_3" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_power_gain = -0.1
+			}
+		}
+		TNO_SATW_Exhaustion_Idea_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Exhaustion_Idea_4" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				conscription_factor = -0.05
+				political_power_gain = -0.2
+			}
+		}
+		TNO_SATW_Exhaustion_Idea_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Exhaustion_Idea_5" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				conscription_factor = -0.1
+				political_power_gain = -0.2
+				army_morale_factor = -0.1
+			}
+		}
+		TNO_SATW_Exhaustion_Idea_6 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Exhaustion_Idea_6" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				conscription_factor = -0.2
+				political_power_gain = -0.3
+				army_morale_factor = -0.2
+			}
+		}
+		TNO_SATW_Exhaustion_Idea_7 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TNO_SATW_Exhaustion_Idea_7" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.4
+				conscription_factor = -0.3
+				political_power_gain = -0.4
+				army_morale_factor = -0.2
+			}
+		}
+
+		SACW_CWS_Level_1_Idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SACW_CWS_Level_1_Idea" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.1
+			}
+		}
+		SACW_CWS_Level_2_Idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SACW_CWS_Level_2_Idea" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.05
+			}
+		}
+		SACW_CWS_Level_3_Idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SACW_CWS_Level_3_Idea" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		SACW_CWS_Level_4_Idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SACW_CWS_Level_4_Idea" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+		SATW_debuff_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SATW_debuff_idea" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.25
+				army_speed_factor = -0.25
+				army_defence_factor = 0.25
+			}
+		}
+	}
+}

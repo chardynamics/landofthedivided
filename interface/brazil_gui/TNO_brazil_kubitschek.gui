@@ -1,0 +1,691 @@
+guiTypes = {
+
+	###############################################################
+	########            Kubitschek Goals Plan              ########
+	###############################################################
+
+	containerWindowType = {
+		name = "TNO_BRA_decisions_kubitschek_goals_plan_GUI"
+		size = { width = 0 height = 815 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_BRA_info_button"
+			position = { x = 453 y = -15 }
+			pdx_tooltip = BRA_kubitschek_goals_plan_info
+		}
+
+		
+		containerWindowType = {
+			name = "timer_container"
+			position = { x = 34 y = 5 }
+
+			iconType = {
+				name = "timer_circle"
+				spriteType = "GFX_BRA_GP_time_circle"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "timer"
+				spriteType = "GFX_BRA_GP_timer"
+				position = { x = 0 y = -1 }
+				frame = 50
+				pdx_tooltip = "BRA_gp_timer_tt"
+			}
+
+			instantTextboxType = {
+				name = "days_left"
+				position = { x = 0 y = 21 }
+				font = "aldrich_36_outline"
+				text = "[?BRA_gp_days_left_in_phase]"
+				allwaystransparent = yes
+				maxWidth = 74
+				format = center
+			}
+
+			instantTextboxType = {
+				name = "phase"
+				position = { x = -34 y = 76 }
+				font = "aldrich_22_outline"
+				text = "[BRA_gp_phase_name]"
+				maxWidth = 150
+				format = center
+			}
+		}
+
+		containerWindowType = {
+			name = "balance_meter"
+			position = { x = 54 y = 139 }
+
+			iconType = {
+				name = "balance_meter_frame"
+				spriteType = "GFX_BRA_GP_balance_meter_frame"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "balance_meter_label"
+				spriteType = "GFX_BRA_GP_balance_text"
+				position = { x = -20 y = 59 }
+			}
+
+			containerWindowType = {
+				name = "balance_meter"
+				position = { x = 2 y = 2 }
+				size = { width = 30 height = 200 }
+				clipping = yes
+
+				#iconType = {
+				#	name = "balance_meter_inner"
+				#	spriteType = "GFX_BRA_GP_balance_meter_inner"
+				#	position = { x = 0 y = -200 }
+				#}
+
+				iconType = {
+					name = "balance_meter_inner"
+					spriteType = "GFX_BRA_GP_balance_meter_inner"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "BRA_gp_balance_meter_tt"
+				}
+			}
+		}
+
+
+		containerWindowType = {
+			name = "cd_members"
+			position = { x = 124 y = 1 }
+
+			iconType = {
+				name = "cd_background"
+				spriteType = "GFX_BRA_GP_cd_background"
+				position = { x = 11 y = 8 }
+			}
+
+			buttonType = {
+				name = "member_0"
+				spriteType = "GFX_BRA_GP_cd_nonaligned_member"
+				position = { x = 46 y = 0 }
+				pdx_tooltip = BRA_gp_cd_member_0_tt_dummy
+			}
+			buttonType = {
+				name = "member_1"
+				spriteType = "GFX_BRA_GP_cd_nonaligned_member"
+				position = { x = 204 y = 0 }
+				pdx_tooltip = BRA_gp_cd_member_1_tt_dummy
+			}
+			buttonType = {
+				name = "member_2"
+				spriteType = "GFX_BRA_GP_cd_add_member"
+				position = { x = 0 y = 148 }
+				pdx_tooltip = BRA_gp_cd_member_2_tt_dummy
+			}
+			buttonType = {
+				name = "member_3"
+				spriteType = "GFX_BRA_GP_cd_add_member"
+				position = { x = 250 y = 148 }
+				pdx_tooltip = BRA_gp_cd_member_3_tt_dummy
+			}
+			buttonType = {
+				name = "member_4"
+				spriteType = "GFX_BRA_GP_cd_add_member"
+				position = { x = 125 y = 238 }
+				pdx_tooltip = BRA_gp_cd_member_4_tt_dummy
+			}
+		}
+
+		containerWindowType = {
+			name = "optimism_meter"
+			position = { x = 0 y = 365 }
+
+			
+			containerWindowType = {
+				name = "people_container"
+				position = { x = 0 y = 0 }
+
+					
+				instantTextboxType = {
+					name = "people"
+					position = { x = 0 y = 0 }
+					font = "aldrich_22_outline"
+					text = "BRA_gp_people"
+					maxWidth = 125
+					format = right
+				}
+
+				iconType = {
+					name ="people_potential_optimism_inner"
+					spriteType = "GFX_BRA_GP_optimism_meter_potential_inner"
+					position = { x = 141 y = 2 }
+					frame = 1
+				}
+				iconType = {
+					name ="people_optimism_inner"
+					spriteType = "GFX_BRA_GP_optimism_meter_inner"
+					position = { x = 141 y = 2 }
+					frame = 100
+				}
+				iconType = {
+					name ="people_optimism_frame"
+					spriteType = "GFX_BRA_GP_optimism_meter_frame"
+					position = { x = 139 y = 1 }
+					pdx_tooltip = "BRA_gp_people_optimism_tt"
+				}
+
+
+			}
+			containerWindowType = {
+				name = "business_container"
+				position = { x = 0 y = 24 }
+
+					
+				instantTextboxType = {
+					name = "business"
+					position = { x = 0 y = 0 }
+					font = "aldrich_22_outline"
+					text = "BRA_gp_business"
+					maxWidth = 125
+					format = right
+				}
+
+
+				iconType = {
+					name ="business_potential_optimism_inner"
+					spriteType = "GFX_BRA_GP_optimism_meter_potential_inner"
+					position = { x = 141 y = 2 }
+					frame = 1
+				}
+
+				iconType = {
+					name ="business_optimism_inner"
+					spriteType = "GFX_BRA_GP_optimism_meter_inner"
+					position = { x = 141 y = 2 }
+					frame = 100
+				}
+				iconType = {
+					name ="business_optimism_frame"
+					spriteType = "GFX_BRA_GP_optimism_meter_frame"
+					position = { x = 139 y = 1 }
+					pdx_tooltip = "BRA_gp_business_optimism_tt"
+				}
+			}
+			containerWindowType = {
+				name = "creditors_container"
+				position = { x = 0 y = 48 }
+
+					
+				instantTextboxType = {
+					name = "creditors"
+					position = { x = 0 y = 0 }
+					font = "aldrich_22_outline"
+					text = "BRA_gp_creditors"
+					maxWidth = 125
+					format = right
+				}
+
+				iconType = {
+					name ="creditors_potential_optimism_inner"
+					spriteType = "GFX_BRA_GP_optimism_meter_potential_inner"
+					position = { x = 141 y = 2 }
+					frame = 1
+				}
+				iconType = {
+					name ="creditors_optimism_inner"
+					spriteType = "GFX_BRA_GP_optimism_meter_inner"
+					position = { x = 141 y = 2 }
+					frame = 100
+				}
+				iconType = {
+					name ="creditors_optimism_frame"
+					spriteType = "GFX_BRA_GP_optimism_meter_frame"
+					position = { x = 139 y = 1 }
+					pdx_tooltip = "BRA_gp_creditors_optimism_tt"
+				}
+
+
+			}
+		}
+
+		containerWindowType = {
+			name = "goals_radar_graph"
+			position = { x = 77 y = 470 }
+
+
+
+			
+			
+			instantTextboxType = {
+				name = "energy_icon"
+				position = { x = 168 y = -25 }
+				font = "aldrich_22_outline"
+				text = "BRA_gp_energy_lg"
+				format = left
+				maxWidth = 125
+				pdx_tooltip = "BRA_gp_energy_tt"
+				pdx_tooltip_delayed = "BRA_gp_energy_target_breakdown"
+			}
+			
+			
+			instantTextboxType = {
+				name = "infra_icon"
+				position = { x = -122 y = 101 }
+				font = "aldrich_22_outline"
+				text = "BRA_gp_infra_lg"
+				format = right
+				maxWidth = 125
+				pdx_tooltip = "BRA_gp_infrastructure_tt"
+				pdx_tooltip_delayed = "BRA_gp_infrastructure_target_breakdown"
+			}
+			
+			instantTextboxType = {
+				name = "edu_icon"
+				position = { x = 348 y = 101 }
+				font = "aldrich_22_outline"
+				text = "BRA_gp_edu_lg"
+				format = left
+				maxWidth = 125
+				pdx_tooltip = "BRA_gp_education_tt"
+				pdx_tooltip_delayed = "BRA_gp_education_target_breakdown"
+			}
+			
+			instantTextboxType = {
+				name = "hc_icon"
+				position = { x = 285 y = 317 }
+				font = "aldrich_22_outline"
+				text = "BRA_gp_hc_lg"
+				format = left
+				maxWidth = 125
+				pdx_tooltip = "BRA_gp_healthcare_tt"
+				pdx_tooltip_delayed = "BRA_gp_healthcare_target_breakdown"
+			}
+			
+			instantTextboxType = {
+				name = "dev_icon"
+				position = { x = -60 y = 317 }
+				font = "aldrich_22_outline"
+				text = "BRA_gp_dev_lg"
+				format = right
+				maxWidth = 125
+				pdx_tooltip = "BRA_gp_development_tt"
+				pdx_tooltip_delayed = "BRA_gp_development_target_breakdown"
+			}
+
+
+
+			iconType = {
+				name = "hitbox_development"
+				spriteType = "GFX_BRA_GP_radar_hitbox_development"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_development_tt"
+				pdx_tooltip_delayed = "BRA_gp_development_target_breakdown"
+			}
+			iconType = {
+				name = "hitbox_energy"
+				spriteType = "GFX_BRA_GP_radar_hitbox_energy"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_energy_tt"
+				pdx_tooltip_delayed = "BRA_gp_energy_target_breakdown"
+			}
+			iconType = {
+				name = "hitbox_healthcare"
+				spriteType = "GFX_BRA_GP_radar_hitbox_healthcare"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_healthcare_tt"
+				pdx_tooltip_delayed = "BRA_gp_healthcare_target_breakdown"
+			}
+			iconType = {
+				name = "hitbox_education"
+				spriteType = "GFX_BRA_GP_radar_hitbox_education"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_education_tt"
+				pdx_tooltip_delayed = "BRA_gp_education_target_breakdown"
+			}
+			iconType = {
+				name = "hitbox_infrastructure"
+				spriteType = "GFX_BRA_GP_radar_hitbox_infrastructure"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_infrastructure_tt"
+				pdx_tooltip_delayed = "BRA_gp_infrastructure_target_breakdown"
+			}
+
+
+
+			buttonType = {
+				name = "hitbox_development_5"
+				spriteType = "GFX_BRA_GP_radar_hitbox_development_5"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_development_tt_5"
+				pdx_tooltip_delayed = "BRA_gp_development_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_energy_5"
+				spriteType = "GFX_BRA_GP_radar_hitbox_energy_5"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_energy_tt_5"
+				pdx_tooltip_delayed = "BRA_gp_energy_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_healthcare_5"
+				spriteType = "GFX_BRA_GP_radar_hitbox_healthcare_5"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_healthcare_tt_5"
+				pdx_tooltip_delayed = "BRA_gp_healthcare_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_education_5"
+				spriteType = "GFX_BRA_GP_radar_hitbox_education_5"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_education_tt_5"
+				pdx_tooltip_delayed = "BRA_gp_education_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_infrastructure_5"
+				spriteType = "GFX_BRA_GP_radar_hitbox_infrastructure_5"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_infrastructure_tt_5"
+				pdx_tooltip_delayed = "BRA_gp_infrastructure_target_breakdown"
+			}
+
+
+			buttonType = {
+				name = "hitbox_development_4"
+				spriteType = "GFX_BRA_GP_radar_hitbox_development_4"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_development_tt_4"
+				pdx_tooltip_delayed = "BRA_gp_development_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_energy_4"
+				spriteType = "GFX_BRA_GP_radar_hitbox_energy_4"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_energy_tt_4"
+				pdx_tooltip_delayed = "BRA_gp_energy_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_healthcare_4"
+				spriteType = "GFX_BRA_GP_radar_hitbox_healthcare_4"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_healthcare_tt_4"
+				pdx_tooltip_delayed = "BRA_gp_healthcare_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_education_4"
+				spriteType = "GFX_BRA_GP_radar_hitbox_education_4"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_education_tt_4"
+				pdx_tooltip_delayed = "BRA_gp_education_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_infrastructure_4"
+				spriteType = "GFX_BRA_GP_radar_hitbox_infrastructure_4"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_infrastructure_tt_4"
+				pdx_tooltip_delayed = "BRA_gp_infrastructure_target_breakdown"
+			}
+
+			buttonType = {
+				name = "hitbox_development_3"
+				spriteType = "GFX_BRA_GP_radar_hitbox_development_3"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_development_tt_3"
+				pdx_tooltip_delayed = "BRA_gp_development_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_energy_3"
+				spriteType = "GFX_BRA_GP_radar_hitbox_energy_3"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_energy_tt_3"
+				pdx_tooltip_delayed = "BRA_gp_energy_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_healthcare_3"
+				spriteType = "GFX_BRA_GP_radar_hitbox_healthcare_3"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_healthcare_tt_3"
+				pdx_tooltip_delayed = "BRA_gp_healthcare_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_education_3"
+				spriteType = "GFX_BRA_GP_radar_hitbox_education_3"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_education_tt_3"
+				pdx_tooltip_delayed = "BRA_gp_education_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_infrastructure_3"
+				spriteType = "GFX_BRA_GP_radar_hitbox_infrastructure_3"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_infrastructure_tt_3"
+				pdx_tooltip_delayed = "BRA_gp_infrastructure_target_breakdown"
+			}
+
+			buttonType = {
+				name = "hitbox_development_2"
+				spriteType = "GFX_BRA_GP_radar_hitbox_development_2"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_development_tt_2"
+				pdx_tooltip_delayed = "BRA_gp_development_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_energy_2"
+				spriteType = "GFX_BRA_GP_radar_hitbox_energy_2"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_energy_tt_2"
+				pdx_tooltip_delayed = "BRA_gp_energy_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_healthcare_2"
+				spriteType = "GFX_BRA_GP_radar_hitbox_healthcare_2"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_healthcare_tt_2"
+				pdx_tooltip_delayed = "BRA_gp_healthcare_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_education_2"
+				spriteType = "GFX_BRA_GP_radar_hitbox_education_2"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_education_tt_2"
+				pdx_tooltip_delayed = "BRA_gp_education_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_infrastructure_2"
+				spriteType = "GFX_BRA_GP_radar_hitbox_infrastructure_2"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_infrastructure_tt_2"
+				pdx_tooltip_delayed = "BRA_gp_infrastructure_target_breakdown"
+			}
+
+			buttonType = {
+				name = "hitbox_development_1"
+				spriteType = "GFX_BRA_GP_radar_hitbox_development_1"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_development_tt_1"
+				pdx_tooltip_delayed = "BRA_gp_development_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_energy_1"
+				spriteType = "GFX_BRA_GP_radar_hitbox_energy_1"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_energy_tt_1"
+				pdx_tooltip_delayed = "BRA_gp_energy_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_healthcare_1"
+				spriteType = "GFX_BRA_GP_radar_hitbox_healthcare_1"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_healthcare_tt_1"
+				pdx_tooltip_delayed = "BRA_gp_healthcare_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_education_1"
+				spriteType = "GFX_BRA_GP_radar_hitbox_education_1"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_education_tt_1"
+				pdx_tooltip_delayed = "BRA_gp_education_target_breakdown"
+			}
+			buttonType = {
+				name = "hitbox_infrastructure_1"
+				spriteType = "GFX_BRA_GP_radar_hitbox_infrastructure_1"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_gp_infrastructure_tt_1"
+				pdx_tooltip_delayed = "BRA_gp_infrastructure_target_breakdown"
+			}
+
+			
+			iconType = {
+				name = "background"
+				spriteType = "GFX_BRA_GP_radar_background"
+				position = { x = 0 y = 0 }
+			}
+
+			
+			iconType = {
+				name = "progress_radar_0"
+				spriteType = "GFX_BRA_GP_radar_progress_0"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "progress_radar_1"
+				spriteType = "GFX_BRA_GP_radar_progress_1"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "progress_radar_2"
+				spriteType = "GFX_BRA_GP_radar_progress_2"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "progress_radar_3"
+				spriteType = "GFX_BRA_GP_radar_progress_3"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "progress_radar_4"
+				spriteType = "GFX_BRA_GP_radar_progress_4"
+				position = { x = 0 y = 0 }
+			}
+
+
+			iconType = {
+				name = "goal_radar_0"
+				spriteType = "GFX_BRA_GP_radar_plan_0"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "goal_radar_1"
+				spriteType = "GFX_BRA_GP_radar_plan_1"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "goal_radar_2"
+				spriteType = "GFX_BRA_GP_radar_plan_2"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "goal_radar_3"
+				spriteType = "GFX_BRA_GP_radar_plan_3"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "goal_radar_4"
+				spriteType = "GFX_BRA_GP_radar_plan_4"
+				position = { x = 0 y = 0 }
+			}
+
+		}
+
+
+	}
+
+	# Pane to let you view old DDLs
+	containerWindowType = { 
+		name = "TNO_BRA_goals_plan_cd_select"
+		size = { width = 500 height = 808 }
+		position = { x = 542 y = 185 }
+		moveable = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_thin_border2"
+		}
+
+		containerWindowType = {
+			name = "cd_member_container"
+			size = { width = 492 height = 761 }
+			
+			verticalScrollbar = "right_vertical_slider"
+			position = { x = 0 y = 40 }
+
+			background = {
+				name = "Backgroundz"
+				quadTextureSprite ="GFX_blank"
+			}
+
+			gridboxtype = {
+				name = "cd_member_selection_list"
+				position = { x = 16 y = 0 }
+				size = { width = 188 height = 748 }
+				slotsize = { width = 188 height = 150 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+
+		instantTextBoxType = {
+			name = "member_select_title"
+			position = { x = 0 y = 11  }
+			maxWidth = 500
+			maxHeight = 22
+			format = center
+			font = "aldrich_24_outline"
+			text = "CHOOSE MEMBER"
+		}
+
+		buttonType = {
+			name = "cd_close_button"
+			position = { x = -31 y = 12 }
+			quadTextureSprite ="GFX_crt_closebutton"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+
+	containerWindowType = {
+		name = "TNO_BRA_goals_plan_cd_option"
+		position = { x = 0 y = 0 }
+		size = { width = 450 height = 154 }
+
+		iconType = {
+			name = "member_icon"
+			spriteType = "GFX_BRA_GP_cd_add_member"
+			position = { x = -96 y = 16 }
+			Orientation = "UPPER_RIGHT"
+		}
+
+		instantTextBoxType = {
+			name = "member_name"
+			font = "aldrich_22_outline"
+			position = { x = 14 y = 10  }
+			maxWidth = 330
+			text = "BRA_gp_cd_member_name_and_affiliation"
+		}
+		instantTextBoxType = {
+			name = "member_trait"
+			font = "aldrich_18_outline"
+			position = { x = 14 y = 36  }
+			maxWidth = 330
+			text = "BRA_gp_cd_member_trait_dummy"
+		}
+		buttonType = {
+			name = "box"
+			spriteType = "GFX_BRA_GP_cd_member_box"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = BRA_gp_cd_member_tt
+		}
+	}
+
+}

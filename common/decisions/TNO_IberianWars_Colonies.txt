@@ -1,0 +1,313 @@
+iberian_wars_colony_skeletons = {
+####CPV Skeleton
+	CPV_PALF_Coup = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = CPV
+		}
+		available = {
+			has_country_flag = IWC_government_fate
+			OR = {
+				has_global_flag = WAC_SCENARIO_1_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_2_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_3_PALF_VICTORY
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CPV_PALF_Coup"
+			CAO = { add_to_faction = CPV }
+			CAO = {
+				set_autonomy = {
+					target = CPV
+					autonomous_state = autonomy_associated
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			econ_join_sphere_CAO = yes
+			add_ideas = PALF_Satellite_peace
+			set_politics = { ruling_party = socialist }
+			set_popularities = {
+				despotism = 5
+				socialist = 65
+				socialist_2 = 10
+				conservatism = 20
+			}
+			set_cosmetic_tag = CPV_palf
+		}
+	}
+
+	CPV_Join_Portugal = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = CPV
+		}
+		available = {
+			has_country_flag = IWC_government_fate
+			OR = {
+				AND = {
+					POR = { has_war = no }
+					POR = { exists = yes }
+				}
+				AND = {
+					RPP = { has_war = no }
+					RPP = { exists = yes }
+				}
+				AND = {
+					GNS = { has_war = no }
+					GNS = { exists = yes }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CPV_Join_Portugal"
+			country_event = { id = CPV_skeleton.3 }
+		}
+	}
+
+	CPV_Join_FMA = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = CPV
+		}
+		available = {
+			has_country_flag = IWC_government_fate
+			OR = {
+				has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+				has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CPV_Join_FMA"
+			FFR = { add_to_faction = CPV }
+			add_ideas = FMA_Puppet
+		}
+	}
+
+	CPV_Join_WAA = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = CPV
+		}
+		available = {
+			has_country_flag = IWC_government_fate
+			OR = {
+				has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_WAA_VICTORY
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CPV_Join_WAA"
+			SEN = { add_to_faction = CPV }
+			add_ideas = WAA_Protectorate
+		}
+	}
+####EQG Skeleton
+	EQG_PALF_Coup = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = EQG
+		}
+		available = {
+			has_country_flag = IWC_government_fate
+			OR = {
+				has_global_flag = WAC_SCENARIO_1_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_2_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_3_PALF_VICTORY
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQG_PALF_Coup"
+			CAO = { add_to_faction = EQG }
+			CAO = {
+				set_autonomy = {
+					target = EQG
+					autonomous_state = autonomy_associated
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			econ_join_sphere_CAO = yes
+			add_ideas = PALF_Satellite_peace
+			set_politics = { ruling_party = socialist }
+			set_popularities = {
+				progressivism = 23
+				socialist = 42
+				conservatism = 27
+				conservatism_1 = 5
+				conservatism_2 = 3
+			}
+			set_cosmetic_tag = EQG_palf
+		}
+	}
+	EQG_Join_FMA = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = EQG
+		}
+		available = {
+			has_country_flag = IWC_government_fate
+			OR = {
+				has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+				has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQG_Join_FMA"
+			FFR = { add_to_faction = EQG }
+			add_ideas = FMA_Puppet
+		}
+	}
+
+	EQG_Join_WAA = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = EQG
+		}
+		available = {
+			has_country_flag = IWC_government_fate
+			OR = {
+				has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_WAA_VICTORY
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQG_Join_WAA"
+			SEN = { add_to_faction = EQG }
+			add_ideas = WAA_Protectorate
+		}
+	}
+####SAO Skeleton
+	SAO_PALF_Coup = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = SAO
+		}
+		available = {
+			has_country_flag = IWC_government_fate
+			OR = {
+				has_global_flag = WAC_SCENARIO_1_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_2_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_3_PALF_VICTORY
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SAO_PALF_Coup"
+			CAO = { add_to_faction = SAO }
+			CAO = {
+				set_autonomy = {
+					target = SAO
+					autonomous_state = autonomy_associated
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			econ_join_sphere_CAO = yes
+			add_ideas = PALF_Satellite_peace
+			set_politics = { ruling_party = socialist }
+			set_popularities = {
+				conservatism = 15
+				socialist = 85
+			}
+			set_cosmetic_tag = SAO_palf
+		}
+	}
+	SAO_Join_FMA = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = SAO
+		}
+		available = {
+			has_country_flag = IWC_government_fate
+			OR = {
+				has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+				has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SAO_Join_FMA"
+			FFR = { add_to_faction = SAO }
+			add_ideas = FMA_Puppet
+		}
+	}
+
+	SAO_Join_WAA = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = SAO
+		}
+		available = {
+			OR = {
+				has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_WAA_VICTORY
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SAO_Join_WAA"
+			SEN = { add_to_faction = SAO }
+			add_ideas = WAA_Protectorate
+		}
+	}
+####GNB Skeleton
+	GNB_Join_Portugal = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = GNB
+		}
+		available = {
+			has_country_flag = IWC_government_fate
+			has_country_leader = { character = IBR_Antonio_Spinola ruling_only = yes }
+			OR = {
+				AND = {
+					POR = { has_war = no }
+					POR = { exists = yes }
+				}
+				AND = {
+					RPP = { has_war = no }
+					RPP = { exists = yes }
+				}
+				AND = {
+					GNS = { has_war = no }
+					GNS = { exists = yes }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GNB_Join_Portugal"
+			country_event = { id = GNB_skeleton.3 }
+		}
+	}
+}

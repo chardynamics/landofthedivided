@@ -1,0 +1,5745 @@
+iberian_wars_military_mechanic = {
+#####################################################################################War missions
+	iberian_wars_mission_portugal_war = {
+		icon = GFX_decision_generic_border_war
+		allowed = {
+			OR = {
+				tag = POR
+				tag = GNS
+				tag = RPP
+				tag = PPR
+			}
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			if = {
+				limit = {
+					tag = PPR
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_PPR_portugal_war_tt
+					AND = {
+						POR = { exists = no }
+						GNS = { exists = no }
+						RPP = {
+							has_country_flag = IBR_Wars_RPP_exiled_flag
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = POR
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_POR_portugal_war_tt
+					AND = {
+						GNS = { exists = no }
+						RPP = {
+							has_country_flag = IBR_Wars_RPP_exiled_flag
+						}
+						PPR = { exists = no }
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GNS
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_GNS_portugal_war_tt
+					AND = {
+						POR = { exists = no }
+						RPP = {
+							has_country_flag = IBR_Wars_RPP_exiled_flag
+						}
+						PPR = { exists = no }
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = RPP
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_RPP_portugal_war_tt
+					AND = {
+						POR = { exists = no }
+						GNS = { exists = no }
+						PPR = { exists = no }
+					}
+				}
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			if = {
+				limit = {
+					tag = POR
+				}
+				custom_effect_tooltip = iberian_wars_mission_portugal_war_effect_POR_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_portugal_war
+					IBR_wars_calculate_homefront_commodities = yes
+				}
+			}
+			if = {
+				limit = {
+					tag = GNS
+				}
+				custom_effect_tooltip = iberian_wars_mission_portugal_war_effect_GNS_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_portugal_war
+					IBR_wars_calculate_homefront_commodities = yes
+				}
+			}
+			if = {
+				limit = {
+					tag = RPP
+				}
+				custom_effect_tooltip = iberian_wars_mission_portugal_war_effect_RPP_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_portugal_war
+					IBR_wars_calculate_homefront_commodities = yes
+				}
+			}
+			if = {
+				limit = {
+					tag = PPR
+				}
+				custom_effect_tooltip = iberian_wars_mission_portugal_war_effect_PPR_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_portugal_war
+					IBR_wars_calculate_homefront_commodities = yes
+				}
+			}
+		}
+		complete_effect = {
+
+		}
+	}
+
+	iberian_wars_mission_spain_war = {
+		icon = GFX_decision_generic_border_war
+		allowed = {
+			OR = {
+				tag = SPS
+				tag = SPR
+				tag = FZL
+				tag = FSR
+			}
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			if = {
+				limit = {
+					tag = SPS
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_SPS_spain_war_tt
+					AND = {
+						IBR = { exists = no }
+						SPR = { exists = no }
+						FZL = { exists = no }
+						FSR = { exists = no }
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_SPR_spain_war_tt
+					AND = {
+						SPS = { exists = no }
+						IBR = { exists = no }
+						FZL = { exists = no }
+						FSR = { exists = no }
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = FZL
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_FZL_spain_war_tt
+					AND = {
+						SPS = { exists = no }
+						SPR = { exists = no }
+						IBR = { exists = no }
+						FSR = { exists = no }
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = FSR
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_FSR_spain_war_tt
+					AND = {
+						SPS = { exists = no }
+						SPR = { exists = no }
+						FZL = { exists = no }
+						IBR = { exists = no }
+					}
+				}
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			if = {
+				limit = {
+					tag = SPS
+				}
+				custom_effect_tooltip = iberian_wars_mission_spain_war_effect_SPS_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_spain_war
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				custom_effect_tooltip = iberian_wars_mission_spain_war_effect_SPR_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_spain_war
+				}
+			}
+			if = {
+				limit = {
+					tag = FZL
+				}
+				custom_effect_tooltip = iberian_wars_mission_spain_war_effect_FZL_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_spain_war
+				}
+			}
+			if = {
+				limit = {
+					tag = FSR
+				}
+				custom_effect_tooltip = iberian_wars_mission_spain_war_effect_FSR_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_spain_war
+				}
+			}
+		}
+		complete_effect = {
+
+		}
+	}
+	#TODO: Add Spanish-Portuguese war mission (only do after reviewing peace deals)
+	iberian_wars_mission_basque_war = {
+		icon = GFX_decision_generic_border_war
+		allowed = {
+			OR = {
+				tag = BSQ
+				tag = SPS
+				tag = FZL
+				tag = FSR
+				tag = SPR
+			}
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			if = {
+				limit = {
+					tag = BSQ
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_BSQ_basque_war_tt
+					AND = {
+						SPS = { exists = no }
+						IBR = { exists = no }
+						FZL = { exists = no }
+						FSR = { exists = no }
+						OR = {
+							AND = {
+								SPR = { exists = no }
+								NOT = { has_global_flag = IBR_Wars_SPR_regionals_alliance_flag }
+							}
+							AND = {
+								SPR = { exists = yes }
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = SPS
+						tag = FZL
+						tag = IBR
+						tag = FSR
+						AND = {
+							tag = SPR
+							NOT = {
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_spain_basque_war_tt
+					BSQ = { exists = no }
+				}
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = SPS
+						tag = FZL
+						tag = FSR
+						AND = {
+							tag = SPR
+							NOT = {
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = iberian_wars_mission_basque_war_effect_spanish_tt
+				IBR_wars_minor_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_basque_war
+				}
+			}
+			if = {
+				limit = {
+					tag = BSQ
+				}
+				custom_effect_tooltip = iberian_wars_mission_basque_war_effect_basque_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_basque_war
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = IBR_Wars_Invasion_Weeks
+					value = 1
+				}
+				if = {
+					limit = { check_variable = { IBR_Wars_Invasion_Weeks = 7 } }
+					IBR_Wars_Avengers_Assemble = yes
+				}
+			}
+		}
+		complete_effect = {
+
+		}
+	}
+
+	iberian_wars_mission_catalonia_war = {
+		icon = GFX_decision_generic_border_war
+		allowed = {
+			OR = {
+				tag = CTL
+				tag = CNT
+				tag = SPS
+				tag = FZL
+				tag = FSR
+				tag = SPR
+			}
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			if = {
+				limit = {
+					OR = {
+						tag = CTL
+						tag = CNT
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_CTL_catalonia_war_tt
+					AND = {
+						SPS = { exists = no }
+						FZL = { exists = no }
+						FSR = { exists = no }
+						OR = {
+							AND = {
+								SPR = { exists = no }
+								NOT = { has_global_flag = IBR_Wars_SPR_regionals_alliance_flag }
+							}
+							AND = {
+								SPR = { exists = yes }
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = SPS
+						tag = FZL
+						tag = FSR
+						AND = {
+							tag = SPR
+							NOT = {
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_spain_catalonia_war_tt
+					AND = {
+						CTL = { exists = no }
+						CNT = { exists = no }
+					}
+				}
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = SPS
+						tag = FZL
+						tag = FSR
+						AND = {
+							tag = SPR
+							NOT = {
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = iberian_wars_mission_catalonia_war_effect_spanish_tt
+				IBR_wars_minor_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_catalonia_war
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = CTL
+						tag = CNT
+					}
+				}
+				custom_effect_tooltip = iberian_wars_mission_catalonia_war_effect_catalan_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_catalonia_war
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = IBR_Wars_Invasion_Weeks
+					value = 1
+				}
+				if = {
+					limit = { check_variable = { IBR_Wars_Invasion_Weeks = 7 } }
+					IBR_Wars_Avengers_Assemble = yes
+				}
+			}
+		}
+		complete_effect = {
+
+		}
+	}
+
+	iberian_wars_mission_galicia_war = {
+		icon = GFX_decision_generic_border_war
+		allowed = {
+			OR = {
+				tag = GAL
+				tag = SPS
+				tag = FZL
+				tag = FSR
+				tag = GNS
+				tag = PPR
+				tag = SPR
+			}
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			if = {
+				limit = {
+					tag = GAL
+				}
+				custom_trigger_tooltip = {
+				tooltip = iberian_wars_mission_GAL_galicia_war_tt
+				AND = {
+					SPS = { exists = no }
+					FZL = { exists = no }
+					FSR = { exists = no }
+					GNS = { has_country_flag = IBR_Wars_Portugal_peace_Galicia_flag }
+					PPR = { has_country_flag = IBR_Wars_Portugal_peace_Galicia_flag }
+						OR = {
+							AND = {
+								SPR = { exists = no }
+								NOT = { has_global_flag = IBR_Wars_SPR_regionals_alliance_flag }
+							}
+							AND = {
+								SPR = { exists = yes }
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = SPS
+						tag = FZL
+						tag = FSR
+						tag = GNS
+						tag = PPR
+						AND = {
+							tag = SPR
+							NOT = {
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_spain_galicia_war_tt
+					GAL = { exists = no }
+				}
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = SPS
+						tag = FZL
+						tag = FSR
+						tag = GNS
+						tag = PPR
+						AND = {
+							tag = SPR
+							NOT = {
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = iberian_wars_mission_galicia_war_effect_spanish_tt
+				IBR_wars_minor_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_galicia_war
+				}
+			}
+			if = {
+				limit = {
+					tag = GAL
+				}
+				custom_effect_tooltip = iberian_wars_mission_galicia_war_effect_galician_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_galicia_war
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = IBR_Wars_Invasion_Weeks
+					value = 1
+				}
+				if = {
+					limit = { check_variable = { IBR_Wars_Invasion_Weeks = 7 } }
+					IBR_Wars_Avengers_Assemble = yes
+				}
+			}
+		}
+		complete_effect = {
+
+		}
+	}
+
+	iberian_wars_mission_andalucia_war = {
+		icon = GFX_decision_generic_border_war
+		allowed = {
+			OR = {
+				tag = ADL
+				tag = SPS
+				tag = FZL
+				tag = FSR
+				tag = SPR
+			}
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			if = {
+				limit = {
+					tag = ADL
+				}
+				custom_trigger_tooltip = {
+				tooltip = iberian_wars_mission_ADL_andalucia_war_tt
+				AND = {
+					SPS = { exists = no }
+					FZL = { exists = no }
+					FSR = { exists = no }
+						OR = {
+							AND = {
+								SPR = { exists = no }
+								NOT = { has_global_flag = IBR_Wars_SPR_regionals_alliance_flag }
+							}
+							AND = {
+								SPR = { exists = yes }
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = SPS
+						tag = FZL
+						tag = FSR
+						AND = {
+							tag = SPR
+							NOT = {
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_spain_andalucia_war_tt
+					ADL = { exists = no }
+				}
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = SPS
+						tag = FZL
+						tag = FSR
+						AND = {
+							tag = SPR
+							NOT = {
+								has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = iberian_wars_mission_andalucia_war_effect_spanish_tt
+				IBR_wars_minor_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_andalucia_war
+				}
+			}
+			if = {
+				limit = {
+					tag = ADL
+				}
+				custom_effect_tooltip = iberian_wars_mission_andalucia_war_effect_andalucia_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_andalucia_war
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = IBR_Wars_Invasion_Weeks
+					value = 1
+				}
+				if = {
+					limit = { check_variable = { IBR_Wars_Invasion_Weeks = 7 } }
+					IBR_Wars_Avengers_Assemble = yes
+				}
+			}
+		}
+		complete_effect = {
+
+		}
+	}
+
+	iberian_wars_mission_asturias_war = {
+		icon = GFX_decision_generic_border_war
+		allowed = {
+			OR = {
+				tag = TBA
+				tag = SPS
+				tag = FZL
+				tag = FSR
+				tag = SPR
+			}
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			if = {
+				limit = {
+						tag = TBA
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_TBA_asturias_war_tt
+					AND = {
+						SPS = { exists = no }
+						FZL = { exists = no }
+						FSR = { exists = no }
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = SPS
+						tag = FZL
+						tag = FSR
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_spain_asturias_war_tt
+					TBA = { exists = no }
+				}
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = SPS
+						tag = FZL
+						tag = FSR
+					}
+				}
+				custom_effect_tooltip = iberian_wars_mission_asturias_war_effect_spanish_tt
+				IBR_wars_minor_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_asturias_war
+				}
+			}
+			if = {
+				limit = {
+					tag = TBA
+				}
+				custom_effect_tooltip = iberian_wars_mission_asturias_war_effect_asturian_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_asturias_war
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = IBR_Wars_Invasion_Weeks
+					value = 1
+				}
+				if = {
+					limit = { check_variable = { IBR_Wars_Invasion_Weeks = 7 } }
+					IBR_Wars_Avengers_Assemble = yes
+				}
+			}
+		}
+		complete_effect = {
+
+		}
+	}
+	iberian_wars_mission_regional_instability = {
+		icon = GFX_decision_generic_border_war
+		allowed = {
+			OR = {
+				tag = BSQ
+				tag = TBA
+				tag = GAL
+				tag = CTL
+				tag = CNT
+				tag = ADL
+			}
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = iberian_wars_mission_regional_instability_tt
+				has_war = yes
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			custom_effect_tooltip = iberian_wars_mission_regional_instability_effect_tt
+			random_list = {
+				50 = {
+					IBR_wars_major_decrease = yes
+				}
+				50 = {
+					IBR_wars_minor_decrease = yes
+				}
+			}
+			hidden_effect = {
+				activate_mission = iberian_wars_mission_regional_instability
+			}
+		}
+		complete_effect = {
+
+		}
+	}
+	iberian_wars_mission_catalonia_civil_war = {
+		icon = GFX_decision_generic_border_war
+		allowed = {
+			OR = {
+				tag = CTL
+				tag = CNT
+			}
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			if = {
+				limit = {
+					tag = CTL
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_CTL_catalonia_civil_war_tt
+					CTL = { exists = no }
+				}
+			}
+			if = {
+				limit = {
+					tag = CNT
+				}
+				custom_trigger_tooltip = {
+					tooltip = iberian_wars_mission_CNT_catalonia_civil_war_tt
+					CTL = { exists = no }
+				}
+			}
+		}
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			if = {
+				limit = {
+					tag = CTL
+				}
+				custom_effect_tooltip = iberian_wars_mission_catalonia_civil_war_effect_CTL_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_catalonia_civil_war
+				}
+			}
+			if = {
+				limit = {
+					tag = CNT
+				}
+				custom_effect_tooltip = iberian_wars_mission_catalonia_civil_war_effect_CNT_tt
+				IBR_wars_major_decrease = yes
+				hidden_effect = {
+					activate_mission = iberian_wars_mission_catalonia_civil_war
+				}
+			}
+		}
+		complete_effect = {
+
+		}
+	}
+####################################################################################################Invasion decisions
+	iberian_wars_declare_war_BSQ = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			NOT = { has_war_with = SPR }
+			NOT = { has_war_with = SPS }
+			NOT = { has_war_with = FSR }
+			NOT = { has_war_with = FZL }
+			NOT = { tag = BSQ }
+			NOT = {
+				has_war_with = BSQ
+			}
+			BSQ = {
+				any_owned_state = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		available = {
+			has_global_flag = IBW_happening
+			has_war = no
+			OR = {
+				AND = {
+					tag = SPR
+					NOT = { has_global_flag = IBR_Wars_SPR_regionals_alliance_flag }
+				}
+				NOT = { tag = SPR }
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				NOT = { check_variable = { IBRW_Planning_War = 1 } }
+				add = 1000
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision iberian_wars_declare_war_BSQ"
+			set_variable = { IBRW_Planning_War = 1 }
+		}
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		remove_effect = {
+			set_variable = { IBRW_Planning_War = 0 }
+			declare_war_on = {
+				target = BSQ
+				type = annex_everything
+			}
+			activate_mission = iberian_wars_mission_basque_war
+			BSQ = {
+				activate_mission = iberian_wars_mission_basque_war
+			}
+		}
+	}
+	iberian_wars_declare_war_TBA = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			NOT = { has_war_with = SPR }
+			NOT = { has_war_with = SPS }
+			NOT = { has_war_with = FSR }
+			NOT = { has_war_with = FZL }
+			NOT = { tag = TBA }
+			NOT = {
+				has_war_with = TBA
+			}
+			TBA = {
+				any_owned_state = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		available = {
+			has_global_flag = IBW_happening
+			has_war = no
+			OR = {
+				AND = {
+					tag = SPR
+					NOT = { has_global_flag = IBR_Wars_SPR_regionals_alliance_flag }
+				}
+				NOT = { tag = SPR }
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				NOT = { check_variable = { IBRW_Planning_War = 1 } }
+				add = 1000
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision iberian_wars_declare_war_TBA"
+			set_variable = { IBRW_Planning_War = 1 }
+		}
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		remove_effect = {
+			set_variable = { IBRW_Planning_War = 0 }
+			declare_war_on = {
+				target = TBA
+				type = annex_everything
+			}
+			activate_mission = iberian_wars_mission_asturias_war
+			TBA = {
+				activate_mission = iberian_wars_mission_asturias_war
+			}
+		}
+	}
+	iberian_wars_declare_war_ADL = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			NOT = { has_war_with = SPR }
+			NOT = { has_war_with = SPS }
+			NOT = { has_war_with = FSR }
+			NOT = { has_war_with = FZL }
+			NOT = { tag = ADL }
+			NOT = {
+				has_war_with = ADL
+			}
+			ADL = {
+				any_owned_state = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		available = {
+			has_global_flag = IBW_happening
+			has_war = no
+			OR = {
+				AND = {
+					tag = SPR
+					NOT = { has_global_flag = IBR_Wars_SPR_regionals_alliance_flag }
+				}
+				NOT = { tag = SPR }
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				NOT = { check_variable = { IBRW_Planning_War = 1 } }
+				add = 1000
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision iberian_wars_declare_war_ADL"
+			set_variable = { IBRW_Planning_War = 1 }
+		}
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		remove_effect = {
+			set_variable = { IBRW_Planning_War = 0 }
+			declare_war_on = {
+				target = ADL
+				type = annex_everything
+			}
+			activate_mission = iberian_wars_mission_andalucia_war
+			ADL = {
+				activate_mission = iberian_wars_mission_andalucia_war
+			}
+		}
+	}
+	iberian_wars_declare_war_CNT = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			NOT = { has_war_with = SPR }
+			NOT = { has_war_with = SPS }
+			NOT = { has_war_with = FSR }
+			NOT = { has_war_with = FZL }
+			NOT = { tag = CNT }
+			NOT = {
+				has_war_with = CNT
+			}
+			CNT = {
+				any_owned_state = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		available = {
+			has_global_flag = IBW_happening
+			has_war = no
+			OR = {
+				AND = {
+					tag = SPR
+					NOT = { has_global_flag = IBR_Wars_SPR_regionals_alliance_flag }
+				}
+				NOT = { tag = SPR }
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				NOT = { check_variable = { IBRW_Planning_War = 1 } }
+				add = 1000
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision iberian_wars_declare_war_CNT"
+			set_variable = { IBRW_Planning_War = 1 }
+		}
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		remove_effect = {
+			set_variable = { IBRW_Planning_War = 0 }
+			declare_war_on = {
+				target = CNT
+				type = annex_everything
+			}
+			activate_mission = iberian_wars_mission_catalonia_war
+			CNT = {
+				activate_mission = iberian_wars_mission_catalonia_war
+			}
+		}
+	}
+	iberian_wars_declare_war_CTL = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			NOT = { has_war_with = SPR }
+			NOT = { has_war_with = SPS }
+			NOT = { has_war_with = FSR }
+			NOT = { has_war_with = FZL }
+			NOT = { tag = CTL }
+			NOT = { has_war_with = CTL }
+			CTL = {
+				any_owned_state = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		available = {
+			has_global_flag = IBW_happening
+			has_war = no
+			OR = {
+				AND = {
+					tag = SPR
+					NOT = { has_global_flag = IBR_Wars_SPR_regionals_alliance_flag }
+				}
+				NOT = { tag = SPR }
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				NOT = { check_variable = { IBRW_Planning_War = 1 } }
+				add = 1000
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision iberian_wars_declare_war_CTL"
+			set_variable = { IBRW_Planning_War = 1 }
+		}
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		remove_effect = {
+			set_variable = { IBRW_Planning_War = 0 }
+			declare_war_on = {
+				target = CTL
+				type = annex_everything
+			}
+			activate_mission = iberian_wars_mission_catalonia_war
+			CTL = {
+				activate_mission = iberian_wars_mission_catalonia_war
+			}
+		}
+	}
+	iberian_wars_declare_war_GAL = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			NOT = { has_war_with = SPR }
+			NOT = { has_war_with = SPS }
+			NOT = { has_war_with = FSR }
+			NOT = { has_war_with = FZL }
+			NOT = { has_war_with = POR }
+			NOT = { has_war_with = GNS }
+			NOT = { has_war_with = RPP }
+			NOT = { tag = GAL }
+			NOT = {
+				has_war_with = GAL
+			}
+			GAL = {
+				any_owned_state = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		available = {
+			has_global_flag = IBW_happening
+			has_war = no
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				NOT = { check_variable = { IBRW_Planning_War = 1 } }
+				add = 1000
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision iberian_wars_declare_war_GAL"
+			set_variable = { IBRW_Planning_War = 1 }
+		}
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		remove_effect = {
+			set_variable = { IBRW_Planning_War = 0 }
+			declare_war_on = {
+				target = GAL
+				type = annex_everything
+			}
+			activate_mission = iberian_wars_mission_galicia_war
+			GAL = {
+				activate_mission = iberian_wars_mission_galicia_war
+			}
+			if = {
+				limit = {
+					OR = {
+						ROOT = { tag = PPR }
+						ROOT = { tag = GNS }
+					}
+					has_global_flag = IBR_Wars_peace_Spain_flag
+				}
+				event_target:IBR_spanish_winner = {
+					country_event = {
+						id = iberiawars.30
+						days = 5
+					}
+				}
+			}
+		}
+	}
+
+	iberian_wars_declare_war_spain_PPR = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = PPR
+			OR = {
+				has_country_flag = PPR_bypass_galicia
+				owns_state = 982
+			}
+			has_country_flag = PPR_Iberian_Ambitions
+		}
+		available = {
+			AND = {
+				has_war = no
+				has_country_flag = PPR_Iberian_Ambitions
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision iberian_wars_declare_war_spain_PPR"
+		}
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		fire_only_once = yes
+		remove_effect = {
+			if = {
+				limit = { country_exists = SPS }
+				declare_war_on = {
+					target = SPS
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = SPR }
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = FZL }
+				declare_war_on = {
+					target = FZL
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = FSR }
+				declare_war_on = {
+					target = FSR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = ADL }
+				declare_war_on = {
+					target = ADL
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = CTL }
+				declare_war_on = {
+					target = CTL
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = CNT }
+				declare_war_on = {
+					target = CNT
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = BSQ }
+				declare_war_on = {
+					target = BSQ
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = TBA }
+				declare_war_on = {
+					target = TBA
+					type = annex_everything
+				}
+			}
+			hidden_effect = {
+				USA = {
+					country_event = {
+						id = iberiawars_portuguese_reclamation.3
+						days = 1
+					}
+				}
+			}
+			#activate_mission = iberian_wars_mission_regional_war
+		}
+	}
+
+	iberian_wars_declare_war_spain = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			AND = {
+				OR = {
+					tag = TBA
+					tag = GAL
+					tag = CNT
+					tag = CTL
+					tag = ADL
+					tag = BSQ
+					tag = GAL
+				}
+				has_country_flag = IBR_Wars_Regional_Can_Join_Invasion
+			}
+		}
+		available = {
+			AND = {
+				has_global_flag = IBW_happening
+				has_war = no
+				has_country_flag = IBR_Wars_Regional_Can_Join_Invasion
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision iberian_wars_declare_war_spain"
+		}
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		fire_only_once = yes
+		remove_effect = {
+			if = {
+				limit = { country_exists = SPS }
+				declare_war_on = {
+					target = SPS
+					type = annex_everything
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						country_exists = SPR
+						SPR = { has_war = yes }
+					}
+				}
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+			}
+			else_if = {
+				limit = { country_exists = FZL }
+				declare_war_on = {
+					target = FZL
+					type = annex_everything
+				}
+			}
+			else_if = {
+				limit = { country_exists = FSR }
+				declare_war_on = {
+					target = FSR
+					type = annex_everything
+				}
+			}
+			#activate_mission = iberian_wars_mission_regional_war
+		}
+	}
+
+	iberian_wars_declare_war_portugal = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			OR = {
+				AND = {
+					OR = {
+						tag = SPR
+						tag = SPS
+						tag = FSR
+						tag = FZL
+					}
+					OR = {
+						GNS = { controls_state = 171 }
+						GNS = { controls_state = 982 }
+						GNS = { has_war_with = GAL }
+						PPR = { controls_state = 171 }
+						PPR = { controls_state = 982 }
+						PPR = { has_war_with = GAL }
+					}
+				}
+				AND = {
+					tag = FZL
+					has_country_flag = IBR_Wars_Invade_Portugal
+				}
+			}
+		}
+		available = {
+			has_war = no
+			OR = {
+				AND = {
+					OR = {
+						tag = SPR
+						tag = SPS
+						tag = FSR
+						tag = FZL
+					}
+					OR = {
+						GNS = { controls_state = 171 }
+						GNS = { controls_state = 982 }
+						GNS = { has_war_with = GAL }
+						PPR = { controls_state = 171 }
+						PPR = { controls_state = 982 }
+						PPR = { has_war_with = GAL }
+					}
+					NOT = {
+						AND = {
+							any_country = { has_guaranteed = GNS }
+							any_country = { has_guaranteed = POR }
+							any_country = { has_guaranteed = RPP }
+							any_country = { has_guaranteed = PPR }
+						}
+					}
+					NOT = {
+						RPP = { is_in_faction = yes }
+						PPR = { is_in_faction = yes }
+						POR = { is_in_faction = yes }
+						GNS = { is_in_faction = yes }
+					}
+				}
+				AND = {
+					tag = FZL
+					has_country_flag = IBR_Wars_Invade_Portugal
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision iberian_wars_declare_war_portugal"
+		}
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		remove_effect = {
+			set_global_flag = IBR_Wars_Spanish_Portuguese_War_flag
+			if = {
+				limit = { country_exists = POR }
+				declare_war_on = {
+					target = POR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = GNS }
+				declare_war_on = {
+					target = GNS
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = PPR }
+				declare_war_on = {
+					target = PPR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { #RPP has not collapsed to Azores and Madeira
+							has_global_flag = IBR_wars_azores_madeira
+						}
+						RPP = { has_war = yes } #RPP is fighting a war, regular Wars or reclamation
+					}
+				}
+				declare_war_on = {
+					target = RPP
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { #RPP on the islands, not collapsed to Azores and Madeira
+					has_global_flag = IBR_wars_portuguese_reclamation
+					RPP = { has_war = no }
+				}
+				hidden_effect = {
+					USA = {
+						country_event = {
+							id = iberiawars_portuguese_reclamation.3
+							days = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	IBR_Wars_decision_invade_baleares_CTL = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = CTL
+			NOT = {
+				IBR = {
+					controls_state = 177
+				}
+			}
+			NOT = {
+				CTL = {
+					controls_state = 177
+				}
+			}
+			NOT = {
+				ITA = {
+					controls_state = 177
+				}
+			}
+			NOT = {
+				CNT = {
+					controls_state = 177
+				}
+			}
+			NOT = {
+				SPR = {
+					controls_state = 177
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_re_enable = 90
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = IBR_Wars_Catalonia_Reclamation
+				add = 5000
+			}
+			modifier = {
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 50
+					compare = greater_than_or_equals
+				}
+				add = -4900
+			}
+		}
+
+		days_remove = 10
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IBR_Wars_decision_invade_baleares_CTL"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove IBR_Wars_decision_invade_baleares_CTL"
+			if = {
+				limit = {
+					CTL = {
+						NOT = {
+							has_war_with = 177.controller
+						}
+					}
+				}
+				CTL = {
+					declare_war_on = {
+						target = 177.controller
+						type = take_state
+						generator = { 177 }
+					}
+					177 = { add_core_of = CTL }
+					transfer_state = 177
+				}
+			}
+			177 = {
+				create_unit = {
+					division = "name = \"Milicia Nacional\"division_template = \"Milicia Nacional\"start_experience_factor = 0.5"
+					owner = CTL
+				}
+			}
+		}
+	}
+	IBR_Wars_decision_invade_baleares_CNT = {
+		icon = GFX_decision_generic_border_war
+		visible = {
+			tag = CNT
+			NOT = {
+				CTL = {
+					controls_state = 177
+				}
+			}
+			NOT = {
+				ITA = {
+					controls_state = 177
+				}
+			}
+			NOT = {
+				CNT = {
+					controls_state = 177
+				}
+			}
+			NOT = {
+				AND = {
+					SPR = {
+						controls_state = 177
+					}
+					has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+				}
+			}
+		}
+		available = { has_war = no }
+		fire_only_once = yes
+
+		days_re_enable = 90
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = IBR_Wars_Catalonia_Reclamation
+				add = 5000
+			}
+			modifier = {
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 50
+					compare = greater_than_or_equals
+				}
+				add = -4900
+			}
+		}
+
+		days_remove = 10
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IBR_Wars_decision_invade_baleares_CNT"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove IBR_Wars_decision_invade_baleares_CNT"
+			if = {
+				limit = {
+					CNT = {
+						NOT = {
+							has_war_with = 177.controller
+						}
+					}
+				}
+				CNT = {
+					declare_war_on = {
+						target = 177.controller
+						type = take_state
+						generator = { 177 }
+					}
+					177 = { add_core_of = CNT }
+					transfer_state = 177
+				}
+			}
+			177 = {
+				create_unit = {
+					division = "name = \"Brigada Obrera\"division_template = \"Brigada Obrera\"start_experience_factor = 0.5"
+					owner = CNT
+				}
+			}
+		}
+	}
+	IBR_Wars_decision_SPR_cancel_regional_pact = {
+		icon = GFX_decision_generic_document_cancel
+		visible = {
+			tag = SPR
+			has_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+			NOT = {
+				has_country_flag = Iberian_Wars_Resigned
+			}
+			OR = {
+				has_war_with = SPS
+				has_war_with = FZL
+				has_war_with = FSR
+			}
+		}
+		available = {
+			has_global_flag = IBW_happening
+		}
+		ai_will_do = {
+			base = 0
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IBR_Wars_decision_SPR_cancel_regional_pact"
+		}
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		remove_effect = {
+			clr_global_flag = IBR_Wars_SPR_regionals_alliance_flag
+			set_temp_variable = { IBR_wars_legitimacy_temp = 7 }
+			IBR_wars_change_legitimacy = yes
+			set_temp_variable = { IBR_wars_opposition_temp = -5 }
+			IBR_wars_change_political_opposition = yes
+			diplomatic_relation = {
+				country = BSQ
+				relation = non_aggression_pact
+				active = no
+			}
+			diplomatic_relation = {
+				country = GAL
+				relation = non_aggression_pact
+				active = no
+			}
+			diplomatic_relation = {
+				country = CTL
+				relation = non_aggression_pact
+				active = no
+			}
+			diplomatic_relation = {
+				country = BSQ
+				relation = military_access
+				active = no
+			}
+			diplomatic_relation = {
+				country = GAL
+				relation = military_access
+				active = no
+			}
+			diplomatic_relation = {
+				country = CTL
+				relation = military_access
+				active = no
+			}
+			remove_opinion_modifier = {
+				target = BSQ
+				modifier = IBR_wars_ACFP_signatory
+			}
+			remove_opinion_modifier = {
+				target = GAL
+				modifier = IBR_wars_ACFP_signatory
+			}
+			remove_opinion_modifier = {
+				target = CTL
+				modifier = IBR_wars_ACFP_signatory
+			}
+			GAL = {
+				every_controlled_state = {
+					add_claim_by = SPR
+				}
+			}
+			BSQ = {
+				every_controlled_state = {
+					add_claim_by = SPR
+				}
+			}
+			CTL = {
+				every_controlled_state = {
+					add_claim_by = SPR
+				}
+			}
+			TBA = {
+				every_controlled_state = {
+					add_claim_by = SPR
+				}
+			}
+			CNT = {
+				every_controlled_state = {
+					add_claim_by = SPR
+				}
+			}
+			ADL = {
+				every_controlled_state = {
+					add_claim_by = SPR
+				}
+			}
+		}
+	}
+##################################################################################################War preparing missions
+	iberian_wars_mission_prepare_galicia_war = {
+		allowed = {
+			OR = {
+				tag = PPR
+				tag = GNS
+			}
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			always = yes
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 30
+		timeout_effect = {
+			add_state_claim = 982
+			add_state_claim = 171
+			declare_war_on = {
+				target = GAL
+				type = annex_everything
+			}
+			activate_mission = iberian_wars_mission_galicia_war
+		}
+		complete_effect = {
+			add_state_claim = 982
+			add_state_claim = 171
+			declare_war_on = {
+				target = GAL
+				type = annex_everything
+			}
+			activate_mission = iberian_wars_mission_galicia_war
+		}
+	}
+	iberian_wars_mission_prepare_portugal_war = {
+		allowed = {
+			tag = FZL
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			always = yes
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 30
+		timeout_effect = {
+			if = {
+				limit = {
+					country_exists = POR
+				}
+				declare_war_on = {
+					target = POR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = GNS
+				}
+				declare_war_on = {
+					target = GNS
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = RPP
+				}
+				declare_war_on = {
+					target = RPP
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = PPR
+				}
+				declare_war_on = {
+					target = PPR
+					type = annex_everything
+				}
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = POR
+				}
+				declare_war_on = {
+					target = POR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = GNS
+				}
+				declare_war_on = {
+					target = GNS
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = RPP
+				}
+				declare_war_on = {
+					target = RPP
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = PPR
+				}
+				declare_war_on = {
+					target = PPR
+					type = annex_everything
+				}
+			}
+		}
+	}
+##################################################################################################Intelligence Operations
+	Iberian_Wars_intelligence_operations_open = {
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_intelligence_operations_opened
+			}
+			always = no
+		}
+		complete_effect = {
+			set_country_flag = IBR_intelligence_operations_opened
+		}
+	}
+
+	Iberian_Wars_intelligence_operations_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_intelligence_operations_opened
+		}
+		complete_effect = {
+			clr_country_flag = IBR_intelligence_operations_opened
+		}
+	}
+	Iberian_Wars_intelligence_operations_sabotage_enemy_nation = {
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+		has_country_flag = IBR_intelligence_operations_opened
+		}
+
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT
+			}
+		}
+		target_array = enemies
+
+		days_remove = 30
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 60
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				set_temp_variable = { IBR_wars_efficiency_gain_temp = -0.15 }
+				IBR_wars_change_efficiency_gain = yes
+				set_temp_variable = { IBR_wars_construction_speed_temp = -0.1 }
+				IBR_wars_change_construction_speed = yes
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				set_temp_variable = { IBR_wars_efficiency_gain_temp = 0.15 }
+				IBR_wars_change_efficiency_gain = yes
+				set_temp_variable = { IBR_wars_construction_speed_temp = 0.1 }
+				IBR_wars_change_construction_speed = yes
+			}
+		}
+	}
+
+	Iberian_Wars_intelligence_operations_spread_dissent_enemy_nation = {
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+		has_country_flag = IBR_intelligence_operations_opened
+		}
+
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT
+			}
+		}
+		target_array = enemies
+
+		days_remove = 10
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 30
+		cost = 15
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			FROM = {
+				set_temp_variable = { IBR_wars_opposition_temp = 5 }
+				IBR_wars_change_political_opposition = yes
+				add_stability = -0.05
+			}
+		}
+	}
+
+	Iberian_Wars_intelligence_operations_counter_propaganda_enemy_nation = {
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+		has_country_flag = IBR_intelligence_operations_opened
+		}
+
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT
+			}
+		}
+		target_array = enemies
+
+		days_remove = 10
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 30
+		cost = 15
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			FROM = {
+				set_temp_variable = { IBR_wars_legitimacy_temp = -5 }
+				IBR_wars_change_legitimacy = yes
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	Iberian_Wars_intelligence_operations_anti_partisan_state = {
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+		has_country_flag = IBR_intelligence_operations_opened
+		}
+
+		state_target = yes
+
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				has_dynamic_modifier = {
+					modifier = Iberian_Wars_supplied_resistance_state_dynamic_modifier
+				}
+			}
+		}
+
+		target_array = controlled_states
+
+		days_remove = 10
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 30
+
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = 7 }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+
+		complete_effect = {
+			hidden_effect = { add_command_power = -7 }
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				FROM = {
+					remove_dynamic_modifier = {
+						modifier = Iberian_Wars_supplied_resistance_state_dynamic_modifier
+					}
+				}
+			}
+			FROM = {
+				effect_tooltip = {
+					add_state_modifier = {
+						modifier = {
+							army_defence_factor = 0.1
+						}
+					}
+					add_state_modifier = {
+						modifier = {
+							army_speed_factor = 0.1
+						}
+					}
+					add_state_modifier = {
+						modifier = {
+							attrition = -0.2
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = Iberian_Wars_intelligence_operations_anti_partisan_state_tt
+		}
+	}
+
+	Iberian_Wars_intelligence_operations_supply_resistance_state = {
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+			has_country_flag = IBR_intelligence_operations_opened
+			FROM = {
+				is_claimed_by = ROOT
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Iberian_Wars_supplied_resistance_state_dynamic_modifier
+					}
+				}
+				any_neighbor_state = {
+					is_controlled_by = ROOT
+				}
+			}
+			is_in_array = { enemies = FROM.controller }
+		}
+
+		state_target = yes
+
+		target_array = global.IBR_original_states
+
+		days_remove = 7
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 45
+
+		custom_cost_trigger = {
+			set_temp_variable = { N = 5 }
+			check_variable = { homefront_commodities_total > 0 }
+		}
+		custom_cost_text = decision_cost_N_homefront_commodities
+
+		complete_effect = {
+			set_temp_variable = { homefront_commodities_total_temp = -5 }
+			IBR_wars_change_hc_quantity = yes
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				FROM = {
+					add_dynamic_modifier = {
+						modifier = Iberian_Wars_supplied_resistance_state_dynamic_modifier
+					}
+				}
+			}
+			FROM = {
+				effect_tooltip = {
+					add_state_modifier = {
+						modifier = {
+							army_defence_factor = -0.1
+						}
+					}
+					add_state_modifier = {
+						modifier = {
+							army_speed_factor = -0.1
+						}
+					}
+					add_state_modifier = {
+						modifier = {
+							attrition = 0.2
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = Iberian_Wars_intelligence_operations_supply_resistance_state_tt
+		}
+	}
+##################################################################################################Military Operations
+	Iberian_Wars_AI_Compatibility_Show = {
+		icon = GFX_decision_generic_military_parade_indent
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			}
+			is_ai = yes
+		}
+		ai_will_do = {
+			factor = 9000
+		}
+		complete_effect = {
+			set_country_flag = IBR_Wars_AI_mechanic_compatibility
+		}
+	}
+
+	Iberian_Wars_military_operations_open = {
+		icon = GFX_decision_generic_military_parade_indent
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_military_operations_opened
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			set_country_flag = IBR_military_operations_opened
+		}
+	}
+
+	Iberian_Wars_military_operations_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_military_operations_opened
+		}
+		complete_effect = {
+			clr_country_flag = IBR_military_operations_opened
+		}
+	}
+	Iberian_Wars_target_supply_open = {
+		visible = {
+			always = no
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_target_supply_opened
+			}
+		}
+		complete_effect = {
+			set_country_flag = IBR_target_supply_opened
+		}
+	}
+
+	Iberian_Wars_target_supply_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_target_supply_opened
+		}
+		complete_effect = {
+			clr_country_flag = IBR_target_supply_opened
+		}
+	}
+	Iberian_Wars_aerial_bombing_open = {
+		icon = GFX_decision_generic_fighter_plane_indent
+		visible = {
+			always = no
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_aerial_bombing_opened
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			set_country_flag = IBR_aerial_bombing_opened
+		}
+	}
+
+	Iberian_Wars_aerial_bombing_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_aerial_bombing_opened
+			is_ai = no
+		}
+		complete_effect = {
+			clr_country_flag = IBR_aerial_bombing_opened
+		}
+	}
+	Iberian_Wars_conscription_open = {
+		icon = GFX_decision_generic_prepare_civil_war_indent
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_conscription_opened
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			set_country_flag = IBR_conscription_opened
+		}
+	}
+
+	Iberian_Wars_conscription_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_conscription_opened
+		}
+		complete_effect = {
+			clr_country_flag = IBR_conscription_opened
+		}
+	}
+	Iberian_Wars_evacuate_civilians_open = {
+		visible = {
+			always = no
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_evacuate_civilians_opened
+			}
+		}
+		complete_effect = {
+			set_country_flag = IBR_evacuate_civilians_opened
+		}
+	}
+
+	Iberian_Wars_evacuate_civilians_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_evacuate_civilians_opened
+		}
+		complete_effect = {
+			clr_country_flag = IBR_evacuate_civilians_opened
+		}
+	}
+	Iberian_Wars_fort_vps_open = {
+		visible = {
+			always = no
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_fort_vps_opened
+			}
+		}
+		complete_effect = {
+			set_country_flag = IBR_fort_vps_opened
+		}
+	}
+
+	Iberian_Wars_fort_vps_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_fort_vps_opened
+		}
+		complete_effect = {
+			clr_country_flag = IBR_fort_vps_opened
+		}
+	}
+	Iberian_Wars_military_operations_target_supply_state = {
+		icon = GFX_decision_generic_supply_red
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+			has_country_flag = IBR_target_supply_opened
+			is_in_array = { enemies = FROM.controller }
+			FROM = {
+				any_neighbor_state = {
+					is_controlled_by = ROOT
+				}
+			}
+		}
+
+		state_target = yes
+
+		target_array = global.IBR_original_states
+
+		days_remove = 15
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 45
+
+		on_map_mode = map_only
+
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = 7 }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -7
+				FROM = {
+					add_dynamic_modifier = {
+					modifier = Iberian_Wars_target_supply_state_dynamic_modifier
+					}
+				}
+			}
+			FROM = {
+				effect_tooltip = {
+					add_state_modifier = {
+						modifier = {
+							local_supplies_for_controller = -0.25
+						}
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				FROM = {
+					remove_dynamic_modifier = {
+						modifier = Iberian_Wars_target_supply_state_dynamic_modifier
+					}
+				}
+			}
+			FROM = {
+				effect_tooltip = {
+					add_state_modifier = {
+						modifier = {
+							local_supplies_for_controller = 0.25
+						}
+					}
+				}
+			}
+			FROM.controller = {
+				set_temp_variable = { homefront_commodities_total_temp = -3 }
+				IBR_wars_change_hc_quantity = yes
+			}
+			set_temp_variable = { homefront_commodities_total_temp = 3 }
+			IBR_wars_change_hc_quantity = yes
+		}
+	}
+###AI Compatibility Decisions
+	Iberian_Wars_AI_Get_Free_Handicap = { #Because the AI click more stuff than the player ever will
+		icon = GFX_decision_market_infantry_indent
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+		}
+		ai_will_do = {
+			factor = 5000
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { IBR_wars_political_gain_temp = 0.25 }
+			IBR_wars_change_political_power_gain = yes
+			set_temp_variable = { IBR_wars_command_gain_temp = 0.5 }
+			IBR_wars_change_command_power_gain = yes
+		}
+	}
+	Iberian_Wars_AI_Boost_CP_Gain = {
+		icon = GFX_decision_generic_military_parade
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				AND = {
+					has_country_flag = IBR_Wars_Improved_Temporary_flag
+					has_country_flag = IBR_Wars_Improved_Full_flag
+				}
+				add = 200
+			}
+			modifier = {
+				has_political_power > 75
+				add = 500
+			}
+		}
+		available = { check_variable = { command_power_gain_ibrwars < 2 } }
+		cost = 15
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = IBR_Wars_Improved_Temporary_flag } }
+				add_political_power = -5
+			}
+			set_temp_variable = { IBR_wars_command_gain_temp = 0.30 }
+			IBR_wars_change_command_power_gain = yes
+		}
+	}
+	Iberian_Wars_AI_Boost_Org_Gain = {
+		icon = GFX_decision_generic_military_hat
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+		}
+		available = { check_variable = { army_org_factor_ibrwars < 0.25 } }
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				AND = {
+					has_country_flag = IBR_Wars_Improved_Temporary_flag
+					has_country_flag = IBR_Wars_Improved_Full_flag
+				}
+				add = 500
+			}
+			modifier = {
+				command_power > 40
+				add = 500
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = army_org_factor_cost_ibrwars }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+		complete_effect = {
+			add_command_power = -15
+			set_temp_variable = { IBR_wars_army_organisation_temp = 0.03 }
+			IBR_wars_change_army_organisation = yes
+		}
+	}
+	Iberian_Wars_AI_Boost_Attack_Gain = {
+		icon = GFX_decision_generic_assault
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+		}
+		available = { check_variable = { army_attack_factor_ibrwars < 0.25 } }
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				AND = {
+					has_country_flag = IBR_Wars_Improved_Temporary_flag
+					has_country_flag = IBR_Wars_Improved_Full_flag
+				}
+				add = 1000
+			}
+			modifier = {
+				command_power > 40
+				add = 500
+			}
+			modifier = {
+				OR = {
+					tag = GAL
+					tag = BSQ
+					tag = CTL
+					tag = CNT
+					tag = ADL
+				}
+				add = -600
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = army_attack_factor_cost_ibrwars }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+		complete_effect = {
+			add_command_power = -15
+			set_temp_variable = { IBR_wars_army_attack_temp = 0.03 }
+			IBR_wars_change_army_attack = yes
+		}
+	}
+	Iberian_Wars_AI_Boost_Defence_Gain = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+		}
+		available = { check_variable = { army_defence_factor_ibrwars < 0.15 } }
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				AND = {
+					has_country_flag = IBR_Wars_Improved_Temporary_flag
+					has_country_flag = IBR_Wars_Improved_Full_flag
+				}
+				add = 500
+			}
+			modifier = {
+				command_power > 40
+				add = 500
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = army_defence_factor_cost_ibrwars }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+		complete_effect = {
+			add_command_power = -15
+			set_temp_variable = { IBR_wars_army_defense_temp = 0.03 }
+			IBR_wars_change_army_defense = yes
+		}
+	}
+
+	##Decisions to Request Equipment##
+	#Guns
+	Iberian_Wars_AI_Request_Guns_Small = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+			OR = {
+				is_in_array = { GER.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { ITA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { USA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { BRA.Iberian_Wars_supported_factions = PREV.id }
+			}
+		}
+		available = {
+			has_war = yes
+			OR = {
+				AND = {
+					is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_USA }
+					USA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_GER }
+					GER = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_ITA }
+					ITA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_BRA }
+					BRA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				has_equipment = { infantry_equipment < 1000 }
+				add = 500
+			}
+		}
+		days_re_enable = 7
+		complete_effect = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_USA }
+							USA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 100
+						USA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = USA }
+					set_country_flag = sent_request_USA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_GER }
+							GER = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 200
+						GER = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = GER }
+					set_country_flag = sent_request_GER
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_ITA }
+							ITA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 200
+						ITA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = ITA }
+					set_country_flag = sent_request_ITA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_BRA }
+							BRA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						BRA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = BRA }
+					set_country_flag = sent_request_BRA
+				}
+			}
+
+			var:IBR_Wars_currently_selected_supporter_var = {
+				set_variable = { IBR_Wars_current_request_type = 4 }
+				set_variable = { IBR_Wars_current_request_quantity = 750 }
+				set_variable = { IBR_Wars_current_request_days = 30 }
+				set_variable = { IBR_Wars_current_requester_influence_change = 2 }
+			}
+			# IBR_Wars_Initiate_Request_Mission = yes
+			IBR_Wars_Initiate_Request_Mission_New = yes
+		}
+	}
+
+	Iberian_Wars_AI_Request_Guns_Med = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+			OR = {
+				is_in_array = { GER.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { ITA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { USA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { BRA.Iberian_Wars_supported_factions = PREV.id }
+			}
+		}
+		available = {
+			has_war = yes
+			OR = {
+				AND = {
+					is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_USA }
+					USA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_GER }
+					GER = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_ITA }
+					ITA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_BRA }
+					BRA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_equipment = { infantry_equipment < 2000 }
+				add = 500
+			}
+		}
+		days_re_enable = 7
+		complete_effect = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_USA }
+							USA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						USA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = USA }
+					set_country_flag = sent_request_USA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_GER }
+							GER = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						GER = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = GER }
+					set_country_flag = sent_request_GER
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_ITA }
+							ITA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						ITA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = ITA }
+					set_country_flag = sent_request_ITA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_BRA }
+							BRA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						BRA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = BRA }
+					set_country_flag = sent_request_BRA
+				}
+			}
+
+			var:IBR_Wars_currently_selected_supporter_var = {
+				set_variable = { IBR_Wars_current_request_type = 4 }
+				set_variable = { IBR_Wars_current_request_quantity = 1250 }
+				set_variable = { IBR_Wars_current_request_days = 30 }
+				set_variable = { IBR_Wars_current_requester_influence_change = 4 }
+			}
+			# IBR_Wars_Initiate_Request_Mission = yes
+			IBR_Wars_Initiate_Request_Mission_New = yes
+		}
+	}
+
+	Iberian_Wars_AI_Request_Guns_Large = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+			OR = {
+				is_in_array = { GER.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { ITA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { USA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { BRA.Iberian_Wars_supported_factions = PREV.id }
+			}
+		}
+		available = {
+			has_war = yes
+			OR = {
+				AND = {
+					is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_USA }
+					USA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_GER }
+					GER = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_ITA }
+					ITA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_BRA }
+					BRA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				has_equipment = { infantry_equipment < 5000 }
+				add = 500
+			}
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+		days_re_enable = 7
+		complete_effect = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_USA }
+							USA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						USA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = USA }
+					set_country_flag = sent_request_USA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_GER }
+							GER = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						GER = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = GER }
+					set_country_flag = sent_request_GER
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_ITA }
+							ITA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						ITA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = ITA }
+					set_country_flag = sent_request_ITA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_BRA }
+							BRA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						BRA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = BRA }
+					set_country_flag = sent_request_BRA
+				}
+			}
+
+			var:IBR_Wars_currently_selected_supporter_var = {
+				set_variable = { IBR_Wars_current_request_type = 4 }
+				set_variable = { IBR_Wars_current_request_quantity = 2000 }
+				set_variable = { IBR_Wars_current_request_days = 30 }
+				set_variable = { IBR_Wars_current_requester_influence_change = 6 }
+			}
+			IBR_Wars_Initiate_Request_Mission_New = yes
+		}
+	}
+	#Support Equipment#
+	Iberian_Wars_AI_Request_Support_Small = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+			OR = {
+				is_in_array = { GER.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { ITA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { USA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { BRA.Iberian_Wars_supported_factions = PREV.id }
+			}
+		}
+		available = {
+			has_war = yes
+			OR = {
+				AND = {
+					is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_USA }
+					USA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_GER }
+					GER = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_ITA }
+					ITA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_BRA }
+					BRA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_equipment = { support_equipment < 0 }
+				add = 500
+			}
+		}
+		days_re_enable = 7
+		complete_effect = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_USA }
+							USA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 100
+						USA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = USA }
+					set_country_flag = sent_request_USA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_GER }
+							GER = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 200
+						GER = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = GER }
+					set_country_flag = sent_request_GER
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_ITA }
+							ITA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 200
+						ITA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = ITA }
+					set_country_flag = sent_request_ITA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_BRA }
+							BRA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						BRA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = BRA }
+					set_country_flag = sent_request_BRA
+				}
+			}
+
+			var:IBR_Wars_currently_selected_supporter_var = {
+				set_variable = { IBR_Wars_current_request_type = 5 }
+				set_variable = { IBR_Wars_current_request_quantity = 150 }
+				set_variable = { IBR_Wars_current_request_days = 30 }
+				set_variable = { IBR_Wars_current_requester_influence_change = 2 }
+			}
+			IBR_Wars_Initiate_Request_Mission_New = yes
+		}
+	}
+
+	Iberian_Wars_AI_Request_Support_Med = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+			OR = {
+				is_in_array = { GER.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { ITA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { USA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { BRA.Iberian_Wars_supported_factions = PREV.id }
+			}
+		}
+		available = {
+			has_war = yes
+			OR = {
+				AND = {
+					is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_USA }
+					USA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_GER }
+					GER = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_ITA }
+					ITA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_BRA }
+					BRA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_equipment = { support_equipment < 200 }
+				add = 500
+			}
+		}
+		days_re_enable = 7
+		complete_effect = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_USA }
+							USA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						USA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = USA }
+					set_country_flag = sent_request_USA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_GER }
+							GER = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						GER = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = GER }
+					set_country_flag = sent_request_GER
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_ITA }
+							ITA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						ITA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = ITA }
+					set_country_flag = sent_request_ITA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_BRA }
+							BRA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						BRA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = BRA }
+					set_country_flag = sent_request_BRA
+				}
+			}
+
+			var:IBR_Wars_currently_selected_supporter_var = {
+				set_variable = { IBR_Wars_current_request_type = 5 }
+				set_variable = { IBR_Wars_current_request_quantity = 300 }
+				set_variable = { IBR_Wars_current_request_days = 30 }
+				set_variable = { IBR_Wars_current_requester_influence_change = 5 }
+			}
+			IBR_Wars_Initiate_Request_Mission_New = yes
+		}
+	}
+
+	Iberian_Wars_AI_Request_Support_Large = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+			OR = {
+				is_in_array = { GER.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { ITA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { USA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { BRA.Iberian_Wars_supported_factions = PREV.id }
+			}
+		}
+		available = {
+			has_war = yes
+			OR = {
+				AND = {
+					is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_USA }
+					USA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_GER }
+					GER = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_ITA }
+					ITA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_BRA }
+					BRA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				has_equipment = { support_equipment < 0 }
+				add = 500
+			}
+		}
+		days_re_enable = 7
+		custom_cost_text = decision_cost_cp_dynamic
+		complete_effect = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_USA }
+							USA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						USA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = USA }
+					set_country_flag = sent_request_USA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_GER }
+							GER = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						GER = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = GER }
+					set_country_flag = sent_request_GER
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_ITA }
+							ITA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						ITA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = ITA }
+					set_country_flag = sent_request_ITA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_BRA }
+							BRA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						BRA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = BRA }
+					set_country_flag = sent_request_BRA
+				}
+			}
+
+			var:IBR_Wars_currently_selected_supporter_var = {
+				set_variable = { IBR_Wars_current_request_type = 5 }
+				set_variable = { IBR_Wars_current_request_quantity = 500 }
+				set_variable = { IBR_Wars_current_request_days = 30 }
+				set_variable = { IBR_Wars_current_requester_influence_change = 6 }
+			}
+			IBR_Wars_Initiate_Request_Mission_New = yes
+		}
+	}
+	#Artillery
+	Iberian_Wars_AI_Request_Artillery_Small = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+			OR = {
+				is_in_array = { GER.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { ITA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { USA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { BRA.Iberian_Wars_supported_factions = PREV.id }
+			}
+		}
+		available = {
+			has_war = yes
+			OR = {
+				AND = {
+					is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_USA }
+					USA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_GER }
+					GER = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_ITA }
+					ITA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_BRA }
+					BRA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_equipment = { artillery_equipment > 1000 }
+				add = 500
+			}
+		}
+		days_re_enable = 7
+		complete_effect = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_USA }
+							USA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 100
+						USA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = USA }
+					set_country_flag = sent_request_USA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_GER }
+							GER = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 200
+						GER = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = GER }
+					set_country_flag = sent_request_GER
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_ITA }
+							ITA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 200
+						ITA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = ITA }
+					set_country_flag = sent_request_ITA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_BRA }
+							BRA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						BRA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = BRA }
+					set_country_flag = sent_request_BRA
+				}
+			}
+
+			var:IBR_Wars_currently_selected_supporter_var = {
+				set_variable = { IBR_Wars_current_request_type = 6 }
+				set_variable = { IBR_Wars_current_request_quantity = 100 }
+				set_variable = { IBR_Wars_current_request_days = 30 }
+				set_variable = { IBR_Wars_current_requester_influence_change = 3 }
+			}
+			IBR_Wars_Initiate_Request_Mission_New = yes
+		}
+	}
+
+	Iberian_Wars_AI_Request_Artillery_Med = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+			OR = {
+				is_in_array = { GER.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { ITA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { USA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { BRA.Iberian_Wars_supported_factions = PREV.id }
+			}
+		}
+		available = {
+			has_war = yes
+			OR = {
+				AND = {
+					is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_USA }
+					USA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_GER }
+					GER = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_ITA }
+					ITA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_BRA }
+					BRA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_equipment = { artillery_equipment > 1000 }
+				add = 500
+			}
+		}
+		days_re_enable = 7
+		complete_effect = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_USA }
+							USA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						USA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = USA }
+					set_country_flag = sent_request_USA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_GER }
+							GER = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						GER = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = GER }
+					set_country_flag = sent_request_GER
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_ITA }
+							ITA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						ITA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = ITA }
+					set_country_flag = sent_request_ITA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_BRA }
+							BRA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						BRA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = BRA }
+					set_country_flag = sent_request_BRA
+				}
+			}
+
+			var:IBR_Wars_currently_selected_supporter_var = {
+				set_variable = { IBR_Wars_current_request_type = 6 }
+				set_variable = { IBR_Wars_current_request_quantity = 250 }
+				set_variable = { IBR_Wars_current_request_days = 30 }
+				set_variable = { IBR_Wars_current_requester_influence_change = 5 }
+			}
+			IBR_Wars_Initiate_Request_Mission_New = yes
+		}
+	}
+
+	Iberian_Wars_AI_Request_Artillery_Large = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			has_country_flag = IBR_Wars_AI_mechanic_compatibility
+			is_ai = yes
+			OR = {
+				is_in_array = { GER.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { ITA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { USA.Iberian_Wars_supported_factions = PREV.id }
+				is_in_array = { BRA.Iberian_Wars_supported_factions = PREV.id }
+			}
+		}
+		available = {
+			has_war = yes
+			OR = {
+				AND = {
+					is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_USA }
+					USA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_GER }
+					GER = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_ITA }
+					ITA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+				AND = {
+					is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id }
+					NOT = { has_country_flag = sent_request_BRA }
+					BRA = {
+						NOT = { has_country_flag = supporter_request_flag }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_equipment = { artillery_equipment > 3000 }
+				add = 500
+			}
+		}
+		days_re_enable = 7
+		custom_cost_text = decision_cost_cp_dynamic
+		complete_effect = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { USA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_USA }
+							USA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						USA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = USA }
+					set_country_flag = sent_request_USA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { GER.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_GER }
+							GER = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						GER = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = GER }
+					set_country_flag = sent_request_GER
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { ITA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_ITA }
+							ITA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						ITA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = ITA }
+					set_country_flag = sent_request_ITA
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { is_in_array = { BRA.Iberian_Wars_supported_factions = ROOT.id } }
+							NOT = { has_country_flag = sent_request_BRA }
+							BRA = {
+								has_country_flag = supporter_request_flag
+							}
+						}
+					}
+					modifier = {
+						factor = 20
+						BRA = { is_ai = no }
+					}
+					set_variable = { IBR_Wars_currently_selected_supporter_var = BRA }
+					set_country_flag = sent_request_BRA
+				}
+			}
+
+			var:IBR_Wars_currently_selected_supporter_var = {
+				set_variable = { IBR_Wars_current_request_type = 6 }
+				set_variable = { IBR_Wars_current_request_quantity = 400 }
+				set_variable = { IBR_Wars_current_request_days = 30 }
+				set_variable = { IBR_Wars_current_requester_influence_change = 7 }
+			}
+			IBR_Wars_Initiate_Request_Mission_New = yes
+		}
+	}
+
+### Actual Decisions
+	Iberian_Wars_military_operations_reorganize_units_state = {
+		icon = GFX_decision_generic_military_parade
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+			has_country_flag = IBR_military_operations_opened
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = IBR_wars_front_decision_active_flag
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT
+				any_controlled_state = {
+					any_neighbor_state = {
+					is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		target_array = enemies
+
+		days_remove = 30
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 45
+
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = 25 }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+
+		complete_effect = {
+			set_country_flag = IBR_wars_front_decision_active_flag
+			hidden_effect = {
+				add_command_power = -25
+				every_controlled_state = {
+					limit = {
+						any_neighbor_state = {
+							NOT = {
+								is_controlled_by = ROOT
+							}
+							is_in_array = { ROOT.enemies = THIS.controller }
+						}
+					}
+					add_dynamic_modifier = {
+					modifier = Iberian_Wars_reorganize_units_state_dynamic_modifier
+					}
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					any_neighbor_state = {
+						NOT = {
+							is_controlled_by = ROOT
+						}
+						is_in_array = { ROOT.enemies = THIS.controller }
+					}
+				}
+				effect_tooltip = {
+					add_state_modifier = {
+						modifier = {
+							army_speed_factor = 0.25
+						}
+					}
+					add_state_modifier = {
+						modifier = {
+							army_org_factor = 0.25
+						}
+					}
+					add_state_modifier = {
+						modifier = {
+							army_attack_factor = -0.1
+						}
+					}
+					add_state_modifier = {
+						modifier = {
+							army_defence_factor = -0.1
+						}
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = IBR_wars_front_decision_active_flag
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+					modifier = Iberian_Wars_reorganize_units_state_dynamic_modifier
+					}
+				}
+				effect_tooltip = {
+					add_state_modifier = {
+						modifier = {
+							army_speed_factor = -0.25
+						}
+					}
+					add_state_modifier = {
+						modifier = {
+							army_org_factor = -0.25
+						}
+					}
+					add_state_modifier = {
+						modifier = {
+							army_attack_factor = 0.1
+						}
+					}
+					add_state_modifier = {
+						modifier = {
+							army_defence_factor = 0.1
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						has_dynamic_modifier = {
+						modifier = Iberian_Wars_reorganize_units_state_dynamic_modifier
+						}
+					}
+					remove_dynamic_modifier = {
+					modifier = Iberian_Wars_reorganize_units_state_dynamic_modifier
+					}
+				}
+			}
+		}
+	}
+	Iberian_Wars_military_operations_defensive_focus_state = {
+		icon = GFX_decision_generic_defend
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+			has_country_flag = IBR_military_operations_opened
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = IBR_wars_front_decision_active_flag
+			}
+		}
+		ai_will_do = {
+			factor = 750
+			modifier = {
+				tag = SPR
+				add = 2000
+			}
+			modifier = {
+				tag = RPP
+				add = 2000
+			}
+		}
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT
+				any_controlled_state = {
+					any_neighbor_state = {
+					is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		target_array = enemies
+
+		days_remove = 30
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 45
+
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = 15 }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+
+		complete_effect = {
+			set_country_flag = IBR_wars_front_decision_active_flag
+			hidden_effect = {
+				add_command_power = -15
+				every_controlled_state = {
+					limit = {
+						any_neighbor_state = {
+							NOT = {
+								is_controlled_by = ROOT
+							}
+							is_in_array = { ROOT.enemies = THIS.controller }
+						}
+					}
+					add_dynamic_modifier = {
+					modifier = Iberian_Wars_defensive_focus_state_dynamic_modifier
+					}
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					any_neighbor_state = {
+						NOT = {
+							is_controlled_by = ROOT
+						}
+						is_in_array = { ROOT.enemies = THIS.controller }
+					}
+				}
+				effect_tooltip = {
+					add_state_modifier = {
+						modifier = {
+							army_defence_factor = 0.2
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			ai_focus_defense_factor = 0.2
+		}
+		remove_effect = {
+			clr_country_flag = IBR_wars_front_decision_active_flag
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+					modifier = Iberian_Wars_defensive_focus_state_dynamic_modifier
+					}
+				}
+				effect_tooltip = {
+					add_state_modifier = {
+						modifier = {
+							army_defence_factor = -0.2
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						has_dynamic_modifier = {
+						modifier = Iberian_Wars_defensive_focus_state_dynamic_modifier
+						}
+					}
+					remove_dynamic_modifier = {
+					modifier = Iberian_Wars_defensive_focus_state_dynamic_modifier
+					}
+				}
+			}
+		}
+	}
+	Iberian_Wars_military_operations_offensive_focus_state = {
+		icon = GFX_decision_generic_assault
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+			has_country_flag = IBR_military_operations_opened
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = IBR_wars_front_decision_active_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT
+				any_controlled_state = {
+					any_neighbor_state = {
+					is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		target_array = enemies
+
+		days_remove = 30
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 45
+
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = 15 }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+
+		complete_effect = {
+			set_country_flag = IBR_wars_front_decision_active_flag
+			hidden_effect = {
+				add_command_power = -15
+				every_controlled_state = {
+					limit = {
+						any_neighbor_state = {
+							NOT = {
+								is_controlled_by = ROOT
+							}
+							is_in_array = { ROOT.enemies = THIS.controller }
+						}
+					}
+					add_dynamic_modifier = {
+					modifier = Iberian_Wars_defensive_focus_state_dynamic_modifier
+					}
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					any_neighbor_state = {
+						NOT = {
+							is_controlled_by = ROOT
+						}
+						is_in_array = { ROOT.enemies = THIS.controller }
+					}
+				}
+				effect_tooltip = {
+					add_state_modifier = {
+						modifier = {
+							army_attack_factor = 0.15
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			ai_focus_aggressive_factor = 0.2
+		}
+
+		remove_effect = {
+			clr_country_flag = IBR_wars_front_decision_active_flag
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+					modifier = Iberian_Wars_defensive_focus_state_dynamic_modifier
+					}
+				}
+				effect_tooltip = {
+					add_state_modifier = {
+						modifier = {
+							army_attack_factor = -0.15
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						has_dynamic_modifier = {
+						modifier = Iberian_Wars_defensive_focus_state_dynamic_modifier
+						}
+					}
+					remove_dynamic_modifier = {
+					modifier = Iberian_Wars_defensive_focus_state_dynamic_modifier
+					}
+				}
+			}
+		}
+	}
+	Iberian_Wars_military_conscription_state_POR = {
+		icon = GFX_decision_generic_military_hat
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+			has_country_flag = IBR_conscription_opened
+			OR = {
+				tag = PPR
+				tag = RPP
+				tag = POR
+				tag = GNS
+			}
+		}
+		available = {
+			has_war = yes
+			NOT = { has_country_flag = IBR_wars_conscription_active_flag }
+			num_divisions < 20
+		}
+		ai_will_do = {
+			factor = 3000
+		}
+
+		days_remove = 14
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+
+		custom_cost_trigger = {
+			set_temp_variable = { N = 10 }
+			check_variable = { homefront_commodities_total > 0 }
+		}
+		custom_cost_text = decision_cost_N_homefront_commodities
+
+		complete_effect = {
+			set_country_flag = IBR_wars_conscription_active_flag
+			set_temp_variable = { homefront_commodities_total_temp = -10 }
+			IBR_wars_change_hc_quantity = yes
+			if = {
+				limit = { NOT = { has_country_flag = IBR_wars_has_conscription_template } }
+				division_template = {
+					name = "Milícia Nacional"
+					is_locked = yes
+					#division_names_group = USA_INF_01
+					regiments = {
+						light_infantry = { x = 0 y = 0 }
+						light_infantry = { x = 0 y = 1 }
+						light_infantry = { x = 0 y = 2 }
+						light_infantry = { x = 1 y = 0 }
+						light_infantry = { x = 1 y = 1 }
+						light_infantry = { x = 1 y = 2 }
+					}
+				}
+				set_country_flag = IBR_wars_has_conscription_template
+			}
+		}
+
+		remove_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Milícia\" division_template = \"Milícia Nacional\" start_manpower_factor = 0.9"
+					owner = FROM
+					count = 1
+					allow_spawning_on_enemy_provs = no
+				}
+				set_state_flag = IBR_Wars_conscripted_brigade
+			}
+			clr_country_flag = IBR_wars_conscription_active_flag
+		}
+	}
+	Iberian_Wars_military_conscription_state_SPA = {
+		icon = GFX_decision_generic_military_hat
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+			has_country_flag = IBR_conscription_opened
+			OR = {
+				tag = SPR
+				tag = SPS
+				tag = FZL
+				tag = FSR
+			}
+		}
+		available = {
+			has_war = yes
+			NOT = { has_country_flag = IBR_wars_conscription_active_flag }
+			num_divisions < 35
+		}
+		ai_will_do = {
+			factor = 3000
+		}
+
+		days_remove = 14
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+
+		custom_cost_trigger = {
+			set_temp_variable = { N = 10 }
+			check_variable = { homefront_commodities_total > 0 }
+		}
+		custom_cost_text = decision_cost_N_homefront_commodities
+
+		complete_effect = {
+			set_country_flag = IBR_wars_conscription_active_flag
+			set_temp_variable = { homefront_commodities_total_temp = -10 }
+			IBR_wars_change_hc_quantity = yes
+			if = {
+				limit = { NOT = { has_country_flag = IBR_wars_has_conscription_template } }
+				division_template = {
+					name = "Milicia Nacional"
+					is_locked = yes
+					#division_names_group = USA_INF_01
+					regiments = {
+						light_infantry = { x = 0 y = 0 }
+						light_infantry = { x = 0 y = 1 }
+						light_infantry = { x = 0 y = 2 }
+						light_infantry = { x = 1 y = 0 }
+						light_infantry = { x = 1 y = 1 }
+						light_infantry = { x = 1 y = 2 }
+					}
+				}
+				set_country_flag = IBR_wars_has_conscription_template
+			}
+		}
+		remove_effect = {
+			capital_scope = {
+					create_unit = {
+					division = "name = \"Milicia\" division_template = \"Milicia Nacional\" start_manpower_factor = 0.9"
+					owner = FROM
+					count = 1
+					allow_spawning_on_enemy_provs = no
+				}
+			}
+			clr_country_flag = IBR_wars_conscription_active_flag
+		}
+	}
+	Iberian_Wars_military_operations_aerial_bombing_state = {
+		icon = GFX_decision_generic_bombing
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+			has_country_flag = IBR_aerial_bombing_opened
+			is_in_array = { enemies = FROM.controller }
+			FROM = {
+				any_neighbor_state = {
+					is_controlled_by = ROOT
+				}
+				anti_air_building < 2
+			}
+		}
+		available = { NOT = { has_country_flag = IBR_wars_bombing_active_flag } }
+		ai_will_do = {
+			factor = 3000
+		}
+		state_target = yes
+
+		target_array = global.IBR_original_states
+
+		on_map_mode = map_only
+
+		days_remove = 14
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+
+		complete_effect = {
+			set_country_flag = IBR_wars_bombing_active_flag
+			FROM = {
+				add_state_modifier = {
+					modifier = {
+						army_attack_factor = 0.05
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = IBR_wars_bombing_active_flag
+			FROM = {
+				add_state_modifier = {
+					modifier = {
+						army_attack_factor = -0.05
+					}
+				}
+			}
+		}
+	}
+	Iberian_Wars_military_operations_evacuate_civilians_state = {
+		icon = GFX_decision_generic_exfiltrate_state
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = { #For the decision to appear at least one state must not be in the border with the enemies
+			has_country_flag = IBR_evacuate_civilians_opened
+			FROM = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+					NOT = {
+						is_controlled_by = ROOT
+					}
+					is_in_array = { ROOT.enemies = THIS.controller }
+				}
+			}
+			any_controlled_state = {
+				OR = {
+					all_neighbor_state = {
+					is_controlled_by = ROOT
+					}
+					AND = {
+						any_neighbor_state = {
+							NOT = {
+								is_controlled_by = ROOT
+							}
+							NOT = {
+								is_in_array = { ROOT.enemies = THIS.controller }
+							}
+						}
+					}
+				}
+			}
+		}
+
+		state_target = yes
+
+		target_array = global.IBR_original_states
+
+		on_map_mode = map_only
+
+		days_remove = 15
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 30
+
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = 7 }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+
+		complete_effect = {
+			hidden_effect = { add_command_power = -7 }
+		}
+
+		remove_effect = {
+			set_temp_variable = { state_10_percent_pop_temp = FROM.state_population }
+			multiply_temp_variable = { state_10_percent_pop_temp = -0.1 }
+			set_temp_variable = { state_2_percent_gdp_temp = FROM.state_value }
+			multiply_temp_variable = { state_2_percent_gdp_temp = 0.001 }
+			multiply_temp_variable = { state_2_percent_gdp_temp = -0.02 }
+			FROM = {
+				set_temp_variable = { temp_state_value_addition = state_2_percent_gdp_temp }
+				econ_state_value_change_addition_specified_state = yes
+				add_manpower = state_10_percent_pop_temp
+			}
+			multiply_temp_variable = { state_10_percent_pop_temp = -1 }
+			multiply_temp_variable = { state_2_percent_gdp_temp = -1 }
+			random_controlled_state = {
+				limit = {
+					OR = {
+						all_neighbor_state = {
+						is_controlled_by = ROOT
+						}
+						AND = {
+							any_neighbor_state = {
+								NOT = {
+									is_controlled_by = ROOT
+								}
+								NOT = {
+									is_in_array = { ROOT.enemies = THIS.controller }
+								}
+							}
+						}
+					}
+				}
+				set_temp_variable = { temp_state_value_addition = state_2_percent_gdp_temp }
+				econ_state_value_change_addition_specified_state = yes
+				add_manpower = state_10_percent_pop_temp
+			}
+		}
+	}
+	Iberian_Wars_military_operations_fortify_vps_state = {
+		icon = GFX_decision_generic_destroy_fort
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = { #For the decision to appear at least one state must not be in the border with the enemies
+			has_country_flag = IBR_fort_vps_opened
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		state_target = yes
+
+		target_array = global.IBR_original_states
+
+		on_map_mode = map_only
+
+		days_remove = 20
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 45
+
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = 12 }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+
+		complete_effect = {
+			hidden_effect = { add_command_power = -12 }
+		}
+
+		remove_effect = {
+			FROM = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_victory_point = yes
+					}
+				}
+			}
+		}
+	}
+	Iberian_Wars_military_operations_fortify_border_against_enemy = {
+		icon = GFX_decision_generic_building_army_base
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+			has_country_flag = IBR_military_operations_opened
+		}
+
+		target_trigger = {
+			FROM = {
+				any_controlled_state = {
+					any_neighbor_state = {
+					is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		target_array = enemies
+
+		days_remove = 10
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 20
+
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = 10 }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -10
+			}
+		}
+
+		remove_effect = {
+			every_controlled_state = {
+				limit = {
+					any_neighbor_state = {
+						NOT = {
+							is_controlled_by = ROOT
+						}
+						is_in_array = { ROOT.enemies = THIS.controller }
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+#############################################################################################IMPROVEMENT OPERATIONS
+	Iberian_Wars_improvement_operations_open = {
+		icon = GFX_decision_market_infantry_indent
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_improvement_operations_opened
+			}
+		}
+		ai_will_do = {
+			factor = 3000
+		}
+		complete_effect = {
+			set_country_flag = IBR_improvement_operations_opened
+		}
+	}
+
+	Iberian_Wars_improvement_operations_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_improvement_operations_opened
+			is_ai = no
+		}
+		complete_effect = {
+			clr_country_flag = IBR_improvement_operations_opened
+		}
+	}
+
+	Iberian_Wars_improvement_operations_temporal_improvement = {
+		icon = GFX_decision_generic_chess_knight_rook_bishop_pawn
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = IBR_Wars_Improved_Full_flag
+				add = 1000
+			}
+		}
+		visible = {
+		has_country_flag = IBR_improvement_operations_opened
+		}
+
+		days_remove = 30
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 45
+		cost = 25
+
+		complete_effect = {
+			set_country_flag = IBR_Wars_Improved_Temporary_flag
+			set_temp_variable = { IBR_wars_military_cost_temp = -5 }
+			IBR_wars_change_military_cost = yes
+		}
+
+		remove_effect = {
+			clr_country_flag = IBR_Wars_Improved_Temporary_flag
+			set_temp_variable = { IBR_wars_military_cost_temp = 5 }
+			IBR_wars_change_military_cost = yes
+		}
+	}
+	Iberian_Wars_improvement_operations_permanent_improvement = {
+		icon = GFX_decision_generic_chess_king
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+		has_country_flag = IBR_improvement_operations_opened
+		}
+		ai_will_do = {
+			factor = 30000
+		}
+		days_remove = 10
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		fire_only_once = yes #This would be broken otherwise
+		cost = 50
+
+		complete_effect = {
+			set_temp_variable = { IBR_wars_military_cost_temp = -5 }
+			IBR_wars_change_military_cost = yes
+		}
+	}
+	Iberian_Wars_improvement_operations_battlefield_lessons = {
+		icon = GFX_decision_generic_arms_trade_increase
+		allowed = {
+			is_iberianwar_mainland_nation = yes
+		}
+
+		visible = {
+		has_country_flag = IBR_improvement_operations_opened
+		}
+
+		days_remove = 10
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 45
+		custom_cost_trigger = {
+			set_temp_variable = { t_cp_check = 10 }
+			set_temp_variable = { t_cp_check_extra = t_cp_check }
+			subtract_from_temp_variable = { t_cp_check_extra = 0.01 }
+
+			command_power > t_cp_check_extra
+		}
+		custom_cost_text = decision_cost_cp_dynamic
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -10
+			}
+
+		}
+		remove_effect = {
+			army_experience = 20
+		}
+		modifier = {
+			experience_gain_army_factor = 0.1
+		}
+	}
+}
+########################################################################################POLITICAL MECHANIC
+iberian_wars_political_mechanic = {
+	Iberian_Wars_political_decisions_open = {
+		icon = GFX_decision_generic_political_action_indent
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_political_decisions_opened
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		complete_effect = {
+			set_country_flag = IBR_political_decisions_opened
+		}
+	}
+
+	Iberian_Wars_political_decisions_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_political_decisions_opened
+			is_ai = no
+		}
+		complete_effect = {
+			clr_country_flag = IBR_political_decisions_opened
+		}
+	}
+
+	Iberian_Wars_political_decisions_give_a_speech = {
+		icon = GFX_decision_generic_podium
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_political_decisions_opened
+		}
+
+		custom_cost_trigger = {
+			set_temp_variable = { N = 0.05 }
+			check_variable = { has_war_support > 0 }
+		}
+		custom_cost_text = decision_cost_N_war_sup
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				check_variable = { IBR_wars_legitimacy_var < 40 }
+				add = 500
+			}
+		}
+		days_remove = 20
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 30
+
+		remove_effect = {
+			set_temp_variable = { IBR_wars_legitimacy_temp = 3 }
+			IBR_wars_change_legitimacy = yes
+		}
+		complete_effect = {
+			add_war_support = -0.05
+		}
+	}
+
+	Iberian_Wars_political_decisions_reinforce_police_patrols = {
+		icon = GFX_decision_generic_riot_police
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_political_decisions_opened
+		}
+
+		custom_cost_trigger = {
+			set_temp_variable = { N = 0.05 }
+			check_variable = { has_stability > 0 }
+		}
+		custom_cost_text = decision_cost_N_stability
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				check_variable = { IBR_wars_political_opposition_var > 30 }
+				add = 500
+			}
+		}
+		days_remove = 20
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 30
+
+		remove_effect = {
+			set_temp_variable = { IBR_wars_opposition_temp = -3 }
+			IBR_wars_change_political_opposition = yes
+			TNO_improve_security_policy_effectiveness_low = yes
+		}
+		complete_effect = {
+			add_stability = -0.05
+		}
+	}
+
+	Iberian_Wars_political_decisions_carry_out_propaganda_campaign = {
+		icon = GFX_decision_generic_propaganda
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_political_decisions_opened
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { N = 0.02 }
+			check_variable = { IBR_wars_legitimacy_var > 2 }
+		}
+		custom_cost_text = decision_cost_N_legitimacy
+
+		days_remove = 30
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 15
+
+		complete_effect = {
+			set_temp_variable = { IBR_wars_legitimacy_temp = -2 }
+			IBR_wars_change_legitimacy = yes
+			TNO_improve_press_rights_policy_effectiveness_low = yes
+		}
+		modifier = {
+			war_support_weekly = 0.015
+		}
+	}
+
+	Iberian_Wars_political_decisions_crackdown_opposition = {
+		icon = GFX_decision_generic_use_force
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_political_decisions_opened
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { N = 0.02 }
+			check_variable = { IBR_wars_political_opposition_var < 100 }
+		}
+		custom_cost_text = decision_cost_N_internal_opp
+		days_remove = 30
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 15
+		complete_effect = {
+			set_temp_variable = { IBR_wars_opposition_temp = 2 }
+			IBR_wars_change_political_opposition = yes
+		}
+		modifier = {
+			stability_weekly = 0.015
+		}
+	}
+
+	Iberian_Wars_political_decisions_show_gov_unity = {
+		icon = GFX_decision_generic_handshake
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_political_decisions_opened
+		}
+
+		days_remove = 15
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				check_variable = { IBR_wars_legitimacy_var < 40 }
+				add = 100
+			}
+		}
+		cost = 20
+
+		remove_effect = {
+			set_temp_variable = { IBR_wars_legitimacy_temp = 2.50 }
+			IBR_wars_change_legitimacy = yes
+		}
+	}
+
+	Iberian_Wars_political_decisions_investigate_civil_servants = {
+		icon = GFX_decision_generic_factory_inspection
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_political_decisions_opened
+		}
+
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = IBR_expanded_administration_powers
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				check_variable = { IBR_wars_political_opposition_var > 30 }
+				add = 100
+			}
+		}
+		days_remove = 15
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 10
+
+		cost = 20
+		remove_effect = {
+			set_temp_variable = { IBR_wars_opposition_temp = -1.5 }
+			IBR_wars_change_political_opposition = yes
+			clr_country_flag = IBR_investigated_civil_servants
+			TNO_improve_admin_efficiency_low = yes
+		}
+		complete_effect = {
+			set_country_flag = IBR_investigated_civil_servants
+		}
+	}
+
+	Iberian_Wars_political_decisions_expand_administration_powers = {
+		icon = GFX_decision_generic_document_building
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_political_decisions_opened
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = IBR_investigated_civil_servants
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		days_remove = 30
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 90
+		custom_cost_trigger = {
+			set_temp_variable = { N = 0.02 }
+			set_temp_variable = { M = 0.02 }
+			check_variable = { IBR_wars_legitimacy_var > 3 }
+			check_variable = { IBR_wars_political_opposition_var < 100 }
+		}
+		custom_cost_text = decision_cost_N_legitimacy_internalopp
+
+		remove_effect = {
+			clr_country_flag = IBR_expanded_administration_powers
+		}
+		complete_effect = {
+			set_temp_variable = { IBR_wars_opposition_temp = 2 }
+			IBR_wars_change_political_opposition = yes
+
+			set_temp_variable = { IBR_wars_legitimacy_temp = -2 }
+			IBR_wars_change_legitimacy = yes
+
+			set_country_flag = IBR_expanded_administration_powers
+		}
+		modifier = {
+			political_power_gain = 0.45
+		}
+	}
+
+	Iberian_Wars_political_decisions_promote_war_bonds = {
+		icon = GFX_decision_generic_money
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_political_decisions_opened
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = war_taxes_enabled
+				}
+			}
+		}
+		days_remove = 45
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 60
+
+		cost = 25
+		remove_effect = {
+			set_temp_variable = { money_reserves_temp = 0.095 }
+			econ_money_reserves_change_raw_money = yes
+		}
+		modifier = {
+			gdp_growth_modifier = -0.15
+		}
+	}
+
+	Iberian_Wars_homefront_commodities_decisions_open = {
+		icon = GFX_decision_generic_consumer_goods_indent
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_homefront_commodities_opened
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		complete_effect = {
+			set_country_flag = IBR_homefront_commodities_opened
+		}
+	}
+
+	Iberian_Wars_homefront_commodities_decisions_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_homefront_commodities_opened
+			is_ai = no
+		}
+		complete_effect = {
+			clr_country_flag = IBR_homefront_commodities_opened
+		}
+	}
+
+	Iberian_Wars_homefront_commodities_decisions_relax_rationing = {
+		icon = GFX_decision_generic_supply
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_homefront_commodities_opened
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = IBR_harshened_rationing
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_political_power > 75
+				add = 100
+			}
+		}
+		days_remove = 45
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 60
+
+		cost = 20
+		remove_effect = {
+			set_temp_variable = { IBR_wars_opposition_temp = -2 }
+			IBR_wars_change_political_opposition = yes
+
+			set_temp_variable = { IBR_wars_legitimacy_temp = 3.5 }
+			IBR_wars_change_legitimacy = yes
+
+			clr_country_flag = IBR_relaxed_rationing
+			TNO_improve_poverty_low = yes
+		}
+		complete_effect = {
+			set_country_flag = IBR_relaxed_rationing
+		}
+		modifier = {
+			IBR_wars_hc_consumption_population = 0.25
+		}
+	}
+
+	Iberian_Wars_homefront_commodities_decisions_harshen_rationing = {
+		icon = GFX_decision_generic_supply_red
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_homefront_commodities_opened
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = IBR_relaxed_rationing
+				}
+			}
+		}
+		days_remove = 45
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 60
+
+		cost = 20
+		remove_effect = {
+			set_temp_variable = { IBR_wars_opposition_temp = 3.5 }
+			IBR_wars_change_political_opposition = yes
+
+			set_temp_variable = { IBR_wars_legitimacy_temp = -2 }
+			IBR_wars_change_legitimacy = yes
+
+			clr_country_flag = IBR_harshened_rationing
+			TNO_worsen_poverty_low = yes
+		}
+		complete_effect = {
+			set_country_flag = IBR_harshened_rationing
+		}
+		modifier = {
+			IBR_wars_hc_consumption_population = -0.25
+		}
+	}
+
+	Iberian_Wars_homefront_commodities_decisions_liquidated_useless_assets = {
+		icon = GFX_decision_generic_seizure
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_homefront_commodities_opened
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_political_power > 100
+				add = 100
+			}
+		}
+		days_remove = 20
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 45
+
+		cost = 30
+		remove_effect = {
+			set_temp_variable = { homefront_commodities_total_temp = 10 }
+			IBR_wars_change_hc_quantity = yes
+			set_temp_variable = { money_reserves_temp = 0.055 }
+			econ_money_reserves_change_raw_money = yes
+		}
+
+		modifier = {
+			IBR_wars_hc_production_core_states = -0.10
+		}
+	}
+
+	Iberian_Wars_homefront_commodities_decisions_reorganize_occupied_assets = {
+		icon = GFX_decision_generic_seizure
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_homefront_commodities_opened
+		}
+		available = {
+			num_occupied_states > 0
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 20
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 45
+
+		remove_effect = {
+			set_temp_variable = { homefront_commodities_total_temp = 15 }
+			IBR_wars_change_hc_quantity = yes
+			set_temp_variable = { money_reserves_temp = 0.045 }
+			econ_money_reserves_change_raw_money = yes
+		}
+		modifier = {
+			IBR_wars_hc_production_occupied_states = -0.10
+		}
+	}
+
+	Iberian_Wars_homefront_commodities_decisions_oranganize_agri_loans = {
+		icon = GFX_decision_generic_industrial_farm
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_homefront_commodities_opened
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_political_power > 100
+				add = 100
+			}
+		}
+		available = {
+			any_controlled_state = {
+				OR = {
+					has_state_category = rural
+					has_state_category = town
+					has_state_category = small_island
+					has_state_category = pastoral
+				}
+			}
+		}
+		days_remove = 15
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 60
+
+		cost = 20
+
+		remove_effect = {
+			set_temp_variable = { homefront_commodities_total_temp = 3 }
+			IBR_wars_change_hc_quantity = yes
+			TNO_improve_agriculture_med = yes
+		}
+		complete_effect = {
+			set_temp_variable = { temp_econ_spending_amount = 0.03 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		modifier = {
+			IBR_wars_hc_production_core_states = 0.15
+			IBR_wars_hc_production_occupied_states = 0.05
+		}
+	}
+
+	Iberian_Wars_homefront_commodities_decisions_empower_gov_control_over_industry = {
+		icon = GFX_decision_generic_chess_king
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_homefront_commodities_opened
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			any_controlled_state = {
+				OR = {
+				has_state_category = large_town
+				has_state_category = city
+				has_state_category = large_city
+				}
+			}
+		}
+		days_remove = 15
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 60
+
+		cost = 20
+
+		remove_effect = {
+			set_temp_variable = { homefront_commodities_total_temp = 10 }
+			IBR_wars_change_hc_quantity = yes
+			set_temp_variable = { econ_centralization_temp = 2 }
+			econ_centralization_change = yes
+		}
+
+		modifier = {
+			IBR_wars_hc_production_core_states = 0.15
+			IBR_wars_hc_production_occupied_states = 0.05
+			gdp_growth_modifier = -0.25
+		}
+	}
+
+	Iberian_Wars_economic_decisions_open = {
+		icon = GFX_decision_generic_money_indent
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			NOT = {
+				has_country_flag = IBR_economic_decisions_opened
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		complete_effect = {
+			set_country_flag = IBR_economic_decisions_opened
+		}
+	}
+
+	Iberian_Wars_economic_decisions_close = {
+		icon = GFX_decision_generic_visibility_indent_closed
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_economic_decisions_opened
+			is_ai = no
+		}
+		complete_effect = {
+			clr_country_flag = IBR_economic_decisions_opened
+		}
+	}
+
+	Iberian_Wars_economic_decisions_relax_industrial_regulations = {
+		icon = GFX_decision_generic_break_treaty
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_economic_decisions_opened
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		days_remove = 45
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 90
+
+		custom_cost_trigger = {
+			set_temp_variable = { N = 0.02 }
+			check_variable = { IBR_wars_political_opposition_var < 100 }
+		}
+		custom_cost_text = decision_cost_N_internal_opp
+		complete_effect = {
+			set_temp_variable = { IBR_wars_opposition_temp = 2 }
+			IBR_wars_change_political_opposition = yes
+			TNO_worsen_regulations_policy_effectiveness_med = yes
+		}
+		modifier = {
+			production_factory_max_efficiency_factor = 0.10
+			production_factory_efficiency_gain_factor = 0.10
+		}
+	}
+
+	Iberian_Wars_economic_decisions_focus_on_civ_production = {
+		icon = GFX_decision_generic_factory_blue
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_economic_decisions_opened
+		}
+		ai_will_do = {
+			factor = 215
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = IBR_focus_mil_production
+				}
+			}
+		}
+
+		days_remove = 45
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 90
+
+		custom_cost_trigger = {
+			set_temp_variable = { N = 10 }
+			check_variable = { homefront_commodities_total > 0 }
+		}
+		custom_cost_text = decision_cost_N_homefront_commodities
+
+		remove_effect = {
+			set_temp_variable = { IBR_wars_opposition_temp = -3 }
+			IBR_wars_change_political_opposition = yes
+
+			set_temp_variable = { IBR_wars_legitimacy_temp = 3 }
+			IBR_wars_change_legitimacy = yes
+
+			clr_country_flag = IBR_focus_civ_production
+		}
+
+		complete_effect = {
+			set_temp_variable = { homefront_commodities_total_temp = -10 }
+			IBR_wars_change_hc_quantity = yes
+			set_country_flag = IBR_focus_civ_production
+		}
+		modifier = {
+			consumer_goods_use_modifier = -0.10
+			production_speed_buildings_factor = 0.10
+			production_units_to_GDP_ratio_modifier = 0.25
+		}
+	}
+
+	Iberian_Wars_economic_decisions_focus_on_mil_production = {
+		icon = GFX_decision_generic_factory_red
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_economic_decisions_opened
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 45
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 90
+
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = IBR_focus_civ_production
+				}
+			}
+		}
+
+		custom_cost_trigger = {
+			set_temp_variable = { N = 10 }
+			check_variable = { homefront_commodities_total > 0 }
+		}
+		custom_cost_text = decision_cost_N_homefront_commodities
+
+		remove_effect = {
+			set_temp_variable = { IBR_wars_opposition_temp = 3 }
+			IBR_wars_change_political_opposition = yes
+
+			set_temp_variable = { IBR_wars_legitimacy_temp = -3 }
+			IBR_wars_change_legitimacy = yes
+
+			clr_country_flag = IBR_focus_mil_production
+
+		}
+
+		complete_effect = {
+			set_temp_variable = { homefront_commodities_total_temp = -10 }
+			IBR_wars_change_hc_quantity = yes
+			set_country_flag = IBR_focus_mil_production
+		}
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.2
+			production_factory_max_efficiency_factor = 0.2
+			production_units_to_GDP_ratio_modifier = 0.25
+		}
+	}
+
+	Iberian_Wars_economic_decisions_redirect_fuel_use = {
+		icon = GFX_decision_generic_oil_extraction
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_economic_decisions_opened
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_fuel > 750
+				add = 100
+			}
+		}
+		days_remove = 25
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 15
+
+		custom_cost_trigger = {
+			set_temp_variable = { N = 10 }
+			check_variable = { homefront_commodities_total > 0 }
+		}
+		custom_cost_text = decision_cost_N_homefront_commodities
+
+		remove_effect = {
+			set_temp_variable = { IBR_wars_opposition_temp = 0.5 }
+			IBR_wars_change_political_opposition = yes
+
+			set_temp_variable = { IBR_wars_legitimacy_temp = -0.65 }
+			IBR_wars_change_legitimacy = yes
+		}
+
+		complete_effect = {
+			set_temp_variable = { homefront_commodities_total_temp = -10 }
+			IBR_wars_change_hc_quantity = yes
+			add_fuel = 750
+		}
+		modifier = {
+			base_fuel_gain_factor = 0.1
+		}
+	}
+
+	Iberian_Wars_economic_decisions_approve_industrial_expansion_plan = {
+		icon = GFX_decision_generic_building
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_economic_decisions_opened
+		}
+		days_remove = 45
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 70
+		ai_will_do = {
+			factor = 500
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { N = 40 }
+			check_variable = { homefront_commodities_total > 0 }
+		}
+		custom_cost_text = decision_cost_N_homefront_commodities
+
+		complete_effect = {
+			set_temp_variable = { IBR_wars_free_prod_units_temp = 1 }
+			IBR_wars_change_free_prod_units = yes
+			TNO_improve_industrial_equipment_med = yes
+			set_temp_variable = { homefront_commodities_total_temp = -40 }
+			IBR_wars_change_hc_quantity = yes
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+	}
+
+	Iberian_Wars_economic_decisions_expand_key_location_stocks = {
+		icon = GFX_decision_generic_supply
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_economic_decisions_opened
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		days_remove = 30
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 60
+
+		custom_cost_trigger = {
+			set_temp_variable = { N = 10 }
+			check_variable = { homefront_commodities_total > 0 }
+		}
+		custom_cost_text = decision_cost_N_homefront_commodities
+
+		modifier = {
+			supply_node_range = 0.25
+		}
+
+		complete_effect = {
+			set_temp_variable = { homefront_commodities_total_temp = -10 }
+			IBR_wars_change_hc_quantity = yes
+		}
+	}
+
+	Iberian_Wars_economic_decisions_tackle_inflation = {
+		icon = GFX_decision_generic_economy_graph
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_economic_decisions_opened
+		}
+		days_remove = 10
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { N = 10 }
+			check_variable = { homefront_commodities_total > 0 }
+		}
+		custom_cost_text = decision_cost_N_homefront_commodities
+
+		complete_effect = {
+			set_temp_variable = { homefront_commodities_total_temp = -10 }
+			IBR_wars_change_hc_quantity = yes
+		}
+
+		remove_effect = {
+			set_temp_variable = { inflation_temp = -0.75 }
+			econ_inflation_change = yes
+		}
+		modifier = {
+			political_power_gain = -0.05
+		}
+	}
+
+	Iberian_Wars_economic_decisions_encourage_spending = {
+		icon = GFX_decision_generic_money
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_economic_decisions_opened
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { N = 0.03 }
+			check_variable = { IBR_wars_legitimacy_var > 3 }
+		}
+		custom_cost_text = decision_cost_N_legitimacy
+		ai_will_do = {
+			factor = 0
+		}
+		days_remove = 30
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		days_re_enable = 60
+
+		cost = 20
+		remove_effect = {
+			set_temp_variable = { money_reserves_temp = 0.025 }
+			econ_money_reserves_change_raw_money = yes
+		}
+		complete_effect = {
+			set_temp_variable = { IBR_wars_legitimacy_temp = -3 }
+			IBR_wars_change_legitimacy = yes
+		}
+		modifier = {
+			gdp_growth_modifier = 0.5
+		}
+	}
+
+	Iberian_Wars_economic_decisions_negotiate_with_debtors = {
+		icon = GFX_decision_generic_investors
+		visible = {
+			is_iberianwar_mainland_nation = yes
+			has_country_flag = IBR_economic_decisions_opened
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		days_remove = 20
+		cancel_trigger = {
+			has_country_flag = Iberian_Wars_Resigned
+		}
+		fire_only_once = yes
+
+		cost = 35
+		remove_effect = {
+			set_temp_variable = { interest_rates_temp = -1 }
+			econ_interest_rates_change = yes
+		}
+	}
+}

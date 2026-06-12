@@ -1,0 +1,37 @@
+ideas = {
+	country = {
+		SAO_Civic_Association = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SAO_Civic_Association" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SAO_The_Civic_Association
+			modifier = {
+				political_power_gain = 0.15
+				drift_defence_factor = -0.3
+			}
+		}
+		SAO_Glorified_Naval_Base = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SAO_Glorified_Naval_Base" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_solid_naval_force
+			modifier = {
+				political_power_gain = -0.2
+				industrial_capacity_dockyard = 0.2
+				dockyard_donations = 1
+				gdp_growth_modifier = 1
+				stability_factor = -0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,177 @@
+ideas = {
+	country = {
+		MOC_casino_monte_carlo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_casino_monte_carlo" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = MOC_casino_de_monte_carlo
+			modifier = {
+				production_factory_max_efficiency_factor = -0.10
+				stability_factor = -0.15
+				consumer_goods_use_modifier = -0.05
+			}
+		}
+		MOC_rainier_reform = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_rainier_reform" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = MOC_rainiers_reformism
+			modifier = {
+				political_power_gain = 0.5
+				stability_factor = 0.1
+			}
+		}
+		MOC_italian_oversight = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_italian_oversight" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = MOC_italian_oversight
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+		MOC_the_red_resort = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_the_red_resort" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_communism_ascendant
+			modifier = {
+			}
+		}
+		MOC_union_des_syndicats_de_monaco = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_union_des_syndicats_de_monaco" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_widespread_protests
+			modifier = {
+			}
+		}
+		MOC_italian_guidance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_italian_guidance" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ITA_italian_economy 
+			modifier = {
+			}
+		}
+		MOC_europes_art_gallery = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_europes_art_gallery" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = IBR_mediterranean_tech_exchange
+			modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				stability_factor = 0.02
+				consumer_goods_use_modifier = 0.10
+			}
+		}
+		MOC_a_toy_model_of_fascism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_a_toy_model_of_fascism" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ITA_fascist_generic
+			modifier = {
+			}
+		}
+		MOC_italian_domination = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_italian_domination" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ITA_economy_generic
+			modifier = {
+				stability_factor = -0.20
+			}
+		}
+		MOC_the_casinos_renaissance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_the_casinos_renaissance" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = MOC_casino_de_monte_carlo
+			modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				stability_factor = 0.02
+				consumer_goods_use_modifier = -0.10
+			}
+		}
+		MOC_rainiers_constitution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_rainiers_constitution" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = MOC_rainiers_reformism
+			modifier = {
+				political_power_gain = 0.75
+				conservatism_drift = 0.02
+				liberalism_drift = 0.02
+			}
+		}
+		MOC_italian_interference = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOC_italian_interference" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ITA_military_generic
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,162 @@
+ideas = {
+	country = {
+		ALG_Storm_Clouds_Algiers = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ALG_Storm_Clouds_Algiers" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ALG_storm_and_thunder
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.15
+				military_expenditures_factor = 0.1
+				consumer_goods_use_modifier = 0.2
+			}
+		}
+		ALG_Spoiled_Victory = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ALG_Spoiled_Victory" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ALG_sinking_with_the_ship
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.1
+				military_expenditures_factor = 0.25
+				consumer_goods_use_modifier = 0.2
+			}
+		}
+		ALG_Coalition_Governance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ALG_Coalition_Governance" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ILG_peacekeeping_intervention
+			modifier = {
+				conscription_factor = 0.20
+				political_power_factor = -0.1
+				military_expenditures_factor = -0.1
+			}
+		}
+		ALG_Paramilitarism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ALG_Paramilitarism" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ALG_the_casbahs_volunteers
+			modifier = {
+				conscription_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		ALG_Wartime_Droughts = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ALG_Wartime_Droughts" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = FLA_the_withered_colony
+			modifier = {
+				political_power_gain = -0.2
+				local_resources_factor = -0.1
+			}
+		}
+		ALG_PostWar_Oasis = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ALG_PostWar_Oasis" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ALG_ground_to_a_halt
+			modifier = {
+				political_power_gain = 0.15
+				local_resources_factor = 0.15
+			}
+		}
+
+		ALG_Divided_Loyalties = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ALG_Divided_Loyalties" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SLG_divided_loyalties
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.15
+			}
+		}
+
+		ALG_Roots_Oujda_Clan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ALG_Roots_Oujda_Clan" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ALG_roots_of_the_oujda_clan
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = -0.1
+			}
+		}
+		ALG_Shining_Star = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ALG_Shining_Star" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ALG_shining_star
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.125
+			}
+		}
+		ALG_ENI_Mandate = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ALG_ENI_Mandate" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ILG_eni_mandate
+			modifier = {
+				political_power_gain = -0.1
+				local_resources_factor = 0.125
+				gdp_growth_modifier = 0.5
+			}
+		}
+	}
+}

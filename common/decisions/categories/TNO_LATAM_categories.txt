@@ -1,0 +1,18 @@
+SATW_dummy_prepare_category = {
+
+	allowed = {
+		is_ai = yes
+		OR = {
+			original_tag = BRA
+			original_tag = ARG
+			original_tag = URG
+			original_tag = PAR
+			original_tag = BOL
+			original_tag = CHL
+			original_tag = STC
+		}
+	}
+	visible = {
+		is_ai = yes
+	}
+}

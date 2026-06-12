@@ -1,0 +1,119 @@
+characters = {
+	AAF_Xavier_Richert = {
+		name = AAF_Xavier_Richert
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Antarctica/Portrait_AAF_Xavier_Richert.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism_antarctic_administration_subtype
+			expire = "1999.1.1"
+			desc = POLITICS_XAVIER_RICHERT_DESC
+			traits = {
+				Prefet_des_Alfreds
+			}
+			id = -1
+		}
+	}
+	AAF_Jacques_Yves_Cousteau = {
+		name = AAF_Jacques_Yves_Cousteau
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Antarctica/Portrait_AAF_Jacques_Cousteau.png"
+				small = "GFX_idea_AAF_Jacques_Cousteau"
+			}
+		}
+		country_leader = {
+			ideology = paternalism_antarctic_administration_subtype
+			expire = "1999.1.1"
+			traits = {
+			}
+			id = -1
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = AAF_Jacques_Cousteau_for
+			allowed = { original_tag = AAF }
+			traits = {
+				foreign_minister
+				paternalism
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AAF_Pierre_Antoine_Cousteau = {
+		name = AAF_Pierre_Antoine_Cousteau
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Antarctica/Portrait_AAF_Pierre_Cousteau.png"
+				small = "GFX_idea_AAF_Pierre_Cousteau"
+			}
+		}
+		country_leader = {
+			ideology = fascism_antarctic_administration_subtype
+			expire = "1999.1.1"
+			traits = {
+			}
+			id = -1
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = AAF_Pierre_Cousteau_sec
+			allowed = { original_tag = AAF }
+			traits = {
+				security_minister
+				fascism
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AAF_Jacques_Dequecker = {
+		name = AAF_Jacques_Dequecker
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AAF_Jacques_Dequecker"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AAF_Jacques_Dequecker_hog
+			allowed = { original_tag = AAF }
+			traits = {
+				head_of_government
+				despotism
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AAF_Jean_Sapin_Jaloustre = {
+		name = AAF_Jean_Sapin_Jaloustre
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AAF_Jean_Sapin_Jaloustre"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = AAF_Jean_Sapin_Jaloustre_eco
+			allowed = { original_tag = AAF }
+			traits = {
+				economy_minister
+				paternalism
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+}

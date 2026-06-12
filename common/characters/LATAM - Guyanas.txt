@@ -1,0 +1,752 @@
+characters = {
+	### Guyana ###
+	GUY_Peter_Aguiar = {
+		name = GUY_Peter_Aguiar
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUY/Portrait_Guyana_Peter_D_Aguiar.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_Peter_D_Aguiar_DESC"
+			ideology = liberal_conservatism_big_tent_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GUY_Forbes_Burnham = {
+		name = GUY_Forbes_Burnham
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUY/Portrait_Guyana_Forbes_Burnham.png"
+				small = "GFX_idea_GUY_minister_Forbes_Burnham"
+			}
+		}
+		country_leader = {
+			expire = "1994.4.20"
+			desc = "POLITICS_GUY_FORBES_BURNHAM_DESC"
+			ideology = paternalism_social_nationalism_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GUY_Forbes_Burnham_hog
+			allowed = { original_tag = GUY }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GUY_John_Carter = {
+		name = GUY_John_Carter
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GUY_minister_John_Carter"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = GUY_John_Carter_for
+			allowed = { original_tag = GUY }
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			desc = "POLITICS_Brindley_Benn_DESC"
+			expire = "1994.4.20"
+			ideology = liberalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GUY_Lionel_Luckhoo = { #More like Cuckoo
+		name = GUY_Lionel_Luckhoo
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GUY_minister_Lionel_Luckhoo"
+				large = "gfx/leaders/GUY/Portrait_Guyana_Lionel_Luckhoo.png"
+			}
+		}
+		country_leader = {
+			expire = "1994.4.20"
+			desc = "POLITICS_GUY_LIONEL_LUCKHOO_DESC"
+			ideology = conservatism_populist_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_LIONEL_LUCKHOO_DESC_2"
+			expire = "1994.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = GUY_Lionel_Luckhoo_eco
+			allowed = { original_tag = GUY }
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GUY_Plotemy_Reid = {
+		name = GUY_Plotemy_Reid
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GUY_minister_Plotemy_Reid"
+				#large = "gfx/leaders/GUY/Portrait_Guyana_Plotemy_Reid.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_PLOTEMY_REID_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GUY_Plotemy_Reid_sec
+			allowed = { original_tag = GUY }
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	GUY_Cheddi_Jagan = {
+		name = GUY_Cheddi_Jagan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUY/Portrait_Guyana_Cheddi_Jagan.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_CHEDDI_JAGAN_DESC"
+			expire = "1994.4.20"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_CHEDDI_JAGAN_DESC"
+			expire = "1994.4.20"
+			ideology = socialist_left_wing_nationalism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_CHEDDI_JAGAN_DESC"
+			expire = "1994.4.20"
+			ideology = socialist_1_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	GUY_Hugh_Desmond_Hoyte = {
+		name = GUY_Hugh_Desmond_Hoyte
+		portraits = {
+			civilian = {
+				#small = "GFX_idea_GUY_minister_Hugh_Desmond_Hoyte"
+				large = "gfx/leaders/GUY/Portrait_Guyana_Hugh_Desmond_Hoyte.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_DESMOND_HOYLE_DESC"
+			expire = "1994.4.20"
+			ideology = paternalism_2_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	GUY_Clarence_Price = {
+		name = GUY_Clarence_Price
+		portraits = {
+			civilian = {
+				#small = "GFX_idea_GUY_minister_Hugh_Desmond_Hoyte"
+				large = "gfx/leaders/GUY/Portrait_Guyana_Clarence_Price.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_CLARENCE_PRICE_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_1_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_CLARENCE_PRICE_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	GUY_Richard_Luyt = {
+		name = GUY_Richard_Luyt
+		portraits = {
+			civilian = {
+				#small = "GFX_idea_GUY_minister_Richard_Luyt"
+				large = "gfx/leaders/GUY/Portrait_Guyana_Richard_Luyt.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_RICHARD_LUYT_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	GUY_Brindley_Benn = {
+		name = GUY_Brindley_Benn
+		portraits = {
+			civilian = {
+				#small = "GFX_idea_GUY_minister_Brindley_Benn"
+				large = "gfx/leaders/GUY/Portrait_Guyana_Brindley_Benn.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_BRINDLEY_BENN_DESC"
+			expire = "1994.4.20"
+			ideology = socialist_revolutionary_frontism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	GUY_Occupation_Authority = {
+		name = GUY_Occupation_Authority
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUY/Portrait_Guyana_Occupation_Authority.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUY_OCCUPIED_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	GUY_Cecil_Clyde = {
+		name = GUY_Cecil_Clyde
+		portraits = {
+			army = {
+				large = "gfx/leaders/GUY/Portrait_Guyana_Cecil_Clyde_Martindale.png"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader }
+
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	### Suriname ###
+	SUR_Aat_Rhijn = {
+		name = SUR_Aat_Rhijn
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Aat_van_Rhijn.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "AAT_VAN_RHIJN_POLITICS_DESC"
+			ideology = paternalism_anocracy_subtype #Herrenvolk
+			traits = { }
+			id = -1
+		}
+	}
+	
+	SUR_Gerard_Helders = {
+		name = SUR_Gerard_Helders
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Gerard_Helders.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_GERARD_HELDERS_DESC"
+			ideology = paternalism_oligarchy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	SUR_Ivo_Samkalden = {
+		name = SUR_Ivo_Samkalden
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Ivo_Samkalden.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_IVO_SAMKALDEN_DESC"
+			ideology = paternalism_left_wing_corporatism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_IVO_SAMKALDEN_DESC"
+			ideology = progressivism_neocorporatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	SUR_Jo_Meyen = {
+		name = SUR_Jo_Meyen
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Jo_Meyen.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_JO_MEYEN_DESC"
+			ideology = paternalism_oligarchy_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_JO_MEYEN_DESC"
+			ideology = paternalism_1_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	SUR_Johan_Adolf_Pengel = {
+		name = SUR_Johan_Adolf_Pengel
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Johan_Adolf_Pengel.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_ADOLF_PENGEL_DESC"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_ADOLF_PENGEL_DESC"
+			ideology = progressivism_1_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	SUR_Johan_Kraag = {
+		name = SUR_Johan_Kraag
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Johan_Kraag.png"
+			}
+		}
+	}
+
+	SUR_Jagernath_Lachmon = {
+		name = SUR_Jagernath_Lachmon
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Jagernath_Lachmon.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_JAGERNATH_LACHMON_DESC"
+			ideology = conservatism_progressive_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_SUR_JAGERNATH_LACHMON_DESC"
+			expire = "1985.4.20"
+			ideology = liberal_conservatism_centrist_progressivism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	SUR_Gaius_de_Gaay_Fortman = {
+		name = SUR_Gaius_de_Gaay_Fortman
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Gaius_de_Gaay_Fortman.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_GAIUS_GAAY_FORTMAN_DESC"
+			ideology = paternalism_transitioning_democracy_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_GAIUS_GAAY_FORTMAN_DESC"
+			ideology = liberal_conservatism_christian_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	SUR_Just_Rens = {
+		name = SUR_Just_Rens
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Just_Rens.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_JUST_RENS_DESC"
+			ideology = paternalism_anocracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	SUR_Frans_van_der_Veen = {
+		name = SUR_Frans_van_der_Veen
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Frans_van_der_Veen.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_FRANS_VAN_VEEN_DESC"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	SUR_Herman_van_Roijen = {
+		name = SUR_Herman_van_Roijen
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Herman_van_Roijen.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_HERMAN_VAN_ROIJEN_DESC"
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	SUR_Olton_van_Genderen = {
+		name = SUR_Olton_van_Genderen
+		portraits = {
+			#civilian = {
+			#	large = "gfx/leaders/SUR/Portrait_Suriname_Olton_van_Genderen.png"
+			#}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = ""
+			ideology = paternalism_provisional_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	SUR_Juliana = {
+		name = SUR_Juliana
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Juliana.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = ""
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	CUR_Juliana = {
+		name = SUR_Juliana
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Juliana.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = ""
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	CUR_Isaac_Arend_Diepenhorst = {
+		name = SUR_Isaac_Arend_Diepenhorst
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUR/Portrait_Suriname_Isaac_Arend_Diepenhorst.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_SUR_ISAAC_AREND_DIEPENHORST_DESC"
+			ideology = conservatism_progressive_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	### Guiana-Cayenne ###
+	GUC_Angelo_Almeida = {
+		name = GUC_Angelo_Almeida
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUC/Portrait_GUC_Angelo_Nolasco_de_Almeida.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_Angelo_Nolasco_de_Almeida_DESC"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	GUC_Pauxy_Gentil_Nunes = {
+		name = GUC_Pauxy_Gentil_Nunes
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GUC_minister_Pauxy_Gentil_Nunes"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GUC_Pauxy_Gentil_Nunes_hog
+			allowed = { original_tag = GUC }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GUC_Helio_Pennafort = {
+		name = GUC_Helio_Pennafort
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GUC_minister_Helio_Pennafort"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = GUC_Helio_Pennafort_for
+			allowed = { original_tag = GUC }
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GUC_Luis_Mendes_da_Silva = {
+		name = GUC_Luis_Mendes_da_Silva
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GUC_minister_Luis_Mendes_da_Silva"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = GUC_Luis_Mendes_da_Silva_eco
+			allowed = { original_tag = GUC }
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GUC_Fernando_Belfort = {
+		name = GUC_Fernando_Belfort
+		portraits = {
+			army = {
+				large = "gfx/leaders/GUC/Portrait_GUC_Fernando_Belfort_Bethlem.png"
+			}
+			civilian = {
+				small = "GFX_idea_GUC_minister_Fernando_Belfort_Bethlem"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer infantry_leader }
+
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GUC_Fernando_Belfort_Bethlem_sec
+			allowed = { original_tag = GUC }
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GUC_OAS_Mandate = {
+		name = GUC_OAS_Mandate
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUC/Portrait_GUC_OAS_Mandate.png"
+			}
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = ""
+			ideology = paternalism_provisional_government_subtype
+			desc = "POLITICS_GUC_OAS_Mandate_DESC"
+			traits = { }
+			id = -1
+		}
+	}
+	GUC_Justin_Catayee = {
+		name = GUC_Justin_Catayee
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUC/Portrait_GUC_Justin_Catayee.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUC_Justin_Catayee_DESC"
+			expire = "1985.4.20"
+			ideology = socialist_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_GUC_Justin_Catayee_DESC"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	GUC_Leon_Gontran_Damas = {
+		name = GUC_Leon_Gontran_Damas
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUC_Leon_Gontran_Damas_DESC"
+			expire = "1985.4.20"
+			ideology = socialist_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	GUC_Gaston_Monnerville = {
+		name = GUC_Gaston_Monnerville
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUC_Gaston_Monnerville_DESC"
+			expire = "1985.4.20"
+			ideology = liberal_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+
+###Essequibo
+	ESQ_Valerie_Hart = {
+		name = ESQ_Valerie_Hart
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GUY/Portrait_Guyana_Valerie_Hart.png"
+			}
+		}
+		gender = female
+		country_leader = {
+			expire = "1985.4.20"
+			desc = "POLITICS_VALERIE_HART_DESC"
+			ideology = paternalism_provisional_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+}

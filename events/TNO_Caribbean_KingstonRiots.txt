@@ -1,0 +1,22 @@
+# Anna's Notes /===/
+# Below is the namespace reserved for the Jamaican Kingston Riots.
+# Some of the events will be de-facto duplicates of the existing ones until further commits follow.
+# Basically, below is something temporary. Easier to mass-replace it this way later.
+# /===/
+add_namespace = JAM.kingston_riots
+
+# Periodic mechanical pulse.
+country_event = {
+	id = JAM.kingston_riots.1
+	is_triggered_only = yes
+	option = {
+		name = JAM.kingston_riots.1.a
+		if = {
+			limit = { has_global_flag = JAM_has_kingston_riots }
+			KingstonRiots_ComputeCycle = yes
+			country_event = { id = JAM.kingston_riots.1 days = 5 }
+		}
+	}
+
+	hidden = yes
+}

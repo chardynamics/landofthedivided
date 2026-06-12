@@ -1,0 +1,380 @@
+ARG_ucr_unity_gui_setup = {
+	set_variable = { mid_influence = 51 }
+	set_variable = { ud_influence = 9 }
+	set_variable = { dp_influence = 40 }
+	set_variable = { UCR_unity = 40 }
+	clamp_variable = {
+		var = mid_influence
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ud_influence
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = dp_influence
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = UCR_unity
+		min = 0
+		max = 100
+	}
+	UCR_GUI_piechart_refresh = yes
+}
+
+###Increase/Decrease Effects Start###
+
+#MID effects
+
+ARG_increase_mid_2_5 = {
+	add_to_variable = { mid_influence = 2.5 }
+	ARG_factional_var_check_mid = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_increasemid_2_5
+}
+
+ARG_increase_mid_5 = {
+	add_to_variable = { mid_influence = 5 }
+	ARG_factional_var_check_mid = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_increasemid_5
+}
+
+ARG_increase_mid_10 = {
+	add_to_variable = { mid_influence = 10 }
+	ARG_factional_var_check_mid = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_increasemid_10
+}
+
+ARG_decrease_mid_2_5 = {
+	add_to_variable = { mid_influence = -2.5 }
+	ARG_factional_var_check_mid = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_decreasemid_2_5
+}
+
+ARG_decrease_mid_5 = {
+	add_to_variable = { mid_influence = -5 }
+	ARG_factional_var_check_mid = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_decreasemid_5
+}
+
+ARG_decrease_mid_10 = {
+	add_to_variable = { mid_influence = -10 }
+	ARG_factional_var_check_mid = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_decreasemid_10
+}
+
+#UD effects
+
+ARG_increase_ud_2_5 = {
+	add_to_variable = { ud_influence = 2.5 }
+	ARG_factional_var_check_ud = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_increaseud_2_5
+}
+
+ARG_increase_ud_5 = {
+	add_to_variable = { ud_influence = 5 }
+	ARG_factional_var_check_ud = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_increaseud_5
+}
+
+ARG_increase_ud_10 = {
+	add_to_variable = { ud_influence = 10 }
+	ARG_factional_var_check_ud = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_increaseud_10
+}
+
+ARG_decrease_ud_2_5 = {
+	add_to_variable = { ud_influence = -2.5 }
+	ARG_factional_var_check_ud = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_decreaseud_2_5
+}
+
+ARG_decrease_ud_5 = {
+	add_to_variable = { ud_influence = -5 }
+	ARG_factional_var_check_ud = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_decreaseud_5
+}
+
+ARG_decrease_ud_10 = {
+	add_to_variable = { ud_influence = -10 }
+	ARG_factional_var_check_ud = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_decreaseud_10
+}
+
+#DP Effects
+
+ARG_increase_dp_2_5 = {
+	add_to_variable = { dp_influence = 2.5 }
+	ARG_factional_var_check_dp = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_increasedp_2_5
+}
+
+ARG_increase_dp_5 = {
+	add_to_variable = { dp_influence = 5 }
+	ARG_factional_var_check_dp = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_increasedp_5
+}
+
+ARG_increase_dp_10 = {
+	add_to_variable = { dp_influence = 10 }
+	ARG_factional_var_check_dp = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_increasedp_10
+}
+
+ARG_decrease_dp_2_5 = {
+	add_to_variable = { dp_influence = -2.5 }
+	ARG_factional_var_check_dp = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_decreasedp_2_5
+}
+
+ARG_decrease_dp_5 = {
+	add_to_variable = { dp_influence = -5 }
+	ARG_factional_var_check_dp = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_decreasedp_5
+}
+
+ARG_decrease_dp_10 = {
+	add_to_variable = { dp_influence = -10 }
+	ARG_factional_var_check_dp = yes
+	UCR_GUI_piechart_refresh = yes
+	custom_effect_tooltip = ARG_decreasedp_10
+}
+
+# UCR unity effects
+
+ARG_increase_ucrunity_2_5 = {
+	add_to_variable = { UCR_unity = 2.5 }
+	custom_effect_tooltip = ARG_increaseucrunity_2_5
+}
+
+ARG_increase_ucrunity_5 = {
+	add_to_variable = { UCR_unity = 5 }
+	custom_effect_tooltip = ARG_increaseucrunity_5
+}
+
+ARG_increase_ucrunity_10 = {
+	add_to_variable = { UCR_unity = 10 }
+	custom_effect_tooltip = ARG_increaseucrunity_10
+}
+
+ARG_decrease_ucrunity_2_5 = {
+	add_to_variable = { UCR_unity = -2.5 }
+	custom_effect_tooltip = ARG_decreaseucrunity_2_5
+}
+
+ARG_decrease_ucrunity_5 = {
+	add_to_variable = { UCR_unity = -5 }
+	custom_effect_tooltip = ARG_decreaseucrunity_5
+}
+
+ARG_decrease_ucrunity_10 = {
+	add_to_variable = { UCR_unity = -10 }
+	custom_effect_tooltip = ARG_decreaseucrunity_10
+}
+
+###Increase/Decrease Effects End###
+
+ARG_total_percentage = {
+	clear_variable = ucr_total_percentage
+	set_variable = {ucr_total_percentage = mid_influence}
+	add_to_variable = {ucr_total_percentage = ud_influence}
+	add_to_variable = {ucr_total_percentage = dp_influence}
+}
+
+ARG_calculate_others_mid = {
+	set_temp_variable = { temp_variable_opposite_percentage = ud_influence }
+	add_to_temp_variable = { temp_variable_opposite_percentage = dp_influence }
+
+	set_variable = { ud_multiplier = ud_influence }
+	divide_variable = { ud_multiplier = temp_variable_opposite_percentage }
+
+	set_variable = { dp_multiplier = dp_influence }
+	divide_variable = { dp_multiplier = temp_variable_opposite_percentage }
+}
+
+ARG_calculate_others_ud = {
+	set_temp_variable = { temp_variable_opposite_percentage = mid_influence }
+	add_to_temp_variable = { temp_variable_opposite_percentage = dp_influence }
+
+	set_variable = { mid_multiplier = mid_influence }
+	divide_variable = { mid_multiplier = temp_variable_opposite_percentage }
+
+	set_variable = { dp_multiplier = dp_influence }
+	divide_variable = { dp_multiplier = temp_variable_opposite_percentage }
+}
+
+ARG_calculate_others_dp = {
+	set_temp_variable = { temp_variable_opposite_percentage = mid_influence }
+	add_to_temp_variable = { temp_variable_opposite_percentage = ud_influence }
+
+	set_variable = { mid_multiplier = mid_influence }
+	divide_variable = { mid_multiplier = temp_variable_opposite_percentage }
+
+	set_variable = { ud_multiplier = ud_influence }
+	divide_variable = { ud_multiplier = temp_variable_opposite_percentage }
+}
+
+ARG_factional_var_check_mid = {
+	ARG_total_percentage = yes
+	set_temp_variable = { ucr_temp_variable_needs_adding = 100 }
+	subtract_from_temp_variable = {ucr_temp_variable_needs_adding = ucr_total_percentage}
+	set_variable = {ucr_needs_adding_multiplication = ucr_temp_variable_needs_adding}
+	ARG_calculate_others_mid = yes
+	if = {
+		limit = {
+			check_variable = {
+				ucr_total_percentage > 100
+			}
+		}
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = ud_multiplier }
+		add_to_variable = { ud_influence = ucr_temp_variable_needs_adding }
+
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = dp_multiplier }
+		add_to_variable = { dp_influence = ucr_temp_variable_needs_adding }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				ucr_total_percentage < 100
+			}
+		}
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = dp_multiplier }
+		add_to_variable = { dp_influence = ucr_temp_variable_needs_adding }
+
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = ud_multiplier }
+		add_to_variable = { ud_influence = ucr_temp_variable_needs_adding }
+	}
+}
+
+ARG_factional_var_check_ud = {
+	ARG_total_percentage = yes
+	set_temp_variable = {ucr_temp_variable_needs_adding = 100}
+	subtract_from_temp_variable = {ucr_temp_variable_needs_adding = ucr_total_percentage}
+	set_variable = {ucr_needs_adding_multiplication = ucr_temp_variable_needs_adding}
+	ARG_calculate_others_ud = yes
+	if = {
+		limit = {
+			check_variable = {
+				ucr_total_percentage > 100
+			}
+		}
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = mid_multiplier }
+		add_to_variable = { mid_influence = ucr_temp_variable_needs_adding }
+
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = dp_multiplier }
+		add_to_variable = { dp_influence = ucr_temp_variable_needs_adding }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				ucr_total_percentage < 100
+			}
+		}
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = dp_multiplier }
+		add_to_variable = { dp_influence = ucr_temp_variable_needs_adding }
+
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = mid_multiplier }
+		add_to_variable = { mid_influence = ucr_temp_variable_needs_adding }
+	}
+}
+
+ARG_factional_var_check_dp = {
+	ARG_total_percentage = yes
+	set_temp_variable = {ucr_temp_variable_needs_adding = 100}
+	subtract_from_temp_variable = {ucr_temp_variable_needs_adding = ucr_total_percentage}
+	set_variable = {ucr_needs_adding_multiplication = ucr_temp_variable_needs_adding}
+	ARG_calculate_others_dp = yes
+	if = {
+		limit = {
+			check_variable = {
+				ucr_total_percentage > 100
+			}
+		}
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = mid_multiplier }
+		add_to_variable = { mid_influence = ucr_temp_variable_needs_adding }
+
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = ud_multiplier }
+		add_to_variable = { ud_influence = ucr_temp_variable_needs_adding }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				ucr_total_percentage < 100
+			}
+		}
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = ud_multiplier }
+		add_to_variable = { ud_influence = ucr_temp_variable_needs_adding }
+
+		set_temp_variable = { ucr_temp_variable_needs_adding = ucr_needs_adding_multiplication }
+		multiply_temp_variable = { ucr_temp_variable_needs_adding = mid_multiplier }
+		add_to_variable = { mid_influence = ucr_temp_variable_needs_adding }
+	}
+}
+
+# Pie chart stuff, code stolen from Flax - Azhadron :wertroll:
+
+UCR_GUI_piechart_refresh = {
+	# Compute start and end values
+	# MID is first so its start is 0 and end is just its %
+	set_temp_variable = { mid_st = 0 }
+	set_temp_variable = { mid_end = mid_influence }
+
+	# Compute frame = SSSEEE by shifting over the start number 3 places
+	# and adding the end number
+	set_variable = { mid_frame = mid_st }
+	round_variable = mid_frame
+	multiply_variable = { mid_frame = 1000 }
+	add_to_variable = { mid_frame = mid_end }
+
+	# Compute start and end values
+
+	set_temp_variable = { dp_st = mid_end }
+	set_temp_variable = { dp_end = dp_st }
+	add_to_temp_variable = { dp_end = dp_influence }
+
+	set_variable = { dp_frame = dp_st }
+	round_variable = dp_frame
+	multiply_variable = { dp_frame = 1000 }
+	add_to_variable = { dp_frame = dp_end }
+
+	set_temp_variable = { ud_st = dp_end }
+	set_temp_variable = { ud_end = ud_st }
+	add_to_temp_variable = { ud_end = ud_influence }
+
+	set_variable = { ud_frame = ud_st }
+	round_variable = ud_frame
+	multiply_variable = { ud_frame = 1000 }
+	add_to_variable = { ud_frame = ud_end }
+}
+

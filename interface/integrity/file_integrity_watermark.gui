@@ -1,0 +1,25 @@
+guiTypes = {
+	containerWindowType = {
+		name = "file_integrity_watermark"
+		position = { x = -1680 y = 0 }
+
+		background = {
+			name = "Background"
+            # alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "watermark_header"
+			font = "aldrich_24_outline"
+            orientation = center
+            # alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "watermark_text"
+			font = "aldrich_18_outline"
+            orientation = center
+            # alwaystransparent = yes
+		}
+	}
+}

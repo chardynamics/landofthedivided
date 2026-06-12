@@ -1,0 +1,345 @@
+characters = {
+	GHA_Komla_Agbeli_Gbedemah = {
+		name = GHA_Komla_Agbeli_Gbedemah
+		portraits = {
+			civilian = { large = "gfx/leaders/GHA/Portrait_GHA_Komla_Agbeli_Gbedemah.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_KOMLA_ADAHLI_DAHDEMAH_DESC"
+			expire = "1999.1.1"
+			ideology = paternalism_national_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GHA_Edward_Akufo_Addo = {
+		name = GHA_Edward_Akufo_Addo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GHA/Portrait_GHA_Edward_Akufo_Addo.png"
+				small = "GFX_idea_GHA_Edward_Akufo_Addo"
+			}
+		}
+		country_leader = {
+			#desc = "POLITICS_EDWARD_AKUFO_ADDO_DESC"
+			expire = "1999.1.1"
+			ideology = progressivism_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GHA_Edward_Akufo_Addo_hog
+			allowed = { original_tag = GHA }
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GHA_Ebenezer_Ako_Adjei = {
+		name = GHA_Ebenezer_Ako_Adjei
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GHA/Portrait_Ghana_Ebenezer_Ako_Adjei.png"
+				small = "GFX_idea_GHA_Ebenezer_Ako_Adjei"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = GHA_Ebenezer_Ako_Adjei_for
+			allowed = { original_tag = GHA }
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GHA_Emmanuel_Obetsebi_Lamptey = {
+		name = GHA_Emmanuel_Obetsebi_Lamptey
+		portraits = {
+			civilian = { small = "GFX_idea_GHA_Emmanuel_Obetsebi_Lamptey" }
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = GHA_Emmanuel_Obetsebi_Lamptey_eco
+			allowed = { original_tag = GHA }
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GHA_Ignatius_Kutu_Acheampong = {
+		name = GHA_Ignatius_Kutu_Acheampong
+		portraits = {
+			civilian = { small = "GFX_idea_GHA_Ignatius_Kutu_Acheampong" }
+			army = {
+				large = "gfx/leaders/GHA/Portrait_GHA_Ignatius_Kutu_Acheampong.png"
+				small = "GFX_idea_GHA_Ignatius_Kutu_Acheampong"
+			}
+		}
+		field_marshal = {
+			traits = { organisational_leader fast_planner }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GHA_Ignatius_Kutu_Acheampong_sec
+			allowed = { original_tag = GHA }
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GHA_Kwame_Nkrumah = {
+		name = GHA_Kwame_Nkrumah
+		portraits = {
+			civilian = { large = "gfx/leaders/GHA/Portrait_GHA_Kwame_Nkrumah.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_KWAME_NKRUMAH_DESC"
+			expire = "1999.1.1"
+			ideology = socialist_african_socialism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	CPP_kwame_nkrumah = {
+		name = GHA_Kwame_Nkrumah
+		portraits = {
+			civilian = { large = "gfx/leaders/GHA/Portrait_GHA_Kwame_Nkrumah.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_KWAME_NKRUMAH_DESC"
+			expire = "1999.1.1"
+			ideology = socialist_african_socialism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GHA_Sylvanus_Olympio = {
+		name = GHA_Sylvanus_Olympio
+		portraits = {
+			civilian = { large = "gfx/leaders/GHA/Portrait_GHA_Sylvanus_Olympio.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_SYLVANUS_OLYMPIO_DESC"
+			expire = "1999.1.1"
+			ideology = liberalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GHA_Nicolas_Grunitzky = {
+		name = GHA_Nicolas_Grunitzky
+		portraits = {
+			civilian = { large = "gfx/leaders/GHA/Portrait_GHA_Nicolas_Grunitzky.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_NICOLAS_GRUNITZKY_DESC"
+			expire = "1999.1.1"
+			ideology = conservatism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			#desc = "POLITICS_NICOLAS_GRUNITZKY_DESC"
+			expire = "1973.1.1"
+			ideology = paternalism_anocracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GHA_Fred_Akuffo = {
+		name = GHA_Fred_Akuffo
+		portraits = {
+			civilian = { large = "gfx/leaders/GHA/Portrait_GHA_Fred_Akuffo.png" }
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_Fred_Akuffo.png" }
+		}
+		corps_commander = {
+			traits = { war_hero trait_reckless }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		country_leader = {
+			#desc = "POLITICS_FRED_AKUFFO_DESC"
+			expire = "1999.1.1"
+			ideology = despotism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GHA_Gnassingbe_Eyadema = {
+		name = GHA_Gnassingbe_Eyadema
+		portraits = {
+			civilian = { large = "gfx/leaders/GHA/Portrait_GHA_Gnassingbe_Eyadema.png" }
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_Gnassingbe_Eyadema.png" }
+		}
+		corps_commander = {
+			traits = { harsh_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		country_leader = {
+			#desc = "POLITICS_GNASSINDAH_EYADEMA_DESC"
+			expire = "1999.1.1"
+			ideology = despotism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GHA_Emmanuel_Bodjolle = {
+		name = GHA_Emmanuel_Bodjolle
+		portraits = {
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_Emmanuel_Bodjolle.png" }
+		}
+		field_marshal = {
+			traits = { offensive_doctrine }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	GHA_Kleber_Dadjo = {
+		name = GHA_Kleber_Dadjo
+		portraits = {
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_Kleber_Dadjo.png" }
+		}
+		corps_commander = {
+			traits = { infantry_officer infantry_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	GHA_Joseph_Arthur_Ankrah = {
+		name = GHA_Joseph_Arthur_Ankrah
+		portraits = {
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_Joseph_Arthur_Ankrah.png" }
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	GHA_Akwasi_Afrifa = {
+		name = GHA_Akwasi_Afrifa
+		portraits = {
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_Akwasi_Afrifa.png" }
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	GHA_Albert_Kwesi_Ocran = {
+		name = GHA_Albert_Kwesi_Ocran
+		portraits = {
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_Albert_Kwesi_Ocran.png" }
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	GHA_Emmanuel_Kwasi_Kotoka = {
+		name = GHA_Emmanuel_Kwasi_Kotoka
+		portraits = {
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_Emmanuel_Kwasi_Kotoka.png" }
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	GHA_Joy_K_Amedume = {
+		name = GHA_Joy_K_Amedume
+		portraits = {
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_Joy_K_Amedume.png" }
+		}
+		navy_leader = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+	GHA_Chemogoh_Kevin_Dzang = {
+		name = GHA_Chemogoh_Kevin_Dzang
+		portraits = {
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_Chemogoh_Kevin_Dzang.png" }
+		}
+		navy_leader = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+	GHA_David_Animle_Hansen = {
+		name = GHA_David_Animle_Hansen
+		portraits = {
+			army = { large = "gfx/leaders/GHA/Portrait_GHA_David_Animle_Hansen.png" }
+		}
+		navy_leader = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+}

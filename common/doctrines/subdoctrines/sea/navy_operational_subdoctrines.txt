@@ -1,0 +1,175 @@
+amphibious_assault = {
+	track = operational
+	name = SUBDOCTRINE_AMBHIBIOUS_ASSAULT
+	description = SUBDOCTRINE_AMBHIBIOUS_ASSAULT_DESC
+	icon = GFX_global_fleet_distribution_medium
+
+	xp_cost = 100
+	xp_type = navy
+
+	available = {
+		OR = {
+			has_doctrine = carrier_task_force
+			has_doctrine = carrier_strike_force
+		}
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	naval_invasion_penalty = -0.05
+	amphibious_invasion_defence = 0.05
+	amphibious_invasion = 0.05
+
+	rewards = {
+		raiders_and_invaders = {
+			naval_invasion_capacity = 2
+			amphibious_invasion = 0.1
+			category_front_line = {
+				river = {
+					attack = 0.05
+					movement = 0.05
+				}
+			}
+			effect = {
+				custom_effect_tooltip = raiders_and_invaders_tt
+			}
+		}
+		fearless_frogmen = {
+			marine = {
+				max_organisation = 5
+				maximum_speed = 0.05
+			}
+			amphibious_invasion = 0.05
+		}
+		established_channels = {
+			naval_invasion_capacity = 3
+			amphibious_invasion = 0.05
+		}
+		refined_rehearsals = {
+			category_all_infantry = {
+				amphibious = {
+					attack = 0.05
+				}
+				river = {
+					attack = 0.05
+				}
+			}
+			category_all_armor = {
+				river = {
+					attack = 0.05
+				}
+				amphibious = {
+					attack = 0.05
+				}				
+			}
+			effect = {
+				custom_effect_tooltip = refined_rehearsals_tt
+			}
+		}
+		expeditionary_all_in_one = {
+			naval_invasion_capacity = 5
+			amphibious_invasion = 0.3
+		}
+	}
+}
+
+pass_the_ammunition = {
+	track = operational
+	name = SUBDOCTRINE_PASS_THE_AMMUNITION
+	description = SUBDOCTRINE_PASS_THE_AMMUNITION_DESC
+	icon = GFX_fleet_command_and_control_medium
+
+	xp_cost = 100
+	xp_type = navy
+
+	available = {
+		OR = {
+			has_doctrine = carrier_task_force
+			has_doctrine = naval_bastion_doctrine
+		}
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	navy_fuel_consumption_factor = -0.08
+	equipment_bonus = {
+		capital_ship = {
+			fuel_consumption = -0.04
+		}
+		screen_ship = {
+			fuel_consumption = -0.02
+		}
+	}
+	rewards = {
+
+		the_guiding_hand = {
+			equipment_bonus = {
+				capital_ship = {
+					reliability = 0.06
+				}
+				carrier = {
+					reliability = 0.06
+				}
+				convoy = {
+					reliability = 0.06
+				}
+				screen_ship = {
+					reliability = 0.06
+				}
+				submarine = {
+					reliability = 0.06
+				}
+			}
+			industrial_capacity_dockyard = 0.03
+		}
+
+		the_quick_and_dirty = {
+			production_speed_naval_supply_hub_factor = 0.05
+			production_speed_coastal_bunker_factor = 0.05
+			production_speed_naval_base_factor = 0.05
+			production_speed_radar_station_factor = 0.05
+			production_speed_anti_air_building_factor = 0.05
+			production_speed_air_base_factor = 0.05
+		}
+
+		the_permanent_fixtures = {
+			naval_cost_modifier = 0.01
+			navy_max_range_factor = 0.05
+			industrial_capacity_dockyard = 0.02
+		}
+		the_hired_help = {
+			naval_cost_modifier = -0.1
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		the_steady_tide = {
+			naval_supply_consumption_factor = -0.6
+			navy_org_factor = 0.1
+			navy_max_range = 0.05
+			equipment_bonus = {
+				capital_ship = {
+					reliability = 0.05
+				}
+				carrier = {
+					reliability = 0.05
+				}
+				convoy = {
+					reliability = 0.05
+				}
+				screen_ship = {
+					reliability = 0.05
+				}
+				submarine = {
+					reliability = 0.05
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1671 @@
+ideas = {
+	country = {
+######## General
+		WFI_Political_Purgatory = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.2
+				political_power_gain = -0.15
+				admin_efficiency_monthly_rate = -0.25
+			}
+			picture = WIN_Political_Purgatory
+		}
+
+		WFI_Apres_le_Deluge = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.2
+				political_power_gain = -0.1
+				gdp_growth_modifier = -0.25
+				stability_factor = -0.05
+			}
+			picture = WIN_Apres_le_Deluge
+		}
+
+######## West Indies Federation
+		WIN_Palm_Maple_Oak = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.25
+				admin_efficiency_monthly_rate = -0.35
+				war_support_factor = -0.15
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = CAN
+				extra_trade_to_target_factor = 0.15
+			}
+			picture = WIN_Palm_Maple_Oak
+		}
+		WIN_Caribbean_Shield = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_professionalism_monthly_rate = 0.5
+				army_defence_factor = 0.075
+				coastal_bunker_effectiveness_factor = 0.1
+			}
+			picture = WIN_Caribbean_Shield
+		}
+		WIN_Shadow_Federation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				admin_costs_misc = -0.1
+				admin_efficiency_monthly_rate = -0.25
+				custom_modifier_tooltip = TNO_worsen_income_taxation_policy_effectiveness_med_tt
+			}
+			picture = WIN_Shadow_Federation
+		}
+		WIN_Lost_at_Sea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = -0.45
+				agriculture_monthly_rate = -0.25
+				industrial_expertise_monthly_rate = -0.25
+				healthcare_monthly_rate = -0.25
+				poverty_monthly_rate = 0.15
+			}
+			picture = WIN_Lost_at_Sea
+		}
+		WIN_Pan_Caribbean_Dream = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.075
+				war_support_factor = 0.075
+				custom_modifier_tooltip = TNO_improve_education_policy_effectiveness_med_tt
+			}
+			picture = WIN_Pan_Caribbean_Dream
+		}
+		#Oil Crisis
+		WIN_Enter_Hurricane = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = -1.15
+				agriculture_monthly_rate = -0.75
+				industrial_expertise_monthly_rate = -0.75
+				healthcare_monthly_rate = -0.75
+				poverty_monthly_rate = -0.45
+			}
+			picture = WIN_Enter_Hurricane
+		}
+		#Bailout Path
+		WIN_Maple_Autumn = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.125
+				war_support_factor = -0.075
+				political_power_cost = 0.15
+			}
+			targeted_modifier = {
+				tag = CAN
+				extra_trade_to_target_factor = 0.20
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = CAN
+				misc_costs_modifier = 0.05
+			}
+			picture = WIN_Maple_Autumn
+		}
+		WIN_Follow_North_Star = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = 0.5
+				poverty_monthly_rate = 0.15
+				custom_modifier_tooltip = TNO_worsen_income_taxation_policy_effectiveness_med_tt
+			}
+			picture = WIN_Follow_North_Star
+		}
+		#American Reforms Path
+		WIN_Sturdy_Oak = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.125
+				war_support_factor = -0.075
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.25
+			}
+			targeted_modifier = {
+				tag = USA
+				misc_costs_modifier = 0.05
+			}
+			picture = WIN_Sturdy_Oak
+		}
+		WIN_New_Captain = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = 1.75
+				custom_modifier_tooltip = TNO_worsen_income_taxation_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_improve_trade_laws_policy_effectiveness_med_tt
+				poverty_monthly_rate = 0.15
+				agriculture_monthly_rate = 0.5
+			}
+			picture = WIN_New_Captain
+		}
+		WIN_United_States_Caribbean = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.125
+				political_power_gain = 0.2
+				admin_efficiency_monthly_rate = 0.65
+			}
+			picture = WIN_United_States_Caribbean
+		}
+		#Williams Path
+		WIN_Young_Palm = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.075
+				war_support_factor = -0.075
+				political_power_gain = 0.2
+			}
+			picture = WIN_Young_Palm
+		}
+		WIN_Federate_or_Die = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				admin_efficiency_monthly_rate = 0.45
+				custom_modifier_tooltip = TNO_improve_income_taxation_policy_effectiveness_low_tt
+				custom_modifier_tooltip = admin_funding_maximal_increase_med_tt
+			}
+			picture = WIN_Federate_or_Die
+		}
+		WIN_Charting_Course = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = social_funding_maximal_increase_med_tt
+				misc_costs_modifier = 0.065
+				gdp_growth_modifier = 0.45
+				academic_base_monthly_rate = 0.25
+				industrial_expertise_monthly_rate = 0.25
+				agriculture_monthly_rate = 0.25
+				stability_factor = -0.075
+				political_power_cost = 0.1
+			}
+			picture = WIN_Charting_Course
+		}
+######## Bahamas
+		BAH_Sandcastle = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = 2.15
+				poverty_monthly_rate = 0.15
+				trade_laws_policy_monthly_rate = 0.25
+				income_taxation_policy_monthly_rate = -0.10
+				
+			}
+			picture = BAH_An_Empire_of_Sand
+		}
+		BAH_Knocking_Sandcastle = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = 0.85
+				poverty_monthly_rate = 0.1
+				political_power_cost = -0.15
+				income_taxation_policy_monthly_rate = 0.10
+				
+			}
+			picture = BAH_Knocking_Down_the_Sandcastle
+		}
+		BAH_Rule_Bay_Street = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = -0.1
+				drift_defence_factor = -0.15
+				vote_franchise_policy_monthly_rate = -0.35
+			}
+			picture = BAH_Rule_Bay_Street
+		}
+		BAH_Closing_Bay_Street = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.25
+				vote_franchise_policy_monthly_rate = 0.35
+			}
+			picture = BAH_Closing_Bay_Street
+		}
+		BAH_Repaving_Bay_Street = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = 0.1
+			}
+			picture = BAH_Repaving_Bay_Street
+		}
+		BAH_Mobsters_Paradise = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				misc_income_modifier = 0.01
+				penal_system_policy_monthly_rate = -0.15
+				security_policy_monthly_rate = -0.25
+			}
+			picture = BAH_Mobsters_Paradise
+		}
+		#Continued White Rule Path - Pretty sure these are for Belize and Bobby just keeps the original Symonette natspirits
+		BAH_Siege = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.15
+				surrender_limit = 0.15
+				custom_modifier_tooltip = TNO_improve_security_policy_effectiveness_med_tt
+				
+			}
+			picture = BAH_Siege:
+		}
+		BAH_Insecurity_State = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.1
+				custom_modifier_tooltip = TNO_improve_penal_system_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_improve_vote_franchise_policy_effectiveness_low_tt
+			}
+			picture = BAH_Insecurity_State:
+		}
+		BAH_Fading_Order = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.1
+				custom_modifier_tooltip = TNO_worsen_vote_franchise_policy_effectiveness_med_tt
+			}
+			picture = BAH_Fading_Order:
+		}
+######## Jamaica
+		#New Skeleton
+		JAM_Busta_Backbone = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				custom_modifier_tooltip = TNO_worsen_political_parties_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_improve_security_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_worsen_vote_franchise_policy_effectiveness_med_tt
+			}
+			picture = JAM_Busta_Backbone
+		}
+		JAM_Reform_Failures = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+				gdp_growth_modifier = -0.45
+				agriculture_monthly_rate = -0.35
+				custom_modifier_tooltip = TNO_worsen_health_care_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_worsen_education_policy_effectiveness_med_tt
+			}
+			picture = JAM_flunking_the_report_card
+		}
+		#Post-Riots
+		JAM_Kingston_Renaissance = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				drift_defence_factor = -0.1
+				monthly_population = 0.25
+				custom_modifier_tooltip = TNO_improve_immigration_policy_effectiveness_med_tt
+			}
+			picture = JAM_Kingston_Renaissance
+		}
+
+		JAM_Posses_Gather = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.1
+				poverty_monthly_rate = -0.3
+				custom_modifier_tooltip = TNO_worsen_security_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_worsen_education_policy_effectiveness_med_tt
+			}
+			picture = JAM_Posses_Gather
+		}
+		#Manley
+		JAM_The_Tropical_Fabian = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				poverty_monthly_rate = 0.1
+				local_resources_factor = 0.1
+				inflation_rate_modifier = 0.05
+				custom_modifier_tooltip = TNO_improve_education_policy_effectiveness_med_tt
+			}
+			picture = JAM_The_Tropical_Fabian
+		}
+		JAM_The_New_Machine = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.1
+				custom_modifier_tooltip = TNO_worsen_political_parties_policy_effectiveness_med_tt
+			}
+			picture = JAM_The_New_Machine
+		}
+		#Commie Path - Strachan
+		JAM_Black_Star_Red_Flag = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10
+				drift_defence_factor = -0.1
+			}
+			picture = JAM_Black_Star_Red_Flag
+		}
+		JAM_The_Maroons_Return = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = -0.05
+				inflation_rate_modifier = 0.05
+				stability_factor = -0.07
+				poverty_monthly_rate = -0.04
+				agriculture_monthly_rate = 0.25
+			}
+			picture = JAM_The_Maroons_Return
+		}
+		#Commie Path - Hart
+		JAM_Revolutionary_Democracy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				political_parties_policy_monthly_rate = 0.25
+				stability_factor = 0.05
+			}
+			picture = JAM_Revolutionary_Democracy
+		}
+		JAM_The_Independence_Debt = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				poverty_monthly_rate = -0.1
+				local_resources_factor = 0.1
+				gdp_growth_modifier = 0.03
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.25
+			}
+			picture = JAM_The_Independence_Debt
+		}
+		#Bustamante
+		JAM_Den_of_Thieves = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				custom_modifier_tooltip = TNO_worsen_security_policy_effectiveness_med_tt
+			}
+			targeted_modifier = {
+				tag = IBR
+				extra_trade_to_target_factor = 0.25
+			}
+			targeted_modifier = {
+				tag = IBR
+				misc_costs_modifier = 0.05
+			}
+			picture = JAM_Den_of_Thieves
+		}
+		JAM_Bent_Backbone = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				custom_modifier_tooltip = TNO_worsen_political_parties_policy_effectiveness_high_tt
+				custom_modifier_tooltip = TNO_worsen_security_policy_effectiveness_low_tt
+				custom_modifier_tooltip = TNO_worsen_vote_franchise_policy_effectiveness_high_tt
+			}
+			picture = JAM_Bent_Backbone
+		}
+		#Seaga
+		JAM_The_Seaga_Spine = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				misc_costs_modifier = -0.05
+				custom_modifier_tooltip = TNO_worsen_political_parties_policy_effectiveness_med_tt
+			}
+			picture = JAM_The_Seaga_Spine
+		}
+		JAM_Sunrise_Over_Montego_Bay = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = 0.07
+				production_speed_buildings_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = CAN
+				extra_trade_to_target_factor = 0.25
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.25
+			}
+			picture = JAM_Sunrise_Over_Montego_Bay
+		}
+######## Leeward Islands
+		SKN_Patchwork_Colony = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.2
+				admin_efficiency_monthly_rate = -0.25
+				custom_modifier_tooltip = TNO_worsen_security_policy_effectiveness_med_tt
+
+			}
+			picture = SKN_Patchwork_Colony
+		}
+		SKN_Underdevelopment = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				annual_gdp_growth_factor = -0.1
+				custom_modifier_tooltip = TNO_worsen_health_care_policy_effectiveness_med_tt
+
+			}
+			picture = SKN_Caribbean_Backwater
+		}
+######## Saint Kitts & Neves
+		SKN_Under_Microscope = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = -0.15
+				custom_modifier_tooltip = TNO_worsen_security_policy_effectiveness_low_tt
+			}
+			picture = SKN_Under_Microscope
+		}
+
+		SKN_Malliouhana_Prey = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.10
+				drift_defence_factor = -0.20
+				admin_efficiency_monthly_rate = -0.05
+			}
+			picture = SKN_Malliouhana_Prey
+		}
+
+		SKN_Little_Davids_Throw = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				annual_gdp_growth_factor = 0.25
+				industrial_equipment_monthly_rate = 0.25
+				civilian_expenditures_factor = 0.05
+			}
+			picture = SKN_Little_Davids_Throw
+		}
+
+		SKN_Sugar_Mass = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				annual_gdp_growth_factor = 0.35
+				gdp_growth_modifier = 1.75
+				custom_modifier_tooltip = TNO_improve_immigration_policy_effectiveness_med_tt
+			}
+			picture = SKN_Sugar_Mass
+		}
+
+		SKN_Malliouhana_Slumbers = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				drift_defence_factor = 0.20
+				admin_efficiency_monthly_rate = 0.15
+			}
+			picture = SKN_Malliouhana_Slumbers
+		}
+######## Leeward Federation
+		SKN_Federalist_Bulwark = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				drift_defence_factor = 0.25
+			}
+			picture = SKN_Federalist_Bulwark
+		}
+		SKN_Pepperpot_Stew = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.075
+				admin_efficiency_monthly_rate = -0.15
+				custom_modifier_tooltip = TNO_worsen_political_parties_policy_effectiveness_med_tt
+
+			}
+			picture = SKN_Pepperpot_Stew
+		}
+######## Windward Islands
+		SVI_Banana_Boom = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = 0.45
+				custom_modifier_tooltip = TNO_worsen_max_workhours_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_improve_trade_laws_policy_effectiveness_med_tt
+			}
+			picture = SVI_Banana_Boom
+		}
+		SVI_Neocolonial_Backlash = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				political_power_gain = -0.15
+			}
+			picture = SVI_Neocolonial_Backlash
+		}
+######## Saint Vincent & Grenadines
+		SVI_Sifting_Through_The_Ashes = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				poverty_monthly_rate = 0.10
+				gdp_growth_modifier = 0.05
+				misc_income_modifier = 0.02
+			}
+			targeted_modifier = {
+				tag = CAN
+				misc_costs_modifier = 0.02
+			}
+			picture = SVI_Sifting_Through_The_Ashes
+		}
+		SVI_Shadow_of_La_Soufriere = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				admin_efficiency_monthly_rate = -0.15
+				gdp_growth_modifier = -0.05
+			}
+			picture = SVI_Shadow_of_La_Soufriere
+		}
+######## Anguilla
+		AGL_Reluctant_Revolution = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				gdp_growth_modifier = -0.5
+			}
+			picture = AGL_Reluctant_Revolution
+		}
+######## Barbados
+		BRB_Acing_the_Report_Card = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				gdp_growth_modifier = 0.75
+				agriculture_monthly_rate = 0.55
+				custom_modifier_tooltip = TNO_improve_health_care_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_improve_education_policy_effectiveness_med_tt
+			}
+			picture = BRB_Acing_the_Report_Card
+		}
+		BRB_Growing_National_Consciouness = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				drift_defence_factor = -0.2
+			}
+			picture = BRB_Growing_National_Consciousness
+		}
+		BRB_Party_Monopoly = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				custom_modifier_tooltip = TNO_worsen_political_parties_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_improve_trade_unions_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_worsen_vote_franchise_policy_effectiveness_med_tt
+			}
+			picture = BRB_Party_Monopoly
+		}
+######## Trinidad
+		TRI_pnm_dominance = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				drift_defence_factor = 0.3
+			}
+			picture = TRI_pnm_dominance
+		}
+		TRI_Fragmented_Politics = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.1
+				admin_efficiency_monthly_rate = -0.15
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_improve_religious_rights_policy_effectiveness_med_tt
+			}
+			picture = TRI_Out_of_the_Chaos
+		}
+
+		TRI_undersea_riches = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				fuel_gain_factor = 0.2
+				gdp_growth_modifier = 1.35
+				custom_modifier_tooltip = TNO_worsen_regulations_policy_effectiveness_med_tt
+			}
+			picture = TRI_Trinidadian_Tar
+		}
+		TRI_OFN_Outpost = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = { NOT = { is_in_faction_with = USA } }
+			removal_cost = -1
+			modifier = {
+				production_speed_bunker_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.1
+				coastal_bunker_effectiveness_factor = 0.15
+				army_professionalism_monthly_rate = 0.2
+				war_support_factor = 0.1
+			}
+			picture = TRI_Chaguaramas
+		}
+		TRI_disunited_front = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				political_power_gain = -0.5
+			}
+			picture = TRI_disunited_front
+		}
+######## East Caribbean Union
+### Start
+		TRI_Beyond_Slavery_and_Capitalism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				poverty_monthly_rate = 0.05
+				misc_costs_modifier = 0.1
+				industrial_expertise_monthly_rate = 0.05
+				healthcare_monthly_rate = 0.06
+				custom_modifier_tooltip = TNO_improve_education_policy_effectiveness_med_tt
+			}
+			picture = TRI_Beyond_Slavery_and_Capitalism
+		}
+
+		TRI_First_Among_Unequals = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.06
+				war_support_factor = -0.04
+				political_power_gain = 0.15
+				admin_efficiency_monthly_rate = 0.05
+			}
+			picture = TRI_First_Among_Unequals
+		}
+
+		TRI_Doc_Knows_Best = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.24
+				custom_modifier_tooltip = TNO_worsen_vote_franchise_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_worsen_security_policy_effectiveness_low_tt
+			}
+			picture = TRI_Doc_Knows_Best
+		}
+### Path-Specific
+		TRI_Doc_Without_Borders = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.16
+				war_support_factor = 0.07
+				political_power_gain = 0.10
+				custom_modifier_tooltip = TNO_worsen_vote_franchise_policy_effectiveness_high_tt
+				custom_modifier_tooltip = TNO_improve_security_policy_effectiveness_med_tt
+			}
+			picture = TRI_Doc_Without_Borders
+		}
+
+		TRI_Generalissimo_Williams = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.50
+				misc_costs_modifier = 0.05
+				custom_modifier_tooltip = TNO_worsen_vote_franchise_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_improve_security_policy_effectiveness_med_tt
+			}
+			picture = TRI_Generalissimo_Williams
+		}
+
+		TRI_Paging_Doc_Williams = { 
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.18
+				political_power_gain = -0.40
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.50
+			}
+			picture = TRI_Paging_Doc_Williams
+		}
+
+
+######## French West Indies
+		FWI_Spirit_Third_Republic = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_med_tt
+			}
+			picture = FWI_Spirit_Third_Republic
+		}
+		FWI_An_Ugly_American = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2	
+			}
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.25
+				extra_trade_to_target_factor = 0.30
+			}
+			picture = FWI_An_Ugly_American
+		}
+		FWI_Corporate_Cartels_Labor_Unions = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				local_building_slots_factor = -0.1
+				custom_modifier_tooltip = TNO_improve_trade_unions_policy_effectiveness_high_tt
+			}
+			picture = FWI_Corporate_Cartels_Labor_Unions
+		}
+		FWI_Stagnating_Plantation_Economy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.15
+				gdp_growth_modifier = -1
+				poverty_monthly_rate = 0.1
+			}
+			targeted_modifier = {
+				tag = USA
+				misc_costs_modifier = 0.085
+			}
+			picture = FWI_Stagnating_Plantation_Economy
+		}
+######## Post-Independence
+#### Revolutionary Front
+		FWI_Peoples_Triumph = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Peoples_Triumph
+		}
+		FWI_Socialized_Colonial_Economy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Socialized_Colonial_Economy
+		}
+		FWI_Broad_Front_Opposition = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Broad_Front_Opposition
+		}
+		FWI_Beyond_The_Third_Republic = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Beyond_The_Third_Republic
+		}
+#### African Socialism
+		FWI_Exiled_Opposition = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_exiled_opposition
+		}
+		FWI_A_Revolution_Secured = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_A_Revolution_Secured
+		}
+#### Oligarchic Lib
+		FWI_Confederations_of_Federations = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Confederations_of_Federations
+		}
+		FWI_Outmoded_Plantocracy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Outmoded_Plantocracy
+		}
+		FWI_Union_of_Workers_Peasants_and_Patrons = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Union_of_Workers_Peasants_and_Patrons
+		}
+		FWI_Victorious_Counter_Revolution = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Victorious_Counter_Revolution
+		}
+		FWI_Underground_Popular_Front = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Underground_Popular_Front
+		}
+### Reformist Socialism
+		FWI_Insular_Federalism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_insular_federalism
+		}
+		FWI_An_Ugly_Shadow = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_An_Ugly_Shadow
+		}
+		FWI_Corporatized_Colonial_Economy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_corporatized_colonial_economy
+		}
+		FWI_Planteur_Paternalism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Planteur_Paternalism
+		}
+#### PUG
+		FWI_Guilliods_Presidential_Republic = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Guilliods_Presidential_Republic
+		}
+		FWI_Strange_Bedfellows = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Strange_Bedfellows
+		}
+		FWI_Antillean_Developmentalism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Antillean_Developmentalism
+		}
+		FWI_Actually_Existing_Gaullism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Actually_Existing_Gaullism
+		}
+		FWI_Squabbling_Few = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Squabbling_Few
+		}
+		FWI_Retreat_Planteurs = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			picture = FWI_Retreat_Planteurs
+		}
+
+######## Antigua
+		ANT_Tourist_Wasteland = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				agriculture_monthly_rate = -0.75
+				poverty_monthly_rate = -0.15
+				gdp_growth_modifier = -0.25
+			}
+			picture = ANT_Tourist_Wasteland
+		}
+
+		ANT_Magpie_Treasure = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.15
+				admin_efficiency_monthly_rate = -0.85
+				admin_costs_misc = 0.35
+			}
+			picture = ANT_Magpie_Treasure
+		}
+
+		ANT_Reign_Rooster = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.25
+				custom_modifier_tooltip = TNO_worsen_political_parties_policy_effectiveness_med_tt
+			}
+			picture = ANT_Reign_Rooster
+		}
+
+		ANT_Northern_Migration = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.1
+				stability_factor = 0.05
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_med_tt
+				misc_income_modifier = -0.02
+			}
+			picture = ANT_Northern_Migration
+		}
+
+######## Dominica
+		DMI_Cultural_Revolution = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				war_support_factor = 0.15
+				academic_base_monthly_rate = 0.65
+			}
+			picture = DMI_Cultural_Revolution
+		}
+		DMI_Peeling_Banana = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.125
+				agriculture_monthly_rate = 0.5
+				admin_costs_misc = 0.10
+				poverty_monthly_rate = 0.1
+			}
+			picture = DMI_Peeling_Banana
+		}
+		DMI_Growing_Dissent = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.15
+			}
+			picture = DMI_Growing_Dissent
+		}
+
+######## Saint Lucia
+		SLU_Two_Faces_Labour = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.2
+				drift_defence_factor = -0.15
+				custom_modifier_tooltip = TNO_improve_trade_unions_policy_effectiveness_med_tt
+			}
+			picture = SLU_Two_Faces_Labour
+		}
+		SLU_Ruins_Metayage = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				agriculture_monthly_rate = 1
+				poverty_monthly_rate = -0.1
+				stability_factor = -0.075
+			}
+			picture = SLU_Ruins_Metayage
+		}
+######## Grenada
+		GND_Mongoose_Revolution = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.125
+				army_cost_modifier = 0.2
+				army_org_factor = 0.05
+				army_professionalism_monthly_rate = 0.5
+			}
+			picture = GND_Mongoose_Revolution
+		}
+		GND_Grenadian_Connection = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				gdp_growth_modifier = 0.85
+				custom_modifier_tooltip = TNO_worsen_security_policy_effectiveness_med_tt
+			}
+			picture = GND_Grenadian_Connection
+		}
+	}
+}

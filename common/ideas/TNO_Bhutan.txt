@@ -1,0 +1,30 @@
+ideas = {
+	country = {
+		BHU_The_Dilemma_Of_Reform = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHU_The_Dilemma_Of_Reform " }
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = BHU_The_Dilemma_Of_Reform
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				political_parties_policy_monthly_rate = 0.25
+			}
+		}
+		BHU_In_Kolkatas_Shadow = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHU_In_Kolkatas_Shadow" }
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = BHU_In_Kolkatas_Shadow
+			removal_cost = -1
+
+			modifier = {
+				extra_trade_to_overlord_factor = 0.3
+				free_production_units_modifier = 1
+			}
+		}
+	}
+}

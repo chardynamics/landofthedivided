@@ -1,0 +1,660 @@
+add_namespace = BAH_skeleton
+add_namespace = BAH_forpol
+add_namespace = BAH_News
+
+country_event = { #Start
+	id = BAH_skeleton.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_skeleton.0" }
+	title = BAH_skeleton.0.t
+	desc = BAH_skeleton.0.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_skeleton.0.a
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { id = BAH_forpol.1 days = 400 } #Operation Chocolate Martini Unlock
+			#2 is for CIA Op Success
+		}
+		IBR = {
+			country_event = { id = BAH_forpol.3 days = 300 } #Iberia Intro
+			#4 is for Post-Puerto Plata Flavor
+		}
+		#Chain
+		country_event = { id = BAH_skeleton.1 days = 1600 } #Mole Check
+	}
+}
+
+country_event = { #Mole Check
+	id = BAH_skeleton.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_skeleton.1" }
+	title = BAH_skeleton.1.t
+	desc = BAH_skeleton.1.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = { USA = { clr_country_flag = USA_CIA_BAH_ChocoMartini_Unlock } }
+
+	option = { #Didn't do the Operation
+		name = BAH_skeleton.1.a
+		ai_chance = { factor = 1 }
+		trigger = { NOT = { has_country_flag = BAH_Mafia_Discovered } }
+		IBR = {
+			country_event = { id = BAH_forpol.5 } #Cancels Operation for the US
+		}
+		USA = {
+			subtract_from_variable = { Caribbean_Stability = 1 }
+			country_event = { id = BAH_forpol.6 days = 1 } #Informant Killed
+		}
+
+		if = { #Majority Rule Transition Path
+			limit = { check_variable = { USA.Caribbean_Stability > 6 } }
+			USA = {
+				country_event = { id = BAH_forpol.7 days = 68 } 
+			}
+			#Chain
+			country_event = { id = BAH_skeleton.2 days = 300 } #Majority Rule Transition - Kendal Isaacs
+		}
+		else = { #Continued White Rule Path
+			USA = {
+				country_event = { id = BAH_forpol.10 days = 68 } #Violence
+			}
+			#IBR = { country_event = { id = BAH_forpol.11 days = 68 } } #Symonette Works with Iberia
+			#Chain
+			country_event = { id = BAH_skeleton.4 days = 300 } #Continued White Rule - Bobby Symonette
+		}
+	}
+
+
+	option = { #Did the Operation
+		name = BAH_skeleton.1.b
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = BAH_Mafia_Discovered }
+		IBR = { country_event = { id = BAH_forpol.16 days = 10 } } #Iberia Gets Cut Off
+		
+		if = {
+			limit = { has_country_flag = BAH_Mafia_Burn }
+			#Chain
+			country_event = { id = BAH_skeleton.5 days = 300 } #Symonette Retires - New Government - Pindling
+		}
+		if = {
+			limit = { has_country_flag = BAH_Mafia_Cooperate }
+			USA = {
+				#country_event = { id = BAH_forpol.17 days = 30 } #Jamaica Boost
+				country_event = { id = BAH_forpol.7 days = 168 } #Symonette Decides to Accept Reforms
+			}
+			#Chain
+			country_event = { id = BAH_skeleton.2 days = 300 } #Majority Rule Transition - Kendal Isaacs
+		}
+	}
+}
+
+country_event = { #Majority Rule Transition
+	id = BAH_skeleton.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_skeleton.2" }
+	title = BAH_skeleton.2.t
+	desc = BAH_skeleton.2.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_skeleton.2.a
+		ai_chance = { factor = 1 }
+		retire_country_leader = yes
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = liberal_conservatism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 48
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_popularities = {
+			liberal_conservatism = 60
+			liberalism = 25
+			progressivism = 10
+			progressivism_1 = 5
+		}
+		
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = BAH_News.3
+				hours = 10
+			}
+		}
+		remove_ideas = {
+			BAH_Rule_Bay_Street
+		}
+		add_ideas = {
+			BAH_Repaving_Bay_Street
+		}
+		#Chain
+		country_event = { id = BAH_skeleton.3 days = 1092 } #Federation Check
+	}
+}
+
+country_event = { #Federation Check
+	id = BAH_skeleton.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_skeleton.3" }
+	title = BAH_skeleton.3.t
+	desc = BAH_skeleton.3.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_skeleton.3.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { country_exists = WIN }
+			USA = { country_event = { id = BAH_forpol.8 days = 1 } }
+		}
+		#else = {
+		#	USA = { country_event = { id = BAH_forpol.9 days = 1092 } }
+		#}
+	}
+}
+
+country_event = { #Continued White Rule
+	id = BAH_skeleton.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_skeleton.4" }
+	title = BAH_skeleton.4.t
+	desc = BAH_skeleton.4.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_skeleton.4.a
+		ai_chance = { factor = 1 }
+		promote_character = BAH_Bobby_Symonette
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = despotism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 48
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+
+		USA = {
+			country_event = { id = BAH_forpol.12 days = 648 } #More Violence
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = BAH_News.2
+				hours = 10
+			}
+		}
+	}
+}
+
+country_event = { #New Government - Pindling
+	id = BAH_skeleton.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_skeleton.5" }
+	title = BAH_skeleton.5.t
+	desc = BAH_skeleton.5.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_skeleton.5.a
+		ai_chance = { factor = 1 }
+		retire_country_leader = yes
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = liberalism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 48
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_popularities = {
+			progressivism_1 = 19
+			progressivism = 23
+			liberalism = 58
+		}
+
+		USA = {
+			country_event = { id = BAH_forpol.13 } #Symonette Retires
+			country_event = { id = BAH_forpol.14 days = 370 } #New Business
+			country_event = { id = BAH_forpol.15 days = 1092 } #Corruption Scandal
+		}
+		remove_ideas = {
+			BAH_Rule_Bay_Street
+			BAH_Sandcastle
+		}
+		add_ideas = {
+			BAH_Closing_Bay_Street
+			BAH_Knocking_Sandcastle
+		}
+		set_temp_variable = { gdp_growth_temp = 1 }
+		econ_gdp_growth_change = yes
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = BAH_News.1
+				hours = 10
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.1" }
+	title = BAH_forpol.1.t
+	desc = BAH_forpol.1.desc
+	picture = GFX_report_event_IRE_interrogation_2
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.1.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		set_country_flag = USA_CIA_BAH_ChocoMartini_Unlock
+	}
+}
+
+country_event = { #Mafia Choice
+	id = BAH_forpol.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event BAH_forpol.2"
+		BAH = { set_country_flag = BAH_Mafia_Discovered }
+	}
+	title = BAH_forpol.2.t
+	desc = BAH_forpol.2.desc
+	picture = GFX_report_event_cia_agents_suits_hats
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.2.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BAH_MAFIA_INTERVENTION option = BAH_MAFIA_INTERVENTION_COOPT }
+			}
+		}
+		custom_effect_tooltip = BAH_Mafia_Burn_tt
+		hidden_effect = { country_event = { id = BAH_forpol.18 days = 11 } }
+	}
+	option = {
+		name = BAH_forpol.2.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BAH_MAFIA_INTERVENTION option = BAH_MAFIA_INTERVENTION_PURGE }
+			}
+		}
+		custom_effect_tooltip = BAH_Mafia_Cooperate_tt
+		hidden_effect = { country_event = { id = BAH_forpol.19 days = 11 } }
+	}
+
+	after = { Espionage_SuccessEffect = yes }
+}
+
+country_event = { #
+	id = BAH_forpol.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.3" }
+	title = BAH_forpol.3.t
+	desc = BAH_forpol.3.desc
+	picture = GFX_report_event_generic_card_game
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.3.a
+		ai_chance = { factor = 1 }
+		random_list = {
+			35 = {
+				add_political_power = 75
+				set_temp_variable = { IBR_stability_temp = 5 }
+				IBR_stability_change = yes
+			}
+			65 = {
+				add_political_power = -75
+				set_temp_variable = { IBR_stability_temp = -5 }
+				IBR_stability_change = yes
+			}
+		}
+	}
+
+	option = {
+		name = BAH_forpol.3.b
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.4" }
+	title = BAH_forpol.4.t
+	desc = BAH_forpol.4.desc
+	picture = GFX_report_event_IBR_madrid_sixty
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.4.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.5" }
+	title = BAH_forpol.5.t
+	desc = BAH_forpol.5.desc
+	picture = GFX_report_event_generic_boat_at_sea
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.5.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.6" }
+	title = BAH_forpol.6.t
+	desc = BAH_forpol.6.desc
+	picture = GFX_report_event_generic_card_game
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.6.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.7" }
+	title = BAH_forpol.7.t
+	desc = BAH_forpol.7.desc
+	picture = GFX_
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.7.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.8" }
+	title = BAH_forpol.8.t
+	desc = BAH_forpol.8.desc
+	picture = GFX_
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.8.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			BAH = {
+				every_owned_state = {
+					add_core_of = WIN
+					remove_core_of = BAH
+				}
+			}
+		}
+		add_political_power = 30
+		WIN = { annex_country = { target = BAH } }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.9" }
+	title = BAH_forpol.9.t
+	desc = BAH_forpol.9.desc
+	picture = GFX_
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.9.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.10" }
+	title = BAH_forpol.10.t
+	desc = BAH_forpol.10.desc
+	picture = GFX_report_event_ITA_moro_dead
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.10.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.11" }
+	title = BAH_forpol.11.t
+	desc = BAH_forpol.11.desc
+	picture = GFX_report_event_MEX_meetings_on_trade
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.11.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.12" }
+	title = BAH_forpol.12.t
+	desc = BAH_forpol.12.desc
+	picture = GFX_
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.12.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.13" }
+	title = BAH_forpol.13.t
+	desc = BAH_forpol.13.desc
+	picture = GFX_report_event_IBR_home_office_desk
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.13.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.14" }
+	title = BAH_forpol.14.t
+	desc = BAH_forpol.14.desc
+	picture = GFX_report_event_UKR_dinner_table
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.14.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.15" }
+	title = BAH_forpol.15.t
+	desc = BAH_forpol.15.desc
+	picture = GFX_report_event_IBR_guy_paper_meeting
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.15.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.16" }
+	title = BAH_forpol.16.t
+	desc = BAH_forpol.16.desc
+	picture = GFX_report_event_KOM_SC_agent_in_chair
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.16.a
+		ai_chance = { factor = 1 }
+		subtract_from_variable = { IBR_OFN_Alignment = 1 }
+		custom_effect_tooltip = IBR_OFN_proxy_alignment_loss
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.17" }
+	title = BAH_forpol.17.t
+	desc = BAH_forpol.17.desc
+	picture = GFX_report_event_GNG_read_report
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.17.a
+		ai_chance = { factor = 1 }
+		
+		set_temp_variable = { change_v = -5 }
+		KingstonRiots_ChangeFervor = yes
+		set_temp_variable = { change_v = -5 }
+		KingstonRiots_ChangeViolence = yes
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.18" }
+	title = BAH_forpol.18.t
+	desc = BAH_forpol.18.desc
+	picture = GFX_report_event_MAD_phone_call
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.18.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Improves_small
+		USA = { add_to_variable = { Caribbean_Stability = 1 } }
+		BAH = {
+			set_country_flag = BAH_Mafia_Burn
+			remove_ideas = BAH_Mobsters_Paradise
+			TNO_improve_admin_efficiency_high = yes
+			hidden_effect = {
+				add_to_variable = { admin_efficiency_monthly_rate = 25 }
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = BAH_forpol.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_forpol.19" }
+	title = BAH_forpol.19.t
+	desc = BAH_forpol.19.desc
+	picture = GFX_report_event_KOM_SC_agent_in_chair
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BAH_forpol.19.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		BAH = { set_country_flag = BAH_Mafia_Cooperate }
+	}
+}
+
+news_event = { #Majority Rule in the Bahamas
+	id = BAH_News.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_News.1" }
+	title = BAH_News.1.t
+	desc = BAH_News.1.desc
+	picture = GFX_news_event_BAH_pindling
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = {
+		name = BAH_News.1.a
+	}
+}
+
+news_event = { #Continued White Rule in the Bahamas
+	id = BAH_News.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_News.2" }
+	title = BAH_News.2.t
+	desc = BAH_News.2.desc
+	picture = GFX_news_event_BAH_bobby_symonette
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = {
+		name = BAH_News.2.a
+	}
+}
+
+news_event = { #'Majority' Rule in the Bahamas
+	id = BAH_News.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BAH_News.3" }
+	title = BAH_News.3.t
+	desc = BAH_News.3.desc
+	picture = GFX_news_event_BAH_isaacs
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = {
+		name = BAH_News.3.a
+	}
+}		

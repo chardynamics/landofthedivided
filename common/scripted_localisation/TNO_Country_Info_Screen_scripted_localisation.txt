@@ -1,0 +1,245 @@
+#############
+### INDEX ###
+#############
+# Use your text editor's Find function using the following keys to jump between parts of the file
+
+# 1. Close_button - Text that appears in the close button
+
+# 2. Poster_image - Scripted Loc refering to the GFX definition of the countries' posters
+
+# 3. Folder_ScriptedLoc - Text that appears in the "folder" buttons
+
+# 4. Content_ScriptedLoc - Text that appears in the "content" buttons
+
+# 5. Content_ScriptedLoc_desc - Long text description that appears corresponding to the "content" button clicked
+
+# X. Functionality - Must always be at the bottom of the file
+	# Functionality_Tutorials
+	# Functionality_Development
+
+# 1. Close_button
+defined_text = {
+	name = GET_CLOSEBUTTON_TEXT
+	text = {
+		trigger = { has_country_flag = CountryInfo_HasCustomCloseButton }
+		localization_key = "TNO_COUNTRY_INFO_BUTTON_TEXT_[THIS.GetTag]"
+	}
+
+	## Default
+	text = {
+		localization_key = TNO_COUNTRY_INFO_BUTTON_TEXT_GEN
+	}
+}
+
+# 2. Poster_image
+defined_text = {
+	name = GET_POSTER
+	
+	text = {
+		trigger = { TNO_has_content = yes }
+		localization_key = "GFX_TNO_OpeningScreen_Poster_[THIS.GetTag]"
+	}
+
+	## Default
+	text = {
+		localization_key = "GFX_TNO_OpeningScreen_Poster_NoContent"
+	}
+}
+
+##=========================##
+### 3. Folder_ScriptedLoc ###
+##=========================##
+defined_text = {
+	name = CountryInfo_GET_Folder_Country
+	
+	#-- Ignore --#
+	text = {
+		trigger = {
+			check_variable = { CountryInfo_tab = 3 }
+		}
+		localization_key = "[Get_Tutorial_Folder]"
+	}
+	text = {
+		trigger = {
+			check_variable = { CountryInfo_tab = 4 }
+		}
+		localization_key = "[Get_Development_Folder]"
+	}
+	#-- UnIgnore --#
+
+	text = { # Britain still needs this because of the old content switch
+		trigger = {
+			original_tag = ENG
+			has_global_flag = TNO_BRITAIN_CONTENT_OLD_ENABLED
+		}
+		localization_key = "OLD_[THIS.GetTag]_CountryInfo_Folder.[?f]"
+	}
+
+	#-- Default --#
+	text = { localization_key = "[THIS.GetTag]_CountryInfo_Folder.[?f]" }
+}
+
+##==========================##
+### 4. Content_ScriptedLoc ###
+##==========================##
+defined_text = {
+	name = CountryInfo_GET_Content_Country
+	
+	#-- Ignore --#
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					NOT = { has_variable = f }
+				}
+				set_temp_variable = { f = CountryInfo_Selected }
+			}
+			always = no
+		}
+	}
+	text = {
+		trigger = {
+			check_variable = { CountryInfo_tab = 2 }
+		}
+		localization_key = "[Get_Economics_Title]"
+	}
+	text = {
+		trigger = {
+			check_variable = { CountryInfo_tab = 3 }
+		}
+		localization_key = "[Get_Tutorial_Content]"
+	}
+	text = {
+		trigger = {
+			check_variable = { CountryInfo_tab = 4 }
+		}
+		localization_key = "[Get_Development_Content]"
+	}
+	#-- UnIgnore --#
+
+	text = { # Britain still needs this because of the old content switch
+		trigger = {
+			original_tag = ENG
+			has_global_flag = TNO_BRITAIN_CONTENT_OLD_ENABLED
+		}
+		localization_key = "OLD_[THIS.GetTag]_CountryInfo_Content.[?f]"
+	}
+
+	#-- Default --#
+	text = { localization_key = "[THIS.GetTag]_CountryInfo_Content.[?f]" }
+}
+
+##===============================##
+### 5. Content_ScriptedLoc_desc ###
+##===============================##
+defined_text = {
+	name = CountryInfo_GET_Content_desc_Country
+	
+	#-- Ignore --#
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					NOT = { has_variable = f }
+				}
+				set_temp_variable = { f = CountryInfo_Selected }
+			}
+			always = no
+		}
+	}
+	text = {
+		trigger = {
+			check_variable = { CountryInfo_tab = 2 }
+		}
+		localization_key = "[Get_Economics_Desc]"
+	}
+	text = {
+		trigger = {
+			check_variable = { CountryInfo_tab = 3 }
+		}
+		localization_key = "[Get_Tutorial_Content_Desc]"
+	}
+	text = {
+		trigger = {
+			check_variable = { CountryInfo_tab = 4 }
+		}
+		localization_key = "[Get_Development_Content_Desc]"
+	}
+	#-- UnIgnore --#
+
+	text = { # Britain still needs this because of the old content switch
+		trigger = {
+			original_tag = ENG
+			has_global_flag = TNO_BRITAIN_CONTENT_OLD_ENABLED
+		}
+		localization_key = "OLD_[THIS.GetTag]_CountryInfo_Content_desc.[?f]"
+	}
+
+	#-- Default --#
+	text = { localization_key = "[THIS.GetTag]_CountryInfo_Content_desc.[?f]" }
+}
+
+# X. Functionality
+defined_text = {
+	name = CountryInfo_GET_entry_container
+	text = {
+		trigger = {
+			check_variable = { f > 100 }
+		}
+		localization_key = "CountryInfo_Folder_Entry"
+	}
+	text = {
+		localization_key = "CountryInfo_Content_Entry"
+	}
+}
+
+defined_text = {
+	name = CountryInfo_GET_tab_name
+	text = { localization_key = "CountryInfo_tab_name_[?d]" }
+}
+
+## Functionality_Tutorials ##
+
+defined_text = {
+	name = Get_Tutorial_Folder
+	text = { localization_key = "CountryInfo_Tutorial_Folder.[?f]" }
+}
+
+defined_text = {
+	name = Get_Tutorial_Content
+	text = { localization_key = "CountryInfo_Tutorial_Content.[?f]" }
+}
+
+defined_text = {
+	name = Get_Tutorial_Content_Desc
+	text = { localization_key = "CountryInfo_Tutorial_Content_desc.[?CountryInfo_Selected]" }
+}
+
+## Functionality_Development ##
+
+defined_text = {
+	name = Get_Development_Folder
+	text = { localization_key = "CountryInfo_Development_Folder.[?f]" }
+}
+
+defined_text = {
+	name = Get_Development_Content
+	text = { localization_key = "CountryInfo_Development_Content.[?f]" }
+}
+
+defined_text = {
+	name = Get_Development_Content_Desc
+	text = { localization_key = "CountryInfo_Development_Content_desc.[?f]" }
+}
+
+## Functionality_Economics ##
+
+defined_text = {
+	name = Get_Economics_Title
+	text = { localization_key = "CountryInfo_Economic.[?f]" }
+}
+
+defined_text = {
+	name = Get_Economics_Desc
+	text = { localization_key = "CountryInfo_Economic_Overview_[THIS.GetTag]" }
+}

@@ -1,0 +1,1009 @@
+TNO_fopo_setup_paraguay_map = {
+	set_global_flag = PAR_bush_war_ongoing
+
+	clear_array = paraguay_map_grid_array
+	clear_array = paraguay_map_x
+	clear_array = paraguay_map_y
+
+	add_to_array = { paraguay_map_grid_array = 1620 }
+	add_to_array = { paraguay_map_x = 150 }
+	add_to_array = { paraguay_map_y = 117 }
+	set_variable = { 1619:PAR_Government_Control = 28 }
+	set_variable = { 1619:PAR_Communist_Control = 72 }
+
+	add_to_array = { paraguay_map_grid_array = 1619 }
+	add_to_array = { paraguay_map_x = 63 }
+	add_to_array = { paraguay_map_y = 45 }
+	set_variable = { 1620:PAR_Government_Control = 51 }
+	set_variable = { 1620:PAR_Communist_Control = 49 }
+
+	add_to_array = { paraguay_map_grid_array = 1618 }
+	add_to_array = { paraguay_map_x = 117 }
+	add_to_array = { paraguay_map_y = 229 }
+	set_variable = { 1618:PAR_Government_Control = 53 }
+	set_variable = { 1618:PAR_Communist_Control = 47 }
+
+	add_to_array = { paraguay_map_grid_array = 1617 }
+	add_to_array = { paraguay_map_x = 25 }
+	add_to_array = { paraguay_map_y = 245 }
+	set_variable = { 1617:PAR_Government_Control = 68 }
+	set_variable = { 1617:PAR_Communist_Control = 32 }
+
+	add_to_array = { paraguay_map_grid_array = 1616 }
+	add_to_array = { paraguay_map_x = 67 }
+	add_to_array = { paraguay_map_y = 205 }
+	set_variable = { 1616:PAR_Government_Control = 73 }
+	set_variable = { 1616:PAR_Communist_Control = 27 }
+
+	add_to_array = { paraguay_map_grid_array = 2100 }
+	add_to_array = { paraguay_map_x = 115 }
+	add_to_array = { paraguay_map_y = 171 }
+	set_variable = { 2100:PAR_Government_Control = 68 }
+	set_variable = { 2100:PAR_Communist_Control = 32 }
+
+	add_to_array = { paraguay_map_grid_array = 301 }
+	add_to_array = { paraguay_map_x = 75 }
+	add_to_array = { paraguay_map_y = 192 }
+	set_variable = { 301:PAR_Government_Control = 70 }
+	set_variable = { 301:PAR_Communist_Control = 30 }
+
+	set_variable = { PAR_selected_state = 1616 }
+	TNO_PAR_Calculate_Frame = yes
+
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = PAR_battle_asuncion
+				option = PAR_BATTLE_ASUNCION_LIBERAL_VICTORY
+			}
+		}
+		set_variable = { PAR.PAR_FULNA_alignment = 56 }
+	}
+	else_if = {
+		limit = {
+			has_game_rule = {
+				rule = PAR_battle_asuncion
+				option = PAR_BATTLE_ASUNCION_COMMUNIST_VICTORY
+			}
+		}
+		set_variable = { PAR.PAR_FULNA_alignment = 44 }
+	}
+	else = {
+		set_variable = { PAR.PAR_FULNA_alignment = 50 }
+	}
+	add_to_variable = { PAR.regime_minus = -10 }
+	PAR_bush_war_calculate_stability = yes
+
+	TNO_PAR_Draw_Pie_Chart = yes
+	# Statuses: 1 (gov't); 2 (fulna); 3 (divided)
+
+	PAR_check_states = yes
+	#set_variable = { PAR.PAR_civil_war_countdown = 365 }
+	#activate_mission = BRA_PAR_civil_war_countdown
+
+	hidden_effect = {
+		ZZZ = {
+			activate_mission = ZZZ_BRA_bush_war_countdown
+			activate_mission = ZZZ_BRA_bush_war_government_action_1
+			set_variable = { PAR_government_action_region_var = 1619 }
+		}
+	}
+
+	if = {
+		limit = {
+			USA = {
+				has_country_flag = american_intel_successful
+			}
+		}
+		hidden_effect = {
+			PAR_fbi_mission_successful_effect = yes
+		}
+		custom_effect_tooltip = fbi_latam_actions_paraguay_prelude_fire_tt
+	}
+
+	USA = {
+		clr_country_flag = USA_CIA_paraguay_prelude
+	}
+}
+
+TNO_PAR_Draw_Pie_Chart = {
+	set_variable = { paraguay_divided_pie_frame = PAR_selected_state:PAR_Communist_Control }
+	round_variable = paraguay_divided_pie_frame
+	multiply_variable = { paraguay_divided_pie_frame = 1000 }
+	add_to_variable = { paraguay_divided_pie_frame = PAR_selected_state:PAR_Communist_Control }
+
+	set_variable = { paraguay_government_pie_frame = PAR_selected_state:PAR_Communist_Control }
+	round_variable = paraguay_government_pie_frame
+	multiply_variable = { paraguay_government_pie_frame = 1000 }
+	add_to_variable = { paraguay_government_pie_frame = 100 }
+}
+PAR_increase_communist_control = {
+	set_temp_variable = { PAR_control_temp_txt = PAR_control_temp }
+	add_to_variable = { PAR_Communist_Control = PAR_control_temp }
+	custom_effect_tooltip = PAR_communst_control_change
+	subtract_from_variable = { PAR_Government_Control = PAR_control_temp }
+
+	PAR_clamp_control = yes
+	TNO_PAR_Draw_Pie_Chart = yes
+	PAR_check_states = yes
+	PAR_bush_war_calculate_stability = yes
+
+	log = "[?PAR_selected_state:PAR_Communist_Control] [?PAR_selected_state:PAR_Government_Control]"
+}
+PAR_increase_government_control = {
+	set_temp_variable = { PAR_control_temp_txt = PAR_control_temp }
+	add_to_variable = { PAR_Government_Control = PAR_control_temp }
+	custom_effect_tooltip = PAR_government_control_change
+	subtract_from_variable = { PAR_Communist_Control = PAR_control_temp }
+
+	PAR_clamp_control = yes
+	TNO_PAR_Draw_Pie_Chart = yes
+	PAR_check_states = yes
+	PAR_bush_war_calculate_stability = yes
+
+	log = "[?PAR_selected_state:PAR_Communist_Control] [?PAR_selected_state:PAR_Government_Control]"
+}
+PAR_clamp_control = {
+	clamp_variable = {
+		var = PAR_Government_Control
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = PAR_Communist_Control
+		min = 0
+		max = 100
+	}
+}
+PAR_check_states = {
+	for_each_loop = {
+		array = paraguay_map_grid_array
+		if = {
+			limit = {
+				var:v = {
+					check_variable = { PAR_Government_Control > PAR_Communist_Control }
+				}
+			}
+			var:v = { set_variable = { state_condition = 1 } }
+		}
+		else_if = {
+			limit = {
+				var:v = {
+					check_variable = { PAR_Communist_Control > PAR_Government_Control }
+				}
+			}
+			var:v = { set_variable = { state_condition = 2 } }
+		}
+		else_if = {
+			limit = {
+				var:v = {
+					check_variable = { PAR_Communist_Control = PAR_Government_Control }
+				}
+			}
+			var:v = { set_variable = { state_condition = 3 } }
+		}
+	}
+}
+PAR_bush_war_calculate_stability = {
+	set_variable = { PAR.PAR_regime_stability = 100 }
+	clamp_variable = {
+		var = PAR.regime_minus
+		min = -100
+		max = 0
+	}
+	add_to_variable = { PAR.PAR_regime_stability = PAR.regime_minus }
+
+	log = "regime_minus: [?PAR.regime_minus]"
+}
+TNO_PAR_Calculate_Frame = {
+	for_each_loop = {
+		array = paraguay_map_grid_array
+		var:v = {
+			if = {
+				limit = {
+					check_variable = { PAR_Government_Control < PAR_Communist_Control }
+				}
+				if = {
+					limit = {
+						check_variable = { state_condition = 1 }
+					}
+					add_to_variable = { PAR.regime_minus = -5 }
+					PAR_bush_war_calculate_stability = yes
+				}
+				set_variable = { state_condition = 2 }
+
+				set_variable = { gui_display_frame = state_condition }
+				multiply_variable = { gui_display_frame = 1000 }
+
+				set_temp_variable = { gui_display_frame_add = PAR_Communist_Control }
+				subtract_from_temp_variable = { gui_display_frame_add = PAR_Government_Control }
+				divide_temp_variable = { gui_display_frame_add = PAR_Communist_Control }
+				multiply_temp_variable = { gui_display_frame_add = 100 }
+
+				add_to_variable = { gui_display_frame = gui_display_frame_add }
+
+				set_demilitarized_zone = yes
+			}
+			else = {
+				if = {
+					limit = {
+						check_variable = { state_condition = 2 }
+					}
+					add_to_variable = { PAR.regime_minus = 5 }
+					PAR_bush_war_calculate_stability = yes
+				}
+				set_variable = { state_condition = 1 }
+
+				set_variable = { gui_display_frame = state_condition }
+				multiply_variable = { gui_display_frame = 1000 }
+
+				set_temp_variable = { gui_display_frame_add = PAR_Government_Control }
+				subtract_from_temp_variable = { gui_display_frame_add = PAR_Communist_Control }
+				divide_temp_variable = { gui_display_frame_add = PAR_Government_Control }
+				multiply_temp_variable = { gui_display_frame_add = 100 }
+
+				add_to_variable = { gui_display_frame = gui_display_frame_add }
+
+				set_demilitarized_zone = no
+			}
+		}
+	}
+	log = "[?PAR_selected_state:gui_display_frame]"
+}
+
+PAR_bush_war_change_selected_group = {
+	PAR = {
+		clear_array = PAR_selected_group_array
+		add_to_array = { PAR_selected_group_array = 1 }
+		add_to_array = { PAR_selected_group_array = 1 }
+		add_to_array = { PAR_selected_group_array = 1 }
+		set_variable = { PAR_selected_group_array^PAR_selected_group = 2 }
+		set_variable = { PAR_selected_group_frame = PAR_selected_group }
+		add_to_variable = { PAR_selected_group_frame = 1 }
+	}
+}
+
+TNO_PAR_bush_war_government_action = {
+	if = {
+		limit = { has_global_flag = PAR_bush_war_government_action_flag }
+		clr_global_flag = PAR_bush_war_government_action_flag
+	}
+	else = {
+		set_global_flag = PAR_bush_war_government_action_flag
+	}
+
+	if = {
+		limit = { check_variable = { PAR_government_action_var = 0 } }
+		set_temp_variable = { PAR_control_temp = 7 }
+		TNO_PAR_bush_war_random_region_government_effect = yes
+		TNO_PAR_Draw_Pie_Chart = yes
+	}
+	else_if = {
+		limit = { check_variable = { PAR_government_action_var = 1 } }
+		set_temp_variable = { PAR_control_temp = 15 }
+		TNO_PAR_bush_war_random_region_government_effect = yes
+		TNO_PAR_Draw_Pie_Chart = yes
+	}
+	else = {
+		ZZZ = {
+			add_days_mission_timeout = {
+				mission = ZZZ_BRA_bush_war_countdown
+				days = -10
+			}
+		}
+	}
+
+	hidden_effect = {
+		if = {
+			limit = { 1616 = { check_variable = { PAR_Communist_Control > 29 } } }
+			random_list = {
+				75 = {
+					set_variable = { PAR_government_action_var = 0 } # Increase Government Support By Ten
+					set_variable = { PAR_government_action_region_var = 1616 }
+				}
+				25 = {
+					set_variable = { PAR_government_action_var = 1 } # Increase Government Support By Twenty
+					set_variable = { PAR_government_action_region_var = 1616 }
+				}
+			}
+		}
+		else = {
+			random_list = {
+				60 = {
+					set_variable = { PAR_government_action_var = 0 } # Increase Government Support By Ten
+					TNO_PAR_bush_war_random_region_government_decide = yes
+				}
+				20 = {
+					set_variable = { PAR_government_action_var = 1 } # Increase Government Support By Twenty
+					TNO_PAR_bush_war_random_region_government_decide = yes
+				}
+				20 = {
+					set_variable = { PAR_government_action_var = 2 } # Decrease Mobilisation Timer By 10 Days
+				}
+			}
+		}
+	}
+}
+
+TNO_PAR_bush_war_random_region_government_effect = {
+	var:PAR_government_action_region_var = { PAR_increase_government_control = yes }
+}
+
+TNO_PAR_bush_war_random_region_government_decide = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = 0
+				1620 = { check_variable = { PAR_Communist_Control < 26 } }
+			}
+			modifier = {
+				factor = 20
+				1620 = { check_variable = { PAR_Communist_Control > 49 } }
+			}
+			set_variable = { PAR_government_action_region_var = 1620 }
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				1619 = { check_variable = { PAR_Communist_Control < 26 } }
+			}
+			modifier = {
+				factor = 20
+				1619 = { check_variable = { PAR_Communist_Control > 49 } }
+			}
+			set_variable = { PAR_government_action_region_var = 1619 }
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				1618 = { check_variable = { PAR_Communist_Control < 26 } }
+			}
+			modifier = {
+				factor = 20
+				1618 = { check_variable = { PAR_Communist_Control > 49 } }
+			}
+			set_variable = { PAR_government_action_region_var = 1618 }
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				1617 = { check_variable = { PAR_Communist_Control < 26 } }
+			}
+			modifier = {
+				factor = 20
+				1617 = { check_variable = { PAR_Communist_Control > 49 } }
+			}
+			set_variable = { PAR_government_action_region_var = 1617 }
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				1616 = { check_variable = { PAR_Communist_Control < 26 } }
+			}
+			modifier = {
+				factor = 20
+				1616 = { check_variable = { PAR_Communist_Control > 49 } }
+			}
+			set_variable = { PAR_government_action_region_var = 1616 }
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				2100 = { check_variable = { PAR_Communist_Control < 26 } }
+			}
+			modifier = {
+				factor = 20
+				2100 = { check_variable = { PAR_Communist_Control > 49 } }
+			}
+			set_variable = { PAR_government_action_region_var = 2100 }
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				301 = { check_variable = { PAR_Communist_Control < 26 } }
+			}
+			modifier = {
+				factor = 20
+				301 = { check_variable = { PAR_Communist_Control > 49 } }
+			}
+			set_variable = { PAR_government_action_region_var = 301 }
+		}
+	}
+}
+
+TNO_PAR_bush_war_fulna_take_over_check = {
+	set_variable = { PAR.par_fulna = 0 }
+
+	for_each_loop = {
+		array = paraguay_map_grid_array
+		if = {
+			limit = { var:v = { check_variable = { state_condition = 2 } } }
+			add_to_variable = { PAR.par_fulna = 1 }
+		}
+	}
+
+	if = { # FULNA Takes Over
+		limit = {
+			OR = {
+				check_variable = { PAR.par_fulna > 3.9 }
+				1616 = { check_variable = { state_condition = 2 } }
+			}
+		}
+		if = {
+			limit = { NOT = { has_global_flag = PAR_bush_war_fulna_take_over_imminent } }
+			set_global_flag = PAR_bush_war_fulna_take_over_imminent
+			ZZZ = { activate_mission = ZZZ_BRA_bush_war_fulna_take_over_imminent }
+		}
+	}
+
+	else = {
+		clr_global_flag = PAR_bush_war_fulna_take_over_imminent
+	}
+}
+
+TNO_PAR_end_bush_war_government_victory = {
+	clr_global_flag = PAR_bush_war_ongoing
+	clr_global_flag = PAR_bush_war_fulna_take_over_imminent
+	BRA = {
+		clear_array = paraguay_map_grid_array
+		TNO_fopo_remove_paraguayan_bush_war_tab = yes
+		set_temp_variable = { alert_id = token:Alert_LATAM_Bush_War }
+		remove_TNO_alert = yes
+	}
+
+	hidden_effect = {
+		PAR = {
+			remove_ideas = PAR_bush_war
+			every_owned_state = { set_demilitarized_zone = no }
+			add_country_leader_role = {
+				character = PAR_Miguel_Angel_Soler
+				promote_leader = yes
+				country_leader = {
+					expire = "1994.4.20"
+					ideology = communist_national_communism_subtype
+				}
+			}
+			set_party_name = {
+				ideology = communist
+				name = PAR_FULNA_lost_party
+				long_name = PAR_FULNA_lost_party_long
+			}
+			if = {
+				limit = {
+					PAR = { has_country_leader = { character = PAR_Epifanio_Mendez_Fleitas ruling_only = yes } }
+					ARG = { has_country_leader = { character = ARG_Juan_Domingo_Peron ruling_only = yes } }
+				}
+				country_event = { id = PAR_scripted.10 days = 730 }
+			}
+			if = {
+				limit = { has_country_leader = { character = PAR_Alfredo_Stroessner ruling_only = yes } }
+				add_popularity = { ideology = communist popularity = -0.10 }
+			}
+		}
+		BRA = {
+			country_event = { id = LATAM_ParaEpilogue_Illiberal.1 days = 7 }
+		}
+		USA = {
+			if = {
+				limit = {
+					has_country_flag = PAR_green_demon_taken
+				}
+				country_event = {
+					id = USA_FBI_LATAM.13
+					days = 7
+				}
+			}
+			clr_country_flag = USA_CIA_paraguay
+		}
+	}
+}
+
+TNO_PAR_end_bush_war_fulna_victory = {
+	clr_global_flag = PAR_bush_war_ongoing
+	clr_global_flag = PAR_bush_war_fulna_take_over_imminent
+	set_global_flag = PAR_FULNA_victory
+	BRA = {
+		clear_array = paraguay_map_grid_array
+		TNO_fopo_remove_paraguayan_bush_war_tab = yes
+		set_temp_variable = { alert_id = token:Alert_LATAM_Bush_War }
+		remove_TNO_alert = yes
+	}
+
+	hidden_effect = {
+		BRA = {
+			country_event = LATAM_bush_war.25
+			country_event = { id = LATAM_santa_cruz_fall.2 days = 5 }
+		}
+		PAR = { country_event = { id = PAR_scripted.5 days = 33 } }
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = LATAM_news.84 days = 1 }
+		}
+		STC = {
+			drop_cosmetic_tag = yes
+			country_event = { id = STC_revolution.1 days = 7 }
+		}
+
+		BRA = { remove_opinion_modifier = { target = PAR modifier = SOUTHAM_guaira } }
+		USA = { remove_opinion_modifier = { target = PAR modifier = SOUTHAM_guaira } }
+		CLC = {	remove_opinion_modifier = { target = PAR modifier = CLC_fascist_comrades } }
+		STC = {	remove_opinion_modifier = { target = PAR modifier = CLC_fascist_comrades } }
+		DOM = {	remove_opinion_modifier = { target = PAR modifier = CLC_fascist_comrades } }
+		GUC = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		SUR = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		CLL = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		BRA = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		CHL = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		PRU = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		COL = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		VEN = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		ECU = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		GUY = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		URG = { remove_opinion_modifier = { target = PAR modifier = PAR_black_spot } }
+		ARG = { remove_opinion_modifier = { target = PAR modifier = PAR_ARG_collaboration } }
+
+		PAR = {
+			remove_opinion_modifier = { target = BRA modifier = SOUTHAM_guaira }
+			remove_opinion_modifier = { target = USA modifier = SOUTHAM_guaira }
+			remove_opinion_modifier = { target = CLC modifier = CLC_fascist_comrades }
+			remove_opinion_modifier = { target = STC modifier = CLC_fascist_comrades }
+			remove_opinion_modifier = { target = DOM modifier = CLC_fascist_comrades }
+			remove_opinion_modifier = { target = BRA modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = CHL modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = PRU modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = COL modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = VEN modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = ECU modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = GUY modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = URG modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = GUC modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = SUR modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = CLL modifier = PAR_black_spot }
+			remove_opinion_modifier = { target = ARG modifier = PAR_ARG_collaboration }
+			every_owned_state = { set_demilitarized_zone = no }
+			econ_leave_sphere = yes
+			end_puppet = STC
+			set_variable = { TNO_SA_influence^global.UNALIGNED = 60 }
+			set_variable = { TNO_SA_influence^global.BRAZIL = 40 }
+			set_variable = { TNO_SA_influence^global.ARGENTINA = 0 }
+			set_variable = { TNO_SA_influence^global.MEXICO = 0 }
+			set_variable = { TNO_SA_influence^global.IBERIA = 0 }
+			SA_set_alignment = yes
+			ARG = {
+				diplomatic_relation = {
+					country = PAR
+					relation = guarantee
+					active = no
+				}
+				diplomatic_relation = {
+					country = STC
+					relation = guarantee
+					active = yes
+				}
+			}
+			set_politics = {
+				ruling_party = paternalism
+				last_election = "1940.1.20"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_popularities = {
+				fascism = 14
+				conservatism = 10
+				liberal_conservatism = 22
+				progressivism = 10
+				socialist = 22
+				communist = 22
+			}
+			set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Planned }
+			econ_type_change = yes
+			remove_ideas = PAR_bush_war
+			#remove_ideas = PAR_bastion_of_latin_american_fascism
+			remove_ideas = Pakt_Observer
+			remove_ideas = PAR_the_chokehold
+			remove_ideas = PAR_condor_legion
+			remove_ideas = PAR_peace_and_progress
+			add_ideas = tno_political_parties_nonpartisan_system
+			add_ideas = tno_trade_unions_all_allowed
+			add_ideas = tno_public_meetings_allowed
+			add_ideas = tno_press_rights_free_press
+			add_ideas = tno_military_supervision_no_supervision
+			add_ideas = tno_penal_system_frontier_justice
+			add_ideas = tno_security_anarchic
+
+			set_party_name = {
+				ideology = paternalism
+				name = PAR_FULNA_party
+				long_name = PAR_FULNA_party_long
+			}
+			set_party_name = {
+				ideology = communist
+				name = PAR_FULNA_com_party
+				long_name = PAR_FULNA_com_party_long
+			}
+			set_party_name = {
+				ideology = socialist
+				name = PAR_FULNA_soc_party
+				long_name = PAR_FULNA_soc_party_long
+			}
+			set_party_name = {
+				ideology = liberal_conservatism
+				name = PAR_FULNA_lib_party
+				long_name = PAR_FULNA_lib_party_long
+			}
+			set_party_name = {
+				ideology = fascism
+				name = PAR_ANR_party
+				long_name = PAR_ANR_party_long
+			}
+			retire_character = PAR_Francisco_Alcibiades_Britez_Borges
+			add_country_leader_role = {
+				character = PAR_FULNA_Provisional_Junta
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_FULNA_PROVISIONAL_JUNTA_DESC"
+					expire = "1994.4.20"
+					ideology = paternalism_provisional_government_subtype
+				}
+			}
+			add_country_leader_role = {
+				character = PAR_Edgar_Ynsfran
+				promote_leader = yes
+				country_leader = {
+					expire = "1994.4.20"
+					ideology = fascism_revolutionary_nationalism_subtype
+				}
+			}
+			if = {
+				limit = { has_global_flag = PPI_Trujillo_Victory }
+				DOM = { add_ideas = PAR_condor_legion }
+			}
+			else = {
+				CLC = { add_ideas = PAR_condor_legion }
+			}
+		}
+		USA = {
+			clr_country_flag = USA_CIA_paraguay
+		}
+		if = { #Remove with the shit below when the time is right, just trying to give some variance to this proxy here
+			limit = {
+				BRA = { is_ai = yes }
+				ARG = { is_ai = yes }
+				has_game_rule = {
+					rule = PAR_battle_asuncion
+					option = DEFAULT
+				}
+			}
+			random_list = {
+				34 = { set_variable = { PAR.PAR_FULNA_alignment = 60 } } #Libs
+				33 = { set_variable = { PAR.PAR_FULNA_alignment = 50 } } #Febs
+				33 = { set_variable = { PAR.PAR_FULNA_alignment = 40 } } #Comms
+			}
+		}
+	}
+}
+
+TNO_PAR_bush_war_stroessner_coup = {
+	hidden_effect = {
+
+		if = { #I know this is ugly as fuck but the AI NEVER wins this proxy man --- Delete with Argentina content probably
+			limit = {
+				BRA = { is_ai = yes }
+				ARG = { is_ai = yes }
+				NOT = {
+					has_game_rule = {
+						rule = PAR_bush_war
+						option = PAR_BUSH_WAR_GOVERNMENT_VICTORY
+					}
+				}
+			}
+			random_list = {
+				65 = { set_country_flag = PAR_FULNA_wins_Cause_this_AI_is_a_Dumbass }
+				35 = { TNO_PAR_bush_war_global_fulna_control_10 = yes }
+			}
+		}
+		else = { TNO_PAR_bush_war_global_fulna_control_10 = yes }
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = LATAM_news.215
+			}
+		}
+
+		BRA = {
+			country_event = { id = LATAM_bush_war.34 days = 1 }
+		}
+
+		PAR = {
+
+			set_party_name = {
+				ideology = despotism_2
+				name = PAR_despotism_neocolorados_party
+				long_name = PAR_despotism_neocolorados_party_long
+			}
+
+			if = {
+				limit = {
+					has_country_leader = {
+						character = PAR_Juan_Natalicio_Gonzalez
+						ruling_only = yes
+					}
+				}
+				set_popularities = {
+					fascism = 16
+					fascism_3 = 5
+					despotism_2 = 16
+					despotism = 29
+					paternalism = 8
+					conservatism = 7
+					communist = 19
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = PAR_despotism_stroessner_party_long
+					name = PAR_despotism_stroessner_party
+				}
+				set_party_name = {
+					ideology = paternalism
+					long_name = PAR_despotism_traditionalists_party_long
+					name = PAR_despotism_traditionalists_party
+				}
+				add_country_leader_role = {
+					character = PAR_Edgar_Ynsfran
+					promote_leader = yes
+					country_leader = {
+						expire = "1994.4.20"
+						ideology = fascism_revolutionary_nationalism_subtype
+					}
+				}
+				add_country_leader_role = {
+					character = PAR_Juan_Ramon_Chaves
+					promote_leader = yes
+					country_leader = {
+						expire = "1994.4.20"
+						ideology = paternalism_national_conservatism_subtype
+					}
+				}
+				remove_ideas = PAR_the_barefoot_revolution
+			}
+			else_if = {
+				limit = {
+					has_country_leader = {
+						character = PAR_Victoriano_Benitez_Vera
+						ruling_only = yes
+					}
+				}
+				set_popularities = {
+					national_socialism = 19
+					fascism_2 = 14
+					fascism = 12
+					despotism = 33
+					communist = 22
+				}
+				set_party_name = {
+					ideology = despotism
+					name = PAR_fascism_labour_party
+					long_name = PAR_fascism_labour_party_long
+				}
+				set_party_name = {
+					ideology = fascism_2
+					name = PAR_fascism_labour_party
+					long_name = PAR_fascism_labour_party_long
+				}
+				set_party_name = {
+					ideology = fascism
+					name = PAR_fascism_2_party
+					long_name = PAR_fascism_2_party_long
+				}
+				add_country_leader_role = {
+					character = PAR_Edgar_Ynsfran
+					promote_leader = yes
+					country_leader = {
+						expire = "1994.4.20"
+						ideology = fascism_revolutionary_nationalism_subtype
+					}
+				}
+				remove_ideas = PAR_new_national_state_benitez_vera
+			}
+			else = { # Couped Epifanio
+				set_popularities = {
+					despotism = 34
+					paternalism = 12
+					paternalism_2 = 15
+					conservatism = 9
+					conservatism_1 = 8
+					communist = 22
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = PAR_despotism_stroessner_party_long
+					name = PAR_despotism_stroessner_party
+				}
+				set_party_name = {
+					ideology = paternalism
+					long_name = PAR_despotism_traditionalists_party_long
+					name = PAR_despotism_traditionalists_party
+				}
+				add_country_leader_role = {
+					character = PAR_Juan_Ramon_Chaves
+					promote_leader = yes
+					country_leader = {
+						expire = "1994.4.20"
+						ideology = paternalism_national_conservatism_subtype
+					}
+				}
+				remove_ideas = PAR_battling_for_democracy
+				set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Corporatism }
+				econ_type_change = yes
+			}
+			set_politics = {
+				ruling_party = despotism
+				last_election = "1963.2.9"
+				election_frequency = 60
+				elections_allowed = yes
+			}
+			add_country_leader_role = {
+				character = PAR_Alfredo_Stroessner
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_ALFREDO_STROESSNER_DESC"
+					expire = "1994.4.20"
+					ideology = despotism_personalistic_dictatorship_subtype
+				}
+			}
+			add_ideas = Pakt_Observer
+			add_ideas = PAR_peace_and_progress
+			add_ideas = tno_political_parties_controlled_opposition
+			add_ideas = tno_slavery_corvee
+			add_ideas = tno_military_supervision_kill_em_all
+		}
+
+		add_to_variable = { PAR.regime_minus = 30 }
+		PAR_bush_war_calculate_stability = yes
+	}
+}
+
+TNO_PAR_bush_war_global_fulna_control_10 = {
+	for_each_scope_loop = {
+		array = paraguay_map_grid_array
+		set_temp_variable = { PAR_control_temp = 10 }
+		PAR_increase_communist_control = yes
+	}
+}
+
+TNO_PAR_bush_war_FULNA_alignment_increase_nationalist = {
+	custom_effect_tooltip = PAR_FULNA_alignment_increase_nationalist_tt
+	add_to_variable = { PAR.PAR_FULNA_alignment = -2 }
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = PAR_battle_asuncion
+				option = PAR_BATTLE_ASUNCION_LIBERAL_VICTORY
+			}
+		}
+		clamp_variable = {
+			var = PAR.PAR_FULNA_alignment
+			min = 56
+			max = 100
+		}
+	}
+	else_if = {
+		limit = {
+			has_game_rule = {
+				rule = PAR_battle_asuncion
+				option = PAR_BATTLE_ASUNCION_FEBRARISTA_VICTORY
+			}
+		}
+		clamp_variable = {
+			var = PAR.PAR_FULNA_alignment
+			min = 45
+			max = 55
+		}
+	}
+	else_if = {
+		limit = {
+			has_game_rule = {
+				rule = PAR_battle_asuncion
+				option = PAR_BATTLE_ASUNCION_COMMUNIST_VICTORY
+			}
+		}
+		clamp_variable = {
+			var = PAR.PAR_FULNA_alignment
+			min = 0
+			max = 44
+		}
+	}
+	else = {
+		clamp_variable = {
+			var = PAR.PAR_FULNA_alignment
+			min = 0
+			max = 100
+		}
+	}
+}
+
+TNO_PAR_bush_war_FULNA_alignment_increase_cringe_liberal = {
+	custom_effect_tooltip = PAR_FULNA_alignment_increase_cringe_liberals_tt
+	add_to_variable = { PAR.PAR_FULNA_alignment = 1 }
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = PAR_battle_asuncion
+				option = PAR_BATTLE_ASUNCION_LIBERAL_VICTORY
+			}
+		}
+		clamp_variable = {
+			var = PAR.PAR_FULNA_alignment
+			min = 56
+			max = 100
+		}
+	}
+	else_if = {
+		limit = {
+			has_game_rule = {
+				rule = PAR_battle_asuncion
+				option = PAR_BATTLE_ASUNCION_FEBRARISTA_VICTORY
+			}
+		}
+		clamp_variable = {
+			var = PAR.PAR_FULNA_alignment
+			min = 45
+			max = 55
+		}
+	}
+	else_if = {
+		limit = {
+			has_game_rule = {
+				rule = PAR_battle_asuncion
+				option = PAR_BATTLE_ASUNCION_COMMUNIST_VICTORY
+			}
+		}
+		clamp_variable = {
+			var = PAR.PAR_FULNA_alignment
+			min = 0
+			max = 44
+		}
+	}
+	else = {
+		clamp_variable = {
+			var = PAR.PAR_FULNA_alignment
+			min = 0
+			max = 100
+		}
+	}
+}
+
+PAR_fbi_mission_successful_effect = {
+	add_to_variable = { PAR.PAR_FULNA_alignment = 3 }
+
+	add_to_variable = { PAR.regime_minus = -10 }
+	PAR_bush_war_calculate_stability = yes
+
+	1616 = {
+		set_temp_variable = { PAR_control_temp = 5 }
+		PAR_increase_communist_control = yes
+	}
+	TNO_PAR_Draw_Pie_Chart = yes
+	TNO_PAR_Calculate_Frame = yes
+}
+
+TNO_PAR_start_bush_war_action = {
+	add_to_variable = { PAR_bush_war_BRA_actions_counter = 1 }
+	if = {
+		limit = { PAR_bush_war_BRA_can_act = no }
+		set_temp_variable = { alert_id = token:Alert_LATAM_Bush_War }
+		remove_TNO_alert = yes
+	}
+}
+TNO_PAR_finish_bush_war_action = {
+	subtract_from_variable = { PAR_bush_war_BRA_actions_counter = 1 }
+	set_temp_variable = { alert_id = token:Alert_LATAM_Bush_War }
+	add_TNO_alert_unless_exists = yes
+}

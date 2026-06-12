@@ -1,0 +1,402 @@
+spriteTypes = {
+
+	## States
+
+	# Display - Denied
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Hainan_display_denied"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/states/Hainan_display_denied.dds"
+		noOfFrames = 2
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+		transparencecheck = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Qinzhou_display_denied"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/states/Qinzhou_display_denied.dds"
+		noOfFrames = 2
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+		transparencecheck = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Zhanjiang_display_denied"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/states/Zhanjiang_display_denied.dds"
+		noOfFrames = 2
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+		transparencecheck = yes
+	}
+
+	# Outline
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Choshu_outline"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/states/Choshu_outline.dds"
+		noOfFrames = 2
+		animation_rate_fps = 2
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Shokan_outline"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/states/Shokan_outline.dds"
+		noOfFrames = 2
+		animation_rate_fps = 2
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Chokei_outline"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/states/Chokei_outline.dds"
+		noOfFrames = 2
+		animation_rate_fps = 2
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Momei_outline"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/states/Momei_outline.dds"
+		noOfFrames = 2
+		animation_rate_fps = 2
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Honkon_outline"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/states/Honkon_outline.dds"
+		noOfFrames = 2
+		animation_rate_fps = 2
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Koshu_outline"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/states/Koshu_outline.dds"
+		noOfFrames = 2
+		animation_rate_fps = 2
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Makao_outline"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/states/Makao_outline.dds"
+		noOfFrames = 2
+		animation_rate_fps = 2
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+
+	# Display
+	progressbartype = {
+		name = GFX_GNG_Choshu_display
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/states/Choshu_display.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/state_colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.151 0.120 1 1 }
+		size = { 
+			x = 151
+			y = 120
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = GFX_GNG_Shokan_display
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/states/Shokan_display.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/state_colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.117 0.115 1 1 }
+		size = { 
+			x = 117
+			y = 115
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = GFX_GNG_Chokei_display
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/states/Chokei_display.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/state_colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.091 0.109 1 1 }
+		size = { 
+			x = 91
+			y = 109
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = GFX_GNG_Momei_display
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/states/Momei_display.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/state_colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.142 0.106 1 1 }
+		size = { 
+			x = 142
+			y = 106
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = GFX_GNG_Honkon_display
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/states/Honkon_display.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/state_colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.029 0.033 1 1 }
+		size = { 
+			x = 29
+			y = 33
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = GFX_GNG_Koshu_display
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/states/Koshu_display.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/state_colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.040 0.033 1 1 }
+		size = { 
+			x = 40
+			y = 33
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = GFX_GNG_Makao_display
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/states/Makao_display.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/state_colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.011 0.016 1 1 }
+		size = { 
+			x = 11
+			y = 16
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+
+	# Button
+	spritetype = {
+		name = GFX_GNG_Choshu_button
+		textureFile = "gfx/interface/guangdong_gui/map_gui/states/Choshu_button.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	spritetype = {
+		name = GFX_GNG_Shokan_button
+		textureFile = "gfx/interface/guangdong_gui/map_gui/states/Shokan_button.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	spritetype = {
+		name = GFX_GNG_Chokei_button
+		textureFile = "gfx/interface/guangdong_gui/map_gui/states/Chokei_button.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	spritetype = {
+		name = GFX_GNG_Momei_button
+		textureFile = "gfx/interface/guangdong_gui/map_gui/states/Momei_button.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	spritetype = {
+		name = GFX_GNG_Honkon_button
+		textureFile = "gfx/interface/guangdong_gui/map_gui/states/Honkon_button.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	spritetype = {
+		name = GFX_GNG_Koshu_button
+		textureFile = "gfx/interface/guangdong_gui/map_gui/states/Koshu_button.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	spritetype = {
+		name = GFX_GNG_Makao_button
+		textureFile = "gfx/interface/guangdong_gui/map_gui/states/Makao_button.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	progressbartype = {
+		name = GFX_GNG_Japanese_Pie
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/japanese_pie_full.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/japanese_symbol.dds"
+		size = { 
+			x = 165
+			y = 165
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_GNG_Chinese_Pie
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/chinese_pie_full.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/chinese_symbol.dds"
+		size = { 
+			x = 165
+			y = 165
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_GNG_Zhujin_Pie
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/zhujin_pie_full.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/zhujin_symbol.dds"
+		size = { 
+			x = 165
+			y = 165
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	spriteType = {
+		name = "GFX_GNG_Map_Bullet"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/bullets.dds"
+		noOfFrames = 3
+	}
+
+	
+	spriteType = {
+		name = "GFX_GNG_Control_Box"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/control_box.dds"
+	}
+	spriteType = {
+		name = "GFX_GNG_Demographics_Box"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/demographics_box.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GNG_Support_Graph_Back"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/support_graph_back.dds"
+	}
+
+	progressbartype = {
+		name = GFX_GNG_Japanese_Bar
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/japanese_bar_full.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/bar_empty.dds"
+		size = { x = 240 y = 24 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = GFX_GNG_Zhujin_Bar
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/zhujin_bar_full.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/bar_empty.dds"
+		size = { x = 240 y = 24 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = GFX_GNG_Chinese_Bar
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/chinese_bar_full.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/bar_empty.dds"
+		size = { x = 240 y = 24 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	
+	progressbartype = {
+		name = GFX_GNG_Zhujin_Symbol
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/zhujin_symbol_full.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/zhujin_symbol_empty.dds"
+		size = { x = 144 y = 134 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no 
+	}
+	progressbartype = {
+		name = GFX_GNG_Japanese_Symbol
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/japanese_symbol_full.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/japanese_symbol_empty.dds"
+		size = { x = 144 y = 144 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	progressbartype = {
+		name = GFX_GNG_Chinese_Symbol
+		textureFile1 = "gfx/interface/guangdong_gui/map_gui/chinese_symbol_full.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/map_gui/chinese_symbol_empty.dds"
+		size = { x = 144 y = 144 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+
+	spriteType = {
+		name = "GFX_GNG_Police"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/GNG_GUI_Police.dds"
+	}
+	spriteType = {
+		name = "GFX_GNG_Police_Selected"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/GNG_GUI_Police_Selected.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GNG_Kenpeitai"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/GNG_GUI_Kenpeitai.dds"
+	}
+	spriteType = {
+		name = "GFX_GNG_Kenpeitai_Selected"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/GNG_GUI_Kenpeitai_Selected.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GNG_Yakuza"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/GNG_GUI_Yakuza.dds"
+	}
+	spriteType = {
+		name = "GFX_GNG_Yakuza_Selected"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/GNG_GUI_Yakuza_Selected.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GNG_Triad"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/GNG_GUI_Triad.dds"
+	}
+	spriteType = {
+		name = "GFX_GNG_Triad_Selected"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/GNG_GUI_Triad_Selected.dds"
+	}
+	spriteType = {
+		name = "GFX_GNG_underworld_button_blocker"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/GNG_underworld_button_blocker.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_GNG_Regions_IJA_Animation"
+		texturefile = "gfx/interface/guangdong_gui/map_gui/GNG_Regions_IJA_Animation.dds"
+		noOfFrames = 6
+		animation_rate_fps = 3
+		looping = yes
+		play_on_show = yes  
+	}
+}

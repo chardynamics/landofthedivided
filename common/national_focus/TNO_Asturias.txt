@@ -1,0 +1,17 @@
+###########################################
+#### Asturian Workers' Battalions tree ####
+###########################################
+
+focus_tree = {
+	id = TBA_vanguards_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TBA
+		}
+	}
+	default = no
+	shared_focus = TBA_a_new_red_spark
+}
+

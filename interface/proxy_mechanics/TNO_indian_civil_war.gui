@@ -1,0 +1,87 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_Indian_Civil_War_GUI"
+		position = { x = 29 y = 131 }
+		size = { width = 496 height = 506 }
+
+		## Fake missions
+		containerWindowType = {
+			name = "fake_mission_1"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_1_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_title"
+				position = { x = 50 y = 9 }
+				text = [GetINDCW_Mission1_Title]
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = INDCW_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_duration"
+				position = { x = 136 y = 8 }
+				text = [GetINDCW_Mission1_Timer]
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = INDCW_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "TNO_Indian_Civil_War_GUI_USA"
+		position = { x = 29 y = 180 }
+		size = { width = 496 height = 506 }
+
+		## Fake missions
+		containerWindowType = {
+			name = "fake_mission_1"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_1_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_title"
+				position = { x = 50 y = 9 }
+				text = USA_INDCW_FakeMission_1_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = USA_INDCW_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_duration"
+				position = { x = 136 y = 8 }
+				text = USA_WAC_FakeMission_1_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = USA_INDCW_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+		}
+	}
+}

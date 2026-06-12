@@ -1,0 +1,145 @@
+﻿##### TURKEY NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+TUR_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { TUR }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "TCG "
+	fallback_name = "%d. Muhrip"					
+
+	unique = {											
+		"Peyk" "Berk" "Kocatepe" "Adatepe" "Zafer" "Tınaztepe" "Gayret" "Demirhisar" "Sultanhisar" "Muavenet" "Gaziantep" "Giresun" 
+		"Gelibolu" "Gemlik" "Alp Arslan" "Mareşal Fevzi Çakmak" "Kılıç Ali Paşa" "Piyale Paşa" "İstanbul" "İzmir" "İzmit" "İskenderun" 
+		"İçel" "Yücetepe" "Savaştepe" "Alçıtepe" "Anıttepe"
+	}
+}
+
+### LIGHT CRUISER NAMES###
+TUR_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { TUR }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "TCG "
+	fallback_name = "%d. Hafif Kruvazör"
+
+	unique = {
+		"Beykoz" "Keşan" "Sarıyer" "Sinop" "Gaziantep" "Adana" "İskenderun" "Muğla" "Manisa" "Fethiye" "Balıkesir" 
+		"Dumlupınar" "Kılıç Ali" "Peyk" "Berk" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+TUR_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { TUR }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "TCG "
+	fallback_name = "%d. Ağır Kruvazör"
+
+	unique = {
+		"Çanakkale" "Edirne" "Tuzla" "Yalova" "Gemlik" "İzmit" "Gebze" "Gelibolu" "Urla" 
+		"Mersin" "Gölcük" "Turgut Reis" 
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+TUR_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { TUR }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "TCG "
+	fallback_name = "%d. Savaş Gemisi"		
+
+	unique = {
+		"İzmir" "İstanbul" "Samsun" "Trabzon" "Turgut Reis" "Barbaros" "Salih Reis" "Kılıç Ali Reis" "Saldıray" "Midilli" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+TUR_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { TUR }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "TCG "
+	fallback_name = "%d. Muharebe Kruvazör"		
+
+	unique = {
+		"Yavuz" "Batıray" "Yıldıray" "Yavuzay" "İzmir" "İstanbul" "Samsun" "Trabzon" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+TUR_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { TUR }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "TCG "
+	fallback_name = "%d. Uçak Gemisi"	
+
+	unique = {
+		"Tekirdağ" "Bandırma" "Anadolu" 
+	}
+}
+
+### FRIGATE NAMES ###
+TUR_FRIGATE_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_FRIGATE
+
+	for_countries = { TUR }
+
+
+	type = ship
+	ship_types = { ship_hull_light destroyer frigate ship_hull_more_light }
+
+	fallback_name = "%d. Fırkateyn"
+
+
+	unique = {
+		"Peyk" "Berk" "Kocatepe" "Adatepe" "Zafer" "Tınaztepe" "Gayret" "Demirhisar" "Sultanhisar" "Muavenet" "Gaziantep" "Giresun" 
+		"Gelibolu" "Gemlik" "Alp Arslan" "Mareşal Fevzi Çakmak" "Kılıç Ali Paşa" "Piyale Paşa" "İstanbul" "İzmir" "İzmit" "İskenderun" 
+		"İçel" "Yücetepe" "Savaştepe" "Alçıtepe"
+	}
+}
+
+### SUBMARINES ###
+TUR_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { TUR }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "TCG "
+	fallback_name = "%d. Denizaltı"
+	
+	unique = {
+		"Dumlupınar" "Sakarya" "Gür" "Saldıray" "Batıray" "Atılay" "Yıldıray" "Oruç Reis" "Murat Reis" 
+		"İnönü" "Çanakkale" "Preveze" "Cerbe" "Turgut Reis" "Piri Reis" "Hızır Reis" "Burak Reis" "Kılıç Ali Reis" 
+	}
+}

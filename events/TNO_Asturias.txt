@@ -1,0 +1,239 @@
+﻿#############################################
+#### Asturian Workers' Battalions events ####
+#############################################
+
+add_namespace = TBA_wars
+
+
+country_event = {
+	id = TBA_wars.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.1" }
+	title = TBA_wars.1.t
+	desc = TBA_wars.1.d
+	picture = GFX_report_event_post_apoc_trapdoor
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.1.a
+	}
+}
+
+
+country_event = { 
+	id = TBA_wars.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.2" }
+	title = TBA_wars.2.t
+	desc = TBA_wars.2.d
+	picture = GFX_report_event_VYT_vyatka_city
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.2.a
+	}
+}
+
+country_event = {
+	id = TBA_wars.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.3" }
+	title = TBA_wars.3.t
+	desc = TBA_wars.3.d
+	picture = GFX_report_event_IRE_family_gathering
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.3.a
+	}
+}
+
+country_event = { 
+	id = TBA_wars.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.4" }
+	title = TBA_wars.4.t
+	desc = TBA_wars.4.d
+	picture = GFX_report_event_CZE_czech_guard_2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.4.a
+	}
+}
+
+country_event = { 
+	id = TBA_wars.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.5" }
+	title = TBA_wars.5.t
+	desc = TBA_wars.5.d
+	picture = GFX_report_event_post_apoc_trapdoor
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.5.a
+	}
+}
+
+country_event = {
+	id = TBA_wars.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.6" }
+	title = TBA_wars.6.t
+	desc = TBA_wars.6.d
+	picture = GFX_report_event_post_apoc_trapdoor
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { 
+		name = TBA_wars.6.a
+		
+	}
+}
+
+country_event = {#Play when reaching 50% capitulation 
+	id = TBA_wars.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.7" }
+	title = TBA_wars.7.t
+	desc = TBA_wars.7.d
+	picture = GFX_report_event_generic_guns_crate_mosin
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.7.a
+	}
+}
+
+country_event = { 
+	id = TBA_wars.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.8" }
+	title = TBA_wars.8.t
+	desc = TBA_wars.8.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.8.a
+	}
+}
+
+country_event = { 
+	id = TBA_wars.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.9" }
+	title = TBA_wars.9.t
+	desc = TBA_wars.9.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.9.a
+	}
+}
+
+country_event = { 
+	id = TBA_wars.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.10" }
+	title = TBA_wars.10.t
+	desc = TBA_wars.10.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.10.a
+	}
+}
+
+country_event = { 
+	id = TBA_wars.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.11" }
+	title = TBA_wars.11.t
+	desc = TBA_wars.11.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.11.a
+	}
+}
+
+country_event = { # Run like Hell
+	id = TBA_wars.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.12" }
+	title = TBA_wars.12.t
+	desc = TBA_wars.12.d
+	picture = GFX_report_event_IBR_iberian_wars_11
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.12.a
+		hidden_effect = {
+			country_event = { id = TBA_wars.13 days = 15 }
+		}
+	}
+}
+
+country_event = { # Paper Makes the World Go Round
+	id = TBA_wars.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.13" }
+	title = TBA_wars.13.t
+	desc = TBA_wars.13.d
+	picture = GFX_report_event_IBR_iberian_wars_1
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.13.a
+	}
+}
+
+##############################################################
+country_event = { #Red Dawn baby
+	id = TBA_wars.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TBA_wars.100" }
+	title = TBA_wars.100.t
+	desc = TBA_wars.100.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = TBA_wars.100.a
+		TBA = {
+			transfer_state = 983
+		}
+	}
+}

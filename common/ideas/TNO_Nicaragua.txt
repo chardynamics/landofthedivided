@@ -1,0 +1,493 @@
+ideas = {
+	country = {
+		#Start
+		NIC_The_Heart_and_the_Fangs = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_The_Heart_and_the_Fangs" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Somocismo
+
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.1
+				admin_costs_misc = 0.075
+			}
+		}
+
+		### USA Relations
+		NIC_Our_Son_of_a_Bitch = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Our_Son_of_a_Bitch" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Our_Son_of_a_Bitch
+
+			modifier = {
+				gdp_growth_modifier = 0.45
+				misc_income_modifier = 0.07
+				custom_modifier_tooltip = NIC_Our_Son_of_a_BitchEffect
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.2
+			}
+		}
+		NIC_Falta_de_Respeto = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Falta_de_Respeto" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Falta_de_Respeto
+			modifier = {
+				gdp_growth_modifier = 0.45
+				misc_income_modifier = 0.085
+				custom_modifier_tooltip = NIC_Our_Son_of_a_BitchEffect
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.15
+			}
+		}
+		NIC_Our_Son_of_a_Bitch_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Our_Son_of_a_Bitch_2" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Our_Son_of_a_Bitch
+
+			modifier = {
+				gdp_growth_modifier = 0.45
+				misc_income_modifier = 0.07
+				custom_modifier_tooltip = NIC_Our_Son_of_a_BitchEffect
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.2
+			}
+		}
+		#The Many Variants
+		NIC_Their_Son_of_a_Bitch_IBR = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Their_Son_of_a_Bitch_IBR" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Their_Son_of_a_Bitch
+
+			modifier = {
+				gdp_growth_modifier = 0.25
+				misc_income_modifier = 0.05
+			}
+			targeted_modifier = {
+				tag = IBR
+				extra_trade_to_target_factor = 0.15
+			}
+		}
+		NIC_Their_Son_of_a_Bitch_ITA = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Their_Son_of_a_Bitch_ITA" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Their_Son_of_a_Bitch
+
+			modifier = {
+				gdp_growth_modifier = 0.25
+				misc_income_modifier = 0.05
+			}
+			targeted_modifier = {
+				tag = ITA
+				extra_trade_to_target_factor = 0.15
+			}
+		}
+		NIC_Their_Son_of_a_Bitch_JAP = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Their_Son_of_a_Bitch_JAP" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Their_Son_of_a_Bitch
+
+			modifier = {
+				gdp_growth_modifier = 0.25
+				misc_income_modifier = 0.05
+			}
+			targeted_modifier = {
+				tag = JAP
+				extra_trade_to_target_factor = 0.15
+			}
+		}
+		NIC_Their_Son_of_a_Bitch_GER = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Their_Son_of_a_Bitch_GER" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Their_Son_of_a_Bitch
+
+			modifier = {
+				gdp_growth_modifier = 0.25
+				misc_income_modifier = 0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.15
+			}
+		}
+		NIC_Their_Son_of_a_Bitch_BRA = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Their_Son_of_a_Bitch_BRA" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Their_Son_of_a_Bitch
+
+			modifier = {
+				gdp_growth_modifier = 0.25
+				misc_income_modifier = 0.05
+			}
+			targeted_modifier = {
+				tag = BRA
+				extra_trade_to_target_factor = 0.15
+			}
+		}
+		NIC_Their_Son_of_a_Bitch_ARG = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Their_Son_of_a_Bitch_ARG" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Their_Son_of_a_Bitch
+
+			modifier = {
+				gdp_growth_modifier = 0.25
+				misc_income_modifier = 0.05
+			}
+			targeted_modifier = {
+				tag = ARG
+				extra_trade_to_target_factor = 0.15
+			}
+		}
+
+
+		### Internal Resistance
+		NIC_Bracing_for_Impact = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Bracing_for_Impact" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Bracing_for_Impact
+
+			modifier = {
+				stability_factor = -0.1
+				admin_efficiency_monthly_rate = -0.85
+				recruitable_population_factor = -0.1
+				army_cost_modifier = 0.05
+			}
+		}
+		NIC_The_Tremors = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_The_Tremors" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_The_Tremors
+
+			modifier = {
+				stability_factor = -0.125
+				gdp_growth_modifier = -0.35
+				admin_efficiency_monthly_rate = -1.15
+				army_cost_modifier = 0.10
+			}
+		}
+		NIC_Silent_but_Deadly = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Silent_but_Deadly" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Silent_but_Deadly
+
+			modifier = {
+				stability_factor = -0.15
+				gdp_growth_modifier = -0.35
+				admin_efficiency_monthly_rate = -1.15
+				army_cost_modifier = 0.15
+			}
+		}
+		NIC_Eruption = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Eruption" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Eruption
+
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.25
+				gdp_growth_modifier = -1
+				admin_efficiency_monthly_rate = -2.25
+				army_cost_modifier = 0.2
+				custom_modifier_tooltip = TNO_worsen_security_policy_effectiveness_high_tt
+			}
+		}
+
+		NIC_Callado = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Callado" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Callado
+
+			modifier = {
+				stability_factor = -0.075
+				political_power_gain = 0.15
+				admin_efficiency_monthly_rate = -0.2
+				army_cost_modifier = 0.05
+			}
+		}
+
+		### Economy
+		NIC_Coffee_Cattle_Control = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Coffee_Cattle_Control" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Coffee_Cattle_Control
+
+			modifier = {
+				gdp_growth_modifier = 0.15
+				production_speed_buildings_factor = 0.075
+				misc_costs_modifier = 0.1
+				poverty_monthly_rate = -0.25
+				academic_base_monthly_rate = -0.5
+			}
+		}
+
+		NIC_Developmental_Death_Grip = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Developmental_Death_Grip" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Developmental_Death_Grip
+
+			modifier = {
+				gdp_growth_modifier = 0.75
+				production_speed_buildings_factor = 0.125
+				misc_costs_modifier = 0.1
+				poverty_monthly_rate = -0.35
+				academic_base_monthly_rate = -0.75
+				education_policy_monthly_rate = -0.85
+			}
+		}
+		NIC_Managuas_Magic_Trick = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Managuas_Magic_Trick" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Managuas_Magic_Trick
+
+			modifier = {
+				gdp_growth_modifier = -2.25
+				stability_factor = -0.15
+				misc_costs_modifier = 0.2
+				misc_income_modifier = 0.215
+				poverty_monthly_rate = -0.85
+				drift_defence_factor = -0.15
+			}
+		}
+
+
+		# 1967 Elections
+		NIC_Somocismo_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Somocismo_2" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Somocismo_2
+
+			modifier = {
+				stability_factor = 0.115
+				admin_costs_misc = 0.1
+				political_power_factor = 0.15
+				drift_defence_factor = 0.05
+			}
+		}
+		NIC_Somocismo_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Somocismo_3" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Somocismo_3
+
+			modifier = {
+				stability_factor = 0.115
+				admin_costs_misc = 0.1
+				political_power_factor = 0.15
+				drift_defence_factor = 0.05
+			}
+		}
+		NIC_Somocismo_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Somocismo_4" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Somocismo_4
+
+			modifier = {
+				stability_factor = -0.125
+				political_power_factor = 0.15
+				admin_costs_misc = 0.15
+				drift_defence_factor = 0.05
+				misc_costs_modifier = 0.1
+			}
+		}
+		# 1972 Elections
+		NIC_Somocismo_Moderno = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Somocismo_Moderno" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Somocismo_Moderno
+
+			modifier = {
+				stability_factor = 0.115
+				admin_costs_misc = 0.1
+				political_power_factor = 0.2
+				drift_defence_factor = 0.05
+				production_units_to_GDP_ratio_modifier = 0.02
+			}
+		}
+		NIC_Somocismo_Moderno_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Somocismo_Moderno_2" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Somocismo_Moderno_2
+
+			modifier = {
+				stability_factor = -0.075
+				admin_costs_misc = 0.15
+				recruitable_population_factor = 0.1
+				political_power_factor = 0.25
+				drift_defence_factor = 0.05
+			}
+		}
+		NIC_Somocismo_Moderno_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Somocismo_Moderno_3" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Somocismo_Moderno_3
+
+			modifier = {
+				stability_factor = -0.15
+				admin_costs_misc = 0.2
+				political_power_cost = 0.2
+				misc_costs_modifier = 0.1
+				drift_defence_factor = 0.1
+			}
+		}
+
+		NIC_Somoza_Continuismo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Somoza_Continuismo" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Somoza_Continuismo
+
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = 0.125
+			}
+		}
+		# Revolution - UNO
+		NIC_From_La_Prensa = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_From_La_Prensa" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_From_La_Prensa
+
+			modifier = {
+				stability_factor = 0.125
+				political_power_gain = 0.15
+				admin_efficiency_monthly_rate = 0.5
+				custom_modifier_tooltip = TNO_improve_vote_franchise_policy_effectiveness_high_tt
+			}
+		}
+		NIC_An_Old_Friend = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_An_Old_Friend" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_An_Old_Friend
+
+			modifier = {
+				gdp_growth_modifier = 0.35
+				misc_income_modifier = 0.05
+			}
+			targeted_modifier = {
+				tag = MEX
+				extra_trade_to_target_factor = 0.15
+			}
+		}
+		NIC_The_Sour_Sandinistas = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_The_Sour_Sandinistas" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_The_Sour_Sandinistas
+
+			modifier = {
+				custom_modifier_tooltip = TNO_worsen_public_meetings_policy_effectiveness_high_tt
+				stability_factor = -0.05
+				drift_defence_factor = -0.075
+				war_support_factor = -0.1
+			}
+		}
+		NIC_Foundations_on_Sand = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Foundations_on_Sand" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Foundations_on_Sand
+
+			modifier = {
+				misc_costs_modifier = 0.185
+				political_power_cost = 0.2
+				poverty_monthly_rate = 0.05
+				academic_base_monthly_rate = 0.85
+				agriculture_monthly_rate = 0.85
+			}
+		}
+		# Revolution - FSLN
+		NIC_Nicaraguas_Jan_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Nicaraguas_Jan_1" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Nicaraguas_Jan_1
+
+			modifier = {
+				stability_factor = 0.075
+				war_support_factor = 0.1
+				political_power_gain = 0.2
+				admin_efficiency_monthly_rate = 0.65
+				despotism_drift = -0.01
+			}
+		}
+		NIC_Theory_Into_Practice = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Theory_Into_Practice" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Theory_into_Practice
+
+			modifier = {
+				gdp_growth_modifier = 0.25
+				misc_income_modifier = 0.05
+			}
+		}
+		NIC_Revolutionary_Inertia = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Revolutionary_Inertia" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Revolutionary_Inertia
+
+			modifier = {
+				drift_defence_factor = -0.1
+				political_power_cost = 0.1
+				custom_modifier_tooltip = TNO_worsen_public_meetings_policy_effectiveness_high_tt
+				army_professionalism_monthly_rate = -0.5
+			}
+		}
+		NIC_Foundations_on_Sand_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Foundations_on_Sand_2" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Foundations_on_Sand
+
+			modifier = {
+				misc_costs_modifier = 0.185
+				political_power_cost = 0.2
+				poverty_monthly_rate = 0.03
+				academic_base_monthly_rate = 0.5
+				agriculture_monthly_rate = 0.5
+			}
+		}
+		NIC_Somoza_in_Heaven = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NIC_Somoza_in_Heaven" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NIC_Somoza_in_Heaven_Sandino_in_Hell
+
+			modifier = {
+				stability_factor = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+	}
+}

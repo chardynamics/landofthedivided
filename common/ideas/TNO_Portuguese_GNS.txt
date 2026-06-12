@@ -1,0 +1,47 @@
+ideas = {
+	country = {
+		GNS_restrained_king = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GNS_restrained_king" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GNS_A_Restrained_King
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		GNS_state_limbo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GNS_state_limbo" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GNS_A_State_in_Limbo
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
+		GNS_all_for_empire = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GNS_all_for_empire" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GNS_All_For_The_Empire
+			modifier = {
+				offence = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+	}
+}

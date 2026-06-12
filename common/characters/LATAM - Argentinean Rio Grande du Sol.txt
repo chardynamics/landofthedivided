@@ -1,0 +1,16 @@
+characters = {
+	ARS_Leandro_Anaya = {
+		name = ARG_Leandro_Anaya
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_ARG_Leandro_Anaya.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_LEONDRO_ANAYA_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			id = -1
+		}
+	}
+}

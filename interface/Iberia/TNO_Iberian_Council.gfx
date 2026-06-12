@@ -1,0 +1,163 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_bg"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_crony_political"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_crony_political.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_crony_political_flipped"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_crony_political_flipped.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_franco_aligned"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_franco_aligned.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_franco_aligned_flipped"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_franco_aligned_flipped.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_hardliner_political"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_hardliner_political.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_hardliner_political_flipped"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_hardliner_political_flipped.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_independent_political"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_independent_political.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_independent_political_flipped"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_independent_political_flipped.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_moderate_political"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_moderate_political.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_moderate_political_flipped"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_moderate_political_flipped.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_neutral_aligned"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_neutral_aligned.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_neutral_aligned_flipped"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_neutral_aligned_flipped.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_salazar_aligned"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_salazar_aligned.dds"
+	}
+	spriteType = {
+		name = "GFX_Iberian_Council_advisory_salazar_aligned_flipped"
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_salazar_aligned_flipped.dds"
+	}
+	spriteType = {
+		name = GFX_IBR_IberianCouncil_Seat
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/seat_icon.dds"
+		noOfFrames = 18
+	}
+	spriteType = {
+		name = GFX_IBR_council_faction_info_box
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/party_info_box.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = GFX_IBR_IberianCouncil_Seat_groups
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/seat_icon_groups.dds"
+		noOfFrames = 15
+	}
+	spriteType = {
+		name = GFX_IBR_IberianCouncil_Seat_dem
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/seat_icon_groups_dem.dds"
+		noOfFrames = 15
+	}
+	spriteType = {
+		name = GFX_IBR_council_faction_info_box_groups
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/party_info_box_groups.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = GFX_IBR_council_reformism_frame
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_council_reformism_frame.dds"
+	}
+	spriteType = {
+		name = GFX_IBR_council_reformism_image
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_council_reformism_image.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = GFX_IBR_advisory_council_law_box
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_law_box.dds"
+	}
+	spriteType = {
+		name = GFX_IBR_legislative_council_law_box
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_legislative_council_law_box.dds"
+	}
+	spriteType = {
+		name = GFX_IBR_parliament_progressivism_frame
+		texturefile = "gfx/interface/iberia/Iberian_Council_gui/IBR_parliament_progressivism_frame.dds"
+		transparencecheck = yes
+	}
+#############Caudillo bar
+	progressbartype = {
+		name = "GFX_Iberian_Council_advisory_bar"
+		textureFile1 = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_progbar.dds"
+		textureFile2 = "gfx/interface/iberia/Iberian_Council_gui/IBR_advisory_council_progbar_empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { 
+			x = 404
+			y = 116
+		}
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+
+	progressbartype = {
+		name = "GFX_Iberian_Council_reformism_bill_bar"
+		textureFile1 = "gfx/interface/iberia/Iberian_Council_gui/IBR_legislative_council_reformism_bill_bar_full.dds"
+		textureFile2 = "gfx/interface/iberia/Iberian_Council_gui/IBR_legislative_council_reformism_bill_bar_empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { 
+			x = 144
+			y = 9
+		}
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+
+	progressbartype = {
+		name = "GFX_Iberian_Council_reformism_bar"
+		textureFile1 = "gfx/interface/iberia/Iberian_Council_gui/IBR_council_reformism_full.dds"
+		textureFile2 = "gfx/interface/iberia/Iberian_Council_gui/IBR_council_reformism_empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { 
+			x = 192
+			y = 9
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbartype = {
+		name = "GFX_Iberian_Council_progressivism_bar"
+		textureFile1 = "gfx/interface/iberia/Iberian_Council_gui/IBR_council_reformism_full.dds"
+		textureFile2 = "gfx/interface/iberia/Iberian_Council_gui/IBR_council_reformism_empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { 
+			x = 185
+			y = 5
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

@@ -1,0 +1,2164 @@
+BRA_develop_increase_highway_speed_1 = {
+	custom_effect_tooltip = BRA_speed_highway_1_tt
+
+	add_to_variable = { BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT = 1 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_increase_highway_speed_2 = {
+	custom_effect_tooltip = BRA_speed_highway_2_tt
+
+	add_to_variable = { BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT = 2 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_increase_highway_speed_05 = {
+	custom_effect_tooltip = BRA_speed_highway_05_tt
+
+	add_to_variable = { BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT = 0.5 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_decrease_highway_speed_1 = {
+	custom_effect_tooltip = BRA_slow_highway_1_tt
+
+	subtract_from_variable = { BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT = 1 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_decrease_highway_speed_2 = {
+	custom_effect_tooltip = BRA_slow_highway_2_tt
+
+
+	subtract_from_variable = { BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT = 2 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+
+}
+
+BRA_develop_decrease_highway_speed_3 = {
+	custom_effect_tooltip = BRA_slow_highway_3_tt
+
+	subtract_from_variable = { BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT = 3 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_increase_guanabara_reconstruction_1 = {
+	custom_effect_tooltip = BRA_speed_guanabara_reconstruction_1_tt
+
+	add_to_variable = { BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT = 1 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_increase_guanabara_reconstruction_2 = {
+	custom_effect_tooltip = BRA_speed_guanabara_reconstruction_2_tt
+
+	add_to_variable = { BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT = 2 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_increase_guanabara_reconstruction_05 = {
+	custom_effect_tooltip = BRA_speed_guanabara_reconstruction_05_tt
+
+	add_to_variable = { BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT = 0.5 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_decrease_guanabara_reconstruction_1 = {
+	custom_effect_tooltip = BRA_slow_guanabara_reconstruction_1_tt
+
+	subtract_from_variable = { BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT = 1 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_decrease_guanabara_reconstruction_2 = {
+	custom_effect_tooltip = BRA_slow_guanabara_reconstruction_2_tt
+
+
+	subtract_from_variable = { BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT = 2 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+
+}
+
+BRA_develop_decrease_guanabara_reconstruction_3 = {
+	custom_effect_tooltip = BRA_slow_guanabara_reconstruction_3_tt
+
+	subtract_from_variable = { BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT = 3 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_decrease_guanabara_reconstruction_05 = {
+	custom_effect_tooltip = BRA_slow_guanabara_reconstruction_05_tt
+
+	subtract_from_variable = { BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT = 0.5 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^GUANABARA_RECONSTRUCTION_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_increase_guanabaran_bridge_speed_5 = {
+	custom_effect_tooltip = BRA_speed_rio_bridge_tt
+
+	add_to_variable = { BRA_megaprojects_max_prog^RIO_NITEROI_BRIDGE_MEGAPROJECT = 5 }
+	clamp_variable = { var = BRA_megaprojects_max_prog^RIO_NITEROI_BRIDGE_MEGAPROJECT min = 0 max = 100 }
+
+	BRA_develop_update_projects = yes
+}
+
+BRA_develop_increase_inflation_low = {
+	set_temp_variable = { inflation_temp = 2 }
+	econ_inflation_change = yes
+}
+BRA_develop_increase_inflation_med = {
+	set_temp_variable = { inflation_temp = 4 }
+	econ_inflation_change = yes
+}
+BRA_develop_increase_inflation_high = {
+	set_temp_variable = { inflation_temp = 5 }
+	econ_inflation_change = yes
+}
+BRA_develop_decrease_inflation_low = {
+	set_temp_variable = { inflation_temp = -2 }
+	econ_inflation_change = yes
+}
+BRA_develop_decrease_inflation_med = {
+	set_temp_variable = { inflation_temp = -4 }
+	econ_inflation_change = yes
+}
+BRA_develop_decrease_inflation_high = {
+	set_temp_variable = { inflation_temp = -5 }
+	econ_inflation_change = yes
+}
+
+BRA_SetEconomicGoals = {
+	if = {
+		limit = { check_variable = { global.year = 1962 } }
+		set_variable = { BRA_TargetGDPGrowth = 33.785 }
+		set_variable = { BRA_TargetInflation = 28.3 }
+		set_variable = { BRA_last_year_gdp = 32.06 }
+	}
+	else = {
+		# Calculate growth since last year
+		set_temp_variable = { year_on_year_growth = BRA.GDP }
+		divide_temp_variable = { year_on_year_growth = BRA_last_year_gdp }
+
+		set_variable = { BRA_last_year_gdp = BRA.GDP }
+
+		# Calculating our GDP growth target
+		set_temp_variable = { BRA_growth_target_as_mult = year_on_year_growth }
+
+		# Get average between our calculated target and a +10% target to avoid extreme targets.
+		add_to_temp_variable = { BRA_growth_target_as_mult = 1.1 }
+		divide_temp_variable = { BRA_growth_target_as_mult = 2 }
+
+		add_to_temp_variable = { BRA_growth_target_as_mult = BRA_gdp_target_additive }
+
+		set_variable = { BRA_TargetGDPGrowth = BRA.GDP }
+		multiply_variable = { BRA_TargetGDPGrowth = BRA_growth_target_as_mult }
+
+		# Set our inflation target
+		set_variable = { BRA_TargetInflation = BRA.clamped_inflation_rate }
+		subtract_from_variable = { BRA_TargetInflation = BRA.rubberband_inflation_rate }
+		multiply_variable = { BRA_TargetInflation = 0.9 }
+		add_to_variable = { BRA_TargetInflation = BRA.rubberband_inflation_rate }
+	}
+}
+
+BRA_check_TargetGDPGrowth_success = {
+	# No check when it is just 3 months after the presidential election
+	if = {
+		limit = {
+			OR = {
+				check_variable = { global.year = 1966 }
+				check_variable = { global.year = 1971 }
+			}
+		}
+		country_event = { id = brazil.1005 days = 7 }
+	}
+	else = {
+		set_variable = { bra_econ_successes = 0 }
+		if = {
+			limit = { check_variable = { BRA.GDP > BRA_TargetGDPGrowth } }
+			add_to_variable = { bra_econ_successes = 1 }
+			add_to_variable = { BRA_gdp_target_additive = 0.01 }
+		}
+		else = {
+			add_to_variable = { BRA_gdp_target_additive = -0.02 }
+		}
+		if = {
+			limit = { check_variable = { clamped_inflation_rate < BRA_TargetInflation } }
+			add_to_variable = { bra_econ_successes = 1 }
+		}
+
+		if = {
+			limit = { check_variable = { bra_econ_successes = 2 } }
+			country_event = brazil.1002
+		}
+		else_if = {
+			limit = { check_variable = { bra_econ_successes = 1 } }
+			country_event = brazil.1003
+		}
+		else = {
+			country_event = brazil.1004
+		}
+	}
+	BRA_SetEconomicGoals = yes
+}
+
+BRA_develop_increase_urban_pop_monthly_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_nationwide_low
+	add_to_variable = { BRA_develop_region_urban_pop_trend^0 = 0.10 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^1 = 0.10 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^2 = 0.10 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^3 = 0.10 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^4 = 0.10 }
+}
+BRA_develop_increase_urban_pop_monthly_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_amazonia_low
+	add_to_variable = { BRA_develop_region_urban_pop_trend^0 = 0.10 }
+}
+BRA_develop_increase_urban_pop_monthly_northeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_northeast_low
+	add_to_variable = { BRA_develop_region_urban_pop_trend^1 = 0.10 }
+}
+BRA_develop_increase_urban_pop_monthly_central_west_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_central_west_low
+	add_to_variable = { BRA_develop_region_urban_pop_trend^2 = 0.10 }
+}
+BRA_develop_increase_urban_pop_monthly_southeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_southeast_low
+	add_to_variable = { BRA_develop_region_urban_pop_trend^3 = 0.10 }
+}
+BRA_develop_increase_urban_pop_monthly_south_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_south_low
+	add_to_variable = { BRA_develop_region_urban_pop_trend^4 = 0.10 }
+}
+BRA_develop_increase_urban_pop_monthly_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_nationwide_med
+	add_to_variable = { BRA_develop_region_urban_pop_trend^0 = 0.25 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^1 = 0.25 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^2 = 0.25 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^3 = 0.25 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^4 = 0.25 }
+}
+BRA_develop_increase_urban_pop_monthly_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_amazonia_med
+	add_to_variable = { BRA_develop_region_urban_pop_trend^0 = 0.25 }
+}
+BRA_develop_increase_urban_pop_monthly_northeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_northeast_med
+	add_to_variable = { BRA_develop_region_urban_pop_trend^1 = 0.25 }
+}
+BRA_develop_increase_urban_pop_monthly_central_west_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_central_west_med
+	add_to_variable = { BRA_develop_region_urban_pop_trend^2 = 0.25 }
+}
+BRA_develop_increase_urban_pop_monthly_southeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_southeast_med
+	add_to_variable = { BRA_develop_region_urban_pop_trend^3 = 0.25 }
+}
+BRA_develop_increase_urban_pop_monthly_south_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_south_med
+	add_to_variable = { BRA_develop_region_urban_pop_trend^4 = 0.25 }
+}
+BRA_develop_increase_urban_pop_monthly_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_nationwide_high
+	add_to_variable = { BRA_develop_region_urban_pop_trend^0 = 0.5 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^1 = 0.5 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^2 = 0.5 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^3 = 0.5 }
+	add_to_variable = { BRA_develop_region_urban_pop_trend^4 = 0.5 }
+}
+BRA_develop_increase_urban_pop_monthly_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_amazonia_high
+	add_to_variable = { BRA_develop_region_urban_pop_trend^0 = 0.5 }
+}
+BRA_develop_increase_urban_pop_monthly_northeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_northeast_high
+	add_to_variable = { BRA_develop_region_urban_pop_trend^1 = 0.5 }
+}
+BRA_develop_increase_urban_pop_monthly_central_west_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_central_west_high
+	add_to_variable = { BRA_develop_region_urban_pop_trend^2 = 0.5 }
+}
+BRA_develop_increase_urban_pop_monthly_southeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_southeast_high
+	add_to_variable = { BRA_develop_region_urban_pop_trend^3 = 0.5 }
+}
+BRA_develop_increase_urban_pop_monthly_south_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_monthly_south_high
+	add_to_variable = { BRA_develop_region_urban_pop_trend^4 = 0.5 }
+}
+
+BRA_develop_decrease_urban_pop_monthly_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_nationwide_low
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^0 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^1 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^2 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^3 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^4 = 0.10 }
+}
+BRA_develop_decrease_urban_pop_monthly_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_amazonia_low
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^0 = 0.10 }
+}
+BRA_develop_decrease_urban_pop_monthly_northeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_northeast_low
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^1 = 0.10 }
+}
+BRA_develop_decrease_urban_pop_monthly_central_west_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_central_west_low
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^2 = 0.10 }
+}
+BRA_develop_decrease_urban_pop_monthly_southeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_southeast_low
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^3 = 0.10 }
+}
+BRA_develop_decrease_urban_pop_monthly_south_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_south_low
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^4 = 0.10 }
+}
+BRA_develop_decrease_urban_pop_monthly_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_nationwide_med
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^0 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^1 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^2 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^3 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^4 = 0.25 }
+}
+BRA_develop_decrease_urban_pop_monthly_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_amazonia_med
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^0 = 0.25 }
+}
+BRA_develop_decrease_urban_pop_monthly_northeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_northeast_med
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^1 = 0.25 }
+}
+BRA_develop_decrease_urban_pop_monthly_central_west_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_central_west_med
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^2 = 0.25 }
+}
+BRA_develop_decrease_urban_pop_monthly_southeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_southeast_med
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^3 = 0.25 }
+}
+BRA_develop_decrease_urban_pop_monthly_south_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_south_med
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^4 = 0.25 }
+}
+BRA_develop_decrease_urban_pop_monthly_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_nationwide_high
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^0 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^1 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^2 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^3 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^4 = 0.5 }
+}
+BRA_develop_decrease_urban_pop_monthly_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_amazonia_high
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^0 = 0.5 }
+}
+BRA_develop_decrease_urban_pop_monthly_northeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_northeast_high
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^1 = 0.5 }
+}
+BRA_develop_decrease_urban_pop_monthly_central_west_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_central_west_high
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^2 = 0.5 }
+}
+BRA_develop_decrease_urban_pop_monthly_southeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_southeast_high
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^3 = 0.5 }
+}
+BRA_develop_decrease_urban_pop_monthly_south_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_monthly_south_high
+	subtract_from_variable = { BRA_develop_region_urban_pop_trend^4 = 0.5 }
+}
+
+
+
+
+
+BRA_develop_increase_industry_monthly_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_nationwide_low
+	add_to_variable = { BRA_develop_region_industry_trend^0 = 0.10 }
+	add_to_variable = { BRA_develop_region_industry_trend^1 = 0.10 }
+	add_to_variable = { BRA_develop_region_industry_trend^2 = 0.10 }
+	add_to_variable = { BRA_develop_region_industry_trend^3 = 0.10 }
+	add_to_variable = { BRA_develop_region_industry_trend^4 = 0.10 }
+}
+BRA_develop_increase_industry_monthly_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_amazonia_low
+	add_to_variable = { BRA_develop_region_industry_trend^0 = 0.10 }
+}
+BRA_develop_increase_industry_monthly_northeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_northeast_low
+	add_to_variable = { BRA_develop_region_industry_trend^1 = 0.10 }
+}
+BRA_develop_increase_industry_monthly_central_west_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_central_west_low
+	add_to_variable = { BRA_develop_region_industry_trend^2 = 0.10 }
+}
+BRA_develop_increase_industry_monthly_southeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_southeast_low
+	add_to_variable = { BRA_develop_region_industry_trend^3 = 0.10 }
+}
+BRA_develop_increase_industry_monthly_south_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_south_low
+	add_to_variable = { BRA_develop_region_industry_trend^4 = 0.10 }
+}
+BRA_develop_increase_industry_monthly_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_nationwide_med
+	add_to_variable = { BRA_develop_region_industry_trend^0 = 0.25 }
+	add_to_variable = { BRA_develop_region_industry_trend^1 = 0.25 }
+	add_to_variable = { BRA_develop_region_industry_trend^2 = 0.25 }
+	add_to_variable = { BRA_develop_region_industry_trend^3 = 0.25 }
+	add_to_variable = { BRA_develop_region_industry_trend^4 = 0.25 }
+}
+BRA_develop_increase_industry_monthly_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_amazonia_med
+	add_to_variable = { BRA_develop_region_industry_trend^0 = 0.25 }
+}
+BRA_develop_increase_industry_monthly_northeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_northeast_med
+	add_to_variable = { BRA_develop_region_industry_trend^1 = 0.25 }
+}
+BRA_develop_increase_industry_monthly_central_west_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_central_west_med
+	add_to_variable = { BRA_develop_region_industry_trend^2 = 0.25 }
+}
+BRA_develop_increase_industry_monthly_southeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_southeast_med
+	add_to_variable = { BRA_develop_region_industry_trend^3 = 0.25 }
+}
+BRA_develop_increase_industry_monthly_south_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_south_med
+	add_to_variable = { BRA_develop_region_industry_trend^4 = 0.25 }
+}
+BRA_develop_increase_industry_monthly_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_nationwide_high
+	add_to_variable = { BRA_develop_region_industry_trend^0 = 0.5 }
+	add_to_variable = { BRA_develop_region_industry_trend^1 = 0.5 }
+	add_to_variable = { BRA_develop_region_industry_trend^2 = 0.5 }
+	add_to_variable = { BRA_develop_region_industry_trend^3 = 0.5 }
+	add_to_variable = { BRA_develop_region_industry_trend^4 = 0.5 }
+}
+BRA_develop_increase_industry_monthly_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_amazonia_high
+	add_to_variable = { BRA_develop_region_industry_trend^0 = 0.5 }
+}
+BRA_develop_increase_industry_monthly_northeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_northeast_high
+	add_to_variable = { BRA_develop_region_industry_trend^1 = 0.5 }
+}
+BRA_develop_increase_industry_monthly_central_west_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_central_west_high
+	add_to_variable = { BRA_develop_region_industry_trend^2 = 0.5 }
+}
+BRA_develop_increase_industry_monthly_southeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_southeast_high
+	add_to_variable = { BRA_develop_region_industry_trend^3 = 0.5 }
+}
+BRA_develop_increase_industry_monthly_south_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_monthly_south_high
+	add_to_variable = { BRA_develop_region_industry_trend^4 = 0.5 }
+}
+
+BRA_develop_decrease_industry_monthly_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_nationwide_low
+	subtract_from_variable = { BRA_develop_region_industry_trend^0 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^1 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^2 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^3 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^4 = 0.10 }
+}
+BRA_develop_decrease_industry_monthly_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_amazonia_low
+	subtract_from_variable = { BRA_develop_region_industry_trend^0 = 0.10 }
+}
+BRA_develop_decrease_industry_monthly_northeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_northeast_low
+	subtract_from_variable = { BRA_develop_region_industry_trend^1 = 0.10 }
+}
+BRA_develop_decrease_industry_monthly_central_west_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_central_west_low
+	subtract_from_variable = { BRA_develop_region_industry_trend^2 = 0.10 }
+}
+BRA_develop_decrease_industry_monthly_southeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_southeast_low
+	subtract_from_variable = { BRA_develop_region_industry_trend^3 = 0.10 }
+}
+BRA_develop_decrease_industry_monthly_south_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_south_low
+	subtract_from_variable = { BRA_develop_region_industry_trend^4 = 0.10 }
+}
+BRA_develop_decrease_industry_monthly_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_nationwide_med
+	subtract_from_variable = { BRA_develop_region_industry_trend^0 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^1 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^2 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^3 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^4 = 0.25 }
+}
+BRA_develop_decrease_industry_monthly_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_amazonia_med
+	subtract_from_variable = { BRA_develop_region_industry_trend^0 = 0.25 }
+}
+BRA_develop_decrease_industry_monthly_northeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_northeast_med
+	subtract_from_variable = { BRA_develop_region_industry_trend^1 = 0.25 }
+}
+BRA_develop_decrease_industry_monthly_central_west_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_central_west_med
+	subtract_from_variable = { BRA_develop_region_industry_trend^2 = 0.25 }
+}
+BRA_develop_decrease_industry_monthly_southeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_southeast_med
+	subtract_from_variable = { BRA_develop_region_industry_trend^3 = 0.25 }
+}
+BRA_develop_decrease_industry_monthly_south_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_south_med
+	subtract_from_variable = { BRA_develop_region_industry_trend^4 = 0.25 }
+}
+BRA_develop_decrease_industry_monthly_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_nationwide_high
+	subtract_from_variable = { BRA_develop_region_industry_trend^0 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^1 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^2 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^3 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_industry_trend^4 = 0.5 }
+}
+BRA_develop_decrease_industry_monthly_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_amazonia_high
+	subtract_from_variable = { BRA_develop_region_industry_trend^0 = 0.5 }
+}
+BRA_develop_decrease_industry_monthly_northeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_northeast_high
+	subtract_from_variable = { BRA_develop_region_industry_trend^1 = 0.5 }
+}
+BRA_develop_decrease_industry_monthly_central_west_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_central_west_high
+	subtract_from_variable = { BRA_develop_region_industry_trend^2 = 0.5 }
+}
+BRA_develop_decrease_industry_monthly_southeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_southeast_high
+	subtract_from_variable = { BRA_develop_region_industry_trend^3 = 0.5 }
+}
+BRA_develop_decrease_industry_monthly_south_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_monthly_south_high
+	subtract_from_variable = { BRA_develop_region_industry_trend^4 = 0.5 }
+}
+
+
+
+
+
+BRA_develop_increase_mech_rate_monthly_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_nationwide_low
+	add_to_variable = { BRA_develop_region_mech_rate_trend^0 = 0.10 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^1 = 0.10 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^2 = 0.10 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^3 = 0.10 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^4 = 0.10 }
+}
+BRA_develop_increase_mech_rate_monthly_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_amazonia_low
+	add_to_variable = { BRA_develop_region_mech_rate_trend^0 = 0.10 }
+}
+BRA_develop_increase_mech_rate_monthly_northeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_northeast_low
+	add_to_variable = { BRA_develop_region_mech_rate_trend^1 = 0.10 }
+}
+BRA_develop_increase_mech_rate_monthly_central_west_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_central_west_low
+	add_to_variable = { BRA_develop_region_mech_rate_trend^2 = 0.10 }
+}
+BRA_develop_increase_mech_rate_monthly_southeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_southeast_low
+	add_to_variable = { BRA_develop_region_mech_rate_trend^3 = 0.10 }
+}
+BRA_develop_increase_mech_rate_monthly_south_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_south_low
+	add_to_variable = { BRA_develop_region_mech_rate_trend^4 = 0.10 }
+}
+BRA_develop_increase_mech_rate_monthly_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_nationwide_med
+	add_to_variable = { BRA_develop_region_mech_rate_trend^0 = 0.25 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^1 = 0.25 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^2 = 0.25 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^3 = 0.25 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^4 = 0.25 }
+}
+BRA_develop_increase_mech_rate_monthly_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_amazonia_med
+	add_to_variable = { BRA_develop_region_mech_rate_trend^0 = 0.25 }
+}
+BRA_develop_increase_mech_rate_monthly_northeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_northeast_med
+	add_to_variable = { BRA_develop_region_mech_rate_trend^1 = 0.25 }
+}
+BRA_develop_increase_mech_rate_monthly_central_west_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_central_west_med
+	add_to_variable = { BRA_develop_region_mech_rate_trend^2 = 0.25 }
+}
+BRA_develop_increase_mech_rate_monthly_southeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_southeast_med
+	add_to_variable = { BRA_develop_region_mech_rate_trend^3 = 0.25 }
+}
+BRA_develop_increase_mech_rate_monthly_south_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_south_med
+	add_to_variable = { BRA_develop_region_mech_rate_trend^4 = 0.25 }
+}
+BRA_develop_increase_mech_rate_monthly_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_nationwide_high
+	add_to_variable = { BRA_develop_region_mech_rate_trend^0 = 0.5 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^1 = 0.5 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^2 = 0.5 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^3 = 0.5 }
+	add_to_variable = { BRA_develop_region_mech_rate_trend^4 = 0.5 }
+}
+BRA_develop_increase_mech_rate_monthly_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_amazonia_high
+	add_to_variable = { BRA_develop_region_mech_rate_trend^0 = 0.5 }
+}
+BRA_develop_increase_mech_rate_monthly_northeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_northeast_high
+	add_to_variable = { BRA_develop_region_mech_rate_trend^1 = 0.5 }
+}
+BRA_develop_increase_mech_rate_monthly_central_west_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_central_west_high
+	add_to_variable = { BRA_develop_region_mech_rate_trend^2 = 0.5 }
+}
+BRA_develop_increase_mech_rate_monthly_southeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_southeast_high
+	add_to_variable = { BRA_develop_region_mech_rate_trend^3 = 0.5 }
+}
+BRA_develop_increase_mech_rate_monthly_south_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_monthly_south_high
+	add_to_variable = { BRA_develop_region_mech_rate_trend^4 = 0.5 }
+}
+
+BRA_develop_decrease_mech_rate_monthly_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_nationwide_low
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^0 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^1 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^2 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^3 = 0.10 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^4 = 0.10 }
+}
+BRA_develop_decrease_mech_rate_monthly_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_amazonia_low
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^0 = 0.10 }
+}
+BRA_develop_decrease_mech_rate_monthly_northeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_northeast_low
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^1 = 0.10 }
+}
+BRA_develop_decrease_mech_rate_monthly_central_west_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_central_west_low
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^2 = 0.10 }
+}
+BRA_develop_decrease_mech_rate_monthly_southeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_southeast_low
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^3 = 0.10 }
+}
+BRA_develop_decrease_mech_rate_monthly_south_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_south_low
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^4 = 0.10 }
+}
+BRA_develop_decrease_mech_rate_monthly_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_nationwide_med
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^0 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^1 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^2 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^3 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^4 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_monthly_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_amazonia_med
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^0 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_monthly_northeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_northeast_med
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^1 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_monthly_central_west_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_central_west_med
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^2 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_monthly_southeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_southeast_med
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^3 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_monthly_south_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_south_med
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^4 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_monthly_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_nationwide_high
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^0 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^1 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^2 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^3 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^4 = 0.5 }
+}
+BRA_develop_decrease_mech_rate_monthly_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_amazonia_high
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^0 = 0.5 }
+}
+BRA_develop_decrease_mech_rate_monthly_northeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_northeast_high
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^1 = 0.5 }
+}
+BRA_develop_decrease_mech_rate_monthly_central_west_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_central_west_high
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^2 = 0.5 }
+}
+BRA_develop_decrease_mech_rate_monthly_southeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_southeast_high
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^3 = 0.5 }
+}
+BRA_develop_decrease_mech_rate_monthly_south_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_monthly_south_high
+	subtract_from_variable = { BRA_develop_region_mech_rate_trend^4 = 0.5 }
+}
+
+
+
+
+
+
+
+BRA_develop_increase_urban_pop_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_nationwide_low
+	add_to_variable = { BRA_develop_region_urban_pop^0 = 1.00 }
+	add_to_variable = { BRA_develop_region_urban_pop^1 = 1.00 }
+	add_to_variable = { BRA_develop_region_urban_pop^2 = 1.00 }
+	add_to_variable = { BRA_develop_region_urban_pop^3 = 1.00 }
+	add_to_variable = { BRA_develop_region_urban_pop^4 = 1.00 }
+}
+BRA_develop_increase_urban_pop_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_amazonia_low
+	add_to_variable = { BRA_develop_region_urban_pop^0 = 1.00 }
+}
+BRA_develop_increase_urban_pop_northeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_northeast_low
+	add_to_variable = { BRA_develop_region_urban_pop^1 = 1.00 }
+}
+BRA_develop_increase_urban_pop_central_west_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_central_west_low
+	add_to_variable = { BRA_develop_region_urban_pop^2 = 1.00 }
+}
+BRA_develop_increase_urban_pop_southeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_southeast_low
+	add_to_variable = { BRA_develop_region_urban_pop^3 = 1.00 }
+}
+BRA_develop_increase_urban_pop_south_low = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_south_low
+	add_to_variable = { BRA_develop_region_urban_pop^4 = 1.00 }
+}
+BRA_develop_increase_urban_pop_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_nationwide_med
+	add_to_variable = { BRA_develop_region_urban_pop^0 = 2.50 }
+	add_to_variable = { BRA_develop_region_urban_pop^1 = 2.50 }
+	add_to_variable = { BRA_develop_region_urban_pop^2 = 2.50 }
+	add_to_variable = { BRA_develop_region_urban_pop^3 = 2.50 }
+	add_to_variable = { BRA_develop_region_urban_pop^4 = 2.50 }
+}
+BRA_develop_increase_urban_pop_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_amazonia_med
+	add_to_variable = { BRA_develop_region_urban_pop^0 = 2.50 }
+}
+BRA_develop_increase_urban_pop_northeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_northeast_med
+	add_to_variable = { BRA_develop_region_urban_pop^1 = 2.50 }
+}
+BRA_develop_increase_urban_pop_central_west_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_central_west_med
+	add_to_variable = { BRA_develop_region_urban_pop^2 = 2.50 }
+}
+BRA_develop_increase_urban_pop_southeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_southeast_med
+	add_to_variable = { BRA_develop_region_urban_pop^3 = 2.50 }
+}
+BRA_develop_increase_urban_pop_south_med = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_south_med
+	add_to_variable = { BRA_develop_region_urban_pop^4 = 2.50 }
+}
+BRA_develop_increase_urban_pop_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_nationwide_high
+	add_to_variable = { BRA_develop_region_urban_pop^0 = 5.00 }
+	add_to_variable = { BRA_develop_region_urban_pop^1 = 5.00 }
+	add_to_variable = { BRA_develop_region_urban_pop^2 = 5.00 }
+	add_to_variable = { BRA_develop_region_urban_pop^3 = 5.00 }
+	add_to_variable = { BRA_develop_region_urban_pop^4 = 5.00 }
+}
+BRA_develop_increase_urban_pop_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_amazonia_high
+	add_to_variable = { BRA_develop_region_urban_pop^0 = 5.00 }
+}
+BRA_develop_increase_urban_pop_northeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_northeast_high
+	add_to_variable = { BRA_develop_region_urban_pop^1 = 5.00 }
+}
+BRA_develop_increase_urban_pop_central_west_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_central_west_high
+	add_to_variable = { BRA_develop_region_urban_pop^2 = 5.00 }
+}
+BRA_develop_increase_urban_pop_southeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_southeast_high
+	add_to_variable = { BRA_develop_region_urban_pop^3 = 5.00 }
+}
+BRA_develop_increase_urban_pop_south_high = {
+	custom_effect_tooltip = BRA_develop_increase_urban_pop_south_high
+	add_to_variable = { BRA_develop_region_urban_pop^4 = 5.00 }
+}
+
+BRA_develop_decrease_urban_pop_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_nationwide_low
+	subtract_from_variable = { BRA_develop_region_urban_pop^0 = 1.00 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^1 = 1.00 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^2 = 1.00 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^3 = 1.00 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^4 = 1.00 }
+}
+BRA_develop_decrease_urban_pop_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_amazonia_low
+	subtract_from_variable = { BRA_develop_region_urban_pop^0 = 1.00 }
+}
+BRA_develop_decrease_urban_pop_northeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_northeast_low
+	subtract_from_variable = { BRA_develop_region_urban_pop^1 = 1.00 }
+}
+BRA_develop_decrease_urban_pop_central_west_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_central_west_low
+	subtract_from_variable = { BRA_develop_region_urban_pop^2 = 1.00 }
+}
+BRA_develop_decrease_urban_pop_southeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_southeast_low
+	subtract_from_variable = { BRA_develop_region_urban_pop^3 = 1.00 }
+}
+BRA_develop_decrease_urban_pop_south_low = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_south_low
+	subtract_from_variable = { BRA_develop_region_urban_pop^4 = 1.00 }
+}
+BRA_develop_decrease_urban_pop_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_nationwide_med
+	subtract_from_variable = { BRA_develop_region_urban_pop^0 = 2.50 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^1 = 2.50 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^2 = 2.50 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^3 = 2.50 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^4 = 2.50 }
+}
+BRA_develop_decrease_urban_pop_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_amazonia_med
+	subtract_from_variable = { BRA_develop_region_urban_pop^0 = 2.50 }
+}
+BRA_develop_decrease_urban_pop_northeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_northeast_med
+	subtract_from_variable = { BRA_develop_region_urban_pop^1 = 2.50 }
+}
+BRA_develop_decrease_urban_pop_central_west_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_central_west_med
+	subtract_from_variable = { BRA_develop_region_urban_pop^2 = 2.50 }
+}
+BRA_develop_decrease_urban_pop_southeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_southeast_med
+	subtract_from_variable = { BRA_develop_region_urban_pop^3 = 2.50 }
+}
+BRA_develop_decrease_urban_pop_south_med = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_south_med
+	subtract_from_variable = { BRA_develop_region_urban_pop^4 = 2.50 }
+}
+BRA_develop_decrease_urban_pop_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_nationwide_high
+	subtract_from_variable = { BRA_develop_region_urban_pop^0 = 5.00 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^1 = 5.00 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^2 = 5.00 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^3 = 5.00 }
+	subtract_from_variable = { BRA_develop_region_urban_pop^4 = 5.00 }
+}
+BRA_develop_decrease_urban_pop_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_amazonia_high
+	subtract_from_variable = { BRA_develop_region_urban_pop^0 = 5.00 }
+}
+BRA_develop_decrease_urban_pop_northeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_northeast_high
+	subtract_from_variable = { BRA_develop_region_urban_pop^1 = 5.00 }
+}
+BRA_develop_decrease_urban_pop_central_west_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_central_west_high
+	subtract_from_variable = { BRA_develop_region_urban_pop^2 = 5.00 }
+}
+BRA_develop_decrease_urban_pop_southeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_southeast_high
+	subtract_from_variable = { BRA_develop_region_urban_pop^3 = 5.00 }
+}
+BRA_develop_decrease_urban_pop_south_high = {
+	custom_effect_tooltip = BRA_develop_decrease_urban_pop_south_high
+	subtract_from_variable = { BRA_develop_region_urban_pop^4 = 5.00 }
+}
+
+
+
+
+
+
+
+BRA_develop_increase_industry_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_nationwide_low
+	add_to_variable = { BRA_develop_region_industry^0 = 1.00 }
+	add_to_variable = { BRA_develop_region_industry^1 = 1.00 }
+	add_to_variable = { BRA_develop_region_industry^2 = 1.00 }
+	add_to_variable = { BRA_develop_region_industry^3 = 1.00 }
+	add_to_variable = { BRA_develop_region_industry^4 = 1.00 }
+}
+BRA_develop_increase_industry_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_amazonia_low
+	add_to_variable = { BRA_develop_region_industry^0 = 1.00 }
+}
+BRA_develop_increase_industry_northeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_northeast_low
+	add_to_variable = { BRA_develop_region_industry^1 = 1.00 }
+}
+BRA_develop_increase_industry_central_west_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_central_west_low
+	add_to_variable = { BRA_develop_region_industry^2 = 1.00 }
+}
+BRA_develop_increase_industry_southeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_southeast_low
+	add_to_variable = { BRA_develop_region_industry^3 = 1.00 }
+}
+BRA_develop_increase_industry_south_low = {
+	custom_effect_tooltip = BRA_develop_increase_industry_south_low
+	add_to_variable = { BRA_develop_region_industry^4 = 1.00 }
+}
+BRA_develop_increase_industry_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_nationwide_med
+	add_to_variable = { BRA_develop_region_industry^0 = 2.50 }
+	add_to_variable = { BRA_develop_region_industry^1 = 2.50 }
+	add_to_variable = { BRA_develop_region_industry^2 = 2.50 }
+	add_to_variable = { BRA_develop_region_industry^3 = 2.50 }
+	add_to_variable = { BRA_develop_region_industry^4 = 2.50 }
+}
+BRA_develop_increase_industry_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_amazonia_med
+	add_to_variable = { BRA_develop_region_industry^0 = 2.50 }
+}
+BRA_develop_increase_industry_northeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_northeast_med
+	add_to_variable = { BRA_develop_region_industry^1 = 2.50 }
+}
+BRA_develop_increase_industry_central_west_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_central_west_med
+	add_to_variable = { BRA_develop_region_industry^2 = 2.50 }
+}
+BRA_develop_increase_industry_southeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_southeast_med
+	add_to_variable = { BRA_develop_region_industry^3 = 2.50 }
+}
+BRA_develop_increase_industry_south_med = {
+	custom_effect_tooltip = BRA_develop_increase_industry_south_med
+	add_to_variable = { BRA_develop_region_industry^4 = 2.50 }
+}
+BRA_develop_increase_industry_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_nationwide_high
+	add_to_variable = { BRA_develop_region_industry^0 = 5.00 }
+	add_to_variable = { BRA_develop_region_industry^1 = 5.00 }
+	add_to_variable = { BRA_develop_region_industry^2 = 5.00 }
+	add_to_variable = { BRA_develop_region_industry^3 = 5.00 }
+	add_to_variable = { BRA_develop_region_industry^4 = 5.00 }
+}
+BRA_develop_increase_industry_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_amazonia_high
+	add_to_variable = { BRA_develop_region_industry^0 = 5.00 }
+}
+BRA_develop_increase_industry_northeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_northeast_high
+	add_to_variable = { BRA_develop_region_industry^1 = 5.00 }
+}
+BRA_develop_increase_industry_central_west_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_central_west_high
+	add_to_variable = { BRA_develop_region_industry^2 = 5.00 }
+}
+BRA_develop_increase_industry_southeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_southeast_high
+	add_to_variable = { BRA_develop_region_industry^3 = 5.00 }
+}
+BRA_develop_increase_industry_south_high = {
+	custom_effect_tooltip = BRA_develop_increase_industry_south_high
+	add_to_variable = { BRA_develop_region_industry^4 = 5.00 }
+}
+#Add Northwest REEEEE
+BRA_develop_decrease_industry_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_nationwide_low
+	subtract_from_variable = { BRA_develop_region_industry^0 = 1.00 }
+	subtract_from_variable = { BRA_develop_region_industry^1 = 1.00 }
+	subtract_from_variable = { BRA_develop_region_industry^2 = 1.00 }
+	subtract_from_variable = { BRA_develop_region_industry^3 = 1.00 }
+	subtract_from_variable = { BRA_develop_region_industry^4 = 1.00 }
+}
+BRA_develop_decrease_industry_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_amazonia_low
+	subtract_from_variable = { BRA_develop_region_industry^0 = 1.00 }
+}
+BRA_develop_decrease_industry_northeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_northeast_low
+	subtract_from_variable = { BRA_develop_region_industry^1 = 1.00 }
+}
+BRA_develop_decrease_industry_central_west_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_central_west_low
+	subtract_from_variable = { BRA_develop_region_industry^2 = 1.00 }
+}
+BRA_develop_decrease_industry_southeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_southeast_low
+	subtract_from_variable = { BRA_develop_region_industry^3 = 1.00 }
+}
+BRA_develop_decrease_industry_south_low = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_south_low
+	subtract_from_variable = { BRA_develop_region_industry^4 = 1.00 }
+}
+BRA_develop_decrease_industry_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_nationwide_med
+	subtract_from_variable = { BRA_develop_region_industry^0 = 2.50 }
+	subtract_from_variable = { BRA_develop_region_industry^1 = 2.50 }
+	subtract_from_variable = { BRA_develop_region_industry^2 = 2.50 }
+	subtract_from_variable = { BRA_develop_region_industry^3 = 2.50 }
+	subtract_from_variable = { BRA_develop_region_industry^4 = 2.50 }
+}
+BRA_develop_decrease_industry_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_amazonia_med
+	subtract_from_variable = { BRA_develop_region_industry^0 = 2.50 }
+}
+BRA_develop_decrease_industry_northeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_northeast_med
+	subtract_from_variable = { BRA_develop_region_industry^1 = 2.50 }
+}
+BRA_develop_decrease_industry_central_west_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_central_west_med
+	subtract_from_variable = { BRA_develop_region_industry^2 = 2.50 }
+}
+BRA_develop_decrease_industry_southeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_southeast_med
+	subtract_from_variable = { BRA_develop_region_industry^3 = 2.50 }
+}
+BRA_develop_decrease_industry_south_med = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_south_med
+	subtract_from_variable = { BRA_develop_region_industry^4 = 2.50 }
+}
+BRA_develop_decrease_industry_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_nationwide_high
+	subtract_from_variable = { BRA_develop_region_industry^0 = 5.00 }
+	subtract_from_variable = { BRA_develop_region_industry^1 = 5.00 }
+	subtract_from_variable = { BRA_develop_region_industry^2 = 5.00 }
+	subtract_from_variable = { BRA_develop_region_industry^3 = 5.00 }
+	subtract_from_variable = { BRA_develop_region_industry^4 = 5.00 }
+}
+BRA_develop_decrease_industry_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_amazonia_high
+	subtract_from_variable = { BRA_develop_region_industry^0 = 5.00 }
+}
+BRA_develop_decrease_industry_northeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_northeast_high
+	subtract_from_variable = { BRA_develop_region_industry^1 = 5.00 }
+}
+BRA_develop_decrease_industry_central_west_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_central_west_high
+	subtract_from_variable = { BRA_develop_region_industry^2 = 5.00 }
+}
+BRA_develop_decrease_industry_southeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_southeast_high
+	subtract_from_variable = { BRA_develop_region_industry^3 = 5.00 }
+}
+BRA_develop_decrease_industry_south_high = {
+	custom_effect_tooltip = BRA_develop_decrease_industry_south_high
+	subtract_from_variable = { BRA_develop_region_industry^4 = 5.00 }
+}
+
+
+
+
+BRA_develop_increase_mech_rate_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_nationwide_low
+	add_to_variable = { BRA_develop_region_mech_rate^0 = 0.1 }
+	add_to_variable = { BRA_develop_region_mech_rate^1 = 0.1 }
+	add_to_variable = { BRA_develop_region_mech_rate^2 = 0.1 }
+	add_to_variable = { BRA_develop_region_mech_rate^3 = 0.1 }
+	add_to_variable = { BRA_develop_region_mech_rate^4 = 0.1 }
+}
+BRA_develop_increase_mech_rate_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_amazonia_low
+	add_to_variable = { BRA_develop_region_mech_rate^0 = 0.1 }
+}
+BRA_develop_increase_mech_rate_northeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_northeast_low
+	add_to_variable = { BRA_develop_region_mech_rate^1 = 0.1 }
+}
+BRA_develop_increase_mech_rate_central_west_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_central_west_low
+	add_to_variable = { BRA_develop_region_mech_rate^2 = 0.1 }
+}
+BRA_develop_increase_mech_rate_southeast_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_southeast_low
+	add_to_variable = { BRA_develop_region_mech_rate^3 = 0.1 }
+}
+BRA_develop_increase_mech_rate_south_low = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_south_low
+	add_to_variable = { BRA_develop_region_mech_rate^4 = 0.1 }
+}
+BRA_develop_increase_mech_rate_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_nationwide_med
+	add_to_variable = { BRA_develop_region_mech_rate^0 = 0.25 }
+	add_to_variable = { BRA_develop_region_mech_rate^1 = 0.25 }
+	add_to_variable = { BRA_develop_region_mech_rate^2 = 0.25 }
+	add_to_variable = { BRA_develop_region_mech_rate^3 = 0.25 }
+	add_to_variable = { BRA_develop_region_mech_rate^4 = 0.25 }
+}
+BRA_develop_increase_mech_rate_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_amazonia_med
+	add_to_variable = { BRA_develop_region_mech_rate^0 = 0.25 }
+}
+BRA_develop_increase_mech_rate_northeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_northeast_med
+	add_to_variable = { BRA_develop_region_mech_rate^1 = 0.25 }
+}
+BRA_develop_increase_mech_rate_central_west_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_central_west_med
+	add_to_variable = { BRA_develop_region_mech_rate^2 = 0.25 }
+}
+BRA_develop_increase_mech_rate_southeast_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_southeast_med
+	add_to_variable = { BRA_develop_region_mech_rate^3 = 0.25 }
+}
+BRA_develop_increase_mech_rate_south_med = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_south_med
+	add_to_variable = { BRA_develop_region_mech_rate^4 = 0.25 }
+}
+BRA_develop_increase_mech_rate_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_nationwide_high
+	add_to_variable = { BRA_develop_region_mech_rate^0 = 0.5 }
+	add_to_variable = { BRA_develop_region_mech_rate^1 = 0.5 }
+	add_to_variable = { BRA_develop_region_mech_rate^2 = 0.5 }
+	add_to_variable = { BRA_develop_region_mech_rate^3 = 0.5 }
+	add_to_variable = { BRA_develop_region_mech_rate^4 = 0.5 }
+}
+BRA_develop_increase_mech_rate_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_amazonia_high
+	add_to_variable = { BRA_develop_region_mech_rate^0 = 0.5 }
+}
+BRA_develop_increase_mech_rate_northeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_northeast_high
+	add_to_variable = { BRA_develop_region_mech_rate^1 = 0.5 }
+}
+BRA_develop_increase_mech_rate_central_west_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_central_west_high
+	add_to_variable = { BRA_develop_region_mech_rate^2 = 0.5 }
+}
+BRA_develop_increase_mech_rate_southeast_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_southeast_high
+	add_to_variable = { BRA_develop_region_mech_rate^3 = 0.5 }
+}
+BRA_develop_increase_mech_rate_south_high = {
+	custom_effect_tooltip = BRA_develop_increase_mech_rate_south_high
+	add_to_variable = { BRA_develop_region_mech_rate^4 = 0.5 }
+}
+
+BRA_develop_decrease_mech_rate_nationwide_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_nationwide_low
+	subtract_from_variable = { BRA_develop_region_mech_rate^0 = 0.1 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^1 = 0.1 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^2 = 0.1 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^3 = 0.1 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^4 = 0.1 }
+}
+BRA_develop_decrease_mech_rate_amazonia_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_amazonia_low
+	subtract_from_variable = { BRA_develop_region_mech_rate^0 = 0.1 }
+}
+BRA_develop_decrease_mech_rate_northeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_northeast_low
+	subtract_from_variable = { BRA_develop_region_mech_rate^1 = 0.1 }
+}
+BRA_develop_decrease_mech_rate_central_west_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_central_west_low
+	subtract_from_variable = { BRA_develop_region_mech_rate^2 = 0.1 }
+}
+BRA_develop_decrease_mech_rate_southeast_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_southeast_low
+	subtract_from_variable = { BRA_develop_region_mech_rate^3 = 0.1 }
+}
+BRA_develop_decrease_mech_rate_south_low = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_south_low
+	subtract_from_variable = { BRA_develop_region_mech_rate^4 = 0.1 }
+}
+BRA_develop_decrease_mech_rate_nationwide_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_nationwide_med
+	subtract_from_variable = { BRA_develop_region_mech_rate^0 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^1 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^2 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^3 = 0.25 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^4 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_amazonia_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_amazonia_med
+	subtract_from_variable = { BRA_develop_region_mech_rate^0 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_northeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_northeast_med
+	subtract_from_variable = { BRA_develop_region_mech_rate^1 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_central_west_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_central_west_med
+	subtract_from_variable = { BRA_develop_region_mech_rate^2 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_southeast_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_southeast_med
+	subtract_from_variable = { BRA_develop_region_mech_rate^3 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_south_med = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_south_med
+	subtract_from_variable = { BRA_develop_region_mech_rate^4 = 0.25 }
+}
+BRA_develop_decrease_mech_rate_nationwide_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_nationwide_high
+	subtract_from_variable = { BRA_develop_region_mech_rate^0 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^1 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^2 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^3 = 0.5 }
+	subtract_from_variable = { BRA_develop_region_mech_rate^4 = 0.5 }
+}
+BRA_develop_decrease_mech_rate_amazonia_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_amazonia_high
+	subtract_from_variable = { BRA_develop_region_mech_rate^0 = 0.5 }
+}
+BRA_develop_decrease_mech_rate_northeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_northeast_high
+	subtract_from_variable = { BRA_develop_region_mech_rate^1 = 0.5 }
+}
+BRA_develop_decrease_mech_rate_central_west_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_central_west_high
+	subtract_from_variable = { BRA_develop_region_mech_rate^2 = 0.5 }
+}
+BRA_develop_decrease_mech_rate_southeast_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_southeast_high
+	subtract_from_variable = { BRA_develop_region_mech_rate^3 = 0.5 }
+}
+BRA_develop_decrease_mech_rate_south_high = {
+	custom_effect_tooltip = BRA_develop_decrease_mech_rate_south_high
+	subtract_from_variable = { BRA_develop_region_mech_rate^4 = 0.5 }
+}
+
+
+### AMAZONAS DEVELOPMENT EFFECTS ###
+BRA_develop_initialize_amazonas = {
+	clear_array = BRA_develop_amazonas_array
+	set_variable = { BRA_develop_rainforest_cover = 0 }
+	set_variable = { BRA_develop_rainforest_cover_percentage = 1 }
+	set_variable = { BRA_develop_forest_loss = 2 }
+	set_variable = { BRA_develop_regional_progress^0 = 4 }
+	set_variable = { BRA_develop_regional_progress_amazonia = BRA_develop_regional_progress^0 }
+
+	add_to_array = { BRA_develop_amazonas_array = 4018.001 }
+	set_temp_variable = { x = BRA_develop_amazonas_array^BRA_develop_rainforest_cover }
+	multiply_temp_variable = { x = 100 }
+	divide_temp_variable = { x = 4100.001 }
+	add_to_array = { BRA_develop_amazonas_array = x }
+	add_to_array = { BRA_develop_amazonas_array = 1500 }
+
+	if = {
+		limit = {
+			check_variable = {
+				BRA_megaprojects_progress^TRANS_AMAZONIAN_HIGHWAY_MEGAPROJECT = 100
+			}
+		}
+		add_to_variable = { BRA_develop_amazonas_array^BRA_develop_forest_loss = 1000 }
+	}
+}
+
+BRA_develop_amazonas_yearly = {
+	set_temp_variable = { x = BRA_develop_amazonas_array^BRA_develop_forest_loss }
+	divide_temp_variable = { x = 1000 }
+	subtract_from_variable = { BRA_develop_amazonas_array^BRA_develop_rainforest_cover = x }
+	set_temp_variable = { x = BRA_develop_amazonas_array^BRA_develop_rainforest_cover }
+	multiply_temp_variable = { x = 100 }
+	divide_temp_variable = { x = 4100.001 }
+	set_variable = { BRA_develop_amazonas_array^BRA_develop_rainforest_cover_percentage = x }
+	subtract_from_temp_variable = { x = 100 } # Amazonia development goes from 5 -> 1 over time, the reverse of other regions
+	divide_temp_variable = { x = 5 }
+	add_to_temp_variable = { x = 4.5 }
+	round_temp_variable = x
+	clamp_temp_variable = {
+		var = x
+		min = 1
+		max = 5
+	}
+	set_variable = { BRA_develop_regional_progress_amazonia = x }
+	set_variable = { BRA_develop_regional_progress^0 = x }
+	BRA_deforestation_events = yes
+}
+
+BRA_clamp_deforestation = {
+	clamp_temp_variable = {
+		var = BRA_develop_amazonas_array^BRA_develop_forest_loss
+		min = 0
+		max = 40000
+	}
+}
+
+BRA_deforestation_events = {
+	if = {
+		limit = {
+			check_variable = { BRA_develop_amazonas_array^BRA_develop_rainforest_cover_percentage < 97.01 }
+		}
+		country_event = BRA_deforestation.1
+	}
+	if = { #not else if or the events might be overran
+		limit = {
+			check_variable = { BRA_develop_amazonas_array^BRA_develop_rainforest_cover_percentage < 96.01 }
+		}
+		country_event = BRA_deforestation.2
+	}
+	if = {
+		limit = {
+			check_variable = { BRA_develop_amazonas_array^BRA_develop_rainforest_cover_percentage < 95.01 }
+		}
+		country_event = BRA_deforestation.3
+	}
+	if = {
+		limit = {
+			check_variable = { BRA_develop_amazonas_array^BRA_develop_rainforest_cover_percentage < 93.01 }
+		}
+		country_event = BRA_deforestation.4
+	}
+	if = {
+		limit = {
+			check_variable = { BRA_develop_amazonas_array^BRA_develop_rainforest_cover_percentage < 90.01 }
+		}
+		country_event = BRA_deforestation.5
+	}
+}
+
+### Literacy ###
+BRA_initialize_illiteracy = {
+	clear_array = BRA_illiteracy_array
+	clear_array = BRA_develop_illiteracy_array
+	clear_array = BRA_illiteracy_trend
+
+	add_to_array = { BRA_illiteracy_array = 52 } # Amazonia
+	add_to_array = { BRA_illiteracy_array = 58 } # Bahia
+	add_to_array = { BRA_illiteracy_array = 56 } # Central-West
+	add_to_array = { BRA_illiteracy_array = 47 } # Minas Gerais
+	add_to_array = { BRA_illiteracy_array = 34 } # South
+	add_to_array = { BRA_illiteracy_array = 88 } # Mid-North
+	add_to_array = { BRA_illiteracy_array = 65 } # Northeast
+	add_to_array = { BRA_illiteracy_array = 45 } # RJ-ES
+	add_to_array = { BRA_illiteracy_array = 40 } # São Paulo
+
+	set_temp_variable = { x = BRA_illiteracy_array^0 }
+	add_to_array = { BRA_develop_illiteracy_array = x }
+
+	set_temp_variable = { x = BRA_illiteracy_array^1 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^5 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^6 }
+	divide_temp_variable = { x = 3 }
+	add_to_array = { BRA_develop_illiteracy_array = x }
+
+	set_temp_variable = { x = BRA_illiteracy_array^2 }
+	add_to_array = { BRA_develop_illiteracy_array = x }
+
+	set_temp_variable = { x = BRA_illiteracy_array^2 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^5 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^6 }
+	divide_temp_variable = { x = 3 }
+	add_to_array = { BRA_develop_illiteracy_array = x }
+
+	set_temp_variable = { x = BRA_illiteracy_array^3 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^7 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^8 }
+	divide_temp_variable = { x = 3 }
+	add_to_array = { BRA_develop_illiteracy_array = x }
+
+	set_temp_variable = { x = BRA_illiteracy_array^4 }
+	add_to_array = { BRA_develop_illiteracy_array = x }
+
+	add_to_array = { BRA_illiteracy_trend = 0.10 }
+	add_to_array = { BRA_illiteracy_trend = 0.10 }
+	add_to_array = { BRA_illiteracy_trend = 0.10 }
+	add_to_array = { BRA_illiteracy_trend = 0.10 }
+	add_to_array = { BRA_illiteracy_trend = 0.10 }
+	add_to_array = { BRA_illiteracy_trend = 0.10 }
+	add_to_array = { BRA_illiteracy_trend = 0.10 }
+	add_to_array = { BRA_illiteracy_trend = 0.10 }
+	add_to_array = { BRA_illiteracy_trend = 0.10 }
+}
+
+BRA_recalculate_develop_region_illiteracy = {
+	set_temp_variable = { x = BRA_illiteracy_array^0 }
+	set_variable = { BRA_develop_illiteracy_array^0 = x }
+
+	set_temp_variable = { x = BRA_illiteracy_array^1 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^5 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^6 }
+	divide_temp_variable = { x = 3 }
+	set_variable = { BRA_develop_illiteracy_array^1 = x }
+
+	set_temp_variable = { x = BRA_illiteracy_array^2 }
+	set_variable = { BRA_develop_illiteracy_array^2 = x }
+
+	set_temp_variable = { x = BRA_illiteracy_array^2 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^5 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^6 }
+	divide_temp_variable = { x = 3 }
+	set_variable = { BRA_develop_illiteracy_array^3 = x }
+
+	set_temp_variable = { x = BRA_illiteracy_array^3 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^7 }
+	add_to_temp_variable = { x = BRA_illiteracy_array^8 }
+	divide_temp_variable = { x = 3 }
+	set_variable = { BRA_develop_illiteracy_array^4 = x }
+
+	set_temp_variable = { x = BRA_illiteracy_array^4 }
+	set_variable = { BRA_develop_illiteracy_array^5 = x }
+
+	for_each_loop = {
+		array = BRA_develop_illiteracy_array
+		index = j
+
+		clamp_variable = {
+			var = BRA_develop_illiteracy_array^j
+			min = 0
+			max = 100
+		}
+	}
+}
+
+BRA_increase_illiteracy_monthly_nationwide_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_nationwide_low
+	add_to_variable = { BRA_illiteracy_trend^0 = 0.10 }
+	add_to_variable = { BRA_illiteracy_trend^1 = 0.10 }
+	add_to_variable = { BRA_illiteracy_trend^2 = 0.10 }
+	add_to_variable = { BRA_illiteracy_trend^3 = 0.10 }
+	add_to_variable = { BRA_illiteracy_trend^4 = 0.10 }
+	add_to_variable = { BRA_illiteracy_trend^5 = 0.10 }
+	add_to_variable = { BRA_illiteracy_trend^6 = 0.10 }
+	add_to_variable = { BRA_illiteracy_trend^7 = 0.10 }
+	add_to_variable = { BRA_illiteracy_trend^8 = 0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_amazonia_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_amazonia_low
+	add_to_variable = { BRA_illiteracy_trend^0 = 0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_bahia_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_bahia_low
+	add_to_variable = { BRA_illiteracy_trend^1 = 0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_central_west_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_central_west_low
+	add_to_variable = { BRA_illiteracy_trend^2 = 0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_minas_gerais_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_minas_gerais_low
+	add_to_variable = { BRA_illiteracy_trend^3 = 0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_south_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_south_low
+	add_to_variable = { BRA_illiteracy_trend^4 = 0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_mid_north_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_mid_north_low
+	add_to_variable = { BRA_illiteracy_trend^5 = 0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_northeast_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_northeast_low
+	add_to_variable = { BRA_illiteracy_trend^6 = 0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_rio_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_rio_low
+	add_to_variable = { BRA_illiteracy_trend^7 = 0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_sao_paolo_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_sao_paolo_low
+	add_to_variable = { BRA_illiteracy_trend^8 = 0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_increase_illiteracy_monthly_nationwide_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_nationwide_med
+	add_to_variable = { BRA_illiteracy_trend^0 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^1 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^2 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^3 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^4 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^5 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^6 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^7 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^8 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_amazonia_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_amazonia_med
+	add_to_variable = { BRA_illiteracy_trend^0 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_bahia_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_bahia_med
+	add_to_variable = { BRA_illiteracy_trend^1 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_central_west_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_central_west_med
+	add_to_variable = { BRA_illiteracy_trend^2 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_minas_gerais_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_minas_gerais_med
+	add_to_variable = { BRA_illiteracy_trend^3 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_south_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_south_med
+	add_to_variable = { BRA_illiteracy_trend^4 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_mid_north_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_mid_north_med
+	add_to_variable = { BRA_illiteracy_trend^5 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_northeast_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_northeast_med
+	add_to_variable = { BRA_illiteracy_trend^6 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_rio_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_rio_med
+	add_to_variable = { BRA_illiteracy_trend^7 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_sao_paolo_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_sao_paolo_med
+	add_to_variable = { BRA_illiteracy_trend^8 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_increase_illiteracy_monthly_nationwide_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_nationwide_high
+	add_to_variable = { BRA_illiteracy_trend^0 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^1 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^2 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^3 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^4 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^5 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^6 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^7 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^8 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_amazonia_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_amazonia_high
+	add_to_variable = { BRA_illiteracy_trend^0 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_bahia_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_bahia_high
+	add_to_variable = { BRA_illiteracy_trend^1 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_central_west_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_central_west_high
+	add_to_variable = { BRA_illiteracy_trend^2 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_minas_gerais_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_minas_gerais_high
+	add_to_variable = { BRA_illiteracy_trend^3 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_south_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_south_high
+	add_to_variable = { BRA_illiteracy_trend^4 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_mid_north_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_mid_north_high
+	add_to_variable = { BRA_illiteracy_trend^5 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_northeast_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_northeast_high
+	add_to_variable = { BRA_illiteracy_trend^6 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_rio_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_rio_high
+	add_to_variable = { BRA_illiteracy_trend^7 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_monthly_sao_paolo_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_monthly_sao_paolo_high
+	add_to_variable = { BRA_illiteracy_trend^8 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_decrease_illiteracy_monthly_nationwide_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_nationwide_low
+	add_to_variable = { BRA_illiteracy_trend^0 = -0.10 }
+	add_to_variable = { BRA_illiteracy_trend^1 = -0.10 }
+	add_to_variable = { BRA_illiteracy_trend^2 = -0.10 }
+	add_to_variable = { BRA_illiteracy_trend^3 = -0.10 }
+	add_to_variable = { BRA_illiteracy_trend^4 = -0.10 }
+	add_to_variable = { BRA_illiteracy_trend^5 = -0.10 }
+	add_to_variable = { BRA_illiteracy_trend^6 = -0.10 }
+	add_to_variable = { BRA_illiteracy_trend^7 = -0.10 }
+	add_to_variable = { BRA_illiteracy_trend^8 = -0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_amazonia_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_amazonia_low
+	add_to_variable = { BRA_illiteracy_trend^0 = -0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_bahia_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_bahia_low
+	add_to_variable = { BRA_illiteracy_trend^1 = -0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_central_west_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_central_west_low
+	add_to_variable = { BRA_illiteracy_trend^2 = -0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_minas_gerais_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_minas_gerais_low
+	add_to_variable = { BRA_illiteracy_trend^3 = -0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_south_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_south_low
+	add_to_variable = { BRA_illiteracy_trend^4 = -0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_mid_north_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_mid_north_low
+	add_to_variable = { BRA_illiteracy_trend^5 = -0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_northeast_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_northeast_low
+	add_to_variable = { BRA_illiteracy_trend^6 = -0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_rio_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_rio_low
+	add_to_variable = { BRA_illiteracy_trend^7 = -0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_sao_paolo_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_sao_paolo_low
+	add_to_variable = { BRA_illiteracy_trend^8 = -0.10 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_decrease_illiteracy_monthly_nationwide_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_nationwide_med
+	add_to_variable = { BRA_illiteracy_trend^0 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^1 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^2 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^3 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^4 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^5 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^6 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^7 = -0.30 }
+	add_to_variable = { BRA_illiteracy_trend^8 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_amazonia_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_amazonia_med
+	add_to_variable = { BRA_illiteracy_trend^0 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_bahia_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_bahia_med
+	add_to_variable = { BRA_illiteracy_trend^1 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_central_west_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_central_west_med
+	add_to_variable = { BRA_illiteracy_trend^2 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_minas_gerais_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_minas_gerais_med
+	add_to_variable = { BRA_illiteracy_trend^3 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_south_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_south_med
+	add_to_variable = { BRA_illiteracy_trend^4 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_mid_north_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_mid_north_med
+	add_to_variable = { BRA_illiteracy_trend^5 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_northeast_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_northeast_med
+	add_to_variable = { BRA_illiteracy_trend^6 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_rio_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_rio_med
+	add_to_variable = { BRA_illiteracy_trend^7 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_sao_paolo_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_sao_paolo_med
+	add_to_variable = { BRA_illiteracy_trend^8 = -0.30 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_decrease_illiteracy_monthly_nationwide_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_nationwide_high
+	add_to_variable = { BRA_illiteracy_trend^0 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^1 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^2 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^3 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^4 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^5 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^6 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^7 = -0.50 }
+	add_to_variable = { BRA_illiteracy_trend^8 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_amazonia_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_amazonia_high
+	add_to_variable = { BRA_illiteracy_trend^0 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_bahia_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_bahia_high
+	add_to_variable = { BRA_illiteracy_trend^1 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_central_west_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_central_west_high
+	add_to_variable = { BRA_illiteracy_trend^2 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_minas_gerais_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_minas_gerais_high
+	add_to_variable = { BRA_illiteracy_trend^3 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_south_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_south_high
+	add_to_variable = { BRA_illiteracy_trend^4 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_mid_north_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_mid_north_high
+	add_to_variable = { BRA_illiteracy_trend^5 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_northeast_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_northeast_high
+	add_to_variable = { BRA_illiteracy_trend^6 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_rio_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_rio_high
+	add_to_variable = { BRA_illiteracy_trend^7 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_monthly_sao_paolo_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_monthly_sao_paolo_high
+	add_to_variable = { BRA_illiteracy_trend^8 = -0.50 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_increase_illiteracy_nationwide_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_nationwide_low
+	add_to_variable = { BRA_illiteracy_array^0 = 1.00 }
+	add_to_variable = { BRA_illiteracy_array^1 = 1.00 }
+	add_to_variable = { BRA_illiteracy_array^2 = 1.00 }
+	add_to_variable = { BRA_illiteracy_array^3 = 1.00 }
+	add_to_variable = { BRA_illiteracy_array^4 = 1.00 }
+	add_to_variable = { BRA_illiteracy_array^5 = 1.00 }
+	add_to_variable = { BRA_illiteracy_array^6 = 1.00 }
+	add_to_variable = { BRA_illiteracy_array^7 = 1.00 }
+	add_to_variable = { BRA_illiteracy_array^8 = 1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_amazonia_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_amazonia_low
+	add_to_variable = { BRA_illiteracy_array^0 = 1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_bahia_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_bahia_low
+	add_to_variable = { BRA_illiteracy_array^1 = 1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_central_west_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_central_west_low
+	add_to_variable = { BRA_illiteracy_array^2 = 1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_minas_gerais_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_minas_gerais_low
+	add_to_variable = { BRA_illiteracy_array^3 = 1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_south_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_south_low
+	add_to_variable = { BRA_illiteracy_array^4 = 1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_mid_north_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_mid_north_low
+	add_to_variable = { BRA_illiteracy_array^5 = 1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_northeast_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_northeast_low
+	add_to_variable = { BRA_illiteracy_array^6 = 1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_rio_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_rio_low
+	add_to_variable = { BRA_illiteracy_array^7 = 1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_sao_paolo_low = {
+	custom_effect_tooltip = BRA_increase_illiteracy_sao_paolo_low
+	add_to_variable = { BRA_illiteracy_array^8 = 1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_increase_illiteracy_nationwide_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_nationwide_med
+	add_to_variable = { BRA_illiteracy_array^0 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^1 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^2 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^3 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^4 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^5 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^6 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^7 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^8 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_amazonia_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_amazonia_med
+	add_to_variable = { BRA_illiteracy_array^0 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_bahia_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_bahia_med
+	add_to_variable = { BRA_illiteracy_array^1 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_central_west_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_central_west_med
+	add_to_variable = { BRA_illiteracy_array^2 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_minas_gerais_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_minas_gerais_med
+	add_to_variable = { BRA_illiteracy_array^3 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_south_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_south_med
+	add_to_variable = { BRA_illiteracy_array^4 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_mid_north_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_mid_north_med
+	add_to_variable = { BRA_illiteracy_array^5 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_northeast_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_northeast_med
+	add_to_variable = { BRA_illiteracy_array^6 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_rio_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_rio_med
+	add_to_variable = { BRA_illiteracy_array^7 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_sao_paolo_med = {
+	custom_effect_tooltip = BRA_increase_illiteracy_sao_paolo_med
+	add_to_variable = { BRA_illiteracy_array^8 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_increase_illiteracy_nationwide_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_nationwide_high
+	add_to_variable = { BRA_illiteracy_array^0 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^1 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^2 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^3 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^4 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^5 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^6 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^7 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^8 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_amazonia_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_amazonia_high
+	add_to_variable = { BRA_illiteracy_array^0 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_bahia_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_bahia_high
+	add_to_variable = { BRA_illiteracy_array^1 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_central_west_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_central_west_high
+	add_to_variable = { BRA_illiteracy_array^2 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_minas_gerais_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_minas_gerais_high
+	add_to_variable = { BRA_illiteracy_array^3 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_south_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_south_high
+	add_to_variable = { BRA_illiteracy_array^4 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_mid_north_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_mid_north_high
+	add_to_variable = { BRA_illiteracy_array^5 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_northeast_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_northeast_high
+	add_to_variable = { BRA_illiteracy_array^6 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_rio_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_rio_high
+	add_to_variable = { BRA_illiteracy_array^7 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_increase_illiteracy_sao_paolo_high = {
+	custom_effect_tooltip = BRA_increase_illiteracy_sao_paolo_high
+	add_to_variable = { BRA_illiteracy_array^8 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_decrease_illiteracy_nationwide_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_nationwide_low
+	add_to_variable = { BRA_illiteracy_array^0 = -1.00 }
+	add_to_variable = { BRA_illiteracy_array^1 = -1.00 }
+	add_to_variable = { BRA_illiteracy_array^2 = -1.00 }
+	add_to_variable = { BRA_illiteracy_array^3 = -1.00 }
+	add_to_variable = { BRA_illiteracy_array^4 = -1.00 }
+	add_to_variable = { BRA_illiteracy_array^5 = -1.00 }
+	add_to_variable = { BRA_illiteracy_array^6 = -1.00 }
+	add_to_variable = { BRA_illiteracy_array^7 = -1.00 }
+	add_to_variable = { BRA_illiteracy_array^8 = -1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_amazonia_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_amazonia_low
+	add_to_variable = { BRA_illiteracy_array^0 = -1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_bahia_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_bahia_low
+	add_to_variable = { BRA_illiteracy_array^1 = -1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_central_west_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_central_west_low
+	add_to_variable = { BRA_illiteracy_array^2 = -1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_minas_gerais_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_minas_gerais_low
+	add_to_variable = { BRA_illiteracy_array^3 = -1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_south_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_south_low
+	add_to_variable = { BRA_illiteracy_array^4 = -1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_mid_north_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_mid_north_low
+	add_to_variable = { BRA_illiteracy_array^5 = -1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_northeast_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_northeast_low
+	add_to_variable = { BRA_illiteracy_array^6 = -1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_rio_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_rio_low
+	add_to_variable = { BRA_illiteracy_array^7 = -1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_sao_paolo_low = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_sao_paolo_low
+	add_to_variable = { BRA_illiteracy_array^8 = -1.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_decrease_illiteracy_nationwide_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_nationwide_med
+	add_to_variable = { BRA_illiteracy_array^0 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^1 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^2 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^3 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^4 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^5 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^6 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^7 = -3.00 }
+	add_to_variable = { BRA_illiteracy_array^8 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_amazonia_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_amazonia_med
+	add_to_variable = { BRA_illiteracy_array^0 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_bahia_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_bahia_med
+	add_to_variable = { BRA_illiteracy_array^1 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_central_west_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_central_west_med
+	add_to_variable = { BRA_illiteracy_array^2 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_minas_gerais_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_minas_gerais_med
+	add_to_variable = { BRA_illiteracy_array^3 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_south_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_south_med
+	add_to_variable = { BRA_illiteracy_array^4 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_mid_north_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_mid_north_med
+	add_to_variable = { BRA_illiteracy_array^5 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_northeast_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_northeast_med
+	add_to_variable = { BRA_illiteracy_array^6 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_rio_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_rio_med
+	add_to_variable = { BRA_illiteracy_array^7 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_sao_paolo_med = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_sao_paolo_med
+	add_to_variable = { BRA_illiteracy_array^8 = -3.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+
+BRA_decrease_illiteracy_nationwide_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_nationwide_high
+	add_to_variable = { BRA_illiteracy_array^0 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^1 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^2 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^3 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^4 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^5 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^6 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^7 = -5.00 }
+	add_to_variable = { BRA_illiteracy_array^8 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_amazonia_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_amazonia_high
+	add_to_variable = { BRA_illiteracy_array^0 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_bahia_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_bahia_high
+	add_to_variable = { BRA_illiteracy_array^1 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_central_west_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_central_west_high
+	add_to_variable = { BRA_illiteracy_array^2 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_minas_gerais_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_minas_gerais_high
+	add_to_variable = { BRA_illiteracy_array^3 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_south_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_south_high
+	add_to_variable = { BRA_illiteracy_array^4 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_mid_north_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_mid_north_high
+	add_to_variable = { BRA_illiteracy_array^5 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_northeast_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_northeast_high
+	add_to_variable = { BRA_illiteracy_array^6 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_rio_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_rio_high
+	add_to_variable = { BRA_illiteracy_array^7 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}
+BRA_decrease_illiteracy_sao_paolo_high = {
+	custom_effect_tooltip = BRA_decrease_illiteracy_sao_paolo_high
+	add_to_variable = { BRA_illiteracy_array^8 = -5.00 }
+	BRA_recalculate_develop_region_illiteracy = yes
+}

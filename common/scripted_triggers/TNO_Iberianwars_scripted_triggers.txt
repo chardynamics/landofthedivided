@@ -1,0 +1,923 @@
+is_iberianwar_mainland_nation = {
+	OR = {
+		original_tag = SPR
+		original_tag = SPS
+		original_tag = CTL
+		original_tag = CNT
+		original_tag = BSQ
+		original_tag = FSR
+		original_tag = GNS
+		original_tag = TBA
+		original_tag = POR
+		original_tag = PPR
+		original_tag = RPP
+		original_tag = GAL
+		original_tag = FZL
+		original_tag = ADL
+	}
+}
+
+is_portuguese_faction = {
+	OR = {
+		tag = RPP
+		tag = PPR
+		tag = POR
+		tag = GNS
+	}
+}
+
+is_spanish_faction = {
+	OR = {
+		tag = SPR
+		tag = SPS
+		tag = FSR
+		tag = FZL
+	}
+}
+
+is_portuguese_state = {
+	OR = {
+		state = 1004
+		state = 179
+		state = 1000
+		state = 112
+		state = 998
+		state = 181
+		state = 180
+		state = 997
+		state = 697
+		state = 698
+		state = 1672
+		state = 1673
+		state = 1674
+	}
+}
+
+is_portuguese_state_not_islands = {
+	OR = {
+		state = 1004
+		state = 179
+		state = 1000
+		state = 112
+		state = 998
+		state = 181
+		state = 180
+		state = 997
+		state = 1672
+		state = 1673
+		state = 1674
+	}
+}
+
+united_portugal_without_islands = {
+	controls_state = 1004
+	controls_state = 179
+	controls_state = 1000
+	controls_state = 112
+	controls_state = 998
+	controls_state = 181
+	controls_state = 180
+	controls_state = 997
+	controls_state = 1672
+	controls_state = 1673
+	controls_state = 1674
+}
+
+
+is_spanish_state = { # This include balearic islands
+	OR = {
+		state = 41
+		state = 118
+		state = 165
+		state = 166
+		state = 167
+		state = 168
+		state = 169
+		state = 170
+		state = 171
+		state = 172
+		state = 173
+		state = 174
+		state = 175
+		state = 176
+		state = 177
+		state = 178
+		state = 982
+		state = 983
+		state = 984
+		state = 985
+		state = 986
+		state = 987
+		state = 988
+		state = 993
+		state = 994
+		state = 995
+		state = 996
+		state = 999
+		state = 1001
+		state = 1002
+		state = 1003
+		state = 1012
+		state = 1013
+		state = 1545
+		state = 1546
+		state = 1547
+		state = 1701
+		state = 1702
+	}
+}
+
+is_moroccan_state = { 
+	OR = {
+		state = 290
+		state = 461
+		state = 462
+		state = 1005
+		state = 1008
+		state = 1150
+		state = 1151
+		state = 1152
+		state = 1153
+		state = 1612
+		state = 2112
+		state = 2113
+		state = 2114
+	}
+}
+
+united_spain = {
+	AND = {
+		controls_state = 983
+		controls_state = 987
+		OR = {
+			controls_state = 177
+			ITA = {
+				controls_state = 177
+			}
+		}
+		controls_state = 168
+		controls_state = 985
+		controls_state = 166
+		controls_state = 172
+		controls_state = 994
+		controls_state = 41
+		controls_state = 1002
+		controls_state = 175
+		controls_state = 999
+		controls_state = 996
+		controls_state = 995
+		controls_state = 174
+		controls_state = 176
+		controls_state = 1001
+		controls_state = 170
+		controls_state = 169
+		controls_state = 173
+		controls_state = 988
+		controls_state = 1003
+		controls_state = 178
+		OR = {
+			controls_state = 982
+			PPR = {
+				controls_state = 982
+			}
+			GNS = {
+				controls_state = 982
+			}
+		}
+		OR = {
+			controls_state = 171
+			PPR = {
+				controls_state = 171
+			}
+			GNS = {
+				controls_state = 171
+			}
+		}
+		controls_state = 165
+		controls_state = 986
+		controls_state = 993
+		controls_state = 984
+		controls_state = 167
+		controls_state = 1012
+		controls_state = 1013
+		controls_state = 1701
+		controls_state = 1702
+		controls_state = 1547
+		controls_state = 118
+	}
+}
+
+united_spain_SPR = {
+	AND = {
+		#TBA
+		OR = {
+			TBA = {
+				controls_state = 983
+			}
+			controls_state = 983	
+		}
+		OR = {
+			controls_state = 177
+			ITA = {
+				controls_state = 177
+			}
+			CTL = {
+				controls_state = 177
+			}
+			CNT = {
+				controls_state = 177
+			}
+		}
+		#ADL
+		OR = {
+			ADL = {
+				controls_state = 169
+			}
+			controls_state = 169	
+		}
+		OR = {
+			ADL = {
+				controls_state = 988
+			}
+			controls_state = 988	
+		}
+		OR = {
+			ADL = {
+				controls_state = 173
+			}
+			controls_state = 173	
+		}
+		OR = {
+			ADL = {
+				controls_state = 1003
+			}
+			controls_state = 1003	
+		}
+		OR = {
+			ADL = {
+				controls_state = 1547
+			}
+			controls_state = 1547	
+		}
+		OR = {
+			ADL = {
+				controls_state = 118
+			}
+			controls_state = 118	
+		}
+		#
+		controls_state = 168
+		controls_state = 985
+		controls_state = 166
+		controls_state = 172
+		controls_state = 994
+		controls_state = 41
+		controls_state = 1002
+		controls_state = 175
+		controls_state = 999
+		controls_state = 996
+		controls_state = 995
+		controls_state = 174
+		controls_state = 176
+		controls_state = 1001
+		controls_state = 170
+		controls_state = 178
+		#GAL
+		OR = {
+			GAL = {
+				controls_state = 982
+			}
+			controls_state = 982	
+		}
+		OR = {
+			GAL = {
+				controls_state = 171
+			}
+			controls_state = 171	
+		}
+		#CTL/CNT
+		OR = {
+			CTL = {
+				controls_state = 165
+			}
+			CNT = {
+				controls_state = 165
+			}
+			controls_state = 165	
+		}
+		OR = {
+			CTL = {
+				controls_state = 986
+			}
+			CNT = {
+				controls_state = 986
+			}
+			controls_state = 986	
+		}
+		OR = {
+			CTL = {
+				controls_state = 1012
+			}
+			CNT = {
+				controls_state = 1012
+			}
+			controls_state = 1012	
+		}
+		#BSQ
+		OR = {
+			BSQ = {
+				controls_state = 993
+			}
+			controls_state = 993	
+		}
+		OR = {
+			BSQ = {
+				controls_state = 984
+			}
+			controls_state = 984	
+		}
+		#VALENCIA
+		OR = {
+			CTL = {
+				controls_state = 167
+			}
+			controls_state = 167	
+		}
+		OR = {
+			CTL = {
+				controls_state = 987
+			}
+			controls_state = 987	
+		}
+		#
+		controls_state = 1013
+		controls_state = 1701
+		controls_state = 1702
+	}
+}
+
+IBR_Wars_is_supporting_defeated_factions = {
+	any_of_scopes = {
+		array = Iberian_Wars_supported_factions
+		exists = yes
+	}
+}
+
+IBR_Wars_spain_invalid_faction_check = {
+	OR = {
+		NOT = {
+			has_country_flag = ibw_supporting_first_faction_spain
+		}
+		AND = {
+			has_country_flag = ibw_supporting_first_faction_spain
+			OR = {
+				AND = {
+					is_in_array = { ROOT.Iberian_Wars_supported_factions = SPR.id }
+					NOT = {
+						country_exists = SPR
+					}
+				}
+				AND = {
+					is_in_array = { ROOT.Iberian_Wars_supported_factions = SPS.id }
+					NOT = {
+						country_exists = SPS
+					}
+				}
+				AND = {
+					is_in_array = { ROOT.Iberian_Wars_supported_factions = FSR.id }
+					NOT = {
+						country_exists = FSR
+					}
+				}
+				AND = {
+					is_in_array = { ROOT.Iberian_Wars_supported_factions = FZL.id }
+					NOT = {
+						country_exists = FZL
+					}
+				}
+			}
+		}
+	}
+}
+
+IBR_Wars_portugal_invalid_faction_check = {
+	OR = {
+		NOT = {
+			has_country_flag = ibw_supporting_first_faction_portugal
+		}
+		AND = {
+			has_country_flag = ibw_supporting_first_faction_portugal
+			OR = {
+				AND = {
+					is_in_array = { ROOT.Iberian_Wars_supported_factions = RPP.id }
+					NOT = {
+						country_exists = RPP
+					}
+				}
+				AND = {
+					is_in_array = { ROOT.Iberian_Wars_supported_factions = PPR.id }
+					NOT = {
+						country_exists = PPR
+					}
+				}
+				AND = {
+					is_in_array = { ROOT.Iberian_Wars_supported_factions = POR.id }
+					NOT = {
+						country_exists = POR
+					}
+				}
+				AND = {
+					is_in_array = { ROOT.Iberian_Wars_supported_factions = GNS.id }
+					NOT = {
+						country_exists = GNS
+					}
+				}
+			}
+		}
+	}
+}
+
+IBR_Wars_SPR_support_trigger = {
+	OR = {
+		AND = { # USA
+			tag = USA
+		}
+		AND = { # ITA
+			tag = ITA
+			OR = {
+				has_country_flag = ITA_dem_dc
+				has_country_flag = ITA_dem_fd
+				has_country_flag = ITA_PIANO_SOLO_COUP
+			}
+		}
+		AND = { # TUR
+			tag = TUR
+			NOT = {
+				has_country_flag = TUR_RadKem_gov
+			}
+		}
+		AND = { # COL
+			tag = event_target:CCW_winner
+			OR = {
+				AND = { # Republic of Colombia
+					tag = COL
+					NOT = {
+						has_government = fascism
+						AND = {
+							has_government = despotism
+							NOT = {
+								has_country_leader = {
+									character = COL_Gustavo_Rojas_Pinilla
+									ruling_only = yes
+								}
+							}
+						}
+					}
+				}
+				AND = { # New Granada
+					tag = CLC
+					has_country_leader = {
+						character = CLC_Diego_Garces_Giraldo
+						ruling_only = yes
+					}
+				}
+				AND = {
+					tag = CLL # URC
+					NOT = {
+						has_government = communist
+					}
+				}
+			}
+		}
+		AND = { # BRA
+			tag = BRA
+			has_country_leader = {
+				character = BRA_Carlos_Lacerda
+				ruling_only = yes
+			}
+		}
+		AND = { # ARG
+			tag = ARG
+			OR = {
+				has_country_flag = ARG_colorado_coup
+				has_country_flag = ARG_democratic
+			}
+		}
+		AND = { # MEX
+			tag = MEX
+		}
+	}
+	country_exists = SPR
+	IBR_Wars_spain_invalid_faction_check = yes
+}
+
+IBR_Wars_SPS_support_trigger = {
+	OR = {
+		AND = { # ITA
+			tag = ITA
+			OR = {
+				has_country_leader = {
+					character = ITA_Carlo_Scorza
+					ruling_only = yes
+				}
+				has_country_flag = ITA_dem_bn
+			}
+		}
+		AND = { # GER
+			tag = GER
+		}
+		AND = { # TUR
+			tag = TUR
+			has_country_flag = TUR_turkes_regime
+			NOT = {
+				country_exists = SPR
+			}
+		}
+		AND = { # COL
+			tag = event_target:CCW_winner
+			OR = {
+				AND = { # Republic of Colombia
+					tag = COL
+					OR = {
+						has_government = fascism
+						AND = {
+							has_government = despotism
+							NOT = {
+								has_country_leader = {
+									character = COL_Gustavo_Rojas_Pinilla
+									ruling_only = yes
+								}
+							}
+						}
+					}
+				}
+				AND = { # New Granada
+					tag = CLC
+					NOT = {
+						has_country_leader = {
+							character = CLC_Diego_Garces_Giraldo
+							ruling_only = yes
+						}
+					}
+				}
+				tag = CLD # SPA
+			}
+		}
+		AND = { # FRS
+			tag = FRS
+			NOT = {
+				has_global_flag = FRA_postreclamation_elections
+				has_global_flag = FRA_civil_war_ongoing
+			}
+		}
+		AND = { # BRA
+			tag = BRA
+			has_country_leader = {
+				character = BRA_Plinio_Salgado
+				ruling_only = yes
+			}
+		}
+		AND = { # ARG
+			tag = ARG
+			OR = {
+				has_country_flag = ARG_democratic_evil
+				has_country_flag = ARG_revolution
+				has_country_flag = ARG_peronist
+			}
+		}
+	}
+	country_exists = SPS
+	IBR_Wars_spain_invalid_faction_check = yes
+}
+
+IBR_Wars_FSR_support_trigger = {
+	OR = {
+		AND = { # ITA
+			tag = ITA
+			OR = {
+				has_country_leader = {
+					character = ITA_Carlo_Scorza
+					ruling_only = yes
+				}
+				has_country_flag = ITA_dem_bn
+			}
+		}
+		AND = { # TUR
+			tag = TUR
+			has_country_flag = TUR_turkes_regime
+			NOT = {
+				country_exists = SPR
+			}
+		}
+		AND = { # COL
+			tag = event_target:CCW_winner
+			OR = {
+				AND = { # New Granada
+					tag = CLC
+					NOT = {
+						has_country_leader = {
+							character = CLC_Diego_Garces_Giraldo
+							ruling_only = yes
+						}
+					}
+					OR = {
+						has_country_leader_ideology = despotism_national_catholicism_subtype
+						is_in_array = {ITA.Iberian_Wars_supported_factions = FSR.id }
+					}
+				}
+				tag = CLD # SPA
+			}
+		}
+		AND = { # FRS
+			tag = FRS
+			OR = {
+				has_country_flag = FRA_sidos_elected
+				has_country_flag = FRA_gaxotte_elected
+			}
+		}
+		AND = { # BRA
+			tag = BRA
+			has_country_leader = {
+				character = BRA_Plinio_Salgado
+				ruling_only = yes
+			}
+		}
+		AND = { # ARG
+			tag = ARG
+			OR = {
+				has_country_flag = ARG_democratic_evil
+				has_country_flag = ARG_revolution
+				has_country_flag = ARG_peronist
+			}
+		}
+	}
+	country_exists = FSR
+	IBR_Wars_spain_invalid_faction_check = yes
+}
+
+IBR_Wars_FZL_support_trigger = {
+	OR = {
+		AND = { # ITA
+			tag = ITA
+			has_country_leader = {
+				character = ITA_Carlo_Scorza
+				ruling_only = yes
+			}
+		}
+		AND = { # GER
+			tag = GER
+		}
+		AND = { # COL
+			tag = event_target:CCW_winner
+			OR = {
+				AND = { # Republic of Colombia
+					tag = COL
+					OR = {
+						has_government = fascism
+						AND = {
+							has_government = despotism
+							NOT = {
+								has_country_leader = {
+									character = COL_Gustavo_Rojas_Pinilla
+									ruling_only = yes
+								}
+							}
+						}
+					}
+				}
+				AND = { # New Granada
+					tag = CLC
+					NOT = {
+						has_country_leader = {
+							character = CLC_Diego_Garces_Giraldo
+							ruling_only = yes
+						}
+					}
+					NOT = {
+						has_country_leader_ideology = despotism_national_catholicism_subtype
+					}
+				}
+				tag = CLD # SPA
+			}
+		}
+		AND = { # FRS
+			tag = FRS
+			has_country_flag = FRA_sidos_elected
+		}
+		AND = { # ARG
+			tag = ARG
+			has_country_flag = ARG_peronist
+		}
+	}
+	country_exists = FZL
+	IBR_Wars_spain_invalid_faction_check = yes
+}
+
+IBR_Wars_RPP_support_trigger = {
+	OR = {
+		AND = { # USA
+			tag = USA
+		}
+		AND = { # ITA
+			tag = ITA
+			OR = {
+				has_country_flag = ITA_dem_dc
+				has_country_flag = ITA_dem_fd
+				has_country_flag = ITA_PIANO_SOLO_COUP
+			}
+		}
+		AND = { # TUR
+			tag = TUR
+			NOT = {
+				has_country_flag = TUR_RadKem_gov
+			}
+		}
+		AND = { # BRA
+			tag = BRA
+			OR = {
+				AND = {
+					BRA_PSP_is_ruling_party = no
+					BRA_Military_is_ruling_party = no
+				}
+				AND = {
+					BRA_Military_is_ruling_party = yes
+					has_idea = OFN_Observer
+				}
+			}
+		}
+		AND = { # MEX
+			tag = MEX
+			OR = {
+				has_country_leader = {
+					character = MEX_Gustavo_Ordaz
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = MEX_Carlos_Madrazo
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	country_exists = RPP
+	IBR_Wars_portugal_invalid_faction_check = yes
+}
+
+IBR_Wars_POR_support_trigger = {
+	OR = {
+		AND = { # ITA
+			tag = ITA
+			OR = {
+				has_country_flag = ITA_dem_dc
+				has_country_flag = ITA_dem_bn
+				has_country_flag = ITA_PIANO_SOLO_COUP
+				has_country_leader = {
+					character = ITA_Carlo_Scorza
+					ruling_only = yes
+				}
+			}
+		}
+		AND = { # TUR
+			tag = TUR
+			OR = {
+				has_country_flag = TUR_turkes_regime
+				has_country_flag = TUR_Junta_gov
+			}
+			NOT = {
+				country_exists = SPR
+			}
+		}
+		AND = { # BRA
+			tag = BRA
+			OR = {
+				has_country_leader = {
+					character = BRA_Plinio_Salgado
+					ruling_only = yes
+				}
+				AND = {
+					BRA_PSP_is_ruling_party = yes
+					GER = {
+						has_country_flag = IBR_Wars_GER_supports_Portugal_flag
+					}
+				}
+				AND = {
+					has_country_leader = {
+						character = BRA_Juscelino_Kubitschek
+						ruling_only = yes
+					}
+					RPP = {
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+		AND = { #GER 
+			tag = GER
+		}
+	}
+	country_exists = POR
+	IBR_Wars_portugal_invalid_faction_check = yes
+}
+
+IBR_Wars_GNS_support_trigger = {
+	OR = {
+		AND = { # ITA
+			tag = ITA
+			OR = {
+				has_country_flag = ITA_dem_bn
+				has_country_leader = {
+					character = ITA_Carlo_Scorza
+					ruling_only = yes
+				}
+			}
+		}
+		AND = { # BRA
+			tag = BRA
+			OR = {
+				has_country_leader = {
+					character = BRA_Plinio_Salgado
+					ruling_only = yes
+				}
+				AND = {
+					OR = {
+						has_country_leader = {
+							character = BRA_Adhemar_de_Barros
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = BRA_Getulio_Vargas_Filho
+							ruling_only = yes
+						}
+					}
+					GER = {
+						has_country_flag = IBR_Wars_GER_supports_Portugal_flag
+					}
+				}
+				AND = {
+					has_country_leader = {
+						character = BRA_Juscelino_Kubitschek
+						ruling_only = yes
+					}
+					RPP = {
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+		AND = { #GER 
+			tag = GER
+		}
+	}
+	country_exists = GNS
+	IBR_Wars_portugal_invalid_faction_check = yes
+}
+
+IBR_Wars_PPR_support_trigger = {
+	OR = {
+		AND = { # ITA
+			tag = ITA
+			has_country_flag = ITA_dem_fd
+			RPP = {
+				has_capitulated = yes
+			}
+		}
+		AND = { # COL
+			tag = event_target:CCW_winner
+			has_government = communist
+		}
+		AND = { # BRA
+			tag = BRA
+			OR = {
+				has_country_leader = {
+					character = BRA_Leonel_Brizola
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = BRA_Milton_Campos
+					ruling_only = yes
+				}
+			}
+			RPP = {
+				has_capitulated = yes
+			}
+		}
+		AND = { # MEX
+			tag = MEX
+			has_country_leader = {
+				character = MEX_Carlos_Madrazo
+				ruling_only = yes
+			}
+			RPP = {
+				has_capitulated = yes
+			}
+		}
+	}
+	country_exists = PPR
+	IBR_Wars_portugal_invalid_faction_check = yes
+}
+
+
+
+
+
+

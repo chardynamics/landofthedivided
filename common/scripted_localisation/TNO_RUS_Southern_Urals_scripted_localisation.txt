@@ -1,0 +1,730 @@
+defined_text = { #Orenburg centralization
+	name = GetOrenburgCentralisation
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = ORECentralizedPower
+					value = 5
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		localization_key = orenburg_complete_centralisation
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = ORECentralizedPower
+					value = 3
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					ORECentralizedPower < 5
+				}
+			}
+		}
+		localization_key = orenburg_high_centralisation
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					ORECentralizedPower < 3
+				}
+				check_variable = {
+					ORECentralizedPower > -2
+				}
+			}
+		}
+		localization_key = orenburg_medium_centralisation
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = ORECentralizedPower
+				value = -2
+				compare = less_than_or_equals
+			}
+		}
+		localization_key = orenburg_low_centralisation
+	}
+}
+
+defined_text = { #orenburg reformist
+	name = GetOrenburgReformist
+	text = {
+		trigger = {
+			check_variable = {
+				party_popularity@paternalism > party_popularity@communist
+			}
+		}
+		localization_key = orenburg_reformist_burba
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				party_popularity@communist > party_popularity@paternalism
+			}
+		}
+		localization_key = orenburg_reformist_malenkov
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				party_popularity@paternalism = party_popularity@communist
+			}
+		}
+		localization_key = orenburg_reformist_undecided
+	}
+}
+
+## NEW RACE FOR THE URALS
+
+defined_text = {
+	name = GetRFTURivalName
+	text = {
+		trigger = {
+			tag = WSR
+		}
+		localization_key = RUS_RFTU_rival_WSB_flag
+	}
+	text = {
+		trigger = {
+			tag = WSB
+		}
+		localization_key = RUS_RFTU_rival_WSR_flag
+	}
+}
+
+defined_text = {
+	name = GetRFTUFactionSelected
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_faction = 0 }
+		}
+		localization_key = RUS_RFTU_orenburg_name
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_faction = 1 }
+		}
+		localization_key = RUS_RFTU_ural_league_name
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_faction = 2 }
+		}
+		localization_key = RUS_RFTU_magnitogorsk_name
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_faction = 3 }
+		}
+		localization_key = RUS_RFTU_orsk_name
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_faction = -1 }
+		}
+		localization_key = RUS_RFTU_no_faction_selected
+	}
+}
+
+defined_text = {
+	name = GetRFTUFactionSelectedFlag
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_faction = 0 }
+		}
+		localization_key = RUS_RFTU_orenburg_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_faction = 1 }
+		}
+		localization_key = RUS_RFTU_ural_league_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_faction = 2 }
+		}
+		localization_key = RUS_RFTU_magnitogorsk_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_faction = 3 }
+		}
+		localization_key = RUS_RFTU_ural_orsk_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_faction = -1 }
+		}
+		localization_key = RUS_RFTU_no_faction_selected
+	}
+}
+
+defined_text = {
+	name = GetRFTUStateSelected
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_region = 1 }
+		}
+		localization_key = RUS_RFTU_orenburg
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_region = 2 }
+		}
+		localization_key = RUS_RFTU_beloretsk
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_region = 3 }
+		}
+		localization_key = RUS_RFTU_magnitogorsk
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_selected_ural_region = 4 }
+		}
+		localization_key = RUS_RFTU_orsk
+	}
+}
+
+defined_text = {
+	name = GetRFTUOwnStatusText
+	text = {
+		trigger = { tag = WSR }
+		localization_key = RUS_RFTU_our_status_criteria_wsr
+	}
+	text = {
+		trigger = { tag = WSB }
+		localization_key = RUS_RFTU_our_status_criteria_wsb
+	}
+}
+
+defined_text = {
+	name = GetRFTURivalStatusText
+	text = {
+		trigger = { tag = WSR }
+		localization_key = RUS_RFTU_our_status_criteria_wsb
+	}
+	text = {
+		trigger = { tag = WSB }
+		localization_key = RUS_RFTU_our_status_criteria_wsr
+	}
+}
+
+defined_text = {
+	name = GetRFTUOwnerOrenburg
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_orenburg_owner = 0 }
+		}
+		localization_key = RUS_RFTU_orenburg_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_orenburg_owner = 1 }
+		}
+		localization_key = RUS_RFTU_ural_league_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_orenburg_owner = 2 }
+		}
+		localization_key = RUS_RFTU_magnitogorsk_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_orenburg_owner = 3 }
+		}
+		localization_key = RUS_RFTU_ural_orsk_flag
+	}
+}
+
+defined_text = {
+	name = GetRFTUOwnerBeloretsk
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_ural_owner = 0 }
+		}
+		localization_key = RUS_RFTU_orenburg_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_ural_owner = 1 }
+		}
+		localization_key = RUS_RFTU_ural_league_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_ural_owner = 2 }
+		}
+		localization_key = RUS_RFTU_magnitogorsk_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_ural_owner = 3 }
+		}
+		localization_key = RUS_RFTU_ural_orsk_flag
+	}
+}
+
+defined_text = {
+	name = GetRFTUOwnerMagnitogorsk
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_magnitogorsk_owner = 0 }
+		}
+		localization_key = RUS_RFTU_orenburg_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_magnitogorsk_owner = 1 }
+		}
+		localization_key = RUS_RFTU_ural_league_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_magnitogorsk_owner = 2 }
+		}
+		localization_key = RUS_RFTU_magnitogorsk_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_magnitogorsk_owner = 3 }
+		}
+		localization_key = RUS_RFTU_ural_orsk_flag
+	}
+}
+
+defined_text = {
+	name = GetRFTUOwnerOrsk
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_orsk_owner = 0 }
+		}
+		localization_key = RUS_RFTU_orenburg_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_orsk_owner = 1 }
+		}
+		localization_key = RUS_RFTU_ural_league_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_orsk_owner = 2 }
+		}
+		localization_key = RUS_RFTU_magnitogorsk_flag
+	}
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_orsk_owner = 3 }
+		}
+		localization_key = RUS_RFTU_ural_orsk_flag
+	}
+}
+
+defined_text = {
+	name = GetRFTURelationsLevelWSR
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_selected_ural_faction = 1 }
+		}
+		localization_key = RUS_RFTU_no_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_selected_ural_faction = 2 }
+		}
+		localization_key = RUS_RFTU_poor_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_selected_ural_faction = 3 }
+		}
+		localization_key = RUS_RFTU_cordial_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_selected_ural_faction = 4 }
+		}
+		localization_key = RUS_RFTU_friendly_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_selected_ural_faction = 5 }
+		}
+		localization_key = RUS_RFTU_sphered
+	}
+}
+
+defined_text = {
+	name = GetRFTURelationsLevelWSB
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_selected_ural_faction = 1 }
+		}
+		localization_key = RUS_RFTU_no_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_selected_ural_faction = 2 }
+		}
+		localization_key = RUS_RFTU_poor_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_selected_ural_faction = 3 }
+		}
+		localization_key = RUS_RFTU_cordial_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_selected_ural_faction = 4 }
+		}
+		localization_key = RUS_RFTU_friendly_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_selected_ural_faction = 5 }
+		}
+		localization_key = RUS_RFTU_sphered
+	}
+}
+
+defined_text = {
+	name = GetRFTURelationsMagnitogorskLevelWSR
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_magnitogorsk_owner = 1 }
+		}
+		localization_key = RUS_RFTU_no_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_magnitogorsk_owner = 2 }
+		}
+		localization_key = RUS_RFTU_poor_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_magnitogorsk_owner = 3 }
+		}
+		localization_key = RUS_RFTU_cordial_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_magnitogorsk_owner = 4 }
+		}
+		localization_key = RUS_RFTU_friendly_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_magnitogorsk_owner = 5 }
+		}
+		localization_key = RUS_RFTU_sphered
+	}
+}
+
+defined_text = {
+	name = GetRFTURelationsMagnitogorskLevelWSB
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_magnitogorsk_owner = 1 }
+		}
+		localization_key = RUS_RFTU_no_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_magnitogorsk_owner = 2 }
+		}
+		localization_key = RUS_RFTU_poor_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_magnitogorsk_owner = 3 }
+		}
+		localization_key = RUS_RFTU_cordial_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_magnitogorsk_owner = 4 }
+		}
+		localization_key = RUS_RFTU_friendly_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_magnitogorsk_owner = 5 }
+		}
+		localization_key = RUS_RFTU_sphered
+	}
+}
+
+defined_text = {
+	name = GetRFTURelationsOrenburgLevelWSR
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_orenburg_owner = 1 }
+		}
+		localization_key = RUS_RFTU_no_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_orenburg_owner = 2 }
+		}
+		localization_key = RUS_RFTU_poor_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_orenburg_owner = 3 }
+		}
+		localization_key = RUS_RFTU_cordial_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_orenburg_owner = 4 }
+		}
+		localization_key = RUS_RFTU_friendly_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_orenburg_owner = 5 }
+		}
+		localization_key = RUS_RFTU_sphered
+	}
+}
+
+defined_text = {
+	name = GetRFTURelationsOrenburgLevelWSB
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_orenburg_owner = 1 }
+		}
+		localization_key = RUS_RFTU_no_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_orenburg_owner = 2 }
+		}
+		localization_key = RUS_RFTU_poor_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_orenburg_owner = 3 }
+		}
+		localization_key = RUS_RFTU_cordial_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_orenburg_owner = 4 }
+		}
+		localization_key = RUS_RFTU_friendly_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_orenburg_owner = 5 }
+		}
+		localization_key = RUS_RFTU_sphered
+	}
+}
+
+defined_text = {
+	name = GetRFTURelationsOrskLevelWSR
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_orsk_owner = 1 }
+		}
+		localization_key = RUS_RFTU_no_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_orsk_owner = 2 }
+		}
+		localization_key = RUS_RFTU_poor_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_orsk_owner = 3 }
+		}
+		localization_key = RUS_RFTU_cordial_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_orsk_owner = 4 }
+		}
+		localization_key = RUS_RFTU_friendly_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_orsk_owner = 5 }
+		}
+		localization_key = RUS_RFTU_sphered
+	}
+}
+
+defined_text = {
+	name = GetRFTURelationsOrskLevelWSB
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_orsk_owner = 1 }
+		}
+		localization_key = RUS_RFTU_no_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_orsk_owner = 2 }
+		}
+		localization_key = RUS_RFTU_poor_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_orsk_owner = 3 }
+		}
+		localization_key = RUS_RFTU_cordial_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_orsk_owner = 4 }
+		}
+		localization_key = RUS_RFTU_friendly_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_orsk_owner = 5 }
+		}
+		localization_key = RUS_RFTU_sphered
+	}
+}
+
+defined_text = {
+	name = GetRFTURelationsBeloretskkLevelWSR
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_ural_owner = 1 }
+		}
+		localization_key = RUS_RFTU_no_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_ural_owner = 2 }
+		}
+		localization_key = RUS_RFTU_poor_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_ural_owner = 3 }
+		}
+		localization_key = RUS_RFTU_cordial_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_ural_owner = 4 }
+		}
+		localization_key = RUS_RFTU_friendly_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSR.RUS_urals_relations_level^RUS_urals_ural_owner = 5 }
+		}
+		localization_key = RUS_RFTU_sphered
+	}
+}
+
+defined_text = {
+	name = GetRFTURelationsBeloretskkLevelWSB
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_ural_owner = 1 }
+		}
+		localization_key = RUS_RFTU_no_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_ural_owner = 2 }
+		}
+		localization_key = RUS_RFTU_poor_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_ural_owner = 3 }
+		}
+		localization_key = RUS_RFTU_cordial_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_ural_owner = 4 }
+		}
+		localization_key = RUS_RFTU_friendly_relations
+	}
+	text = {
+		trigger = {
+			check_variable = { WSB.RUS_urals_relations_level^RUS_urals_ural_owner = 5 }
+		}
+		localization_key = RUS_RFTU_sphered
+	}
+}
+
+defined_text = {
+	name = GetRFTUImproveRelationsTooltip
+	text = {
+		trigger = {
+			check_variable = { RUS_urals_relations_level^RUS_selected_ural_faction > 3 }
+		}
+		localization_key = RUS_RFTU_increase_relations_need_to_sphere_tt
+	}
+	text = {
+		localization_key = RUS_RFTU_increase_relations_normal_tt
+	}
+}
+
+defined_text = {
+	name = GetRFTUDecreaseRelationsTooltip
+	text = {
+		trigger = {
+			tag = WSR
+			check_variable = { WSB.RUS_urals_relations_level^RUS_selected_ural_faction = 1 }
+		}
+		localization_key = RUS_RFTU_decrease_relations_too_low_tt
+	}
+	text = {
+		trigger = {
+			tag = WSB
+			check_variable = { WSR.RUS_urals_relations_level^RUS_selected_ural_faction = 1 }
+		}
+		localization_key = RUS_RFTU_decrease_relations_too_low_tt
+	}
+	text = {
+		localization_key = RUS_RFTU_decrease_relations_normal_tt
+	}
+}
+
+defined_text = {
+	name = GetRFTUDiscreditRivalTooltip
+	text = {
+		trigger = {
+			AND = {
+				tag = WSR
+				check_variable = { WSB.RUS_urals_influence_tick^RUS_selected_ural_faction = 0 }
+			}
+		}
+		localization_key = RUS_RFTU_discredit_rival_no_growth_tt
+	}
+	text = {
+		trigger = {
+			AND = {
+				tag = WSB
+				check_variable = { WSR.RUS_urals_influence_tick^RUS_selected_ural_faction = 0 }
+			}
+		}
+		localization_key = RUS_RFTU_discredit_rival_no_growth_tt
+	}
+	text = {
+		localization_key = RUS_RFTU_discredit_rival_normal_tt
+	}
+}

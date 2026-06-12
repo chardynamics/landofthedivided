@@ -1,0 +1,222 @@
+defined_text = {
+	name = LATAM_bolivian_treaty_round_name_text_sl
+	text = { 
+		trigger = {
+			check_variable = { global.andean_bolivian_round = 1 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_name_text_1
+	}
+	text = { 
+		trigger = {
+			check_variable = { global.andean_bolivian_round = 2 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_name_text_2
+	}
+	text = { 
+		trigger = {
+			check_variable = { global.andean_bolivian_round = 3 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_name_text_3
+	}
+	text = { 
+		trigger = {
+			check_variable = { global.andean_bolivian_round = 4 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_name_text_4
+	}
+	text = { 
+		trigger = {
+			check_variable = { global.andean_bolivian_round = 5 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_name_text_5
+	}
+}
+
+
+defined_text = {
+	name = LATAM_bolivian_treaty_round_tt_sl
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = { round_v = 1 }
+			}
+		}
+		localization_key = round_overlay_tt
+	}
+}
+
+defined_text = {
+	name = LATAM_bolivian_treaty_round_name_text_naked_sl
+	text = { 
+		trigger = {
+			check_variable = { round_idx = 1 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_name_text_naked_1
+	}
+	text = { 
+		trigger = {
+			check_variable = { round_idx = 2 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_name_text_naked_2
+	}
+	text = { 
+		trigger = {
+			check_variable = { round_idx = 3 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_name_text_naked_3
+	}
+	text = { 
+		trigger = {
+			check_variable = { round_idx = 4 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_name_text_naked_4
+	}
+	text = { 
+		trigger = {
+			check_variable = { round_idx = 5 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_name_text_naked_5
+	}
+}
+
+defined_text = {
+	name = LATAM_bolivian_treaty_round_reward_text_sl
+	text = { 
+		trigger = {
+			check_variable = { round_idx = 1 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_reward_text_1
+	}
+	text = { 
+		trigger = {
+			check_variable = { round_idx = 2 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_reward_text_2
+	}
+	text = { 
+		trigger = {
+			check_variable = { round_idx = 3 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_reward_text_3
+	}
+	text = { 
+		trigger = {
+			check_variable = { round_idx = 4 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_reward_text_4
+	}
+	text = { 
+		trigger = {
+			check_variable = { round_idx = 5 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_reward_text_5
+	}
+}
+
+defined_text = {
+	name = LATAM_bolivian_treaty_round_outcome_sl
+	text = { 
+		trigger = {
+			check_variable = { global.andean_bolivian_round_type^round_idx = 2 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_outcome_ongoing
+	}
+	text = { 
+		trigger = {
+			check_variable = { global.andean_bolivian_round_type^round_idx = 3 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_outcome_draw
+	}
+	text = { 
+		trigger = {
+			check_variable = { global.andean_bolivian_round_type^round_idx = 4 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_outcome_brazil
+	}
+	text = { 
+		trigger = {
+			check_variable = { global.andean_bolivian_round_type^round_idx = 5 }
+		}
+		localization_key = LATAM_bolivian_treaty_round_outcome_arg
+	}
+}
+
+defined_text = {
+	name = BOL_andean_treaty_modify_tension_tt_sl
+	text = { 
+		trigger = {
+			check_variable = { temp_tension > 0 }
+		}
+		localization_key = BOL_andean_treaty_add_tension_tt
+	}
+	text = {
+		localization_key = BOL_andean_treaty_remove_tension_tt
+	}
+}
+
+defined_text = {
+	name = LATAM_cayenne_voters
+	text = { 
+		trigger = {
+			check_variable = { LATAM_cayenne_voters_group = 0 }
+		}
+		localization_key = LATAM_cayenne_voters_french
+	}
+	text = { 
+		trigger = {
+			check_variable = { LATAM_cayenne_voters_group = 1 }
+		}
+		localization_key = LATAM_cayenne_voters_minority
+	}
+	text = { 
+		trigger = {
+			check_variable = { LATAM_cayenne_voters_group = 2 }
+		}
+		localization_key = LATAM_cayenne_voters_brazilian
+	}
+}
+
+defined_text = {
+	name = LATAM_cayenne_voters_meta
+	text = { 
+		trigger = {
+			check_variable = { LATAM_cayenne_voters_group = 0 }
+		}
+		localization_key = "FRA"
+	}
+	text = { 
+		trigger = {
+			check_variable = { LATAM_cayenne_voters_group = 1 }
+		}
+		localization_key = "IND"
+	}
+	text = { 
+		trigger = {
+			check_variable = { LATAM_cayenne_voters_group = 2 }
+		}
+		localization_key = "BRA"
+	}
+}
+
+defined_text = {
+	name = GetARGIntelligenceHead
+	text = { 
+		trigger = {
+			ARG_Arturo_Frondizi = {
+				is_country_leader = yes
+			}
+		}
+		localization_key = ARG_intel_juan_carlos_varela
+	}
+	text = { 
+		trigger = {
+			ARG_Jose_Maria_Guido = {
+				is_country_leader = yes
+			}
+		}
+		localization_key = ARG_intel_ernesto_taquini
+	}
+	text = { 
+		localization_key = ARG_intel_jose_cornejo_saravia
+	}
+}

@@ -1,0 +1,145 @@
+guiTypes = {
+	
+	###############################################################
+	########            Adhemar Edna Mechanic              ########
+	###############################################################
+
+	containerWindowType = {
+		name = "TNO_CSS_decisions_scripted_adhemaredna_GUI"
+		size = { width = 0 height = 500 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_BRA_info_button"
+			position = { x = 440 y = -7 }
+			pdx_tooltip = BRA_adhemaredna_info_tt
+		}
+
+		containerWindowType = {
+			name = "TNO_CSS_decisions_scripted_adhemaredna_container1"
+			size = { width = 0 height = 0 }
+			position = { x = 18 y = -14 }
+
+			iconType = {
+				name = "Adhemar"
+				spriteType = "GFX_BRA_GUI_adhemar"
+				position = { x = 50 y = 10 }
+				scale = 0.9
+				Orientation = "CENTER"
+			}
+
+			iconType = {
+				name = "Edna"
+				spriteType = "GFX_BRA_GUI_edna"
+				position = { x = 262 y = 10 }
+				scale = 0.9
+				Orientation = "CENTER"
+			}
+
+			iconType = {
+				name = "Palacio"
+				spriteType = "GFX_BRA_GUI_palacio"
+				position = { x = 0 y = 50 }
+				scale = 1.0
+				Orientation = "CENTER"
+			}
+
+			iconType = {
+				name = "adhemaredna_Meter"
+				spriteType = "GFX_BRA_adhemaredna_Progressbar"
+				position = { x = 55 y = 237 }
+				#frame = 64
+				pdx_tooltip = BRA_adhemaredna_bar_tooltip
+				# pdx_tooltip_delayed = BRA_adhemaredna_Progressbar_tooltip_delayed
+				Orientation = "CENTER"
+			}
+
+			instantTextBoxType = {
+				name = "edna_influence"
+				position = { x = 43 y = 315 }
+				maxWidth = 374
+				maxHeight = 2000
+				format = right
+				font = "aldrich_18_outline"
+				text = BRA_adhemaredna_edna_influence
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "adhemar_influence"
+				position = { x = 43 y = 315 }
+				maxWidth = 374
+				maxHeight = 2000
+				format = left
+				font = "aldrich_18_outline"
+				text = BRA_adhemaredna_adhemar_influence
+				alwaystransparent = yes
+			}
+
+			#iconType = {
+			#	name = "PSP"
+			#	spriteType = "GFX_BRA_GUI_PSP"
+			#	position = { x = 420 y = 462 }
+			#	scale = 1.00
+			#}
+#
+			#iconType = {
+			#	name = "PTB"
+			#	spriteType = "GFX_BRA_GUI_PTB"
+			#	position = { x = 11 y = 462 }
+			#	scale = 1.00
+			#}
+
+			instantTextBoxType = {
+				name = "category_description"
+				position = { x = 0 y = 370 }
+				maxWidth = 482
+				maxHeight = 2000
+				format = left
+				font = "aldrich_18_outline"
+				text = BRA_adhemaredna_category_description
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "relationship_status"
+				position = { x = -15 y = 340 }
+				maxWidth = 482
+				maxHeight = 2000
+				format = center
+				font = "aldrich_20_outline"
+				text = BRA_adhemaredna_status_long
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "adhemaredna_edna_button"
+				position = { x = 420 y = 315 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+			}
+
+			buttonType = {
+				name = "adhemaredna_adhemar_button"
+				position = { x = 15 y = 315 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+			}
+
+			buttonType = {
+				name = "adhemaredna_coop_plus_button"
+				position = { x = 430 y = 340 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+			}
+
+			buttonType = {
+				name = "adhemaredna_coop_minus_button"
+				position = { x = 20 y = 340 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+			}
+		}
+	}
+}

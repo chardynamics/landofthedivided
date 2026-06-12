@@ -1,0 +1,3082 @@
+##New Iberian Council (Democratic)
+IBR_rerender_democratic_council_regular = {
+	set_variable = { IBR_independent_right = IBR_democratic_council_faction_seats^0 }
+
+	set_variable = { IBR_catholic_reformer_left = IBR_independent_right }
+	set_variable = { IBR_catholic_reformer_right = IBR_catholic_reformer_left }
+	add_to_variable = { IBR_catholic_reformer_right = IBR_democratic_council_faction_seats^1 }
+
+	set_variable = { IBR_blue_reformer_left = IBR_catholic_reformer_right }
+	set_variable = { IBR_blue_reformer_right = IBR_blue_reformer_left }
+	add_to_variable = { IBR_blue_reformer_right = IBR_democratic_council_faction_seats^2 }
+
+	set_variable = { IBR_modernist_left = IBR_blue_reformer_right }
+	set_variable = { IBR_modernist_right = IBR_modernist_left }
+	add_to_variable = { IBR_modernist_right = IBR_democratic_council_faction_seats^3 }
+
+	set_variable = { IBR_moderate_conservative_left = IBR_modernist_right }
+	set_variable = { IBR_moderate_conservative_right = IBR_moderate_conservative_left }
+	add_to_variable = { IBR_moderate_conservative_right = IBR_democratic_council_faction_seats^4 }
+
+	set_variable = { IBR_radical_conservative_left = IBR_moderate_conservative_right }
+	set_variable = { IBR_radical_conservative_right = IBR_radical_conservative_left }
+	add_to_variable = { IBR_radical_conservative_right = IBR_democratic_council_faction_seats^5 }
+
+	set_variable = { IBR_technocrat_left = IBR_radical_conservative_right }
+	set_variable = { IBR_technocrat_right = IBR_technocrat_left }
+	add_to_variable = { IBR_technocrat_right = IBR_democratic_council_faction_seats^6 }
+
+	set_variable = { IBR_monarchist_left = IBR_technocrat_right }
+	set_variable = { IBR_monarchist_right = IBR_monarchist_left }
+	add_to_variable = { IBR_monarchist_right = IBR_democratic_council_faction_seats^7 }
+
+	set_variable = { IBR_traditionalist_left = IBR_monarchist_right }
+	set_variable = { IBR_traditionalist_right = IBR_traditionalist_left }
+	add_to_variable = { IBR_traditionalist_right = IBR_democratic_council_faction_seats^8 }
+
+	set_variable = { IBR_fascist_left = IBR_traditionalist_right }
+	set_variable = { IBR_fascist_right = IBR_fascist_left }
+	add_to_variable = { IBR_fascist_right = IBR_democratic_council_faction_seats^9 }
+
+	set_variable = { IBR_military_left = IBR_fascist_right }
+
+	clear_array = demIberianCouncil_seats
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 0
+		size = IBR_independent_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 1
+		size = IBR_catholic_reformer_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 2
+		size = IBR_blue_reformer_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 3
+		size = IBR_modernist_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 4
+		size = IBR_moderate_conservative_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 5
+		size = IBR_radical_conservative_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 6
+		size = IBR_technocrat_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 7
+		size = IBR_monarchist_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 8
+		size = IBR_traditionalist_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 9
+		size = IBR_fascist_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 10
+		size = 600
+	}
+	IBR_set_up_democratic_council_initialize_positions = yes
+}
+
+IBR_rerender_democratic_council_support = {
+	clear_array = demIberianCouncil_seats
+
+	#Part that supports bill (moves 20 pixels to the left)
+	set_temp_variable = { total = 0 }
+	for_loop_effect = {
+		start = 0
+		end = 11
+		value = i
+
+		set_temp_variable = { ir = i }
+
+		set_temp_variable = { old_total = total }
+		log = "i: [?i]"
+		log = "ir: [?ir]"
+		log = "old_total: [?old_total]"
+		add_to_temp_variable = { total = IBR_democratic_council_faction_seats_supporting^ir }
+		log = "total: [?total]"
+		log = "supporting: [?IBR_democratic_council_faction_seats_supporting^ir]"
+		resize_array = {
+			array = demIberianCouncil_seats
+			value = ir
+			size = total
+		}
+
+		for_loop_effect = {
+			start = old_total
+			end = total
+			value = k
+
+			add_to_variable = { demIberianCouncil_seats_x^k = -20 }
+		}
+	}
+	#Part that votes blank on the bill (stays in place)
+	for_loop_effect = {
+		start = 0
+		end = 11
+		value = i
+
+		set_temp_variable = { ir = i }
+
+		set_temp_variable = { old_total = total }
+		log = "i: [?i]"
+		log = "ir: [?ir]"
+		log = "old_total: [?old_total]"
+		add_to_temp_variable = { total = IBR_democratic_council_faction_seats_abstain^ir }
+		log = "total: [?total]"
+		log = "abstaining: [?IBR_democratic_council_faction_seats_abstain^ir]"
+		resize_array = {
+			array = demIberianCouncil_seats
+			value = ir
+			size = total
+		}
+
+		for_loop_effect = {
+			start = old_total
+			end = total
+			value = k
+
+			add_to_variable = { demIberianCouncil_seats_x^k = 0 }
+		}
+	}
+	#Part that does not support bill (moves 20 pixels to the right)
+	for_loop_effect = {
+		start = 0
+		end = 11
+		value = i
+
+		set_temp_variable = { ir = i }
+
+		set_temp_variable = { old_total = total }
+		log = "i: [?i]"
+		log = "ir: [?ir]"
+		log = "old_total: [?old_total]"
+
+		set_temp_variable = { non_supporting_seats = IBR_democratic_council_faction_seats^ir }
+		subtract_from_temp_variable = { non_supporting_seats = IBR_democratic_council_faction_seats_supporting^ir }
+		subtract_from_temp_variable = { non_supporting_seats = IBR_democratic_council_faction_seats_abstain^ir }
+		add_to_temp_variable = { total = non_supporting_seats }
+		log = "total: [?total]"
+		log = "not supporting: [?non_supporting_seats]"
+
+
+		resize_array = {
+			array = demIberianCouncil_seats
+			value = ir
+			size = total
+		}
+
+		for_loop_effect = {
+			start = old_total
+			end = total
+			value = k
+
+			add_to_variable = { demIberianCouncil_seats_x^k = 20 }
+
+		}
+	}
+}
+
+IBR_set_up_democratic_council = {
+	set_country_flag = IBR_democratic_council_created_flag
+	clr_country_flag = IBR_council_parliamentary_groups_created
+
+	set_variable = { IBR_government_progressivism = 10 }
+
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+
+	add_to_array = { IBR_democratic_council_faction_color = 1 }
+	add_to_array = { IBR_democratic_council_faction_color = 2 }
+	add_to_array = { IBR_democratic_council_faction_color = 3 }
+	add_to_array = { IBR_democratic_council_faction_color = 4 }
+	add_to_array = { IBR_democratic_council_faction_color = 5 }
+	add_to_array = { IBR_democratic_council_faction_color = 6 }
+	add_to_array = { IBR_democratic_council_faction_color = 7 }
+	add_to_array = { IBR_democratic_council_faction_color = 8 }
+	add_to_array = { IBR_democratic_council_faction_color = 9 }
+	add_to_array = { IBR_democratic_council_faction_color = 10 }
+	add_to_array = { IBR_democratic_council_faction_color = 11 }
+
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_supporting = 0 }
+
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats_abstain = 0 }
+
+	IBR_rerender_democratic_council_regular = yes
+
+	clear_array = IBR_democratic_council_current_group
+	clear_array = IBR_democratic_council_reformist_factions
+	add_to_array = { IBR_democratic_council_reformist_factions = 0 } # PCE/LL
+	add_to_array = { IBR_democratic_council_reformist_factions = 1 } # PCP/FEPU
+	add_to_array = { IBR_democratic_council_reformist_factions = 2 } # FPS
+	add_to_array = { IBR_democratic_council_reformist_factions = 3 } # EC
+	add_to_array = { IBR_democratic_council_reformist_factions = 4 } # EEH
+	resize_array = { array = IBR_democratic_council_current_group value = 1 size = 5 }
+	clear_array = IBR_democratic_council_conservative_factions
+	add_to_array = { IBR_democratic_council_conservative_factions = 5 } # CD
+	add_to_array = { IBR_democratic_council_conservative_factions = 6 } # EDC
+	add_to_array = { IBR_democratic_council_conservative_factions = 7 } # PDC
+	resize_array = { array = IBR_democratic_council_current_group value = 2 size = 8 }
+	clear_array = IBR_democratic_council_radical_factions
+	add_to_array = { IBR_democratic_council_radical_factions = 8 } # AP
+	add_to_array = { IBR_democratic_council_radical_factions = 9 } # EAJ
+	add_to_array = { IBR_democratic_council_radical_factions = 10 } # Independents
+	resize_array = { array = IBR_democratic_council_current_group value = 3 size = 11 }
+
+	IBR_set_up_democratic_council_initialize_positions = yes
+
+	add_to_array = { IBR_democratic_council_total_faction_seats = 0 } #Total reformist seats
+	add_to_array = { IBR_democratic_council_total_faction_seats = 0 } #Total conservative seats
+	add_to_array = { IBR_democratic_council_total_faction_seats = 0 } #Total hardliner seats
+
+	set_variable = { IBR_democratic_council_PCE_LL_subfaction = 0 }
+	set_variable = { IBR_democratic_council_PCP_FEPU_subfaction = 1 }
+	set_variable = { IBR_democratic_council_FPS_subfaction = 2 }
+	set_variable = { IBR_democratic_council_EC_subfaction = 3 }
+	set_variable = { IBR_democratic_council_EEH_subfaction = 4 }
+	set_variable = { IBR_democratic_council_CD_subfaction = 5 }
+	set_variable = { IBR_democratic_council_EDC_subfaction = 6 }
+	set_variable = { IBR_democratic_council_PDC_subfaction = 7 }
+	set_variable = { IBR_democratic_council_AP_subfaction = 8 }
+	set_variable = { IBR_democratic_council_EAJ_subfaction = 9 }
+	set_variable = { IBR_democratic_council_independent_subfaction = 10 }
+}
+
+IBR_democratic_council_update_seat_order = {
+	#0 Reformists
+	#1 Conservatives
+	#2 Hardliners
+	find_highest_in_array = {
+		array = IBR_democratic_council_total_faction_seats
+		index = i
+	}
+	if = { # find_highest_in_array defaults to the first index in case of a tie, so 2 must be larger than 0 and 1, but 1 may be equal to 2, and 0 could be tied 3 ways
+		limit = { check_variable = { i = 2 } }
+		if = {
+			limit = { check_variable = { IBR_democratic_council_total_faction_seats^0 > IBR_democratic_council_total_faction_seats^1 } }
+			set_variable = { IBR_democratic_council_biggest_group = 2 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 0 }
+			set_variable = { IBR_democratic_council_last_group = 1 }
+		}
+		else = {
+			set_variable = { IBR_democratic_council_biggest_group = 2 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 1 }
+			set_variable = { IBR_democratic_council_last_group = 0 }
+		}
+	}
+	else_if = {
+		limit = { check_variable = { i = 1 } }
+		if = {
+			limit = { check_variable = { IBR_democratic_council_total_faction_seats^1 = IBR_democratic_council_total_faction_seats^2 } }
+			set_variable = { IBR_democratic_council_biggest_group = 2 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 1 }
+			set_variable = { IBR_democratic_council_last_group = 0 }
+		}
+		else_if = {
+			limit = { check_variable = { IBR_democratic_council_total_faction_seats^0 > IBR_democratic_council_total_faction_seats^2 } }
+			set_variable = { IBR_democratic_council_biggest_group = 1 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 0 }
+			set_variable = { IBR_democratic_council_last_group = 2 }
+		}
+		else = {
+			set_variable = { IBR_democratic_council_biggest_group = 1 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 2 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 0 }
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				check_variable = { IBR_democratic_council_total_faction_seats^0 = IBR_democratic_council_total_faction_seats^1 }
+				check_variable = { IBR_democratic_council_total_faction_seats^0 = IBR_democratic_council_total_faction_seats^2 }
+			}
+			set_variable = { IBR_democratic_council_biggest_group = 2 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 1 }
+			set_variable = { IBR_democratic_council_last_group = 0 }
+		}
+		else_if = {
+			limit = { check_variable = { IBR_democratic_council_total_faction_seats^0 = IBR_democratic_council_total_faction_seats^2 } }
+			set_variable = { IBR_democratic_council_biggest_group = 2 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 0 }
+			set_variable = { IBR_democratic_council_last_group = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { IBR_democratic_council_total_faction_seats^0 = IBR_democratic_council_total_faction_seats^1 } }
+			set_variable = { IBR_democratic_council_biggest_group = 1 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 0 }
+			set_variable = { IBR_democratic_council_last_group = 2 }
+		}
+		else_if = {
+			limit = { check_variable = { IBR_democratic_council_total_faction_seats^1 > IBR_democratic_council_total_faction_seats^2 } }
+			set_variable = { IBR_democratic_council_biggest_group = 0 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 1 }
+			set_variable = { IBR_democratic_council_last_group = 2 }
+		}
+		else = {
+			set_variable = { IBR_democratic_council_biggest_group = 0 }
+			set_variable = { IBR_democratic_council_second_biggest_group = 2 }
+			set_variable = { IBR_democratic_council_last_group = 1 }
+		}
+	}
+}
+
+IBR_democratic_council_distribute_subfaction_seats = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = IBR_democratic_council_independent_proportion
+			}
+		}
+		set_variable = { IBR_democratic_council_independent_proportion = 0.1 }
+	}
+	else = {
+		set_variable = { IBR_democratic_council_independent_proportion = IBR_democratic_council_faction_seats^IBR_democratic_council_PCE_LL_subfaction }
+		divide_variable = { IBR_democratic_council_independent_proportion = IBR_democratic_council_total_faction_seats^0 }
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = IBR_democratic_council_catholic_reformer_proportion
+			}
+		}
+		set_variable = { IBR_democratic_council_catholic_reformer_proportion = 0.25 }
+	}
+	else = {
+		set_variable = { IBR_democratic_council_catholic_reformer_proportion = IBR_democratic_council_faction_seats^IBR_democratic_council_PCP_FEPU_subfaction }
+		divide_variable = { IBR_democratic_council_catholic_reformer_proportion = IBR_democratic_council_total_faction_seats^0 }
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = IBR_democratic_council_blue_reformer_proportion
+			}
+		}
+		set_variable = { IBR_democratic_council_blue_reformer_proportion = 0.3 }
+	}
+	else = {
+		set_variable = { IBR_democratic_council_blue_reformer_proportion = IBR_democratic_council_faction_seats^IBR_democratic_council_FPS_subfaction }
+		divide_variable = { IBR_democratic_council_blue_reformer_proportion = IBR_democratic_council_total_faction_seats^0 }
+	}
+
+	set_temp_variable = { IBR_democratic_council_reformist_seats_assigned = 0 }
+
+	set_temp_variable = { IBR_democratic_council_independent_seats = IBR_democratic_council_total_faction_seats^0 }
+	multiply_temp_variable = { IBR_democratic_council_independent_seats = IBR_democratic_council_independent_proportion }
+	round_temp_variable = IBR_democratic_council_independent_seats
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_PCE_LL_subfaction = IBR_democratic_council_independent_seats }
+	add_to_temp_variable = { IBR_democratic_council_reformist_seats_assigned = IBR_democratic_council_independent_seats }
+
+	set_temp_variable = { IBR_democratic_council_catholic_reformer_seats = IBR_democratic_council_total_faction_seats^0 }
+	multiply_temp_variable = { IBR_democratic_council_catholic_reformer_seats = IBR_democratic_council_catholic_reformer_proportion }
+	round_temp_variable = IBR_democratic_council_catholic_reformer_seats
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_PCP_FEPU_subfaction = IBR_democratic_council_catholic_reformer_seats }
+	add_to_temp_variable = { IBR_democratic_council_reformist_seats_assigned = IBR_democratic_council_catholic_reformer_seats }
+
+	set_temp_variable = { IBR_democratic_council_blue_reformer_seats = IBR_democratic_council_total_faction_seats^0 }
+	multiply_temp_variable = { IBR_democratic_council_blue_reformer_seats = IBR_democratic_council_blue_reformer_proportion }
+	round_temp_variable = IBR_democratic_council_blue_reformer_seats
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_FPS_subfaction = IBR_democratic_council_blue_reformer_seats }
+	add_to_temp_variable = { IBR_democratic_council_reformist_seats_assigned = IBR_democratic_council_blue_reformer_seats }
+
+	set_temp_variable = { IBR_democratic_council_modernist_seats = IBR_democratic_council_total_faction_seats^0 }
+	subtract_from_temp_variable = { IBR_democratic_council_modernist_seats = IBR_democratic_council_reformist_seats_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_EC_subfaction = IBR_democratic_council_modernist_seats }
+
+	if = {
+		limit = {
+			NOT = {
+				has_variable = IBR_democratic_council_moderate_conservative_proportion
+			}
+		}
+		set_variable = { IBR_democratic_council_moderate_conservative_proportion = 0.3 }
+	}
+	else = {
+		set_variable = { IBR_democratic_council_moderate_conservative_proportion = IBR_democratic_council_faction_seats^IBR_democratic_council_EEH_subfaction }
+		divide_variable = { IBR_democratic_council_moderate_conservative_proportion = IBR_democratic_council_total_faction_seats^1 }
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = IBR_democratic_council_technocrat_proportion
+			}
+		}
+		set_variable = { IBR_democratic_council_technocrat_proportion = 0.25 }
+	}
+	else = {
+		set_variable = { IBR_democratic_council_technocrat_proportion = IBR_democratic_council_faction_seats^IBR_democratic_council_EDC_subfaction }
+		divide_variable = { IBR_democratic_council_technocrat_proportion = IBR_democratic_council_total_faction_seats^1 }
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = IBR_democratic_council_monarchist_proportion
+			}
+		}
+		set_variable = { IBR_democratic_council_monarchist_proportion = 0.15 }
+	}
+	else = {
+		set_variable = { IBR_democratic_council_monarchist_proportion = IBR_democratic_council_faction_seats^IBR_democratic_council_PDC_subfaction }
+		divide_variable = { IBR_democratic_council_monarchist_proportion = IBR_democratic_council_total_faction_seats^1 }
+	}
+
+	set_temp_variable = { IBR_democratic_council_conservative_seats_assigned = 0 }
+
+	set_temp_variable = { IBR_democratic_council_moderate_conservative_seats = IBR_democratic_council_total_faction_seats^1 }
+	multiply_temp_variable = { IBR_democratic_council_moderate_conservative_seats = IBR_democratic_council_moderate_conservative_proportion }
+	round_temp_variable = IBR_democratic_council_moderate_conservative_seats
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_EEH_subfaction = IBR_democratic_council_moderate_conservative_seats }
+	add_to_temp_variable = { IBR_democratic_council_conservative_seats_assigned = IBR_democratic_council_moderate_conservative_seats }
+
+	set_temp_variable = { IBR_democratic_council_technocrat_seats = IBR_democratic_council_total_faction_seats^1 }
+	multiply_temp_variable = { IBR_democratic_council_technocrat_seats = IBR_democratic_council_technocrat_proportion }
+	round_temp_variable = IBR_democratic_council_technocrat_seats
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_EDC_subfaction = IBR_democratic_council_technocrat_seats }
+	add_to_temp_variable = { IBR_democratic_council_conservative_seats_assigned = IBR_democratic_council_technocrat_seats }
+
+	set_temp_variable = { IBR_democratic_council_monarchist_seats = IBR_democratic_council_total_faction_seats^1 }
+	multiply_temp_variable = { IBR_democratic_council_monarchist_seats = IBR_democratic_council_monarchist_proportion }
+	round_temp_variable = IBR_democratic_council_monarchist_seats
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_PDC_subfaction = IBR_democratic_council_monarchist_seats }
+	add_to_temp_variable = { IBR_democratic_council_conservative_seats_assigned = IBR_democratic_council_monarchist_seats }
+
+	set_temp_variable = { IBR_democratic_council_radical_conservative_seats = IBR_democratic_council_total_faction_seats^1 }
+	subtract_from_temp_variable = { IBR_democratic_council_radical_conservative_seats = IBR_democratic_council_conservative_seats_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_CD_subfaction = IBR_democratic_council_radical_conservative_seats }
+
+	if = {
+		limit = {
+			NOT = {
+				has_variable = IBR_democratic_council_traditionalist_proportion
+			}
+		}
+		set_variable = { IBR_democratic_council_traditionalist_proportion = 0.35 }
+	}
+	else = {
+		set_variable = { IBR_democratic_council_traditionalist_proportion = IBR_democratic_council_faction_seats^IBR_democratic_council_AP_subfaction }
+		divide_variable = { IBR_democratic_council_traditionalist_proportion = IBR_democratic_council_total_faction_seats^2 }
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = IBR_democratic_council_military_hardliner_proportion
+			}
+		}
+		set_variable = { IBR_democratic_council_military_hardliner_proportion = 0.15 }
+	}
+	else = {
+		set_variable = { IBR_democratic_council_military_hardliner_proportion = IBR_democratic_council_faction_seats^IBR_democratic_council_independent_subfaction }
+		divide_variable = { IBR_democratic_council_military_hardliner_proportion = IBR_democratic_council_total_faction_seats^2 }
+	}
+
+	set_temp_variable = { IBR_democratic_council_hardliner_seats_assigned = 0 }
+
+	set_temp_variable = { IBR_democratic_council_traditionalist_seats = IBR_democratic_council_total_faction_seats^2 }
+	multiply_temp_variable = { IBR_democratic_council_traditionalist_seats = IBR_democratic_council_traditionalist_proportion }
+	round_temp_variable = IBR_democratic_council_traditionalist_seats
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_AP_subfaction = IBR_democratic_council_traditionalist_seats }
+	add_to_temp_variable = { IBR_democratic_council_hardliner_seats_assigned = IBR_democratic_council_traditionalist_seats }
+
+	set_temp_variable = { IBR_democratic_council_military_hardliner_seats = IBR_democratic_council_total_faction_seats^2 }
+	multiply_temp_variable = { IBR_democratic_council_military_hardliner_seats = IBR_democratic_council_military_hardliner_proportion }
+	round_temp_variable = IBR_democratic_council_military_hardliner_seats
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_independent_subfaction = IBR_democratic_council_military_hardliner_seats }
+	add_to_temp_variable = { IBR_democratic_council_hardliner_seats_assigned = IBR_democratic_council_military_hardliner_seats }
+
+	set_temp_variable = { IBR_democratic_council_fascist_seats = IBR_democratic_council_total_faction_seats^2 }
+	subtract_from_temp_variable = { IBR_democratic_council_fascist_seats = IBR_democratic_council_hardliner_seats_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^IBR_democratic_council_EAJ_subfaction = IBR_democratic_council_fascist_seats }
+
+	IBR_rerender_democratic_council_regular = yes
+}
+
+IBR_democratic_council_change_seats = {
+	if = {
+		limit = {
+			check_variable = {
+				var = IBR_democratic_council_faction_seats^losing_group
+				value = seat_change
+				compare = greater_than_or_equals
+			}
+		}
+		subtract_from_variable = { IBR_democratic_council_faction_seats^losing_group = seat_change }
+		add_to_variable = { IBR_democratic_council_faction_seats^winning_group = seat_change }
+		if = {
+			limit = {
+				OR = {
+					check_variable = { losing_group = 0 }
+					check_variable = { losing_group = 1 }
+					check_variable = { losing_group = 2 }
+					check_variable = { losing_group = 3 }
+				}
+			}
+			subtract_from_variable = { IBR_democratic_council_total_faction_seats^0 = seat_change }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					check_variable = { losing_group = 4 }
+					check_variable = { losing_group = 5 }
+					check_variable = { losing_group = 6 }
+					check_variable = { losing_group = 7 }
+				}
+			}
+			subtract_from_variable = { IBR_democratic_council_total_faction_seats^1 = seat_change }
+		}
+		else = {
+			subtract_from_variable = { IBR_democratic_council_total_faction_seats^2 = seat_change }
+		}
+		if = {
+			limit = {
+				OR = {
+					check_variable = { winning_group = 0 }
+					check_variable = { winning_group = 1 }
+					check_variable = { winning_group = 2 }
+					check_variable = { winning_group = 3 }
+				}
+			}
+			add_to_variable = { IBR_democratic_council_total_faction_seats^0 = seat_change }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					check_variable = { winning_group = 4 }
+					check_variable = { winning_group = 5 }
+					check_variable = { winning_group = 6 }
+					check_variable = { winning_group = 7 }
+				}
+			}
+			add_to_variable = { IBR_democratic_council_total_faction_seats^1 = seat_change }
+		}
+		else = {
+			add_to_variable = { IBR_democratic_council_total_faction_seats^2 = seat_change }
+		}
+	}
+	else = {
+		set_temp_variable = { seat_change = IBR_democratic_council_faction_seats^losing_group }
+		subtract_from_variable = { IBR_democratic_council_faction_seats^losing_group = seat_change }
+		add_to_variable = { IBR_democratic_council_faction_seats^winning_group = seat_change }
+		if = {
+			limit = {
+				OR = {
+					check_variable = { losing_group = 0 }
+					check_variable = { losing_group = 1 }
+					check_variable = { losing_group = 2 }
+					check_variable = { losing_group = 3 }
+				}
+			}
+			subtract_from_variable = { IBR_democratic_council_total_faction_seats^0 = seat_change }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					check_variable = { losing_group = 4 }
+					check_variable = { losing_group = 5 }
+					check_variable = { losing_group = 6 }
+					check_variable = { losing_group = 7 }
+				}
+			}
+			subtract_from_variable = { IBR_democratic_council_total_faction_seats^1 = seat_change }
+		}
+		else = {
+			subtract_from_variable = { IBR_democratic_council_total_faction_seats^2 = seat_change }
+		}
+		if = {
+			limit = {
+				OR = {
+					check_variable = { winning_group = 0 }
+					check_variable = { winning_group = 1 }
+					check_variable = { winning_group = 2 }
+					check_variable = { winning_group = 3 }
+				}
+			}
+			add_to_variable = { IBR_democratic_council_total_faction_seats^0 = seat_change }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					check_variable = { winning_group = 4 }
+					check_variable = { winning_group = 5 }
+					check_variable = { winning_group = 6 }
+					check_variable = { winning_group = 7 }
+				}
+			}
+			add_to_variable = { IBR_democratic_council_total_faction_seats^1 = seat_change }
+		}
+		else = {
+			add_to_variable = { IBR_democratic_council_total_faction_seats^2 = seat_change }
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { seat_change > 0 }
+		}
+		custom_effect_tooltip = IBR_legislative_council_change_seats_tt
+	}
+	IBR_rerender_democratic_council_regular = yes
+}
+
+IBR_set_up_democratic_council_initialize_positions = {
+	clear_array = demIberianCouncil_seats_x
+	clear_array = demIberianCouncil_seats_y
+
+	add_to_array = { demIberianCouncil_seats_x = 0 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 10 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 20 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 30 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 40 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 50 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 60 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 70 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 80 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 90 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 100 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 110 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 1 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 120 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 11 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 21 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 31 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 41 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 51 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 61 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 71 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 2 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 81 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 12 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 22 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 91 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 32 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 102 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 43 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 53 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 112 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 4 }
+	add_to_array = { demIberianCouncil_seats_y = 183 }
+	add_to_array = { demIberianCouncil_seats_x = 63 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 14 }
+	add_to_array = { demIberianCouncil_seats_y = 183 }
+	add_to_array = { demIberianCouncil_seats_x = 122 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 73 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 24 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 34 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 83 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 45 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 93 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 6 }
+	add_to_array = { demIberianCouncil_seats_y = 173 }
+	add_to_array = { demIberianCouncil_seats_x = 55 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 17 }
+	add_to_array = { demIberianCouncil_seats_y = 173 }
+	add_to_array = { demIberianCouncil_seats_x = 104 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 65 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 27 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 37 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 114 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 76 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 9 }
+	add_to_array = { demIberianCouncil_seats_y = 162 }
+	add_to_array = { demIberianCouncil_seats_x = 47 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 86 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 20 }
+	add_to_array = { demIberianCouncil_seats_y = 162 }
+	add_to_array = { demIberianCouncil_seats_x = 125 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 58 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 30 }
+	add_to_array = { demIberianCouncil_seats_y = 163 }
+	add_to_array = { demIberianCouncil_seats_x = 96 }
+	add_to_array = { demIberianCouncil_seats_y = 185 }
+	add_to_array = { demIberianCouncil_seats_x = 68 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 40 }
+	add_to_array = { demIberianCouncil_seats_y = 163 }
+	add_to_array = { demIberianCouncil_seats_x = 12 }
+	add_to_array = { demIberianCouncil_seats_y = 152 }
+	add_to_array = { demIberianCouncil_seats_x = 107 }
+	add_to_array = { demIberianCouncil_seats_y = 185 }
+	add_to_array = { demIberianCouncil_seats_x = 51 }
+	add_to_array = { demIberianCouncil_seats_y = 163 }
+	add_to_array = { demIberianCouncil_seats_x = 79 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 23 }
+	add_to_array = { demIberianCouncil_seats_y = 152 }
+	add_to_array = { demIberianCouncil_seats_x = 33 }
+	add_to_array = { demIberianCouncil_seats_y = 153 }
+	add_to_array = { demIberianCouncil_seats_x = 62 }
+	add_to_array = { demIberianCouncil_seats_y = 163 }
+	add_to_array = { demIberianCouncil_seats_x = 118 }
+	add_to_array = { demIberianCouncil_seats_y = 185 }
+	add_to_array = { demIberianCouncil_seats_x = 90 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 16 }
+	add_to_array = { demIberianCouncil_seats_y = 142 }
+	add_to_array = { demIberianCouncil_seats_x = 44 }
+	add_to_array = { demIberianCouncil_seats_y = 153 }
+	add_to_array = { demIberianCouncil_seats_x = 72 }
+	add_to_array = { demIberianCouncil_seats_y = 163 }
+	add_to_array = { demIberianCouncil_seats_x = 100 }
+	add_to_array = { demIberianCouncil_seats_y = 175 }
+	add_to_array = { demIberianCouncil_seats_x = 27 }
+	add_to_array = { demIberianCouncil_seats_y = 142 }
+	add_to_array = { demIberianCouncil_seats_x = 55 }
+	add_to_array = { demIberianCouncil_seats_y = 153 }
+	add_to_array = { demIberianCouncil_seats_x = 128 }
+	add_to_array = { demIberianCouncil_seats_y = 185 }
+	add_to_array = { demIberianCouncil_seats_x = 38 }
+	add_to_array = { demIberianCouncil_seats_y = 143 }
+	add_to_array = { demIberianCouncil_seats_x = 83 }
+	add_to_array = { demIberianCouncil_seats_y = 164 }
+	add_to_array = { demIberianCouncil_seats_x = 111 }
+	add_to_array = { demIberianCouncil_seats_y = 175 }
+	add_to_array = { demIberianCouncil_seats_x = 66 }
+	add_to_array = { demIberianCouncil_seats_y = 153 }
+	add_to_array = { demIberianCouncil_seats_x = 21 }
+	add_to_array = { demIberianCouncil_seats_y = 132 }
+	add_to_array = { demIberianCouncil_seats_x = 48 }
+	add_to_array = { demIberianCouncil_seats_y = 143 }
+	add_to_array = { demIberianCouncil_seats_x = 94 }
+	add_to_array = { demIberianCouncil_seats_y = 164 }
+	add_to_array = { demIberianCouncil_seats_x = 32 }
+	add_to_array = { demIberianCouncil_seats_y = 132 }
+	add_to_array = { demIberianCouncil_seats_x = 77 }
+	add_to_array = { demIberianCouncil_seats_y = 154 }
+	add_to_array = { demIberianCouncil_seats_x = 60 }
+	add_to_array = { demIberianCouncil_seats_y = 144 }
+	add_to_array = { demIberianCouncil_seats_x = 122 }
+	add_to_array = { demIberianCouncil_seats_y = 175 }
+	add_to_array = { demIberianCouncil_seats_x = 42 }
+	add_to_array = { demIberianCouncil_seats_y = 134 }
+	add_to_array = { demIberianCouncil_seats_x = 105 }
+	add_to_array = { demIberianCouncil_seats_y = 165 }
+	add_to_array = { demIberianCouncil_seats_x = 26 }
+	add_to_array = { demIberianCouncil_seats_y = 122 }
+	add_to_array = { demIberianCouncil_seats_x = 88 }
+	add_to_array = { demIberianCouncil_seats_y = 154 }
+	add_to_array = { demIberianCouncil_seats_x = 71 }
+	add_to_array = { demIberianCouncil_seats_y = 144 }
+	add_to_array = { demIberianCouncil_seats_x = 53 }
+	add_to_array = { demIberianCouncil_seats_y = 134 }
+	add_to_array = { demIberianCouncil_seats_x = 37 }
+	add_to_array = { demIberianCouncil_seats_y = 122 }
+	add_to_array = { demIberianCouncil_seats_x = 133 }
+	add_to_array = { demIberianCouncil_seats_y = 176 }
+	add_to_array = { demIberianCouncil_seats_x = 116 }
+	add_to_array = { demIberianCouncil_seats_y = 166 }
+	add_to_array = { demIberianCouncil_seats_x = 47 }
+	add_to_array = { demIberianCouncil_seats_y = 124 }
+	add_to_array = { demIberianCouncil_seats_x = 65 }
+	add_to_array = { demIberianCouncil_seats_y = 134 }
+	add_to_array = { demIberianCouncil_seats_x = 82 }
+	add_to_array = { demIberianCouncil_seats_y = 144 }
+	add_to_array = { demIberianCouncil_seats_x = 99 }
+	add_to_array = { demIberianCouncil_seats_y = 154 }
+	add_to_array = { demIberianCouncil_seats_x = 31 }
+	add_to_array = { demIberianCouncil_seats_y = 113 }
+	add_to_array = { demIberianCouncil_seats_x = 59 }
+	add_to_array = { demIberianCouncil_seats_y = 125 }
+	add_to_array = { demIberianCouncil_seats_x = 110 }
+	add_to_array = { demIberianCouncil_seats_y = 156 }
+	add_to_array = { demIberianCouncil_seats_x = 76 }
+	add_to_array = { demIberianCouncil_seats_y = 135 }
+	add_to_array = { demIberianCouncil_seats_x = 42 }
+	add_to_array = { demIberianCouncil_seats_y = 113 }
+	add_to_array = { demIberianCouncil_seats_x = 127 }
+	add_to_array = { demIberianCouncil_seats_y = 166 }
+	add_to_array = { demIberianCouncil_seats_x = 94 }
+	add_to_array = { demIberianCouncil_seats_y = 145 }
+	add_to_array = { demIberianCouncil_seats_x = 53 }
+	add_to_array = { demIberianCouncil_seats_y = 115 }
+	add_to_array = { demIberianCouncil_seats_x = 37 }
+	add_to_array = { demIberianCouncil_seats_y = 103 }
+	add_to_array = { demIberianCouncil_seats_x = 70 }
+	add_to_array = { demIberianCouncil_seats_y = 125 }
+	add_to_array = { demIberianCouncil_seats_x = 88 }
+	add_to_array = { demIberianCouncil_seats_y = 135 }
+	add_to_array = { demIberianCouncil_seats_x = 122 }
+	add_to_array = { demIberianCouncil_seats_y = 157 }
+	add_to_array = { demIberianCouncil_seats_x = 105 }
+	add_to_array = { demIberianCouncil_seats_y = 145 }
+	add_to_array = { demIberianCouncil_seats_x = 65 }
+	add_to_array = { demIberianCouncil_seats_y = 116 }
+	add_to_array = { demIberianCouncil_seats_x = 49 }
+	add_to_array = { demIberianCouncil_seats_y = 104 }
+	add_to_array = { demIberianCouncil_seats_x = 139 }
+	add_to_array = { demIberianCouncil_seats_y = 167 }
+	add_to_array = { demIberianCouncil_seats_x = 82 }
+	add_to_array = { demIberianCouncil_seats_y = 126 }
+	add_to_array = { demIberianCouncil_seats_x = 43 }
+	add_to_array = { demIberianCouncil_seats_y = 94 }
+	add_to_array = { demIberianCouncil_seats_x = 59 }
+	add_to_array = { demIberianCouncil_seats_y = 106 }
+	add_to_array = { demIberianCouncil_seats_x = 100 }
+	add_to_array = { demIberianCouncil_seats_y = 136 }
+	add_to_array = { demIberianCouncil_seats_x = 116 }
+	add_to_array = { demIberianCouncil_seats_y = 147 }
+	add_to_array = { demIberianCouncil_seats_x = 77 }
+	add_to_array = { demIberianCouncil_seats_y = 116 }
+	add_to_array = { demIberianCouncil_seats_x = 133 }
+	add_to_array = { demIberianCouncil_seats_y = 157 }
+	add_to_array = { demIberianCouncil_seats_x = 94 }
+	add_to_array = { demIberianCouncil_seats_y = 126 }
+	add_to_array = { demIberianCouncil_seats_x = 55 }
+	add_to_array = { demIberianCouncil_seats_y = 95 }
+	add_to_array = { demIberianCouncil_seats_x = 71 }
+	add_to_array = { demIberianCouncil_seats_y = 107 }
+	add_to_array = { demIberianCouncil_seats_x = 50 }
+	add_to_array = { demIberianCouncil_seats_y = 86 }
+	add_to_array = { demIberianCouncil_seats_x = 112 }
+	add_to_array = { demIberianCouncil_seats_y = 136 }
+	add_to_array = { demIberianCouncil_seats_x = 89 }
+	add_to_array = { demIberianCouncil_seats_y = 117 }
+	add_to_array = { demIberianCouncil_seats_x = 66 }
+	add_to_array = { demIberianCouncil_seats_y = 98 }
+	add_to_array = { demIberianCouncil_seats_x = 128 }
+	add_to_array = { demIberianCouncil_seats_y = 148 }
+	add_to_array = { demIberianCouncil_seats_x = 83 }
+	add_to_array = { demIberianCouncil_seats_y = 108 }
+	add_to_array = { demIberianCouncil_seats_x = 106 }
+	add_to_array = { demIberianCouncil_seats_y = 127 }
+	add_to_array = { demIberianCouncil_seats_x = 62 }
+	add_to_array = { demIberianCouncil_seats_y = 87 }
+	add_to_array = { demIberianCouncil_seats_x = 123 }
+	add_to_array = { demIberianCouncil_seats_y = 139 }
+	add_to_array = { demIberianCouncil_seats_x = 78 }
+	add_to_array = { demIberianCouncil_seats_y = 99 }
+	add_to_array = { demIberianCouncil_seats_x = 146 }
+	add_to_array = { demIberianCouncil_seats_y = 158 }
+	add_to_array = { demIberianCouncil_seats_x = 101 }
+	add_to_array = { demIberianCouncil_seats_y = 118 }
+	add_to_array = { demIberianCouncil_seats_x = 57 }
+	add_to_array = { demIberianCouncil_seats_y = 78 }
+	add_to_array = { demIberianCouncil_seats_x = 73 }
+	add_to_array = { demIberianCouncil_seats_y = 90 }
+	add_to_array = { demIberianCouncil_seats_x = 96 }
+	add_to_array = { demIberianCouncil_seats_y = 109 }
+	add_to_array = { demIberianCouncil_seats_x = 140 }
+	add_to_array = { demIberianCouncil_seats_y = 149 }
+	add_to_array = { demIberianCouncil_seats_x = 119 }
+	add_to_array = { demIberianCouncil_seats_y = 128 }
+	add_to_array = { demIberianCouncil_seats_x = 91 }
+	add_to_array = { demIberianCouncil_seats_y = 100 }
+	add_to_array = { demIberianCouncil_seats_x = 69 }
+	add_to_array = { demIberianCouncil_seats_y = 79 }
+	add_to_array = { demIberianCouncil_seats_x = 114 }
+	add_to_array = { demIberianCouncil_seats_y = 119 }
+	add_to_array = { demIberianCouncil_seats_x = 135 }
+	add_to_array = { demIberianCouncil_seats_y = 140 }
+	add_to_array = { demIberianCouncil_seats_x = 64 }
+	add_to_array = { demIberianCouncil_seats_y = 70 }
+	add_to_array = { demIberianCouncil_seats_x = 86 }
+	add_to_array = { demIberianCouncil_seats_y = 91 }
+	add_to_array = { demIberianCouncil_seats_x = 80 }
+	add_to_array = { demIberianCouncil_seats_y = 82 }
+	add_to_array = { demIberianCouncil_seats_x = 109 }
+	add_to_array = { demIberianCouncil_seats_y = 110 }
+	add_to_array = { demIberianCouncil_seats_x = 130 }
+	add_to_array = { demIberianCouncil_seats_y = 131 }
+	add_to_array = { demIberianCouncil_seats_x = 104 }
+	add_to_array = { demIberianCouncil_seats_y = 101 }
+	add_to_array = { demIberianCouncil_seats_x = 77 }
+	add_to_array = { demIberianCouncil_seats_y = 71 }
+	add_to_array = { demIberianCouncil_seats_x = 98 }
+	add_to_array = { demIberianCouncil_seats_y = 92 }
+	add_to_array = { demIberianCouncil_seats_x = 72 }
+	add_to_array = { demIberianCouncil_seats_y = 62 }
+	add_to_array = { demIberianCouncil_seats_x = 153 }
+	add_to_array = { demIberianCouncil_seats_y = 151 }
+	add_to_array = { demIberianCouncil_seats_x = 93 }
+	add_to_array = { demIberianCouncil_seats_y = 83 }
+	add_to_array = { demIberianCouncil_seats_x = 127 }
+	add_to_array = { demIberianCouncil_seats_y = 121 }
+	add_to_array = { demIberianCouncil_seats_x = 88 }
+	add_to_array = { demIberianCouncil_seats_y = 75 }
+	add_to_array = { demIberianCouncil_seats_x = 148 }
+	add_to_array = { demIberianCouncil_seats_y = 142 }
+	add_to_array = { demIberianCouncil_seats_x = 122 }
+	add_to_array = { demIberianCouncil_seats_y = 112 }
+	add_to_array = { demIberianCouncil_seats_x = 117 }
+	add_to_array = { demIberianCouncil_seats_y = 103 }
+	add_to_array = { demIberianCouncil_seats_x = 143 }
+	add_to_array = { demIberianCouncil_seats_y = 133 }
+	add_to_array = { demIberianCouncil_seats_x = 85 }
+	add_to_array = { demIberianCouncil_seats_y = 64 }
+	add_to_array = { demIberianCouncil_seats_x = 112 }
+	add_to_array = { demIberianCouncil_seats_y = 94 }
+	add_to_array = { demIberianCouncil_seats_x = 80 }
+	add_to_array = { demIberianCouncil_seats_y = 55 }
+	add_to_array = { demIberianCouncil_seats_x = 138 }
+	add_to_array = { demIberianCouncil_seats_y = 124 }
+	add_to_array = { demIberianCouncil_seats_x = 107 }
+	add_to_array = { demIberianCouncil_seats_y = 85 }
+	add_to_array = { demIberianCouncil_seats_x = 102 }
+	add_to_array = { demIberianCouncil_seats_y = 76 }
+	add_to_array = { demIberianCouncil_seats_x = 97 }
+	add_to_array = { demIberianCouncil_seats_y = 68 }
+	add_to_array = { demIberianCouncil_seats_x = 135 }
+	add_to_array = { demIberianCouncil_seats_y = 114 }
+	add_to_array = { demIberianCouncil_seats_x = 94 }
+	add_to_array = { demIberianCouncil_seats_y = 57 }
+	add_to_array = { demIberianCouncil_seats_x = 130 }
+	add_to_array = { demIberianCouncil_seats_y = 105 }
+	add_to_array = { demIberianCouncil_seats_x = 89 }
+	add_to_array = { demIberianCouncil_seats_y = 48 }
+	add_to_array = { demIberianCouncil_seats_x = 125 }
+	add_to_array = { demIberianCouncil_seats_y = 96 }
+	add_to_array = { demIberianCouncil_seats_x = 161 }
+	add_to_array = { demIberianCouncil_seats_y = 144 }
+	add_to_array = { demIberianCouncil_seats_x = 120 }
+	add_to_array = { demIberianCouncil_seats_y = 87 }
+	add_to_array = { demIberianCouncil_seats_x = 115 }
+	add_to_array = { demIberianCouncil_seats_y = 79 }
+	add_to_array = { demIberianCouncil_seats_x = 156 }
+	add_to_array = { demIberianCouncil_seats_y = 135 }
+	add_to_array = { demIberianCouncil_seats_x = 110 }
+	add_to_array = { demIberianCouncil_seats_y = 70 }
+	add_to_array = { demIberianCouncil_seats_x = 105 }
+	add_to_array = { demIberianCouncil_seats_y = 61 }
+	add_to_array = { demIberianCouncil_seats_x = 151 }
+	add_to_array = { demIberianCouncil_seats_y = 127 }
+	add_to_array = { demIberianCouncil_seats_x = 146 }
+	add_to_array = { demIberianCouncil_seats_y = 118 }
+	add_to_array = { demIberianCouncil_seats_x = 103 }
+	add_to_array = { demIberianCouncil_seats_y = 51 }
+	add_to_array = { demIberianCouncil_seats_x = 98 }
+	add_to_array = { demIberianCouncil_seats_y = 42 }
+	add_to_array = { demIberianCouncil_seats_x = 144 }
+	add_to_array = { demIberianCouncil_seats_y = 107 }
+	add_to_array = { demIberianCouncil_seats_x = 139 }
+	add_to_array = { demIberianCouncil_seats_y = 99 }
+	add_to_array = { demIberianCouncil_seats_x = 134 }
+	add_to_array = { demIberianCouncil_seats_y = 90 }
+	add_to_array = { demIberianCouncil_seats_x = 129 }
+	add_to_array = { demIberianCouncil_seats_y = 81 }
+	add_to_array = { demIberianCouncil_seats_x = 124 }
+	add_to_array = { demIberianCouncil_seats_y = 73 }
+	add_to_array = { demIberianCouncil_seats_x = 119 }
+	add_to_array = { demIberianCouncil_seats_y = 64 }
+	add_to_array = { demIberianCouncil_seats_x = 114 }
+	add_to_array = { demIberianCouncil_seats_y = 55 }
+	add_to_array = { demIberianCouncil_seats_x = 112 }
+	add_to_array = { demIberianCouncil_seats_y = 45 }
+	add_to_array = { demIberianCouncil_seats_x = 107 }
+	add_to_array = { demIberianCouncil_seats_y = 36 }
+	add_to_array = { demIberianCouncil_seats_x = 170 }
+	add_to_array = { demIberianCouncil_seats_y = 138 }
+	add_to_array = { demIberianCouncil_seats_x = 165 }
+	add_to_array = { demIberianCouncil_seats_y = 130 }
+	add_to_array = { demIberianCouncil_seats_x = 160 }
+	add_to_array = { demIberianCouncil_seats_y = 121 }
+	add_to_array = { demIberianCouncil_seats_x = 155 }
+	add_to_array = { demIberianCouncil_seats_y = 112 }
+	add_to_array = { demIberianCouncil_seats_x = 123 }
+	add_to_array = { demIberianCouncil_seats_y = 50 }
+	add_to_array = { demIberianCouncil_seats_x = 128 }
+	add_to_array = { demIberianCouncil_seats_y = 59 }
+	add_to_array = { demIberianCouncil_seats_x = 133 }
+	add_to_array = { demIberianCouncil_seats_y = 67 }
+	add_to_array = { demIberianCouncil_seats_x = 138 }
+	add_to_array = { demIberianCouncil_seats_y = 76 }
+	add_to_array = { demIberianCouncil_seats_x = 143 }
+	add_to_array = { demIberianCouncil_seats_y = 85 }
+	add_to_array = { demIberianCouncil_seats_x = 148 }
+	add_to_array = { demIberianCouncil_seats_y = 93 }
+	add_to_array = { demIberianCouncil_seats_x = 153 }
+	add_to_array = { demIberianCouncil_seats_y = 102 }
+	add_to_array = { demIberianCouncil_seats_x = 117 }
+	add_to_array = { demIberianCouncil_seats_y = 31 }
+	add_to_array = { demIberianCouncil_seats_x = 122 }
+	add_to_array = { demIberianCouncil_seats_y = 39 }
+	add_to_array = { demIberianCouncil_seats_x = 133 }
+	add_to_array = { demIberianCouncil_seats_y = 45 }
+	add_to_array = { demIberianCouncil_seats_x = 138 }
+	add_to_array = { demIberianCouncil_seats_y = 54 }
+	add_to_array = { demIberianCouncil_seats_x = 143 }
+	add_to_array = { demIberianCouncil_seats_y = 62 }
+	add_to_array = { demIberianCouncil_seats_x = 165 }
+	add_to_array = { demIberianCouncil_seats_y = 107 }
+	add_to_array = { demIberianCouncil_seats_x = 126 }
+	add_to_array = { demIberianCouncil_seats_y = 26 }
+	add_to_array = { demIberianCouncil_seats_x = 148 }
+	add_to_array = { demIberianCouncil_seats_y = 71 }
+	add_to_array = { demIberianCouncil_seats_x = 131 }
+	add_to_array = { demIberianCouncil_seats_y = 35 }
+	add_to_array = { demIberianCouncil_seats_x = 170 }
+	add_to_array = { demIberianCouncil_seats_y = 116 }
+	add_to_array = { demIberianCouncil_seats_x = 153 }
+	add_to_array = { demIberianCouncil_seats_y = 80 }
+	add_to_array = { demIberianCouncil_seats_x = 175 }
+	add_to_array = { demIberianCouncil_seats_y = 125 }
+	add_to_array = { demIberianCouncil_seats_x = 158 }
+	add_to_array = { demIberianCouncil_seats_y = 88 }
+	add_to_array = { demIberianCouncil_seats_x = 163 }
+	add_to_array = { demIberianCouncil_seats_y = 97 }
+	add_to_array = { demIberianCouncil_seats_x = 180 }
+	add_to_array = { demIberianCouncil_seats_y = 133 }
+	add_to_array = { demIberianCouncil_seats_x = 143 }
+	add_to_array = { demIberianCouncil_seats_y = 40 }
+	add_to_array = { demIberianCouncil_seats_x = 136 }
+	add_to_array = { demIberianCouncil_seats_y = 21 }
+	add_to_array = { demIberianCouncil_seats_x = 148 }
+	add_to_array = { demIberianCouncil_seats_y = 49 }
+	add_to_array = { demIberianCouncil_seats_x = 141 }
+	add_to_array = { demIberianCouncil_seats_y = 30 }
+	add_to_array = { demIberianCouncil_seats_x = 153 }
+	add_to_array = { demIberianCouncil_seats_y = 58 }
+	add_to_array = { demIberianCouncil_seats_x = 158 }
+	add_to_array = { demIberianCouncil_seats_y = 67 }
+	add_to_array = { demIberianCouncil_seats_x = 163 }
+	add_to_array = { demIberianCouncil_seats_y = 75 }
+	add_to_array = { demIberianCouncil_seats_x = 174 }
+	add_to_array = { demIberianCouncil_seats_y = 103 }
+	add_to_array = { demIberianCouncil_seats_x = 168 }
+	add_to_array = { demIberianCouncil_seats_y = 84 }
+	add_to_array = { demIberianCouncil_seats_x = 180 }
+	add_to_array = { demIberianCouncil_seats_y = 112 }
+	add_to_array = { demIberianCouncil_seats_x = 153 }
+	add_to_array = { demIberianCouncil_seats_y = 37 }
+	add_to_array = { demIberianCouncil_seats_x = 173 }
+	add_to_array = { demIberianCouncil_seats_y = 93 }
+	add_to_array = { demIberianCouncil_seats_x = 146 }
+	add_to_array = { demIberianCouncil_seats_y = 18 }
+	add_to_array = { demIberianCouncil_seats_x = 158 }
+	add_to_array = { demIberianCouncil_seats_y = 45 }
+	add_to_array = { demIberianCouncil_seats_x = 152 }
+	add_to_array = { demIberianCouncil_seats_y = 26 }
+	add_to_array = { demIberianCouncil_seats_x = 185 }
+	add_to_array = { demIberianCouncil_seats_y = 121 }
+	add_to_array = { demIberianCouncil_seats_x = 163 }
+	add_to_array = { demIberianCouncil_seats_y = 54 }
+	add_to_array = { demIberianCouncil_seats_x = 190 }
+	add_to_array = { demIberianCouncil_seats_y = 130 }
+	add_to_array = { demIberianCouncil_seats_x = 168 }
+	add_to_array = { demIberianCouncil_seats_y = 63 }
+	add_to_array = { demIberianCouncil_seats_x = 173 }
+	add_to_array = { demIberianCouncil_seats_y = 72 }
+	add_to_array = { demIberianCouncil_seats_x = 157 }
+	add_to_array = { demIberianCouncil_seats_y = 14 }
+	add_to_array = { demIberianCouncil_seats_x = 163 }
+	add_to_array = { demIberianCouncil_seats_y = 33 }
+	add_to_array = { demIberianCouncil_seats_x = 178 }
+	add_to_array = { demIberianCouncil_seats_y = 81 }
+	add_to_array = { demIberianCouncil_seats_x = 162 }
+	add_to_array = { demIberianCouncil_seats_y = 23 }
+	add_to_array = { demIberianCouncil_seats_x = 184 }
+	add_to_array = { demIberianCouncil_seats_y = 100 }
+	add_to_array = { demIberianCouncil_seats_x = 168 }
+	add_to_array = { demIberianCouncil_seats_y = 42 }
+	add_to_array = { demIberianCouncil_seats_x = 184 }
+	add_to_array = { demIberianCouncil_seats_y = 90 }
+	add_to_array = { demIberianCouncil_seats_x = 173 }
+	add_to_array = { demIberianCouncil_seats_y = 51 }
+	add_to_array = { demIberianCouncil_seats_x = 190 }
+	add_to_array = { demIberianCouncil_seats_y = 109 }
+	add_to_array = { demIberianCouncil_seats_x = 178 }
+	add_to_array = { demIberianCouncil_seats_y = 60 }
+	add_to_array = { demIberianCouncil_seats_x = 167 }
+	add_to_array = { demIberianCouncil_seats_y = 11 }
+	add_to_array = { demIberianCouncil_seats_x = 173 }
+	add_to_array = { demIberianCouncil_seats_y = 30 }
+	add_to_array = { demIberianCouncil_seats_x = 195 }
+	add_to_array = { demIberianCouncil_seats_y = 118 }
+	add_to_array = { demIberianCouncil_seats_x = 184 }
+	add_to_array = { demIberianCouncil_seats_y = 69 }
+	add_to_array = { demIberianCouncil_seats_x = 172 }
+	add_to_array = { demIberianCouncil_seats_y = 20 }
+	add_to_array = { demIberianCouncil_seats_x = 178 }
+	add_to_array = { demIberianCouncil_seats_y = 39 }
+	add_to_array = { demIberianCouncil_seats_x = 189 }
+	add_to_array = { demIberianCouncil_seats_y = 78 }
+	add_to_array = { demIberianCouncil_seats_x = 200 }
+	add_to_array = { demIberianCouncil_seats_y = 127 }
+	add_to_array = { demIberianCouncil_seats_x = 184 }
+	add_to_array = { demIberianCouncil_seats_y = 48 }
+	add_to_array = { demIberianCouncil_seats_x = 195 }
+	add_to_array = { demIberianCouncil_seats_y = 97 }
+	add_to_array = { demIberianCouncil_seats_x = 178 }
+	add_to_array = { demIberianCouncil_seats_y = 9 }
+	add_to_array = { demIberianCouncil_seats_x = 194 }
+	add_to_array = { demIberianCouncil_seats_y = 87 }
+	add_to_array = { demIberianCouncil_seats_x = 189 }
+	add_to_array = { demIberianCouncil_seats_y = 58 }
+	add_to_array = { demIberianCouncil_seats_x = 184 }
+	add_to_array = { demIberianCouncil_seats_y = 28 }
+	add_to_array = { demIberianCouncil_seats_x = 183 }
+	add_to_array = { demIberianCouncil_seats_y = 18 }
+	add_to_array = { demIberianCouncil_seats_x = 200 }
+	add_to_array = { demIberianCouncil_seats_y = 106 }
+	add_to_array = { demIberianCouncil_seats_x = 189 }
+	add_to_array = { demIberianCouncil_seats_y = 37 }
+	add_to_array = { demIberianCouncil_seats_x = 194 }
+	add_to_array = { demIberianCouncil_seats_y = 67 }
+	add_to_array = { demIberianCouncil_seats_x = 194 }
+	add_to_array = { demIberianCouncil_seats_y = 47 }
+	add_to_array = { demIberianCouncil_seats_x = 189 }
+	add_to_array = { demIberianCouncil_seats_y = 7 }
+	add_to_array = { demIberianCouncil_seats_x = 205 }
+	add_to_array = { demIberianCouncil_seats_y = 116 }
+	add_to_array = { demIberianCouncil_seats_x = 200 }
+	add_to_array = { demIberianCouncil_seats_y = 76 }
+	add_to_array = { demIberianCouncil_seats_x = 194 }
+	add_to_array = { demIberianCouncil_seats_y = 26 }
+	add_to_array = { demIberianCouncil_seats_x = 194 }
+	add_to_array = { demIberianCouncil_seats_y = 16 }
+	add_to_array = { demIberianCouncil_seats_x = 200 }
+	add_to_array = { demIberianCouncil_seats_y = 56 }
+	add_to_array = { demIberianCouncil_seats_x = 205 }
+	add_to_array = { demIberianCouncil_seats_y = 95 }
+	add_to_array = { demIberianCouncil_seats_x = 205 }
+	add_to_array = { demIberianCouncil_seats_y = 85 }
+	add_to_array = { demIberianCouncil_seats_x = 200 }
+	add_to_array = { demIberianCouncil_seats_y = 36 }
+	add_to_array = { demIberianCouncil_seats_x = 211 }
+	add_to_array = { demIberianCouncil_seats_y = 125 }
+	add_to_array = { demIberianCouncil_seats_x = 205 }
+	add_to_array = { demIberianCouncil_seats_y = 65 }
+	add_to_array = { demIberianCouncil_seats_x = 199 }
+	add_to_array = { demIberianCouncil_seats_y = 6 }
+	add_to_array = { demIberianCouncil_seats_x = 205 }
+	add_to_array = { demIberianCouncil_seats_y = 45 }
+	add_to_array = { demIberianCouncil_seats_x = 211 }
+	add_to_array = { demIberianCouncil_seats_y = 105 }
+	add_to_array = { demIberianCouncil_seats_x = 205 }
+	add_to_array = { demIberianCouncil_seats_y = 25 }
+	add_to_array = { demIberianCouncil_seats_x = 205 }
+	add_to_array = { demIberianCouncil_seats_y = 15 }
+	add_to_array = { demIberianCouncil_seats_x = 210 }
+	add_to_array = { demIberianCouncil_seats_y = 75 }
+	add_to_array = { demIberianCouncil_seats_x = 210 }
+	add_to_array = { demIberianCouncil_seats_y = 55 }
+	add_to_array = { demIberianCouncil_seats_x = 210 }
+	add_to_array = { demIberianCouncil_seats_y = 35 }
+	add_to_array = { demIberianCouncil_seats_x = 210 }
+	add_to_array = { demIberianCouncil_seats_y = 5 }
+	add_to_array = { demIberianCouncil_seats_x = 216 }
+	add_to_array = { demIberianCouncil_seats_y = 115 }
+	add_to_array = { demIberianCouncil_seats_x = 216 }
+	add_to_array = { demIberianCouncil_seats_y = 95 }
+	add_to_array = { demIberianCouncil_seats_x = 216 }
+	add_to_array = { demIberianCouncil_seats_y = 85 }
+	add_to_array = { demIberianCouncil_seats_x = 216 }
+	add_to_array = { demIberianCouncil_seats_y = 65 }
+	add_to_array = { demIberianCouncil_seats_x = 216 }
+	add_to_array = { demIberianCouncil_seats_y = 45 }
+	add_to_array = { demIberianCouncil_seats_x = 216 }
+	add_to_array = { demIberianCouncil_seats_y = 25 }
+	add_to_array = { demIberianCouncil_seats_x = 216 }
+	add_to_array = { demIberianCouncil_seats_y = 15 }
+	add_to_array = { demIberianCouncil_seats_x = 221 }
+	add_to_array = { demIberianCouncil_seats_y = 125 }
+	add_to_array = { demIberianCouncil_seats_x = 221 }
+	add_to_array = { demIberianCouncil_seats_y = 105 }
+	add_to_array = { demIberianCouncil_seats_x = 221 }
+	add_to_array = { demIberianCouncil_seats_y = 75 }
+	add_to_array = { demIberianCouncil_seats_x = 221 }
+	add_to_array = { demIberianCouncil_seats_y = 55 }
+	add_to_array = { demIberianCouncil_seats_x = 221 }
+	add_to_array = { demIberianCouncil_seats_y = 35 }
+	add_to_array = { demIberianCouncil_seats_x = 221 }
+	add_to_array = { demIberianCouncil_seats_y = 5 }
+	add_to_array = { demIberianCouncil_seats_x = 227 }
+	add_to_array = { demIberianCouncil_seats_y = 15 }
+	add_to_array = { demIberianCouncil_seats_x = 227 }
+	add_to_array = { demIberianCouncil_seats_y = 25 }
+	add_to_array = { demIberianCouncil_seats_x = 227 }
+	add_to_array = { demIberianCouncil_seats_y = 45 }
+	add_to_array = { demIberianCouncil_seats_x = 227 }
+	add_to_array = { demIberianCouncil_seats_y = 65 }
+	add_to_array = { demIberianCouncil_seats_x = 227 }
+	add_to_array = { demIberianCouncil_seats_y = 85 }
+	add_to_array = { demIberianCouncil_seats_x = 226 }
+	add_to_array = { demIberianCouncil_seats_y = 95 }
+	add_to_array = { demIberianCouncil_seats_x = 226 }
+	add_to_array = { demIberianCouncil_seats_y = 115 }
+	add_to_array = { demIberianCouncil_seats_x = 232 }
+	add_to_array = { demIberianCouncil_seats_y = 5 }
+	add_to_array = { demIberianCouncil_seats_x = 232 }
+	add_to_array = { demIberianCouncil_seats_y = 35 }
+	add_to_array = { demIberianCouncil_seats_x = 232 }
+	add_to_array = { demIberianCouncil_seats_y = 55 }
+	add_to_array = { demIberianCouncil_seats_x = 232 }
+	add_to_array = { demIberianCouncil_seats_y = 75 }
+	add_to_array = { demIberianCouncil_seats_x = 238 }
+	add_to_array = { demIberianCouncil_seats_y = 15 }
+	add_to_array = { demIberianCouncil_seats_x = 237 }
+	add_to_array = { demIberianCouncil_seats_y = 25 }
+	add_to_array = { demIberianCouncil_seats_x = 232 }
+	add_to_array = { demIberianCouncil_seats_y = 105 }
+	add_to_array = { demIberianCouncil_seats_x = 237 }
+	add_to_array = { demIberianCouncil_seats_y = 45 }
+	add_to_array = { demIberianCouncil_seats_x = 243 }
+	add_to_array = { demIberianCouncil_seats_y = 6 }
+	add_to_array = { demIberianCouncil_seats_x = 237 }
+	add_to_array = { demIberianCouncil_seats_y = 65 }
+	add_to_array = { demIberianCouncil_seats_x = 232 }
+	add_to_array = { demIberianCouncil_seats_y = 125 }
+	add_to_array = { demIberianCouncil_seats_x = 243 }
+	add_to_array = { demIberianCouncil_seats_y = 36 }
+	add_to_array = { demIberianCouncil_seats_x = 237 }
+	add_to_array = { demIberianCouncil_seats_y = 85 }
+	add_to_array = { demIberianCouncil_seats_x = 237 }
+	add_to_array = { demIberianCouncil_seats_y = 95 }
+	add_to_array = { demIberianCouncil_seats_x = 243 }
+	add_to_array = { demIberianCouncil_seats_y = 56 }
+	add_to_array = { demIberianCouncil_seats_x = 248 }
+	add_to_array = { demIberianCouncil_seats_y = 16 }
+	add_to_array = { demIberianCouncil_seats_x = 248 }
+	add_to_array = { demIberianCouncil_seats_y = 26 }
+	add_to_array = { demIberianCouncil_seats_x = 243 }
+	add_to_array = { demIberianCouncil_seats_y = 76 }
+	add_to_array = { demIberianCouncil_seats_x = 237 }
+	add_to_array = { demIberianCouncil_seats_y = 116 }
+	add_to_array = { demIberianCouncil_seats_x = 254 }
+	add_to_array = { demIberianCouncil_seats_y = 7 }
+	add_to_array = { demIberianCouncil_seats_x = 248 }
+	add_to_array = { demIberianCouncil_seats_y = 47 }
+	add_to_array = { demIberianCouncil_seats_x = 248 }
+	add_to_array = { demIberianCouncil_seats_y = 67 }
+	add_to_array = { demIberianCouncil_seats_x = 253 }
+	add_to_array = { demIberianCouncil_seats_y = 37 }
+	add_to_array = { demIberianCouncil_seats_x = 242 }
+	add_to_array = { demIberianCouncil_seats_y = 106 }
+	add_to_array = { demIberianCouncil_seats_x = 259 }
+	add_to_array = { demIberianCouncil_seats_y = 18 }
+	add_to_array = { demIberianCouncil_seats_x = 259 }
+	add_to_array = { demIberianCouncil_seats_y = 28 }
+	add_to_array = { demIberianCouncil_seats_x = 253 }
+	add_to_array = { demIberianCouncil_seats_y = 58 }
+	add_to_array = { demIberianCouncil_seats_x = 248 }
+	add_to_array = { demIberianCouncil_seats_y = 87 }
+	add_to_array = { demIberianCouncil_seats_x = 264 }
+	add_to_array = { demIberianCouncil_seats_y = 9 }
+	add_to_array = { demIberianCouncil_seats_x = 248 }
+	add_to_array = { demIberianCouncil_seats_y = 97 }
+	add_to_array = { demIberianCouncil_seats_x = 259 }
+	add_to_array = { demIberianCouncil_seats_y = 48 }
+	add_to_array = { demIberianCouncil_seats_x = 242 }
+	add_to_array = { demIberianCouncil_seats_y = 127 }
+	add_to_array = { demIberianCouncil_seats_x = 253 }
+	add_to_array = { demIberianCouncil_seats_y = 78 }
+	add_to_array = { demIberianCouncil_seats_x = 264 }
+	add_to_array = { demIberianCouncil_seats_y = 39 }
+	add_to_array = { demIberianCouncil_seats_x = 270 }
+	add_to_array = { demIberianCouncil_seats_y = 20 }
+	add_to_array = { demIberianCouncil_seats_x = 259 }
+	add_to_array = { demIberianCouncil_seats_y = 69 }
+	add_to_array = { demIberianCouncil_seats_x = 248 }
+	add_to_array = { demIberianCouncil_seats_y = 118 }
+	add_to_array = { demIberianCouncil_seats_x = 269 }
+	add_to_array = { demIberianCouncil_seats_y = 30 }
+	add_to_array = { demIberianCouncil_seats_x = 275 }
+	add_to_array = { demIberianCouncil_seats_y = 11 }
+	add_to_array = { demIberianCouncil_seats_x = 264 }
+	add_to_array = { demIberianCouncil_seats_y = 60 }
+	add_to_array = { demIberianCouncil_seats_x = 253 }
+	add_to_array = { demIberianCouncil_seats_y = 109 }
+	add_to_array = { demIberianCouncil_seats_x = 269 }
+	add_to_array = { demIberianCouncil_seats_y = 51 }
+	add_to_array = { demIberianCouncil_seats_x = 259 }
+	add_to_array = { demIberianCouncil_seats_y = 90 }
+	add_to_array = { demIberianCouncil_seats_x = 274 }
+	add_to_array = { demIberianCouncil_seats_y = 42 }
+	add_to_array = { demIberianCouncil_seats_x = 258 }
+	add_to_array = { demIberianCouncil_seats_y = 100 }
+	add_to_array = { demIberianCouncil_seats_x = 280 }
+	add_to_array = { demIberianCouncil_seats_y = 23 }
+	add_to_array = { demIberianCouncil_seats_x = 264 }
+	add_to_array = { demIberianCouncil_seats_y = 81 }
+	add_to_array = { demIberianCouncil_seats_x = 279 }
+	add_to_array = { demIberianCouncil_seats_y = 33 }
+	add_to_array = { demIberianCouncil_seats_x = 286 }
+	add_to_array = { demIberianCouncil_seats_y = 14 }
+	add_to_array = { demIberianCouncil_seats_x = 269 }
+	add_to_array = { demIberianCouncil_seats_y = 72 }
+	add_to_array = { demIberianCouncil_seats_x = 274 }
+	add_to_array = { demIberianCouncil_seats_y = 63 }
+	add_to_array = { demIberianCouncil_seats_x = 253 }
+	add_to_array = { demIberianCouncil_seats_y = 130 }
+	add_to_array = { demIberianCouncil_seats_x = 279 }
+	add_to_array = { demIberianCouncil_seats_y = 54 }
+	add_to_array = { demIberianCouncil_seats_x = 258 }
+	add_to_array = { demIberianCouncil_seats_y = 121 }
+	add_to_array = { demIberianCouncil_seats_x = 291 }
+	add_to_array = { demIberianCouncil_seats_y = 26 }
+	add_to_array = { demIberianCouncil_seats_x = 285 }
+	add_to_array = { demIberianCouncil_seats_y = 45 }
+	add_to_array = { demIberianCouncil_seats_x = 296 }
+	add_to_array = { demIberianCouncil_seats_y = 18 }
+	add_to_array = { demIberianCouncil_seats_x = 269 }
+	add_to_array = { demIberianCouncil_seats_y = 93 }
+	add_to_array = { demIberianCouncil_seats_x = 290 }
+	add_to_array = { demIberianCouncil_seats_y = 37 }
+	add_to_array = { demIberianCouncil_seats_x = 263 }
+	add_to_array = { demIberianCouncil_seats_y = 112 }
+	add_to_array = { demIberianCouncil_seats_x = 274 }
+	add_to_array = { demIberianCouncil_seats_y = 84 }
+	add_to_array = { demIberianCouncil_seats_x = 268 }
+	add_to_array = { demIberianCouncil_seats_y = 103 }
+	add_to_array = { demIberianCouncil_seats_x = 279 }
+	add_to_array = { demIberianCouncil_seats_y = 75 }
+	add_to_array = { demIberianCouncil_seats_x = 284 }
+	add_to_array = { demIberianCouncil_seats_y = 67 }
+	add_to_array = { demIberianCouncil_seats_x = 289 }
+	add_to_array = { demIberianCouncil_seats_y = 58 }
+	add_to_array = { demIberianCouncil_seats_x = 301 }
+	add_to_array = { demIberianCouncil_seats_y = 30 }
+	add_to_array = { demIberianCouncil_seats_x = 295 }
+	add_to_array = { demIberianCouncil_seats_y = 49 }
+	add_to_array = { demIberianCouncil_seats_x = 306 }
+	add_to_array = { demIberianCouncil_seats_y = 21 }
+	add_to_array = { demIberianCouncil_seats_x = 300 }
+	add_to_array = { demIberianCouncil_seats_y = 40 }
+	add_to_array = { demIberianCouncil_seats_x = 263 }
+	add_to_array = { demIberianCouncil_seats_y = 133 }
+	add_to_array = { demIberianCouncil_seats_x = 279 }
+	add_to_array = { demIberianCouncil_seats_y = 97 }
+	add_to_array = { demIberianCouncil_seats_x = 284 }
+	add_to_array = { demIberianCouncil_seats_y = 88 }
+	add_to_array = { demIberianCouncil_seats_x = 268 }
+	add_to_array = { demIberianCouncil_seats_y = 125 }
+	add_to_array = { demIberianCouncil_seats_x = 289 }
+	add_to_array = { demIberianCouncil_seats_y = 80 }
+	add_to_array = { demIberianCouncil_seats_x = 273 }
+	add_to_array = { demIberianCouncil_seats_y = 116 }
+	add_to_array = { demIberianCouncil_seats_x = 311 }
+	add_to_array = { demIberianCouncil_seats_y = 35 }
+	add_to_array = { demIberianCouncil_seats_x = 294 }
+	add_to_array = { demIberianCouncil_seats_y = 71 }
+	add_to_array = { demIberianCouncil_seats_x = 316 }
+	add_to_array = { demIberianCouncil_seats_y = 26 }
+	add_to_array = { demIberianCouncil_seats_x = 278 }
+	add_to_array = { demIberianCouncil_seats_y = 107 }
+	add_to_array = { demIberianCouncil_seats_x = 299 }
+	add_to_array = { demIberianCouncil_seats_y = 62 }
+	add_to_array = { demIberianCouncil_seats_x = 304 }
+	add_to_array = { demIberianCouncil_seats_y = 54 }
+	add_to_array = { demIberianCouncil_seats_x = 309 }
+	add_to_array = { demIberianCouncil_seats_y = 45 }
+	add_to_array = { demIberianCouncil_seats_x = 321 }
+	add_to_array = { demIberianCouncil_seats_y = 39 }
+	add_to_array = { demIberianCouncil_seats_x = 326 }
+	add_to_array = { demIberianCouncil_seats_y = 31 }
+	add_to_array = { demIberianCouncil_seats_x = 289 }
+	add_to_array = { demIberianCouncil_seats_y = 102 }
+	add_to_array = { demIberianCouncil_seats_x = 294 }
+	add_to_array = { demIberianCouncil_seats_y = 93 }
+	add_to_array = { demIberianCouncil_seats_x = 299 }
+	add_to_array = { demIberianCouncil_seats_y = 85 }
+	add_to_array = { demIberianCouncil_seats_x = 304 }
+	add_to_array = { demIberianCouncil_seats_y = 76 }
+	add_to_array = { demIberianCouncil_seats_x = 309 }
+	add_to_array = { demIberianCouncil_seats_y = 67 }
+	add_to_array = { demIberianCouncil_seats_x = 314 }
+	add_to_array = { demIberianCouncil_seats_y = 59 }
+	add_to_array = { demIberianCouncil_seats_x = 319 }
+	add_to_array = { demIberianCouncil_seats_y = 50 }
+	add_to_array = { demIberianCouncil_seats_x = 287 }
+	add_to_array = { demIberianCouncil_seats_y = 112 }
+	add_to_array = { demIberianCouncil_seats_x = 282 }
+	add_to_array = { demIberianCouncil_seats_y = 121 }
+	add_to_array = { demIberianCouncil_seats_x = 277 }
+	add_to_array = { demIberianCouncil_seats_y = 130 }
+	add_to_array = { demIberianCouncil_seats_x = 272 }
+	add_to_array = { demIberianCouncil_seats_y = 138 }
+	add_to_array = { demIberianCouncil_seats_x = 335 }
+	add_to_array = { demIberianCouncil_seats_y = 36 }
+	add_to_array = { demIberianCouncil_seats_x = 330 }
+	add_to_array = { demIberianCouncil_seats_y = 45 }
+	add_to_array = { demIberianCouncil_seats_x = 328 }
+	add_to_array = { demIberianCouncil_seats_y = 55 }
+	add_to_array = { demIberianCouncil_seats_x = 323 }
+	add_to_array = { demIberianCouncil_seats_y = 64 }
+	add_to_array = { demIberianCouncil_seats_x = 318 }
+	add_to_array = { demIberianCouncil_seats_y = 73 }
+	add_to_array = { demIberianCouncil_seats_x = 313 }
+	add_to_array = { demIberianCouncil_seats_y = 81 }
+	add_to_array = { demIberianCouncil_seats_x = 308 }
+	add_to_array = { demIberianCouncil_seats_y = 90 }
+	add_to_array = { demIberianCouncil_seats_x = 303 }
+	add_to_array = { demIberianCouncil_seats_y = 99 }
+	add_to_array = { demIberianCouncil_seats_x = 298 }
+	add_to_array = { demIberianCouncil_seats_y = 107 }
+	add_to_array = { demIberianCouncil_seats_x = 344 }
+	add_to_array = { demIberianCouncil_seats_y = 42 }
+	add_to_array = { demIberianCouncil_seats_x = 339 }
+	add_to_array = { demIberianCouncil_seats_y = 51 }
+	add_to_array = { demIberianCouncil_seats_x = 296 }
+	add_to_array = { demIberianCouncil_seats_y = 118 }
+	add_to_array = { demIberianCouncil_seats_x = 291 }
+	add_to_array = { demIberianCouncil_seats_y = 127 }
+	add_to_array = { demIberianCouncil_seats_x = 337 }
+	add_to_array = { demIberianCouncil_seats_y = 61 }
+	add_to_array = { demIberianCouncil_seats_x = 332 }
+	add_to_array = { demIberianCouncil_seats_y = 70 }
+	add_to_array = { demIberianCouncil_seats_x = 286 }
+	add_to_array = { demIberianCouncil_seats_y = 135 }
+	add_to_array = { demIberianCouncil_seats_x = 327 }
+	add_to_array = { demIberianCouncil_seats_y = 79 }
+	add_to_array = { demIberianCouncil_seats_x = 322 }
+	add_to_array = { demIberianCouncil_seats_y = 87 }
+	add_to_array = { demIberianCouncil_seats_x = 281 }
+	add_to_array = { demIberianCouncil_seats_y = 144 }
+	add_to_array = { demIberianCouncil_seats_x = 317 }
+	add_to_array = { demIberianCouncil_seats_y = 96 }
+	add_to_array = { demIberianCouncil_seats_x = 353 }
+	add_to_array = { demIberianCouncil_seats_y = 48 }
+	add_to_array = { demIberianCouncil_seats_x = 312 }
+	add_to_array = { demIberianCouncil_seats_y = 105 }
+	add_to_array = { demIberianCouncil_seats_x = 348 }
+	add_to_array = { demIberianCouncil_seats_y = 57 }
+	add_to_array = { demIberianCouncil_seats_x = 307 }
+	add_to_array = { demIberianCouncil_seats_y = 114 }
+	add_to_array = { demIberianCouncil_seats_x = 346 }
+	add_to_array = { demIberianCouncil_seats_y = 68 }
+	add_to_array = { demIberianCouncil_seats_x = 341 }
+	add_to_array = { demIberianCouncil_seats_y = 76 }
+	add_to_array = { demIberianCouncil_seats_x = 336 }
+	add_to_array = { demIberianCouncil_seats_y = 85 }
+	add_to_array = { demIberianCouncil_seats_x = 304 }
+	add_to_array = { demIberianCouncil_seats_y = 124 }
+	add_to_array = { demIberianCouncil_seats_x = 362 }
+	add_to_array = { demIberianCouncil_seats_y = 55 }
+	add_to_array = { demIberianCouncil_seats_x = 331 }
+	add_to_array = { demIberianCouncil_seats_y = 94 }
+	add_to_array = { demIberianCouncil_seats_x = 357 }
+	add_to_array = { demIberianCouncil_seats_y = 64 }
+	add_to_array = { demIberianCouncil_seats_x = 299 }
+	add_to_array = { demIberianCouncil_seats_y = 133 }
+	add_to_array = { demIberianCouncil_seats_x = 326 }
+	add_to_array = { demIberianCouncil_seats_y = 103 }
+	add_to_array = { demIberianCouncil_seats_x = 321 }
+	add_to_array = { demIberianCouncil_seats_y = 112 }
+	add_to_array = { demIberianCouncil_seats_x = 294 }
+	add_to_array = { demIberianCouncil_seats_y = 142 }
+	add_to_array = { demIberianCouncil_seats_x = 354 }
+	add_to_array = { demIberianCouncil_seats_y = 75 }
+	add_to_array = { demIberianCouncil_seats_x = 316 }
+	add_to_array = { demIberianCouncil_seats_y = 121 }
+	add_to_array = { demIberianCouncil_seats_x = 349 }
+	add_to_array = { demIberianCouncil_seats_y = 83 }
+	add_to_array = { demIberianCouncil_seats_x = 289 }
+	add_to_array = { demIberianCouncil_seats_y = 151 }
+	add_to_array = { demIberianCouncil_seats_x = 370 }
+	add_to_array = { demIberianCouncil_seats_y = 62 }
+	add_to_array = { demIberianCouncil_seats_x = 344 }
+	add_to_array = { demIberianCouncil_seats_y = 92 }
+	add_to_array = { demIberianCouncil_seats_x = 365 }
+	add_to_array = { demIberianCouncil_seats_y = 71 }
+	add_to_array = { demIberianCouncil_seats_x = 339 }
+	add_to_array = { demIberianCouncil_seats_y = 101 }
+	add_to_array = { demIberianCouncil_seats_x = 312 }
+	add_to_array = { demIberianCouncil_seats_y = 131 }
+	add_to_array = { demIberianCouncil_seats_x = 334 }
+	add_to_array = { demIberianCouncil_seats_y = 110 }
+	add_to_array = { demIberianCouncil_seats_x = 362 }
+	add_to_array = { demIberianCouncil_seats_y = 82 }
+	add_to_array = { demIberianCouncil_seats_x = 357 }
+	add_to_array = { demIberianCouncil_seats_y = 91 }
+	add_to_array = { demIberianCouncil_seats_x = 378 }
+	add_to_array = { demIberianCouncil_seats_y = 70 }
+	add_to_array = { demIberianCouncil_seats_x = 307 }
+	add_to_array = { demIberianCouncil_seats_y = 140 }
+	add_to_array = { demIberianCouncil_seats_x = 328 }
+	add_to_array = { demIberianCouncil_seats_y = 119 }
+	add_to_array = { demIberianCouncil_seats_x = 373 }
+	add_to_array = { demIberianCouncil_seats_y = 79 }
+	add_to_array = { demIberianCouncil_seats_x = 352 }
+	add_to_array = { demIberianCouncil_seats_y = 100 }
+	add_to_array = { demIberianCouncil_seats_x = 323 }
+	add_to_array = { demIberianCouncil_seats_y = 128 }
+	add_to_array = { demIberianCouncil_seats_x = 302 }
+	add_to_array = { demIberianCouncil_seats_y = 149 }
+	add_to_array = { demIberianCouncil_seats_x = 346 }
+	add_to_array = { demIberianCouncil_seats_y = 109 }
+	add_to_array = { demIberianCouncil_seats_x = 369 }
+	add_to_array = { demIberianCouncil_seats_y = 90 }
+	add_to_array = { demIberianCouncil_seats_x = 385 }
+	add_to_array = { demIberianCouncil_seats_y = 78 }
+	add_to_array = { demIberianCouncil_seats_x = 341 }
+	add_to_array = { demIberianCouncil_seats_y = 118 }
+	add_to_array = { demIberianCouncil_seats_x = 297 }
+	add_to_array = { demIberianCouncil_seats_y = 158 }
+	add_to_array = { demIberianCouncil_seats_x = 364 }
+	add_to_array = { demIberianCouncil_seats_y = 99 }
+	add_to_array = { demIberianCouncil_seats_x = 320 }
+	add_to_array = { demIberianCouncil_seats_y = 139 }
+	add_to_array = { demIberianCouncil_seats_x = 380 }
+	add_to_array = { demIberianCouncil_seats_y = 87 }
+	add_to_array = { demIberianCouncil_seats_x = 336 }
+	add_to_array = { demIberianCouncil_seats_y = 127 }
+	add_to_array = { demIberianCouncil_seats_x = 359 }
+	add_to_array = { demIberianCouncil_seats_y = 108 }
+	add_to_array = { demIberianCouncil_seats_x = 314 }
+	add_to_array = { demIberianCouncil_seats_y = 148 }
+	add_to_array = { demIberianCouncil_seats_x = 376 }
+	add_to_array = { demIberianCouncil_seats_y = 98 }
+	add_to_array = { demIberianCouncil_seats_x = 353 }
+	add_to_array = { demIberianCouncil_seats_y = 117 }
+	add_to_array = { demIberianCouncil_seats_x = 331 }
+	add_to_array = { demIberianCouncil_seats_y = 136 }
+	add_to_array = { demIberianCouncil_seats_x = 393 }
+	add_to_array = { demIberianCouncil_seats_y = 86 }
+	add_to_array = { demIberianCouncil_seats_x = 371 }
+	add_to_array = { demIberianCouncil_seats_y = 107 }
+	add_to_array = { demIberianCouncil_seats_x = 387 }
+	add_to_array = { demIberianCouncil_seats_y = 95 }
+	add_to_array = { demIberianCouncil_seats_x = 348 }
+	add_to_array = { demIberianCouncil_seats_y = 126 }
+	add_to_array = { demIberianCouncil_seats_x = 309 }
+	add_to_array = { demIberianCouncil_seats_y = 157 }
+	add_to_array = { demIberianCouncil_seats_x = 366 }
+	add_to_array = { demIberianCouncil_seats_y = 116 }
+	add_to_array = { demIberianCouncil_seats_x = 326 }
+	add_to_array = { demIberianCouncil_seats_y = 147 }
+	add_to_array = { demIberianCouncil_seats_x = 343 }
+	add_to_array = { demIberianCouncil_seats_y = 136 }
+	add_to_array = { demIberianCouncil_seats_x = 383 }
+	add_to_array = { demIberianCouncil_seats_y = 106 }
+	add_to_array = { demIberianCouncil_seats_x = 399 }
+	add_to_array = { demIberianCouncil_seats_y = 94 }
+	add_to_array = { demIberianCouncil_seats_x = 360 }
+	add_to_array = { demIberianCouncil_seats_y = 126 }
+	add_to_array = { demIberianCouncil_seats_x = 303 }
+	add_to_array = { demIberianCouncil_seats_y = 167 }
+	add_to_array = { demIberianCouncil_seats_x = 394 }
+	add_to_array = { demIberianCouncil_seats_y = 104 }
+	add_to_array = { demIberianCouncil_seats_x = 377 }
+	add_to_array = { demIberianCouncil_seats_y = 116 }
+	add_to_array = { demIberianCouncil_seats_x = 337 }
+	add_to_array = { demIberianCouncil_seats_y = 145 }
+	add_to_array = { demIberianCouncil_seats_x = 321 }
+	add_to_array = { demIberianCouncil_seats_y = 157 }
+	add_to_array = { demIberianCouncil_seats_x = 354 }
+	add_to_array = { demIberianCouncil_seats_y = 135 }
+	add_to_array = { demIberianCouncil_seats_x = 372 }
+	add_to_array = { demIberianCouncil_seats_y = 125 }
+	add_to_array = { demIberianCouncil_seats_x = 406 }
+	add_to_array = { demIberianCouncil_seats_y = 103 }
+	add_to_array = { demIberianCouncil_seats_x = 389 }
+	add_to_array = { demIberianCouncil_seats_y = 115 }
+	add_to_array = { demIberianCouncil_seats_x = 349 }
+	add_to_array = { demIberianCouncil_seats_y = 145 }
+	add_to_array = { demIberianCouncil_seats_x = 315 }
+	add_to_array = { demIberianCouncil_seats_y = 166 }
+	add_to_array = { demIberianCouncil_seats_x = 400 }
+	add_to_array = { demIberianCouncil_seats_y = 113 }
+	add_to_array = { demIberianCouncil_seats_x = 366 }
+	add_to_array = { demIberianCouncil_seats_y = 135 }
+	add_to_array = { demIberianCouncil_seats_x = 332 }
+	add_to_array = { demIberianCouncil_seats_y = 156 }
+	add_to_array = { demIberianCouncil_seats_x = 383 }
+	add_to_array = { demIberianCouncil_seats_y = 125 }
+	add_to_array = { demIberianCouncil_seats_x = 411 }
+	add_to_array = { demIberianCouncil_seats_y = 113 }
+	add_to_array = { demIberianCouncil_seats_x = 343 }
+	add_to_array = { demIberianCouncil_seats_y = 154 }
+	add_to_array = { demIberianCouncil_seats_x = 360 }
+	add_to_array = { demIberianCouncil_seats_y = 144 }
+	add_to_array = { demIberianCouncil_seats_x = 378 }
+	add_to_array = { demIberianCouncil_seats_y = 134 }
+	add_to_array = { demIberianCouncil_seats_x = 395 }
+	add_to_array = { demIberianCouncil_seats_y = 124 }
+	add_to_array = { demIberianCouncil_seats_x = 326 }
+	add_to_array = { demIberianCouncil_seats_y = 166 }
+	add_to_array = { demIberianCouncil_seats_x = 309 }
+	add_to_array = { demIberianCouncil_seats_y = 176 }
+	add_to_array = { demIberianCouncil_seats_x = 405 }
+	add_to_array = { demIberianCouncil_seats_y = 122 }
+	add_to_array = { demIberianCouncil_seats_x = 389 }
+	add_to_array = { demIberianCouncil_seats_y = 134 }
+	add_to_array = { demIberianCouncil_seats_x = 372 }
+	add_to_array = { demIberianCouncil_seats_y = 144 }
+	add_to_array = { demIberianCouncil_seats_x = 354 }
+	add_to_array = { demIberianCouncil_seats_y = 154 }
+	add_to_array = { demIberianCouncil_seats_x = 417 }
+	add_to_array = { demIberianCouncil_seats_y = 122 }
+	add_to_array = { demIberianCouncil_seats_x = 338 }
+	add_to_array = { demIberianCouncil_seats_y = 165 }
+	add_to_array = { demIberianCouncil_seats_x = 400 }
+	add_to_array = { demIberianCouncil_seats_y = 134 }
+	add_to_array = { demIberianCouncil_seats_x = 320 }
+	add_to_array = { demIberianCouncil_seats_y = 175 }
+	add_to_array = { demIberianCouncil_seats_x = 383 }
+	add_to_array = { demIberianCouncil_seats_y = 144 }
+	add_to_array = { demIberianCouncil_seats_x = 365 }
+	add_to_array = { demIberianCouncil_seats_y = 154 }
+	add_to_array = { demIberianCouncil_seats_x = 411 }
+	add_to_array = { demIberianCouncil_seats_y = 132 }
+	add_to_array = { demIberianCouncil_seats_x = 348 }
+	add_to_array = { demIberianCouncil_seats_y = 164 }
+	add_to_array = { demIberianCouncil_seats_x = 394 }
+	add_to_array = { demIberianCouncil_seats_y = 143 }
+	add_to_array = { demIberianCouncil_seats_x = 422 }
+	add_to_array = { demIberianCouncil_seats_y = 132 }
+	add_to_array = { demIberianCouncil_seats_x = 376 }
+	add_to_array = { demIberianCouncil_seats_y = 153 }
+	add_to_array = { demIberianCouncil_seats_x = 331 }
+	add_to_array = { demIberianCouncil_seats_y = 175 }
+	add_to_array = { demIberianCouncil_seats_x = 359 }
+	add_to_array = { demIberianCouncil_seats_y = 164 }
+	add_to_array = { demIberianCouncil_seats_x = 405 }
+	add_to_array = { demIberianCouncil_seats_y = 143 }
+	add_to_array = { demIberianCouncil_seats_x = 314 }
+	add_to_array = { demIberianCouncil_seats_y = 185 }
+	add_to_array = { demIberianCouncil_seats_x = 387 }
+	add_to_array = { demIberianCouncil_seats_y = 153 }
+	add_to_array = { demIberianCouncil_seats_x = 415 }
+	add_to_array = { demIberianCouncil_seats_y = 142 }
+	add_to_array = { demIberianCouncil_seats_x = 342 }
+	add_to_array = { demIberianCouncil_seats_y = 175 }
+	add_to_array = { demIberianCouncil_seats_x = 370 }
+	add_to_array = { demIberianCouncil_seats_y = 163 }
+	add_to_array = { demIberianCouncil_seats_x = 398 }
+	add_to_array = { demIberianCouncil_seats_y = 153 }
+	add_to_array = { demIberianCouncil_seats_x = 426 }
+	add_to_array = { demIberianCouncil_seats_y = 142 }
+	add_to_array = { demIberianCouncil_seats_x = 353 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 325 }
+	add_to_array = { demIberianCouncil_seats_y = 185 }
+	add_to_array = { demIberianCouncil_seats_x = 381 }
+	add_to_array = { demIberianCouncil_seats_y = 163 }
+	add_to_array = { demIberianCouncil_seats_x = 409 }
+	add_to_array = { demIberianCouncil_seats_y = 153 }
+	add_to_array = { demIberianCouncil_seats_x = 419 }
+	add_to_array = { demIberianCouncil_seats_y = 152 }
+	add_to_array = { demIberianCouncil_seats_x = 363 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 391 }
+	add_to_array = { demIberianCouncil_seats_y = 163 }
+	add_to_array = { demIberianCouncil_seats_x = 335 }
+	add_to_array = { demIberianCouncil_seats_y = 185 }
+	add_to_array = { demIberianCouncil_seats_x = 430 }
+	add_to_array = { demIberianCouncil_seats_y = 152 }
+	add_to_array = { demIberianCouncil_seats_x = 402 }
+	add_to_array = { demIberianCouncil_seats_y = 163 }
+	add_to_array = { demIberianCouncil_seats_x = 374 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 346 }
+	add_to_array = { demIberianCouncil_seats_y = 185 }
+	add_to_array = { demIberianCouncil_seats_x = 413 }
+	add_to_array = { demIberianCouncil_seats_y = 163 }
+	add_to_array = { demIberianCouncil_seats_x = 384 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 318 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 423 }
+	add_to_array = { demIberianCouncil_seats_y = 162 }
+	add_to_array = { demIberianCouncil_seats_x = 356 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 395 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 433 }
+	add_to_array = { demIberianCouncil_seats_y = 162 }
+	add_to_array = { demIberianCouncil_seats_x = 367 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 328 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 405 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 416 }
+	add_to_array = { demIberianCouncil_seats_y = 174 }
+	add_to_array = { demIberianCouncil_seats_x = 377 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 339 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 426 }
+	add_to_array = { demIberianCouncil_seats_y = 173 }
+	add_to_array = { demIberianCouncil_seats_x = 387 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 436 }
+	add_to_array = { demIberianCouncil_seats_y = 173 }
+	add_to_array = { demIberianCouncil_seats_x = 349 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 398 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 359 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 408 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 418 }
+	add_to_array = { demIberianCouncil_seats_y = 184 }
+	add_to_array = { demIberianCouncil_seats_x = 369 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 320 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 428 }
+	add_to_array = { demIberianCouncil_seats_y = 183 }
+	add_to_array = { demIberianCouncil_seats_x = 379 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 438 }
+	add_to_array = { demIberianCouncil_seats_y = 183 }
+	add_to_array = { demIberianCouncil_seats_x = 331 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 390 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 400 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 341 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 410 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 351 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 420 }
+	add_to_array = { demIberianCouncil_seats_y = 195 }
+	add_to_array = { demIberianCouncil_seats_x = 430 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 361 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 440 }
+	add_to_array = { demIberianCouncil_seats_y = 194 }
+	add_to_array = { demIberianCouncil_seats_x = 371 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 381 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 391 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 401 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 411 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 421 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 431 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 322 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 442 }
+	add_to_array = { demIberianCouncil_seats_y = 205 }
+	add_to_array = { demIberianCouncil_seats_x = 332 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 342 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 352 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 362 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 372 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 382 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 392 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 402 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 412 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 422 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 432 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+	add_to_array = { demIberianCouncil_seats_x = 442 }
+	add_to_array = { demIberianCouncil_seats_y = 216 }
+}
+
+IBR_rerender_democratic_council_regular_groups = {
+	set_variable = { IBR_group1_right = IBR_democratic_council_faction_seats^0 }
+
+	set_variable = { IBR_group2_left = IBR_group1_right }
+	set_variable = { IBR_group2_right = IBR_group2_left }
+	add_to_variable = { IBR_group2_right = IBR_democratic_council_faction_seats^1 }
+
+	set_variable = { IBR_group3_left = IBR_catholic_reformer_right }
+	set_variable = { IBR_group3_right = IBR_group3_left }
+	add_to_variable = { IBR_group3_right = IBR_democratic_council_faction_seats^2 }
+
+	set_variable = { IBR_group4_left = IBR_group3_right }
+	set_variable = { IBR_group4_right = IBR_group4_left }
+	add_to_variable = { IBR_group4_right = IBR_democratic_council_faction_seats^3 }
+
+	set_variable = { IBR_group5_left = IBR_group4_right }
+	set_variable = { IBR_group5_right = IBR_group5_left }
+	add_to_variable = { IBR_group5_right = IBR_democratic_council_faction_seats^4 }
+
+	set_variable = { IBR_group6_left = IBR_group5_right }
+	set_variable = { IBR_group6_right = IBR_group6_left }
+	add_to_variable = { IBR_group6_right = IBR_democratic_council_faction_seats^5 }
+
+	set_variable = { IBR_group7_left = IBR_group6_right }
+
+	clear_array = demIberianCouncil_seats
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 0
+		size = IBR_group1_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 1
+		size = IBR_group2_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 2
+		size = IBR_group3_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 3
+		size = IBR_group4_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 4
+		size = IBR_group5_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 5
+		size = IBR_group6_right
+	}
+	resize_array = {
+		array = demIberianCouncil_seats
+		value = 6
+		size = 450
+	}
+	IBR_set_up_democratic_council_initialize_positions = yes
+}
+
+IBR_democratic_council_distribute_seats_groups = {
+	set_temp_variable = { IBR_democratic_council_faction_seats_1_assigned = 0 }
+	set_temp_variable = { IBR_democratic_council_faction_seats_2_assigned = 0 }
+	set_temp_variable = { IBR_democratic_council_faction_seats_3_assigned = 0 }
+	set_temp_variable = { IBR_democratic_council_faction_seats_4_assigned = 0 }
+	set_temp_variable = { IBR_democratic_council_faction_seats_5_assigned = 0 }
+	set_temp_variable = { IBR_democratic_council_faction_seats_6_assigned = 0 }
+	set_temp_variable = { IBR_democratic_council_faction_seats_7_assigned = 0 }
+	set_temp_variable = { IBR_democratic_council_faction_seats_8_assigned = 0 }
+	set_temp_variable = { IBR_democratic_council_faction_seats_9_assigned = 0 }
+
+	#Independent split
+	add_to_variable = { IBR_democratic_council_faction_seats^0 = IBR_democratic_council_faction_seats_temp^0 }
+
+	#Catholic reformer split
+	set_temp_variable = { IBR_democratic_council_catholic_reformer_split = IBR_democratic_council_faction_seats_temp^1 }
+	multiply_temp_variable = { IBR_democratic_council_catholic_reformer_split = 0.2 }
+	round_temp_variable = IBR_democratic_council_catholic_reformer_split
+	add_to_variable = { IBR_democratic_council_faction_seats^0 = IBR_democratic_council_catholic_reformer_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_1_assigned = IBR_democratic_council_catholic_reformer_split }
+
+	set_temp_variable = { IBR_democratic_council_catholic_reformer_split = IBR_democratic_council_faction_seats_temp^1 }
+	multiply_temp_variable = { IBR_democratic_council_catholic_reformer_split = 0.6 }
+	round_temp_variable = IBR_democratic_council_catholic_reformer_split
+	add_to_variable = { IBR_democratic_council_faction_seats^1 = IBR_democratic_council_catholic_reformer_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_1_assigned = IBR_democratic_council_catholic_reformer_split }
+
+	set_temp_variable = { IBR_democratic_council_catholic_reformer_split = IBR_democratic_council_faction_seats_temp^1 }
+	multiply_temp_variable = { IBR_democratic_council_catholic_reformer_split = 0.1 }
+	round_temp_variable = IBR_democratic_council_catholic_reformer_split
+	add_to_variable = { IBR_democratic_council_faction_seats^2 = IBR_democratic_council_catholic_reformer_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_1_assigned = IBR_democratic_council_catholic_reformer_split }
+
+	set_temp_variable = { IBR_democratic_council_catholic_reformer_split = IBR_democratic_council_faction_seats_temp^1 }
+	subtract_from_temp_variable = { IBR_democratic_council_catholic_reformer_split = IBR_democratic_council_faction_seats_1_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^3 = IBR_democratic_council_catholic_reformer_split }
+
+	#Blue reformer split
+	set_temp_variable = { IBR_democratic_council_blue_reformer_split = IBR_democratic_council_faction_seats_temp^2 }
+	multiply_temp_variable = { IBR_democratic_council_blue_reformer_split = 0.2 }
+	round_temp_variable = IBR_democratic_council_blue_reformer_split
+	add_to_variable = { IBR_democratic_council_faction_seats^0 = IBR_democratic_council_blue_reformer_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_2_assigned = IBR_democratic_council_blue_reformer_split }
+
+	set_temp_variable = { IBR_democratic_council_blue_reformer_split = IBR_democratic_council_faction_seats_temp^2 }
+	multiply_temp_variable = { IBR_democratic_council_blue_reformer_split = 0.15 }
+	round_temp_variable = IBR_democratic_council_blue_reformer_split
+	add_to_variable = { IBR_democratic_council_faction_seats^1 = IBR_democratic_council_blue_reformer_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_2_assigned = IBR_democratic_council_blue_reformer_split }
+
+	set_temp_variable = { IBR_democratic_council_blue_reformer_split = IBR_democratic_council_faction_seats_temp^2 }
+	multiply_temp_variable = { IBR_democratic_council_blue_reformer_split = 0.2 }
+	round_temp_variable = IBR_democratic_council_blue_reformer_split
+	add_to_variable = { IBR_democratic_council_faction_seats^2 = IBR_democratic_council_blue_reformer_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_2_assigned = IBR_democratic_council_blue_reformer_split }
+
+	set_temp_variable = { IBR_democratic_council_blue_reformer_split = IBR_democratic_council_faction_seats_temp^2 }
+	multiply_temp_variable = { IBR_democratic_council_blue_reformer_split = 0.4 }
+	round_temp_variable = IBR_democratic_council_blue_reformer_split
+	add_to_variable = { IBR_democratic_council_faction_seats^3 = IBR_democratic_council_blue_reformer_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_2_assigned = IBR_democratic_council_blue_reformer_split }
+
+	set_temp_variable = { IBR_democratic_council_blue_reformer_split = IBR_democratic_council_faction_seats_temp^2 }
+	subtract_from_temp_variable = { IBR_democratic_council_blue_reformer_split = IBR_democratic_council_faction_seats_2_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^4 = IBR_democratic_council_blue_reformer_split }
+
+	#modernist split
+	set_temp_variable = { IBR_democratic_council_modernist_split = IBR_democratic_council_faction_seats_temp^3 }
+	multiply_temp_variable = { IBR_democratic_council_modernist_split = 0.05 }
+	round_temp_variable = IBR_democratic_council_modernist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^0 = IBR_democratic_council_modernist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_3_assigned = IBR_democratic_council_modernist_split }
+
+	set_temp_variable = { IBR_democratic_council_modernist_split = IBR_democratic_council_faction_seats_temp^3 }
+	multiply_temp_variable = { IBR_democratic_council_modernist_split = 0.15 }
+	round_temp_variable = IBR_democratic_council_modernist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^1 = IBR_democratic_council_modernist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_3_assigned = IBR_democratic_council_modernist_split }
+
+	set_temp_variable = { IBR_democratic_council_modernist_split = IBR_democratic_council_faction_seats_temp^3 }
+	multiply_temp_variable = { IBR_democratic_council_modernist_split = 0.2 }
+	round_temp_variable = IBR_democratic_council_modernist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^2 = IBR_democratic_council_modernist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_3_assigned = IBR_democratic_council_modernist_split }
+
+	set_temp_variable = { IBR_democratic_council_modernist_split = IBR_democratic_council_faction_seats_temp^3 }
+	multiply_temp_variable = { IBR_democratic_council_modernist_split = 0.3 }
+	round_temp_variable = IBR_democratic_council_modernist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^3 = IBR_democratic_council_modernist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_3_assigned = IBR_democratic_council_modernist_split }
+
+	set_temp_variable = { IBR_democratic_council_modernist_split = IBR_democratic_council_faction_seats_temp^3 }
+	multiply_temp_variable = { IBR_democratic_council_modernist_split = 0.25 }
+	round_temp_variable = IBR_democratic_council_modernist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^4 = IBR_democratic_council_modernist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_3_assigned = IBR_democratic_council_modernist_split }
+
+	set_temp_variable = { IBR_democratic_council_modernist_split = IBR_democratic_council_faction_seats_temp^3 }
+	subtract_from_temp_variable = { IBR_democratic_council_modernist_split = IBR_democratic_council_faction_seats_3_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^5 = IBR_democratic_council_modernist_split }
+
+	#moderate conservative split
+	set_temp_variable = { IBR_democratic_council_moderate_conservative_split = IBR_democratic_council_faction_seats_temp^4 }
+	multiply_temp_variable = { IBR_democratic_council_moderate_conservative_split = 0.45 }
+	round_temp_variable = IBR_democratic_council_moderate_conservative_split
+	add_to_variable = { IBR_democratic_council_faction_seats^2 = IBR_democratic_council_moderate_conservative_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_4_assigned = IBR_democratic_council_moderate_conservative_split }
+
+	set_temp_variable = { IBR_democratic_council_moderate_conservative_split = IBR_democratic_council_faction_seats_temp^4 }
+	multiply_temp_variable = { IBR_democratic_council_moderate_conservative_split = 0.05 }
+	round_temp_variable = IBR_democratic_council_moderate_conservative_split
+	add_to_variable = { IBR_democratic_council_faction_seats^3 = IBR_democratic_council_moderate_conservative_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_4_assigned = IBR_democratic_council_moderate_conservative_split }
+
+	set_temp_variable = { IBR_democratic_council_moderate_conservative_split = IBR_democratic_council_faction_seats_temp^4 }
+	multiply_temp_variable = { IBR_democratic_council_moderate_conservative_split = 0.3 }
+	round_temp_variable = IBR_democratic_council_moderate_conservative_split
+	add_to_variable = { IBR_democratic_council_faction_seats^4 = IBR_democratic_council_moderate_conservative_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_4_assigned = IBR_democratic_council_moderate_conservative_split }
+
+	set_temp_variable = { IBR_democratic_council_moderate_conservative_split = IBR_democratic_council_faction_seats_temp^4 }
+	multiply_temp_variable = { IBR_democratic_council_moderate_conservative_split = 0.25 }
+	round_temp_variable = IBR_democratic_council_moderate_conservative_split
+	add_to_variable = { IBR_democratic_council_faction_seats^5 = IBR_democratic_council_moderate_conservative_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_4_assigned = IBR_democratic_council_moderate_conservative_split }
+
+	set_temp_variable = { IBR_democratic_council_moderate_conservative_split = IBR_democratic_council_faction_seats_temp^4 }
+	subtract_from_temp_variable = { IBR_democratic_council_moderate_conservative_split = IBR_democratic_council_faction_seats_4_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^6 = IBR_democratic_council_moderate_conservative_split }
+
+	#radical conservative split
+	set_temp_variable = { IBR_democratic_council_radical_conservative_split = IBR_democratic_council_faction_seats_temp^5 }
+	multiply_temp_variable = { IBR_democratic_council_radical_conservative_split = 0.15 }
+	round_temp_variable = IBR_democratic_council_radical_conservative_split
+	add_to_variable = { IBR_democratic_council_faction_seats^1 = IBR_democratic_council_radical_conservative_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_5_assigned = IBR_democratic_council_radical_conservative_split }
+
+	set_temp_variable = { IBR_democratic_council_radical_conservative_split = IBR_democratic_council_faction_seats_temp^5 }
+	multiply_temp_variable = { IBR_democratic_council_radical_conservative_split = 0.2 }
+	round_temp_variable = IBR_democratic_council_radical_conservative_split
+	add_to_variable = { IBR_democratic_council_faction_seats^2 = IBR_democratic_council_radical_conservative_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_5_assigned = IBR_democratic_council_radical_conservative_split }
+
+	set_temp_variable = { IBR_democratic_council_radical_conservative_split = IBR_democratic_council_faction_seats_temp^5 }
+	multiply_temp_variable = { IBR_democratic_council_radical_conservative_split = 0.05 }
+	round_temp_variable = IBR_democratic_council_radical_conservative_split
+	add_to_variable = { IBR_democratic_council_faction_seats^3 = IBR_democratic_council_radical_conservative_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_5_assigned = IBR_democratic_council_radical_conservative_split }
+
+	set_temp_variable = { IBR_democratic_council_radical_conservative_split = IBR_democratic_council_faction_seats_temp^5 }
+	multiply_temp_variable = { IBR_democratic_council_radical_conservative_split = 0.25 }
+	round_temp_variable = IBR_democratic_council_radical_conservative_split
+	add_to_variable = { IBR_democratic_council_faction_seats^4 = IBR_democratic_council_radical_conservative_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_5_assigned = IBR_democratic_council_radical_conservative_split }
+
+	set_temp_variable = { IBR_democratic_council_radical_conservative_split = IBR_democratic_council_faction_seats_temp^5 }
+	multiply_temp_variable = { IBR_democratic_council_radical_conservative_split = 0.25 }
+	round_temp_variable = IBR_democratic_council_radical_conservative_split
+	add_to_variable = { IBR_democratic_council_faction_seats^5 = IBR_democratic_council_radical_conservative_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_5_assigned = IBR_democratic_council_radical_conservative_split }
+
+	set_temp_variable = { IBR_democratic_council_radical_conservative_split = IBR_democratic_council_faction_seats_temp^5 }
+	subtract_from_temp_variable = { IBR_democratic_council_radical_conservative_split = IBR_democratic_council_faction_seats_5_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^6 = IBR_democratic_council_radical_conservative_split }
+
+	#technocrat split
+	set_temp_variable = { IBR_democratic_council_technocrat_split = IBR_democratic_council_faction_seats_temp^6 }
+	multiply_temp_variable = { IBR_democratic_council_technocrat_split = 0.05 }
+	round_temp_variable = IBR_democratic_council_technocrat_split
+	add_to_variable = { IBR_democratic_council_faction_seats^0 = IBR_democratic_council_technocrat_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_6_assigned = IBR_democratic_council_technocrat_split }
+
+	set_temp_variable = { IBR_democratic_council_technocrat_split = IBR_democratic_council_faction_seats_temp^6 }
+	multiply_temp_variable = { IBR_democratic_council_technocrat_split = 0.1 }
+	round_temp_variable = IBR_democratic_council_technocrat_split
+	add_to_variable = { IBR_democratic_council_faction_seats^1 = IBR_democratic_council_technocrat_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_6_assigned = IBR_democratic_council_technocrat_split }
+
+	set_temp_variable = { IBR_democratic_council_technocrat_split = IBR_democratic_council_faction_seats_temp^6 }
+	multiply_temp_variable = { IBR_democratic_council_technocrat_split = 0.5 }
+	round_temp_variable = IBR_democratic_council_technocrat_split
+	add_to_variable = { IBR_democratic_council_faction_seats^2 = IBR_democratic_council_technocrat_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_6_assigned = IBR_democratic_council_technocrat_split }
+
+	set_temp_variable = { IBR_democratic_council_technocrat_split = IBR_democratic_council_faction_seats_temp^6 }
+	multiply_temp_variable = { IBR_democratic_council_technocrat_split = 0.15 }
+	round_temp_variable = IBR_democratic_council_technocrat_split
+	add_to_variable = { IBR_democratic_council_faction_seats^3 = IBR_democratic_council_technocrat_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_6_assigned = IBR_democratic_council_technocrat_split }
+
+	set_temp_variable = { IBR_democratic_council_technocrat_split = IBR_democratic_council_faction_seats_temp^6 }
+	multiply_temp_variable = { IBR_democratic_council_technocrat_split = 0.15 }
+	round_temp_variable = IBR_democratic_council_technocrat_split
+	add_to_variable = { IBR_democratic_council_faction_seats^4 = IBR_democratic_council_technocrat_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_6_assigned = IBR_democratic_council_technocrat_split }
+
+	set_temp_variable = { IBR_democratic_council_technocrat_split = IBR_democratic_council_faction_seats_temp^6 }
+	subtract_from_temp_variable = { IBR_democratic_council_technocrat_split = IBR_democratic_council_faction_seats_6_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^6 = IBR_democratic_council_technocrat_split }
+
+	#monarchist split
+	set_temp_variable = { IBR_democratic_council_monarchist_split = IBR_democratic_council_faction_seats_temp^7 }
+	multiply_temp_variable = { IBR_democratic_council_monarchist_split = 0.15 }
+	round_temp_variable = IBR_democratic_council_monarchist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^1 = IBR_democratic_council_monarchist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_7_assigned = IBR_democratic_council_monarchist_split }
+
+	set_temp_variable = { IBR_democratic_council_monarchist_split = IBR_democratic_council_faction_seats_temp^7 }
+	multiply_temp_variable = { IBR_democratic_council_monarchist_split = 0.2 }
+	round_temp_variable = IBR_democratic_council_monarchist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^2 = IBR_democratic_council_monarchist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_7_assigned = IBR_democratic_council_monarchist_split }
+
+	set_temp_variable = { IBR_democratic_council_monarchist_split = IBR_democratic_council_faction_seats_temp^7 }
+	multiply_temp_variable = { IBR_democratic_council_monarchist_split = 0.30 }
+	round_temp_variable = IBR_democratic_council_monarchist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^5 = IBR_democratic_council_monarchist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_7_assigned = IBR_democratic_council_monarchist_split }
+
+	set_temp_variable = { IBR_democratic_council_monarchist_split = IBR_democratic_council_faction_seats_temp^7 }
+	subtract_from_temp_variable = { IBR_democratic_council_monarchist_split = IBR_democratic_council_faction_seats_7_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^6 = IBR_democratic_council_monarchist_split }
+
+	#traditionalist split
+	set_temp_variable = { IBR_democratic_council_traditionalist_split = IBR_democratic_council_faction_seats_temp^8 }
+	multiply_temp_variable = { IBR_democratic_council_traditionalist_split = 0.1 }
+	round_temp_variable = IBR_democratic_council_traditionalist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^2 = IBR_democratic_council_traditionalist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_8_assigned = IBR_democratic_council_traditionalist_split }
+
+	set_temp_variable = { IBR_democratic_council_traditionalist_split = IBR_democratic_council_faction_seats_temp^8 }
+	multiply_temp_variable = { IBR_democratic_council_traditionalist_split = 0.4 }
+	round_temp_variable = IBR_democratic_council_traditionalist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^5 = IBR_democratic_council_traditionalist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_8_assigned = IBR_democratic_council_traditionalist_split }
+
+	set_temp_variable = { IBR_democratic_council_traditionalist_split = IBR_democratic_council_faction_seats_temp^8 }
+	subtract_from_temp_variable = { IBR_democratic_council_traditionalist_split = IBR_democratic_council_faction_seats_8_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^6 = IBR_democratic_council_traditionalist_split }
+
+	#fascist split
+	set_temp_variable = { IBR_democratic_council_fascist_split = IBR_democratic_council_faction_seats_temp^9 }
+	multiply_temp_variable = { IBR_democratic_council_fascist_split = 0.05 }
+	round_temp_variable = IBR_democratic_council_fascist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^2 = IBR_democratic_council_fascist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_9_assigned = IBR_democratic_council_fascist_split }
+
+	set_temp_variable = { IBR_democratic_council_fascist_split = IBR_democratic_council_faction_seats_temp^9 }
+	multiply_temp_variable = { IBR_democratic_council_fascist_split = 0.20 }
+	round_temp_variable = IBR_democratic_council_fascist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^4 = IBR_democratic_council_fascist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_9_assigned = IBR_democratic_council_fascist_split }
+
+	set_temp_variable = { IBR_democratic_council_fascist_split = IBR_democratic_council_faction_seats_temp^9 }
+	multiply_temp_variable = { IBR_democratic_council_fascist_split = 0.1 }
+	round_temp_variable = IBR_democratic_council_fascist_split
+	add_to_variable = { IBR_democratic_council_faction_seats^5 = IBR_democratic_council_fascist_split }
+	add_to_temp_variable = { IBR_democratic_council_faction_seats_9_assigned = IBR_democratic_council_fascist_split }
+
+	set_temp_variable = { IBR_democratic_council_fascist_split = IBR_democratic_council_faction_seats_temp^9 }
+	subtract_from_temp_variable = { IBR_democratic_council_fascist_split = IBR_democratic_council_faction_seats_9_assigned }
+	add_to_variable = { IBR_democratic_council_faction_seats^6 = IBR_democratic_council_fascist_split }
+
+	#military hardliner split
+	add_to_variable = { IBR_democratic_council_faction_seats^6 = IBR_democratic_council_faction_seats_temp^10 }
+}
+
+IBR_democratic_council_create_groups = {
+
+	IBR_rerender_democratic_council_regular = yes
+
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^0 }
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^1 }
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^2 }
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^3 }
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^4 }
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^5 }
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^6 }
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^7 }
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^8 }
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^9 }
+	add_to_array = { IBR_democratic_council_faction_seats_temp = IBR_democratic_council_faction_seats^10 }
+
+	clear_array = IBR_democratic_council_faction_seats
+
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+	add_to_array = { IBR_democratic_council_faction_seats = 0 }
+
+	clear_array = IBR_democratic_council_faction_color
+
+	add_to_array = { IBR_democratic_council_faction_color = 12 }
+	add_to_array = { IBR_democratic_council_faction_color = 13 }
+	add_to_array = { IBR_democratic_council_faction_color = 14 }
+	add_to_array = { IBR_democratic_council_faction_color = 15 }
+	add_to_array = { IBR_democratic_council_faction_color = 16 }
+	add_to_array = { IBR_democratic_council_faction_color = 17 }
+	add_to_array = { IBR_democratic_council_faction_color = 18 }
+
+	set_country_flag = IBR_democratic_council_parliamentary_groups_created
+
+	clear_array = IBR_democratic_council_current_group
+	clear_array = IBR_democratic_council_column1_factions
+	add_to_array = { IBR_democratic_council_column1_factions = 0 }
+	add_to_array = { IBR_democratic_council_column1_factions = 1 }
+	resize_array = { array = IBR_democratic_council_current_group value = 4 size = 2 }
+	clear_array = IBR_democratic_council_column2_factions
+	add_to_array = { IBR_democratic_council_column2_factions = 2 }
+	add_to_array = { IBR_democratic_council_column2_factions = 3 }
+	add_to_array = { IBR_democratic_council_column2_factions = 4 }
+	resize_array = { array = IBR_democratic_council_current_group value = 4 size = 5 }
+	clear_array = IBR_democratic_council_column3_factions
+	add_to_array = { IBR_democratic_council_column3_factions = 5 }
+	add_to_array = { IBR_democratic_council_column3_factions = 6 }
+	resize_array = { array = IBR_democratic_council_current_group value = 4 size = 7 }
+
+	IBR_democratic_council_distribute_seats_groups = yes
+
+	IBR_rerender_democratic_council_regular_groups = yes
+
+	clear_array = IBR_democratic_council_faction_seats_temp
+}
+
+IBR_democratic_council_election_test_score = {
+	add_to_array = { IBR_democratic_council_faction_score = 6 }
+	add_to_array = { IBR_democratic_council_faction_score = 5 }
+	add_to_array = { IBR_democratic_council_faction_score = 8 }
+	add_to_array = { IBR_democratic_council_faction_score = 12 }
+	add_to_array = { IBR_democratic_council_faction_score = 7 }
+	add_to_array = { IBR_democratic_council_faction_score = 5 }
+	add_to_array = { IBR_democratic_council_faction_score = 3 }
+	add_to_array = { IBR_democratic_council_faction_score = 3 }
+	add_to_array = { IBR_democratic_council_faction_score = 3 }
+	add_to_array = { IBR_democratic_council_faction_score = 3 }
+	add_to_array = { IBR_democratic_council_faction_score = 3 }
+}
+
+IBR_democratic_council_election = {
+	#Tie breaks
+	set_temp_variable = { IBR_communist_1_pop = 0 }
+	set_temp_variable = { IBR_communist_pop = 0 }
+	set_temp_variable = { IBR_socialist_1_pop = 0 }
+	set_temp_variable = { IBR_socialist_pop = 0 }
+	set_temp_variable = { IBR_liberalism_1_pop = 0 }
+	set_temp_variable = { IBR_liberalism_pop = 0 }
+	set_temp_variable = { IBR_liberal_conservatism_pop = 0 }
+	set_temp_variable = { IBR_conservatism_pop = 0 }
+	set_temp_variable = { IBR_paternalism_pop = 0 }
+	if = {
+		limit = {
+			AND = {
+				check_variable = { IBR_democratic_council_faction_score^8 = IBR_democratic_council_faction_score^5 }
+				has_country_flag = IBR_election_play_rc
+			}
+		}
+		add_to_variable = { IBR_democratic_council_faction_score^8 = 1 }
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { IBR_democratic_council_faction_score^8 = IBR_democratic_council_faction_score^5 }
+				has_country_flag = IBR_election_play_cc
+			}
+		}
+		add_to_variable = { IBR_democratic_council_faction_score^5 = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { IBR_democratic_council_faction_score^2 = IBR_democratic_council_faction_score^5 }
+		}
+		add_to_variable = { IBR_democratic_council_faction_score^5 = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { IBR_democratic_council_faction_score^2 = IBR_democratic_council_faction_score^8 }
+		}
+		add_to_variable = { IBR_democratic_council_faction_score^8 = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { IBR_democratic_council_faction_score^6 = IBR_democratic_council_faction_score^0 }
+		}
+		add_to_variable = { IBR_democratic_council_faction_score^6 = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { IBR_democratic_council_faction_score^6 = IBR_democratic_council_faction_score^1 }
+		}
+		add_to_variable = { IBR_democratic_council_faction_score^6 = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { IBR_democratic_council_faction_score^0 = IBR_democratic_council_faction_score^1 }
+		}
+		add_to_variable = { IBR_democratic_council_faction_score^0 = 1 }
+	}
+	### FPS-2, CD-5, AP-8 (420 seats) ###
+
+	if = {
+		limit = {
+			AND = {
+				check_variable = { IBR_democratic_council_faction_score^8 < IBR_democratic_council_faction_score^5 }
+				check_variable = { IBR_democratic_council_faction_score^2 < IBR_democratic_council_faction_score^8 }
+			}
+		}
+		set_temp_variable = { IBR_democratic_council_elections_temp = IBR_democratic_council_faction_score^5 }
+		subtract_from_temp_variable = { IBR_democratic_council_elections_temp = IBR_democratic_council_faction_score^8 }
+		if = {
+			limit = {
+				check_variable = { IBR_democratic_council_elections_temp > 4 }
+			}
+			set_variable = { IBR_democratic_council_faction_seats^5 = 250 }
+			set_variable = { IBR_democratic_council_faction_seats^8 = 120 }
+			set_variable = { IBR_democratic_council_faction_seats^2 = 50 }
+
+			set_temp_variable = { IBR_socialist_pop = 10 }
+			set_temp_variable = { IBR_liberal_conservatism_pop = 30 }
+			set_temp_variable = { IBR_paternalism_pop = 15 }
+		}
+		else = {
+			set_variable = { IBR_democratic_council_faction_seats^5 = 200 }
+			set_variable = { IBR_democratic_council_faction_seats^8 = 150 }
+			set_variable = { IBR_democratic_council_faction_seats^2 = 70 }
+
+			set_temp_variable = { IBR_socialist_pop = 10 }
+			set_temp_variable = { IBR_liberal_conservatism_pop = 25 }
+			set_temp_variable = { IBR_paternalism_pop = 20 }
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = { IBR_democratic_council_faction_score^2 < IBR_democratic_council_faction_score^5 }
+				check_variable = { IBR_democratic_council_faction_score^8 < IBR_democratic_council_faction_score^2 }
+			}
+		}
+		set_temp_variable = { IBR_democratic_council_elections_temp = IBR_democratic_council_faction_score^5 }
+		subtract_from_temp_variable = { IBR_democratic_council_elections_temp = IBR_democratic_council_faction_score^2 }
+		if = {
+			limit = {
+				check_variable = { IBR_democratic_council_elections_temp > 4 }
+			}
+			set_variable = { IBR_democratic_council_faction_seats^5 = 250 }
+			set_variable = { IBR_democratic_council_faction_seats^2 = 120 }
+			set_variable = { IBR_democratic_council_faction_seats^8 = 50 }
+
+			set_temp_variable = { IBR_socialist_pop = 15 }
+			set_temp_variable = { IBR_liberal_conservatism_pop = 30 }
+			set_temp_variable = { IBR_paternalism_pop = 10 }
+		}
+		else = {
+			set_variable = { IBR_democratic_council_faction_seats^5 = 200 }
+			set_variable = { IBR_democratic_council_faction_seats^2 = 150 }
+			set_variable = { IBR_democratic_council_faction_seats^8 = 70 }
+
+			set_temp_variable = { IBR_socialist_pop = 20 }
+			set_temp_variable = { IBR_liberal_conservatism_pop = 25 }
+			set_temp_variable = { IBR_paternalism_pop = 10 }
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = { IBR_democratic_council_faction_score^5 < IBR_democratic_council_faction_score^8 }
+				check_variable = { IBR_democratic_council_faction_score^2 < IBR_democratic_council_faction_score^5 }
+			}
+		}
+		set_temp_variable = { IBR_democratic_council_elections_temp = IBR_democratic_council_faction_score^8 }
+		subtract_from_temp_variable = { IBR_democratic_council_elections_temp = IBR_democratic_council_faction_score^5 }
+		if = {
+			limit = {
+				check_variable = { IBR_democratic_council_elections_temp > 4 }
+			}
+			set_variable = { IBR_democratic_council_faction_seats^8 = 250 }
+			set_variable = { IBR_democratic_council_faction_seats^5 = 120 }
+			set_variable = { IBR_democratic_council_faction_seats^2 = 50 }
+
+			set_temp_variable = { IBR_socialist_pop = 10 }
+			set_temp_variable = { IBR_liberal_conservatism_pop = 15 }
+			set_temp_variable = { IBR_paternalism_pop = 30 }
+		}
+		else = {
+			set_variable = { IBR_democratic_council_faction_seats^8 = 200 }
+			set_variable = { IBR_democratic_council_faction_seats^5 = 150 }
+			set_variable = { IBR_democratic_council_faction_seats^2 = 70 }
+
+			set_temp_variable = { IBR_socialist_pop = 10 }
+			set_temp_variable = { IBR_liberal_conservatism_pop = 20 }
+			set_temp_variable = { IBR_paternalism_pop = 25 }
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = { IBR_democratic_council_faction_score^2 < IBR_democratic_council_faction_score^8 }
+				check_variable = { IBR_democratic_council_faction_score^5 < IBR_democratic_council_faction_score^2 }
+			}
+		}
+		set_temp_variable = { IBR_democratic_council_elections_temp = IBR_democratic_council_faction_score^8 }
+		subtract_from_temp_variable = { IBR_democratic_council_elections_temp = IBR_democratic_council_faction_score^2 }
+		if = {
+			limit = {
+				check_variable = { IBR_democratic_council_elections_temp > 4 }
+			}
+			set_variable = { IBR_democratic_council_faction_seats^8 = 250 }
+			set_variable = { IBR_democratic_council_faction_seats^2 = 120 }
+			set_variable = { IBR_democratic_council_faction_seats^5 = 50 }
+
+			set_temp_variable = { IBR_socialist_pop = 15 }
+			set_temp_variable = { IBR_liberal_conservatism_pop = 10 }
+			set_temp_variable = { IBR_paternalism_pop = 30 }
+		}
+		else = {
+			set_variable = { IBR_democratic_council_faction_seats^8 = 200 }
+			set_variable = { IBR_democratic_council_faction_seats^2 = 150 }
+			set_variable = { IBR_democratic_council_faction_seats^5 = 70 }
+
+			set_temp_variable = { IBR_socialist_pop = 20 }
+			set_temp_variable = { IBR_liberal_conservatism_pop = 10 }
+			set_temp_variable = { IBR_paternalism_pop = 25 }
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = { IBR_democratic_council_faction_score^5 < IBR_democratic_council_faction_score^2 }
+				check_variable = { IBR_democratic_council_faction_score^8 < IBR_democratic_council_faction_score^5 }
+			}
+		}
+		set_variable = { IBR_democratic_council_faction_seats^5 = 200 }
+		set_variable = { IBR_democratic_council_faction_seats^2 = 150 }
+		set_variable = { IBR_democratic_council_faction_seats^8 = 70 }
+
+		set_temp_variable = { IBR_socialist_pop = 20 }
+		set_temp_variable = { IBR_liberal_conservatism_pop = 25 }
+		set_temp_variable = { IBR_paternalism_pop = 10 }
+	}
+	else = {
+		set_variable = { IBR_democratic_council_faction_seats^8 = 200 }
+		set_variable = { IBR_democratic_council_faction_seats^2 = 150 }
+		set_variable = { IBR_democratic_council_faction_seats^5 = 70 }
+
+		set_temp_variable = { IBR_socialist_pop = 20 }
+		set_temp_variable = { IBR_liberal_conservatism_pop = 10 }
+		set_temp_variable = { IBR_paternalism_pop = 25 }
+	}
+
+	### LL/PCE-0, FEPU/PCP-1, EDC-6 (420 seats) ###
+
+	if = {
+		limit = {
+			check_variable = {
+				var = IBR_democratic_council_faction_score^6
+				value = IBR_democratic_council_faction_score^0
+				compare = less_than_or_equals
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = IBR_democratic_council_faction_score^6
+					value = IBR_democratic_council_faction_score^1
+					compare = less_than_or_equals
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = IBR_democratic_council_faction_score^0
+						value = IBR_democratic_council_faction_score^1
+						compare = less_than_or_equals
+					}
+				}
+				set_variable = { IBR_democratic_council_faction_seats^6 = 65 }
+				set_variable = { IBR_democratic_council_faction_seats^1 = 47 }
+				set_variable = { IBR_democratic_council_faction_seats^0 = 33 }
+
+				set_temp_variable = { IBR_communist_1_pop = 12 }
+				set_temp_variable = { IBR_communist_pop = 10 }
+				set_temp_variable = { IBR_liberalism_pop = 13 }
+			}
+
+			else = {
+				set_variable = { IBR_democratic_council_faction_seats^6 = 65 }
+				set_variable = { IBR_democratic_council_faction_seats^0 = 47 }
+				set_variable = { IBR_democratic_council_faction_seats^1 = 33 }
+
+				set_temp_variable = { IBR_communist_1_pop = 10 }
+				set_temp_variable = { IBR_communist_pop = 12 }
+				set_temp_variable = { IBR_liberalism_pop = 13 }
+			}
+		}
+		else = {
+			set_variable = { IBR_democratic_council_faction_seats^1 = 65 }
+			set_variable = { IBR_democratic_council_faction_seats^6 = 47 }
+			set_variable = { IBR_democratic_council_faction_seats^0 = 33 }
+
+			set_temp_variable = { IBR_communist_1_pop = 13 }
+			set_temp_variable = { IBR_communist_pop = 10 }
+			set_temp_variable = { IBR_liberalism_pop = 12 }
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				check_variable = {
+					var = IBR_democratic_council_faction_score^0
+					value = IBR_democratic_council_faction_score^1
+					compare = less_than_or_equals
+				}
+			}
+			set_variable = { IBR_democratic_council_faction_seats^1 = 65 }
+			set_variable = { IBR_democratic_council_faction_seats^0 = 47 }
+			set_variable = { IBR_democratic_council_faction_seats^6 = 33 }
+
+			set_temp_variable = { IBR_communist_1_pop = 13 }
+			set_temp_variable = { IBR_communist_pop = 12 }
+			set_temp_variable = { IBR_liberalism_pop = 10 }
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						var = IBR_democratic_council_faction_score^6
+						value = IBR_democratic_council_faction_score^1
+						compare = less_than_or_equals
+					}
+				}
+				set_variable = { IBR_democratic_council_faction_seats^0 = 65 }
+				set_variable = { IBR_democratic_council_faction_seats^6 = 47 }
+				set_variable = { IBR_democratic_council_faction_seats^1 = 33 }
+
+				set_temp_variable = { IBR_communist_1_pop = 10 }
+				set_temp_variable = { IBR_communist_pop = 13 }
+				set_temp_variable = { IBR_liberalism_pop = 12 }
+			}
+
+			else = {
+				set_variable = { IBR_democratic_council_faction_seats^0 = 65 }
+				set_variable = { IBR_democratic_council_faction_seats^1 = 47 }
+				set_variable = { IBR_democratic_council_faction_seats^6 = 33 }
+
+				set_temp_variable = { IBR_communist_1_pop = 12 }
+				set_temp_variable = { IBR_communist_pop = 13 }
+				set_temp_variable = { IBR_liberalism_pop = 10 }
+			}
+		}
+	}
+
+	### PDC-7, EAJ/PNV-9, EEH-4, EC-3, Indp-10 (35 seats) ###
+
+	set_variable = { IBR_democratic_council_faction_seats^7 = 15 }
+	set_variable = { IBR_democratic_council_faction_seats^9 = 10 }
+	set_variable = { IBR_democratic_council_faction_seats^4 = 5 }
+	set_variable = { IBR_democratic_council_faction_seats^3 = 3 }
+	set_variable = { IBR_democratic_council_faction_seats^10 = 2 }
+
+	set_temp_variable = { IBR_socialist_1_pop = 3 }
+	set_temp_variable = { IBR_liberalism_1_pop = 4 }
+	set_temp_variable = { IBR_conservatism_pop = 3 }
+
+	if = {
+		limit = {
+			check_variable = { IBR_democratic_council_faction_score^9 < IBR_democratic_council_faction_score^4 }
+		}
+		add_to_variable = { IBR_democratic_council_faction_seats^9 = 2 }
+		subtract_from_variable = { IBR_democratic_council_faction_seats^4 = 2 }
+	}
+	if = {
+		limit = {
+			check_variable = { IBR_democratic_council_faction_score^7 < IBR_democratic_council_faction_score^3 }
+		}
+		subtract_from_variable = { IBR_democratic_council_faction_seats^3 = 1 }
+		add_to_variable = { IBR_democratic_council_faction_seats^7 = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { IBR_democratic_council_faction_score^10 < IBR_democratic_council_faction_score^9 }
+		}
+		subtract_from_variable = { IBR_democratic_council_faction_seats^9 = 1 }
+		add_to_variable = { IBR_democratic_council_faction_seats^10 = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { IBR_democratic_council_faction_score^10 < IBR_democratic_council_faction_score^7 }
+		}
+		subtract_from_variable = { IBR_democratic_council_faction_seats^7 = 1 }
+		add_to_variable = { IBR_democratic_council_faction_seats^10 = 1 }
+	}
+	set_popularities = {
+		communist_1 = IBR_communist_1_pop
+		communist = IBR_communist_pop
+		socialist_1 = IBR_socialist_1_pop
+		socialist = IBR_socialist_pop
+		liberalism_1 = IBR_liberalism_1_pop
+		liberalism = IBR_liberalism_pop
+		liberal_conservatism = IBR_liberal_conservatism_pop
+		conservatism = IBR_conservatism_pop
+		paternalism = IBR_paternalism_pop
+	}
+	IBR_rerender_democratic_council_regular = yes
+}
+
+IBR_change_council_progressivism = {
+	set_temp_variable = { new_value_council_progressivism = IBR_government_progressivism }
+	add_to_temp_variable = { new_value_council_progressivism = IBR_government_progressivism_temp }
+	clamp_temp_variable = {
+		var = new_value_council_progressivism
+		min = 0
+		max = 100
+	}
+	add_to_variable = { IBR_government_progressivism = IBR_government_progressivism_temp }
+	clamp_variable = {
+		var = IBR_government_progressivism
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = {
+			check_variable = { IBR_government_progressivism_temp > 0 }
+		}
+		custom_effect_tooltip = increase_Iberian_Council_progressivism_tt
+	}
+	else = {
+		multiply_temp_variable = { IBR_government_progressivism_temp = -1 }
+		custom_effect_tooltip = decrease_Iberian_Council_progressivism_tt
+	}
+}
+
+IBR_democratic_council_set_initial_bill_position = {
+	set_temp_variable = { total_bill_reformism = IBR_council_active_law_reformism_temp }
+	set_variable = { IBR_council_active_law_reformism = IBR_council_active_law_reformism_temp }
+	set_temp_variable = { IBR_progressivism_add_temp = IBR_government_progressivism }
+	divide_temp_variable = { IBR_progressivism_add_temp = 10 }
+	if = {
+		limit = {
+			check_variable = { IBR_government_progressivism < 50 }
+		}
+		multiply_temp_variable = { IBR_progressivism_add_temp = -1 }
+	}
+	add_to_temp_variable = { total_bill_reformism = IBR_progressivism_add_temp }
+	add_to_variable = { IBR_council_active_law_reformism = IBR_progressivism_add_temp }
+	custom_effect_tooltip = IBR_democratic_council_set_initial_bill_position_tt
+}
+
+IBR_democratic_council_change_bill_position = {
+	set_temp_variable = { new_value_bill_reformism = IBR_council_active_law_reformism }
+	add_to_variable = { IBR_council_active_law_reformism = IBR_council_active_law_reformism_temp }
+	clamp_variable = {
+		var = IBR_council_active_law_reformism
+		min = 0
+		max = 100
+	}
+	add_to_temp_variable = { new_value_bill_reformism = IBR_council_active_law_reformism_temp }
+	clamp_temp_variable = {
+		var = new_value_bill_reformism
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = {
+			check_variable = { IBR_council_active_law_reformism_temp > 0 }
+		}
+		custom_effect_tooltip = IBR_democratic_council_change_bill_position_increase_tt
+	}
+	else = {
+		multiply_temp_variable = { IBR_council_active_law_reformism_temp = -1 }
+		custom_effect_tooltip = IBR_democratic_council_change_bill_position_decrease_tt
+	}
+}
+
+#Modify seats to support (set/increase/decrease)
+IBR_democratic_council_modify_support_seats_faction = {
+	#current_subfaction_id_temp
+	#current_subfaction_seats_temp
+	#is_change
+	clamp_temp_variable = {
+		var = current_subfaction_seats_temp
+		max = IBR_democratic_council_faction_seats^current_subfaction_id_temp
+		min = current_subfaction_seats_temp
+	}
+	if = {
+		limit = {
+			check_variable = { is_change = 1 }
+		}
+		set_temp_variable = { new_value_seats = IBR_democratic_council_faction_seats_supporting^current_subfaction_id_temp }
+		add_to_variable = { IBR_democratic_council_faction_seats_supporting^current_subfaction_id_temp = current_subfaction_seats_temp }
+		add_to_temp_variable = { new_value_seats = current_subfaction_seats_temp }
+		clamp_variable = {
+			var = IBR_democratic_council_faction_seats_supporting^current_subfaction_id_temp
+			max = IBR_democratic_council_faction_seats^current_subfaction_id_temp
+			min = 0
+		}
+		clamp_temp_variable = {
+			var = new_value_seats
+			max = IBR_democratic_council_faction_seats^current_subfaction_id_temp
+			min = 0
+		}
+		subtract_from_variable = { IBR_democratic_council_faction_seats_abstain^current_subfaction_id_temp = current_subfaction_seats_temp }
+		if = {
+			limit = {
+				check_variable = { current_subfaction_seats_temp < 0 }
+			}
+			multiply_temp_variable = { current_subfaction_seats_temp = -1 }
+			custom_effect_tooltip = IBR_democratic_council_modify_support_seats_faction_remove_tt
+		}
+		else = {
+			custom_effect_tooltip = IBR_democratic_council_modify_support_seats_faction_add_tt
+		}
+	}
+	else = {
+		add_to_variable = { IBR_democratic_council_faction_seats_supporting^current_subfaction_id_temp = current_subfaction_seats_temp }
+		custom_effect_tooltip = IBR_democratic_council_modify_support_seats_faction_initial_tt
+	}
+}
+#Modify seats to abstain (set/increase/decrease)
+IBR_democratic_council_modify_abstain_seats_faction = {
+	#current_subfaction_id_temp
+	#current_subfaction_seats_temp
+	#is_change
+	clamp_temp_variable = {
+		var = current_subfaction_seats_temp
+		max = IBR_democratic_council_faction_seats^current_subfaction_id_temp
+		min = current_subfaction_seats_temp
+	}
+	if = {
+		limit = {
+			check_variable = { is_change = 1 }
+		}
+		set_temp_variable = { new_value_seats = IBR_democratic_council_faction_seats_abstain^current_subfaction_id_temp }
+		add_to_variable = { IBR_democratic_council_faction_seats_abstain^current_subfaction_id_temp = current_subfaction_seats_temp }
+		add_to_temp_variable = { new_value_seats = current_subfaction_seats_temp }
+		clamp_variable = {
+			var = IBR_democratic_council_faction_seats_abstain^current_subfaction_id_temp
+			max = IBR_democratic_council_faction_seats^current_subfaction_id_temp
+			min = 0
+		}
+		clamp_temp_variable = {
+			var = new_value_seats
+			max = IBR_democratic_council_faction_seats^current_subfaction_id_temp
+			min = 0
+		}
+		subtract_from_variable = { IBR_democratic_council_faction_seats_supporting^current_subfaction_id_temp = current_subfaction_seats_temp }
+		if = {
+			limit = {
+				check_variable = { current_subfaction_seats_temp < 0 }
+			}
+			multiply_temp_variable = { current_subfaction_seats_temp = -1 }
+			custom_effect_tooltip = IBR_democratic_council_modify_abstain_seats_faction_remove_tt
+		}
+		else = {
+			custom_effect_tooltip = IBR_democratic_council_modify_abstain_seats_faction_add_tt
+		}
+	}
+	else = {
+		add_to_variable = { IBR_democratic_council_faction_seats_abstain^current_subfaction_id_temp = current_subfaction_seats_temp }
+		custom_effect_tooltip = IBR_democratic_council_modify_abstain_seats_faction_initial_tt
+	}
+}
+
+IBR_democratic_council_set_up_seats_faction = {
+	#current_subfaction_id_temp
+	#current_subfaction_seats_support_temp
+	#current_subfaction_seats_abstain_temp
+
+	set_temp_variable = { faction_number = current_subfaction_id_temp }
+	set_temp_variable = { support_seats = IBR_democratic_council_faction_seats^current_subfaction_id_temp }
+	set_temp_variable = { abstain_seats = IBR_democratic_council_faction_seats^current_subfaction_id_temp }
+
+	multiply_temp_variable = { support_seats = current_subfaction_seats_support_temp }
+	multiply_temp_variable = { abstain_seats = current_subfaction_seats_abstain_temp }
+
+	round_temp_variable = support_seats
+	round_temp_variable = abstain_seats
+
+	add_to_variable = { IBR_council_total_supporting_seats = support_seats }
+	add_to_variable = { IBR_council_total_abstain_seats = abstain_seats }
+	set_temp_variable = { seats_against = IBR_democratic_council_faction_seats^current_subfaction_id_temp }
+	subtract_from_temp_variable = { seats_against = support_seats }
+	subtract_from_temp_variable = { seats_against = abstain_seats }
+	add_to_variable = { IBR_council_total_against_seats = seats_against }
+
+	set_variable = { IBR_democratic_council_faction_seats_supporting^current_subfaction_id_temp = support_seats }
+	set_variable = { IBR_democratic_council_faction_seats_abstain^current_subfaction_id_temp = abstain_seats }
+	custom_effect_tooltip = IBR_democratic_council_set_up_seats_faction_tt
+
+	IBR_rerender_democratic_council_regular = yes
+	IBR_rerender_democratic_council_support = yes
+}
+
+IBR_democratic_council_change_seats_faction = {
+	#current_subfaction_id_temp
+	#current_subfaction_seats_support_temp - new overall percentage so 0.5 means that in total 50% of seats support the bill, not that 50% more support it
+	#current_subfaction_seats_abstain_temp - same as above but for abstention
+
+	set_temp_variable = { support_seats = IBR_democratic_council_faction_seats^current_subfaction_id_temp }
+	set_temp_variable = { abstain_seats = IBR_democratic_council_faction_seats^current_subfaction_id_temp }
+	set_temp_variable = { faction_number = current_subfaction_id_temp }
+
+	multiply_temp_variable = { support_seats = current_subfaction_seats_support_temp }
+	multiply_temp_variable = { abstain_seats = current_subfaction_seats_abstain_temp }
+
+	round_temp_variable = support_seats
+	round_temp_variable = abstain_seats
+
+	set_temp_variable = { seat_difference_support = support_seats }
+	set_temp_variable = { seat_difference_abstain = abstain_seats }
+
+	subtract_from_temp_variable = { seat_difference_support = IBR_democratic_council_faction_seats_supporting^current_subfaction_id_temp }
+	subtract_from_temp_variable = { seat_difference_abstain = IBR_democratic_council_faction_seats_abstain^current_subfaction_id_temp }
+
+	set_variable = { IBR_democratic_council_faction_seats_supporting^current_subfaction_id_temp = support_seats }
+	set_variable = { IBR_democratic_council_faction_seats_abstain^current_subfaction_id_temp = abstain_seats }
+	if = {
+		limit = {
+			check_variable = { seat_difference_support > 0 }
+			check_variable = { seat_difference_abstain > 0 }
+		}
+		add_to_variable = { IBR_council_total_supporting_seats = seat_difference_support }
+		add_to_variable = { IBR_council_total_abstain_seats = seat_difference_abstain }
+		set_temp_variable = { seats_against = 0 }
+		subtract_from_temp_variable = { seats_against = seat_difference_support }
+		subtract_from_temp_variable = { seats_against = seat_difference_abstain }
+		add_to_variable = { IBR_council_total_against_seats = seats_against }
+		custom_effect_tooltip = IBR_democratic_council_change_seats_faction_add_support_add_abstention_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = { seat_difference_support > 0 }
+			check_variable = { seat_difference_abstain = 0 }
+		}
+		add_to_variable = { IBR_council_total_supporting_seats = seat_difference_support }
+		add_to_variable = { IBR_council_total_abstain_seats = seat_difference_abstain }
+		set_temp_variable = { seats_against = 0 }
+		subtract_from_temp_variable = { seats_against = seat_difference_support }
+		subtract_from_temp_variable = { seats_against = seat_difference_abstain }
+		add_to_variable = { IBR_council_total_against_seats = seats_against }
+		custom_effect_tooltip = IBR_democratic_council_change_seats_faction_add_support_0_abstention_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = { seat_difference_support > 0 }
+			check_variable = { seat_difference_abstain < 0 }
+		}
+		add_to_variable = { IBR_council_total_supporting_seats = seat_difference_support }
+		add_to_variable = { IBR_council_total_abstain_seats = seat_difference_abstain }
+		set_temp_variable = { seats_against = 0 }
+		subtract_from_temp_variable = { seats_against = seat_difference_support }
+		subtract_from_temp_variable = { seats_against = seat_difference_abstain }
+		add_to_variable = { IBR_council_total_against_seats = seats_against }
+		multiply_temp_variable = { seat_difference_abstain = -1 }
+		custom_effect_tooltip = IBR_democratic_council_change_seats_faction_add_support_remove_abstention_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = { seat_difference_support = 0 }
+			check_variable = { seat_difference_abstain > 0 }
+		}
+		add_to_variable = { IBR_council_total_supporting_seats = seat_difference_support }
+		add_to_variable = { IBR_council_total_abstain_seats = seat_difference_abstain }
+		set_temp_variable = { seats_against = 0 }
+		subtract_from_temp_variable = { seats_against = seat_difference_support }
+		subtract_from_temp_variable = { seats_against = seat_difference_abstain }
+		add_to_variable = { IBR_council_total_against_seats = seats_against }
+		custom_effect_tooltip = IBR_democratic_council_change_seats_faction_0_support_add_abstention_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = { seat_difference_support = 0 }
+			check_variable = { seat_difference_abstain < 0 }
+		}
+		add_to_variable = { IBR_council_total_supporting_seats = seat_difference_support }
+		add_to_variable = { IBR_council_total_abstain_seats = seat_difference_abstain }
+		set_temp_variable = { seats_against = 0 }
+		subtract_from_temp_variable = { seats_against = seat_difference_support }
+		subtract_from_temp_variable = { seats_against = seat_difference_abstain }
+		add_to_variable = { IBR_council_total_against_seats = seats_against }
+		multiply_temp_variable = { seat_difference_abstain = -1 }
+		custom_effect_tooltip = IBR_democratic_council_change_seats_faction_0_support_remove_abstention_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = { seat_difference_support < 0 }
+			check_variable = { seat_difference_abstain > 0 }
+		}
+		add_to_variable = { IBR_council_total_supporting_seats = seat_difference_support }
+		add_to_variable = { IBR_council_total_abstain_seats = seat_difference_abstain }
+		set_temp_variable = { seats_against = 0 }
+		subtract_from_temp_variable = { seats_against = seat_difference_support }
+		subtract_from_temp_variable = { seats_against = seat_difference_abstain }
+		add_to_variable = { IBR_council_total_against_seats = seats_against }
+		multiply_temp_variable = { seat_difference_support = -1 }
+		custom_effect_tooltip = IBR_democratic_council_change_seats_faction_remove_support_add_abstention_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = { seat_difference_support < 0 }
+			check_variable = { seat_difference_abstain = 0 }
+		}
+		add_to_variable = { IBR_council_total_supporting_seats = seat_difference_support }
+		add_to_variable = { IBR_council_total_abstain_seats = seat_difference_abstain }
+		set_temp_variable = { seats_against = 0 }
+		subtract_from_temp_variable = { seats_against = seat_difference_support }
+		subtract_from_temp_variable = { seats_against = seat_difference_abstain }
+		add_to_variable = { IBR_council_total_against_seats = seats_against }
+		multiply_temp_variable = { seat_difference_support = -1 }
+		custom_effect_tooltip = IBR_democratic_council_change_seats_faction_remove_support_0_abstention_tt
+	}
+	else = {
+		add_to_variable = { IBR_council_total_supporting_seats = seat_difference_support }
+		add_to_variable = { IBR_council_total_abstain_seats = seat_difference_abstain }
+		set_temp_variable = { seats_against = 0 }
+		subtract_from_temp_variable = { seats_against = seat_difference_support }
+		subtract_from_temp_variable = { seats_against = seat_difference_abstain }
+		add_to_variable = { IBR_council_total_against_seats = seats_against }
+		multiply_temp_variable = { seat_difference_support = -1 }
+		multiply_temp_variable = { seat_difference_abstain = -1 }
+		custom_effect_tooltip = IBR_democratic_council_change_seats_faction_remove_support_remove_abstention_tt
+	}
+
+	IBR_rerender_democratic_council_regular = yes
+	IBR_rerender_democratic_council_support = yes
+}
+
+IBR_democratic_council_change_seats_faction_support = {
+	#current_subfaction_id_temp
+	#support_difference_temp - percentage difference. 0.5 means increase support by 50%, -0.5 means decreasing it
+	set_temp_variable = { IBR_democratic_council_support_percent_temp = IBR_democratic_council_faction_seats_supporting^current_subfaction_id_temp }
+	divide_temp_variable = { IBR_democratic_council_support_percent_temp = IBR_democratic_council_faction_seats^current_subfaction_id_temp }
+
+	set_temp_variable = { IBR_democratic_council_abstention_percent_temp = IBR_democratic_council_faction_seats_abstain^current_subfaction_id_temp }
+	divide_temp_variable = { IBR_democratic_council_abstention_percent_temp = IBR_democratic_council_faction_seats^current_subfaction_id_temp }
+
+	set_temp_variable = { IBR_democratic_council_non_support_sum_temp = 1 }
+	subtract_from_temp_variable = { IBR_democratic_council_non_support_sum_temp = IBR_democratic_council_support_percent_temp }
+
+	set_temp_variable = { IBR_democratic_council_ratio_temp = 0 }
+	add_to_temp_variable = { IBR_democratic_council_ratio_temp = support_difference_temp }
+	divide_temp_variable = { IBR_democratic_council_ratio_temp = IBR_democratic_council_non_support_sum_temp }
+
+	set_temp_variable = { IBR_democratic_council_ratio_abstention_temp = IBR_democratic_council_ratio_temp }
+	multiply_temp_variable = { IBR_democratic_council_ratio_abstention_temp = IBR_democratic_council_abstention_percent_temp }
+	subtract_from_temp_variable = { IBR_democratic_council_abstention_percent_temp = IBR_democratic_council_ratio_abstention_temp }
+
+	add_to_temp_variable = { IBR_democratic_council_support_percent_temp = support_difference_temp }
+
+	clamp_temp_variable = {
+		var = IBR_democratic_council_support_percent_temp
+		min = 0
+		max = 1
+	}
+	clamp_temp_variable = {
+		var = IBR_democratic_council_abstention_percent_temp
+		min = 0
+		max = 1
+	}
+
+	set_temp_variable = { current_subfaction_seats_support_temp = IBR_democratic_council_support_percent_temp }
+	set_temp_variable = { current_subfaction_seats_abstain_temp = IBR_democratic_council_abstention_percent_temp }
+	IBR_democratic_council_change_seats_faction = yes
+}
+
+IBR_democratic_council_change_seats_faction_abstention = {
+	#current_subfaction_id_temp
+	#abstention_difference_temp - percentage difference. 0.5 means increase abstention by 50%, -0.5 means decreasing it
+	set_temp_variable = { IBR_democratic_council_support_percent_temp = IBR_democratic_council_faction_seats_supporting^current_subfaction_id_temp }
+	divide_temp_variable = { IBR_democratic_council_support_percent_temp = IBR_democratic_council_faction_seats^current_subfaction_id_temp }
+
+	set_temp_variable = { IBR_democratic_council_abstention_percent_temp = IBR_democratic_council_faction_seats_abstain^current_subfaction_id_temp }
+	divide_temp_variable = { IBR_democratic_council_abstention_percent_temp = IBR_democratic_council_faction_seats^current_subfaction_id_temp }
+
+	set_temp_variable = { IBR_democratic_council_non_abstention_sum_temp = 1 }
+	subtract_from_temp_variable = { IBR_democratic_council_non_abstention_sum_temp = IBR_democratic_council_abstention_percent_temp }
+
+	set_temp_variable = { IBR_democratic_council_ratio_temp = 0 }
+	add_to_temp_variable = { IBR_democratic_council_ratio_temp = abstention_difference_temp }
+	divide_temp_variable = { IBR_democratic_council_ratio_temp = IBR_democratic_council_non_abstention_sum_temp }
+
+	set_temp_variable = { IBR_democratic_council_ratio_support_temp = IBR_democratic_council_ratio_temp }
+	multiply_temp_variable = { IBR_democratic_council_ratio_support_temp = IBR_democratic_council_abstention_percent_temp }
+	subtract_from_temp_variable = { IBR_democratic_council_support_percent_temp = IBR_democratic_council_ratio_support_temp }
+
+	add_to_temp_variable = { IBR_democratic_council_abstention_percent_temp = abstention_difference_temp }
+
+	clamp_temp_variable = {
+		var = IBR_democratic_council_support_percent_temp
+		min = 0
+		max = 1
+	}
+	clamp_temp_variable = {
+		var = IBR_democratic_council_abstention_percent_temp
+		min = 0
+		max = 1
+	}
+
+	set_temp_variable = { current_subfaction_seats_support_temp = IBR_democratic_council_support_percent_temp }
+	set_temp_variable = { current_subfaction_seats_abstain_temp = IBR_democratic_council_abstention_percent_temp }
+	IBR_democratic_council_change_seats_faction = yes
+}
+
+# Ideology of CD / AP and the belief in the transition process
+
+IBR_democratic_council_change_CD_ideology = {
+	add_to_variable = { IBR_CD_ideology = IBR_CD_ideology_temp }
+	if = {
+		limit = {
+			check_variable = { IBR_CD_ideology_temp > 0 }
+		}
+		custom_effect_tooltip = IBR_CD_move_to_right_tt
+	}
+	else = {
+		custom_effect_tooltip = IBR_CD_move_to_left_tt
+	}
+}
+
+IBR_democratic_council_change_AP_ideology = {
+	add_to_variable = { IBR_AP_ideology = IBR_AP_ideology_temp }
+	if = {
+		limit = {
+			check_variable = { IBR_AP_ideology_temp > 0 }
+		}
+		custom_effect_tooltip = IBR_AP_move_to_right_tt
+	}
+	else = {
+		custom_effect_tooltip = IBR_AP_move_to_left_tt
+	}
+}
+
+IBR_democratic_council_change_transition_belief = {
+	add_to_variable = { IBR_transition_result = IBR_transition_result_temp }
+	if = {
+		limit = {
+			check_variable = { IBR_transition_result_temp > 0 }
+		}
+		custom_effect_tooltip = IBR_increase_belief_in_transition_tt
+	}
+	else = {
+		custom_effect_tooltip = IBR_decrease_belief_in_transition_tt
+	}
+}

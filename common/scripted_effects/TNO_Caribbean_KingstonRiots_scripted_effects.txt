@@ -1,0 +1,725 @@
+# |===============| #
+# |=/=/ INDEX /=/=| #
+# |===============| #
+
+#---| [1] OVERALL
+	# KingstonRiots_Initialize
+	# KingstonRiots_Disable
+
+#---| [2] NATIONAL VARIABLES
+	#---| [2.1] VIOLENCE
+		# KingstonRiots_ChangeViolence
+		# KingstonRiots_ChangeViolenceFactor
+	#---| [2.2] FERVOR
+		# KingstonRiots_ChangeFervor
+		# KingstonRiots_ChangeFervorFactor
+
+#---| [3] ROUTES
+	# KingstonRiots_AddRoute
+	# KingstonRiots_RemoveRoute
+	# KingstonRiots_SetRouteType
+	# KingstonRiots_ChangeRouteLevel
+	# KingstonRiots_SetRouteLevel
+	# KingstonRiots_SetRouteBlockadeTime
+	# KingstonRiots_ComputeCycle
+	# KingstonRiots_ComputeOutcome
+
+#---| [4] DECISION EFFECTS
+	# KingstonRiots_AddCoastGuardAsset
+	# KingstonRiots_RemoveCoastGuardAsset
+
+#---| [5] GUI
+	# KingstonRiots_GUISelectRoute
+	# KingstonRiots_GUISelectCRT
+
+#---| [d] DEBUG
+	# d_KingstonRiots_AddAllRoutes
+	# d_KingstonRiots_ResetRoutes
+
+# |==============| #
+# |=/=/ CODE /=/=| #
+# |==============| #
+
+# [=========================] #
+# [==/==| [1] OVERALL |==/==] #
+# [=========================] #
+
+# DESCRIPTION: Initializes the entire mechanic, making it both accessible and active.
+# INPUT: n/a
+KingstonRiots_Initialize = {
+	log = "[GetDateText]: [Root.GetTag]: KingstonRiots_Initialize; Executing."
+
+	# Setting up the world for the proxy.
+	set_global_flag = JAM_has_kingston_riots
+	USA = { TNO_fopo_add_kingston_riots_tab = yes }
+	IBR = { TNO_fopo_add_kingston_riots_tab = yes }
+	MEX = { TNO_fopo_add_kingston_riots_tab = yes }
+
+	# Setting up Jamaica for the proxy.
+	JAM = {
+		# Setting up the main variables.
+		set_variable = { KingstonRiots_Violence = 14 }
+		set_variable = { KingstonRiots_ViolenceFactor = 1.25 }
+
+		set_variable = { KingstonRiots_Fervor = 56 }
+		set_variable = { KingstonRiots_FervorFactor = 1.1 }
+
+		# Opening routes
+		set_temp_variable = { route_v = token:KingstonRiots_Route_Iberia }
+		KingstonRiots_AddRoute = yes
+
+		set_temp_variable = { route_v = token:KingstonRiots_Route_Nicaragua }
+		KingstonRiots_AddRoute = yes
+
+		set_temp_variable = { route_v = token:KingstonRiots_Route_Mexico }
+		KingstonRiots_AddRoute = yes
+
+		set_temp_variable = { route_v = token:KingstonRiots_Route_Cuba }
+		KingstonRiots_AddRoute = yes
+
+		if = {
+			limit = { 
+				DOM = { 
+					OR = {
+						check_variable = { ECON_SPHERE_LEADER = IBR } 
+						check_variable = { ECON_SPHERE_LEADER = SPA } 
+					}
+				}
+			}
+			set_temp_variable = { route_v = token:KingstonRiots_Route_DominicanRepublic }
+			KingstonRiots_AddRoute = yes
+		}
+
+		hidden_effect = {
+			set_variable = { USA.KingstonRiots_SelectedRoute = token:KingstonRiots_Route_Iberia }
+			set_variable = { IBR.KingstonRiots_SelectedRoute = token:KingstonRiots_Route_Iberia }
+			set_variable = { MEX.KingstonRiots_SelectedRoute = token:KingstonRiots_Route_Iberia }
+
+			set_variable = { KingstonRiots_CyclesLeft = 23 }
+			set_variable = { KingstonRiots_NextCycle = global.date }
+			add_to_variable = { KingstonRiots_NextCycle = 0.00120 }
+
+			set_variable = { KingstonRiots_FinalCycle = global.date }
+			set_temp_variable = { final_cycle = 0.00120 }
+			multiply_temp_variable = { final_cycle = KingstonRiots_CyclesLeft }
+			add_to_variable = { KingstonRiots_FinalCycle = final_cycle }
+
+			country_event = { id = JAM.kingston_riots.1 days = 5 }
+		}
+	}
+
+	USA = {
+		set_variable = { KingstonRiots_CoastGuardAssets = 2 }
+		set_variable = { KingstonRiots_CoastGuardCapacity = 2 }
+
+		if = {
+			limit = { BAH = { has_government = liberal_conservatism } }
+			country_event = { id = BAH_forpol.17 days = 12 }
+		}
+	}
+
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+
+	log = "[GetDateText]: [Root.GetTag]: KingstonRiots_Initialize; Completed execution."
+}
+
+# DESCRIPTION: Disables the entire mechanic, cleaning out every single thing connected to it from the game.
+# INPUT: n/a
+KingstonRiots_Disable = {
+	log = "[GetDateText]: [Root.GetTag]: KingstonRiots_Disable; Executing."
+
+	clr_global_flag = JAM_has_kingston_riots
+	USA = { TNO_fopo_remove_kingston_riots_tab = yes }
+	IBR = { TNO_fopo_remove_kingston_riots_tab = yes }
+	MEX = { TNO_fopo_remove_kingston_riots_tab = yes }
+	
+	JAM = {
+		clear_variable = KingstonRiots_Violence
+		clear_variable = KingstonRiots_ViolenceFactor
+		clear_variable = KingstonRiots_Fervor
+		clear_variable = KingstonRiots_FervorFactor
+
+		clear_variable = KingstonRiots_CyclesLeft
+		clear_variable = KingstonRiots_NextCycle
+		clear_variable = KingstonRiots_FinalCycle
+
+		for_each_loop = {
+			array = KingstonRiots_Routes
+			clear_variable = Type@var:v
+			clear_variable = Level@var:v
+			clear_variable = Blockade@var:v
+			clear_variable = BlockadeTime@var:v
+			clear_variable = Selected@var:v
+			clear_variable = CoordinateX@var:v
+			clear_variable = CoordinateY@var:v
+			clear_variable = LastUpgrade@var:v
+		}
+		clear_array = KingstonRiots_Routes
+
+		clear_variable = USA.KingstonRiots_SelectedRoute
+		clear_variable = IBR.KingstonRiots_SelectedRoute
+		clear_variable = MEX.KingstonRiots_SelectedRoute
+
+		clear_variable = USA.KingstonRiots_OverviewCommands
+		clear_variable = IBR.KingstonRiots_OverviewCommands
+		clear_variable = MEX.KingstonRiots_OverviewCommands
+	}
+
+	USA = {
+		clear_variable = KingstonRiots_CoastGuardAssets 
+		clear_variable = KingstonRiots_CoastGuardCapacity
+		clear_variable = KingstonRiots_AssignedCoastGuardAssets
+		clear_variable = KingstonRiots_LogViolence
+		clear_variable = KingstonRiots_LogFervor
+	}
+
+	MEX = {
+		clear_variable = KingstonRiots_LogViolence
+		clear_variable = KingstonRiots_LogFervor
+	}
+
+	log = "[GetDateText]: [Root.GetTag]: KingstonRiots_Disable; Completed execution."
+}
+
+# [====================================] #
+# [==/==| [2] NATIONAL VARIABLES |==/==] #
+# [====================================] #
+
+# [==-==| [2.1] VIOLENCE |==-==] #
+
+# DESCRIPTION: Changes Violence by a custom value. 
+# INPUT: change_v
+KingstonRiots_ChangeViolence = {
+	custom_effect_tooltip = KingstonRiots_ChangeViolence_tt
+	add_to_variable = { JAM.KingstonRiots_Violence = change_v }
+	if = {
+		limit = {
+			OR = {
+				has_game_rule = {
+					rule = KINGSTON_RIOTS_OUTCOME
+					option = KINGSTON_RIOTS_OUTCOME_USA
+				}
+				has_game_rule = {
+					rule = KINGSTON_RIOTS_OUTCOME
+					option = KINGSTON_RIOTS_OUTCOME_MEX
+				}
+			}
+		}
+		clamp_variable = { var = JAM.KingstonRiots_Violence min = 0 max = 24 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_game_rule = {
+					rule = KINGSTON_RIOTS_OUTCOME
+					option = KINGSTON_RIOTS_OUTCOME_IBR
+				}
+				has_game_rule = {
+					rule = KINGSTON_RIOTS_OUTCOME
+					option = KINGSTON_RIOTS_OUTCOME_BLACK_STAR
+				}
+			}
+		}
+		clamp_variable = { var = JAM.KingstonRiots_Violence min = 75 max = 100 }
+	}
+	else = {
+		clamp_variable = { var = JAM.KingstonRiots_Violence min = 0 max = 100 }
+	}
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+
+	# Variable stored on tag that caused the effect
+	add_to_variable = { KingstonRiots_LogViolence = change_v }
+}
+
+# DESCRIPTION: Changes Violence Factor by a custom value. 
+# INPUT: change_v
+KingstonRiots_ChangeViolenceFactor = {
+	custom_effect_tooltip = KingstonRiots_ChangeViolenceFactor_tt
+	add_to_variable = { JAM.KingstonRiots_ViolenceFactor = change_v }
+	clamp_variable = { var = JAM.KingstonRiots_ViolenceFactor min = 0.5 max = 2 }
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}
+
+# [==-==| [2.2] FERVOR |==-==] #
+
+# DESCRIPTION: Changes Fervor by a custom value. 
+# INPUT: change_v
+KingstonRiots_ChangeFervor = {
+	custom_effect_tooltip = KingstonRiots_ChangeFervor_tt
+	add_to_variable = { JAM.KingstonRiots_Fervor = change_v }
+	if = {
+		limit = {
+			OR = {
+				has_game_rule = {
+					rule = KINGSTON_RIOTS_OUTCOME
+					option = KINGSTON_RIOTS_OUTCOME_USA
+				}
+				has_game_rule = {
+					rule = KINGSTON_RIOTS_OUTCOME
+					option = KINGSTON_RIOTS_OUTCOME_IBR
+				}
+			}
+		}
+		clamp_variable = { var = JAM.KingstonRiots_Fervor min = 0 max = 24 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_game_rule = {
+					rule = KINGSTON_RIOTS_OUTCOME
+					option = KINGSTON_RIOTS_OUTCOME_MEX
+				}
+				has_game_rule = {
+					rule = KINGSTON_RIOTS_OUTCOME
+					option = KINGSTON_RIOTS_OUTCOME_BLACK_STAR
+				}
+			}
+		}
+		clamp_variable = { var = JAM.KingstonRiots_Fervor min = 75 max = 100 }
+	}
+	else = {
+		clamp_variable = { var = JAM.KingstonRiots_Fervor min = 0 max = 100 }
+	}
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+
+	# Variable stored on tag that caused the effect
+	add_to_variable = { KingstonRiots_LogFervor = change_v }
+}
+
+# DESCRIPTION: Changes Fervor Factor by a custom value. 
+# INPUT: change_v
+KingstonRiots_ChangeFervorFactor = {
+	custom_effect_tooltip = KingstonRiots_ChangeFervorFactor_tt
+	add_to_variable = { JAM.KingstonRiots_FervorFactor = change_v }
+	clamp_variable = { var = JAM.KingstonRiots_FervorFactor min = 0.5 max = 2 }
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}
+
+# [========================] #
+# [==/==| [3] ROUTES |==/==] #
+# [========================] #
+
+# All "route_v" come from tokens outlined in the TNO_Caribbean_Dummy.txt
+
+# DESCRIPTION: Adds a Route via token.
+# INPUT: route_v
+KingstonRiots_AddRoute = {
+	custom_effect_tooltip = KingstonRiots_AddRoute_tt
+	hidden_effect = {
+		JAM = {
+			meta_effect = {
+				text = { add_ideas = [ROUTE] }
+				ROUTE = "[?route_v.GetTokenKey]"
+			}
+		}
+	}
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}
+
+# DESCRIPTION: Removes a Route via token.
+# INPUT: route_v
+KingstonRiots_RemoveRoute = {
+	custom_effect_tooltip = KingstonRiots_RemoveRoute_tt
+	JAM = {
+		remove_from_array = { KingstonRiots_Routes = route_v }
+		clear_variable = Type@var:route_v
+		clear_variable = Level@var:route_v
+		clear_variable = Blockade@var:route_v
+		clear_variable = Selected@var:route_v
+		clear_variable = CoordinateX@var:route_v
+		clear_variable = CoordinateY@var:route_v
+	}
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}
+
+# DESCRIPTION: Sets a Route type to a certain value.
+# INPUT: route_v, set_v,
+KingstonRiots_SetRouteType = {
+	custom_effect_tooltip = KingstonRiots_SetRouteType_tt
+	set_variable = { JAM.Type@var:route_v = set_v }
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}
+
+# DESCRIPTION: Changes a Route level by a custom value.
+# INPUT: route_v, change_v, 
+# OPTIONAL TOOLTIP INPUTS: type_v needed for tooltip to function
+KingstonRiots_ChangeRouteLevel = {
+	custom_effect_tooltip = KingstonRiots_ChangeRouteLevel_tt
+	add_to_variable = { JAM.Level@var:route_v = change_v }
+	clamp_variable = { var = JAM.Level@var:route_v min = 1 max = 5 }
+	set_variable = { JAM.LastUpgrade@var:route_v = 4 }
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}
+
+# DESCRIPTION: Sets a Route level to a certain value.
+# INPUT: route_v, set_v,
+KingstonRiots_SetRouteLevel = {
+	custom_effect_tooltip = KingstonRiots_SetRouteLevel_tt
+	set_variable = { JAM.Level@var:route_v = set_v }
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}
+
+# DESCRIPTION: Sets a amount of Cycles a Route should be blocked for, blocks the route.
+# INPUT: route_v, set_v
+KingstonRiots_SetRouteBlockadeTime = {
+	set_variable = { JAM.BlockadeTime@var:route_v = set_v }
+	clamp_variable = { var = JAM.BlockadeTime@var:route_v min = 0 }
+
+	# If adding cycles blockade the route and notify the player
+	if = {
+		limit = { check_variable = { set_v > 0 } }
+		set_variable = { JAM.Blockade@var:route_v = 2 }
+		custom_effect_tooltip = KingstonRiots_SetRouteBlockadeTime_tt
+	}
+
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}
+
+# DESCRIPTION: Computes the effects of this cycle, initiates the next one.
+# INPUT: n/a
+KingstonRiots_ComputeCycle = {
+	log = "[GetDateText]: [Root.GetTag]: KingstonRiots_ComputeCycle; Executing."
+	JAM = {
+		if = {
+			limit = { check_variable = { KingstonRiots_CyclesLeft > 0 } }
+
+			# Roll log over
+			set_variable = { KingstonRiots_PastCycleFervor = KingstonRiots_Fervor }
+			set_variable = { KingstonRiots_PastCycleViolence = KingstonRiots_Violence }
+
+			set_variable = { MEX.KingstonRiots_LogViolence = 0 }
+			set_variable = { MEX.KingstonRiots_LogFervor = 0 }
+			set_variable = { USA.KingstonRiots_LogViolence = 0 }
+			set_variable = { USA.KingstonRiots_LogFervor = 0 }
+
+			# Setting up the values to change Violence and Fervor by.
+			set_temp_variable = { violence_s = 0 }
+			set_temp_variable = { fervor_s = 0 }
+
+			# Amassing data on what all Routes are.
+			for_each_loop = {
+				array = KingstonRiots_Routes
+
+				# Proceeding with this route if it's not blockaded.
+				if = {
+					limit = { check_variable = { Blockade@var:v = 1 } }
+
+					# Setting up the current loop's Route impact on overall change.
+					# Tying the changes dynamically to the current level of Route.
+					# Dividng by three to not make the overall sum too large.
+					set_temp_variable = { violence_loop = Level@var:v }
+					divide_temp_variable = { violence_loop = 3 }
+					set_temp_variable = { fervor_loop = Level@var:v }
+					divide_temp_variable = { fervor_loop = 2 }
+
+					# Changing the current loop's impact based on the type of Route.
+					if = {
+						limit = { check_variable = { Type@var:v = 1 } } # Drugs
+						multiply_temp_variable = { violence_loop = 1.35 }
+						multiply_temp_variable = { fervor_loop = -1.35 }
+					}
+					else_if = {
+						limit = { check_variable = { Type@var:v = 2 } } # Arms
+						multiply_temp_variable = { violence_loop = 1.5 }
+						multiply_temp_variable = { fervor_loop = 0 }
+					}
+					else_if = {
+						limit = { check_variable = { Type@var:v = 3 } } # Agitation
+						multiply_temp_variable = { violence_loop = 0 }
+						multiply_temp_variable = { fervor_loop = 2 }
+					}
+					else_if = {
+						limit = { check_variable = { Type@var:v = 4 } } # Brigadistas
+						multiply_temp_variable = { violence_loop = 1.5 }
+						multiply_temp_variable = { fervor_loop = 1.5 }
+					}
+
+					# Contributing the current loop to the previously set values of overall change.
+					add_to_temp_variable = { violence_s = violence_loop }
+					add_to_temp_variable = { fervor_s = fervor_loop }
+
+					# add to a temp array for AI funzone
+					add_to_temp_array = { temp_KingstonRiots_OpenRoutes = var:v }
+					add_to_temp_array = { temp_KingstonRiots_OpenRoutesLevel = Level@var:v }
+				}
+
+				# If route is blockaded remove one cycle from the timer
+				else = {
+					subtract_from_variable = { BlockadeTime@var:v = 1 }
+
+					# Once Blockade Time his 0 open the route again, restore used asset
+					if = {
+						limit = { check_variable = { BlockadeTime@var:v < 1 }	}
+						set_variable = { Blockade@var:v = 1 }
+						USA = { 
+							KingstonRiots_RestoreCoastGuardAsset = yes
+						}
+
+						# add newly unblocked to a temp array for AI funzone also
+						add_to_temp_array = { temp_KingstonRiots_OpenRoutes = var:v }
+						add_to_temp_array = { temp_KingstonRiots_OpenRoutesLevel = Level@var:v }
+					}
+				}
+
+				# Remove one cycle on the upgrade timer
+				subtract_from_variable = { LastUpgrade@var:v = 1 }
+				clamp_variable = { var = LastUpgrade@var:v min = 0 }
+			}
+
+			# Multiplying by the corresponding factors if the sum of changes is above 0. 
+			if = {
+				limit = { check_variable = { violence_s > 0 } }
+				multiply_temp_variable = { violence_s = KingstonRiots_ViolenceFactor }
+			}
+			if = {
+				limit = { check_variable = { fervor_s > 0 } }
+				multiply_temp_variable = { fervor_s = KingstonRiots_FervorFactor }
+			}
+
+			# Performing the value changes.
+			# TODO: May need to set up varying temp variables for the tooltip, since this effect would be performed in a mission.
+			set_temp_variable = { change_v = violence_s }
+			KingstonRiots_ChangeViolence = yes
+			set_temp_variable = { change_v = fervor_s }
+			KingstonRiots_ChangeFervor = yes
+
+			add_to_variable = { KingstonRiots_CyclesLeft = -1 }
+			add_to_variable = { KingstonRiots_NextCycle = 0.00120 }
+
+			# AI funzone
+
+			# Iberia should find the lowest level route to try expand it
+			if = {
+				limit = { IBR = { is_ai = yes } }
+
+				# Iberia wants to pump as many drugs in as possible
+				for_each_loop = {
+					array = temp_KingstonRiots_OpenRoutes
+					if = {
+						limit = {
+							NOT = { check_variable = { JAM.Type@var:v = 1 } }
+						}
+						remove_from_array = { temp_KingstonRiots_OpenRoutes = i }
+						remove_from_array = { temp_KingstonRiots_OpenRoutesLevel = i }
+					}
+				}
+
+				# Use temp_KingstonRiots_OpenRoutesLevel array to find i for parallel temp_KingstonRiots_OpenRoutes storing the token
+				find_lowest_in_array = { array = temp_KingstonRiots_OpenRoutesLevel }
+				set_variable = { IBR.KingstonRiots_SelectedRoute = var:temp_KingstonRiots_OpenRoutes^i }
+			}
+
+			# USA should find the highest level route to try block it
+			if = {
+				limit = { USA = { is_ai = yes } }
+
+				# Use temp_KingstonRiots_OpenRoutesLevel array to find i for parallel temp_KingstonRiots_OpenRoutes storing the token
+				find_highest_in_array = { array = temp_KingstonRiots_OpenRoutesLevel }
+				set_variable = { USA.KingstonRiots_SelectedRoute = var:temp_KingstonRiots_OpenRoutes^i }
+			}
+
+			# TBD
+			if = {
+				limit = { MEX = { is_ai = yes } }
+
+				MEX = {
+					random_list = {
+						1 = {
+							set_temp_variable = { change_v = -0.5 }
+							KingstonRiots_ChangeViolence = yes
+							set_temp_variable = { change_v = 0.5 }
+							KingstonRiots_ChangeFervor = yes
+						}
+						1 = {
+							set_temp_variable = { change_v = 2 }
+							KingstonRiots_ChangeFervor = yes
+						}
+						1 = {
+							set_temp_variable = { change_v = 1 }
+							KingstonRiots_ChangeFervor = yes
+						}
+					}
+				}		
+			}
+		}
+
+		# Adding in Mexico alligned routes like this for now before they get content
+		else_if = {
+			limit = {
+				check_variable = { KingstonRiots_CyclesLeft = 15 } 
+				HAI = { check_variable = { ECON_SPHERE_LEADER = MEX } }
+			}
+			set_temp_variable = { route_v = token:KingstonRiots_Route_Haiti }
+			KingstonRiots_AddRoute = yes
+
+			set_temp_variable = { route_v = token:KingstonRiots_Route_Haiti }
+			set_temp_variable = { type_v = 3 }
+			KingstonRiots_SetRouteType = yes
+		}
+		else_if = {
+			limit = {
+				check_variable = { KingstonRiots_CyclesLeft = 10 } 
+				DOM = { check_variable = { ECON_SPHERE_LEADER = MEX } }
+			}
+			set_temp_variable = { route_v = token:KingstonRiots_Route_DominicanRepublic }
+			KingstonRiots_AddRoute = yes
+
+			set_temp_variable = { route_v = token:KingstonRiots_Route_DominicanRepublic }
+			set_temp_variable = { type_v = 3 }
+			KingstonRiots_SetRouteType = yes
+		}
+
+		else = {
+			KingstonRiots_ComputeOutcome = yes
+		}
+	}
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+	
+	log = "[GetDateText]: [Root.GetTag]: KingstonRiots_ComputeCycle; Completed execution."
+}
+
+# DESCRIPTION: Computes the outcome of the entire proxy.
+# INPUT: n/a
+KingstonRiots_ComputeOutcome = {
+	if = { #Low and medium fervor have the same effect, helps the US and Iberia
+		limit = { JAM = { has_country_flag = JAM_Brandenburg_Completed } }
+		if = {
+			limit = { check_variable = { JAM.KingstonRiots_Fervor > 74.99 } }
+			TNO_end_jamaica_crisis_coup = yes
+		}
+		else = { TNO_end_jamaica_crisis_calmed = yes }
+	}
+	else = { #High and medium fervor have the same effect, helps the socialists and Mexico
+		if = {
+			limit = { check_variable = { JAM.KingstonRiots_Fervor < 25.00 } }
+			TNO_end_jamaica_crisis_calmed = yes
+		}
+		else = { TNO_end_jamaica_crisis_coup = yes }
+	}
+}
+
+# [==================================] #
+# [==/==| [4] DECISION EFFECTS |==/==] #
+# [==================================] #
+
+# DESCRIPTION: Assigns a Coastguard asset usable in American decisions
+# INPUT: n/a
+KingstonRiots_AssignCoastGuardAsset = {
+	add_to_variable = { KingstonRiots_CoastGuardAssets = -1 }
+	add_to_variable = { KingstonRiots_AssignedCoastGuardAssets = 1 }
+	custom_effect_tooltip = KingstonRiots_AssignCoastGuardAsset_tt
+}
+
+# DESCRIPTION: Restores Coastguard asset after temporary use
+# INPUT: n/a
+KingstonRiots_RestoreCoastGuardAsset = {
+	add_to_variable = { KingstonRiots_CoastGuardAssets = 1 }
+	add_to_variable = { KingstonRiots_AssignedCoastGuardAssets = -1 }
+	clamp_variable = { var = KingstonRiots_CoastGuardAssets max = KingstonRiots_CoastGuardCapacity }
+	custom_effect_tooltip = KingstonRiots_RestoreCoastGuardAsset_tt
+}
+
+# DESCRIPTION: Adds Coastguard asset usable in American decisions
+# INPUT: n/a
+KingstonRiots_AddCoastGuardCapacity = {
+	add_to_variable = { KingstonRiots_CoastGuardAssets = 1 }
+	add_to_variable = { KingstonRiots_CoastGuardCapacity = 1 }
+	custom_effect_tooltip = KingstonRiots_AddCoastGuardCapacity_tt
+}
+
+# [=====================] #
+# [==/==| [5] GUI |==/==] #
+# [=====================] #
+
+# DESCRIPTION: Selecting a route via the usual way, i.e. clicking on the white lines.
+# INPUT: route_v
+KingstonRiots_GUISelectRoute = {
+	for_each_loop = { array = JAM.KingstonRiots_Routes set_variable = { JAM.Selected@var:v = 1 } }
+	set_variable = { JAM.Selected@var:route_v = 2 }
+	set_variable = { KingstonRiots_SelectedRoute = route_v }
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}
+
+# DESCRIPTION: Selecting a route via the CRT outlines, i.e. on countries themselves.
+# INPUT: route_v
+KingstonRiots_GUISelectCRT = {
+	if = {
+		limit = { is_in_array = { JAM.KingstonRiots_Routes = route_v } }
+		if = {
+			limit = {
+				NOT = { check_variable = { KingstonRiots_SelectedRoute = route_v } }
+			}
+			KingstonRiots_GUISelectRoute = yes
+		}
+		sound_effect = "click_expand"
+	}
+	else = {
+		sound_effect = "click_close"
+	}
+}
+
+# [=======================] #
+# [==/==| [d] DEBUG |==/==] #
+# [=======================] #
+
+# DESCRIPTION: Removes all existing routes, adds all possible routes.
+# INPUT: n/a
+d_KingstonRiots_AddAllRoutes = {
+	JAM = {
+		for_each_loop = {
+			array = KingstonRiots_Routes
+			clear_variable = Type@var:v
+			clear_variable = Level@var:v
+			clear_variable = Blockade@var:v
+			clear_variable = Selected@var:v
+			clear_variable = CoordinateX@var:v
+			clear_variable = CoordinateY@var:v
+			clear_variable = LastUpgrade@var:v
+		}
+		clear_array = KingstonRiots_Routes
+
+		hidden_effect = {
+			add_ideas = KingstonRiots_Route_Iberia
+			add_ideas = KingstonRiots_Route_Bahamas
+			add_ideas = KingstonRiots_Route_Nicaragua
+			add_ideas = KingstonRiots_Route_DominicanRepublic
+			add_ideas = KingstonRiots_Route_Guatemala
+			add_ideas = KingstonRiots_Route_Haiti
+			add_ideas = KingstonRiots_Route_Colombia
+			add_ideas = KingstonRiots_Route_Panama
+			add_ideas = KingstonRiots_Route_Cuba
+			add_ideas = KingstonRiots_Route_Mexico
+			add_ideas = KingstonRiots_Route_UnitedStates
+		}
+	}
+
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}
+
+# DESCRIPTION: Removes all routes, adds Iberian one, i.e. reverting to how it is in the beginning.
+# INPUT: n/a
+d_KingstonRiots_ResetRoutes = {
+	JAM = {
+		for_each_loop = {
+			array = KingstonRiots_Routes
+			clear_variable = Type@var:v
+			clear_variable = Level@var:v
+			clear_variable = Blockade@var:v
+			clear_variable = Selected@var:v
+			clear_variable = CoordinateX@var:v
+			clear_variable = CoordinateY@var:v
+			clear_variable = LastUpgrade@var:v
+		}
+		clear_array = KingstonRiots_Routes
+
+		set_variable = { USA.KingstonRiots_SelectedRoute = token:KingstonRiots_Route_Iberia }
+		set_variable = { IBR.KingstonRiots_SelectedRoute = token:KingstonRiots_Route_Iberia }
+		set_variable = { MEX.KingstonRiots_SelectedRoute = token:KingstonRiots_Route_Iberia }
+
+		hidden_effect = {
+			add_ideas = KingstonRiots_Route_Iberia
+		}
+	}
+
+	add_to_variable = { JAM.KingstonRiots_Dirty = 1 }
+}

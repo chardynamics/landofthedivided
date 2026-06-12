@@ -1,0 +1,118 @@
+scripted_map_modes = {
+	tno_admin_title_map_mode = {
+		top = {
+			type = state
+			color = {
+				set_temp_variable = { alpha = 0.95 }
+				if = {
+					limit = {
+						FROM = { state = var:PREV.TNO_admin_title_map_mode_selected_state }
+					}
+					set_temp_variable = { red = 0.9 }
+					set_temp_variable = { green = 0.9 }
+					set_temp_variable = { blue = 0.9 }
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								FROM = { has_variable = AdminTitle }
+								check_variable = { FROM.AdminTitle = TNO_admin_title_map_mode_selected_state:AdminTitle }
+								check_variable = { global.TNO_admin_title_map_mode_config = 1 }
+							}
+							AND = {
+								FROM = { has_variable = AdminTitle }
+								check_variable = { FROM.AdminTitle = TNO_admin_title_map_mode_selected_state:AdminTitle }
+								FROM = { is_controlled_by = event_target:TNO_admin_title_map_mode_selected_state_owner }
+								check_variable = { global.TNO_admin_title_map_mode_config = 2 }
+							}
+							AND = {
+								FROM = { has_variable = AssocRegion }
+								check_variable = { FROM.AssocRegion = TNO_admin_title_map_mode_selected_state:AssocRegion }
+								check_variable = { global.TNO_admin_title_map_mode_config = 3 }
+							}
+							AND = {
+								FROM = { has_variable = AssocRegion2 }
+								check_variable = { FROM.AssocRegion2 = TNO_admin_title_map_mode_selected_state:AssocRegion2 }
+								check_variable = { global.TNO_admin_title_map_mode_config = 4 }
+							}
+							AND = {
+								FROM = { has_variable = SubAdminTitle }
+								check_variable = { FROM.SubAdminTitle = TNO_admin_title_map_mode_selected_state:SubAdminTitle }
+								check_variable = { global.TNO_admin_title_map_mode_config = 5 }
+							}
+							AND = {
+								FROM = { has_variable = SubAdminTitle }
+								check_variable = { FROM.SubAdminTitle = TNO_admin_title_map_mode_selected_state:SubAdminTitle }
+								FROM = { is_controlled_by = event_target:TNO_admin_title_map_mode_selected_state_owner }
+								check_variable = { global.TNO_admin_title_map_mode_config = 6 }
+							}
+						}
+					}
+					set_temp_variable = { red = 0.401 }
+					set_temp_variable = { green = 0.897 }
+					set_temp_variable = { blue = 0.875 }
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								FROM = { has_variable = SubAdminTitle }
+								FROM = { NOT = { has_variable = AdminTitle } }
+								check_variable = { FROM.SubAdminTitle = TNO_admin_title_map_mode_selected_state:AdminTitle }
+								check_variable = { global.TNO_admin_title_map_mode_config = 1 }
+							}
+							AND = {
+								FROM = { has_variable = SubAdminTitle }
+								FROM = { NOT = { has_variable = AdminTitle } }
+								check_variable = { FROM.SubAdminTitle = TNO_admin_title_map_mode_selected_state:AdminTitle }
+								FROM = { is_controlled_by = event_target:TNO_admin_title_map_mode_selected_state_owner }
+								check_variable = { global.TNO_admin_title_map_mode_config = 2 }
+							}
+							AND = {
+								FROM = { has_variable = AssocRegion2 }
+								check_variable = { FROM.AssocRegion2 = TNO_admin_title_map_mode_selected_state:AssocRegion }
+								check_variable = { global.TNO_admin_title_map_mode_config = 3 }
+							}
+							AND = {
+								FROM = { has_variable = AssocRegion }
+								check_variable = { FROM.AssocRegion = TNO_admin_title_map_mode_selected_state:AssocRegion2 }
+								check_variable = { global.TNO_admin_title_map_mode_config = 4 }
+							}
+							AND = {
+								FROM = { has_variable = AdminTitle }
+								FROM = { NOT = { has_variable = SubAdminTitle } }
+								check_variable = { FROM.AdminTitle = TNO_admin_title_map_mode_selected_state:SubAdminTitle }
+								check_variable = { global.TNO_admin_title_map_mode_config = 5 }
+							}
+							AND = {
+								FROM = { has_variable = AdminTitle }
+								FROM = { NOT = { has_variable = SubAdminTitle } }
+								check_variable = { FROM.AdminTitle = TNO_admin_title_map_mode_selected_state:SubAdminTitle }
+								FROM = { is_controlled_by = event_target:TNO_admin_title_map_mode_selected_state_owner }
+								check_variable = { global.TNO_admin_title_map_mode_config = 6 }
+							}
+						}
+					}
+					set_temp_variable = { red = 0.331 }
+					set_temp_variable = { green = 0.741 }
+					set_temp_variable = { blue = 0.722 }
+				}
+				else = {
+					set_temp_variable = { red = 0.5 }
+					set_temp_variable = { green = 0.5 }
+					set_temp_variable = { blue = 0.5 }
+				}
+			}
+			thickness = no
+			targets = { target_array = global.states }
+		}
+
+		bottom = { type = none }
+
+		far_text = none
+		near_text = none
+
+		update_daily = no
+	}
+}

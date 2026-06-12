@@ -1,0 +1,445 @@
+TNO_ARG_FDP_Estates_Setup = {
+	clear_array = TNO_ARG_FDP_Estates_Opinion
+	clear_array = TNO_ARG_FDP_Estates_Influence
+	set_variable = { TNO_ARG_FDP_Flooring = 25 }
+	add_to_array = { TNO_ARG_FDP_Estates_Opinion = 19 } #syndicates
+	add_to_array = { TNO_ARG_FDP_Estates_Opinion = 78 } #church
+	add_to_array = { TNO_ARG_FDP_Estates_Opinion = 82 } #big bussynesses
+	add_to_array = { TNO_ARG_FDP_Estates_Opinion = 48 } #media
+	add_to_array = { TNO_ARG_FDP_Estates_Opinion = 26 } #military
+	add_to_array = { TNO_ARG_FDP_Estates_Opinion = 12 } #el campo
+	add_to_array = { TNO_ARG_FDP_Estates_Influence = 51 } #syndicates
+	add_to_array = { TNO_ARG_FDP_Estates_Influence = 33 } #church
+	add_to_array = { TNO_ARG_FDP_Estates_Influence = 60 } #big bussynesses
+	add_to_array = { TNO_ARG_FDP_Estates_Influence = 74 } #media
+	add_to_array = { TNO_ARG_FDP_Estates_Influence = 93 } #military
+	add_to_array = { TNO_ARG_FDP_Estates_Influence = 82 } #el campo
+	set_variable = { Previous_Inflation = clamped_inflation_rate }
+
+	TNO_ARG_FDP_Update_Estates = yes
+
+	add_dynamic_modifier = { modifier = ARG_estates}
+}
+
+TNO_ARG_FDP_Estates_Effect_Calc = {
+	for_each_loop = {
+		array = TNO_ARG_FDP_Estates_Opinion
+		clamp_variable = {
+			var = TNO_ARG_FDP_Estates_Opinion^i
+			max = 100
+			min = 0
+		}
+	}
+	for_each_loop = {
+		array = TNO_ARG_FDP_Estates_Influence
+		clamp_variable = {
+			var = TNO_ARG_FDP_Estates_Influence^i
+			max = 100
+			min = 0
+		}
+	}
+
+
+	clear_temp_array = Estate_Effects_Temp_Array
+	set_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Opinion^0 }
+	subtract_from_temp_variable = { Estate0_temp = 50 }
+	multiply_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Influence^0 }
+	divide_temp_variable = { Estate0_temp = 1000 }
+	add_to_temp_array = {
+				array = Estate_Effects_Temp_Array
+				value = Estate0_temp
+			}
+	set_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Opinion^1 }
+	subtract_from_temp_variable = { Estate0_temp = 50 }
+	multiply_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Influence^1 }
+	divide_temp_variable = { Estate0_temp = 1000 }
+	add_to_temp_array = {
+				array = Estate_Effects_Temp_Array
+				value = Estate0_temp
+			}
+	set_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Opinion^2 }
+	subtract_from_temp_variable = { Estate0_temp = 50 }
+	multiply_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Influence^2 }
+	divide_temp_variable = { Estate0_temp = 1000 }
+	add_to_temp_array = {
+				array = Estate_Effects_Temp_Array
+				value = Estate0_temp
+			}
+	set_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Opinion^3 }
+	subtract_from_temp_variable = { Estate0_temp = 50 }
+	multiply_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Influence^3 }
+	divide_temp_variable = { Estate0_temp = 1000 }
+	add_to_temp_array = {
+				array = Estate_Effects_Temp_Array
+				value = Estate0_temp
+			}
+	set_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Opinion^4 }
+	subtract_from_temp_variable = { Estate0_temp = 50 }
+	multiply_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Influence^4 }
+	divide_temp_variable = { Estate0_temp = 1000 }
+	add_to_temp_array = {
+				array = Estate_Effects_Temp_Array
+				value = Estate0_temp
+			}
+	set_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Opinion^5 }
+	subtract_from_temp_variable = { Estate0_temp = 50 }
+	multiply_temp_variable = { Estate0_temp = TNO_ARG_FDP_Estates_Influence^5 }
+	divide_temp_variable = { Estate0_temp = 1000 }
+	add_to_temp_array = {
+				array = Estate_Effects_Temp_Array
+				value = Estate0_temp
+			}
+	set_variable = { TNO_ARG_FDP_Estate_Decline = 0 }
+	for_each_loop = {
+		array = Estate_Effects_Temp_Array
+		value = v
+		index = i
+		add_to_variable = { TNO_ARG_FDP_Estate_Decline = v }
+	}
+}
+
+
+TNO_ARG_FDP_Update_Estates = {
+
+	TNO_ARG_FDP_Estates_Effect_Calc = yes
+	#syndicates
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^0 < 33}
+		}
+
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^0 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^0 < 66}
+		}
+
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^0 > 66}
+		}
+
+	}
+
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^0 < 33}
+		}
+		multiply_variable = {ARG_status_dynmod_stab = 0.33}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^0 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Influence^0 < 66}
+		}
+
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^0 > 66}
+		}
+
+	}
+	#church
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^1 < 33}
+		}
+		set_variable = {ARG_status_dynmod_stab = -0.1}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^1 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^1 < 66}
+		}
+		set_variable = {ARG_status_dynmod_stab = 0}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^1 > 66}
+		}
+		set_variable = {ARG_status_dynmod_stab = 0.1}
+	}
+
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^1 < 33}
+		}
+		multiply_variable = {ARG_status_dynmod_stab = 0.33}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^1 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Influence^1 < 66}
+		}
+		multiply_variable = {ARG_status_dynmod_stab = 0.66}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^1 > 66}
+		}
+		multiply_variable = {ARG_status_dynmod_stab = 1}
+	}
+
+	#big business
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^2 < 33}
+		}
+
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^2 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^2 < 66}
+		}
+
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^2 > 66}
+		}
+
+	}
+
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^2 < 33}
+		}
+
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^2 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Influence^2 < 66}
+		}
+
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^2 > 66}
+		}
+
+	}
+
+	#media
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^3 < 33}
+		}
+		set_variable = {ARG_status_dynmod_pp = -0.1}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^3 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^3 < 66}
+		}
+		set_variable = {ARG_status_dynmod_pp = 0}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^3 > 66}
+		}
+		set_variable = {ARG_status_dynmod_pp = 0.1}
+	}
+
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^3 < 33}
+		}
+		multiply_variable = {ARG_status_dynmod_pp = 0.33}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^3 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Influence^3 < 66}
+		}
+		multiply_variable = {ARG_status_dynmod_pp = 0.66}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^3 > 66}
+		}
+		multiply_variable = {ARG_status_dynmod_pp = 1}
+	}
+
+	#military
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^4 < 33}
+		}
+		set_variable = {ARG_status_dynmod_warsup = -0.1}
+		set_variable = {ARG_status_dynmod_army_exp = -0.1}
+		set_variable = {ARG_status_dynmod_comm_power = -0.1}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^4 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^4 < 66}
+		}
+		set_variable = {ARG_status_dynmod_warsup = 0}
+		set_variable = {ARG_status_dynmod_army_exp = 0}
+		set_variable = {ARG_status_dynmod_comm_power = 0}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^4 > 66}
+		}
+		set_variable = {ARG_status_dynmod_warsup = 0.1}
+		set_variable = {ARG_status_dynmod_army_exp = 0.1}
+		set_variable = {ARG_status_dynmod_comm_power = 0.1}
+	}
+
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^4 < 33}
+		}
+		multiply_variable = {ARG_status_dynmod_warsup = 0.33}
+		multiply_variable = {ARG_status_dynmod_army_exp = 0.33}
+		multiply_variable = {ARG_status_dynmod_comm_power = 0.33}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^4 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Influence^4 < 66}
+		}
+		multiply_variable = {ARG_status_dynmod_warsup = 0.66}
+		multiply_variable = {ARG_status_dynmod_army_exp = 0.66}
+		multiply_variable = {ARG_status_dynmod_comm_power = 0.66}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^4 > 66}
+		}
+		multiply_variable = {ARG_status_dynmod_warsup = 1}
+		multiply_variable = {ARG_status_dynmod_army_exp = 1}
+		multiply_variable = {ARG_status_dynmod_comm_power = 1}
+	}
+
+	#el campo
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^5 < 33}
+		}
+		set_variable = {ARG_status_dynmod_gdp_growth = -0.1}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^5 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^5 < 66}
+		}
+		set_variable = {ARG_status_dynmod_gdp_growth = 0}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Opinion^5 > 66}
+		}
+		set_variable = {ARG_status_dynmod_gdp_growth = 0.1}
+	}
+
+	if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^5 < 33}
+		}
+		multiply_variable = {ARG_status_dynmod_gdp_growth = 0.33}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^5 > 33}
+			check_variable = { TNO_ARG_FDP_Estates_Influence^5 < 66}
+		}
+		multiply_variable = {ARG_status_dynmod_gdp_growth = 0.66}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_ARG_FDP_Estates_Influence^5 > 66}
+		}
+		multiply_variable = {ARG_status_dynmod_gdp_growth = 1}
+	}
+
+}
+
+TNO_ARG_FDP_Add_Debug_InfOp = {
+	for_each_loop = {
+		array = TNO_ARG_FDP_Estates_Opinion
+		add_to_variable = {TNO_ARG_FDP_Estates_Opinion^i = 10}
+	}
+	for_each_loop = {
+		array = TNO_ARG_FDP_Estates_Influence
+		add_to_variable = {TNO_ARG_FDP_Estates_Influence^i = 10}
+	}
+	TNO_ARG_FDP_Update_Estates = yes
+}
+
+TNO_ARG_FDP_Remove_Debug_InfOp = {
+	for_each_loop = {
+		array = TNO_ARG_FDP_Estates_Opinion
+		add_to_variable = {TNO_ARG_FDP_Estates_Opinion^i = -10}
+	}
+	for_each_loop = {
+		array = TNO_ARG_FDP_Estates_Influence
+		add_to_variable = {TNO_ARG_FDP_Estates_Influence^i = -10}
+	}
+	TNO_ARG_FDP_Update_Estates = yes
+}
+
+TNO_ARG_FDP_Lira_Decline_Calc = {
+	if = {
+		limit = {
+			check_variable = { clamped_inflation_rate > Previous_Inflation }
+		}
+		set_temp_variable = { current_temp_inflation = clamped_inflation_rate }
+		divide_variable = { current_temp_inflation = Previous_Inflation  }
+		multiply_variable = { TNO_ARG_FDP_Total_Decline = current_temp_inflation}
+		set_country_flag = when_the_lira_is_collapsed
+	}
+	if = {
+		limit = {
+			check_variable = { clamped_inflation_rate < Previous_Inflation }
+		}
+		set_temp_variable = { current_temp_inflation = Previous_Inflation }
+		divide_variable = { current_temp_inflation = clamped_inflation_rate  }
+		multiply_variable = { TNO_ARG_FDP_Total_Decline = current_temp_inflation }
+		set_country_flag = when_the_lira_is_grand
+	}
+	set_variable = { Previous_Inflation = clamped_inflation_rate }
+}
+
+TNO_ARG_FDP_Flooring_Decline_Calc = {
+	multiply_variable = { TNO_ARG_FDP_Estate_Decline = 10 }
+	round_variable = TNO_ARG_FDP_Estate_Decline
+	divide_variable = { TNO_ARG_FDP_Estate_Decline = 10 }
+	set_variable = { TNO_ARG_FDP_Total_Decline = TNO_ARG_FDP_Estate_Decline }
+	add_to_variable = { TNO_ARG_FDP_Total_Decline = TNO_ARG_FDP_Natural_Decline }
+	#divide_variable = { TNO_ARG_FDP_Total_Decline = 10 }
+	TNO_ARG_FDP_Lira_Decline_Calc = yes
+}
+
+TNO_ARG_FDP_Flooring_Calc = {
+	TNO_ARG_FDP_Estates_Effect_Calc = yes
+	TNO_ARG_FDP_Flooring_Decline_Calc = yes
+	multiply_variable = { TNO_ARG_FDP_Total_Decline = 10 }
+	round_variable = TNO_ARG_FDP_Total_Decline
+	divide_variable = { TNO_ARG_FDP_Total_Decline = 10 }
+	add_to_variable = { TNO_ARG_FDP_Flooring = TNO_ARG_FDP_Total_Decline }
+	clamp_variable = {
+		var = TNO_ARG_FDP_Flooring
+		max = 100
+		min = 0
+	}
+	set_variable = { TNO_ARG_FDP_Chair_Frame = TNO_ARG_FDP_Flooring }
+	divide_variable = { TNO_ARG_FDP_Chair_Frame = 5 }
+	round_variable = TNO_ARG_FDP_Chair_Frame
+}
+
+
+ARG_Estate_Opinion_Add = {
+	add_to_variable = { TNO_ARG_FDP_Estates_Opinion^TNO_ARG_FDP_Chosen_Estate = TNO_ARG_FDP_Estates_Opinion_Value }
+	custom_effect_tooltip = ARG_Estate_Opinion_Add_tt
+}
+ARG_Estate_Influence_Add = {
+	add_to_variable = { TNO_ARG_FDP_Estates_Influence^TNO_ARG_FDP_Chosen_Estate = TNO_ARG_FDP_Estates_Opinion_Value }
+	custom_effect_tooltip = ARG_Estate_Influence_Add_tt
+}

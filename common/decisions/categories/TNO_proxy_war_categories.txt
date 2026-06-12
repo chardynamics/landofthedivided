@@ -1,0 +1,68 @@
+####Proxy war
+####War
+
+GER_south_african_war_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	picture = GFX_decision_image_GER_political_situation
+
+	allowed = {
+		original_tag = GER
+	}
+	visible = {
+		has_global_flag = south_african_war_happening
+		has_global_flag = german_civil_war_end
+		NOT = {
+			has_global_flag = german_civil_war_bormannvic
+			has_global_flag = german_civil_war_speervic
+			has_global_flag = german_civil_war_heydrichvic
+		}
+	}
+}
+
+
+
+
+
+
+USA_south_african_war_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+
+	allowed = {
+		original_tag = USA
+		always = no # can be removed if the gui is good
+	}
+
+	visible = {
+		has_country_flag = USA_In_The_SAF_WAR
+		has_global_flag = south_african_war_happening
+	}
+}
+
+BRA_SAW_weapons_category = {
+	icon = GFX_decision_BRA_decision_category_saw
+
+	allowed = {
+		original_tag = BRA
+		always = no
+	}
+	visible = {
+		has_country_flag = BRA_south_african_war
+	}
+}
+
+USA_south_african_war_domestic_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+
+	allowed = {
+		original_tag = USA
+		always = no # can be removed if the gui is good
+	}
+
+	visible = {
+		has_country_flag = USA_In_The_SAF_WAR
+		has_global_flag = south_african_war_happening
+	}
+}

@@ -1,0 +1,12 @@
+focus_tree = {
+	id = SPS_War_Tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SPS
+		}
+	}
+	default = no
+	shared_focus = SPS_the_burning_peninsula
+}

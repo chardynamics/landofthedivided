@@ -162,18 +162,6 @@ ideas = {
 				misc_costs_modifier = 0.15
 			}
 		}
-		IBR_6002_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_6002_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.025
-			}
-		}
-		IBR_610_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_610_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.07
-			}
-		}
 		IBR_693_misc_costs = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_693_misc_costs" }
 			modifier = {
@@ -208,12 +196,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_assist_the_farmers_misc_costs" }
 			modifier = {
 				misc_costs_modifier = 0.11
-			}
-		}
-		IBR_prioritize_the_farmers_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_prioritize_the_farmers_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.08
 			}
 		}
 		IRE_equal_growth_plan_misc_income = {
@@ -769,12 +751,6 @@ ideas = {
 				misc_costs_modifier = 0.01
 			}
 		}
-		attract_canadian_investors_iberia_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea attract_canadian_investors_iberia_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.015
-			}
-		}
 		australia_53_misc_income = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea australia_53_misc_income" }
 			modifier = {
@@ -863,180 +839,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea chase_eco_11_c_misc_costs" }
 			modifier = {
 				misc_costs_modifier = -0.1
-			}
-		}
-		economics_majority_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea economics_majority_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.012
-			}
-		}
-		economics_natives_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea economics_natives_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.004
-			}
-		}
-		economics_settlers_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea economics_settlers_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.007
-			}
-		}
-		iceland_fishing_iberia_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea iceland_fishing_iberia_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.004
-			}
-		}
-		invest_bulgaria_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_bulgaria_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.022
-			}
-		}
-		invest_bulgaria_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_bulgaria_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.007
-			}
-		}
-		invest_cuba_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_cuba_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.03
-			}
-		}
-		invest_dominican_republic_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_dominican_republic_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.012
-			}
-		}
-		invest_andes_region_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_andes_region_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.05
-			}
-		}
-		invest_brazil_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_brazil_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.06
-			}
-		}
-		invest_haiti_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_haiti_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.006
-			}
-		}
-		invest_hungary_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_hungary_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.025
-			}
-		}
-		invest_hungary_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_hungary_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.007
-			}
-		}
-		invest_kaukasien_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_kaukasien_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.023
-			}
-		}
-		invest_kaukasien_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_kaukasien_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.011
-			}
-		}
-		invest_moskowien_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_moskowien_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.05
-			}
-		}
-		invest_moskowien_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_moskowien_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.025
-			}
-		}
-		invest_ostland_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_ostland_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.032
-			}
-		}
-		invest_ostland_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_ostland_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.011
-			}
-		}
-		invest_serbia_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_serbia_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.009
-			}
-		}
-		invest_poland_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_poland_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.03
-			}
-		}
-		invest_poland_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_poland_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.01
-			}
-		}
-		invest_romania_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_romania_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.038
-			}
-		}
-		invest_romania_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_romania_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.021
-			}
-		}		
-		invest_slovakia_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_slovakia_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.011
-			}
-		}
-		invest_southern_cone_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_southern_cone_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.05
-			}
-		}
-		invest_southern_cone_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_southern_cone_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.02
-			}
-		}
-		invest_ukraine_decision_misc_costs = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_ukraine_decision_misc_costs" }
-			modifier = {
-				misc_costs_modifier = 0.04
-			}
-		}
-		invest_ukraine_decision_misc_income = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea invest_ukraine_decision_misc_income" }
-			modifier = {
-				misc_income_modifier = 0.015
 			}
 		}
 		japkaya_182_misc_income = {

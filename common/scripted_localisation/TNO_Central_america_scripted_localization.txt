@@ -1,0 +1,23 @@
+defined_text = {
+	name = Get_HON_PNH_Alignment_tt
+
+	text = {
+		trigger = {
+			HON = { check_variable = { HON_PNH_Alignment < 4 } }
+		}
+		localization_key = HON_PNH_Alignment_low_tt
+	}
+	text = {
+		trigger = {
+			HON = { check_variable = { HON_PNH_Alignment > 3 } }
+			HON = { check_variable = { HON_PNH_Alignment < 7 } }
+		}
+		localization_key = HON_PNH_Alignment_med_tt
+	}
+	text = {
+		trigger = {
+			HON = { check_variable = { HON_PNH_Alignment > 6 } }
+		}
+		localization_key = HON_PNH_Alignment_high_tt
+	}
+}

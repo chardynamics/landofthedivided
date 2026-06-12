@@ -1,0 +1,240 @@
+ideas = {
+	country = {
+		Iberian_Wars_dummy_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_dummy_idea" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_civil_war
+
+			modifier = {
+			}
+		}
+		Iberian_Wars_Reconstruction_idea_A = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_Reconstruction_idea_A" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_Hell_Neighbor
+
+			modifier = {
+				war_support_factor = -0.15
+				consumer_goods_use_modifier = 0.2
+				gdp_growth_modifier = 0.5
+				production_speed_buildings_factor = 0.1
+				industry_free_repair_factor = 0.2
+			}
+		}
+		Iberian_Wars_Reconstruction_idea_B = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_Reconstruction_idea_B" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_Ashes_and_Granite
+
+			modifier = {
+				war_support_factor = -0.2
+				consumer_goods_use_modifier = 0.35
+				gdp_growth_modifier = 0.5
+				production_speed_buildings_factor = 0.05
+				industry_free_repair_factor = 0.2
+			}
+		}
+		Iberian_Wars_Reconstruction_idea_C = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_Reconstruction_idea_C" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_Ashes_and_Ashes
+
+			modifier = {
+				war_support_factor = -0.25
+				consumer_goods_use_modifier = 0.5
+				gdp_growth_modifier = 0.5
+				production_speed_buildings_factor = -0.05
+				industry_free_repair_factor = 0.2
+			}
+		}
+		Iberian_Wars_Reconstruction_idea_D = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_Reconstruction_idea_D" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_The_Crippled_Phoenix
+
+			modifier = {
+				war_support_factor = -0.35
+				consumer_goods_use_modifier = 0.75
+				gdp_growth_modifier = 2.5
+				production_speed_buildings_factor = -0.15
+				industry_free_repair_factor = 0.2
+			}
+		}
+		Iberian_Wars_American_recovery_plan_portugal_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_American_recovery_plan_portugal_idea" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_american_trade
+
+			modifier = {
+				gdp_growth_modifier = 1.5
+				inflation_rate_modifier = -0.05
+				production_speed_buildings_factor = 0.2
+				misc_income_modifier = 0.075
+			}
+		}
+		Iberian_Wars_no_american_restriction_portugal_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_no_american_restriction_portugal_idea" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_american_investment
+
+			modifier = {
+				gdp_growth_modifier = 0.5
+				inflation_rate_modifier = -0.02
+				production_speed_buildings_factor = 0.05
+				misc_income_modifier = 0.025
+			}
+		}
+		Iberian_Wars_american_military_aid_portugal_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_american_military_aid_portugal_idea" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_american_advisors
+
+			modifier = {
+				training_time_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.05
+				command_power_gain = 0.05
+				supply_consumption_factor = -0.1
+			}
+		}
+		Iberian_Wars_no_ofn_personnel_portugal_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_no_ofn_personnel_portugal_idea" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_anti_partisan_tactics
+
+			modifier = {
+			}
+		}
+		Iberian_Wars_military_restrictions_third_party_portugal_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_military_restrictions_third_party_portugal_idea" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_broken_rifle
+
+			modifier = {
+				conscription_factor = -0.3
+				training_time_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.15
+			}
+		}
+		Iberian_Wars_military_restrictions_spain_portugal_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_military_restrictions_spain_portugal_idea" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_broken_rifle
+
+			modifier = {
+				conscription_factor = -0.5
+				training_time_factor = 0.25
+				production_factory_efficiency_gain_factor = -0.3
+			}
+		}
+		Iberian_Wars_reparations_portugal_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_reparations_portugal_idea" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_undersupplied_army
+
+			modifier = {
+				gdp_growth_modifier = -0.75
+			}
+		}
+		Iberian_Wars_reparations_spain_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_reparations_spain_idea" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_well_supplied_army
+
+			modifier = {
+				gdp_growth_modifier = 0.75
+			}
+		}
+	}
+	hidden_ideas = {
+		Iberian_Wars_Compliance_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Iberian_Wars_Compliance_idea" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_freedom_or_death
+
+			modifier = {
+				starting_compliance = 0.35
+				compliance_gain = 0.05
+				compliance_growth = 0.15
+			}
+		}
+	}
+}

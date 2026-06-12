@@ -1,0 +1,303 @@
+towed_artillery_firepower = { #Buffing Towed Artillery & Support Companies
+	track = combat_support
+	name = SUBDOCTRINE_TOWED_ARTILLERY_FIREPOWER
+	description = SUBDOCTRINE_TOWED_ARTILLERY_FIREPOWER_DESC
+	icon = GFX_wartime_industry_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		OR = {
+			has_doctrine = strategic_warfare
+			has_doctrine = defensive_warfare
+		}
+	}
+
+	ai_will_do = {
+		base = 5 #Default, thus lower base AI weight
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = artillery
+			name = artillery
+		}
+	}
+	category_line_artillery = {
+		default_morale = 0.1
+		max_organisation = 5
+	}
+
+	rewards = {
+		tried_and_true = {
+			category_line_artillery = {
+				soft_attack = 0.05
+				breakthrough = 0.05
+				ap_attack = 0.1
+			}
+		}
+		modular_carriages = {
+			category_line_artillery = {
+				breakthrough = 0.1
+				default_morale = 0.15
+			}
+			artillery_brigade = {
+				maximum_speed = 0.2
+			}
+			mot_artillery_brigade = {
+				maximum_speed = 0.05
+			}
+		}
+		diy_fortifcations = {
+			category_line_artillery = {
+				entrenchment = 1
+				max_organisation = 5
+				defense = 0.15
+			}
+		}
+		improved_cluster_warheads = {
+			category_line_artillery = {
+				soft_attack = 0.05
+				hard_attack = 0.05
+				defense = 0.1
+			}
+		}
+		anyplace_anywhere_anytime = {
+			coordination_bonus = 0.15
+			enable_tactic = tactic_overwhelming_fire
+			category_line_artillery = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+				equipment_capture_factor = 0.01
+			}
+			category_recon = {
+				defense = 0.15
+				breakthrough = 0.15
+				recon = 2
+			}
+		}
+	}
+}
+
+sp_artillery_firepower = { #Buffing SP Artillery & Support Companies
+	track = combat_support
+	name = SUBDOCTRINE_SP_ARTILLERY_FIREPOWER
+	description = SUBDOCTRINE_SP_ARTILLERY_FIREPOWER_DESC
+	icon = GFX_assault_concentration_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		has_doctrine = maneuver_warfare
+	}
+
+	ai_will_do = {
+		base = 5 #Default, thus lower base AI weight
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = armor
+			name = armor
+		}
+	}
+	category_sp_artillery = {
+		default_morale = 0.1
+		max_organisation = 5
+	}
+
+	rewards = {
+		top_guns = {
+			equipment_conversion_speed = 0.1
+			category_sp_artillery = {
+				max_organisation = 5
+			}
+			maintenance_company = {
+				max_organisation = 10
+				default_morale = 0.1
+				reliability_factor = 0.1
+			}
+		}
+		anchored = {
+			category_sp_artillery = {
+				breakthrough = 0.05
+				defense = 0.1
+				entrenchment = 1
+			}
+		}
+		rock_paper_scissors = {
+			enable_tactic = tactic_overwhelming_fire
+			category_sp_artillery = {
+				soft_attack = 0.05
+				hard_attack = 0.1
+			}
+		}
+		advanced_firing_positions = {
+			category_sp_artillery = {
+				soft_attack = 0.05
+				breakthrough = 0.1
+				defense = -0.1
+			}
+		}
+		shoot_and_scoot = {
+			coordination_bonus = 0.15
+			category_sp_artillery = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+				maximum_speed = 0.15
+				defense = 0.1
+			}
+		}
+	}
+}
+
+alternative_artillery_firepower = { #Buffing Anti-Tank, Anti-Air & Support Companies
+	track = combat_support
+	name = SUBDOCTRINE_ALTERNATIVE_ARTILLERY_FIREPOWER
+	description = SUBDOCTRINE_ALTERNATIVE_ARTILLERY_FIREPOWER_DESC
+	icon = GFX_support_companies_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		OR = {
+			has_doctrine = unconventional_warfare
+			has_doctrine = defensive_warfare
+		}
+	}
+
+	ai_will_do = {
+		base = 5 #Default, thus lower base AI weight
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+			name = infantry_weapons
+		}
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = anti_air_tech
+			name = anti_air_tech
+		}
+	}
+	category_antitank = {
+		default_morale = 0.1
+		max_organisation = 10
+	}
+	category_antiair = {
+		default_morale = 0.1
+		max_organisation = 10
+	}
+
+	rewards = {
+		defensive_artillery_tactics = {
+			enable_tactic = tactic_infantry_charge
+			initiative_factor = 0.05
+			infantry = {
+				defense = 0.05
+			}
+			category_antitank = {
+				breakthrough = 0.1
+				supply_consumption_factor = -0.25
+			}
+		}
+		heavy_mortars = {
+			infantry = {
+				breakthrough = 0.1
+				soft_attack = 0.05
+				maximum_speed = -0.05
+			}
+		}
+		sky_denial_tactics = {
+			category_antiair = { # Couldn't find the effects
+				entrenchment = 1
+				max_organisation = 5
+				defense = 0.15
+			}
+		}
+		tank_hunting_manuals = {
+			category_antitank = {
+				soft_attack = 0.05
+				hard_attack = 0.1
+				defense = 0.1
+			}
+		}
+		pivotal_barrages = {
+			coordination_bonus = 0.15
+			category_artillery = {
+				breakthrough = 0.2
+				defense = 0.05
+				max_organisation = 5
+			}
+			category_antitank = {
+				breakthrough = 0.2
+				defense = 0.05
+				max_organisation = 5
+			}
+			category_antiair = {
+				breakthrough = 0.2
+				defense = 0.05
+				max_organisation = 5
+			}
+		}
+	}
+}
+
+aerial_artillery_firepower = { #Bombing and CAS Boost
+	track = combat_support
+	name = SUBDOCTRINE_AERIAL_ARTILLERY_FIREPOWER
+	description = SUBDOCTRINE_AERIAL_ARTILLERY_FIREPOWER_DESC
+	icon = GFX_preemptive_strike_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		NOT = { has_doctrine = unconventional_warfare }
+	}
+
+	ai_will_do = {
+		base = 0 #Default, thus lower base AI weight
+	}
+	air_mission_efficiency = 0.1
+	air_mission_xp_gain_factor = 0.15
+
+	rewards = {
+		who_needs_land = {
+			equipment_bonus = {
+				CAS_equipment = {
+					air_ground_attack = 0.15
+				}
+				tactical_bomber = {
+					air_ground_attack = 0.15
+				}
+			}
+		}
+	}
+}
+##category_artillery
+#artillery
+#artillery_brigade
+#mot_artillery_brigade
+
+##category_sp_artillery
+#light_sp_artillery_brigade
+#apc_sp_artillery_brigade
+#sp_artillery_brigade
+
+##category_antitank
+##category_antiair

@@ -1,0 +1,836 @@
+﻿add_namespace = armenia
+
+country_event = { #Armenia Intro for Turkey #fired in turkey on_action
+	id = armenia.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.0" }
+	title = armenia.0.t
+	desc = armenia.0.d
+	picture = GFX_report_event_TUR_mount_ararat
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = armenia.0.a
+		hidden_effect = {
+			country_event = { id = armenia.100 days = 1199 } #Should be April 4, 1965 lol
+		}
+	}
+}
+
+country_event = { #Yakov Zarobyan censored for discussing recognition of the Armenian genocide
+	id = armenia.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.100" }
+	title = armenia.100.t
+	desc = armenia.100.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.100.a
+		hidden_effect = { country_event = { id = armenia.101 days = 4 } }
+	}
+}
+
+country_event = { #Other figures join Zarobyan
+	id = armenia.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.101" }
+	title = armenia.101.t
+	desc = armenia.101.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.101.a
+		hidden_effect = { country_event = { id = armenia.102 days = 10 } }
+	}
+}
+
+country_event = { #Protest in Yerevan in support of recognition
+	id = armenia.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.102" }
+	title = armenia.102.t
+	desc = armenia.102.d
+	picture = GFX_report_event_TUR_yerevan_protests
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.102.a
+		country_event = { id = armenia.103 days = 10 }
+		hidden_effect = { country_event = { id = armenia.127 days = 18 } }
+	}
+}
+
+country_event = { #Şellefyan condemns this "subversive" action
+	id = armenia.103
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.103" }
+	title = armenia.103.t
+	desc = armenia.103.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.103.a
+		country_event = { id = armenia.104 days = 5 }
+	}
+}
+
+country_event = { #Protests in Yerevan turn against Şellefyan, and out of control
+	id = armenia.104
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.104" }
+	title = armenia.104.t
+	desc = armenia.104.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.104.a
+		country_event = { id = armenia.105 days = 10 }
+	}
+}
+
+country_event = { #Zakar Tarver asks to replace Sellefyan
+	id = armenia.105
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.105" }
+	title = armenia.105.t
+	desc = armenia.105.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #Sure, let's remove him
+		name = armenia.105.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARM_FATE_OF_SELLEFYAN
+					option = ARM_FATE_OF_SELLEFYAN_COLLAPSE
+				}
+			}
+		}
+		country_event = { id = armenia.106 days = 10 }
+	}
+	option = { #No, why?
+		name = armenia.105.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARM_FATE_OF_SELLEFYAN
+					option = ARM_FATE_OF_SELLEFYAN_OUSTED
+				}
+			}
+		}
+		custom_effect_tooltip = ARM_sellefyan_kept_tt
+		hidden_effect = { country_event = { id = armenia.129 days = 5 } }
+	}
+}
+
+country_event = { #took deal- sellefyan ousted
+	id = armenia.106
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.106" }
+	title = armenia.106.t
+	desc = armenia.106.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.106.a
+		country_event = { id = armenia.128 }
+	}
+}
+
+country_event = { #Şellefyan goes dictator; Ankara decides to contact him
+	id = armenia.107
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.107" }
+	title = armenia.107.t
+	desc = armenia.107.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #Let Şellefyan cook
+		name = armenia.107.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARM_FATE_OF_SELLEFYAN
+					option = ARM_FATE_OF_SELLEFYAN_COLLAPSE
+				}
+			}
+		}
+		country_event = { id = armenia.109 days = 5 }
+	}
+	option = { #Force him resign
+		name = armenia.107.b
+		ai_chance = {
+			base = 1
+		}
+		country_event = { id = armenia.130 days = 5 }
+	}
+}
+
+country_event = { #An interim government is set
+	id = armenia.108
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.108" }
+	title = armenia.108.t
+	desc = armenia.108.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.108.a
+		custom_effect_tooltip = ARM_elections_incoming_tt
+		hidden_effect = {
+			country_event = { id = armenia.111 days = 250 }
+			ARM = {
+				country_event = { id = armenia.112 days = 300 }
+				add_popularity = { ideology = liberalism popularity = -0.10 }
+			}
+
+		}
+	}
+}
+
+country_event = { #Şellefyan implodes on his own, after you stand by him
+	id = armenia.109
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.109" }
+	title = armenia.109.t
+	desc = armenia.109.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.109.a
+		custom_effect_tooltip = ARM_sellefyan_removed_by_ana_tt
+		hidden_effect = { country_event = { id = armenia.110 days = 5 } }
+	}
+}
+
+country_event = { #TSK deposes Şellefyan, transfers power to interim government
+	id = armenia.110
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.110" }
+	title = armenia.110.t
+	desc = armenia.110.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.110.a
+		custom_effect_tooltip = ARM_sellefyan_resigns_tt
+		ARM = {
+			remove_ideas = ARM_king_of_tin_cans
+			hidden_effect = {
+				remove_country_leader_role = {
+					character = ARM_Migirdic_Sellefyan
+					ideology = despotism_civilian_dictatorship_subtype
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = ARM_transitional_government_long
+					name = ARM_transitional_government
+				}
+				#promote_character = {
+				#	character = ARM_Parliament
+				#	ideology = despotism_interim_government_subtype
+				#}
+				add_country_leader_role = {
+					character = ARM_Zakar_Tarver
+					promote_leader = yes
+					country_leader = {
+						ideology = despotism_interim_government_subtype
+					}
+				}
+				add_popularity = { ideology = despotism popularity = -0.40 }
+			}
+		}
+
+		country_event = { id = armenia.131 days = 10 }
+	}
+}
+
+country_event = { #Turkish Meddling in Armenian Elections?
+	id = armenia.111
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.111" }
+	title = armenia.111.t
+	desc = armenia.111.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #Sure, make sure our guy wins
+		name = armenia.111.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				AND = {
+					OR = {
+						has_game_rule = {
+							rule = ARM_1966_ELECTION
+							option = ARM_1966_ELECTION_LIBCON
+						}
+						has_game_rule = {
+							rule = ARM_1966_ELECTION
+							option = ARM_1966_ELECTION_SOC
+						}
+					}
+					TUR = { NOT = { has_country_leader_ideology = despotism_radical_kemalism_subtype } }
+				}
+			}
+		}
+		custom_effect_tooltip = ARM_elections_rigged_tt
+		ARM = { set_country_flag = ARM_Tarver_wins }
+		#maybe have some political cost?
+		add_political_power = -40
+	}
+	option = { #there is no need
+		name = armenia.111.b
+		trigger = {
+			TUR = { NOT = { has_country_leader_ideology = despotism_radical_kemalism_subtype } }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #FOR ARMENIA 1966 Armenian elections
+	id = armenia.112
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event armenia.112"
+		#country_event = { id = armenia.119 days = 1460 }
+	}
+	title = armenia.112.t
+	desc = armenia.112.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.112.a #Zakar Tarver
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = ARM_Tarver_wins }
+				OR = {
+					has_game_rule = {
+						rule = ARM_1966_ELECTION
+						option = ARM_1966_ELECTION_LIBCON
+					}
+					has_game_rule = {
+						rule = ARM_1966_ELECTION
+						option = ARM_1966_ELECTION_SOC
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+		}
+		set_party_name = { #undo interim govt ideology name
+			ideology = despotism
+			long_name = ARM_despotism_party_long
+			name = ARM_despotism_party
+		}
+		TUR = {
+			country_event = { id = armenia.113 days = 1 }
+			country_event = { id = armenia.116 days = 1095 }
+		}
+	}
+	option = {
+		name = armenia.112.b #Haykaz Khachatryan
+		trigger = {
+			NOT = { has_country_flag = ARM_Tarver_wins }
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARM_1966_ELECTION
+						option = ARM_1966_ELECTION_LIB
+					}
+					has_game_rule = {
+						rule = ARM_1966_ELECTION
+						option = ARM_1966_ELECTION_SOC
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = liberal_conservatism
+			elections_allowed = yes
+		}
+		set_party_name = { #undo interim govt ideology name
+			ideology = despotism
+			long_name = ARM_despotism_party_long
+			name = ARM_despotism_party
+		}
+		TUR = {
+			country_event = { id = armenia.114 days = 1 }
+			country_event = { id = armenia.117 days = 1095 }
+		}
+	}
+	option = {
+		name = armenia.112.c #Karen Demirchyan
+		trigger = {
+			NOT = { has_country_flag = ARM_Tarver_wins }
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARM_1966_ELECTION
+						option = ARM_1966_ELECTION_LIB
+					}
+					has_game_rule = {
+						rule = ARM_1966_ELECTION
+						option = ARM_1966_ELECTION_LIBCON
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = socialist
+			elections_allowed = yes
+		}
+		set_party_name = { #undo interim govt ideology name
+			ideology = despotism
+			long_name = ARM_despotism_party_long
+			name = ARM_despotism_party
+		}
+		TUR = {
+			country_event = { id = armenia.115 days = 1 }
+			country_event = { id = armenia.118 days = 1095 }
+		}
+	}
+}
+
+country_event = { #Turkish Report: Tarver Wins
+	id = armenia.113
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.113" }
+	title = armenia.113.t
+	desc = armenia.113.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.113.a
+
+	}
+}
+country_event = { #Turkish Report: Khachatryan Wins
+	id = armenia.114
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.114" }
+	title = armenia.114.t
+	desc = armenia.114.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.114.a
+
+	}
+}
+country_event = { #Turkish Report: Demirchyan Wins
+	id = armenia.115
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.115" }
+	title = armenia.115.t
+	desc = armenia.115.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.115.a
+
+	}
+}
+
+country_event = { #Turkish Report: 3. year of Tarver
+	id = armenia.116
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.116" }
+	title = armenia.116.t
+	desc = armenia.116.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.116.a
+
+	}
+}
+country_event = { #Turkish Report: 3. year of Khachatryan
+	id = armenia.117
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.117" }
+	title = armenia.117.t
+	desc = armenia.117.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.117.a
+
+	}
+}
+country_event = { #Turkish Report: 3. year of Demirchyan
+	id = armenia.118
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.118" }
+	title = armenia.118.t
+	desc = armenia.118.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.118.a
+
+	}
+}
+
+country_event = { #mid protests flavor- soup
+	id = armenia.127
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.127" }
+	title = armenia.127.t
+	desc = armenia.127.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.127.a
+
+	}
+}
+
+country_event = { #took deal - tarver elected
+	id = armenia.128
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.128" }
+	title = armenia.128.t
+	desc = armenia.128.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.128.a
+
+		custom_effect_tooltip = ARM_elections_incoming_tt
+		hidden_effect = {
+			country_event = { id = armenia.111 days = 250 }
+			ARM = { country_event = { id = armenia.112 days = 300 } }
+		}
+
+		custom_effect_tooltip = ARM_sellefyan_replaced_tt
+		ARM = {
+			remove_ideas = ARM_king_of_tin_cans
+			hidden_effect = {
+				retire_character = ARM_Migirdic_Sellefyan
+
+				set_politics = {
+					ruling_party = liberalism
+					elections_allowed = yes
+				}
+
+				add_popularity = { ideology = paternalism popularity = -0.2 }
+				add_popularity = { ideology = liberalism popularity = 0.1 }
+			}
+		}
+
+	}
+}
+
+country_event = { #didn't take deal - sellefyan sends in army
+	id = armenia.129
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.129" }
+	title = armenia.129.t
+	desc = armenia.129.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.129.a
+
+		custom_effect_tooltip = ARM_sellefyan_became_despotist_tt
+		ARM = {
+			hidden_effect = {
+				add_country_leader_role = {
+					character = ARM_Migirdic_Sellefyan
+					promote_leader = yes
+					country_leader = {
+						ideology = despotism_civilian_dictatorship_subtype
+					}
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = ARM_paternalism_party_long
+					name = ARM_paternalism_party
+				}
+				set_politics = {
+					ruling_party = despotism
+				}
+				set_popularities = {
+					socialist = 6
+					progressivism = 2
+					liberalism = 17
+					liberal_conservatism = 7
+					despotism = 68
+				}
+			}
+		}
+
+		country_event = { id = armenia.107 days = 5 }
+	}
+}
+
+country_event = { #sellefyan betrayed - resigns
+	id = armenia.130
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.130" }
+	title = armenia.130.t
+	desc = armenia.130.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.130.a
+
+		custom_effect_tooltip = ARM_sellefyan_resigns_tt
+		ARM = {
+			remove_ideas = ARM_king_of_tin_cans
+			hidden_effect = {
+				remove_country_leader_role = {
+					character = ARM_Migirdic_Sellefyan
+					ideology = despotism_civilian_dictatorship_subtype
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = ARM_transitional_government_long
+					name = ARM_transitional_government
+				}
+				#promote_character = {
+				#	character = ARM_Parliament
+				#	ideology = despotism_interim_government_subtype
+				#}
+				add_country_leader_role = {
+					character = ARM_Zakar_Tarver
+					promote_leader = yes
+					country_leader = {
+						ideology = despotism_interim_government_subtype
+					}
+				}
+				add_popularity = { ideology = despotism popularity = -0.15 }
+			}
+		}
+
+		hidden_effect = { country_event = { id = armenia.108 days = 5 } }
+	}
+}
+
+country_event = { #armenia spiralling after soft coup
+	id = armenia.131
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.131" }
+	title = armenia.131.t
+	desc = armenia.131.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.131.a
+		custom_effect_tooltip = "maybe have political consequences"
+		add_political_power = -40
+
+		custom_effect_tooltip = ARM_elections_incoming_tt
+		hidden_effect = {
+			country_event = { id = armenia.111 days = 250 }
+			ARM = { country_event = { id = armenia.112 days = 300 } }
+		}
+	}
+}
+
+
+
+
+
+
+#REVOLT EVENTS - OUTDATED SKELETON
+
+country_event = { #Post-Revolt - Insurgents become actual political parties, hold elections
+	id = armenia.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event armenia.1"
+		hidden_effect = {
+			set_party_name = {
+				ideology = communist
+				name = ARM_communisms_back_baby
+				long_name = ARM_communisms_back_baby_long
+			}
+			set_party_name = {
+				ideology = socialist
+				name = ARM_communisms_back_baby
+				long_name = ARM_communisms_back_baby_long
+			}
+			set_party_name = {
+				ideology = despotism
+				name = ARM_paternalism_party
+				long_name = ARM_paternalism_party_long
+			}
+			set_party_name = {
+				ideology = ultranationalism
+				name = ARM_paternalism_party
+				long_name = ARM_paternalism_party_long
+			}
+			country_event = { id = armenia.2 days = 1825 }
+		}
+	}
+	title = armenia.1.t
+	desc = armenia.1.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.1.a
+		if = {
+			limit = {
+				has_government = communist
+			}
+			ARM_Gevork_Vartanyan = {
+				promote_character = {
+					ideology = socialist_left_wing_nationalism_subtype
+				}
+			}
+			set_politics = {
+				ruling_party = socialist
+				election_frequency = 60
+				elections_allowed = yes
+			}
+			set_popularities = {
+				communist = 14
+				socialist = 41
+				progressivism = 0
+				liberalism = 0
+				liberal_conservatism = 0
+				conservatism = 0
+				paternalism = 29
+				despotism = 9
+				fascism = 4
+				national_socialism = 0
+				ultranationalism = 3
+			}
+		}
+		else = {
+			set_politics = {
+				ruling_party = paternalism
+				election_frequency = 60
+				elections_allowed = yes
+			}
+			set_popularities = {
+				communist = 9
+				socialist = 28
+				progressivism = 0
+				liberalism = 0
+				liberal_conservatism = 0
+				conservatism = 0
+				paternalism = 46
+				despotism = 9
+				fascism = 4
+				national_socialism = 0
+				ultranationalism = 4
+			}
+		}
+		set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Planned }
+		econ_type_change = yes
+	}
+	option = { #Vartanyan is assassinated by the Turkish Revenge Brigades, Yuzbashan takes over the party
+		name = armenia.1.b
+		trigger = { has_government = communist }
+		ARM_Marius_Yuzbashyan = {
+			promote_character = {
+				ideology = communist_national_communism_subtype
+			}
+		}
+		set_politics = {
+			ruling_party = communist
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		set_popularities = {
+			communist = 41
+			socialist = 14
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 29
+			despotism = 9
+			fascism = 4
+			national_socialism = 0
+			ultranationalism = 3
+		}
+		set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Planned }
+		econ_type_change = yes
+	}
+}
+
+country_event = { #Post-Revolt - Second Elections, other political parties form
+	id = armenia.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event armenia.2" }
+	title = armenia.2.t
+	desc = armenia.2.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = armenia.2.a
+		trigger = { NOT = { has_government = communist } }
+		set_politics = {
+			ruling_party = socialist
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		set_popularities = {
+			communist = 12
+			socialist = 32
+			progressivism = 5
+			liberalism = 12
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 27
+			despotism = 6
+			fascism = 3
+			national_socialism = 0
+			ultranationalism = 3
+		}
+	}
+	option = {
+		name = armenia.2.b
+		trigger = { NOT = { has_government = communist } }
+		set_politics = {
+			ruling_party = paternalism
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		set_popularities = {
+			communist = 8
+			socialist = 28
+			progressivism = 5
+			liberalism = 12
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 32
+			despotism = 8
+			fascism = 3
+			national_socialism = 0
+			ultranationalism = 4
+		}
+	}
+	option = { #Yuzbashan refuses to allow Dashnaks into elections
+		name = armenia.2.c
+		trigger = { has_government = communist }
+		set_politics = {
+			ruling_party = communist
+			elections_allowed = no
+		}
+	}
+}

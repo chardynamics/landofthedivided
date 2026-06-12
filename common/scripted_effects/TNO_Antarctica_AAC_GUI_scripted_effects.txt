@@ -1,0 +1,855 @@
+Antarctica_AAC_Setup_Marine_Mech = {
+	AAC = {
+		set_country_flag = Antarctica_GUI_AAC_Marine_Enabled
+
+		add_to_array = { AAC_Skill_Array = 30 } # Mobility
+		add_to_array = { AAC_Skill_Array = 30 } # Endurance
+		add_to_array = { AAC_Skill_Array = 40 } # Aggression
+		add_to_array = { AAC_Skill_Array = 30 } # Loyalty
+
+		set_variable = { AAC_Skill_XP = 5 }
+
+		Antarctica_AAC_Marine_Skill_Check = yes
+
+		add_dynamic_modifier = { modifier = AAC_The_Apex_Predator }
+
+		add_to_array = { AAC_Active_Equipment_Array = token:AAC_Marine_Equipment_CHL_M14 } # Infantry Weapon
+		add_to_array = { AAC_Active_Equipment_Array = token:AAC_Marine_Equipment_CHL_Mk2_Fragmentation_Grenade } # Support Weapon
+		add_to_array = { AAC_Active_Equipment_Array = token:AAC_Marine_Equipment_USA_47_Winter_Parka } # Body Kit
+		add_to_array = { AAC_Active_Equipment_Array = token:AAC_Marine_Equipment_AAC_High_Performance_Dog_Sled } # Polar Warfare
+		add_to_array = { AAC_Active_Equipment_Array = token:AAC_Marine_Equipment_SWI_Rolex_Explorer_Watches } # Creature Comforts
+
+		add_to_array = { AAC_Unlocked_Equipment_Array = token:AAC_Marine_Equipment_CHL_M14 } # Infantry Weapon
+		add_to_array = { AAC_Unlocked_Equipment_Array = token:AAC_Marine_Equipment_CHL_Mk2_Fragmentation_Grenade } # Support Weapon
+		add_to_array = { AAC_Unlocked_Equipment_Array = token:AAC_Marine_Equipment_USA_47_Winter_Parka } # Body Kit
+		add_to_array = { AAC_Unlocked_Equipment_Array = token:AAC_Marine_Equipment_AAC_High_Performance_Dog_Sled } # Polar Warfare
+		add_to_array = { AAC_Unlocked_Equipment_Array = token:AAC_Marine_Equipment_SWI_Rolex_Explorer_Watches } # Creature Comforts
+
+		hidden_effect = {
+			add_ideas = {
+				AAC_Marine_Equipment_CHL_M14
+				AAC_Marine_Equipment_CHL_Mk2_Fragmentation_Grenade
+				AAC_Marine_Equipment_USA_47_Winter_Parka
+				AAC_Marine_Equipment_AAC_High_Performance_Dog_Sled
+				AAC_Marine_Equipment_SWI_Rolex_Explorer_Watches
+			}
+		}
+
+		for_each_loop = {
+			array = AAC_Active_Equipment_Array
+
+			add_to_array = { AAC_Equipment_Frame = 1 }
+		}
+		set_variable = { AAC_Equipment_Frame^0 = 2 }
+
+		set_variable = { AAC_Marine_Active_Category = 0 }
+	}
+	custom_effect_tooltip = AAC_marine_setup_tt
+}
+
+# Infantry weapons
+AAC_populate_armory_array_0 = {
+	clear_array = AAC_Armory_Array
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_CHL_M14 }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_USA_M19024A_Springfield }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_BRA_INA_Model_953 }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_JAP_Arisaka_Type_15 }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_CAN_Rifle_No_9_Mk_I }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_TUR_T58_Atmaca }
+}
+
+# Support Weapon
+AAC_populate_armory_array_1 = {
+	clear_array = AAC_Armory_Array
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_CHL_Mk2_Fragmentation_Grenade }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_USA_M18A1_Claymore }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_BRA_RL_83_Blindicide }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_JAP_Type_22_Kuyu }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_CAN_L21A1 }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_TUR_granatwerfer_34 }
+}
+
+# Body Kit
+AAC_populate_armory_array_2 = {
+	clear_array = AAC_Armory_Array
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_USA_47_Winter_Parka }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_AAC_Dry_Scuba_Kit }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_BRA_M2_Flamethrower }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_JAP_Body_Armor }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_CAN_Inuit_Polar_Clothes }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_TUR_makeshift_grenade_bandolier }
+}
+
+# Polar Warfare
+AAC_populate_armory_array_3 = {
+	clear_array = AAC_Armory_Array
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_AAC_High_Performance_Dog_Sled }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_AAC_Extra_Huskies }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_USA_57_Polaris_Snow_Traveler }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_AAC_Tucker_Snow_Cat }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_AAC_Thiokol_Trackmaster }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_CAN_60_Ski_Doo }
+}
+
+# Creature Comforts
+AAC_populate_armory_array_4 = {
+	clear_array = AAC_Armory_Array
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_SWI_Rolex_Explorer_Watches }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_CHL_Pisco }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_HON_Fresh_Bananas }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_HAI_Frozen_Mangos }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_CUB_Cigars }
+	add_to_array = { AAC_Armory_Array = token:AAC_Marine_Equipment_ELS_Deluxe_Coffee }
+}
+
+Antarctica_AAC_Change_XP = {
+	add_to_variable = { AAC_Skill_XP = temp_value }
+	if = {
+		limit = {
+			check_variable = { temp_value > 0 }
+		}
+		custom_effect_tooltip = Antarctica_AAC_Add_XP_tt
+	}
+	else = {
+		multiply_temp_variable = { temp_value = -1 }
+		custom_effect_tooltip = Antarctica_AAC_Subtract_XP_tt
+	}
+	clamp_variable = { var = AAC_Skill_XP min = 0 max = 100 }
+	add_to_variable = { dirty_marines = 1 }
+}
+
+Antarctica_AAC_Marine_Modify_Skill = {
+	add_to_variable = { AAC_Skill_Array^temp_skill = temp_value }
+	if = {
+		limit = {
+			check_variable = { temp_value > 0 }
+		}
+		custom_effect_tooltip = AAC_marine_increase_skill_tt
+	}
+	
+	else = {
+		multiply_temp_variable = { temp_value = -1 }
+		custom_effect_tooltip = AAC_marine_decrease_skill_tt
+	}
+	clamp_variable = { var = AAC_Skill_Array^temp_skill min = 0 max = 100 }
+
+	Antarctica_AAC_Marine_Skill_Check = yes
+	add_to_variable = { dirty_marines = 1 }
+}
+
+Antarctica_AAC_Marine_Skill_Check = {
+	# Mobility
+	set_variable = { AAC_Mobility_dynmod_var = AAC_Skill_Array^0 }
+	divide_variable = { AAC_Mobility_dynmod_var = 500 }
+
+	set_variable = { AAC_Mobility_resource = AAC_Skill_Array^0 } # legitimacy
+	divide_variable = { AAC_Mobility_resource = 100 }
+	subtract_from_variable = { AAC_Mobility_resource = 0.5 }
+
+	# Endurance
+	set_variable = { AAC_Endurance_dynmod_var = AAC_Skill_Array^1 }
+	divide_variable = { AAC_Endurance_dynmod_var = 200 }
+
+	set_variable = { AAC_Endurance_resource = AAC_Skill_Array^1 } # supplies
+	divide_variable = { AAC_Endurance_resource = -200 }
+	add_to_variable = { AAC_Endurance_resource = 0.5 }
+
+	# Aggression
+	set_variable = { AAC_Aggression_dynmod_var = AAC_Skill_Array^2 }
+	divide_variable = { AAC_Aggression_dynmod_var = 200 }
+
+	set_variable = { AAC_Aggression_resource = AAC_Skill_Array^2 } # militarisation
+	divide_variable = { AAC_Aggression_resource = 100 }
+	subtract_from_variable = { AAC_Aggression_resource = 0.5 }
+
+	# Loyalty
+	set_variable = { AAC_Loyalty_dynmod_var = AAC_Skill_Array^3 }
+	divide_variable = { AAC_Loyalty_dynmod_var = 200 }
+
+	set_variable = { AAC_Loyalty_resource = AAC_Skill_Array^3 } # PP
+	divide_variable = { AAC_Loyalty_resource = 200 }
+	subtract_from_variable = { AAC_Loyalty_resource = 0.25 }
+
+	force_update_dynamic_modifier = yes
+}
+
+# Used to display a tooltip fo changing equipment
+Antarctica_AAC_Marine_Remove_Current_Equipment = { # fires first to remove current equipment
+
+	set_temp_variable = { Equipment = AAC_Active_Equipment_Array^AAC_Marine_Active_Category }
+	Antarctica_AAC_Marine_Assign_Equipment_Values = yes # look up the values for this equipment
+	
+	# apply the change
+	subtract_from_variable = { AAC_Skill_Array^0 = mobility }
+	subtract_from_variable = { AAC_Skill_Array^1 = endurance }
+	subtract_from_variable = { AAC_Skill_Array^2 = aggression }
+	subtract_from_variable = { AAC_Skill_Array^3 = loyalty }
+
+	custom_effect_tooltip = Antarctica_AAC_Marine_Remove_Current_Equipment_Name_tt
+	Antarctica_AAC_Marine_Equipment_Effect_Tooltip = yes #show a tooltip
+}
+
+# Used to unlock new equipment or display a tooltip for changing equipment
+Antarctica_AAC_Marine_Add_Equipment = {
+	#set_variable = { AAC_Active_Equipment_Array^AAC_Marine_Active_Category = equipment_id_temp }
+	
+	hidden_effect = {
+		add_ideas = var:equipment_id_temp
+	}
+
+	set_temp_variable = { Equipment = equipment_id_temp }
+	Antarctica_AAC_Marine_Assign_Equipment_Values = yes # look up the values for this equipment
+
+	custom_effect_tooltip = Antarctica_AAC_Marine_Add_Equipment_Name_tt
+	Antarctica_AAC_Marine_Equipment_Effect_Tooltip = yes #show a tooltip
+	add_to_variable = { dirty_marines = 1 }
+
+	if = {
+		limit = {
+			NOT = { is_in_array = { AAC_Unlocked_Equipment_Array = var:equipment_id_temp } }
+		}
+		add_to_array = { AAC_Unlocked_Equipment_Array = var:equipment_id_temp }
+	}
+}
+
+Antarctica_AAC_Marine_Change_Equipment = {
+	Antarctica_AAC_Marine_Remove_Current_Equipment = yes
+	custom_effect_tooltip = AAC_equipment_will_be_added_tt
+	Antarctica_AAC_Marine_Add_Equipment = yes
+
+	# apply the change from values assigned in Antarctica_AAC_Marine_Add_Equipment
+	add_to_variable = { AAC_Skill_Array^0 = mobility }
+	add_to_variable = { AAC_Skill_Array^1 = endurance }
+	add_to_variable = { AAC_Skill_Array^2 = aggression }
+	add_to_variable = { AAC_Skill_Array^3 = loyalty }
+
+	clamp_variable = { var = AAC_Skill_Array^0 min = 0 max = 100 }
+	clamp_variable = { var = AAC_Skill_Array^1 min = 0 max = 100 }
+	clamp_variable = { var = AAC_Skill_Array^2 min = 0 max = 100 }
+	clamp_variable = { var = AAC_Skill_Array^3 min = 0 max = 100 }
+
+	Antarctica_AAC_Marine_Skill_Check = yes
+
+	if = {
+		limit = { check_variable = { frame > 0 } }
+		set_variable = { AAC_body_kit_frame = frame }
+	}
+
+	# Assign the equipment to be active
+	set_variable = { AAC_Active_Equipment_Array^AAC_Marine_Active_Category = equipment_id_temp }
+	add_to_variable = { dirty_marines = 1 }
+}
+
+# Show the correct tooltip in the equipment change decisions
+Antarctica_AAC_Marine_Equipment_Effect_Tooltip = {
+
+	if = {
+		limit = {
+			NOT = { check_variable = { mobility = 0 } }
+		}
+		custom_effect_tooltip = AAC_marine_equip_change_mobility_tt
+	}
+	if = {
+		limit = {
+			NOT = { check_variable = { endurance = 0 } }
+		}
+		custom_effect_tooltip = AAC_marine_equip_change_endurance_tt
+	}
+
+	if = {
+		limit = {
+			NOT = { check_variable = { aggression = 0 } }
+		}
+		custom_effect_tooltip = AAC_marine_equip_change_aggression_tt
+	}
+
+	if = {
+		limit = {
+			NOT = { check_variable = { loyalty = 0 } }
+		}
+		custom_effect_tooltip = AAC_marine_equip_change_loyalty_tt
+	}
+}
+
+# lookup equipment stats to apply values in equipment change decisions
+Antarctica_AAC_Marine_Assign_Equipment_Values = {
+	# clear variables so they don't bleed over from previous effects
+	set_temp_variable = { mobility = 0 }
+	set_temp_variable = { endurance = 0 }
+	set_temp_variable = { aggression = 0 }
+	set_temp_variable = { loyalty = 0 }
+
+	# Infantry Weapon
+	if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_CHL_M14 }
+		}
+		set_temp_variable = { aggression = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_USA_M19024A_Springfield }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = 5 }
+		set_temp_variable = { aggression = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_BRA_INA_Model_953 }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { aggression = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_JAP_Arisaka_Type_15 }
+		}
+		set_temp_variable = { endurance = -5 }
+		set_temp_variable = { aggression = 15 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_CAN_Rifle_No_9_Mk_I }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = -5 }
+		set_temp_variable = { aggression = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_TUR_T58_Atmaca }
+		}
+		set_temp_variable = { endurance = -5 }
+		set_temp_variable = { aggression = 10 }
+	}
+
+	# Body Kit
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_USA_47_Winter_Parka }
+		}
+		set_temp_variable = { endurance = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_AAC_Dry_Scuba_Kit }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = -5 }
+		set_temp_variable = { aggression = 10 }
+		set_temp_variable = { frame = 2 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_JAP_Body_Armor }
+		}
+		set_temp_variable = { mobility = -10 }
+		set_temp_variable = { endurance = 10 }
+		set_temp_variable = { frame = 3 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_BRA_M2_Flamethrower }
+		}
+		set_temp_variable = { mobility = -5 }
+		set_temp_variable = { endurance = -5 }
+		set_temp_variable = { aggression = 15 }
+		set_temp_variable = { frame = 4 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_CAN_Inuit_Polar_Clothes }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = 15 }
+		set_temp_variable = { frame = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_TUR_makeshift_grenade_bandolier }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = -10 }
+		set_temp_variable = { aggression = 15 }
+		set_temp_variable = { frame = 6 }
+	}
+
+	# Support Weapon
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_CHL_Mk2_Fragmentation_Grenade }
+		}
+		set_temp_variable = { aggression = 5 }
+		
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_USA_M18A1_Claymore }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = 10 }
+		set_temp_variable = { aggression = -5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_BRA_RL_83_Blindicide }
+		}
+		set_temp_variable = { mobility = -5 }
+		set_temp_variable = { aggression = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_JAP_Type_22_Kuyu }
+		}
+		set_temp_variable = { mobility = -5 }
+		set_temp_variable = { endurance = 5 }
+		set_temp_variable = { aggression = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_CAN_L21A1 }
+		}
+		set_temp_variable = { mobility = -10 }
+		set_temp_variable = { endurance = 10 }
+		set_temp_variable = { aggression = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_TUR_granatwerfer_34 }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = 5 }
+		set_temp_variable = { aggression = 5 }
+	}
+
+	# Polar Warfare
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_AAC_Tucker_Snow_Cat }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = 5 }
+		set_temp_variable = { aggression = 5 }
+	}
+
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_AAC_Thiokol_Trackmaster }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = 15 }
+		set_temp_variable = { aggression = -5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_AAC_High_Performance_Dog_Sled }
+		}
+		set_temp_variable = { mobility = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_AAC_Extra_Huskies }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = -5 }
+		set_temp_variable = { loyalty = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_CAN_60_Ski_Doo }
+		}
+		set_temp_variable = { mobility = 15 }
+		set_temp_variable = { endurance = -10 }
+		set_temp_variable = { aggression = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_USA_57_Polaris_Snow_Traveler }
+		}
+		set_temp_variable = { mobility = 10 }
+		set_temp_variable = { endurance = -5 }
+		set_temp_variable = { aggression = 5 }
+	}
+
+	# Creature Comforts
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_HON_Fresh_Bananas }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_HAI_Frozen_Mangos }
+		}
+		set_temp_variable = { endurance = 15 }
+		set_temp_variable = { loyalty = -5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_CUB_Cigars }
+		}
+		set_temp_variable = { mobility = -5 }
+		set_temp_variable = { endurance = -5 }
+		set_temp_variable = { loyalty = 15 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_ELS_Deluxe_Coffee }
+		}
+		set_temp_variable = { mobility = 5 }
+		set_temp_variable = { endurance = 5 }
+		set_temp_variable = { aggression = 5 }
+		set_temp_variable = { loyalty = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_CHL_Pisco }
+		}
+		set_temp_variable = { mobility = -5 }
+		set_temp_variable = { aggression = 5 }
+		set_temp_variable = { loyalty = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Equipment = token:AAC_Marine_Equipment_SWI_Rolex_Explorer_Watches }
+		}
+		set_temp_variable = { mobility = 5 }
+	}
+}
+
+# Diplo mech
+
+Antarctica_AAC_Diplo_Initialize_Country = {
+	set_variable = { AAC_Diplomacy_Active_Country = state_id_temp }
+	set_variable = { AAC_Diplomacy_Negotiation_Progress = neg_prog_temp }
+	set_variable = { AAC_Diplomacy_Negotiation_Threshold = neg_threshold_temp }
+	set_variable = { AAC_engagements_left = planned_engagements }
+	subtract_from_variable = { AAC_engagements_left = 1 } # So the first engagement shows the remaining number correctly
+
+	set_variable = { AAC_Diplomacy_Threshold_X = AAC_Diplomacy_Negotiation_Threshold }
+	divide_variable = { AAC_Diplomacy_Threshold_X = 100 }
+	multiply_variable = { AAC_Diplomacy_Threshold_X = 398 }
+
+	set_country_flag = Antarctica_GUI_AAC_Diplomacy_Enabled
+
+	add_to_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_Preamble }
+	if = { 
+		limit = {
+			has_idea = AAC_Diplo_Deal_URG_OAS_Diplomatic_Offensive
+		}
+		add_to_variable = { AAC_Diplomacy_Negotiation_Progress = 2.5 }
+	}
+	if = {
+		limit = {
+			has_idea = AAC_Diplo_Deal_VEN_Independent_Focus
+		}
+		add_to_variable = { AAC_Diplomacy_Negotiation_Progress = -5 }
+	}
+
+	custom_effect_tooltip = AAC_diplo_setup_tt
+}
+
+Antarctica_AAC_Diplo_Conclude_Negotiations_failure = {
+	custom_effect_tooltip = AAC_diplo_conclude_failure_tt
+
+	if = { # Uruguay
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 1629 } }
+		set_variable = { AAC_diplo_outcome_uruguay = -1 }
+	}
+	else_if = { # Peru
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 1689 } }
+		set_variable = { AAC_diplo_outcome_peru = -1 }
+
+	}
+	else_if = { # Ecuador
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 305 } }
+		set_variable = { AAC_diplo_outcome_ecuador = -1 }
+
+	}
+	else_if = { # Venezuela
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 307 } }
+		set_variable = { AAC_diplo_outcome_venezuela = -1 }
+
+	}
+	else_if = { # Haiti
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 318 } }
+		set_variable = { AAC_diplo_outcome_haiti = -1 }
+
+	}
+	else_if = { # Cuba
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 315 } }
+		set_variable = { AAC_diplo_outcome_cuba = -1 }
+
+	}
+	else_if = { # Central America
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 304 } }
+		set_variable = { AAC_diplo_outcome_cam = -1 }
+
+	}
+	else_if = { # Mexico
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 277 } }
+		set_variable = { AAC_diplo_outcome_mexico = -1 }
+		MEX = { country_event = { id = antarctica_aac_diplo.103 } }
+	}
+
+	clear_array = AAC_Diplo_Deal_Array
+
+	set_variable = { AAC_Diplomacy_Active_Country = 0 }
+	set_variable = { AAC_Diplomacy_Negotiation_Progress = 0 }
+	set_variable = { AAC_Diplomacy_Negotiation_Threshold = 100 }
+	clr_country_flag = AAC_Diplo_Deadline
+	clr_country_flag = Antarctica_GUI_AAC_Diplomacy_Enabled
+	Antarctica_Remove_Decisions = yes
+}
+
+Antarctica_AAC_Diplo_Conclude_Negotiations_success = {
+	custom_effect_tooltip = AAC_diplo_conclude_success_tt
+
+	# for_each_loop = {
+	# 	array = AAC_Diplo_Deal_Array
+	# 	value = v
+
+	# 	add_ideas = var:v
+	# }
+
+	# Do it one by one so we can get the correct tooltip, always skip i0 as the preamble
+	if = {
+		limit = { check_variable = { AAC_Diplo_Deal_Array^1 > 0 } }
+		add_ideas = var:AAC_Diplo_Deal_Array^1
+	}
+	if = {
+		limit = { check_variable = { AAC_Diplo_Deal_Array^2 > 0 } }
+		add_ideas = var:AAC_Diplo_Deal_Array^2
+	}
+	if = {
+		limit = { check_variable = { AAC_Diplo_Deal_Array^3 > 0 } }
+		add_ideas = var:AAC_Diplo_Deal_Array^3
+	}
+	if = {
+		limit = { check_variable = { AAC_Diplo_Deal_Array^4 > 0 } }
+		add_ideas = var:AAC_Diplo_Deal_Array^4
+	}
+	if = {
+		limit = { check_variable = { AAC_Diplo_Deal_Array^5 > 0 } }
+		add_ideas = var:AAC_Diplo_Deal_Array^5
+	}
+	if = {
+		limit = { check_variable = { AAC_Diplo_Deal_Array^6 > 0 } }
+		add_ideas = var:AAC_Diplo_Deal_Array^6
+	}
+
+	add_to_variable = { AAC_Diplo_Meter = 1 }	
+	
+	if = { # Uruguay
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 1629 } }
+		set_variable = { AAC_diplo_outcome_uruguay = 1 }
+	}
+	else_if = { # Peru
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 1689 } }
+		set_variable = { AAC_diplo_outcome_peru = 1 }
+	}
+	else_if = { # Ecuador
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 305 } }
+		set_variable = { AAC_diplo_outcome_ecuador = 1 }
+	}
+	else_if = { # Venezuela
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 307 } }
+		set_variable = { AAC_diplo_outcome_venezuela = 1 }
+	}
+	else_if = { # Haiti
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 318 } }
+		set_variable = { AAC_diplo_outcome_haiti = 1 }
+	}
+	else_if = { # Cuba
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 315 } }
+		set_variable = { AAC_diplo_outcome_cuba = 1 }
+	}
+	else_if = { # Central America
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 304 } }
+		set_variable = { AAC_diplo_outcome_cam = 1 }
+	}
+	else_if = { # Mexico
+		limit = { check_variable = { AAC_Diplomacy_Active_Country = 277 } }
+		set_variable = { AAC_diplo_outcome_mexico = 1 }
+		add_to_variable = { AAC_Diplo_Meter = 1 } # Mexico is big and important so it should count as two countries
+		MEX = { country_event = { id = antarctica_aac_diplo.102 } }
+	}
+
+	
+	if = {
+		limit = { is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_VEN_Oil_For_Arturo_Prat } }
+		set_temp_variable = { tempSupply = -0.03 }
+		AAC_add_supply_from_diplomacy = yes
+	}
+	if = {
+		limit = { is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_VEN_Subsidized_Oil_Deal } }
+		set_temp_variable = { tempSupply = -0.05 }
+		AAC_add_supply_from_diplomacy = yes
+	}
+	if = {
+		limit = { 
+			OR = {
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_HAI_Haitian_Mango_Shipments }
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_HAI_Discounted_Haitian_Mango_Shipments }
+			}			
+		}
+		set_temp_variable = { tempSupply = -0.01 }
+		AAC_add_supply_from_diplomacy = yes
+	}
+	if = {
+		limit = { is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_CentAm_Priority_Canal_Passage } }
+		set_temp_variable = { tempSupply = -0.02 }
+		AAC_add_supply_from_diplomacy = yes
+	}
+	if = {
+		limit = { 
+			OR = {
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_CentAm_Honduran_Banana_Bonanza }
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_CentAm_Honduran_Bananas }
+			}
+		}
+		set_temp_variable = { tempSupply = -0.01 }
+		AAC_add_supply_from_diplomacy = yes
+	}
+	if = {
+		limit = { 
+			OR = {
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_CentAm_Discounted_Luxury_Coffee_Imports }
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_CentAm_Luxury_Coffee_Shipments_Imports }
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_CentAm_Cheap_Coffee_Imports }
+			}			
+		}
+		set_temp_variable = { tempSupply = -0.01 }
+		AAC_add_supply_from_diplomacy = yes
+	}
+	if = {
+		limit = { is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_CUB_Cuban_Antarctic_Base } }
+		set_temp_variable = { tempPP = 0.05 }
+		AAC_add_PP_from_diplomacy = yes
+		set_victory_points = {
+			province = 20005
+			value = 1
+		}
+		hidden_effect = {
+			2021 = {
+				add_dynamic_modifier = { modifier = AAC_base_cuba } 
+				add_to_array = { global.state_with_lore = THIS.id }
+				add_to_array = { lore_entries = 1002 }
+			}
+		}
+		
+	}
+	if = {
+		limit = {
+			OR = { 
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_ECU_Basing_Rights_Granted_to_Ecuador }
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_ECU_A_Bigger_Base_Than_Peruvian_One_Promised }
+			}
+		}
+		set_victory_points = {
+			province = 20003
+			value = 1
+		}
+		hidden_effect = {
+			2071 = {
+				add_dynamic_modifier = { modifier = AAC_base_ecuador } 
+				add_to_array = { global.state_with_lore = THIS.id }
+				add_to_array = { lore_entries = 1000 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = { 
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_MEX_Financed_Mexican_Antarctic_Base }
+				is_in_array = { AAC_Diplo_Deal_Array = token:AAC_Diplo_Deal_MEX_Land_For_Mexican_Antarctic_Base }
+			}
+		}
+		set_victory_points = {
+			province = 20004
+			value = 1
+		}
+		hidden_effect = {
+			2085 = {
+				add_dynamic_modifier = { modifier = AAC_base_mexico } 
+				add_to_array = { global.state_with_lore = THIS.id }
+				add_to_array = { lore_entries = 1003 }
+			}
+		}		
+	}
+	
+	clear_array = AAC_Diplo_Deal_Array
+
+	set_variable = { AAC_Diplomacy_Active_Country = 0 }
+	set_variable = { AAC_Diplomacy_Negotiation_Progress = 0 }
+	set_variable = { AAC_Diplomacy_Negotiation_Threshold = 100 }
+	clr_country_flag = AAC_Diplo_Deadline
+	clr_country_flag = Antarctica_GUI_AAC_Diplomacy_Enabled
+	Antarctica_Remove_Decisions = yes
+}
+
+Antarctica_Remove_Decisions = {
+	hidden_effect = {
+		clr_country_flag = AAC_negotiations_decisions_visible
+		# Need to add the mission again so it actually get removed
+		activate_mission = AAC_Diplomacy_Negotiation_Deadline
+		remove_mission = AAC_Diplomacy_Negotiation_Deadline
+		remove_decision = AAC_Diplomacy_Minimize_Argentine_Threat
+		remove_decision = AAC_Diplomacy_Utilize_Intercepted_Cables
+		remove_decision = AAC_Diplomacy_Make_Trivial_Concessions
+		remove_decision = AAC_Diplomacy_Complementary_Pisco
+		remove_decision = AAC_Diplomacy_Launch_Charm_Offensive
+	}
+}
+
+# Antarctica_AAC_Diplo_Modify_Progress = {
+# 	add_to_variable = { AAC_Diplomacy_Negotiation_Progress = prog_change_temp }
+# 	custom_effect_tooltip = AAC_diplo_modify_progress_tt
+# }
+
+Antarctica_AAC_Diplo_Modify_Progress = {
+	add_to_variable = { AAC_Diplomacy_Negotiation_Progress = prog_change_temp }
+	if = {
+		limit = {
+			check_variable = { prog_change_temp > 0 }
+		}
+		custom_effect_tooltip = Antarctica_AAC_Diplo_Increase_Progress
+	}
+	else = {
+		multiply_temp_variable = { prog_change_temp = -1 }
+		custom_effect_tooltip = Antarctica_AAC_Diplo_Decrease_Progress
+	}
+}
+
+Antarctica_AAC_Add_Clause = {
+	add_to_array = { AAC_Diplo_Deal_Array = token_temp } # always assign token_temp with "token:" prefix!
+	custom_effect_tooltip = AAC_diplo_add_clause_tt
+}
+
+
+AAC_add_supply_from_diplomacy = {
+	add_to_variable = { AAC_diplomacy_supply = tempSupply }
+	custom_effect_tooltip = AAC_add_supply_from_diplomacy_tt
+}
+
+AAC_add_pp_from_diplomacy = {
+	add_to_variable = { AAC_diplomacy_pp = tempPP }
+	custom_effect_tooltip = AAC_add_pp_from_diplomacy_tt
+}
+
+ACC_count_engagement = {
+	if = {
+		limit = { check_variable = { AAC_engagements_left = 0 } }
+		custom_effect_tooltip = AAC_count_engagement_last_tt
+	}
+	else = {
+		custom_effect_tooltip = AAC_count_engagement_tt
+	}
+	subtract_from_variable = { AAC_engagements_left = 1 }
+
+	# Negotiation decisions only available after at least one event
+	set_country_flag = AAC_negotiations_decisions_visible
+}

@@ -1,0 +1,67 @@
+VEN_CrimsonSpectre_dynamic_modifier = {
+	# icon = "GFX_idea_MGN_mad_scientist"
+	enable = { always = yes }
+
+	# Social Anger effects
+	war_support_factor					= VEN_CrimsonSpectreEffects^0
+	security_policy_monthly_rate		= VEN_CrimsonSpectreEffects^1
+	taxable_population_factor			= VEN_CrimsonSpectreEffects^2
+	army_org_factor						= VEN_CrimsonSpectreEffects^3
+	production_speed_buildings_factor	= VEN_CrimsonSpectreEffects^4
+	local_resources_factor				= VEN_CrimsonSpectreEffects^5
+	drift_defence_factor				= VEN_CrimsonSpectreEffects^6
+}
+
+VEN_GovtLegitimacy_dynamic_modifier = {
+	# icon = "GFX_idea_MGN_mad_scientist"
+	enable = { always = yes }
+
+	war_support_factor					= VEN_GovtLegitimacyEffects^0
+	terrain_penalty_reduction			= VEN_GovtLegitimacyEffects^1
+	army_speed_factor					= VEN_GovtLegitimacyEffects^2
+	army_morale_factor					= VEN_GovtLegitimacyEffects^3
+	army_core_defence_factor			= VEN_GovtLegitimacyEffects^4
+	political_power_gain				= VEN_GovtLegitimacyEffects^5
+}
+
+VEN_CommieLegitimacy_dynamic_modifier = {
+	# icon = "GFX_idea_MGN_mad_scientist"
+	enable = { always = yes }
+
+	war_support_factor					= VEN_CommieLegitimacyEffects^0
+	terrain_penalty_reduction			= VEN_CommieLegitimacyEffects^1
+	army_speed_factor					= VEN_CommieLegitimacyEffects^2
+	army_morale_factor					= VEN_CommieLegitimacyEffects^3
+	army_attack_factor					= VEN_CommieLegitimacyEffects^4
+	supply_consumption_factor			= VEN_CommieLegitimacyEffects^5
+}
+
+VEN_faln_state_modifier = {
+	icon = GFX_idea_VEN_faln
+	enable = { always = yes }
+
+	enemy_local_supplies = 0.3
+	enemy_attrition = -0.3
+	enemy_army_speed_factor = 0.4
+	resistance_growth = 0.85 #Doesn't work if the enemy also has a core on the state
+}
+
+VEN_falncvw_state_modifier = {
+	icon = GFX_idea_VEN_faln_br
+	enable = { always = yes }
+
+	enemy_local_supplies = 0.35
+	enemy_attrition = -0.35
+	enemy_army_speed_factor = 0.75
+	resistance_growth = 0.85
+}
+
+VEN_ucmb_state_modifier = {
+	icon = GFX_idea_VEN_ucmb
+	enable = { always = yes }
+
+	enemy_local_supplies = 0.35
+	enemy_attrition = -0.3
+	enemy_army_speed_factor = 0.6
+	resistance_growth = 0.85
+} 

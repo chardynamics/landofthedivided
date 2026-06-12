@@ -1,0 +1,35 @@
+ideas = {
+	country = {
+		TBA_memories_34 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TBA_memories_34" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = TBA_Memories_of_34
+			modifier = {
+				war_support_factor = 0.07
+				conscription_factor = 0.01
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		TBA_uncertain_future = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TBA_uncertain_future" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = TBA_Uncertain_future
+			modifier = {
+				political_power_factor = -0.02 
+				stability_factor = -0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,1652 @@
+add_namespace = BLZ_skeleton
+add_namespace = BLZ_forpol
+
+### SKELETON CONTENT FOR UA ###
+#Touched up by KD for Modern Tordesillas
+
+country_event = { #1963 Election
+	id = BLZ_skeleton.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.1" }
+	title = BLZ_skeleton.1.t
+	desc = BLZ_skeleton.1.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_skeleton.1.a
+		ai_chance = { factor = 1 }
+		retire_country_leader = yes #Gilbert takes his spot by default
+		promote_character = BLZ_Philip_Goldson
+		set_politics = {
+			ruling_party = liberalism
+			last_election = "1963.3.26"
+		}
+		set_popularities = {
+			socialist = 2
+			socialist_1 = 4
+			progressivism = 8
+			liberalism = 29
+			liberal_conservatism = 17
+			conservatism = 11
+			conservatism_1 = 8
+			despotism = 21
+		}
+		remove_ideas = {
+			BLZ_Insecurity_State
+			BLZ_The_Fading_Order
+		}
+		add_ideas = {
+			BLZ_Democratic_Dawn
+			BLZ_Old_Wounds
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17201
+			}
+		}
+		USA = {
+			country_event = { id = BLZ_forpol.0 days = 2250 } #Decolonization Attempt
+			country_event = { id = BLZ_forpol.1 days = 398 } #Report on Price being Released
+			#2 is for Operation Result
+		}
+		MEX = {
+			country_event = { id = BLZ_forpol.3 days = 10 } #Report on Sanctions
+			country_event = { id = BLZ_forpol.4 days = 728 } #Report on Price being Release for Mexico
+			country_event = { id = BLZ_forpol.5 days = 900 } #Secret Meeting with Price
+		}
+	}
+}
+
+country_event = { #1967 Election
+	id = BLZ_skeleton.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.2" }
+	title = BLZ_skeleton.2.t
+	desc = BLZ_skeleton.2.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		#Chain
+		country_event = { #Fate of Belize 
+			id = BLZ_skeleton.3
+			days = 100
+		}
+	}
+	
+	option = { #Honduran Democratic Party SocLib
+		name = BLZ_skeleton.2.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.1
+				has_country_flag = BLZ_US_Funding
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BLZ_ELECTION_PATH option = BLZ_ELECTION_PATH_PUP }
+			}
+		}
+		set_politics = {
+			ruling_party = liberalism
+			last_election = "1967.3.26"
+		}
+		set_popularities = {
+			socialist = 2
+			socialist_1 = 7
+			progressivism = 22
+			liberalism = 34
+			liberal_conservatism = 12
+			conservatism = 10
+			conservatism_1 = 6
+			despotism = 7
+		}
+		USA = {
+			country_event = { id = BLZ_forpol.6 days = 35 } #Meeting with Goldson
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17202
+			}
+		}
+	}
+	option = { #People's United Party
+		name = BLZ_skeleton.2.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.1
+				has_country_flag = BLZ_Mex_Funding
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BLZ_ELECTION_PATH option = BLZ_ELECTION_PATH_HDP }
+			}
+		}
+		set_politics = {
+			ruling_party = progressivism
+			last_election = "1967.3.26"
+		}
+		remove_ideas = {
+			BLZ_Democratic_Dawn
+			BLZ_Old_Wounds
+		}
+		add_ideas = {
+			BLZ_Back_With_Bang
+			BLZ_Look_Latin
+		}
+		set_popularities = {
+			socialist = 4
+			socialist_1 = 11
+			progressivism = 34
+			liberalism = 17
+			liberal_conservatism = 10
+			conservatism = 11
+			conservatism_1 = 6
+			despotism = 7
+		}
+		MEX = {
+			country_event = { id = BLZ_forpol.7 days = 35 } #Meeting with Price
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17203
+			}
+		}
+	}
+}
+
+country_event = { #Fate of Belize
+	id = BLZ_skeleton.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.3" }
+	title = BLZ_skeleton.3.t
+	desc = BLZ_skeleton.3.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Guard Coup
+		name = BLZ_skeleton.3.a
+		trigger = {
+			OR = {
+				GUA = { has_country_leader = { character = GUA_Marco_Antonio_Yon_Sosa ruling_only = yes } }
+				GUA = { is_subject_of = MEX }
+			}
+		}
+		ai_chance = { factor = 100 }
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		set_popularities = {
+			socialist = 6
+			socialist_1 = 14
+			progressivism = 20
+			conservatism = 6
+			conservatism_1 = 10
+			despotism = 28
+			despotism_3 = 16
+		}
+		set_party_name = {
+			ideology = despotism
+			name = BLZ_despotism_3_party
+			long_name = BLZ_despotism_3_party_long
+		}
+		set_party_name = {
+			ideology = despotism_3
+			name = BLZ_despotism_party
+			long_name = BLZ_despotism_party_long
+		}
+		remove_ideas = {
+			BLZ_Democratic_Dawn
+			BLZ_Old_Wounds
+			BLZ_Back_With_Bang
+			BLZ_Look_Latin
+		}
+		add_ideas = {
+			BLZ_Into_Hurricane
+			BLZ_Insecurity_State
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17207
+				days = 1
+			}
+		}
+		USA = {
+			country_event = { id = BLZ_forpol.8 hours = 20 } #US Reacts to Coup
+			country_event = { id = BLZ_forpol.9 days = 1092 } #Option to takeover securities after Canada leaves
+		}
+		MEX = {
+			country_event = { id = BLZ_forpol.10 days = 4 } #Prices flees to Mexico
+			country_event = { id = BLZ_forpol.11 days = 1092 } #Request to Approve Invasion
+		}
+		#Chain
+		country_event = { #Invasion Check
+			id = BLZ_skeleton.6
+			days = 1101
+		}
+	}
+	option = { #Negotiations with Guatemala
+		name = BLZ_skeleton.3.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				OR = {
+					GUA = { has_country_leader = { character = GUA_Marco_Antonio_Yon_Sosa ruling_only = yes } }
+					GUA = { is_subject_of = MEX }
+				}
+			}
+		}
+		USA = {
+			country_event = { id = BLZ_forpol.12 days = 729 } #Request for Negotiations
+			country_event = { id = BLZ_forpol.13 days = 1480 } #Negotiations if Pro-US Junta
+			country_event = { id = BLZ_forpol.14 days = 1480 } #Negotiations if PAR Government
+			country_event = { id = BLZ_forpol.15 days = 1500 } #Pressure for Compromise
+		}
+		MEX = {
+			country_event = { id = BLZ_forpol.16 days = 1480 } #Mexico Endorses Negotiations
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17204
+				days = 1479
+			}
+		}
+		#Chain
+		country_event = { #Negotiations Outcome
+			id = BLZ_skeleton.4
+			days = 1515
+		}
+	}
+}
+
+country_event = { #Negotiations Outcome
+	id = BLZ_skeleton.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.4" }
+	title = BLZ_skeleton.4.t
+	desc = BLZ_skeleton.4.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Union
+		name = BLZ_skeleton.4.a
+		trigger = {
+			AND = {
+				NOT = { GUA = { has_government = despotism } }
+				BLZ = { has_government = progressivism }
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BLZ_INDEPENDENCE_PATH option = BLZ_INDEPENDENCE_PATH_COMPROMISE }
+			}
+		}
+		save_party_popularities = yes
+		get_current_government_type = yes
+		GUA = {
+			set_autonomy = {
+				target = BLZ
+				autonomy_state = autonomy_client_state #Temporary
+			}
+		}
+		remove_ideas = {
+			BLZ_A_Nation_Under_Siege
+		}
+		add_ideas = {
+			BLZ_New_Masters
+		}
+		BLZ = {
+			every_owned_state = {
+				limit = { check_variable = { AdminTitle = token:Admin_Title_Colony } }
+				TNO_clear_admin_title = yes
+			}
+		}
+		apply_party_popularities = yes
+		restore_previous_government_type = yes
+		set_cosmetic_tag = BLZ_autonomy
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17206
+			}
+		}
+		USA = {
+			country_event = { id = BLZ_forpol.20 days = 4 } #US Reacts to Union 
+		}
+		USA = {
+			set_temp_variable = { Victory_ID = 63 }
+			set_temp_variable = { Victory_Outcome = 4 }
+			set_temp_variable = { Victory_Points = 50 }
+			Cold_War_GUI_AddVictory = yes
+		}
+	}
+	option = { #Compromise
+		name = BLZ_skeleton.4.b
+		trigger = {
+			OR = {
+				GUA = { NOT = { has_government = despotism } }
+				GUA = { has_country_leader = { character =  GUA_Carlos_Manuel_Arana_Osorio ruling_only = yes } }
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BLZ_INDEPENDENCE_PATH option = BLZ_INDEPENDENCE_PATH_UNION }
+			}
+		}
+		#Insert World Event here
+		USA = {
+			country_event = { id = BLZ_forpol.19 days = 4 } #US Reacts to Compromise
+		}
+		remove_ideas = {
+			BLZ_A_Nation_Under_Siege
+		}
+		add_ideas = {
+			BLZ_Compromise_Treaty
+		}
+		GUA = {
+			remove_state_claim = 1967
+			remove_state_claim = 311
+		}	
+		set_country_flag = BLZ_Compromise
+		#Chain
+		country_event = { #Independence
+			id = BLZ_skeleton.5
+			days = 30
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17205
+			}
+		}
+	}
+	option = { #Failure
+		name = BLZ_skeleton.4.c
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = BLZ_INDEPENDENCE_PATH option = BLZ_INDEPENDENCE_PATH_COMPROMISE }
+					has_game_rule = { rule = BLZ_INDEPENDENCE_PATH option = BLZ_INDEPENDENCE_PATH_UNION }
+					GUA = { NOT = { has_government = despotism } }
+					GUA = { has_country_leader = { character =  GUA_Carlos_Manuel_Arana_Osorio ruling_only = yes } }
+				}
+			}
+		}
+		USA = {
+			#country_event = { id = BLZ_forpol.20 days = 4 } #US Reacts to Failure
+		}
+		#Chain
+		country_event = { #Triggers
+			id = BLZ_skeleton.5
+			days = 30
+		}
+	}
+}
+
+country_event = { #Independence
+	id = BLZ_skeleton.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.5" }
+	title = BLZ_skeleton.5.t
+	desc = BLZ_skeleton.5.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		BLZ = {
+			every_owned_state = {
+				limit = { check_variable = { AdminTitle = token:Admin_Title_Colony } }
+				TNO_clear_admin_title = yes
+			}
+		}
+	}
+	
+	option = { #Price Independence
+		name = BLZ_skeleton.5.a
+		trigger = { 
+			BLZ = {	has_government = progressivism }
+		}
+		ai_chance = { factor = 100 }
+		#Insert World Event here
+		USA = { country_event = { id = BLZ_forpol.21 days = 4 } } #Prices speaks to OAS
+		MEX = { country_event = { id = BLZ_forpol.21 days = 4 } }
+		set_politics = { ruling_party = socialist }
+		set_popularities = {
+			socialist = 38
+			socialist_2 = 4
+			progressivism = 15
+			liberalism = 17
+			liberal_conservatism = 10
+			conservatism = 9
+			conservatism_1 = 7
+		}
+		add_country_leader_role = {
+			character = BLZ_George_Cadle_Price
+			promote_leader = yes
+			country_leader = {
+				ideology = socialist_left_wing_nationalism_subtype
+				expire = "1999.1.1"
+			}
+		}
+		set_party_name = {
+			ideology = socialist
+			name = BLZ_socialist_1_party
+			long_name = BLZ_socialist_1_party_long
+		}
+		set_party_name = {
+			ideology = socialist_2
+			name = BLZ_socialist_party
+			long_name = BLZ_socialist_party_long
+		}
+		remove_ideas = BLZ_Colonial_Undertow
+		add_ideas = BLZ_Rural_Reform
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		VEN = { VEN_commie_increase_small = yes }
+	}
+
+	option = { #Goldson Joins WIF
+		name = BLZ_skeleton.5.a
+		trigger = {
+			AND = {
+				USA = { check_variable = { Caribbean_Stability > 7 } }
+				country_exists = WIN
+				BLZ = { has_government = liberalism }
+			}
+		}
+		ai_chance = { factor = 100 }
+		#Insert World Event here
+		USA = { country_event = { id = BLZ_forpol.22 days = 10 } } #US Reacts to Belize joining WIF
+	}
+	option = { #Goldson Independence
+		name = BLZ_skeleton.5.a
+		trigger = {
+			AND = {
+				has_government = liberalism
+				NOT = {
+					AND = {
+						USA = { check_variable = { Caribbean_Stability > 7 } }
+						country_exists = WIN
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 10 }
+		#Insert World Event here
+		USA = {
+			country_event = { id = BLZ_forpol.23 days = 4 } #Goldson Does Business
+		}
+		set_politics = { ruling_party = liberal_conservatism }
+		set_popularities = {
+			socialist = 2
+			socialist_1 = 7
+			progressivism = 22
+			liberalism = 17
+			liberal_conservatism = 36
+			conservatism = 8
+			conservatism_1 = 8
+		}
+		add_country_leader_role = {
+			character = BLZ_Philip_Goldson
+			promote_leader = yes
+			country_leader = {
+				ideology = liberal_conservatism_oligarchic_liberalism_subtype
+				expire = "1999.1.1"
+			}
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Corporate_Oligopoly }
+		econ_subtype_change = yes
+		remove_ideas = BLZ_Colonial_Undertow
+		add_ideas = BLZ_Citrus_State
+	}
+}
+
+country_event = { #Invasion Check
+	id = BLZ_skeleton.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.6" }
+	title = BLZ_skeleton.6.t
+	desc = BLZ_skeleton.6.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #No Invasion
+		name = BLZ_skeleton.6.a
+		trigger = {
+			OR = {
+				has_country_flag = BLZ_US_Intervention
+				has_country_flag = BLZ_MEX_Block
+				AND = {
+					has_game_rule = { rule = BLZ_JUNTA_PATH option = BLZ_JUNTA_PATH_NO_INVASION }
+					USA = { is_ai = yes }
+					MEX = { is_ai = yes }
+				}
+			}
+		}
+		ai_chance = { factor = 1 }
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17208
+				days = 30
+			}
+		}
+		USA = { country_event = { id = BLZ_forpol.24 days = 10 } } #Unhappy American Soldiers
+	}
+	option = { #Oh oh
+		name = BLZ_skeleton.6.a
+		trigger = {
+			OR = {
+				NOT = {
+					has_country_flag = BLZ_US_Intervention
+					has_country_flag = BLZ_MEX_Block
+				}
+				AND = {
+					has_game_rule = { rule = BLZ_JUNTA_PATH option = BLZ_JUNTA_PATH_INVASION }
+					USA = { is_ai = yes }
+					MEX = { is_ai = yes }
+				}
+			}
+		}
+		ai_chance = { factor = 1 }
+		USA = { country_event = { id = BLZ_forpol.25 hours = 2 } } #Invasion Reaction
+		#Insert World Event
+		leave_faction = yes
+		CAN = { end_puppet = BLZ }
+		GUA = {
+			declare_war_on = {
+				target = BLZ
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = { #Peace Deal
+	id = BLZ_skeleton.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.7" }
+	title = BLZ_skeleton.7.t
+	desc = BLZ_skeleton.7.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Annexation
+		name = BLZ_skeleton.7.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BLZ_INVASION_OUTCOME option = BLZ_INVASION_OUTCOME_UNION }
+			}
+		}
+		annex_country = {
+			target = BLZ
+			transfer_troops = yes
+		}
+		every_state = { 
+			limit = { is_core_of = BLZ }
+			add_core_of = GUA
+			remove_core_of = BLZ
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17209
+			}
+		}
+		USA = { country_event = { id = BLZ_forpol.30 days = 10 } } #Canada Protests Invasion
+		MEX = { country_event = { id = BLZ_forpol.30 days = 10 } } #Canada Protests Invasion
+		MEX = { country_event = { id = BLZ_forpol.31 days = 15 } } #Protests After Annexation
+	}
+	option = { #Union
+		name = BLZ_skeleton.7.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BLZ_INVASION_OUTCOME option = BLZ_INVASION_OUTCOME_ANNEX }
+			}
+		}
+		#Failsafe
+		311 = { transfer_state_to = BLZ }
+		1967 = { transfer_state_to = BLZ }
+		GUA = { set_autonomy = { target = BLZ autonomy_state = autonomy_client_state } }
+		BLZ = {
+			set_politics = { ruling_party = despotism elections_allowed = no }
+			set_popularities = {
+				socialist = 6
+				socialist_1 = 14
+				progressivism = 20
+				conservatism = 6
+				conservatism_1 = 10
+				despotism = 28
+				despotism_3 = 16
+			}
+			remove_ideas = {
+				BLZ_Into_Hurricane
+				BLZ_Insecurity_State
+				BLZ_A_Nation_Under_Siege
+			}
+			add_ideas = {
+				BLZ_New_Masters
+				BLZ_Look_Latin
+				BLZ_Back_With_Bang
+			}
+			add_country_leader_role = {
+				character = BLZ_George_Cadle_Price
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism_institutional_despotism_subtype
+					expire = "1999.1.1"
+				}
+			}
+			set_party_name = {
+				ideology = despotism
+				name = BLZ_progressivism_party
+				long_name = BLZ_progressivism_party_long
+			}
+			if = {
+				limit = { GUA = { is_subject_of = MEX } }
+				set_cosmetic_tag = BLZ_autonomy_mex
+			}
+			else_if = {
+				limit = { GUA = { has_country_leader = { character = GUA_Marco_Antonio_Yon_Sosa ruling_only = yes } } }
+				set_cosmetic_tag = BLZ_autonomy_soc
+			}
+			else = { set_cosmetic_tag = BLZ_autonomy }
+			set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Stabilizing_Development }
+			econ_subtype_change = yes
+			econ_leave_sphere = yes
+			econ_join_sphere_MEX = yes
+		}
+		
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17210
+			}
+		}
+		USA = { country_event = { id = BLZ_forpol.30 days = 10 } } #Canada Protests Invasion
+		MEX = { country_event = { id = BLZ_forpol.30 days = 10 } } #Canada Protests Invasion
+		MEX = { country_event = { id = BLZ_forpol.32 days = 54 } } #George Price Reforms
+	}
+}
+
+#Capital Construction Skeleton
+country_event = { # Belmopan Funding
+	id = BLZ_skeleton.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.10" }
+	title = BLZ_skeleton.10.t
+	desc = BLZ_skeleton.10.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_skeleton.10.a
+		ai_chance = { factor = 1 }
+		random_list = {
+			1 = {
+				#modifier = {
+				#	factor = 0
+				#	OR = {
+				#		has_game_rule = { rule = BLZ_BELMOPAN option = BLZ_BELMOPAN_MODERATE }
+				#		has_game_rule = { rule = BLZ_BELMOPAN option = BLZ_BELMOPAN_MINIMUM }
+				#	}
+				#}
+				CAN = {
+					set_temp_variable = { temp_econ_spending_amount = 0.115 }
+					econ_spend_money_once_effect_raw_money = yes
+					add_political_power = -40
+				}
+				set_country_flag = BLZ_Belmopan_Maximum_Funding
+				BLZ = {
+					country_event = { 
+						id = BLZ_skeleton.11
+						days = 1130
+					}
+				}
+			}
+			1 = {
+				#modifier = {
+				#	factor = 0
+				#	OR = {
+				#		has_game_rule = { rule = BLZ_BELMOPAN option = BLZ_BELMOPAN_MAXIMUM }
+				#		has_game_rule = { rule = BLZ_BELMOPAN option = BLZ_BELMOPAN_MINIMUM }
+				#	}
+				#}
+				CAN = {
+					set_temp_variable = { temp_econ_spending_amount = 0.105 }
+					econ_spend_money_once_effect_raw_money = yes
+					add_political_power = -20
+				}
+				set_country_flag = BLZ_Belmopan_Medium_Funding
+				BLZ = {
+					country_event = { 
+						id = BLZ_skeleton.11
+						days = 1330
+					}
+				}
+			}
+			1 = {
+				#modifier = {
+				#	factor = 0
+				#	OR = {
+				#		has_game_rule = { rule = BLZ_BELMOPAN option = BLZ_BELMOPAN_MAXIMUM }
+				#		has_game_rule = { rule = BLZ_BELMOPAN option = BLZ_BELMOPAN_MODERATE }
+				#	}
+				#}
+				CAN = {
+					set_temp_variable = { temp_econ_spending_amount = 0.075 }
+					econ_spend_money_once_effect_raw_money = yes
+					add_political_power = -20
+				}
+				set_country_flag = BLZ_Belmopan_Small_Funding
+				BLZ = {
+					country_event = { 
+						id = BLZ_skeleton.11
+						days = 1700
+					}
+				}
+			}
+		}	
+	}
+}
+
+country_event = { # Belmopan Construction Begins
+	id = BLZ_skeleton.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.11" }
+	title = BLZ_skeleton.11.t
+	desc = BLZ_skeleton.11.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_skeleton.11.a
+		ai_chance = { factor = 1 }
+		swap_ideas = {
+			remove_idea = BLZ_The_Fading_Order
+			add_idea = BLZ_A_New_Home
+		}
+		if = {
+			limit = {
+				has_country_flag = BLZ_Belmopan_Maximum_Funding
+			}
+			BLZ = {
+				country_event = { 
+					id = BLZ_skeleton.12
+					days = 730
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BLZ_Belmopan_Medium_Funding
+			}
+			BLZ = {
+				country_event = { 
+					id = BLZ_skeleton.12
+					days = 1220
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BLZ_Belmopan_Small_Funding
+			}
+			BLZ = {
+				country_event = { 
+					id = BLZ_skeleton.12
+					days = 1350
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Belmopan Construction Finishes
+	id = BLZ_skeleton.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.12" }
+	title = BLZ_skeleton.12.t
+	desc = BLZ_skeleton.12.desc
+	#picture = 
+	trigger = { NOT = { is_subject_of = GUA } }
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_skeleton.12.a
+		ai_chance = { factor = 1 }
+		swap_ideas = {
+			remove_idea = BLZ_A_New_Home
+			add_idea = BLZ_A_City_Upon_A_Hill
+		}
+		add_victory_points = {
+			province = 16168
+			value = 3
+		}
+		set_capital = { state = 1967 }
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = WORLD.17200
+			}
+		}
+		1967 = {
+			add_to_array = { global.state_with_lore = THIS.id }
+			add_to_array = { lore_entries = 311 }
+		}
+	}
+}
+
+#Decolonization Chain
+country_event = { # Reaction to Free English win
+	id = BLZ_skeleton.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.20" }
+	title = BLZ_skeleton.20.t
+	desc = BLZ_skeleton.20.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { NOT = { ENG = { has_government = socialist } } }
+	
+	option = { #
+		name = BLZ_skeleton.20.a
+		ai_chance = { factor = 1 }
+		remove_ideas = BLZ_Colonial_Undertow
+		set_country_flag = BLZ_ENG_colony
+		save_party_popularities = yes
+		get_current_government_type = yes
+		CAN = { end_puppet = BLZ }
+		ENG = {
+			set_autonomy = {
+				target = BLZ
+				autonomy_state = autonomy_colony
+			}
+		}
+		apply_party_popularities = yes
+		restore_previous_government_type = yes
+		set_politics = { #restores election interface
+			ruling_party = ROOT
+			elections_allowed = yes
+		}
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_skeleton.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_skeleton.21" }
+	title = BLZ_skeleton.21.t
+	desc = BLZ_skeleton.21.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_skeleton.21.a
+		ai_chance = { factor = 1 }
+		add_popularity = { 
+			ideology = progressivism  
+			popularity = 0.02
+		}
+		add_popularity = { 
+			ideology = socialist  
+			popularity = 0.01
+		}		
+	}
+}
+
+###Flavor Events
+
+country_event = { #Decolonization Effort
+	id = BLZ_forpol.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.0" }
+	title = BLZ_forpol.0.t
+	desc = BLZ_forpol.0.desc
+	picture = GFX_report_event_IBR_meeting_small
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.0.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.1" }
+	title = BLZ_forpol.1.t
+	desc = BLZ_forpol.1.desc
+	picture = GFX_report_event_USA_fbi_button
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.1.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		set_country_flag = USA_CIA_Belize_Coriander_unlock
+	}
+}
+
+country_event = { #Report on Price being Released
+	id = BLZ_forpol.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.2" }
+	title = BLZ_forpol.2.t
+	desc = BLZ_forpol.2.desc
+	picture = GFX_report_event_generic_printing_press
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.2.a
+		ai_chance = { factor = 1 }
+		BLZ = { set_country_flag = BLZ_US_Funding }
+		clr_country_flag = USA_CIA_Belize_Coriander_unlock
+	
+	}
+}
+
+country_event = { #Mexican Report on New Government
+	id = BLZ_forpol.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.3" }
+	title = BLZ_forpol.3.t
+	desc = BLZ_forpol.3.desc
+	picture = GFX_report_event_IBR_meeting_table
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.3.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { #Price Released
+	id = BLZ_forpol.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.4" }
+	title = BLZ_forpol.4.t
+	desc = BLZ_forpol.4.desc
+	picture = GFX_report_event_IBR_valcarcel_speech
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.4.a
+		ai_chance = { factor = 1 }
+		add_political_power = 5
+		BLZ = {
+			set_temp_variable = { temp_modifier = 30 }
+			add_to_trade_modifier_PREV = yes
+			add_popularity = { 
+				ideology = progressivism  
+				popularity = 0.04
+			}
+			add_popularity = { 
+				ideology = socialist_1  
+				popularity = 0.02
+			}
+		}
+	}
+}
+
+country_event = { #Price Meets with Mexico
+	id = BLZ_forpol.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.5" }
+	title = BLZ_forpol.5.t
+	desc = BLZ_forpol.5.desc
+	picture = GFX_report_event_BLZ_george_cadle_price
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Funding
+		name = BLZ_forpol.5.a
+		ai_chance = { factor = 1 }
+		trigger = { has_political_power > 4 }
+		add_political_power = -5
+		set_country_flag = BLZ_Mex_Funding
+		set_temp_variable = { temp_econ_spending_amount = 0.01 }
+		econ_spend_money_once_effect_raw_money = yes
+		BLZ = {
+			add_popularity = { 
+				ideology = progressivism  
+				popularity = 0.01
+			}
+		}
+	
+	}
+	option = { #No Funding
+		name = BLZ_forpol.5.b
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Meeting with Goldson Post-Relection
+	id = BLZ_forpol.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.6" }
+	title = BLZ_forpol.6.t
+	desc = BLZ_forpol.6.desc
+	picture = GFX_report_event_ITA_demarsanich_speech
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.6.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # MEX Meeting with Price Post-Election
+	id = BLZ_forpol.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.7" }
+	title = BLZ_forpol.7.t
+	desc = BLZ_forpol.7.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.7.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+
+country_event = { # US Reaction to Volunteer Guard Coup
+	id = BLZ_forpol.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.8" }
+	title = BLZ_forpol.8.t
+	desc = BLZ_forpol.8.desc
+	picture = GFX_report_event_generic_office
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.8.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # US decides whether or not to prop up Junta Belize
+	id = BLZ_forpol.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.9" }
+	title = BLZ_forpol.9.t
+	desc = BLZ_forpol.9.desc
+	picture = GFX_report_event_GUA_map
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { # blocks guatemalan invasion
+		name = BLZ_forpol.9.a
+		ai_chance = { factor = 1 }
+		BLZ = { set_country_flag = BLZ_US_Intervention }
+		add_political_power = -40
+		send_equipment = {
+			type = infantry_equipment
+			amount = 1000
+			target = BLZ
+		}
+	}
+	option = { # invasion guaranteed
+		name = BLZ_forpol.9.b
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { # Mexico reaction to Volunteer Guard coup
+	id = BLZ_forpol.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.10" }
+	title = BLZ_forpol.10.t
+	desc = BLZ_forpol.10.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.10.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Mexico approves Guatemala invasion (or not), guaranteed for the AI
+	id = BLZ_forpol.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.11" }
+	title = BLZ_forpol.11.t
+	desc = BLZ_forpol.11.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { # approves 
+		name = BLZ_forpol.11.a
+		ai_chance = { factor = 1 }
+	
+	}
+	
+	option = { # doesnt!
+		name = BLZ_forpol.11.b
+		ai_chance = { factor = 0 }
+		BLZ = { set_country_flag = BLZ_MEX_Block }
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.12" }
+	title = BLZ_forpol.12.t
+	desc = BLZ_forpol.12.desc
+	picture = GFX_report_event_JAM_meeting
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.12.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.13" }
+	title = BLZ_forpol.13.t
+	desc = BLZ_forpol.13.desc
+	trigger = { GUA = { has_government = despotism } }
+	picture = GFX_report_event_ENG_maudling_think
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.13.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.14" }
+	title = BLZ_forpol.14.t
+	desc = BLZ_forpol.14.desc
+	trigger = { GUA = { has_government = socialist } }
+	picture = GFX_report_event_IBR_guy_paper_meeting
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.14.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.15" }
+	title = BLZ_forpol.15.t
+	desc = BLZ_forpol.15.desc
+	picture = GFX_report_event_USA_fbi_button
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.15.a
+		ai_chance = { factor = 1 }
+	
+	}
+	option = { #
+		name = BLZ_forpol.15.b
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.16" }
+	title = BLZ_forpol.16.t
+	desc = BLZ_forpol.16.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.16.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.17" }
+	title = BLZ_forpol.17.t
+	desc = BLZ_forpol.17.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.17.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.18" }
+	title = BLZ_forpol.18.t
+	desc = BLZ_forpol.18.desc
+	picture = GFX_report_event_generic_phone_call
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.18.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { #treaty signed
+	id = BLZ_forpol.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.19" }
+	title = BLZ_forpol.19.t
+	desc = BLZ_forpol.19.desc
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.19.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = BLZ_forpol.19.tt
+		hidden_effect = {
+			GUA = {
+				remove_opinion_modifier = {
+					target = CAN
+					modifier = GUA_invading_imperialists
+				}
+				remove_opinion_modifier = {
+					target = BLZ
+					modifier = GUA_imperialist_occupation
+				}
+			}
+			BLZ = {
+				remove_opinion_modifier = {
+					target = GUA
+					modifier = BLZ_existential_threat
+				}
+			}
+			CAN = {
+				remove_opinion_modifier = {
+					target = GUA
+					modifier = CAN_threatening_british_honduras
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Unification Reaction -U.S.
+	id = BLZ_forpol.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.20" }
+	title = BLZ_forpol.20.t
+	desc = BLZ_forpol.20.desc
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.20.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # 
+	id = BLZ_forpol.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.21" }
+	title = BLZ_forpol.21.t
+	desc = BLZ_forpol.21.desc
+	picture = GFX_report_event_BLZ_george_cadle_price
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = BLZ_forpol.21.a
+		ai_chance = { factor = 1 }
+		BLZ = {
+			if = {
+				limit = { is_subject_of = CAN }
+				CAN = { end_puppet = BLZ }
+			}
+			else_if = {
+				limit = { is_subject_of = ENG }
+				ENG = { end_puppet = BLZ }
+			}
+			drop_cosmetic_tag = yes
+		}
+		if = {
+			limit = { tag = MEX }
+			set_temp_variable = { temp_modifier = 30 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+}
+
+country_event = { # Belize in WIF
+	id = BLZ_forpol.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.22" }
+	title = BLZ_forpol.22.t
+	desc = BLZ_forpol.22.desc
+	picture = GFX_report_event_WIF_poster
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.22.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			BLZ = {
+				every_owned_state = {
+					add_core_of = WIN
+					remove_core_of = BLZ
+				}
+			}
+		}
+		add_political_power = 30
+		WIN = { annex_country = { target = BLZ } }
+	}
+}
+
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.23" }
+	title = BLZ_forpol.23.t
+	desc = BLZ_forpol.23.desc
+	picture = GFX_report_event_BRA_amazonian_village
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.23.a
+		ai_chance = { factor = 1 }
+		BLZ = {
+			if = {
+				limit = { is_subject_of = CAN }
+				CAN = { end_puppet = BLZ }
+			}
+			else_if = {
+				limit = { is_subject_of = ENG }
+				ENG = { end_puppet = BLZ }
+			}
+			drop_cosmetic_tag = yes
+		}
+		set_temp_variable = { temp_modifier = 30 }
+		add_to_trade_modifier_PREV = yes
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.24" }
+	title = BLZ_forpol.24.t
+	desc = BLZ_forpol.24.desc
+	picture = GFX_report_event_SUR_barracks
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.24.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.25" }
+	title = BLZ_forpol.25.t
+	desc = BLZ_forpol.25.desc
+	picture = GFX_report_event_GUA_map
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.25.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.26" }
+	title = BLZ_forpol.26.t
+	desc = BLZ_forpol.26.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.26.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.27" }
+	title = BLZ_forpol.27.t
+	desc = BLZ_forpol.27.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.27.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.28" }
+	title = BLZ_forpol.28.t
+	desc = BLZ_forpol.28.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.28.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.29" }
+	title = BLZ_forpol.29.t
+	desc = BLZ_forpol.29.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.29.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.30" }
+	title = BLZ_forpol.30.t
+	desc = BLZ_forpol.30.desc
+	picture = GFX_report_event_BRA_oas
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = BLZ_forpol.30.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.31" }
+	title = BLZ_forpol.31.t
+	desc = BLZ_forpol.31.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.31.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.32" }
+	title = BLZ_forpol.32.t
+	desc = BLZ_forpol.32.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.32.a
+		ai_chance = { factor = 1 }
+	
+	}
+}
+
+country_event = { # Reaction to Free English loss
+	id = BLZ_forpol.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BLZ_forpol.33" }
+	title = BLZ_forpol.33.t
+	desc = BLZ_forpol.33.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = BLZ_forpol.33.a
+		ai_chance = { factor = 1 }
+	
+	}
+}

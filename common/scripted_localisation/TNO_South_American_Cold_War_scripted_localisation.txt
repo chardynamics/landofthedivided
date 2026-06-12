@@ -1,0 +1,998 @@
+defined_text = {
+	name = GetSATooltip
+	text = {
+		trigger = {
+			tag = COL
+			COL = {
+				NOT = {
+					has_global_flag = COL_civil_war_over
+				}
+			}
+		}
+		localization_key = SA_colombia_civil_war
+	}
+	text = {
+		localization_key = SA_nation_normal
+	}
+}
+
+defined_text = {
+	name = GetSacwNation
+	text = {
+		trigger = { check_variable = { SA_target = BRA } }
+		localization_key = SA_brazil
+	}
+	text = {
+		trigger = { check_variable = { SA_target = ARG } }
+		localization_key = SA_argentina
+	}
+}
+
+defined_text = {
+	name = GetSacwCountryPoints
+	text = {
+		trigger = { set_temp_variable = { counter = 0 } }
+		localization_key = "[GetSacwCountryPointsInner]"
+	}
+}
+defined_text = {
+	name = GetSacwCountryPointsInner
+	text = {
+		trigger = {
+			check_variable = { counter < SA_target:SA_cws_political_allies^num }
+			set_temp_variable = { tag = SA_target:SA_cws_political_allies^counter }
+			set_temp_variable = { points = SA_target:SA_cws_political_allies_points^counter }
+			add_to_temp_variable = { counter = 1 }
+		}
+		localization_key = "SA_cold_war_score_political_tt_entry"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetSacwAllignment
+	text = {
+		trigger = { tag = BRA }
+		localization_key = SA_alignment_brazil
+	}
+	text = {
+		trigger = { tag = ARG }
+		localization_key = SA_alignment_argentina
+	}
+	text = {
+		trigger = { tag = MEX }
+		localization_key = SA_alignment_mexico
+	}
+	text = {
+		trigger = { check_variable = { SA_cold_war_alignment < 2 } }
+		localization_key = SA_alignment_non_aligned
+	}
+	text = {
+		trigger = { check_variable = { SA_cold_war_alignment = 2 } }
+		localization_key = SA_alignment_brazil
+	}
+	text = {
+		trigger = { check_variable = { SA_cold_war_alignment = 3 } }
+		localization_key = SA_alignment_argentina
+	}
+	text = {
+		trigger = { check_variable = { SA_cold_war_alignment = 4 } }
+		localization_key = SA_alignment_mexico
+	}
+	text = {
+		trigger = { check_variable = { SA_cold_war_alignment = 5 } }
+		localization_key = SA_alignment_iberia
+	}
+	text = {
+		trigger = { check_variable = { SA_cold_war_alignment = 6 } }
+		localization_key = SA_alignment_usa
+	}
+}
+
+defined_text = {
+	name = GetSaInfluenceChange
+	text = {
+		trigger = { check_variable = { tempInfluence > 0 } }
+		localization_key = SA_increase
+	}
+	text = {
+		trigger = { check_variable = { tempInfluence < 0 } }
+		localization_key = SA_decrease
+	}
+}
+
+defined_text = {
+	name = GetSaInfluenceNation
+	text = {
+		trigger = { check_variable = { tempFaction = 0 } }
+		localization_key = SA_alignment_non_aligned
+	}
+	text = {
+		trigger = { check_variable = { tempFaction = 1 } }
+		localization_key = SA_alignment_brazil
+	}
+	text = {
+		trigger = { check_variable = { tempFaction = 2 } }
+		localization_key = SA_alignment_argentina
+	}
+	text = {
+		trigger = { check_variable = { tempFaction = 3 } }
+		localization_key = SA_alignment_mexico
+	}
+	text = {
+		trigger = { check_variable = { tempFaction = 4 } }
+		localization_key = SA_alignment_iberia
+	}
+	text = {
+		trigger = { check_variable = { tempFaction = 5 } }
+		localization_key = SA_alignment_usa
+	}
+}
+
+defined_text = {
+	name = GetSaShowUnalignedInfluence
+	text = {
+		trigger = { check_variable = { TNO_SA_influence^0 > 0 } }
+		localization_key = SA_show_influence_unaligned
+	}
+}
+defined_text = {
+	name = GetSaShowBrazilInfluence
+	text = {
+		trigger = { check_variable = { TNO_SA_influence^1 > 0 } }
+		localization_key = SA_show_influence_brazil
+	}
+}
+defined_text = {
+	name = GetSaShowArgentinaInfluence
+	text = {
+		trigger = { check_variable = { TNO_SA_influence^2 > 0 } }
+		localization_key = SA_show_influence_argentina
+	}
+}
+defined_text = {
+	name = GetSaShowMexicoInfluence
+	text = {
+		trigger = { check_variable = { TNO_SA_influence^3 > 0 } }
+		localization_key = SA_show_influence_mexico
+	}
+}
+defined_text = {
+	name = GetSaShowIberiaInfluence
+	text = {
+		trigger = { check_variable = { TNO_SA_influence^4 > 0 } }
+		localization_key = SA_show_influence_iberia
+	}
+}
+defined_text = {
+	name = GetSaShowUSAInfluence
+	text = {
+		trigger = { check_variable = { TNO_SA_influence^5 > 0 } }
+		localization_key = SA_show_influence_usa
+	}
+}
+
+defined_text = {
+	name = GetSAOvtBtnCol
+	text = {
+		trigger = { check_variable = { SA_selected_tab = 0 } }
+		localization_key = overview_button_text_grey
+	}
+	text = {
+		trigger = { check_variable = { SA_selected_tab = 1 } }
+		localization_key = overview_button_text_red
+	}
+}
+defined_text = {
+	name = GetSANucBtnCol
+	text = {
+		trigger = { check_variable = { SA_selected_tab = 0 } }
+		localization_key = nuclear_button_text_red
+	}
+	text = {
+		trigger = { check_variable = { SA_selected_tab = 1 } }
+		localization_key = nuclear_button_text_grey
+	}
+}
+
+#GUI bits
+defined_text = {
+	name = Get_SA_gui_tab
+	text = {
+		localization_key = TNO_SA_overview
+	}
+}
+defined_text = {
+	name = Get_SA_gui_tab_2
+	text = {
+		localization_key = TNO_south_america_nuclear_race_gui
+	}
+}
+
+defined_text = {
+	name = GetSAMapNationFill
+	text = { # Triple Alliance Brazil + Cayenne
+		trigger = {
+			original_tag = BRA
+			country_exists = BRP
+			NOT = { country_exists = GUC }
+		}
+		localization_key = GFX_SAmap_alt_brazil_triple_alliance_cayenne
+	}
+	text = { # Triple Alliance Brazil
+		trigger = {
+			original_tag = BRA
+			country_exists = BRP
+		}
+		localization_key = GFX_SAmap_alt_brazil_triple_alliance
+	}
+	text = { # Cayenne Brazil
+		trigger = {
+			original_tag = BRA
+			NOT = { country_exists = GUC }
+		}
+		localization_key = GFX_SAmap_alt_brazil_cayenne
+	}
+	text = { # Normal Brazil
+		trigger = { original_tag = BRA }
+		localization_key = GFX_SAmap_brazil
+	}
+	text = { # Triple Alliance Argentina
+		trigger = {
+			original_tag = ARG
+			country_exists = ARP
+		}
+		localization_key = GFX_SAmap_alt_argentina_triple_alliance
+	}
+	text = { # Normal Argentina
+		trigger = { original_tag = ARG }
+		localization_key = GFX_SAmap_argentina
+	}
+	text = {
+		trigger = { original_tag = MEX }
+		localization_key = GFX_SAmap_mexico
+	}
+	text = {
+		trigger = { original_tag = BLZ }
+		localization_key = GFX_SAmap_belize_fill
+	}
+	text = {
+		trigger = {
+			original_tag = BOL
+			owns_state = 1649 
+		}
+		localization_key = GFX_SAmap_alt_bolivia_santa_cruz_full_fill
+	}
+	text = {
+		trigger = {
+			original_tag = BOL
+			NOT = { country_exists = STC }
+		}
+		localization_key = GFX_SAmap_bolivia_santa_cruz_fill
+	}
+	text = {
+		trigger = {
+			original_tag = BOL
+			NOT = { owns_state = 542 }
+		}
+		localization_key = GFX_SAmap_camba_bolivia_small_fill
+	}
+	text = {
+		trigger = {
+			original_tag = BOL
+			NOT = { owns_state = 487 }
+		}
+		localization_key = GFX_SAmap_alt_bolvia_small_fill
+	}
+	text = {
+		trigger = { original_tag = BOL }
+		localization_key = GFX_SAmap_bolivia_fill
+	}
+	text = {
+		trigger = { original_tag = GUC }
+		localization_key = GFX_SAmap_cayenne_fill
+	}
+	text = {
+		trigger = { original_tag = CHL }
+		localization_key = GFX_SAmap_chile_fill
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = COL
+				original_tag = CLL
+				original_tag = CLC
+				original_tag = CLD
+			}
+		}
+		localization_key = GFX_SAmap_colombia_fill
+	}
+	text = {
+		trigger = { original_tag = COS }
+		localization_key = GFX_SAmap_costa_rica_fill
+	}
+	text = {
+		trigger = { original_tag = CUB }
+		localization_key = GFX_SAmap_cuba_fill
+	}
+	text = {
+		trigger = { original_tag = DOM }
+		localization_key = GFX_SAmap_dominica_fill
+	}
+	text = {
+		trigger = { original_tag = ECU }
+		localization_key = GFX_SAmap_ecuador_fill
+	}
+	text = {
+		trigger = { original_tag = ELS }
+		localization_key = GFX_SAmap_el_salvador_fill
+	}
+	text = {
+		trigger = { original_tag = GUA }
+		localization_key = GFX_SAmap_guatemala_fill
+	}
+	text = {
+		trigger = { original_tag = GUY }
+		localization_key = GFX_SAmap_guyana_fill
+	}
+	text = {
+		trigger = { original_tag = HAI }
+		localization_key = GFX_SAmap_haiti_fill
+	}
+	text = {
+		trigger = { original_tag = HON }
+		localization_key = GFX_SAmap_honduras_fill
+	}
+	text = {
+		trigger = { original_tag = NIC }
+		localization_key = GFX_SAmap_nicaragua_fill
+	}
+	text = {
+		trigger = {
+			original_tag = PAR
+			NOT = { owns_state = 1649 }
+		}
+		localization_key = GFX_SAmap_alt_paraguay_small_fill
+	}
+	text = {
+		trigger = { original_tag = PAR }
+		localization_key = GFX_SAmap_paraguay_fill
+	}
+	text = {
+		trigger = { original_tag = PAN }
+		localization_key = GFX_SAmap_panama_fill
+	}
+	text = {
+		trigger = { original_tag = PRU }
+		localization_key = GFX_SAmap_peru_fill
+	}
+	text = {
+		trigger = {
+			original_tag = STC
+			owns_state = 542
+		}
+		localization_key = GFX_SAmap_camba_santa_cruz_fill
+	}
+	text = {
+		trigger = {
+			original_tag = STC
+			owns_state = 302
+		}
+		localization_key = GFX_SAmap_alt_boliva_santa_cruz_full_fill
+	}
+	text = {
+		trigger = {
+			original_tag = STC
+			owns_state = 487
+		}
+		localization_key = GFX_SAmap_alt_santa_cruz_fill
+	}
+	text = {
+		trigger = { original_tag = STC }
+		localization_key = GFX_SAmap_santa_cruz_fill
+	}
+	text = {
+		trigger = { original_tag = SUR }
+		localization_key = GFX_SAmap_suriname_fill
+	}
+	text = {
+		trigger = { original_tag = URG }
+		localization_key = GFX_SAmap_uruguay_fill
+	}
+	text = {
+		trigger = { original_tag = USA }
+		localization_key = GFX_SAmap_usa_fill
+	}
+	text = {
+		trigger = { original_tag = VEN }
+		localization_key = GFX_SAmap_venezuela_fill
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = WIN
+				original_tag = JAM
+			}
+		}
+		localization_key = GFX_SAmap_wif_fill
+	}
+}
+
+defined_text = {
+	name = GetSAMapNation
+	text = { # Triple Alliance Brazil + Cayenne
+		trigger = {
+			original_tag = BRA
+			country_exists = BRP
+			NOT = { country_exists = GUC }
+		}
+		localization_key = GFX_SAmap_alt_brazil_triple_alliance_cayenne
+	}
+	text = { # Triple Alliance Brazil
+		trigger = {
+			original_tag = BRA
+			country_exists = BRP
+		}
+		localization_key = GFX_SAmap_alt_brazil_triple_alliance
+	}
+	text = { # Cayenne Brazil
+		trigger = {
+			original_tag = BRA
+			NOT = { country_exists = GUC }
+		}
+		localization_key = GFX_SAmap_alt_brazil_cayenne
+	}
+	text = { # Normal Brazil
+		trigger = { original_tag = BRA }
+		localization_key = GFX_SAmap_brazil
+	}
+	text = { # Triple Alliance Argentina
+		trigger = {
+			original_tag = ARG
+			country_exists = ARP
+		}
+		localization_key = GFX_SAmap_alt_argentina_triple_alliance
+	}
+	text = { # Normal Argentina
+		trigger = { original_tag = ARG }
+		localization_key = GFX_SAmap_argentina
+	}
+	text = {
+		trigger = { original_tag = MEX }
+		localization_key = GFX_SAmap_mexico
+	}
+	text = {
+		trigger = { original_tag = BLZ }
+		localization_key = GFX_SAmap_belize
+	}
+	text = {
+		trigger = {
+			original_tag = BOL
+			owns_state = 1649 
+		}
+		localization_key = GFX_SAmap_alt_bolivia_santa_cruz_full
+	}
+	text = {
+		trigger = {
+			original_tag = BOL
+			NOT = { country_exists = STC }
+		}
+		localization_key = GFX_SAmap_bolivia_santa_cruz
+	}
+	text = {
+		trigger = {
+			original_tag = BOL
+			NOT = { owns_state = 542 }
+		}
+		localization_key = GFX_SAmap_camba_bolivia_small
+	}
+	text = {
+		trigger = {
+			original_tag = BOL
+			NOT = { owns_state = 487 }
+		}
+		localization_key = GFX_SAmap_alt_bolvia_small
+	}
+	text = {
+		trigger = { original_tag = BOL }
+		localization_key = GFX_SAmap_bolivia
+	}
+	text = {
+		trigger = { original_tag = GUC }
+		localization_key = GFX_SAmap_cayenne
+	}
+	text = {
+		trigger = { original_tag = CHL }
+		localization_key = GFX_SAmap_chile
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = COL
+				original_tag = CLL
+				original_tag = CLC
+				original_tag = CLD
+			}
+			has_global_flag = COL_civil_war_over
+		}
+		localization_key = GFX_SAmap_colombia
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = COL
+				original_tag = CLL
+				original_tag = CLC
+				original_tag = CLD
+			}
+			NOT = {
+				has_global_flag = COL_civil_war_over
+			}
+		}
+		localization_key = GFX_SAmap_colombia_civil_war
+	}
+	text = {
+		trigger = { original_tag = COS }
+		localization_key = GFX_SAmap_costa_rica
+	}
+	text = {
+		trigger = { original_tag = CUB }
+		localization_key = GFX_SAmap_cuba
+	}
+	text = {
+		trigger = { original_tag = DOM }
+		localization_key = GFX_SAmap_dominica
+	}
+	text = {
+		trigger = { original_tag = ECU }
+		localization_key = GFX_SAmap_ecuador
+	}
+	text = {
+		trigger = { original_tag = ELS }
+		localization_key = GFX_SAmap_el_salvador
+	}
+	text = {
+		trigger = { original_tag = GUA }
+		localization_key = GFX_SAmap_guatemala
+	}
+	text = {
+		trigger = { original_tag = GUY }
+		localization_key = GFX_SAmap_guyana
+	}
+	text = {
+		trigger = { original_tag = HAI }
+		localization_key = GFX_SAmap_haiti
+	}
+	text = {
+		trigger = { original_tag = HON }
+		localization_key = GFX_SAmap_honduras
+	}
+	text = {
+		trigger = { original_tag = NIC }
+		localization_key = GFX_SAmap_nicaragua
+	}
+	text = {
+		trigger = {
+			original_tag = PAR
+			NOT = { owns_state = 1649 }
+		}
+		localization_key = GFX_SAmap_alt_paraguay_small
+	}
+	text = {
+		trigger = { original_tag = PAR }
+		localization_key = GFX_SAmap_paraguay
+	}
+	text = {
+		trigger = { original_tag = PAN }
+		localization_key = GFX_SAmap_panama
+	}
+	text = {
+		trigger = { original_tag = PRU }
+		localization_key = GFX_SAmap_peru
+	}
+	text = {
+		trigger = {
+			original_tag = STC
+			owns_state = 542
+		}
+		localization_key = GFX_SAmap_camba_santa_cruz
+	}
+	text = {
+		trigger = {
+			original_tag = STC
+			owns_state = 302
+		}
+		localization_key = GFX_SAmap_alt_boliva_santa_cruz_full
+	}
+	text = {
+		trigger = {
+			original_tag = STC
+			owns_state = 487
+		}
+		localization_key = GFX_SAmap_alt_santa_cruz
+	}
+	text = {
+		trigger = { original_tag = STC }
+		localization_key = GFX_SAmap_santa_cruz
+	}
+	text = {
+		trigger = { original_tag = SUR }
+		localization_key = GFX_SAmap_suriname
+	}
+	text = {
+		trigger = { original_tag = URG }
+		localization_key = GFX_SAmap_uruguay
+	}
+	text = {
+		trigger = { original_tag = USA }
+		localization_key = GFX_SAmap_usa
+	}
+	text = {
+		trigger = { original_tag = VEN }
+		localization_key = GFX_SAmap_venezuela
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = WIN
+				original_tag = JAM
+			}
+		}
+		localization_key = GFX_SAmap_wif
+	}
+}
+
+defined_text = {
+	name = GetSAColdWarScoreBg
+	text = {
+		trigger = { check_variable = { SA_target = BRA } }
+		localization_key = GFX_scores_bg_bra
+	}
+	text = {
+		trigger = { check_variable = { SA_target = ARG } }
+		localization_key = GFX_scores_bg_arg
+	}
+}
+
+defined_text = {
+	name = GetSAColdWarNuclearOpponent
+	text = {
+		trigger = { check_variable = { SA_target = BRA } }
+		localization_key = SA_nuclear_info_argentina
+	}
+	text = {
+		trigger = { check_variable = { SA_target = ARG } }
+		localization_key = SA_nuclear_info_brazil
+	}
+}
+
+defined_text = {
+	name = GetSAColdWarSecurityLevel
+	text = {
+		trigger = {
+			check_variable = { SA_nuclear_security_level < 30 }
+		}
+		localization_key = "SA_nuclear_security_high"
+	}
+	text = {
+		trigger = {
+			check_variable = { SA_nuclear_security_level > 29 }
+			check_variable = { SA_nuclear_security_level < 70 }
+		}
+		localization_key = "SA_nuclear_security_moderate"
+	}
+	text = {
+		localization_key = "SA_nuclear_security_low"
+	}
+}
+
+defined_text = {
+	name = GetSAColdWarCompromiseStatus
+	text = {
+		trigger = {
+			check_variable = { SA_nuclear_security_level < 100 }
+		}
+		localization_key = "SA_nuclear_uncompromised"
+	}
+	text = {
+		localization_key = "SA_nuclear_compromised"
+	}
+}
+
+defined_text = {
+	name = GetSAColdWarNuclearOpponentProgress
+	text = {
+		trigger = {
+			set_temp_variable = { opponent_temp = var:SA_opponent:SA_nuclear_progress }
+			divide_temp_variable = { opponent_temp = 10 }
+			round_temp_variable = opponent_temp
+			multiply_temp_variable = { opponent_temp = 10 }
+		}
+		localization_key = "SA_nuclear_opponent_progress"
+	}
+}
+
+defined_text = {
+	name = GetSAColdWarNuclearCompletion
+	text = {
+		trigger = {
+			set_temp_variable = { nyaa = SACW_set_nuclear_budget }
+			divide_temp_variable = { nyaa = 100 }
+			multiply_temp_variable = { nyaa = 2.5 }
+			add_to_temp_variable = { nyaa = SACW_nuclear_monthly_supporter_speed }
+			add_to_temp_variable = { nyaa = SACW_nuclear_monthly_speed_bonus }
+			check_variable = { nyaa = 0 }
+		}
+		localization_key = "SA_nuclear_progress_never"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { progress_temp = SA_nuclear_progress }
+			subtract_from_temp_variable = { progress_temp = 100 }
+			multiply_temp_variable = { progress_temp = -1 }
+			divide_temp_variable = { progress_temp = nyaa }
+			round_temp_variable = progress_temp
+		}
+		localization_key = "SA_nuclear_progress_months"
+	}
+}
+
+defined_text = {
+	name = GetSAColdWarNuclearMonth
+	text = {
+		trigger = {
+			check_variable = { progress_temp < 2 }
+		}
+		localization_key = "SA_nuclear_completion_month"
+	}
+	text = {
+		localization_key = "SA_nuclear_completion_months"
+	}
+}
+defined_text = {
+	name = GetSAColdWarTensionLevel
+	text = {
+		trigger = {
+			check_variable = { global.SA_tension < 20 }
+		}
+		localization_key = "SA_Tension_Level_1"
+	}
+	text = {
+		trigger = {
+			check_variable = { global.SA_tension < 40 }
+			check_variable = { global.SA_tension > 19.99 }
+		}
+		localization_key = "SA_Tension_Level_2"
+	}
+	text = {
+		trigger = {
+			check_variable = { global.SA_tension < 60 }
+			check_variable = { global.SA_tension > 39.99 }
+		}
+		localization_key = "SA_Tension_Level_3"
+	}
+	text = {
+		trigger = {
+			check_variable = { global.SA_tension < 80 }
+			check_variable = { global.SA_tension > 59.99 }
+		}
+		localization_key = "SA_Tension_Level_4"
+	}
+	text = {
+		trigger = {
+			check_variable = { global.SA_tension > 79.99 }
+		}
+		localization_key = "SA_Tension_Level_5"
+	}
+}
+defined_text = {
+	name = GetSAColdWarTensionLevelEffects
+	text = {
+		trigger = {
+			check_variable = { global.SA_tension < 20 }
+		}
+		localization_key = "SA_Tension_Level_1_Effects"
+	}
+	text = {
+		trigger = {
+			check_variable = { global.SA_tension < 40 }
+			check_variable = { global.SA_tension > 19.99 }
+		}
+		localization_key = "SA_Tension_Level_2_Effects"
+	}
+	text = {
+		trigger = {
+			check_variable = { global.SA_tension < 60 }
+			check_variable = { global.SA_tension > 39.99 }
+		}
+		localization_key = "SA_Tension_Level_3_Effects"
+	}
+	text = {
+		trigger = {
+			check_variable = { global.SA_tension < 80 }
+			check_variable = { global.SA_tension > 59.99 }
+		}
+		localization_key = "SA_Tension_Level_4_Effects"
+	}
+	text = {
+		trigger = {
+			check_variable = { global.SA_tension > 79.99 }
+		}
+		localization_key = "SA_Tension_Level_5_Effects"
+	}
+}
+defined_text = {
+	name = GetSACWCWSPercentage
+	text = {
+		trigger = {
+			check_variable = { BRA.cws_percentage < 50 }
+		}
+		localization_key = "SA_CWS_Level_1"
+	}
+	text = {
+		trigger = {
+			check_variable = { BRA.cws_percentage < 100 }
+			check_variable = { BRA.cws_percentage > 49.99 }
+		}
+		localization_key = "SA_CWS_Level_2"
+	}
+	text = {
+		trigger = {
+			check_variable = { BRA.cws_percentage < 150 }
+			check_variable = { BRA.cws_percentage > 99.99 }
+		}
+		localization_key = "SA_CWS_Level_3"
+	}
+	text = {
+		trigger = {
+			check_variable = { BRA.cws_percentage > 149.99 }
+		}
+		localization_key = "SA_CWS_Level_4"
+	}
+}
+defined_text = {
+	name = GetSACWCWSPercentageEffects
+	text = {
+		trigger = {
+			check_variable = { BRA.cws_percentage < 50 }
+		}
+		localization_key = "SA_CWS_1_Effects"
+	}
+	text = {
+		trigger = {
+			check_variable = { BRA.cws_percentage < 100 }
+			check_variable = { BRA.cws_percentage > 49.99 }
+		}
+		localization_key = "SA_CWS_2_Effects"
+	}
+	text = {
+		trigger = {
+			check_variable = { BRA.cws_percentage < 150 }
+			check_variable = { BRA.cws_percentage > 99.99 }
+		}
+		localization_key = "SA_CWS_3_Effects"
+	}
+	text = {
+		trigger = {
+			check_variable = { BRA.cws_percentage > 149.99 }
+		}
+		localization_key = "SA_CWS_4_Effects"
+	}
+}
+
+defined_text = {
+	name = GetSACWActiveProxyPAR
+	text = {
+		localization_key = GC_ParaguayanBushWar
+	}
+}
+defined_text = {
+	name = GetSACWActiveProxyBOL
+	text = {
+		trigger = {
+			is_in_array = { TNO_active_conflicts = token:GC_BoliviaTreatyNegotiation }
+		}
+		localization_key = GC_BoliviaTreatyNegotiation
+	}
+	text = {
+		trigger = {
+			is_in_array = { TNO_active_conflicts = token:GC_BoliviaMiningWar }
+		}
+		localization_key = GC_BoliviaMiningWar
+	}
+	text = {
+		trigger = {
+			is_in_array = { TNO_active_conflicts = token:GC_BoliviaSantaCruz }
+		}
+		localization_key = GC_BoliviaSantaCruz
+	}
+	text = {
+		trigger = {
+			is_in_array = { TNO_active_conflicts = token:GC_BoliviaParaguay }
+		}
+		localization_key = GC_BoliviaParaguay
+	}
+}
+defined_text = {
+	name = GetSACWActiveProxyCOL
+	text = {
+		localization_key = GC_ColombiaCW
+	}
+}
+defined_text = {
+	name = GetSACWActiveProxyGUC
+	text = {
+		localization_key = GC_CayenneReferendum
+	}
+}
+defined_text = {
+	name = GetSACWActiveProxySATW
+	text = {
+		localization_key = GC_SouthAtlanticWar
+	}
+}
+defined_text = {
+	name = GetSACWActiveProxyDOM
+	text = {
+		trigger = {
+			has_global_flag = PPI_landing_ongoing
+		}
+		localization_key = GC_PuertoPlata_landing
+	}
+	text = {
+		trigger = {
+			has_global_flag = PPI_ceasefire_happening
+		}
+		localization_key = GC_PuertoPlata_ceasefire
+	}
+	text = {
+		trigger = {
+			has_global_flag = PPI_civil_war_ongoing
+		}
+		localization_key = GC_PuertoPlata_ceasefire_broken
+	}
+}
+defined_text = {
+	name = GetSACWActiveProxyHAI
+	text = {
+		localization_key = GC_Haitian_Civil_War
+	}
+}
+defined_text = {
+	name = GetSACWActiveProxyJAM
+	text = {
+		localization_key = GC_KingstonRiots
+	}
+}
+defined_text = {
+	name = GetSACWActiveProxyTRI
+	text = {
+		localization_key = GC_TrinidadRev
+	}
+}
+defined_text = {
+	name = GetSACW_iberia_status
+	text = {
+		trigger = {
+			has_global_flag = Iberian_Divorce
+		}
+		localization_key = SA_spain
+	}
+	text = {
+		localization_key = SA_iberia
+	}
+}
+defined_text = {
+	name = GetSACW_iberia_status_name
+	text = {
+		trigger = {
+			has_global_flag = Iberian_Divorce
+		}
+		localization_key = SA_spain_name
+	}
+		text = {
+		localization_key = SA_iberia_name
+	}
+}

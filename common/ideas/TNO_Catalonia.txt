@@ -1,0 +1,34 @@
+ideas = {
+	country = {
+		CTL_discontinued_government = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CTL_discontinued_government" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_vacant_administration
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_use_modifier = 0.05
+			}
+		}
+		CTL_pancatalan_claims = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CTL_pancatalan_claims" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = CTL_pancatalanist_claims
+			modifier = {
+				mobilization_speed = 0.05
+				war_support_factor = 0.075
+			}
+		}
+	}
+}

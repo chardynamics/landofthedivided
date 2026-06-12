@@ -1,0 +1,215 @@
+characters = {
+	PAK_Nawabzada_Shahabuddin_Khan = {
+		name = PAK_Nawabzada_Shahabuddin_Khan
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Nawabzada_Shahabuddin_Khan.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_NAWABZADA_SHAHABUDDIN_KHAN_DESC"
+			expire = "1999.1.1"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = {}
+			id = -1
+		}
+	}
+	PAK_Abdul_Qayyum_Khan = {
+		name = PAK_Abdul_Qayyum_Khan
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Abdul_Qayyum_Khan.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_ABDUL_QAYYUM_KHAN_DESC"
+			ideology = ultranationalism_reactionary_nationalism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PAK_Feroz_Khan_Noon = {
+		name = PAK_Feroz_Khan_Noon
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Feroz_Khan_Noon.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_FEROZ_KHAN_NOON_DESC"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PAK_Mumtaz_Daultana = {
+		name = PAK_Mumtaz_Daultana
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Mumtaz_Daultana.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_MUMTAZ_DAULTANA_DESC"
+			ideology = despotism_2_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PAK_Zulfikar_Ali_Bhutto = {
+		name = PAK_Zulfikar_Ali_Bhutto
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Zulfikar_Ali_Bhutto.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_ZULFIKAR_ALI_BHUTTO_DESC"
+			ideology = despotism_3_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PAK_Jahanara_Shahnawaz = {
+		name = PAK_Jahanara_Shahnawaz
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Jahanara_Shahnawaz.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_JAHANARA_SHAHNAWAZ_DESC"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PAK_Muhammad_Akbar_Khan = {
+		name = PAK_Muhammad_Akbar_Khan
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Muhammad_Akbar_Khan.png" }
+			army = { large = "gfx/leaders/PAK/Portrait_Pakistan_Muhammad_Akbar_Khan.png" }
+		}
+		country_leader = {
+			#desc = ""
+			expire = "1999.1.1"
+			ideology = paternalism_subtype
+			traits = {}
+			id = -1
+		}
+		field_marshal = {
+			traits = { career_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	PAK_Pashtun_Tribal_Clans = {
+		name = PAK_Pashtun_Tribal_Clans
+		portraits = {
+			civilian = { large = "GFX_leader_unknown" }
+		}
+		country_leader = {
+			#desc = ""
+			expire = "1999.1.1"
+			ideology = conservatism_subtype
+			traits = {}
+			id = -1
+		}
+	}
+	PAK_Hassan_Nasir = {
+		name = PAK_Hassan_Nasir
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Hassan_Nasir.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_HASSAN_NASIR_DESC"
+			ideology = communist_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PAK_Fatima_Jinnah = {
+		name = PAK_Fatima_Jinnah
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Fatima_Jinnah.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_FATIMA_JINNAH_DESC"
+			ideology = liberalism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PAK_Mohammed_Ayub_Khan = {
+		name = PAK_Mohammed_Ayub_Khan
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Mohammed_Ayub_Khan.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_MOHAMMAD_AYUB_KHAN_DESC"
+			ideology = paternalism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PAK_Yahya_Khan = {
+		name = PAK_Yahya_Khan
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Yahya_Khan.png" }
+			army = { large = "gfx/leaders/PAK/Portrait_Pakistan_Yahya_Khan.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_YAHYA_KHAN_DESC"
+			ideology = despotism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+		corps_commander = {
+			traits = { infantry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	PAK_Mahmud_Ahmed = {
+		name = PAK_Mahmud_Ahmed
+		portraits = {
+			civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Mahmud_Ahmed.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_MAHMUD_AHMED_DESC"
+			ideology = ultranationalism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	# Pakistan Failstate #
+	PAK_Internal_Commotion_Of_The_State = {
+		name = PAK_Internal_Commotion_Of_The_State
+		portraits = {
+			civilian = { large = "GFX_leader_unknown" }
+		}
+		country_leader = {
+			desc = "POLITICS_INTERNAL_COMMOTION_OF_THE_STATE_DESC"
+			expire = "1999.1.1"
+			ideology = despotism_subtype
+			traits = {}
+		}
+	}
+	PAK_Collective_Leadership = {
+		name = PAK_Collective_Leadership
+		portraits = {
+			#civilian = { large = "gfx/leaders/PAK/Portrait_Pakistan_Mahmud_Ahmed.png" }
+		}
+		country_leader = {
+			#desc = ""
+			ideology = socialist_2_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+}

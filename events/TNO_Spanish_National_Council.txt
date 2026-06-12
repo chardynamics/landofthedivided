@@ -1,0 +1,816 @@
+﻿############################
+#### Frente Azul events ####
+############################
+
+add_namespace = FZL
+add_namespace = FZL_wars
+
+
+####################FLAVOR EVENTS################################
+
+country_event = { #One Final Chance of Salvation
+	id = FZL.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.1" }
+	title = FZL.1.t
+	desc = FZL.1.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.1.a
+	}
+}
+
+country_event = { #Spanish National Socialism
+	id = FZL.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.2" }
+	title = FZL.2.t
+	desc = FZL.2.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.2.a
+	}
+}
+
+country_event = { #All Will be in Agreement...
+	id = FZL.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.3" }
+	title = FZL.3.t
+	desc = FZL.3.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.3.a
+	}
+}
+
+country_event = { #And Only the Spanish Will Remain
+	id = FZL.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.4" }
+	title = FZL.4.t
+	desc = FZL.4.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.4.a
+	}
+}
+
+country_event = { #They Will Have to Learn...
+	id = FZL.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.5" }
+	title = FZL.5.t
+	desc = FZL.5.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.5.a
+
+		#swap_ideas = {
+		#	remove_idea = FZL_natsoc_1
+		#	add_idea = FZL_natsoc_2
+		#}
+	}
+}
+
+country_event = { #And They Will Know their Place
+	id = FZL.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.6" }
+	title = FZL.6.t
+	desc = FZL.6.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.6.a
+
+		#swap_ideas = {
+		#	remove_idea = FZL_natsoc_2
+		#	add_idea = FZL_natsoc_3
+		#}
+	}
+}
+
+country_event = { #Saving Spain from Itself
+	id = FZL.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.7" }
+	title = FZL.7.t
+	desc = FZL.7.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.7.a
+	}
+}
+
+country_event = { #A National Push
+	id = FZL.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.8" }
+	title = FZL.8.t
+	desc = FZL.8.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.8.a
+	}
+}
+
+country_event = { #And Some May be Controversial
+	id = FZL.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.9" }
+	title = FZL.9.t
+	desc = FZL.9.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.9.a
+
+		hidden_effect = {
+			country_event = {
+				id = FZL.14
+				days = 13
+			}
+		}
+	}
+}
+
+country_event = { #Saving Spain from its Enemies
+	id = FZL.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.10" }
+	title = FZL.10.t
+	desc = FZL.10.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.10.a
+	}
+}
+
+country_event = { #Sin Relevo Posible, Hasta la Extinción
+	id = FZL.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.11" }
+	title = FZL.11.t
+	desc = FZL.11.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.11.a
+	}
+}
+
+
+##############Chain/Reaction Events#######################
+
+country_event = { #uh seems like some stuff is not holding up
+	id = FZL.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.14" }
+	title = FZL.14.t
+	desc = FZL.14.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.14.a
+
+		hidden_effect = {
+			country_event = {
+				id = FZL.15
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #oh god oh fuck why did we do this
+	id = FZL.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.15" }
+	title = FZL.15.t
+	desc = FZL.15.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.15.a
+
+		add_political_power = -100
+		add_stability = -0.3
+		add_manpower = -3000
+	}
+}
+
+##############Germany Events#######################
+
+country_event = { #Diplomats from Frente Azul Arrive
+	id = FZL.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.16" }
+	title = FZL.16.t
+	desc = FZL.16.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = { #Send some token aid
+		name = FZL.16.a
+
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -300
+			producer = GER
+		}
+
+		FZL = {
+		country_event = {
+			id = FZL.17
+			days = 5
+		}
+		}
+	}
+	option = { #These falangists are crumbling, pay no attention to them
+		name = FZL.16.b
+
+		trigger = { is_ai = no }
+	}
+}
+
+country_event = { #German Arms Shipments Arrive
+	id = FZL.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.17" }
+	title = FZL.17.t
+	desc = FZL.17.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.17.a
+
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 300
+			producer = GER
+		}
+
+		add_ideas = FZL_germany_1
+
+		set_country_flag = FZL_germanhelp1
+	}
+}
+
+country_event = { #Frente Azul Requests More Aid
+	id = FZL.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.18" }
+	title = FZL.18.t
+	desc = FZL.18.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = { #Ramp up the military assistance, they could be a good ally
+		name = FZL.18.a
+
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -900
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = -100
+			producer = GER
+		}
+
+		FZL = {
+		country_event = {
+			id = FZL.19
+			days = 3
+		}
+		}
+	}
+	option = { #Enough has been invested in this failure
+		name = FZL.18.b
+
+		trigger = { is_ai = no }
+	}
+}
+
+country_event = { #Significant German Support is Promised
+	id = FZL.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.19" }
+	title = FZL.19.t
+	desc = FZL.19.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.19.a
+
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 900
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 100
+			producer = GER
+		}
+
+		#swap_ideas = {
+		#	remove_idea = FZL_germany_1
+		#	add_idea = FZL_germany_2
+		#}
+		set_country_flag = FZL_germanhelp2
+	}
+}
+
+country_event = { #Our Delegation Arrives in Germania
+	id = FZL.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.20" }
+	title = FZL.20.t
+	desc = FZL.20.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.20.a
+
+		GER = {
+		country_event = {
+			id = FZL.21
+			days = 1
+		}
+		}
+	}
+}
+
+country_event = { #A Decisive Meeting with the Frente Azul Delegation
+	id = FZL.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.21" }
+	title = FZL.21.t
+	desc = FZL.21.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = { #Send all we can to our new Spanish ally
+		name = FZL.21.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				GER = { has_country_leader = { character = GER_hermann_goring ruling_only = yes } }
+			}
+			modifier = {
+				factor = 4
+				GER = { has_country_leader = { character = GER_martin_bormann ruling_only = yes } }
+			}
+		}
+
+		add_manpower = -10000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -3000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = -750
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = -500
+			producer = GER
+		}
+
+		FZL = {
+		country_event = {
+			id = FZL.22
+			days = 4
+		}
+		}
+	}
+	option = { #Offer significantly more aid
+		name = FZL.21.b
+		ai_chance = {
+			factor = 2
+		}
+
+		add_manpower = -3000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -1000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = -200
+			producer = GER
+		}
+
+		FZL = {
+		country_event = {
+			id = FZL.23
+			days = 4
+		}
+		}
+	}
+	option = { #There will be no more support
+		name = FZL.21.c
+		ai_chance = {
+			factor = 2
+		}
+
+		FZL = {
+		country_event = {
+			id = FZL.24
+			days = 4
+		}
+		}
+	}
+}
+
+country_event = { #Germany Pledges their Full Support
+	id = FZL.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.22" }
+	title = FZL.22.t
+	desc = FZL.22.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.22.a
+
+		add_manpower = 10000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 3000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 750
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = 500
+			producer = GER
+		}
+
+		#swap_ideas = {
+		#	remove_idea = FZL_germany_2
+		#	add_idea = FZL_germany_4
+		#}
+	}
+}
+
+country_event = { #Germany Increases their Support
+	id = FZL.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.23" }
+	title = FZL.23.t
+	desc = FZL.23.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.23.a
+
+		add_manpower = 3000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 1000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 200
+			producer = GER
+		}
+		#swap_ideas = {
+		#	remove_idea = FZL_germany_2
+		#	add_idea = FZL_germany_3
+		#}
+	}
+}
+
+country_event = { #Germany Maintains the Status Quo
+	id = FZL.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL.24" }
+	title = FZL.24.t
+	desc = FZL.24.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL.24.a
+	}
+}
+
+########################################################
+country_event = { #
+	id = FZL_wars.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.1" }
+	title = FZL_wars.1.t
+	desc = FZL_wars.1.d
+	picture = GFX_report_event_CHL_club_union
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL_wars.1.a
+	}
+}
+
+country_event = { #
+	id = FZL_wars.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.2" }
+	title = FZL_wars.2.t
+	desc = FZL_wars.2.d
+	picture = GFX_report_event_FAR_Faroes_High_School
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL_wars.2.a
+	}
+}
+
+country_event = { #
+	id = FZL_wars.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.3" }
+	title = FZL_wars.3.t
+	desc = FZL_wars.3.d
+	picture = GFX_report_event_IBR_home_office_desk
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL_wars.3.a
+	}
+}
+
+country_event = { #
+	id = FZL_wars.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.4" }
+	title = FZL_wars.4.t
+	desc = FZL_wars.4.d
+	picture = GFX_report_event_IBR_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL_wars.4.a
+	}
+}
+
+country_event = { #
+	id = FZL_wars.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.5" }
+	title = FZL_wars.5.t
+	desc = FZL_wars.5.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = FZL_wars.5.a
+	}
+}
+
+country_event = {
+	id = FZL_wars.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.6" }
+	title = FZL_wars.6.t
+	desc = FZL_wars.6.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_KOM_execution
+	option = { 
+		name = FZL_wars.6.a
+	}
+}
+
+country_event = {
+	id = FZL_wars.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.7" }
+	title = FZL_wars.7.t
+	desc = FZL_wars.7.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_RUS_burning_village
+	option = { 
+		name = FZL_wars.7.a
+	}
+}
+
+country_event = {#To play when capturing Madrid
+	id = FZL_wars.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.8" }
+	title = FZL_wars.8.t
+	desc = FZL_wars.8.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FZL_can_see_conquer_events
+	}
+	picture = GFX_report_event_IBR_madrid_aerial_view
+	option = { 
+		name = FZL_wars.8.a
+	}
+}
+
+country_event = {#To play when capturing Guadalajara
+	id = FZL_wars.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.9" }
+	title = FZL_wars.9.t
+	desc = FZL_wars.9.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FZL_can_see_conquer_events
+	}
+	picture = GFX_report_event_GER_child_german_soldiers
+	option = { 
+		name = FZL_wars.9.a
+	}
+}
+
+country_event = {#To play when capturing Zaragoza
+	id = FZL_wars.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.10" }
+	title = FZL_wars.10.t
+	desc = FZL_wars.10.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FZL_can_see_conquer_events
+	}
+	picture = GFX_report_event_generic_corpses
+	option = { 
+		name = FZL_wars.10.a
+	}
+}
+
+country_event = {#To play when capturing Toledo
+	id = FZL_wars.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.11" }
+	title = FZL_wars.11.t
+	desc = FZL_wars.11.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FZL_can_see_conquer_events
+	}
+	picture = GFX_report_event_generic_building_rubble
+	option = { 
+		name = FZL_wars.11.a
+	}
+}
+
+country_event = {#To play when capturing Badajoz
+	id = FZL_wars.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.12" }
+	title = FZL_wars.12.t
+	desc = FZL_wars.12.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FZL_can_see_conquer_events
+	}
+	picture = GFX_report_event_generic_sunset
+	option = { 
+		name = FZL_wars.12.a
+	}
+}
+
+country_event = {#To play when capturing Cartagena
+	id = FZL_wars.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.13" }
+	title = FZL_wars.13.t
+	desc = FZL_wars.13.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FZL_can_see_conquer_events
+	}
+	picture = GFX_report_event_generic_ruins
+	option = { 
+		name = FZL_wars.13.a
+	}
+}
+
+country_event = {#To play when capturing Cordoba
+	id = FZL_wars.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.14" }
+	title = FZL_wars.14.t
+	desc = FZL_wars.14.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FZL_can_see_conquer_events
+	}
+	picture = GFX_report_event_GER_ss_loading_truck
+	option = { 
+		name = FZL_wars.14.a
+	}
+}
+
+#Invading Portugal
+country_event = { 
+	id = FZL_wars.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FZL_wars.100" }
+	title = FZL_wars.100.t
+	desc = FZL_wars.100.d
+	picture = GFX_report_event_IBR_iberian_wars_gns_kaulza_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FZL_wars.100.a
+		custom_effect_tooltip = FZL_Portugal_War_Ready
+		set_country_flag = IBR_Wars_Invade_Portugal
+	}
+}

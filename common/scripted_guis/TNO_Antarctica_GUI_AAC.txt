@@ -1,0 +1,258 @@
+scripted_gui = {
+	Antarctica_GUI_AAC = {
+		context_type = decision_category
+		window_name = "Antarctica_GUI_AAC"
+
+		visible = {
+			always = yes
+		}
+		
+		effects = {
+			Antarctica_GUI_AAC_Basic_Map_AAA_Button_click = {
+				set_country_flag = Antarctica_GUI_AAC_AAA_Decisions_Visible
+				clr_country_flag = Antarctica_GUI_AAC_AAJ_Decisions_Visible
+			}
+			Antarctica_GUI_AAC_Basic_Map_AAJ_Button_click = {
+				clr_country_flag = Antarctica_GUI_AAC_AAA_Decisions_Visible
+				set_country_flag = Antarctica_GUI_AAC_AAJ_Decisions_Visible
+			}
+		}
+		
+		triggers = {
+			
+		}
+		
+		properties = {
+			Antarctica_GUI_AAC_Progressbar_AAA_1 = {
+				frame = Antarctica_GUI_AAC_Diplo_AAA
+			}
+			Antarctica_GUI_AAC_Progressbar_AAA_2 = {
+				frame = Antarctica_GUI_AAC_Tensions_AAA
+			}
+			Antarctica_GUI_AAC_Progressbar_AAJ_1 = {
+				frame = Antarctica_GUI_AAC_Diplo_AAJ
+			}
+			Antarctica_GUI_AAC_Progressbar_AAJ_2 = {
+				frame = Antarctica_GUI_AAC_Tensions_AAJ
+			}
+		}
+	}
+
+	Antarctica_GUI_AAC_Diplomacy = {
+		# var:AAC_Diplomacy_Active_Country - id of guys' current location state
+		# var:AAC_Diplomacy_Negotiation_Progress - negotiation progress (0-100)
+		# var:AAC_Diplomacy_Negotiation_Threshold - negotiation threshold (0-100)
+
+		context_type = decision_category
+		window_name = "Antarctica_GUI_AAC_Diplomacy"
+
+		visible = {
+			always = yes
+		}
+		triggers = {
+			Antarctica_GUI_AAC_Diplomacy_Progressbar_Threshold_visible = {
+				NOT = {
+					check_variable = { AAC_Diplomacy_Active_Country = 0 }
+				}
+			}
+		}
+
+		dynamic_lists = {
+			Deal_Gridbox = {
+				array = AAC_Diplo_Deal_Array
+				value = aac_diplo_deal_v
+				index = aac_diplo_deal_i
+				change_scope = no
+				entry_container = Deal_Gridbox_Entry
+			}
+		}
+
+		effects = {
+		}
+
+		properties = {
+			Antarctica_GUI_AAC_Diplomacy_Progressbar = {
+				frame = AAC_Diplomacy_Negotiation_Progress
+			}
+			Antarctica_GUI_AAC_Diplomacy_Progressbar_Threshold = {
+				frame = AAC_Diplomacy_Negotiation_Threshold
+				image = [GetAACNegotiationThresholdBar]
+			}
+			Antarctica_GUI_AAC_Diplomacy_Threshold_X = {
+				x = AAC_Diplomacy_Threshold_X
+			}
+			Antarctica_GUI_AAC_Diplomacy_Image = {
+				image = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_[?AAC_Diplomacy_Active_Country]"
+			}
+		}
+	}
+
+	Antarctica_GUI_AAC_Marine = {
+		context_type = decision_category
+		window_name = "Antarctica_GUI_AAC_Marine"
+		dirty = dirty_marines
+
+		visible = {
+			always = yes
+		}
+
+		effects = {
+			AAC_Marine_Skill_Pump_click = {
+				set_temp_variable = { temp_value = -1 }
+				Antarctica_AAC_Change_XP = yes
+
+				set_temp_variable = { temp_skill = i }
+				set_temp_variable = { temp_value = 1 }
+				Antarctica_AAC_Marine_Modify_Skill = yes
+				add_to_variable = { dirty_marines = 1 }
+			}
+
+			AAC_Marine_Equipment_Category_Button_click = {
+				set_variable = { AAC_Equipment_Frame^AAC_Marine_Active_Category = 1 }
+				set_variable = { AAC_Marine_Active_Category = cat_i }
+				add_to_variable = { dirty_marines = 1 }
+				set_variable = { AAC_Equipment_Frame^AAC_Marine_Active_Category = 2 }
+
+				meta_effect = {
+					text = {
+						AAC_populate_armory_array_[ID] = yes
+					}
+					ID = "[?cat_i]"
+				}
+			}
+
+			AAC_Marine_Active_Equipment_Icon_click = {
+				if = {
+					limit = { has_country_flag = AAC_Marine_Armory_Open }
+					clr_country_flag = AAC_Marine_Armory_Open
+				}
+				else = {
+					set_country_flag = AAC_Marine_Armory_Open
+				}
+
+				# Populates armory array based on current equipment
+				set_temp_variable = { cat_v = AAC_Marine_Active_Category }
+				meta_effect = {
+					text = {
+						AAC_populate_armory_array_[ID] = yes
+					}
+					ID = "[?cat_v]"
+				}
+
+				# To give tooltip for current equipment
+				effect_tooltip = {
+					set_temp_variable = { equipment_id_temp = var:AAC_Active_Equipment_Array^AAC_Marine_Active_Category }
+					Antarctica_AAC_Marine_Add_Equipment = yes
+				}
+			}
+		}
+
+		triggers = {
+			AAC_Marine_Skill_Pump_visible = {
+				NOT = {
+					check_variable = { FROM.AAC_Skill_XP = 0 }
+					check_variable = { v = 100 }
+				}
+			}
+			AAC_Marine_Skill_Pump_Locked_visible = {
+				OR = {
+					check_variable = { FROM.AAC_Skill_XP = 0 }
+					check_variable = { v = 100 }
+				}
+			}
+		}
+
+		dynamic_lists = {
+			AAC_Marine_Skill_Grid_Box = {
+				array = AAC_Skill_Array
+				value = v
+				index = i
+				entry_container = "AAC_Marine_Skill_Container"
+			}
+
+			AAC_Marine_Equipment_Category_Grid_Box = {
+				array = AAC_Active_Equipment_Array
+				value = cat_v
+				index = cat_i
+				entry_container = "AAC_Marine_Equipment_Category_Entry"
+				change_scope = no
+			}
+		}
+
+		properties = {
+			AAC_Marine_Skill_Bar = {
+				image = "GFX_AAC_Marine_Skill_[?i]_Bar"
+				frame = v
+			}
+			AAC_Marine_Equipment_Category_Button = {
+				image = "GFX_AAC_Marine_Equipment_[?cat_i]"
+				frame = AAC_Equipment_Frame^cat_i
+			}
+			AAC_Marine_Active_Equipment_Icon = {
+				image = "GFX_[?AAC_Active_Equipment_Array^AAC_Marine_Active_Category.GetTokenKey]"
+			}
+			AAC_Marine_Display = {
+				frame = AAC_body_kit_frame
+			}
+		}
+	}
+
+	Antarctica_GUI_AAC_Armory = {
+		context_type = player_context
+		window_name = "Antarctica_GUI_AAC_Armory"
+		dirty = dirty_marines
+
+		visible = {
+			has_country_flag = AAC_Marine_Armory_Open
+		}
+
+		dynamic_lists = {
+			AAC_Armory_Equipment_gridbox = {
+				array = AAC_Armory_Array
+				value = v
+				index = i
+				entry_container = "AAC_Marine_Armory_Equipment_Entry"
+			}
+		}
+
+		effects = {
+			AAC_Marine_Armory_Equipment_Button_click = {
+				set_temp_variable = { equipment_id_temp = var:AAC_Armory_Array^i }
+				Antarctica_AAC_Marine_Change_Equipment = yes
+
+				#set_variable = { AAC_Active_Equipment_Array^AAC_Marine_Active_Category = v }
+				add_to_variable = { dirty_marines = 1 }
+			}
+
+			AAC_Armory_close_button_click = {
+				clr_country_flag = AAC_Marine_Armory_Open
+			}
+		}
+
+		triggers = {
+			AAC_Marine_Armory_Equipment_Button_click_enabled = {
+				custom_trigger_tooltip = {
+					has_idea = var:AAC_Armory_Array^i
+					tooltip = AAC_Armory_has_unlocked_equipment_tt
+				}
+				custom_trigger_tooltip = {
+					NOT = { check_variable = { AAC_Active_Equipment_Array^AAC_Marine_Active_Category = var:AAC_Armory_Array^i } }
+					tooltip = AAC_Armory_not_already_in_use_tt
+				}
+			}
+			AAC_Armory_Equipment_Locked_visible = {
+				NOT = { has_idea = var:AAC_Armory_Array^i }
+			}
+			AAC_Marine_Armory_Locked_visible = {
+				NOT = { has_idea = var:AAC_Armory_Array^i }
+			}
+		}
+
+		properties = {
+			AAC_Marine_Armory_Equipment_Button = {
+				image = "GFX_[?AAC_Armory_Array^i.GetTokenKey]"
+			}
+			
+		}
+	}
+}

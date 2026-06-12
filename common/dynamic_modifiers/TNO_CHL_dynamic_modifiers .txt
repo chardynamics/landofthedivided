@@ -1,0 +1,8 @@
+CHL_rural_collapse = {
+	enable = { always = yes }
+	stability_factor = CHL_cautinazo_participation_var
+	weekly_manpower = CHL_cautinazo_violence_var
+}
+CHL_copper_prices = {
+	enable = { always = yes }
+}

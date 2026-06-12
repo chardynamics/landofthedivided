@@ -1,0 +1,275 @@
+TNO_setup_french_west_indies_referendum = {
+	hidden_effect = {
+		FWI = {
+			# Set up initial favor, daily tick
+			if = {
+				limit = { has_game_rule = { rule = FWI_PROXY option = FWI_PROXY_MEX } }
+				set_variable = { FWI_referendum_favor = 49 } #failproof
+			}
+			else = {
+				set_variable = { FWI_referendum_favor = 51 }
+			}
+			set_variable = { TNO_FWI_referendum_mendesist_modifier = 0 }
+			set_variable = { TNO_FWI_referendum_gaullist_modifier = 0 }
+		}
+		ZZZ = {
+			activate_mission = ZZZ_FWI_Referendum_Deadline
+		}
+		USA = { country_event = { id = FWI_proxy.7 days = 50 } } #Hidden Event that activates the Veto Decision
+
+		USA = {
+			set_temp_variable = { Victory_ID = 68 }
+			set_temp_variable = { Victory_Outcome = 0 }
+			Cold_War_GUI_AddVictory = yes
+		}
+	}
+}
+
+TNO_conclude_french_west_indies_referendum = {
+	USA = {
+		TNO_fopo_remove_french_west_indies_referendum_tab = yes
+	}
+	MEX = {
+		TNO_fopo_remove_french_west_indies_referendum_tab = yes
+	}
+	IBR = {
+		TNO_fopo_remove_french_west_indies_referendum_tab = yes
+	}
+	FWI = {
+		if = { #Veto Outcome
+			limit = {
+				USA = { has_country_flag = FWI_Referendum_USA_VETO }
+				OR = {
+					check_variable = {
+						var = FWI.FWI_referendum_favor
+						value = 41
+						compare = greater_than_or_equals
+					}
+					has_game_rule = { rule = FWI_PROXY option = FWI_PROXY_VETO }
+				}
+				NOT = { has_game_rule = { rule = FWI_PROXY option = FWI_PROXY_USA } }
+				NOT = { has_game_rule = { rule = FWI_PROXY option = FWI_PROXY_MEX } }
+			}
+			country_event = { id = FWI_skeleton.2 days = 1 }
+			USA = {
+				country_event = { id = FWI_proxy.11 }
+				clr_country_flag = FWI_Referendum_USA_VETO
+			}
+			MEX = { country_event = { id = FWI_proxy.11 days = 1 } }
+			IBR = { country_event = { id = FWI_proxy.11 days = 1 } }
+
+			USA = {
+				set_temp_variable = { Victory_ID = 68 }
+				set_temp_variable = { Victory_Outcome = 4 }
+				set_temp_variable = { Victory_Points = 50 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+		}
+		else_if = { #Veto Cancelled Outcome
+			limit = {
+				USA = { has_country_flag = FWI_Referendum_USA_VETO }
+				check_variable = {
+					var = FWI.FWI_referendum_favor
+					value = 41
+					compare = less_than
+				}
+				NOT = { has_game_rule = { rule = FWI_PROXY option = FWI_PROXY_USA } }
+			}
+			country_event = { id = FWI_skeleton.10 days = 1 }
+			USA = {
+				country_event = { id = FWI_proxy.10 }
+				clr_country_flag = FWI_Referendum_USA_VETO
+			}
+			MEX = { country_event = { id = FWI_proxy.8 } }
+			IBR = { country_event = { id = FWI_proxy.9 } }			
+
+			USA = {
+				set_temp_variable = { Victory_ID = 68 }
+				set_temp_variable = { Victory_Outcome = 2 }
+				set_temp_variable = { Victory_Points = -75 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+		}
+		else_if = { #Confederation Plan
+			limit = {
+				OR = {
+					check_variable = {
+						var = FWI.FWI_referendum_favor
+						value = 50
+						compare = greater_than_or_equals
+					}
+					has_game_rule = { rule = FWI_PROXY option = FWI_PROXY_USA }
+				}
+				NOT = { has_game_rule = { rule = FWI_PROXY option = FWI_PROXY_MEX } }
+			}
+			country_event = { id = FWI_skeleton.4 days = 1 }
+			USA = { country_event = { id = FWI_proxy.5 } }
+			MEX = { country_event = { id = FWI_proxy.5 } }
+			IBR = { country_event = { id = FWI_proxy.5 } }
+
+			USA = {
+				set_temp_variable = { Victory_ID = 68 }
+				set_temp_variable = { Victory_Outcome = 5 }
+				set_temp_variable = { Victory_Points = 75 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+		}
+		else = { #Autonomy Plan
+			country_event = { id = FWI_skeleton.10 days = 1 }
+			USA = { country_event = { id = FWI_proxy.6 } }
+			MEX = { country_event = { id = FWI_proxy.6 } }
+			IBR = { country_event = { id = FWI_proxy.6 } }
+
+			USA = {
+				set_temp_variable = { Victory_ID = 68 }
+				set_temp_variable = { Victory_Outcome = 2 }
+				set_temp_variable = { Victory_Points = -75 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+		}
+	}
+}
+
+TNO_FWI_referendum_mendesist_increase_low = {
+	FWI = {
+		add_to_variable = { FWI_referendum_favor = 2 }
+		add_to_variable = { FWI_referendum_favor = FWI.TNO_FWI_referendum_mendesist_modifier }
+	}
+	TNO_FWI_referendum_calculate_favor = yes
+	custom_effect_tooltip = TNO_FWI_referendum_mendesist_increase_low
+}
+
+TNO_FWI_referendum_mendesist_increase_med = {
+	FWI = {
+		add_to_variable = { FWI_referendum_favor = 4 }
+		add_to_variable = { FWI_referendum_favor = FWI.TNO_FWI_referendum_mendesist_modifier }
+	}
+	TNO_FWI_referendum_calculate_favor = yes
+	custom_effect_tooltip = TNO_FWI_referendum_mendesist_increase_med
+}
+
+TNO_FWI_referendum_mendesist_increase_high = {
+	FWI = {
+		add_to_variable = { FWI_referendum_favor = 6 }
+		add_to_variable = { FWI_referendum_favor = FWI.TNO_FWI_referendum_mendesist_modifier }
+	}
+	TNO_FWI_referendum_calculate_favor = yes
+	custom_effect_tooltip = TNO_FWI_referendum_mendesist_increase_high
+}
+
+TNO_FWI_referendum_gaullist_increase_low = {
+	FWI = {
+		subtract_from_variable = { FWI_referendum_favor = 1 }
+		subtract_from_variable = { FWI_referendum_favor = FWI.TNO_FWI_referendum_gaullist_modifier }
+	}
+	TNO_FWI_referendum_calculate_favor = yes
+	custom_effect_tooltip = TNO_FWI_referendum_gaullist_increase_low
+}
+
+TNO_FWI_referendum_gaullist_increase_med = {
+	FWI = {
+		subtract_from_variable = { FWI_referendum_favor = 2 }
+		subtract_from_variable = { FWI_referendum_favor = FWI.TNO_FWI_referendum_gaullist_modifier }
+	}
+	TNO_FWI_referendum_calculate_favor = yes
+	custom_effect_tooltip = TNO_FWI_referendum_gaullist_increase_med
+}
+
+TNO_FWI_referendum_gaullist_increase_high = {
+	FWI = {
+		subtract_from_variable = { FWI_referendum_favor = 3 }
+		subtract_from_variable = { FWI_referendum_favor = FWI.TNO_FWI_referendum_gaullist_modifier }
+	}
+	TNO_FWI_referendum_calculate_favor = yes
+	custom_effect_tooltip = TNO_FWI_referendum_gaullist_increase_high
+}
+
+IBR_FWI_referendum_increase_albrand_backing = {
+	add_to_variable = { IBR_FWI_referendum_albrand_var = IBR_FWI_referendum_albrand_change }
+	clamp_variable = {
+		var = IBR_FWI_referendum_albrand_var
+		min = 0
+		max = 5
+	}
+	set_variable = { IBR_FWI_referendum_albrand_cost = 75 }
+	set_temp_variable = { IBR_FWI_referendum_albrand_tmp = IBR_FWI_referendum_albrand_var }
+	multiply_temp_variable = { IBR_FWI_referendum_albrand_tmp = 15 }
+	subtract_from_variable = { IBR_FWI_referendum_albrand_cost = IBR_FWI_referendum_albrand_tmp }
+	custom_effect_tooltip = IBR_FWI_referendum_increase_albrand_backing_tt
+}
+IBR_FWI_referendum_decrease_albrand_backing = {
+	subtract_from_variable = { IBR_FWI_referendum_albrand_var = 1 }
+	clamp_variable = {
+		var = IBR_FWI_referendum_albrand_var
+		min = 0
+		max = 5
+	}
+	set_variable = { IBR_FWI_referendum_albrand_cost = 75 }
+	set_temp_variable = { IBR_FWI_referendum_albrand_tmp = IBR_FWI_referendum_albrand_var }
+	multiply_temp_variable = { IBR_FWI_referendum_albrand_tmp = 15 }
+	subtract_from_variable = { IBR_FWI_referendum_albrand_cost = IBR_FWI_referendum_albrand_tmp }
+	custom_effect_tooltip = IBR_FWI_referendum_decrease_albrand_backing_tt
+}
+
+TNO_FWI_referendum_calculate_favor = {
+	FWI = {
+		clamp_variable = {
+			var = FWI_referendum_favor
+			min = 0
+			max = 100
+		}
+	}
+	set_variable = { USA_FWI_confed_cost = FWI.FWI_referendum_favor }
+	divide_variable = { USA_FWI_confed_cost = 100 }
+	subtract_from_variable = { USA_FWI_confed_cost = 60 }
+	multiply_variable = { USA_FWI_confed_cost = -1 }
+	if = {
+		limit = { has_game_rule = { rule = FWI_PROXY option = FWI_PROXY_USA } }
+		set_variable = { FWI_referendum_favor = 100 }
+	}
+	else_if = {
+		limit = { has_game_rule = { rule = FWI_PROXY option = FWI_PROXY_VETO } }
+		set_variable = { FWI_referendum_favor = 45 }
+	}
+	else_if = {
+		limit = { has_game_rule = { rule = FWI_PROXY option = FWI_PROXY_MEX } }
+		set_variable = { FWI_referendum_favor = 0 }
+	}
+}
+
+TNO_FWI_start_referendum_action = {
+	if = {
+		limit = { tag = USA }
+		add_to_variable = { fwi_referendum_USA_actions_counter = 1 }
+	}
+	else_if = {
+		limit = { tag = MEX }
+		add_to_variable = { fwi_referendum_MEX_actions_counter = 1 }
+	}
+	else_if = {
+		limit = { tag = IBR }
+		add_to_variable = { fwi_referendum_IBR_actions_counter = 1 }
+	}
+	#if = {
+	#	limit = { fwi_referendum_can_act = no }
+	#	set_temp_variable = { alert_id = token:Alert_LATAM_Bush_War }
+	#	remove_TNO_alert = yes
+	#}
+}
+
+TNO_FWI_finish_referendum_action = {
+	if = {
+		limit = { tag = USA }
+		subtract_from_variable = { fwi_referendum_USA_actions_counter = 1 }
+	}
+	else_if = {
+		limit = { tag = MEX }
+		subtract_from_variable = { fwi_referendum_MEX_actions_counter = 1 }
+	}
+	else_if = {
+		limit = { tag = IBR }
+		subtract_from_variable = { fwi_referendum_IBR_actions_counter = 1 }
+	}
+	#set_temp_variable = { alert_id = token:Alert_LATAM_Bush_War }
+	#add_TNO_alert_unless_exists = yes
+}

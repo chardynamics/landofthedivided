@@ -1,0 +1,279 @@
+characters = {
+	STC_Carmelo_Ortiz_Taborga = {
+		name = STC_Carmelo_Ortiz_Taborga
+		portraits = { civilian = { large = "gfx/leaders/STC/Portrait_Santa_Cruz_Carmelo_Ortiz_Taborga.png" } }
+		country_leader = {
+			desc = "POLITICS_CARMELO_ORTIZ_TABORGA"
+			expire = "1994.4.20"
+			ideology = paternalism_right_wing_populism_subtype
+			id = -1
+		}
+	}
+	STC_Jose_Luis_Camacho_Parada = {
+		name = STC_Jose_Luis_Camacho_Parada
+		portraits = { civilian = { large = "gfx/leaders/STC/Portrait_Santa_Cruz_Camacho_Parada.png" } }
+	}
+	STC_Carlos_Valverde_Barbery = {
+		name = STC_Carlos_Valverde_Barbery
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/STC/Portrait_Santa_Cruz_Carlos_Valverde_Barbery.png"
+				small = "GFX_idea_STC_Carlos_Valverde_Barbery"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CARLOS_VALVERDE_BARBERY"
+			expire = "1994.4.20"
+			ideology = fascism_falangism_subtype
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = STC_Carlos_Valverde_Barbery_hog
+			allowed = { original_tag = STC }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	STC_Luis_Sandoval_Moron = {
+		name = STC_Luis_Sandoval_Moron
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/STC/Portrait_Santa_Cruz_Luis_Sandoval_Moron.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_LUIS_SANDOVAL_MORON"
+			expire = "1994.4.20"
+			ideology = socialist_left_wing_nationalism_subtype
+			traits = { lucho_santa_cruz }
+			id = -1
+		}
+	}
+
+	STC_Pedro_Ribera_Mendez = {
+		name = STC_Pedro_Ribera_Mendez
+		portraits = {
+			civilian = {
+				small = "GFX_idea_STC_Pedro_Ribera_Mendez"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = STC_Pedro_Ribera_Mendez_hog
+			allowed = { original_tag = STC }
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	STC_Edil_Sandoval_Moron = {
+		name = STC_Edil_Sandoval_Moron
+		portraits = {
+			civilian = {
+				small = "GFX_idea_STC_Edil_Sandoval_Moron"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = STC_Edil_Sandoval_Moron_for
+			allowed = { original_tag = STC }
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	STC_Julio_Calvo_Cronenbold = {
+		name = STC_Julio_Calvo_Cronenbold
+		portraits = {
+			civilian = {
+				small = "GFX_idea_STC_Julio_Calvo_Cronenbold"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = STC_Julio_Calvo_Cronenbold_eco
+			allowed = { original_tag = STC }
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	STC_Lorgio_Vaca_Marchetti = {
+		name = STC_Lorgio_Vaca_Marchetti
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/STC/Portrait_Santa_Cruz_Lorgio_Vaca_Marchetti.png"
+				small = "GFX_idea_STC_Lorgio_Vaca_Marchetti"
+			}
+		}
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = communist_guevarism_subtype
+			id = -1
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = STC_Lorgio_Vaca_Marchetti_sec
+			allowed = { original_tag = STC }
+			traits = {
+				security_minister
+				sec_resistance_hero
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	STC_Elfy_Albrecht = {
+		name = STC_Elfy_Albrecht
+		#portraits = { civilian = { small = "GFX_idea_STC_Elfy_Albrecht_for" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = STC_Elfy_Albrecht_for
+			allowed = { original_tag = STC }
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	STC_Melchor_Pinto = {
+		name = STC_Melchor_Pinto
+		#portraits = { civilian = { small = "GFX_idea_STC_Melchor_Pinto_eco" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = STC_Melchor_Pinto_eco
+			allowed = { original_tag = STC }
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	STC_Modesto_Saavadera = {
+		name = STC_Modesto_Saavadera
+		#portraits = { civilian = { small = "GFX_idea_STC_Modesto_Saavadera_mil" } }
+		advisor = {
+			slot = security_minister
+			idea_token = STC_Modesto_Saavadera_sec
+			allowed = { original_tag = STC }
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	STC_Hugo_Banzer = {
+		name = STC_Hugo_Banzer
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/STC/Portrait_Santa_Cruz_Hugo_Banzer.png"
+				small = "GFX_idea_STC_minister_Hugo_Banzer"
+			}
+			army = {
+				large = "gfx/leaders/STC/Portrait_Santa_Cruz_Hugo_Banzer.png"
+			}
+		}
+		country_leader = {
+			traits = { generalissimo_banzer }
+			desc = "POLITICS_HUGO_BANZER"
+			expire = "1994.4.20"
+			ideology = despotism_aristocratic_conservatism_subtype
+			id = -1
+		}
+		country_leader = {
+			traits = { generalissimo_banzer }
+			desc = "POLITICS_HUGO_BANZER"
+			expire = "1994.4.20"
+			ideology = paternalism_oligarchy_subtype
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = STC_Hugo_Banzer_hog
+			allowed = { original_tag = STC }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			traits = { career_officer cavalry_leader politically_connected }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	STC_Julio_Prado_Montano = {
+		name = STC_Julio_Prado_Montano
+		portraits = {
+			army = { large = "gfx/leaders/STC/Portrait_STC_Julio_Prado_Montano.png" }
+		}
+		field_marshal = {
+			traits = { old_guard war_hero unyielding_defender }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	STC_Saul_Pinto_Landivar = {
+		name = STC_Saul_Pinto_Landivar
+		portraits = {
+			army = { large = "gfx/leaders/STC/Portrait_STC_Saul_Pinto_Landivar.png" }
+		}
+		corps_commander = {
+			traits = { politically_connected media_personality trait_reckless }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

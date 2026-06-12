@@ -1,0 +1,1005 @@
+spriteTypes = {
+
+	### NSB FIXES ###
+	
+	###INFANTRY UNIFORM UPGRADES###
+
+	SpriteType = {
+		name = "GFX_FRS_infantry_kit_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_36_Kit.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_kit_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_45_Kit.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_kit_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_58_Kit.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_kit_6_medium"
+		texturefile = "gfx/interface/technologies/FRA_70_Kit.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_kit_8_medium"
+		texturefile = "gfx/interface/technologies/FRA_82_Kit.dds"
+	}
+	
+	## Artillery ##
+	SpriteType = {
+		name = "GFX_FRS_artillery_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_artillery_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_artillery_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_artillery_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_Infantry_36.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_Infantry_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/FRS_Infantry_58.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_Infantry_68.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_5_medium"
+		texturefile = "gfx/interface/technologies/FRA_Infantry_78.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_6_medium"
+		texturefile = "gfx/interface/technologies/FRA_Infantry_88.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_support_weapons_hmg_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_mg1.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_support_weapons_hmg_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_mg2.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_support_weapons_hmg_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_mg3.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_support_weapons_hmg_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_mg4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_improvements_mine_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_mine1.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_improvements_mine_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_mine2.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_improvements_mine_3_medium"
+		texturefile = "gfx/interface/technologies/FRS_mine3.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_improvements_mine_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_mine4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_improvements_grenade_1_medium"
+		texturefile = "gfx/interface/technologies/FRS_grenade1.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_improvements_grenade_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_grenade2.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_improvements_grenade_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_grenade3.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_weapons_improvements_grenade_4_medium"
+		texturefile = "gfx/interface/technologies/FRS_grenade4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_support_weapons_arty_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_arty2.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_support_weapons_arty_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_arty4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/FRS_Infantry_AT_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/FRA_Infantry_AT_58.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_infantry_at3_medium"
+		texturefile = "gfx/interface/technologies/FRS_Infantry_AT_68.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_motorized_infantry_medium"
+		texturefile = "gfx/interface/technologies/FRS_Motorized_36.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_motorized_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_Motorized_74.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_motorized_infantry_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_Motorized_86.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_MBT_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_MBT_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_MBT_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_MBT_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_MBT_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_MBT_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_MBT_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_MBT_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_MBT_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_MBT_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_MBT_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_MBT_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_IFV_1945_medium"
+		texturefile = "gfx/interface/technologies/FRA_IFV_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_IFV_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_IFV_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_IFV_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_IFV_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_IFV_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_IFV_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_IFV_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_IFV_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_IFV_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_IFV_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_NSB_MBT_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_MBT_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_MBT_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_MBT_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_MBT_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_MBT_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_MBT_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_MBT_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_MBT_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_MBT_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_MBT_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_MBT_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_NSB_IFV_1945_medium"
+		texturefile = "gfx/interface/technologies/FRA_IFV_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_IFV_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_IFV_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_IFV_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_IFV_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_IFV_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_IFV_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_IFV_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_IFV_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_IFV_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_IFV_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_APC_1945_medium"
+		texturefile = "gfx/interface/technologies/FRA_APC_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_APC_1950_medium"
+		texturefile = "gfx/interface/technologies/FRA_APC_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_APC_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_APC_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_APC_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_APC_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_APC_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_APC_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_APC_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_APC_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_AC_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_AC_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_AC_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_AC_1970_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_AC_1980_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_AC_1990_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_NSB_APC_1945_medium"
+		texturefile = "gfx/interface/technologies/FRA_APC_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_APC_1950_medium"
+		texturefile = "gfx/interface/technologies/FRA_APC_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_APC_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_APC_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_APC_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_APC_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_APC_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_APC_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_APC_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_APC_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_NSB_AC_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_AC_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_AC_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_AC_1970_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_AC_1980_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_AC_1990_medium"
+		texturefile = "gfx/interface/technologies/FRS_AC_90.dds"
+	}
+	
+	# Heavy Tanks
+	
+	# Vanilla
+	
+	SpriteType = {
+		name = "GFX_FRS_Heavy_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_Heavy_Tank_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_Heavy_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_Heavy_Tank_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_Heavy_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Heavy_Tank_50.dds"
+	}
+	
+	# NSB
+
+	SpriteType = {
+		name = "GFX_FRS_NSB_heavy_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_Heavy_Tank_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_heavy_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_Heavy_Tank_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_heavy_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Heavy_Tank_60.dds"
+	}
+	
+	# Superheavy Tanks
+	
+	# Vanilla
+	
+	SpriteType = {
+		name = "GFX_FRS_Superheavy_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_Superheavy_Tank_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_Superheavy_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_Superheavy_Tank_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_Superheavy_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Superheavy_Tank_60.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_Superheavy_Artillery_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_Superheavy_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_Superheavy_Artillery_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_Superheavy_Artillery_60.dds"
+	}
+	
+	# NSB
+	
+	SpriteType = {
+		name = "GFX_FRS_NSB_Superheavy_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_Superheavy_Tank_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_Superheavy_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_Superheavy_Tank_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_Superheavy_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Superheavy_Tank_60.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_NSB_superheavy_artillery_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_Superheavy_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_superheavy_artillery_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_Superheavy_Artillery_60.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_artillery_1945_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_artillery_1950_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_artillery_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_artillery_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_NSB_artillery_1945_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_artillery_1950_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_artillery_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_artillery_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_SPART_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_Heavy_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_SPART_1950_medium"
+		texturefile = "gfx/interface/technologies/FRA_Heavy_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_SPART_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_Heavy_Artillery_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_SPART_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_Heavy_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_SPART_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_Heavy_Artillery_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_SPART_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_Heavy_Artillery_90.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRS_light_SPART_1950_medium"
+		texturefile = "gfx/interface/technologies/FRA_Light_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_light_SPART_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Light_Artillery_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_light_SPART_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_Light_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_light_SPART_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_Light_Artillery_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_light_SPART_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_Light_Artillery_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_antiair_1945_medium"
+		texturefile = "gfx/interface/technologies/FRA_AntiAir_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_antiair_1950_medium"
+		texturefile = "gfx/interface/technologies/IBR_AntiAir_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_antiair_1970_medium"
+		texturefile = "gfx/interface/technologies/FRS_AntiAir_70.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_NSB_antiair_1945_medium"
+		texturefile = "gfx/interface/technologies/FRA_AntiAir_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_antiair_1950_medium"
+		texturefile = "gfx/interface/technologies/IBR_AntiAir_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_NSB_antiair_1970_medium"
+		texturefile = "gfx/interface/technologies/FRS_AntiAir_70.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRS_anti_air_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_AntiAir_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_anti_air_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/IBR_AntiAir_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_anti_air_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/FRS_AntiAir_70.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_SPAA_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_Heavy_AntiAir_90.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_SPAA_1980_medium"
+		texturefile = "gfx/interface/technologies/FRS_Heavy_AntiAir_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_SPAA_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_Heavy_AntiAir_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_SPAA_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Heavy_AntiAir_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_SPAA_1950_medium"
+		texturefile = "gfx/interface/technologies/FRA_Heavy_AntiAir_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_SPAA_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_Heavy_AntiAir_45.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_light_SPAA_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_Light_AntiAir_90.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_light_SPAA_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_Light_AntiAir_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_light_SPAA_1970_medium"
+		texturefile = "gfx/interface/technologies/FRS_Light_AntiAir_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_light_SPAA_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_Light_AntiAir_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_light_SPAA_1950_medium"
+		texturefile = "gfx/interface/technologies/FRA_Light_AntiAir_50.dds"
+	}
+	
+	## FRA AIR: LIGHT ##
+	
+	SpriteType = {
+		name = "GFX_FRS_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/FRA_Fighter_36.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_fighter_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_Fighter_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_fighter_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_Fighter_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_fighter_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Fighter_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_fighter_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_Fighter_70.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRS_CAS_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_CAS_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_CAS_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_CAS_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_CAS_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_CAS_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_CAS_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_CAS_70.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRS_MCA_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_MCA_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_MCA_1990_medium"
+		texturefile = "gfx/interface/technologies/FRA_MCA_90.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRS_interceptor_1945_medium"
+		texturefile = "gfx/interface/technologies/FRS_Interceptor_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_interceptor_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_Interceptor_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_interceptor_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Interceptor_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_interceptor_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_Interceptor_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_interceptor_1980_medium"
+		texturefile = "gfx/interface/technologies/FRS_Interceptor_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_interceptor_1990_medium"
+		texturefile = "gfx/interface/technologies/FRS_Interceptor_90.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/FRA_Strategic_Bomber_36.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_heavy_air_1945_medium"
+		texturefile = "gfx/interface/technologies/FRA_Strategic_Bomber_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_heavy_air_1950_medium"
+		texturefile = "gfx/interface/technologies/FRA_Strategic_Bomber_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_heavy_air_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Strategic_Bomber_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_heavy_air_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_Strategic_Bomber_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_heavy_air_1980_medium"
+		texturefile = "gfx/interface/technologies/FRS_Strategic_Bomber_80.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_tac_bomber1_medium"
+		texturefile = "gfx/interface/technologies/FRS_Tactical_Bomber_36.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_tac_air_1950_medium"
+		texturefile = "gfx/interface/technologies/FRS_Tactical_Bomber_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_tac_air_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_Tactical_Bomber_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_tac_air_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_Tactical_Bomber_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_tac_air_1980_medium"
+		texturefile = "gfx/interface/technologies/FRS_Tactical_Bomber_80.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_transport_air1_medium"
+		texturefile = "gfx/interface/technologies/FRS_Transport_36.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_transport_air_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_Transport_60.dds"
+	}
+	
+
+	SpriteType = {
+		name = "GFX_FRS_very_early_helicopter_medium"
+		texturefile = "gfx/interface/technologies/FRS_Very_Early_Heli.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_early_helicopter_medium"
+		texturefile = "gfx/interface/technologies/FRS_Early_Heli.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_asw_helicopter_1970_medium"
+		texturefile = "gfx/interface/technologies/FRS_ASW_Heli_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_asw_helicopter_1980_medium"
+		texturefile = "gfx/interface/technologies/FRS_ASW_Heli_80.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_attack_helicopter_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Attack_Heli_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_attack_helicopter_1970_medium"
+		texturefile = "gfx/interface/technologies/FRA_Attack_Heli_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_attack_helicopter_1980_medium"
+		texturefile = "gfx/interface/technologies/FRS_Attack_Heli_80.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_scout_helicopter_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Scout_Heli_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_scout_helicopter_1970_medium"
+		texturefile = "gfx/interface/technologies/FRS_Scout_Heli_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_scout_helicopter_1980_medium"
+		texturefile = "gfx/interface/technologies/FRA_Scout_Heli_80.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_transport_helicopter_1960_medium"
+		texturefile = "gfx/interface/technologies/FRS_Transport_Heli_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_transport_helicopter_1970_medium"
+		texturefile = "gfx/interface/technologies/FRS_Transport_Heli_70.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_scout_plane_1950_medium"
+		texturefile = "gfx/interface/technologies/FRA_Scout_Plane_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_scout_plane_1960_medium"
+		texturefile = "gfx/interface/technologies/FRA_Scout_Plane_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_scout_plane_1970_medium"
+		texturefile = "gfx/interface/technologies/FRS_Scout_Plane_70.dds"
+	}
+	
+	# Naval Icons
+	
+	SpriteType = {
+		name = "GFX_FRS_improved_cruiser_medium"
+		texturefile = "gfx/interface/technologies/FRA_Cruiser_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_improved_ship_hull_cruiser_medium"
+		texturefile = "gfx/interface/technologies/FRA_Cruiser_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_ship_hull_cruiser_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_Cruiser_60.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_ship_hull_cruiser_3_capital_medium"
+		texturefile = "gfx/interface/technologies/FRA_Cruiser_60.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_early_modern_carrier_medium"
+		texturefile = "gfx/interface/technologies/FRA_Carrier_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_ww2_carrier_medium"
+		texturefile = "gfx/interface/technologies/FRA_Carrier_45.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_semi_modern_ship_hull_carrier_medium"
+		texturefile = "gfx/interface/technologies/FRA_Carrier_80.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRS_early_ship_hull_carrier_medium"
+		texturefile = "gfx/interface/technologies/FRA_Carrier_45.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_ww2_submarine_medium"
+		texturefile = "gfx/interface/technologies/FRA_Submarine_45.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRS_early_ship_hull_submarine_medium"
+		texturefile = "gfx/interface/technologies/FRA_Submarine_45.dds"
+	}
+
+	#### Fix for Graphical Culture Bug (or the "I hate Paradox" zone)
+
+	### FRM ###
+
+	## Artillery ##
+	SpriteType = {
+		name = "GFX_FRM_artillery_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRM_artillery_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRM_artillery_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRM_artillery_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_90.dds"
+	}
+
+	## Anti-Air ##
+	SpriteType = {
+		name = "GFX_FRM_anti_air_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_AntiAir_45.dds"
+	}
+
+	### FRD ###
+
+	## Artillery ##
+	SpriteType = {
+		name = "GFX_FRD_artillery_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRD_artillery_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRD_artillery_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRD_artillery_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_90.dds"
+	}
+
+	## Anti-Air ##
+	SpriteType = {
+		name = "GFX_FRD_anti_air_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_AntiAir_45.dds"
+	}
+
+	### FMM ###
+
+	## Artillery ##
+	SpriteType = {
+		name = "GFX_FMM_artillery_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FMM_artillery_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FMM_artillery_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FMM_artillery_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_90.dds"
+	}
+
+	## Anti-Air ##
+	SpriteType = {
+		name = "GFX_FMM_anti_air_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_AntiAir_45.dds"
+	}
+
+	### FRV ###
+
+	## Artillery ##
+	SpriteType = {
+		name = "GFX_FRV_artillery_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRV_artillery_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRV_artillery_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRV_artillery_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_90.dds"
+	}
+
+	## Anti-Air ##
+	SpriteType = {
+		name = "GFX_FRV_anti_air_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_AntiAir_45.dds"
+	}
+
+	### FGR ###
+
+	## Artillery ##
+	SpriteType = {
+		name = "GFX_FGR_artillery_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FGR_artillery_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FGR_artillery_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FGR_artillery_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_90.dds"
+	}
+
+	## Anti-Air ##
+	SpriteType = {
+		name = "GFX_FGR_anti_air_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_AntiAir_45.dds"
+	}
+
+	### FIT ###
+
+	## Artillery ##
+	SpriteType = {
+		name = "GFX_FIT_artillery_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_FIT_artillery_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_FIT_artillery_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_70.dds"
+	}
+	SpriteType = {
+		name = "GFX_FIT_artillery_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/FRA_Artillery_90.dds"
+	}
+
+	## Anti-Air ##
+	SpriteType = {
+		name = "GFX_FIT_anti_air_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_AntiAir_45.dds"
+	}
+}

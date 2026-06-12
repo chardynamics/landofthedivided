@@ -1,0 +1,66 @@
+ideas = {
+	country = {
+		EQG_Preelection_Shock = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea EQG_Preelection_Shock" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_relative_democracy
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.075
+			}
+		}
+		EQG_Towards_Integration = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea EQG_Towards_Integration" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = EQG_Towards_Integration
+			modifier = {
+				political_power_gain = -0.2
+				GDP_to_sphere_leader_modifier = 0.2
+				stability_factor = -0.05
+			}
+		}
+		EQG_Grand_Coalition = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea EQG_Grand_Coalition" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_unity
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+			}
+		}
+		EQG_Bioko_Nationalism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea EQG_Bioko_Nationalism" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = EQG_Bioko_Nationalism
+			modifier = {
+				political_power_gain = -0.1
+				gdp_growth_modifier = -0.5
+				stability_factor = -0.025
+			}
+		}
+	}
+}

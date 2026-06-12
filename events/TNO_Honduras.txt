@@ -1,0 +1,3171 @@
+add_namespace = HON_scripted
+add_namespace = HON_forpol
+add_namespace = HON_news
+
+add_namespace = CA_Football_War
+
+country_event = {#Start
+	id = HON_scripted.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.0" }
+	title = HON_scripted.0.t
+	desc = HON_scripted.0.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_scripted.0.a
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { id = HON_forpol.1 days = 393 }
+			country_event = { id = HON_forpol.2 days = 452 }
+			
+			country_event = { id = HON_forpol.3 days = 1112 }
+			country_event = { id = HON_forpol.4 days = 1412 }
+			country_event = { id = HON_forpol.5 days = 1463 }
+			country_event = { id = HON_forpol.6 days = 1821 }
+		}
+		JAP = {
+			country_event = { id = HON_forpol.7 days = 1112 }
+			country_event = { id = HON_forpol.10 days = 1821 }
+		}
+		IBR = {
+			country_event = { id = HON_forpol.8 days = 1412 }
+		}
+		MEX = {
+			country_event = { id = HON_forpol.9 days = 1463 }
+		}
+		#Chain
+		country_event = { id = HON_scripted.1 days = 1890 } #1967 Elections
+		country_event = { id = HON_scripted.10 days = 3310 } #1971 Elections
+	}
+}
+
+country_event = {#1966 Election (Transition in 1967)
+	id = HON_scripted.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.1" }
+	title = HON_scripted.1.t
+	desc = HON_scripted.1.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {#Liberals
+		name = HON_scripted.1.a
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = HON_66_ELECTION_PATH option = HON_66_ELECTION_PATH_NATIONALISTS }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = HON_66_ELECTION_PATH option = HON_66_ELECTION_PATH_MILITARY }
+			}
+			modifier = {
+				factor = 1.2
+				GUA = { has_government = socialist }
+			}
+			modifier = {
+				factor = 2.5
+				HON = { has_country_flag = HON_USA_Back_PLH }
+			}
+			modifier = {
+				add = 2
+				NOT = { COS = { has_government = paternalism } }
+			}
+			modifier = {
+				add = 2
+				PAN = { has_government = liberal_conservatism }
+			}
+			modifier = {
+				factor = 2
+				has_global_flag = COL_liberal_win
+			}
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = liberal_conservatism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_popularities = {
+			liberal_conservatism = 30
+			liberalism = 15
+			progressivism = 25
+			paternalism = 10
+			conservatism = 20
+		}
+		retire_country_leader = yes
+		HON_Modesto_Rodas_Alvarado = {
+			promote_character = liberal_conservatism_oligarchic_liberalism_subtype
+		}
+		swap_ideas = {
+			remove_idea = HON_Creeping_Colonels
+			add_idea = HON_Honduran_Gaitan
+		}
+		clr_country_flag = HON_USA_Back_PLH
+		clr_country_flag = HON_USA_Back_PNH
+		clr_country_flag = HON_USA_Back_JNT
+		USA = {
+			country_event = { id = HON_forpol.11 days = 100 }
+			country_event = { id = HON_forpol.12 days = 201 }
+			country_event = { id = HON_forpol.13 days = 565 }
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = HON_news.5 hours = 4 }
+		}
+	}
+	option = {#Nationalists
+		name = HON_scripted.1.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = HON_66_ELECTION_PATH option = HON_66_ELECTION_PATH_LIBERALS }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = HON_66_ELECTION_PATH option = HON_66_ELECTION_PATH_MILITARY }
+			}
+			modifier = {
+				add = 3
+				has_global_flag = COL_conservative_win
+			}
+			modifier = {
+				factor = 2.5
+				HON = { has_country_flag = HON_USA_Back_PNH }
+			}
+			
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = conservatism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_popularities = {
+			liberal_conservatism = 25
+			liberalism = 10
+			progressivism = 10
+			paternalism = 15
+			conservatism = 40
+		}
+		swap_ideas = {
+			remove_idea = HON_Creeping_Colonels
+			add_idea = HON_If_It_Aint_Broke
+		}
+		clr_country_flag = HON_USA_Back_PLH
+		clr_country_flag = HON_USA_Back_PNH
+		clr_country_flag = HON_USA_Back_JNT
+		USA = {
+			country_event = { id = HON_forpol.14 days = 100 }
+			country_event = { id = HON_forpol.15 days = 201 }
+			country_event = { id = HON_forpol.16 days = 565 }
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = HON_news.6 hours = 4 }
+		}
+	}
+	option = {#Military
+		name = HON_scripted.1.c
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = HON_66_ELECTION_PATH option = HON_66_ELECTION_PATH_LIBERALS }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = HON_66_ELECTION_PATH option = HON_66_ELECTION_PATH_NATIONALISTS }
+			}
+			modifier = {
+				add = 2
+				GUA = { has_government = despotism }
+			}
+			modifier = {
+				add = 2
+				AND = {
+					COL = { has_country_leader = { character = COL_Gustavo_Rojas_Pinilla ruling_only = yes } }
+					country_exists = COL
+				}
+			}
+			modifier = {
+				factor = 2.5
+				HON = { has_country_flag = HON_USA_Back_JNT }
+			}
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = despotism
+					last_election = "[current_election_date]"
+					elections_allowed = no
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_popularities = {
+			liberal_conservatism = 15
+			progressivism = 5
+			despotism = 45
+			despotism_4 = 15
+			paternalism = 10
+			conservatism = 10
+		}
+		set_cosmetic_tag = HON_junta
+		swap_ideas = {
+			remove_idea = HON_Creeping_Colonels
+			add_idea = HON_Just_Like_Anyone_Else
+		}
+		clr_country_flag = HON_USA_Back_PLH
+		clr_country_flag = HON_USA_Back_PNH
+		clr_country_flag = HON_USA_Back_JNT
+		USA = {
+			country_event = { id = HON_forpol.17 days = 100 }
+			country_event = { id = HON_forpol.18 days = 201 }
+			country_event = { id = HON_forpol.19 days = 565 }
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = HON_news.1 hours = 4 }
+		}
+	}
+}
+
+country_event = {#Load Post-Football War Outcomes
+	id = HON_scripted.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.2" }
+	title = HON_scripted.2.t
+	desc = HON_scripted.2.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = { ELS = { country_event = { id = ELS_scripted.5 } } }
+
+	option = { #Defeat
+		trigger = { has_global_flag = CA_ELS_Won_Football_War }
+		ai_chance = { factor = 1 }
+		name = HON_scripted.2.a
+		add_ideas = HON_La_Tragedia_Nacional
+		remove_opinion_modifier = {
+			target = ELS
+			modifier = HON_territorial_disputes
+		}
+		remove_opinion_modifier = {
+			target = ELS
+			modifier = HON_salvadoran_squatters
+		}
+		add_opinion_modifier = {
+			target = ELS
+			modifier = ELS_spilt_blood
+		}
+		ELS = {
+			remove_opinion_modifier = {
+				target = HON
+				modifier = HON_territorial_disputes
+			}
+			remove_opinion_modifier = {
+				target = HON
+				modifier = HON_salvadoran_squatters
+			}
+			add_opinion_modifier = {
+				target = HON
+				modifier = ELS_spilt_blood
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_leader = { character = HON_Modesto_Rodas_Alvarado ruling_only = yes }
+					has_country_leader = { character = HON_Ramon_Ernesto_Cruz_Uccles ruling_only = yes }
+				}
+			}
+			country_event = { id = HON_scripted.5 days = 100 }
+		}
+		else_if = {
+			limit = { has_country_leader = { character = HON_Oswaldo_Lopez_Arellano ruling_only = yes } }
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 0
+						has_game_rule = { rule = HON_OSWALDO_FATE option = HON_OSWALDO_FATE_SURVIVE }
+					}
+					country_event = { id = HON_scripted.5 days = 100 }
+				}
+				50 = {
+					modifier = {
+						factor = 0
+						has_game_rule = { rule = HON_OSWALDO_FATE option = HON_OSWALDO_FATE_DISMISS }
+					}
+					country_event = { id = HON_scripted.4 days = 100 }
+					USA = {
+						country_event = { id = HON_forpol.21 days = 250 }
+						country_event = { id = HON_forpol.22 days = 552 }
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = CA_Football_War.2 hours = 4 }
+		}
+	}
+	option = { #Win
+		trigger = { NOT = { has_global_flag = CA_ELS_Won_Football_War } }
+		ai_chance = { factor = 1 }
+		name = HON_scripted.2.a
+		if = {
+			limit = { has_country_leader = { character = HON_Modesto_Rodas_Alvarado ruling_only = yes } }
+			#Elections Trigger Occurs Pre-War
+			USA = {
+				country_event = { id = HON_forpol.20 days = 150 }
+			}
+			country_event = { id = HON_scripted.3 days = 100 }
+			add_ideas = HON_Sobreviviendo
+			swap_ideas = {
+				remove_idea = HON_Honduran_Gaitan
+				add_idea = HON_La_Republica_Liberal
+			}
+			swap_ideas = {
+				remove_idea = HON_Banana_Kings
+				add_idea = HON_King_Banana_Queen_Land_Reform
+			}
+		}
+		else_if = {
+			limit = { has_country_leader = { character = HON_Ramon_Ernesto_Cruz_Uccles ruling_only = yes } }
+			#Elections Trigger Occurs Pre-War
+			USA = {
+				country_event = { id = HON_forpol.23 days = 250 }
+				country_event = { id = HON_forpol.24 days = 552 }
+			}
+			set_variable = { HON_PNH_Alignment = 6 }
+			add_ideas = HON_Sobreviviendo
+			swap_ideas = {
+				remove_idea = HON_If_It_Aint_Broke
+				add_idea = HON_Viva_El_Cariacismo
+			}
+			swap_ideas = {
+				remove_idea = HON_USS_Honduras
+				add_idea = HON_Leaving_the_Nest
+			}
+		}
+		else_if = {
+			limit = { has_country_leader = { character = HON_Oswaldo_Lopez_Arellano ruling_only = yes } }
+			country_event = { id = HON_scripted.4 days = 50 }
+			USA = {
+				country_event = { id = HON_forpol.25 days = 200 }
+				country_event = { id = HON_forpol.26 days = 552 }
+			}
+			add_ideas = HON_All_Thanks_to
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = CA_Football_War.3 hours = 4 }
+		}
+	}
+}
+
+country_event = {#Rodas Post-War
+	id = HON_scripted.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.3" }
+	title = HON_scripted.3.t
+	desc = HON_scripted.3.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_scripted.3.a
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = yes
+			#last_election = "1970.06.07"
+			#election_frequency = 48
+		}
+		set_popularities = {
+			liberal_conservatism = 10
+			liberalism = 15
+			progressivism = 40
+			socialist = 15
+			paternalism = 10
+			conservatism = 10
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		USA = {
+			country_event = { id = HON_forpol.27 days = 150 }
+			country_event = { id = HON_forpol.28 days = 452 }
+		}
+	}
+}
+
+country_event = {#Oswaldo Post-War
+	id = HON_scripted.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.4" }
+	title = HON_scripted.4.t
+	desc = HON_scripted.4.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_scripted.4.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { NOT = { has_global_flag = CA_ELS_Won_Football_War } }
+			set_popularities = {
+				liberal_conservatism = 5
+				liberalism = 5
+				progressivism = 5
+				despotism = 45
+				despotism_1 = 30
+				paternalism = 10
+			}
+			set_party_name = {
+				ideology = despotism
+				name = HON_paternalism_party
+				long_name = HON_paternalism_party_long
+			}
+			set_party_name = {
+				ideology = despotism_1
+				name = HON_despotism_party
+				long_name = HON_despotism_party_long
+			}
+			add_country_leader_role = { #KD's Notes - Haiti Says Hi
+				character = HON_Oswaldo_Lopez_Arellano
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_OSWALDO_DESC"
+					expire = "1999.1.1"
+					ideology = despotism_personalistic_dictatorship_subtype
+					traits = { }
+					id = -1
+				}
+			}
+			set_country_leader_portrait = {
+				portrait = "gfx/leaders/HON/Portrait_Honduras_Oswaldo_Lopez_Arellano.png"
+			}
+			swap_ideas = {
+				remove_idea = HON_Just_Like_Anyone_Else
+				add_idea = HON_The_Second_Somoza
+			}
+		}
+		else = { #Lost Football War
+			set_popularities = {
+				liberal_conservatism = 10
+				liberalism = 5
+				progressivism = 5
+				despotism = 35
+				despotism_1 = 10
+				paternalism = 10
+				fascism = 15
+				communist = 10
+			}
+			set_party_name = {
+				ideology = despotism
+				name = HON_paternalism_party
+				long_name = HON_paternalism_party_long
+			}
+			set_party_name = {
+				ideology = despotism_1
+				name = HON_despotism_party
+				long_name = HON_despotism_party_long
+			}
+			add_country_leader_role = { #KD's Notes - Haiti Says Hi
+				character = HON_Oswaldo_Lopez_Arellano
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_OSWALDO_DESC"
+					expire = "1999.1.1"
+					ideology = despotism_aristocratic_conservatism_subtype
+					traits = { }
+					id = -1
+				}
+			}
+			set_country_leader_portrait = {
+				portrait = "gfx/leaders/HON/Portrait_Honduras_Oswaldo_Lopez_Arellano.png"
+			}
+			swap_ideas = {
+				remove_idea = HON_Just_Like_Anyone_Else
+				add_idea = HON_Second_Somoza
+			}
+			swap_ideas = {
+				remove_idea = HON_La_Tragedia_Nacional
+				add_idea = HON_Rapid_Reshaping
+			}
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 2
+						AND = {
+							GUA = { has_government = despotism }
+							GUA = { check_variable = { ECON_SPHERE_LEADER = USA } }
+						}
+					}
+					modifier = {
+						factor = 0
+						has_game_rule = { rule = HON_REVOLUTION option = HON_REVOLUTION_YES }
+					}
+				}
+				50 = {
+					modifier = {
+						factor = 1.2
+						OR = {
+							COS = { has_government = socialist }
+							COS = { has_government = communist }
+						}
+					}
+					modifier = {
+						factor = 1.2
+						GUA = { has_country_leader = { character = GUA_Marco_Antonio_Yon_Sosa ruling_only = yes } }
+					}
+					modifier = {
+						factor = 1.2
+						OR = {
+							PAN = { has_government = socialist }
+							PAN = { has_government = communist }
+						}
+					}
+					modifier = {
+						factor = 1.2
+						OR = {
+							DOM = { has_government = socialist }
+							DOM = { has_government = communist }
+						}
+					}
+					modifier = {
+						factor = 2
+						AND = {
+							OR = {
+								CLC = { has_government = socialist }
+								CLC = { has_government = communist }
+							}
+							country_exists = CLL
+						}
+					}
+					modifier = {
+						factor = 0
+						has_game_rule = { rule = HON_REVOLUTION option = HON_REVOLUTION_NO }
+					}
+					country_event = { id = HON_scripted.6 days = 100 }
+				}
+			}
+		}
+	}
+}
+
+country_event = {#Military Coup
+	id = HON_scripted.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.5" }
+	title = HON_scripted.5.t
+	desc = HON_scripted.5.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_scripted.5.a
+		ai_chance = { factor = 1 }
+		set_popularities = {
+			liberal_conservatism = 8
+			progressivism = 5
+			despotism = 43
+			paternalism = 4
+			fascism = 14
+			communist = 26
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = despotism
+					last_election = "[current_election_date]"
+					elections_allowed = no
+					election_frequency = 72
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		set_party_name = {
+			ideology = despotism
+			name = HON_despotism_party
+			long_name = HON_despotism_party_long
+		}
+		set_party_name = {
+			ideology = despotism_1
+			name = HON_despotism_1_party
+			long_name = HON_despotism_1_party_long
+		}
+		retire_character = HON_Oswaldo_Lopez_Arellano
+		promote_character = HON_Juan_Alberto_Melgar_Castro
+		set_cosmetic_tag = HON_axis
+		econ_leave_sphere = yes
+		set_temp_variable = { gdp_growth_temp = -0.25 }
+		econ_gdp_growth_change = yes
+		LATAM_Partner_Preference_selector = yes
+		set_temp_variable = { tension_WT = 15 }
+		set_temp_variable = { tension_superpower_1 = JAP }
+		set_temp_variable = { tension_superpower_2 = USA }
+		set_temp_variable = { tension_id = 65 }			
+		TNO_change_tension = yes
+		remove_ideas = {
+			HON_Banana_Kings
+			HON_Honduran_Gaitan
+			HON_If_It_Aint_Broke
+			HON_Just_Like_Anyone_Else
+			HON_USS_Honduras
+			HON_Creeping_Colonels
+		}
+		add_ideas = {
+			HON_Scuttling_the_Ship
+			HON_Tearing_at_the_Seams
+			HON_A_New_Direction
+		}
+		remove_opinion_modifier = {
+			target = USA
+			modifier = HON_uss_honduras
+		}
+		add_opinion_modifier = {
+			target = USA
+			modifier = HON_nationalist_backlash
+		}
+		USA = {
+			remove_opinion_modifier = {
+				target = HON
+				modifier = HON_uss_honduras
+			}
+			add_opinion_modifier = {
+				target = HON
+				modifier = HON_nationalist_backlash
+			}
+		}
+		USA = {
+			country_event = { id = HON_forpol.29 days = 10 }
+		}
+		USA = {
+			set_temp_variable = { Victory_ID = 55 }
+			set_temp_variable = { Victory_Outcome = 2 }
+			set_temp_variable = { Victory_Points = -50 }
+			Cold_War_GUI_AddVictory = yes
+		}
+		JAP = {
+			set_temp_variable = { Victory_ID = 55 }
+			set_temp_variable = { Victory_Outcome = 4 }
+			set_temp_variable = { Victory_Points = 50 }
+			Cold_War_GUI_AddVictory = yes
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAxisAmericasInterest = yes
+			}
+			news_event = { id = HON_news.2 hours = 4 }
+		}
+		if = {
+			limit = { check_variable = { ECON_SPHERE_LEADER = IBR } }
+			IBR = { country_event = { id = HON_forpol.30 days = 10 } }
+		}
+		else_if = {
+			limit = { check_variable = { ECON_SPHERE_LEADER = JAP } }
+			JAP = { country_event = { id = HON_forpol.30 days = 10 } }
+		}
+		else_if = {
+			limit = { check_variable = { ECON_SPHERE_LEADER = ITA } }
+			ITA = { country_event = { id = HON_forpol.30 days = 10 } }
+		}
+		country_event = { id = HON_scripted.8 days = 40 }
+	}
+}
+
+
+country_event = {#Socialist Revolution
+	id = HON_scripted.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.6" }
+	title = HON_scripted.6.t
+	desc = HON_scripted.6.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_scripted.6.a
+		ai_chance = { factor = 1 }
+		set_cosmetic_tag = HON_soc
+		set_politics = {
+			ruling_party = communist
+			elections_allowed = no
+			#last_election = "1970.06.07"
+			#election_frequency = 48
+		}
+		set_popularities = {
+			communist = 39
+			despotism = 28
+			despotism_3 = 17
+			fascism = 16
+		}
+		set_party_name = {
+			ideology = despotism_3
+			long_name = HON_conservatism_party_long
+			name = HON_conservatism_party
+		}
+		set_temp_variable = { gdp_growth_temp = -2 }
+		econ_gdp_growth_change = yes
+		set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Planned }
+		econ_type_change = yes
+		econ_leave_sphere = yes
+		remove_ideas = {
+			OFN_Independent_Member
+			OFN_Observer
+			HON_A_New_Direction
+			HON_Scuttling_the_Ship
+			HON_Tearing_at_the_Seams
+			HON_Rapid_Reshaping
+			HON_Second_Somoza
+			HON_All_Thanks_to
+			HON_Just_Like_Anyone_Else
+			HON_La_Tragedia_Nacional
+		}
+		add_ideas = {
+			HON_Peasants_Honduras
+			HON_In_The_Red
+		}
+		remove_opinion_modifier = {
+			target = USA
+			modifier = HON_uss_honduras
+		}
+		add_opinion_modifier = {
+			target = USA
+			modifier = HON_nationalist_backlash
+		}
+		USA = {
+			remove_opinion_modifier = {
+				target = HON
+				modifier = HON_uss_honduras
+			}
+			add_opinion_modifier = {
+				target = HON
+				modifier = HON_nationalist_backlash
+			}
+		}
+		if = {
+			limit = {
+				HON = { check_variable = { ECON_SPHERE_LEADER = USA } }
+			}
+			USA = {
+				set_temp_variable = { Victory_ID = 56 }
+				set_temp_variable = { Victory_Outcome = 2 }
+				set_temp_variable = { Victory_Points = -50 }
+				Cold_War_GUI_AddVictory = yes
+			}
+		}
+		else_if = {
+			limit = {
+				HON = { check_variable = { ECON_SPHERE_LEADER = JAP } }
+			}
+			JAP = {
+				set_temp_variable = { Victory_ID = 56 }
+				set_temp_variable = { Victory_Outcome = 2 }
+				set_temp_variable = { Victory_Points = -50 }
+				Cold_War_GUI_AddVictory = yes
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = HON_news.3 hours = 4 }
+		}
+	}
+}
+
+country_event = {#Junta Moderation
+	id = HON_scripted.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.7" }
+	title = HON_scripted.7.t
+	desc = HON_scripted.7.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_scripted.7.a
+		ai_chance = { factor = 1 }
+		if = { #If Backer is Moderate
+			limit = {
+				OR = {
+					AND = {
+						check_variable = { ECON_SPHERE_LEADER = JAP }
+						OR = {
+							JAP = {
+								has_government = liberalism
+								has_government = conservatism
+								has_government = liberal_conservatism
+								#has_country_leader = { character = JAP_ ruling_only = yes }
+							}
+						}
+					}
+					AND = {
+						check_variable = { ECON_SPHERE_LEADER = ITA }
+						OR = {
+							ITA = {
+								has_government = liberalism
+								has_government = conservatism
+								has_government = liberal_conservatism
+								#has_country_leader = { character = ITA_ ruling_only = yes }
+							}
+						}
+					}
+					AND = {
+						check_variable = { ECON_SPHERE_LEADER = GER }
+						OR = {
+							GER = {
+								has_government = liberalism
+								has_government = conservatism
+								has_government = liberal_conservatism
+								#has_country_leader = { character = GER_ ruling_only = yes }
+							}
+						}
+					}
+					AND = {
+						check_variable = { ECON_SPHERE_LEADER = IBR }
+						OR = {
+							IBR = {
+								has_government = liberalism
+								has_government = conservatism
+								has_government = liberal_conservatism
+								#has_country_leader = { character = IBR_ ruling_only = yes }
+							}
+						}
+					}
+				}
+			}
+			add_country_leader_role = {
+				character = HON_Juan_Alberto_Melgar_Castro
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_MELGAR_CASTRO_DESC"
+					expire = "1999.1.1"
+					ideology = despotism_aristocratic_conservatism_subtype
+					traits = { }
+					id = -1
+				}
+			}
+		}
+		#Else Nothing Changes
+	}
+}
+
+country_event = {#Fate of the Junta --- don't ask why it's here
+	id = HON_scripted.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.8" }
+	title = HON_scripted.7.t
+	desc = HON_scripted.7.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_scripted.7.a
+		ai_chance = { factor = 1 }
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.2
+					AND = {
+						ELS = { has_government = despotism }
+						NOT = { ELS = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+					}
+				}
+				modifier = {
+					factor = 1.2
+					AND = {
+						NIC = { has_government = despotism }
+						NOT = { NIC = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+					}
+				}
+				modifier = {
+					factor = 1.2
+					AND = {
+						OR = {
+							PAN = { has_government = despotism }
+							PAN = { has_government = fascism }
+						}
+						NOT = { PAN = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = { has_country_flag = HON_Axis_partner_betrayal }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = HON_REVOLUTION option = HON_REVOLUTION_YES }
+				}
+				country_event = { id = HON_scripted.7 days = 100 }
+			}
+			50 = {
+				modifier = {
+					factor = 1.2
+					OR = {
+						COS = { has_government = socialist }
+						COS = { has_government = communist }
+					}
+				}
+				modifier = {
+					factor = 1.2
+					GUA = { has_country_leader = { character = GUA_Marco_Antonio_Yon_Sosa ruling_only = yes } }
+				}
+				modifier = {
+					factor = 1.2
+					OR = {
+						PAN = { has_government = socialist }
+						PAN = { has_government = communist }
+					}
+				}
+				modifier = {
+					factor = 1.2
+					OR = {
+						DOM = { has_government = socialist }
+						DOM = { has_government = communist }
+					}
+				}
+				modifier = {
+					factor = 2
+					AND = {
+						OR = {
+							CLC = { has_government = socialist }
+							CLC = { has_government = communist }
+						}
+						country_exists = CLL
+					}
+				}
+				modifier = {
+					factor = 1.5
+					has_country_flag = HON_Axis_partner_betrayal
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = HON_REVOLUTION option = HON_REVOLUTION_NO }
+				}
+				country_event = { id = HON_scripted.6 days = 100 }
+			}
+		}
+	}
+}
+
+country_event = {#1971 Election
+	id = HON_scripted.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.10" }
+	title = HON_scripted.10.t
+	desc = HON_scripted.10.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		if = {
+			limit = { NOT = { has_government = conservatism } } #They stay Conservative if they didn't win the previous election
+			add_country_leader_role = {
+				character = HON_Andres_Alvarado_Puerto
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_ALVARADO_DESC"
+					expire = "1999.1.1"
+					ideology = conservatism_oligarchic_conservatism_subtype
+					traits = { }
+					id = -1
+				}
+			}	
+		}
+
+		remove_country_leader_role = {
+			character = HON_Modesto_Rodas_Alvarado
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+		}
+		HON_Roberto_Suazo_Cordova = {
+			promote_character = liberal_conservatism_oligarchic_liberalism_subtype
+		}
+	}
+	option = {
+		name = HON_scripted.10.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { has_country_leader = { character = HON_Modesto_Rodas_Alvarado ruling_only = yes } }
+#			random_list = {
+#				60 = {
+#					modifier = {
+#						factor = 1.2
+#						AND = {
+#							COL = { has_government = liberalism }
+#							country_exists = COL
+#						}
+#					}
+#					modifier = {
+#						factor = 0
+#						has_game_rule = { rule = HON_73_ELECTION_PATH option = HON_73_ELECTION_PATH_NATIONALISTS }
+#					}
+					meta_effect = { #sets up next election date in country ui
+						text = {
+							set_politics = {
+								ruling_party = liberalism
+								last_election = "[current_election_date]"
+								elections_allowed = yes
+								election_frequency = 72
+							}
+						}
+						current_election_date = "[?global.date.GetDateStringNoHour]"
+					}
+					set_popularities = {
+						socialist = 15
+						liberalism = 40
+						liberal_conservatism = 10
+						progressivism = 15
+						conservatism = 10
+						paternalism = 10
+					}
+#				}
+#				40 = {
+#					modifier = {
+#						factor = 0
+#						has_game_rule = { rule = HON_73_ELECTION_PATH option = HON_73_ELECTION_PATH_LIBERALS }
+#					}
+#					modifier = {
+#						factor = 1.2
+#						OR = {
+#							AND = {
+#								NOT = { COL = { has_government = liberalism } }
+#								country_exists = COL
+#							}
+#							country_exists = CLC
+#							country_exists = CLD
+#						}
+#					}
+#					meta_effect = { #sets up next election date in country ui
+#						text = {
+#							set_politics = {
+#								ruling_party = conservatism
+#								last_election = "[current_election_date]"
+#								elections_allowed = yes
+#								election_frequency = 72
+#							}
+#						}
+#						current_election_date = "[?global.date.GetDateStringNoHour]"
+#					}
+#					set_popularities = {
+#						liberal_conservatism = 25
+#						progressivism = 20
+#						conservatism = 40
+#						paternalism = 15
+#					}
+#					econ_leave_sphere = yes #there's no way to determine USA allignment here
+#				}
+#			}
+		}
+		if = {
+			limit = { has_country_leader = { character = HON_Ramon_Ernesto_Cruz_Uccles ruling_only = yes } }
+			random_list = {
+				40 = {
+					modifier = {
+						factor = 1.2
+						AND = {
+							COL = { has_government = liberalism }
+							country_exists = COL
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_country_flag = HON_USA_Back_PLH
+					}
+					modifier = {
+						factor = 0
+						has_game_rule = { rule = HON_73_ELECTION_PATH option = HON_73_ELECTION_PATH_NATIONALISTS }
+					}
+					meta_effect = { #sets up next election date in country ui
+						text = {
+							set_politics = {
+								ruling_party = liberal_conservatism
+								last_election = "[current_election_date]"
+								elections_allowed = yes
+								election_frequency = 72
+							}
+						}
+						current_election_date = "[?global.date.GetDateStringNoHour]"
+					}
+					remove_ideas = {
+						HON_Viva_El_Cariacismo
+						HON_Leaving_the_Nest
+					}
+					set_popularities = {
+						liberal_conservatism = 35
+						liberalism = 10
+						progressivism = 10
+						conservatism = 30
+						paternalism = 15
+					}
+					clr_country_flag = HON_USA_Back_PLH
+				}
+				60 = {
+					modifier = {
+						factor = 0
+						has_game_rule = { rule = HON_73_ELECTION_PATH option = HON_73_ELECTION_PATH_LIBERALS }
+					}
+					modifier = {
+						factor = 1.2
+						OR = {
+							AND = {
+								NOT = { COL = { has_government = liberalism } }
+								country_exists = COL
+							}
+							country_exists = CLC
+							country_exists = CLD
+						}
+					}
+					meta_effect = { #sets up next election date in country ui
+						text = {
+							set_politics = {
+								ruling_party = paternalism
+								last_election = "[current_election_date]"
+								elections_allowed = yes
+								election_frequency = 72
+							}
+						}
+						current_election_date = "[?global.date.GetDateStringNoHour]"
+					}
+					set_popularities = {
+						liberal_conservatism = 14
+						liberalism = 11
+						progressivism = 10
+						paternalism = 43
+						despotism_4 = 22
+					}
+					clr_country_flag = HON_USA_Back_PLH
+					if = {
+						limit = {
+							ELS = { check_variable = { ECON_SPHERE_LEADER = MEX } }
+							GUA = { check_variable = { ECON_SPHERE_LEADER = MEX } }
+							OR = {
+								NOT = { JAM = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+								NOT = { NIC = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+							}
+							check_variable = { HON_PNH_Alignment < 4 }
+						}
+						econ_leave_sphere = yes
+						econ_join_sphere_MEX = yes
+						USA = { country_event = { id = HON_forpol.31 days = 10 } }
+					}
+					else = { USA = { country_event = { id = HON_forpol.32 days = 10 } } }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #First match coming up
+	id = CA_Football_War.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.0" }
+	title = CA_Football_War.0.t
+	desc = CA_Football_War.0.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Football_War.0.a
+		ai_chance = { factor = 1 }
+		if = { #Nationalist Salvador
+			limit = { ELS = { has_country_flag = ELS_Nationalist_Coup } }
+			JAP = { country_event = { id = CA_Football_War.6 } }
+			IBR = { country_event = { id = CA_Football_War.7 } }
+			USA = { country_event = { id = CA_Football_War.5 } }
+		}
+		else_if = { #Castrist Salvador
+			limit = { ELS = { has_country_flag = ELS_Castrist_Coup } }
+			MEX = { country_event = { id = CA_Football_War.8 } }
+			USA = { country_event = { id = CA_Football_War.5 } }
+		} #Pro US Salvador
+		else = { USA = { country_event = { id = CA_Football_War.4 } } }
+	}
+}
+
+country_event = {#Football War
+	id = CA_Football_War.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.1" }
+	title = CA_Football_War.t
+	desc = CA_Football_War.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		USA = { country_event = { id = CA_Football_War.15 } } #Mid-war event
+		if = {
+			limit = { ELS = { has_country_flag = ELS_Nationalist_Coup } }
+			JAP = { country_event = { id = CA_Football_War.15 } }
+			IBR = { country_event = { id = CA_Football_War.15 } }
+		}
+		else_if = {
+			limit = { ELS = { has_country_flag = ELS_Castrist_Coup } }
+			MEX = { country_event = { id = CA_Football_War.15 } }
+		}
+	}
+
+	option = {
+		name = CA_Football_War.1.a
+		ai_chance = { factor = 1 }
+		HON = { remove_ideas = HON_Border_Tensions }
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 314 #El Salvador
+				num_provinces = 4
+				on_win = HON_scripted.100
+				on_lose = HON_scripted.101
+				on_cancel = HON_scripted.101
+			}	
+			defender = {
+				state = 312 #Honduras
+				num_provinces = 4
+				on_win = HON_scripted.101
+				on_lose = HON_scripted.100
+				on_cancel = HON_scripted.101
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = { rule = CA_FOOTBALL_WAR option = CA_FOOTBALL_WAR_HON }
+					AND = {
+						check_variable = { HON_Football_Aid > ELS_Football_Aid }
+						NOT = { has_game_rule = { rule = CA_FOOTBALL_WAR option = CA_FOOTBALL_WAR_ELS } }
+					}
+				}
+			}
+			set_border_war_data = {
+				attacker = 314
+				defender = 312
+				defender_modifier = 1
+				combat_width = 100
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_game_rule = { rule = CA_FOOTBALL_WAR option = CA_FOOTBALL_WAR_ELS }
+					AND = {
+						check_variable = { ELS_Football_Aid > HON_Football_Aid }
+						NOT = { has_game_rule = { rule = CA_FOOTBALL_WAR option = CA_FOOTBALL_WAR_HON } }
+					}
+				}
+			}
+			set_border_war_data = {
+				attacker = 314
+				defender = 312
+				defender_modifier = -1
+				combat_width = 100
+			}
+		}
+	}
+}
+
+news_event = { #El Salvador Wins the Football War News Event
+	id = CA_Football_War.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.2" }
+	title = CA_Football_War.2.t
+	desc = CA_Football_War.2.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_news_event_ELS_football_war
+
+	option = {
+		name = CA_Football_War.2.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #Honduras Wins the Football War News Event
+	id = CA_Football_War.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.3" }
+	title = CA_Football_War.3.t
+	desc = CA_Football_War.3.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_news_event_HON_football_war
+
+	option = {
+		name = CA_Football_War.3.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #What a way to start a war - Pro US Salvador prelude
+	id = CA_Football_War.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.5" } #TODO: In Yippie, this will result in a domestic crisis
+	title = CA_Football_War.4.t
+	desc = CA_Football_War.4.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_USA_cia_fbi
+
+	immediate = { hidden_effect = { country_event = { id = CA_Football_War.9 days = 10 } } } #Second match coming, prelude to war
+
+	option = { #FBI wants to support Honduras - Op Cold Volcano
+		name = CA_Football_War.4.a
+		ai_chance = { factor = 1 }
+		add_political_power = -20
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		set_country_flag = USA_CIA_Operation_cold_volcano_Unlocked
+		HON = { add_to_variable = { HON_Football_Aid = 2 } }
+		if = {
+			limit = { HON = { has_government = conservatism } }
+			HON = { subtract_from_variable = { HON_PNH_Alignment = 2 } }
+		}
+		set_country_flag = USA_backed_HON
+	}
+
+	option = { #CIA wants to support El Salvador - Op Rotten Fruit
+		name = CA_Football_War.4.b
+		ai_chance = { factor = 1 }
+		add_political_power = -20
+		custom_effect_tooltip = SUR_New_CIA_Mission #lmfao this is the only place this is used in now
+		set_country_flag = USA_CIA_Operation_rotten_fruit_Unlocked
+		HON = { add_to_variable = { ELS_Football_Aid = 2 } }
+		if = {
+			limit = { HON = { has_government = conservatism } }
+			HON = { add_to_variable = { HON_PNH_Alignment = 1 } }
+		}
+		set_country_flag = USA_backed_ELS
+	}
+
+	option = { #Idgaf
+		name = CA_Football_War.4.c
+		ai_chance = { factor = 1 }
+		set_country_flag = USA_backed_No_one
+		add_stability = -0.05
+	}
+}
+
+country_event = { #What a way to start a war - Anti US Salvador prelude
+	id = CA_Football_War.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.5" }
+	title = CA_Football_War.5.t
+	desc = CA_Football_War.5.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_USA_fbi_button
+
+	immediate = { hidden_effect = { country_event = { id = CA_Football_War.10 days = 10 } } } #Second match coming, prelude to war
+
+	option = { #FBI wants to support Honduras - Op Cold Volcano
+		name = CA_Football_War.5.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { NetworkChange = 10 }
+		Espionage_AddNetworkStrength_CentralAmerica = yes
+		set_country_flag = USA_CIA_Operation_cold_volcano_Unlocked
+		HON = {
+			add_to_variable = { HON_Football_Aid = 2 }
+			add_war_support = 0.10
+		}
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+	}
+
+	option = {
+		name = CA_Football_War.5.b
+		ai_chance = { factor = 1 }
+		send_equipment = {
+			equipment = infantry_equipment_2
+			amount = 2750
+			target = HON
+		}
+	}
+
+	option = {
+		name = CA_Football_War.5.c
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #Japan gets report on Salvadorian-Honduran tensions
+	id = CA_Football_War.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.6" }
+	title = CA_Football_War.6.t
+	desc = CA_Football_War.6.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	#picture =
+
+	immediate = { hidden_effect = { country_event = { id = CA_Football_War.11 days = 10 } } } #Second match coming, prelude to war
+
+	option = {
+		name = CA_Football_War.6.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				IBR = { is_ai = no } #Japan always takes the strongest option if player is Iberia, and vice versa
+			}
+		}
+		if = {
+			limit = { country_exists = IBR }
+			HON = { add_to_variable = { ELS_Football_Aid = 2 } } #Japan and Iberia's Aid var is half the US/Mexico's since its a 2 v 1
+			send_equipment = {
+				equipment = support_equipment
+				amount = 1500
+				target = ELS
+			}
+		}
+		else = {
+			HON = { add_to_variable = { ELS_Football_Aid = 4 } } #But if Iberia imploded, Japan takes on the heavy lifting
+			send_equipment = {
+				equipment = support_equipment
+				amount = 3000
+				target = ELS
+			}
+			custom_effect_tooltip = CA_Football_Japan_alone_tt
+		}
+	}
+
+	option = {
+		name = CA_Football_War.6.b
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { country_exists = IBR }
+			HON = { add_to_variable = { ELS_Football_Aid = 1 } }
+			add_command_power = -25
+		}
+		else = {
+			HON = { add_to_variable = { ELS_Football_Aid = 2 } }
+			add_command_power = -50
+			custom_effect_tooltip = CA_Football_Japan_alone_tt
+		}
+	}
+
+	option = {
+		name = CA_Football_War.6.c
+		ai_chance = { factor = 1 }
+		set_country_flag = JAP_backed_No_one
+	}
+}
+
+country_event = { #Iberia gets report on Salvadorian-Honduran tensions
+	id = CA_Football_War.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.7" }
+	title = CA_Football_War.7.t
+	desc = CA_Football_War.7.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_ELS_Medrano
+
+	immediate = { hidden_effect = { country_event = { id = CA_Football_War.12 days = 10 } } } #Second match coming, prelude to war
+
+	option = {
+		name = CA_Football_War.7.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				JAP = { is_ai = no }
+			}
+		}
+		send_equipment = {
+			equipment = infantry_equipment_2
+			amount = 2750
+			target = ELS
+		}
+		HON = { add_to_variable = { ELS_Football_Aid = 2 } }
+		if = {
+			limit = { ELS = { check_variable = { ECON_SPHERE_LEADER = IBR } } }
+			ELS = { set_country_flag = ELS_Iberia_max_aid }
+			custom_effect_tooltip = CA_Football_War_Iberia_max_aid_tt
+		}
+	}
+
+	option = {
+		name = CA_Football_War.7.b
+		ai_chance = { factor = 1 }
+		set_temp_variable = { temp_econ_spending_amount = 0.025 }
+		econ_spend_money_once_effect_raw_money = yes
+		ELS = {
+		set_temp_variable = { money_reserves_temp = 0.25 }
+		econ_money_reserves_change_raw_money = yes
+		}
+		HON = { add_to_variable = { ELS_Football_Aid = 1 } }
+	}
+
+	option = {
+		name = CA_Football_War.7.c
+		ai_chance = { factor = 1 }
+		set_country_flag = IBR_backed_No_one
+	}
+}
+
+country_event = { #Mexico gets report on Salvadorian-Honduran tensions
+	id = CA_Football_War.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.8" }
+	title = CA_Football_War.8.t
+	desc = CA_Football_War.8.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	#picture =
+
+	immediate = { hidden_effect = { country_event = { id = CA_Football_War.13 days = 10 } } } #Second match coming, prelude to war
+
+	option = {
+		name = CA_Football_War.8.a
+		ai_chance = { factor = 1 }
+		HON = { add_to_variable = { ELS_Football_Aid = 4 } }
+	}
+
+	option = {
+		name = CA_Football_War.8.b
+		ai_chance = { factor = 1 }
+		HON = { add_to_variable = { ELS_Football_Aid = 2 } }
+	}
+
+	option = {
+		name = CA_Football_War.8.c
+		ai_chance = { factor = 1 }
+		set_country_flag = MEX_backed_No_one
+		if = {
+			limit = { HON = { has_government = conservatism } }
+			HON = { subtract_from_variable = { HON_PNH_Alignment = 2 } } #PNH Honduras appreciates
+		}
+	}
+}
+
+country_event = {#War is coming - Pro US Salvador
+	id = CA_Football_War.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.9" }
+	title = CA_Football_War.9.t
+	desc = CA_Football_War.9.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_USA_cia_fbi
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = USA_CIA_Operation_cold_volcano_Unlocked
+			clr_country_flag = USA_CIA_Operation_rotten_fruit_Unlocked
+			country_event = { id = CA_Football_War.14 days = 15 }
+		}
+	}
+
+	option = { #El Salvador is scheming! Send Honduras some guns
+		name = CA_Football_War.9.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { has_country_flag = USA_backed_ELS }
+			clr_country_flag = USA_backed_ELS
+			set_country_flag = USA_backed_No_one
+		}
+		if = {
+			limit = { HON = { has_government = conservatism } }
+			HON = { add_to_variable = { HON_PNH_Alignment = 1 } }
+		}
+		send_equipment = {
+			equipment = infantry_equipment_2
+			amount = 2750
+			target = HON
+		}
+		HON = {
+			add_to_variable = { HON_Football_Aid = 2 }
+			add_war_support = 0.05
+		}
+	}
+
+	option = { #El Salvador is just protecting itself
+		name = CA_Football_War.9.b
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { has_country_flag = USA_backed_HON }
+			clr_country_flag = USA_backed_HON
+			set_country_flag = USA_backed_No_one
+		}
+		if = {
+			limit = { HON = { has_government = conservatism } }
+			HON = { subtract_from_variable = { HON_PNH_Alignment = 2 } }
+		}
+		HON = {
+			add_to_variable = { ELS_Football_Aid = 2 }
+			add_war_support = -0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = -2750
+			}
+		}
+	}
+
+	option = { #I'm sick of you two
+		name = CA_Football_War.9.c
+		ai_chance = { factor = 1 }
+		add_stability = -0.05
+	}
+}
+
+country_event = {#War is coming - Anti US Salvador
+	id = CA_Football_War.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.10" }
+	title = CA_Football_War.10.t
+	desc = CA_Football_War.10.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_USA_fbi_button
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = USA_CIA_Operation_cold_volcano_Unlocked
+			clr_country_flag = USA_CIA_Operation_rotten_fruit_Unlocked
+			country_event = { id = CA_Football_War.14 days = 15 }
+		}
+	}
+
+	option = { #Give them Planes and Elis
+		name = CA_Football_War.10.a
+		ai_chance = { factor = 1 }
+		HON = {
+			add_to_variable = { HON_Football_Aid = 4 }
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = CAS_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = attack_helicopter_equipment
+				amount = 250
+			}
+		}
+	}
+
+	option = { #Fix their high command
+		name = CA_Football_War.10.b
+		ai_chance = { factor = 1 }
+		HON = {
+			add_to_variable = { HON_Football_Aid = 2 }
+			TNO_improve_army_professionalism_med = yes
+			TNO_improve_training_policy_effectiveness_med = yes
+			add_war_support = 0.10
+		}
+	}
+
+	option = { #Isolationalism was kinda cool right guys
+		name = CA_Football_War.10.c
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #War is coming - Japan
+	id = CA_Football_War.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.11" }
+	title = CA_Football_War.11.t
+	desc = CA_Football_War.11.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	#picture =
+
+	immediate = { hidden_effect = { country_event = { id = CA_Football_War.14 days = 15 } } } #Things are about to go down
+
+	option = {
+		name = CA_Football_War.11.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				IBR = { is_ai = no }
+			}
+		}
+		if = {
+			limit = { country_exists = IBR }
+			HON = { add_to_variable = { ELS_Football_Aid = 2 } }
+			add_political_power = -50
+			set_temp_variable = { temp_econ_spending_amount = 0.25 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		else = {
+			HON = { add_to_variable = { ELS_Football_Aid = 4 } }
+			add_political_power = -100
+			set_temp_variable = { temp_econ_spending_amount = 0.50 }
+			econ_spend_money_once_effect_raw_money = yes
+			custom_effect_tooltip = CA_Football_Japan_alone_tt
+		}
+		clr_country_flag = JAP_backed_No_one
+	}
+
+	option = {
+		name = CA_Football_War.11.b
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { country_exists = IBR }
+			HON = { add_to_variable = { ELS_Football_Aid = 1 } }
+			send_equipment = {
+				equipment = infantry_equipment_2
+				amount = 1500
+				target = ELS
+			}
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 300
+				target = ELS
+			}
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 300
+				target = ELS
+			}
+			send_equipment = {
+				equipment = attack_helicopter_equipment
+				amount = 200
+				target = ELS
+			}
+		}
+		else = {
+			HON = { add_to_variable = { ELS_Football_Aid = 2 } }
+			send_equipment = {
+				equipment = infantry_equipment_2
+				amount = 3000
+				target = ELS
+			}
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 600
+				target = ELS
+			}
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 600
+				target = ELS
+			}
+			send_equipment = {
+				equipment = attack_helicopter_equipment
+				amount = 400
+				target = ELS
+			}
+			custom_effect_tooltip = CA_Football_Japan_alone_tt
+		}
+		clr_country_flag = JAP_backed_No_one
+	}
+
+	option = {
+		name = CA_Football_War.11.c
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #War is coming - Iberia
+	id = CA_Football_War.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.12" }
+	title = CA_Football_War.12.t
+	desc = CA_Football_War.12.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_ELS_Medrano
+
+	immediate = { hidden_effect = { country_event = { id = CA_Football_War.14 days = 15 } } } #Things are about to go down
+
+	option = {
+		name = CA_Football_War.12.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				JAP = { is_ai = no }
+			}
+		}
+		HON = { add_to_variable = { ELS_Football_Aid = 2 } }
+		clr_country_flag = IBR_backed_No_one
+		ELS = {
+			add_manpower = 5000
+			add_war_support = 0.10
+			add_stability = -0.10
+		}
+		if = {
+			limit = { ELS = { check_variable = { ECON_SPHERE_LEADER = IBR } } }
+			custom_effect_tooltip = CA_Football_War_Iberia_max_aid_tt
+		}
+	}
+
+	option = {
+		name = CA_Football_War.12.b
+		ai_chance = { factor = 1 }
+		HON = { add_to_variable = { ELS_Football_Aid = 1 } }
+		clr_country_flag = IBR_backed_No_one
+		set_temp_variable = { temp_econ_spending_amount = 0.015 }
+		econ_spend_money_once_effect_raw_money = yes
+		ELS = { add_manpower = 1000 }
+		ELS = { clr_country_flag = ELS_Iberia_max_aid }
+	}
+
+	option = {
+		name = CA_Football_War.12.c
+		ai_chance = { factor = 1 }
+		ELS = { clr_country_flag = ELS_Iberia_max_aid }
+	}
+}
+
+country_event = { #War is coming - Mexico
+	id = CA_Football_War.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.13" }
+	title = CA_Football_War.13.t
+	desc = CA_Football_War.13.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	#picture =
+
+	immediate = { hidden_effect = { country_event = { id = CA_Football_War.14 days = 15 } } } #Things are about to go down
+
+	option = {
+		name = CA_Football_War.13.a
+		ai_chance = { factor = 1 }
+		HON = { add_to_variable = { ELS_Football_Aid = 4 } }
+		clr_country_flag = MEX_backed_No_one
+	}
+
+	option = {
+		name = CA_Football_War.13.b
+		ai_chance = { factor = 1 }
+		HON = { add_to_variable = { ELS_Football_Aid = 2 } }
+		clr_country_flag = MEX_backed_No_one
+	}
+
+	option = {
+		name = CA_Football_War.13.c
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { HON = { has_government = conservatism } }
+			HON = { subtract_from_variable = { HON_PNH_Alignment = 2 } } #PNH Honduras appreciates
+		}
+	}
+}
+
+country_event = { #Final Prelude for everyone - Mexico City Finals coming up
+	id = CA_Football_War.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.14" }
+	title = CA_Football_War.14.t
+	desc = CA_Football_War.14.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_HON_football
+
+	option = {
+		name = CA_Football_War.14.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #War event
+	id = CA_Football_War.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.15" }
+	title = CA_Football_War.15.t
+	desc = CA_Football_War.15.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_HON_football_war
+
+	option = {
+		name = CA_Football_War.15.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = CA_Football_War_tt
+	}
+}
+
+country_event = { #US - Honduran victory
+	id = CA_Football_War.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.16" }
+	title = CA_Football_War.16.t
+	desc = CA_Football_War.16.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_USA_fbi_button
+
+	option = { #our side won!
+		name = CA_Football_War.16.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { has_country_flag = USA_backed_HON } #our side won!
+			custom_effect_tooltip = CA_Football_War_16_HON_Help
+			add_political_power = 75
+			add_command_power = 30
+		}
+		else_if = {
+			limit = { has_country_flag = USA_backed_No_one } #I still don't give a fuck
+			custom_effect_tooltip = CA_Football_War_16_NO_Help
+		}
+		else_if = {
+			limit = { has_country_flag = USA_backed_ELS } #our side lost...
+			custom_effect_tooltip = CA_Football_War_16_ELS_Help
+			add_political_power = -75
+			add_command_power = -30
+		}
+	}
+}
+
+country_event = { #US - Pro US Salvadorean victory
+	id = CA_Football_War.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.17" }
+	title = CA_Football_War.17.t
+	desc = CA_Football_War.17.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_USA_cia_button
+
+	option = { 
+		name = CA_Football_War.17.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { has_country_flag = USA_backed_ELS } #our side won!
+			custom_effect_tooltip = CA_Football_War_17_ELS_Help
+			add_political_power = 75
+			add_command_power = 30
+		}
+		else_if = {
+			limit = { has_country_flag = USA_backed_No_one } #I still don't give a fuck
+			custom_effect_tooltip = CA_Football_War_16_NO_Help
+		}
+		else_if = {
+			limit = { has_country_flag = USA_backed_HON } #our side lost...
+			custom_effect_tooltip = CA_Football_War_17_HON_Help
+			add_political_power = -75
+			add_command_power = -30
+		}
+	}
+}
+
+country_event = { #US - Anti US Salvadorean victory
+	id = CA_Football_War.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.18" }
+	title = CA_Football_War.18.t
+	desc = CA_Football_War.18.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_USA_fbi_button
+
+	option = { #Bro how
+		name = CA_Football_War.18.a
+		ai_chance = { factor = 1 }
+		add_political_power = -75
+		add_command_power = -30
+	}
+}
+
+country_event = { #JAP and IBR - Honduran victory
+	id = CA_Football_War.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.19" }
+	title = CA_Football_War.19.t
+	desc = CA_Football_War.19.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_ELS_Medrano
+
+	option = { #We need to stabilize, we can't lose our foothold in Central America!
+		name = CA_Football_War.19.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { tag = IBR }
+			ELS = { set_country_flag = ELS_Regime_life_saver_IBR }
+		}
+		else = { ELS = { set_country_flag = ELS_Regime_life_saver_JAP } }
+		custom_effect_tooltip = CA_Football_War_Save_Nationalist_Regime_tt
+		add_political_power = -75
+		add_command_power = -30
+	}
+
+	option = { #Does anyone care?
+		name = CA_Football_War.19.b
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #JAP and IBR - Salvadorean victory
+	id = CA_Football_War.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.20" }
+	title = CA_Football_War.20.t
+	desc = CA_Football_War.20.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_ELS_Medrano_victory
+
+	option = { #I used to deny the TNO team had an hispanist bias...
+		name = CA_Football_War.20.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_backed_No_one
+					has_country_flag = IBR_backed_No_one
+				}
+			}
+			custom_effect_tooltip = CA_Football_War_Nationalist_helped_tt
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_country_flag = JAP_backed_No_one
+					has_country_flag = IBR_backed_No_one
+				}
+			}
+			custom_effect_tooltip = CA_Football_War_Nationalist_didnt_tt
+		}
+		add_political_power = 75
+		add_command_power = 30
+	}
+}
+
+country_event = { #MEX - Honduran victory
+	id = CA_Football_War.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.21" }
+	title = CA_Football_War.21.t
+	desc = CA_Football_War.21.desc
+	is_triggered_only = yes
+	#picture =
+
+	option = { #The revolution cannot go down that easily
+		name = CA_Football_War.21.a
+		ai_chance = { factor = 1 }
+		ELS = { set_country_flag = ELS_Regime_life_saver_MEX }
+		custom_effect_tooltip = CA_Football_War_Save_Castrist_Regime_tt
+		add_political_power = -75
+		add_command_power = -30
+	}
+
+	option = { #I always preferred Colombian coffee
+		name = CA_Football_War.21.b
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #MEX - Salvadorean victory
+	id = CA_Football_War.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Football_War.22" }
+	title = CA_Football_War.22.t
+	desc = CA_Football_War.22.desc
+	is_triggered_only = yes
+	#picture =
+
+	option = { #PAR for the course
+		name = CA_Football_War.22.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { NOT = { has_country_flag = MEX_backed_No_one } }
+			custom_effect_tooltip = CA_Football_War_Castrist_helped_tt
+		}
+		else_if = {
+			limit = { has_country_flag = MEX_backed_No_one }
+			custom_effect_tooltip = CA_Football_War_Castrist_didnt_tt
+		}
+	}
+}
+
+country_event = {#ELS Won Football War Set-Up
+	id = HON_scripted.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.100" }
+	title = HON_scripted.100.t
+	desc = HON_scripted.100.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_scripted.100.a
+		set_global_flag = CA_ELS_Won_Football_War
+		HON = { country_event = { id = HON_scripted.2 } }
+		ELS = { country_event = { id = ELS_scripted.5 } }
+
+		if = {
+			limit = { ELS = { has_country_flag = ELS_Nationalist_Coup } } #Nationalist Salvador won
+			JAP = { country_event = { id = CA_Football_War.20 days = 1 } }
+			IBR = { country_event = { id = CA_Football_War.20 days = 1 } }
+			USA = { country_event = { id = CA_Football_War.18 days = 1 } }
+		}
+		else_if = {
+			limit = { ELS = { has_country_flag = ELS_Castrist_Coup } } #Castrist Salvador won
+			MEX = { country_event = { id = CA_Football_War.22 days = 1 } }
+			USA = { country_event = { id = CA_Football_War.18 days = 1 } }
+		}
+		else = { USA = { country_event = { id = CA_Football_War.17 days = 1 } } } #Pro US Salvador won
+	}
+}
+
+country_event = {#HON Won Football War Set-Up
+	id = HON_scripted.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.101" }
+	title = HON_scripted.101.t
+	desc = HON_scripted.101.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_scripted.101.a
+		HON = { country_event = { id = HON_scripted.2 } }
+		ELS = { country_event = { id = ELS_scripted.5 } }
+
+		if = {
+			limit = { ELS = { has_country_flag = ELS_Nationalist_Coup } } #Nationalist Salvador lost
+			JAP = { country_event = { id = CA_Football_War.19 days = 1 } }
+			IBR = { country_event = { id = CA_Football_War.19 days = 1 } }
+		}
+		else_if = {
+			limit = { ELS = { has_country_flag = ELS_Castrist_Coup } } #Castrist Salvador lost
+			MEX = { country_event = { id = CA_Football_War.21 days = 1 } }
+		}
+		USA = { country_event = { id = CA_Football_War.16 days = 1 } } #Honduras won
+	}
+}
+
+country_event = {#Debug
+	id = HON_scripted.200
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_scripted.200" }
+	title = HON_scripted.200.t
+	desc = HON_scripted.200.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_scripted.200.a
+		econ_leave_sphere = yes
+		LATAM_Partner_Preference_selector = yes
+	}
+}
+
+###Flavour Events
+country_event = { #
+	id = HON_forpol.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.1" }
+	title = HON_forpol.1.t
+	desc = HON_forpol.1.desc
+	picture = GFX_report_event_HIS_Initiate_Troop_Surge
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.1.a
+		ai_chance = { factor = 1 }
+		add_command_power = 5
+	}
+}
+
+country_event = { #
+	id = HON_forpol.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.2" }
+	title = HON_forpol.2.t
+	desc = HON_forpol.2.desc
+	picture = GFX_report_event_HON_ramon_villeda
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.2.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		HON = {
+			set_temp_variable = { temp_modifier = 30 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.3" }
+	title = HON_forpol.3.t
+	desc = HON_forpol.3.desc
+	picture = GFX_report_event_JAM_voting
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.3.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = HON_forpol.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.4" }
+	title = HON_forpol.4.t
+	desc = HON_forpol.4.desc
+	picture = GFX_report_event_usa_army_training
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.4.a
+		ai_chance = { factor = 1 }
+		HON = {
+			TNO_improve_army_professionalism_med = yes
+			TNO_improve_training_policy_effectiveness_med = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 250
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = jet_fighter_equipment_2
+				amount = 250
+				producer = USA
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.5" }
+	title = HON_forpol.5.t
+	desc = HON_forpol.5.desc
+	picture = GFX_report_event_HON_modesto_rodas_alvarado
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.5.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		HON = {
+			set_country_flag = HON_USA_Back_PLH
+			TNO_improve_political_parties_policy_effectiveness_low = yes
+		}
+		set_temp_variable = { debt_temp = 0.05 }
+		econ_national_debt_change = yes
+		custom_effect_tooltip = HON_election_boost_tt
+	}
+	option = {
+		name = HON_forpol.5.b
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		HON = {
+			set_country_flag = HON_USA_Back_PNH
+			TNO_improve_political_parties_policy_effectiveness_low = yes
+		}
+		set_temp_variable = { debt_temp = 0.05 }
+		econ_national_debt_change = yes
+		custom_effect_tooltip = HON_election_boost_tt
+	}
+	option = {
+		name = HON_forpol.5.c
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+		HON = {
+			set_country_flag = HON_USA_Back_JNT
+			TNO_improve_army_professionalism_med = yes
+		}
+		set_temp_variable = { debt_temp = 0.05 }
+		econ_national_debt_change = yes
+		custom_effect_tooltip = HON_election_boost_tt
+	}
+	option = {
+		name = HON_forpol.5.d
+		ai_chance = { factor = 1 }
+		HON = { TNO_improve_political_parties_policy_effectiveness_med = yes }
+		custom_effect_tooltip = HON_election_boost_tt
+	}
+}
+
+country_event = { #
+	id = HON_forpol.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.6" }
+	title = HON_forpol.6.t
+	desc = HON_forpol.6.desc
+	picture = GFX_report_event_HON_banana_worker
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.6.a
+		ai_chance = { factor = 1 }
+		HON = {
+			set_temp_variable = { gdp_growth_temp = 0.15 }
+			econ_gdp_growth_change = yes
+			TNO_worsen_poverty_med = yes
+			TNO_worsen_regulations_policy_effectiveness_med = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.7" }
+	title = HON_forpol.7.t
+	desc = HON_forpol.7.desc
+	picture = GFX_report_event_generic_banana_republic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.7.a
+		ai_chance = { factor = 1 }
+		add_political_power = 5
+		HON = {
+			TNO_improve_industrial_expertise_low = yes
+		}
+		HON = {
+			set_temp_variable = { temp_modifier = 15 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.8" }
+	title = HON_forpol.8.t
+	desc = HON_forpol.8.desc
+	picture = GFX_report_event_generic_spanish_anti_imperialism
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.8.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		HON = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.025
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.9" }
+	title = HON_forpol.9.t
+	desc = HON_forpol.9.desc
+	picture = GFX_report_event_generic_banana_republic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.9.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		set_temp_variable = { gdp_growth_temp = 0.10 }
+		econ_gdp_growth_change = yes
+		HON = {
+			set_temp_variable = { temp_modifier = 15 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.10" }
+	title = HON_forpol.10.t
+	desc = HON_forpol.10.desc
+	picture = GFX_report_event_generic_econ_goal
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.10.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { gdp_growth_temp = 0.10 }
+		econ_gdp_growth_change = yes
+		HON = {
+			set_temp_variable = { temp_modifier = 25 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.11" }
+	title = HON_forpol.11.t
+	desc = HON_forpol.11.desc
+	picture = GFX_report_event_HON_modesto_rodas_alvarado
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.11.a
+		ai_chance = { factor = 1 }
+		add_political_power = 25
+	}
+}
+
+country_event = { #
+	id = HON_forpol.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.12" }
+	title = HON_forpol.12.t
+	desc = HON_forpol.12.desc
+	picture = GFX_report_event_HON_modesto_rodas_alvarado
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.12.a
+		ai_chance = { factor = 1 }
+		HON = {
+			312 = {
+				add_building_construction = {
+					type = thermoelectric_plant
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.05 }
+				econ_state_value_change_multiply = yes
+			}
+			set_temp_variable = { gdp_growth_temp = 0.85 }
+			econ_gdp_growth_change = yes
+			TNO_improve_pensions_policy_effectiveness_med = yes
+		}
+
+	}
+}
+
+country_event = { #
+	id = HON_forpol.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.13" }
+	title = HON_forpol.13.t
+	desc = HON_forpol.13.desc
+	picture = GFX_report_event_HON_modesto_rodas_alvarado
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.13.a
+		ai_chance = { factor = 1 }
+		HON = { TNO_worsen_political_parties_policy_effectiveness_med = yes }
+	}
+}
+
+country_event = { #
+	id = HON_forpol.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.14" }
+	title = HON_forpol.14.t
+	desc = HON_forpol.14.desc
+	picture = GFX_report_event_HON_crus_ucles
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.14.a
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+		HON = {
+			set_temp_variable = { temp_modifier = -10 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.15" }
+	title = HON_forpol.15.t
+	desc = HON_forpol.15.desc
+	picture = GFX_report_event_USA_drinking_businessmen
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.15.a
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+		HON = {
+			set_temp_variable = { temp_modifier = -10 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.16" }
+	title = HON_forpol.16.t
+	desc = HON_forpol.16.desc
+	picture = GFX_report_event_IBR_timor_crowd
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.16.a
+		ai_chance = { factor = 1 }
+		HON = { TNO_worsen_political_parties_policy_effectiveness_high = yes }
+	}
+}
+
+country_event = { #
+	id = HON_forpol.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.17" }
+	title = HON_forpol.17.t
+	desc = HON_forpol.17.desc
+	picture = GFX_report_event_USA_major_riot_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.17.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = HON_forpol.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.18" }
+	title = HON_forpol.18.t
+	desc = HON_forpol.18.desc
+	picture = GFX_report_event_generic_handshake_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.18.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { gdp_growth_temp = 0.10 }
+		econ_gdp_growth_change = yes
+		HON = {
+			set_temp_variable = { gdp_growth_temp = 1.15 }
+			econ_gdp_growth_change = yes
+			TNO_worsen_admin_efficiency_med = yes
+			TNO_worsen_poverty_med = yes
+			TNO_worsen_pensions_policy_effectiveness_med = yes
+			TNO_worsen_regulations_policy_effectiveness_med = yes
+		}
+		HON = {
+			set_temp_variable = { temp_modifier = 30 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.19" }
+	title = HON_forpol.19.t
+	desc = HON_forpol.19.desc
+	picture = GFX_report_event_generic_police_brutality
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.19.a
+		ai_chance = { factor = 1 }
+		HON = {
+			add_stability = -0.05
+			TNO_worsen_security_policy_effectiveness_med = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.20" }
+	title = HON_forpol.20.t
+	desc = HON_forpol.20.desc
+	picture = GFX_report_event_IBR_meeting_table
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.20.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		HON = { TNO_improve_political_parties_policy_effectiveness_low = yes }
+		set_temp_variable = { debt_temp = 0.05 }
+		econ_national_debt_change = yes
+	}
+}
+
+country_event = { #
+	id = HON_forpol.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.21" }
+	title = HON_forpol.21.t
+	desc = HON_forpol.21.desc
+	picture = GFX_report_event_usa_soldier_latin_america
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.21.a
+		ai_chance = { factor = 1 }
+		HON = {
+			312 = {
+				set_temp_variable = { building = token:barracks }
+				set_temp_variable = { building_amount = 1 }
+				dynamic_building_effect = yes
+				set_temp_variable = { state_value_multiplier_temp = 1.01 }
+				econ_state_value_change_multiply = yes
+			}
+			TNO_improve_training_policy_effectiveness_med = yes
+			TNO_improve_army_professionalism_med = yes
+		}
+		set_temp_variable = { debt_temp = 0.05 }
+		econ_national_debt_change = yes
+	}
+}
+
+country_event = { #
+	id = HON_forpol.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.22" }
+	title = HON_forpol.22.t
+	desc = HON_forpol.22.desc
+	picture = GFX_report_event_usa_soldier_m72_law
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.22.a
+		ai_chance = { factor = 1 }
+		HON = {
+			add_popularity = {
+				ideology = socialist
+				popularity = -0.01
+			}
+			TNO_worsen_poverty_low = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.23" }
+	title = HON_forpol.23.t
+	desc = HON_forpol.23.desc
+	picture = GFX_report_event_HON_crus_ucles
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.23.a
+		ai_chance = { factor = 1 }
+		HON = { add_to_variable = { HON_PNH_Alignment = 2 } }
+		set_temp_variable = { debt_temp = 0.015 }
+		econ_national_debt_change = yes
+		custom_effect_tooltip = HON_election_boost_tt
+	}
+	option = {
+		name = HON_forpol.23.b
+		ai_chance = { factor = 1 }
+		HON = {
+			312 = {
+				set_temp_variable = { building = token:barracks }
+				set_temp_variable = { building_amount = 1 }
+				dynamic_building_effect = yes
+				set_temp_variable = { state_value_multiplier_temp = 1.01 }
+				econ_state_value_change_multiply = yes
+			}
+			TNO_improve_training_policy_effectiveness_med = yes
+			TNO_improve_army_professionalism_med = yes
+			add_to_variable = { HON_PNH_Alignment = 1 }
+		}
+		set_temp_variable = { debt_temp = 0.015 }
+		econ_national_debt_change = yes
+		custom_effect_tooltip = HON_election_boost_tt
+	}
+	option = {
+		name = HON_forpol.23.c
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = HON_election_boost_tt
+	}
+}
+
+country_event = { #
+	id = HON_forpol.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.24" }
+	title = HON_forpol.24.t
+	desc = HON_forpol.24.desc
+	picture = GFX_report_event_USA_fbi
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.24.a
+		ai_chance = { factor = 1 }
+		HON = {
+			set_country_flag = HON_USA_Back_PLH
+			subtract_from_variable = { HON_PNH_Alignment = 2 }
+			add_popularity = {
+				ideology = liberal_conservatism
+				popularity = 0.02
+			}
+		}
+		custom_effect_tooltip = HON_election_boost_tt
+	}
+	option = {
+		name = HON_forpol.24.b
+		ai_chance = { factor = 1 }
+		add_political_power = -30
+		HON = { add_to_variable = { HON_PNH_Alignment = 1 } }
+		custom_effect_tooltip = HON_election_boost_tt
+	}
+}
+
+country_event = { #
+	id = HON_forpol.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.25" }
+	title = HON_forpol.25.t
+	desc = HON_forpol.25.desc
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.25.a
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+	}
+}
+
+country_event = { #
+	id = HON_forpol.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.26" }
+	title = HON_forpol.26.t
+	desc = HON_forpol.26.desc
+	picture = GFX_report_event_GUA_map
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.26.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = HON_forpol.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.27" }
+	title = HON_forpol.27.t
+	desc = HON_forpol.27.desc
+	picture = GFX_report_event_HON_modesto_rodas_alvarado
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.27.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		USA = { add_to_faction = HON }
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = HON_news.4 hours = 4 }
+		}
+		hidden_effect = {
+			HON = {
+				add_ideas = OFN_Independent_Member
+				remove_ideas = OFN_Observer
+			}
+			add_to_array = { OFN_members = HON }
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.28" }
+	title = HON_forpol.28.t
+	desc = HON_forpol.28.desc
+	picture = GFX_report_event_HON_modesto_rodas_alvarado
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.28.a
+		ai_chance = { factor = 1 }
+		add_political_power = 15
+		HON = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.02
+			}
+			TNO_improve_political_parties_policy_effectiveness_med = yes
+		}
+	}
+}
+
+country_event = { #
+	id = HON_forpol.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.29" }
+	title = HON_forpol.29.t
+	desc = HON_forpol.29.desc
+	picture = GFX_report_event_GUA_map
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.29.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = HON_forpol.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.30" }
+	title = HON_forpol.30.t
+	desc = {
+		trigger = { tag = IBR }
+		text = HON_forpol.30.iberia.desc
+	}
+	desc = {
+		trigger = { tag = ITA }
+		text = HON_forpol.30.italy.desc
+	}
+	desc = {
+		trigger = { tag = GER }
+		text = HON_forpol.30.germany.desc
+	}
+	desc = {
+		trigger = { tag = JAP }
+		text = HON_forpol.30.japan.desc
+	}
+	picture = GFX_report_event_generic_globe
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		trigger = { tag = IBR }
+		name = HON_forpol.30.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		set_temp_variable = { gdp_growth_temp = 0.15 }
+		econ_gdp_growth_change = yes
+		HON = {
+			set_temp_variable = { temp_modifier = 15 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+	option = {
+		trigger = { tag = IBR }
+		HON = { set_country_flag = HON_Axis_partner_betrayal }
+		name = HON_forpol.30.b
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		trigger = { tag = ITA }
+		name = HON_forpol.30.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		set_temp_variable = { gdp_growth_temp = 0.15 }
+		econ_gdp_growth_change = yes
+		HON = {
+			set_temp_variable = { temp_modifier = 15 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+	option = {
+		trigger = { tag = ITA }
+		HON = { set_country_flag = HON_Axis_partner_betrayal }
+		name = HON_forpol.30.b
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		trigger = { tag = GER }
+		name = HON_forpol.30.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		set_temp_variable = { gdp_growth_temp = 0.15 }
+		econ_gdp_growth_change = yes
+		HON = {
+			set_temp_variable = { temp_modifier = 15 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+	option = {
+		trigger = { tag = GER }
+		HON = { set_country_flag = HON_Axis_partner_betrayal }
+		name = HON_forpol.30.b
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		trigger = { tag = JAP }
+		name = HON_forpol.30.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		set_temp_variable = { gdp_growth_temp = 0.10 }
+		econ_gdp_growth_change = yes
+		HON = {
+			set_temp_variable = { temp_modifier = 15 }
+			add_to_trade_modifier_PREV = yes
+		}
+	}
+	option = {
+		trigger = { tag = JAP }
+		HON = { set_country_flag = HON_Axis_partner_betrayal }
+		name = HON_forpol.30.b
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #
+	id = HON_forpol.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.31" }
+	title = HON_forpol.31.t
+	desc = HON_forpol.31.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.31.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+	}
+}
+
+country_event = { #
+	id = HON_forpol.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_forpol.32" }
+	title = HON_forpol.32.t
+	desc = HON_forpol.32.desc
+	picture = GFX_report_event_USA_fbi_button
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = HON_forpol.32.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #Arellano Coup
+	id = HON_news.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_news.1" }
+	title = HON_news.1.t
+	desc = HON_news.1.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_news_event_HON_arellano
+
+	option = {
+		name = HON_news.1.a #USA
+		trigger = {
+			tag = USA
+		}
+	}
+	option = {
+		name = HON_news.1.b #MEX
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = {
+		name = HON_news.1.c #Everybody else
+		trigger = {
+			NOT = {
+				tag = USA
+				tag = MEX
+			}
+		}
+	}
+}
+
+news_event = { #Melgar Castro Coup
+	id = HON_news.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_news.2" }
+	title = HON_news.2.t
+	desc = HON_news.2.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_news_event_HON_melgar
+
+	option = {
+		name = HON_news.2.a #USA
+		trigger = {
+			tag = USA
+		}
+	}
+	option = {
+		name = HON_news.2.b #MEX
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = {
+		name = HON_news.2.c #Everybody else
+		trigger = {
+			NOT = {
+				tag = USA
+				tag = MEX
+			}
+		}
+	}
+}
+
+news_event = { #Zelaya Socialist Revolution
+	id = HON_news.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_news.3" }
+	title = HON_news.3.t
+	desc = HON_news.3.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_news_event_HON_zelaya
+
+	option = {
+		name = HON_news.3.a #USA
+		trigger = {
+			tag = USA
+		}
+	}
+	option = {
+		name = HON_news.3.b #MEX
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = {
+		name = HON_news.3.c #Everybody else
+		trigger = {
+			NOT = {
+				tag = USA
+				tag = MEX
+			}
+		}
+	}
+}
+
+news_event = { #Modesto Rodas Alvarado's Honduras joins the OFN
+	id = HON_news.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_news.4" }
+	title = HON_news.4.t
+	desc = HON_news.4.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_news_event_HON_ofn
+
+	option = {
+		name = HON_news.4.a #USA
+		trigger = {
+			tag = USA
+		}
+	}
+	option = {
+		name = HON_news.4.b #MEX
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = {
+		name = HON_news.4.c #Japan or Germany
+		trigger = {
+			OR = {
+				tag = JAP
+				tag = GER
+			}
+		}
+	}
+	option = {
+		name = HON_news.4.d #Everybody else
+		trigger = {
+			NOT = {
+				tag = USA
+				tag = MEX
+				tag = JAP
+				tag = GER				
+			}
+		}
+	}
+}
+
+news_event = { #Liberal Party win 1966
+	id = HON_news.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_news.5" }
+	title = HON_news.5.t
+	desc = HON_news.5.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_news_event_HON_alvarado
+
+	option = { #USA
+		name = HON_news.5.a
+		trigger = {
+			tag = USA
+		}
+	}
+	option = { #Mexico
+		name = HON_news.5.b
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = { #Everybody else
+		name = HON_news.5.c
+		trigger = {
+			NOT = {
+				tag = USA
+				tag = MEX			
+			}
+		}
+	}
+}
+
+news_event = { #National Party win 1966
+	id = HON_news.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event HON_news.6" }
+	title = HON_news.6.t
+	desc = HON_news.6.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_news_event_HON_ucles
+
+	option = { #USA
+		name = HON_news.6.a
+		trigger = {
+			tag = USA
+		}
+	}
+	option = { #Mexico
+		name = HON_news.6.b
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = { #Everybody else
+		name = HON_news.6.c
+		trigger = {
+			NOT = {
+				tag = USA
+				tag = MEX			
+			}
+		}
+	}
+}

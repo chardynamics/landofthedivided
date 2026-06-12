@@ -1,0 +1,18 @@
+###########################################
+################ Andalusia trees ##########
+###########################################
+
+# War Tree
+focus_tree = {
+	id = ADL_war_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ADL
+		}
+	}
+	default = no
+	shared_focus = ADL_enough_already
+}
+

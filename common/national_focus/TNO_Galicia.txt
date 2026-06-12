@@ -1,0 +1,16 @@
+###########################################
+################ Euskadi trees ##########
+###########################################
+# War Tree
+focus_tree = {
+	id = GAL_war_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GAL
+		}
+	}
+	default = no
+	shared_focus = GAL_Galicia_Wakes_Up
+}

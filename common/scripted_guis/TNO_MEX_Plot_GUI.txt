@@ -1,0 +1,27 @@
+scripted_gui = {
+	TNO_Plot_Tracker = {
+		context_type = player_context
+		window_name = "TNO_Plot_Tracker"
+		dirty = TNO_Plot_Tracker_dirty
+		visible = { has_country_flag = TNO_Plot_Tracker_open }
+
+		dynamic_lists = {
+			TNO_plots_gridbox = {
+				array = TNO_plots
+				entry_container = "TNO_plot_entry"
+				value = plot
+			}
+			TNO_plot_points_gridbox = {
+				array = TNO_plot_points@var:plot
+				entry_container = "TNO_plot_point_entry"
+				value = plot_point
+			}
+		}
+
+		effects = {
+			TNO_Plot_Tracker_close_click = {
+				clr_country_flag = TNO_Plot_Tracker_open
+			}
+		}
+	}
+}

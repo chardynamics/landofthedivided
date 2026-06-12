@@ -1,0 +1,1201 @@
+characters = {
+	# West Indies Federation #
+	WIN_Grantley_Herbert_Adams = {
+		name = WIN_Grantley_Herbert_Adams
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WIN/Portrait_WIN_Grantley_Adams.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_WIN_GRANTLEY_ADAMS_DESC"
+			expire = "1971.11.28.1"
+			ideology = paternalism_provisional_government_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	WIN_Hugh_Shearer = {
+		name = JAM_Hugh_Shearer
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAM/Portrait_JAM_Hugh_Shearer.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_WIN_HUGH_SHEARER_DESC"
+			expire = "1981.3.29.1"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	WIN_Michael_Manley = {
+		name = JAM_Michael_Manley
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAM/Portrait_JAM_Michael_Manley.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_WIN_MICHAEL_MANLEY_DESC"
+			expire = "1997.3.6.1"
+			ideology = liberalism_national_liberal_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	WIN_ANR_Robinson = {
+		name = WIN_ANR_Robinson
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WIN/Portrait_WIN_ANR_Robinson.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_WIN_ANR_Robinson_DESC"
+			expire = "1997.3.6.1"
+			ideology = liberalism_social_liberalism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	WIN_Tom_Adams = {
+		name = BRB_Tom_Adams
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BRB/Portrait_BRB_Tom_Adams.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_WIN_TOM_ADAMS_DESC"
+			expire = "1997.3.6.1"
+			ideology = liberalism_classical_liberalism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+
+	# Bahamas #
+	BAH_Roland_Theodore_Symonette = {
+		name = BAH_Roland_Theodore_Symonette
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAH/Portrait_BAH_Roland_Theodore_Symonette.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism_aristocratic_conservatism_subtype
+			desc = "POLITICS_BAH_ROLAND_THEODORE_SYMONETTE_DESC"
+			expire = "1999.1.23"
+			id = -1
+		}
+	}
+	BAH_Bobby_Symonette = {
+		name = BAH_Bobby_Symonette
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAH/Portrait_BAH_Bobby_Symonette.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism_aristocratic_conservatism_subtype
+			desc = "POLITICS_BAH_BOBBY_SYMONETTE_DESC"
+			expire = "1999.1.23"
+			id = -1
+		}
+	}
+	BAH_Kendal_Isaacs = {
+		name = BAH_Kendal_Isaacs
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAH/Portrait_BAH_Kendal_Isaacs.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			expire = "1999.1.23"
+			desc = "POLITICS_BAH_KENDAL_ISAACS_DESC"
+			id = -1
+		}
+	}
+	BAH_Lyndon_Pindling = {
+		name = BAH_Lyndon_Pindling
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAH/Portrait_BAH_Lyndon_Pindling.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism_social_liberalism_subtype
+			expire = "1999.1.23"
+			desc = "POLITICS_BAH_LYNDON_PINDLING_DESC"
+			id = -1
+		}
+	}
+
+	# Jamaica #
+	JAM_Alexander_Bustamante = {
+		name = JAM_Alexander_Bustamante
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WIN/Portrait_WIN_Alexander_Bustamante.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ALEXANDER_BUSTAMANTE_DESC"
+			expire = "1977.8.6.1"
+			ideology = paternalism_right_wing_populism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	JAM_Norman_Manley = {
+		name = JAM_Norman_Manley
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WIN/Portrait_WIN_Norman_Manley.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_NORMAN_MANLEY_DESC"
+			expire = "1977.8.6.1"
+			ideology = paternalism_provisional_government_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	JAM_Michael_Manley = {
+		name = JAM_Michael_Manley
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAM/Portrait_JAM_Michael_Manley.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_MICHAEL_MANLEY_DESC"
+			expire = "1977.8.6.1"
+			ideology = progressivism_left_wing_populism_subtype
+			traits = {
+			}
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_MICHAEL_MANLEY_DESC"
+			expire = "1977.8.6.1"
+			ideology = socialist_1_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	JAM_Donald_Sangster = {
+		name = JAM_Donald_Sangster
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAM/Portrait_JAM_Donald_Sangster.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_DONALD_SANGSTER_DESC"
+			expire = "1977.8.6.1"
+			ideology = paternalism_right_wing_populism_subtype
+			traits = {
+			}
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_DONALD_SANGSTER_DESC"
+			expire = "1977.8.6.1"
+			ideology = conservatism_oligarchic_conservatism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	JAM_Hugh_Shearer = {
+		name = JAM_Hugh_Shearer
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAM/Portrait_JAM_Hugh_Shearer.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_HUGH_SHEARER_DESC"
+			expire = "1977.8.6.1"
+			ideology = paternalism_anocracy_subtype
+			traits = {
+			}
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_HUGH_SHEARER_DESC"
+			expire = "1977.8.6.1"
+			ideology = paternalism_1_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	JAM_Edward_Seaga = {
+		name = JAM_Edward_Seaga
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAM/Portrait_JAM_Edward_Seaga.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_EDWARD_SEAGA_DESC"
+			expire = "1977.8.6.1"
+			ideology = paternalism_anocracy_subtype
+			traits = {
+			}
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_EDWARD_SEAGA_DESC"
+			expire = "1977.8.6.1"
+			ideology = paternalism_2_subtype
+			traits = {
+			}
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_EDWARD_SEAGA_DESC"
+			expire = "1977.8.6.1"
+			ideology = conservatism_oligarchic_conservatism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	JAM_William_Strachan = {
+		name = JAM_William_Strachan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAM/Portrait_JAM_William_Strachan.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_WILLIAM_STRACHAN_DESC"
+			expire = "1977.8.6.1"
+			ideology = socialist_revolutionary_frontism_subtype
+			traits = {
+			}
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_JAM_WILLIAM_STRACHAN_DESC"
+			expire = "1977.8.6.1"
+			ideology = communist_guevarism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	JAM_Richard_Hart = {
+		name = JAM_Richard_Hart
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAM/Portrait_JAM_Richard_Hart.png"
+			}
+		}
+	}
+
+	# Trinidad and Tobago #
+	TRI_Eric_Williams = {
+		name = WIN_Eric_Williams
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TRI/Portrait_TRI_Eric_Williams.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_TRI_ERIC_WILLIAMS_DESC"
+			expire = "1981.3.29.1"
+			ideology = paternalism_social_nationalism_subtype
+			traits = {
+			}
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_TRI_ERIC_WILLIAMS_DESC"
+			expire = "1981.3.29.1"
+			ideology = liberalism_national_liberal_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	TRI_Makandal_Daaga = {
+		name = TRI_Makandal_Daaga
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TRI/Portrait_TRI_Makandal_Daaga.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MAKANDAL_DAAGA_DESC"
+			expire = "2016.8.13.1"
+			ideology = socialist_left_wing_nationalism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	TRI_Bhadase_Sagan_Maraj = {
+		name = TRI_Bhadase_Sagan_Maraj
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TRI/Portrait_TRI_Bhadase_Sagan_Maraj.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_TRI_BHADASE_SAGAN_MARAJ_DESC"
+			expire = "2016.8.13.1"
+			ideology = conservatism_subtype
+			traits = {
+			}
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_TRI_BHADASE_SAGAN_MARAJ_DESC"
+			expire = "2016.8.13.1"
+			ideology = liberal_conservatism_big_tent_subtype
+			traits = {
+			}
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_TRI_BHADASE_SAGAN_MARAJ_DESC"
+			expire = "2016.8.13.1"
+			ideology = progressivism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	# Anguilla
+	AGL_Ronald_Webster = {
+		name = AGL_Ronald_Webster
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WIN/Portrait_WIN_Ronald_Webster.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_AGL_RONALD_WEBSTER_DESC"
+			expire = "2011.2.20.1"
+			ideology = paternalism_provisional_government_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_AGL_RONALD_WEBSTER_DESC"
+			expire = "2011.2.20.1"
+			ideology = liberalism_social_liberalism_subtype
+			id = -1
+		}
+	}
+
+	# Leeward Islands - (Later St. Kitts and Nevis) #
+	SKN_Kenneth_Blackburne = {
+		name = SKN_Kenneth_Blackburne
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SKN/Portrait_SKN_Kenneth_Blackburne.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SKN_KENNETH_BLACKBURNE_DESC"
+			expire = "2011.2.20.1"
+			ideology = despotism_colonial_government_subtype
+			id = -1
+		}
+	}
+	SKN_William_Herbert = {
+		name = SKN_William_Herbert
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SKN/Portrait_SKN_William_Herbert.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SKN_WILLIAM_HERBERT_DESC"
+			expire = "2011.2.20.1"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+	}
+	SKN_Robert_Llewellyn_Bradshaw = {
+		name = SKN_Robert_Llewellyn_Bradshaw
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SKN/Portrait_SKN_Robert_Llewellyn_Bradshaw.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SKN_ROBERT_LLEWELLYN_BRADSHAW_DESC"
+			expire = "2011.2.20.1"
+			ideology = progressivism_left_wing_populism_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_SKN_ROBERT_LLEWELLYN_BRADSHAW_DESC"
+			expire = "2011.2.20.1"
+			ideology = despotism_personalistic_dictatorship_subtype
+			id = -1
+		}
+	}
+	SKN_Frederick_Albert_Phillips = {
+		name = SKN_Frederick_Albert_Phillips
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SKN/Portrait_SKN_Frederick_Albert_Phillips.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SKN_FREDERICK_ALBERT_PHILLIPS_DESC"
+			expire = "2011.2.20.1"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+	}
+
+	# Windward Islands - (Later St. Vincent and the Grenadines) #
+	SVI_Hector_Allard = {
+		name = SVI_Hector_Allard
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SVI/Portrait_SVI_Hector_Allard.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SVI_HECTOR_ALLARD_DESC"
+			expire = "1991.3.14.1"
+			ideology = despotism_colonial_government_subtype
+			id = -1
+		}
+	}
+
+	SVI_Ebenezer_Joshua = {
+		name = SVI_Ebenezer_Joshua
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SVI/Portrait_SVI_Ebenezer_Joshua.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SVI_EBENEZER_JOSHUA_DESC"
+			expire = "1991.3.14.1"
+			ideology = liberalism_social_liberalism_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_SVI_EBENEZER_JOSHUA_DESC"
+			expire = "1991.3.14.1"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_SVI_EBENEZER_JOSHUA_DESC"
+			expire = "1991.3.14.1"
+			ideology = progressivism_1_subtype
+			id = -1
+		}
+	}
+	SVI_Robert_Milton_Cato = {
+		name = SVI_Robert_Milton_Cato
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SVI/Portrait_SVI_Robert_Milton_Cato.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SVI_ROBERT_MILTON_CATO_DESC"
+			expire = "1991.3.14.1"
+			ideology = socialist_social_democracy_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_SVI_ROBERT_MILTON_CATO_DESC"
+			expire = "1991.3.14.1"
+			ideology = progressivism_reformist_socialism_subtype
+			id = -1
+		}
+	}
+
+
+	# Barbados #
+	BRB_Grantley_Hebert_Adams = {
+		name = BRB_Grantley_Hebert_Adams
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WIN/Portrait_WIN_Grantley_Adams.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BRB_HEBERT_GRANTLEY_ADAMS_DESC"
+			expire = "1987.6.1.1"
+			ideology = liberalism_social_liberalism_subtype
+			id = -1
+		}
+	}
+	BRB_Hugh_Springer = {
+		name = BRB_Hugh_Springer
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BRB/Portrait_BRB_Hugh_Springer.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BRB_HUGH_SPRINGER_DESC"
+			expire = "1987.6.1.1"
+			ideology = liberal_conservatism_centrist_progressivism_subtype
+			id = -1
+		}
+	}
+	BRB_Tom_Adams = {
+		name = BRB_Tom_Adams
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BRB/Portrait_BRB_Tom_Adams.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BRB_TOM_ADAMS_DESC"
+			expire = "1987.6.1.1"
+			ideology = liberal_conservatism_centrist_progressivism_subtype
+			id = -1
+		}
+	}
+	BRB_Errol_Barrow = {
+		name = BRB_Errol_Barrow
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BRB/Portrait_BRB_Errol_Barrow.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BRB_ERROL_BARROW_DESC"
+			expire = "1987.6.1.1"
+			ideology = progressivism_left_wing_populism_subtype
+			id = -1
+		}
+	}
+
+	# French West Indies #
+	FWI_Lyman_Lemnitzer = {
+		name = FWI_Lyman_Lemnitzer
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_GEN_Lyman_Lemnitzer.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_LYMAN_LEMNITZER_DESC"
+			expire = "2004.12.24.1"
+			ideology = despotism_colonial_government_subtype
+			id = -1
+		}
+	}
+	#Antilles Confederation
+	FWI_Paul_Valentino = {
+		name = FWI_Paul_Valentino
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Paul_Valentino.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_PAUL_VALENTINO_DESC"
+			expire = "2004.12.24.1"
+			ideology = paternalism_provisional_government_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_PAUL_VALENTINO_DESC"
+			expire = "2004.12.24.1"
+			ideology = progressivism_reformist_socialism_subtype
+			id = -1
+		}
+	}
+	FWI_Emmanuel_Very_Hermence = {
+		name = FWI_Emmanuel_Very_Hermence
+		portraits = {
+			#civilian = {
+			#	large = "gfx/leaders/FWI/Portrait_FWI_Emmanuel_Very_Hermence.png"
+			#}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_EMMANUEL_VERY_HERMENCE_DESC"
+			expire = "2004.12.24.1"
+			ideology = progressivism_reformist_socialism_subtype
+			id = -1
+		}
+	}
+	FWI_Medard_Albrand = {
+		name = FWI_Medard_Albrand
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Medard_Albrand.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+	}
+	FWI_Lucette_Michau_Chevry = {
+		name = FWI_Lucette_Michau_Chevry
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Lucette_Michau_Chevry.png"
+			}
+		}
+		gender = female
+		country_leader = {
+			desc = "POLITICS_FWI_LUCETTE_MICHAU_CHEVRY_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+	}
+	FWI_Gaston_Feuillard = {
+		name = FWI_Gaston_Feuillard
+		portraits = {
+			#civilian = {
+			#	large = "gfx/leaders/FWI/Portrait_FWI_Gaston_Feuillard.png"
+			#}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberal_conservatism_centrist_progressivism_subtype
+			id = -1
+		}
+	}
+	FWI_Victor_Sable = {
+		name = FWI_Victor_Sable
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Victor_Sable.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberalism_liberal_radicalism_subtype
+			id = -1
+		}
+	}
+	FWI_Pierre_Petit = {
+		name = FWI_Pierre_Petit
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Pierre_Petit.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberal_conservatism_big_tent_subtype
+			id = -1
+		}
+	}
+	FWI_Furcie_Tirolien = {
+		name = FWI_Furcie_Tirolien
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Furcie_Tirolien.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberal_conservatism_centrist_progressivism_subtype
+			id = -1
+		}
+	}
+	FWI_Tertulien_Robinel = {
+		name = FWI_Tertulien_Robinel
+		portraits = {
+			#civilian = {
+			#	large = "gfx/leaders/FWI/Portrait_FWI_Tertulien_Robinel.png"
+			#}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = progressivism_neocorporatism_subtype
+			id = -1
+		}
+	}
+	FWI_Raymond_Guilliod = {
+		name = FWI_Raymond_Guilliod
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Raymond_Guilliod.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_RAYMOND_GUILLIOD_DESC"
+			expire = "2004.12.24.1"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			id = -1
+		}
+	}
+	FWI_Gerty_Archimede = {
+		name = FWI_Gerty_Archimede
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Gerty_Archimede.png"
+			}
+		}
+		gender = female
+		country_leader = {
+			desc = "POLITICS_FWI_GERTY_ARCHIMEDE_DESC"
+			expire = "2004.12.24.1"
+			ideology = socialist_revolutionary_frontism_subtype
+			id = -1
+		}
+	}
+	FWI_Aime_Cesaire = {
+		name = FWI_Aime_Cesaire
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Aime_Cesaire.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FWI_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = socialist_social_democracy_subtype
+			id = -1
+		}
+	}
+
+
+	# Guadeloupe #
+	GUD_Gerty_Archimede = {
+		name = FWI_Gerty_Archimede
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Gerty_Archimede.png"
+			}
+		}
+		gender = female
+		country_leader = {
+			desc = "POLITICS_GUD_GERTY_ARCHIMEDE_DESC"
+			expire = "2004.12.24.1"
+			ideology = socialist_revolutionary_gaitanismo_subtype
+			id = -1
+		}
+	}
+	GUD_Medard_Albrand = {
+		name = FWI_Medard_Albrand
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Medard_Albrand.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUD_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+	}
+	GUD_Lucette_Michau_Chevry = {
+		name = FWI_Lucette_Michau_Chevry
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Lucette_Michau_Chevry.png"
+			}
+		}
+		gender = female
+		country_leader = {
+			desc = "POLITICS_GUD_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+	}
+	GUD_Raymond_Guilliod = {
+		name = FWI_Raymond_Guilliod
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Raymond_Guilliod.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUD_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			id = -1
+		}
+	}
+	GUD_Furcie_Tirolien = {
+		name = FWI_Furcie_Tirolien
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Furcie_Tirolien.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUD_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberal_conservatism_centrist_progressivism_subtype
+			id = -1
+		}
+	}
+	GUD_Paul_Valentino = {
+		name = FWI_Paul_Valentino
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Paul_Valentino.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GUD_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = progressivism_reformist_socialism_subtype
+			id = -1
+		}
+	}
+
+
+	# Martinique #
+	MRT_Conseil_General = { #Deprecated, kept for later uses
+		name = MRT_Conseil_General
+		portraits = {
+			#civilian = {
+			#	large = "gfx/leaders/FWI/Portrait_FWI_Conseil_General.png"
+			#}
+		}
+		country_leader = {
+			desc = "POLITICS_MRT_GEORGES_MARRIE_ANNE_DESC"
+			expire = "2001.2.21.1"
+			ideology = progressivism_subtype
+			id = -1
+		}
+	}
+	MRT_Georges_Marrie_Anne = {
+		name = MRT_Georges_Marrie_Anne
+		portraits = {
+			#civilian = {
+			#	large = "gfx/leaders/FWI/Portrait_FWI_George_Marrie_Anne.png"
+			#}
+		}
+		country_leader = {
+			desc = "POLITICS_MRT_GEORGES_MARRIE_ANNE_DESC"
+			expire = "2001.2.21.1"
+			ideology = progressivism_subtype
+			id = -1
+		}
+	}
+	MRT_Claude_Lise = {
+		name = FWI_Tertulien_Robinel
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Claude_Lise.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MRT_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = progressivism_neocorporatism_subtype
+			id = -1
+		}
+	}
+	MRT_Aime_Cesaire = {
+		name = FWI_Aime_Cesaire
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Aime_Cesaire.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MRT_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = socialist_social_democracy_subtype
+			id = -1
+		}
+	}
+	MRT_Victor_Sable = {
+		name = FWI_Victor_Sable
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Victor_Sable.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MRT_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberalism_liberal_radicalism_subtype
+			id = -1
+		}
+	}
+	MRT_Pierre_Petit = {
+		name = FWI_Pierre_Petit
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Pierre_Petit.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MRT_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = liberal_conservatism_big_tent_subtype
+			id = -1
+		}
+	}
+	MRT_Edmond_Valcin = {
+		name = FWI_Edmond_Valcin
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Edmond_Valcin.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MRT_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = conservatism_progressive_conservatism_subtype
+			id = -1
+		}
+	}
+	MRT_Tertulien_Robinel = {
+		name = FWI_Tertulien_Robinel
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Tertulien_Robinel.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MRT_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = progressivism_reformist_socialism_subtype
+			id = -1
+		}
+	}
+	MRT_Alfred_Marie_Jeanne = {
+		name = FWI_Alfred_Marie_Jeanne
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FWI/Portrait_FWI_Alfred_Marie_Jeanne.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MRT_PIERRE_ROUYER_DESC"
+			expire = "2004.12.24.1"
+			ideology = socialist_left_wing_nationalism_subtype
+			id = -1
+		}
+	}
+
+
+
+	#########################
+	### Post-Independence ###
+	#########################
+
+	# Antigua and Barbuda #
+	ANT_Vere_Bird = {
+		name = ANT_Vere_Bird
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ANT/Portrait_ANT_Vere_Bird.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ANT_VERE_BIRD_DESC"
+			expire = "2008.3.4.1"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ANT_VERE_BIRD_DESC"
+			expire = "2008.3.4.1"
+			ideology = despotism_civilian_dictatorship_subtype
+			id = -1
+		}
+	}
+	ANT_George_Walter = {
+		name = ANT_George_Walter
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ANT/Portrait_ANT_George_Walter.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ANT_GEORGE_WALTER_DESC"
+			expire = "2008.3.4.1"
+			ideology = liberalism_social_liberalism_subtype
+			id = -1
+		}
+	}
+	# Dominica #
+	DMI_Edward_Oliver_LeBlanc = {
+		name = DMI_Edward_Oliver_LeBlanc
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DMI/Portrait_DMI_Edward_Oliver_LeBlanc.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DMI_EDWARD_OLIVER_LEBLANC_DESC"
+			expire = "2021.7.6.1"
+			ideology = progressivism_left_wing_populism_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_DMI_EDWARD_OLIVER_LEBLANC_INSTDESP_DESC"
+			expire = "2021.7.6.1"
+			ideology = despotism_institutional_despotism_subtype
+			id = -1
+		}
+	}
+	DMI_Nicholson_Ducreay = {
+		name = DMI_Nicholson_Ducreay
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DMI/Portrait_DMI_Nicholson_Ducreay.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DMI_NICHOLSON_DUCREAY_DESC"
+			expire = "2021.7.6.1"
+			ideology = socialist_social_democracy_subtype
+			id = -1
+		}
+	}
+	DMI_Eugenia_Charles = {
+		name = DMI_Eugenia_Charles
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DMI/Portrait_DMI_Eugenia_Charles.png"
+			}
+		}
+		gender = female
+		country_leader = {
+			desc = "POLITICS_DMI_EUGENIA_CHARLES_DESC"
+			expire = "2021.7.6.1"
+			ideology = conservatism_progressive_conservatism_subtype
+			id = -1
+		}
+	}
+	DMI_Patrick_Roland_John = {
+		name = DMI_Patrick_Roland_John
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DMI/Portrait_DMI_Patrick_Roland_John.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DMI_PATRICK_ROLAND_JOHN_DESC"
+			expire = "2021.7.6.1"
+			ideology = paternalism_anocracy_subtype
+			id = -1
+		}
+	}
+
+
+	# Saint Lucia #
+	SLU_George_Charles = {
+		name = SLU_George_Charles
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SLU/Portrait_SLU_George_Charles.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SLU_GEORGE_CHARLES_DESC"
+			expire = "2007.9.7.1"
+			ideology = liberalism_social_liberalism_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_SLU_GEORGE_CHARLES_SOCDEM_DESC"
+			expire = "2007.9.7.1"
+			ideology = socialist_social_democracy_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_SLU_GEORGE_CHARLES_SOCDEM_DESC"
+			expire = "2007.9.7.1"
+			ideology = progressivism_reformist_socialism_subtype
+			id = -1
+		}
+	}
+	SLU_John_Compton = {
+		name = SLU_John_Compton
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SLU/Portrait_SLU_John_Compton.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SLU_JOHN_COMPTON_DESC"
+			expire = "2007.9.7.1"
+			ideology = conservatism_agrarianism_subtype
+			id = -1
+		}
+	}
+	# Grenada #
+	GND_Herbert_Blaize = {
+		name = GND_Herbert_Blaize
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GND/Portrait_GND_Herbert_Blaize.png"
+			}
+		}country_leader = {
+			desc = "POLITICS_GND_HERBERT_BLAIZE_DESC"
+			expire = "1989.12.19.1"
+			ideology = liberalism_classical_liberalism_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_GND_HERBERT_BLAIZE_DESC"
+			expire = "1989.12.19.1"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_GND_HERBERT_BLAIZE_DESC"
+			expire = "1989.12.19.1"
+			ideology = conservatism_oligarchic_conservatism_subtype
+			id = -1
+		}
+	}
+	GND_Eric_Gairy = {
+		name = GND_Eric_Gairy
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GND/Portrait_GND_Eric_Gairy.png"
+			}
+		}
+	}
+	# Curacao #
+	CUR_Efrain_Jonchkeer = {
+		name = CUR_Efrain_Jonchkeer
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CUR/Portrait_CUR_Efrain_Jonchkeer.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_EFRAIN_JONCHKEER_DESC"
+			expire = "1997.3.30.1"
+			ideology = liberalism_subtype
+			id = -1
+		}
+	}
+}

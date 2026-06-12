@@ -1,0 +1,6839 @@
+## Intro Tree - Lacerda was elected Normally ##
+
+shared_focus = {
+	id = BRA_1965_the_lacerda_presidency
+	icon = GFX_focus_BRA_the_lacerda_presidency
+	cost = 2
+	x = 15
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_1965_the_lacerda_presidency"
+		country_event = brazil_lacerda.1
+		add_political_power = 25
+		BRA_military_increase_loyalty_low = yes
+		hidden_effect = {
+			country_event = {
+				id = brazil_lacerda.197
+				days = 14
+			}
+			country_event = {
+				id = brazil_lacerda.77
+				days = 85
+			}
+			country_event = {
+				id = brazil_lacerda.78
+				days = 107
+			}
+			country_event = {
+				id = brazil_lacerda.90
+				days = 135
+			}
+			if = {
+				limit = { NOT = { has_government = paternalism } }
+				country_event = {
+					id = brazil_lacerda.115
+					days = 468
+				}
+			}
+			country_event = {
+				id = brazil_lacerda.129
+				days = 630
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_varguist_devils
+	icon = GFX_focus_BRA_varguist_devils
+	cost = 2
+	prerequisite = {
+		focus = BRA_1965_the_lacerda_presidency
+	}
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_varguist_devils"
+		BRA_military_increase_loyalty_low = yes
+		BRA_military_decrease_power_const_med = yes
+		set_temp_variable = { temp_udn_unity = 4 }
+		BRA_lacerda_udn_unity_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_guanabaran_deluge
+	icon = GFX_focus_BRA_guanabaran_deluge
+	cost = 2
+	prerequisite = {
+		focus = BRA_1965_the_lacerda_presidency
+	}
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_guanabaran_deluge"
+		country_event = brazil_lacerda.3
+		custom_effect_tooltip = BRA_megaproject_gnb_effect
+		BRA_boost_UDN_candidates_nationwide_low = yes
+		BRA_boost_UDN_aligned_candidates_guanabara_med = yes
+		BRA_boost_UDN_aligned_candidates_rio_de_janeiro_low = yes
+		hidden_effect = {
+				BRA_start_guanabara_reconstruction_project = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_automatic_alignment
+	icon = GFX_focus_BRA_brazil_military_ops
+	cost = 2
+	prerequisite = {
+		focus = BRA_1965_the_lacerda_presidency
+	}
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_automatic_alignment"
+		country_event = brazil_lacerda.8
+		add_opinion_modifier = {
+			target = USA
+			modifier = BRA_automatic_alignment
+		}
+		USA = {
+			add_opinion_modifier = {
+				target = BRA
+				modifier = BRA_automatic_alignment
+			}
+		}
+		set_temp_variable = { gdp_growth_temp = 0.25 }
+		econ_gdp_growth_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_uncover_varguist_crimes
+	icon = GFX_focus_BRA_eliminate_varguist_elements
+	cost = 2
+	available = {
+		BRA_pl_no_bill_in_voting = yes
+	}
+	prerequisite = {
+		focus = BRA_varguist_devils
+	}
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = -3
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_uncover_varguist_crimes"
+		country_event = brazil_lacerda.4
+		custom_effect_tooltip = BRA_pl_national_truth_commission_tooltip
+		hidden_effect = {
+			set_temp_variable = { temp_bill = token:BRA_NATIONAL_TRUTH_COMMISSION_ACT }
+
+			set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0.2 }
+			set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.2 }
+			BRA_lacerda_calculate_udn_bill_support = yes
+			set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0.6 }
+			if = {
+				limit = { has_country_flag = BRA_lacerda_psp_support_flag }
+				if = {
+					limit = { check_variable = { BRA_pl_psp_support_bill@var:temp_bill < BRA_lacerda_psp_support } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+				if = {
+					limit = { check_variable = { BRA_lacerda_psp_support = 0 } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+			}
+			set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 0.6 }
+
+			BRA_initialize_bill = yes
+			set_variable = { BRA_pl_vote_days@var:temp_bill = 21 }
+		}
+		effect_tooltip = {
+			BRA_harm_PTB_candidates_nationwide_low = yes
+			BRA_boost_UDN_candidates_nationwide_low = yes
+			set_temp_variable = { temp_law = token:BRA_national_truth_commission_law }
+			TNO_add_assorted_law = yes
+			add_political_power = 25
+			BRA_military_increase_loyalty_low = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_urbanize_favelas
+	icon = GFX_focus_BRA_a_roof_over_their_heads
+	cost = 2
+	prerequisite = {
+		focus = BRA_guanabaran_deluge
+	}
+	mutually_exclusive = {
+		focus = BRA_new_neighborhoods
+	}
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = -1
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_urbanize_favelas"
+		BRA_develop_increase_urban_pop_southeast_med = yes
+		BRA_develop_increase_guanabara_reconstruction_1 = yes
+		set_temp_variable = { temp_udn_unity = -2 }
+		BRA_lacerda_udn_unity_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_new_neighborhoods
+	icon = GFX_focus_BRA_the_cities_of_tomorrow
+	cost = 2
+	prerequisite = {
+		focus = BRA_guanabaran_deluge
+	}
+	mutually_exclusive = {
+		focus = BRA_urbanize_favelas
+	}
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = 1
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_new_neighborhoods"
+		BRA_develop_increase_urban_pop_southeast_med = yes
+		TNO_improve_poverty_low = yes
+		BRA_boost_UDN_candidates_southeast_med = yes
+		BRA_develop_decrease_guanabara_reconstruction_2 = yes
+		set_temp_variable = { temp_udn_unity = -2 }
+		BRA_lacerda_udn_unity_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_perons_shadow
+	icon = GFX_focus_BRA_perons_shadow
+	cost = 2
+	prerequisite = {
+		focus = BRA_automatic_alignment
+	}
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = 3
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_perons_shadow"
+		country_event = brazil_lacerda.9
+		set_temp_variable = { tempTension = 5 }
+		SA_change_tension = yes
+		add_opinion_modifier = {
+			target = ARG
+			modifier = BRA_perons_shadow
+		}
+		ARG = {
+			add_opinion_modifier = {
+				target = BRA
+				modifier = BRA_perons_shadow
+			}
+		}
+		BRA_military_increase_loyalty_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_spring_tunes
+	icon = GFX_focus_BRA_spring_tunes
+	cost = 2
+	prerequisite = {
+		focus = BRA_uncover_varguist_crimes
+	}
+	prerequisite = {
+		focus = BRA_urbanize_favelas
+		focus = BRA_new_neighborhoods
+	}
+	prerequisite = {
+		focus = BRA_perons_shadow
+	}
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = -2
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_spring_tunes"
+		country_event = brazil_lacerda.7
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+		hidden_effect = {
+			set_temp_variable = { inflation_temp = 1 }
+			econ_inflation_change = yes
+			set_temp_variable = { gdp_growth_temp = 1 }
+			econ_gdp_growth_change = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_enemy_no_1
+	icon = GFX_focus_BRA_enemy_no1
+	cost = 2
+	prerequisite = {
+		focus = BRA_uncover_varguist_crimes
+	}
+	prerequisite = {
+		focus = BRA_urbanize_favelas
+		focus = BRA_new_neighborhoods
+	}
+	prerequisite = {
+		focus = BRA_perons_shadow
+	}
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = 2
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_enemy_no_1"
+		set_temp_variable = { temp_udn_unity = 2 }
+		BRA_lacerda_udn_unity_change = yes
+		set_temp_variable = { inflation_temp = -1 }
+		econ_inflation_change = yes
+		set_temp_variable = { interest_rates_temp = 0.25 }
+		econ_interest_rates_change = yes
+		hidden_effect = {
+			set_temp_variable = { gdp_growth_temp = -0.75 }
+			econ_gdp_growth_change = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_shield_of_the_republic
+	icon = GFX_focus_generic_unite_the_garrison
+	cost = 2
+	prerequisite = {
+		focus = BRA_spring_tunes
+	}
+	prerequisite = {
+		focus = BRA_enemy_no_1
+	}
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = 0
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_shield_of_the_republic"
+		country_event = brazil_lacerda.53
+		BRA_military_increase_loyalty_low = yes
+		TNO_improve_army_professionalism_low = yes
+		army_funding_minimal_increase_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_the_freedom_fighter
+	icon = GFX_focus_USA_jet_fighter_plane
+	cost = 2
+	prerequisite = {
+		focus = BRA_shield_of_the_republic
+	}
+	relative_position_id = BRA_shield_of_the_republic
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_the_freedom_fighter"
+		country_event = brazil_lacerda.54
+		BRA_military_increase_power_sorbonne_med = yes
+		add_equipment_to_stockpile = {
+			type = jet_fighter_equipment_2
+			amount = 64
+			variant_name = "Northrop F-5"
+		}
+		set_temp_variable = { temp_econ_spending_amount = 0.075 }
+		econ_spend_money_once_effect_raw_money = yes
+	}
+}
+shared_focus = {
+	id = BRA_brazilian_fire
+	icon = GFX_focus_BRA_brazilian_fire
+	cost = 2
+	prerequisite = {
+		focus = BRA_the_freedom_fighter
+	}
+	relative_position_id = BRA_the_freedom_fighter
+	x = -3
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_brazilian_fire"
+		country_event = brazil_lacerda.55
+		army_experience = 30
+		TNO_improve_industrial_expertise_med = yes
+		BRA_military_increase_loyalty_low = yes
+		BRA_military_increase_power_sorbonne_low = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.050 }
+		econ_spend_money_once_effect_raw_money = yes
+	}
+}
+shared_focus = {
+	id = BRA_early_warning_systems
+	icon = GFX_focus_BRA_monitor_the_dissent
+	cost = 2
+	prerequisite = {
+		focus = BRA_brazilian_fire
+	}
+	relative_position_id = BRA_brazilian_fire
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_early_warning_systems"
+		country_event = brazil_lacerda.555
+		BRA_military_increase_loyalty_low = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.150 }
+		econ_spend_money_once_effect_raw_money = yes
+		add_tech_bonus = {
+			name = radar_tech
+			bonus = 1.0
+			uses = 1
+			category = radar_tech
+		}
+		502 = {
+			add_building_construction = {
+				type = radar_station
+				level = 2
+				instant_build = yes
+			}
+		}
+		503 = {
+			add_building_construction = {
+				type = radar_station
+				level = 2
+				instant_build = yes
+			}
+		}
+		1486 = {
+			add_building_construction = {
+				type = radar_station
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BRA_training_in_panama
+	icon = GFX_focus_BRA_officers_in_the_soa
+	cost = 2
+	prerequisite = {
+		focus = BRA_early_warning_systems
+	}
+	relative_position_id = BRA_early_warning_systems
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_training_in_panama"
+		country_event = brazil_lacerda.56
+		BRA_military_increase_loyalty_low = yes
+		TNO_improve_army_professionalism_med = yes
+	}
+}
+shared_focus = {
+	id = BRA_operation_saucer
+	icon = GFX_focus_BRA_operation_saucer
+	cost = 2
+	prerequisite = {
+		focus = BRA_the_freedom_fighter
+	}
+	relative_position_id = BRA_the_freedom_fighter
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_operation_saucer"
+		country_event = brazil_lacerda.57
+		BRA_military_increase_loyalty_low = yes
+		air_experience = 50
+		set_temp_variable = { tempTension = 2 }
+		SA_change_tension = yes
+	}
+}
+shared_focus = {
+	id = BRA_enbrarer_investment
+	icon = GFX_focus_BRA_enbrarer_investment
+	cost = 2
+	prerequisite = {
+		focus = BRA_operation_saucer
+	}
+	mutually_exclusive = { focus = BRA_the_national_interest }
+	relative_position_id = BRA_operation_saucer
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_enbrarer_investment"
+		set_temp_variable = { gdp_growth_temp = 0.30 }
+		econ_gdp_growth_change = yes
+		BRA_develop_increase_industry_central_west_low = yes
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_realistas_quarter = yes
+					BRA_lacerda_udn_bossa_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_banda_quarter = yes
+					BRA_lacerda_udn_liberais_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BRA_civil_purposes
+	icon = GFX_focus_BRA_civil_purposes
+	cost = 2
+	prerequisite = {
+		focus = BRA_enbrarer_investment
+	}
+	relative_position_id = BRA_enbrarer_investment
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_civil_purposes"
+		country_event = brazil_lacerda.58
+		BRA_boost_UDN_candidates_nationwide_med = yes
+		add_equipment_to_stockpile = {
+			type = transport_plane_equipment_4
+			amount = 40
+			variant_name = "Embraer EMB 110 Bandeirante"
+		}
+	}
+}
+shared_focus = {
+	id = BRA_the_national_interest
+	icon = GFX_focus_BRA_the_national_interest
+	cost = 2
+	prerequisite = {
+		focus = BRA_operation_saucer
+	}
+	mutually_exclusive = { focus = BRA_enbrarer_investment }
+	relative_position_id = BRA_operation_saucer
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_the_national_interest"
+		add_tech_bonus = {
+			name = jet_fighter
+			bonus = 1.0
+			uses = 2
+			category = jet_fighter
+		}
+		add_tech_bonus = {
+			name = jet_interceptor
+			bonus = 1.0
+			uses = 2
+			category = jet_interceptor
+		}
+		set_temp_variable = { gdp_growth_temp = 0.30 }
+		econ_gdp_growth_change = yes
+		BRA_military_increase_loyalty_low = yes
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_realistas_quarter = yes
+					BRA_lacerda_udn_bossa_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_banda_quarter = yes
+					BRA_lacerda_udn_liberais_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BRA_the_super_tucano
+	icon = GFX_focus_BRA_the_super_tucano
+	cost = 2
+	prerequisite = {
+		focus = BRA_the_national_interest
+	}
+	relative_position_id = BRA_the_national_interest
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_the_super_tucano"
+		country_event = brazil_lacerda.59
+		BRA_military_increase_loyalty_low = yes
+		add_equipment_to_stockpile = {
+			type = jet_CAS_equipment_2
+			amount = 36
+			variant_name = "Embraer EMB 312 Tucano"
+		}
+	}
+}
+shared_focus = {
+	id = BRA_atomic_taboo
+	icon = GFX_focus_generic_the_nuclear_option
+	cost = 2
+	prerequisite = {
+		focus = BRA_the_freedom_fighter
+	}
+	relative_position_id = BRA_the_freedom_fighter
+	x = 3
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_atomic_taboo"
+		country_event = brazil_lacerda.60
+		set_temp_variable = { SACW_nuke_speed_temp = 0.5 }
+		SACW_change_monthly_speed = yes
+	}
+}
+shared_focus = {
+	id = BRA_contact_kissinger
+	icon = GFX_focus_BRA_contact_kissinger
+	cost = 2
+	prerequisite = {
+		focus = BRA_atomic_taboo
+	}
+	relative_position_id = BRA_atomic_taboo
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_contact_kissinger"
+		country_event = brazil_lacerda.61
+		add_political_power = 25
+		set_temp_variable = { SACW_nuke_sec_temp = 5 }
+		SACW_change_security = yes
+	}
+}
+shared_focus = {
+	id = BRA_camp_david_talks
+	icon = GFX_focus_BRA_camp_david_talks
+	cost = 2
+	prerequisite = {
+		focus = BRA_contact_kissinger
+	}
+	relative_position_id = BRA_contact_kissinger
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_camp_david_talks"
+		country_event = brazil_lacerda.62
+		custom_effect_tooltip = BRA_camp_david_talks_tooltip
+	}
+}
+shared_focus = {
+	id = BRA_silent_assassin
+	icon = GFX_focus_BRA_silent_assassin
+	cost = 2
+	prerequisite = {
+		focus = BRA_civil_purposes
+		focus = BRA_the_super_tucano
+	}
+	prerequisite = {
+		focus = BRA_training_in_panama
+	}
+	relative_position_id = BRA_training_in_panama
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_silent_assassin"
+		BRA_military_increase_loyalty_med = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.225 }
+		econ_spend_money_once_effect_raw_money = yes
+		custom_effect_tooltip = BRA_silent_assassin_tt
+		hidden_effect = {
+			BRA = {
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Gato Class"
+					creator = USA
+					name = "MB 24"
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Gato Class"
+					creator = USA
+					name = "MB 25"
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Gato Class"
+					creator = USA
+					name = "MB 26"
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Gato Class"
+					creator = USA
+					name = "MB 28"
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Gato Class"
+					creator = USA
+					name = "MB 29"
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Gato Class"
+					creator = USA
+					name = "MB 30"
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BRA_modern_tank
+	icon = GFX_focus_USA_SAW_break_front
+	cost = 2
+	prerequisite = {
+		focus = BRA_civil_purposes
+		focus = BRA_the_super_tucano
+	}
+	prerequisite = {
+		focus = BRA_camp_david_talks
+	}
+	relative_position_id = BRA_camp_david_talks
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_modern_tank"#
+		set_temp_variable = { temp_econ_spending_amount = 0.050 }
+		econ_spend_money_once_effect_raw_money = yes
+		add_tech_bonus = {
+				name = MBT
+				bonus = 0.50
+				uses = 2
+				category = MBT
+			}
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			add_equipment_to_stockpile = {
+				type = MBT_chassis_1
+				amount = 125
+				producer = USA
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = MBT_equipment_1
+				amount = 125
+				producer = USA
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BRA_bargain_completed
+	icon = GFX_focus_BRA_proceeding_as_planned
+	cost = 2
+	prerequisite = {
+		focus = BRA_silent_assassin
+		focus = BRA_modern_tank
+	}
+	relative_position_id = BRA_the_freedom_fighter
+	x = 0
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_bargain_completed"
+		country_event = brazil_lacerda.63
+		BRA_military_increase_loyalty_med = yes
+	}
+}
+
+###############################################
+########### Administration Reforms! ###########
+###############################################
+
+shared_focus = {
+	id = BRA_streamline_civil_service
+	icon = GFX_focus_BRA_improving_the_central_bureaucracy
+	cost = 2
+	prerequisite = {
+		focus = BRA_spring_tunes
+	}
+	relative_position_id = BRA_spring_tunes
+	x = -8
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_streamline_civil_service"
+		country_event = brazil_lacerda.10
+		TNO_improve_admin_efficiency_really_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_Establish_ENAP
+	icon = GFX_focus_GNG_ensure_a_healthy_budget
+	cost = 2
+	prerequisite = {
+		focus = BRA_streamline_civil_service
+	}
+	relative_position_id = BRA_streamline_civil_service
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_Establish_ENAP"
+		set_temp_variable = { temp_econ_spending_amount = 0.05 }
+		econ_spend_money_once_effect_raw_money = yes
+		set_temp_variable = { temp_law = token:BRA_ENAP_law }
+		TNO_add_assorted_law = yes
+		1488 = {
+			add_building_construction = {
+				type = offices
+				level = 1
+				instant_build = yes
+			}
+		}
+		TNO_improve_admin_efficiency_low = yes
+	}
+}
+shared_focus = {
+	id = BRA_Regionalize_Administration
+	icon = GFX_focus_USA_hart_shining_megalopolis_on_a_hill
+	cost = 2
+	prerequisite = {
+		focus = BRA_streamline_civil_service
+	}
+	relative_position_id = BRA_streamline_civil_service
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_Regionalize_Administration"
+		country_event = brazil_lacerda.11
+	}
+}
+shared_focus = {
+	id = BRA_anti_corruption_crusade
+	icon = GFX_focus_BRA_anti_corruption_raids
+	cost = 2
+	prerequisite = {
+		focus = BRA_Establish_ENAP
+	}
+	relative_position_id = BRA_Establish_ENAP
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_anti_corruption_crusade"
+		country_event = brazil_lacerda.12
+		add_political_power = 25
+		add_popularity = {
+			ideology = BRA
+			popularity = 0.02
+		}
+	}
+}
+shared_focus = {
+	id = BRA_competency_tests
+	icon = GFX_focus_generic_paperwork_stack
+	cost = 2
+	prerequisite = {
+		focus = BRA_Establish_ENAP
+		focus = BRA_Regionalize_Administration
+	}
+	relative_position_id = BRA_streamline_civil_service
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_competency_tests"
+		TNO_improve_admin_efficiency_low = yes
+		BRA_harm_UDN_candidates_nationwide_low = yes
+	}
+}
+shared_focus = {
+	id = BRA_Professionalize_Politics
+	icon = GFX_focus_BRA_professionalize_politics
+	cost = 2
+	available = {
+		BRA_pl_no_bill_in_voting = yes
+	}
+	prerequisite = {
+		focus = BRA_Regionalize_Administration
+	}
+	relative_position_id = BRA_Regionalize_Administration
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_Professionalize_Politics"
+		country_event = brazil_lacerda.13
+		custom_effect_tooltip = BRA_pl_standards_in_government_tooltip
+		hidden_effect = {
+			set_temp_variable = { temp_bill = token:BRA_STANDARDS_IN_GOVERNMENT_ACT }
+			set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0.3 }
+			set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.2 }
+			BRA_lacerda_calculate_udn_bill_support = yes
+			set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0.0 }
+			if = {
+				limit = { has_country_flag = BRA_lacerda_psp_support_flag }
+				if = {
+					limit = { check_variable = { BRA_pl_psp_support_bill@var:temp_bill < BRA_lacerda_psp_support } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+				if = {
+					limit = { check_variable = { BRA_lacerda_psp_support = 0 } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+			}
+			set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 0.5 }
+
+			BRA_initialize_bill = yes
+			set_variable = { BRA_pl_vote_days@var:temp_bill = 35 }
+		}
+		effect_tooltip = {
+			TNO_improve_admin_efficiency_high = yes
+			BRA_boost_UDN_candidates_nationwide_med = yes
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BRA_lacerda_Meritocratic_Government
+	icon = GFX_focus_generic_compromise
+	cost = 2
+	prerequisite = {
+		focus = BRA_anti_corruption_crusade
+		focus = BRA_competency_tests
+		focus = BRA_Professionalize_Politics
+	}
+	relative_position_id = BRA_competency_tests
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_Meritocratic_Government"
+		swap_ideas = {
+			remove_idea = BRA_idea_rampant_corruption
+			add_idea = BRA_idea_lacerda_corruption_reforms
+		}
+		TNO_improve_gender_rights_policy_effectiveness_low = yes
+		TNO_improve_admin_efficiency_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_equalize_education
+	icon = GFX_focus_BRA_equalize_education
+	cost = 2
+	prerequisite = {
+		focus = BRA_lacerda_Meritocratic_Government
+	}
+	relative_position_id = BRA_lacerda_Meritocratic_Government
+	x = -3
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_equalize_education"
+		country_event = brazil_lacerda.17
+		BRA_decrease_illiteracy_monthly_nationwide_low = yes
+		TNO_improve_education_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_national_literacy_campaign
+	icon = GFX_focus_USA_begin_integration
+	cost = 2
+	available = {
+		BRA_pl_no_bill_in_voting = yes
+	}
+	prerequisite = {
+		focus = BRA_equalize_education
+	}
+	relative_position_id = BRA_equalize_education
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_national_literacy_campaign"
+		country_event = brazil_lacerda.18
+		custom_effect_tooltip = BRA_pl_national_literacy_campaign_tooltip
+		hidden_effect = {
+			set_temp_variable = { temp_bill = token:BRA_UNIVERSAL_LITERACY_ACT }
+
+			set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0.3 }
+			set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.2 }
+			BRA_lacerda_calculate_udn_bill_support = yes
+			set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0.7 }
+			if = {
+				limit = { has_country_flag = BRA_lacerda_psp_support_flag }
+				if = {
+					limit = { check_variable = { BRA_pl_psp_support_bill@var:temp_bill < BRA_lacerda_psp_support } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+				if = {
+					limit = { check_variable = { BRA_lacerda_psp_support = 0 } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+			}
+			set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 0.5 }
+
+			BRA_initialize_bill = yes
+			set_variable = { BRA_pl_vote_days@var:temp_bill = 35 }
+		}
+		effect_tooltip = {
+			country_event = brazil_lacerda.19
+			set_temp_variable = { temp_econ_spending_amount = 0.4 }
+			econ_spend_money_once_effect_raw_money = yes
+			TNO_improve_education_policy_effectiveness_high = yes
+			TNO_improve_education_policy_effectiveness_monthly_low = yes
+			BRA_decrease_illiteracy_monthly_nationwide_med = yes
+			TNO_improve_academic_base_med = yes
+			TNO_improve_research_facilities_med = yes
+			BRA_boost_UDN_candidates_nationwide_med = yes
+			set_temp_variable = { temp_law = token:BRA_national_literacy_campaign_law }
+			TNO_add_assorted_law = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_cooperate_church
+	icon = GFX_focus_BRA_put_religion_back_at_the_proper_place
+	cost = 2
+	prerequisite = {
+		focus = BRA_national_literacy_campaign
+	}
+	mutually_exclusive = {
+		focus = BRA_maintain_equality
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_passed_lit_act_tt
+			has_country_flag = BRA_passed_lacerda_lit_act
+		}
+	}
+	relative_position_id = BRA_national_literacy_campaign
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_cooperate_church"
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		TNO_improve_education_policy_effectiveness_med = yes
+		TNO_worsen_religious_rights_policy_effectiveness_low = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.05 }
+		econ_spend_money_once_effect_raw_money = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_maintain_equality
+	icon = GFX_focus_generic_education_for_all
+	cost = 2
+	prerequisite = {
+		focus = BRA_national_literacy_campaign
+	}
+	mutually_exclusive = {
+		focus = BRA_cooperate_church
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_passed_lit_act_tt
+			has_country_flag = BRA_passed_lacerda_lit_act
+		}
+	}
+	relative_position_id = BRA_national_literacy_campaign
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_maintain_equality"
+		BRA_decrease_UDN_management_x_by_50 = yes
+		BRA_decrease_UDN_management_y_by_25 = yes
+		TNO_improve_education_policy_effectiveness_med = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.3 }
+		econ_spend_money_once_effect_raw_money = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_oligatory_lessons
+	icon = GFX_focus_BRA_increase_health_awareness
+	cost = 2
+	prerequisite = {
+		focus = BRA_cooperate_church
+		focus = BRA_maintain_equality
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_passed_lit_act_tt
+			has_country_flag = BRA_passed_lacerda_lit_act
+		}
+	}
+	relative_position_id = BRA_national_literacy_campaign
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_oligatory_lessons"
+		country_event = brazil_lacerda.21
+		TNO_improve_academic_base_med = yes
+		TNO_improve_education_policy_effectiveness_monthly_med = yes
+		BRA_decrease_illiteracy_monthly_nationwide_low = yes
+		BRA_develop_increase_urban_pop_monthly_nationwide_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_education_education_war
+	icon = GFX_focus_BRA_education_education_and_war
+	cost = 2
+	prerequisite = {
+		focus = BRA_equalize_education
+	}
+	relative_position_id = BRA_equalize_education
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_education_education_war"
+		custom_effect_tooltip = BRA_lacerda_education_edu_war_tooltip
+		TNO_improve_education_policy_effectiveness_monthly_low = yes
+		BRA_boost_UDN_candidates_nationwide_low = yes
+		BRA_harm_PTB_candidates_nationwide_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_expand_universities
+	icon = GFX_focus_generic_education_reform
+	cost = 2
+	prerequisite = {
+		focus = BRA_education_education_war
+	}
+	relative_position_id = BRA_education_education_war
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_expand_universities"
+		country_event = brazil_lacerda.22
+		TNO_improve_academic_base_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_stop_funding_UNE
+	icon = GFX_focus_BRA_extinguish_the_student_union
+	cost = 2
+	prerequisite = {
+		focus = BRA_expand_universities
+	}
+	relative_position_id = BRA_expand_universities
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_stop_funding_UNE"
+		country_event = brazil_lacerda.23
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		TNO_worsen_public_meetings_policy_effectiveness_med = yes
+		add_stability = 0.02
+		add_popularity = {
+			ideology = BRA
+			popularity = 0.01
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_banish_ignorance
+	icon = GFX_focus_BRA_banish_ignorance
+	cost = 2
+	prerequisite = {
+		focus = BRA_oligatory_lessons
+	}
+	prerequisite = {
+		focus = BRA_stop_funding_UNE
+	}
+	relative_position_id = BRA_equalize_education
+	x = 0
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_banish_ignorance"
+		country_event = brazil_lacerda.25
+		BRA_decrease_illiteracy_monthly_nationwide_med = yes
+		tno_education_improve = yes
+		TNO_improve_academic_base_med = yes
+		BRA_boost_UDN_candidates_nationwide_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_universalize_healthcare
+	icon = GFX_focus_COG_the_cheapest_prices
+	cost = 2
+	prerequisite = {
+		focus = BRA_lacerda_Meritocratic_Government
+	}
+	relative_position_id = BRA_lacerda_Meritocratic_Government
+	x = 3
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_universalize_healthcare"
+		country_event = brazil_lacerda.26
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		TNO_improve_health_care_policy_effectiveness_low = yes
+		BRA_boost_UDN_candidates_nationwide_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_universal_vaccination
+	icon = GFX_focus_BRA_expanding_the_vaccination_program
+	cost = 2
+	prerequisite = {
+		focus = BRA_universalize_healthcare
+	}
+	relative_position_id = BRA_universalize_healthcare
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_universal_vaccination"
+		country_event = brazil_lacerda.27
+		TNO_improve_healthcare_low = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.2 }
+		econ_spend_money_once_effect_raw_money = yes
+		hidden_effect = {
+			country_event = {
+				id = brazil_lacerda.28
+				days = 380
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_dreaming_clean_water
+	icon = GFX_focus_BRA_dreaming_of_clean_water
+	cost = 2
+	prerequisite = {
+		focus = BRA_universal_vaccination
+	}
+	relative_position_id = BRA_universal_vaccination
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_dreaming_clean_water"
+		504 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			set_temp_variable = { state_value_multiplier_temp = 1.01 }
+			econ_state_value_change_multiply = yes
+		}
+		499 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			set_temp_variable = { state_value_multiplier_temp = 1.01 }
+			econ_state_value_change_multiply = yes
+		}
+		1491 = {
+			add_building_construction = {
+				type = hospitals
+				level = 1
+				instant_build = yes
+			}
+			set_temp_variable = { state_value_multiplier_temp = 1.02 }
+			econ_state_value_change_multiply = yes
+		}
+		TNO_improve_healthcare_low = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.3 }
+		econ_spend_money_once_effect_raw_money = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_reduce_infant_mortality
+	icon = GFX_focus_BRA_healthcare_initiatives
+	cost = 2
+	prerequisite = {
+		focus = BRA_dreaming_clean_water
+	}
+	relative_position_id = BRA_dreaming_clean_water
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_reduce_infant_mortality"
+		country_event = brazil_lacerda.29
+		505 = {
+			add_building_construction = {
+				type = hospitals
+				level = 1
+				instant_build = yes
+			}
+			set_temp_variable = { state_value_multiplier_temp = 1.02 }
+			econ_state_value_change_multiply = yes
+		}
+		TNO_improve_health_care_policy_effectiveness_low = yes
+		BRA_boost_UDN_candidates_nationwide_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_rural_health_clinics
+	icon = GFX_focus_generic_caduceus
+	cost = 2
+	prerequisite = {
+		focus = BRA_universalize_healthcare
+	}
+	relative_position_id = BRA_universalize_healthcare
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_rural_health_clinics"
+		country_event = brazil_lacerda.30
+		497 = {
+			add_building_construction = {
+				type = hospitals
+				level = 1
+				instant_build = yes
+			}
+			set_temp_variable = { state_value_multiplier_temp = 1.02 }
+			econ_state_value_change_multiply = yes
+		}
+		498 = {
+			add_building_construction = {
+				type = hospitals
+				level = 1
+				instant_build = yes
+			}
+			set_temp_variable = { state_value_multiplier_temp = 1.02 }
+			econ_state_value_change_multiply = yes
+		}
+		504 = {
+			add_building_construction = {
+				type = hospitals
+				level = 1
+				instant_build = yes
+			}
+			set_temp_variable = { state_value_multiplier_temp = 1.02 }
+			econ_state_value_change_multiply = yes
+		}
+		TNO_improve_healthcare_low = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.25 }
+		econ_spend_money_once_effect_raw_money = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_mosquito_campaign
+	icon = GFX_focus_BRA_Anti_Mosquito_Campaign
+	cost = 2
+	prerequisite = {
+		focus = BRA_rural_health_clinics
+	}
+	relative_position_id = BRA_rural_health_clinics
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_mosquito_campaign"
+		TNO_improve_health_care_policy_effectiveness_low = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.1 }
+		econ_spend_money_once_effect_raw_money = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_increase_medic_wages
+	icon = GFX_focus_BRA_higher_salaries_for_our_protectors
+	cost = 2
+	prerequisite = {
+		focus = BRA_rural_health_clinics
+	}
+	relative_position_id = BRA_rural_health_clinics
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_increase_medic_wages"
+		country_event = brazil_lacerda.31
+		set_temp_variable = { temp_econ_spending_amount = 0.2 }
+		econ_spend_money_once_effect_raw_money = yes
+		TNO_improve_healthcare_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_rely_on_market
+	icon = GFX_focus_BRA_expand_the_ambulance_system
+	cost = 2
+	available = {
+		BRA_pl_no_bill_in_voting = yes
+	}
+	prerequisite = {
+		focus = BRA_mosquito_campaign
+	}
+	prerequisite = {
+		focus = BRA_increase_medic_wages
+	}
+	mutually_exclusive = {
+		focus = BRA_government_intervention
+	}
+	relative_position_id = BRA_rural_health_clinics
+	x = -1
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_rely_on_market"
+		hidden_effect = {
+			set_temp_variable = { temp_bill = token:BRA_AFFORDABLE_HEALTHCARE_BILL }
+
+			set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0.2 }
+			set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.3 }
+			BRA_lacerda_calculate_udn_bill_support = yes
+			set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0.3 }
+			if = {
+				limit = { has_country_flag = BRA_lacerda_psp_support_flag }
+				if = {
+					limit = { check_variable = { BRA_pl_psp_support_bill@var:temp_bill < BRA_lacerda_psp_support } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+				if = {
+					limit = { check_variable = { BRA_lacerda_psp_support = 0 } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+			}
+			set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 0.2 }
+
+			BRA_initialize_bill = yes
+			set_variable = { BRA_pl_vote_days@var:temp_bill = 35 }
+		}
+		country_event = {
+			id = brazil_lacerda.32
+			days = 1
+		}
+		custom_effect_tooltip = BRA_pl_UDN_moderate_healthcare_law_tooltip
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_realistas_quarter = yes
+					BRA_lacerda_udn_bossa_quarter = yes
+				}
+			}
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_banda_quarter = yes
+					BRA_lacerda_udn_liberais_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		effect_tooltip = {
+			country_event = brazil_lacerda.34
+			BRA_boost_UDN_candidates_nationwide_med = yes
+			TNO_improve_healthcare_high = yes
+			TNO_improve_health_care_policy_effectiveness_high = yes
+			swap_ideas = {
+				remove_idea = tno_health_care_support_for_emergencies
+				add_idea = tno_health_care_low_income_protections
+			}
+			set_temp_variable = { temp_law = token:BRA_UDN_moderate_healthcare_law }
+			TNO_add_assorted_law = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_government_intervention
+	icon = GFX_focus_generic_help_elderly
+	cost = 2
+	available = {
+		BRA_pl_no_bill_in_voting = yes
+	}
+	prerequisite = {
+		focus = BRA_mosquito_campaign
+	}
+	prerequisite = {
+		focus = BRA_increase_medic_wages
+	}
+	mutually_exclusive = {
+		focus = BRA_rely_on_market
+	}
+	relative_position_id = BRA_rural_health_clinics
+	x = 1
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_government_intervention"
+		hidden_effect = {
+			set_temp_variable = { temp_bill = token:BRA_NATIONAL_HEALTHCARE_ACT }
+
+			set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0.4 }
+			set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.5 }
+			BRA_lacerda_calculate_udn_bill_support = yes
+			set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0.1 }
+			if = {
+				limit = { has_country_flag = BRA_lacerda_psp_support_flag }
+				if = {
+					limit = { check_variable = { BRA_pl_psp_support_bill@var:temp_bill < BRA_lacerda_psp_support } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+				if = {
+					limit = { check_variable = { BRA_lacerda_psp_support = 0 } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+			}
+			set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 0.4 }
+
+			BRA_initialize_bill = yes
+			set_variable = { BRA_pl_vote_days@var:temp_bill = 35 }
+		}
+		country_event = {
+			id = brazil_lacerda.33
+			days = 1
+		}
+		custom_effect_tooltip = BRA_pl_UDN_radical_healthcare_law_tooltip
+		BRA_decrease_UDN_management_x_by_50 = yes
+		BRA_decrease_UDN_management_y_by_50 = yes
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_realistas_quarter = yes
+					BRA_lacerda_udn_bossa_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_banda_quarter = yes
+					BRA_lacerda_udn_liberais_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		effect_tooltip = {
+			country_event = brazil_lacerda.34
+			BRA_boost_UDN_candidates_nationwide_med = yes
+			TNO_improve_healthcare_med = yes
+			TNO_improve_health_care_policy_effectiveness_high = yes
+			swap_ideas = {
+				remove_idea = tno_health_care_support_for_emergencies
+				add_idea = tno_health_care_universal_health_care
+			}
+			set_temp_variable = { temp_law = token:BRA_UDN_radical_healthcare_law }
+			TNO_add_assorted_law = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_kill_first_horseman
+	icon = GFX_focus_UPO_great_famine
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_healthcare_reform_req_tt
+			has_country_flag = BRA_lacerda_healthcare_reform_passed
+		}
+	}
+	prerequisite = {
+		focus = BRA_rely_on_market
+		focus = BRA_government_intervention
+	}
+	prerequisite = {
+		focus = BRA_reduce_infant_mortality
+	}
+	relative_position_id = BRA_universalize_healthcare
+	x = 0
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_kill_first_horseman"
+		country_event = {
+			id = brazil_lacerda.36
+			days = 1
+		}
+		TNO_improve_healthcare_med = yes
+		BRA_boost_UDN_candidates_nationwide_med = yes
+	}
+}
+
+###############################################
+############## Economic Reforms! ##############
+###############################################
+
+shared_focus = {
+	id = BRA_lacerda_agriculture_SDA
+	icon = GFX_focus_BRA_expand_ministry_of_agriculture
+	cost = 2
+	prerequisite = {
+		focus = BRA_enemy_no_1
+	}
+	relative_position_id = BRA_enemy_no_1
+	x = 5
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_agriculture_SDA"
+		country_event = {
+			id = brazil_lacerda.37
+			days = 1
+		}
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.1 }
+		econ_spend_money_once_effect_raw_money = yes
+		TNO_improve_agriculture_med = yes
+		BRA_develop_increase_mech_rate_monthly_south_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerda_rural_credit
+	icon = GFX_focus_BRA_Rural_Credit_System
+	cost = 2
+	prerequisite = {
+		focus = BRA_lacerda_agriculture_SDA
+	}
+	relative_position_id = BRA_lacerda_agriculture_SDA
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_rural_credit"
+		BRA_develop_increase_mech_rate_monthly_southeast_med = yes
+		BRA_develop_decrease_urban_pop_southeast_low = yes
+		BRA_decrease_UDN_management_x_by_50 = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerda_fertilise_cerrado
+	icon = GFX_focus_BRA_irrigation_channels_in_nordeste
+	cost = 2
+	prerequisite = {
+		focus = BRA_lacerda_agriculture_SDA
+	}
+	relative_position_id = BRA_lacerda_agriculture_SDA
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_fertilise_cerrado"
+		country_event = {
+			id = brazil_lacerda.38
+			days = 1
+		}
+		BRA_develop_increase_mech_rate_monthly_central_west_med = yes
+		BRA_develop_increase_mech_rate_monthly_northeast_med = yes
+		TNO_improve_regulations_policy_effectiveness_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerda_buffer_stock
+	icon = GFX_focus_generic_agricultural_control
+	cost = 2
+	prerequisite = {
+		focus = BRA_lacerda_rural_credit
+	}
+	prerequisite = {
+		focus = BRA_lacerda_fertilise_cerrado
+	}
+	relative_position_id = BRA_lacerda_agriculture_SDA
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_buffer_stock"
+		country_event = {
+			id = brazil_lacerda.39
+			days = 1
+		}
+		set_temp_variable = { inflation_temp = -1 }
+		econ_inflation_change = yes
+		hidden_effect = {
+			set_temp_variable = { gdp_growth_temp = -0.75 }
+			econ_gdp_growth_change = yes
+		}
+		BRA_develop_decrease_urban_pop_nationwide_low = yes
+		BRA_decrease_UDN_management_x_by_50 = yes
+		BRA_decrease_UDN_management_y_by_50 = yes
+		set_temp_variable = { temp_udn_unity = 5 }
+		BRA_lacerda_udn_unity_change = yes
+		BRA_boost_UDN_candidates_central_west_med = yes
+		add_popularity = {
+			ideology = BRA
+			popularity = 0.02
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerda_agri_bastion_against_radicalism
+	icon = GFX_focus_BRA_bastion_against_radicalism
+	cost = 2
+	prerequisite = {
+		focus = BRA_lacerda_buffer_stock
+	}
+	mutually_exclusive = {
+		focus = BRA_lacerda_conservative_land_reform
+	}
+	relative_position_id = BRA_lacerda_buffer_stock
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_agri_bastion_against_radicalism"
+		country_event = {
+			id = brazil_lacerda.40
+			days = 1
+		}
+		set_temp_variable = { gdp_growth_temp = 0.50 }
+		econ_gdp_growth_change = yes
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		add_stability = -0.02
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerda_conservative_land_reform
+	icon = GFX_focus_generic_farmer
+	cost = 2
+	available = {
+		NOT = { 
+			has_idea = BRA_minor_agrarian_reform
+			has_idea = BRA_completed_agrarian_reform
+			has_idea = BRA_radical_agrarian_reform
+		}
+	}
+	prerequisite = {
+		focus = BRA_lacerda_buffer_stock
+	}
+	mutually_exclusive = {
+		focus = BRA_lacerda_agri_bastion_against_radicalism
+	}
+	relative_position_id = BRA_lacerda_buffer_stock
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_conservative_land_reform"
+		country_event = {
+			id = brazil_lacerda.41
+			days = 1
+		}
+		BRA_decrease_UDN_management_x_by_50 = yes
+		BRA_decrease_UDN_management_y_by_50 = yes
+		swap_ideas = {
+				add_idea = BRA_minor_agrarian_reform
+				remove_idea = BRA_latifundos_crisis
+			}
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerda_inter_brazil_cooperation
+	icon = GFX_focus_BRA_invest_in_amazon_territories
+	cost = 2
+	prerequisite = {
+		focus = BRA_lacerda_agri_bastion_against_radicalism
+		focus = BRA_lacerda_conservative_land_reform
+	}
+	relative_position_id = BRA_lacerda_agriculture_SDA
+	x = 0
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_inter_brazil_cooperation"
+		TNO_improve_agriculture_med = yes
+		TNO_improve_admin_efficiency_low = yes
+		BRA_develop_increase_mech_rate_monthly_nationwide_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_obliterate_lotts_folly
+	icon = GFX_focus_BRA_Obliterate_Lotts_Folly
+	cost = 2
+	prerequisite = {
+		focus = BRA_enemy_no_1
+	}
+	bypass = {
+		has_country_flag = BRA_trans_amazonian_highway_finished
+	}
+	relative_position_id = BRA_enemy_no_1
+	x = 11
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_obliterate_lotts_folly"
+		country_event = brazil_lacerda.16
+		custom_effect_tooltip = BRA_tah_dismantle_megaproject_tooltip
+		hidden_effect = {
+			BRA_dismantle_trans_amazonian_highway_project = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_new_tools_greatest_manager
+	icon = GFX_focus_BRA_new_tools_for_the_greatest_manager
+	cost = 2
+	prerequisite = {
+		focus = BRA_obliterate_lotts_folly
+	}
+	relative_position_id = BRA_obliterate_lotts_folly
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_new_tools_greatest_manager"
+		country_event = {
+			id = brazil_lacerda.42
+			days = 1
+		}
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		add_political_power = 35
+		social_funding_minimal_decrease_low = yes
+		set_temp_variable = { econ_centralization_temp = -10 }
+		econ_centralization_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_no_mercy
+	icon = GFX_focus_GNG_draw_a_red_line
+	cost = 2
+	prerequisite = {
+		focus = BRA_new_tools_greatest_manager
+	}
+	mutually_exclusive = {
+		focus = BRA_tavora_receipts
+	}
+	relative_position_id = BRA_new_tools_greatest_manager
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_no_mercy"
+		country_event = {
+			id = brazil_lacerda.44
+			days = 1
+		}
+		BRA_increase_UDN_management_x_by_50 = yes
+		set_temp_variable = { econ_centralization_temp = -5 }
+		econ_centralization_change = yes
+		social_funding_minimal_decrease_high = yes
+		set_temp_variable = { civilian_costs_temp = -0.30 }
+		econ_civilian_costs_tooltip = yes
+		BRA_military_increase_loyalty_med = yes
+		BRA_harm_UDN_candidates_nationwide_low = yes
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_liberais_quarter = yes
+					BRA_lacerda_udn_banda_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_bossa_quarter = yes
+					BRA_lacerda_udn_realistas_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_tavora_receipts
+	icon = GFX_focus_BRA_tavora_receipts
+	cost = 2
+	prerequisite = {
+		focus = BRA_new_tools_greatest_manager
+	}
+	mutually_exclusive = {
+		focus = BRA_no_mercy
+	}
+	relative_position_id = BRA_new_tools_greatest_manager
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_tavora_receipts"
+		country_event = {
+			id = brazil_lacerda.45
+			days = 1
+		}
+		BRA_decrease_UDN_management_x_by_100 = yes
+		set_temp_variable = { temp_udn_unity = 5 }
+		BRA_lacerda_udn_unity_change = yes
+		set_temp_variable = { econ_centralization_temp = -2 }
+		econ_centralization_change = yes
+		TNO_improve_income_taxation_policy_effectiveness_monthly_low = yes
+		social_funding_minimal_decrease_low = yes
+		BRA_military_decrease_loyalty_low = yes
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_realistas_quarter = yes
+					BRA_lacerda_udn_bossa_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_banda_quarter = yes
+					BRA_lacerda_udn_liberais_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_increase_coffee_tax
+	icon = GFX_focus_generic_money
+	cost = 2
+	prerequisite = {
+		focus = BRA_no_mercy
+	}
+	relative_position_id = BRA_no_mercy
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_increase_coffee_tax"
+		set_temp_variable = { business_tax_temp = 0.04 }
+		set_temp_variable = { money_reserves_temp = 0.2 }
+		econ_money_reserves_change_raw_money = yes
+		econ_business_tax_rate_change = yes
+		TNO_improve_income_taxation_policy_effectiveness_med = yes
+		add_to_variable = { BRA_misc_income = 0.3 }
+		set_temp_variable = { gdp_growth_temp = -0.25 }
+		econ_gdp_growth_change = yes
+		BRA_harm_UDN_candidates_south_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_increase_interest_rates
+	icon = GFX_focus_BRA_tackling_the_tiger
+	cost = 2
+	prerequisite = {
+		focus = BRA_increase_coffee_tax
+	}
+	relative_position_id = BRA_increase_coffee_tax
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_increase_interest_rates"
+		set_temp_variable = { interest_rates_temp = 1.25 }
+		econ_interest_rates_change = yes
+		BRA_develop_decrease_inflation_med = yes
+		set_temp_variable = { econ_centralization_temp = -5 }
+		econ_centralization_change = yes
+		BRA_harm_UDN_candidates_nationwide_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_national_lottery
+	icon = GFX_focus_BRA_A_National_Lottery
+	cost = 2
+	prerequisite = {
+		focus = BRA_tavora_receipts
+	}
+	relative_position_id = BRA_tavora_receipts
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_national_lottery"
+		TNO_improve_poverty_low = yes
+		set_temp_variable = { money_reserves_temp = 0.35 }
+		econ_money_reserves_change_raw_money = yes
+		BRA_decrease_UDN_management_y_by_25 = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_death_and_taxs
+	icon = GFX_focus_BRA_reassess_our_ambitions
+	cost = 2
+	prerequisite = {
+		focus = BRA_national_lottery
+	}
+	relative_position_id = BRA_national_lottery
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_death_and_taxs"
+		set_temp_variable = { econ_centralization_temp = -3 }
+		econ_centralization_change = yes
+		set_temp_variable = { business_tax_temp = -0.03 }
+		econ_business_tax_rate_change = yes
+		TNO_improve_income_taxation_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_centralize_banking
+	icon = GFX_focus_generic_friends_in_the_council
+	cost = 2
+	prerequisite = {
+		focus = BRA_no_mercy
+		focus = BRA_tavora_receipts
+	}
+	relative_position_id = BRA_obliterate_lotts_folly
+	x = 0
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_centralize_banking"
+		set_temp_variable = { econ_centralization_temp = -3 }
+		econ_centralization_change = yes
+		set_temp_variable = { inflation_temp = -0.75 }
+		econ_inflation_change = yes
+		set_temp_variable = { gdp_growth_temp = -0.55 }
+		econ_gdp_growth_change = yes
+		set_temp_variable = { interest_rates_temp = 0.35 }
+		econ_interest_rates_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_strengthen_coffee_trade
+	icon = GFX_focus_BRA_coffee_the_blood_of_nation
+	cost = 2
+	prerequisite = {
+		focus = BRA_centralize_banking
+	}
+	relative_position_id = BRA_centralize_banking
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_strengthen_coffee_trade"
+		BRA_develop_increase_mech_rate_monthly_southeast_med = yes
+		TNO_improve_trade_laws_policy_effectiveness_med = yes
+		set_temp_variable = { gdp_growth_temp = 0.25 }
+		econ_gdp_growth_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_free_people_free_trade
+	icon = GFX_focus_generic_trade
+	cost = 2
+	prerequisite = {
+		focus = BRA_centralize_banking
+	}
+	relative_position_id = BRA_centralize_banking
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_free_people_free_trade"
+		tno_trade_laws_worsen = yes
+		TNO_improve_trade_laws_policy_effectiveness_med = yes
+		set_temp_variable = { temp_udn_unity = -5 }
+		BRA_lacerda_udn_unity_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_guanabara_dreaming
+	icon = GFX_focus_BRA_fireworks_in_rio
+	cost = 2
+	prerequisite = {
+		focus = BRA_enemy_no_1
+	}
+	relative_position_id = BRA_enemy_no_1
+	x = 15
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_guanabara_dreaming"
+		country_event = {
+			id = brazil_lacerda.43
+			days = 1
+		}
+		BRA_develop_increase_guanabara_reconstruction_1 = yes
+		BRA_develop_increase_urban_pop_southeast_low = yes
+		1488 = {
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.01
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_atomic_light
+	icon = GFX_focus_BRA_exploit_the_atom
+	cost = 2
+	prerequisite = {
+		focus = BRA_guanabara_dreaming
+	}
+	relative_position_id = BRA_guanabara_dreaming
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_atomic_light"
+		custom_effect_tooltip = BRA_megaproject_app_effect
+		hidden_effect = {
+				BRA_start_angra_plant_project = yes
+			}
+	}
+}
+
+shared_focus = {
+	id = BRA_sugarloaf_racing
+	icon = GFX_focus_BRA_rubens_vaz_bridge
+	cost = 2
+	prerequisite = {
+		focus = BRA_guanabara_dreaming
+	}
+	relative_position_id = BRA_guanabara_dreaming
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_sugarloaf_racing"
+		custom_effect_tooltip = BRA_megaproject_rnb_effect
+			hidden_effect = {
+				BRA_start_rio_bridge_project = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_no_room_homelessness
+	icon = GFX_focus_BRA_no_room_for_homelessness
+	cost = 2
+	prerequisite = {
+		focus = BRA_atomic_light
+	}
+	relative_position_id = BRA_atomic_light
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_no_room_homelessness"
+		BRA_develop_increase_guanabara_reconstruction_1 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		1488 = {
+			add_manpower = -914
+		}
+		BRA_boost_UDN_aligned_candidates_guanabara_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_doxadis_industrial_zone
+	icon = GFX_focus_BRA_refineries_in_the_northeast
+	cost = 2
+	prerequisite = {
+		focus = BRA_sugarloaf_racing
+	}
+	relative_position_id = BRA_sugarloaf_racing
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_doxadis_industrial_zone"
+		TNO_improve_industrial_expertise_med = yes
+		BRA_develop_increase_industry_southeast_low = yes
+		add_resource = {
+			type = steel
+			amount = 6
+			state = 1488
+		}
+		1488 = {
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.005
+				}
+			}
+		}
+		BRA_develop_decrease_guanabara_reconstruction_1 = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_spare_no_expense
+	icon = GFX_focus_BRA_continuing_brazils_march_forward
+	cost = 2
+	prerequisite = {
+		focus = BRA_no_room_homelessness
+	}
+	prerequisite = {
+		focus = BRA_doxadis_industrial_zone
+	}
+	mutually_exclusive = {
+		focus = BRA_football_suggestion
+	}
+	relative_position_id = BRA_no_room_homelessness
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_spare_no_expense"
+		country_event = {
+			id = brazil_lacerda.46
+			hours = 6
+		}
+		BRA_develop_decrease_guanabara_reconstruction_1 = yes
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_decrease_UDN_management_y_by_50 = yes
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_realistas_quarter = yes
+					BRA_lacerda_udn_bossa_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_banda_quarter = yes
+					BRA_lacerda_udn_liberais_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_football_suggestion
+	icon = GFX_focus_BRA_footballer_suggestions
+	cost = 2
+	prerequisite = {
+		focus = BRA_no_room_homelessness
+	}
+	prerequisite = {
+		focus = BRA_doxadis_industrial_zone
+	}
+	mutually_exclusive = {
+		focus = BRA_spare_no_expense
+	}
+	relative_position_id = BRA_doxadis_industrial_zone
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_football_suggestion"
+		country_event = {
+			id = brazil_lacerda.47
+			hours = 6
+		}
+		BRA_develop_increase_guanabara_reconstruction_05 = yes
+		BRA_decrease_UDN_management_x_by_50 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_realistas_quarter = yes
+					BRA_lacerda_udn_bossa_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_banda_quarter = yes
+					BRA_lacerda_udn_liberais_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_south_atlantic_free_port
+	icon = GFX_focus_BRA_south_atlantic_free_port
+	cost = 2
+	prerequisite = {
+		focus = BRA_spare_no_expense
+		focus = BRA_football_suggestion
+	}
+	relative_position_id = BRA_guanabara_dreaming
+	x = 2
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_south_atlantic_free_port"
+		BRA_develop_increase_guanabara_reconstruction_2 = yes
+		1488 = {
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.01
+				}
+			}
+		}
+		set_temp_variable = { business_tax_temp = -0.01 }
+		econ_business_tax_rate_change = yes
+		TNO_improve_income_taxation_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_free_the_market
+	icon = GFX_focus_BRA_the_might_of_brazilian_labour
+	cost = 2
+	available = {
+		BRA_pl_no_bill_in_voting = yes
+	}
+	prerequisite = {
+		focus = BRA_strengthen_coffee_trade
+	}
+	prerequisite = {
+		focus = BRA_free_people_free_trade
+	}
+	prerequisite = {
+		focus = BRA_increase_interest_rates
+		focus = BRA_death_and_taxs
+	}
+	prerequisite = {
+		focus = BRA_lacerda_inter_brazil_cooperation
+	}
+	prerequisite = {
+		focus = BRA_south_atlantic_free_port
+	}
+	relative_position_id = BRA_obliterate_lotts_folly
+	x = 0
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_free_the_market"
+		country_event = brazil_lacerda.48
+		custom_effect_tooltip = BRA_pl_free_the_market_tooltip
+		hidden_effect = {
+			set_temp_variable = { temp_bill = token:BRA_NATIONAL_DEREGULATION_ACT }
+
+			set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0.0 }
+			set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.2 }
+			BRA_lacerda_calculate_udn_bill_support = yes
+			set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0.3 }
+			if = {
+				limit = { has_country_flag = BRA_lacerda_psp_support_flag }
+				if = {
+					limit = { check_variable = { BRA_pl_psp_support_bill@var:temp_bill < BRA_lacerda_psp_support } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+				if = {
+					limit = { check_variable = { BRA_lacerda_psp_support = 0 } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+			}
+			set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 0.2 }
+
+			BRA_initialize_bill = yes
+			set_variable = { BRA_pl_vote_days@var:temp_bill = 35 }
+		}
+		effect_tooltip = {
+			country_event = brazil_lacerda.49
+			set_temp_variable = { econ_centralization_temp = -15 }
+			econ_centralization_change = yes
+			set_temp_variable = { inflation_temp = -1 }
+			econ_inflation_change = yes
+		}
+	}
+}
+shared_focus = {
+	id = BRA_shake_up_petrochemistry
+	icon = GFX_focus_BRA_new_standards_in_petrobras
+	cost = 2
+	prerequisite = {
+		focus = BRA_free_the_market
+	}
+	relative_position_id = BRA_free_the_market
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_shake_up_petrochemistry"
+		add_resource = {
+			type = oil
+			amount = 4
+			state = 500
+		}
+		add_tech_bonus = {
+			name = synth_resources
+			bonus = 0.5
+			uses = 2
+			category = synth_resources
+		}
+		501 = {
+			set_temp_variable = { building = token:synthetic_refinery }
+			set_temp_variable = { building_amount = 1 }
+			dynamic_building_effect = yes
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.025
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_last_vestiges_dirigismse
+	icon = GFX_focus_BRA_last_vestiges_of_dirigisme
+	cost = 2
+	prerequisite = {
+		focus = BRA_free_the_market
+	}
+	relative_position_id = BRA_free_the_market
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_last_vestiges_dirigismse"
+		country_event = brazil_lacerda.51
+		set_temp_variable = { econ_centralization_temp = -8 }
+		econ_centralization_change = yes
+		BRA_develop_decrease_industry_nationwide_low = yes
+		set_temp_variable = { inflation_temp = -1.25 }
+		econ_inflation_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_investors_paradise
+	icon = GFX_focus_BRA_american_industry_brazilian_markets
+	cost = 2
+	prerequisite = {
+		focus = BRA_free_the_market
+	}
+	relative_position_id = BRA_free_the_market
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_investors_paradise"
+		set_temp_variable = { business_tax_temp = -0.01 }
+		econ_business_tax_rate_change = yes
+		TNO_improve_income_taxation_policy_effectiveness_high = yes
+		set_temp_variable = { gdp_growth_temp = 0.65 }
+		econ_gdp_growth_change = yes
+
+	}
+}
+
+shared_focus = {
+	id = BRA_expansion_modernity
+	icon = GFX_focus_BRA_technocratic_approach
+	cost = 2
+	prerequisite = {
+		focus = BRA_shake_up_petrochemistry
+	}
+	relative_position_id = BRA_shake_up_petrochemistry
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_expansion_modernity"
+		TNO_improve_research_facilities_med = yes
+		TNO_improve_industrial_equipment_med = yes
+		1491 = {
+			set_temp_variable = { building = token:fuel_silo }
+			set_temp_variable = { building_amount = 2 }
+			dynamic_building_effect = yes
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.025
+				}
+			}
+		}
+		BRA_develop_increase_industry_monthly_northeast_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_public_private_partnership
+	icon = GFX_focus_generic_hardhat_green
+	cost = 2
+	prerequisite = {
+		focus = BRA_last_vestiges_dirigismse
+	}
+	relative_position_id = BRA_last_vestiges_dirigismse
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_north_easts_boons"
+		BRA_decrease_UDN_management_y_by_50 = yes
+		TNO_improve_industrial_expertise_med = yes
+		TNO_improve_industrial_equipment_low = yes
+		set_temp_variable = { gdp_growth_temp = 0.25 }
+		econ_gdp_growth_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_come_to_nordeste
+	icon = GFX_focus_BRA_help_nordeste
+	cost = 2
+	prerequisite = {
+		focus = BRA_investors_paradise
+	}
+	relative_position_id = BRA_investors_paradise
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_come_to_nordeste"
+		BRA_develop_increase_mech_rate_monthly_northeast_med = yes
+		498 = {
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.04
+				}
+			}
+		}
+		1491 = {
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.02
+				}
+			}
+		}
+		1492 = {
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.02
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerdanomics_enshrined
+	icon = GFX_focus_BRA_lacerdanomics_enshrined
+	cost = 2
+	prerequisite = {
+		focus = BRA_public_private_partnership
+	}
+	prerequisite = {
+		focus = BRA_expansion_modernity
+	}
+	prerequisite = {
+		focus = BRA_come_to_nordeste
+	}
+	relative_position_id = BRA_free_the_market
+	x = 0
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerdanomics_enshrined"
+		country_event = brazil_lacerda.52
+		custom_effect_tooltip = BRA_lacerdanomics_enshrined_tooltip
+		BRA_increase_UDN_management_y_by_100 = yes
+		set_temp_variable = { gdp_growth_temp = 0.75 }
+		econ_gdp_growth_change = yes
+		if = {
+			limit = { NOT = { check_variable = { TNO_economy_type = token:Econ_Type_Capitalism } } }
+			set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Capitalism }
+			econ_type_change = yes
+		}
+		else = {
+			set_temp_variable = { interest_rates_temp = -1.25 }
+			econ_interest_rates_change = yes
+		}
+		set_temp_variable = { econ_centralization_temp = -10 }
+		econ_centralization_change = yes
+		BRA_develop_increase_industry_monthly_nationwide_low = yes
+	}
+}
+###############################################
+############### Foreign Policy! ###############
+###############################################
+
+shared_focus = {
+	id = BRA_lacerda_hemispheric_defence
+	icon = GFX_focus_BRA_hemispheric_defense
+	cost = 2
+	x = 30
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_hemispheric_defence"
+		country_event = brazil_lacerda.66
+		TNO_improve_admin_efficiency_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_support_brazilian_antarctica
+	icon = GFX_focus_BRA_support_brazilian_antarctica
+	cost = 2
+	prerequisite = {
+		focus = BRA_lacerda_hemispheric_defence
+	}
+	relative_position_id = BRA_lacerda_hemispheric_defence
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_support_brazilian_antarctica"
+		country_event = brazil_lacerda.67
+		add_war_support = 0.05
+		set_temp_variable = { tempTension = 1 }
+		SA_change_tension = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_focus_hunting_spiders
+	icon = GFX_focus_BRA_Hunting_Spiders
+	cost = 2
+	prerequisite = {
+		focus = BRA_lacerda_hemispheric_defence
+	}
+	relative_position_id = BRA_lacerda_hemispheric_defence
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_focus_hunting_spiders"
+		TNO_improve_security_policy_effectiveness_med = yes
+		add_stability = 0.05
+		add_political_power = 25
+	}
+}
+
+shared_focus = {
+	id = BRA_token_force
+	icon = GFX_focus_BRA_token_force
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_wac_ongoing_tt
+			has_global_flag = west_african_war_ongoing
+			country_exists = FFR
+		}
+	}
+	prerequisite = {
+		focus = BRA_support_brazilian_antarctica
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_wac_over
+			OR = {
+				has_global_flag = WAC_SCENARIO_1_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_3_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+				NOT = { country_exists = FFR }
+			}
+		}
+	}
+	relative_position_id = BRA_support_brazilian_antarctica
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_token_force"
+		custom_effect_tooltip = BRA_token_force_tt
+		TNO_fopo_add_wac_tab = yes
+		set_temp_variable = { target = FFR }
+		set_temp_variable = { number = 1 }
+		TNO_set_num_volunteers = yes
+		set_country_flag = BRA_WAC_volunteer_send_lacerda
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerda_65_join_OFN
+	icon = GFX_focus_generic_maintain_ofn
+	cost = 2
+	available = {
+		BRA_pl_no_bill_in_voting = yes
+	}
+	prerequisite = {
+		focus = BRA_support_brazilian_antarctica
+		focus = BRA_focus_hunting_spiders
+	}
+	bypass = {
+		is_in_faction_with = USA
+	}
+
+	relative_position_id = BRA_lacerda_hemispheric_defence
+	x = 0
+	y = 2
+
+	select_effect = {
+		hidden_effect = { country_event = { id = brazil_lacerda.223 days = 7 } }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_65_join_OFN"
+		set_temp_variable = { tempTension = 2 }
+		SA_change_tension = yes
+		hidden_effect = {
+			set_temp_variable = { temp_bill = token:BRA_UNWAVERING_TORCH_ACT }
+			set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0.05 }
+			set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.5 }
+			BRA_lacerda_calculate_udn_bill_support = yes
+			set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0.05 }
+			if = {
+				limit = { has_country_flag = BRA_lacerda_psp_support_flag }
+				if = {
+					limit = { check_variable = { BRA_pl_psp_support_bill@var:temp_bill < BRA_lacerda_psp_support } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+				if = {
+					limit = { check_variable = { BRA_lacerda_psp_support = 0 } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+			}
+			set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 0.0 }
+			BRA_initialize_bill = yes
+			set_variable = { BRA_pl_vote_days@var:temp_bill = 14 }
+			BRA_call_bill_vote = yes
+		}
+		custom_effect_tooltip = BRA_pl_join_ofn_tooltip
+		effect_tooltip = {
+			USA = {
+				country_event = brazil.127
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_rival_banana_fascists
+	icon = GFX_focus_BRA_rival_banana_fascists
+	cost = 2
+	prerequisite = {
+		focus = BRA_focus_hunting_spiders
+	}
+	relative_position_id = BRA_focus_hunting_spiders
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_rival_banana_fascists"
+		custom_effect_tooltip = BRA_rival_banana_fascists_tt
+		GUA = { # i am so sorry for this
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		HON = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		ELS = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		NIC = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		COS = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		ECU = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		PRU = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		BOL = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		STC = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		PAR = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		URG = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		DOM = {
+			if = {
+				limit = {
+					OR = {
+						has_government = national_socialism
+						has_government = fascism
+						has_government = ultranationalism
+					}
+				}
+				add_opinion_modifier = {
+						target = BRA
+						modifier = BRA_banana_fascists
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = CLC
+			}
+			CLC = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = BRA_banana_fascists
+				}
+			}
+		}
+		set_temp_variable = { tempTension = 2 }
+		SA_change_tension = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_OFN_policing_duties
+	icon = GFX_focus_BRA_OFN_Policing_Duties
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_is_in_ofn_tt
+			is_in_faction_with = USA
+		}
+	}
+	prerequisite = {
+		focus = BRA_token_force
+	}
+	relative_position_id = BRA_token_force
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_OFN_policing_duties"
+		country_event = brazil_lacerda.68
+		BRA_military_increase_power_sorbonne_low = yes
+		BRA_military_increase_loyalty_low = yes
+		add_manpower = -5000
+	}
+}
+
+shared_focus = {
+	id = BRA_cameroonian_sinkhole
+	icon = GFX_focus_BRA_the_cameroonian_sinkhole
+	cost = 2
+	available = {
+		BRA_pl_no_bill_in_voting = yes
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_is_in_ofn_tt
+			is_in_faction_with = USA
+		}
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_wac_ongoing_tt
+			has_global_flag = west_african_war_ongoing
+			country_exists = FFR
+		}
+	}
+	prerequisite = {
+		focus = BRA_token_force
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_wac_over
+			OR = {
+				has_global_flag = WAC_SCENARIO_1_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_3_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+				NOT = { country_exists = FFR }
+			}
+		}
+	}
+	relative_position_id = BRA_token_force
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_cameroonian_sinkhole"
+		custom_effect_tooltip = BRA_pl_west_african_intervention_act_tooltip
+		effect_tooltip = {
+			country_event = brazil_lacerda.64
+			set_temp_variable = { target = FFR }
+			TNO_increase_volunteer_cap_1 = yes
+		}
+		hidden_effect = {
+			set_temp_variable = { temp_bill = token:BRA_WEST_AFRICAN_INTERVENTION_ACT }
+
+			set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0.3 }
+			set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.2 }
+			BRA_lacerda_calculate_udn_bill_support = yes
+			set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0.7 }
+			if = {
+				limit = { has_country_flag = BRA_lacerda_psp_support_flag }
+				if = {
+					limit = { check_variable = { BRA_pl_psp_support_bill@var:temp_bill < BRA_lacerda_psp_support } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+				if = {
+					limit = { check_variable = { BRA_lacerda_psp_support = 0 } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+			}
+			set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 0.5 }
+			BRA_initialize_bill = yes
+			set_variable = { BRA_pl_vote_days@var:temp_bill = 28 }
+			BRA_call_bill_vote = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_recognise_axis_atrocities
+	icon = GFX_focus_BRA_recognise_axis_atrocities
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_is_in_ofn_tt
+			is_in_faction_with = USA
+		}
+	}
+	prerequisite = {
+		focus = BRA_rival_banana_fascists
+	}
+	relative_position_id = BRA_rival_banana_fascists
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_recognise_axis_atrocities"
+		country_event = brazil_lacerda.69
+		add_opinion_modifier = {
+			target = GER
+			modifier = BRA_recognise_atrocities
+		}
+		BRA_boost_UDN_candidates_nationwide_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerda_restrict_japan_trade
+	icon = GFX_focus_BRA_restrict_japanese_trade
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_is_in_ofn_tt
+			is_in_faction_with = USA
+		}
+	}
+	prerequisite = {
+		focus = BRA_rival_banana_fascists
+	}
+	relative_position_id = BRA_rival_banana_fascists
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_restrict_japan_trade"
+		JAP = {
+			add_opinion_modifier = {
+				target = BRA
+				modifier = BRA_restrict_japan_trade
+			}
+			set_temp_variable = { temp_modifier = -20 }
+			add_to_trade_modifier_PREV = yes
+		}
+		TNO_worsen_trade_laws_policy_effectiveness_med = yes
+		set_temp_variable = { gdp_growth_temp = -0.2 }
+		econ_gdp_growth_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_city_of_the_sun
+	icon = GFX_focus_BRA_city_of_the_sun
+	cost = 2
+	prerequisite = {
+		focus = BRA_lacerda_65_join_OFN
+	}
+	relative_position_id = BRA_lacerda_65_join_OFN
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_city_of_the_sun"
+		BRA_boost_UDN_candidates_rio_grande_do_norte_high = yes
+		498 = {
+			set_temp_variable = { building = token:dockyard }
+			set_temp_variable = { building_amount = 2 }
+			dynamic_building_effect = yes
+			set_building_level = {
+				type = coastal_bunker
+				level = 5
+				instant_build = yes
+				province = 10933
+			}
+			set_building_level = {
+				type = coastal_bunker
+				level = 5
+				instant_build = yes
+				province = 2175
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.05
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_more_than_a_puppet
+	icon = GFX_focus_BRA_more_than_a_puppet
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_is_in_ofn_tt
+			is_in_faction_with = USA
+		}
+	}
+	prerequisite = { focus = BRA_city_of_the_sun }
+	prerequisite = { focus = BRA_lacerda_restrict_japan_trade }
+	prerequisite = { focus = BRA_recognise_axis_atrocities }
+	prerequisite = { focus = BRA_cameroonian_sinkhole }
+	prerequisite = { focus = BRA_OFN_policing_duties }
+	relative_position_id = BRA_city_of_the_sun
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_more_than_a_puppet"
+		country_event = brazil_lacerda.70
+		BRA_military_increase_power_sorbonne_low = yes
+		BRA_military_increase_loyalty_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_the_crow_triumphant
+	icon = GFX_focus_BRA_The_Crow_Triumphant
+	cost = 3
+
+	x = 15
+	y = 13
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_the_crow_triumphant"
+		country_event = brazil_lacerda.209
+		add_political_power = 30
+		add_stability = 0.05
+		BRA_military_increase_loyalty_low = yes
+		BRA_boost_UDN_candidates_nationwide_low = yes
+		set_temp_variable = { temp_udn_unity = 5 }
+		BRA_lacerda_udn_unity_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerda_final_challenge
+	icon = GFX_focus_BRA_The_Final_Challenge
+	cost = 3
+	prerequisite = {
+		focus = BRA_the_crow_triumphant
+	}
+	relative_position_id = BRA_the_crow_triumphant
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_final_challenge"
+		country_event = brazil_lacerda.210
+		custom_effect_tooltip = BRA_lacerda_final_challenge_tt
+	}
+}
+
+shared_focus = {
+	id = BRA_beltraos_triumph
+	icon = GFX_focus_BRA_Beltraos_Triumph
+	cost = 3
+	prerequisite = {
+		focus = BRA_lacerda_final_challenge
+	}
+	relative_position_id = BRA_lacerda_final_challenge
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_beltraos_triumph"
+		econ_raise_credit_rating = yes
+		set_temp_variable = { inflation_temp = -3 }
+		econ_inflation_change = yes
+		set_temp_variable = { econ_centralization_temp = -10 }
+		econ_centralization_change = yes
+		TNO_improve_income_taxation_policy_effectiveness_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_ice_cold
+	icon = GFX_focus_BRA_Ice_Cold
+	cost = 3
+	prerequisite = {
+		focus = BRA_beltraos_triumph
+	}
+	relative_position_id = BRA_beltraos_triumph
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_ice_cold"
+		country_event = brazil_lacerda.211
+		BRA_boost_UDN_aligned_candidates_minas_gerais_high = yes
+		BRA_develop_increase_industry_monthly_south_low = yes
+		496 = {
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.05
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_bank_of_sam
+	icon = GFX_focus_generic_united_states_treasury
+	cost = 3
+	prerequisite = {
+		focus = BRA_beltraos_triumph
+	}
+	relative_position_id = BRA_beltraos_triumph
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_bank_of_sam"
+		set_temp_variable = { debt_temp = -1 }
+		econ_national_debt_change = yes
+		USA = {
+			set_temp_variable = { temp_modifier = 30 }
+			add_to_trade_modifier_PREV = yes 
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_brazil_open_to_all_lacerda
+	icon = GFX_focus_BRA_brazil_open_to_all_lacerda
+	cost = 3
+	prerequisite = {
+		focus = BRA_ice_cold
+	}
+	prerequisite = {
+		focus = BRA_bank_of_sam
+	}
+	relative_position_id = BRA_beltraos_triumph
+	x = -1
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_brazil_open_to_all_lacerda"
+		country_event = brazil_lacerda.212
+		BRA_develop_increase_industry_monthly_northeast_high = yes
+		TNO_improve_industrial_equipment_high = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_brazil_hotline_rio
+	icon = GFX_focus_BRA_hotline_rio
+	cost = 3
+	prerequisite = {
+		focus = BRA_brazil_open_to_all_lacerda
+	}
+	relative_position_id = BRA_brazil_open_to_all_lacerda
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_brazil_hotline_rio"
+		country_event = brazil_lacerda.213
+		1488 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		1488 = {
+			add_state_modifier = {
+				modifier = {
+					state_GDP_growth_factor_modifier = 0.05
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_setting_sun
+	icon = GFX_focus_BRA_Setting_Sun
+	cost = 3
+	prerequisite = {
+		focus = BRA_bank_of_sam
+	}
+	relative_position_id = BRA_bank_of_sam
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_setting_sun"
+		country_event = brazil_lacerda.217
+		BRA_military_increase_loyalty_low = yes
+		USA = {
+			set_temp_variable = { temp_modifier = 5 }
+			add_to_trade_modifier_PREV = yes 
+		}
+		JAP = {
+			set_temp_variable = { temp_modifier = -5 }
+			add_to_trade_modifier_PREV = yes 
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_a_slow_drift
+	icon = GFX_focus_BRA_A_slow_drift
+	cost = 3
+	prerequisite = {
+		focus = BRA_setting_sun
+	}
+	available = {
+		has_country_flag = BRA_selected_slow_drift_focus 
+	}	
+	mutually_exclusive = {
+		focus = BRA_trade_war
+	}
+	relative_position_id = BRA_setting_sun
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_a_slow_drift"
+		country_event = brazil_lacerda.214
+		JAP = {
+			add_opinion_modifier = {
+				target = BRA
+				modifier = BRA_trade_restrictions
+			}
+		}
+		JAP = { 
+			set_temp_variable = { temp_modifier = -10 }
+			add_to_trade_modifier_PREV = yes
+		}
+		set_temp_variable = { gdp_growth_temp = -0.5 }
+		econ_gdp_growth_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_trade_war
+	icon = GFX_focus_BRA_trade_war
+	cost = 3
+	prerequisite = {
+		focus = BRA_setting_sun
+	}
+	available = {
+		has_country_flag = BRA_selected_trade_war_focus 
+	}	
+	mutually_exclusive = {
+		focus = BRA_a_slow_drift
+	}
+	relative_position_id = BRA_setting_sun
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_trade_war"
+		country_event = brazil_lacerda.215
+		set_temp_variable = { gdp_growth_temp = -2 }
+		econ_gdp_growth_change = yes
+		BRA_develop_decrease_industry_monthly_nationwide_low = yes
+		TNO_improve_trade_laws_policy_effectiveness_high = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_the_new_colossus
+	icon = GFX_focus_BRA_The_New_Colossus
+	cost = 3
+	prerequisite = {
+		focus = BRA_brazil_hotline_rio
+	}
+	prerequisite = {
+		focus = BRA_trade_war
+		focus = BRA_a_slow_drift
+	}
+	relative_position_id = BRA_bank_of_sam
+	x = 0
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_the_new_colossus"
+		country_event = brazil_lacerda.216
+		BRA_boost_UDN_candidates_nationwide_low = yes
+		set_temp_variable = { temp_udn_unity = 5 }
+		BRA_lacerda_udn_unity_change = yes
+		set_temp_variable = { gdp_growth_temp = 1 }
+		econ_gdp_growth_change = yes
+		TNO_improve_immigration_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_confront_argentina
+	icon = GFX_focus_BRA_Confront_Argentina
+	cost = 3
+	prerequisite = {
+		focus = BRA_lacerda_final_challenge
+	}
+	relative_position_id = BRA_lacerda_final_challenge
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_confront_argentina"
+		country_event = brazil_lacerda_cisplatina.1
+		custom_effect_tooltip = BRA_confront_argentina_tt
+	}
+}
+
+shared_focus = {
+	id = BRA_bolster_the_bulwarks
+	icon = GFX_focus_BRA_bolster_the_bullwarks
+	cost = 3
+	prerequisite = {
+		focus = BRA_confront_argentina
+	}
+	relative_position_id = BRA_confront_argentina
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_bolster_the_bulwarks"
+		BRA_military_increase_loyalty_low = yes
+		BRA_military_increase_power_sorbonne_low = yes
+		country_event = brazil_lacerda_cisplatina.2
+	}
+}
+
+shared_focus = {
+	id = BRA_fear_is_the_mind_killer
+	icon = GFX_focus_BRA_Fear_is_the_Mind_Killerpart
+	cost = 3
+	prerequisite = {
+		focus = BRA_bolster_the_bulwarks
+	}
+	mutually_exclusive = {
+		focus = BRA_diplomatic_angle
+	}
+	relative_position_id = BRA_bolster_the_bulwarks
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_fear_is_the_mind_killer"
+		BRA_military_increase_loyalty_low = yes
+		BRA_military_increase_power_hardliners_low = yes
+		set_temp_variable = { tempTension = 5 }
+		SA_change_tension = yes
+		add_to_variable = { BRA_cisplatina_triggers = 2 }
+		country_event = brazil_lacerda_cisplatina.3
+	}
+}
+
+shared_focus = {
+	id = BRA_diplomatic_angle
+	icon = GFX_focus_BRA_The_Diplomatic_Angle
+	cost = 3
+	prerequisite = {
+		focus = BRA_bolster_the_bulwarks
+	}
+	mutually_exclusive = {
+		focus = BRA_fear_is_the_mind_killer
+	}
+	relative_position_id = BRA_bolster_the_bulwarks
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_diplomatic_angle"
+		BRA_military_decrease_loyalty_low = yes
+		set_temp_variable = { tempTension = -5 }
+		SA_change_tension = yes
+		country_event = brazil_lacerda_cisplatina.4
+	}
+}
+
+shared_focus = {
+	id = BRA_naval_manoeuvre
+	icon = GFX_focus_BRA_Naval_Manouevre
+	cost = 3
+	prerequisite = {
+		focus = BRA_fear_is_the_mind_killer
+		focus = BRA_diplomatic_angle
+	}
+	relative_position_id = BRA_bolster_the_bulwarks
+	x = -1
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_naval_manoeuvre"
+		navy_experience = 30
+		BRA_boost_UDN_candidates_nationwide_low = yes
+		country_event = brazil_lacerda_cisplatina.5
+	}
+}
+
+shared_focus = {
+	id = BRA_joint_army_ops_lacerda
+	icon = GFX_focus_BRA_joint_army_ops_lacerda
+	cost = 3
+	prerequisite = {
+		focus = BRA_fear_is_the_mind_killer
+		focus = BRA_diplomatic_angle
+	}
+	relative_position_id = BRA_bolster_the_bulwarks
+	x = 1
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_joint_army_ops_lacerda"
+		add_command_power = 20
+		army_experience = 30
+		country_event = brazil_lacerda_cisplatina.6
+	}
+}
+
+shared_focus = {
+	id = BRA_cisplatina_70
+	icon = GFX_focus_BRA_Cisplatina_70
+	cost = 3
+	prerequisite = {
+		focus = BRA_naval_manoeuvre
+	}
+	prerequisite = {
+		focus = BRA_joint_army_ops_lacerda
+	}
+	relative_position_id = BRA_bolster_the_bulwarks
+	x = 0
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_cisplatina_70"
+		country_event = brazil_lacerda_cisplatina.7
+		clr_country_flag = BRA_cisplatina_70_ongoing
+		set_country_flag = BRA_cisplatina_70_finished
+	}
+}
+
+
+shared_focus = {
+	id = BRA_tavoras_masterplan
+	icon = GFX_focus_BRA_Tavoras_Masterplan
+	cost = 3
+	prerequisite = {
+		focus = BRA_lacerda_final_challenge
+	}
+	relative_position_id = BRA_lacerda_final_challenge
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_tavoras_masterplan"
+		add_popularity = {
+			ideology = BRA
+			popularity = 0.02
+		}
+		set_temp_variable = { temp_udn_unity = 5 }
+		BRA_lacerda_udn_unity_change = yes
+		add_to_variable = { BRA_pres_support^2 = 3 }
+		custom_effect_tooltip = BRA_tavoras_masterplan_tt
+		BRA_redraw_pres_info = yes
+		BRA_pres_select_region = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_repair_liberdade
+	icon = GFX_focus_BRA_Repair_Liberdade
+	cost = 3
+	prerequisite = {
+		focus = BRA_tavoras_masterplan
+	}
+	relative_position_id = BRA_tavoras_masterplan
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_repair_liberdade"
+		country_event = brazil_lacerda.218
+		BRA_boost_UDN_candidates_sao_paulo_low = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.25 }
+		econ_spend_money_once_effect_raw_money = yes
+		if = {
+			limit = { check_variable = { BRA_pres_70_scenario = 3 } }
+			add_to_variable = { BRA_pres_support^26 = 1 }
+		}
+		else = {
+			add_to_variable = { BRA_pres_support^34 = 1 }
+		}
+		custom_effect_tooltip = BRA_repair_liberdade_tt
+		BRA_redraw_pres_info = yes
+		BRA_pres_select_region = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_werewolf_nightmare
+	icon = GFX_focus_BRA_werewolf_nightmare
+	cost = 3
+	prerequisite = {
+		focus = BRA_tavoras_masterplan
+	}
+	relative_position_id = BRA_tavoras_masterplan
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_werewolf_nightmare"
+		BRA_harm_PTB_candidates_south_low = yes
+		TNO_improve_press_rights_policy_effectiveness_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_isolate_the_psp
+	icon = GFX_focus_BRA_divide_et_impera
+	cost = 3
+	prerequisite = {
+		focus = BRA_repair_liberdade
+	}
+	prerequisite = {
+		focus = BRA_werewolf_nightmare
+	}
+	relative_position_id = BRA_repair_liberdade
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_isolate_the_psp"
+		BRA_harm_PSP_candidates_nationwide_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_doomsday_clock
+	icon = GFX_focus_BRA_doomsdayclock
+	cost = 3
+	prerequisite = {
+		focus = BRA_isolate_the_psp
+	}
+	relative_position_id = BRA_isolate_the_psp
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_doomsday_clock"
+		BRA_military_increase_loyalty_low = yes
+		BRA_military_increase_power_sorbonne_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_squeeze_the_psd
+	icon = GFX_focus_BRA_squeeze_the_psd
+	cost = 3
+	prerequisite = {
+		focus = BRA_werewolf_nightmare
+	}
+	relative_position_id = BRA_werewolf_nightmare
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_squeeze_the_psd"
+		BRA_harm_PSD_candidates_nationwide_med = yes
+		BRA_boost_UDN_candidates_nationwide_low = yes
+		BRA_boost_PTB_candidates_nationwide_low = yes
+		if = {
+			limit = { check_variable = { BRA_pres_70_scenario = 3 } }
+			add_to_variable = { BRA_pres_support^14 = 2 }
+		}
+		else = {
+			add_to_variable = { BRA_pres_support^18 = 2 }
+		}
+		custom_effect_tooltip = BRA_squeeze_the_psd_tt
+		BRA_redraw_pres_info = yes
+		BRA_pres_select_region = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_keeping_clean
+	icon = GFX_focus_BRA_keeping_clean
+	cost = 3
+	prerequisite = {
+		focus = BRA_squeeze_the_psd
+	}
+	mutually_exclusive = {
+		focus = BRA_getting_dirty
+	}
+	relative_position_id = BRA_squeeze_the_psd
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_keeping_clean"
+		BRA_boost_UDN_candidates_nationwide_low = yes
+		add_political_power = 30
+	}
+}
+
+shared_focus = {
+	id = BRA_getting_dirty
+	icon = GFX_focus_BRA_drown_out_the_critics
+	cost = 3
+	prerequisite = {
+		focus = BRA_squeeze_the_psd
+	}
+	mutually_exclusive = {
+		focus = BRA_keeping_clean
+	}
+	relative_position_id = BRA_squeeze_the_psd
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_getting_dirty"
+		if = {
+			limit = { check_variable = { BRA_pres_70_scenario = 3 } }
+			add_to_variable = { BRA_pres_support^23 = 2 }
+			add_to_variable = { BRA_pres_support^21 = 1 }
+			add_to_variable = { BRA_pres_support^13 = -3 }
+		}
+		else = {
+			add_to_variable = { BRA_pres_support^30 = 2 }
+			add_to_variable = { BRA_pres_support^28 = 1 }
+			add_to_variable = { BRA_pres_support^17 = -3 }
+		}
+		BRA_redraw_pres_info = yes
+		BRA_pres_select_region = yes
+		custom_effect_tooltip = BRA_getting_dirty_tt
+	}
+}
+
+shared_focus = {
+	id = BRA_globo_domination
+	icon = GFX_focus_BRA_globodomination
+	cost = 3
+	prerequisite = {
+		focus = BRA_keeping_clean
+		focus = BRA_getting_dirty
+	}
+	prerequisite = {
+		focus = BRA_doomsday_clock
+	}
+	relative_position_id = BRA_doomsday_clock
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_globo_domination"
+		country_event = brazil_lacerda.219
+		BRA_boost_UDN_candidates_nationwide_med = yes
+		TNO_improve_press_rights_policy_effectiveness_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_live_on_air
+	icon = GFX_focus_BRA_live_on_air
+	cost = 3
+	prerequisite = {
+		focus = BRA_globo_domination
+	}
+	prerequisite = {
+		focus = BRA_the_new_colossus
+	}
+	prerequisite = {
+		focus = BRA_cisplatina_70
+	}
+	relative_position_id = BRA_cisplatina_70
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_live_on_air"
+		country_event = brazil_lacerda.220
+	}
+}
+
+shared_focus = {
+	id = BRA_lacerda_judgement_day
+	icon = GFX_focus_BRA_imperial_judgement_day
+	cost = 2
+	prerequisite = {
+		focus = BRA_live_on_air
+	}
+	relative_position_id = BRA_live_on_air
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerda_judgement_day"
+		country_event = brazil_lacerda.222
+		add_to_variable = { BRA_pres_support^2 = 3 }
+		custom_effect_tooltip = BRA_lacerda_judgement_day_tt
+		BRA_redraw_pres_info = yes
+		BRA_pres_select_region = yes
+	}
+}
+
+#######################################################################################################################################################
+###                                                                                                                                                ####
+###  ##############   ####        #####   ###############   ############     ############    ###          ##########           ###                 ####
+###       ####        ######     ######   ###         ###   ###              ###      ###                ############          ###                 ####
+###       ####        ### ###   ### ###   ###         ###   ###              ###      ###    ###        ###        ###         ###                 ####
+###       ####        ###  #######  ###   ###         ###   ############     ###      ###    ###       ###          ###        ###                 ####
+###       ####        ###   #####   ###   ###############   ############     ############    ###      ##################       ###                 ####
+###       ####        ###     ##    ###   ###               ###              ###  ####       ###     ###              ###      ###                 ####
+###       ####        ###           ###   ###               ###              ###    ####     ###    ###                ###     #################   ####
+###  ##############   ###           ###   ###               #############    ###      ####   ###   ###                  ###    #################   ####
+###                                                                                                                                                ####
+#######################################################################################################################################################
+
+shared_focus = {
+	id = BRA_imperial_catastrophe_avoided
+	icon = GFX_focus_BRA_catastrophe_avoided
+	cost = 2
+	x = 15
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_catastrophe_avoided"
+		country_event = brazil_lacerda_imp.88
+		add_stability = 0.05
+		add_political_power = 50
+		add_popularity = {
+			ideology = paternalism
+			popularity = -0.02
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = progressivism_2
+			popularity = 0.01
+		}
+		BRA_harm_UDN_candidates_nationwide_med = yes
+		hidden_effect = {
+			country_event = {
+				id = brazil_lacerda.197
+				days = 14
+			}
+			country_event = {
+				id = brazil_lacerda.123
+				days = 468
+			}
+			country_event = {
+				id = brazil_lacerda.129
+				days = 630
+			}
+			country_event = {
+				id = brazil_lacerda_imp.111
+				days = 300
+				random = 50
+			}
+			country_event = {
+				id = brazil_lacerda_imp.112
+				days = 400
+				random = 100
+			}
+			country_event = {
+				id = brazil_lacerda_imp.115
+				days = 1800
+				random = 50
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_trojan_siege
+	icon = GFX_focus_BRA_trojan_siege
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_catastrophe_avoided
+	}
+	relative_position_id = BRA_imperial_catastrophe_avoided
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_trojan_siege"
+		country_event = brazil_lacerda_imp.1
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_restrained_exile
+	icon = GFX_focus_BRA_a_restrained_exile
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_trojan_siege
+	}
+	mutually_exclusive = {
+		focus = BRA_imperial_public_execution
+	}
+	relative_position_id = BRA_imperial_trojan_siege
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_restrained_exile"
+		country_event = brazil_lacerda_imp.89
+		custom_effect_tooltip = BRA_imperial_restrained_exile_tt
+		add_stability = 0.03
+		TNO_improve_political_parties_policy_effectiveness_med = yes
+		BRA_decrease_UDN_management_x_by_25 = yes
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_realistas_quarter = yes
+					BRA_lacerda_udn_bossa_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_banda_quarter = yes
+					BRA_lacerda_udn_liberais_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_velvet_glove
+	icon = GFX_focus_BRA_velvet_glove
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_restrained_exile
+	}
+	relative_position_id = BRA_imperial_restrained_exile
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_velvet_glove"
+		country_event = brazil_lacerda_imp.90
+		custom_effect_tooltip = BRA_imperial_velvet_glove_tt
+		TNO_worsen_press_rights_policy_effectiveness_low = yes
+		TNO_worsen_public_meetings_policy_effectiveness_low = yes
+		TNO_worsen_security_policy_effectiveness_low = yes
+		TNO_worsen_penal_system_policy_effectiveness_low = yes
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+		BRA_decrease_UDN_management_x_by_25 = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_a_general_pardon
+	icon = GFX_focus_BRA_imperial_a_general_pardon
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_velvet_glove
+	}
+	relative_position_id = BRA_imperial_velvet_glove
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_a_general_pardon"
+		country_event = brazil_lacerda_imp.91
+		add_political_power = 25
+		if = {
+			limit = {
+				check_variable = { BRA_num_senate_seats^PARTY_PTB > 1 }
+			}
+			BRA_setup_switch_parties_immune = yes
+			if = {
+				limit = {
+					check_variable = { BRA_num_senate_seats^PARTY_PTB < 20 }
+				}
+				set_temp_variable = { PTB_half_senators = BRA_num_senate_seats^PARTY_PTB }
+				divide_temp_variable = { PTB_half_senators = 2 }
+				round_temp_variable = PTB_half_senators
+				set_temp_variable = { PSD_PTB = PTB_half_senators }
+				set_temp_variable = { PSP_PTB = PTB_half_senators }
+				set_temp_variable = { PDC_PTB = PTB_half_senators }
+				set_temp_variable = { PST_PTB = PTB_half_senators }
+				set_temp_variable = { PRP_PTB = PTB_half_senators }
+				multiply_temp_variable = { PSD_PTB = 0.5 }
+				multiply_temp_variable = { PSP_PTB = 0.2 }
+				multiply_temp_variable = { PDC_PTB = 0.1 }
+				multiply_temp_variable = { PST_PTB = 0.1 }
+				multiply_temp_variable = { PRP_PTB = 0.1 }
+				round_temp_variable = PSD_PTB
+				round_temp_variable = PSP_PTB
+				round_temp_variable = PDC_PTB
+				round_temp_variable = PST_PTB
+				round_temp_variable = PRP_PTB
+				clamp_temp_variable = {
+					var = PSD_PTB
+					min = 0
+					max = BRA_num_senate_seats^PARTY_PTB
+				}
+				clamp_temp_variable = {
+					var = PSP_PTB
+					min = 0
+					max = BRA_num_senate_seats^PARTY_PTB
+				}
+				clamp_temp_variable = {
+					var = PDC_PTB
+					min = 0
+					max = BRA_num_senate_seats^PARTY_PTB
+				}
+				clamp_temp_variable = {
+					var = PST_PTB
+					min = 0
+					max = BRA_num_senate_seats^PARTY_PTB
+				}
+				clamp_temp_variable = {
+					var = PRP_PTB
+					min = 0
+					max = BRA_num_senate_seats^PARTY_PTB
+				}
+				set_temp_variable = { tmp_from_party = PARTY_PTB }
+				set_temp_variable = { tmp_to_party = PARTY_PSD }
+				set_temp_variable = { tmp_num_switch = PSD_PTB }
+				BRA_switch_parties = yes
+				set_temp_variable = { tmp_to_party = PARTY_PSP }
+				set_temp_variable = { tmp_num_switch = PSP_PTB }
+				BRA_switch_parties = yes
+				set_temp_variable = { tmp_to_party = PARTY_PDC }
+				set_temp_variable = { tmp_num_switch = PDC_PTB }
+				BRA_switch_parties = yes
+				set_temp_variable = { tmp_to_party = PARTY_PST }
+				set_temp_variable = { tmp_num_switch = PST_PTB }
+				BRA_switch_parties = yes
+				set_temp_variable = { tmp_to_party = PARTY_PRP }
+				set_temp_variable = { tmp_num_switch = PRP_PTB }
+				BRA_switch_parties = yes
+			}
+			else = {
+				set_temp_variable = { tmp_from_party = PARTY_PTB }
+				set_temp_variable = { tmp_to_party = PARTY_PSD }
+				set_temp_variable = { tmp_num_switch = 5 }
+				BRA_switch_parties = yes
+				set_temp_variable = { tmp_to_party = PARTY_PSP }
+				set_temp_variable = { tmp_num_switch = 2 }
+				BRA_switch_parties = yes
+				set_temp_variable = { tmp_to_party = PARTY_PDC }
+				set_temp_variable = { tmp_num_switch = 1 }
+				BRA_switch_parties = yes
+				set_temp_variable = { tmp_to_party = PARTY_PST }
+				set_temp_variable = { tmp_num_switch = 1 }
+				BRA_switch_parties = yes
+				set_temp_variable = { tmp_to_party = PARTY_PRP }
+				set_temp_variable = { tmp_num_switch = 1 }
+				BRA_switch_parties = yes
+			}
+		}
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+		TNO_worsen_security_policy_effectiveness_low = yes
+		TNO_worsen_penal_system_policy_effectiveness_low = yes
+		BRA_military_decrease_loyalty_low = yes
+		BRA_military_increase_power_sorbonne_low = yes
+		BRA_decrease_UDN_management_x_by_25 = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_realist_approach
+	icon = GFX_focus_BRA_imperial_realist_approach
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_velvet_glove
+	}
+	relative_position_id = BRA_imperial_velvet_glove
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_realist_approach"
+		country_event = brazil_lacerda_imp.92
+		add_stability = "0.05"
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+		BRA_military_increase_loyalty_low = yes
+		add_political_power = 50
+		BRA_decrease_UDN_management_x_by_25 = yes
+		set_temp_variable = { temp_udn_unity = 5 }
+		BRA_lacerda_udn_unity_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_walk_the_fine_line
+	icon = GFX_focus_BRA_walking_the_fine_line
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_a_general_pardon
+	}
+	prerequisite = {
+		focus = BRA_imperial_realist_approach
+	}
+	relative_position_id = BRA_imperial_realist_approach
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_walk_the_fine_line"
+		country_event = brazil_lacerda_imp.93
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+		BRA_decrease_UDN_management_x_by_50 = yes
+		add_stability = 0.05
+		TNO_worsen_security_policy_effectiveness_low = yes
+		TNO_worsen_press_rights_policy_effectiveness_low = yes
+		TNO_worsen_public_meetings_policy_effectiveness_low = yes
+		TNO_worsen_penal_system_policy_effectiveness_low = yes
+		admin_funding_minimal_decrease_med = yes
+
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_public_execution
+	icon = GFX_focus_BRA_A_Public_Execution
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_trojan_siege
+	}
+	mutually_exclusive = {
+		focus = BRA_imperial_restrained_exile
+	}
+	relative_position_id = BRA_imperial_trojan_siege
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_public_execution"
+		country_event = brazil_lacerda_imp.94
+		BRA_increase_UDN_management_x_by_50 = yes
+		set_temp_variable = { temp_udn_unity = -5 }
+		BRA_lacerda_udn_unity_change = yes
+		add_popularity = {
+			ideology = socialist
+			popularity = -0.01
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = -0.01
+		}
+		add_popularity = {
+			ideology = paternalism_1
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = communist
+			popularity = 0.01
+		}
+		add_stability = -0.05
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+		BRA_military_increase_power_hardliners_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_victor_the_spoils
+	icon = GFX_focus_BRA_the_victor_the_spoils
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_public_execution
+	}
+	relative_position_id = BRA_imperial_public_execution
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_victor_the_spoils"
+		BRA_military_increase_nepotism_low = yes
+		TNO_improve_security_policy_effectiveness_low = yes
+		TNO_improve_press_rights_policy_effectiveness_low = yes
+		TNO_improve_public_meetings_policy_effectiveness_low = yes
+		TNO_improve_penal_system_policy_effectiveness_low = yes
+		admin_funding_minimal_increase_med = yes
+		BRA_increase_UDN_management_x_by_50 = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_rely_on_the_military
+	icon = GFX_focus_BRA_rely_on_the_military
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_victor_the_spoils
+	}
+	relative_position_id = BRA_imperial_victor_the_spoils
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_rely_on_the_military"
+		country_event = brazil_lacerda_imp.97
+		BRA_military_increase_nepotism_low = yes
+		add_stability = 0.05
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_one_thorough_cleaning
+	icon = GFX_focus_BRA_one_thorough_cleaning
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_victor_the_spoils
+	}
+	relative_position_id = BRA_imperial_victor_the_spoils
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_one_thorough_cleaning"
+		country_event = brazil_lacerda_imp.96
+		BRA_increase_UDN_management_x_by_25 = yes
+		add_stability = -0.05
+		TNO_worsen_research_facilities_low = yes
+		TNO_worsen_army_professionalism_low = yes
+		TNO_worsen_admin_efficiency_low = yes
+		add_political_power = 50
+		add_popularity = {
+			ideology = communist
+			popularity = 0.01
+		}
+		BRA_military_increase_loyalty_low = yes
+		BRA_military_increase_power_hardliners_low = yes
+		BRA_harm_PSP_candidates_nationwide_low = yes
+		BRA_harm_PTB_candidates_nationwide_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_new_udn
+	icon = GFX_focus_BRA_A_New_UDN
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_rely_on_the_military
+	}
+	prerequisite = {
+		focus = BRA_imperial_one_thorough_cleaning
+	}
+	relative_position_id = BRA_imperial_one_thorough_cleaning
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_new_udn"
+		country_event = brazil_lacerda_imp.98
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_decrease_UDN_management_y_by_50 = yes
+		set_temp_variable = { temp_udn_unity = 5 }
+		BRA_lacerda_udn_unity_change = yes
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+		add_stability = 0.05
+
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_head_of_the_snake
+	icon = GFX_focus_BRA_adhemar_the_viper
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_restrained_exile
+		focus = BRA_imperial_public_execution
+	}
+	relative_position_id = BRA_imperial_trojan_siege
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_head_of_the_snake"
+		country_event = brazil_lacerda_imp.99
+		TNO_improve_public_meetings_policy_effectiveness_low = yes
+		admin_funding_minimal_increase_med = yes
+		BRA_increase_UDN_management_x_by_50 = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_reach_out_gordon
+	icon = GFX_focus_BRA_kick_gordon_out
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_head_of_the_snake
+	}
+	relative_position_id = BRA_imperial_head_of_the_snake
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_reach_out_gordon"
+		country_event = brazil_lacerda_imp.100
+		add_stability = 0.05
+		add_political_power = 50
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.01
+		}
+		BRA_boost_UDN_candidates_nationwide_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_rebirth_of_democracy
+	icon = GFX_focus_BRA_imperial_rebirth_of_democracy
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_reach_out_gordon
+	}
+	relative_position_id = BRA_imperial_reach_out_gordon
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_rebirth_of_democracy"
+		country_event = brazil_lacerda_imp.101
+		BRA_decrease_UDN_management_x_by_25 = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_our_work_has_only_begun
+	icon = GFX_focus_BRA_our_work_has_just_begun
+	cost = 2
+	prerequisite = {
+		focus = BRA_imperial_rebirth_of_democracy
+	}
+	prerequisite = {
+		focus = BRA_imperial_walk_the_fine_line
+		focus = BRA_imperial_new_udn
+	}
+	relative_position_id = BRA_imperial_rebirth_of_democracy
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_our_work_has_only_begun"
+		country_event = brazil_lacerda_imp.102
+		TNO_improve_admin_efficiency_low = yes
+	}
+}
+
+#Imperial Lacerda post 68
+shared_focus = {
+	id = BRA_imperial_the_crow_reigns_supreme
+	icon = GFX_focus_BRA_The_Crow_Supreme
+	cost = 3
+	x = 15
+	y = 13
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_the_crow_reigns_supreme"
+		country_event = brazil_lacerda_imp.9
+		BRA_boost_UDN_candidates_nationwide_med = yes
+		BRA_military_increase_loyalty_low = yes
+		custom_effect_tooltip = BRA_imp_lacerda_full_unity_tt
+		hidden_effect = {
+			set_temp_variable = { temp_udn_unity = 100 }
+			BRA_lacerda_udn_unity_change = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_birth_of_5th_republic
+	icon = GFX_focus_BRA_Birth_Of_The_Fith_Republic
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_the_crow_reigns_supreme
+	}
+	relative_position_id = BRA_imperial_the_crow_reigns_supreme
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_birth_of_5th_republic"
+		country_event = brazil_lacerda_imp.10
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_constitionalise_capitalism
+	icon = GFX_focus_BRA_professionalize_politics
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_birth_of_5th_republic
+	}
+	relative_position_id = BRA_imperial_birth_of_5th_republic
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_constitionalise_capitalism"
+		country_event = brazil_lacerda_imp.11
+		set_temp_variable = { econ_centralization_temp = -10 }
+		econ_centralization_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_plot_with_gordon
+	icon = GFX_focus_BRA_kick_gordon_out
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_birth_of_5th_republic
+	}
+	relative_position_id = BRA_imperial_birth_of_5th_republic
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_plot_with_gordon"
+		BRA_military_increase_loyalty_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_antarctica_awaits
+	icon = GFX_focus_BRA_Antarctica_Awaits
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_birth_of_5th_republic
+	}
+	relative_position_id = BRA_imperial_birth_of_5th_republic
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_antarctica_awaits"
+		BRA_military_decrease_loyalty_med = yes
+		BRA_military_increase_nepotism_low = yes
+		BRA_military_decrease_power_const_low = yes
+		BRA_military_increase_power_sorbonne_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_a_new_dawn
+	icon = GFX_focus_BRA_Setting_Sun
+	cost = 3
+	prerequisite = { focus = BRA_imperial_constitionalise_capitalism }
+	prerequisite = { focus = BRA_imperial_plot_with_gordon }
+	prerequisite = { focus = BRA_imperial_antarctica_awaits }
+	relative_position_id = BRA_imperial_plot_with_gordon
+	x = 0
+	y = 1
+	select_effect = {
+		custom_effect_tooltip = BRA_imperial_birth_of_5th_republic_tt
+		set_temp_variable = { temp_bill = token:BRA_5TH_REPUBLIC_CONSTITUTION }
+		set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0 }
+		set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.2 }
+		BRA_lacerda_calculate_udn_bill_support = yes
+		set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0.1 }
+		set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 1 }
+		set_variable = { BRA_pl_vote_days@var:temp_bill = 21 }
+		BRA_initialize_bill = yes
+		BRA_call_bill_vote = yes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_a_new_dawn"
+		custom_effect_tooltip = BRA_imperial_a_new_dawn_tt
+		effect_tooltip = {
+			set_cosmetic_tag = BRA_imp_lacerda
+			set_temp_variable = { temp_law = token:BRA_varguist_labor_law }
+			TNO_remove_assorted_law = yes
+			set_temp_variable = { temp_law = token:BRA_dismantled_labour_laws }
+			TNO_add_assorted_law = yes
+			set_temp_variable = { temp_law = token:BRA_5th_republic }
+			TNO_add_assorted_law = yes
+			custom_effect_tooltip = BRA_imperial_a_new_dawn_tt_2
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_enemies_at_the_gate
+	icon = GFX_focus_BRA_counter_the_reaction
+	cost = 3
+	allow_branch = { has_cosmetic_tag = BRA_imp_lacerda }
+	prerequisite = {
+		focus = BRA_imperial_a_new_dawn
+	}
+	relative_position_id = BRA_imperial_a_new_dawn
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_enemies_at_the_gate"
+		country_event = brazil_lacerda_imp.13
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_an_illegal_gathering
+	icon = GFX_focus_BRA_outlast_strikes
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_enemies_at_the_gate
+	}
+	relative_position_id = BRA_imperial_enemies_at_the_gate
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_an_illegal_gathering"
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -5 }
+		BRA_Riots_CGT_Strength_Change = yes
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = 5 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+		add_popularity = {
+			ideology = communist
+			popularity = 0.01
+		}
+		set_temp_variable = { gdp_growth_temp = -0.5 }
+		econ_gdp_growth_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_mass_layoffs
+	icon = GFX_focus_GNG_draw_a_red_line
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_an_illegal_gathering
+	}
+	relative_position_id = BRA_imperial_an_illegal_gathering
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_mass_layoffs"
+		country_event = brazil_lacerda_imp.14
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -7 }
+		BRA_Riots_CGT_Strength_Change = yes
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = 10 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+		set_temp_variable = { gdp_growth_temp = -1 }
+		econ_gdp_growth_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_gordons_boys
+	icon = GFX_focus_BRA_gordons_men
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_mass_layoffs
+	}
+	relative_position_id = BRA_imperial_mass_layoffs
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_gordons_boys"
+		country_event = brazil_lacerda_imp.15
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -2 }
+		BRA_Riots_CGT_Strength_Change = yes
+		set_temp_variable = { temp_udn_unity = -5 }
+		BRA_lacerda_udn_unity_change = yes
+		set_temp_variable = { BRA_Riots_UDN_Concern_Temp = 5 }
+		BRA_Riots_UDN_Concern_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_the_eagle_watches
+	icon = GFX_focus_USA_cia
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_gordons_boys
+	}
+	relative_position_id = BRA_imperial_gordons_boys
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_the_eagle_watches"
+		country_event = brazil_lacerda_imp.16
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -3 }
+		BRA_Riots_CGT_Strength_Change = yes
+		add_popularity = {
+			ideology = communist
+			popularity = -0.02
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_seahorse
+	icon = GFX_focus_BRA_The_Seahorse
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_enemies_at_the_gate
+	}
+	relative_position_id = BRA_imperial_enemies_at_the_gate
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_seahorse"
+		country_event = brazil_lacerda_imp.17
+		BRA_military_increase_loyalty_low = yes
+		TNO_improve_security_policy_effectiveness_med = yes
+		hidden_effect = {
+			swap_ideas = {
+				add_idea = tno_military_supervision_kill_em_all
+				remove_idea = tno_military_supervision_rules_of_engagement
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = tno_military_supervision_kill_em_all_dummy
+				add_idea = tno_military_supervision_rules_of_engagement_dummy
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_cuban_cigars
+	icon = GFX_focus_BRA_Cuban_Cigars
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_seahorse
+	}
+	relative_position_id = BRA_imperial_seahorse
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_cuban_cigars"
+		country_event = brazil_lacerda_imp.18
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = -5 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+		set_temp_variable = { BRA_Riots_UDN_Concern_Temp = -10 }
+		BRA_Riots_UDN_Concern_Change = yes
+		BRA_military_increase_loyalty_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_unleash_fluery
+	icon = GFX_focus_BRA_Unleash_Fleury
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_cuban_cigars
+	}
+	relative_position_id = BRA_imperial_cuban_cigars
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_unleash_fluery"
+		country_event = brazil_lacerda_imp.19
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -2 }
+		BRA_Riots_CGT_Strength_Change = yes
+		BRA_military_increase_power_hardliners_low = yes
+		BRA_military_increase_nepotism_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_out_of_sight_out_of_mind
+	icon = GFX_focus_BRA_Out_of_Sight_out_of_Mind
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_unleash_fluery
+	}
+	relative_position_id = BRA_imperial_unleash_fluery
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_out_of_sight_out_of_mind"
+		country_event = brazil_lacerda_imp.20
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -5 }
+		BRA_Riots_CGT_Strength_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_iron_general
+	icon = GFX_focus_BRA_supervise_constitutionalists
+	cost = 3
+	prerequisite = { focus = BRA_imperial_an_illegal_gathering }
+	prerequisite = { focus = BRA_imperial_seahorse }
+	relative_position_id = BRA_imperial_an_illegal_gathering
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_iron_general"
+		country_event = brazil_lacerda_imp.21
+		add_stability = 0.02
+		BRA_military_increase_power_hardliners_low = yes
+		BRA_military_decrease_loyalty_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_flames_of_araguaia
+	icon = GFX_focus_BRA_destroy_the_red_threat
+	cost = 3
+	mutually_exclusive = { focus = BRA_imperial_sewers_of_diable }
+	prerequisite = { focus = BRA_imperial_mass_layoffs }
+	prerequisite = { focus = BRA_imperial_iron_general }
+	relative_position_id = BRA_imperial_mass_layoffs
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_flames_of_araguaia"
+		country_event = brazil_lacerda_imp.22
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = -6 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_operation_parrot
+	icon = GFX_focus_BRA_Operation_Parrot
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_flames_of_araguaia
+	}
+	relative_position_id = BRA_imperial_flames_of_araguaia
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_operation_parrot"
+		country_event = brazil_lacerda_imp.23
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = -10 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_our_friend_huey
+	icon = GFX_focus_BRA_Our_Friend_Huey
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_operation_parrot
+	}
+	relative_position_id = BRA_imperial_operation_parrot
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_our_friend_huey"
+		country_event = brazil_lacerda_imp.24
+		add_equipment_to_stockpile = {
+			type = transport_helicopter_equipment_1
+			amount = 150
+		}
+		add_manpower = -45
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_paint_the_jungle_red
+	icon = GFX_focus_BRA_Paint_The_Jungle_Red
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_our_friend_huey
+	}
+	relative_position_id = BRA_imperial_our_friend_huey
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_paint_the_jungle_red"
+		country_event = brazil_lacerda_imp.25
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = -10 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+		add_manpower = -75
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_sewers_of_diable
+	icon = GFX_focus_BRA_Sewers_of_Diable
+	cost = 3
+	mutually_exclusive = { focus = BRA_imperial_flames_of_araguaia }
+	prerequisite = { focus = BRA_imperial_cuban_cigars }
+	prerequisite = { focus = BRA_imperial_iron_general }
+	relative_position_id = BRA_imperial_cuban_cigars
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_sewers_of_diable"
+		country_event = brazil_lacerda_imp.26
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -6 }
+		BRA_Riots_CGT_Strength_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_toppling_a_dynasty
+	icon = GFX_focus_BRA_thank_vargas_jr
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_sewers_of_diable
+	}
+	relative_position_id = BRA_imperial_sewers_of_diable
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_toppling_a_dynasty"
+		country_event = brazil_lacerda_imp.27
+		BRA_harm_PSP_candidates_nationwide_med = yes
+		add_popularity = {
+			ideology = paternalism_1
+			popularity = -0.03
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_tanks_on_the_streets
+	icon = GFX_focus_BRA_end_the_marches
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_toppling_a_dynasty
+	}
+	relative_position_id = BRA_imperial_toppling_a_dynasty
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_tanks_on_the_streets"
+		country_event = brazil_lacerda_imp.28
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -5 }
+		BRA_Riots_CGT_Strength_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_raid_favelas
+	icon = GFX_focus_BRA_military_option
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_tanks_on_the_streets
+	}
+	relative_position_id = BRA_imperial_tanks_on_the_streets
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_raid_favelas"
+		country_event = brazil_lacerda_imp.29
+		add_popularity = {
+			ideology = communist
+			popularity = -0.01
+		}
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -5 }
+		BRA_Riots_CGT_Strength_Change = yes
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = -10 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_roars_of_truimph
+	icon = GFX_focus_BRA_lacerdas_speeches
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_flames_of_araguaia
+		focus = BRA_imperial_sewers_of_diable
+	}
+	relative_position_id = BRA_imperial_flames_of_araguaia
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_roars_of_truimph"
+		country_event = brazil_lacerda_imp.30
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_everything_is_fine
+	icon = GFX_focus_BRA_Everything_is_Fine
+	cost = 3
+	prerequisite = { focus = BRA_imperial_operation_parrot }
+	prerequisite = { focus = BRA_imperial_roars_of_truimph }
+	relative_position_id = BRA_imperial_operation_parrot
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_everything_is_fine"
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -2 }
+		BRA_Riots_CGT_Strength_Change = yes
+		BRA_boost_UDN_candidates_nationwide_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_campos_pleas
+	icon = GFX_focus_BRA_campos_pleas
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_everything_is_fine
+	}
+	relative_position_id = BRA_imperial_everything_is_fine
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_campos_pleas"
+		set_temp_variable = { temp_udn_unity = 5 }
+		BRA_lacerda_udn_unity_change = yes
+		set_temp_variable = { BRA_Riots_UDN_Concern_Temp = -10 }
+		BRA_Riots_UDN_Concern_Change = yes
+		set_temp_variable = { BRA_Riots_MSD_Strength_Temp = 3 }
+		BRA_Riots_MSD_Strength_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_reassure_usa
+	icon = GFX_focus_BRA_brazil_military_ops
+	cost = 3
+	prerequisite = { focus = BRA_imperial_roars_of_truimph }
+	prerequisite = { focus = BRA_imperial_toppling_a_dynasty }
+	relative_position_id = BRA_imperial_roars_of_truimph
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_reassure_usa"
+		country_event = brazil_lacerda_imp.31
+		set_temp_variable = { gdp_growth_temp = 0.5 }
+		econ_gdp_growth_change = yes
+		set_temp_variable = { money_reserves_temp = 0.5 }
+		econ_money_reserves_change_raw_money = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_pintos_support
+	icon = GFX_focus_BRA_Pintos_Support
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_reassure_usa
+	}
+	relative_position_id = BRA_imperial_reassure_usa
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_pintos_support"
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = -5 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+		set_temp_variable = { temp_udn_unity = 5 }
+		BRA_lacerda_udn_unity_change = yes
+		set_temp_variable = { BRA_Riots_UDN_Concern_Temp = -10 }
+		BRA_Riots_UDN_Concern_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_all_in
+	icon = GFX_focus_BRA_All_in
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_campos_pleas
+		focus = BRA_imperial_pintos_support
+	}
+	relative_position_id = BRA_imperial_pintos_support
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_all_in"
+		country_event = brazil_lacerda_imp.32
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -10 }
+		BRA_Riots_CGT_Strength_Change = yes
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = 15 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+		set_temp_variable = { BRA_Riots_MSD_Radicalism_Temp = 15 }
+		BRA_Riots_MSD_Radicalism_Change = yes
+		hidden_effect = {
+			country_event = { id = brazil_lacerda_imp.4 days = 3 }
+		}
+	}
+}
+
+#Success ending
+shared_focus = {
+	id = BRA_imperial_lacerda_victory
+	icon = GFX_focus_BRA_The_Crow_Triumphant
+	cost = 3
+	x = 0
+	y = 15
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_lacerda_victory"
+		country_event = brazil_lacerda_imp.53
+		BRA_military_increase_loyalty_low = yes
+		custom_effect_tooltip = BRA_imp_lacerda_full_unity_tt
+		remove_ideas = BRA_general_strke_lacerda
+		hidden_effect = {
+			set_temp_variable = { temp_udn_unity = 100 }
+			BRA_lacerda_udn_unity_change = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_a_feast_for_crows
+	icon = GFX_focus_BRA_A_Feast_For_Crows
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_lacerda_victory
+	}
+	relative_position_id = BRA_imperial_lacerda_victory
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_a_feast_for_crows"
+		country_event = brazil_lacerda_imp.54
+		add_stability = 0.05
+		add_popularity = {
+			ideology = communist
+			popularity = -0.05
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_silenced_opposition
+	icon = GFX_focus_BRA_The_Silenced_Opposition
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_lacerda_victory
+	}
+	relative_position_id = BRA_imperial_lacerda_victory
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_silenced_opposition"
+		country_event = brazil_lacerda_imp.55
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.01
+		}
+		TNO_improve_press_rights_policy_effectiveness_med = yes
+		TNO_improve_political_parties_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_introduce_the_heir
+	icon = GFX_focus_BRA_footballer_suggestions
+	cost = 3
+	prerequisite = { focus = BRA_imperial_a_feast_for_crows }
+	prerequisite = { focus = BRA_imperial_silenced_opposition }
+	relative_position_id = BRA_imperial_a_feast_for_crows
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_introduce_the_heir"
+		country_event = brazil_lacerda_imp.56
+		custom_effect_tooltip = BRA_imperial_introduce_the_heir_tt
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_good }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_the_march_north
+	icon = GFX_focus_generic_increase_conscription
+	cost = 3
+	allow_branch = { has_country_flag = BRA_imp_lacerda_1970_election }
+	prerequisite = {
+		focus = BRA_imperial_introduce_the_heir
+	}
+	relative_position_id = BRA_imperial_introduce_the_heir
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_the_march_north"
+		country_event = brazil_lacerda_imp.59
+		add_popularity = {
+			ideology = communist
+			popularity = -0.02
+		}
+		2101 = { set_demilitarized_zone = no }
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_anaconda
+	icon = GFX_focus_BRA_anaconda
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_the_march_north
+	}
+	relative_position_id = BRA_imperial_the_march_north
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_anaconda"
+		country_event = brazil_lacerda_imp.60
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_duck_hunt
+	icon = GFX_focus_BRA_Duck_Hunt
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_anaconda
+	}
+	relative_position_id = BRA_imperial_anaconda
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_duck_hunt"
+		country_event = brazil_lacerda_imp.61
+		retire_character = BRA_Joao_Amazonas
+		hidden_effect = {
+			BRA_Luis_Carlos_Prestes = {
+				promote_character = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_distraction
+	icon = GFX_focus_BRA_the_bully_pulpit
+	cost = 3
+	allow_branch = { has_country_flag = BRA_imp_lacerda_1970_election }
+	prerequisite = {
+		focus = BRA_imperial_introduce_the_heir
+	}
+	relative_position_id = BRA_imperial_introduce_the_heir
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_distraction"
+		country_event = brazil_lacerda_imp.62
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_quiet_the_psd
+	icon = GFX_focus_BRA_squeeze_the_psd
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_distraction
+	}
+	relative_position_id = BRA_imperial_distraction
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_quiet_the_psd"
+		country_event = brazil_lacerda_imp.63
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_caged_bird
+	icon = GFX_focus_BRA_A_Caged_Bird
+	cost = 3
+	prerequisite = {
+		focus = BRA_imperial_quiet_the_psd
+	}
+	relative_position_id = BRA_imperial_quiet_the_psd
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_caged_bird"
+		country_event = brazil_lacerda_imp.65
+		TNO_improve_political_parties_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_trip_to_america
+	icon = GFX_focus_BRA_camp_david_talks
+	cost = 3
+	prerequisite = { focus = BRA_imperial_the_march_north }
+	prerequisite = { focus = BRA_imperial_distraction }
+	relative_position_id = BRA_imperial_the_march_north
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_trip_to_america"
+		country_event = brazil_lacerda_imp.66
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_the_special_relationship
+	icon = GFX_focus_generic_united_states_treasury
+	cost = 3
+	prerequisite = { focus = BRA_imperial_trip_to_america }
+	relative_position_id = BRA_imperial_trip_to_america
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_the_special_relationship"
+		country_event = brazil_lacerda_imp.67
+		set_temp_variable = { gdp_growth_temp = 0.5 }
+		econ_gdp_growth_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_thunderous_applause
+	icon = GFX_focus_BRA_lacerdas_speeches
+	cost = 3
+	prerequisite = { focus = BRA_imperial_duck_hunt }
+	prerequisite = { focus = BRA_imperial_the_special_relationship }
+	relative_position_id = BRA_imperial_duck_hunt
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_thunderous_applause"
+		country_event = brazil_lacerda_imp.68
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_the_final_reforms
+	icon = GFX_focus_BRA_enemy_no1
+	cost = 3
+	prerequisite = { focus = BRA_imperial_the_special_relationship }
+	prerequisite = { focus = BRA_imperial_caged_bird }
+	relative_position_id = BRA_imperial_the_special_relationship
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_the_final_reforms"
+		country_event = brazil_lacerda_imp.69
+		set_temp_variable = { inflation_temp = -2 }
+		econ_inflation_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_bounty_of_brazil
+	icon = GFX_focus_BRA_invest_in_amazon_territories
+	cost = 3
+	prerequisite = { focus = BRA_imperial_thunderous_applause }
+	relative_position_id = BRA_imperial_thunderous_applause
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_bounty_of_brazil"
+		country_event = brazil_lacerda_imp.70
+		add_resource = {
+			type = oil
+			amount = 8
+			state = 1485
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_midnight_hour
+	icon = GFX_focus_BRA_Midnight_Hour
+	cost = 3
+	prerequisite = { focus = BRA_imperial_thunderous_applause }
+	prerequisite = { focus = BRA_imperial_the_final_reforms }
+	relative_position_id = BRA_imperial_thunderous_applause
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_midnight_hour"
+		country_event = brazil_lacerda_imp.71
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_a_new_rio
+	icon = GFX_focus_BRA_hotline_rio
+	cost = 3
+	prerequisite = { focus = BRA_imperial_the_final_reforms }
+	relative_position_id = BRA_imperial_the_final_reforms
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_a_new_rio"
+		country_event = brazil_lacerda_imp.72
+		1488 = {
+			set_temp_variable = { state_value_multiplier_temp = 1.05 }
+			econ_state_value_change_multiply_specified_state = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_coronation
+	icon = GFX_focus_BRA_An_Imperial_Coronation
+	cost = 3
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_imperial_coronation_tt
+			date > 1971.1.1
+		}
+	}
+	prerequisite = { focus = BRA_imperial_bounty_of_brazil }
+	prerequisite = { focus = BRA_imperial_midnight_hour }
+	prerequisite = { focus = BRA_imperial_a_new_rio }
+	relative_position_id = BRA_imperial_midnight_hour
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_coronation"
+		country_event = brazil_lacerda_imp.73
+	}
+}
+
+#Failure ending
+shared_focus = {
+	id = BRA_imperial_lacerda_vengeance
+	icon = GFX_focus_BRA_Vengeance
+	cost = 3
+	x = 0
+	y = 15
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_lacerda_vengeance"
+		country_event = brazil_lacerda_imp.77
+		BRA_military_increase_power_hardliners_high = yes
+		hidden_effect = {
+			497 = { set_demilitarized_zone = yes }
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_parasar
+	icon = GFX_focus_BRA_PARA-SAR
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_lacerda_vengeance
+	}
+	prerequisite = { focus = BRA_imperial_lacerda_vengeance }
+	relative_position_id = BRA_imperial_lacerda_vengeance
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_parasar"
+		country_event = { id = brazil_lacerda_imp.6 days = 3 }
+		custom_effect_tooltip = BRA_imperial_parasar_tt
+		BRA_Carlos_Lacerda = {
+			promote_character = despotism_personalistic_dictatorship_subtype
+		}
+		remove_ideas = {
+			BRA_general_strke_lacerda
+			BRA_UDN_Counterrevolution
+		}
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+			set_politics = { ruling_party = despotism }
+			set_party_name = {
+				ideology = despotism
+				long_name = BRA_liberal_conservatism_party_long
+				name = BRA_liberal_conservatism_party
+			}
+			set_portraits = {
+				character = BRA_Carlos_Lacerda
+				civilian = { large = "gfx/leaders/BRA/Portrait_Carlos_Lacerda_Fucked.png" }
+			}
+			clr_country_flag = BRA_Riots_Show_GUI
+			remove_mission = BRA_riot_tick_update_timer
+			set_temp_variable = { temp = party_popularity@paternalism }
+			add_popularity = {
+				ideology = despotism
+				popularity = temp
+			}
+			multiply_temp_variable = { temp = -1 }
+			add_popularity = {
+				ideology = paternalism
+				popularity = temp
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_kidnap_goulart
+	icon = GFX_focus_BRA_Kidnap_Goulart
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_parasar
+	}
+	prerequisite = { focus = BRA_imperial_parasar }
+	relative_position_id = BRA_imperial_parasar
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_kidnap_goulart"
+		country_event = brazil_lacerda_imp.33
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_cover_up_kubitschek
+	icon = GFX_focus_BRA_cut_out_kubitsheck
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_kidnap_goulart
+		has_completed_focus = BRA_imperial_no_half_measures
+	}
+	prerequisite = { focus = BRA_imperial_kidnap_goulart }
+	relative_position_id = BRA_imperial_kidnap_goulart
+	x = -2
+	y = 1
+	completion_reward = {
+		country_event = brazil_lacerda_imp.76
+		BRA_harm_UDN_candidates_nationwide_high = yes
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_cover_up_kubitschek"
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_arrest_tavora
+	icon = GFX_focus_BRA_Arrest_Tavora
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_kidnap_goulart
+		has_completed_focus = BRA_imperial_no_half_measures
+	}
+	prerequisite = { focus = BRA_imperial_kidnap_goulart }
+	relative_position_id = BRA_imperial_kidnap_goulart
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_arrest_tavora"
+		country_event = brazil_lacerda_imp.38
+		set_temp_variable = { temp_udn_unity = -25 }
+		BRA_lacerda_udn_unity_change = yes
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_doubt
+	icon = GFX_focus_BRA_Doubt
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_cover_up_kubitschek
+		has_completed_focus = BRA_imperial_arrest_tavora
+		has_completed_focus = BRA_imperial_crush_fota
+		has_completed_focus = BRA_imperial_blood_on_the_amazon
+	}
+	prerequisite = { focus = BRA_imperial_arrest_tavora }
+	prerequisite = { focus = BRA_imperial_cover_up_kubitschek }
+	relative_position_id = BRA_imperial_arrest_tavora
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_doubt"
+		country_event = brazil_lacerda_imp.41
+		add_stability = 0.02
+		set_temp_variable = { temp_udn_unity = 3 }
+		BRA_lacerda_udn_unity_change = yes
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_no_half_measures
+	icon = GFX_focus_BRA_no_half_measures
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_parasar
+	}
+	prerequisite = { focus = BRA_imperial_parasar }
+	relative_position_id = BRA_imperial_parasar
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_no_half_measures"
+		country_event = brazil_lacerda_imp.37
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_crush_fota
+	icon = GFX_focus_USA_SAW_break_front
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_kidnap_goulart
+		has_completed_focus = BRA_imperial_no_half_measures
+	}
+	prerequisite = { focus = BRA_imperial_no_half_measures }
+	relative_position_id = BRA_imperial_no_half_measures
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_crush_fota"
+		country_event = brazil_lacerda_imp.39
+		retire_character = BRA_Silvio_Frota
+		BRA_military_decrease_loyalty_high = yes
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_blood_on_the_amazon
+	icon = GFX_focus_BRA_blood_on_the_amazon
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_kidnap_goulart
+		has_completed_focus = BRA_imperial_no_half_measures
+	}
+	prerequisite = { focus = BRA_imperial_no_half_measures }
+	relative_position_id = BRA_imperial_no_half_measures
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_blood_on_the_amazon"
+		country_event = brazil_lacerda_imp.40
+		2101 = { set_demilitarized_zone = no }
+		497 = { set_demilitarized_zone = no }
+		add_popularity = {
+			ideology = communist
+			popularity = -0.02
+		}
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_mercy
+	icon = GFX_focus_BRA_Mercy
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_cover_up_kubitschek
+		has_completed_focus = BRA_imperial_arrest_tavora
+		has_completed_focus = BRA_imperial_crush_fota
+		has_completed_focus = BRA_imperial_blood_on_the_amazon
+	}
+	prerequisite = { focus = BRA_imperial_crush_fota }
+	prerequisite = { focus = BRA_imperial_blood_on_the_amazon }
+	relative_position_id = BRA_imperial_blood_on_the_amazon
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_mercy"
+		country_event = brazil_lacerda_imp.43
+		if = {
+			limit = { country_exists = GUN }
+			annex_country = {
+				target = GUN
+			}
+		}
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_succession
+	icon = GFX_focus_BRA_succession
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_cover_up_kubitschek
+		has_completed_focus = BRA_imperial_arrest_tavora
+		has_completed_focus = BRA_imperial_crush_fota
+		has_completed_focus = BRA_imperial_blood_on_the_amazon
+	}
+	prerequisite = { focus = BRA_imperial_arrest_tavora }
+	prerequisite = { focus = BRA_imperial_crush_fota }
+	relative_position_id = BRA_imperial_crush_fota
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_succession"
+		country_event = brazil_lacerda_imp.42
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_cold_southern_springs
+	icon = GFX_focus_BRA_Cisplatina_70
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_doubt
+		has_completed_focus = BRA_imperial_mercy
+		has_completed_focus = BRA_imperial_succession
+	}
+	prerequisite = { focus = BRA_imperial_doubt }
+	prerequisite = { focus = BRA_imperial_succession }
+	relative_position_id = BRA_imperial_succession
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_cold_southern_springs"
+		country_event = brazil_lacerda_imp.44
+		set_temp_variable = { tempTension = -5 }
+		SA_change_tension = yes
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_illusions_end
+	icon = GFX_focus_BRA_Illusions_End
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_doubt
+		has_completed_focus = BRA_imperial_mercy
+		has_completed_focus = BRA_imperial_succession
+	}
+	prerequisite = { focus = BRA_imperial_succession }
+	prerequisite = { focus = BRA_imperial_mercy }
+	relative_position_id = BRA_imperial_mercy
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_illusions_end"
+		country_event = brazil_lacerda_imp.45
+		custom_effect_tooltip = BRA_imperial_illusions_end_tt
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_urban_guerilla
+	icon = GFX_focus_BRA_The_Urban_Guerilla
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_cold_southern_springs
+		has_completed_focus = BRA_imperial_illusions_end
+	}
+	prerequisite = { focus = BRA_imperial_cold_southern_springs }
+	relative_position_id = BRA_imperial_cold_southern_springs
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_urban_guerilla"
+		country_event = brazil_lacerda_imp.46
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_arrest_burnier
+	icon = GFX_focus_BRA_Arrest_Burnier
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_cold_southern_springs
+		has_completed_focus = BRA_imperial_illusions_end
+	}
+	prerequisite = { focus = BRA_imperial_cold_southern_springs }
+	prerequisite = { focus = BRA_imperial_illusions_end }
+	relative_position_id = BRA_imperial_illusions_end
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_arrest_burnier"
+		country_event = brazil_lacerda_imp.47
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_the_other_carlos
+	icon = GFX_focus_BRA_The_Other_Carlos
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_cold_southern_springs
+		has_completed_focus = BRA_imperial_illusions_end
+	}
+	prerequisite = { focus = BRA_imperial_illusions_end }
+	relative_position_id = BRA_imperial_illusions_end
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_the_other_carlos"
+		country_event = brazil_lacerda_imp.52
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_black_swans
+	icon = GFX_focus_BRA_Black_Swans
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_urban_guerilla
+		has_completed_focus = BRA_imperial_arrest_burnier
+		has_completed_focus = BRA_imperial_the_other_carlos
+	}
+	prerequisite = { focus = BRA_imperial_urban_guerilla }
+	prerequisite = { focus = BRA_imperial_arrest_burnier }
+	prerequisite = { focus = BRA_imperial_the_other_carlos }
+	relative_position_id = BRA_imperial_arrest_burnier
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_black_swans"
+		country_event = brazil_lacerda_imp.49
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_imperial_letting_go
+	icon = GFX_focus_BRA_Letting_Go
+	cost = 3
+	allow_branch = {
+		has_completed_focus = BRA_imperial_black_swans
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_imperial_coronation_tt
+			date > 1971.1.1
+		}
+	}
+	prerequisite = { focus = BRA_imperial_black_swans }
+	relative_position_id = BRA_imperial_black_swans
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_imperial_letting_go"
+		country_event = brazil_lacerda_imp.51
+		hidden_effect = {
+			load_focus_tree = { tree = BRA_Imperial_Lacerda_65_strikes_bad }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+### Strikes
+
+shared_focus = {
+	id = BRA_gomes_checkmate
+	icon = GFX_focus_BRA_gomes_checkmate
+	cost = 2
+
+	relative_position_id = BRA_1965_the_lacerda_presidency
+	x = 25
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_gomes_checkmate"
+		country_event = brazil_lacerda_strikes.1
+		add_political_power = 30
+		custom_effect_tooltip = BRA_lacerda_gomes_checkmate_tt
+	}
+}
+
+shared_focus = {
+	id = BRA_Sisyphean_struggle
+	icon = GFX_focus_BRA_Sisephyan_Struggle
+	cost = 2
+	prerequisite = {
+		focus = BRA_gomes_checkmate
+	}
+	relative_position_id = BRA_gomes_checkmate
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_Sisyphean_struggle"
+		country_event = brazil_lacerda_strikes.2
+	}
+}
+
+shared_focus = {
+	id = BRA_begin_media_campaign
+	icon = GFX_focus_BRA_begin_media_campaign
+	cost = 2
+	prerequisite = {
+		focus = BRA_gomes_checkmate
+	}
+	relative_position_id = BRA_gomes_checkmate
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_begin_media_campaign"
+		country_event = brazil_lacerda_strikes.3
+		add_political_power = 20
+		BRA_boost_UDN_candidates_nationwide_low = yes
+		TNO_improve_press_rights_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_preempt_unions
+	icon = GFX_focus_BRA_Preempt_the_Unions
+	cost = 2
+	prerequisite = {
+		focus = BRA_Sisyphean_struggle
+	}
+	prerequisite = {
+		focus = BRA_begin_media_campaign
+	}
+	relative_position_id = BRA_gomes_checkmate
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_preempt_unions"
+		country_event = brazil_lacerda_strikes.4
+		BRA_harm_PTB_candidates_nationwide_low = yes
+		TNO_improve_trade_unions_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_submit_the_bill
+	icon = GFX_focus_BRA_submit_the_bill
+	cost = 2
+	available = {
+		BRA_pl_no_bill_in_voting = yes
+	}
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	prerequisite = {
+		focus = BRA_preempt_unions
+	}
+	relative_position_id = BRA_preempt_unions
+	x = 0
+	y = 1
+	select_effect = {
+		hidden_effect = {
+			set_temp_variable = { temp_bill = token:BRA_BRAZILIAN_LABOR_ACT }
+
+			set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0 }
+			set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.2 }
+			set_variable = { BRA_pl_udn_support_bill@var:temp_bill = 1 } # will always be 100% so not using scripted effect
+			set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0 }
+			if = {
+				limit = { has_country_flag = BRA_lacerda_psp_support_flag }
+				if = {
+					limit = { check_variable = { BRA_pl_psp_support_bill@var:temp_bill < BRA_lacerda_psp_support } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+				if = {
+					limit = { check_variable = { BRA_lacerda_psp_support = 0 } }
+					set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+				}
+			}
+			set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 0.2 }
+
+			BRA_initialize_bill = yes
+			set_variable = { BRA_pl_vote_days@var:temp_bill = 21 }
+			BRA_call_bill_vote = yes
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_submit_the_bill"
+		country_event = brazil_lacerda_strikes.5
+		custom_effect_tooltip = BRA_submit_the_bill_tt
+	}
+}
+
+
+shared_focus = {
+	id = BRA_counter_reaction
+	icon = GFX_focus_BRA_counter_the_reaction
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_ongoing_tt
+			has_country_flag = BRA_Riots_Show_GUI
+		}
+	}
+	prerequisite = {
+		focus = BRA_submit_the_bill
+	}
+	relative_position_id = BRA_submit_the_bill
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_counter_reaction"
+		country_event = brazil_lacerda_strikes.11
+		custom_effect_tooltip = BRA_lacerda_strike_more_options_tt
+	}
+}
+
+shared_focus = {
+	id = BRA_iron_will
+	icon = GFX_focus_BRA_defeat_the_general_strike
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_ongoing_tt
+			has_country_flag = BRA_Riots_Show_GUI
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = { has_country_flag = BRA_Riots_Show_GUI }
+		}
+	}
+	prerequisite = {
+		focus = BRA_counter_reaction
+	}
+	mutually_exclusive = {
+		focus = BRA_realist_concern
+	}
+	relative_position_id = BRA_counter_reaction
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_iron_will"
+		add_political_power = 30
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = 10 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+		set_temp_variable = { BRA_Riots_MSD_Strength_Temp = 5 }
+		BRA_Riots_MSD_Strength_Change = yes
+		set_temp_variable = { gdp_growth_temp = 0.5 }
+		econ_gdp_growth_change = yes
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_realistas_quarter = yes
+					BRA_lacerda_udn_bossa_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_banda_quarter = yes
+					BRA_lacerda_udn_liberais_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_realist_concern
+	icon = GFX_focus_BRA_realist_concerns
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_ongoing_tt
+			has_country_flag = BRA_Riots_Show_GUI
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = { has_country_flag = BRA_Riots_Show_GUI }
+		}
+	}
+	prerequisite = {
+		focus = BRA_counter_reaction
+	}
+	mutually_exclusive = {
+		focus = BRA_iron_will
+	}
+	relative_position_id = BRA_counter_reaction
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_realist_concern"
+		if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_realistas_quarter = yes
+					BRA_lacerda_udn_bossa_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_loyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = 2 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					BRA_lacerda_udn_banda_quarter = yes
+					BRA_lacerda_udn_liberais_quarter = yes
+				}
+			}
+			custom_effect_tooltip = BRA_lacerda_focus_disloyal
+			hidden_effect = {
+				set_temp_variable = { temp_udn_unity = -3 }
+				BRA_lacerda_udn_unity_change = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_virtue_of_patience
+	icon = GFX_focus_BRA_The_Virtue_of_Patience
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_ongoing_tt
+			has_country_flag = BRA_Riots_Show_GUI
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = { has_country_flag = BRA_Riots_Show_GUI }
+		}
+	}
+	prerequisite = {
+		focus = BRA_iron_will
+		focus = BRA_realist_concern
+	}
+	relative_position_id = BRA_counter_reaction
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_virtue_of_patience"
+		country_event = brazil_lacerda_strikes.12
+		add_political_power = 25
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = 10 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -5 }
+		BRA_Riots_CGT_Strength_Change = yes
+		set_temp_variable = { gdp_growth_temp = 0.25 }
+		econ_gdp_growth_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_cavalry_charge
+	icon = GFX_focus_BRA_cavalrycharge
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_ongoing_tt
+			has_country_flag = BRA_Riots_Show_GUI
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = { has_country_flag = BRA_Riots_Show_GUI }
+		}
+	}
+	prerequisite = {
+		focus = BRA_iron_will
+	}
+	relative_position_id = BRA_iron_will
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_cavalry_charge"
+		country_event = brazil_lacerda_strikes.13
+		custom_effect_tooltip = BRA_lacerda_strike_more_options_tt
+	}
+}
+
+shared_focus = {
+	id = BRA_military_option
+	icon = GFX_focus_BRA_military_option
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_ongoing_tt
+			has_country_flag = BRA_Riots_Show_GUI
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = { has_country_flag = BRA_Riots_Show_GUI }
+		}
+	}
+	prerequisite = {
+		focus = BRA_cavalry_charge
+	}
+	mutually_exclusive = {
+		focus = BRA_outlast_strikes
+	}
+	relative_position_id = BRA_cavalry_charge
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_military_option"
+		country_event = brazil_lacerda_strikes.14
+		add_political_power = -30
+		BRA_military_increase_loyalty_med = yes
+		BRA_harm_UDN_candidates_nationwide_med = yes
+		custom_effect_tooltip = BRA_lacerda_strike_more_options_tt
+	}
+}
+
+shared_focus = {
+	id = BRA_outlast_strikes
+	icon = GFX_focus_BRA_outlast_strikes
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_ongoing_tt
+			has_country_flag = BRA_Riots_Show_GUI
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = { has_country_flag = BRA_Riots_Show_GUI }
+		}
+	}
+	prerequisite = {
+		focus = BRA_cavalry_charge
+	}
+	mutually_exclusive = {
+		focus = BRA_military_option
+	}
+	relative_position_id = BRA_cavalry_charge
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_outlast_strikes"
+		country_event = brazil_lacerda_strikes.15
+		add_political_power = 25
+		BRA_military_decrease_loyalty_low = yes
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -3 }
+		BRA_Riots_CGT_Strength_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_tavora_negotiations
+	icon = GFX_focus_BRA_Tavora_Negotiations
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_ongoing_tt
+			has_country_flag = BRA_Riots_Show_GUI
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = { has_country_flag = BRA_Riots_Show_GUI }
+		}
+	}
+	prerequisite = {
+		focus = BRA_realist_concern
+	}
+	relative_position_id = BRA_realist_concern
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_tavora_negotiations"
+		country_event = brazil_lacerda_strikes.16
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = -10 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+		set_temp_variable = { BRA_Riots_MSD_Radicalism_Temp = -10 }
+		BRA_Riots_MSD_Radicalism_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_pragmatism_over_all
+	icon = GFX_focus_BRA_Pragmatism_over_Fundamentalism
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_ongoing_tt
+			has_country_flag = BRA_Riots_Show_GUI
+		}
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_negotiations_succeed_tt
+			has_country_flag = BRA_Riots_tavora_negotiations_succeed
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = { has_country_flag = BRA_Riots_Show_GUI }
+		}
+	}
+	prerequisite = {
+		focus = BRA_tavora_negotiations
+	}
+	mutually_exclusive = {
+		focus = BRA_hold_firm
+	}
+	relative_position_id = BRA_tavora_negotiations
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_pragmatism_over_all"
+		set_temp_variable = { BRA_Riots_CGT_Radicalism_Temp = -10 }
+		BRA_Riots_CGT_Radicalism_Change = yes
+		set_temp_variable = { BRA_Riots_CGT_Strength_Temp = -5 }
+		BRA_Riots_CGT_Strength_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_hold_firm
+	icon = GFX_focus_BRA_hold_firm
+	cost = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_ongoing_tt
+			has_country_flag = BRA_Riots_Show_GUI
+		}
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strike_negotiations_collapse_tt
+			has_country_flag = BRA_Riots_tavora_negotiations_collapse
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = { has_country_flag = BRA_Riots_Show_GUI }
+		}
+	}
+	prerequisite = {
+		focus = BRA_tavora_negotiations
+	}
+	mutually_exclusive = {
+		focus = BRA_pragmatism_over_all
+	}
+	relative_position_id = BRA_tavora_negotiations
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_hold_firm"
+		set_temp_variable = { BRA_Riots_MSD_Strength_Temp = 3 }
+		BRA_Riots_MSD_Strength_Change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_crows_legacy
+	icon = GFX_focus_BRA_crowslegacy
+	cost = 2
+	prerequisite = {
+		focus = BRA_military_option
+		focus = BRA_outlast_strikes
+		focus = BRA_hold_firm
+		focus = BRA_pragmatism_over_all
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_lacerda_strikes_over_tt
+			has_country_flag = BRA_lacerda_strikes_over
+		}
+	}
+	relative_position_id = BRA_virtue_of_patience
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_crows_legacy"
+		BRA_boost_UDN_candidates_nationwide_med = yes
+		custom_effect_tooltip = BRA_crows_legacy_tt
+		set_country_flag = BRA_HOUR_OF_THE_CHOSEN
+		hidden_effect = {
+			load_focus_tree = {
+				tree = BRA_Lacerda_65_success
+				keep_completed = yes
+			}
+		}
+	}
+}
+
+## Tavora Presidency
+
+shared_focus = {
+	id = BRA_tavora_presidency
+	icon = GFX_focus_BRA_the_tavora_presidency
+	cost = 4
+
+	x = 0
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_tavora_presidency"
+		country_event = brazil_lacerda_tavora.1
+		add_political_power = 30
+	}
+}
+
+shared_focus = {
+	id = BRA_united_against_varguism
+	icon = GFX_focus_BRA_united_against_varguism
+	cost = 4
+	prerequisite = {
+		focus = BRA_tavora_presidency
+	}
+	relative_position_id = BRA_tavora_presidency
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_united_against_varguism"
+		country_event = brazil_lacerda_tavora.2
+		set_temp_variable = { temp_udn_unity = 3 }
+		BRA_lacerda_udn_unity_increase = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_correct_the_error
+	icon = GFX_focus_BRA_Correct_the_Error
+	cost = 4
+	prerequisite = {
+		focus = BRA_united_against_varguism
+	}
+	relative_position_id = BRA_united_against_varguism
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_correct_the_error"
+		country_event = brazil_lacerda_tavora.3
+		swap_ideas = {
+			remove_idea = tno_trade_unions_state_controlled
+			add_idea = tno_trade_unions_all_allowed
+		}
+		swap_ideas = {
+			remove_idea = tno_minimum_wage_trinket_minimum_wage
+			add_idea = tno_minimum_wage_acceptable_minimum
+		}
+		set_temp_variable = { temp_law = token:BRA_varguist_labor_law }
+		TNO_add_assorted_law = yes
+		set_temp_variable = { temp_law = token:BRA_dismantled_labour_laws }
+		TNO_remove_assorted_law = yes
+		hidden_effect = {
+			country_event = {
+				id = brazil_lacerda_tavora.9
+				days = 21
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_our_natural_ally
+	icon = GFX_focus_BRA_our_natural_ally
+	cost = 4
+	prerequisite = {
+		focus = BRA_correct_the_error
+	}
+	relative_position_id = BRA_correct_the_error
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_our_natural_ally"
+		country_event = brazil_lacerda_tavora.4
+		add_political_power = 25
+		BRA_boost_UDN_candidates_parana_low = yes
+		BRA_boost_UDN_candidates_santa_catarina_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_the_crows_protege
+	icon = GFX_focus_BRA_the_crows_protege
+	cost = 4
+	prerequisite = {
+		focus = BRA_correct_the_error
+	}
+	relative_position_id = BRA_correct_the_error
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_the_crows_protege"
+		BRA_decrease_UDN_management_x_by_50 = yes
+		BRA_decrease_UDN_management_y_by_50 = yes
+		country_event = brazil_lacerda_tavora.10
+	}
+}
+
+shared_focus = {
+	id = BRA_tavora_stabilize_inflation
+	icon = GFX_focus_BRA_tavora_stabilize_inflation
+	cost = 4
+	prerequisite = {
+		focus = BRA_our_natural_ally
+	}
+	relative_position_id = BRA_our_natural_ally
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_tavora_stabilize_inflation"
+		set_temp_variable = { inflation_temp = -2 }
+		econ_inflation_change = yes
+		hidden_effect = {
+			set_temp_variable = { gdp_growth_temp = -1 }
+			econ_gdp_growth_change = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_deficit_hawks_tavora
+	icon = GFX_focus_BRA_deficit_hawks_tavora
+	cost = 4
+	prerequisite = {
+		focus = BRA_tavora_stabilize_inflation
+	}
+	relative_position_id = BRA_tavora_stabilize_inflation
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_deficit_hawks_tavora"
+		add_to_variable = { BRA_misc_income = 0.1 }
+		social_funding_maximal_decrease_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_loan_sharks
+	icon = GFX_focus_BRA_loan_sharks
+	cost = 4
+	prerequisite = {
+		focus = BRA_deficit_hawks_tavora
+	}
+	relative_position_id = BRA_deficit_hawks_tavora
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_loan_sharks"
+		country_event = brazil_lacerda_tavora.5
+		add_to_variable = { BRA_misc_income = 0.1 }
+		BRA_harm_UDN_candidates_nationwide_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_end_guanabara_dream
+	icon = GFX_focus_BRA_end_the_guanabra_dream
+	cost = 4
+	prerequisite = {
+		focus = BRA_the_crows_protege
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = BRA_guanabara_prooject_done_tt
+			NOT = { is_in_array = { BRA_active_megaprojects = GUANABARA_RECONSTRUCTION_MEGAPROJECT } }
+		}
+	}
+	relative_position_id = BRA_the_crows_protege
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_end_guanabara_dream"
+		country_event = brazil_lacerda_guanabara_recon.7
+		custom_effect_tooltip = BRA_tavora_guanabara_dismantle_megaproject_tooltip
+		hidden_effect = {
+			BRA_dismantle_guanbara_reconstruction_project = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRA_nordeste_reinvestment
+	icon = GFX_focus_BRA_nordeste_reinvestment
+	cost = 4
+	prerequisite = {
+		focus = BRA_end_guanabara_dream
+	}
+	relative_position_id = BRA_end_guanabara_dream
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_nordeste_reinvestment"
+		BRA_develop_increase_industry_northeast_med = yes
+		BRA_develop_increase_mech_rate_monthly_northeast_med = yes
+		BRA_boost_UDN_candidates_northeast_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_loyal_middle_class
+	icon = GFX_focus_BRA_our_loyal_middle_class
+	cost = 4
+	allow_branch = {
+		NOT = { has_country_flag = BRA_sorbonne_undermined_hardliners }
+	}
+	prerequisite = {
+		focus = BRA_nordeste_reinvestment
+	}
+	relative_position_id = BRA_nordeste_reinvestment
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_loyal_middle_class"
+		set_temp_variable = { income_tax_temp = -0.01 }
+		econ_income_tax_rate_change = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_our_subservient_middle_class
+	#icon =
+	cost = 4
+	allow_branch = {
+		has_country_flag = BRA_sorbonne_undermined_hardliners
+	}
+	prerequisite = {
+		focus = BRA_nordeste_reinvestment
+	}
+	relative_position_id = BRA_nordeste_reinvestment
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_our_subservient_middle_class"
+		add_political_power = 30
+		TNO_improve_admin_efficiency_low = yes
+		BRA_develop_increase_urban_pop_central_west_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_meet_the_psd
+	icon = GFX_focus_BRA_meet_the_psd
+	cost = 4
+	allow_branch = {
+		NOT = { has_country_flag = BRA_sorbonne_undermined_hardliners }
+	}
+	prerequisite = {
+		focus = BRA_our_natural_ally
+		focus = BRA_the_crows_protege
+	}
+	relative_position_id = BRA_correct_the_error
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_meet_the_psd"
+		set_temp_variable = { x = 1 }
+		BRA_UDN_management_change_x = yes
+		BRA_boost_PSD_candidates_nationwide_low = yes
+		BRA_boost_UDN_aligned_candidates_nationwide_low = yes
+		add_political_power = 50
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_beat_the_psd
+	#icon =
+	cost = 4
+	allow_branch = {
+		has_country_flag = BRA_sorbonne_undermined_hardliners
+	}
+	prerequisite = {
+		focus = BRA_our_natural_ally
+		focus = BRA_the_crows_protege
+	}
+	relative_position_id = BRA_correct_the_error
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_beat_the_psd"
+		custom_effect_tooltip = BRA_beat_the_psd_tt
+		subtract_from_variable = { BRA_pres_support^0 = 5 }
+		subtract_from_variable = { BRA_pres_support^3 = 5 } 
+		subtract_from_variable = { BRA_pres_support^6 = 5 } 
+		subtract_from_variable = { BRA_pres_support^9 = 5 } 
+		subtract_from_variable = { BRA_pres_support^12 = 5 } 
+		subtract_from_variable = { BRA_pres_support^15 = 5 } 
+		subtract_from_variable = { BRA_pres_support^18 = 5 } 
+		subtract_from_variable = { BRA_pres_support^21 = 5 } 
+		subtract_from_variable = { BRA_pres_support^24 = 5 }
+		BRA_redraw_pres_info = yes
+		BRA_pres_select_region = yes
+		TNO_worsen_political_parties_policy_effectiveness_med = yes
+		TNO_worsen_vote_franchise_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_tavora_big_tent
+	icon = GFX_focus_BRA_tavora_big_tent
+	cost = 4
+	allow_branch = {
+		NOT = { has_country_flag = BRA_sorbonne_undermined_hardliners }
+	}
+	prerequisite = {
+		focus = BRA_meet_the_psd
+	}
+	mutually_exclusive = {
+		focus = BRA_cement_realist_dominance
+	}
+	relative_position_id = BRA_meet_the_psd
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_tavora_big_tent"
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		BRA_boost_UDN_candidates_nationwide_med = yes
+	}
+}
+
+shared_focus = { 
+	id = BRA_cement_realist_dominance
+	icon = GFX_focus_BRA_Cement_Realist_Dominance
+	cost = 4
+	allow_branch = {
+		NOT = { has_country_flag = BRA_sorbonne_undermined_hardliners }
+	}
+	prerequisite = {
+		focus = BRA_meet_the_psd
+	}
+	mutually_exclusive = {
+		focus = BRA_tavora_big_tent
+	}
+	relative_position_id = BRA_meet_the_psd
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_cement_realist_dominance"
+		BRA_decrease_UDN_management_x_by_50 = yes
+		BRA_decrease_UDN_management_y_by_50 = yes
+		BRA_harm_UDN_candidates_nationwide_med = yes
+	}
+}
+
+shared_focus = {
+	id = BRA_conference_season
+	icon = GFX_focus_BRA_Conference_Season
+	cost = 4
+	allow_branch = {
+		NOT = { has_country_flag = BRA_sorbonne_undermined_hardliners }
+	}
+	prerequisite = {
+		focus = BRA_tavora_big_tent
+		focus = BRA_cement_realist_dominance
+	}
+	relative_position_id = BRA_meet_the_psd
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_conference_season"
+		country_event = brazil_lacerda_tavora.7
+	}
+}
+
+shared_focus = { #Same focus but for a different scenario
+	id = BRA_tavora_big_tent_sorbonne
+	icon = GFX_focus_BRA_tavora_big_tent
+	cost = 4
+	allow_branch = {
+		has_country_flag = BRA_sorbonne_undermined_hardliners
+	}
+	prerequisite = {
+		focus = BRA_beat_the_psd
+	}
+	mutually_exclusive = {
+		focus = BRA_cement_realist_dominance_sorbonne
+	}
+	relative_position_id = BRA_beat_the_psd
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_tavora_big_tent_sorbonne"
+		BRA_increase_UDN_management_x_by_50 = yes
+		BRA_increase_UDN_management_y_by_50 = yes
+		BRA_boost_UDN_candidates_nationwide_med = yes
+	}
+}
+
+shared_focus = { #Same focus but for a different scenario
+	id = BRA_cement_realist_dominance_sorbonne
+	icon = GFX_focus_BRA_Cement_Realist_Dominance
+	cost = 4
+	allow_branch = {
+		has_country_flag = BRA_sorbonne_undermined_hardliners
+	}
+	prerequisite = {
+		focus = BRA_beat_the_psd
+	}
+	mutually_exclusive = {
+		focus = BRA_tavora_big_tent_sorbonne
+	}
+	relative_position_id = BRA_beat_the_psd
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_cement_realist_dominance_sorbonne"
+		BRA_decrease_UDN_management_x_by_50 = yes
+		BRA_decrease_UDN_management_y_by_50 = yes
+		BRA_harm_UDN_candidates_nationwide_med = yes
+	}
+}
+
+shared_focus = { #Same focus but for a different scenario
+	id = BRA_conference_season_sorbonne
+	icon = GFX_focus_BRA_Conference_Season
+	cost = 4
+	allow_branch = {
+		has_country_flag = BRA_sorbonne_undermined_hardliners
+	}
+	prerequisite = {
+		focus = BRA_tavora_big_tent_sorbonne
+		focus = BRA_cement_realist_dominance_sorbonne
+	}
+	relative_position_id = BRA_beat_the_psd
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_conference_season_sorbonne"
+		country_event = brazil_lacerda_tavora.7
+	}
+}
+
+shared_focus = {
+	id = BRA_knife_edge
+	icon = GFX_focus_BRA_On_a_Knife_Edge
+	cost = 4
+	allow_branch = {
+		NOT = { has_country_flag = BRA_sorbonne_undermined_hardliners }
+	}
+	prerequisite = {
+		focus = BRA_loan_sharks
+	}
+	prerequisite = {
+		focus = BRA_conference_season
+	}
+	prerequisite = {
+		focus = BRA_loyal_middle_class
+	}
+	relative_position_id = BRA_conference_season
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_knife_edge"
+		country_event = brazil_lacerda_tavora.11
+	}
+}
+
+shared_focus = {
+	id = BRA_razors_grip
+	#icon =
+	cost = 4
+	allow_branch = {
+		has_country_flag = BRA_sorbonne_undermined_hardliners
+	}
+	prerequisite = {
+		focus = BRA_loan_sharks
+	}
+	prerequisite = {
+		focus = BRA_conference_season_sorbonne
+	}
+	prerequisite = {
+		focus = BRA_our_subservient_middle_class
+	}
+	relative_position_id = BRA_conference_season_sorbonne
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_razors_grip"
+		custom_effect_tooltip = BRA_razors_grip_tt
+		subtract_from_variable = { BRA_pres_support^0 = 5 }
+		subtract_from_variable = { BRA_pres_support^3 = 5 } 
+		subtract_from_variable = { BRA_pres_support^6 = 5 } 
+		subtract_from_variable = { BRA_pres_support^9 = 5 } 
+		subtract_from_variable = { BRA_pres_support^12 = 5 } 
+		subtract_from_variable = { BRA_pres_support^15 = 5 } 
+		subtract_from_variable = { BRA_pres_support^18 = 5 } 
+		subtract_from_variable = { BRA_pres_support^21 = 5 } 
+		subtract_from_variable = { BRA_pres_support^24 = 5 }
+		add_to_variable = { BRA_pres_support^1 = 5 }
+		add_to_variable = { BRA_pres_support^4 = 5 } 
+		add_to_variable = { BRA_pres_support^7 = 5 } 
+		add_to_variable = { BRA_pres_support^10 = 5 } 
+		add_to_variable = { BRA_pres_support^13 = 5 } 
+		add_to_variable = { BRA_pres_support^16 = 5 } 
+		add_to_variable = { BRA_pres_support^19 = 5 } 
+		add_to_variable = { BRA_pres_support^22 = 5 } 
+		add_to_variable = { BRA_pres_support^25 = 5 }
+		BRA_redraw_pres_info = yes
+		BRA_pres_select_region = yes
+		BRA_military_increase_loyalty_med = yes
+	}
+}

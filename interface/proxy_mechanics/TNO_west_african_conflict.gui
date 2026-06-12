@@ -1,0 +1,260 @@
+guiTypes = { #I wish there was an easier way to do this ngl -Marethyu
+	containerWindowType = {
+		name = "TNO_West_African_Conflict_GUI_USA"
+		position = { x = 29 y = 131 }
+		size = { width = 496 height = 506 }
+
+		## Fake missions
+		containerWindowType = {
+			name = "fake_mission_1"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_1_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_title"
+				position = { x = 50 y = 9 }
+				text = USA_WAC_FakeMission_1_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_duration"
+				position = { x = 136 y = 8 }
+				text = USA_WAC_FakeMission_1_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "fake_mission_2"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_2_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_2_title"
+				position = { x = 50 y = 9 }
+				text = USA_WAC_FakeMission_2_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_2_duration"
+				position = { x = 136 y = 8 }
+				text = USA_WAC_FakeMission_2_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "fake_mission_3"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_3_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_3_title"
+				position = { x = 50 y = 9 }
+				text = USA_WAC_FakeMission_3_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_3_duration"
+				position = { x = 136 y = 8 }
+				text = USA_WAC_FakeMission_3_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "TNO_West_African_Conflict_GUI_USA_2"
+		position = { x = 29 y = 180 }
+		size = { width = 496 height = 506 }
+
+		## Fake missions
+		containerWindowType = {
+			name = "fake_mission_4"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_4_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_4_title"
+				position = { x = 50 y = 9 }
+				text = USA_WAC_FakeMission_4_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_4_duration"
+				position = { x = 136 y = 8 }
+				text = USA_WAC_FakeMission_4_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "fake_mission_5"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_5_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_5_title"
+				position = { x = 50 y = 9 }
+				text = USA_WAC_FakeMission_5_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_5_duration"
+				position = { x = 136 y = 8 }
+				text = USA_WAC_FakeMission_5_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "fake_mission_6"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_6_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_6_title"
+				position = { x = 50 y = 9 }
+				text = USA_WAC_FakeMission_6_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_6_duration"
+				position = { x = 136 y = 8 }
+				text = USA_WAC_FakeMission_6_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "TNO_West_African_Conflict_GUI_USA_3"
+		position = { x = 29 y = 229 }
+		size = { width = 496 height = 506 }
+
+		## Fake missions
+		containerWindowType = {
+			name = "fake_mission_7"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_7_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_7_title"
+				position = { x = 50 y = 9 }
+				text = USA_WAC_FakeMission_7_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_7_duration"
+				position = { x = 136 y = 8 }
+				text = USA_WAC_FakeMission_7_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+	}
+}

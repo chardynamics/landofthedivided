@@ -1,0 +1,2578 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_TT_Jamaica_Sidebar"
+		texturefile = "gfx/interface/proxy_wars/jamaica_referendum/sidebar.dds"
+	}
+	spriteType = {
+		name = "GFX_TT_Trinidad_BPR_Sidebar"
+		texturefile = "gfx/interface/proxy_wars/trinidad_bpr/sidebar2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_TT_Jamaica_Dial"
+		texturefile = "gfx/interface/proxy_wars/jamaica_referendum/dial.dds"
+	}
+	spriteType = {
+		name = "GFX_TT_Jamaica_Time_Circle"
+		texturefile = "gfx/interface/proxy_wars/jamaica_referendum/dial_time_circle.dds"
+	}
+
+
+
+	progressbartype = {
+		name = "GFX_TT_Jamaica_Dial_Arrow"
+		textureFile1 = "gfx/interface/proxy_wars/jamaica_referendum/dial_arrow.dds"
+		textureFile2 = "gfx/interface/proxy_wars/jamaica_referendum/dial_arrow.dds"
+		size = { 
+			x = 358
+			y = 358
+		}
+		effectFile = "gfx/FX/half_dial.lua"
+		horizontal = yes
+	}
+
+	progressbartype = {
+		name = "GFX_TT_Jamaica_Timer"
+		textureFile1 = "gfx/interface/proxy_wars/jamaica_referendum/dial_time_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/jamaica_referendum/dial_time_empty.dds"
+		size = { 
+			x = 74
+			y = 74
+		}
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_TT_Jamaica_Right_1"
+		texturefile = "gfx/interface/proxy_wars/jamaica_referendum/arrow_right_1.dds"
+		noOfFrames = 3
+		animation_rate_fps = 1.5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_TT_Jamaica_Right_2"
+		texturefile = "gfx/interface/proxy_wars/jamaica_referendum/arrow_right_2.dds"
+		noOfFrames = 5
+		animation_rate_fps = 1.5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_TT_Jamaica_Right_3"
+		texturefile = "gfx/interface/proxy_wars/jamaica_referendum/arrow_right_3.dds"
+		noOfFrames = 7
+		animation_rate_fps = 1.5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_TT_Jamaica_Left_1"
+		texturefile = "gfx/interface/proxy_wars/jamaica_referendum/arrow_left_1.dds"
+		noOfFrames = 3
+		animation_rate_fps = 1.5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_TT_Jamaica_Left_2"
+		texturefile = "gfx/interface/proxy_wars/jamaica_referendum/arrow_left_2.dds"
+		noOfFrames = 5
+		animation_rate_fps = 1.5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_TT_Jamaica_Left_3"
+		texturefile = "gfx/interface/proxy_wars/jamaica_referendum/arrow_left_3.dds"
+		noOfFrames = 7
+		animation_rate_fps = 1.5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+
+	## CA Conference
+
+	spriteType = {
+		name = "GFX_TT_CA_Conference_hall"
+		texturefile = "gfx/interface/proxy_wars/central_asia/conference_hall.dds"
+	}
+
+	spriteType = {
+		name = "GFX_TT_CA_Conference_calendar"
+		texturefile = "gfx/interface/proxy_wars/central_asia/calendar.dds"
+	}
+	spriteType = {
+		name = "GFX_TT_CA_Conference_dot"
+		texturefile = "gfx/interface/proxy_wars/central_asia/conference_dot.dds"
+		noOfFrames = 3
+	}
+
+	progressbartype = {
+		name = "GFX_TT_CA_Conference_ofn_bar"
+		textureFile1 = "gfx/interface/proxy_wars/central_asia/ofn_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/central_asia/ofn_bar_empty.dds"
+		size = { 
+			x = 14
+			y = 158
+		}
+		effectFile = "gfx/FX/progress.lua"
+		steps = 1000
+		horizontal = no
+	}
+	spriteType = {
+		name = "GFX_TT_CA_Conference_votes_bar"
+		texturefile = "gfx/interface/proxy_wars/central_asia/votes_bar.dds"
+	}
+	spriteType = {
+		name = "GFX_TT_CA_Conference_tension_frame"
+		texturefile = "gfx/interface/proxy_wars/central_asia/tension_frame.dds"
+	}
+	progressbartype = {
+		name = "GFX_TT_CA_Conference_pakt_bar"
+		textureFile1 = "gfx/interface/proxy_wars/central_asia/pakt_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/central_asia/ofn_bar_empty.dds"
+		size = { 
+			x = 14
+			y = 158
+		}
+		effectFile = "gfx/FX/progress.lua"
+		steps = 1000
+		horizontal = no
+	}
+
+	progressbartype = {
+		name = "GFX_TT_CA_Conference_tension_bar"
+		textureFile1 = "gfx/interface/proxy_wars/central_asia/tension_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/central_asia/tension_bar_empty.dds"
+		size = { 
+			x = 172
+			y = 24
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_TT_CA_Conference_suspicion_bar"
+		textureFile1 = "gfx/interface/proxy_wars/central_asia/suspicion_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/central_asia/tension_bar_empty.dds"
+		size = { 
+			x = 172
+			y = 24
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	## Bukharan Keneş
+	progressbartype = {
+		name = "GFX_TT_Turk_OFN_Influenced_right"
+		textureFile1 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Delegate_Bar_BLUE.dds"
+		textureFile2 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Delegate_Bar_WHITE.dds"
+		size = { 
+			x = 400
+			y = 50
+		}
+		effectFile = "gfx/FX/progress.lua"
+		steps = 1000
+	}
+	spriteType = {
+		name = "GFX_GER_TURK_influence_center"
+		texturefile = "gfx/interface/proxy_wars/bukhara_kenes/CA_Delegate_Bar_WHITE.dds"
+	}
+	progressbartype = {
+		name = "GFX_TT_Turk_CPS_Influenced_left"
+		textureFile1 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Delegate_Bar_RED.dds"
+		textureFile2 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Tension_Bar_Empty.dds"
+		size = { 
+			x = 400
+			y = 50
+		}
+		effectFile = "gfx/FX/progress_reverse.lua"
+		steps = 1000
+	}
+
+	progressbartype = {
+		name = "GFX_TT_Turk_Evidence_Bar"
+		texturefile1 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Evidence_Bar_Full.dds"
+		texturefile2 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Evidence_Bar_Empty.dds"
+		size = { 
+			x = 360
+			y = 40
+		}
+		effectFile = "gfx/FX/progress.lua"
+		steps = 6
+	}
+	progressbartype = {
+		name = "GFX_TT_Turk_Suspicion_Bar"
+		texturefile1 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Suspicion_Bar_Full.dds"
+		texturefile2 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Suspicion_Bar_Empty.dds"
+		size = { 
+			x = 200
+			y = 50
+		}
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressbartype = {
+		name = "GFX_TT_Turk_Tension_Bar"
+		texturefile1 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Tension_Bar_Full.dds"
+		texturefile2 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Tension_Bar_Empty.dds"
+		size = { 
+			x = 200
+			y = 50
+		}
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressbartype = {
+		name = "GFX_TT_Evidence_bar"
+		texturefile1 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Evidence_Bar_Full.dds"
+		texturefile2 = "gfx/interface/proxy_wars/bukhara_kenes/CA_Evidence_Bar_Empty.dds"
+		size = { 
+			x = 200
+			y = 50
+		}
+		effectFile = "gfx/FX/progress.lua"
+		steps = 6
+	}
+
+
+
+
+	## Philippines Prep
+	
+
+	progressbartype = {
+		name = "GFX_TT_Philippines_Supply_Bar"
+		textureFile1 = "gfx/interface/proxy_wars/philippines/supply_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/philippines/bar_empty.dds"
+		size = { 
+			x = 360
+			y = 42
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	progressbartype = {
+		name = "GFX_TT_Philippines_Out_Of_Supply_Bar"
+		textureFile1 = "gfx/interface/proxy_wars/philippines/out_of_supply_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/philippines/bar_empty.dds"
+		size = { 
+			x = 360
+			y = 42
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_TT_Philippines_Supply_Frame"
+		texturefile = "gfx/interface/proxy_wars/philippines/supply_frame.dds"
+	}
+	
+
+
+	spriteType = {
+		name = "GFX_TT_Philippines_Supply_Arrow"
+		texturefile = "gfx/interface/proxy_wars/philippines/arrow.dds"
+	}
+	
+	## Philippines Reconstruction
+	
+	progressbartype = {
+		name = "GFX_Philippines_Reconstruction_Bar"
+		textureFile1 = "gfx/interface/proxy_wars/philippines/reconstruction_bar.dds"
+		textureFile2 = "gfx/interface/proxy_wars/philippines/bar_empty.dds"
+		size = {
+			x = 360
+			y = 42
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_Reconstruction_Complete_Button"
+		texturefile = "gfx/interface/proxy_wars/philippines/reconstruction_complete_button.dds"
+	}
+
+	## Malayan Reconstruction
+	progressbartype = {
+		name = "GFX_Southern_Seas_status_progbar"
+		textureFile1 = "gfx/interface/proxy_wars/malaya/malaya_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/philippines/bar_empty.dds"
+		size = { 
+			x = 280
+			y = 28
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_Southern_Seas_status_frame"
+		texturefile = "gfx/interface/proxy_wars/malaya/malaya_bar_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_OFN_MZB_Flag"
+		texturefile = "gfx/interface/proxy_wars/saw_reconstruction/OFN_east_africa_flag_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_OFN_ANG_Flag"
+		texturefile = "gfx/interface/proxy_wars/saw_reconstruction/OFN_angola_flag_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_OFN_COG_Flag"
+		texturefile = "gfx/interface/proxy_wars/saw_reconstruction/OFN_congo_flag_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_OFN_USC_Flag"
+		texturefile = "gfx/interface/proxy_wars/saw_reconstruction/OFN_central_africa_flag_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Malaya_Reconstruction_Sidebar"
+		texturefile = "gfx/interface/proxy_wars/fopo_gui/category_pics/southeastasia_reconstruction.dds"
+	}
+	
+	# SAW Withdrawal
+
+	progressbartype = {
+		name = "GFX_SAW_Withdrawal_Bar"
+		textureFile1 = "gfx/interface/proxy_wars/saw_withdrawal/withdrawal_bar.dds"
+		textureFile2 = "gfx/interface/proxy_wars/philippines/bar_empty.dds"
+		size = {
+			x = 360
+			y = 42
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_Withdrawal_Complete_Button"
+		texturefile = "gfx/interface/proxy_wars/saw_withdrawal/withdrawal_complete_button.dds"
+	}
+
+	# Mandates
+
+	spriteType = {
+		name = "GFX_mandates_midpoint"
+		texturefile = "gfx/interface/proxy_wars/mandates/midpoint.dds"
+	}
+	spriteType = {
+		name = "GFX_mandates_warning_box"
+		texturefile = "gfx/interface/proxy_wars/mandates/warning_box.dds"
+	}
+
+	# WAF Reconstruction
+	progressbartype = {
+		name = "GFX_WAF_reconstruction_bar"
+		textureFile1 = "gfx/interface/proxy_wars/waf_reconstruct/reconstruction_bar.dds"
+		textureFile2 = "gfx/interface/proxy_wars/waf_reconstruct/reconstruction_bar_empty.dds"
+		size = {
+			x = 232
+			y = 42
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_WAF_reconstruction_frame"
+		texturefile = "gfx/interface/proxy_wars/waf_reconstruct/reconstruction_frame.dds"
+	}
+
+	#Puerto Plata#
+	frameAnimatedSpriteType = {
+		name = "GFX_USA_FoPo_animated_bar"
+		texturefile = "gfx/interface/proxy_wars/pp_invasion/supply_bar_animation.dds"
+		noOfFrames = 5
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_USA_FoPo_animated_bar_out_of_supply"
+		texturefile = "gfx/interface/proxy_wars/pp_invasion/supply_bar_animation_oos.dds"
+		noOfFrames = 5
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_USA_FoPo_animated_preparation_bar"
+		texturefile = "gfx/interface/proxy_wars/pp_invasion/preparation_bar_animation.dds"
+		noOfFrames = 5
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_USA_FoPo_animated_arrow"
+		texturefile = "gfx/interface/proxy_wars/pp_invasion/arrow_animated.dds"
+		noOfFrames = 10
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	progressbartype = {
+		name = "GFX_PP_overlay_bar"
+		textureFile1 = "gfx/interface/proxy_wars/pp_invasion/pp_supply_bar_overlay.dds"
+		textureFile2 = "gfx/interface/proxy_wars/pp_invasion/pp_supply_bar_overlay_empty.dds"
+		size = {
+			x = 360
+			y = 40
+		}
+		effectFile = "gfx/FX/progress_reverse_retreating.lua"
+	}
+
+	progressbartype = {
+		name = "GFX_PP_spy_meter"
+		textureFile1 = "gfx/interface/proxy_wars/pp_invasion/spy_bar_usa.dds"
+		textureFile2 = "gfx/interface/proxy_wars/pp_invasion/spy_bar_dom.dds"
+		size = { x = 378 y = 37 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+
+	progressbartype = {
+		name = "GFX_PP_brandenburger_meter"
+		textureFile1 = "gfx/interface/proxy_wars/pp_invasion/manpower_bar_ger_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/pp_invasion/manpower_bar_ger_empty.dds"
+		size = { x = 368 y = 37 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	spriteType = {
+		name = "GFX_PP_mexican_american_cooperation"
+		texturefile = "gfx/interface/proxy_wars/pp_invasion/mexican_american_cooperation.dds"
+		noOfFrames = 4
+	}	
+	# French Reclamation
+	spriteType = {
+		name = "GFX_FrenchReclamation_Button_Stored"
+		texturefile = "gfx/interface/proxy_wars/french_reclamation/GFX_FrenchReclamation_Button_Stored.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_FrenchReclamation_Button_Usual"
+		texturefile = "gfx/interface/proxy_wars/french_reclamation/GFX_FrenchReclamation_Button_Usual.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_FrenchReclamation_Focus_Bar"
+		texturefile = "gfx/interface/proxy_wars/french_reclamation/GFX_FrenchReclamation_Focus_Bar.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_FrenchReclamation_Focus_Bar_Empty"
+		texturefile = "gfx/interface/proxy_wars/french_reclamation/GFX_FrenchReclamation_Focus_Bar_Empty.dds"
+	}
+	spriteType = {
+		name = "GFX_FrenchReclamation_Divider"
+		texturefile = "gfx/interface/proxy_wars/french_reclamation/GFX_FrenchReclamation_Divider.dds"
+	}
+	spriteType = {
+		name = "GFX_FrenchReclamation_Buttons_Background"
+		texturefile = "gfx/interface/proxy_wars/french_reclamation/GFX_FrenchReclamation_Buttons_Background.dds"
+	}
+
+
+	# Indonesian Civil War
+	spriteType = {
+		name = "GFX_icw_bar_outline"
+		texturefile = "gfx/interface/proxy_wars/indonesian_civil_war/icw_bar_outline.dds"
+	}
+	spriteType = {
+		name = "GFX_icw_divider"
+		texturefile = "gfx/interface/proxy_wars/indonesian_civil_war/icw_divider.dds"
+	}
+	spriteType = {
+		name = "GFX_icw_effect_box"
+		texturefile = "gfx/interface/proxy_wars/indonesian_civil_war/icw_effect_box.dds"
+	}
+	progressbartype = {
+		name = "GFX_icw_discontent_bar"
+		textureFile1 = "gfx/interface/proxy_wars/indonesian_civil_war/discontent_prog_bar.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 364 y = 42 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_icw_escalation_bar"
+		textureFile1 = "gfx/interface/proxy_wars/indonesian_civil_war/escalation_prog_bar.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 364 y = 42 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+
+	## Bolivia
+	spriteType = {
+		name = "GFX_bolivia_rounds"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_negotiation_round.dds"
+	}
+	spriteType = {
+		name = "GFX_ATEC_rounds"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_rounds.dds" 
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_bolivia_round_num"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_negotiation_round_number_box.dds"
+	}
+	spriteType = {
+		name = "GFX_bolivia_description"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_title_box.dds"
+	}
+	spriteType = {
+		name = "GFX_bolivia_title"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_text_box.dds"
+	}
+	spriteType = {
+		name = "GFX_bolivia_attitude"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_bolivian_attitude.dds"
+	}
+	spriteType = {
+		name = "GFX_bolivia_favours"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_favors_box.dds"
+	}
+	spriteType = {
+		name = "GFX_bolivia_argflag"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_flag_argentina_box.dds"
+	}
+	spriteType = {
+		name = "GFX_bolivia_chlbraflag"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_flag_brazil_chile_box.dds"
+	}
+	spriteType = {
+		name = "GFX_bolivia_info_box"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_info_box.dds"
+	}
+	spriteType = {
+		name = "GFX_bolivia_rope"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_rope_bar_outline.dds"
+	}
+	spriteType = {
+		name = "GFX_bolivia_negotiation_round_number_circle"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_negotiation_round_number_circle.dds"
+	}
+	spriteType = {
+		name = "GFX_bolivia_round_image"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_round_image.dds"
+		noofframes = 5
+	}
+	spriteType = {
+		name = "GFX_bolivia_negotiation_round_wheel"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_negotiation_round_wheel.dds"
+		noofframes = 12
+	}
+	spriteType = {
+		name = "GFX_bolivia_proxy_maneuvers_dot"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_maneuvers_dot.dds"
+		noofframes = 4
+	}
+	spriteType = {
+		name = "GFX_bolivia_tension_progress_bar_border"
+		texturefile = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_bolivia_tension_frame.dds"
+	}
+	progressbartype = {
+		name = "GFX_bolivia_tension_progress_bar"
+		textureFile1 = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_bolivia_tension_bar.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 178 y = 25 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_probrachl_bar"
+		textureFile1 = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_rope_bar_brazil_chile.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 340 y = 44 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_proarg_bar"
+		textureFile1 = "gfx/interface/proxy_wars/bolivia_treaty/ATEC_proxy_rope_bar_argentine.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 340 y = 44 }
+		effectFile = "gfx/FX/progress_reverse.lua"
+		horizontal = yes
+	}
+	
+	## Iceland
+	
+	spriteType = {
+		name = "GFX_iceland_banner_side_iceland"
+		texturefile = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_banner_side_iceland.dds"
+	}
+	spriteType = {
+		name = "GFX_iceland_grid"
+		texturefile = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_grid.dds"
+	}
+	spriteType = {
+		name = "GFX_Iceland_INFO_box"
+		texturefile = "gfx/interface/proxy_wars/iceland_congress/GFX_Iceland_INFO_box.dds"
+	}
+	spriteType = {
+		name = "GFX_icelandproxy_divider"
+		texturefile = "gfx/interface/proxy_wars/iceland_congress/GFX_icelandproxy_divider.dds"
+	}
+	spriteType = {
+		name = "GFX_ICELANDPROXY_headerdivider"
+		texturefile = "gfx/interface/proxy_wars/iceland_congress/GFX_ICELANDPROXY_headerdivider.dds"
+	}
+	
+	progressbartype = {
+		name = "GFX_anti_ofn_bargraph"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_antiofn_bar.dds"
+		textureFile2 = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_thick_bar_notxt.dds"
+		size = { x = 121 y = 289 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	progressbartype = {
+		name = "GFX_pro_ofn_bargraph"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_ofn_bar.dds"
+		textureFile2 = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_thick_bar_notxt.dds"
+		size = { x = 121 y = 289 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	
+	progressbartype = {
+		name = "GFX_2faction_bgbar"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_big_girth.dds"
+		textureFile2 = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_big_girth_notxt.dds"
+		size = { x = 123 y = 289 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	
+	progressbartype = {
+		name = "GFX_indepen_bargraph"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_ind_bar.dds"
+		textureFile2 = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_ind_bar_notxt.dds"
+		size = { x = 106 y = 289 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	
+	progressbartype = {
+		name = "GFX_ind_bgbar"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_thin_girth.dds"
+		textureFile2 = "gfx/interface/proxy_wars/iceland_congress/GFX_iceland_tinydick.dds"
+		size = { x = 108 y = 289 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	
+	## Haiti
+	
+	spriteType = {
+		name = "GFX_haiti_map_frame"
+		texturefile = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_map_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_haitianwar_state_selected_1728"
+		textureFile = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_state_selected_Artibonite_et_Nord.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_haitianwar_state_selected_1881"
+		textureFile = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_state_selected_Grand_Ouest.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_haitianwar_state_selected_1880"
+		textureFile = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_state_selected_Nord_Est.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_haitianwar_state_selected_1882"
+		textureFile = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_state_selected_Tiburon.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_haitianwar_state_selected_1706"
+		textureFile = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_state_selected_Trujillo.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	progressbartype = {
+		name = "GFX_haitianwar_state_1728"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_state_Artibonite_et_Nord.dds"
+		textureFile2 = "gfx/interface/proxy_wars/haitian_civilwar/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.177 0.183 1 1 }
+		size = {
+			x = 177
+			y = 183
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_haitianwar_state_1881"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_state_Grand_Ouest.dds"
+		textureFile2 = "gfx/interface/proxy_wars/haitian_civilwar/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.193 0.116 1 1 }
+		size = { 
+			x = 193
+			y = 116
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_haitianwar_state_1880"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_state_Nord_Est.dds"
+		textureFile2 = "gfx/interface/proxy_wars/haitian_civilwar/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.118 0.065 1 1 }
+		size = { 
+			x = 118
+			y = 65
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_haitianwar_state_1882"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_state_Tiburon.dds"
+		textureFile2 = "gfx/interface/proxy_wars/haitian_civilwar/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.179 0.079 1 1 }
+		size = { 
+			x = 176
+			y = 79
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	spriteType = {
+		name = "GFX_haitianwar_state_trujillo"
+		textureFile = "gfx/interface/proxy_wars/haitian_civilwar/GFX_haiti_state_Trujillo.dds"
+		noofframes = 4
+	}
+	progressbartype = {
+		name = "GFX_haitianwar_trujillo_tension"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/Trujillo_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/haitian_civilwar/Trujillo_empty.dds"
+		size = { 
+			x = 96
+			y = 103
+		}
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_haitianwar_trujillo_warning"
+		texturefile = "gfx/interface/proxy_wars/haitian_civilwar/Trujillo_warning.dds"
+		noofframes = 2
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_haiti_pie_overlay"
+		textureFile = "gfx/interface/proxy_wars/haitian_civilwar/pie_overlay.dds"
+	}
+	# using the alpha channel as a bool parameter :hatr: - dia
+	progressbartype = {
+		name = "GFX_haiti_pie_government"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/pie_government.dds"
+		textureFile2 = "gfx/interface/proxy_wars/haitian_civilwar/pie_government_image.dds"
+		color = { 0.0 0.0 0.0 0.0 }
+		size = { x = 120 y = 120 }
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100001
+	}
+	progressbartype = {
+		name = "GFX_haiti_pie_communism"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/pie_communism.dds"
+		textureFile2 = "gfx/interface/proxy_wars/haitian_civilwar/pie_communism_image.dds"
+		color = { 0.0 0.0 0.0 0.0 }
+		size = { x = 120 y = 120 }
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100001
+	}
+	progressbartype = {
+		name = "GFX_haiti_pie_divided"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/pie_divided.dds"
+		textureFile2 = "gfx/interface/proxy_wars/haitian_civilwar/pie_divided_image.dds"
+		color = { 0.0 0.0 0.0 0.0 }
+		size = { x = 120 y = 120 }
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100001
+	}
+	spriteType = {
+		name = "GFX_haiti_pie_signal_lost"
+		textureFile = "gfx/interface/proxy_wars/haitian_civilwar/pie_signal_lost.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_haiti_bar_frame"
+		textureFile = "gfx/interface/proxy_wars/haitian_civilwar/bar_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_haiti_bar_frame_mini"
+		textureFile = "gfx/interface/proxy_wars/haitian_civilwar/bar_frame_mini.dds"
+	}
+	progressbartype = {
+		name = "GFX_haiti_legitimacy_bar"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/legitimacy_bar.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 322 y = 23 }
+		effectFile = "gfx/FX/progress_centered.lua"
+	}
+	progressbartype = {
+		name = "GFX_haiti_violence_bar"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/violence_bar.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 147 y = 23 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_haiti_weariness_bar"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/weariness_bar.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 147 y = 23 }
+		effectFile = "gfx/FX/progress_reverse.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_haiti_animated_bar"
+		texturefile = "gfx/interface/proxy_wars/haitian_civilwar/involvement_bar_animation.dds"
+		noOfFrames = 4
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_haiti_animated_bar_red"
+		texturefile = "gfx/interface/proxy_wars/haitian_civilwar/involvement_bar_animation_red.dds"
+		noOfFrames = 4
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	progressbartype = {
+		name = "GFX_haiti_overlay_bar"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/involvement_bar_overlay.dds"
+		textureFile2 = "gfx/interface/proxy_wars/haitian_civilwar/involvement_bar_overlay_empty.dds"
+		size = {
+			x = 474
+			y = 40
+		}
+		effectFile = "gfx/FX/progress_reverse_retreating.lua"
+	}
+	progressbartype = {
+		name = "GFX_haiti_overlay_bar_inverted"
+		textureFile1 = "gfx/interface/proxy_wars/haitian_civilwar/involvement_bar_overlay_inverted.dds"
+		textureFile2 = "gfx/interface/proxy_wars/haitian_civilwar/involvement_bar_overlay_empty.dds"
+		size = {
+			x = 474
+			y = 40
+		}
+		effectFile = "gfx/FX/progress_reverse_retreating.lua"
+	}
+	
+	## Madagascar
+	
+	spriteType = {
+		name = "GFX_madagascar_image"
+		textureFile = "gfx/interface/proxy_wars/madagascar/image.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_map"
+		texturefile = "gfx/interface/proxy_wars/madagascar/map.dds"
+	}
+
+	spriteType = {
+		name = "GFX_madagascar_city_main_blank"
+		texturefile = "gfx/interface/proxy_wars/madagascar/city_main.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_city_main_grn"
+		texturefile = "gfx/interface/proxy_wars/madagascar/city_main_grn.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_city_main_red"
+		texturefile = "gfx/interface/proxy_wars/madagascar/city_main_red.dds"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_madagascar_selected_node"
+		texturefile = "gfx/interface/proxy_wars/madagascar/selected_node.dds"
+		noofframes = 2
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+
+	spriteType = {
+		name = "GFX_madagascar_city_mini_blank"
+		texturefile = "gfx/interface/proxy_wars/madagascar/city_mini.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_city_mini_grn"
+		texturefile = "gfx/interface/proxy_wars/madagascar/city_mini_grn.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_city_mini_red"
+		texturefile = "gfx/interface/proxy_wars/madagascar/city_mini_red.dds"
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_madagascar_selected_node_small"
+		texturefile = "gfx/interface/proxy_wars/madagascar/selected_node_small.dds"
+		noofframes = 2
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+
+	spriteType = {
+		name = "GFX_madagascar_trail_1859_blank"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1859_blank.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1859_grn"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1859_grn.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1859_red"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1859_red.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1861_blank"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1861_blank.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1861_grn"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1861_grn.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1861_red"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1861_red.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1864_blank"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1864_blank.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1864_grn"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1864_grn.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1864_red"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1864_red.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1971_blank"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1971_blank.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1971_grn"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1971_grn.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1971_red"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1971_red.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1972_blank"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1972_blank.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1972_grn"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1972_grn.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_trail_1972_red"
+		texturefile = "gfx/interface/proxy_wars/madagascar/trail_1972_red.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_madagascar_line_1857"
+		texturefile = "gfx/interface/proxy_wars/madagascar/line_1857.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_line_1969"
+		texturefile = "gfx/interface/proxy_wars/madagascar/line_1969.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_line_944"
+		texturefile = "gfx/interface/proxy_wars/madagascar/line_944.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_line_945"
+		texturefile = "gfx/interface/proxy_wars/madagascar/line_945.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_line_1970"
+		texturefile = "gfx/interface/proxy_wars/madagascar/line_1970.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_line_1974"
+		texturefile = "gfx/interface/proxy_wars/madagascar/line_1974.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_line_1975"
+		texturefile = "gfx/interface/proxy_wars/madagascar/line_1975.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_line_1860"
+		texturefile = "gfx/interface/proxy_wars/madagascar/line_1860.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_line_946"
+		texturefile = "gfx/interface/proxy_wars/madagascar/line_946.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_madagascar_button_toggle"
+		textureFile = "gfx/interface/proxy_wars/madagascar/button_toggle.dds"
+		noofframes = 2
+	}
+	
+	spriteType = {
+		name = "GFX_madagascar_strength"
+		textureFile = "gfx/interface/proxy_wars/madagascar/strength.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_madagascar_bar_frame"
+		textureFile = "gfx/interface/proxy_wars/madagascar/bar_frame.dds"
+	}
+	progressbartype = {
+		name = "GFX_madagascar_bar"
+		textureFile1 = "gfx/interface/proxy_wars/madagascar/bar_content.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 215 y = 38 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	progressbartype = {
+		name = "GFX_madagascar_pie_france"
+		textureFile1 = "gfx/interface/proxy_wars/madagascar/pie_france.dds"
+		textureFile2 = "gfx/interface/proxy_wars/madagascar/pie_france_image.dds"
+		size = { x = 120 y = 120 }
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+	progressbartype = {
+		name = "GFX_madagascar_pie_germany"
+		textureFile1 = "gfx/interface/proxy_wars/madagascar/pie_germany.dds"
+		textureFile2 = "gfx/interface/proxy_wars/madagascar/pie_germany_image.dds"
+		size = { x = 120 y = 120 }
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+	progressbartype = {
+		name = "GFX_madagascar_pie_japan"
+		textureFile1 = "gfx/interface/proxy_wars/madagascar/pie_japan.dds"
+		textureFile2 = "gfx/interface/proxy_wars/madagascar/pie_japan_image.dds"
+		size = { x = 120 y = 120 }
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+	progressbartype = {
+		name = "GFX_madagascar_pie_usa"
+		textureFile1 = "gfx/interface/proxy_wars/madagascar/pie_usa.dds"
+		textureFile2 = "gfx/interface/proxy_wars/madagascar/pie_usa_image.dds"
+		size = { x = 120 y = 120 }
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+	spriteType = {
+		name = "GFX_madagascar_pie_overlay"
+		textureFile = "gfx/interface/proxy_wars/madagascar/pie_overlay.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_investment"
+		textureFile = "gfx/interface/proxy_wars/madagascar/investment.dds"
+	}
+	spriteType = {
+		name = "GFX_madagascar_contribution"
+		textureFile = "gfx/interface/proxy_wars/madagascar/contribution.dds"
+	}
+
+	## Subcontinental Crisis ##
+
+	spriteType = {
+		name = "GFX_subcontinental_crisis_topbar_image_1"
+		textureFile = "gfx/interface/proxy_wars/subcontinental_crisis/pic_buildup_phase.dds"
+	}
+
+	spriteType = {
+		name = "GFX_subcontinental_crisis_topbar_image_2"
+		textureFile = "gfx/interface/proxy_wars/subcontinental_crisis/pic_confrontation_phase.dds"
+	}
+
+	progressbartype = {
+		name = "GFX_subcontinental_crisis_readiness_opposing_bar"
+		textureFile1 = "gfx/interface/proxy_wars/channel_crisis/readiness_bar_opposing_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/subcontinental_crisis/readiness_bar_opposing_uncertainty.dds"
+		#color = { 0.588 0.078 0.078 } #copied
+		#colortwo = { 0.322 0.745 0.663 } #copied
+		size = { x = 78 y = 231 }
+		effectFile = "gfx/FX/channel_crisis_opposition.lua"
+		#horizontal = no
+		steps = 1000000
+	}
+	
+	## Channel Crisis ##
+
+	spriteType = {
+		name = "GFX_channel_crisis_topbar_image_1"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/pic_buildup_phase.dds"
+	}
+
+	spriteType = {
+		name = "GFX_channel_crisis_topbar_image_2"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/pic_confrontation_phase.dds"
+	}
+
+	spriteType = {
+		name = "GFX_channel_crisis_readiness_frame"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/readiness_bar_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_channel_crisis_phase_indicator_static"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/phase_indicator_static.dds"
+	}
+
+	progressbartype = {
+		name = "GFX_channel_crisis_readiness_bar"
+		textureFile1 = "gfx/interface/proxy_wars/channel_crisis/readiness_bar_full.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 78 y = 231 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+
+	progressbartype = {
+		name = "GFX_channel_crisis_readiness_opposing_bar"
+		textureFile1 = "gfx/interface/proxy_wars/channel_crisis/readiness_bar_opposing_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/channel_crisis/readiness_bar_opposing_uncertainty.dds"
+		#color = { 0.588 0.078 0.078 } #copied
+		#colortwo = { 0.322 0.745 0.663 } #copied
+		size = { x = 78 y = 231 }
+		effectFile = "gfx/FX/channel_crisis_opposition.lua"
+		#horizontal = no
+		steps = 1000000
+	}
+
+	spriteType = {
+		name = "GFX_channel_crisis_info_frame"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/info_box.dds"
+	}
+
+	spriteType = {
+		name = "GFX_channel_crisis_nego_dividing_line_vertical"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/nego_dividing_line_vertical.dds"
+	}
+
+	spriteType = {
+		name = "GFX_channel_crisis_nego_dividing_line_bottom"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/nego_dividing_line_bottom.dds"
+	}
+
+	spriteType = {
+		name = "GFX_cc_button_accept"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/accept.dds"
+	}
+
+	spriteType = {
+		name = "GFX_cc_button_reject"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/reject.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_cc_concessions_tt_background"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/concessions_tt_background.dds"
+	}
+
+	spriteType = {
+		name = "GFX_channel_crisis_concession_frame_red"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/concession_frame_red.dds"
+	}
+
+	spriteType = {
+		name = "GFX_channel_crisis_concession_frame_blue"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/concession_frame_blue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_cc_negotiations_ex1"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/test_ex1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_1"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_release_pakt_nationals.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_2"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_3"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_4"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_5"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_6"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_continental_security_zone.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_7"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_8"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_9"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_10"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_11"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_no_nukes.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_12"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_13"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_14"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_cc_negotiations_concession_15"
+		textureFile = "gfx/interface/proxy_wars/channel_crisis/negotiations_generic.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_FWI_Referendum_Dial"
+		texturefile = "gfx/interface/proxy_wars/french_west_indies_referendum/dial.dds"
+	}
+	progressbartype = {
+		name = GFX_FWI_Referendum_Mendesist_Bar
+		textureFile1 = "gfx/interface/proxy_wars/french_west_indies_referendum/icon_mendesist.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/legco/empty.dds"
+		color = { 0.835 0.157 0.078 0 } # doesn't matter i think?
+		colortwo = { 0 0 0 0 }
+		size = { 
+			x = 336
+			y = 336
+		}
+		effectFile = "gfx/FX/progress_radial_legco.lua"
+		steps = 100000
+	}
+	# Matsushita
+	progressbartype = {
+		name = GFX_FWI_Referendum_Gaullist_Bar
+		textureFile1 = "gfx/interface/proxy_wars/french_west_indies_referendum/icon_gaullist.dds"
+		textureFile2 = "gfx/interface/guangdong_gui/legco/empty.dds"
+		color = { 0.098 0.282 0.482 0 }
+		colortwo = { 0 0 0 0 }
+		size = { 
+			x = 336
+			y = 336
+		}
+		effectFile = "gfx/FX/progress_radial_legco.lua"
+		steps = 100000
+	}
+	progressbartype = {
+		name = GFX_FWI_Referendum_Bar
+		textureFile1 = "gfx/interface/proxy_wars/french_west_indies_referendum/icon_mendesist.dds"
+		textureFile2 = "gfx/interface/proxy_wars/french_west_indies_referendum/icon_gaullist.dds"
+		color = { 0 0.682 0.937 0 }
+		colortwo = { 0.098 0.282 0.482 1.0 }
+		size = { 
+			x = 336
+			y = 336
+		}
+		effectFile = "gfx/FX/progress_radial_legco.lua"
+		steps = 100000
+	}
+
+	### Salvadoran Coup ###
+
+	# Top Border
+	spriteType = {
+		name = "GFX_SalvadoranCoup_Top_Border"
+		textureFile = "gfx/interface/proxy_wars/salvadoran_coup/GFX_SalvadoranCoup_Top_Border.dds"
+	}
+	# Factionalism Piechart
+	# Full: Castrists, Empty: Hispanists
+	progressbartype = {
+		name = "GFX_SalvadoranCoup_Factionalism_PieChart"
+		textureFile1 = "gfx/interface/proxy_wars/salvadoran_coup/GFX_SalvadoranCoup_Factionalism_PieChart_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/salvadoran_coup/GFX_SalvadoranCoup_Factionalism_PieChart_empty.dds"
+		size = { x = 120 y = 120 }
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+	# Bottom Border
+	spriteType = {
+		name = "GFX_SalvadoranCoup_Bottom_Border"
+		textureFile = "gfx/interface/proxy_wars/salvadoran_coup/GFX_SalvadoranCoup_Bottom_Border.dds"
+	}
+	# Military Readiness Icon
+	spriteType = {
+		name = "GFX_SalvadoranCoup_MilitaryPreparedness_Icon"
+		textureFile = "gfx/interface/proxy_wars/salvadoran_coup/GFX_SalvadoranCoup_MilitaryPreparedness_Icon.dds"
+		noofframes = 6
+	}
+	# Civilian Anger Icon
+	spriteType = {
+		name = "GFX_SalvadoranCoup_CivilianAnger_Icon"
+		textureFile = "gfx/interface/proxy_wars/salvadoran_coup/GFX_SalvadoranCoup_CivilianAnger_Icon.dds"
+		noofframes = 6
+	}
+	
+	### Paraguayan Bush War ###
+	
+	spriteType = {
+		name = "GFX_paraguay_bg"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/gui_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_paraguay_gran_chaco"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/gran_chaco_overlay.dds"
+	}
+	spriteType = {
+		name = "GFX_paraguay_map_bg"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/map_bg.dds"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_paraguay_map_state_1620"
+		textureFile1 = "gfx/interface/proxy_wars/paraguayan_bush_war/alto_parana_state.dds"
+		textureFile2 = "gfx/interface/proxy_wars/paraguayan_bush_war/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.087 0.151 1 1 }
+		size = { 
+			x = 87
+			y = 151
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_paraguay_map_state_1619"
+		textureFile1 = "gfx/interface/proxy_wars/paraguayan_bush_war/concepcion_state.dds"
+		textureFile2 = "gfx/interface/proxy_wars/paraguayan_bush_war/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.113 0.153 1 1 }
+		size = { 
+			x = 113
+			y = 153
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_paraguay_map_state_1618"
+		textureFile1 = "gfx/interface/proxy_wars/paraguayan_bush_war/itapua_state.dds"
+		textureFile2 = "gfx/interface/proxy_wars/paraguayan_bush_war/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.104 0.110 1 1 }
+		size = { 
+			x = 104
+			y = 110
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_paraguay_map_state_1617"
+		textureFile1 = "gfx/interface/proxy_wars/paraguayan_bush_war/misiones_state.dds"
+		textureFile2 = "gfx/interface/proxy_wars/paraguayan_bush_war/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.105 0.095 1 1 }
+		size = { 
+			x = 105
+			y = 95
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_paraguay_map_state_1616"
+		textureFile1 = "gfx/interface/proxy_wars/paraguayan_bush_war/asuncion_state.dds"
+		textureFile2 = "gfx/interface/proxy_wars/paraguayan_bush_war/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.023 0.046 1 1 }
+		size = { 
+			x = 23
+			y = 46
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_paraguay_map_state_2100"
+		textureFile1 = "gfx/interface/proxy_wars/paraguayan_bush_war/caaguazu_state.dds"
+		textureFile2 = "gfx/interface/proxy_wars/paraguayan_bush_war/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.082 0.087 1 1 }
+		size = { 
+			x = 82
+			y = 87
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_paraguay_map_state_301"
+		textureFile1 = "gfx/interface/proxy_wars/paraguayan_bush_war/cordillera_state.dds"
+		textureFile2 = "gfx/interface/proxy_wars/paraguayan_bush_war/colors.dds"
+		color = { 0.010 0.0 0.0 0.10 }
+		colortwo = { 0.059 0.086 1 1 }
+		size = { 
+			x = 59
+			y = 86
+		}
+		effectFile = "gfx/FX/gng_map_fill.lua"
+		steps = 10000
+	}
+	spriteType = {
+		name = "GFX_paraguay_map_state_selected_1620"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/alto_parana_state_selected.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_paraguay_map_state_selected_1619"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/concepcion_state_selected.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_paraguay_map_state_selected_1618"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/itapua_state_selected.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_paraguay_map_state_selected_1617"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/misiones_state_selected.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_paraguay_map_state_selected_1616"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/asuncion_state_selected.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_paraguay_map_state_selected_2100"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/caaguazu_state_selected.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_paraguay_map_state_selected_301"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/cordillera_state_selected.dds"
+		transparencecheck = yes
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_paraguay_pie_overlay"
+		textureFile = "gfx/interface/proxy_wars/paraguayan_bush_war/pie_overlay.dds"
+	}
+	progressbartype = {
+		name = "GFX_paraguay_pie_government"
+		textureFile1 = "gfx/interface/proxy_wars/paraguayan_bush_war/pie_government.dds"
+		textureFile2 = "gfx/interface/proxy_wars/paraguayan_bush_war/pie_government_image.dds"
+		size = { x = 160 y = 160 }
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+	progressbartype = {
+		name = "GFX_paraguay_pie_communism"
+		textureFile1 = "gfx/interface/proxy_wars/paraguayan_bush_war/pie_communism.dds"
+		textureFile2 = "gfx/interface/proxy_wars/paraguayan_bush_war/pie_communism_image.dds"
+		size = { x = 160 y = 160 }
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+	progressbartype = {
+		name = "GFX_paraguay_pie_divided"
+		textureFile1 = "gfx/interface/proxy_wars/paraguayan_bush_war/pie_divided.dds"
+		textureFile2 = "gfx/interface/proxy_wars/paraguayan_bush_war/pie_divided_image.dds"
+		size = { x = 160 y = 160 }
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+	spriteType = {
+		name = "GFX_PAR_hide_first_decision"
+		texturefile = "gfx/interface/proxy_wars/paraguayan_bush_war/hide_first_decision_background_par.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_PAR_group_button"
+		texturefile = "gfx/interface/proxy_wars/paraguayan_bush_war/par_group_button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_PAR_stability"
+		texturefile = "gfx/interface/proxy_wars/paraguayan_bush_war/par_stability.dds"
+	}
+	spriteType = {
+		name = "GFX_PAR_support"
+		texturefile = "gfx/interface/proxy_wars/paraguayan_bush_war/par_support.dds"
+	}
+	spriteType = {
+		name = "GFX_PAR_mobilization"
+		texturefile = "gfx/interface/proxy_wars/paraguayan_bush_war/par_mobilization.dds"
+	}
+
+	#########################
+	######## CAYENNE ######## 
+	#########################
+
+    spriteType = {
+		name = "GFX_cayenne_public_anger_category"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/public_anger_button_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_cayenne_turnout_category"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/turnout_button_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_cayenne_legitimacy_category"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/legitimacy_button_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_cayenne_bottom_bar"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/bottom_bar.dds"
+	}
+	spriteType = {
+		name = "GFX_cayenne_ballot_box"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/ballot_box.dds"
+	}
+	progressbartype = {
+		name = "GFX_cayenne_anti_brazil_sentiment"
+		textureFile1 = "gfx/interface/proxy_wars/cayenne_referendum/riot_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/cayenne_referendum/riot_empty.dds"
+		size = { x = 374 y = 172 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	progressbartype = {
+		name = "GFX_cayenne_legitimacy"
+		textureFile1 = "gfx/interface/proxy_wars/cayenne_referendum/legitimacy_full.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 76 y = 62 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	progressbartype = {
+		name = "GFX_cayenne_brazil_bar"
+		textureFile1 = "gfx/interface/proxy_wars/cayenne_referendum/BRA_bar.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 370 y = 56 }
+		effectFile = "gfx/FX/progress_reverse.lua"
+	}
+	progressbartype = {
+		name = "GFX_cayenne_indep_bar"
+		textureFile1 = "gfx/interface/proxy_wars/cayenne_referendum/indep_bar.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 370 y = 56 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_cayenne_sidebar"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/old/CIF_sidebar.dds"
+	}
+	spriteType = {
+		name = "GFX_cayenne_description"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/old/CIF_proxy_description.dds"
+	}
+	spriteType = {
+		name = "GFX_OAS_symbol"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/old/CIF_OAS_symbol.dds"
+	}
+	spriteType = {
+		name = "GFX_oas_attitude"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/old/CIF_oas_attitude.dds"
+	}
+	spriteType = {
+		name = "GFX_brazil_seal"
+		texturefile = "gfx/interface/proxy_wars/fopo_gui/brazil_seal.dds"
+	}
+	spriteType = {
+		name = "GFX_voter_big_box"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/old/CIF_proxy_voter_big_box.dds"
+	}
+	progressbartype = {
+		name = "GFX_french_voter"
+		textureFile1 = "gfx/interface/proxy_wars/cayenne_referendum/old/CIF_proxy_french_voter.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 127 y = 175 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	progressbartype = {
+		name = "GFX_minority_voter"
+		textureFile1 = "gfx/interface/proxy_wars/cayenne_referendum/old/CIF_proxy_minority_voter.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 127 y = 175 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	progressbartype = {
+		name = "GFX_brazillian_voter"
+		textureFile1 = "gfx/interface/proxy_wars/cayenne_referendum/old/CIF_proxy_brazillian_voter.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 127 y = 175 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	spriteType = {
+		name = "GFX_oas_attitude_legitimacy"
+		texturefile = "gfx/interface/proxy_wars/cayenne_referendum/old/CIF_oas_attitude_legitimacy.dds"
+		noofframes = 2
+	}
+
+
+
+	spriteType = {
+		name = "GFX_BOL_time_circle"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/dial_time_circle.dds"
+	}
+	progressbartype = {
+		name = "GFX_BOL_timer"
+		textureFile1 = "gfx/interface/proxy_wars/bolivia_mining_war/dial_time_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/bolivia_mining_war/dial_time_empty.dds"
+		size = { 
+			x = 74
+			y = 74
+		}
+		effectFile = "gfx/FX/progress_radial.lua"
+		steps = 150
+	}
+
+
+	spriteType = {
+		name = "GFX_BOL_triangle_flipped"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/triangle_flipped.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BOL_triangle_highlight_r_flipped"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/triangle_r_flipped.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BOL_triangle_highlight_g_flipped"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/triangle_g_flipped.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BOL_triangle_highlight_b_flipped"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/triangle_b_flipped.dds"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_BOL_triangle_highlight_r_flipped_lite"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/triangle_r_flipped_lite.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BOL_triangle_highlight_g_flipped_lite"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/triangle_g_flipped_lite.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BOL_triangle_highlight_b_flipped_lite"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/triangle_b_flipped_lite.dds"
+		transparencecheck = yes
+	}
+
+	
+	spriteType = {
+		name = "GFX_BOL_hide_first_decision"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/hide_first_decision_background.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_BOL_group_button"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/group_button.dds"
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_BOL_bolivia_outline"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/bolivia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_BOL_police"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/police.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BOL_labor"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/labor.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BOL_elites"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/elites.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BOL_military"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/military.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BOL_peasants"
+		texturefile = "gfx/interface/proxy_wars/bolivia_mining_war/peasants.dds"
+		noOfFrames = 2
+	}
+	
+	###Nuclear Negotiations
+
+    spriteType = {
+		name = "GFX_nuke_neg_button"
+		texturefile = "gfx/interface/proxy_wars/brazil_usa_negotiations/GFX_nuke_neg_button_border.dds"
+	}
+	spriteType = {
+		name = "GFX_nuke_neg_approval_border"
+		texturefile = "gfx/interface/proxy_wars/brazil_usa_negotiations/GFX_nuke_neg_approval_boder.dds"
+	}
+	
+	progressbartype = {
+		name = "GFX_nuke_neg_turn_bar" 
+		textureFile1 = "gfx/interface/proxy_wars/brazil_usa_negotiations/GFX_nuke_neg_turn_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/brazil_usa_negotiations/GFX_nuke_neg_turn_bar_empty.dds"
+		size = { x = 370 y = 40 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_nuke_neg_approval_prog_bar"
+		textureFile1 = "gfx/interface/proxy_wars/brazil_usa_negotiations/GFX_nuke_neg_approval_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/brazil_usa_negotiations/GFX_nuke_neg_approval_empty.dds"
+		size = { x = 52 y = 256 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	
+	##South Atlantic War
+	spriteType = {
+		name = "GFX_SATW_black_bg"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/black_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_SATW_escalation"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/SATW_Clock.dds"
+	}
+	spriteType = {
+		name = "GFX_SATW_foreign_intervention"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/SATW_Globe.dds"
+	}
+	spriteType = {
+		name = "GFX_SATW_generic"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/SATW_Helmet.dds"
+	}
+	spriteType = {
+		name = "GFX_SATW_exhaustion"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/SATW_Skull.dds"
+	}
+	spriteType = {
+		name = "GFX_SATW_tv_error"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/tv_error.dds"
+	}
+	spriteType = {
+		name = "GFX_SATW_monitors"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/monitors.dds"
+	}
+	spriteType = {
+		name = "GFX_SATW_heartbeat"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/heartbeat.dds"
+	}
+	spriteType = {
+		name = "GFX_SATW_skulls"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/skulls.dds"
+		noOfFrames = 7
+	}
+	spriteType = {
+		name = "GFX_SATW_flags_ARG"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/ARG_flag.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_SATW_flags_BRA"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/BRA_flag.dds"
+		noOfFrames = 6
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_SATW_nuclear_alert"
+		texturefile = "gfx/interface/proxy_wars/south_atlantic_war/alerta_nuclear.dds"
+		noOfFrames = 18
+		animation_rate_fps = 9
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	### Easter Coup ###
+
+	progressbartype = {
+		name = "GFX_ven_secrecy_bar"	
+		textureFile1 = "gfx/interface/proxy_wars/easter_coup/ec_secrecy_progbar.dds"
+		textureFile2 = "gfx/interface/proxy_wars/easter_coup/ec_empty_progbar.dds"
+		size = { x = 231 y = 38 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressbartype = {
+		name = "GFX_ven_coup_bar"	
+		textureFile1 = "gfx/interface/proxy_wars/easter_coup/ec_coup_progbar.dds"
+		textureFile2 = "gfx/interface/proxy_wars/easter_coup/ec_empty_progbar.dds"
+		size = { x = 232 y = 38 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	spriteType = {
+		name = "GFX_EC_venezuela_map"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/venezuela_map.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_outline"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/ec_outline.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_road_1"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_1.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_2"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_2.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_3"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_3.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_4"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_4.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_5"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_5.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_6"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_6.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_7"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_7.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_8"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_8.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_9"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_9.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_10"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_10.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_11"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_11.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_12"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_12.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_EC_road_13"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/road_13.dds"
+		noOfFrames = 3
+	}
+
+	# Cities
+	spriteType = {
+		name = "GFX_EC_city"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/ven_city.dds"
+	}
+	spriteType = { # Maracaibo
+		name = "GFX_EC_city_0"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/ven_city.dds"
+	}
+
+	# Blue
+	spriteType = {
+		name = "GFX_EC_phase_2_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_2_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_3_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_3_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_4_1_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_4_1_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_4_2_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_4_2_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_5_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_5_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_6_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_6_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_7_1_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_7_1_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_7_2_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_7_2_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_8_1_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_8_1_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_8_2_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_8_2_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_9_1_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_9_1_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_9_2_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_9_2_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_9_3_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_9_3_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_10_1_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_10_1_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_10_2_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_10_2_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_10_3_blue"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_10_3_blue.dds"
+	}
+	# Grey
+	spriteType = {
+		name = "GFX_EC_phase_2_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_2_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_3_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_3_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_4_1_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_4_1_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_4_2_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_4_2_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_5_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_5_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_6_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_6_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_7_1_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_7_1_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_7_2_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_7_2_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_8_1_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_8_1_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_8_2_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_8_2_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_9_1_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_9_1_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_9_2_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_9_2_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_9_3_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_9_3_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_10_1_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_10_1_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_10_2_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_10_2_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_10_3_grey"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_10_3_grey.dds"
+	}
+	# Red
+	spriteType = {
+		name = "GFX_EC_phase_2_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_2_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_3_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_3_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_4_1_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_4_1_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_4_2_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_4_2_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_5_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_5_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_6_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_6_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_7_1_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_7_1_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_7_2_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_7_2_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_8_1_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_8_1_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_8_2_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_8_2_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_9_1_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_9_1_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_9_2_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_9_2_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_9_3_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_9_3_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_10_1_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_10_1_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_10_2_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_10_2_red.dds"
+	}
+	spriteType = {
+		name = "GFX_EC_phase_10_3_red"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/phase_10_3_red.dds"
+	}
+
+	# City Pictures
+	spriteType = {
+		name = "GFX_ec_city_pics"
+		texturefile = "gfx/interface/proxy_wars/easter_coup/ec_city_pics.dds"
+		noOfFrames = 11
+	}
+
+	## Venezuela Coup ## 
+
+	spriteType = {
+		name = "GFX_venc_map"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/Caracas.png"
+	}
+	progressbartype = {
+		name = "GFX_VEN_coup_military_readiness_bar"
+		textureFile1 = "gfx/interface/proxy_wars/caracas_nights/VEN_coup_progbar_military.png"
+		textureFile2 = "gfx/interface/proxy_wars/caracas_nights/VEN_coup_progbar_empty.png"
+		size = { x = 206 y = 22 }		
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_VEN_coup_popularity_bar"
+		textureFile1 = "gfx/interface/proxy_wars/caracas_nights/VEN_coup_progbar_popularity.png"
+		textureFile2 = "gfx/interface/proxy_wars/caracas_nights/VEN_coup_progbar_empty.png"
+		size = { x = 206 y = 22 }		
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_ven_district_occupied_libertador"
+		textureFile1 = "gfx/interface/proxy_wars/caracas_nights/libertador_occupation.png"
+		textureFile2 = "gfx/interface/proxy_wars/caracas_nights/caracas_colors.dds"
+		size = { x = 260 y = 184 }
+		color = { 0.004 0.0 0.0 0.10 }
+		colortwo = { 0.260 0.184 1 1 }
+		effectFile = "gfx/FX/ven_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ven_district_occupied_sucre"
+		textureFile1 = "gfx/interface/proxy_wars/caracas_nights/sucre_occupation.png"
+		textureFile2 = "gfx/interface/proxy_wars/caracas_nights/caracas_colors.dds"
+		size = { x = 151 y = 160}
+		color = { 0.004 0.0 0.0 0.10 }
+		colortwo = { 0.151 0.160 1 1 }
+		effectFile = "gfx/FX/ven_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ven_district_occupied_hatillo"
+		textureFile1 = "gfx/interface/proxy_wars/caracas_nights/hatillo_occupation.png"
+		textureFile2 = "gfx/interface/proxy_wars/caracas_nights/caracas_colors.dds"
+		size = { x = 108 y = 77}
+		color = { 0.004 0.0 0.0 0.10 }
+		colortwo = { 0.108 0.077 1 1 }
+		effectFile = "gfx/FX/ven_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ven_district_occupied_chacao"
+		textureFile1 = "gfx/interface/proxy_wars/caracas_nights/chacao_occupation.png"
+		textureFile2 = "gfx/interface/proxy_wars/caracas_nights/caracas_colors.dds"
+		size = { x = 51 y = 52 }
+		color = { 0.004 0.0 0.0 0.10 }
+		colortwo = { 0.051 0.052 1 1 }
+		effectFile = "gfx/FX/ven_map_fill.lua"
+		steps = 10000
+	}
+	progressbartype = {
+		name = "GFX_ven_district_occupied_baruta"
+		textureFile1 = "gfx/interface/proxy_wars/caracas_nights/baruta_occupation.png"
+		textureFile2 = "gfx/interface/proxy_wars/caracas_nights/caracas_colors.dds"
+		size = { x = 125 y = 128 }
+		color = { 0.004 0.0 0.0 0.10 }
+		colortwo = { 0.125 0.128 1 1 }
+		effectFile = "gfx/FX/ven_map_fill.lua"
+		steps = 10000
+	}
+	spriteType = {
+		name = "GFX_ven_district_highlight_libertador"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/libertador_highlight.png"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_ven_district_highlight_sucre"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/sucre_highlight.png"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_ven_district_highlight_hatillo"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/hatillo_highlight.png"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_ven_district_highlight_chacao"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/chacao_highlight.png"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_ven_district_highlight_baruta"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/baruta_highlight.png"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_ven_district_button_libertador"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/libertador_button.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_ven_district_button_sucre"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/sucre_button.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_ven_district_button_hatillo"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/hatillo_button.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_ven_district_button_chacao"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/chacao_button.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_ven_district_button_baruta"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/baruta_button.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_caracas_nights_description_district_libertador"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/description_district_libertador.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_caracas_nights_description_district_sucre"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/description_district_sucre.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_caracas_nights_description_district_hatillo"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/description_district_hatillo.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_caracas_nights_description_district_chacao"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/description_district_chacao.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_caracas_nights_description_district_baruta"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/description_district_baruta.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ven_coup_progbar_container"
+		textureFile = "gfx/interface/proxy_wars/caracas_nights/VEN_coup_progbar_container.png"
+	}
+
+	### Kingston Riots ###
+
+	spriteType = {
+		name = "GFX_KingstonRiots_Borders"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_Borders.dds"
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Info"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_Info.dds"
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Overview"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_Overview.dds"
+	}
+
+	progressbartype = {
+		name = "GFX_KingstonRiots_Violence_bar"
+		textureFile1 = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_Violence_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_bar_empty.dds"
+		size = { 
+			x = 268
+			y = 22
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_KingstonRiots_Fervor_bar"
+		textureFile1 = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_Fervor_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_bar_empty.dds"
+		size = { 
+			x = 268
+			y = 22
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_KingstonRiots_GoodGain"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_GoodGain.dds"
+		noOfFrames = 5
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_KingstonRiots_BadGain"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_BadGain.dds"
+		noOfFrames = 5
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_Bahamas"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_Bahamas.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_Colombia"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_Colombia.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_Cuba"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_Cuba.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_DominicanRepublic"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_DominicanRepublic.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_Guatemala"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_Guatemala.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_Haiti"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_Haiti.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_Iberia"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_Iberia.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_Mexico"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_Mexico.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_Nicaragua"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_Nicaragua.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_Panama"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_Panama.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_Route_UnitedStates"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_Route_UnitedStates.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_KingstonRiots_CRT_Jamaica"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_Jamaica.dds"
+		noOfFrames = 2
+		animation_rate_fps = 2
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_Bahamas"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_Bahamas.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_Nicaragua"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_Nicaragua.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_DominicanRepublic"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_DominicanRepublic.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_Guatemala"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_Guatemala.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_Haiti"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_Haiti.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_Colombia"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_Colombia.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_Panama"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_Panama.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_Iberia"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_Iberia.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_Cuba"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_Cuba.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_Mexico"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_Mexico.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_CRT_UnitedStates"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/map/GFX_KingstonRiots_CRT_UnitedStates.dds"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_KingstonRiots_SelectedRoute_Borders"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_SelectedRoute_Borders.dds"
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_SelectedRoute_Type"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_SelectedRoute_Type.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_KingstonRiots_SelectedRoute_Blockade"
+		texturefile = "gfx/interface/proxy_wars/kingston_riots/GFX_KingstonRiots_SelectedRoute_Blockade.dds"
+		noOfFrames = 2
+	}
+	### VENEZUELAN REVOLUTION ###
+	spriteType = {
+		name = "GFX_venezuelan_revolution_background"
+		texturefile = "gfx/interface/proxy_wars/venezuelan_revolution/background.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_rebels"
+		texturefile = "gfx/interface/proxy_wars/venezuelan_revolution/rebels.dds"
+		transparencecheck = yes
+		noOfFrames = 7
+	}
+	spriteType = {
+		name = "GFX_government_troops"
+		texturefile = "gfx/interface/proxy_wars/venezuelan_revolution/government_troops.dds"
+		transparencecheck = yes
+		noOfFrames = 7
+	}
+	spriteType = {
+		name = "GFX_foliage"
+		texturefile = "gfx/interface/proxy_wars/venezuelan_revolution/foliage.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_rebel6"
+		texturefile = "gfx/interface/proxy_wars/venezuelan_revolution/rebel6.dds"
+	}
+	spriteType = {
+		name = "GFX_rebel2"
+		texturefile = "gfx/interface/proxy_wars/venezuelan_revolution/rebel2.dds"
+	}
+	spriteType = {
+		name = "GFX_rebel1"
+		texturefile = "gfx/interface/proxy_wars/venezuelan_revolution/rebel1.dds"
+	}
+	spriteType = {
+		name = "GFX_rock"
+		texturefile = "gfx/interface/proxy_wars/venezuelan_revolution/rock.dds"
+	}
+}

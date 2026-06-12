@@ -1,0 +1,349 @@
+# Marine Mechanic
+
+defined_text = {
+	name = GetAAC_marine_skill
+	text = {
+		localization_key = "AAC_marine_skill_[?temp_skill]"
+	}
+}
+
+defined_text = {
+	name = GetAAC_marine_skill_delayed_tt
+	text = {
+		localization_key = "AAC_marine_skill_delayed_tt_[?temp_skill]"
+	}
+}
+
+defined_text = {
+	name = GetAAC_marine_effect
+	text = {
+		localization_key = "AAC_marine_effect_[?temp_skill]"
+	}
+}
+
+defined_text = {
+	name = GetAACEquipmentCategoryTooltip
+	text = {
+		trigger = { check_variable = { cat_i = 0 } }
+		localization_key = "AAC_marines_infantry_weapon_text"
+	}
+	text = {
+		trigger = { check_variable = { cat_i = 1 } }
+		localization_key = "AAC_marines_support_weapon_text"
+	}
+	text = {
+		trigger = { check_variable = { cat_i = 2 } }
+		localization_key = "AAC_marines_body_kit_text"
+	}
+	text = {
+		trigger = { check_variable = { cat_i = 3 } }
+		localization_key = "AAC_marines_polar_warfare_text"
+	}
+	text = {
+		trigger = { check_variable = { cat_i = 4 } }
+		localization_key = "AAC_marines_creature_comforts_text"
+	}
+}
+
+defined_text = {
+	name = GetAACActiveCategory
+	text = {
+		trigger = { check_variable = { AAC_Marine_Active_Category = 0 } }
+		localization_key = "AAC_marines_infantry_weapon_text"
+	}
+	text = {
+		trigger = { check_variable = { AAC_Marine_Active_Category = 1 } }
+		localization_key = "AAC_marines_support_weapon_text"
+	}
+	text = {
+		trigger = { check_variable = { AAC_Marine_Active_Category = 2 } }
+		localization_key = "AAC_marines_body_kit_text"
+	}
+	text = {
+		trigger = { check_variable = { AAC_Marine_Active_Category = 3 } }
+		localization_key = "AAC_marines_polar_warfare_text"
+	}
+	text = {
+		trigger = { check_variable = { AAC_Marine_Active_Category = 4 } }
+		localization_key = "AAC_marines_creature_comforts_text"
+	}
+}
+
+
+# Diplo Mechanic
+
+defined_text = {
+	name = GetAACNegotiationDeadline
+	text = {
+		trigger = { check_variable = { var = AAC_Diplomacy_Negotiation_Progress value = AAC_Diplomacy_Negotiation_Threshold compare = greater_than_or_equals } }
+		localization_key = "AAC_Diplomacy_Negotiation_Deadline_success"
+	}
+	text = {
+		localization_key = "AAC_Diplomacy_Negotiation_Deadline_fail"
+	}
+}
+
+defined_text = {
+	name = GetAACNextNegotiation
+	text = {
+		trigger = { check_variable = { AAC_Diplomacy_Active_Country = 1629 } }
+		localization_key = AAC_diplo_outcome_peru 
+	}
+	text = {
+		trigger = { check_variable = { AAC_Diplomacy_Active_Country = 1689 } }
+		localization_key = AAC_diplo_outcome_ecuador 
+	}
+	text = {
+		trigger = { check_variable = { AAC_Diplomacy_Active_Country = 305 } }
+		localization_key = AAC_diplo_outcome_venezuela 
+	}
+	text = {
+		trigger = { check_variable = { AAC_Diplomacy_Active_Country = 307 } }
+		localization_key = AAC_diplo_outcome_haiti 
+	}
+	text = {
+		trigger = { check_variable = { AAC_Diplomacy_Active_Country = 318 } }
+		localization_key = AAC_diplo_outcome_cuba 
+	}
+	text = {
+		trigger = { check_variable = { AAC_Diplomacy_Active_Country = 315 } }
+		localization_key = AAC_diplo_outcome_cam 
+	}
+	text = {
+		trigger = { check_variable = { AAC_Diplomacy_Active_Country = 304 } }
+		localization_key = AAC_diplo_outcome_mexico 
+	}
+	text = {
+		trigger = { check_variable = { AAC_Diplomacy_Active_Country = 277 } }
+		localization_key = AAC_next_country_OAS
+	}
+}
+
+defined_text = {
+	name = AAC_Diplomacy_Get_Country_Name_Short
+	text = {
+		trigger = {
+			check_variable = { AAC_Diplomacy_Active_Country = 304 }
+		}
+		localization_key = AAC_Diplomacy_Central_America
+	}
+	text = {
+		localization_key = AAC_Diplomacy_Default_short
+	}
+}
+
+defined_text = {
+	name = AAC_Diplomacy_Get_Country_Name_Adj
+	text = {
+		trigger = {
+			check_variable = { AAC_Diplomacy_Active_Country = 304 }
+		}
+		localization_key = AAC_Diplomacy_Central_America_adj
+	}
+	text = {
+		localization_key = AAC_Diplomacy_Default_Adj
+	}
+}
+
+defined_text = {
+	name = AAC_Diplomacy_Get_Country_Capital_Name
+	text = {
+		trigger = {
+			check_variable = { AAC_Diplomacy_Active_Country = 304 }
+		}
+		localization_key = AAC_Diplomacy_Central_America
+	}
+	text = {
+		localization_key = AAC_Diplomacy_Default_Capital
+	}
+}
+
+defined_text = {
+	name = AAC_Diplomacy_Get_Country_Name
+	
+	text = {
+		trigger = {
+			check_variable = { AAC_Diplomacy_Active_Country = 0 }
+		}
+		localization_key = AAC_Diplomacy_On_The_Way
+	}
+	text = {
+		trigger = {
+			check_variable = { AAC_Diplomacy_Active_Country = 304 }
+		}
+		localization_key = AAC_Diplomacy_Central_America
+	}
+	text = {
+		localization_key = AAC_Diplomacy_Default
+	}
+}
+
+defined_text = {
+	name = AAC_Diplomacy_Get_Location_Image
+	
+	text = {
+		trigger = {
+			check_variable = { AAC_Diplomacy_Active_Country = 304 }
+		}
+		localization_key = AAC_Diplomacy_Location_Image_304
+	}
+	text = {
+		localization_key = AAC_Diplomacy_Location_Image_0
+	}
+}
+
+defined_text = {
+	name = AAC_Diplomacy_Get_Deal_Text
+	text = {
+		#localization_key = "[?AAC.aac_diplo_deal_v.GetTokenLocalizedKey]"
+		localization_key = AAC_Diplomacy_Deal_Text
+	}
+}
+
+defined_text = {
+	name = GetAACNegotiationThresholdBar
+	text = {
+		trigger = { check_variable = { var = AAC_Diplomacy_Negotiation_Progress value = AAC_Diplomacy_Negotiation_Threshold compare = greater_than_or_equals } }
+		localization_key = "GFX_Antarctica_GUI_AAC_Diplomacy_Progressbar_Threshold_Achieved"
+	}
+	text = {
+		localization_key = "GFX_Antarctica_GUI_AAC_Diplomacy_Progressbar_Threshold"
+	}
+}
+
+defined_text = {
+	name = GetAACUruguayDiplo
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_uruguay = 1 }
+		}
+		localization_key = "AAC_diplo_outcome_uruguay_win"
+	}
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_uruguay = -1 }
+		}
+		localization_key = "AAC_diplo_outcome_uruguay_fail"
+	}
+}
+
+defined_text = {
+	name = GetAACPeruDiplo
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_peru = 1 }
+		}
+		localization_key = "AAC_diplo_outcome_peru_win"
+	}
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_peru = -1 }
+		}
+		localization_key = "AAC_diplo_outcome_peru_fail"
+	}
+}
+
+defined_text = {
+	name = GetAACEcuadorDiplo
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_ecuador = 1 }
+		}
+		localization_key = "AAC_diplo_outcome_ecuador_win"
+	}
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_ecuador = -1 }
+		}
+		localization_key = "AAC_diplo_outcome_ecuador_fail"
+	}
+}
+
+defined_text = {
+	name = GetAACVenezuelaDiplo
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_venezuela = 1 }
+		}
+		localization_key = "AAC_diplo_outcome_venezuela_win"
+	}
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_venezuela = -1 }
+		}
+		localization_key = "AAC_diplo_outcome_venezuela_fail"
+	}
+}
+
+defined_text = {
+	name = GetAACHaitiDiplo
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_haiti = 1 }
+		}
+		localization_key = "AAC_diplo_outcome_haiti_win"
+	}
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_haiti = -1 }
+		}
+		localization_key = "AAC_diplo_outcome_haiti_fail"
+	}
+}
+
+defined_text = {
+	name = GetAACCubaDiplo
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_cuba = 1 }
+		}
+		localization_key = "AAC_diplo_outcome_cuba_win"
+	}
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_cuba = -1 }
+		}
+		localization_key = "AAC_diplo_outcome_cuba_fail"
+	}
+}
+
+defined_text = {
+	name = GetAACCamDiplo
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_cam = 1 }
+		}
+		localization_key = "AAC_diplo_outcome_cam_win"
+	}
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_cam = -1 }
+		}
+		localization_key = "AAC_diplo_outcome_cam_fail"
+	}
+}
+
+defined_text = {
+	name = GetAACMexicoDiplo
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_mexico = 1 }
+		}
+		localization_key = "AAC_diplo_outcome_mexico_win"
+	}
+	text = {
+		trigger = {
+			check_variable = { AAC_diplo_outcome_mexico = -1 }
+		}
+		localization_key = "AAC_diplo_outcome_mexico_fail"
+	}
+}
+
+defined_text = {
+	name = GetFoDLineBreak
+	text = {
+		trigger = { has_variable = AAC_diplo_outcome_uruguay }
+		localization_key = "AAC_line_break"
+	}
+	
+}

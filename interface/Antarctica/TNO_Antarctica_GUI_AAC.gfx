@@ -1,0 +1,366 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Basic_Map"
+		textureFile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Basic_Map.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Basic_Map_AAA_Button"
+		textureFile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Basic_Map_AAA_Button.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Basic_Map_AAJ_Button"
+		textureFile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Basic_Map_AAJ_Button.dds"
+		transparencecheck = yes
+	}
+	
+	progressbartype = {
+		name = "GFX_Antarctica_GUI_AAC_Progressbar_AAA"
+		textureFile1 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Progressbar_AAA.dds"
+		textureFile2 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Progressbar_Frame_AAA.dds"
+		size = { x = 452 y = 31 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_Antarctica_GUI_AAC_Progressbar_AAJ"
+		textureFile1 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Progressbar_AAJ.dds"
+		textureFile2 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Progressbar_Frame_AAJ.dds"
+		size = { x = 452 y = 31 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	# Diplomacy GUI
+
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Locked"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Diplomacy_Locked.dds"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Active"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Diplomacy_Active.dds"
+		noOfFrames = 2
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Victory"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Diplomacy_Victory.dds"
+	}
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Defeat"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Diplomacy_Defeat.dds"
+	}
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Progressbar_Frame"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Diplomacy_Progressbar_Frame.dds"
+	}
+	progressbartype = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Progressbar"
+		textureFile1 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Diplomacy_Progressbar.dds"
+		textureFile2 = "gfx/interface/blank.dds"
+		size = { x = 400 y = 26 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Progressbar_Threshold"
+		textureFile1 = "gfx/interface/blank.dds"
+		textureFile2 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Diplomacy_Progressbar_Threshold.dds"
+		size = { x = 400 y = 26 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Progressbar_Threshold_Achieved"
+		textureFile1 = "gfx/interface/blank.dds"
+		textureFile2 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Diplomacy_Progressbar_Threshold_Achieved.dds"
+		size = { x = 400 y = 26 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Threshold_X"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Diplomacy_Threshold_X.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Flag_Button"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/Antarctica_GUI_AAC_Diplomacy_Flag_Button.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_0"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/location_images/decision_image_AAC_Diplo_0.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_304"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/location_images/decision_image_AAC_Diplo_304.dds"
+	}
+	spriteType = { # Uruguay
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_1629"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/location_images/decision_image_AAC_Diplo_1629.dds"
+	}
+	spriteType = { # Peru
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_1689"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/location_images/decision_image_AAC_Diplo_1689.dds"
+	}
+	spriteType = { # Ecuador
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_305"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/location_images/decision_image_AAC_Diplo_305.dds"
+	}
+	spriteType = { # Venezuela
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_307"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/location_images/decision_image_AAC_Diplo_307.dds"
+	}
+	spriteType = { # Haiti
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_318"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/location_images/decision_image_AAC_Diplo_318.dds"
+	}
+	spriteType = { # Cuba
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_315"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/location_images/decision_image_AAC_Diplo_315.dds"
+	}
+	spriteType = { # Central America
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_304"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/location_images/decision_image_AAC_Diplo_304.dds"
+	}
+	spriteType = { # Mexico
+		name = "GFX_Antarctica_GUI_AAC_Diplomacy_Image_277"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/location_images/decision_image_AAC_Diplo_277.dds"
+	}
+
+	# Marine GUI
+	spriteType = {
+		name = "GFX_AAC_Marine_Base_Frame"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Base_Frame.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Skill_Frame"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_Frame.dds"
+	}
+
+	progressbartype = {
+		name = "GFX_AAC_Marine_Skill_0_Bar"
+		textureFile1 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_M_Full.dds"
+		textureFile2 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_M_Empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { x = 61 y = 64 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	progressbartype = {
+		name = "GFX_AAC_Marine_Skill_1_Bar"
+		textureFile1 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_E_Full.dds"
+		textureFile2 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_E_Empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { x = 61 y = 64 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	progressbartype = {
+		name = "GFX_AAC_Marine_Skill_2_Bar"
+		textureFile1 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_A_Full.dds"
+		textureFile2 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_A_Empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { x = 61 y = 64 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+	progressbartype = {
+		name = "GFX_AAC_Marine_Skill_3_Bar"
+		textureFile1 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_L_Full.dds"
+		textureFile2 = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_L_Empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { x = 61 y = 64 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+
+	spriteType = {
+		name = "GFX_AAC_Marine_Skill_Pump"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_Pump.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Skill_Pump_Locked"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Skill_Pump_Locked.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Armory_Equipment_Locked"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Armory_Equipment_Locked.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Armory_Title_Card"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Armory_Title_Card.dds"
+	}
+
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_0"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Equipment_Infantry_Weapon_Button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_1"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Equipment_Support_Weapon_Button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_2"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Equipment_Body_Kit_Button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_3"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Equipment_Polar_Warfare_Button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_4"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Equipment_Creature_Comforts_Button.dds"
+		noOfFrames = 2
+	}
+
+	### Marine Mech Equipment
+	# Intantry Weapon
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CHL_M14"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CHL_M14.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_USA_M19024A_Springfield"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/USA_M19024A_Springfield.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_BRA_INA_Model_953"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/BRA_INA_Model_953.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_JAP_Arisaka_Type_15"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/JAP_Arisaka_Type_15.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CAN_Rifle_No_9_Mk_I"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CAN_Rifle_No_9_Mk_I.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_TUR_T58_Atmaca"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/TUR_T58_Atmaca.dds"
+	}
+
+	# Body Kit
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_USA_47_Winter_Parka"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/USA_47_Winter_Parka.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_AAC_Dry_Scuba_Kit"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/AAC_Dry_Scuba_Kit.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_BRA_M2_Flamethrower"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/BRA_M2_Flamethrower.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_JAP_Body_Armor"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/JAP_Body_Armor.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CAN_Inuit_Polar_Clothes"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CAN_Inuit_Polar_Clothes.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_TUR_makeshift_grenade_bandolier"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/TUR_makeshift_grenade_bandolier.dds"
+	}
+
+	# Support Weapon
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CHL_Mk2_Fragmentation_Grenade"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CHL_Mk2_Fragmentation_Grenade.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_USA_M18A1_Claymore"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/USA_M18A1_Claymore.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_BRA_RL_83_Blindicide"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/BRA_RL_83_Blindicide.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_JAP_Type_22_Kuyu"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/JAP_Type_22_Kuyu.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CAN_L21A1"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CAN_L21A1.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_TUR_granatwerfer_34"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/TUR_granatwerfer_34.dds"
+	}
+
+	# Polar Warfare
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_AAC_Tucker_Snow_Cat"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/AAC_Tucker_Snow_Cat.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_AAC_Thiokol_Trackmaster"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/AAC_Thiokol_Trackmaster.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_AAC_High_Performance_Dog_Sled"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/AAC_High_Performance_Dog_Sled.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_AAC_Extra_Huskies"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/AAC_Extra_Huskies.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CAN_60_Ski_Doo"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CAN_60_Ski_Doo.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_USA_57_Polaris_Snow_Traveler"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/USA_57_Polaris_Snow_Traveler.dds"
+	}
+
+	# Creature Comforts
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_HON_Fresh_Bananas"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/HON_Fresh_Bananas.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_HAI_Frozen_Mangos"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/HAI_Frozen_Mangos.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CUB_Cigars"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CUB_Cigars.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_ELS_Deluxe_Coffee"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/ELS_Deluxe_Coffee.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_CHL_Pisco"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/CHL_Pisco.dds"
+	}
+	spriteType = {
+		name = "GFX_AAC_Marine_Equipment_SWI_Rolex_Explorer_Watches"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/techs/SWI_Rolex_Explorer_Watches.dds"
+	}
+
+	spriteType = {
+		name = "GFX_AAC_Marine_Display"
+		texturefile = "gfx/interface/Antarctica_GUI/Antarctica_GUI_AAC/marine_gui/AAC_Marine_Display.dds"
+		noOfFrames = 6
+	}
+}

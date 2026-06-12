@@ -1,0 +1,58 @@
+ideas = {
+	country = {
+		GGN_Underground_State = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGN_Underground_State" }
+			allowed = { always = no }
+			picture = generic_the_underground_state
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.50
+				war_support_factor = -0.30
+				industrial_capacity_factory = -0.15
+				army_org_factor = -0.2
+			}
+		}
+
+		GGN_Reich_Defense = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGN_Reich_Defense" }
+			allowed = { always = no }
+			removal_cost = -1
+			cancel = { has_war = no }
+			picture = generic_terrified_garrison
+			modifier = {
+				surrender_limit = 0.25
+				resistance_target = -0.1
+				out_of_supply_factor = -0.2
+			}
+			targeted_modifier = {
+				tag = POL
+				defense_bonus_against = 0.15
+			}
+		}
+
+		POL_Home_Defense = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea POL_Home_Defense" }
+			allowed = { always = no }
+			removal_cost = -1
+			cancel = { is_in_faction_with = GER }
+			picture = POL_polish_home_defense
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.2
+			}
+		}
+
+		POL_Hardened_Defense = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea POL_Hardened_Defense" }
+			allowed = { always = no }
+			removal_cost = -1
+			cancel = { is_in_faction_with = GER }
+			picture = generic_partisan_alliance
+			modifier = {
+				army_core_defence_factor = 0.35
+				dig_in_speed_factor = 0.15
+				max_dig_in = 10
+			}
+		}
+	}
+}

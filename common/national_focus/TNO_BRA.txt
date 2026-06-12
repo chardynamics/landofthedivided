@@ -1,0 +1,321 @@
+#LOBSTER WAR TREE
+focus_tree = {
+	id = BRA_Lott
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	default = no
+	shared_focus = BRA_the_lott_presidency
+	shared_focus = BRA_brazil_to_the_rescue
+	shared_focus = BRA_business_as_usual
+}
+
+focus_tree = {
+	id = BRA_Denys_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	default = no
+	shared_focus = BRA_the_ides_of_brazil
+	shared_focus = BRA_marxism_will_not_prevail
+}
+
+focus_tree = {
+	id = BRA_Quadros_Coup_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_now_onto_the_hard_part
+}
+
+focus_tree = {
+	id = BRA_Hundred_Days_Crisis_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_brasilia_paralyzed
+}
+
+focus_tree = {
+	id = BRA_Goulart_Hundred_Days_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_legacy_of_vargas
+}
+
+focus_tree = {
+	id = BRA_Lacerda_Hundred_Days_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_lacerda_presidency
+}
+
+
+focus_tree = {
+	id = BRA_Adhemar_65
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_the_adhemar_presidency
+}
+
+focus_tree = {
+	id = BRA_Adhemar_true_progress
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_true_progress
+}
+
+focus_tree = {
+	id = BRA_Adhemar_puppetmaster_is_out
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_puppetmaster_is_out
+}
+
+focus_tree = {
+	id = BRA_Adhemar_against_all_odds
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_against_all_odds
+}
+
+focus_tree = {
+	id = BRA_Adhemar_return_to_normality
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_return_to_normality
+}
+
+focus_tree = {
+	id = BRA_Adhemar_adhemar_gone
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_adhemar_gone
+}
+
+focus_tree = {
+	id = BRA_Kubitschek_Hundred_Days_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_kubitscheks_return
+}
+
+focus_tree = {
+	id = BRA_Adhemar_Hundred_Days_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_dark_horse_rises
+}
+
+focus_tree = {
+	id = BRA_HundredDays_MilitaryCoup_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_the_intervention
+}
+
+focus_tree = {
+	id = BRA_Hardliner_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_scrap_the_election_plans
+}
+
+focus_tree = {
+	id = BRA_Hardliner_Silva_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_silva_victorious
+}
+
+focus_tree = {
+	id = BRA_Sorbonne_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_humberto_stands_defiant
+}
+
+focus_tree = {
+	id = BRA_Lacerda_65
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_1965_the_lacerda_presidency
+	shared_focus = BRA_lacerda_hemispheric_defence
+}
+
+focus_tree = {
+	id = BRA_Imperial_Lacerda_65
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_imperial_catastrophe_avoided
+}
+
+focus_tree = {
+	id = BRA_Imperial_Lacerda_65_strikes
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_imperial_the_crow_reigns_supreme
+}
+
+focus_tree = {
+	id = BRA_Imperial_Lacerda_65_strikes_bad
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_imperial_lacerda_vengeance
+}
+
+focus_tree = {
+	id = BRA_Imperial_Lacerda_65_strikes_good
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_imperial_lacerda_victory
+}
+
+
+focus_tree = {
+	id = BRA_Lacerda_65_strikes
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+
+	shared_focus = BRA_gomes_checkmate
+}
+
+focus_tree = {
+	id = BRA_Lacerda_65_success
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_the_crow_triumphant
+}
+
+focus_tree = {
+	id = BRA_tavora_coup
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	shared_focus = BRA_tavora_presidency
+}

@@ -1,0 +1,99 @@
+## Enables a tag in the BoP GUI
+# Arguments: TabName (token)
+TNO_BoP_AddTab = {
+	# If this is the first time a tab is added to th GUI (that is, the interface has been enabled for a tag), activate the relevant tag's BoP
+	if = {
+		limit = { check_variable = { TNO_BoP_Tabs^num = 0 } }
+		hidden_effect = {
+			meta_effect = {
+				text = { set_power_balance = { id = BoP_Decisions_[TAG] } }
+				TAG = "[THIS.GetTag]"
+			}
+		}
+	}
+
+	custom_effect_tooltip = TNO_BoP_AddTab_tt
+	add_to_array = { TNO_BoP_Tabs = TabName }
+	resize_array = { TNO_BoP_Tabs_Frames = TNO_BoP_Tabs^num }
+
+	# If it's the only tab in the GUI at all, select it and enable its decisions
+	if = {
+		limit = { check_variable = { TNO_BoP_Tabs^num = 1 } }
+		set_variable = { TNO_BoP_Tabs_Frames^0 = 2 }
+		set_variable = { TNO_BoP_SelectedTab = TNO_BoP_Tabs^0 }
+	}
+}
+
+## Disables a tag in the BoP GUI
+# Arguments: TabName (token)
+TNO_BoP_RemoveTab = {
+	remove_from_array = { TNO_BoP_Tabs = TabName }
+	resize_array = { TNO_BoP_Tabs_Frames = TNO_BoP_Tabs^num }
+
+	# If this happened to be the last BoP tab, then disable the BoP category for the target tag
+	if = {
+		limit = { check_variable = { TNO_BoP_Tabs^num = 0 } }
+		meta_effect = {
+			text = { remove_power_balance = { id = BoP_Decisions_[TAG] } }
+			TAG = "[THIS.GetTag]"
+		}
+	}
+}
+
+Global_Conflicts_Initalize = {
+	USA = {
+		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+		TNO_BoP_AddTab = yes
+	}
+	JAP = {
+		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+		TNO_BoP_AddTab = yes
+	}
+	GER = {
+		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+		TNO_BoP_AddTab = yes
+	}
+	ARG = {
+		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+		TNO_BoP_AddTab = yes
+	}
+	BRA = {
+		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+		TNO_BoP_AddTab = yes
+	}
+	IBR = {
+		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+		TNO_BoP_AddTab = yes
+	}
+	MEX = {
+		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+		TNO_BoP_AddTab = yes
+	}
+	ITA = { #After 6 years
+		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+		TNO_BoP_AddTab = yes
+	}
+	TUR = {
+		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+		TNO_BoP_AddTab = yes
+	}
+	FRS = {
+		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+		TNO_BoP_AddTab = yes
+	}
+}
+
+SACW_GUI_proxy_link = {
+	set_variable = { TNO_BoP_Tabs_Frames^2 = 0 }
+	set_variable = { TNO_BoP_Tabs_Frames^1 = 2 }
+	meta_effect = {
+		text = {
+			remove_power_balance = { id = [OLD_TAB]_[TAG] }
+			set_power_balance = { id = [TAB_TYPE]_[TAG] }
+		}
+		TAG = "[THIS.GetTag]"
+		OLD_TAB = "[?TNO_BoP_SelectedTab.GetTokenKey]"
+		TAB_TYPE = "[?token:BoP_Tab_GlobalConflicts.GetTokenKey]"
+	}
+	set_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+}

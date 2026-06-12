@@ -1,0 +1,30 @@
+Antarctica_GUI_Foreign = {
+	allowed = {
+		OR = {
+			tag = USA
+			tag = JAP
+			tag = GER
+			tag = SGR
+			tag = BGR
+			tag = GGR
+		}
+	}
+	visible = {
+		OR = {
+			always = yes
+			AND = {
+				tag = USA
+				AAO = { exists = yes }
+			}
+			AND = {
+				tag = JAP
+				AAJ = { exists = yes }
+			}
+			AND = {
+				tag = GER
+				has_global_flag = german_civil_war_end
+				AAG = { exists = yes }
+			}
+		}
+	}
+}

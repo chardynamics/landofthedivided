@@ -1,0 +1,646 @@
+##Argentina Elections##
+#####################Front End Stuff##################
+######################Cool and Easy###################
+####Election Setup and Executions####
+##Frondizi Falls Elections##
+#1963#
+ARG_POL_GUI_setup_for_63_election = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_country_flag = presidential_election
+	set_country_flag = cycle_1_sen_election
+	set_country_flag = cycle_2_sen_election
+	set_country_flag = cycle_3_sen_election
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = cycle_1_dep_election 
+		set_state_flag = cycle_2_dep_election
+		set_state_flag = state_legislature_election
+	}
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	ARG_POL_GUI_presidential_setup = yes
+	ARG_POL_63_deps_election_prediction = yes
+	ARG_state_legislature_election_prediction = yes
+	ARG_POL_predict_senate_elections = yes
+	ARG_POL_highlight_all = yes
+	set_variable = {ARG_POL_election_year = 63}
+	set_country_flag = cycle_1_dep_election
+	set_country_flag = cycle_2_dep_election
+}
+ARG_POL_GUI_hold_63_election = {
+	ARG_POL_63_deps_election = yes
+	ARG_state_legislature_elections = yes
+	ARG_POL_hold_senate_elections = yes
+	ARG_POL_hold_presidential_election = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1965#
+ARG_POL_GUI_setup_for_65_election = {
+	set_country_flag = ARG_POL_ongoing_election
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = cycle_1_dep_election 
+	}
+	ARG_POL_GUI_highlight_all_cycle_1_deps = yes
+	set_variable = {ARG_POL_election_year = 65}
+	set_country_flag = cycle_1_dep_election
+	ARG_POL_predict_cycle_1_deps_election = yes
+}
+ARG_POL_GUI_hold_65_election = {
+	ARG_POL_hold_cycle_1_deps_election = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1966#
+ARG_POL_GUI_setup_for_66_election = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_country_flag = cycle_1_sen_election
+	ARG_POL_GUI_highlight_all_cycle_1_sens = yes
+	511 = {
+		set_state_flag = state_legislature_election
+	}
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	set_variable = {ARG_POL_election_year = 66}
+	ARG_state_legislature_election_prediction = yes
+	ARG_POL_predict_senate_elections = yes
+}
+ARG_POL_GUI_hold_66_election = {
+	ARG_state_legislature_elections = yes
+	ARG_POL_hold_senate_elections = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1967#
+ARG_POL_GUI_setup_for_67_election = {
+	set_country_flag = ARG_POL_ongoing_election
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = cycle_2_dep_election
+	}
+	278 = {
+		set_state_flag = state_legislature_election
+	}
+	ARG_POL_GUI_highlight_all_cycle_2_deps = yes
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	set_variable = {ARG_POL_election_year = 67}
+	set_country_flag = cycle_2_dep_election
+	ARG_POL_predict_cycle_2_deps_election = yes
+	ARG_state_legislature_election_prediction = yes
+}
+ARG_POL_GUI_hold_67_election = {
+	ARG_state_legislature_elections = yes
+	ARG_POL_hold_cycle_2_deps_election = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1969#
+ARG_POL_GUI_setup_for_69_election = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_country_flag = presidential_election
+	set_country_flag = cycle_1_sen_election
+	set_country_flag = cycle_2_sen_election
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = cycle_1_dep_election 
+		set_state_flag = state_legislature_election
+	}
+	ARG_POL_GUI_highlight_all_cycle_1_sens = yes
+	ARG_POL_GUI_highlight_all_cycle_2_sens = yes
+	278 = {
+		clr_state_flag = state_legislature_election
+	}
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	ARG_POL_GUI_highlight_all_cycle_1_deps = yes
+	set_variable = {ARG_POL_election_year = 69}
+	set_country_flag = cycle_1_dep_election
+	ARG_POL_GUI_presidential_setup = yes
+	ARG_POL_predict_cycle_1_deps_election = yes
+	ARG_state_legislature_election_prediction = yes
+	ARG_POL_predict_senate_elections = yes
+}
+ARG_POL_GUI_hold_69_election = {
+	ARG_POL_hold_senate_elections = yes
+	ARG_POL_hold_cycle_1_deps_election = yes
+	ARG_state_legislature_elections = yes
+	ARG_POL_hold_presidential_election = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1971#
+ARG_POL_GUI_setup_for_71_election = {
+	set_country_flag = ARG_POL_ongoing_election
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = cycle_2_dep_election
+	}
+	278 = {
+		set_state_flag = state_legislature_election
+	}
+	ARG_POL_GUI_highlight_all_cycle_2_deps = yes
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	set_variable = {ARG_POL_election_year = 71}
+	set_country_flag = cycle_2_dep_election
+	ARG_POL_predict_cycle_2_deps_election = yes
+	ARG_state_legislature_election_prediction = yes
+}
+ARG_POL_GUI_hold_71_election = {
+	ARG_POL_hold_cycle_2_deps_election = yes
+	ARG_state_legislature_elections = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1972#
+ARG_POL_GUI_setup_for_72_election = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_country_flag = cycle_1_sen_election
+	set_country_flag = cycle_3_sen_election
+	511 = {
+		set_state_flag = state_legislature_election
+	}
+	ARG_POL_GUI_highlight_all_cycle_1_sens = yes
+	ARG_POL_GUI_highlight_all_cycle_3_sens = yes
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	set_variable = {ARG_POL_election_year = 72}
+	ARG_POL_predict_senate_elections = yes
+	ARG_state_legislature_election_prediction = yes
+}
+ARG_POL_GUI_hold_72_election = {
+	ARG_POL_hold_senate_elections = yes
+	ARG_state_legislature_elections = yes
+	ARG_POL_clear_election_flags = yes
+}
+##Frondizi Survives Elections##
+#1962#
+ARG_POL_GUI_setup_for_62_election_fr = {
+	set_country_flag = ARG_POL_ongoing_election
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = cycle_1_dep_election 
+		set_state_flag = state_legislature_election
+	}
+	511 = { clr_state_flag = state_legislature_election	} #Mendoza
+	1505 = { clr_state_flag = state_legislature_election } #San Luis
+	1496 = { clr_state_flag = state_legislature_election } #Catamarca
+	1497 = { clr_state_flag = state_legislature_election } #La Pampa
+	1500 = { clr_state_flag = state_legislature_election } #Misiones
+	510 = { clr_state_flag = state_legislature_election	} #Santa Fe
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	ARG_state_legislature_election_prediction = yes
+	ARG_POL_predict_cycle_1_deps_election = yes
+	set_variable = {ARG_POL_election_year = 62}
+	set_country_flag = cycle_1_dep_election
+	ARG_POL_GUI_highlight_all_cycle_1_deps = yes
+}
+ARG_POL_GUI_hold_62_election_fr = {
+	ARG_POL_hold_cycle_1_deps_election = yes
+	ARG_state_legislature_elections = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1963#
+ARG_POL_GUI_setup_for_63_election_fr = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_country_flag = presidential_election
+	set_country_flag = cycle_1_sen_election
+	511 = { set_state_flag = state_legislature_election	} #Mendoza
+	1505 = { set_state_flag = state_legislature_election } #San Luis
+	ARG_POL_predict_senate_elections = yes
+	ARG_POL_GUI_highlight_all_cycle_1_sens = yes
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	set_variable = {ARG_POL_election_year = 63}
+	ARG_state_legislature_election_prediction = yes
+	ARG_POL_GUI_presidential_setup = yes
+}
+ARG_POL_GUI_hold_63_election_fr = {
+	ARG_state_legislature_elections = yes
+	ARG_POL_hold_senate_elections = yes
+	ARG_POL_hold_presidential_election = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1964
+ARG_POL_GUI_setup_for_64_election_fr = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_variable = {ARG_POL_election_year = 64}
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = cycle_2_dep_election 
+	}
+	set_country_flag = cycle_2_dep_election
+	ARG_POL_predict_cycle_2_deps_election = yes
+	ARG_POL_GUI_highlight_all_cycle_2_deps = yes
+	1496 = { set_state_flag = state_legislature_election } #Catamarca
+	1497 = { set_state_flag = state_legislature_election } #La Pampa
+	1500 = { set_state_flag = state_legislature_election } #Misiones
+	510 = { set_state_flag = state_legislature_election	} #Santa Fe
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	ARG_state_legislature_election_prediction = yes
+}
+ARG_POL_GUI_hold_64_election_fr = {
+	ARG_state_legislature_elections = yes
+	ARG_POL_hold_cycle_2_deps_election = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1966#
+ARG_POL_GUI_setup_for_66_election_fr = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_variable = {ARG_POL_election_year = 66}
+	set_country_flag = cycle_1_sen_election
+	set_country_flag = cycle_2_sen_election
+	set_country_flag = cycle_1_dep_election
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = cycle_1_dep_election 
+	}
+	511 = { set_state_flag = state_legislature_election	} #Mendoza
+	1505 = { set_state_flag = state_legislature_election } #San Luis
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	ARG_POL_GUI_highlight_all_cycle_1_sens = yes
+	ARG_POL_GUI_highlight_all_cycle_2_sens = yes
+	ARG_POL_GUI_highlight_all_cycle_1_deps = yes
+	ARG_state_legislature_election_prediction = yes
+	ARG_POL_predict_cycle_1_deps_election = yes
+	ARG_POL_predict_senate_elections = yes
+}
+ARG_POL_GUI_hold_66_election_fr = {
+	ARG_state_legislature_elections = yes
+	ARG_POL_hold_cycle_1_deps_election = yes
+	ARG_POL_hold_senate_elections = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1968#
+ARG_POL_GUI_setup_for_68_election_fr = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_variable = {ARG_POL_election_year = 68}
+	set_country_flag = cycle_2_dep_election
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = state_legislature_election
+		set_state_flag = cycle_2_dep_election 
+	}
+	511 = { clr_state_flag = state_legislature_election	} #Mendoza
+	1505 = { clr_state_flag = state_legislature_election } #San Luis
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	ARG_POL_GUI_highlight_all_cycle_2_deps = yes
+	ARG_state_legislature_election_prediction = yes
+	ARG_POL_predict_cycle_2_deps_election = yes
+}
+ARG_POL_GUI_hold_68_election_fr = {
+	ARG_state_legislature_elections = yes
+	ARG_POL_hold_cycle_2_deps_election = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1969#
+ARG_POL_GUI_setup_for_69_election_fr = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_variable = {ARG_POL_election_year = 69}
+	511 = { set_state_flag = state_legislature_election	} #Mendoza
+	1505 = { set_state_flag = state_legislature_election } #San Luis
+	set_country_flag = cycle_1_sen_election
+	set_country_flag = cycle_3_sen_election
+	set_country_flag = presidential_election
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	ARG_POL_GUI_highlight_all_cycle_1_sens = yes
+	ARG_POL_GUI_highlight_all_cycle_3_sens = yes
+	ARG_state_legislature_election_prediction = yes
+	ARG_POL_predict_senate_elections = yes
+	ARG_POL_GUI_presidential_setup = yes
+}
+ARG_POL_GUI_hold_69_election_fr = {
+	ARG_state_legislature_elections = yes
+	ARG_POL_hold_senate_elections = yes
+	ARG_POL_hold_presidential_election = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1970#
+ARG_POL_GUI_setup_for_70_election_fr = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_variable = {ARG_POL_election_year = 70}
+	set_country_flag = cycle_1_dep_election
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = cycle_1_dep_election 
+	}
+	ARG_POL_GUI_highlight_all_cycle_1_deps = yes
+	ARG_POL_predict_cycle_1_deps_election = yes
+}
+ARG_POL_GUI_hold_70_election_fr = {
+	ARG_POL_hold_cycle_1_deps_election = yes
+	ARG_POL_clear_election_flags = yes
+}
+#1972#
+ARG_POL_GUI_setup_for_72_election_fr = {
+	set_country_flag = ARG_POL_ongoing_election
+	set_variable = {ARG_POL_election_year = 72}
+	set_country_flag = cycle_2_dep_election
+	set_country_flag = cycle_1_sen_election
+	set_country_flag = cycle_2_sen_election
+	every_owned_state = {
+		limit = { has_state_flag = ARG_election_state }
+		set_state_flag = cycle_2_dep_election 
+	}
+	1496 = { set_state_flag = state_legislature_election } #Catamarca
+	1497 = { set_state_flag = state_legislature_election } #La Pampa
+	1500 = { set_state_flag = state_legislature_election } #Misiones
+	510 = { set_state_flag = state_legislature_election	} #Santa Fe
+	ARG_POL_GUI_highlight_state_leg_for_election = yes
+	ARG_POL_GUI_highlight_all_cycle_2_deps = yes
+	ARG_POL_GUI_highlight_all_cycle_1_sens = yes
+	ARG_POL_GUI_highlight_all_cycle_2_sens = yes
+	ARG_POL_predict_cycle_2_deps_election = yes
+	ARG_state_legislature_election_prediction = yes
+	ARG_POL_predict_senate_elections = yes
+}
+ARG_POL_GUI_hold_72_election_fr = {
+	ARG_state_legislature_elections = yes
+	ARG_POL_hold_senate_elections = yes
+	ARG_POL_hold_cycle_2_deps_election = yes
+	ARG_POL_clear_election_flags = yes
+}
+###################Unbanning Effects####################
+ARG_POL_unban_mpp = {
+	clr_country_flag = MPP_banned
+}
+ARG_POL_unban_mpn = {
+	clr_country_flag = MPN_banned
+}
+ARG_POL_unban_apn = {
+	clr_country_flag = APN_banned
+}
+ARG_POL_unban_apc = {
+	clr_country_flag = APC_banned
+}
+ARG_POL_unban_pj = {
+	clr_country_flag = PJ_banned
+}
+###########Restore Democracry Effect#############
+ARG_POL_GUI_RESTORE_DEMOCRACY = {
+	for_loop_effect = {
+		start = 0
+		end = 192
+		value = idx
+
+		set_variable = { ARG_frame_congress_array^idx = 10 }
+	}
+	for_loop_effect = {
+		start = 0
+		end = 46
+		value = idx
+
+		set_variable = { ARG_frame_senate_array^idx = 10 }
+	}
+	for_loop_effect = {
+		start = 0
+		end = 61
+		value = idx
+
+		set_variable = { ARG_POL_total_num_of_deps^idx = 0 }
+	}
+	every_owned_state = {
+		limit = {
+			has_state_flag = ARG_election_state
+		}
+		set_variable = {ARG_state_govenor = 10}
+		set_variable = {ARG_state_governor_display = 10}
+		set_variable = {ARG_senator_1 = 10}
+		set_variable = {ARG_senator_2 = 10}
+		set_variable = {ARG_POL_current_state_senator_1 = 10}
+		set_variable = {ARG_senator_2_display = 10}
+		for_loop_effect = {
+			start = 0
+			end = 92
+			value = idx
+
+			if = {
+				limit = {
+					check_Variable = {ARG_state_seats_display^idx > 0}
+				}
+				set_variable = {ARG_state_seats_display^idx = 10}
+				set_variable = {ARG_state_seats_display_tt^idx = 10}
+			}
+
+			if = {
+				limit = {
+					check_Variable = {ARG_POL_GUI_cong_seat^idx > 0}
+				}
+				set_variable = {ARG_POL_GUI_cong_seat^idx = 10}
+			}
+
+			if = {
+				limit = {
+					check_Variable = {ARG_POL_GUI_sen_seat^idx > 0}
+				}
+				set_variable = {ARG_POL_GUI_sen_seat^idx = 10}
+			}
+		}
+		#####################################################
+		for_each_loop = {
+			array = ARG.ARG_POL_active_subparties
+			index = idx
+			value = party_idx
+
+			set_variable = {ARG_POL_deps_state_leg^party_idx = 0}
+			set_variable = {ARG_POL_sens_state_leg^party_idx = 0}
+		}
+		#set_variable = {ARG_POL_psa_deps_state_leg = 0}
+		#set_variable = {ARG_POL_psd_deps_state_leg = 0}
+#
+		#set_variable = {ARG_POL_ucrp_mir_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_u_mu_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ucrp_lc_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_u_mir_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_ip_deps_state_leg = 0}
+#
+		#set_variable = {ARG_POL_ucri_a_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ucri_d_deps_state_leg = 0}
+#
+		#set_variable = {ARG_POL_pdc_deps_state_leg = 0}
+#
+		#set_variable = {ARG_POL_uc_deps_state_leg = 0}
+		#set_variable = {ARG_POL_dp_bb_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pci_deps_state_leg = 0}
+		#set_variable = {ARG_POL_prar_deps_state_leg = 0}
+		#set_variable = {ARG_POL_plco_deps_state_leg = 0}
+		#set_variable = {ARG_POL_paco_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pcp_deps_state_leg = 0}
+		#set_variable = {ARG_POL_padeco_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pup_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pdn_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pdu_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pd_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pdl_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pd_c_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pd_m_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pd_p_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pdrn_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pcdch_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pdca_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pdf_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pcop_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pds_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pl_fnpc_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pdp_fnpc_deps_state_leg = 0}
+		#set_variable = {ARG_POL_psd_fnpc_deps_state_leg = 0}
+#
+		#set_variable = {ARG_POL_pl_deps_state_leg = 0}
+		#set_variable = {ARG_POL_mpn_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pp_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ptb_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ucrb_deps_state_leg = 0}
+		#set_variable = {ARG_POL_mpp_deps_state_leg = 0}
+		#set_variable = {ARG_POL_apc_deps_state_leg = 0}
+		#set_variable = {ARG_POL_apn_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ppdch_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ap_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pjs_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pbt_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pln_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pt_deps_state_leg = 0}
+		#set_variable = {ARG_POL_mfd_deps_state_leg = 0}
+		#set_variable = {ARG_POL_up_deps_state_leg = 0}
+		#set_variable = {ARG_POL_mpm_deps_state_leg = 0}
+#
+		#set_variable = {ARG_POL_pdp_deps_state_leg = 0}
+#
+		#set_variable = {ARG_POL_pj_deps_state_leg = 0}
+		#set_variable = {ARG_POL_pb_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_bc_deps_state_leg = 0}
+		#set_variable = {ARG_POL_prn_up_deps_state_leg = 0}
+#
+		#set_variable = {ARG_POL_pun_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_cr_deps_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_f_deps_state_leg = 0}
+		#set_variable = {ARG_POL_other_deps_state_leg = 0}
+		##################################################################################
+		#set_variable = {ARG_POL_psa_sens_state_leg = 0}
+		#set_variable = {ARG_POL_psd_sens_state_leg = 0}
+#
+		#set_variable = {ARG_POL_ucrp_mir_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_u_mu_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ucrp_lc_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_u_mir_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_ip_sens_state_leg = 0}
+#
+		#set_variable = {ARG_POL_ucri_a_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ucri_d_sens_state_leg = 0}
+#
+		#set_variable = {ARG_POL_pdc_sens_state_leg = 0}
+#
+		#set_variable = {ARG_POL_uc_sens_state_leg = 0}
+		#set_variable = {ARG_POL_dp_bb_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pci_sens_state_leg = 0}
+		#set_variable = {ARG_POL_prar_sens_state_leg = 0}
+		#set_variable = {ARG_POL_plco_sens_state_leg = 0}
+		#set_variable = {ARG_POL_paco_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pcp_sens_state_leg = 0}
+		#set_variable = {ARG_POL_padeco_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pup_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pdn_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pdu_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pd_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pdl_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pd_c_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pd_m_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pd_p_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pdrn_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pcdch_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pdca_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pdf_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pcop_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pds_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pl_fnpc_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pdp_fnpc_sens_state_leg = 0}
+		#set_variable = {ARG_POL_psd_fnpc_sens_state_leg = 0}
+#
+		#set_variable = {ARG_POL_pl_sens_state_leg = 0}
+		#set_variable = {ARG_POL_mpn_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pp_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ptb_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ucrb_sens_state_leg = 0}
+		#set_variable = {ARG_POL_mpp_sens_state_leg = 0}
+		#set_variable = {ARG_POL_apc_sens_state_leg = 0}
+		#set_variable = {ARG_POL_apn_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ppdch_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ap_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pjs_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pbt_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pln_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pt_sens_state_leg = 0}
+		#set_variable = {ARG_POL_mfd_sens_state_leg = 0}
+		#set_variable = {ARG_POL_up_sens_state_leg = 0}
+		#set_variable = {ARG_POL_mpm_sens_state_leg = 0}
+#
+		#set_variable = {ARG_POL_pdp_sens_state_leg = 0}
+#
+		#set_variable = {ARG_POL_pj_sens_state_leg = 0}
+		#set_variable = {ARG_POL_pb_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_bc_sens_state_leg = 0}
+		#set_variable = {ARG_POL_prn_up_sens_state_leg = 0}
+#
+		#set_variable = {ARG_POL_pun_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_cr_sens_state_leg = 0}
+		#set_variable = {ARG_POL_ucr_f_sens_state_leg = 0}
+		#set_variable = {ARG_POL_other_sens_state_leg = 0}
+
+		for_each_loop = {
+			array = ARG.ARG_POL_active_subparties
+			index = idx
+			value = party_idx
+
+			set_variable = { ARG_POL_deps_state_cycle_1^party_idx = 0 }
+			set_variable = { ARG_POL_deps_state_cycle_2^party_idx = 0 }
+			set_variable = {ARG_POL_total_state_leg_sens^party_idx = 0}
+			set_variable = {ARG_POL_total_state_leg_deps^party_idx = 0}
+		}
+
+		ARG_total_up_state_legs = yes
+		ARG_POL_update_state_deps_display = yes
+	}
+	ARG_POL_clear_senate = yes
+	for_each_loop = {
+		array = ARG.ARG_POL_active_parties
+		index = idx
+		value = party_idx
+
+		set_variable = { ARG_number_of_sens^party_idx = 0 }
+		set_variable = { ARG_senators^party_idx = ARG_number_of_sens^party_idx}
+	}
+	#set_variable = {PS_senators = ARG_number_of_sens^1}
+	#set_variable = {UCRP_senators = ARG_number_of_sens^2}
+	#set_variable = {UCRI_senators = ARG_number_of_sens^3}
+	#set_variable = {PDC_senators = ARG_number_of_sens^4}
+	#set_variable = {FNPC_senators = ARG_number_of_sens^5}
+	#set_variable = {NP_senators = ARG_number_of_sens^6}
+	#set_variable = {PDP_senators = ARG_number_of_sens^7}
+	#set_variable = {PRN_senators = ARG_number_of_sens^8}
+	#set_variable = {OTHER_senators = ARG_number_of_sens^9}
+
+	ARG_sort_out_list_of_parties_senate_seats = yes
+
+	ARG_POL_update_amount_of_deps_nationally = yes
+	ARG_POL_state_click_effect = yes
+
+	clear_array = ARG_calendar_boxes
+
+	add_to_array = {ARG_calendar_boxes = 1}
+	add_to_array = {ARG_calendar_boxes = 3}
+	add_to_array = {ARG_calendar_boxes = 4}
+	add_to_array = {ARG_calendar_boxes = 5}
+	add_to_array = {ARG_calendar_boxes = 7}
+	add_to_array = {ARG_calendar_boxes = 9}
+	add_to_array = {ARG_calendar_boxes = 10}
+
+	clear_array = ARG_POL_dep_election_y_position
+	add_to_array = {ARG_POL_dep_election_y_position = 45}
+	add_to_array = {ARG_POL_dep_election_y_position = 28}
+	add_to_array = {ARG_POL_dep_election_y_position = 0}
+	add_to_array = {ARG_POL_dep_election_y_position = 45}
+	add_to_array = {ARG_POL_dep_election_y_position = 45}
+	add_to_array = {ARG_POL_dep_election_y_position = 45}
+	add_to_array = {ARG_POL_dep_election_y_position = 0}
+	set_variable = {ARG_POL_dep_election_x_position = 4}
+
+	clear_array = ARG_POL_sen_election_y_position
+	add_to_array = {ARG_POL_sen_election_y_position = 62}
+	add_to_array = {ARG_POL_sen_election_y_position = 0}
+	add_to_array = {ARG_POL_sen_election_y_position = 45}
+	add_to_array = {ARG_POL_sen_election_y_position = 0}
+	add_to_array = {ARG_POL_sen_election_y_position = 62}
+	add_to_array = {ARG_POL_sen_election_y_position = 0}
+	add_to_array = {ARG_POL_sen_election_y_position = 45}
+	set_variable = {ARG_POL_sen_election_x_position = 4}
+
+	set_country_flag = ARG_POL_democracy_round_2
+}

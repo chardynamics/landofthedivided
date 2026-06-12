@@ -1,0 +1,674 @@
+ideas = {
+	country = {
+		VEN_Puntofijo_Pact = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_Puntofijo_Pact" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_puntofijo_pact
+			modifier = {
+				stability_weekly_factor = 0.10
+				political_power_gain = 0.20
+			}
+		}
+		VEN_Essequibo_Dispute = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_Essequibo_Dispute" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_essequibo_dispute
+			modifier = {
+				war_support_factor = 0.15
+			}
+		}
+		VEN_King_of_Oil = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_King_of_Oil" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_king_of_oil
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				local_resources_factor = 0.20
+			}
+		}
+
+		###---------------------- NEW NATSPIRITS --------------------------------------------------
+
+		VEN_black_gold_raw_gold = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_black_gold_raw_gold" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_black_gold_raw_gold
+			modifier = {
+				local_resources_factor = 0.15
+				gdp_growth_modifier = 4.0
+				production_factory_efficiency_gain_factor = 0.12
+				debt_to_GDP_ceiling_modifier = 0.12
+				monthly_population = 0.07
+				inflation_rate_modifier = 0.5
+			}
+		}
+		VEN_black_gold_raw_gold_alt = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_black_gold_raw_gold_alt" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_black_gold_raw_gold
+			modifier = {
+				local_resources_factor = 0.15
+				gdp_growth_modifier = 5.0
+				production_factory_efficiency_gain_factor = 0.15
+				debt_to_GDP_ceiling_modifier = 0.15
+				monthly_population = 0.03
+				inflation_rate_modifier = 0.4
+			}
+		}
+
+		# Game of The Three Kings Variants
+
+		VEN_game_of_the_three_kings = { # Leoni leads AD
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_game_of_the_three_kings" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_game_of_the_three_kings
+			modifier = {
+				political_power_gain = 0.10
+				political_parties_policy_monthly_rate = 0.25
+				admin_efficiency_monthly_rate = -0.01
+			}
+		}
+		VEN_game_of_the_three_kings_barrios = { # Barrios leads AD
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_game_of_the_three_kings_barrios" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_game_of_the_three_kings_barrios
+			modifier = {
+				political_power_gain = 0.10
+				political_parties_policy_monthly_rate = 0.25
+				admin_efficiency_monthly_rate = -0.01
+			}
+		}
+		VEN_game_of_the_three_kings_prieto = { # Prieto leads AD
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_game_of_the_three_kings_prieto" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_game_of_the_three_kings_prieto
+			modifier = {
+				political_power_gain = 0.10
+				political_parties_policy_monthly_rate = 0.25
+				admin_efficiency_monthly_rate = -0.01
+			}
+		}
+
+		VEN_democracys_fraying_lifeline = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_democracys_fraying_lifeline" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_democracys_fraying_lifeline
+			modifier = {
+				army_morale_factor = -0.10
+				army_professionalism_monthly_rate = -0.03
+				political_power_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+		VEN_the_crimson_spectre = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_the_crimson_spectre" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_the_crimson_spectre
+			modifier = {
+				stability_factor = -0.1
+				conscription_factor = -0.05
+			}
+		}
+		VEN_el_esequibo_es_nuestro = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_el_esequibo_es_nuestro" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_el_esequibo_es_nuestro
+			modifier = {
+				training_policy_monthly_rate = 0.05
+				war_support_factor = 0.2
+				custom_modifier_tooltip = GUY_Venezuela_border_dispute_tt
+			}
+		}
+		VEN_One_Under_Bandera = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_one_under_the_bandera" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_One_Under_Bandera
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = -0.05
+				admin_efficiency_monthly_rate = 0.05
+				regulations_policy_monthly_rate = 0.25
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		VEN_vanguards_of_the_flag = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_vanguards_of_the_flag" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_vanguards_of_the_flag
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = -0.10
+				army_org_factor = 0.05
+				military_supervision_policy_monthly_rate = -0.25
+				admin_efficiency_monthly_rate = -0.02
+				production_speed_barracks_factor = 0.25
+			}
+		}
+		VEN_the_brightest_and_boldest = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_the_brightest_and_boldest" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_the_brightest_and_boldest
+			modifier = {
+				annual_gdp_growth_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				political_power_cost = 0.10
+				stability_factor = -0.05
+				regulations_policy_monthly_rate = -0.05
+				research_facilities_monthly_rate = 0.10
+				free_production_units_modifier = 2
+			}
+		}
+		VEN_eagles_in_the_sky = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_eagles_in_the_sky" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_eagles_in_the_sky
+			modifier = {
+				#tariff_tax_rate_modifier = 0.15 #+15% gives Venezuela an ungodly income and pretty sure is the reason why it randomly goes to super low growth sometimes, probably better to remove
+				misc_income_modifier = 0.1
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.30
+			}
+			targeted_modifier = {
+				tag = IBR
+				extra_trade_to_target_factor = 0.30
+			}
+			targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.30
+			}
+		}
+		VEN_the_jewel_of_the_caribbean = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_the_jewel_of_the_caribbean" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_the_jewel_of_the_caribbean
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				army_professionalism_monthly_rate = 0.1
+				political_parties_policy_monthly_rate = 0.05
+				vote_franchise_policy_monthly_rate = 0.05
+			}
+		}
+		VEN_Venezuela_Reborn = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_venezuela_reborn" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_Venezuela_Reborn
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = 0.10
+				political_parties_policy_monthly_rate = 0.03
+				admin_efficiency_monthly_rate = 0.10
+			}
+		}
+		VEN_the_quiet_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_the_quiet_revolution" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_the_quiet_revolution
+			modifier = {
+				trade_unions_policy_monthly_rate = 0.02
+				regulations_policy_monthly_rate = 0.03
+				poverty_monthly_rate = 0.03
+				drift_defence_factor = 0.05
+				gdp_growth_modifier = -1.0
+			}
+		}
+		VEN_along_the_shores = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_along_the_shores" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_along_the_shores
+			modifier = {
+				local_resources_factor = 0.25
+				free_production_units_modifier = 5
+				gdp_growth_modifier = 8.0
+				production_factory_efficiency_gain_factor = 0.15
+				debt_to_GDP_ceiling_modifier = 0.20
+				monthly_population = 0.05
+				inflation_rate_modifier = 1.5
+				social_costs_misc = 0.40
+			}
+		}
+		VEN_Port_of_Spain = { #should prob get a custom tt like the essequibo one
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_port_of_spain_protocol" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_Port_of_Spain
+			modifier = {
+				war_support_factor = -0.10
+				stability_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = GUY
+				extra_trade_to_target_factor = 0.05
+			}
+		}
+		VEN_Port_of_Spain_HMMLR = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_port_of_spain_protocol_HMMLR" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_Port_of_Spain_HMMLR
+			modifier = {
+				war_support_factor = -0.10
+				stability_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = GUY
+				extra_trade_to_target_factor = 0.05
+			}
+		}
+		VEN_the_invisible_hand = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_the_invisible_hand" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_the_invisible_hand
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = 0.20
+				political_parties_policy_monthly_rate = 0.03
+				trade_laws_policy_monthly_rate = 0.05
+				trade_opinion_factor = 0.15
+				inflation_rate_modifier = -0.20
+			}
+		}
+		VEN_drowned_in_pitch_black = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_drowned_in_pitch_black" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_drowned_in_pitch_black
+			modifier = {
+				local_resources_factor = 0.2
+				gdp_growth_modifier = 2.0
+				production_factory_efficiency_gain_factor = 0.2
+				monthly_population = -0.05
+				inflation_rate_modifier = 0.30
+				military_costs_misc = 0.75
+				social_costs_misc = -0.25
+			}
+		}
+		VEN_bolivar_anew = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_bolivar_anew" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_Bolivar_Anew
+			modifier = {
+				political_power_gain = 0.20
+				stability_factor = -0.20
+				army_org_factor = 0.10
+				military_supervision_policy_monthly_rate = -0.35
+				admin_efficiency_monthly_rate = -0.15
+				trade_unions_policy_monthly_rate = -0.10
+			}
+		}
+		VEN_the_young_bolivar = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_the_young_bolivar" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_Young_Bolivar
+			modifier = {
+				political_power_gain = 0.20
+				stability_factor = -0.10
+				army_org_factor = 0.10
+				military_supervision_policy_monthly_rate = -0.35
+				admin_efficiency_monthly_rate = -0.05
+				trade_unions_policy_monthly_rate = 0.10
+			}
+		}
+		VEN_all_roads_led_to_rome = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_all_roads_led_to_rome" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_all_paths_led_to_rome
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				army_org_factor = 0.15
+				military_supervision_policy_monthly_rate = -0.15
+				admin_efficiency_monthly_rate = 0.03
+				production_speed_barracks_factor = 0.25
+			}
+		}
+		VEN_all_roads_led_to_rome_margot = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_all_roads_led_to_rome_margot" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_all_paths_led_to_rome_margot
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.15
+				army_org_factor = 0.10
+				military_supervision_policy_monthly_rate = -0.25
+				penal_system_policy_monthly_rate = 0.15
+				security_policy_monthly_rate = 0.20
+				admin_efficiency_monthly_rate = 0.02
+				production_speed_barracks_factor = 0.25
+			}
+		}
+		VEN_democracys_decimated_corpse = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_democracys_decimated_corpse" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_democracys_decimated_corpse
+			modifier = {
+				army_professionalism_monthly_rate = -0.05
+				political_power_factor = -0.20
+				stability_factor = 0.20
+				drift_defence_factor = -0.15
+				weekly_manpower = 170
+			}
+		}
+		VEN_caesars_gambit = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_caesars_gambit" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_caesars_gambit
+			modifier = {
+				stability_factor = 0.15
+				production_speed_infrastructure_factor = 0.20
+				trade_laws_policy_monthly_rate = 0.05
+				industrial_expertise_monthly_rate = 0.10
+				social_costs_misc = 0.25
+			}
+		}
+		VEN_thrown_to_wolves = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_thrown_to_wolves" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_thrown_to_wolves
+			modifier = {
+				monthly_population = -0.15
+				war_support_factor = 0.3
+				army_core_attack_factor = 0.1
+				terrain_penalty_reduction = -0.35
+				army_speed_factor = -0.15
+				army_morale_factor = -0.1
+				surrender_limit = 0.05
+			}
+		}
+		VEN_esequibo_avenged = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_esequibo_avenged" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_esequibo_avenged
+			modifier = {
+				training_policy_monthly_rate = 0.15
+				war_support_factor = 0.3
+				stability_factor = 0.15
+			}
+		}
+
+		#Venezuelan Revolution
+		VEN_govt_legitimacy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_govt_legitimacy" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_thrown_to_wolves
+			modifier = {
+				monthly_population = -0.15
+				army_core_attack_factor = 0.1
+				surrender_limit = 0.05
+			}
+		}
+		VEN_commie_legitimacy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VNS_commie_legitimacy" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VNS_National_Chorus
+			modifier = {
+				army_core_defence_factor = 0.075
+				army_professionalism_monthly_rate = -0.1
+				conscription_factor = 0.10
+				training_policy_monthly_rate = -0.03
+				surrender_limit = 0.25
+			}
+		}
+		VEN_border_sabotage = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_border_sabotage" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = generic_fleeing_soldier
+			modifier = {
+				supply_consumption_factor = 0.1
+				army_speed_factor = -0.1
+			}
+		}
+		VEN_estrada_intel_support = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_estrada_intel_support" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = generic_spy
+			modifier = {
+				recon_factor = 0.1
+				terrain_penalty_reduction = 0.1 
+			}
+		}
+		VEN_MEX_intel_support = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_MEX_intel_support" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = generic_intelligence_leaks
+			modifier = {
+				recon_factor = 0.2
+				terrain_penalty_reduction = 0.2
+			}
+		}
+		VEN_DOM_sabotage = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_DOM_sabotage" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = generic_disrupted_commmunication
+			modifier = {
+				army_org_factor = -0.1
+				army_defence_factor = -0.05
+			}
+		}
+		VEN_starvation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_starvation" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = generic_spreading_famine
+			modifier = {
+				monthly_population = -0.33
+				army_morale_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		### VENEZUELAN COMMUNISTS
+
+		VNS_Blood_of_Proletariat = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VNS_Blood_of_Proletariat" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_Blood_of_Proletariat
+			modifier = {
+				local_resources_factor = 0.1
+				gdp_growth_modifier = 3.0
+				production_factory_efficiency_gain_factor = 0.1
+				inflation_rate_modifier = 0.25
+				social_costs_misc = 0.20
+				debt_to_GDP_ceiling_modifier = -0.10
+				trade_opinion_factor = -0.20
+			}
+		}
+		VNS_National_Chorus = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VNS_National_Chorus" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VNS_National_Chorus
+			modifier = {
+				war_support_factor = 0.25
+				army_speed_factor = 0.1
+				army_core_defence_factor = 0.075
+				terrain_penalty_reduction = 0.1
+				army_professionalism_monthly_rate = -0.05
+				conscription_factor = 0.10
+				training_policy_monthly_rate = -0.03
+				surrender_limit = 0.25
+			}
+		}
+		VEN_charter_of_the_masses = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_charter_of_the_masses" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_charter_of_the_masses
+			modifier = {
+				stability_factor = -0.05
+				army_morale_factor = 0.10
+				poverty_monthly_rate = 0.08
+				public_meetings_policy_monthly_rate = -0.05
+				trade_unions_policy_monthly_rate = 0.05
+			}
+		}
+
+		### VENEZUELAN INTERVENTION
+
+		VEN_sins_of_history = { #cramming everything in one single spirit really doesn't look good lol I tried, not gonna add too much
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_sins_of_history" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_Sins_of_History
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.40
+				production_speed_buildings_factor = -0.20
+				war_support_factor = -0.30
+				security_policy_monthly_rate = -0.15
+				gdp_growth_modifier = -2.00
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.35
+			}
+		}
+		VEN_sins_of_history2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_sins_of_history2" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_Sins_of_History
+			modifier = {
+				political_power_gain = -0.35
+				war_support_factor = -0.30
+			}
+		}
+		VEN_civilization_and_barbarism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_civilization_and_barbarism" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_civilization_and_barbarism
+			modifier = {
+				stability_factor = 0.25
+				command_power_gain = 0.3
+				base_fuel_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.35
+			}
+		}
+		VEN_or_an_unwanted_presence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_or_an_unwanted_presence" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_or_an_unwanted_presence
+			modifier = {
+				army_defence_factor = -0.1
+				army_speed_factor = -0.1
+				army_morale_factor = -0.25
+				terrain_penalty_reduction = -0.15
+			}
+		}
+		VEN_outside_the_enclosure = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_outside_the_enclosure" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_outside_the_enclosure
+			modifier = {
+				stability_factor = -0.30
+				security_policy_monthly_rate = -0.15
+				supply_consumption_factor = 0.1
+				army_speed_factor = -0.15
+				resistance_decay_on_our_occupied_states = -0.35
+			}
+		}
+		VEN_peacekeeping_force = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_peacekeeping_force" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_peacekeeping_force
+			modifier = {
+				army_org_regain = 0.15
+				army_strength_factor = 0.2
+				air_superiority_bonus_in_combat = 0.25
+			}
+		}
+		VEN_to_aspire_to_better = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_to_aspire_to_better" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_to_aspire_to_better
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				free_production_units_modifier = 2
+				political_parties_policy_monthly_rate = 0.50
+				poverty_monthly_rate = 0.03
+			}
+		}
+		VEN_gringos_fuera = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_gringos_fuera" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = VEN_gringos_fuera
+			modifier = {
+				gdp_growth_modifier = 2.00
+				required_garrison_factor = 0.2
+				drift_defence_factor = -0.3
+				public_meetings_policy_monthly_rate = 0.25
+				army_professionalism_monthly_rate = 0.1
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.35
+			}
+		}
+	}
+
+	hidden_ideas = {
+		USA_VEN_DONT_ATTACK = {
+			targeted_modifier = {
+				tag = VEN
+				attack_bonus_against = -2.0
+			}
+		}
+
+		VEN_ESQ_small_buff = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VEN_gringos_fuera" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				army_attack_factor = 0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+#################################
+# Iberian Wars custom modifiers #
+#################################
+IBR_wars_hc_production_base = {
+	color_type = neutral
+	value_type = percentage
+	precision = 2
+	category = country
+}
+IBR_wars_hc_production_core_states = {
+	color_type = neutral
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+IBR_wars_hc_production_occupied_states = {
+	color_type = neutral
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+IBR_wars_hc_consumption_base = {
+	color_type = neutral
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+IBR_wars_hc_consumption_population = {
+	color_type = neutral
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+IBR_wars_hc_consumption_core_states = {
+	color_type = neutral
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+IBR_wars_hc_consumption_occupied_states = {
+	color_type = neutral
+	value_type = percentage
+	precision = 2
+	category = country
+}

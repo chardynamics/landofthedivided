@@ -1,0 +1,236 @@
+characters = {
+	COS_Mario_Echandi_Jimenez = {
+		name = COS_Mario_Echandi_Jimenez
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Mario_Echandi_Jimenez.png" } }
+		country_leader = {
+			desc = "POLITICS_COS_Echandi_Jimenez_DESC"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	COS_Francisco_Orilich_Bolmarcich = {
+		name = COS_Francisco_Orilich_Bolmarcich
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Francisco_Orilich_Bolmarcich.png" } }
+		country_leader = {
+			desc = "POLITICS_COS_Orilich_Bolmarcich_DESC"
+			expire = "1994.4.20"
+			ideology = liberalism_national_liberal_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	COS_Jose_Figueres_Ferrer = {
+		name = COS_Jose_Figueres_Ferrer
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_Costa_Rica_Jose_Ferrer.png" } }
+		country_leader = {
+			desc = "POLITICS_COS_Figueres_Ferrer_DESC"
+			expire = "1994.4.20"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	COS_Joaquin_Gutierrez_Mangel = {
+		name = COS_Joaquin_Gutierrez_Mangel
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Joaquin_Gutierrez_Mangel.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = communist_national_communism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	COS_Fernando_Trejos_Escalante = {
+		name = COS_Fernando_Trejos_Escalante
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Fernando_Trejos_Escalante.png" } }
+		country_leader = {
+			desc = "POLITICS_COS_Trejos_Escalante_DESC"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	COS_Teodoro_Picado_JR = {
+		name = COS_Teodoro_Picado_JR
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Teodoro_Picado_Jr.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = paternalism_social_nationalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	COS_Daniel_Oduber_Quiros = {
+		name = COS_Daniel_Oduber_Quiros
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Daniel_Oduber_Quiros.png" } }
+		country_leader = {
+			desc = "POLITICS_COS_DANIEL_QUIROS_DESC"
+			expire = "1994.4.20"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+
+	COS_Gonzalo_Facio = {
+		name = COS_Gonzalo_Facio
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Gonzalo_Facio.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	COS_Jorge_Gonzalez_Marten = {
+		name = COS_Jorge_Gonzalez_Marten
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Jorge_Gonzalez_Marten.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	COS_Rodrigo_Carazo_Odio = {
+		name = COS_Rodrigo_Carazo_Odio
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Rodrigo_Carazo_Odio.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = socialist_revolutionary_frontism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	COS_Luis_Alberto_Monge = {
+		name = COS_Luis_Alberto_Monge
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Luis_Alberto_Monge.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	COS_Guillermo_Villalobos = {
+		name = COS_Guillermo_Villalobos
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Guillermo_Villalobos.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	#Calderons
+	COS_Rafael_Calderon_Guardia = {
+		name = COS_Rafael_Calderon_Guardia
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Rafael_Calderon_Guardia.png" } }
+		country_leader = {
+			desc = "POLITICS_COS_Calderon_Guardia_DESC"
+			expire = "1994.4.20"
+			ideology = paternalism_social_nationalism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_COS_Calderon_Guardia_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	COS_Rafael_Calderon_Fournier = {
+		name = COS_Rafael_Calderon_Fournier
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Rafael_Calderon_Fournier.png" } }
+		country_leader = {
+			desc = "POLITICS_COS_RAFAEL_CALDERON_FOURNIER_DESC"
+			expire = "1994.4.20"
+			ideology = paternalism_anocracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	#Frank
+	COS_Frank_Marshall = {
+		name = COS_Frank_Marshall
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Frank_Marshall.png" } }
+		country_leader = {
+			desc = "POLITICS_COS_FRANK_MARSHALL_DESC"
+			expire = "1994.4.20"
+			ideology = fascism_fascist_populism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	#Commies
+	COS_Manuel_Mora_Valverde = {
+		name = COS_Manuel_Mora_Valverde
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Manuel_Mora.png" } }
+		country_leader = {
+			desc = "POLITICS_COS_Manuel_Mora_Valverde_DESC"
+			expire = "1994.4.20"
+			ideology = communist_national_communism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	COS_Carlos_Luis_Fallas = {
+		name = COS_Carlos_Luis_Fallas
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Carlos_Luis_Fallas.png" } }
+		country_leader = {
+			desc = "POLITICS_COS_CARLOS_LUIS_FALLAS_DESC"
+			expire = "1994.4.20"
+			ideology = socialist_syndicalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	COS_Humberto_Vargas_Carbonelli = {
+		name = COS_Humberto_Vargas_Carbonelli
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Humberto_Vargas_Carbonell.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = communist_guevarism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	COS_Rodolfo_Cerdas_Cruz = {
+		name = COS_Rodolfo_Cerdas_Cruz
+		portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Rodolfo_Cerdas_Cruz.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = communist_amazonism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	COS_Alejandra_Calderon_Fournier = {
+		name = COS_Alejandra_Calderon_Fournier
+		#portraits = { civilian = { large = "gfx/leaders/COS/Portrait_COS_Alejandra_Calderon_Fournier.png" } }
+		gender = female
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = communist_subtype
+			traits = { }
+			id = -1
+		}
+	}
+}

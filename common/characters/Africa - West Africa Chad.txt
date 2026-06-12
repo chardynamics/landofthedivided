@@ -1,0 +1,145 @@
+characters = {
+	CHD_Ahmed_Koulamallah = {
+		name = CHD_Ahmed_Koulamallah
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHD/Portrait_Chad_Ahmed_Koulamallah.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_AHMED_KOULAMALLAH_DESC"
+			ideology = despotism_aristocratic_conservatism_subtype
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+	CHD_Abrahim_Abatcha = {
+		name = CHD_Abrahim_Abatcha
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	CHD_Omar_III_ibn_Muhammad_al_Amin_Kiyari = {
+		name = CHD_Omar_III_ibn_Muhammad_al_Amin_Kiyari
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+	}
+	CHD_Hissene_Habre = {
+		name = CHD_Hissene_Habre
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHD/Portrait_Chad_Hissene_Habre.png"
+				small = "GFX_idea_CHD_Hissene_Habre"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = CHD_Hissene_Habre_hog
+			allowed = { original_tag = CHD }
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = CHD_Hissene_Habre_sec
+			allowed = { original_tag = CHD }
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	CHD_Bernard_Fonlon = {
+		name = CHD_Bernard_Fonlon
+		portraits = { civilian = { small = "GFX_idea_CHD_Bernard_Fonlon" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = CHD_Bernard_Fonlon_for
+			allowed = { original_tag = CHD }
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	CHD_Alhadj_Adam_Adji_Hassan = {
+		name = CHD_Alhadj_Adam_Adji_Hassan
+		portraits = { civilian = { small = "GFX_idea_Chad_Alhadj_Adam_Adji_Hassan" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = CHD_Alhadj_Adam_Adji_Hassan_eco
+			allowed = { original_tag = CHD }
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	# Chad Republic
+	CHR_Felix_Malloum = {
+		name = CHR_Felix_Malloum
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHD/Portrait_Chad_Felix_Malloum.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FELIX_MALLOUM_DESC"
+			expire = "2000.7.7"
+			ideology = paternalism_social_nationalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	#Chad Nationalists
+	CHF_Francois_Tombalbye = {
+		name = CHF_Francois_Tombalbye
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHD/Portrait_Chad_Francois_Tombalbye.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FRANCOIS_TOMBALBYE_DESC"
+			ideology = fascism_revolutionary_nationalism_subtype
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+}

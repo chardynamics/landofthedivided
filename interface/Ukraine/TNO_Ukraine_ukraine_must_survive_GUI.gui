@@ -1,0 +1,36 @@
+guiTypes = {
+	containerWindowType = {
+		name = "UKR_Ukraine_Must_Survive_GUI"
+		size = { width = 482 height = 80 }
+
+		iconType = {
+			name = "UKR_Ukraine_Must_Survive_bar_1"
+			spriteType = "GFX_Ukraine_Must_Survive_bar_1"
+			position = { x = 99 y = 26 }
+			pdx_tooltip = UKR_ukraine_must_survive_bar_tt
+		}
+
+		iconType = {
+			name = "UKR_Ukraine_Must_Survive_bar_2"
+			spriteType = "GFX_Ukraine_Must_Survive_bar_2"
+			position = { x = 99 y = 26 }
+			pdx_tooltip = UKR_ukraine_must_survive_bar_tt
+		}
+
+		iconType = {
+			name = "UKR_Ukraine_Must_Survive_bar_frame"
+			spriteType = "GFX_Ukraine_Must_Survive_bar_frame"
+			position = { x = 90 y = 20 }
+			pdx_tooltip = UKR_ukraine_must_survive_bar_tt
+		}
+
+		instantTextboxType = {
+			name = "UKR_Ukraine_Must_Survive_Text"
+			position = { x = 47 y = 60 }
+			font = "aldrich_24_outline"
+			text = UKR_Ukraine_Must_Survive_text_tt
+			format = center
+			maxWidth = 400
+		}
+	}
+}

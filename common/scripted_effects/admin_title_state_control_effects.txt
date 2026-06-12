@@ -1,0 +1,1185 @@
+###State Control Effects
+## Handles possible admin title interactions when a state switches owners
+# Ex:
+# if = {
+#		limit = {
+#			event_target:admin_title_old_owner = {
+#				tag = <old owner>
+#			}
+#			event_target:admin_title_new_owner = {
+#				tag = <new owner>
+#			}
+#		}
+#		<effects here>
+#	}
+
+##Admin Titles
+TNO_admin_title_state_control_effect_Admin_Title_Province = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = ITA }
+			event_target:admin_title_new_owner = { tag = TUR }
+			has_global_flag = ita_tur_ita_lose
+		}
+		if = {
+			limit = { state = 164 }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Aegean }
+			TNO_adjust_assoc_region = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Admin_Title_Govenorate = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = EGY }
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = RPS
+					tag = SDS
+					tag = SDF
+				}
+			}
+		}
+		set_temp_variable = { admin_title_temp = token:Admin_Title_Province }
+		TNO_adjust_admin_title = yes
+	}
+	else_if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = EGY }
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = AYA
+					tag = AZA
+				}
+			}
+		}
+		TNO_clear_admin_title = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Admin_Title_Treaty_Port = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = ITA }
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = NYM
+					tag = YEM
+				}
+			}
+		}
+		if = {
+			limit = { state = 1705 }
+			set_temp_variable = { admin_title_temp = token:Admin_Title_Port }
+			TNO_adjust_admin_title = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Admin_Title_Department = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = FRA }
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = BRG
+					tag = ILG
+					tag = SLG
+				}
+			}
+		}
+		TNO_clear_admin_title = yes
+	}
+	else_if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = FRA }
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = GER
+					tag = GLC
+				}
+			}
+		}
+		set_temp_variable = { admin_title_temp = token:Admin_Title_Military_Territory }
+		TNO_adjust_admin_title = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Admin_Title_Territorial_Council = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = FWI }
+			event_target:admin_title_new_owner = { tag = USA }
+		}
+		set_temp_variable = { admin_title_temp = token:Admin_Title_Unc_Territory }
+		TNO_adjust_admin_title = yes
+	}
+	else_if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = FWI }
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = MRT 
+					tag = GUD
+				}
+			}
+		}
+		TNO_clear_admin_title = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Admin_Title_District = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = BLZ }
+			event_target:admin_title_new_owner = { tag = GUA }
+		}
+		set_temp_variable = { sub_admin_title_temp = token:Admin_Title_Department }
+		TNO_adjust_sub_admin_title = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Admin_Title_Concession = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = USA }
+			event_target:admin_title_new_owner = { tag = PAN }
+		}
+		set_temp_variable = { sub_admin_title_temp = token:Admin_Title_Province }
+		TNO_adjust_sub_admin_title = yes
+	}
+	else_if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = USA }
+			event_target:admin_title_new_owner = { tag = COL }
+		}
+		set_temp_variable = { admin_title_temp = token:Admin_Title_Department }
+		TNO_adjust_admin_title = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Admin_Title_Military_Territory = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = GUC }
+			event_target:admin_title_new_owner = { tag = BRA }
+		}
+		if = {
+			limit = {
+				event_target:admin_title_new_owner = { has_country_flag = LATAM_cayenne_best_ending }
+			}
+			set_temp_variable = { admin_title_temp = token:Admin_Title_Federal_Territory }
+			TNO_adjust_admin_title = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Admin_Title_Colony = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = SKN }
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = AGL
+					tag = WIN
+				} 
+			}
+		}
+		TNO_clear_admin_title = yes
+	}
+	else_if = {
+		limit = {
+			event_target:admin_title_old_owner = {
+				OR = {
+					tag = SVI
+					tag = SKN
+					tag = BAH
+				}
+			}
+			event_target:admin_title_new_owner = { tag = WIN }
+		}
+		set_temp_variable = { admin_title_temp = token:Admin_Title_Self_Governing_Colony }
+		TNO_adjust_admin_title = yes
+	}
+	else_if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = SKN }
+			event_target:admin_title_new_owner = { tag = CAN }
+		}
+		set_temp_variable = { admin_title_temp = token:Admin_Title_Overseas_Territory }
+		TNO_adjust_admin_title = yes
+	}
+	else_if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = SKN }
+			event_target:admin_title_new_owner = { tag = ANT }
+		}
+		set_temp_variable = { admin_title_temp = token:Admin_Title_Self_Governing_Colony }
+		TNO_adjust_admin_title = yes
+	}
+	else_if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = SVI }
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = GND
+					tag = SLU
+					tag = DMI
+				}
+			}
+		}
+		set_temp_variable = { admin_title_temp = token:Admin_Title_Self_Governing_Colony }
+		TNO_adjust_admin_title = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Admin_Title_Self_Governing_Colony = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = JAM }
+			event_target:admin_title_new_owner = { tag = CAN }
+		}
+		set_temp_variable = { admin_title_temp = token:Admin_Title_Overseas_Territory }
+		TNO_adjust_admin_title = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Admin_Title_Division = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = PAK }
+			event_target:admin_title_new_owner = { tag = AFG }
+		}
+		TNO_clear_admin_title = yes
+	}
+}
+
+##Assoc Regions
+TNO_admin_title_state_control_effect_Assoc_Region_Southeast_Anatolia = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = BKU }
+			event_target:admin_title_new_owner = { tag = IRQ }
+		}
+		TNO_clear_assoc_region = yes
+		TNO_clear_sub_admin_title = yes
+		set_temp_variable = { admin_title_temp = token:Admin_Title_Banner }
+		TNO_adjust_admin_title = yes 
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Cyprus_Dept = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = GRE }
+			event_target:admin_title_new_owner = { tag = TUR }
+			has_global_flag = ita_tur_ita_lose			
+		}
+		if = {
+			limit = {
+				check_variable = { AssocRegion = token:Assoc_Region_Cyprus_Dept }
+				NOT = {
+					state = 2322
+					state = 2323
+				}
+			}
+			set_temp_variable = { sub_admin_title_temp = token:Admin_Title_District }
+			TNO_adjust_sub_admin_title = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_East_China = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = { # China Admin Title Reverse
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				tag = JAP
+				is_in_faction_with = JAP
+			}
+		}
+		greater_china_admin_japan = yes
+	}
+	else_if = { # China Admin Titles
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = CHI
+					is_in_array = { global.chinese_warlords = THIS }
+				}
+			}
+		}
+		greater_china_admin_reset = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_North_China = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = { # China Admin Title Reverse
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				tag = JAP
+				is_in_faction_with = JAP
+			}
+		}
+		greater_china_admin_japan = yes
+	}
+	else_if = { # China Admin Titles
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = CHI
+					is_in_array = { global.chinese_warlords = THIS }
+				}
+			}
+		}
+		greater_china_admin_reset = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Southwest_China = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = { # China Admin Title Reverse
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				tag = JAP
+				is_in_faction_with = JAP
+			}
+		}
+		greater_china_admin_japan = yes
+	}
+	else_if = { # China Admin Titles
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = CHI
+					is_in_array = { global.chinese_warlords = THIS }
+				}
+			}
+		}
+		greater_china_admin_reset = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_South_Central_China = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = { # China Admin Title Reverse
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				tag = JAP
+				is_in_faction_with = JAP
+			}
+		}
+		greater_china_admin_japan = yes
+	}
+	else_if = { # China Admin Titles
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = CHI
+					is_in_array = { global.chinese_warlords = THIS }
+				}
+			}
+		}
+		greater_china_admin_reset = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_South_China = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = { # China Admin Title Reverse
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				tag = JAP
+				is_in_faction_with = JAP
+			}
+		}
+		greater_china_admin_japan = yes
+	}
+	else_if = { # China Admin Titles
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = CHI
+					is_in_array = { global.chinese_warlords = THIS }
+				}
+			}
+		}
+		greater_china_admin_reset = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Northwest_China = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = { # China Admin Title Reverse
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				tag = JAP
+				is_in_faction_with = JAP
+			}
+		}
+		greater_china_admin_japan = yes
+	}
+	else_if = { # China Admin Titles
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = CHI
+					is_in_array = { global.chinese_warlords = THIS }
+				}
+			}
+		}
+		greater_china_admin_reset = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Northeast_China = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = { # China Admin Title Reverse
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				tag = JAP
+				is_in_faction_with = JAP
+			}
+		}
+		greater_china_admin_japan = yes
+	}
+	else_if = { # China Admin Titles
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = CHI
+					is_in_array = { global.chinese_warlords = THIS }
+				}
+			}
+		}
+		greater_china_admin_reset = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Frontier = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = { # China Admin Title Reverse
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				tag = JAP
+				is_in_faction_with = JAP
+			}
+		}
+		greater_china_admin_japan = yes
+	}
+	else_if = { # China Admin Titles
+		limit = {
+			has_variable = china_state_ref
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = CHI
+					is_in_array = { global.chinese_warlords = THIS }
+				}
+			}
+		}
+		greater_china_admin_reset = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Saint_Petersburg = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = { 
+		limit = { event_target:admin_title_new_owner = { tag = GER } }
+		if = {
+			limit = { state = 195 }
+			set_temp_variable = { admin_title_temp = token:Admin_Title_Reichsgau }
+			TNO_adjust_admin_title = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_British_West_Indies = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = { 
+		limit = {
+			event_target:admin_title_old_owner = { tag = GUY }
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = VEN 
+					tag = VNS
+				}
+			}
+		}
+		if = {
+			limit = { state = 1551 }
+			if = {
+				limit = {
+					event_target:admin_title_new_owner = { tag = VEN }
+					event_target:admin_title_new_owner = {
+						NOT = {
+							has_government = fascism
+							has_government = despotism
+						}
+					}
+				}
+				TNO_clear_assoc_region = yes
+				TNO_clear_sub_admin_title = yes
+			}
+			else = {
+				TNO_clear_assoc_region = yes
+				TNO_clear_sub_admin_title = yes
+				set_temp_variable = { admin_title_temp = token:Admin_Title_Territory }
+				TNO_adjust_admin_title = yes
+			}
+		}
+	}
+	else_if = { 
+		limit = {
+			event_target:admin_title_old_owner = { tag = GUY }
+			event_target:admin_title_new_owner = { tag = SUR }
+		}
+		TNO_clear_assoc_region = yes
+	}
+	else_if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = SKN }
+			event_target:admin_title_new_owner = { tag = AGL }
+		}
+		TNO_clear_assoc_region = yes
+		if = {
+			limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Lesser_Antilles } }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+			TNO_adjust_assoc_region = yes
+			TNO_clear_assoc_region_2 = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_French_West_Indies = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = FWI }
+			event_target:admin_title_new_owner = {
+				OR = {
+					tag = MRT 
+					tag = GUD
+					tag = USA
+				}
+			}
+		}
+		TNO_clear_assoc_region = yes
+		if = {
+			limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Lesser_Antilles } }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+			TNO_adjust_assoc_region = yes
+			TNO_clear_assoc_region_2 = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Punjab_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Punjab_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Punjab_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Punjab_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Himachal_Pradesh_UT = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Himachal_Pradesh_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Himachal_Pradesh_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Himachal_Pradesh_UT }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Jammu_Kashmir_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Jammu_Kashmir_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Jammu_Kashmir_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Jammu_Kashmir_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Sindh_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Sindh_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Sindh_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Sindh_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Rajasthan_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Rajasthan_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Rajasthan_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Rajasthan_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Uttar_Pradesh_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Uttar_Pradesh_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Uttar_Pradesh_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Uttar_Pradesh_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Madhya_Pradesh_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Madhya_Pradesh_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Madhya_Pradesh_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Madhya_Pradesh_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Gujarat_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Gujarat_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Gujarat_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Gujarat_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Maharashtra_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Maharashtra_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Maharashtra_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Maharashtra_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Mysore_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Mysore_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Mysore_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Mysore_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Madras_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Madras_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Madras_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Madras_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Andhra_Pradesh_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Andhra_Pradesh_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Andhra_Pradesh_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Andhra_Pradesh_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Haryana_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Haryana_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Haryana_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Haryana_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Bengal_AR = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		if = {
+			limit = { NOT = { has_global_flag = IND_peaceful_reunification } }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Bengal_UT }
+			TNO_adjust_assoc_region = yes
+		}
+		else_if = {
+			limit = { has_global_flag = IND_peaceful_reunification }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Bengal_State }
+			TNO_adjust_assoc_region = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Bengal_UT = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Bengal_AR }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Assam_AR = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		if = {
+			limit = { NOT = { has_global_flag = IND_peaceful_reunification } }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Assam_UT }
+			TNO_adjust_assoc_region = yes
+		}
+		else_if = {
+			limit = { has_global_flag = IND_peaceful_reunification }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Assam_State }
+			TNO_adjust_assoc_region = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Assam_UT = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Assam_AR }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Orissa_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Orissa_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Orissa_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		if = {
+			limit = { has_state_flag = GDP_regions_orissa_ind }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Orissa_State }
+			TNO_adjust_assoc_region = yes
+		}
+		else_if = {
+			limit = { has_state_flag = GDP_regions_orissa_azh }
+			if = {
+				limit = { NOT = { has_global_flag = IND_peaceful_reunification } }
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Orissa_UT }
+				TNO_adjust_assoc_region = yes
+			}
+			else_if = {
+				limit = { has_global_flag = IND_peaceful_reunification }
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Orissa_State }
+				TNO_adjust_assoc_region = yes
+			}
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Orissa_UT = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Orissa_PMA }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Bihar_AR = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		if = {
+			limit = { NOT = { has_global_flag = IND_peaceful_reunification } }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Bihar_UT }
+			TNO_adjust_assoc_region = yes
+		}
+		else_if = {
+			limit = { has_global_flag = IND_peaceful_reunification }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Bihar_State }
+			TNO_adjust_assoc_region = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Bihar_PMA = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = AZH }
+			event_target:admin_title_new_owner = { tag = IND }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Bihar_State }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Bihar_UT = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		if = {
+			limit = { has_state_flag = GDP_regions_bihar_ind }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Bihar_PMA }
+			TNO_adjust_assoc_region = yes
+		}
+		else_if = {
+			limit = { has_state_flag = GDP_regions_bihar }
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Bihar_AR }
+			TNO_adjust_assoc_region = yes
+		}
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_NWFP = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = PAK }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Gandhara_AR }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Jammu_Kashmir_Province = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = PAK }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Jammu_Kashmir_AR }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Punjab_Province = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = PAK }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Punjab_AR }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Sindh_Province = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = PAK }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Sindh_AR }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Balochistan_Province = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = PAK }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Balochistan_AR }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Balochistan_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Balochistan_AR }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Assoc_Region_Gandhara_State = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = IND }
+			event_target:admin_title_new_owner = { tag = AZH }
+		}
+		set_temp_variable = { assoc_region_temp = token:Assoc_Region_Gandhara_AR }
+		TNO_adjust_assoc_region = yes
+	}
+}
+
+##Sub Admin Titles
+
+TNO_admin_title_state_control_effect_Sub_Admin_Title_District = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+	if = {
+		limit = {
+			event_target:admin_title_old_owner = { tag = PAK }
+			event_target:admin_title_new_owner = { tag = AFG }
+		}
+		TNO_clear_sub_admin_title = yes
+	}
+}
+
+TNO_admin_title_state_control_effect_Sub_Admin_Title_Province = {
+	log = "[GetDateText]: [Root.GetName]: TNO_admin_title_state_control_effect_[?current_title.GetTokenKey]; State: [THIS.GetID], FROM: [?event_target:admin_title_old_owner.GetTag], ROOT: [?event_target:admin_title_new_owner.GetTag]"
+}

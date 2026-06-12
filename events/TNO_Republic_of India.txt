@@ -1,0 +1,2491 @@
+add_namespace = IND_skeleton
+add_namespace = IND_UNIFIED_skeleton
+add_namespace = USA_IND #For the USA's interactions with the RoI, wasn't sure whether to put it in here or the USA file
+
+### SKELETON CONTENT FOR TT ###
+
+country_event = { # Penang Incident, Feb 5 1962
+	id = IND_skeleton.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_skeleton.1" }
+	title = IND_skeleton.1.t
+	desc = IND_skeleton.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = IND_skeleton.1.a
+		hidden_effect = {
+			country_event = {
+				id = IND_skeleton.2
+				days = 456
+			}
+			country_event = {
+				id = IND_skeleton.3
+				days = 839
+			}
+			AZH = {
+				country_event = {
+					id = AZH_skeleton.1
+					days = 0
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Hazratal Shrine Incident, May 7 1963
+	id = IND_skeleton.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_skeleton.2" }
+	title = IND_skeleton.2.t
+	desc = IND_skeleton.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = IND_skeleton.2.a
+	}
+}
+
+country_event = { # Death of Nehru (weep and woeisme), 27th of May 1964
+	id = IND_skeleton.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_skeleton.3" }
+	title = IND_skeleton.3.t
+	desc = IND_skeleton.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = IND_skeleton.3.a
+		retire_character = IND_Jawaharlal_Nehru
+		set_popularities = {
+			communist = 8
+			socialist = 10
+			socialist_1 = 3
+			progressivism = 20
+			liberalism = 20
+			liberal_conservatism = 10
+			conservatism = 20
+			paternalism = 5
+			fascism = 2
+			ultranationalism = 2
+		}
+		swap_ideas = {
+			remove_idea = IND_Stroke_Of_The_Midnight_Hour
+			add_idea = IND_Tryst_With_Destiny
+		}
+		JAP = { country_event = { id = jap_india.8 days = 3 } }
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.30998
+					hours = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { # South Asian Economic Conference succeeds, 15th of September 1964
+	id = IND_skeleton.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_skeleton.4" }
+	title = IND_skeleton.4.t
+	desc = IND_skeleton.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = IND_skeleton.4.a
+		add_ideas = IND_Indian_Economic_Union
+		AZH = { add_ideas = IND_Indian_Economic_Union }
+		JAP = { country_event = { id = jap_india.34 days = 3 } }
+		country_event = {
+			id = IND_UNIFIED_skeleton.1
+			days = 153
+		}
+	}
+}
+
+country_event = { # South Asian Economic Conference fails, TBD 1964
+	id = IND_skeleton.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_skeleton.5" }
+	title = IND_skeleton.5.t
+	desc = IND_skeleton.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = IND_skeleton.5.a
+		country_event = {
+			id = IND_skeleton.6
+			days = 80 #TBD
+		}
+	}
+}
+
+country_event = { # menon out, shastri in (15th august 1964)
+	id = IND_skeleton.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_skeleton.6" }
+	title = IND_skeleton.6.t
+	desc = IND_skeleton.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = IND_skeleton.6.a
+		retire_character = IND_VK_Krishna_Menon
+		set_popularities = {
+			communist = 8
+			socialist = 10
+			socialist_1 = 3
+			progressivism = 15
+			liberalism = 20
+			liberal_conservatism = 15
+			conservatism = 20
+			paternalism = 5
+			fascism = 2
+			ultranationalism = 2
+		}
+		set_party_name = {
+			ideology = liberalism
+			long_name = IND_liberalism_swatantra_party_long
+			name = IND_liberalism_swatantra_party
+		}
+		set_country_flag = IND_Cry_Havoc_prep
+		swap_ideas = {
+			remove_idea = IND_Tryst_With_Destiny
+			add_idea = IND_Cry_Havoc
+		}
+		swap_ideas = {
+			remove_idea = IND_Shadows_Of_Communalism
+			add_idea = IND_Embers_Of_Communalism
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31003
+					hours = 1
+				}
+			}
+			country_event = {
+				id = IND_skeleton.7
+				days = 1010
+			}
+		}
+	}
+}
+
+country_event = { # Elections, July 25 1967
+	id = IND_skeleton.7
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event IND_skeleton.7"
+		retire_character = IND_Deendayal_Upadhyaya
+		IND_Atal_Bihari_Vajpayee = { promote_character = yes }
+		retire_character = IND_Lal_Bahadur_Shastri
+		retire_character = IND_Hirubhai_M_Patel
+		set_party_name = {
+			ideology = socialist
+			long_name = IND_socialist_forum_party_long
+			name = IND_socialist_forum_party
+		}
+		set_party_name = {
+			ideology = paternalism
+			long_name = IND_paternalism_bjs2_party_long
+			name = IND_paternalism_bjs2_party
+		}
+		set_party_name = {
+			ideology = conservatism
+			long_name = IND_conservatism_2_party_long
+			name = IND_conservatism_2_party
+		}
+		remove_ideas = {
+			IND_Death_March_Downwards
+			IND_Embers_Of_Communalism
+			IND_Indias_Long_Night
+			IND_Friend_In_Need
+			IND_The_Behemoth_Shastri
+			IND_The_Behemoth_Shastri_OBQ
+		}
+	}
+	title = IND_skeleton.7.t
+	desc = IND_skeleton.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Chavan wins
+		name = IND_skeleton.7.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = IND_67_ELECTION_PATH
+						option = IND_67_ELECTION_PATH_CLASSICAL_LIBERALISM
+					}
+					has_game_rule = {
+						rule = IND_67_ELECTION_PATH
+						option = IND_67_ELECTION_PATH_PATERNALISTIC_CONSERVATISM
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = yes
+			last_election = "1967.7.25"
+			election_frequency = 60
+		}
+		set_popularities = {
+			communist = 5
+			socialist = 10
+			socialist_1 = 3
+			progressivism = 20
+			progressivism_2 = 5
+			liberalism = 20
+			liberal_conservatism = 10
+			conservatism = 15
+			paternalism = 5
+			paternalism_1 = 3
+			fascism = 2
+			ultranationalism = 2
+		}
+		set_party_name = {
+			ideology = progressivism
+			long_name = IND_progressivism_socialist_party_long
+			name = IND_progressivism_socialist_party
+		}
+		USA = {
+			set_temp_variable = { Victory_ID = 39 }
+			set_temp_variable = { Victory_Outcome = 4 }
+			set_temp_variable = { Victory_Points = 300 }
+			if = { limit = { country_exists = PAK } subtract_from_temp_variable = { Victory_Points = 100 } }
+			Cold_War_GUI_ManipulateVictory = yes
+		}
+		JAP = {
+			set_temp_variable = { Victory_ID = 39 }
+			set_temp_variable = { Victory_Outcome = 2 }
+			set_temp_variable = { Victory_Points = -300 }
+			Cold_War_GUI_ManipulateVictory = yes
+		}
+		add_ideas = {
+			IND_The_Behemoth_Chavan
+			IND_The_Nehruvian_Vision
+			IND_An_India_of_Light
+			IND_Look_Westwards
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = PAK }
+			}
+			add_ideas = IND_My_Brothers_Keeper
+		}
+		else = {
+			add_ideas = IND_The_Partition
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31007
+					hours = 1
+				}
+			}
+			country_event = {
+				id = IND_skeleton.8
+				days = 1826
+			}
+		}
+	}
+	option = { # Morarji wins
+		name = IND_skeleton.7.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = IND_67_ELECTION_PATH
+						option = IND_67_ELECTION_PATH_REFORMIST_SOCIALISM
+					}
+					has_game_rule = {
+						rule = IND_67_ELECTION_PATH
+						option = IND_67_ELECTION_PATH_CLASSICAL_LIBERALISM
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+			last_election = "1967.7.25"
+			election_frequency = 60
+		}
+		set_popularities = {
+			communist = 10
+			socialist = 15
+			socialist_1 = 3
+			progressivism = 5
+			liberalism = 15
+			liberal_conservatism = 5
+			conservatism = 35
+			paternalism = 5
+			paternalism_1 = 3
+			fascism = 2
+			ultranationalism = 2
+		}
+		promote_character = {
+			character = IND_Ramaswamy_Venkataraman
+			ideology = progressivism_reformist_socialism_subtype
+		}
+		USA = {
+			set_temp_variable = { Victory_ID = 39 }
+			set_temp_variable = { Victory_Outcome = 4 }
+			set_temp_variable = { Victory_Points = 300 }
+			if = { limit = { country_exists = PAK } subtract_from_temp_variable = { Victory_Points = 100 } }
+			Cold_War_GUI_ManipulateVictory = yes
+		}
+		JAP = {
+			set_temp_variable = { Victory_ID = 39 }
+			set_temp_variable = { Victory_Outcome = 2 }
+			set_temp_variable = { Victory_Points = -300 }
+			Cold_War_GUI_ManipulateVictory = yes
+		}
+		add_ideas = {
+			IND_The_Behemoth_Desai
+			IND_The_Indian_Vision
+			IND_An_India_of_Light
+			IND_Look_Westwards
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = PAK }
+			}
+			add_ideas = IND_My_Brothers_Keeper
+		}
+		else = {
+			add_ideas = IND_The_Partition
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31009
+					hours = 1
+				}
+			}
+			country_event = {
+				id = IND_skeleton.9
+				days = 1826
+			}
+		}
+	}
+	option = { #Rajagopalachari wins
+		name = IND_skeleton.7.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = IND_67_ELECTION_PATH
+						option = IND_67_ELECTION_PATH_REFORMIST_SOCIALISM
+					}
+					has_game_rule = {
+						rule = IND_67_ELECTION_PATH
+						option = IND_67_ELECTION_PATH_PATERNALISTIC_CONSERVATISM
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+			last_election = "1967.7.25"
+			election_frequency = 60
+		}
+		promote_character = IND_Chakravarti_Rajagopalachari
+		set_popularities = {
+			communist = 10
+			socialist = 15
+			socialist_1 = 3
+			progressivism = 5
+			liberalism = 40
+			liberal_conservatism = 5
+			conservatism = 10
+			paternalism = 5
+			paternalism_1 = 3
+			fascism = 2
+			ultranationalism = 2
+		}
+		promote_character = {
+			character = IND_Ramaswamy_Venkataraman
+			ideology = progressivism_reformist_socialism_subtype
+		}
+		USA = {
+			set_temp_variable = { Victory_ID = 39 }
+			set_temp_variable = { Victory_Outcome = 5 }
+			set_temp_variable = { Victory_Points = 375 }
+			if = { limit = { country_exists = PAK } subtract_from_temp_variable = { Victory_Points = 100 } }
+			Cold_War_GUI_ManipulateVictory = yes
+		}
+		JAP = {
+			set_temp_variable = { Victory_ID = 39 }
+			set_temp_variable = { Victory_Outcome = 1 }
+			set_temp_variable = { Victory_Points = -375 }
+			Cold_War_GUI_ManipulateVictory = yes
+		}
+		add_ideas = {
+			IND_The_Behemoth_Rajaji
+			IND_The_Ganges_Unleashed
+			IND_An_India_of_Light
+			IND_Eastern_Bulwark
+		}
+		set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Capitalism }
+		econ_type_change = yes
+		if = {
+			limit = {
+				NOT = { country_exists = PAK }
+			}
+			add_ideas = IND_My_Brothers_Keeper
+		}
+		else = {
+			add_ideas = IND_The_Partition
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31008
+					hours = 1
+				}
+			}
+			country_event = {
+				id = IND_skeleton.10
+				days = 1826
+			}
+			USA = {
+				country_event = {
+					id = USA_IND.18
+					days = 100
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Chavan Elections, July 24 1972
+	id = IND_skeleton.8
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event IND_skeleton.8"
+		promote_character = IND_NG_Ranga
+	}
+	title = IND_skeleton.8.t
+	desc = IND_skeleton.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Chavan reelection
+		name = IND_skeleton.8.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_INCDEM
+					}
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_CHARAN_SINGH
+					}
+				}
+			}
+		}
+		set_popularities = {
+			communist = 2
+			socialist = 10
+			socialist_1 = 1
+			progressivism = 50
+			progressivism_2 = 5
+			liberalism = 15
+			conservatism = 5
+			paternalism = 5
+			paternalism_1 = 3
+			fascism = 2
+			ultranationalism = 2
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31013
+					hours = 1
+				}
+			}
+		}
+	}
+	option = { # Morarji wins
+		name = IND_skeleton.8.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_INCPRO
+					}
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_CHARAN_SINGH
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+			last_election = "1972.7.24"
+			election_frequency = 60
+		}
+		promote_character = IND_Morarji_Desai
+		promote_character = {
+			character = IND_Ramaswamy_Venkataraman
+			ideology = progressivism_reformist_socialism_subtype
+		}
+		set_popularities = {
+			communist = 5
+			socialist = 5
+			socialist_1 = 3
+			progressivism = 5
+			liberalism = 25
+			conservatism = 30
+			paternalism = 20
+			paternalism_1 = 3
+			fascism = 2
+			ultranationalism = 2
+		}
+		set_party_name = {
+			ideology = progressivism
+			long_name = IND_progressivism_party_long
+			name = IND_progressivism_party
+		}
+		remove_ideas = {
+			IND_The_Behemoth_Chavan
+			IND_The_Nehruvian_Vision
+		}
+		add_ideas = {
+			IND_The_Behemoth_Desai
+			IND_Reversing_the_Overreach
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31014
+					hours = 1
+				}
+			}
+		}
+	}
+	option = { #Singh wins
+		name = IND_skeleton.8.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_INCPRO
+					}
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_INCDEM
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = liberal_conservatism
+			elections_allowed = yes
+			last_election = "1972.7.24"
+			election_frequency = 60
+		}
+		retire_character = IND_Kumaraswami_Kamaraj
+		promote_character = {
+			character = IND_Ramaswamy_Venkataraman
+			ideology = progressivism_reformist_socialism_subtype
+		}
+		set_popularities = {
+			communist = 5
+			socialist = 5
+			socialist_1 = 3
+			progressivism = 5
+			liberalism = 20
+			liberal_conservatism = 30
+			conservatism = 10
+			paternalism = 5
+			paternalism_1 = 13
+			fascism = 2
+			ultranationalism = 2
+		}
+		set_party_name = {
+			ideology = progressivism
+			long_name = IND_progressivism_party_long
+			name = IND_progressivism_party
+		}
+		set_party_name = {
+			ideology = liberal_conservatism
+			long_name = IND_liberal_conservatism_singh_party_long
+			name = IND_liberal_conservatism_singh_party
+		}
+		remove_ideas = {
+			IND_The_Behemoth_Chavan
+			IND_The_Nehruvian_Vision
+		}
+		add_ideas = {
+			IND_The_Behemoth_Singh
+			IND_Kulak_Socialism
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31015
+					hours = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Morarji Elections, July 24 1972
+	id = IND_skeleton.9
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event IND_skeleton.9"
+	}
+	title = IND_skeleton.9.t
+	desc = IND_skeleton.9.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Morarji reelection
+		name = IND_skeleton.9.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_INCPRO
+					}
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_CHARAN_SINGH
+					}
+				}
+			}
+		}
+		set_popularities = {
+			communist = 10
+			socialist = 10
+			socialist_1 = 3
+			progressivism = 5
+			liberalism = 5
+			conservatism = 50
+			paternalism = 5
+			paternalism_1 = 8
+			fascism = 2
+			ultranationalism = 2
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31016
+					hours = 1
+				}
+			}
+		}
+	}
+	option = { # Chavan wins
+		name = IND_skeleton.9.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_INCDEM
+					}
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_CHARAN_SINGH
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = yes
+			last_election = "1972.7.24"
+			election_frequency = 60
+		}
+		promote_character = IND_Yashvantrao_Chavan
+		promote_character = {
+			character = IND_Ramaswamy_Venkataraman
+			ideology = progressivism_2_subtype
+		}
+		set_popularities = {
+			communist = 10
+			socialist = 10
+			socialist_1 = 3
+			progressivism = 20
+			progressivism_2 = 5
+			liberalism = 20
+			conservatism = 5
+			paternalism = 20
+			paternalism_1 = 3
+			fascism = 2
+			ultranationalism = 2
+		}
+		set_party_name = {
+			ideology = progressivism
+			long_name = IND_progressivism_socialist_party_long
+			name = IND_progressivism_socialist_party
+		}
+		remove_ideas = {
+			IND_The_Behemoth_Desai
+			IND_The_Indian_Vision
+		}
+		add_ideas = {
+			IND_The_Behemoth_Chavan
+			IND_A_Monument_to_Failure
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31017
+					hours = 1
+				}
+			}
+		}
+	}
+	option = { #Singh wins
+		name = IND_skeleton.9.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_INCPRO
+					}
+					has_game_rule = {
+						rule = IND_72_ELECTION_PATH
+						option = IND_72_ELECTION_PATH_INCDEM
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+			last_election = "1972.7.24"
+			election_frequency = 60
+		}
+		promote_character = {
+			character = IND_Charan_Singh
+			ideology = conservatism_agrarianism_subtype
+		}
+		promote_character = {
+			character = IND_Morarji_Desai
+			ideology = conservatism_2_subtype
+		}
+		promote_character = IND_NG_Ranga
+		set_popularities = {
+			communist = 5
+			socialist = 15
+			socialist_1 = 3
+			progressivism = 5
+			liberalism = 10
+			conservatism = 35
+			conservatism_2 = 5
+			paternalism = 5
+			paternalism_1 = 13
+			fascism = 2
+			ultranationalism = 2
+		}
+		set_party_name = {
+			ideology = progressivism
+			long_name = IND_progressivism_party_long
+			name = IND_progressivism_party
+		}
+		set_party_name = {
+			ideology = conservatism
+			long_name = IND_conservatism_singh_party_long
+			name = IND_conservatism_singh_party
+		}
+		remove_ideas = {
+			IND_The_Behemoth_Desai
+			IND_The_Indian_Vision
+		}
+		add_ideas = {
+			IND_The_Behemoth_Chavan
+			IND_A_Monument_to_Failure
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31018
+					hours = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Swatantra Elections, July 24 1972
+	id = IND_skeleton.10
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event IND_skeleton.10"
+	}
+	title = IND_skeleton.10.t
+	desc = IND_skeleton.10.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Swatantra reelection if Pakistan exists
+		name = IND_skeleton.10.a
+		trigger = { country_exists = PAK }
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = IND_72_ELECTION_PATH
+					option = IND_72_ELECTION_PATH_INCSOC
+				}
+			}
+		}
+		set_popularities = {
+			communist = 10
+			socialist = 15
+			socialist_1 = 3
+			progressivism = 5
+			liberalism = 50
+			conservatism = 5
+			paternalism = 5
+			paternalism_1 = 3
+			fascism = 2
+			ultranationalism = 2
+		}
+		promote_character = IND_NG_Ranga
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31019
+					hours = 1
+				}
+			}
+		}
+	}
+	option = { #Swatantra reelection if Pakistan does not exist
+		name = IND_skeleton.10.b
+		trigger = { NOT = { country_exists = PAK } }
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = IND_72_ELECTION_PATH
+					option = IND_72_ELECTION_PATH_INCSOC
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = liberal_conservatism
+			elections_allowed = yes
+			last_election = "1972.7.24"
+			election_frequency = 60
+		}
+		promote_character = IND_Gayatri_Devi
+		set_popularities = {
+			communist = 10
+			socialist = 15
+			socialist_1 = 3
+			progressivism = 5
+			liberal_conservatism = 50
+			conservatism = 5
+			paternalism = 5
+			paternalism_1 = 3
+			fascism = 2
+			ultranationalism = 2
+		}
+		set_party_name = {
+			ideology = liberal_conservatism
+			long_name = IND_liberalism_swatantra_party
+			name = IND_liberalism_swatantra_party
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31020
+					hours = 1
+				}
+			}
+		}
+	}
+	option = { #Yadav wins
+		name = IND_skeleton.10.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = IND_72_ELECTION_PATH
+					option = IND_72_ELECTION_PATH_LIB
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = socialist
+			elections_allowed = yes
+			last_election = "1972.7.24"
+			election_frequency = 60
+		}
+		promote_character = IND_Brahm_Prakash_Yadav
+		promote_character = IND_NG_Ranga
+		set_popularities = {
+			communist = 10
+			socialist = 35
+			socialist_1 = 3
+			progressivism = 5
+			liberalism = 20
+			conservatism = 15
+			paternalism = 5
+			paternalism_1 = 3
+			fascism = 2
+			ultranationalism = 2
+		}
+		remove_ideas = {
+			IND_The_Behemoth_Rajaji
+			IND_The_Ganges_Unleashed
+			OFN_Independent_Member
+		}
+		add_ideas = {
+			IND_The_Behemoth_Yadav
+			IND_Reversing_the_Current
+			OFN_Observer
+		}
+		leave_faction = yes
+		BHU = {
+			leave_faction = yes
+			remove_ideas = OFN_Dependent_Member
+		}
+		SIK = {
+			leave_faction = yes
+			remove_ideas = OFN_Dependent_Member
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = WORLD.31021
+					hours = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Indian Reunification War, April 1965
+	id = IND_skeleton.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_skeleton.100" }
+	title = IND_skeleton.100.t
+	desc = IND_skeleton.100.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = IND_skeleton.100.a
+		clr_country_flag = IND_Cry_Havoc_prep
+		swap_ideas = {
+			remove_idea = tno_conscription_volunteer_only
+			add_idea = tno_conscription_broadened_conscription
+		}
+		swap_ideas = {
+			remove_idea = IND_Going_It_Alone
+			add_idea = IND_Friend_In_Need
+		}
+		swap_ideas = {
+			remove_idea = IND_A_Civilian_Economy_For_The_Army
+			add_idea = IND_Death_March_Downwards
+		}
+		swap_ideas = {
+			remove_idea = IND_Beacon_In_The_Dark
+			add_idea = IND_Indias_Long_Night
+		}
+		AZH = {
+			declare_war_on = {
+				target = IND
+				type = civil_war
+			}
+		}
+		add_timed_idea = {
+			idea = IND_Defensive_Start
+			days = 210
+		}
+		add_dynamic_modifier = { modifier = IND_black_years_dynamic_modifier }
+		add_dynamic_modifier = { modifier = IND_war_weariness }
+		set_variable = { IND_black_years_modifier_0 = -0.03 }
+		set_variable = { IND_black_years_modifier_1 = -300 }
+		AZH = {
+			leave_faction = yes
+			swap_ideas = {
+				remove_idea = tno_conscription_volunteer_only
+				add_idea = tno_conscription_broadened_conscription
+			}
+			add_dynamic_modifier = { modifier = AZH_black_years_dynamic_modifier }
+			add_dynamic_modifier = { modifier = AZH_war_weariness }
+			set_variable = { AZH_black_years_modifier_0 = -0.03 }
+			set_variable = { AZH_black_years_modifier_1 = -300 }
+			add_timed_idea = {
+				idea = AZH_IRW_hidden_debuff
+				days = 340
+			}
+		}
+		PAK = { country_event = { id = PAK.3 days = 60 } }
+		set_global_flag = ind_civil_war_ongoing
+		TNO_iwr_pandoras_box_initialize = yes
+		set_politics = {
+			ruling_party = progressivism #Shastri is only person in power at this I believe
+			elections_allowed = no
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = WORLD.31010
+					hours = 1
+				}
+			}
+			USA = {
+				country_event = { id = USA.1623 hours = 1 }
+				set_temp_variable = { Victory_ID = 39 }
+				Cold_War_GUI_AddVictory = yes
+			}
+			JAP = {
+				country_event = { id = jap_india.16 hours = 1 }
+				set_temp_variable = { Victory_ID = 39 }
+				Cold_War_GUI_AddVictory = yes
+			}
+		}
+		set_global_flag = {
+			flag = TNO_AZH_won_too_hard
+			value = 1
+			days = 120
+		}
+	}
+}
+
+####################################
+### PEACEFUL UNIFICIATION EVENTS ###
+####################################
+
+country_event = { # Dehli and Kolkata governments unite; 15th of February 1965
+	id = IND_UNIFIED_skeleton.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_UNIFIED_skeleton.1" }
+	title = IND_UNIFIED_skeleton.1.t
+	desc = IND_UNIFIED_skeleton.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = { # Shared Effects
+		AZH = {
+			every_character = {
+				limit = { NOT = { is_character = AZH_Generic_Vacant } }
+				set_nationality = IND
+			}
+		}
+		annex_country = {
+			target = AZH
+			transfer_troops = yes
+		}
+		every_owned_state = {
+			remove_core_of = AZH
+			remove_claim_by = AZH
+			remove_claim_by = IND
+			add_core_of = IND
+		}
+		every_state = {
+			remove_core_of = AZH
+			remove_claim_by = AZH
+		}
+		set_cosmetic_tag = IND_UNIFIED
+		set_global_flag = IND_peaceful_reunification
+		set_party_name = {
+			ideology = progressivism
+			long_name = IND_progressivism_party_INC_long
+			name = IND_progressivism_party_INC
+		}
+		set_party_name = {
+			ideology = paternalism
+			long_name = IND_paternalism_party_HSS_long
+			name = IND_paternalism_party_HSS
+		}
+		set_party_name = {
+			ideology = paternalism_2
+			long_name = IND_paternalism_party_long
+			name = IND_paternalism_party
+		}
+		set_party_name = {
+			ideology = liberal_conservatism
+			long_name = IND_liberalism_swatantra_party_long
+			name = IND_liberalism_swatantra_party
+		}
+		econ_join_sphere_JAP = yes
+		NEP = { econ_join_sphere_JAP = yes }
+		set_popularities = {
+			communist = 8
+			socialist_1 = 3
+			progressivism = 45
+			liberal_conservatism = 10
+			paternalism = 25
+			paternalism_2 = 5
+			fascism = 2
+			ultranationalism = 2
+		}
+		swap_ideas = {
+			remove_idea = IND_A_Civilian_Economy_For_The_Army
+			add_idea = IND_Into_Plowshares
+		}
+		swap_ideas = {
+			remove_idea = IND_Shadows_Of_Communalism
+			add_idea = IND_Whispers_of_Communalism
+		}
+		swap_ideas = {
+			remove_idea = IND_Going_It_Alone
+			add_idea = IND_Non_Alignment_with_Indian_Characteristics
+		}
+		swap_ideas = {
+			remove_idea = IND_Indian_Economic_Union
+			add_idea = IND_The_Nations_Honeymoon
+		}
+		IND_VK_Krishna_Menon = {
+			add_country_leader_role = {
+				country_leader = {
+					desc = "POLITICS_VK_KRISHNA_MENON_POST_DESC"
+					expire = "1990.1.1"
+					ideology = progressivism_reformist_socialism_subtype
+				}
+				promote_leader = yes
+			}
+		}
+		BHU = {
+			save_party_popularities = yes
+			get_current_government_type = yes
+		}
+		set_autonomy = {
+			target = BHU
+			autonomous_state = autonomy_reliant
+		}
+		BHU = {
+			apply_party_popularities = yes
+			restore_previous_government_type = yes
+			remove_ideas = {
+				BHU_In_Kolkatas_Shadow
+				Sphere_Fully_Dependent
+			}
+		}
+		SIK = {
+			save_party_popularities = yes
+			get_current_government_type = yes
+		}
+		set_autonomy = {
+			target = SIK
+			autonomous_state = autonomy_reliant
+		}
+		SIK = {
+			apply_party_popularities = yes
+			restore_previous_government_type = yes
+			remove_ideas = {
+				SIK_Legacy_of_Tumlong
+				Sphere_Fully_Dependent
+			}
+		}
+		country_event = {
+			id = IND_UNIFIED_skeleton.7
+			days = 1104
+		}
+		USA = {
+			country_event = {
+				id = USA_IND.20
+				days = 3
+			}
+		}
+		every_country = {
+			limit = { is_ai = no }
+			news_event = {
+				id = WORLD.31022
+				hours = 1
+			}
+		}
+	}
+
+	option = { # Indira Gandhi
+		name = IND_UNIFIED_skeleton.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = IND_UNIFIED_65_ELECTIONS_PATH option = IND_UNIFIED_65_ELECTIONS_PATH_HSS }
+				}
+			}
+		}
+		swap_ideas = {
+			remove_idea = IND_Tryst_With_Destiny
+			add_idea = IND_The_Behemoth_Menon
+		}
+		country_event = {
+			id = IND_UNIFIED_skeleton.2
+			days = 109
+		}
+	}
+
+	option = { # Abid Hasan Safrani
+		name = IND_UNIFIED_skeleton.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = IND_UNIFIED_65_ELECTIONS_PATH option = IND_UNIFIED_65_ELECTIONS_PATH_INC }
+				}
+			}
+		}
+		swap_ideas = {
+			remove_idea = IND_Tryst_With_Destiny
+			add_idea = IND_The_Behemoth_Bose
+		}
+		country_event = {
+			id = IND_UNIFIED_skeleton.6
+			days = 109
+		}
+	}
+}
+
+country_event = { # Elections!; 4th of June 1965; Indira victory
+	id = IND_UNIFIED_skeleton.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_UNIFIED_skeleton.2" }
+	title = IND_UNIFIED_skeleton.2.t
+	desc = IND_UNIFIED_skeleton.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Indira Gandhi
+		name = IND_UNIFIED_skeleton.2.a
+
+		promote_character = IND_Indira_Gandhi
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = yes
+			last_election = "1965.6.4"
+			election_frequency = 60
+		}
+		set_party_name = {
+			ideology = paternalism
+			long_name = IND_progressivism_party_INC_long
+			name = IND_progressivism_party_INC
+		}
+		set_party_name = {
+			ideology = progressivism
+			long_name = IND_progressivism_party_Janata_long
+			name = IND_progressivism_party_Janata
+		}
+		set_popularities = {
+			communist = 8
+			socialist_1 = 3
+			progressivism = 35
+			paternalism = 45
+			paternalism_2 = 5
+			fascism = 2
+			ultranationalism = 2
+		}
+		swap_ideas = {
+			remove_idea = IND_The_Behemoth_Menon
+			add_idea = IND_The_Behemoth_ROI_1
+		}
+		swap_ideas = {
+			remove_idea = IND_Into_Plowshares
+			add_idea = IND_The_Twenty_Point_Programme
+		}
+		swap_ideas = {
+			remove_idea = IND_Beacon_In_The_Dark
+			add_idea = IND_The_Dimming_Light
+		}
+		remove_ideas = {
+			IND_The_Nations_Honeymoon
+		}
+		country_event = {
+			id = IND_UNIFIED_skeleton.3
+			days = 1826
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Socialized_Economy }
+		econ_subtype_change = yes
+		USA = {
+			set_temp_variable = { Victory_ID = 38 }
+			set_temp_variable = { Victory_Outcome = 3 }
+			set_temp_variable = { Victory_Points = 0 }
+			Cold_War_GUI_ManipulateVictory = yes
+		}
+		JAP = {
+			set_temp_variable = { Victory_ID = 38 }
+			set_temp_variable = { Victory_Outcome = 3 }
+			set_temp_variable = { Victory_Points = 0 }
+			Cold_War_GUI_ManipulateVictory = yes
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31023
+					hours = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Elections!; 4th of June 1965; Safrani victory
+	id = IND_UNIFIED_skeleton.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_UNIFIED_skeleton.6" }
+	title = IND_UNIFIED_skeleton.6.t
+	desc = IND_UNIFIED_skeleton.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+
+	option = { # Abid Hasan Safrani
+		name = IND_UNIFIED_skeleton.2.a
+
+		promote_character = AZH_Abid_Hasan_Safrani
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = yes
+			last_election = "1965.6.4"
+			election_frequency = 60
+		}
+		set_party_name = {
+			ideology = paternalism_2
+			long_name = IND_progressivism_party_INC_long
+			name = IND_progressivism_party_INC
+		}
+		set_popularities = {
+			communist = 3
+			socialist_1 = 3
+			liberal_conservatism = 20
+			paternalism = 49
+			paternalism_2 = 21
+			fascism = 2
+			ultranationalism = 2
+		}
+		swap_ideas = {
+			remove_idea = IND_The_Behemoth_Bose
+			add_idea = IND_The_Behemoth_AH_1
+		}
+		swap_ideas = {
+			remove_idea = IND_Into_Plowshares
+			add_idea = IND_Picking_Up_the_Pieces
+		}
+		swap_ideas = {
+			remove_idea = IND_Beacon_In_The_Dark
+			add_idea = IND_The_Dimming_Light
+		}
+		remove_ideas = {
+			IND_The_Nations_Honeymoon
+		}
+		country_event = {
+			id = IND_UNIFIED_skeleton.4
+			days = 1052
+		}
+		USA = {
+			set_temp_variable = { Victory_ID = 38 }
+			set_temp_variable = { Victory_Outcome = 2 }
+			set_temp_variable = { Victory_Points = -150 }
+			Cold_War_GUI_AddVictory = yes
+		}
+		JAP = {
+			set_temp_variable = { Victory_ID = 38 }
+			set_temp_variable = { Victory_Outcome = 4 }
+			set_temp_variable = { Victory_Points = 150 }
+			Cold_War_GUI_AddVictory = yes
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31027
+					hours = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { # 1970 General Elections (Indira Gandhi); 4th of June 1970
+	id = IND_UNIFIED_skeleton.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_UNIFIED_skeleton.3" }
+	title = IND_UNIFIED_skeleton.3.t
+	desc = IND_UNIFIED_skeleton.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # All-India Janata Front Victory
+		name = IND_UNIFIED_skeleton.3.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = IND_UNIFIED_70_ELECTIONS_PATH option = IND_UNIFIED_70_ELECTIONS_PATH_INC }
+					has_game_rule = { rule = IND_UNIFIED_70_ELECTIONS_PATH option = IND_UNIFIED_70_ELECTIONS_PATH_INC_STATE_OF_EMERGENCY }
+				}
+			}
+		}
+
+		promote_character = IND_Jagjivan_Ram
+		swap_ideas = {
+			remove_idea = IND_The_Behemoth_ROI_1
+			add_idea = IND_The_Behemoth_ROI_Ram
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = yes
+			last_election = "1970.6.4"
+			election_frequency = 60
+		}
+		set_popularities = {
+			communist = 8
+			socialist_1 = 3
+			progressivism = 45
+			paternalism = 25
+			paternalism_2 = 15
+			fascism = 2
+			ultranationalism = 2
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31025
+					hours = 1
+				}
+			}
+		}
+	}
+
+	option = { # INC Victory
+		name = IND_UNIFIED_skeleton.3.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = IND_UNIFIED_70_ELECTIONS_PATH option = IND_UNIFIED_70_ELECTIONS_PATH_AIJF }
+					has_game_rule = { rule = IND_UNIFIED_70_ELECTIONS_PATH option = IND_UNIFIED_70_ELECTIONS_PATH_INC_STATE_OF_EMERGENCY }
+				}
+			}
+		}
+
+		#nothing ever happens
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = yes
+			last_election = "1970.6.4"
+			election_frequency = 60
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31024
+					hours = 1
+				}
+			}
+		}
+	}
+
+	option = { # INC Victory; State of Emergency
+		name = IND_UNIFIED_skeleton.3.c
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = IND_UNIFIED_70_ELECTIONS_PATH option = IND_UNIFIED_70_ELECTIONS_PATH_AIJF }
+					has_game_rule = { rule = IND_UNIFIED_70_ELECTIONS_PATH option = IND_UNIFIED_70_ELECTIONS_PATH_INC }
+				}
+			}
+		}
+
+		IND_Indira_Gandhi = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism_managerial_state_subtype
+					expire = "1994.1.1.1"
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = IND_progressivism_party_INC_long
+			name = IND_progressivism_party_INC
+		}
+		set_popularities = {
+			communist = 13
+			socialist_1 = 20
+			paternalism_2 = 5
+			despotism = 58
+			fascism = 2
+			ultranationalism = 2
+		}
+		swap_ideas = {
+			remove_idea = IND_The_Dimming_Light
+			add_idea = IND_What_Happens_in_the_Dark
+		}
+		swap_ideas = {
+			remove_idea = IND_The_Behemoth_ROI_1
+			add_idea = IND_The_Behemoth_ROI_2
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31026
+					hours = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Safrani Consolidates Power; 21st of April 1968
+	id = IND_UNIFIED_skeleton.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_UNIFIED_skeleton.4" }
+	title = IND_UNIFIED_skeleton.4.t
+	desc = IND_UNIFIED_skeleton.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Rebuilding the Party-State
+		name = IND_UNIFIED_skeleton.4.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = IND_UNIFIED_PARTY_STATE_PATH option = IND_UNIFIED_PARTY_STATE_PATH_COUP }
+				}
+			}
+		}
+
+		AZH_Abid_Hasan_Safrani = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism_civilian_dictatorship_subtype
+					expire = "1994.1.1.1"
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = IND_paternalism_party_HSS_long
+			name = IND_paternalism_party_HSS
+		}
+		set_popularities = {
+			communist = 3
+			socialist_1 = 3
+			liberal_conservatism = 10
+			paternalism_2 = 11
+			despotism = 69
+			fascism = 2
+			ultranationalism = 2
+		}
+		swap_ideas = {
+			remove_idea = tno_political_parties_multiparty_system
+			add_idea = tno_political_parties_one_party_state
+		}
+		swap_ideas = {
+			remove_idea = tno_vote_franchise_universal
+			add_idea = tno_vote_franchise_no_voting
+		}
+		swap_ideas = {
+			remove_idea = IND_The_Behemoth_AH_1
+			add_idea = IND_The_Behemoth_AH_2
+		}
+		swap_ideas = {
+			remove_idea = tno_religious_rights_secularism
+			add_idea = tno_religious_rights_laicism
+		}
+		swap_ideas = {
+			remove_idea = IND_Whispers_of_Communalism
+			add_idea = IND_The_Old_Ghosts_of_Communalism
+		}
+		swap_ideas = {
+			remove_idea = IND_Picking_Up_the_Pieces
+			add_idea = IND_The_Finished_Puzzle
+		}
+		swap_ideas = {
+			remove_idea = IND_The_Dimming_Light
+			add_idea = IND_What_Happens_in_the_Dark
+		}
+		swap_ideas = {
+			remove_idea = IND_Non_Alignment_with_Indian_Characteristics
+			add_idea = IND_Our_Old_Friends_in_the_East
+		}
+		add_ideas = {
+			Sphere_Observer
+		}
+		set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Planned }
+		econ_type_change = yes
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31028
+					hours = 1
+				}
+			}
+		}
+	}
+
+	option = { # Military Coup; Guiding the World's Largest Democracy
+		name = IND_UNIFIED_skeleton.4.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = IND_UNIFIED_PARTY_STATE_PATH option = IND_UNIFIED_PARTY_STATE_PATH_SUCCESS }
+				}
+			}
+		}
+
+		promote_character = IND_KM_Cariappa
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = IND_despotism_party_NSC_long
+			name = IND_despotism_party_NSC
+		}
+		set_popularities = {
+			communist = 3
+			socialist_1 = 3
+			liberal_conservatism = 21
+			paternalism = 20
+			paternalism_2 = 19
+			despotism = 30
+			fascism = 2
+			ultranationalism = 2
+		}
+		swap_ideas = {
+			remove_idea = tno_political_parties_multiparty_system
+			add_idea = tno_political_parties_controlled_opposition
+		}
+		swap_ideas = {
+			remove_idea = tno_vote_franchise_universal
+			add_idea = tno_vote_franchise_no_voting
+		}
+		swap_ideas = {
+			remove_idea = IND_The_Behemoth_AH_1
+			add_idea = IND_The_Behemoth_Coup_1
+		}
+		swap_ideas = {
+			remove_idea = IND_The_Dimming_Light
+			add_idea = IND_What_Happens_in_the_Dark
+		}
+		swap_ideas = {
+			remove_idea = IND_Picking_Up_the_Pieces
+			add_idea = IND_Move_Fast_and_Break_Things
+		}
+		swap_ideas = {
+			remove_idea = IND_Non_Alignment_with_Indian_Characteristics
+			add_idea = IND_All_Paths_Lead_West
+		}
+		add_ideas = {
+			OFN_Observer
+		}
+		econ_join_sphere_USA = yes
+		NEP = { econ_join_sphere_USA = yes }
+		BHU = { econ_join_sphere_USA = yes }
+		SIK = { econ_join_sphere_USA = yes }
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Corporate_Oligopoly }
+		econ_subtype_change = yes
+		country_event = {
+			id = IND_UNIFIED_skeleton.5
+			days = 228
+		}
+		USA = {
+			set_temp_variable = { Victory_ID = 38 }
+			set_temp_variable = { Victory_Outcome = 4 }
+			set_temp_variable = { Victory_Points = 150 }
+			Cold_War_GUI_AddVictory = yes
+		}
+		JAP = {
+			set_temp_variable = { Victory_ID = 38 }
+			set_temp_variable = { Victory_Outcome = 2 }
+			set_temp_variable = { Victory_Points = -150 }
+			Cold_War_GUI_AddVictory = yes
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSouthAsiaInterest = yes
+				}
+				news_event = {
+					id = WORLD.31029
+					hours = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Post-Coup Civilian Transition; 5th of December 1968
+	id = IND_UNIFIED_skeleton.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_UNIFIED_skeleton.5" }
+	title = IND_UNIFIED_skeleton.5.t
+	desc = IND_UNIFIED_skeleton.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = IND_UNIFIED_skeleton.5.a
+		promote_character = IND_Minoo_Masani
+		set_party_name = {
+			ideology = despotism
+			long_name = IND_liberalism_swatantra_party_long
+			name = IND_liberalism_swatantra_party
+		}
+		set_party_name = {
+			ideology = progressivism
+			long_name = IND_progressivism_party_ILP_long
+			name = IND_progressivism_party_ILP
+		}
+		set_popularities = {
+			communist = 19
+			socialist_1 = 3
+			progressivism = 19
+			paternalism = 16
+			paternalism_2 = 9
+			despotism = 30
+			fascism = 2
+			ultranationalism = 2
+		}
+		swap_ideas = {
+			remove_idea = IND_The_Behemoth_Coup_1
+			add_idea = IND_The_Behemoth_Coup_2
+		}
+	}
+}
+
+country_event = { # Invasion of Pakistan, 1968
+	id = IND_UNIFIED_skeleton.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event IND_UNIFIED_skeleton.7" }
+	title = IND_UNIFIED_skeleton.7.t
+	desc = IND_UNIFIED_skeleton.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = IND_UNIFIED_skeleton.7.a
+		declare_war_on = {
+			target = PAK
+			type = annex_everything
+		}
+	}
+}
+
+########################
+### USA-INDIA EVENTS ###
+########################
+
+country_event = { # Nixon vs Nehru
+	id = USA_IND.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.1" }
+	title = USA_IND.1.t
+	desc = USA_IND.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_9
+
+	option = {
+		name = USA_IND.1.a
+		hidden_effect = {
+			country_event = {
+				id = USA_IND.2
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = { # Modernising Indian Aid
+	id = USA_IND.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.2" }
+	title = USA_IND.2.t
+	desc = USA_IND.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_USA_congress_4
+
+	option = {
+		name = USA_IND.2.a
+		hidden_effect = {
+			country_event = {
+				id = USA_IND.3
+				days = 40
+			}
+		}
+	}
+}
+
+country_event = { # USAID in India
+	id = USA_IND.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.3" }
+	title = USA_IND.3.t
+	desc = USA_IND.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_HIS_weariness_3_aid_worker
+
+	option = {
+		name = USA_IND.3.a
+		hidden_effect = {
+			country_event = {
+				id = USA_IND.4
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = { # Red Cross in India
+	id = USA_IND.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.4" }
+	title = USA_IND.4.t
+	desc = USA_IND.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_HIS_weariness_3_aid_worker
+
+	option = {
+		name = USA_IND.4.a
+		add_opinion_modifier = {
+			target = IND
+			modifier = small_increase
+		}
+		reverse_add_opinion_modifier = {
+			target = IND
+			modifier = small_increase
+		}
+		hidden_effect = {
+			country_event = {
+				id = USA_IND.5
+				days = 90
+			}
+		}
+	}
+
+	option = {
+		name = USA_IND.4.b
+		USA_increase_hawkishness_small = yes
+		hidden_effect = {
+			country_event = {
+				id = USA_IND.5
+				days = 90
+			}
+		}
+	}
+}
+
+country_event = { # Quater for India
+	id = USA_IND.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.5" }
+	title = USA_IND.5.t
+	desc = USA_IND.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_generic_money
+
+	option = {
+		name = USA_IND.5.a
+	}
+}
+
+country_event = { # Expansion of the Dehli embassy
+	id = USA_IND.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.6" }
+	title = USA_IND.6.t
+	desc = USA_IND.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_8
+
+	option = {
+		name = USA_IND.6.a
+		custom_effect_tooltip = USA_IND.6_tt #will add loc for this when this event gets loc
+		set_temp_variable = { NetworkChange = 4 }
+		Espionage_AddNetworkStrength_MiddleEast = yes
+		hidden_effect = {
+			country_event = {
+				id = USA_IND.7
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = { # CIA Document on Indian plans
+	id = USA_IND.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.7" }
+	title = USA_IND.7.t
+	desc = USA_IND.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_USA_cia
+
+	option = {
+		name = USA_IND.7.a
+	}
+}
+
+country_event = { # Wallace reacts to Indian Civil War
+	id = USA_IND.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.8" }
+	title = USA_IND.8.t
+	desc = USA_IND.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_7
+
+	option = {
+		name = USA_IND.8.a
+	}
+}
+
+country_event = { # RFK reacts to Indian Civil War
+	id = USA_IND.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.9" }
+	title = USA_IND.9.t
+	desc = USA_IND.9.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_7
+
+	option = {
+		name = USA_IND.9.a
+	}
+}
+
+country_event = { # Bennett reacts to Indian Civil War
+	id = USA_IND.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.10" }
+	title = USA_IND.10.t
+	desc = USA_IND.10.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_7
+
+	option = {
+		name = USA_IND.10.a
+	}
+}
+
+country_event = { # LBJ reacts to Indian Civil War
+	id = USA_IND.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.11" }
+	title = USA_IND.11.t
+	desc = USA_IND.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_7
+
+	option = {
+		name = USA_IND.11.a
+	}
+}
+
+country_event = { # Televised Humanitarian Crisis
+	id = USA_IND.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.12" }
+	title = USA_IND.12.t
+	desc = USA_IND.12.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_generic_starving_african_natives
+
+	option = {
+		name = USA_IND.12.a
+		custom_effect_tooltip = USA_IND_aid_bill_available_tt
+		set_country_flag = USA_IND_aid_bill_available
+	}
+}
+
+country_event = { # Escalated Aid
+	id = USA_IND.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.13" }
+	title = USA_IND.13.t
+	desc = USA_IND.13.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_USA_congress_1
+
+	option = {
+		name = USA_IND.13.a
+		set_country_flag = USA_IND_help_bill_passed
+	}
+}
+
+country_event = { # Status Quo Aid
+	id = USA_IND.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.14" }
+	title = USA_IND.14.t
+	desc = USA_IND.14.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_USA_congress_3
+
+	option = {
+		name = USA_IND.14.a
+	}
+}
+
+country_event = { # OFN OAS Aid Coalition
+	id = USA_IND.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.15" }
+	title = USA_IND.15.t
+	desc = USA_IND.15.d
+	is_triggered_only = yes
+	picture = GFX_report_event_USA_OFN_meeting
+
+	option = { # Only OAS
+		name = USA_IND.15.a
+		add_political_power = -20
+		IND = {
+			add_to_variable = { IND_USA_free_pu = 1 }
+			force_update_dynamic_modifier = yes
+		}
+		custom_effect_tooltip = USA_IND_increase_pu_1_tt
+		IND = {
+			add_to_variable = { IND_black_years_modifier_0 = 0.01 }
+			add_to_variable = { IND_black_years_modifier_1 = 100 }
+			clamp_variable = { var = IND_black_years_modifier_0 max = 0 }
+			clamp_variable = { var = IND_black_years_modifier_1 max = 0 }
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	option = { # Only OFN
+		name = USA_IND.15.b
+		custom_effect_tooltip = USA_subtract_OFN_unity
+		add_to_variable = { OFN_unity = -1 }
+		IND = {
+			add_to_variable = { IND_USA_free_pu = 2 }
+			force_update_dynamic_modifier = yes
+		}
+		custom_effect_tooltip = USA_IND_increase_pu_2_tt
+		IND = {
+			add_to_variable = { IND_black_years_modifier_0 = 0.02 }
+			add_to_variable = { IND_black_years_modifier_1 = 200 }
+			clamp_variable = { var = IND_black_years_modifier_0 max = 0 }
+			clamp_variable = { var = IND_black_years_modifier_1 max = 0 }
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	option = { # Both
+		name = USA_IND.15.c
+		add_political_power = -20
+		custom_effect_tooltip = USA_subtract_OFN_unity
+		add_to_variable = { OFN_unity = -1 }
+		IND = {
+			add_to_variable = { IND_USA_free_pu = 5 }
+			force_update_dynamic_modifier = yes
+		}
+		custom_effect_tooltip = USA_IND_increase_pu_5_tt
+		IND = {
+			add_to_variable = { IND_black_years_modifier_0 = 0.03 }
+			add_to_variable = { IND_black_years_modifier_1 = 300 }
+			clamp_variable = { var = IND_black_years_modifier_0 max = 0 }
+			clamp_variable = { var = IND_black_years_modifier_1 max = 0 }
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	option = { # None
+		name = USA_IND.15.e
+	}
+}
+
+country_event = { # Sectarian Subfutage
+	id = USA_IND.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.16" }
+	title = USA_IND.16.t
+	desc = USA_IND.16.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_11
+
+	option = {
+		name = USA_IND.16.a
+		AZH = {
+			add_stability = -0.10
+			add_war_support = -0.10
+		}
+		IND = {
+			add_stability = -0.05
+			add_war_support = 0.10
+		}
+	}
+}
+
+country_event = { # India becomes OFN observer
+	id = USA_IND.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.17" }
+	title = USA_IND.17.t
+	desc = USA_IND.17.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_5
+
+	option = {
+		name = USA_IND.17.a
+		IND = {
+			add_ideas = OFN_Observer
+			econ_join_sphere_USA = yes
+		}
+		SIK = {
+			econ_join_sphere_USA = yes
+		}
+		NEP = { econ_join_sphere_USA = yes }
+		BHU = {
+			econ_join_sphere_USA = yes
+		}
+	}
+}
+
+country_event = { # India joins OFN
+	id = USA_IND.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.18" }
+	title = USA_IND.18.t
+	desc = USA_IND.18.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_USA_OFN_meeting
+
+	option = {
+		name = USA_IND.18.a
+		USA = { add_to_faction = IND }
+		add_to_array = { global.OFN_members = IND }
+		add_to_array = { global.OFN_members = BHU }
+		add_to_array = { global.OFN_members = SIK }
+		IND = {
+			remove_ideas = OFN_Observer
+			add_ideas = OFN_Independent_Member
+		}
+		BHU = {
+			add_ideas = OFN_Dependent_Member
+		}
+		SIK = {
+			add_ideas = OFN_Dependent_Member
+		}
+		hidden_effect = {
+			country_event = { id = USA_IND.19 days = 365 }
+		}
+	}
+}
+
+country_event = { # Economic Benefits to America
+	id = USA_IND.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.19" }
+	title = USA_IND.19.t
+	desc = USA_IND.19.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_11
+
+	option = {
+		name = USA_IND.19.a
+	}
+}
+
+country_event = { # USA reaction to peaceful unfification
+	id = USA_IND.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.20" }
+	title = USA_IND.20.t
+	desc = USA_IND.20.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_sunset
+
+	option = {
+		name = USA_IND.20.a
+	}
+}
+
+country_event = { # Aid bill passes house
+	id = USA_IND.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.21" }
+	title = USA_IND.21.t
+	desc = USA_IND.21.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_USA_congress_2
+
+	option = {
+		name = USA_IND.21.a
+		custom_effect_tooltip = USA_IND_aid_bill_senate_tt
+		USA_IND_support_bill_setup = yes
+		hidden_effect = {
+			country_event = {
+				id = USA_sen_bill.15000
+				days = 15
+			}
+		}
+	}
+}
+
+country_event = { # Operation Bin Qasim reaction
+	id = USA_IND.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.22" }
+	title = USA_IND.22.t
+	desc = USA_IND.22.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_2
+
+	option = {
+		name = USA_IND.22.a
+		activate_mission = USA_IND_obq_reaction
+	}
+}
+
+country_event = { # American Staffers in Lahore captured
+	id = USA_IND.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.23" }
+	title = USA_IND.23.t
+	desc = USA_IND.23.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_12
+
+	option = {
+		name = USA_IND.23.a
+		set_country_flag = USA_IND_staffers_captured
+		custom_effect_tooltip = USA_IND_rescue_staffers_tt
+	}
+}
+
+news_event = { #Operation fails
+	id = USA_IND.231
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.231" }
+	title = USA_IND.231.t
+	desc = USA_IND.231.d
+	picture = GFX_news_event_USA_PAK_lahore_embassy_failure
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_IND.231.a
+		add_political_power = -30
+		add_stability = -0.03
+	}
+}
+
+country_event = { # American Staffers returned
+	id = USA_IND.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.24" }
+	title = USA_IND.24.t
+	desc = USA_IND.24.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_plane
+
+	option = {
+		name = USA_IND.24.a
+		add_stability = 0.02
+		clr_country_flag = USA_IND_staffers_captured
+	}
+}
+
+country_event = { # RoI + Pakistan Victory
+	id = USA_IND.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.25" }
+	title = USA_IND.25.t
+	desc = USA_IND.25.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_sunset
+
+	immediate = { set_country_flag = conclusion_victory }
+
+	option = {
+		name = USA_IND.25.a
+		set_temp_variable = { conclusion_weeks = 14 }
+		set_temp_variable = { conclusion_bonus = 0.025 }
+		USA_proxy_conclusion_effect = yes
+	}
+}
+
+country_event = { #Pakistan Experiment Ends
+	id = USA_IND.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.26" }
+	title = USA_IND.26.t
+	desc = USA_IND.26.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_sunset
+
+	option = {
+		name = USA_IND.26.a
+	}
+}
+
+country_event = { # Azad Hind + Pakistan Victory
+	id = USA_IND.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.27" }
+	title = USA_IND.27.t
+	desc = USA_IND.27.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_sunset
+
+	option = {
+		name = USA_IND.27.a
+		set_temp_variable = { conclusion_weeks = 14 }
+		set_temp_variable = { conclusion_bonus = 0.025 }
+		USA_proxy_conclusion_effect = yes
+	}
+}
+
+country_event = { # Azad Hind full victory
+	id = USA_IND.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.28" }
+	title = USA_IND.28.t
+	desc = USA_IND.28.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_sunset
+
+	option = {
+		name = USA_IND.28.a
+		set_temp_variable = { conclusion_weeks = 14 }
+		set_temp_variable = { conclusion_bonus = 0.05 }
+		USA_proxy_conclusion_effect = yes
+	}
+}
+
+country_event = { # CIA sets up base in Pakistan
+	id = USA_IND.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_IND.29" }
+	title = USA_IND.29.t
+	desc = USA_IND.29.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_IND_USA_10
+
+	option = {
+		name = USA_IND.29.a
+	}
+}

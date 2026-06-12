@@ -1,0 +1,208 @@
+ideas = {
+	#################################################
+	#                  Dummy Ideas                  #
+	#################################################
+
+	#|=====[ KINGSTON RIOTS ]=====|#
+	hidden_ideas = {
+
+		#---| [1] ROUTES
+			# KingstonRiots_Route_Bahamas
+			# KingstonRiots_Route_Nicaragua
+			# KingstonRiots_Route_DominicanRepublic
+			# KingstonRiots_Route_Guatemala
+			# KingstonRiots_Route_Haiti
+			# KingstonRiots_Route_Colombia
+			# KingstonRiots_Route_Panama
+			# KingstonRiots_Route_Iberia
+			# KingstonRiots_Route_Cuba
+			# KingstonRiots_Route_Mexico
+			# KingstonRiots_Route_UnitedStates
+
+		# [========================] #
+		# [==/==| [1] ROUTES |==/==] #
+		# [========================] #
+
+		# ROUTE TYPES VALUES
+		# 1 - Drugs
+		# 2 - Arms
+		# 3 - Agitation
+		# 4 - Brigadistas
+
+		KingstonRiots_Route_Bahamas = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_Bahamas
+				set_temp_variable = { i = token:KingstonRiots_Route_Bahamas }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_Bahamas }
+
+				set_variable = { Type@var:i = 1 }
+				set_variable = { Level@var:i = 1 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 1 }
+				set_variable = { CoordinateX@var:i = 296 }
+				set_variable = { CoordinateY@var:i = 218 }
+			}
+		}
+
+		KingstonRiots_Route_Nicaragua = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_Nicaragua
+				set_temp_variable = { i = token:KingstonRiots_Route_Nicaragua }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_Nicaragua }
+
+				set_variable = { Type@var:i = 1 }
+				set_variable = { Level@var:i = 1 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 1 }
+				set_variable = { CoordinateX@var:i = 135 }
+				set_variable = { CoordinateY@var:i = 285 }
+			}
+		}
+
+		KingstonRiots_Route_DominicanRepublic = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_DominicanRepublic
+				set_temp_variable = { i = token:KingstonRiots_Route_DominicanRepublic }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_DominicanRepublic }
+
+				set_variable = { Type@var:i = 2 }
+				set_variable = { Level@var:i = 2 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 1 }
+				set_variable = { CoordinateX@var:i = 303 }
+				set_variable = { CoordinateY@var:i = 272 }
+			}
+		}
+
+		KingstonRiots_Route_Guatemala = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_Guatemala
+				set_temp_variable = { i = token:KingstonRiots_Route_Guatemala }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_Guatemala }
+
+				set_variable = { Type@var:i = 1 }
+				set_variable = { Level@var:i = 1 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 1 }
+				set_variable = { CoordinateX@var:i = 23 }
+				set_variable = { CoordinateY@var:i = 278 }
+			}
+		}
+
+		KingstonRiots_Route_Haiti = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_Haiti
+				set_temp_variable = { i = token:KingstonRiots_Route_Haiti }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_Haiti }
+
+				set_variable = { Type@var:i = 2 }
+				set_variable = { Level@var:i = 1 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 1 }
+				set_variable = { CoordinateX@var:i = 303 }
+				set_variable = { CoordinateY@var:i = 265 }
+			}
+		}
+
+		KingstonRiots_Route_Colombia = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_Colombia
+				set_temp_variable = { i = token:KingstonRiots_Route_Colombia }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_Colombia }
+
+				set_variable = { Type@var:i = 1 }
+				set_variable = { Level@var:i = 1 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 1 }
+				set_variable = { CoordinateX@var:i = 284 }
+				set_variable = { CoordinateY@var:i = 286 }
+			}
+		}
+
+		KingstonRiots_Route_Panama = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_Panama
+				set_temp_variable = { i = token:KingstonRiots_Route_Panama }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_Panama }
+
+				set_variable = { Type@var:i = 1 }
+				set_variable = { Level@var:i = 1 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 1 }
+				set_variable = { CoordinateX@var:i = 252 }
+				set_variable = { CoordinateY@var:i = 288 }
+			}
+		}
+
+		KingstonRiots_Route_Iberia = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_Iberia
+				set_temp_variable = { i = token:KingstonRiots_Route_Iberia }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_Iberia }
+
+				set_variable = { Type@var:i = 1 }
+				set_variable = { Level@var:i = 1 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 2 }
+				set_variable = { CoordinateX@var:i = 293 }
+				set_variable = { CoordinateY@var:i = 287 }
+			}
+		}
+
+		KingstonRiots_Route_Cuba = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_Cuba
+				set_temp_variable = { i = token:KingstonRiots_Route_Cuba }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_Cuba }
+
+				set_variable = { Type@var:i = 4 }
+				set_variable = { Level@var:i = 1 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 1 }
+				set_variable = { CoordinateX@var:i = 280 }
+				set_variable = { CoordinateY@var:i = 239 }
+			}
+		}
+
+		KingstonRiots_Route_Mexico = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_Mexico
+				set_temp_variable = { i = token:KingstonRiots_Route_Mexico }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_Mexico }
+
+				set_variable = { Type@var:i = 3 }
+				set_variable = { Level@var:i = 1 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 1 }
+				set_variable = { CoordinateX@var:i = 51 }
+				set_variable = { CoordinateY@var:i = 243 }
+			}
+		}
+
+		KingstonRiots_Route_UnitedStates = {
+			on_add = {
+				remove_ideas = KingstonRiots_Route_UnitedStates
+				set_temp_variable = { i = token:KingstonRiots_Route_UnitedStates }
+				add_to_array = { KingstonRiots_Routes = token:KingstonRiots_Route_UnitedStates }
+
+				set_variable = { Type@var:i = 1 }
+				set_variable = { Level@var:i = 1 }
+				set_variable = { Blockade@var:i = 1 }
+
+				set_variable = { Selected@var:i = 1 }
+				set_variable = { CoordinateX@var:i = 94 }
+				set_variable = { CoordinateY@var:i = 102 }
+			}
+		}
+	}
+}

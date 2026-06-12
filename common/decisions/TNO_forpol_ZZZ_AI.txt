@@ -1,0 +1,114 @@
+###############################
+## 		Salvadoran Coup      ##
+###############################
+
+ELS_SalvadoranCoup_category = {
+	SalvadoranCoup_Deadline = {
+		allowed = { always = no }
+		activation = { always = no }
+		available = {
+			set_temp_variable = { check_v = 0.9 } 
+			SalvadoranCoup_HasMilitaryPreparedness = yes
+			set_temp_variable = { check_v = 0.9 } 
+			SalvadoranCoup_HasCivilianAnger = yes
+		}
+
+		days_mission_timeout = 120
+
+		complete_effect = { SalvadoranCoup_ComputeConclusionSuccess = yes }
+		timeout_effect = { SalvadoranCoup_ComputeConclusionFailure = yes }
+	}
+
+	SalvadoranCoup_Pulse = {
+		allowed = { always = no }
+		activation = { always = no }
+		available = { always = no }
+
+		days_mission_timeout = var:SalvadoranCoup_PulseDuration
+
+		timeout_effect = {
+			SalvadoranCoup_ComputePulseMilitaryPreparednessDecrease = yes
+			SalvadoranCoup_ComputePulseCivilianAngerDecrease = yes
+
+			if = {
+				limit = { has_decision = ELS_SalvadoranCoup_RestructureThePillars }
+				add_stability = 0.085
+				add_war_support = 0.065
+			}
+			else = {
+				add_stability = 0.05
+				add_war_support = 0.025
+			}
+			
+			activate_mission = SalvadoranCoup_Pulse
+		}
+	}
+
+	SalvadoranCoup_Readjustment = {
+		allowed = { always = no }
+		activation = { always = no }
+		available = { always = no }
+
+		days_mission_timeout = 30
+		timeout_effect = {
+			IBR = {
+				if = {
+					limit = { set_temp_variable = { check_v = 0.5 } SalvadoranCoup_HasMilitaryPreparedness = yes }
+					set_temp_variable = { change_v = 0.8 }
+				}
+				else = {
+					set_temp_variable = { change_v = 0.6 }
+				}
+				SalvadoranCoup_ChangeDecisionsCostIBR = yes
+			}
+
+			MEX = {
+				if = {
+					limit = { set_temp_variable = { check_v = 0.5 } SalvadoranCoup_HasCivilianAnger = yes }
+					set_temp_variable = { change_v = 0.8 }
+				}
+				else = {
+					set_temp_variable = { change_v = 0.6 }
+				}
+				SalvadoranCoup_ChangeDecisionsCostMEX = yes
+			}
+
+			activate_mission = SalvadoranCoup_Readjustment
+		}
+	}
+
+	ELS_SalvadoranCoup_CombatTheCombatants = { # Combat the Combatants
+		cost = 30
+		days_remove = 20
+		ai_will_do = { base = 1 }
+	}
+
+	ELS_SalvadoranCoup_RestructureThePillars = { # Restructure the Pillars
+		cost = 60
+		days_remove = 30
+		ai_will_do = { base = 1 }
+	}
+
+	ELS_SalvadoranCoup_MessUpTheirGame = { # Mess Up Their Game
+		cost = 60
+		days_remove = 15
+		ai_will_do = { base = 1 }
+		available = { check_variable = { SalvadoranCoup_PulseDuration > 4 } }
+		complete_effect = { set_temp_variable = { change_v = -2 } SalvadoranCoup_ChangePulseDuration = yes }
+	}
+
+	ELS_SalvadoranCoup_BestToInvestWithInterest = { # Best to Invest with Interest
+		cost = 30
+		days_remove = 15
+		ai_will_do = { base = 10 }
+		complete_effect = { TNO_improve_political_parties_policy_effectiveness_low = yes }
+		modifier = { political_power_gain = 5 }
+	}
+	
+	ELS_SalvadoranCoup_JudgeTheJudges = { # Judge the Judges
+		cost = 40
+		days_remove = 50
+		ai_will_do = { base = 1 }
+		complete_effect = { add_days_mission_timeout = { mission = SalvadoranCoup_Deadline days = -20 } }
+	}
+}

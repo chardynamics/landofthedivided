@@ -1,0 +1,2950 @@
+add_namespace = JAM_skeleton
+
+add_namespace = JAM_flavor
+add_namespace = JAM_News
+
+#	custom_effect_tooltip = LATAM_New_FBI_Mission - Utilized when unlocking new FBI operations
+#	set_country_flag = USA_CIA_Operation_Catnip_Unlocked - Operation Specific Country Flag set up when unlocked, removed when the opportunity expires or the operation is completed
+
+### Jamaica Skeleton Post-Crisis
+#Auth Path
+country_event = { #Bustamante Set-Up
+	id = JAM_skeleton.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event JAM_skeleton.1" }
+	title = JAM_skeleton.1.t
+	desc = JAM_skeleton.1.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_skeleton.1.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = JAM_skeleton.2
+			days = 3
+		}
+		USA = { country_event = { id = JAM_flavor.1 days = 1 } } #Busta is denounced, leaves OFN
+		#MEX = { country_event = { id = JAM_flavor.4 days = 10 } }
+	}
+}
+
+country_event = { #Bustamante Constitution
+	id = JAM_skeleton.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event JAM_skeleton.2" }
+	title = JAM_skeleton.2.t
+	desc = JAM_skeleton.2.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_skeleton.2.a
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = no
+		}
+		JAM = {
+			add_country_leader_role = {
+				character = JAM_Alexander_Bustamante
+				promote_leader = yes
+				country_leader = {
+					expire = "1977.8.6.1"
+					desc = "POLITICS_JAM_ALEXANDER_BUSTAMANTE_DESC"
+					ideology = paternalism_anocracy_subtype
+					id = -1
+				}
+			}
+		}
+		set_popularities = {
+			paternalism = 44
+			paternalism_2 = 20
+			progressivism = 12
+			socialist = 9
+			socialist_1 = 5
+			communist = 10
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Corporate_Oligopoly }
+		econ_subtype_change = yes
+		#Flavor
+		IBR = {
+			country_event = { id = JAM_flavor.4 hours = 3 } #New Constitution Plan
+			country_event = { id = JAM_flavor.7 days = 70 } #Mining Investments
+			country_event = { id = JAM_flavor.8 days = 145 } #Docks
+			country_event = { id = JAM_flavor.9 days = 350 } #Gang Governance
+		}
+		USA = {
+			country_event = { id = JAM_flavor.5 hours = 3 } #Edward Seaga Reaches Out
+			country_event = { id = JAM_flavor.10 days = 70 } #Operation Banana Split
+			#country_event = { id = JAM_flavor.12 days = 115 } #Drugs coming into Miami --- doesn't seem to exist?
+			country_event = { id = JAM_flavor.13 days = 300 } #Rastafarian Refugees
+		}
+		#14 and 15 triggered by Oil Crisis
+		MEX = { country_event = { id = JAM_flavor.6 hours = 3 } } #Manley flees to Mexico
+		CAN = { end_puppet = JAM }
+		ENG = { end_puppet = JAM }
+		set_cosmetic_tag = JAM_busta
+		689 = {
+			TNO_clear_admin_title = yes
+			TNO_clear_assoc_region = yes
+			if = {
+				limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Greater_Antilles } }
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Greater_Antilles }
+				TNO_adjust_assoc_region = yes
+				TNO_clear_assoc_region_2 = yes
+			}
+		}
+		#every_country = {
+		#	limit = {
+		#		is_ai = no
+		#		HasAmericasInterest = yes
+		#	}
+		#	news_event = {
+		#		id = JAM_News.5
+		#	}
+		#}
+	}
+}
+
+country_event = { #Oil Crisis Ending Check
+	id = JAM_skeleton.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event JAM_skeleton.3" }
+	title = JAM_skeleton.3.t
+	desc = JAM_skeleton.3.desc
+	picture = GFX_report_event_MAD_phone_call
+	immediate = { USA = { clr_country_flag = USA_CIA_Operation_banana_split_Unlocked } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_skeleton.3.a
+		ai_chance = { factor = 1 }
+		if = { #Regime Holds
+			limit = {
+				OR = {
+					AND = {
+						has_country_flag = JAM_Banana_Has_Been_Split
+						has_country_flag = JAM_Iberian_Bailout
+						check_variable = { USA.Caribbean_Stability < 7 }
+					}
+					AND = {
+						NOT = { has_country_flag = JAM_Banana_Has_Been_Split }
+						has_country_flag = JAM_Iberian_Bailout
+					}
+					has_game_rule = { rule = JAM_JLP_POWER_STRUGGLE option = JAM_JLP_POWER_STRUGGLE_SHEARER }
+				}
+				country_exists = IBR
+				NOT = { has_game_rule = { rule = JAM_JLP_POWER_STRUGGLE option = JAM_JLP_POWER_STRUGGLE_SEAGA } }
+			}
+			set_popularities = {
+				paternalism = 32
+				paternalism_2 = 13
+				progressivism = 10
+				socialist = 15
+				socialist_1 = 10
+				communist = 20
+			}
+			JAM_Alexander_Bustamante = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/WIN/Portrait_WIN_Alexander_Bustamante_70s.png" }
+				}
+			}
+			USA = {
+				#country_event = { id = JAM_flavor. days = 1 } #Hugh Shearer becomes PM
+				country_event = { id = JAM_flavor.20 days = 30 } #Intel Report on Jamaica
+			}
+			IBR = {
+				#country_event = { id = JAM_flavor. days = 1 } #Hugh Shearer becomes PM
+				country_event = { id = JAM_flavor.18 days = 30 } #Web of Corruption
+				country_event = { id = JAM_flavor.19 days = 600 } #Future of Jamaica Report
+			}
+			country_event = { id = JAM_skeleton.4 days = 600 }
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = JAM_News.11
+					days = 32
+				}
+			}
+		}
+		else_if = { #Palace Coup
+			limit = {
+				OR = {
+					AND = {
+						has_country_flag = JAM_Banana_Has_Been_Split
+						has_country_flag = JAM_Iberian_Bailout
+						check_variable = { USA.Caribbean_Stability > 6 }
+					}
+					AND = {
+						has_country_flag = JAM_Banana_Has_Been_Split
+						NOT = { has_country_flag = JAM_Iberian_Bailout }
+					}
+					NOT = { country_exists = IBR }
+					has_game_rule = { rule = JAM_JLP_POWER_STRUGGLE option = JAM_JLP_POWER_STRUGGLE_SEAGA }
+				}
+			}
+			retire_country_leader = yes
+			promote_character = { character = JAM_Edward_Seaga ideology = paternalism_anocracy_subtype }
+			promote_character = { character = JAM_Edward_Seaga ideology = conservatism_oligarchic_conservatism_subtype }
+			set_popularities = {
+				paternalism_1 = 11
+				paternalism = 32
+				conservatism = 14
+				progressivism = 13
+				socialist = 7
+				socialist_1 = 9
+				communist = 14
+			}
+			set_party_name = {
+				ideology = paternalism_1
+				name = JAM_paternalism_party
+				long_name = JAM_paternalism_party_long
+			}
+			set_party_name = {
+				ideology = paternalism
+				name = JAM_paternalism_2_party
+				long_name = JAM_paternalism_2_party_long
+			}
+			remove_ideas = {
+				JAM_Den_of_Thieves
+				JAM_Bent_Backbone
+			}
+			add_ideas = {
+				JAM_The_Seaga_Spine
+				JAM_Sunrise_Over_Montego_Bay
+			}
+			
+			USA = {
+				set_temp_variable = { Victory_ID = 66 }
+				set_temp_variable = { Victory_Outcome = 4 }
+				set_temp_variable = { Victory_Points = 50 }
+				Cold_War_GUI_AddVictory = yes
+			}
+
+			set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_American_Capitalism }
+			econ_subtype_change = yes
+			USA = {
+				country_event = { id = JAM_flavor.21 } #Seaga promises Cooperation
+				#country_event = { id = JAM_flavor.23 days = 300 } #Investment Push
+				#country_event = { id = JAM_flavor.24 days = 600 } #60 Minute Intel Report
+			}
+			IBR = {
+				country_event = { id = JAM_flavor.22 days = 300 } #Purge of Pro-Iberians - That's it?
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = JAM_News.12
+				}
+			}
+		}
+
+	}
+}
+
+country_event = { #Shearer becomes leader
+	id = JAM_skeleton.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event JAM_skeleton.4" }
+	title = JAM_skeleton.4.t
+	desc = JAM_skeleton.4.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_skeleton.4.a
+		ai_chance = { factor = 1 }
+		promote_character = { character = JAM_Hugh_Shearer ideology = paternalism_anocracy_subtype }
+	}
+}
+
+#Dem Path Skeleton
+country_event = { #Independence Referendum
+	id = JAM_skeleton.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event JAM_skeleton.5" }
+	title = JAM_skeleton.5.t
+	desc = JAM_skeleton.5.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_skeleton.5.a
+		ai_chance = { factor = 1 }
+		#25 and 26 are JLP reaction events for Iberian Wars
+		set_party_name = {
+			ideology = paternalism
+			name = JAM_paternalism_party
+			long_name = JAM_paternalism_party_long
+		}
+		set_popularities = {
+			conservatism = 18
+			paternalism = 16
+			progressivism = 38
+			socialist = 12
+			socialist_1 = 16
+		}
+		set_cosmetic_tag = JAM_rep
+		CAN = { end_puppet = JAM }
+		ENG = { end_puppet = JAM }
+		set_politics = { ruling_party = progressivism }
+		remove_ideas = OFN_Dependent_Member
+		add_ideas = OFN_Independent_Member
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		689 = {
+			TNO_clear_admin_title = yes
+			TNO_clear_assoc_region = yes
+			if = {
+				limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Greater_Antilles } }
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Greater_Antilles }
+				TNO_adjust_assoc_region = yes
+				TNO_clear_assoc_region_2 = yes
+			}
+		}
+
+		#25 and 26 are JLP reaction events for Iberian Wars, 27 is triggered in the Scripted Effects file
+
+		USA = {
+			country_event = { id = JAM_flavor.29 days = 11 } #Unlock Operation Rotten Cardinal --- 31 is for Rotten Cardinal Success
+			country_event = { id = JAM_flavor.33 days = 200 } #Capital Flight in Jamaica
+			country_event = { id = JAM_flavor.36 days = 536 } #Bob Marley Visits US
+			#country_event = { id = JAM_flavor. days = 741 } #60 Minute Report on Manley
+			#country_event = { id = JAM_flavor. days = 1140 } #Lead-up to election
+		}
+		MEX = { #These are way too many but leaving for now since Mexico content doesn't reach this far
+			country_event = { id = JAM_flavor.39 days = 20 } #Joins Veracruz
+			country_event = { id = JAM_flavor.32 days = 30 } #Manley Social Democracy Speech
+			country_event = { id = JAM_flavor.40 days = 30 } #Manley Social Democracy Speech
+			country_event = { id = JAM_flavor.41 days = 40 } #Capital Flight in Jamaica
+			country_event = { id = JAM_flavor.42 days = 536 } #Bob Marley Visits US
+			country_event = { id = JAM_flavor.43 days = 741 } #60 Minute Report on Manley
+			country_event = { id = JAM_flavor.44 days = 1110 } #Loan Request
+		}
+		#every_country = { #Already another news event shortly before this and this one isn't written
+		#	limit = {
+		#		is_ai = no
+		#		HasAmericasInterest = yes
+		#	}
+		#	news_event = {
+		#		id = JAM_News.17
+		#		days = 1
+		#	}
+		#}
+
+		#Chain
+		country_event = {
+			id = JAM_skeleton.7
+			days = 1448
+		}
+	}
+}
+
+country_event = { #1971 Election
+	id = JAM_skeleton.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event JAM_skeleton.7" }
+	title = JAM_skeleton.7.t
+	desc = JAM_skeleton.7.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_skeleton.7.a
+		ai_chance = { factor = 1 }
+		USA = { clr_country_flag = USA_CIA_Operation_rotten_cardinal_Unlocked }
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = JAM_1971_ELECTION option = JAM_1971_ELECTION_JLP }
+				}
+				modifier = {
+					factor = 1.2
+					check_variable = { USA.Caribbean_Stability < 7 }
+				}
+				if = {
+					limit = { check_variable = { USA.Caribbean_Stability < 7 } }
+					set_popularities = {
+						conservatism = 31
+						progressivism = 42
+						socialist = 11
+						socialist_1 = 16
+					}
+					#USA = { country_event = { id = JAM_flavor.45 } } #Massive Win
+					#MEX = { country_event = { id = JAM_flavor.45 } }
+				}
+				if = {
+					limit = { check_variable = { USA.Caribbean_Stability > 6 } }
+					set_popularities = {
+						conservatism = 42
+						progressivism = 38
+						socialist = 11
+						socialist_1 = 9
+					}
+					#USA = { country_event = { id = JAM_flavor.46 } } #Narrow Win
+					#MEX = { country_event = { id = JAM_flavor.46 } }
+				}
+
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = JAM_News.18
+						days = 1
+					}
+				}
+
+				set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+				econ_subtype_change = yes
+
+				USA = { country_event = { id = JAM_flavor.50 days = 48 } } #Coup Plans
+				#MEX = { country_event = { id = JAM_flavor.48 days = 49 } } #Fears of Foreign Meddling
+			}
+			50 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = { rule = JAM_1971_ELECTION option = JAM_1971_ELECTION_PNP }
+						AND = {
+							NOT = { has_game_rule = { rule = JAM_1971_ELECTION option = JAM_1971_ELECTION_JLP } }
+							NOT = { has_country_flag = JAM_Rotten_Cardinal_Completed }
+						}
+					}
+				}
+				modifier = {
+					factor = 1.2
+					check_variable = { USA.Caribbean_Stability > 6 }
+				}
+				set_politics = { ruling_party = conservatism }
+				promote_character = { character = JAM_Edward_Seaga ideology = conservatism_oligarchic_conservatism_subtype }
+				set_popularities = {
+					conservatism = 55
+					progressivism = 30
+					socialist = 10
+					socialist_1 = 5
+				}
+
+				econ_join_sphere_USA = yes
+				remove_ideas = {
+					JAM_The_Tropical_Fabian
+					JAM_The_New_Machine
+				}
+				add_ideas = {
+					JAM_The_Seaga_Spine
+					JAM_Sunrise_Over_Montego_Bay
+				}
+
+				#USA = { country_event = { id = JAM_flavor.49 } } #Victory Reactions
+				#MEX = { country_event = { id = JAM_flavor.49 } }
+
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = JAM_News.19
+						days = 1
+					}
+				}
+
+				USA = { country_event = { id = JAM_flavor.51 days = 48 } } #Seaga wants assistance with Crime
+				#MEX = { country_event = { id =  } }
+			}
+		}
+	}
+}
+
+#Rev Path Skeleton
+country_event = { #Declaration of Independence
+	id = JAM_skeleton.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event JAM_skeleton.8" }
+	title = JAM_skeleton.8.t
+	desc = JAM_skeleton.8.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_skeleton.8.a
+		ai_chance = { factor = 1 }
+		set_cosmetic_tag = JAM_poprep
+		CAN = { end_puppet = JAM }
+		ENG = { end_puppet = JAM }
+		VEN = { VEN_commie_increase_small = yes }
+		leave_faction = yes
+		remove_ideas = OFN_Dependent_Member
+		econ_leave_sphere = yes
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Socialized_Economy }
+		econ_subtype_change = yes 
+		689 = {
+			TNO_clear_admin_title = yes
+			TNO_clear_assoc_region = yes
+			if = {
+				limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Greater_Antilles } }
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Greater_Antilles }
+				TNO_adjust_assoc_region = yes
+				TNO_clear_assoc_region_2 = yes
+			}
+		}
+		IBR = { country_event = { id = JAM_flavor.52 days = 100 } } #New Regime Reveals JLP-Iberia Ties
+		USA = { country_event = { id = JAM_flavor.55 days = 35 } } #Detente Choice --- 56 and 57 are Triggered as a response to 55
+		MEX = { country_event = { id = JAM_flavor.58 days = 20 } } #Reservations about the Government
+
+		#Chain
+		country_event = { #Fate of the Revolution
+			id = JAM_skeleton.9
+			days = 50
+		}
+	}
+}
+
+country_event = { #Fate of the Revolution
+	id = JAM_skeleton.9
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_skeleton.9"
+		USA = {
+			country_event = { id = JAM_flavor.60 days = 300 } #All-Caribbean Conference
+			country_event = { id = JAM_flavor.61 days = 921 } #Bob Marley Denied Entry
+		}
+
+		set_party_name = {
+			ideology = socialist
+			name = JAM_socialist_party
+			long_name = JAM_socialist_party_long
+		}
+
+	}
+	title = JAM_skeleton.9.t
+	desc = JAM_skeleton.9.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #Radical Turn
+		name = JAM_skeleton.9.a
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = JAM_Revolution_Rejected }
+		set_politics = {
+			ruling_party = communist
+			elections_allowed = no
+		}
+		add_country_leader_role = {
+			character = JAM_William_Strachan
+			promote_leader = yes
+			country_leader = {
+				expire = "1977.8.6.1"
+				ideology = communist_guevarism_subtype
+				id = -1
+			}
+		}
+		set_popularities = {
+			paternalism = 10
+			paternalism_2 = 5
+			socialist = 17
+			socialist_1 = 10
+			progressivism = 18
+			communist = 40
+		}
+		USA = {
+			country_event = { id = JAM_flavor.53 days = 280 } #Operation Heroic Strangle Unlocked --- #54 for Operation Result (the counter-coup doesn't actually happen tho)
+			country_event = { id = JAM_flavor.64 days = 1520 } #Jamaican Economy is Struggling
+			country_event = { id = JAM_flavor.65 days = 1800 } #Jamaica Crisis Plans
+		}
+		MEX = {
+			country_event = { id = JAM_flavor.66 days = 80 } #Manley Reaches out
+			country_event = { id = JAM_flavor.64 days = 1520 } #Jamaican Economy is Struggling
+			country_event = { id = JAM_flavor.67 days = 1800 } #Manley flees Jamaica
+		}
+
+		VEN = { VEN_commie_increase_small = yes }
+
+		#Chain
+		country_event = { #Antillean Union Joining?
+			id = JAM_skeleton.10
+			days = 1820
+		}
+	}
+
+	option = { #Moderation
+		name = JAM_skeleton.9.b
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = JAM_Revolution_Accepted }
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		add_country_leader_role = {
+			character = JAM_Richard_Hart
+			promote_leader = yes
+			country_leader = {
+				expire = "1977.8.6.1"
+				desc = "POLITICS_JAM_RICHARD_HART_DESC"
+				ideology = progressivism_popular_front_subtype
+				id = -1
+			}
+		}
+		set_party_name = {
+			ideology = progressivism
+			name = JAM_front
+			long_name = JAM_front_long
+		}
+		set_party_name = {
+			ideology = progressivism_2
+			name = JAM_progressivism_party
+			long_name = JAM_progressivism_party_long
+		}
+
+		set_popularities = {
+			paternalism = 10
+			paternalism_2 = 5
+			progressivism = 25
+			progressivism_2 = 18
+			socialist = 16
+			socialist_1 = 6
+			communist = 20
+		}
+
+		remove_ideas = {
+			JAM_Black_Star_Red_Flag
+			JAM_The_Maroons_Return
+		}
+
+		add_ideas = {
+			JAM_Revolutionary_Democracy
+			JAM_The_Independence_Debt
+		}
+
+		USA = { country_event = { id = JAM_flavor.68 days = 84 } } #Operation Vineyard Bounty unlocked - #69 for Operation Result
+		MEX = { country_event = { id = JAM_flavor.70 days = 84 } } #Manley Reaches out
+
+		#Chain
+		country_event = { #Snap Elections
+			id = JAM_skeleton.11
+			days = 1798
+		}
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = JAM_News.24
+			}
+		}
+	}
+}
+
+country_event = { #Red Jamaica joins Antillean Union
+	id = JAM_skeleton.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event JAM_skeleton.10" }
+	title = JAM_skeleton.10.t
+	desc = JAM_skeleton.10.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = JAM_skeleton.10.a
+		ai_chance = { factor = 1 }
+		#USA = { country_event = { id = # days = 1 } } #reaction event?
+		#MEX = { country_event = { id = # days = 1 } } #reaction event?
+		#every_owned_state = {
+		#	add_core_of = #
+		#	remove_core_of = JAM
+		#	transfer_state_to = # 
+		#}
+	}
+}
+
+country_event = { #1972 Socialist Election
+	id = JAM_skeleton.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event JAM_skeleton.11" }
+	title = JAM_skeleton.11.t
+	desc = JAM_skeleton.11.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	immediate = { clr_country_flag = USA_CIA_Operation_vineyard_bounty_Unlocked }
+
+	option = {
+		name = JAM_skeleton.11.a
+		ai_chance = { factor = 1 }
+		set_party_name = {
+			ideology = progressivism
+			name = JAM_progressivism_party
+			long_name = JAM_progressivism_party_long
+		}
+		random_list = {
+			50 = { #PFM Win
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							check_variable = { USA.Caribbean_Stability < 7 }
+							has_country_flag = JAM_Vineyard_Bountry_Completed
+						}
+						check_variable = { USA.Caribbean_Stability < 8 }
+					}
+				}
+
+				set_politics = { ruling_party = socialist }
+				add_country_leader_role = {
+					character = JAM_Richard_Hart
+					promote_leader = yes
+					country_leader = {
+						expire = "1977.8.6.1"
+						desc = "POLITICS_JAM_RICHARD_HART_DESC"
+						ideology = socialist_left_wing_nationalism_subtype
+						id = -1
+					}
+				}
+				set_popularities = {
+					paternalism = 6
+					paternalism_2 = 9
+					socialist = 38
+					socialist_1 = 9
+					progressivism = 28
+					communist = 10
+				}
+
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = JAM_News.20
+						days = 1
+					}
+				}
+				USA = { country_event = { id = JAM_flavor.71 days = 10 } } #Cooling of Relations
+				VEN = { VEN_commie_increase_small = yes }
+			}
+			50 = { #PNP Win
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							check_variable = { USA.Caribbean_Stability > 6 }
+							has_country_flag = JAM_Vineyard_Bountry_Completed
+						}
+						check_variable = { USA.Caribbean_Stability > 7 }
+					}
+				}
+
+				add_country_leader_role = {
+					character = JAM_Michael_Manley
+					promote_leader = yes
+					country_leader = {
+						expire = "1977.8.6.1"
+						desc = "POLITICS_JAM_MICHAEL_MANLEY_DESC"
+						ideology = progressivism_reformist_socialism_subtype
+						id = -1
+					}
+				}
+
+				set_popularities = {
+					paternalism = 6
+					paternalism_2 = 9
+					socialist = 28
+					socialist_1 = 9
+					progressivism = 38
+					communist = 10
+				}
+
+				set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+				econ_subtype_change = yes
+
+				USA = { country_event = { id = JAM_flavor.38 days = 10 } } #Manley wants money, you want democracy
+				MEX = { country_event = { id = JAM_flavor.73 days = 10 } }
+
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = JAM_News.21
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+### FLAVOR EVENTS
+country_event = {
+	id = JAM_flavor.1
+	picture = GFX_report_event_JAM_bustamante_meeting
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.1"
+	}
+	title = JAM_flavor.1.t
+	desc = JAM_flavor.1.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.1.a
+		ai_chance = { factor = 1 }
+		add_political_power = -50
+		JAM = {
+			leave_faction = yes
+			hidden_effect = { remove_ideas = OFN_Dependent_Member }
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.4
+	picture = GFX_report_event_IBR_ullastres_handshake
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.4"
+	}
+	title = JAM_flavor.4.t
+	desc = JAM_flavor.4.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.4.a
+		ai_chance = { factor = 1 }
+		JAM = { tno_political_parties_worsen = yes }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.5
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.5"
+	}
+	title = JAM_flavor.5.t
+	desc = JAM_flavor.5.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.5.a
+		ai_chance = { factor = 1 }
+		add_command_power = 1
+		custom_effect_tooltip = JAM_flavor_5_tt
+	}
+}
+
+country_event = {
+	id = JAM_flavor.6
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.6"
+	}
+	title = JAM_flavor.6.t
+	desc = JAM_flavor.6.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.6.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.7
+	picture = GFX_report_event_generic_sign_treaty3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.7"
+	}
+	title = JAM_flavor.7.t
+	desc = JAM_flavor.7.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.7.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { temp_econ_spending_amount = 0.010 }
+		econ_spend_money_once_effect_raw_money = yes
+		set_temp_variable = { gdp_growth_temp = 0.05 }
+		econ_gdp_growth_change = yes
+		JAM = {
+			set_temp_variable = { gdp_growth_temp = 0.35 }
+			econ_gdp_growth_change = yes
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.8
+	picture = GFX_report_event_FFR_oran_dockyards
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.8"
+	}
+	title = JAM_flavor.8.t
+	desc = JAM_flavor.8.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.8.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { money_reserves_temp = 0.15 }
+		econ_money_reserves_change_raw_money = yes
+		JAM = { TNO_worsen_trade_laws_policy_effectiveness_med = yes }
+		689 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = 12304
+			}
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.9
+	picture = GFX_report_event_IBR_gonzalez_mata
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.9"
+	}
+	title = JAM_flavor.9.t
+	desc = JAM_flavor.9.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.9.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			add_stability = 0.10
+			TNO_improve_security_policy_effectiveness_med = yes
+			set_temp_variable = { temp_econ_spending_amount = 0.13 }
+			econ_spend_money_once_effect_raw_money = yes
+			TNO_worsen_admin_efficiency_med = yes
+		}
+	}
+}
+
+
+country_event = {
+	id = JAM_flavor.10
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.10"
+	}
+	title = JAM_flavor.10.t
+	desc = JAM_flavor.10.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.10.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		JAM = {
+			add_stability = -0.05
+			TNO_worsen_security_policy_effectiveness_med = yes
+			TNO_worsen_admin_efficiency_med = yes
+		}
+		set_country_flag = USA_CIA_Operation_banana_split_Unlocked
+	}
+}
+
+country_event = {
+	id = JAM_flavor.11
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.11"
+	}
+	title = JAM_flavor.11.t
+	desc = JAM_flavor.11.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.11.a
+		ai_chance = { factor = 1 }
+		
+	}
+	option = { #
+		name = JAM_flavor.11.b
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.12
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.12"
+	}
+	title = JAM_flavor.12.t
+	desc = JAM_flavor.12.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.12.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.13
+	picture = GFX_report_event_generic_river_boat
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.13"
+	}
+	title = JAM_flavor.13.t
+	desc = JAM_flavor.13.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.13.a
+		ai_chance = { factor = 1 }
+		add_manpower = 172
+	}
+}
+
+country_event = {
+	id = JAM_flavor.14
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.14"
+	}
+	title = JAM_flavor.14.t
+	desc = JAM_flavor.14.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.14.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.15
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.15"
+	}
+	title = JAM_flavor.15.t
+	desc = JAM_flavor.15.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.15.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.16
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.16"
+	}
+	title = {
+		text = JAM_flavor.16A.t
+		trigger = { ROOT = { tag = USA } }
+	}
+	title = {
+		text = JAM_flavor.16B.t
+		trigger = { ROOT = { tag = IBR } }
+	}
+	desc = {
+		text = JAM_flavor.16A.desc
+		trigger = { ROOT = { tag = USA } }
+	}
+	desc = {
+		text = JAM_flavor.16B.desc
+		trigger = { ROOT = { tag = IBR } }
+	}
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.16A.a
+		trigger = { ROOT = { tag = USA } }
+		ai_chance = { factor = 1 }
+		JAM = {
+			add_stability = -0.05
+			TNO_worsen_admin_efficiency_med = yes
+			set_temp_variable = { gdp_growth_temp = -0.5 }
+			econ_gdp_growth_change = yes
+		}
+		custom_effect_tooltip = JAM_flavor_16_tt
+	}
+	option = { #
+		name = JAM_flavor.16B.a
+		trigger = { ROOT = { tag = IBR } }
+		ai_chance = { factor = 1 }
+		JAM = { #Yes, it's intentional to do two of these. Nationwide blackouts, 1 leader missing and 1 dead is that bad
+			add_stability = -0.05
+			TNO_worsen_admin_efficiency_med = yes
+			set_temp_variable = { gdp_growth_temp = -0.5 }
+			econ_gdp_growth_change = yes
+		}
+		custom_effect_tooltip = JAM_flavor_16_tt
+	}
+}
+
+country_event = {
+	id = JAM_flavor.17
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.17"
+	}
+	title = JAM_flavor.17.t
+	desc = JAM_flavor.17.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_flavor.17.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.18
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.18"
+	}
+	title = JAM_flavor.18.t
+	desc = JAM_flavor.18.desc
+
+	picture = GFX_report_event_JAM_rodney
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.18.a
+		JAM = {
+			add_stability = -0.03
+			TNO_worsen_admin_efficiency_low = yes
+			TNO_worsen_security_policy_effectiveness_med = yes
+			set_temp_variable = { gdp_growth_temp = -0.2 }
+			econ_gdp_growth_change = yes
+			TNO_worsen_poverty_med = yes
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.19
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.19"
+	}
+	title = JAM_flavor.19.t
+	desc = JAM_flavor.19.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_flavor.19.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			add_stability = -0.05
+			TNO_worsen_security_policy_effectiveness_low = yes
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.20
+	picture = GFX_report_event_USA_fbi_button
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.20"
+	}
+	title = JAM_flavor.20.t
+	desc = JAM_flavor.20.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.20.a
+		JAM = {
+			add_stability = 0.03
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.21
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.21"
+	}
+	title = JAM_flavor.21.t
+	desc = JAM_flavor.21.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.21.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			set_temp_variable = { temp_modifier = 30 }
+			add_to_trade_modifier_PREV = yes
+		}
+		add_to_faction = JAM
+		JAM = {
+			add_ideas = OFN_Dependent_Member
+			set_temp_variable = { gdp_growth_temp = 0.35 }
+			econ_gdp_growth_change = yes
+			TNO_improve_security_policy_effectiveness_med = yes
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.22
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.22"
+	}
+	title = JAM_flavor.22.t
+	desc = JAM_flavor.22.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.22.a
+		ai_chance = { factor = 1 }
+		add_political_power = -30
+		set_temp_variable = { IBR_foreign_alignment_temp = -3.5 }
+		IBR_change_foreign_opinion_franco = yes
+		IBR_check_caudillo_popularity = yes
+	}
+}
+
+country_event = {
+	id = JAM_flavor.23
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.23"
+	}
+	title = JAM_flavor.23.t
+	desc = JAM_flavor.23.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.23.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.24
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.24"
+	}
+	title = JAM_flavor.24.t
+	desc = JAM_flavor.24.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.24.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.25
+	picture = GFX_report_event_USA_wfb_broken_hill_mine
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.25"
+	}
+	title = JAM_flavor.25.t
+	desc = JAM_flavor.25.desc
+
+	is_triggered_only = yes
+
+	option = { #Didn't put effects here because it's triggering for every Iberian Wars Participant
+		name = JAM_flavor.25.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.26
+	picture = GFX_report_event_WIF_map
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.26"
+	}
+	title = JAM_flavor.26.t
+	desc = JAM_flavor.26.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_flavor.26.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			set_temp_variable = { gdp_growth_temp = -1.25 }
+			econ_gdp_growth_change = yes
+			add_stability = -0.25
+			TNO_worsen_poverty_high = yes
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.27
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.27"
+	}
+	title = JAM_flavor.27.t
+	desc = JAM_flavor.27.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_flavor.27.a
+		ai_chance = { factor = 1 }
+		add_political_power = -20
+		JAM = { TNO_worsen_trade_laws_policy_effectiveness_high = yes }
+	}
+
+	#option = { #why are there two? One for Mexico and one for the US?
+	#	name = JAM_flavor.27.b
+	#	ai_chance = { factor = 1 }
+	#}
+}
+
+country_event = {
+	id = JAM_flavor.28
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.28"
+	}
+	title = JAM_flavor.28.t
+	desc = JAM_flavor.28.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.28.a
+		ai_chance = { factor = 1 }
+		add_political_power = -20
+		TNO_worsen_trade_laws_policy_effectiveness_low = yes
+	}
+}
+
+country_event = {
+	id = JAM_flavor.29
+	picture = GFX_report_event_IBR_looking_out_window
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.29"
+	}
+	title = JAM_flavor.29.t
+	desc = JAM_flavor.29.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.29.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		set_country_flag = USA_CIA_Operation_rotten_cardinal_Unlocked
+	}
+}
+
+country_event = {
+	id = JAM_flavor.30
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.30"
+	}
+	title = JAM_flavor.30.t
+	desc = JAM_flavor.30.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.30.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = {
+	id = JAM_flavor.31
+	picture = GFX_report_event_IBR_detective_desk
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.31"
+	}
+	title = JAM_flavor.31.t
+	desc = JAM_flavor.31.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.31.a
+		ai_chance = { factor = 1 }
+		Espionage_SuccessEffect = yes
+		JAM = { set_country_flag = JAM_Rotten_Cardinal_Completed }
+		clr_country_flag = USA_CIA_Operation_rotten_cardinal_Unlocked
+	}
+}
+
+country_event = { #Manley Social Democracy Speech
+	id = JAM_flavor.32
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.32"
+	}
+	title = JAM_flavor.32.t
+	desc = JAM_flavor.32.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.32.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			JAM = {
+				add_country_leader_role = {
+					character = JAM_Michael_Manley
+					promote_leader = yes
+					country_leader = {
+						expire = "1977.8.6.1"
+						desc = "POLITICS_JAM_MICHAEL_MANLEY_DESC"
+						ideology = progressivism_reformist_socialism_subtype
+						id = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.33
+	picture = GFX_report_event_generic_radio1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.33"
+	}
+	title = JAM_flavor.33.t
+	desc = JAM_flavor.33.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.33.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { temp_econ_spending_amount = 0.020 }
+		econ_spend_money_once_effect_raw_money = yes
+		JAM = {
+			set_temp_variable = { gdp_growth_temp = -0.15 }
+			econ_gdp_growth_change = yes
+			TNO_improve_income_taxation_policy_effectiveness_med = yes
+			TNO_improve_regulations_policy_effectiveness_low = yes
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.34
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.34"
+	}
+	title = JAM_flavor.34.t
+	desc = JAM_flavor.34.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.34.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.35
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.35"
+	}
+	title = JAM_flavor.35.t
+	desc = JAM_flavor.35.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.35.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.36
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.36"
+	}
+	title = JAM_flavor.36.t
+	desc = JAM_flavor.36.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.36.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.37
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.37"
+	}
+	title = JAM_flavor.37.t
+	desc = JAM_flavor.37.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.37.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.38
+	picture = GFX_report_event_JAM_michael_manley
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.38"
+	}
+	title = JAM_flavor.38.t
+	desc = JAM_flavor.38.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.38.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { temp_econ_spending_amount = 0.35 }
+		econ_spend_money_once_effect_raw_money = yes
+		JAM = {
+			TNO_improve_vote_franchise_policy_effectiveness_high = yes
+			TNO_worsen_income_taxation_policy_effectiveness_low = yes
+			set_temp_variable = { money_reserves_temp = 0.35 }
+			econ_money_reserves_change_raw_money = yes
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.39
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.39"
+	}
+	title = JAM_flavor.39.t
+	desc = JAM_flavor.39.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.39.a
+		ai_chance = { factor = 1 }
+		JAM = { econ_join_sphere_MEX = yes }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.40
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.40"
+	}
+	title = JAM_flavor.40.t
+	desc = JAM_flavor.40.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.40.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.41
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.41"
+	}
+	title = JAM_flavor.41.t
+	desc = JAM_flavor.41.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.41.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.42
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.42"
+	}
+	title = JAM_flavor.42.t
+	desc = JAM_flavor.42.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.42.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.43
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.43"
+	}
+	title = JAM_flavor.43.t
+	desc = JAM_flavor.43.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.43.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.44
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.44"
+	}
+	title = JAM_flavor.44.t
+	desc = JAM_flavor.44.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.44.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.45
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.45"
+	}
+	title = JAM_flavor.45.t
+	desc = JAM_flavor.45.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.45.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.46
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.46"
+	}
+	title = JAM_flavor.46.t
+	desc = JAM_flavor.46.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.46.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.47
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.47"
+	}
+	title = JAM_flavor.47.t
+	desc = JAM_flavor.47.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.47.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.48
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.48"
+	}
+	title = JAM_flavor.48.t
+	desc = JAM_flavor.48.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.48.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.49
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.49"
+	}
+	title = JAM_flavor.49.t
+	desc = JAM_flavor.49.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.49.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.50
+	picture = GFX_report_event_cia_agents_suits_hats
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.50"
+	}
+	title = JAM_flavor.50.t
+	desc = JAM_flavor.50.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.50.a
+		ai_chance = { factor = 1 }
+		add_political_power = -30
+	}
+}
+
+country_event = {
+	id = JAM_flavor.51
+	picture = GFX_report_event_GNG_interrogation
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.51"
+	}
+	title = JAM_flavor.51.t
+	desc = JAM_flavor.51.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_flavor.51.a
+		ai_chance = { factor = 1 }
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = JAM_flavor.52
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.52"
+	}
+	title = JAM_flavor.52.t
+	desc = JAM_flavor.52.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_flavor.52.a
+		ai_chance = { factor = 1 }
+		add_political_power = -30
+		set_temp_variable = { IBR_foreign_alignment_temp = -5 }
+		IBR_change_foreign_opinion_franco = yes
+		IBR_check_caudillo_popularity = yes
+	}
+}
+
+country_event = {
+	id = JAM_flavor.53
+	picture = GFX_report_event_USA_fbi_button
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.53"
+	}
+	title = JAM_flavor.53.t
+	desc = JAM_flavor.53.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_flavor.53.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		set_country_flag = USA_CIA_Operation_heroic_strangle_Unlocked
+	}
+}
+
+country_event = {
+	id = JAM_flavor.54
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.54"
+	}
+	title = JAM_flavor.54.t
+	desc = JAM_flavor.54.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.54.a
+		ai_chance = { factor = 1 }
+		Espionage_SuccessEffect = yes
+		add_to_variable = { Caribbean_Stability = 2 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Improves_med
+		clr_country_flag = USA_CIA_Operation_heroic_strangle_Unlocked
+	}
+}
+
+country_event = {
+	id = JAM_flavor.55
+	picture = GFX_report_event_generic_sign_treaty2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.55"
+	}
+	title = JAM_flavor.55.t
+	desc = JAM_flavor.55.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.55.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = JAM_SOCIALIST_RECOGNITION option = JAM_SOCIALIST_RECOGNITION_YAY }
+			}
+		}
+		country_event = {
+			id = JAM_flavor.56
+			days = 7
+		}
+	}
+	option = { #
+		name = JAM_flavor.55.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = JAM_SOCIALIST_RECOGNITION option = JAM_SOCIALIST_RECOGNITION_NAY }
+			}
+		}
+		country_event = {
+			id = JAM_flavor.57
+			days = 7
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.56
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.56"
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = JAM_News.22
+				}
+			}
+		}
+	}
+	title = JAM_flavor.56.t
+	desc = JAM_flavor.56.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.56.a
+		ai_chance = { factor = 1 }
+		JAM = { add_manpower = -3 }
+		CAN = { add_manpower = -4 }
+		JAM = { set_country_flag = JAM_Revolution_Rejected }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.57
+	picture = GFX_report_event_WIF_map
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.57"
+	}
+	title = JAM_flavor.57.t
+	desc = JAM_flavor.57.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.57.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			TNO_improve_vote_franchise_policy_effectiveness_med = yes
+			set_temp_variable = { gdp_growth_temp = 0.1 }
+			econ_gdp_growth_change = yes
+		}
+		JAM = { set_country_flag = JAM_Revolution_Accepted }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.58
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.58"
+	}
+	title = JAM_flavor.58.t
+	desc = JAM_flavor.58.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.58.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.59
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.59"
+	}
+	title = JAM_flavor.59.t
+	desc = JAM_flavor.59.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.59.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.60
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.60"
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = JAM_News.23
+				}
+			}
+		}
+	}
+	title = JAM_flavor.60.t
+	desc = JAM_flavor.60.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.60.a
+		ai_chance = { factor = 1 }
+		subtract_from_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Worsens_small
+	}
+}
+
+country_event = {
+	id = JAM_flavor.61
+	picture = GFX_report_event_CHI_airport
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.61"
+	}
+	title = JAM_flavor.61.t
+	desc = JAM_flavor.61.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.61.a
+		ai_chance = { factor = 1 }
+		add_stability = -0.01
+	}
+}
+
+country_event = {
+	id = JAM_flavor.62
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.62"
+	}
+	title = JAM_flavor.62.t
+	desc = JAM_flavor.62.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.62.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.63
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.63"
+	}
+	title = JAM_flavor.63.t
+	desc = JAM_flavor.63.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.63.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.64
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.64"
+	}
+	title = JAM_flavor.64.t
+	desc = JAM_flavor.64.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.64.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.65
+	picture = GFX_report_event_IBR_big_meeting
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.65"
+	}
+	title = JAM_flavor.65.t
+	desc = JAM_flavor.65.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.65.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { NetworkChange = 20 }
+		Espionage_AddNetworkStrength_CentralAmerica = yes
+		JAM = {
+			set_temp_variable = { gdp_growth_temp = -0.2 }
+			econ_gdp_growth_change = yes
+			TNO_worsen_poverty_med = yes
+		}
+	}
+}
+
+country_event = {
+	id = JAM_flavor.66
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.66"
+	}
+	title = JAM_flavor.66.t
+	desc = JAM_flavor.66.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.66.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.67
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.67"
+	}
+	title = JAM_flavor.67.t
+	desc = JAM_flavor.67.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_flavor.67.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.68
+	picture = GFX_report_event_USA_fbi_button
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.68"
+	}
+	title = JAM_flavor.68.t
+	desc = JAM_flavor.68.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_flavor.68.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		set_country_flag = USA_CIA_Operation_vineyard_bounty_Unlocked
+	}
+}
+
+country_event = {
+	id = JAM_flavor.69
+	picture = GFX_report_event_TRI_eric_williams_speech
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.69"
+	}
+	title = JAM_flavor.69.t
+	desc = JAM_flavor.69.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_flavor.69.a
+		ai_chance = { factor = 1 }
+		Espionage_SuccessEffect = yes
+		add_to_variable = { Caribbean_Stability = 2 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Improves_med
+		clr_country_flag = USA_CIA_Operation_vineyard_bounty_Unlocked
+	}
+}
+
+country_event = {
+	id = JAM_flavor.70
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.70"
+	}
+	title = JAM_flavor.70.t
+	desc = JAM_flavor.70.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.70.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.71
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.71"
+	}
+	title = JAM_flavor.71.t
+	desc = JAM_flavor.71.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.71.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.72
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.72"
+	}
+	title = JAM_flavor.72.t
+	desc = JAM_flavor.72.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.72.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.73
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.73"
+	}
+	title = JAM_flavor.73.t
+	desc = JAM_flavor.73.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.73.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.74
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.74"
+	}
+	title = JAM_flavor.74.t
+	desc = JAM_flavor.74.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.74.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.75
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.75"
+	}
+	title = JAM_flavor.75.t
+	desc = JAM_flavor.75.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.75.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.76
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.76"
+	}
+	title = JAM_flavor.76.t
+	desc = JAM_flavor.76.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.76.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.77
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.77"
+	}
+	title = JAM_flavor.77.t
+	desc = JAM_flavor.77.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.77.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.78
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.78"
+	}
+	title = JAM_flavor.78.t
+	desc = JAM_flavor.78.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_flavor.78.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = JAM_flavor.79
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_flavor.79"
+	}
+	title = JAM_flavor.79.t
+	desc = JAM_flavor.79.desc
+
+	picture = GFX_report_event_WIF_map
+
+	is_triggered_only = yes
+
+	option = { #You should know money doesn't grow on trees at your big age
+		name = JAM_flavor.79.a
+		ai_chance = { factor = 1 }
+		add_political_power = -30
+		set_temp_variable = { temp_econ_spending_amount = 0.2 }
+		econ_spend_money_once_effect_raw_money = yes
+		JAM = {
+			set_temp_variable = { money_reserves_temp = 0.2 }
+			econ_money_reserves_change_raw_money = yes
+			set_country_flag = JAM_Iberian_Bailout
+		}
+	}
+	option = { #Fuck you old man
+		name = JAM_flavor.79.b
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		JAM = {
+			add_stability = -0.08
+			TNO_worsen_security_policy_effectiveness_med = yes
+		}
+	}
+}
+
+## News Events
+news_event = {
+	id = JAM_News.1
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.1"
+	}
+	title = JAM_News.1.t
+	desc = JAM_News.1.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.1.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.2
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.2"
+	}
+	title = JAM_News.2.t
+	desc = JAM_News.2.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.2.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.3
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.3"
+	}
+	title = JAM_News.3.t
+	desc = JAM_News.3.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.3.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.4
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.4"
+	}
+	title = JAM_News.4.t
+	desc = JAM_News.4.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.4.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #Bustamante constitution
+	id = JAM_News.5
+	picture = GFX_news_event_JAM_bustamante_consolidates
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.5"
+	}
+	title = JAM_News.5.t
+	desc = JAM_News.5.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_News.5.a
+		ai_chance = { factor = 1 }
+		trigger = { is_in_faction_with = USA }
+	}
+
+	option = {
+		name = JAM_News.5.b
+		ai_chance = { factor = 1 }
+		trigger = { original_tag = IBR }
+	}
+
+	option = {
+		name = JAM_News.5.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				is_in_faction_with = USA
+				original_tag = IBR
+			}
+		}
+	}
+}
+
+news_event = {
+	id = JAM_News.6
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.6"
+	}
+	title = JAM_News.6.t
+	desc = JAM_News.6.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.6.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.7
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.7"
+	}
+	title = JAM_News.7.t
+	desc = JAM_News.7.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.7.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.8
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.8"
+	}
+	title = JAM_News.8.t
+	desc = JAM_News.8.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.8.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.9
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.9"
+	}
+	title = JAM_News.9.t
+	desc = JAM_News.9.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.9.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.10
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.10"
+	}
+	title = JAM_News.10.t
+	desc = JAM_News.10.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.10.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #Sangster dies
+	id = JAM_News.11
+	picture = GFX_news_event_JAM_sangster_death
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.11"
+	}
+	title = JAM_News.11.t
+	desc = JAM_News.11.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_News.11.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #Seaga coups
+	id = JAM_News.12
+	picture = GFX_news_event_JAM_pro_american_coup
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.12"
+	}
+	title = JAM_News.12.t
+	desc = JAM_News.12.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_News.12.a
+		ai_chance = { factor = 1 }
+		trigger = { is_in_faction_with = USA }
+	}
+
+	option = {
+		name = JAM_News.12.b
+		ai_chance = { factor = 1 }
+		trigger = { original_tag = IBR }
+	}
+
+	option = {
+		name = JAM_News.12.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				is_in_faction_with = USA
+				original_tag = IBR
+			}
+		}
+	}
+}
+
+news_event = {
+	id = JAM_News.13
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.13"
+	}
+	title = JAM_News.13.t
+	desc = JAM_News.13.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.13.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.14
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.14"
+	}
+	title = JAM_News.14.t
+	desc = JAM_News.14.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.14.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.15
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.15"
+	}
+	title = JAM_News.15.t
+	desc = JAM_News.15.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.15.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.16
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.16"
+	}
+	title = JAM_News.16.t
+	desc = JAM_News.16.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.16.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.17
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.17"
+	}
+	title = JAM_News.17.t
+	desc = JAM_News.17.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.17.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #PNP wins elections
+	id = JAM_News.18
+	picture = GFX_news_event_JAM_pnp_victory
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.18"
+	}
+	title = JAM_News.18.t
+	desc = JAM_News.18.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_News.18.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			original_tag = MEX
+		}
+	}
+
+	option = {
+		name = JAM_News.18.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			original_tag = USA
+		}
+	}
+
+	option = {
+		name = JAM_News.18.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				original_tag = MEX
+				original_tag = USA
+			}
+		}
+	}
+}
+
+news_event = { #JLP wins elections
+	id = JAM_News.19
+	picture = GFX_news_event_JAM_pro_american_coup
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.19"
+	}
+	title = JAM_News.19.t
+	desc = JAM_News.19.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_News.19.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			original_tag = MEX
+		}
+	}
+
+	option = {
+		name = JAM_News.19.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			original_tag = USA
+		}
+	}
+
+	option = {
+		name = JAM_News.19.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				original_tag = MEX
+				original_tag = USA
+			}
+		}
+	}
+}
+
+news_event = { #Hart wins election
+	id = JAM_News.20
+	picture = GFX_news_event_WI_JAM_far_left_vic
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.20"
+	}
+	title = JAM_News.20.t
+	desc = JAM_News.20.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.20.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #Manley wins election
+	id = JAM_News.21
+	picture = GFX_news_event_WI_JAM_moderate_vic
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.21"
+	}
+	title = JAM_News.21.t
+	desc = JAM_News.21.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.21.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #Strachan declares emergency
+	id = JAM_News.22
+	picture = GFX_news_event_JAM_skirmishes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.22"
+	}
+	title = JAM_News.22.t
+	desc = JAM_News.22.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.22.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #All-Caribbean People's Conference
+	id = JAM_News.23
+	picture = GFX_news_event_JAM_all_caribbean_conference
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.23"
+	}
+	title = JAM_News.23.t
+	desc = JAM_News.23.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.23.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #pop-front wins elections
+	id = JAM_News.24
+	picture = GFX_news_event_JAM_poprep_election
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.24"
+	}
+	title = JAM_News.24.t
+	desc = JAM_News.24.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = JAM_News.24.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			original_tag = IBR
+		}
+	}
+
+	option = {
+		name = JAM_News.24.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = { original_tag = IBR }
+		}
+	}
+}
+
+news_event = {
+	id = JAM_News.25
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.25"
+	}
+	title = JAM_News.25.t
+	desc = JAM_News.25.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.25.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.26
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.26"
+	}
+	title = JAM_News.26.t
+	desc = JAM_News.26.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.26.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.27
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.27"
+	}
+	title = JAM_News.27.t
+	desc = JAM_News.27.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.27.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.28
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.28"
+	}
+	title = JAM_News.28.t
+	desc = JAM_News.28.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.28.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = {
+	id = JAM_News.29
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event JAM_News.29"
+	}
+	title = JAM_News.29.t
+	desc = JAM_News.29.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = JAM_News.29.a
+		ai_chance = { factor = 1 }
+	}
+}

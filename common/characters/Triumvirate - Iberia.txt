@@ -1,0 +1,6717 @@
+characters = {
+#######################################################################################################Iberian Union
+#LEADERS
+	IBR_Francisco_Franco = {
+		name = IBR_Francisco_Franco
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Francisco_Franco.png"
+				small = "GFX_idea_IBR_minister_Francisco_Franco"
+			}
+		}
+		country_leader = { #Starting version
+			desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = {
+				strong_franco_trait
+			}
+			expire = "1975.10.20"
+			id = -1
+		}
+		country_leader = { #Starting version
+			desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology = fascism_2_subtype
+			traits = {
+				strong_franco_trait
+			}
+			expire = "1975.10.20"
+			id = -1
+		}
+		country_leader = { #Starting version
+			desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology = fascism_subtype
+			traits = {
+				strong_franco_trait
+			}
+			expire = "1975.10.20"
+			id = -1
+		}
+		country_leader = { #Starting version
+			desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology = despotism_3_subtype
+			traits = {
+				strong_franco_trait
+			}
+			expire = "1975.10.20"
+			id = -1
+		}
+		country_leader = { #Starting version
+			desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology = despotism_2_subtype
+			traits = {
+				strong_franco_trait
+			}
+			expire = "1975.10.20"
+			id = -1
+		}
+		country_leader = { #Starting version
+			desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology = paternalism_subtype
+			traits = {
+				strong_franco_trait
+			}
+			expire = "1975.10.20"
+			id = -1
+		}
+		country_leader = { #Starting version
+			desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology = paternalism_1_subtype
+			traits = {
+				strong_franco_trait
+			}
+			expire = "1975.10.20"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = IBR_Francisco_Franco_hog
+			allowed = { original_tag = IBR }
+			traits = {
+				head_of_government
+				advisor_franco_trait
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Antonio_Salazar = {
+		name = IBR_Antonio_Salazar
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Antonio_Salazar.png"
+				small = "GFX_idea_IBR_minister_Antonio_Salazar"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ANTONIO_DE_OLIVEIRA_SALAZAR_IBERIA_DESC"
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = {
+				strong_salazar_trait
+			}
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ANTONIO_DE_OLIVEIRA_SALAZAR_IBERIA_DESC"
+			ideology = fascism_2_subtype
+			traits = {
+				strong_salazar_trait
+			}
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ANTONIO_DE_OLIVEIRA_SALAZAR_IBERIA_DESC"
+			ideology = fascism_subtype
+			traits = {
+				strong_salazar_trait
+			}
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ANTONIO_DE_OLIVEIRA_SALAZAR_IBERIA_DESC"
+			ideology = despotism_2_subtype
+			traits = {
+				strong_salazar_trait
+			}
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ANTONIO_DE_OLIVEIRA_SALAZAR_IBERIA_DESC"
+			ideology = despotism_3_subtype
+			traits = {
+				strong_salazar_trait
+			}
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ANTONIO_DE_OLIVEIRA_SALAZAR_IBERIA_DESC"
+			ideology = paternalism_subtype
+			traits = {
+				strong_salazar_trait
+			}
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ANTONIO_DE_OLIVEIRA_SALAZAR_IBERIA_DESC"
+			ideology = paternalism_1_subtype
+			traits = {
+				strong_salazar_trait
+			}
+			expire = "1999.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = IBR_Antonio_Salazar_hog
+			allowed = { original_tag = IBR }
+			traits = {
+				head_of_government
+				advisor_salazar_trait
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Iberian_Council = {
+		name = IBR_Iberian_Council
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Iberian_Council.png"
+				small = "GFX_idea_IBR_minister_Iberian_Council"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_IBERIAN_COUNCIL_PRE68"
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { iberian_council_trait }
+			expire = "1999.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = IBR_Iberian_Council_hog
+			allowed = { original_tag = IBR }
+			traits = {
+				head_of_government
+				hog_national_figurehead
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Manuel_Fraga = {
+		name = IBR_Manuel_Fraga
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Manuel_Fraga.png"
+				small = "GFX_idea_IBR_minister_Manuel_Fraga"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = conservatism_2_subtype
+			id = -1
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = paternalism_1_subtype
+			id = -1
+		}
+	}
+	IBR_Joao_Miller_Guerra = {
+		name = IBR_Joao_Miller_Guerra
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Joao_Miller_Guerra.png"
+				small = "GFX_idea_IBR_minister_Joao_Miller_Guerra"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = liberal_conservatism_subtype
+			id = -1
+		}
+	}
+	IBR_Marcelo_Caetano = {
+		name = IBR_Marcelo_Caetano
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Marcelo_Caetano.png"
+				small = "GFX_idea_IBR_minister_Marcelo_Caetano"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = IBR_Marcelo_Caetano_hog
+			allowed = { original_tag = IBR }
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	IBR_Power_Vacuum = {
+		name = COL_Power_Vacuum
+		country_leader = {
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	IBR_Decentralized = {
+		name = IBR_Decentralized
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IBR_Fernando_Alvarez_Miranda = {
+		name = IBR_Fernando_Alvarez_Miranda
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = conservatism_1_subtype
+			id = -1
+		}
+	}
+	IBR_Jose_Maria_Gil_Robles = {
+		name = IBR_Jose_Maria_Gil_Robles
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = conservatism_subtype
+			id = -1
+		}
+	}
+	IBR_Pio_Cabanillas = {
+		name = IBR_Pio_Cabanillas
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = liberal_conservatism_subtype
+			id = -1
+		}
+	}
+	IBR_Joaquin_Garrigues_Walker = {
+		name = IBR_Joaquin_Garrigues_Walker
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = liberalism_subtype
+			id = -1
+		}
+	}
+	IBR_Francisco_Pinto_Balsemao = {
+		name = IBR_Francisco_Pinto_Balsemao
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = liberalism_1_subtype
+			id = -1
+		}
+	}
+	IBR_Joaquin_Ruiz_Gimenez = {
+		name = IBR_Joaquin_Ruiz_Gimenez
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = progressivism_2_subtype
+			id = -1
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = liberalism_subtype
+			id = -1
+		}
+	}
+	IBR_Francisco_Fernandez_Ordonez = {
+		name = IBR_Francisco_Fernandez_Ordonez
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = progressivism_subtype
+			id = -1
+		}
+	}
+	IBR_Armando_Adao_Silva = {
+		name = IBR_Armando_Adao_Silva
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = progressivism_1_subtype
+			id = -1
+		}
+	}
+	IBR_Rodolfo_Llopis = {
+		name = IBR_Rodolfo_Llopis
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = socialist_subtype
+			id = -1
+		}
+	}
+	IBR_Mario_Soares = {
+		name = IBR_Mario_Soares
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = socialist_1_subtype
+			id = -1
+		}
+	}
+	IBR_Santiago_Carrillo = {
+		name = IBR_Santiago_Carrillo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = communist_subtype
+			id = -1
+		}
+	}
+	IBR_Alvaro_Cunhal = {
+		name = IBR_Alvaro_Cunhal
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = communist_1_subtype
+			id = -1
+		}
+	}
+	IBR_Enrique_Tierno_Galvan = {
+		name = IBR_Enrique_Tierno_Galvan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = socialist_subtype
+			id = -1
+		}
+	}
+	IBR_Rodolfo_Martin_Villa = {
+		name = IBR_Rodolfo_Martin_Villa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+	}
+	IBR_Various_Leaders = {
+		name = IBR_Various_Leaders
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = socialist_1_subtype
+			id = -1
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = liberalism_1_subtype
+			id = -1
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = conservatism_subtype
+			id = -1
+		}
+	}
+
+#MINISTERS
+	IBR_Fernando_Maria_Castiella = {
+		name = IBR_Fernando_Maria_Castiella
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Fernando_Maria_Castiella"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = IBR_Fernando_Maria_Castiella_for
+			allowed = { original_tag = IBR }
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Jose_Ferreira_Dias = {
+		name = IBR_Jose_Ferreira_Dias
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Jose_Ferreira_Dias"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = IBR_Jose_Ferreira_Dias_eco
+			allowed = { original_tag = IBR }
+			traits = {
+				economy_minister
+				eco_vernacular_industrialiser
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Luis_Teixeira = {
+		name = IBR_Luis_Teixeira
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Luis_Maria_Teixeira_Pinto"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = IBR_Luis_Teixeira_eco
+			allowed = { original_tag = IBR }
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Jose_Correia_Oliveira = {
+		name = IBR_Jose_Correia_Oliveira
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Jose_Goncalo_Correia_de_Oliveira"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = IBR_Jose_Correia_Oliveira_eco
+			allowed = { original_tag = IBR }
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Antonio_Barroso_Sanchez = {
+		name = IBR_Antonio_Barroso_Sanchez
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Jose_Barroso_Sanchez_Guerra"
+				large = "gfx/leaders/SPS/Portrait_SPS_Antonio_Barroso_y_Sanchez_Guerra.png"
+			}
+			army = {
+				small = "GFX_idea_IBR_minister_Jose_Barroso_Sanchez_Guerra"
+				large = "gfx/leaders/SPS/Portrait_SPS_Antonio_Barroso_y_Sanchez_Guerra.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = IBR_Antonio_Barroso_Sanchez_sec
+			allowed = { original_tag = IBR }
+			traits = {
+				security_minister
+				sec_retired_general
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Antonio_Barroso_Sanchez_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Pablo_Martin_Alonso = {
+		name = IBR_Pablo_Martin_Alonso
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Pablo_Martin_Alonso"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = IBR_Pablo_Martin_Alonso_sec
+			allowed = { original_tag = IBR }
+			traits = {
+				security_minister
+				sec_retired_general
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Pablo_Martin_Alonso_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Camilo_Menendez_Tolosa = {
+		name = IBR_Camilo_Menendez_Tolosa
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Camilo_Menendez_Tolosa"
+			}
+			army = {
+				small = "GFX_idea_IBR_minister_Camilo_Menendez_Tolosa"
+				large = "gfx/leaders/IBR/Portrait_Iberia_Camilo_Menendez_Tolosa.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = IBR_Camilo_Menendez_Tolosa_sec
+			allowed = { original_tag = IBR }
+			traits = {
+				security_minister
+				sec_retired_general
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Camilo_Menendez_Tolosa_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	IBR_Antonio_Castro_Fernandes = {
+		name = IBR_Antonio_Castro_Fernandes
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Antonio_Castro_Fernandes"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = IBR_Antonio_Castro_Fernandes_eco
+			allowed = { original_tag = IBR }
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Mariano_Navarro_Rubio = {
+		name = IBR_Mariano_Navarro_Rubio
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Mariano_Rubio"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = IBR_Mariano_Navarro_Rubio_eco
+			allowed = { original_tag = IBR }
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Juan_Castanon_Mena = {
+		name = IBR_Juan_Castanon_Mena
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Juan_Castanon_de_Mena"
+			}
+			army = {
+				small = "GFX_idea_IBR_minister_Juan_Castanon_de_Mena"
+				large = "gfx/leaders/IBR/Portrait_Iberia_Juan_Castanon_de_Mena.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = IBR_Juan_Castanon_Mena_sec
+			allowed = { original_tag = IBR }
+			traits = {
+				security_minister
+				sec_retired_general
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Juan_Castanon_Mena_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	IBR_Jose_Maria_Areilza = {
+		name = IBR_Jose_Maria_Areilza
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Jose_Maria_de_Areilza"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = IBR_Jose_Maria_Areilza_for
+			allowed = { original_tag = IBR }
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Enrique_Fuentes_Quintana = {
+		name = IBR_Enrique_Fuentes_Quintana
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Enrique_Fuentes_Quintana"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = IBR_Enrique_Fuentes_Quintana_eco
+			allowed = { original_tag = IBR }
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Fernando_de_Santiago = {
+		name = IBR_Fernando_de_Santiago
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Fernando_de_Santiago"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = IBR_Fernando_de_Santiago_sec
+			allowed = { original_tag = IBR }
+			traits = {
+				security_minister
+				sec_retired_general
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Fernando_de_Santiago_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Torcuato_Fernandez_Miranda = {
+		name = IBR_Torcuato_Fernandez_Miranda
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Torcuato_Fernandez_Miranda"
+				large = "gfx/leaders/IBR/Portrait_Iberia_Torcuato_Fernandez_Miranda.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = IBR_Torcuato_Fernandez_Miranda_hog
+			allowed = { original_tag = IBR }
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Joao_Freitas_Cruz = {
+		name = IBR_Joao_Freitas_Cruz
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Joao_de_Freitas_Cruz"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = IBR_Joao_Freitas_Cruz_for
+			allowed = { original_tag = IBR }
+			traits = {
+				foreign_minister
+				for_seasoned_ambassador
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Manuel_Gutierrez_Mellado = {
+		name = IBR_Manuel_Gutierrez_Mellado
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Manuel_Gutierrez_Mellado.png"
+				small = "GFX_idea_IBR_minister_Manuel_Gutierrez_Mellado"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = IBR_Manuel_Gutierrez_Mellado_sec
+			allowed = { original_tag = IBR }
+			traits = {
+				security_minister
+				sec_retired_general
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Manuel_Gutierrez_Mellado_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Joao_Pereira_Campos = {
+		name = IBR_Joao_Pereira_Campos
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Joao_Mota_Pereira_de_Campos"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = paternalism_1_subtype
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = IBR_Joao_Pereira_Campos_hog
+			allowed = { original_tag = IBR }
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Andre_Goncalves_Pereira = {
+		name = IBR_Andre_Goncalves_Pereira
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Andre_Goncalves_Pereira"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = IBR_Andre_Goncalves_Pereira_for
+			allowed = { original_tag = IBR }
+			traits = {
+				foreign_minister
+				for_seasoned_ambassador
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Laureano_Lopez_Rodo = {
+		name = IBR_Laureano_Lopez_Rodo
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Laureano_Lopez_Rodo"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = IBR_Laureano_Lopez_Rodo_eco
+			allowed = { original_tag = IBR }
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Fernando_Herrero_Tejedor = {
+		name = IBR_Fernando_Herrero_Tejedor
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Fernando_Herrero_Tejedor"
+				#large = "gfx/leaders/IBR/Portrait_Iberia_Fernando_Herrero_Tejedor.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = IBR_Fernando_Herrero_Tejedor_hog
+			allowed = { original_tag = IBR }
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+#HIGH COMMAND AND SUCH
+	IBR_Luis_Camara_Pina = {
+		name = IBR_Luis_Camara_Pina
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Luis_Maria_da_Camara_Pina"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = IBR_Luis_Camara_Pina_army_chief
+			allowed = { original_tag = IBR }
+			traits = {
+				army_chief
+				army_chief_old_guard
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Alberto_Andrade_Silva = {
+		name = IBR_Alberto_Andrade_Silva
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Alberto_Andrade_Silva"
+			}
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Alberto_Andrade_Silva.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = IBR_Alberto_Andrade_Silva_army_chief
+			allowed = { original_tag = IBR }
+			traits = {
+				army_chief
+				army_chief_reform_1
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+
+		}
+	}
+	IBR_Francisco_Costa_Gomes = {
+		name = IBR_Francisco_Costa_Gomes
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Francisco_Gomes"
+			}
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Francisco_Gomes.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = IBR_Francisco_Costa_Gomes_army_chief
+			allowed = { original_tag = IBR }
+			traits = {
+				army_chief
+				army_chief_reform_1
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			desc = "GENERAL_FRANCISCO_COSTA_GOMES_DESC"
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = {
+				infantry_officer
+			}
+			legacy_id = 1307
+		}
+	}
+
+	IBR_Felipe_Jose_Abarzuza = {
+		name = IBR_Felipe_Jose_Abarzuza
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Felipe_Jose_Abarzuza"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = IBR_Felipe_Jose_Abarzuza_navy_chief
+			allowed = { original_tag = IBR }
+			traits = {
+				navy_chief
+				navy_chief_decisive_battle_1
+			}
+			ledger = navy
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	IBR_Adolfo_Baturone_Colombo = {
+		name = IBR_Adolfo_Baturone_Colombo
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Adolfo_Baturone_Colombo"
+			}
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Adolfo_Baturone_Colombo.png"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = IBR_Francisco_Costa_Gomes_navy_chief
+			allowed = { original_tag = IBR }
+			traits = {
+				navy_chief
+				navy_chief_decisive_battle_1
+			}
+			ledger = navy
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+			traits = {
+			}
+			legacy_id = 1316
+		}
+	}
+
+	IBR_Carlos_Buhigas_Garcia = {
+		name = IBR_Carlos_Buhigas_Garcia
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Carlos_Buhigas_Garcia"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = IBR_Carlos_Buhigas_Garcia_navy_chief
+			allowed = { original_tag = IBR }
+			traits = {
+				navy_chief
+				navy_chief_reform_1
+			}
+			ledger = navy
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	IBR_Bernardo_Mira_Delgado = {
+		name = IBR_Bernardo_Mira_Delgado
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Bernardo_Tiago_Mira_Delgado"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = IBR_Bernardo_Mira_Delgado_air_chief
+			allowed = { original_tag = IBR }
+			traits = {
+				air_chief
+				air_chief_old_guard
+			}
+			ledger = air
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	IBR_Joao_Corte_Real = {
+		name = IBR_Joao_Corte_Real
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Joao_Corte_Real"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = IBR_Joao_Corte_Real_air_chief
+			allowed = { original_tag = IBR }
+			traits = {
+				air_chief
+				air_chief_ground_support_1
+			}
+			ledger = air
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	IBR_Luis_Navarro_Garnica = {
+		name = IBR_Luis_Navarro_Garnica
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Luis_Navarro_Garnica"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = IBR_Luis_Navarro_Garnica_air_chief
+			allowed = { original_tag = IBR }
+			traits = {
+				air_chief
+				air_chief_ground_support_1
+			}
+			ledger = air
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	IBR_Ignacio_Alfaro_Arregui = {
+		name = IBR_Ignacio_Alfaro_Arregui
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Ignacio_Alfaro_Arregui.png"
+				small = "GFX_idea_IBR_minister_Ignacio_Alfaro_Arregui"
+			}
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Ignacio_Alfaro_Arregui.png"
+				small = "GFX_idea_IBR_minister_Ignacio_Alfaro_Arregui"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = IBR_Ignacio_Alfaro_Arregui_air_chief
+			allowed = { original_tag = IBR }
+			traits = {
+				air_chief
+				air_chief_ground_support_1
+			}
+			ledger = air
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Fernando_Quintanilha = {
+		name = IBR_Fernando_Quintanilha
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Fernando_Quintanilha.png"
+				small = "GFX_idea_IBR_minister_Fernando_Quintanilha"
+			}
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Fernando_Quintanilha.png"
+				small = "GFX_idea_IBR_minister_Fernando_Quintanilha"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Fernando_Quintanilha_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Juan_Romero_Manso = {
+		name = IBR_Juan_Romero_Manso
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Juan_Romero_Manso"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Juan_Romero_Manso_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Jose_Rodriguez_Lecea = {
+		name = IBR_Jose_Rodriguez_Lecea
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Jose_Rodriguez_y_Diaz_de_Lecea"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Jose_Rodriguez_Lecea_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Jose_Daniel_Lacalle = {
+		name = IBR_Jose_Daniel_Lacalle
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Jose_Lacalle_Larraga"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Jose_Daniel_Lacalle_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Julio_Salvador_Diaz = {
+		name = IBR_Julio_Salvador_Diaz
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Julio_Salvador_Diaz"
+			}
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Julio_Salvador_Diaz.png"
+				small = "GFX_idea_IBR_minister_Julio_Salvador_Diaz"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Julio_Salvador_Diaz_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+
+		}
+	}
+	IBR_Manuel_Diogo_Neto = {
+		name = IBR_Manuel_Diogo_Neto
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Manuel_Diogo_Neto"
+			}
+			army = {
+				small = "GFX_idea_IBR_minister_Manuel_Diogo_Neto"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Manuel_Diogo_Neto_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Angel_Gonzalez_Mendoza = {
+		name = IBR_Angel_Gonzalez_Mendoza
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Angel_Gonzalez_Mendoza"
+			}
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Angel_Gonzalez_de_Mendoza_Dorvier.png"
+				small = "GFX_idea_IBR_minister_Angel_Gonzalez_Mendoza"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = IBR_Angel_Gonzalez_Mendoza_theorist
+			allowed = { original_tag = IBR }
+			traits = {
+				theorist
+				military_theorist
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			traits = {
+				career_officer
+			}
+		}
+	}
+	IBR_Indalencio_Nunez_Iglesias = {
+		name = IBR_Indalencio_Nunez_Iglesias
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Indalencio_Nunez_Iglesias"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = IBR_Indalencio_Nunez_Iglesias_theorist
+			allowed = { original_tag = IBR }
+			traits = {
+				theorist
+				naval_theorist
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Manuel_Diez_Alegria = {
+		name = IBR_Manuel_Diez_Alegria
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Manuel_Diez_Alegria.png"
+			}
+			civilian = {
+				small = "GFX_idea_IBR_minister_Manuel_Diez_Alegria"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = IBR_Manuel_Diez_Alegria_theorist
+			allowed = { original_tag = IBR }
+			traits = {
+				theorist
+				military_theorist
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+			traits = {
+				trait_engineer
+			}
+			legacy_id = 1312
+		}
+	}
+#UNIT LEADERS
+	IBR_Agustin_Munoz_Grandes = {
+		name = IBR_Agustin_Munoz_Grandes
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Agustin_Munoz_Grandes.png"
+				small = "GFX_idea_IBR_minister_Agustin_Munoz_Grandes"
+			}
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Agustin_Munoz_Grandes.png"
+				small = "GFX_idea_IBR_minister_Agustin_Munoz_Grandes"
+			}
+		}
+		field_marshal = {
+			desc = "GENERAL_AGUSTIN_MUNOZ_GRANDES_DESC"
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			traits = {
+				organizer
+				thorough_planner
+				old_guard
+			}
+			legacy_id = 1301
+		}
+	}
+	IBR_Carlos_Asensio_Cabanillas = {
+		name = IBR_Carlos_Asensio_Cabanillas
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Carlos_Cabanillas.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			traits = {
+				desert_fox
+				old_guard
+			}
+			legacy_id = 1302
+		}
+	}
+
+	IBR_Francisco_Coloma_Gallegos = {
+		name = IBR_Francisco_Coloma_Gallegos
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Francisco_Coloma_Gallegos.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			traits = {
+				desert_fox
+			}
+			legacy_id = 1303
+		}
+	}
+
+	IBR_Mohammed_Mezziane = {
+		name = IBR_Mohammed_Mezziane
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Mohammed_Meziane.png"
+			}
+		}
+		corps_commander = {
+			desc = "GENERAL_MOHAMMEDD_MEZZIANE_DESC"
+			skill = 3
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			traits = {
+				old_guard
+				cavalry_officer
+			}
+			legacy_id = 1304
+		}
+	}
+
+	IBR_Alfonso_Armada = {
+		name = IBR_Alfonso_Armada
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Afonso_Armada.png"
+			}
+		}
+		corps_commander = {
+			desc = "GENERAL_ALFONSO_ARMADA_DESC"
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = {
+				politically_connected
+			}
+			legacy_id = 1305
+		}
+	}
+
+	IBR_Antonio_Spinola = {
+		name = IBR_Antonio_Spinola
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Antonio_Spinola.png"
+			}
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Antonio_Spinola.png"
+			}
+		}
+		corps_commander = {
+			desc = "GENERAL_ANTONIO_SPINOLA_DESC"
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			traits = {
+			}
+			legacy_id = 1306
+		}
+	}
+
+	IBR_Rafael_Garcia_Valino = {
+		name = IBR_Rafael_Garcia_Valino
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Rafael_Valino.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 4
+			traits = {
+				old_guard
+			}
+			legacy_id = 1308
+		}
+	}
+
+	IBR_Afonso_Almeida_Fernandes = {
+		name = IBR_Afonso_Almeida_Fernandes
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Afonso_de_Almeida_Fernandes.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				trait_engineer
+			}
+			legacy_id = 1309
+		}
+	}
+
+	IBR_Camilo_Alonso_Vega = {
+		name = IBR_Camilo_Alonso_Vega
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Camilo_Vega.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+			traits = {
+				old_guard
+			}
+			legacy_id = 1317
+		}
+	}
+
+	IBR_Santiago_Amado_Loriga = {
+		name = IBR_Santiago_Amado_Loriga
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Santiago_Amado_Loriga.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 3
+			traits = {
+				old_guard
+				trait_mountaineer
+			}
+			legacy_id = 1319
+		}
+	}
+
+	IBR_Luis_Carrero_Blanco = {
+		name = IBR_Luis_Carrero_Blanco
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Luis_Carrero_Blanco.png"
+			}
+			civilian = {
+				small = "GFX_idea_IBR_minister_Luis_Carrero_Blanco"
+			}
+		}
+		navy_leader = {
+			desc = "ADMIRAL_LUIS_CARRERO_BLANCO_DESC"
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 5
+			traits = {
+				media_personality
+			}
+			legacy_id = 1310
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = IBR_Luis_Carrero_Blanco_sec
+			allowed = { original_tag = IBR }
+			traits = {
+				security_minister
+				sec_political_appointment
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	IBR_Angel_Liberal_Lucini = {
+		name = IBR_Angel_Liberal_Lucini
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Angel_Liberal_Lucini.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+			traits = {
+
+			}
+			legacy_id = 1311
+		}
+	}
+
+	IBR_Gabriel_Pita_Veiga = {
+		name = IBR_Gabriel_Pita_Veiga
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Gabriel_Pita_da_Veiga.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 3
+			coordination_skill = 4
+			traits = {
+			}
+			legacy_id = 1313
+		}
+	}
+
+	IBR_Americo_Tomas = {
+		name = IBR_Americo_Tomas
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Americo_Tomas.png"
+			}
+		}
+		navy_leader = {
+			desc = "ADMIRAL_AMERICO_TOMAS_DESC"
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 3
+			traits = {
+			}
+			legacy_id = 1314
+		}
+	}
+
+	IBR_Henrique_Tenreiro = {
+		name = IBR_Henrique_Tenreiro
+		portraits = {
+			army = {
+				small = "GFX_idea_IBR_minister_Henrique_Tenreiro"
+				large = "gfx/leaders/IBR/Portrait_Iberia_Henrique_Tenreiro.png"
+			}
+			civilian = {
+				small = "GFX_idea_IBR_minister_Henrique_Tenreiro"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 1
+			traits = {
+			}
+			legacy_id = 1315
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = IBR_Henrique_Tenreiro_high_command
+			allowed = { original_tag = IBR }
+			traits = {
+				high_command
+			}
+			ledger = army
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IBR_Pedro_Nieto_Antunez = {
+		name = IBR_Pedro_Nieto_Antunez
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Pedro_Nieto_Antunez.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+			traits = {
+			}
+			legacy_id = 1318
+		}
+	}
+
+
+########################################################################################################################Galicia
+#LEADERS
+	GAL_Xose_Velo = {
+		name = GAL_Xose_Velo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GAL/Portrait_GAL_Jose_Velo.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_XOSE_VELO_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	GAL_Decentralized = {
+		name = GAL_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	GAL_Unorganized = {
+		name = GAL_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_3_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	GAL_Central_Committee = {
+		name = GAL_Central_Committee
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	GAL_Santiago_Alvarez = {
+		name = GAL_Santiago_Alvarez
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	GAL_Francisco_Fernandez_del_Riego = {
+		name = GAL_Francisco_Fernandez_del_Riego
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = socialist_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	GAL_Xose_Filgueira = {
+		name = GAL_Xose_Filgueira
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism_christian_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	GAL_Antonio_Rios = {
+		name = GAL_Antonio_Rios
+		portraits = { civilian = { small = "GFX_idea_GAL_minister_Antonio_Alonso_Rios" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = GAL_Antonio_Rios_hog
+			allowed = { original_tag = GAL }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	GAL_Ramon_Otero = {
+		name = GAL_Ramon_Otero
+		portraits = { civilian = { small = "GFX_idea_GAL_minister_Ramon_Otero_Pedrayo" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = GAL_Ramon_Otero_for
+			allowed = { original_tag = GAL }
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	GAL_Francisco_Alvajar = {
+		name = GAL_Francisco_Alvajar
+		portraits = { civilian = { small = "GFX_idea_GAL_minister_Javier_Alvajar_Lopez" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = GAL_Francisco_Alvajar_eco
+			allowed = { original_tag = GAL }
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	GAL_Jose_Fernandez = {
+		name = GAL_Jose_Fernandez
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GAL_minister_Jose_Fernando_Fernandez"
+			}
+			army = {
+				large = "gfx/leaders/GAL/Portrait_GAL_Bibiano_Fernandez_Osorio_Tafall.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GAL_Jose_Fernandez_sec
+			allowed = { original_tag = GAL }
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		navy_leader = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			traits = {
+			}
+		}
+	}
+#UNIT LEADERS
+	GAL_Benjamin_Lopez = {
+		name = GAL_Benjamin_Lopez
+		portraits = {
+			army = {
+				large = "gfx/leaders/GAL/Portrait_GAL_Benjamin_Balboa_Lopez.png"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			traits = {
+			}
+		}
+	}
+
+	GAL_Andres_Conde = {
+		name = GAL_Andres_Conde
+		portraits = {
+			army = {
+				large = "gfx/leaders/GAL/Portrait_GAL_Andres_Freire_Conde.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				career_officer
+			}
+			legacy_id = -1
+		}
+	}
+
+	GAL_Luis_Paradela = {
+		name = GAL_Luis_Paradela
+		portraits = {
+			army = {
+				large = "gfx/leaders/GAL/Portrait_GAL_Luis_Barreiro_Paradela.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+			}
+			legacy_id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ALVARO_CUNQUEIRO_DESC"
+			ideology = liberalism_national_liberal_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	GAL_Avelino_Garcia = {
+		name = GAL_Avelino_Garcia
+		portraits = {
+			army = {
+				large = "gfx/leaders/GAL/Portrait_GAL_Avelino_Garcia_Garcia.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+			}
+			legacy_id = -1
+		}
+	}
+
+	GAL_Ramon_Garrido = {
+		name = GAL_Ramon_Garrido
+		portraits = {
+			army = {
+				large = "gfx/leaders/GAL/Portrait_GAL_Ramon_Garrido_Vidal.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			traits = {
+				guerrilla_veteran
+			}
+			legacy_id = -1
+		}
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+########################################################################################################################Andalucia
+#LEADERS
+	ADL_Placido_Fernandez = {
+		name = ADL_Placido_Fernandez
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ADL/Portrait_Andalusia_Placido_Viagas.png"
+			}
+		}
+		country_leader = {
+			ideology = paternalism_provisional_government_subtype
+			desc = "POLITICS_ADL_PLACIDO_FERNANDEZ_DESC"
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	ADL_Decentralized = {
+		name = ADL_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	ADL_Unorganized = {
+		name = ADL_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_3_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	ADL_Central_Committee = {
+		name = ADL_Central_Committee
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	ADL_Fernando_Soto = {
+		name = ADL_Fernando_Soto
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = communist_bolshevism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	ADL_Manuel_Clavero = {
+		name = ADL_Manuel_Clavero
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	ADL_Jose_Gabriel_Diaz = {
+		name = ADL_Jose_Gabriel_Diaz
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism_christian_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	ADL_Alejandro_Rojas_Marcos = {
+		name = ADL_Alejandro_Rojas_Marcos
+		portraits = { civilian = { small = "GFX_idea_ADL_minister_Alejandro_Rojas_Marcos" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = ADL_Alejandro_Rojas_Marcos_hog
+			allowed = { original_tag = ADL }
+			traits = {
+				head_of_government
+				hog_happy_amateur
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	ADL_Eugenio_Ales = {
+		name = ADL_Eugenio_Ales
+		portraits = { civilian = { small = "GFX_idea_ADL_minister_Eugenio_Ales_Perez" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = ADL_Eugenio_Ales_for
+			allowed = { original_tag = ADL }
+			traits = {
+				foreign_minister
+				for_political_appointment
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	ADL_Tomas_Garcia = {
+		name = ADL_Tomas_Garcia
+		portraits = { civilian = { small = "GFX_idea_ADL_minister_Tomas_Garcia_Garcia" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = ADL_Tomas_Garcia_eco
+			allowed = { original_tag = ADL }
+			traits = {
+				economy_minister
+				eco_keynesian_economy
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	ADL_Carlos_Navarrete = {
+		name = ADL_Carlos_Navarrete
+		portraits = { civilian = { small = "GFX_idea_ADL_minister_Carlos_Navarrete" } }
+		advisor = {
+			slot = security_minister
+			idea_token = ADL_Carlos_Navarrete_sec
+			allowed = { original_tag = ADL }
+			traits = {
+				security_minister
+				sec_silent_lawyer
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+#UNIT LEADERS
+	ADL_Manuel_Esquivias = {
+		name = ADL_Manuel_Esquivias
+		portraits = {
+			army = {
+				large = "gfx/leaders/ADL/Portrait_Andalusia_Manuel_Esquivias_Franco.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			traits = {
+				career_officer
+			}
+		}
+	}
+
+	ADL_Francisco_Lainez = {
+		name = ADL_Francisco_Lainez
+		portraits = {
+			army = {
+				large = "gfx/leaders/ADL/Portrait_Andalusia_Francisco_Lainez.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 1
+			traits = {
+				spotter
+			}
+		}
+	}
+
+	ADL_Urbano_Orad = {
+		name = ADL_Urbano_Orad
+		portraits = {
+			army = {
+				large = "gfx/leaders/ADL/Portrait_Andalusia_Urbano_Orad_de_la_Torre.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+			}
+		}
+	}
+########################################################################################################################Asturias
+#LEADERS
+	TBA_Horacio_Fernandez_Inguanzo = {
+		name = TBA_Horacio_Fernandez_Inguanzo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TBA/Portrait_TBA_Horacio_Fernandez_Inguanzo.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_HORACIO_FERNANDEZ_INGUANZO_DESC"
+			ideology = socialist_revolutionary_frontism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	TBA_Decentralized = {
+		name = TBA_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	TBA_Unorganized = {
+		name = TBA_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	TBA_Jose_Barreiro_Garcia = {
+		name = TBA_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = socialist_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	TBA_Rafael_Alvarez = {
+		name = TBA_Rafael_Alvarez
+		portraits = { civilian = { small = "GFX_idea_TBA_minister_Rafael_Fernandez_Alvarez" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = TBA_Rafael_Alvarez_hog
+			allowed = { original_tag = TBA }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	TBA_Manuel_Mondelo = {
+		name = TBA_Manuel_Mondelo
+		portraits = { civilian = { small = "GFX_idea_TBA_minister_Manuel_Mondelo_Ronda" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = TBA_Manuel_Mondelo_for
+			allowed = { original_tag = TBA }
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	TBA_Amaro_Rosal = {
+		name = TBA_Amaro_Rosal
+		portraits = { civilian = { small = "GFX_idea_TBA_minister_Amaro_del_Rosal" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = TBA_Amaro_Rosal_eco
+			allowed = { original_tag = TBA }
+			traits = {
+				economy_minister
+				eco_union_man
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	TBA_Felipe_Matarranz = {
+		name = TBA_Felipe_Matarranz
+		portraits = {
+			army = {
+				large = "gfx/leaders/TBA/Portrait_TBA_Felipe_Matarranz_Gonzalez.png"
+			}
+			civilian = {
+				small = "GFX_idea_TBA_minister_Felipe_Matarranz_Gonzalez"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = TBA_Felipe_Matarranz_sec
+			allowed = { original_tag = TBA }
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { partisan_commander }
+			legacy_id = 1372
+		}
+	}
+#UNIT LEADERS
+	TBA_Jose_Mata = {
+		name = TBA_Jose_Mata
+		portraits = {
+			army = {
+				large = "gfx/leaders/TBA/Portrait_TBA_Jose_Mata_Castro.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { partisan_commander }
+		}
+	}
+
+	TBA_Manuel_Zapico = {
+		name = TBA_Manuel_Zapico
+		portraits = {
+			army = {
+				large = "gfx/leaders/TBA/Portrait_TBA_Manuel_Zapico.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { partisan_commander }
+		}
+	}
+
+	TBA_Jose_Vitini = {
+		name = TBA_Jose_Vitini
+		portraits = {
+			army = {
+				large = "gfx/leaders/TBA/Portrait_TBA_Jose_Vitini.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { partisan_commander }
+		}
+	}
+
+	TBA_Baldomero_Fernandez = {
+		name = TBA_Baldomero_Fernandez
+		portraits = {
+			army = {
+				large = "gfx/leaders/TBA/Portrait_TBA_Baldomero_Fernandez_Ladreda.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { partisan_commander }
+		}
+	}
+########################################################################################################################Basque Country
+#LEADERS
+	BSQ_Telesforo_Monzon = {
+		name = BSQ_Telesforo_Monzon
+		portraits = { civilian = { large = "gfx/leaders/BSQ/Portrait_BSQ_Telesforo_Monzon.png" } }
+		country_leader = {
+			desc = "POLITICS_TELESFORO_MONZON_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	BSQ_Decentralized = {
+		name = BSQ_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = ultranationalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	BSQ_Unorganized = {
+		name = BSQ_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	BSQ_Collective_Leadership = {
+		name = BSQ_Collective_Leadership
+		portraits = { civilian = { large = "gfx/leaders/BSQ/Portrait_BSQ_Collective_Leadership.png" } }
+		country_leader = {
+			desc = "POLITICS_BASQUE_COLLECTIVE_LEADERSHIP_DESC"
+			ideology = socialist_revolutionary_frontism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	BSQ_Ramon_Ormazabal = {
+		name = BSQ_Ramon_Ormazabal
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	BSQ_Patxi_Iturrioz = {
+		name = BSQ_Patxi_Iturrioz
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	BSQ_Ramon_Rubial = {
+		name = BSQ_Ramon_Rubial
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = socialist_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	BSQ_Valentin_Solaguistua = {
+		name = BSQ_Valentin_Solaguistua
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = socialist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	BSQ_Jose_Luis_Alvarez = {
+		name = BSQ_Jose_Luis_Alvarez
+		portraits = { civilian = { small = "GFX_idea_BSQ_minister_Jose_Luis_Alvarez" } }
+		country_leader = {
+			ideology = socialist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = BSQ_Jose_Luis_Alvarez_for
+			allowed = { original_tag = BSQ }
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+#MINISTERS
+	BSQ_Jesus_Leizaola = {
+		name = BSQ_Jesus_Leizaola
+		portraits = { civilian = { small = "GFX_idea_BSQ_minister_Jesus_Maria_de_Leizaola" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = BSQ_Jesus_Leizaola_hog
+			allowed = { original_tag = BSQ }
+			traits = {
+				head_of_government
+				hog_national_figurehead
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	BSQ_Jose_Maria_Eskubi = {
+		name = BSQ_Jose_Maria_Eskubi
+		portraits = { civilian = { small = "GFX_idea_BSQ_minister_Jose_Maria_Eskubi" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = BSQ_Jose_Maria_Eskubi_hog
+			allowed = { original_tag = BSQ }
+			traits = {
+				head_of_government
+				hog_national_figurehead
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	BSQ_Jose_Miguel_Benaran = {
+		name = BSQ_Jose_Miguel_Benaran
+		portraits = { civilian = { small = "GFX_idea_BSQ_minister_Jose_Miguel_Benaran" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = BSQ_Jose_Miguel_Benaran_hog
+			allowed = { original_tag = BSQ }
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BSQ_Jose_Miguel_Benaran_sec
+			allowed = { original_tag = BSQ }
+			traits = {
+				security_minister
+				sec_guerrilla_fighter
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	BSQ_Txabi_Etxebarrieta = {
+		name = BSQ_Txabi_Etxebarrieta
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Txabi_Etxebarrieta.png"
+				small = "GFX_idea_BSQ_minister_Txabi_Etxebarrieta"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = BSQ_Txabi_Etxebarrieta_for
+			allowed = { original_tag = BSQ }
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = BSQ_Txabi_Etxebarrieta_eco
+			allowed = { original_tag = BSQ }
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			ideology = socialist_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	BSQ_Angel_Otaegui = {
+		name = BSQ_Angel_Otaegui
+		portraits = { civilian = { small = "GFX_idea_BSQ_minister_Angel_Otaegui" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = BSQ_Angel_Otaegui_for
+			allowed = { original_tag = BSQ }
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	BSQ_Juan_Ajuriagerra = {
+		name = BSQ_Juan_Ajuriagerra
+		portraits = { civilian = { small = "GFX_idea_BSQ_minister_Juan_Ajuriagerra" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = BSQ_Juan_Ajuriagerra_eco
+			allowed = { original_tag = BSQ }
+			traits = {
+				economy_minister
+				eco_industrial_chemist
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	BSQ_Domingo_Iturbide = {
+		name = BSQ_Domingo_Iturbide
+		portraits = { civilian = { small = "GFX_idea_BSQ_minister_Domingo_Iturbe_Abasolo" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = BSQ_Domingo_Iturbide_eco
+			allowed = { original_tag = BSQ }
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	BSQ_Xabier_Zumalde = {
+		name = BSQ_Xabier_Zumalde
+		portraits = {
+			civilian = { small = "GFX_idea_BSQ_minister_Xabier_Zumalde" }
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Xabier_Zumalde.png"
+				small = "GFX_idea_BSQ_minister_Xabier_Zumalde"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BSQ_Xabier_Zumalde_sec
+			allowed = { original_tag = BSQ }
+			traits = {
+				security_minister
+				sec_guerrilla_fighter
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				guerrilla_veteran
+				trickster
+				guerrilla_fighter
+			}
+		}
+	}
+#UNIT LEADERS
+	BSQ_Joseba_Elosegui = {
+		name = BSQ_Joseba_Elosegui
+		portraits = {
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Joseba_Elosegui.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 1392
+			traits = {
+				trait_cautious
+				inflexible_strategist
+			}
+		}
+	}
+
+	BSQ_Pablo_Beldarrain = {
+		name = BSQ_Pablo_Beldarrain
+		portraits = {
+			civilian = { small = "GFX_idea_BSQ_minister_Pablo_Beldarrain" }
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Pablo_Beldarrain.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { brilliant_strategist }
+			legacy_id = 1393
+		}
+		country_leader = {
+			desc = "POLITICS_PABLO_BELDARRAIN_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BSQ_Pablo_Beldarrain_sec
+			allowed = { original_tag = BSQ }
+			traits = {
+				security_minister
+				sec_spymaster
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	BSQ_Kepa_Ordoki = {
+		name = BSQ_Kepa_Ordoki
+		portraits = {
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Kepa_Ordoki.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	BSQ_Modesto_Gallastegui = {
+		name = BSQ_Modesto_Arambarri_Gallastegui
+		portraits = {
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Modesto_Arambarri_Gallastegui.png"
+			}
+		}
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { politically_connected }
+			legacy_id = -1
+		}
+	}
+	#Legacy Leaders I presume
+	BSQ_Julen_Gimon = {
+		name = BSQ_Julen_Gimon
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	BSQ_Jesus_Maria_Leizaola = {
+		name = BSQ_Jesus_Maria_Leizaola
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism_christian_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	BSQ_Ignacio_Iturbide = {
+		name = BSQ_Ignacio_Iturbide
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism_civilian_dictatorship_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	BSQ_Mariano_Sanchez = {
+		name = BSQ_Mariano_Sanchez
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_corporate_statism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	BSQ_Juan_Etxabe = {
+		name = BSQ_Juan_Etxabe
+		portraits = {
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Juan_Jose_Etxabe.png"
+			}
+			civilian = {
+				small = "GFX_idea_BSQ_minister_Juan_Etxabe"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BSQ_Juan_Etxabe_sec
+			allowed = { original_tag = BSQ }
+			traits = {
+				security_minister
+				sec_guerrilla_fighter
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	BSQ_Eustakio_Mendizabal = {
+		name = BSQ_Eustakio_Mendizabal
+		portraits = {
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Eustakio_Mendizabal.png"
+			}
+		}
+	}
+
+	BSQ_Jesus_Zubarte = {
+		name = BSQ_Jesus_Zubarte
+		portraits = {
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Jesus_Mari_Zabarte.png"
+			}
+		}
+	}
+
+	BSQ_Juan_Castro = {
+		name = BSQ_Juan_Castro
+		portraits = {
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Juan_Antonio_Castro.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 2
+			traits = { green_water_expert }
+			legacy_id = 1394
+		}
+	}
+
+	BSQ_Rafael_Menchaca = {
+		name = BSQ_Rafael_Menchaca
+		portraits = {
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Rafael_Menchaca_Ugalde.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			traits = {
+				cuts_corners
+			}
+			legacy_id = 1431
+		}
+	}
+
+	BSQ_Alejo_Bilbao = {
+		name = BSQ_Alejo_Bilbao
+		portraits = {
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Alejo_Bilbao_Beltran.png"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			traits = {
+				gentlemanly
+			}
+			legacy_id = 1395
+		}
+	}
+
+	BSQ_Federico_Krutwig = {
+		name = BSQ_Federico_Krutwig
+		portraits = {
+			army = {
+				large = "gfx/leaders/BSQ/Portrait_BSQ_Federico_Krutwig.png"
+			}
+		}
+	}
+########################################################################################################################Catalonia
+#LEADERS
+	CTL_Josep_Tarradellas = {
+		name = CTL_Josep_Tarradellas
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CTL/Portrait_CTL_Josep_Tarradellas.png"
+			}
+		}
+		country_leader = {
+			ideology = paternalism_provisional_government_subtype
+			desc = "POLITICS_Josep_Tarradellas_DESC"
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CTL_Decentralized = {
+		name = CTL_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CTL_Unorganized = {
+		name = CTL_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CTL_Collective_Leadership = {
+		name = CTL_Collective_Leadership
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = socialist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CTL_Gregorio_Lopez_Raimundo = {
+		name = CTL_Gregorio_Lopez_Raimundo
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CTL_Joan_Reventos = {
+		name = CTL_Joan_Reventos
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = socialist_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CTL_Josep_Pallach = {
+		name = CTL_Josep_Pallach
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = progressivism_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CTL_Joan_Sauret = {
+		name = CTL_Joan_Sauret
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CTL_Miquel_Coll = {
+		name = CTL_Miquel_Coll
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	CTL_Joan_Cornudella = {
+		name = CTL_Joan_Cornudella
+		portraits = { civilian = { small = "GFX_idea_CTL_minister_Joan_Cornudella" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = CTL_Joan_Cornudella_hog
+			allowed = { original_tag = CTL }
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	CTL_Josep_Carner = {
+		name = CTL_Josep_Carner
+		portraits = { civilian = { small = "GFX_idea_CTL_minister_Josep_Carner" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = CTL_Josep_Carner_for
+			allowed = { original_tag = CTL }
+			traits = {
+				foreign_minister
+				for_political_appointment
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	CTL_Ramon_Perera = {
+		name = CTL_Ramon_Perera
+		portraits = { civilian = { small = "GFX_idea_CTL_minister_Ramon_Perera" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = CTL_Ramon_Perera_eco
+			allowed = { original_tag = CTL }
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	CTL_Joan_Roca = {
+		name = CTL_Joan_Roca
+		portraits = { civilian = { small = "GFX_idea_CTL_minister_Joan_Roca" } }
+		advisor = {
+			slot = security_minister
+			idea_token = CTL_Joan_Roca_sec
+			allowed = { original_tag = CTL }
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+#UNIT LEADERS
+	CTL_Vicente_Guarner = {
+		name = CTL_Vicente_Guarner
+		portraits = {
+			army = {
+				large = "gfx/leaders/CTL/Portrait_CTL_Vicente_Guarner.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { infantry_officer }
+		}
+	}
+
+	CTL_Frederic_Escofet = {
+		name = CTL_Frederic_Escofet
+		portraits = {
+			army = {
+				large = "gfx/leaders/CTL/Portrait_CTL_Frederic_Escofet_i_Alsina.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { skilled_staffer }
+		}
+	}
+
+	CTL_Josep_Maria_Benet = {
+		name = CTL_Josep_Maria_Benet
+		portraits = {
+			army = {
+				large = "gfx/leaders/CTL/Portrait_CTL_Josep_Maria_Benet.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			traits = {
+				trickster
+				guerrilla_fighter
+			}
+		}
+	}
+
+	CTL_Antoni_Blavia = {
+		name = CTL_Antoni_Blavia
+		portraits = {
+			army = {
+				large = "gfx/leaders/CTL/Portrait_CTL_Antoni_Blavia.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+########################################################################################################################CNT
+#LEADERS
+	CNT_Catalonian_Council = {
+		name = CNT_Catalonian_Council
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CNT/Portrait_CNT_Catalan_Council.png"
+			}
+		}
+		country_leader = {
+			ideology = socialist_revolutionary_frontism_subtype
+			desc = "POLITICS_CNT_Catalonian_Council_DESC"
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	CNT_Decentralized = {
+		name = CNT_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CNT_Unorganized = {
+		name = CNT_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_3_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CNT_Collective_Leadership = {
+		name = CNT_Collective_Leadership
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = socialist_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = socialist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	CNT_Gregorio_Lopez = {
+		name = CNT_Gregorio_Lopez
+		portraits = { civilian = { small = "GFX_idea_CNT_minister_Gregorio_Lopez_Raimundo" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = CNT_Gregorio_Lopez_hog
+			allowed = { original_tag = CNT }
+			traits = {
+				head_of_government
+				hog_naive_optimist
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	CNT_Salvador_Casanova = {
+		name = CNT_Salvador_Casanova
+		portraits = { civilian = { small = "GFX_idea_CNT_minister_Salvador_Casanova" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = CNT_Salvador_Casanova_for
+			allowed = { original_tag = CNT }
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	CNT_Germinal_Esgleas = {
+		name = CNT_Germinal_Esgleas
+		portraits = { civilian = { small = "GFX_idea_CNT_minister_Germinal_Esgleas" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = CNT_Germinal_Esgleas_eco
+			allowed = { original_tag = CNT }
+			traits = {
+				economy_minister
+				eco_union_man
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	CNT_Josep_Asens = {
+		name = CNT_Josep_Asens
+		portraits = { civilian = { small = "GFX_idea_CNT_minister_Josep_Asens_Giol" } }
+		advisor = {
+			slot = security_minister
+			idea_token = CNT_Josep_Asens_sec
+			allowed = { original_tag = CNT }
+			traits = {
+				security_minister
+				sec_guerrilla_fighter
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+#UNIT LEADERS
+	CNT_Marcelino_Massana = {
+		name = CNT_Marcelino_Massana
+		portraits = {
+			army = {
+				large = "gfx/leaders/CNT/Portrait_CNT_Marcelino_Massana.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+			traits = { partisan_commander }
+			legacy_id = 1381
+		}
+	}
+
+	CNT_Francesc_Sabate = {
+		name = CNT_Francesc_Sabate
+		portraits = {
+			army = {
+				large = "gfx/leaders/CNT/Portrait_CNT_Francesc_Sabate.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { partisan_commander }
+			legacy_id = 1382
+		}
+	}
+
+	CNT_Jaume_Martinez = {
+		name = CNT_Jaume_Martinez
+		portraits = {
+			army = {
+				large = "gfx/leaders/CNT/Portrait_CNT_Jaume_Martinez_i_Vendrell.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	CNT_Miguel_Nunez = {
+		name = CNT_Miguel_Nunez
+		portraits = {
+			army = {
+				large = "gfx/leaders/CNT/Portrait_CNT_Miguel_Nunez_Gonzalez.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { partisan_commander }
+			legacy_id = -1
+		}
+	}
+
+	CNT_Joaquin_Puig = {
+		name = CNT_Joaquin_Puig
+		portraits = {
+			army = {
+				large = "gfx/leaders/CNT/Portrait_CNT_Joaquim_Puig.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { partisan_commander }
+			legacy_id = -1
+		}
+	}
+########################################################################################################################Spanish Republic
+#LEADERS
+	SPR_Jose_Miguel_Vega = {
+		name = SPR_Jose_Miguel_Vega
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Jose_Miguel_Vega.png"
+				small = "GFX_idea_SPR_minister_Jose_Miguel_Vega"
+			}
+			army = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Jose_Miguel_Vega.png"
+				small = "GFX_idea_SPR_minister_Jose_Miguel_Vega"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = SPR_Jose_Miguel_Vega_sec
+			allowed = { original_tag = SPR }
+			traits = {
+				security_minister
+				sec_great_soul
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				politically_connected
+				special_forces_leader
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JOSE_MIGUEL_VEGA_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	SPR_Provisional_Government = {
+		name = IBR_Provisional_Government
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Iberian_Council.png"
+				small = "GFX_idea_IBR_minister_Iberian_Council"
+			}
+		}
+		country_leader = { # Socialist Version
+			#desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology = socialist_revolutionary_frontism_subtype
+			expire = "1978.10.20"
+			id = -1
+		}
+		country_leader = { # Paternalist Version
+			#desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1978.10.20"
+			id = -1
+		}
+	}
+	SPR_Rodolfo_Llopsis = {
+		name = SPR_Rodolfo_Llopsis
+		portraits = {
+			civilian = {
+				#large = ""
+			}
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	SPR_Dionisio_Ridruejo = {
+		name = SPR_Dionisio_Ridruejo
+			country_leader = {
+			ideology = progressivism_subtype
+			expire = "1999.1.1"
+			id = -1
+			}
+		}
+	SPR_Joaquin_Ruiz_Gimenez = {
+		name = SPR_Joaquin_Ruiz_Gimenez
+			country_leader = {
+			ideology = progressivism_1_subtype
+			expire = "1999.1.1"
+			id = -1
+			}
+		}
+
+	SPR_Jose_Gil_Robles = {
+		name = SPR_Jose_Gil_Robles
+		portraits = {
+			civilian = {
+				#large = ""
+			}
+		}
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	SPR_Decentralized = {
+		name = SPR_Decentralized
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = paternalism_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	SPR_Unorganized = {
+		name = SPR_Unorganized
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Generics/leader_unknown.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	SPR_Pio_Cabanillas = {
+		name = SPR_Pio_Cabanillas
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Pio_Cabanillas_Gallas"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = SPR_Pio_Cabanillas_hog
+			allowed = { original_tag = SPR }
+			traits = {
+				head_of_government
+				hog_disgruntled_politician
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SPR_Pascual_Pery = {
+		name = SPR_Pascual_Pery
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SPR_minister_Pascual_Pery_Junquera"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = SPR_Pascual_Pery_hog
+			allowed = { original_tag = SPR }
+			traits = {
+				head_of_government
+				hog_disgruntled_politician
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	SPR_Jose_Maldonado = {
+		name = SPR_Jose_Maldonado
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SPR_minister_Jose_Maldonado"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = SPR_Jose_Maldonado_for
+			allowed = { original_tag = SPR }
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			ideology = progressivism_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	SPR_Santiago_Carrillo = {
+		name = SPR_Santiago_Carrillo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Santiago_Carrillo.png"
+				small = "GFX_idea_SPR_minister_Santiago_Carrillo"
+			}
+		}
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = SPR_Santiago_Carrillo_eco
+			allowed = { original_tag = SPR }
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	SPR_Marcelino_Oreja = {
+		name = SPR_Marcelino_Oreja
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SPR_minister_Marcelino_Oreja"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = SPR_Marcelino_Oreja_for
+			allowed = { original_tag = SPR }
+			traits = {
+				foreign_minister
+				for_americanophile
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SPR_Macrino_Suarez = {
+		name = SPR_Macrino_Suarez
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SPR_minister_Macrino_Suarez"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = SPR_Macrino_Suarez_eco
+			allowed = { original_tag = SPR }
+			traits = {
+				economy_minister
+				eco_balanced_budget_economy
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+#UNIT LEADERS
+	SPR_Francisco_Sintes = {
+		name = SPR_Francisco_Sintes
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Francisco_Sintes_Obrador.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				bearer_of_artillery
+			}
+		}
+	}
+
+	SPR_Luis_Pinilla = {
+		name = SPR_Luis_Pinilla
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Luis_Pinilla_Soliveres.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { infantry_officer }
+		}
+	}
+
+	SPR_Guillermo_Quintana = {
+		name = SPR_Guillermo_Quintana
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Guillermo_Quintana_Lacaci.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 1
+			traits = { infantry_officer }
+			legacy_id = 1411
+		}
+	}
+
+	SPR_Jose_Rodrigo = {
+		name = SPR_Jose_Rodrigo
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Jose_Rodrigo_Rodrigo.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			traits = { infantry_officer }
+			legacy_id = -1
+		}
+	}
+
+	SPR_Jose_Saenz_Tejada = {
+		name = SPR_Jose_Saenz_Tejada
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Jose_Maria_Saenz_de_Tejada.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+
+	SPR_Gonzalo_Rodriguez = {
+		name = SPR_Gonzalo_Rodriguez
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Gonzalo_Rodriguez_Martin_Granizo.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+			traits = { gunnery_expert }
+		}
+	}
+
+	SPR_Saturnino_Suanzes = {
+		name = SPR_Saturnino_Suanzes
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPR/Portrait_SPR_Saturnino_Suanzes_Hidalga.png"
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 3
+			traits = { air_controller }
+		}
+	}
+########################################################################################################################Falangist Spain
+#LEADERS
+	SPS_Carlos_Iniesta = {
+		name = SPS_Carlos_Iniesta
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPS/Portrait_SPS_Carlos_Iniesta_Cano.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CARLOS_INIESTA_CANO_DESC"
+			ideology = fascism_corporate_statism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = national_socialism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = ultranationalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { infantry_officer }
+		}
+	}
+	SPS_Raimundo_Fernandez_Cuesta = {
+		name = SPS_Raimundo_Fernandez_Cuesta
+		portraits = {
+			civilian = {
+				#large = ""
+			}
+		}
+		country_leader = {
+			ideology = fascism_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	SPS_Jose_Maria_Valiente = {
+		name = SPS_Jose_Maria_Valiente
+		portraits = {
+			civilian = {
+				#large = ""
+			}
+		}
+		country_leader = {
+			ideology = fascism_3_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	SPS_Unorganized = {
+		name = SPS_Unorganized
+		portraits = {
+			civilian = {
+				#large = ""
+			}
+		}
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	SPS_Tomas_Rebull = {
+		name = SPS_Tomas_Rebull
+		portraits = { civilian = { small = "GFX_idea_SPS_minister_Tomas_Garcia_Rebull" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = SPS_Tomas_Rebull_hog
+			allowed = { original_tag = SPS }
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	SPS_Jose_Codon = {
+		name = SPS_Jose_Codon
+		portraits = { civilian = { small = "GFX_idea_SPS_minister_Jose_Maria_Codon" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = SPS_Jose_Codon_for
+			allowed = { original_tag = SPS }
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	SPS_Manuel_Valdes_Larranaga = {
+		name = SPS_Manuel_Valdes_Larranaga
+		portraits = { civilian = { small = "GFX_idea_SPS_minister_Manuel_Valdes_Larranaga" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = SPS_Manuel_Valdes_Larranaga_eco
+			allowed = { original_tag = SPS }
+			traits = {
+				economy_minister
+				eco_resource_industrialist
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	SPS_Alfonso_Perez = {
+		name = SPS_Alfonso_Perez
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SPS_minister_Alfonso_Perez_Vineta"
+			}
+			army = {
+				large = "gfx/leaders/SPS/Portrait_SPS_Alfonso_Perez_Vineta.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = SPS_Alfonso_Perez_sec
+			allowed = { original_tag = SPS }
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+#UNIT LEADERS
+	SPS_Agustin_Aznar = {
+		name = SPS_Agustin_Aznar
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPS/Portrait_SPS_Agustin_Aznar.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	SPS_Luis_Torres = {
+		name = SPS_Luis_Torres
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPS/Portrait_SPS_Luis_Torres_Rojas.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	SPS_Angel_Ramirez_Cartagena = {
+		name = SPS_Angel_Ramirez_Cartagena
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPS/Portrait_SPS_Angel_Ramirez_de_Cartagena_y_Marcaida-.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	SPS_Jaime_Milans = {
+		name = SPS_Jaime_Milans
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPS/Portrait_SPS_Jaime_Milans_del_Bosch.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			traits = { armor_officer }
+		}
+	}
+
+	SPS_Jaime_Bofill = {
+		name = SPS_Jaime_Bofill
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPS/Portrait_SPS_Jaime_Bofill_Gasset_y_Amil.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	SPS_Juan_Atares = {
+		name = SPS_Juan_Atares
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPS/Portrait_SPS_Juan_Atares_Penna.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { politically_connected }
+		}
+	}
+
+	SPS_Camilo_Menendez = {
+		name = SPS_Camilo_Menendez
+		portraits = {
+			army = {
+				large = "gfx/leaders/SPS/Portrait_SPS_Camilo_Menendez_Vives.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+########################################################################################################################Frente Azul
+#LEADERS
+FZL_Jose_Luis_Arrese = {
+		name = FZL_Jose_Luis_Arrese
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FZL/Portrait_FZL_Jose_Luis_de_Arrese.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_falangism_subtype
+			desc = "POLITICS_Jose_Luis_Arrese_DESC"
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	FZL_Unorganized = {
+		name = FZL_Unorganized
+		portraits = {
+			civilian = {
+				#arge = ""
+			}
+		}
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	FZL_Serrano_Suner = {
+		name = FZL_Serrano_Suner
+		portraits = { civilian = { small = "GFX_idea_FZL_minister_Serrano_Suner" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = FZL_Serrano_Suner_hog
+			allowed = { original_tag = FZL }
+			traits = {
+				head_of_government
+				hog_naive_optimist
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	FZL_Felipe_Ximenez = {
+		name = FZL_Felipe_Ximenez
+		portraits = { civilian = { small = "GFX_idea_FZL_minister_Felipe_Ximenez" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = FZL_Felipe_Ximenez_for
+			allowed = { original_tag = FZL }
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	FZL_Jose_Antonio_Giron_De_Velasco = {
+		name = FZL_Jose_Antonio_Giron_De_Velasco
+		portraits = { civilian = { small = "GFX_idea_FZL_minister_Jose_Antonio_Giron_De_Velasco" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = FZL_Jose_Antonio_Giron_De_Velasco_eco
+			allowed = { original_tag = FZL }
+			traits = {
+				economy_minister
+				eco_anti_reform
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FZL_Agustin_Aznar = {
+		name = FZL_Agustin_Aznar
+		portraits = { civilian = { small = "GFX_idea_FZL_minister_Agustin_Aznar" } }
+		advisor = {
+			slot = security_minister
+			idea_token = FZL_Agustin_Aznar_sec
+			allowed = { original_tag = FZL }
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+#UNIT LEADERS
+	FZL_Miguel_Ezquerra = {
+		name = FZL_Miguel_Ezquerra
+		portraits = {
+			army = {
+				large = "gfx/leaders/FZL/Portrait_FZL_Miguel_Ezquerra.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { harsh_leader }
+			legacy_id = 1365
+		}
+	}
+######################################################################################################################## Spanish Kingdom
+#LEADERS
+	FSR_Jose_Valiente = {
+		name = FSR_Jose_Valiente
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FSR/Portrait_FSR_Jose_Maria_Valiente.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_integralism_subtype
+			desc = "POLITICS_Jose_Valiente_DESC"
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	FSR_Unorganized = {
+		name = FSR_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	FSR_Mauricio_Sivatte = {
+		name = FSR_Mauricio_Sivatte
+		portraits = { civilian = { small = "GFX_idea_FSR_minister_Mauricio_de_Sivatte" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = FSR_Mauricio_Sivatte_hog
+			allowed = { original_tag = FSR }
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	FSR_Fidel_Carazo = {
+		name = FSR_Fidel_Carazo
+		portraits = { civilian = { small = "GFX_idea_FSR_minister_Fidel_Carazo_Hernandez" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = FSR_Fidel_Carazo_for
+			allowed = { original_tag = FSR }
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	FSR_Jose_Perez_Nievas = {
+		name = FSR_Jose_Perez_Nievas
+		portraits = { civilian = { small = "GFX_idea_FSR_minister_Jose_Angel_Perez_Nievas" } }
+		advisor = {
+			slot = security_minister
+			idea_token = FSR_Jose_Perez_Nievas_sec
+			allowed = { original_tag = FSR }
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	FSR_Jose_Zubiaur = {
+		name = FSR_Jose_Zubiaur
+		portraits = { civilian = { small = "GFX_idea_FSR_minister_Jose_Angel_Zubiaur" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = FSR_Jose_Zubiaur_eco
+			allowed = { original_tag = FSR }
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+#UNIT LEADERS
+	FSR_Jose_Zamanillo = {
+		name = FSR_Jose_Zamanillo
+		portraits = {
+			army = {
+				large = "gfx/leaders/FSR/Portrait_FSR_Jose_Luis_Zamanillo.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { politically_connected }
+		}
+	}
+	FSR_Ricardo_Pardo = {
+		name = FSR_Ricardo_Pardo
+		portraits = {
+			army = {
+				large = "gfx/leaders/FSR/Portrait_FSR_Ricardo_Pardo_Zancada.png"
+			}
+		}
+		country_leader = {
+			ideology = ultranationalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	FSR_Cruz_Martinez = {
+		name = FSR_Cruz_Martinez
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = paternalism_national_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	FSR_Miguel_Urmeneta = {
+		name = FSR_Miguel_Urmeneta
+		portraits = {
+			army = {
+				large = "gfx/leaders/FSR/Portrait_FSR_Miguel_Javier_Urmeneta.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	FSR_Jose_Pareja = {
+		name = FSR_Jose_Pareja
+		portraits = {
+			army = {
+				large = "gfx/leaders/FSR/Portrait_FSR_Jose_Arturo_Marquez_de_Prado.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	FSR_Jose_Azcarraga = {
+		name = FSR_Jose_Azcarraga
+		portraits = {
+			army = {
+				large = "gfx/leaders/FSR/Portrait_FSR_Jose_Luis_de_Azcarraga.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 3
+			coordination_skill = 1
+		}
+	}
+########################################################################################################################GNS
+#LEADERS
+	GNS_Kaulza_Arriaga = {
+		name = GNS_Kaulza_Arriaga
+		portraits = {
+			civilian = { large = "gfx/leaders/GNS/Portrait_GNS_Kaulza_de_Arriaga.png" }
+			army = {
+				large = "gfx/leaders/GNS/Portrait_GNS_Kaulza_de_Arriaga.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { old_guard }
+			legacy_id = 1351
+		}
+		country_leader = {
+			desc = "POLITICS_KAULZA_DE_ARRIAGA_DESC"
+			ideology = despotism_military_junta_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	GNS_Decentralized = {
+		name = POR_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = liberalism_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	GNS_Unorganized = {
+		name = POR_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = communist_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = communist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	GNS_Joao_Costa_Leite = {
+		name = POR_Joao_Costa_Leite
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = despotism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	GNS_Jose_Manuel_Bettencourt_Rodrigues = {
+		name = GNS_Jose_Manuel_Bettencourt_Rodrigues
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GNS_minister_Jose_Manuel_Bettencourt_Rodrigues"
+			}
+			army = {
+				large = "gfx/leaders/GNS/Portrait_GNS_Jose_Manuel_Bettencourt_Rodrigues.png"
+				small = "GFX_idea_GNS_minister_Jose_Manuel_Bettencourt_Rodrigues"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = GNS_Jose_Manuel_Bettencourt_Rodrigues_eco
+			allowed = { original_tag = GNS }
+			traits = {
+				economy_minister
+				eco_resource_industrialist
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { politically_connected }
+			legacy_id = 1353
+		}
+	}
+
+	GNS_Antonio_Goncalves_Rapazote = {
+		name = GNS_Antonio_Goncalves_Rapazote
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GNS_minister_Antonio_Rapazote"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GNS_Antonio_Goncalves_Rapazote_hog
+			allowed = { original_tag = GNS }
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	GNS_Joao_Bruno = {
+		name = GNS_Joao_Bruno
+		portraits = {
+			army = {
+				large = "gfx/leaders/GNS/Portrait_GNS_Joao_de_Almeida_Bruno.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { }
+			legacy_id = 1354
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GNS_Joao_Bruno_hog
+			allowed = { original_tag = GNS }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	GNS_Silvino_Marques = {
+		name = GNS_Silvino_Marques
+		portraits = {
+			army = {
+				large = "gfx/leaders/GNS/Portrait_GNS_Silvino_Silverio_Marques.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 1
+			traits = {
+				politically_connected
+			}
+			legacy_id = 1355
+		}
+	}
+
+	GNS_Occupation_Authority = {
+		name = GNS_Occupation_Authority
+		portraits = {
+			civilian = { large = "gfx/leaders/GNS/Portrait_GNS_Occupation_Authority.png" }
+		}
+		country_leader = {
+			ideology = national_socialism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = despotism_interim_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	GNS_Guilherme_Calvao = {
+		name = GNS_Guilherme_Calvao
+		portraits = {
+			army = {
+				large = "gfx/leaders/GNS/Portrait_GNS_Guilherme_Almor_de_Alpoim_Calvao.png"
+			}
+			civilian = { small = "GFX_idea_GNS_minister_Guilherme_Almor_de_Alpoim_Calvao" }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { trait_reckless }
+			legacy_id = 1358
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = GNS_Guilherme_Calvao_sec
+			allowed = { original_tag = GNS }
+			traits = {
+				security_minister
+				sec_resistance_hero
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	GNS_Jaime_Neves = {
+		name = GNS_Jaime_Neves
+		portraits = {
+			army = {
+				large = "gfx/leaders/GNS/Portrait_GNS_Jaime_Neves.png"
+				small = "GFX_idea_GNS_minister_Jaime_Neves"
+			}
+			civilian = {
+				small = "GFX_idea_GNS_minister_Jaime_Neves"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = GNS_Jaime_Neves_for
+			allowed = { original_tag = GNS }
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			traits = {
+			}
+		}
+	}
+#UNIT LEADERS
+	GNS_Rafael_Durao = {
+		name = GNS_Rafael_Durao
+		portraits = {
+			army = {
+				large = "gfx/leaders/GNS/Portrait_GNS_Rafael_Durao.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+			traits = {
+			}
+		}
+	}
+
+	GNS_Armando_Roboredo = {
+		name = GNS_Armando_Roboredo
+		portraits = {
+			army = {
+				large = "gfx/leaders/GNS/Portrait_GNS_Armando_Julio_de_Roboredo_e_Silva.png"
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 1
+			traits = { bold }
+		}
+	}
+########################################################################################################################Portuguese Provisional Republic
+#LEADERS
+	RPP_Humberto_Delgado = {
+		name = RPP_Humberto_Delgado
+		portraits = {
+			civilian = { large = "gfx/leaders/RPP/Portrait_RPP_Humberto_Delgado.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_HUMBERTO_DELGADO_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			traits = {
+				general_sem_medo
+			}
+			id = -1
+		}
+	}
+
+	RPP_Revolutionary_Council = {
+		name = RPP_Revolutionary_Council
+		portraits = {
+			civilian = { large = "gfx/leaders/RPP/Portrait_RPP_Revolutionary_Council.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_KAULZA_DE_ARRIAGA_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	RPP_Francisco_Martins_Rodrigues = {
+		name = PPR_Francisco_Martins_Rodrigues
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_3_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	RPP_Alvaro_Cunhal = {
+		name = PPR_Alvaro_Cunhal
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	RPP_Carlos_Antunes = {
+		name = PPR_Carlos_Antunes
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	RPP_Mario_Soares = {
+		name = RPP_Mario_Soares
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	RPP_Decentralized = {
+		name = RPP_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = despotism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberalism_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	RPP_Unorganized = {
+		name = RPP_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = communist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = communist_3_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	RPP_Manuel_Lapa = {
+		name = RPP_Manuel_Lapa
+		portraits = { civilian = { small = "GFX_idea_RPP_minister_Manuel_Rodrigues_Lapa" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = RPP_Manuel_Lapa_hog
+			allowed = { original_tag = RPP }
+			traits = {
+				head_of_government
+				hog_crown_prince
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	RPP_Clodomiro_Alvarenga = {
+		name = RPP_Clodomiro_Alvarenga
+		portraits = {
+			civilian = { small = "GFX_idea_RPP_minister_Clodomiro_Alvarenga" }
+			army = {
+				large = "gfx/leaders/RPP/Portrait_RPP_Clodomiro_Alvarenga.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = RPP_Clodomiro_Alvarenga_hog
+			allowed = { original_tag = RPP }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = {
+			}
+		}
+	}
+
+	RPP_Jorge_Sena = {
+		name = RPP_Jorge_Sena
+		portraits = { civilian = { small = "GFX_idea_RPP_minister_Jorge_Candido_de_Sena" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = RPP_Jorge_Sena_for
+			allowed = { original_tag = RPP }
+			traits = {
+				foreign_minister
+				for_political_appointment
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	RPP_Herminio_Inacio = {
+		name = RPP_Herminio_Inacio
+		portraits = { civilian = { small = "GFX_idea_RPP_minister_Herminio_da_Palma_Inacio" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = RPP_Herminio_Inacio_for
+			allowed = { original_tag = RPP }
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	RPP_Nuno_Simoes = {
+		name = RPP_Nuno_Simoes
+		portraits = { civilian = { small = "GFX_idea_RPP_minister_Nuno_Simoes" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = RPP_Nuno_Simoes_eco
+			allowed = { original_tag = RPP }
+			traits = {
+				economy_minister
+				eco_bank_president
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	RPP_Jose_Fragoso = {
+		name = RPP_Jose_Fragoso
+		portraits = { civilian = { small = "GFX_idea_IBR_minister_Vasco_Goncalves" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = RPP_Jose_Fragoso_eco
+			allowed = { original_tag = RPP }
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			ideology = conservatism_paternalistic_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	RPP_Fernando_Queiroga = {
+		name = RPP_Fernando_Queiroga
+		portraits = { civilian = { small = "GFX_idea_IBR_minister_Vasco_Goncalves" } }
+		advisor = {
+			slot = security_minister
+			idea_token = RPP_Fernando_Queiroga_sec
+			allowed = { original_tag = RPP }
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	RPP_Jose_Azevedo = {
+		name = RPP_Jose_Azevedo
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Jose_Pinheiro_de_Azevedo.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+	}
+#UNIT LEADERS
+	RPP_Francisco_Gomes = {
+		name = RPP_Francisco_Gomes
+		portraits = {
+			army = {
+				large = "gfx/leaders/RPP/Portrait_RPP_Otelo_Saraiva_de_Carvalho_general.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			traits = { career_officer }
+		}
+		country_leader = {
+			ideology = progressivism_reformist_socialism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	RPP_Joao_Gomes = {
+		name = RPP_Joao_Gomes
+		portraits = {
+			army = {
+				large = "gfx/leaders/RPP/Portrait_RPP_Joao_Varela_Gomes_military.png"
+			}
+			civilian = { small = "GFX_idea_RPP_minister_Joao_Varela_Gomes" }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { trait_reckless }
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = RPP_Joao_Gomes_sec
+			allowed = { original_tag = RPP }
+			traits = {
+				security_minister
+				sec_army_instructor
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	RPP_Altino_Magalhaes = {
+		name = RPP_Altino_Magalhaes
+		portraits = {
+			army = {
+				large = "gfx/leaders/RPP/Portrait_RPP_Altino_Pinto_de_Magalhaes.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			traits = { infantry_officer }
+		}
+	}
+
+	RPP_Antonio_Veloso = {
+		name = RPP_Antonio_Veloso
+		portraits = {
+			army = {
+				large = "gfx/leaders/RPP/Portrait_RPP_Antonio_Pires_Veloso.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				organizer
+				harsh_leader
+			}
+		}
+	}
+	RPP_Ernesto_Antunes = {
+		name = RPP_Ernesto_Antunes
+		portraits = {
+			army = {
+				large = "gfx/leaders/RPP/Portrait_RPP_Ernesto_Melo_Antunes.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+			traits = {
+				anti_fascist
+				trickster
+			}
+		}
+	}
+	RPP_Vasco_Santos = {
+		name = RPP_Vasco_Santos
+		portraits = {
+			army = {
+				large = "gfx/leaders/RPP/Portrait_RPP_Vasco_da_Costa_Santos.png"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 2
+			traits = { bold }
+		}
+	}
+########################################################################################################################Portuguese People's Republic
+#LEADERS
+	PPR_Carlos_Antunes = {
+		name = PPR_Carlos_Antunes
+		portraits = { civilian = { large = "gfx/leaders/PPR/Portrait_PPR_Carlos_Antunes.png" } }
+		country_leader = {
+			ideology = socialist_revolutionary_frontism_subtype
+			desc = "POLITICS_CARLOS_ANTUNES_DESC"
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = communist_2_subtype
+			desc = "POLITICS_CARLOS_ANTUNES_DESC"
+			expire = "1999.1.1"
+			id = -1
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				politically_connected
+				communist_vanguard
+			}
+		}
+	}
+	PPR_Decentralized = {
+		name = PPR_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = socialist_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PPR_Unorganized = {
+		name = PPR_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = despotism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PPR_Francisco_Martins_Rodrigues = {
+		name = PPR_Francisco_Martins_Rodrigues
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_3_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	PPR_Alvaro_Cunhal = {
+		name = PPR_Alvaro_Cunhal
+		portraits = {
+			civilian = {
+				small = "GFX_idea_PPR_minister_Alvaro_Cunhal"
+				large = "gfx/leaders/PPR/Portrait_PPR_Alvaro_Cunhal.png"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PPR_Alvaro_Cunhal_hog
+			allowed = { original_tag = PPR }
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	PPR_Pedro_Soares = {
+		name = PPR_Pedro_Soares
+		portraits = { civilian = { small = "GFX_idea_PPR_minister_Pedro_dos_Santos_Soares" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = PPR_Pedro_Soares_for
+			allowed = { original_tag = PPR }
+			traits = {
+				foreign_minister
+				for_political_appointment
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	PPR_Joaquim_Santos = {
+		name = PPR_Joaquim_Santos
+		portraits = { civilian = { small = "GFX_idea_PPR_minister_Joaquim_Gomes" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = PPR_Joaquim_Santos_eco
+			allowed = { original_tag = PPR }
+			traits = {
+				economy_minister
+				eco_industrialiser
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	PPR_Jaime_Serra = {
+		name = PPR_Jaime_Serra
+		portraits = { civilian = { small = "GFX_idea_PPR_minister_Jaime_dos_Santos_Serra" } }
+		advisor = {
+			slot = security_minister
+			idea_token = PPR_Jaime_Serra_sec
+			allowed = { original_tag = PPR }
+			traits = {
+				security_minister
+				sec_aggressive_fighter
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	PPR_Mario_Tome = {
+		name = PPR_Mario_Tome
+		portraits = {
+			army = {
+				large = "gfx/leaders/PPR/Portrait_PPR_Mario_Tome.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				anti_fascist
+				guerrilla_veteran
+				trickster
+			}
+		}
+	}
+#UNIT LEADERS
+	PPR_Vasco_Goncalves = {
+		name = PPR_Vasco_Goncalves
+		portraits = {
+			army = {
+				large = "gfx/leaders/PPR/Portrait_PPR_Vasco_Goncalves.png"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { politically_connected }
+			legacy_id = -1
+		}
+	}
+
+	PPR_Rui_Espiney = {
+		name = PPR_Rui_Espiney
+		portraits = {
+			army = {
+				large = "gfx/leaders/PPR/Portrait_PPR_Ruy_Espiney.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		country_leader = {
+			ideology = conservatism_paternalistic_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	PPR_Antonio_Metello = {
+		name = PPR_Antonio_Metello
+		portraits = {
+			army = {
+				large = "gfx/leaders/PPR/Portrait_PPR_Antonio_Arnao_Metello.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				trait_engineer
+			}
+		}
+	}
+
+	PPR_Antonio_Ferreira = {
+		name = PPR_Antonio_Ferreira
+		portraits = {
+			army = {
+				large = "gfx/leaders/PPR/Portrait_PPR_Antonio_Pedro_Ferreira.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	PPR_Antonio_Coutinho = {
+		name = PPR_Antonio_Coutinho
+		portraits = {
+			army = {
+				large = "gfx/leaders/PPR/Portrait_PPR_Antonio_Rosa_Coutinho.png"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			traits = {
+			}
+		}
+	}
+
+########################################################################################################################Portugal
+#LEADERS
+	POR_Jaime_Melo = {
+		name = POR_Jaime_Melo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POR/Portrait_POR_Jaime_Alvares_Pereira_de_Melo.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JAIME_I_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	POR_Decentralized = {
+		name = POR_Decentralized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = liberalism_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	POR_Unorganized = {
+		name = POR_Unorganized
+		portraits = { civilian = { large = "gfx/leaders/Generics/leader_unknown.png" } }
+		country_leader = {
+			ideology = communist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = communist_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = communist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+#MINISTERS
+	POR_Pedro_Pereira = {
+		name = POR_Pedro_Pereira
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POR/Portrait_POR_Pedro_Teotonio_Pereira.png"
+				small = "GFX_idea_POR_minister_Pedro_Teotonio_Pereira"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = POR_Pedro_Pereira_hog
+			allowed = { original_tag = POR }
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	POR_Francisco_Sousa_Tavares = {
+		name = POR_Francisco_Sousa_Tavares
+		portraits = {
+			civilian = {
+				small = "GFX_idea_POR_minister_Francisco_Sousa_Tavares"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = POR_Francisco_Sousa_Tavares_hog
+			allowed = { original_tag = POR }
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	POR_Marcello_Mathias = {
+		name = POR_Marcello_Mathias
+		portraits = { civilian = { small = "GFX_idea_POR_minister_Marcello_Mathias" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = POR_Marcello_Mathias_for
+			allowed = { original_tag = POR }
+			traits = {
+				foreign_minister
+				for_seasoned_ambassador
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	POR_Joao_Costa_Leite = {
+		name = POR_Joao_Costa_Leite
+		portraits = { civilian = { small = "GFX_idea_POR_minister_Joao_Pinto_da_Costa_Leite" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = POR_Joao_Costa_Leite_for
+			allowed = { original_tag = POR }
+			traits = {
+				foreign_minister
+				for_well_connected
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			ideology = despotism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	POR_Manuel_Gomes_de_Araujo = {
+		name = POR_Manuel_Gomes_de_Araujo
+		portraits = {
+			civilian = {
+				small = "GFX_idea_POR_minister_Manuel_Gomes_de_Araujo"
+			}
+			army = {
+				large = "gfx/leaders/POR/Portrait_POR_Manuel_Gomes_de_Araujo.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = POR_Manuel_Gomes_de_Araujo_sec
+			allowed = { original_tag = POR }
+			traits = {
+				security_minister
+				sec_steadfast_defender
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			traits = {
+				politically_connected
+				infantry_officer
+			}
+		}
+	}
+
+	POR_Ulisses_Cortes = {
+		name = POR_Ulisses_Cortes
+		portraits = { civilian = { small = "GFX_idea_IBR_minister_Ulisses_Cortes" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = POR_Ulisses_Cortes_eco
+			allowed = { original_tag = POR }
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	POR_Jose_Ulrich = {
+		name = POR_Jose_Ulrich
+		portraits = { civilian = { small = "GFX_idea_POR_minister_Jose_Frederico_Ulrich" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = POR_Jose_Ulrich_eco
+			allowed = { original_tag = POR }
+			traits = {
+				economy_minister
+				eco_big_spender
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	POR_Fernando_Santos_Costa = {
+		name = POR_Fernando_Santos_Costa
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Fernando_dos_Santos_Costa"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = POR_Fernando_Santos_Costa_sec
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = {factor = 0 }
+		}
+	}
+#UNIT LEADERS
+	POR_Avelino_Cardoso = {
+		name = POR_Avelino_Cardoso
+		portraits = {
+			army = {
+				large = "gfx/leaders/POR/Portrait_POR_Avelino_Barbieri_de_Figueiredo_Baptista_Cardoso.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { old_guard }
+		}
+	}
+
+	POR_Fernando_Pais = {
+		name = POR_Fernando_Pais
+		portraits = {
+			army = {
+				large = "gfx/leaders/POR/Portrait_POR_Fernando_Eduardo_da_Silva_Pais.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				anti_communist
+				harsh_leader
+			}
+		}
+	}
+
+	POR_Aires_Martins = {
+		name = POR_Aires_Martins
+		portraits = {
+			army = {
+				large = "gfx/leaders/POR/Portrait_POR_Aires_Fernandes_Martins.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { trait_engineer }
+		}
+	}
+
+	POR_Luis_Maria_Pina = {
+		name = POR_Luis_Maria_Pina
+		portraits = {
+			army = {
+				large = "gfx/leaders/POR/Portrait_POR_Luis_Maria_da_Camara_Pina.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { old_guard }
+		}
+	}
+
+	POR_Jose_Vitoriano = {
+		name = POR_Jose_Vitoriano
+		portraits = {
+			army = {
+				large = "gfx/leaders/POR/Portrait_POR_Jose_de_Oliveira_Vitoriano.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			traits = {
+				partisan_commander
+				trickster
+				guerrilla_fighter
+				communist_vanguard
+			}
+		}
+	}
+
+	POR_Henrique_Tenreiro = {
+		name = POR_Henrique_Tenreiro
+		portraits = {
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Henrique_Tenreiro.png"
+			}
+		}
+		#navy_leader = {
+		#	skill = 3
+		#	attack_skill = 2
+		#	defense_skill = 2
+		#	maneuvering_skill = 2
+		#	coordination_skill = 2
+		#	traits = { caustic_personality }
+		#}
+	}
+	POR_Kaulza_de_Arriaga = {
+		name = POR_Kaulza_de_Arriaga
+		portraits = {
+			civilian = {
+				small = "GFX_idea_IBR_minister_Kaulza_de_Arriaga"
+			}
+			army = {
+				large = "gfx/leaders/GNS/Portrait_GNS_Kaulza_de_Arriaga.png"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 5
+			traits = {
+				logistics_wizard
+				harsh_leader
+				anti_communist
+			}
+		}
+	}
+########################################################################################################################Morocco
+#LEADERS
+	MOR_Hassan_II = {
+		name = MOR_Hassan_II
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MOR_minister_Hassan_II"
+				large = "gfx/leaders/MOR/Portrait_MOR_Hassan_II_young.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_HASSAN_II_DESC"
+			ideology = despotism_absolute_monarchy_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_HASSAN_II_DESC"
+			ideology = paternalism_anocracy_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	MOR_Abbas_Messadi = {
+		name = MOR_Abbas_Messadi
+		portraits = {
+			civilian = {
+				#small = "GFX_idea_MOR_minister_Hassan_II"
+				large = "gfx/leaders/MOR/Portrait_MOR_Abbas Messadi.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ABBAS_MESSADI_DESC"
+			ideology = despotism_partisan_movement_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ABBAS_MESSADI_DESC"
+			ideology = paternalism_social_nationalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	MOR_Abdallah_Ibrahim = {
+		name = MOR_Abdallah_Ibrahim
+		portraits = {
+			civilian = {
+				#small = "GFX_idea_MOR_minister_Hassan_II"
+				large = "gfx/leaders/MOR/Portrait_MOR_Abdallah_Ibrahim.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ABDALLAH_IBRAHIM_DESC"
+			ideology = paternalism_social_nationalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+#MINISTERS
+	MOR_Ahmed_Guedira = {
+		name = MOR_Ahmed_Guedira
+		portraits = { civilian = { small = "GFX_idea_MOR_minister_Ahmed_Reda_Guedira" } }
+		advisor = {
+			slot = head_of_government
+			idea_token = MOR_Ahmed_Guedira_hog
+			allowed = { original_tag = MOR }
+			traits = {
+				head_of_government
+				hog_national_figurehead
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	MOR_Ahmed_Balafrej = {
+		name = MOR_Ahmed_Balafrej
+		portraits = { civilian = { small = "GFX_idea_MOR_minister_Ahmed_Balafrej" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = MOR_Ahmed_Balafrej_for
+			allowed = { original_tag = MOR }
+			traits = {
+				foreign_minister
+				for_seasoned_ambassador
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	MOR_Mohamed_Oufkir = {
+		name = MOR_Mohamed_Oufkir
+		portraits = {
+			civilian = { small = "GFX_idea_MOR_minister_Mohamed_Oufkir" }
+			army = {
+				large = "gfx/leaders/MOR/Portrait_MOR_Mohamed_Oufkir.png"
+			}
+			}
+		advisor = {
+			slot = security_minister
+			idea_token = MOR_Mohamed_Oufkir_sec
+			allowed = { original_tag = MOR }
+			traits = {
+				security_minister
+				sec_guerrilla_fighter
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	MOR_Driss_Slaoui = {
+		name = MOR_Driss_Slaoui
+		portraits = { civilian = { small = "GFX_idea_MOR_minister_Driss_Slaoui" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = MOR_Driss_Slaoui_eco
+			allowed = { original_tag = MOR }
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+#UNIT LEADERS
+	MOR_Ahmed_Dlimi = {
+		name = MOR_Ahmed_Dlimi
+		portraits = {
+			army = {
+				large = "gfx/leaders/MOR/Portrait_MOR_Ahmed_Dlimi.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			traits = {
+				harsh_leader
+				politically_connected
+			}
+		}
+	}
+
+	MOR_Driss_Omar = {
+		name = MOR_Driss_Omar
+		portraits = {
+			army = {
+				large = "gfx/leaders/MOR/Portrait_MOR_Driss_ben_Omar.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			traits = {
+				politically_connected
+			}
+		}
+	}
+
+	MOR_Mohamed_Bouhali = {
+		name = MOR_Mohamed_Bouhali
+		portraits = {
+			army = {
+				large = "gfx/leaders/MOR/Portrait_MOR_Mohamed_Bachir_El_Bouhali.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			traits = {
+				desert_fox
+			}
+		}
+	}
+
+	MOR_Benhammou_Kettani = {
+		name = MOR_Benhammou_Kettani
+		portraits = {
+			army = {
+				large = "gfx/leaders/MOR/Portrait_MOR_Benhammou_El_Kettani.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	MOR_Abdeslam_Amar = {
+		name = MOR_Abdeslam_Amar
+		portraits = {
+			army = {
+				large = "gfx/leaders/MOR/Portrait_MOR_Abdeslam_Ben_Amar.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	MOR_Ben_Qassem_Moha = {
+		name = MOR_Ben_Qassem_Moha
+		portraits = {
+			army = {
+				large = "gfx/leaders/MOR/Portrait_MOR_Ben_Qassem_Ait_Moha.png"
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+
+	##############################################################################################################################################Divorce Spain
+	SPA_Francisco_Franco = {
+		name = SPA_Francisco_Franco
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Francisco_Franco.png"
+				small = "GFX_idea_IBR_minister_Francisco_Franco"
+			}
+		}
+		country_leader = { #Starting version
+			desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology = despotism_civilian_dictatorship_subtype
+			expire = "1975.10.20"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = SPA_Francisco_Franco_hog
+			allowed = { original_tag = SPA }
+			traits = {
+				head_of_government
+				hog_respected_war_hero
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	SPA_Alejandro_Valcarcel = {
+		name = SPA_Alejandro_Valcarcel
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Alejandro_Rodriguez_de_Valcarcel.png"
+				small = "GFX_idea_IBR_minister_Alejandro_de_Valcarel"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = SPA_Alejandro_Valcarcel_hog
+			allowed = { original_tag = SPA }
+			traits = {
+				head_of_government
+				for_political_appointment
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	SPA_Agustin_Munoz = {
+		name = SPA_Agustin_Munoz
+		portraits = { civilian = { small = "GFX_idea_IBR_minister_Agustin_Munoz_Grandes" } }
+		advisor = {
+			slot = security_minister
+			idea_token = SPA_Agustin_Munoz_sec
+			allowed = { original_tag = SPA }
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	SPA_Pedro_Cortina = {
+		name = SPA_Pedro_Cortina
+		portraits = { civilian = { small = "GFX_idea_IBR_minister_Pedro_Cartina_Mauri" } }
+		advisor = {
+			slot = foreign_minister
+			idea_token = SPA_Pedro_Cortina_for
+			allowed = { original_tag = SPA }
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	SPA_Mariano_Rubio = {
+		name = SPA_Mariano_Rubio
+		portraits = { civilian = { small = "GFX_idea_IBR_minister_Mariano_Rubio" } }
+		advisor = {
+			slot = economy_minister
+			idea_token = SPA_Mariano_Rubio_eco
+			allowed = { original_tag = SPA }
+			traits = {
+				economy_minister
+				eco_balanced_budget_economy
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	################################################################################ DIVORCE PORTUGAL
+	POR_Antonio_Salazar = {
+		name = POR_Antonio_Salazar
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Antonio_Salazar.png"
+				small = "GFX_idea_IBR_minister_Antonio_Salazar"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ANTONIO_DE_OLIVEIRA_SALAZAR_DIVORCE_DESC"
+			ideology = despotism_civilian_dictatorship_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = POR_Antonio_Salazar_hog
+			traits = {
+				head_of_government
+				hog_corporate_suit
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+########################################################################################################################Iberian Wars Colonies - Cabo Verde
+#LEADERS
+	CPV_Tito_Livio_Maria_Feijoo = {
+		name = CPV_Tito_Livio_Maria_Feijoo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CPV/Portrait_CPV_Tito_Livio_Maria_Feijoo.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_TITO_LIVIO_DESC"
+			ideology = despotism_colonial_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CPV_Jose_Andre_Leitao_da_Graca = {
+		name = CPV_Jose_Andre_Leitao_da_Graca
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CPV/Portrait_CPV_Jose_Andre_Leitao_da_Graca.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JOSE_LEITAO_DESC"
+			ideology = socialist_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_JOSE_LEITAO_DESC"
+			ideology = socialist_african_socialism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CPV_Aristides_Pereira = {
+		name = CPV_Aristides_Pereira
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CPV/Portrait_CPV_Aristides_Pereira.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ARISTIDES_PEREIRA_DESC"
+			ideology = socialist_african_socialism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	CPV_Aguinaldo_de_Carvalho_Veiga = {
+		name = CPV_Aguinaldo_de_Carvalho_Veiga
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CPV/Portrait_CPV_Aguinaldo_de_Carvalho_Veiga.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_AGUINALDO_CARVALHO_DESC"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+########################################################################################################################Iberian Wars Colonies - Equatorial Guinea
+#LEADERS
+	EQG_Federico_Ngomo = {
+		name = EQG_Federico_Ngomo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQG/Portrait_EQG_Federico_Ngomo.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FEDERICO_NGOMO_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	EQG_Atanasio_Ndongo = {
+		name = EQG_Atanasio_Ndongo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQG/Portrait_EQG_Atanasio_Ndongo.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ATANASIO_NDONGO"
+			ideology = progressivism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	EQG_Bonifacio_Ondo = {
+		name = EQG_Bonifacio_Ondo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQG/Portrait_EQG_Bonifacio_Ondo.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BONIFCAIO_ONDO_DESC"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	EQG_Luis_Maho_Sicacha = {
+		name = EQG_Luis_Maho_Sicacha
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQG/Portrait_EQG_Luis_Maho_Sicacha.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_LUIS_MAHO_SICACHA_DESC"
+			ideology = socialist_panafricanism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	EQG_Edmundo_Bossio = {
+		name = EQG_Edmundo_Bossio
+		country_leader = {
+			desc = "POLITICS_EDMUNDO_BOSSIO_DESC"
+			ideology = conservatism_1_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	EQG_Wilwardo_Jones = {
+		name = EQG_Luis_Maho_Sicacha
+		country_leader = {
+			desc = "POLITICS_WILWARDO_JONES_DESC"
+			ideology = conservatism_2_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+########################################################################################################################Iberian Wars Colonies - Sao Tome
+#LEADERS
+	SAO_Albertino_Neto = {
+		name = SAO_Albertino_Neto
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAO/Portrait_Sao_Tome_Albertino_Neto.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MANUEL_PINTA_COSTA_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	SAO_Manuel_Pinto_da_Costa = {
+		name = SAO_Manuel_Pinto_da_Costa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAO/Portrait_Sao_Tome_Manuel_Pinto_da_Costa.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MANUEL_PINTA_COSTA_DESC"
+			ideology = paternalism_provisional_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_MANUEL_PINTA_COSTA_DESC"
+			ideology = progressivism_reformist_socialism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_MANUEL_PINTA_COSTA_DESC"
+			ideology = socialist_african_socialism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	SAO_Nuno_Xavier_Daniel_Dias = {
+		name = SAO_Nuno_Xavier_Daniel_Dias
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAO/Portrait_Sao_Tome_Nuno_Xavier_Daniel_Dias.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MANUEL_PINTA_COSTA_DESC"
+			ideology = paternalism_social_nationalism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	SAO_Gastao_Torres = {
+		name = SAO_Gastao_Torres
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAO/Portrait_Sao_Tome_Gastao_Torres.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MANUEL_PINTA_COSTA_DESC"
+			ideology = socialist_panafricanism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	SAO_Disorganized = {
+		name = SAO_Disorganized
+		country_leader = {
+			#desc = "POLITICS_MANUEL_PINTA_COSTA_DESC"
+			ideology = conservatism_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+########################################################################################################################Iberian Wars Azores and Madeira
+	FML_Fernando_Quintanilha = {
+		name = IBR_Fernando_Quintanilha
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Fernando_Quintanilha.png"
+				small = "GFX_idea_IBR_minister_Fernando_Quintanilha"
+			}
+			army = {
+				large = "gfx/leaders/IBR/Portrait_Iberia_Fernando_Quintanilha.png"
+				small = "GFX_idea_IBR_minister_Fernando_Quintanilha"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FERNANDO_DIAS_ANC_DESC"
+			ideology = despotism_military_junta_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	FML_Alvaro_Pereira_Monjardino = {
+		name = FML_Alvaro_Pereira_Monjardino
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FML/Portrait_Azores_Alvaro_Pereira_Monjardino.png"
+			}
+		}
+	}
+	RPP_Jaime_Ornelas_Camacho = {
+		name = RPP_Jaime_Ornelas_Camacho
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RPP/Portrait_Madeira_Jaime_Ornelas_Camacho.png"
+			}
+		}
+		country_leader = {
+			ideology = liberal_conservatism_big_tent_subtype
+			desc = "POLITICS_RPP_JAIME_ORNELAS_CAMACHO_DESC"
+			expire = "1999.1.1"
+		}
+	}
+}

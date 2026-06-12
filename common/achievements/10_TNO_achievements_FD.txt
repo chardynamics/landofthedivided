@@ -1,0 +1,270 @@
+# possible - filters out achivements on game start so we dont have to check everything all the
+#time
+## happened - checks if achivement happened
+
+##### FALSE DAWN #####
+unique_id = FD_achievements
+
+BRA_Delayed_Appointment = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_ADHEMAR_SURVIVES
+			tooltip = BRA_Delayed_Appointment_trigger
+		}
+	}
+}
+BRA_The_Doctor_Said_To_The_Morgue = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_ADHEMAR_DIES
+			tooltip = BRA_The_Doctor_Said_To_The_Morgue_trigger
+		}
+	}
+}
+BRA_My_Own_Army = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_MY_OWN_ARMY
+			tooltip = BRA_My_Own_Army_trigger
+		}
+	}
+}
+BRA_The_Young_Masters_Prescription = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_70_vargas_presidency
+			has_country_flag = BRA_65_adhemar_presidency
+			tooltip = BRA_The_Young_Masters_Prescription_trigger
+		}
+	}
+}
+BRA_Famous_Or_Made_Of_Glass_It_Breaks_All_The_Same = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_70_edna_presidency
+			has_country_flag = BRA_65_adhemar_presidency
+			tooltip = BRA_Famous_Or_Made_Of_Glass_It_Breaks_All_The_Same_trigger
+		}
+	}
+}
+BRA_Moneybags = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_65_adhemar_presidency
+			has_country_leader = {
+				character = BRA_Adhemar_de_Barros
+				ruling_only = yes
+			}
+			check_variable = { BRA_adhemar_wealth > 199.99 }
+			tooltip = BRA_Moneybags_trigger
+		}
+	}
+}
+BRA_The_Hour_Of_The_Chosen = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_HOUR_OF_THE_CHOSEN
+			tooltip = BRA_The_Hour_Of_The_Chosen_trigger
+		}
+	}
+}
+BRA_The_Thirteenth_Hour = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_dem_lacerda_40_seats
+			tooltip = BRA_The_Thirteenth_Hour_trigger
+		}
+	}
+}
+BRA_A_Crusade_Won = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_A_CRUSADE_WON
+			tooltip = BRA_A_Crusade_Won_trigger
+		}
+	}
+}
+BRA_To_What_End = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_HOUR_OF_THE_CHOSEN
+			OR = {
+				has_country_flag = BRA_70_brizola_presidency
+				has_country_flag = BRA_70_edna_presidency
+			}
+			tooltip = BRA_To_What_End_trigger
+		}
+	}
+}
+BRA_Glass_Cannon = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_lacerda_killed_psp
+			tooltip = BRA_Glass_Cannon_trigger
+		}
+	}
+}
+BRA_Weapon_Of_The_Gods = {
+	possible = {
+		has_start_date < 1962.01.02
+		OR = {
+			tag = BRA
+			tag = ARG
+		}
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			if = {
+				limit = { tag = BRA }
+				has_country_flag = BRA_SACW_Nukes_developed
+			}
+			else_if = {
+				limit = { tag = ARG }
+				has_country_flag = ARG_SACW_Nukes_developed
+			}
+			tooltip = BRA_Weapon_Of_The_Gods_trigger
+		}
+	}
+}
+BRA_Monroe_Defeated = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = GER
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			BRA = {
+				has_idea = Pakt_Observer
+			}
+			tooltip = BRA_Monroe_Defeated_trigger
+		}
+	}
+}
+BRA_The_Matador_Victorious = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = USA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = USA_killed_adhemar
+			tooltip = BRA_The_Matador_Victorious_trigger
+		}
+	}
+}
+BRA_The_Fifth_Sun = {
+	possible = {
+		has_start_date < 1962.01.02
+		OR = {
+			tag = BRA
+			tag = ARG
+		}
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			BRA = { has_war_with = ARG }
+			tooltip = BRA_The_Fifth_Sun_trigger
+		}
+	}
+}
+
+BRA_Tomb_for_Heroic_Men = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_HOMICIDE_AT_THE_SENATE
+			tooltip = BRA_Tomb_for_Heroic_Men_trigger
+		}
+	}
+}
+
+BRA_Carwash = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_CARWASH
+			tooltip = BRA_Carwash_trigger
+		}
+	}
+}
+
+BRA_You_See_Im_Lott = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = BRA
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = BRA_YOU_SEE_IM_LOTT
+			tooltip = BRA_You_See_Im_Lott_trigger
+		}
+	}
+}

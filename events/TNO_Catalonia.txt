@@ -1,0 +1,249 @@
+add_namespace = CTL_wars
+
+country_event = {
+	id = CTL_wars.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.1" }
+	title = CTL_wars.1.t
+	desc = CTL_wars.1.desc
+	picture = GFX_report_event_vosburg_church
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.1.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.2" }
+	title = CTL_wars.2.t
+	desc = CTL_wars.2.desc
+	picture = GFX_report_event_UKR_writing_2
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.2.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.3" }
+	title = CTL_wars.3.t
+	desc = CTL_wars.3.desc
+	picture = GFX_report_event_IBR_meeting_table
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.3.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.4" }
+	title = CTL_wars.4.t
+	desc = CTL_wars.4.desc
+	picture = GFX_report_event_IBR_big_meeting
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.4.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.5" }
+	title = CTL_wars.5.t
+	desc = CTL_wars.5.desc
+	picture = GFX_report_event_CAU_factory
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.5.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.6" }
+	title = CTL_wars.6.t
+	desc = CTL_wars.6.desc
+	picture = GFX_report_event_IBR_spanish_police_car
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.6.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.7" }
+	title = CTL_wars.7.t
+	desc = CTL_wars.7.desc
+	picture = GFX_report_event_buenos_aires_street
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.7.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.8" }
+	title = CTL_wars.8.t
+	desc = CTL_wars.8.desc
+	picture = GFX_report_event_IBR_interview
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.8.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+
+country_event = {
+	id = CTL_wars.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.9" }
+	title = CTL_wars.9.t
+	desc = CTL_wars.9.desc
+	picture = GFX_report_event_generic_guns_rifles_fal
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.9.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.10" }
+	title = CTL_wars.10.t
+	desc = CTL_wars.10.desc
+	picture = GFX_report_event_IBR_interview
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.10.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.11" }
+	title = CTL_wars.11.t
+	desc = CTL_wars.11.desc
+	picture = GFX_report_event_IRE_interrogation_2
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.11.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.12 # Snakes in the Tall Grass
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.12" }
+	title = CTL_wars.12.t
+	desc = CTL_wars.12.desc
+	picture = GFX_report_event_CHI_Victim_Body
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.12.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = CTL_wars.13 # Double Vision
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.13" }
+	title = CTL_wars.13.t
+	desc = CTL_wars.13.desc
+	picture = GFX_report_event_generic_street_night
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.13.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {#CNT revolt
+	id = CTL_wars.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.15" }
+	title = CTL_wars.15.t
+	desc = CTL_wars.15.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.15.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			IBR_wars_set_up_CNT = yes
+		}
+	}
+}
+
+
+
+
+country_event = {#Catalonia Ready for War
+	id = CTL_wars.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CTL_wars.100" }
+	title = CTL_wars.100.t
+	desc = CTL_wars.100.desc
+	picture = GFX_report_event_generic_machinegunner
+
+	is_triggered_only = yes
+
+	option = { #
+		name = CTL_wars.100.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = CTL_Reclaim_Baleares_tt
+		if = {
+			limit = { is_ai = yes }
+			random_list = {
+				50 = {
+					set_country_flag = IBR_Wars_Catalonia_Reclamation
+					CNT = { set_country_flag = IBR_Wars_Catalonia_Reclamation }
+				}
+				50 = { }
+			}
+		}
+		else = {
+		set_country_flag = IBR_Wars_Catalonia_Reclamation
+		CNT = { set_country_flag = IBR_Wars_Catalonia_Reclamation }
+		}
+	}
+}
+	

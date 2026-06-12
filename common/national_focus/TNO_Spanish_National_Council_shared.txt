@@ -1,0 +1,460 @@
+
+#Frente Azul War Tree
+
+
+shared_focus = {
+	id = FZL_one_final_chance_of_salvation
+	icon = GFX_focus_FZL_One_Final_Chance_of_Salvation
+	cost = 2
+	x = 6
+	y = 0
+	bypass = { always = yes }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_one_final_chance_of_salvation"
+		custom_effect_tooltip = FZL_one_final_chance_of_salvation_tt
+	}
+}
+
+shared_focus = {
+	id = FZL_spanish_national_socialism
+	icon = GFX_focus_generic_national_socialist_male
+	cost = 2
+	prerequisite = { focus = FZL_one_final_chance_of_salvation }
+	relative_position_id = FZL_one_final_chance_of_salvation
+	x = -4
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_spanish_national_socialism"
+		country_event = {
+			id = FZL_wars.1
+			days = 1
+		}
+		add_political_power = 25
+		add_stability = 0.05
+		set_temp_variable = { IBR_wars_legitimacy_temp = 5 }
+		IBR_wars_change_legitimacy = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_national_cleansing
+	icon = GFX_focus_BRA_cavalrycharge
+	cost = 2
+	prerequisite = { focus = FZL_spanish_national_socialism }
+	relative_position_id = FZL_spanish_national_socialism
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_national_cleansing"
+		add_political_power = 50
+		set_temp_variable = { IBR_wars_political_gain_temp = 0.1 }
+		IBR_wars_change_political_power_gain = yes
+		set_temp_variable = { IBR_wars_opposition_temp = -6.5 }
+		IBR_wars_change_political_opposition = yes
+		TNO_improve_security_policy_effectiveness_med = yes
+		hidden_effect = {
+			country_event = {
+				id = FZL_wars.7
+				days = 10
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = FZL_all_will_be_in_agreement
+	icon = GFX_focus_BRA_marxism_shall_not_prevail
+	cost = 2
+	prerequisite = { focus = FZL_national_cleansing }
+	relative_position_id = FZL_national_cleansing
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_all_will_be_in_agreement"
+		tno_press_rights_worsen = yes
+		add_war_support = 0.075
+		TNO_improve_press_rights_policy_effectiveness_med = yes
+		TNO_improve_public_meetings_policy_effectiveness_med = yes
+		set_temp_variable = { IBR_wars_opposition_temp = -2.5 }
+		IBR_wars_change_political_opposition = yes
+		set_temp_variable = { IBR_wars_legitimacy_temp = -2.5 }
+		IBR_wars_change_legitimacy = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_and_only_the_spanish_will_remain
+	icon = GFX_focus_ENG_a_tower_of_fire
+	cost = 2
+	prerequisite = { focus = FZL_all_will_be_in_agreement }
+	relative_position_id = FZL_all_will_be_in_agreement
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_and_only_the_spanish_will_remain"
+		country_event = {
+			id = FZL_wars.3
+			days = 1
+		}
+		tno_penal_system_worsen = yes
+		add_political_power = 15
+		TNO_improve_penal_system_policy_effectiveness_med = yes
+		set_temp_variable = { IBR_wars_opposition_temp = -6.5 }
+		IBR_wars_change_political_opposition = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_la_comunidad_popular
+	icon = GFX_focus_generic_workers_rights
+	cost = 2
+	prerequisite = { focus = FZL_spanish_national_socialism }
+	relative_position_id = FZL_spanish_national_socialism
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_la_comunidad_popular"
+		add_political_power = 25
+		set_temp_variable = { IBR_wars_legitimacy_temp = 3.5 }
+		IBR_wars_change_legitimacy = yes
+		set_temp_variable = { IBR_wars_opposition_temp = -2.5 }
+		IBR_wars_change_political_opposition = yes
+		set_temp_variable = { IBR_wars_recuitable_population_temp = 0.025 }
+		IBR_wars_change_recuitable_population = yes
+		TNO_improve_security_policy_effectiveness_med = yes
+		TNO_improve_conscription_policy_effectiveness_low = yes
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_they_will_have_to_learn
+	icon = GFX_focus_GER_unity
+	cost = 2
+	prerequisite = { focus = FZL_la_comunidad_popular }
+	relative_position_id = FZL_la_comunidad_popular
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_they_will_have_to_learn"
+		country_event = {
+			id = FZL_wars.2
+			days = 1
+		}
+		add_political_power = 15
+		TNO_improve_academic_base_low = yes
+		TNO_improve_education_policy_effectiveness_med = yes
+		set_temp_variable = { IBR_wars_opposition_temp = -3.5 }
+		IBR_wars_change_political_opposition = yes
+		hidden_effect = {
+			country_event = {
+				id = FZL_wars.6
+				days = 10
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = FZL_and_they_will_know_their_place
+	icon = GFX_focus_PRM_break_their_will
+	cost = 2
+	prerequisite = { focus = FZL_they_will_have_to_learn }
+	relative_position_id = FZL_they_will_have_to_learn
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_and_they_will_know_their_place"
+		tno_security_improve = yes
+		set_temp_variable = { IBR_wars_max_effiency_temp = 0.075 }
+		IBR_wars_change_max_efficiency = yes
+		set_temp_variable = { hc_consumption_core_states_temp = -0.035 }
+		IBR_wars_change_hc_consumption_core_states_modifier = yes
+		TNO_improve_security_policy_effectiveness_high = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_saving_spain_from_itself
+	icon = GFX_focus_MCW_tapeworms
+	cost = 2
+	prerequisite = { focus = FZL_and_only_the_spanish_will_remain }
+	prerequisite = { focus = FZL_and_they_will_know_their_place }
+	relative_position_id = FZL_and_only_the_spanish_will_remain
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_saving_spain_from_itself"
+		add_political_power = 50
+		set_temp_variable = { IBR_wars_army_attack_temp = 0.0.65 }
+		IBR_wars_change_army_attack = yes
+		set_temp_variable = { IBR_wars_legitimacy_temp = 4.25 }
+		IBR_wars_change_legitimacy = yes
+		TNO_improve_conscription_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_reconvene_falange
+	icon = GFX_focus_FZL_reconvene_falange
+	cost = 2
+	prerequisite = { focus = FZL_one_final_chance_of_salvation }
+	relative_position_id = FZL_one_final_chance_of_salvation
+	x = 0
+	y = 2
+	ai_will_do = { factor = 1000 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_reconvene_falange"
+		add_political_power = 50
+		add_stability = 0.1
+		set_temp_variable = { IBR_wars_political_gain_temp = 0.1 }
+		IBR_wars_change_political_power_gain = yes
+		set_temp_variable = { IBR_wars_legitimacy_temp = 5 }
+		IBR_wars_change_legitimacy = yes
+		TNO_improve_admin_efficiency_med = yes
+		TNO_improve_political_parties_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_the_party_above_all
+	icon = GFX_focus_IBR_falangist_flag
+	cost = 2
+	prerequisite = { focus = FZL_reconvene_falange }
+	relative_position_id = FZL_reconvene_falange
+	x = 0
+	y = 1
+	ai_will_do = { factor = 1000 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_the_party_above_all"
+		add_political_power = 45
+		set_temp_variable = { IBR_wars_political_gain_temp = 0.15 }
+		IBR_wars_change_political_power_gain = yes
+		TNO_improve_admin_efficiency_low = yes
+		TNO_improve_political_parties_policy_effectiveness_high = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_a_phone_call_to_germania
+	icon = GFX_focus_ENG_check_in_with_germania
+	cost = 2
+	prerequisite = { focus = FZL_the_party_above_all }
+	relative_position_id = FZL_the_party_above_all
+	x = 0
+	y = 1
+	ai_will_do = { factor = 1000 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_a_phone_call_to_germania"
+		add_political_power = 25
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2500
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 1000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 500
+			producer = GER
+		}
+		set_temp_variable = { money_reserves_temp = 0.115 }
+		econ_money_reserves_change_raw_money = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_a_national_push
+	icon = GFX_focus_generic_prepare_for_the_clash
+	cost = 2
+	prerequisite = { focus = FZL_one_final_chance_of_salvation }
+	relative_position_id = FZL_one_final_chance_of_salvation
+	x = 4
+	y = 1
+	ai_will_do = { factor = 650 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_a_national_push"
+		country_event = {
+			id = FZL_wars.4
+			days = 1
+		}
+		add_command_power = 20
+		set_temp_variable = { IBR_wars_army_speed_temp = 0.05 }
+		IBR_wars_change_army_speed = yes
+		set_temp_variable = { IBR_wars_max_command_temp = 5 }
+		IBR_wars_change_max_command_power = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_total_war_economy
+	icon = GFX_focus_generic_arms_factory_red
+	cost = 2
+	prerequisite = { focus = FZL_a_national_push }
+	relative_position_id = FZL_a_national_push
+	x = -2
+	y = 1
+	ai_will_do = { factor = 650 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_total_war_economy"
+		set_temp_variable = { income_tax_temp = 0.04 }
+		econ_income_tax_rate_change = yes
+		set_temp_variable = { business_tax_temp = 0.04 }
+		econ_business_tax_rate_change = yes
+		set_temp_variable = { IBR_wars_efficiency_gain_temp = 0.07 }
+		IBR_wars_change_efficiency_gain = yes
+		set_temp_variable = { econ_centralization_temp = 5 }
+		econ_centralization_change = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_taking_lessons_from_german_industry
+	icon = GFX_focus_generic_aryan_logistics
+	cost = 2
+	prerequisite = { focus = FZL_total_war_economy }
+	relative_position_id = FZL_total_war_economy
+	x = 0
+	y = 1
+	ai_will_do = { factor = 650 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_taking_lessons_from_german_industry"
+		set_temp_variable = { gdp_growth_temp = 0.35 }
+		econ_gdp_growth_change = yes
+		set_temp_variable = { IBR_wars_free_prod_units_temp = 2 }
+		IBR_wars_change_free_prod_units = yes
+		set_temp_variable = { IBR_wars_max_effiency_temp = 0.05 }
+		IBR_wars_change_max_efficiency = yes
+		set_temp_variable = { hc_production_core_states_temp = 0.03 }
+		IBR_wars_change_hc_production_core_states_modifier = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_and_some_may_be_controversial
+	icon = GFX_focus_generic_penal_brigade
+	cost = 2
+	prerequisite = { focus = FZL_taking_lessons_from_german_industry }
+	relative_position_id = FZL_taking_lessons_from_german_industry
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_and_some_may_be_controversial"
+		tno_slavery_worsen = yes
+		set_temp_variable = { IBR_wars_efficiency_gain_temp = 0.065 }
+		IBR_wars_change_efficiency_gain = yes
+		set_temp_variable = { hc_consumption_core_states_temp = -0.025 }
+		IBR_wars_change_hc_consumption_core_states_modifier = yes
+		TNO_worsen_regulations_policy_effectiveness_med = yes
+		set_temp_variable = { IBR_wars_opposition_temp = 3.5 }
+		IBR_wars_change_political_opposition = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_the_national_army_takes_shape
+	icon = GFX_focus_MCW_die_grenzwacht_im_osten
+	cost = 2
+	prerequisite = { focus = FZL_a_national_push }
+	relative_position_id = FZL_a_national_push
+	x = 2
+	y = 1
+	ai_will_do = { factor = 750 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_the_national_army_takes_shape"
+		set_temp_variable = { IBR_wars_command_gain_temp = 0.15 }
+		IBR_wars_change_command_power_gain = yes
+		set_temp_variable = { IBR_wars_army_organisation_temp = 0.065 }
+		IBR_wars_change_army_organisation = yes
+		TNO_improve_army_professionalism_med = yes
+		TNO_worsen_training_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_not_taking_one_step_back
+	icon = GFX_focus_RUS_red_terror_marches
+	cost = 2
+	prerequisite = { focus = FZL_the_national_army_takes_shape }
+	relative_position_id = FZL_the_national_army_takes_shape
+	x = 0
+	y = 1
+	ai_will_do = { factor = 750 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_not_taking_one_step_back"
+		set_temp_variable = { IBR_wars_army_defense_temp = 0.075 }
+		IBR_wars_change_army_defense = yes
+		set_temp_variable = { IBR_wars_army_organisation_temp = 0.045 }
+		IBR_wars_change_army_organisation = yes
+		TNO_improve_army_professionalism_med = yes
+		TNO_worsen_training_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_and_the_people_clamor_to_join
+	icon = GFX_focus_FZL_The_Spirit_of_The_Visigoths
+	cost = 2
+	prerequisite = { focus = FZL_not_taking_one_step_back }
+	relative_position_id = FZL_not_taking_one_step_back
+	x = 0
+	y = 1
+	ai_will_do = { factor = 750 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_and_the_people_clamor_to_join"
+		tno_conscription_worsen = yes
+		add_war_support = 0.05
+		set_temp_variable = { IBR_wars_recuitable_population_temp = 0.065 }
+		IBR_wars_change_recuitable_population = yes
+		TNO_improve_conscription_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = FZL_saving_spain_from_its_enemies
+	icon = GFX_focus_MCW_eagles
+	cost = 2
+	prerequisite = { focus = FZL_and_some_may_be_controversial }
+	prerequisite = { focus = FZL_and_the_people_clamor_to_join }
+	relative_position_id = FZL_and_some_may_be_controversial
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_saving_spain_from_its_enemies"
+		add_command_power = 15
+		add_war_support = 0.05
+		set_temp_variable = { IBR_wars_legitimacy_temp = 5 }
+		IBR_wars_change_legitimacy = yes
+		set_temp_variable = { IBR_wars_opposition_temp = -5 }
+		IBR_wars_change_political_opposition = yes
+	}
+}
+
+
+shared_focus = {
+	id = FZL_sin_relevo_posible_hasta_la_extincin
+	icon = GFX_focus_POL_the_peoples_republic_secured
+	cost = 2
+	prerequisite = { focus = FZL_saving_spain_from_itself }
+	prerequisite = { focus = FZL_a_phone_call_to_germania }
+	prerequisite = { focus = FZL_saving_spain_from_its_enemies }
+	relative_position_id = FZL_saving_spain_from_itself
+	x = 4
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus FZL_sin_relevo_posible_hasta_la_extincin"
+		add_political_power = 75
+		set_temp_variable = { IBR_wars_political_gain_temp = 0.1 }
+		IBR_wars_change_political_power_gain = yes
+		set_temp_variable = { IBR_wars_army_attack_temp = 0.05 }
+		IBR_wars_change_army_attack = yes
+		set_temp_variable = { IBR_wars_army_defense_temp = 0.05 }
+		IBR_wars_change_army_defense = yes
+		set_temp_variable = { IBR_wars_legitimacy_temp = 5 }
+		IBR_wars_change_legitimacy = yes
+	}
+}

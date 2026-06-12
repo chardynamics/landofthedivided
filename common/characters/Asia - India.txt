@@ -1,0 +1,546 @@
+characters = {
+	###########################################################
+	###########			REPUBLIC OF INDIA			###########
+	###########################################################
+
+	IND_Jawaharlal_Nehru = {
+		name = IND_Jawaharlal_Nehru
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_Nehru.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_JAWAHARLAL_NEHRU_DESC"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { father_of_india }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_VK_Krishna_Menon = {
+		name = IND_VK_Krishna_Menon
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_VK_Krishna_Menon.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_VK_KRISHNA_MENON_DESC"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			expire = "1994.4.20"
+			id = -1
+		}
+	}
+	IND_Lal_Bahadur_Shastri = {
+		name = IND_Lal_Bahadur_Shastri
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_Lal_Bahadur_Shastri.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_LAL_BAHADUR_SHASTRI_DESC"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			expire = "1994.4.20"
+			id = -1
+		}
+	}
+	IND_Yashvantrao_Chavan = {
+		name = IND_Yashvantrao_Chavan
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_Yashvantrao_Chavan.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_YASHVANTRAO_CHAVAN_DESC"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			expire = "1994.4.20"
+			id = -1
+		}
+	}
+	IND_Ramaswamy_Venkataraman = {
+		name = IND_Ramaswamy_Venkataraman
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Ramaswamy_Venkataraman.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_RAMASWAMY_VENKATARAMAN_DESC"
+			ideology = progressivism_2_subtype
+			traits = { }
+			expire = "1994.4.20"
+			id = -1
+		}
+		country_leader = {
+			#desc = "POLITICS_RAMASWAMY_VENKATARAMAN_DESC"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = { }
+			expire = "1994.4.20"
+			id = -1
+		}
+	}
+	
+	IND_Amar_Nath_Vidyalankar = {
+		name = IND_Amar_Nath_Vidyalankar
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Amar_Nath_Vidyalankar.png" }
+		}
+	}
+
+	IND_Hirubhai_M_Patel = {
+		name = IND_Hirubhai_M_Patel
+		portraits = {
+			#civilian = {
+			#	large = "gfx/leaders/IND/Portrait_India_Hirubhai_M_Patel.png"
+			#	small = "GFX_idea_IND_Hirubhai_M_Patel"
+			#}
+		}
+		country_leader = {
+			#desc = "POLITICS_HIRUBHAI_M_PATEL_DESC"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	
+	IND_Kumaraswami_Kamaraj = {
+		name = IND_Kumaraswami_Kamaraj
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Kumaraswami_Kamaraj.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_KUMARASWAMI_KAMARAJ_DESC"
+			ideology = liberal_conservatism_big_tent_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	
+	IND_Charan_Singh = {
+		name = IND_Charan_Singh
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_Charan_Singh.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_CHARAN_SINGH_DESC"
+			ideology = liberal_conservatism_big_tent_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_CHARAN_SINGH_DESC"
+			ideology = conservatism_agrarianism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+
+	IND_Morarji_Desai = {
+		name = IND_Morarji_Desai
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IND/Portrait_India_Morarji_Desai.png"
+				small = "GFX_idea_IND_Morarji_Desai"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MORARJI_DESAI_DESC"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_MORARJI_DESAI_DESC"
+			ideology = conservatism_2_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Neelam_Sanjiva_Reddy = {
+		name = IND_Neelam_Sanjiva_Reddy
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Neelam_Sanjiva_Reddy.png" }
+		}
+	}
+	IND_Chakravarti_Rajagopalachari = {
+		name = IND_Chakravarti_Rajagopalachari
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IND/Portrait_India_Chakravarti_Rajagopalachari.png"
+				small = "GFX_idea_IND_Chakravarti_Rajagopalachari"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CHAKRAVARTI_RAJAGOPALACHARI_DESC"
+			ideology = liberalism_classical_liberalism_subtype
+			traits = { }
+			expire = "1994.4.20"
+			id = -1
+		}
+	}
+	IND_NG_Ranga = {
+		name = IND_NG_Ranga
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_NG_Ranga.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_NG_RANGA_DESC"
+			ideology = liberalism_classical_liberalism_subtype
+			traits = { }
+			expire = "1994.4.20"
+			id = -1
+		}
+	}
+	
+	IND_Gayatri_Devi = {
+		name = IND_Gayatri_Devi
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_Gayatri_Devi.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_GAYATRI_DEVI_DESC"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	
+	IND_EMS_Namboodiripad = {
+		name = IND_EMS_Namboodiripad
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_EMS_Namboodiripad.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_EMS_NAMBOODIRIPAD_DESC"
+			ideology = communist_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Chandra_Rajeswara_Rao = {
+		name = IND_Chandra_Rajeswara_Rao
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Chandra_Rajeswara_Rao.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_CHANDRA_RAJESWARA_RAO_DESC"
+			ideology = communist_marxism_leninism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Swami_Karpatri = {
+		name = IND_Swami_Karpatri
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Swami_Karpatri.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_SWAMI_KARPATRI_DESC"
+			ideology = ultranationalism_reactionary_nationalism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Vinayak_Damodar_Savarkar = {
+		name = IND_Vinayak_Damodar_Savarkar
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_Vinayak_Damodar_Savarkar.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_VINAYAK_DAMODAR_SAVARKAR_DESC"
+			ideology = fascism_fascist_populism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Deendayal_Upadhyaya = {
+		name = IND_Deendayal_Upadhyaya
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Deendayal_Upadhyaya.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_DEENDAYAL_UPADHYAYA_DESC"
+			ideology = paternalism_national_conservatism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Atal_Bihari_Vajpayee = {
+		name = IND_Atal_Bihari_Vajpayee
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Atal_Bihari_Vajpayee.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_ATAL_BIHARI_VAJPAYEE_DESC"
+			ideology = paternalism_national_conservatism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Balraj_Madhok = {
+		name = IND_Balraj_Madhok
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Balraj_Madhok.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_BALRAJ_MADHOK_DESC"
+			ideology = paternalism_1_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Brahm_Prakash_Yadav = {
+		name = IND_Brahm_Prakash_Yadav
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_Brahm_Prakash_Yadav.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_BRAHM_PRAKASH_YADAV_DESC"
+			ideology = socialist_social_democracy_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Ram_Manohar_Lohia = {
+		name = IND_Ram_Manohar_Lohia
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Ram_Manohar_Lohia.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_RAM_MONAHAR_LOHIA_DESC"
+			ideology = socialist_1_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Indira_Gandhi = {
+		name = IND_Indira_Gandhi
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_Indira_Gandhi.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_INDIRA_GANDHI_DESC"
+			ideology = paternalism_left_wing_corporatism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Jagjivan_Ram = {
+		name = IND_Jagjivan_Ram
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_Jagjivan_Ram.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_JAGJIVAN_RAM_DESC"
+			ideology = progressivism_popular_front_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	IND_Minoo_Masani = {
+		name = IND_Minoo_Masani
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_Minoo_Masani.png" }
+		}
+		country_leader = {
+			desc = "POLITICS_MINOO_MASANI_DESC"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+	
+	IND_Mani_Ram_Bagri = {
+		name = IND_Mani_Ram_Bagri
+		portraits = {
+			#civilian = { large = "gfx/leaders/IND/Portrait_India_Mani_Ram_Bagri.png" }
+		}
+	}
+	############
+	##Military##
+	############
+
+	IND_Gopal_Gurunath_Bewoor = {
+		name = IND_Gopal_Gurunath_Bewoor
+		portraits = {
+			army = {
+				large = "gfx/leaders/IND/Portrait_India_Gopal_Gurunath_Bewoor.png"
+				small = "GFX_idea_IND_Gopal_Gurunath_Bewoor"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer inflexible_strategist }
+			legacy_id = 3005
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	IND_Pran_Nath_Thapar = {
+		name = IND_Pran_Nath_Thapar
+		portraits = {
+			army = {
+				large = "gfx/leaders/IND/Portrait_India_Pran_Nath_Thapar.png"
+				small = "GFX_idea_IND_Pran_Nath_Thapar"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard }
+			legacy_id = 3002
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	IND_Brijmohan_Kaul = {
+		name = IND_Brijmohan_Kaul
+		portraits = {
+			army = {
+				large = "gfx/leaders/IND/Portrait_India_Brijmohan_Kaul.png"
+				small = "GFX_idea_IND_Brijmohan_Kaul"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard politically_connected }
+			legacy_id = 3001
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	IND_KM_Cariappa = {
+		name = IND_KM_Cariappa
+		portraits = {
+			civilian = { large = "gfx/leaders/IND/Portrait_India_KM_Cariappa.png" }
+			army = {
+				large = "gfx/leaders/IND/Portrait_India_KM_Cariappa.png"
+				small = "GFX_idea_IND_KM_Cariappa"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KM_CARIAPPA_DESC"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			expire = "1999.1.1"
+			id = -1
+		}
+		field_marshal = {
+			traits = { old_guard brilliant_strategist harsh_leader aggressive_assaulter }
+			legacy_id = 3007
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	IND_Kodandera_Subayya_Thimayya = {
+		name = IND_Kodandera_Subayya_Thimayya
+		portraits = {
+			army = { large = "gfx/leaders/IND/Portrait_India_Kodendera_Subayya_Thimayya.png" }
+		}
+		corps_commander = {
+			traits = { war_hero infantry_officer infantry_leader commando jungle_rat }
+			legacy_id = 3003
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	IND_Jayanto_Nath_Chaudhuri = {
+		name = IND_Jayanto_Nath_Chaudhuri
+		portraits = {
+			army = { large = "gfx/leaders/IND/Portrait_India_Jayanto_Nath_Chaudhuri.png" }
+		}
+		corps_commander = {
+			traits = { war_hero career_officer cavalry_leader skilled_staffer }
+			legacy_id = 3004
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	IND_Yahya_Khan = {
+		name = IND_Yahya_Khan
+		portraits = {
+			army = { large = "gfx/leaders/IND/Portrait_India_Yahya_Khan.png" }
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			legacy_id = 3006
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	IND_Sam_Manekshaw = {
+		name = IND_Sam_Manekshaw
+		portraits = {
+			army = { large = "gfx/leaders/IND/Portrait_India_Sam_Manekshaw.png" }
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			legacy_id = 3008
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	IND_PP_Kumaramangalam = {
+		name = IND_PP_Kumaramangalam
+		portraits = {
+			army = { large = "gfx/leaders/IND/Portrait_India_PP_Kumaramangalam.png" }
+		}
+		corps_commander = {
+			traits = { career_officer bearer_of_artillery commando paratrooper }
+			legacy_id = 3009
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	IND_Charles_Pizey = {
+		name = IND_Charles_Pizey
+		portraits = {
+			navy = { large = "gfx/leaders/IND/Portrait_India_Charles_Pizey.png" }
+		}
+		navy_leader = {
+			traits = { war_hero politically_shunned old_man }
+			legacy_id = 3010
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+		}
+	}
+}

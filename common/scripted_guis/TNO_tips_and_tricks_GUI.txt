@@ -1,0 +1,95 @@
+scripted_gui = {
+	TNO_tips_and_tricks_GUI = {
+		context_type = player_context
+		window_name = "TNO_tips_and_tricks_window"
+		dirty = TNO_tips_and_tricks_dirty
+
+		visible = {
+			has_country_flag = TNO_Tips_And_Tricks_Open
+		}
+
+		effects = {
+			back_button_click = {
+				subtract_from_variable = { current_tip_id = 1 }
+				TNO_Tips_and_Tricks_overflow_solution = yes
+				add_to_variable = { TNO_tips_and_tricks_dirty = 0.001 }
+			}
+			random_button_click = {
+				TNO_Tips_and_Tricks_random_page = yes
+				add_to_variable = { TNO_tips_and_tricks_dirty = 0.001 }
+			}
+			forward_button_click = {
+				add_to_variable = { current_tip_id = 1 }
+				TNO_Tips_and_Tricks_overflow_solution = yes
+				add_to_variable = { TNO_tips_and_tricks_dirty = 0.001 }
+			}
+
+			close_button_click = {
+				clr_country_flag = TNO_Tips_And_Tricks_Open
+				add_to_variable = { TNO_tips_and_tricks_dirty = 0.001 }
+			}
+
+			# Table of Contents
+
+			Folder_button_click = {
+				set_variable = { current_tip_id = g }
+				add_to_variable = { TNO_tips_and_tricks_dirty = 0.001 }
+			}
+
+			Content_button_click = {
+				set_variable = { current_tip_id = g }
+				add_to_variable = { TNO_tips_and_tricks_dirty = 0.001 }
+			}
+		}
+
+		properties = {
+			random_button = {
+				frame = var:global.tips_and_tricks_dice_number
+			}
+			Folder_button = {
+				frame = tips_folder_frame
+			}
+			Content_button = {
+				frame = tips_content_frame
+			}
+		}
+
+		dynamic_lists = {
+			tips_and_tricks_entry_gridbox = {
+				array = global.tip_category_array
+				entry_container = "[GetTipContentsType]"
+				value = f
+				index = g
+			}
+		}
+
+		triggers = {
+			Folder_button_visible = {
+				if = {
+					limit = {
+						check_variable = { current_tip_id = g }
+					}
+					set_temp_variable = { tips_folder_frame = 2 }
+				}
+				else = {
+					set_temp_variable = { tips_folder_frame = 1 }
+				}
+			}
+			Content_button_visible = {
+				if = {
+					limit = {
+						check_variable = { current_tip_id = g }
+					}
+					set_temp_variable = { tips_content_frame = 2 }
+				}
+				else = {
+					set_temp_variable = { tips_content_frame = 1 }
+				}
+			}
+
+			Content_glow_visible = {
+				NOT = { has_variable = current_tip_id }
+			}
+		}
+	}
+}

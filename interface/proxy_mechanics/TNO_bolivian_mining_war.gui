@@ -1,0 +1,276 @@
+guiTypes = {
+
+	## Bolivia Mining War GUI
+	containerWindowType = {
+		name = "TNO_Bolivian_Mining_War_GUI"
+		size = { width = 525 height = 450 }
+		position = { x = 29 y = 131 }
+		size = { width = 496 height = 506 }
+
+		containerWindowType = {
+			name = "group_selector"
+			position = { x = 527 y = 94 }
+
+			iconType = {
+				name = "hide_decisions"
+				spriteType = "GFX_BOL_hide_first_decision" 
+				position = { x = 0 y = 0 }
+			}
+			containerWindowType = {
+				name = "select_police"
+				position = { x = 0 y = 4 }
+
+				iconType = {
+					name = "police_icon"
+					spriteType = "GFX_BOL_police"
+					position = { x = 8 y = 8 }
+				}
+				iconType = {
+					name = "button_police"
+					spriteType = "GFX_BOL_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "BOL_mining_war_police_tooltip"
+				}
+			}
+			containerWindowType = {
+				name = "select_labor"
+				position = { x = 42 y = 4 }
+
+				iconType = {
+					name = "labor_icon"
+					spriteType = "GFX_BOL_labor"
+					position = { x = 8 y = 8 }
+				}
+				iconType = {
+					name = "button_labor"
+					spriteType = "GFX_BOL_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "BOL_mining_war_labor_tooltip"
+				}
+			}
+			containerWindowType = {
+				name = "select_peasants"
+				position = { x = 84 y = 4 }
+
+				iconType = {
+					name = "peasants_icon"
+					spriteType = "GFX_BOL_peasants"
+					position = { x = 8 y = 8 }
+				}
+				iconType = {
+					name = "button_peasants"
+					spriteType = "GFX_BOL_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "BOL_mining_war_peasants_tooltip"
+				}
+			}
+			containerWindowType = {
+				name = "select_elites"
+				position = { x = 126 y = 4 }
+
+				iconType = {
+					name = "elites_icon"
+					spriteType = "GFX_BOL_elites"
+					position = { x = 8 y = 8 }
+				}
+				iconType = {
+					name = "button_elites"
+					spriteType = "GFX_BOL_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "BOL_mining_war_elites_tooltip"
+				}
+			}
+			containerWindowType = {
+				name = "select_military"
+				position = { x = 168 y = 4 }
+
+				iconType = {
+					name = "military_icon"
+					spriteType = "GFX_BOL_military"
+					position = { x = 8 y = 8 }
+				}
+				iconType = {
+					name = "button_military"
+					spriteType = "GFX_BOL_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "BOL_mining_war_military_tooltip"
+				}
+			}
+
+			instantTextboxType = {
+				name = "group_selector_title"
+				position = { x = 300 y = 17 }
+				text = "BOL_mining_war_active_text"
+				format = right
+				font = "aldrich_22_outline" 
+				maxWidth = 180
+				maxheight = 22
+				pdx_tooltip = BOL_mining_war_active_text_tooltip
+			}
+
+		}
+
+		containerWindowType = {
+			name = "fake_mission_1"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_1_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			} 
+			instantTextboxType = {
+				name = "fake_mission_1_title"
+				position = { x = 50 y = 9 }
+				text = BRA_MiningWar_update
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_duration"
+				position = { x = 136 y = 8 }
+				text = ZZZ_BRA_MiningWar_update_duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+			
+
+		containerWindowType = {
+			name = "inner"
+			position = { x = 0 y = 0 }
+				
+			instantTextboxType = {
+				name = "desc"
+				position = { x = 118 y = 10 }
+				font = "aldrich_18_outline"
+				text = "[BOL_mining_war_description]"
+				maxWidth = 370
+				format = left
+			}
+		
+			containerWindowType = {
+				name = "inner"
+				position = { x = 160 y = 105 }
+				
+
+				
+				iconType = {
+					name = "bolivia_outline"
+					position = { x = 10 y = -12 }
+					spriteType = "GFX_BOL_bolivia_outline"
+				}
+				iconType = {
+					name = "triangle"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_BOL_triangle_flipped"
+				}
+				iconType = {
+					name = "triangle_r"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_BOL_triangle_highlight_r_flipped"
+					pdx_tooltip = "BOL_mining_war_falangists_tooltip"
+				}
+				iconType = {
+					name = "triangle_g"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_BOL_triangle_highlight_g_flipped"
+					pdx_tooltip = "BOL_mining_war_government_tooltip"
+				}
+				iconType = {
+					name = "triangle_b"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_BOL_triangle_highlight_b_flipped"
+					pdx_tooltip = "BOL_mining_war_nationalists_tooltip"
+				}
+
+				containerWindowType = {
+					name = "inner"
+					position = { x = 0 y = 0 }
+
+					gridboxtype = {
+						name = "group_icons"
+						position = { x = 0 y = 0 }
+						size = { width = 100%% height = 100%% }
+						slotsize = { width = 100%% height = 0 }
+						max_slots_horizontal = 1
+						add_horizontal = no
+					}
+				}
+			}
+
+		
+			containerWindowType = {
+				name = "time_circle"
+				position = { x = 340 y = 340 }
+
+				iconType = {
+					name = "time_circle"
+					position = { x = 0 y = 0 }
+					spriteType = GFX_BOL_time_circle
+				}
+				iconType = {
+					name = "timer_fill"
+					position = { x = 0 y = -1 }
+					spriteType = GFX_BOL_timer
+
+					pdx_tooltip = BOL_mining_war_timer_tt
+				}
+
+				instantTextboxType = {
+					name = "timer_days_left"
+					position = { x = 0 y = 21 }
+					font = "aldrich_36_outline"
+					text = BOL_mining_war_timer_days
+					alwaystransparent = yes
+					maxWidth = 74
+					format = center
+				}
+			}
+
+
+			instantTextboxType = {
+				name = "winning"
+				position = { x = 118 y = 455 }
+				font = "aldrich_22_outline"
+				text = "[BOL_mining_war_winning_faction]"
+				maxWidth = 350
+				format = center
+				pdx_tooltip = BOL_mining_war_winner_tooltip
+			}
+
+			iconType = {
+				name = "Info"
+				spriteType = "GFX_BRA_info_button"
+				position = { x = 455 y = -33 }
+				pdx_tooltip = BOL_mining_war_help_text_BRA
+			}
+			
+		
+			
+		}
+	}
+
+	containerWindowType = {
+		name = "TNO_Bolivian_Mining_War_group_icon"
+		size = { width = 26 height = 26 }
+		position = { x = -12 y = -12 }
+
+		iconType = {
+			name = "group_icon"
+			spriteType = "GFX_BOL_elites"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "BOL_mining_war_group_tooltip"
+			pdx_tooltip_delayed = "BOL_mining_war_group_tooltip_delay"
+		}
+	}
+}

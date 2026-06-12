@@ -1,0 +1,32 @@
+LATAM_nuclear_cost = {
+	enable = { always = yes }
+	misc_costs_modifier = SACW_nuclear_cost
+}
+
+BRA_SATW_foreign_support_dynmod = {
+	enable = { always = yes }
+	free_production_units_modifier = BRA.SATW_foreign_pu
+}
+
+ARG_SATW_foreign_support_dynmod = {
+	enable = { always = yes }
+	free_production_units_modifier = ARG.SATW_foreign_pu
+}
+
+SATW_amazon_hinderances = {
+	enable = { always = yes }
+	air_cas_present_factor = -1.5
+	army_attack_factor = -1.5
+	army_attack_speed_factor = -1.5
+	ground_attack_factor = -1.5
+	local_org_regain = -1
+}
+
+SATW_amazon_hinderances_better = {
+	enable = { always = yes }
+	air_cas_present_factor = -0.5
+	army_attack_factor = -0.75
+	army_speed_factor = -0.75
+	ground_attack_factor = -0.75
+	local_org_regain = -0.75
+}

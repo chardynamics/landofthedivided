@@ -1,0 +1,151 @@
+characters = {
+	AAA_Jorge_Edgar_Leal = {
+		name = AAA_Jorge_Edgar_Leal
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Antarctica/Portrait_AAA_Jorge_Edgar_Leal.png"
+			}
+		}
+		country_leader = {
+			ideology = paternalism_antarctic_administration_subtype
+			expire = "1999.1.1"
+			desc = POLITICS_JORGE_EDGAR_LEAL_DESC
+			traits = {
+				paternalism
+				Spirit_of_Exploration
+			}
+			id = -1
+		}
+	}
+	AAA_Gustavo_Adolfo_Giro = {
+		name = AAA_Gustavo_Adolfo_Giro
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AAA_Gustavo_Adolfo_Giro"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AAA_Gustavo_Adolfo_Giro_hog
+			allowed = { original_tag = AAA }
+			traits = {
+				head_of_government
+				paternalism
+				hog_silent_workhorse
+				hog_devoted_follower
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AAA_Juan_Carlos_Beltramino = {
+		name = AAA_Juan_Carlos_Beltramino
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AAA_Juan_Carlos_Beltramino"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = AAA_Juan_Carlos_Beltramino_for
+			allowed = { original_tag = AAA }
+			traits = {
+				foreign_minister
+				liberalism
+				for_well_connected
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AAA_Mario_Luis_Olezza = {
+		name = AAA_Mario_Luis_Olezza
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AAA_Mario_Luis_Olezza"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = AAA_Mario_Luis_Olezza_eco
+			allowed = { original_tag = AAA }
+			traits = {
+				economy_minister
+				paternalism
+				eco_air_superiority_proponent
+				sec_army_instructor
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AAA_Hernan_Pujato = {
+		name = AAA_Hernan_Pujato
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AAA_Hernan_Pujato"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = AAA_Hernan_Pujato_sec
+			allowed = { original_tag = AAA }
+			traits = {
+				security_minister
+				despotism
+				sec_disliked_by_the_military
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = { ideology = despotism_antarctic_administration_subtype traits = { despotism } }
+	}
+	AAA_Emilio_Eduardo_Massera = {
+		name = AAA_Emilio_Eduardo_Massera
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Antarctica/Portrait_AAA_Emilio_Eduardo_Massera.png"
+			}
+			army = {
+				large = "gfx/leaders/Antarctica/Portrait_AAA_Emilio_Eduardo_Massera.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				naval_liason
+			}
+		}
+		country_leader = { ideology = despotism_antarctic_administration_subtype traits = { despotism } }
+	}
+	AAA_Alcides_Lopez_Aufranc = {
+		name = AAA_Alcides_Lopez_Aufranc
+		portraits = {
+			army = {
+				large = "gfx/leaders/Antarctica/Portrait_AAA_Alcides_Lopez_Aufranc.png"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			traits = {
+				aggressive_assaulter
+			}
+		}
+	}
+}

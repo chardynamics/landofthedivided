@@ -1,0 +1,16 @@
+characters = {
+	NGS_Djibo_Bakary = {
+		name = FTF_Djibo_Bakary
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NGR/Portrait_Niger_Djibo_Bakary.png"
+			}
+		}
+		country_leader = {
+			expire = 1999.12.12
+			ideology = socialist_panafricanism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+}

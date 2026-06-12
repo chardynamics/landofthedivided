@@ -1,0 +1,20 @@
+characters = {
+	### Fiji ###
+	# Country Leader
+	FIJ_A_D_Patel = {
+		name = FIJ_A_D_Patel
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIJ/Portrait_Fiji_A_D_Patel.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_A_D_PATEL_DESC"
+			expire = "1994.4.20"
+			ideology = progressivism_reformist_socialism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,299 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_Paraguay_GUI"
+		size = { width = 525 height = 450 }
+		position = { x = 29 y = 131 }
+		containerWindowType = {
+			name = "category_support_selector"
+			position = { x = 527 y = 48 }
+			iconType = {
+				name = "hide_decision"
+				spriteType = "GFX_PAR_hide_first_decision" 
+				position = { x = 0 y = 0 }
+			}
+			containerWindowType = {
+				name = "select_support_decisions"
+				position = { x = 0 y = 0 }
+
+				iconType = {
+					name = "support_icon"
+					spriteType = "GFX_PAR_support"
+					position = { x = 6 y = 6 }
+				}
+				iconType = {
+					name = "button_support_decisions"
+					spriteType = "GFX_PAR_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "PAR_bush_war_support_decisions_tooltip"
+				}
+			}
+			containerWindowType = {
+				name = "select_stability_decisions"
+				position = { x = 42 y = 0 }
+
+				iconType = {
+					name = "stability_icon"
+					spriteType = "GFX_PAR_stability"
+					position = { x = 6 y = 6 }
+				}
+				iconType = {
+					name = "button_stability_decisions"
+					spriteType = "GFX_PAR_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "PAR_bush_war_stability_decisions_tooltip"
+				}
+			}
+			containerWindowType = {
+				name = "select_mobilization_decisions"
+				position = { x = 84 y = 0 }
+
+				iconType = {
+					name = "mobilization_icon"
+					spriteType = "GFX_PAR_mobilization"
+					position = { x = 6 y = 6 }
+				}
+				iconType = {
+					name = "button_mobilization_decisions"
+					spriteType = "GFX_PAR_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "PAR_bush_war_mobilization_decisions_tooltip"
+				}
+			}
+
+			instantTextboxType = {
+				name = "group_selector_title"
+				position = { x = 300 y = 17 }
+				text = "PAR_bush_war_active_decisions_text"
+				format = right
+				font = "aldrich_22_outline" 
+				maxWidth = 180
+				maxheight = 22
+				pdx_tooltip = PAR_bush_war_active_decisions_text_tt
+			}
+		}
+		
+		containerWindowType = {
+			name = "fake_mission_1"
+			position = { x = 527 y = 98 }
+
+			iconType = {
+				name = "fake_mission_1_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			} 
+			instantTextboxType = {
+				name = "fake_mission_1_title"
+				position = { x = 50 y = 9 }
+				text = BRA_PAR_bush_war_dummy_decision_1
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_duration"
+				position = { x = 136 y = 8 }
+				text = BRA_PAR_bush_war_dummy_decision_1_duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "fake_mission_2"
+			position = { x = 527 y = 148 }
+
+			iconType = {
+				name = "fake_mission_2_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			} 
+			instantTextboxType = {
+				name = "fake_mission_2_title"
+				position = { x = 50 y = 9 }
+				text = BRA_PAR_bush_war_dummy_decision_2
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_2_duration"
+				position = { x = 136 y = 8 }
+				text = BRA_PAR_bush_war_dummy_decision_2_duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "fake_mission_3"
+			position = { x = 527 y = 198 }
+
+			iconType = {
+				name = "fake_mission_3_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			} 
+			instantTextboxType = {
+				name = "fake_mission_3_title"
+				position = { x = 50 y = 9 }
+				text = BRA_PAR_bush_war_dummy_decision_3
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_3_duration"
+				position = { x = 136 y = 8 }
+				text = BRA_PAR_bush_war_dummy_decision_3_duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+	
+		containerWindowType = {
+			name = "inner"
+			position = { x = 0 y = 0 }
+			
+			iconType = {
+				name = "sidebar"
+				position = { x = 8 y = 8 }
+				#spriteType = "GFX_TT_Trinidad_BPR_Sidebar"
+			}
+			iconType = {
+				name = "seal"
+				position = { x = 153 y = 25 }
+			}
+			instantTextboxType = {
+				name = "desc"
+				position = { x = 20 y = 380 }
+				font = "aldrich_18_outline"
+				text = "[Get_fopo_desc]"
+				maxWidth = 469
+				maxHeight = 122
+				format = left
+			}
+		}
+		
+		containerWindowType = {
+			name = "map"
+			position = { x = 0 y = 0 }
+			iconType = {
+				name = "background"
+				position = { x = -2 y = -45 }
+				spriteType = "GFX_paraguay_bg"
+			}
+			iconType = {
+				name = "map_background"
+				position = { x = 11 y = 16 }
+				spriteType = "GFX_paraguay_map_bg"
+				pdx_tooltip = PAR_zone_not_interactable
+				pdx_tooltip_delayed = PAR_zone_not_interactable_desc
+			}
+			iconType = {
+				name = "background_gran_chaco_overlay"
+				position = { x = 11 y = 16 }
+				spriteType = "GFX_paraguay_gran_chaco"
+				pdx_tooltip_delayed = PAR_zone_gran_chaco_desc
+			}
+		}
+		gridboxtype = {
+			name = "paraguay_map_gridbox"
+			position = { x = 0 y = -1 }
+		}
+		containerWindowType = {
+			name = "paraguay_pie_container"
+			position = { x = 290 y = 19 }
+			iconType = {
+				name = "paraguay_government_pie"
+				position = { x = 7 y = 3 }
+				spriteType = "GFX_paraguay_pie_government"
+			}
+			iconType = {
+				name = "paraguay_divided_pie"
+				position = { x = 7 y = 3 }
+				spriteType = "GFX_paraguay_pie_divided"
+			}
+			iconType = {
+				name = "paraguay_communism_pie"
+				position = { x = 7 y = 3 }
+				spriteType = "GFX_paraguay_pie_communism"
+			}
+			iconType = {
+				name = "paraguay_pie_overlay"
+				position = { x = -8 y = -13 }
+				spriteType = "GFX_paraguay_pie_overlay"
+				pdx_tooltip = PAR_bush_war_pie_tt
+			}
+			iconType = {
+				name = "bush_war_info_box"
+				spriteType = "GFX_BRA_info_button"
+				position = { x = 165 y = -52 }
+				pdx_tooltip = PAR_bush_war_info_box
+			}
+		}
+		containerWindowType = {
+			name = "paraguay_stats_container"
+			position = { x = 300 y = 149 }
+			instantTextBoxType = { 
+				name = "PAR_selected_state"
+				position = { x = -50 y = 44 }
+				text = PAR_selected_state_txt
+				font = "aldrich_24_outline"
+				format = centre
+				maxWidth = 250
+			}
+			instantTextBoxType = { 
+				name = "PAR_stats_stability"
+				position = { x = 0 y = 104 }
+				text = PAR_stats_stability_txt
+				font = "aldrich_24_outline"
+				format = centre
+				maxWidth = 150
+			}
+			instantTextBoxType = { 
+				name = "PAR_stats_fulna_alignment"
+				position = { x = -42 y = 164 }
+				text = PAR_bush_war_fulna_alignment
+				font = "aldrich_24_outline"
+				format = centre
+				maxWidth = 250
+			}
+		}
+	}
+	containerWindowType = {
+		name = "paraguay_map_entry"
+		iconType = {
+			name = "paraguay_map_icon"
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "paraguay_map_button"
+			spriteType = "GFX_blank"
+			pdx_tooltip = paraguay_map_state_tt
+		}
+	}
+}

@@ -1,0 +1,38 @@
+ideas = {
+	country = {
+		BKU_Operation_Alparslan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BKU_Operation_Alparslan" }
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			picture = TUR_operation_alp_arslan
+			
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = 0.2
+				compliance_growth = -0.25
+				resistance_growth = -0.25
+				custom_modifier_tooltip = GER_gone_over_tt
+			}
+		}
+		BKU_Musul_Kerkuk_Oil_Company = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BKU_Musul_Kerkuk_Oil_Company" }
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			picture = TUR_mosul_and_kirkuk_petroleum_company
+			
+			modifier = {
+				gdp_growth_modifier = 1
+				fuel_gain_factor = 0.15
+				custom_modifier_tooltip = BKU_Turkey_takes_oil_tt
+			}
+		}
+	}
+}

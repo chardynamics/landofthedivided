@@ -1,0 +1,114 @@
+characters = {
+	AAJ_Ishida_Suteo = {
+		name = AAJ_Ishida_Suteo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Antarctica/Portrait_AAJ_Ishida_Suteo.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism_antarctic_administration_subtype
+			expire = "1999.1.1"
+			desc = POLITICS_ISHIDA_SUTEO_DESC
+			traits = {
+			}
+			id = -1
+		}
+	}
+	AAJ_Hayao_Kinugasa = {
+		name = AAJ_Hayao_Kinugasa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Antarctica/Portrait_AAJ_Hayao_Kinugasa.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism_antarctic_administration_subtype
+			expire = "1999.1.1"
+			desc = POLITICS_HAYAO_KINUGASA_DESC
+			traits = {
+			}
+			id = -1
+		}
+	}
+	AAJ_Kyuhei_Suzuki = {
+		name = AAJ_Kyuhei_Suzuki
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AAJ_Kyuhei_Suzuki"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AAJ_Kyuhei_Suzuki_hog
+			allowed = { original_tag = AAJ }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AAJ_Iwao_Fujita = { # TODO: implement large portrait when available - BrickPi
+		name = AAJ_Iwao_Fujita
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AAJ_Iwao_Fujita"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = AAJ_Iwao_Fujita_for
+			allowed = { original_tag = AAJ }
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AAJ_Nakai_Haruo = {
+		name = AAJ_Nakai_Haruo
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AAJ_Nakai_Haruo"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = AAJ_Nakai_Haruo_eco
+			allowed = { original_tag = AAJ }
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AAJ_Takeshi_Nagata = {
+		name = AAJ_Takeshi_Nagata
+		portraits = {
+			civilian = {
+				small = "GFX_idea_AAJ_Takeshi_Nagata"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = AAJ_Takeshi_Nagata_sec
+			allowed = { original_tag = AAJ }
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+}

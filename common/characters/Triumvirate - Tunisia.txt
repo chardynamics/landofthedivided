@@ -1,0 +1,176 @@
+characters = {
+	# Country leaders #
+	TUN_Muhammad_VIII = {
+		name = TUN_Muhammad_VIII
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUN/Portrait_Tunisia_Muhammad_VIII.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MUHAMMAD_VIII_DESC"
+			expire = "1999.1.1"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	TUN_Mohamed_Ennafaa = {
+		name = TUN_Mohamed_Ennafaa
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = communist_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	TUN_Habib_Bourguiba = {
+		name = TUN_Habib_Bourguiba
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUN/Portrait_Tunisia_Habib_Bourguiba.png"
+			}
+		}
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = progressivism_subtype
+			traits = { }
+		}
+	}
+	TUN_Georges_Adda = {
+		name = TUN_Georges_Adda
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = socialist_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	TUN_Hedi_Nouira = {
+		name = TUN_Hedi_Nouira
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = liberalism_subtype
+			traits = { }
+		}
+	}
+	TUN_Salah_Farhat = {
+		name = TUN_Salah_Farhat
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = conservatism_subtype
+			traits = { }
+		}
+	}
+	TUN_Enrico_Bombieri = {
+		name = TUN_Enrico_Bombieri
+		country_leader = {
+			expire = "1999.1.1"
+			ideology = fascism_subtype
+			traits = { }
+		}
+	}
+
+	# Ministers #
+	TUN_Habib_Thameur = {
+		name = TUN_Habib_Thameur
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUN_minister_Habib_Thameur"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = TUN_Habib_Thameur_hog
+			allowed = { original_tag = TUN }
+			traits = {
+				head_of_government
+				social_democracy
+				hog_compromise_candidate
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	TUN_Mustapha_Kaak = {
+		name = TUN_Mustapha_Kaak
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUN_minister_Mustapha_Kaak"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = TUN_Mustapha_Kaak_for
+			allowed = { original_tag = TUN }
+			traits = {
+				foreign_minister
+				despotism
+				for_great_compromiser
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	TUN_Mohamed_Chenik = {
+		name = TUN_Mohamed_Chenik
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUN_minister_Mohamed_Chenik"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = TUN_Mohamed_Chenik_eco
+			allowed = { original_tag = TUN }
+			traits = {
+				economy_minister
+				despotism
+				eco_resource_industrialist
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	# Generals #
+	TUN_Mohamed_Habib_Essoussi = {
+		name = TUN_Mohamed_Habib_Essoussi
+		portraits = {
+			civilian = {
+				small = "GFX_idea_TUN_minister_Mohamed_Habib_Essoussi"
+			}
+			army = {
+				large = "gfx/leaders/TUN/Portrait_Tunisia_Mohamed_Habib_Essoussi.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = TUN_Mohamed_Habib_Essoussi_sec
+			allowed = { original_tag = TUN }
+			traits = {
+				security_minister
+				despotism
+				sec_crime_fighter
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		corps_commander = {
+			traits = { career_officer desert_fox }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+}

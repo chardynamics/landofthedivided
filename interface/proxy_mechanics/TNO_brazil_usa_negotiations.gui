@@ -1,0 +1,108 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_Nuke_Negotiation_GUI"
+		size = { width = 0 height = 465 }
+		position = { x = 0 y = 0 }
+
+		containerWindowType = {
+			name = "upper"
+			size = { width = 0 height = 0 }
+			position = { x = 75 y = 100 }
+
+			iconType = {
+				name = "TNO_nuke_neg_info_button"
+				spriteType = "GFX_BRA_info_button"
+				position = { x = 400 y = 50 }
+				pdx_tooltip = TNO_fopo_nuke_neg_info
+			}
+		}
+
+		containerWindowType = {
+			name = "lower"
+			size = { width = 0 height = 0 }
+			position = { x = 130 y = 340 }
+
+			instantTextboxType = {
+				name = "nuke_neg_bra_proposal"
+				position = { x = 10 y = 150 }
+				font = "aldrich_18_outline"
+				text = TNO_nuke_neg_bra_proposal_text
+				maxWidth = 200
+				format = center
+			}
+
+			instantTextboxType = {
+				name = "nuke_neg_usa_proposal"
+				position = { x = 190 y = 150 }
+				font = "aldrich_18_outline"
+				text = TNO_nuke_neg_usa_proposal_text
+				maxWidth = 200
+				format = center
+			}
+
+			instantTextboxType = {
+				name = "chance_of_succeeding_text"
+				position = { x = 50 y = 220 }
+				font = "aldrich_28_outline"
+				text = TNO_nuke_neg_chance_of_succeeding_text
+				maxWidth = 300
+				format = center
+			}
+
+			instantTextboxType = {
+				name = "TNO_fopo_nuke_neg_turn_text"
+				position = { x = 50 y = 50 }
+				font = "aldrich_24_outline"
+				text = TNO_fopo_nuke_neg_turn_text
+				maxWidth = 300
+				format = center
+			}
+
+			iconType = {
+				name = "TNO_nuke_negotiations_bar_bias"
+				spriteType = "GFX_BRA_lottquadros_Progressbar"
+				position = { x = 14 y = 100 }
+				pdx_tooltip = TNO_nuke_negotiations_bar_tt
+				Orientation = "CENTER"
+			}
+		}
+
+		## Fake missions
+		containerWindowType = {
+			name = "fake_mission_1"
+			position = { x = 556 y = 179 }
+
+			iconType = {
+				name = "fake_mission_1_background"
+				spriteType = "GFX_fopo_fake_mission_frame"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = BRA_Nuke_Neg_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_title"
+				position = { x = 50 y = 9 }
+				text = BRA_Nuke_Neg_FakeMission_1_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline"
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = BRA_Nuke_Neg_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_duration"
+				position = { x = 136 y = 8 }
+				text = BRA_Nuke_Neg_FakeMission_1_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline"
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = BRA_Nuke_Neg_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,199 @@
+fighter_escort_primacy = {
+	track = fighter_aircraft
+	name = SUBDOCTRINE_FIGHTER_ESCORT_PRIMACY
+	description = SUBDOCTRINE_FIGHTER_ESCORT_PRIMACY_DESC
+	icon = GFX_defensive_tactics_medium
+
+	xp_cost = 50
+	xp_type = air
+
+	available = {
+		has_doctrine = air_power_projection
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+
+	air_escort_efficiency = 0.25
+	air_strategic_bomber_bombing_factor = 0.25
+
+	rewards = {
+		destroyers_of_the_air = {
+			air_escort_efficiency = 0.1
+			fighter = {
+				air_attack = 0.1
+				air_range = 0.1
+			}
+		}
+		interlocked_radar_fields = {
+			air_superiority_detect_factor = 0.1
+			air_interception_detect_factor = 0.1
+			fighter = {
+				night_penalty = -0.05
+			}
+		}
+		anti_radiation_missles = {
+			strategic_bomb_visibility = -0.25
+			category_strat_bomber = {
+				air_defence = 0.1
+			}
+			category_tac_bomber = {
+				air_defence = 0.1
+			}
+			air_strategic_bomber_bombing_factor = 0.1
+		}
+		ground_based_interception = {
+			enemy_army_bonus_air_superiority_factor = -0.2
+			production_speed_radar_station_factor = 0.25 
+			production_speed_anti_air_building_factor = 0.25 
+		}
+		queen_bee_protocols = {
+			air_escort_efficiency = 0.2
+			category_strat_bomber = {
+				air_defence = 0.25
+			}
+			category_tac_bomber = {
+				air_defence = 0.25
+			}
+			air_strategic_bomber_bombing_factor = 0.1
+			fighter = {
+				air_agility = 0.1
+			}
+			air_mission_xp_gain_factor = -0.05
+			air_training_xp_gain_factor = -0.05
+		}
+	}
+}
+
+fighter_the_road_to_supremacy = {
+	track = fighter_aircraft
+	name = SUBDOCTRINE_FIGHTER_THE_ROAD_TO_SUPREMACY
+	description = SUBDOCTRINE_FIGHTER_THE_ROAD_TO_SUPREMACY_DESC
+	icon = GFX_numerical_superiority_medium
+
+	xp_cost = 50
+	xp_type = air
+
+	available = {
+		has_doctrine = air_power_projection
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+
+	air_superiority_efficiency = 0.05
+	fighter = {
+		air_agility = 0.05
+		air_attack = 0.05
+		air_defence = 0.05
+	}
+
+	rewards = {
+		speed_twins = {
+			fighter = {
+				air_agility = 0.15
+				maximum_speed = 0.15
+				build_cost_ic = -0.05
+			}
+		}
+		the_owls_plumage = {
+			air_superiority_efficiency = 0.1
+			fighter = {
+				air_defence = 0.1
+			}
+		}
+		the_eagles_talons = {
+			air_ace_generation_chance_factor = 0.15
+			fighter = {
+				air_agility = 0.05
+				air_agility = 0.1
+			}
+		}
+		mass_engagement_tactics = {
+			air_superiority_efficiency = 0.15
+			air_intercept_efficiency = 0.15
+		}
+		caelum_nostrum = {
+			fighter = { air_ground_attack = 0.1 }
+			air_nav_efficiency = 0.1
+			air_strategic_bomber_bombing_factor = 0.1
+		}
+	}
+}
+
+fighter_clear_skies = {
+	track = fighter_aircraft
+	name = SUBDOCTRINE_FIGHTER_CLEAR_SKIES
+	description = SUBDOCTRINE_FIGHTER_CLEAR_SKIES_DESC
+	icon = GFX_area_defense_medium
+
+	xp_cost = 50
+	xp_type = air
+
+	available = {
+		has_doctrine = tactical_aviation
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+
+	air_intercept_efficiency = 0.15
+	enemy_army_bonus_air_superiority_factor = -0.05
+
+	rewards = {
+		light_jet_fighters = {
+			fighter = {
+				air_range = -0.15
+				air_agility = 0.1
+				build_cost_ic = -0.1
+			}
+			interceptor = {
+				air_range = -0.15
+				air_agility = 0.1
+				build_cost_ic = -0.1
+			}
+		}
+		keep_the_factories_open = {
+			air_intercept_efficiency = 0.05
+			air_attack_factor = 0.05
+		}
+		frontline_support_operations = {
+			air_superiority_efficiency = 0.1
+			air_accidents_factor = -0.05
+			air_night_penalty = -0.05
+			fighter = {
+				reliability = 0.05
+			}
+			interceptor = {
+				reliability = 0.05
+			}
+		}
+		aerial_swashbuckling = {
+			air_ace_generation_chance_factor = 0.1
+			fighter = {
+				air_attack = 0.1
+				air_defence = 0.1
+				air_agility = 0.1
+			}
+			interceptor = {
+				air_attack = 0.1
+				air_defence = 0.1
+				air_agility = 0.1
+			}
+		}
+		fly_like_a_butterfly_sting_like_a_bee = {
+			enemy_army_bonus_air_superiority_factor = -0.1
+			air_intercept_efficiency = 0.1
+			air_superiority_efficiency = 0.1
+		}
+	}
+}

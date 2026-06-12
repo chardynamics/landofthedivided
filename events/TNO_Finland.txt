@@ -1,0 +1,1289 @@
+################
+#Finland Events#
+################
+
+add_namespace = FIN
+
+add_namespace = FIN_SKELETON
+
+add_namespace = murmansk
+
+add_namespace = red_finland
+
+add_namespace = white_finland
+
+country_event = { # The 1963 election.
+	id = FIN_SKELETON.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN_SKELETON.1" }
+	title = FIN_SKELETON.1.t
+	desc = FIN_SKELETON.1.desc
+	picture = GFX_report_event_IBR_guy_paper_meeting
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FIN_SKELETON.1.a
+		random_list = {
+			30 = {
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = FIN_CIVIL_WAR_TYPE option = FIN_CIVIL_WAR_TYPE_RED }
+
+				}
+				country_event = {
+					id = FIN_SKELETON.7
+					days = 270
+				}
+			}
+			70 = {
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = FIN_CIVIL_WAR_TYPE option = FIN_CIVIL_WAR_TYPE_RED } }
+				}
+
+			}
+		}
+	}
+}
+
+country_event = { # The resignation of Rihtniemi.
+	id = FIN_SKELETON.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN_SKELETON.2" }
+	title = FIN_SKELETON.2.t
+	desc = FIN_SKELETON.2.desc
+	picture = GFX_report_event_IBR_guy_paper_meeting
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FIN_SKELETON.2.a
+		retire_character = FIN_Juha_Rihtniemi
+		set_politics = {
+			ruling_party = fascism
+		}
+		promote_character = FIN_Lauri_Torni
+	}
+}
+
+country_event = { # The 1967 Presidential election.
+	id = FIN_SKELETON.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN_SKELETON.4" }
+	title = FIN_SKELETON.4.t
+	desc = FIN_SKELETON.4.desc
+	picture = GFX_report_event_IBR_guy_paper_meeting
+
+	is_triggered_only = yes
+
+	option = { #Rihtniemi Re-Election
+		name = FIN_SKELETON.4.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FIN_1967_PRESIDENT_PATH option = FIN_1967_PRESIDENT_PATH_VIROLAINEN }
+					has_game_rule = { rule = FIN_1967_PRESIDENT_PATH option = FIN_1967_PRESIDENT_PATH_FAGERHOLM }
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				has_country_leader = {
+					character = FIN_Lauri_Torni
+					ruling_only = yes
+				}
+			}
+			has_country_leader = {
+				character = FIN_Juha_Rihtniemi
+				ruling_only = yes
+			}
+		}
+		set_popularities = {
+			communist = 5
+			socialist = 5
+			progressivism = 24
+			liberalism = 9
+			liberal_conservatism = 22
+			conservatism = 24
+			paternalism = 4
+			fascism = 7
+		}
+		if = {
+			limit = { has_global_flag = german_civil_war_speervic }
+			FIN = { econ_join_sphere_GER = yes }
+			FIN = { join_zollverein = yes }
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = {
+				id = FIN_WORLD.22
+				days = 1
+			}
+		}
+	}
+	option = { #Virkunnen Election
+		name = FIN_SKELETON.4.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FIN_1967_PRESIDENT_PATH option = FIN_1967_PRESIDENT_PATH_VIROLAINEN }
+					has_game_rule = { rule = FIN_1967_PRESIDENT_PATH option = FIN_1967_PRESIDENT_PATH_FAGERHOLM }
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				has_country_leader = {
+					character = FIN_Juha_Rihtniemi
+					ruling_only = yes
+				}
+			}
+			NOT = {
+				has_country_leader = {
+					character = FIN_Lauri_Torni
+					ruling_only = yes
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = yes
+			election_frequency = 36
+		}
+		set_party_name = {
+			ideology = paternalism
+			name = FIN_conservatism_party
+			long_name = FIN_conservatism_party_long
+		}
+		set_party_name = {
+			ideology = paternalism_2
+			name = FIN_paternalism_party
+			long_name = FIN_paternalism_party_long
+		}
+		set_popularities = {
+			communist = 5
+			socialist = 5
+			progressivism = 24
+			liberalism = 9
+			liberal_conservatism = 22
+			paternalism = 24
+			paternalism_2 = 4
+			fascism = 7
+		}
+		if = {
+			limit = { has_global_flag = german_civil_war_speervic }
+			FIN = { econ_join_sphere_GER = yes }
+			FIN = { join_zollverein = yes }
+		}
+		set_temp_variable = { TNO_economy_type_temp = token:Econ_Type_Capitalism }
+		econ_type_change = yes
+		promote_character = FIN_Matti_Virkkunen
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = {
+				id = FIN_WORLD.23
+				days = 1
+			}
+		}
+	}
+	option = { #Virolainen Election
+		name = FIN_SKELETON.4.c
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FIN_1967_PRESIDENT_PATH option = FIN_1967_PRESIDENT_PATH_RIHTNIEMI }
+					has_game_rule = { rule = FIN_1967_PRESIDENT_PATH option = FIN_1967_PRESIDENT_PATH_VIRKKUNEN }
+					has_game_rule = { rule = FIN_1967_PRESIDENT_PATH option = FIN_1967_PRESIDENT_PATH_FAGERHOLM }
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				has_country_leader = {
+					character = FIN_Lauri_Torni
+					ruling_only = yes
+				}
+			}
+		}
+		promote_character = FIN_Johannes_Virolainen
+		set_politics = {
+			ruling_party = liberal_conservatism
+			elections_allowed = yes
+			election_frequency = 36
+		}
+		set_popularities = {
+			communist = 5
+			socialist = 5
+			progressivism = 22
+			liberalism = 9
+			liberal_conservatism = 28
+			paternalism = 20
+			paternalism_2 = 4
+			fascism = 7
+		}
+		if = {
+			limit = { has_global_flag = german_civil_war_speervic }
+			FIN = { econ_join_sphere_GER = yes }
+			FIN = { join_zollverein = yes }
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = {
+				id = FIN_WORLD.24
+				days = 1
+			}
+		}
+	}
+	option = { #Fagerholm Election
+		name = FIN_SKELETON.4.e
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FIN_1967_PRESIDENT_PATH option = FIN_1967_PRESIDENT_PATH_RIHTNIEMI }
+					has_game_rule = { rule = FIN_1967_PRESIDENT_PATH option = FIN_1967_PRESIDENT_PATH_VIRKKUNEN }
+					has_game_rule = { rule = FIN_1967_PRESIDENT_PATH option = FIN_1967_PRESIDENT_PATH_VIROLAINEN }
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				has_country_leader = {
+					character = FIN_Lauri_Torni
+					ruling_only = yes
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = yes
+			election_frequency = 36
+		}
+		set_popularities = {
+			communist = 5
+			socialist = 5
+			progressivism = 30
+			liberalism = 9
+			liberal_conservatism = 20
+			conservatism = 20
+			paternalism = 4
+			fascism = 7
+		}
+		promote_character = FIN_Karl_August_Fagerholm
+		if = {
+			limit = {
+				OR = {
+					has_idea = Pakt_Observer
+					has_idea = Pakt_Bundnispartner
+				}
+			}
+			remove_faction_status = yes
+			leave_faction = yes
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Socialized_Economy }
+		econ_subtype_change = yes
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = {
+				id = FIN_WORLD.25
+				days = 1
+			}
+		}
+	}
+	option = { #Simojoki Election
+		name = FIN_SKELETON.4.f
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_leader = {
+				character = FIN_Lauri_Torni
+				ruling_only = yes
+			}
+			NOT = {
+				has_war_with = RFI
+			}
+		}
+		set_politics = {
+			ruling_party = fascism
+		}
+		if = {
+			limit = { has_global_flag = german_civil_war_speervic }
+			FIN = { econ_join_sphere_GER = yes }
+			FIN = { join_zollverein = yes }
+		}
+		promote_character = FIN_Elias_Simojoki
+		set_popularities = {
+			progressivism = 15
+			liberalism = 5
+			liberal_conservatism = 22
+			conservatism = 22
+			paternalism = 6
+			fascism = 30
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = {
+				id = FIN_WORLD.26
+				days = 1
+			}
+		}
+	}
+	option = { #Wait for the end of CW
+		name = FIN_SKELETON.4.g
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_war_with = RFI
+		}
+		country_event = {
+			id = FIN_SKELETON.4
+			days = 30
+		}
+	}
+}
+
+country_event = { # Legalisation of Communism
+	id = FIN_SKELETON.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN_SKELETON.7" }
+	title = FIN_SKELETON.7.t
+	desc = FIN_SKELETON.7.desc
+	picture = GFX_report_event_IBR_guy_paper_meeting
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FIN_SKELETON.7.a
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = {
+				id = FIN_WORLD.27
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # Karelia Reform
+	id = FIN_SKELETON.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN_SKELETON.8" }
+	title = FIN_SKELETON.8.t
+	desc = FIN_SKELETON.8.desc
+	picture = GFX_report_event_IBR_guy_paper_meeting
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FIN_SKELETON.8.a
+		remove_ideas = FIN_An_Unsatisfactory_Answer
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = {
+				id = FIN_WORLD.44
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Onega Betrayed!
+	id = FIN.125
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN.125" }
+	title = FIN.125.t
+	desc = FIN.125.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = FIN.125.a
+		WSR = {
+			add_state_core = 859
+			add_state_core = 858
+			transfer_state = 859
+			transfer_state = 858
+			858 = { set_demilitarized_zone = yes }
+			859 = { set_demilitarized_zone = yes }
+			WSR = { RUS_reset_war_weariness = yes }
+		}
+	}
+	option = {
+		name = FIN.125.b
+		ai_chance = {
+			base = 1000
+			modifier = {
+				factor = 0
+				AND = {
+					WSR = { surrender_progress > 0.3 }
+					num_divisions > 8
+				}
+			}
+		}
+		remove_ideas = ONG_finland_dependence_high
+	}
+}
+
+####MURMANSK UPRISING
+
+country_event = {
+	id = murmansk.1
+	title = murmansk.1.t
+	desc = murmansk.1.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk.1" }
+
+	option = {
+		name = murmansk.1.a
+		set_global_flag = MURMANSK_CRISIS
+		if = {
+			limit = {
+				NOT = {
+					WSR = {
+						original_tag = PRM
+					}
+				}
+			}
+			1359 = {
+				set_demilitarized_zone = yes
+			}
+			WSR = {
+				country_event = murmansk.11
+			}
+			hidden_effect = {
+				country_event = {
+					id = murmansk.2
+					days = 35
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = murmansk.11
+	title = murmansk.11.t
+	desc = murmansk.11.desc
+	picture = GFX_report_event_generic_revolt
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk.11" }
+
+	option = {
+		name = murmansk.11.a
+		add_political_power = 100
+	}
+}
+
+country_event = {
+	id = murmansk.2
+	title = murmansk.2.t
+	desc = murmansk.2.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk.2" }
+
+	option = {
+		name = murmansk.2.a
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEurasiaInterest = yes
+			}
+			news_event = {
+				id = FIN_WORLD.6
+				days = 1
+			}
+		}
+		1359 = {
+			add_province_modifier = {
+				static_modifiers = { MPR_crisis_murmansk_modifier }
+				province = { all_provinces = yes }
+			}
+			set_state_flag = MPR_crisis_murmansk_modifier_flag
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 213
+					state = 148
+					state = 150
+				}
+			}
+			add_province_modifier = {
+				static_modifiers = { MPR_crisis_state_modifier }
+				province = { all_provinces = yes }
+			}
+			set_state_flag = MPR_crisis_state_modifier_flag
+		}
+		WSR = {
+			country_event = murmansk.21
+		}
+		SWE = {
+			diplomatic_relation = {
+				country = FIN
+				relation = guarantee
+				active = no
+			}
+		}
+		MPR = {
+			set_country_flag = is_russian_nation #Just in case
+			transfer_state = 1359
+			add_state_core = 1359
+			remove_resource_rights = 1359
+			inherit_technology = WSR
+			load_oob = MPR_murmansk
+			country_event = murmansk.3
+			load_oob = "MPR_naval"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5115
+				producer = WRS
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment_1
+				amount = 250
+				producer = WRS
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 100
+				producer = WRS
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 300
+				producer = WRS
+			}
+			declare_war_on = { target = FIN type = annex_everything }
+			add_manpower = 50000
+			give_military_access = WSR
+		}
+		FIN = {
+			if = {
+				limit = { has_game_rule = { rule = FIN_CIVIL_WAR_TYPE option = FIN_CIVIL_WAR_TYPE_RED } }
+				country_event = {
+					id = red_finland.1
+					days = 50
+					random_hours = 250
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = murmansk.21
+	title = murmansk.21.t
+	desc = murmansk.21.desc
+	picture = GFX_report_event_RUS_soviet_soldiers_6
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event murmansk.21"
+		if = {
+			limit = { is_ai = no }
+			SWE = {
+				set_temp_variable = { target = FIN }
+				TNO_increase_volunteer_cap_3 = yes
+			}
+		}
+	}
+
+	option = {
+		name = murmansk.21.a
+		ai_chance = { factor = 2 }
+		set_variable = { MPRInterventionProgressGain = 5 }
+		add_political_power = 100
+		set_temp_variable = { target = MPR }
+		set_temp_variable = { number = 3 }
+		TNO_set_num_volunteers = yes
+		custom_effect_tooltip = RUS_MPR_volunteers_tt
+	}
+	option = {
+		name = murmansk.21.b
+		ai_chance = { base = 0 }
+		set_variable = { MPRInterventionProgressGain = 5 }
+		add_political_power = 100
+		set_country_flag = RUS_Hard_Mode
+		custom_effect_tooltip = RUS_MPR_HARD
+	}
+}
+
+country_event = {
+	id = murmansk.3
+	title = murmansk.3.t
+	desc = murmansk.3.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk.3" }
+
+	option = {
+		name = murmansk.3.a
+		#There is literally no other decent way to do this.
+		#I'm so sorry for this code.
+		load_oob = MPR_air
+	}
+}
+
+country_event = {
+	id = murmansk.4
+	title = murmansk.4.t
+	desc = murmansk.4.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk.4" }
+
+	option = {
+		name = murmansk.4.a
+		add_war_support = 0.10
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+		hidden_effect = {
+			country_event = {
+				id = murmansk.5
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = murmansk.5
+	title = murmansk.5.t
+	desc = murmansk.5.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk.5" }
+
+	option = {
+		name = murmansk.5.a
+		load_oob = FIN_auxiliaries
+		hidden_effect = {
+			country_event = {
+				id = murmansk.6
+				days = 15
+			}
+		}
+	}
+}
+
+country_event = {
+	id = murmansk.6
+	title = murmansk.6.t
+	desc = murmansk.6.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk.6" }
+
+	option = {
+		name = murmansk.6.a
+		load_oob = FIN_reserves
+	}
+}
+
+country_event = {
+	id = murmansk.7
+	title = murmansk.7.t
+	desc = murmansk.7.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk.7" }
+
+	option = {
+		name = murmansk.7.a
+		set_global_flag = KARELIAN_WAR_FORCE_PEACE
+	}
+}
+
+add_namespace = murmansk_peace
+
+country_event = { #Offer unconditional surrender
+	id = murmansk_peace.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk_peace.1" }
+	title = murmansk_peace.1.t
+	desc = murmansk_peace.1.desc
+	picture = GFX_report_event_generic_peace_deal
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = murmansk_peace.1.a
+		FIN = {
+			country_event = {
+				id = murmansk_peace.2
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #Unconditional Surrender
+	id = murmansk_peace.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk_peace.2" }
+	title = murmansk_peace.2.t
+	desc = murmansk_peace.2.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = murmansk_peace.2.a
+		MPR = { #To Rig the effect
+			transfer_state = 215
+			transfer_state = 858
+			transfer_state = 859
+			transfer_state = 1887
+			transfer_state = 1359 #Failsafe
+			set_variable = { poverty_rate = 68 }
+		}
+		set_temp_variable = { TNO_KD_Annexed_Tag = MPR.id }
+		set_temp_variable = { TNO_KD_Annexing_Tag = FROM.id }
+		TNO_KD_Consequences_of_Annexation = yes
+		FROM = {
+			white_peace = FIN
+			add_state_core = 215
+			add_state_core = 858
+			add_state_core = 859
+			add_state_core = 1887
+			transfer_state = 215
+			transfer_state = 858
+			transfer_state = 859
+			transfer_state = 1887
+			save_global_event_target_as = winning_country
+			set_temp_variable = { target = MPR }
+			TNO_clear_num_volunteers = yes
+			if = {
+				limit = {
+					country_exists = MPR
+				}
+				annex_country = {
+					target = MPR
+					transfer_troops = yes
+				}
+				MPR = {
+					every_unit_leader = {
+						set_nationality = WSR
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = MPR
+					}
+					add_core_of = WSR
+					remove_core_of = MPR
+				}
+			}
+			else = {
+				add_state_core = 1359
+				transfer_state = 1359
+			}
+		}
+		hidden_effect = {
+			retire_character = FIN_Juha_Rihtniemi
+			promote_character = FIN_Kauno_Kleemola
+			clr_country_flag = FIN_waiting_response
+			set_politics = {
+				ruling_party = liberal_conservatism
+				elections_allowed = yes
+				election_frequency = 36
+			}
+			SWE = {
+				set_temp_variable = { target = FIN }
+				TNO_clear_num_volunteers = yes
+			}
+			set_country_flag = FIN_lost_land
+			every_country = {
+				limit = {
+					is_ai = no
+					HasEurasiaInterest = yes
+				}
+				news_event = {
+					id = FIN_WORLD.14
+					days = 1
+				}
+			}
+			FIN = { save_global_event_target_as = losing_country }
+		}
+		remove_ideas = FIN_An_Unsatisfactory_Answer
+		set_global_flag = war_won
+		set_global_flag = show_peace_popup_alert
+		add_to_variable = { global.peace_popup_dirty = 1 }
+		WSR = { RUS_reset_war_weariness = yes }
+		clr_global_flag = MURMANSK_CRISIS
+	}
+}
+
+country_event = { #Offer ceasefire
+	id = murmansk_peace.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk_peace.3" }
+	title = murmansk_peace.3.t
+	desc = murmansk_peace.3.desc
+	picture = GFX_report_event_RUS_soviet_soldiers
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = murmansk_peace.3.a
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = KARELIAN_WAR_OUTCOME option = KARELIAN_WAR_OUTCOME_TOTAL_RUSSIA_VICTORY }
+					has_game_rule = { rule = KARELIAN_WAR_OUTCOME option = KARELIAN_WAR_OUTCOME_RUSSIA_VICTORY }
+				}
+			}
+		}
+		FIN = {
+			country_event = {
+				id = murmansk_peace.4
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = murmansk_peace.3.b
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_game_rule = { rule = KARELIAN_WAR_OUTCOME option = KARELIAN_WAR_OUTCOME_TOTAL_RUSSIA_VICTORY }
+						has_game_rule = { rule = KARELIAN_WAR_OUTCOME option = KARELIAN_WAR_OUTCOME_RUSSIA_VICTORY }
+					}
+				}
+			}
+		}
+		FIN = {
+			country_event = {
+				id = murmansk_peace.5
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #Offer ceasefire - yes
+	id = murmansk_peace.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk_peace.4" }
+	title = murmansk_peace.4.t
+	desc = murmansk_peace.4.desc
+	picture = GFX_report_event_generic_peace_deal
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = murmansk_peace.4.a
+		diplomatic_relation = {
+			country = ONG
+			relation = guarantee
+			active = no
+		}
+		ONG = { #To Rig the effect
+			transfer_state = 858
+			transfer_state = 859
+			set_variable = { poverty_rate = 72 }
+		}
+		set_temp_variable = { TNO_KD_Annexed_Tag = ONG.id }
+		set_temp_variable = { TNO_KD_Annexing_Tag = FROM.id }
+		TNO_KD_Consequences_of_Annexation = yes
+		FROM = {
+			white_peace = FIN
+			add_state_core = 858
+			add_state_core = 859
+			transfer_state = 858
+			transfer_state = 859
+			save_global_event_target_as = winning_country
+			set_temp_variable = { target = MPR }
+			TNO_clear_num_volunteers = yes
+		}
+		hidden_effect = {
+			SWE = {
+				set_temp_variable = { target = FIN }
+				TNO_clear_num_volunteers = yes
+			}
+			set_country_flag = FIN_lost_land
+			if = {
+				limit = {
+					has_country_leader = {
+						character = FIN_Lauri_Torni
+						ruling_only = yes
+					}
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+						HasEurasiaInterest = yes
+					}
+					news_event = {
+						id = FIN_WORLD.12 #FIN_WORLD.132
+						days = 1
+					}
+				}
+			}
+			else = {
+				#retire_character = FIN_Juha_Rihtniemi
+				#set_politics = {
+				#	ruling_party = liberal_conservatism
+				#	elections_allowed = yes
+				#	election_frequency = 36
+				#}
+				#promote_character = FIN_Kauno_Kleemola
+				every_country = {
+					limit = {
+						is_ai = no
+						HasEurasiaInterest = yes
+					}
+					news_event = {
+						id = FIN_WORLD.12 #FIN_WORLD.13
+						days = 1
+					}
+				}
+			}
+			FIN = { save_global_event_target_as = losing_country }
+		}
+		set_global_flag = war_won
+		set_global_flag = show_peace_popup_alert
+		add_to_variable = { global.peace_popup_dirty = 1 }
+		clr_global_flag = MURMANSK_CRISIS
+	}
+}
+
+country_event = { #Offer ceasefire - no
+	id = murmansk_peace.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk_peace.5" }
+	title = murmansk_peace.5.t
+	desc = murmansk_peace.5.desc
+	picture = GFX_report_event_generic_machinegunner
+
+	is_triggered_only = yes
+
+	option = {
+		name = murmansk_peace.5.a
+		add_stability = -0.05
+		set_global_flag = FINLAND_CEASEFIRE_REFUSED
+		clr_country_flag = FIN_waiting_response
+		if = {
+			limit = {
+				has_global_flag = FINLAND_CEASEFIRE_REFUSED
+			}
+			set_global_flag = FINLAND_CEASEFIRE_REFUSED_2
+		}
+	}
+}
+
+country_event = { #Demand ceasefire
+	id = murmansk_peace.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk_peace.6" }
+	title = murmansk_peace.6.t
+	desc = murmansk_peace.6.desc
+	picture = GFX_report_event_RUS_soviet_soldiers
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = murmansk_peace.6.a
+		FIN = {
+			country_event = {
+				id = murmansk_peace.7
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #Demand ceasefire - yes
+	id = murmansk_peace.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event murmansk_peace.7" }
+	title = murmansk_peace.7.t
+	desc = murmansk_peace.7.desc
+	picture = GFX_report_event_generic_peace_deal
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = murmansk_peace.7.a
+		diplomatic_relation = {
+			country = ONG
+			relation = guarantee
+			active = no
+		}
+		FROM = {
+			white_peace = FIN
+			save_global_event_target_as = losing_country
+			set_temp_variable = { target = MPR }
+			TNO_clear_num_volunteers = yes
+		}
+		if = {
+			limit = { ONG = { has_capitulated = yes } }
+			ONG = { #To Rig the effect
+				transfer_state = 858
+				transfer_state = 859
+				set_variable = { poverty_rate = 72 }
+			}
+			set_temp_variable = { TNO_KD_Annexed_Tag = ONG.id }
+			set_temp_variable = { TNO_KD_Annexing_Tag = FROM.id }
+			TNO_KD_Consequences_of_Annexation = yes
+			FROM = {
+				add_state_core = 859
+				add_state_core = 858
+				transfer_state = 859
+				transfer_state = 858
+				WSR = { RUS_reset_war_weariness = yes }
+			}
+		}
+		else = {
+			ONG = { country_event = FIN.125 }
+		}
+		hidden_effect = {
+			#SWE_insurrection_FinlandWins = yes
+			every_country = {
+				limit = {
+					is_ai = no
+					HasEurasiaInterest = yes
+				}
+				news_event = {
+					id = FIN_WORLD.12
+					days = 1
+				}
+			}
+			SWE = {
+				set_temp_variable = { target = FIN }
+				TNO_clear_num_volunteers = yes
+			}
+			FIN = {
+				clr_country_flag = FIN_waiting_response
+				country_event = {
+					id = FIN_SKELETON.8
+					days = 824
+				}
+				give_resource_rights = { receiver = GER state = 1359 resources = { chromium } }
+			}
+			FIN = { save_global_event_target_as = winning_country }
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = KARELIAN_WAR_OUTCOME
+						option = KARELIAN_WAR_OUTCOME_FINLAND_VICTORY
+					}
+				}
+				every_country = {
+					limit = {
+						has_idea = Custom_TNO_KAR_front_line_stopper
+					}
+					remove_ideas = Custom_TNO_KAR_front_line_stopper
+				}
+			}
+		}
+		set_global_flag = war_won
+		set_global_flag = show_peace_popup_alert
+		add_to_variable = { global.peace_popup_dirty = 1 }
+		clr_global_flag = MURMANSK_CRISIS
+	}
+}
+
+### RED FINLAND
+
+country_event = {
+	id = red_finland.1
+	title = red_finland.1.t
+	desc = red_finland.1.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event red_finland.1" }
+
+	option = {
+		name = red_finland.1.a
+		111 = {
+			add_province_modifier = {
+				static_modifiers = { FIN_FCW_helsinki_modifier }
+				province = { all_provinces = yes }
+			}
+			set_state_flag = FIN_FCW_helsinki_modifier_flag
+		}
+		every_owned_state = { add_core_of = RFI }
+		RFI = {
+			transfer_state = 1716
+			declare_war_on = {
+				target = FIN
+				type = civil_war
+			}
+			load_oob = RFI_uprising
+			TNO_startup_nation = yes
+		}
+		FIN = {
+			load_oob = FIN_helsinki
+			country_event = {
+				id = white_finland.1
+				days = 14
+			}
+		}
+		RFI = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = KARELIAN_WAR_OUTCOME
+						option = KARELIAN_WAR_OUTCOME_FINLAND_VICTORY
+					}
+					NOT = {
+						has_idea = Custom_TNO_KAR_front_line_stopper
+					}
+				}
+				add_ideas = Custom_TNO_KAR_front_line_stopper
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = {
+				id = FIN_WORLD.8
+				days = 1
+			}
+		}
+	}
+}
+
+### WHITE FINLAND
+
+country_event = {
+	id = white_finland.1
+	title = white_finland.1.t
+	desc = white_finland.1.desc
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event white_finland.1" }
+
+	option = {
+		name = white_finland.1.a
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = {
+				id = FIN_WORLD.9
+				days = 1
+			}
+		}
+		FIN = {
+			promote_character = FIN_Lauri_Torni
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+	}
+}
+
+country_event = {
+	id = white_finland.2
+	title = white_finland.2.t
+	desc = white_finland.2.desc
+	picture = GFX_report_event_lithuania_army
+
+	trigger = {
+		NOT = {
+			has_global_flag = german_civil_war_heydrichvic
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event white_finland.2" }
+
+	option = {
+		name = white_finland.2.a
+		GER = { add_to_faction = FIN }
+		econ_join_sphere_GER = yes
+		remove_ideas = Pakt_Observer
+		add_ideas = Pakt_Bundnispartner
+		if = {
+			limit = { has_global_flag = german_civil_war_speervic }
+			FIN = { econ_join_sphere_GER = yes }
+		}
+	}
+}

@@ -1,0 +1,679 @@
+guiTypes = {
+	#######Advisory Council 
+	containerWindowType = {
+		name = "TNO_IBR_Advisory_Council_GUI_window"
+		size = { width = 525 height = 325 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_Iberian_Wars_Info_Icon"
+			position = { x = 465 y = -15 } 
+			pdx_tooltip = TNO_IBR_advisory_council_mechanic_Info_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_bg"
+			spriteType = "GFX_Iberian_Council_advisory_bg"
+			position = { x = 50 y = 0 }
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_bar"
+			spriteType = "GFX_Iberian_Council_advisory_bar"
+			position = { x = 52 y = 43 }
+			pdx_tooltip = Iberian_Council_advisory_bar_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_1_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned"
+			position = { x = 63 y = 2 }
+			pdx_tooltip = Iberian_Council_advisory_seat_1_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_1_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political"
+			position = { x = 64 y = 20 }
+			pdx_tooltip = Iberian_Council_advisory_seat_1_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_2_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned"
+			position = { x = 113 y = 2 }
+			pdx_tooltip = Iberian_Council_advisory_seat_2_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_2_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political"
+			position = { x = 114 y = 20 }
+			pdx_tooltip = Iberian_Council_advisory_seat_2_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_3_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned"
+			position = { x = 163 y = 2 }
+			pdx_tooltip = Iberian_Council_advisory_seat_3_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_3_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political"
+			position = { x = 164 y = 20 }
+			pdx_tooltip = Iberian_Council_advisory_seat_3_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_4_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned"
+			position = { x = 213 y = 2 }
+			pdx_tooltip = Iberian_Council_advisory_seat_4_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_4_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political"
+			position = { x = 214 y = 20 }
+			pdx_tooltip = Iberian_Council_advisory_seat_4_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_5_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned"
+			position = { x = 263 y = 2 }
+			pdx_tooltip = Iberian_Council_advisory_seat_5_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_5_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political"
+			position = { x = 264 y = 20 }
+			pdx_tooltip = Iberian_Council_advisory_seat_5_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_6_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned"
+			position = { x = 313 y = 2 }
+			pdx_tooltip = Iberian_Council_advisory_seat_6_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_6_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political"
+			position = { x = 314 y = 20 }
+			pdx_tooltip = Iberian_Council_advisory_seat_6_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_7_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned"
+			position = { x = 363 y = 2 }
+			pdx_tooltip = Iberian_Council_advisory_seat_7_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_7_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political"
+			position = { x = 364 y = 20 }
+			pdx_tooltip = Iberian_Council_advisory_seat_7_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_8_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned"
+			position = { x = 413 y = 2 }
+			pdx_tooltip = Iberian_Council_advisory_seat_8_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_8_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political"
+			position = { x = 414 y = 20 }
+			pdx_tooltip = Iberian_Council_advisory_seat_8_tt
+		}
+		#########################Bottom row
+		iconType = {
+			name = "Iberian_Council_advisory_seat_9_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned_flipped"
+			position = { x = 63 y = 174 }
+			pdx_tooltip = Iberian_Council_advisory_seat_9_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_9_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political_flipped"
+			position = { x = 64 y = 167 }
+			pdx_tooltip = Iberian_Council_advisory_seat_9_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_10_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned_flipped"
+			position = { x = 113 y = 174 }
+			pdx_tooltip = Iberian_Council_advisory_seat_10_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_10_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political_flipped"
+			position = { x = 114 y = 167 }
+			pdx_tooltip = Iberian_Council_advisory_seat_10_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_11_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned_flipped"
+			position = { x = 163 y = 174 }
+			pdx_tooltip = Iberian_Council_advisory_seat_11_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_11_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political_flipped"
+			position = { x = 164 y = 167 }
+			pdx_tooltip = Iberian_Council_advisory_seat_11_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_12_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned_flipped"
+			position = { x = 213 y = 174 }
+			pdx_tooltip = Iberian_Council_advisory_seat_12_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_12_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political_flipped"
+			position = { x = 214 y = 167 }
+			pdx_tooltip = Iberian_Council_advisory_seat_12_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_13_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned_flipped"
+			position = { x = 263 y = 174 }
+			pdx_tooltip = Iberian_Council_advisory_seat_13_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_13_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political_flipped"
+			position = { x = 264 y = 167 }
+			pdx_tooltip = Iberian_Council_advisory_seat_13_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_14_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned_flipped"
+			position = { x = 313 y = 174 }
+			pdx_tooltip = Iberian_Council_advisory_seat_14_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_14_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political_flipped"
+			position = { x = 314 y = 167 }
+			pdx_tooltip = Iberian_Council_advisory_seat_14_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_15_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned_flipped"
+			position = { x = 363 y = 174 }
+			pdx_tooltip = Iberian_Council_advisory_seat_15_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_15_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political_flipped"
+			position = { x = 364 y = 167 }
+			pdx_tooltip = Iberian_Council_advisory_seat_15_tt
+		}
+		iconType = {
+			name = "Iberian_Council_advisory_seat_16_caudillo"
+			spriteType = "GFX_Iberian_Council_advisory_franco_aligned_flipped"
+			position = { x = 413 y = 174 }
+			pdx_tooltip = Iberian_Council_advisory_seat_16_tt
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_seat_16_political"
+			spriteType = "GFX_Iberian_Council_advisory_hardliner_political_flipped"
+			position = { x = 414 y = 167 }
+			pdx_tooltip = Iberian_Council_advisory_seat_16_tt
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_advisory_alignments"
+			position = { x = 25 y = 210 }
+			maxWidth = 482
+			format = left
+			font = "aldrich_18_outline"
+			text = Iberian_Council_advisory_alignments_text
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_advisory_is_law_active"
+			position = { x = 25 y = 245 }
+			maxWidth = 482
+			format = center
+			font = "aldrich_18_outline"
+			text = Iberian_Council_is_law_active_text
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "Iberian_Council_advisory_law_box"
+			spriteType = "GFX_IBR_advisory_council_law_box"
+			position = { x = 50 y = 270 }
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_advisory_law_name"
+			position = { x = 58 y = 277 }
+			maxWidth = 237
+			maxHeight = 42
+			format = center
+			font = "aldrich_22_outline"
+			text = Iberian_Council_active_law_name_text
+			#pdx_tooltip = Iberian_Council_active_law_desc_text
+			vertical_alignment = center
+			
+		}
+		instantTextBoxType = {
+			name = "Iberian_Council_advisory_first_amendment"
+			position = { x = 295 y = 277 }
+			maxWidth = 156
+			maxHeight = 20
+			format = center
+			font = "aldrich_18_outline"
+			text = Iberian_Council_advisory_first_amendment_state_text
+			pdx_tooltip = Iberian_Council_advisory_first_amendment_desc_text
+		}
+		instantTextBoxType = {
+			name = "Iberian_Council_advisory_second_amendment"
+			position = { x = 295 y = 298 }
+			maxWidth = 156
+			maxHeight = 20
+			format = center
+			font = "aldrich_18_outline"
+			text = Iberian_Council_advisory_second_amendment_state_text
+			pdx_tooltip = Iberian_Council_advisory_second_amendment_desc_text
+		}
+		instantTextBoxType = {
+			name = "Iberian_Council_advisory_investments_title"
+			position = { x = 295 y = 277 }
+			maxWidth = 156
+			maxHeight = 20
+			format = center
+			font = "aldrich_20_outline"
+			text = Iberian_Council_advisory_investments_title_text
+		}
+		instantTextBoxType = {
+			name = "Iberian_Council_advisory_investments_count"
+			position = { x = 295 y = 298 }
+			maxWidth = 156
+			maxHeight = 20
+			format = center
+			font = "aldrich_20_outline"
+			text = Iberian_Council_advisory_investments_count_text
+		}
+	}
+	#######Legislative Council 
+	containerWindowType = {
+		name = "TNO_IBR_Legislative_Council_GUI_window"
+		size = { width = 525 height = 425 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_Iberian_Wars_Info_Icon"
+			position = { x = 465 y = 0 } 
+			pdx_tooltip = TNO_IBR_legislative_council_mechanic_Info_tt
+		}
+
+		gridboxtype = {
+			name = "parliament_diagram"
+			position = { x = 7 y = 0 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 100%% height = 0 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+
+		iconType = {
+			name = "Iberian_Council_legislative_reformism_bar_frame"
+			spriteType = "GFX_IBR_council_reformism_frame"
+			position = { x = 149 y = 145 }
+		}
+
+		iconType = {
+			name = "Iberian_Council_legislative_reformism_bar"
+			spriteType = "GFX_Iberian_Council_reformism_bar"
+			position = { x = 151 y = 227 }
+			pdx_tooltip = Iberian_Council_reformism_bar_tt
+		}
+		iconType = {
+			name = "Iberian_Council_legislative_reformism_image"
+			spriteType = "GFX_IBR_council_reformism_image"
+			position = { x = 152 y = 147 }
+			pdx_tooltip = Iberian_Council_reformism_bar_tt
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_legislative_reformism_value"
+			position = { x = 187 y = 175 }
+			maxWidth = 120
+			format = center
+			font = "aldrich_32_outline"
+			text = Iberian_Council_reformism_number_tt
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "camera_left_info"
+			position = { x = 17 y = 250 }
+
+			gridboxtype = {
+				name = "council_reformist_factions"
+				position = { x = 0 y = 0 }
+				size = { width = 146 height = 150 }
+				slotsize = { width = 100%% height = 26 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+		containerWindowType = {
+			name = "camera_center_info"
+			position = { x = 178 y = 250 }
+
+			gridboxtype = {
+				name = "council_conservative_factions"
+				position = { x = 0 y = 0 }
+				size = { width = 146 height = 150 }
+				slotsize = { width = 100%% height = 26 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+		containerWindowType = {
+			name = "camera_right_info"
+			position = { x = 339 y = 250 }
+
+			gridboxtype = {
+				name = "council_radical_factions"
+				position = { x = 0 y = 0 }
+				size = { width = 146 height = 150 }
+				slotsize = { width = 100%% height = 26 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_legislative_is_law_active"
+			position = { x = 11 y = 380 }
+			maxWidth = 482
+			format = center
+			font = "aldrich_18_outline"
+			text = Iberian_Council_is_law_active_text
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "Iberian_Council_legislative_law_box"
+			spriteType = "GFX_IBR_legislative_council_law_box"
+			position = { x = 50 y = 370 }
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_legislative_law_name"
+			position = { x = 58 y = 377 }
+			maxWidth = 237
+			maxHeight = 42
+			format = center
+			font = "aldrich_22_outline"
+			text = Iberian_Council_active_law_name_text			
+			vertical_alignment = center
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_legislative_bill_reformism_title"
+			position = { x = 297 y = 380 }
+			maxWidth = 156
+			maxHeight = 20
+			format = center
+			font = "aldrich_18_outline"
+			text = "Iberian_Council_legislative_bill_reformism_title_text"
+			text_color_code = W
+		}
+
+		iconType = {
+			name = "Iberian_Council_legislative_reformism_bill_bar"
+			spriteType = "GFX_Iberian_Council_reformism_bill_bar"
+			position = { x = 301 y = 402 }
+			pdx_tooltip = Iberian_Council_legislative_reformism_bill_bar_text
+		}
+	}
+	containerWindowType = {
+		name = "IberianCouncilSeat"
+		position = { x = 0 y = 0 }
+
+		iconType = { 
+			name = "parliament_dot_icon"
+			quadTextureSprite = "GFX_IBR_IberianCouncil_Seat"
+			pdx_tooltip = IBR_council_seat_tt
+		}
+	}
+	containerWindowType = {
+		name = "IBR_council_faction_info"
+		position = { x = 0 y = 0 }
+		size = { width = 146 height = 26 }
+
+		iconType = { 
+			position = { x = 0 y = 0 }
+			name = "info_box"
+			quadTextureSprite = "GFX_IBR_council_faction_info_box"
+			frame = 1
+			pdx_tooltip = IBR_council_faction_info_tt
+		}
+
+		instantTextBoxType = {
+			name = "party_name"
+			position = { x = 2 y = 4 }
+			maxWidth = 84
+			maxHeight = 50
+			format = center
+			font = "aldrich_18_outline"
+			text = "[Get_Faction_Name_Short_dynamic]"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "current_seats"
+			position = { x = 90 y = 6 }
+			maxWidth = 55
+			maxHeight = 50
+			format = center
+			font = "aldrich_14_outline"
+			text = "[Get_Current_Supporting_Deputies_dynamic]"
+			alwaystransparent = yes
+		}
+	}
+	#######Legislative Council (groups)
+	containerWindowType = {
+		name = "TNO_IBR_Legislative_Council_groups_GUI_window"
+		size = { width = 525 height = 425 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_Iberian_Wars_Info_Icon"
+			position = { x = 465 y = 0 } 
+			pdx_tooltip = TNO_IBR_legislative_council_mechanic_Info_tt
+		}
+
+		gridboxtype = {
+			name = "parliament_diagram"
+			position = { x = 7 y = 0 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 100%% height = 0 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+
+		iconType = {
+			name = "Iberian_Council_groups_reformism_bar_frame"
+			spriteType = "GFX_IBR_council_reformism_frame"
+			position = { x = 149 y = 145 }
+		}
+
+		iconType = {
+			name = "Iberian_Council_groups_reformism_bar"
+			spriteType = "GFX_Iberian_Council_reformism_bar"
+			position = { x = 151 y = 227 }
+			pdx_tooltip = Iberian_Council_reformism_bar_tt
+		}
+		iconType = {
+			name = "Iberian_Council_groups_reformism_image"
+			spriteType = "GFX_IBR_council_reformism_image"
+			position = { x = 152 y = 147 }
+			pdx_tooltip = Iberian_Council_reformism_bar_tt
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_groups_reformism_value"
+			position = { x = 187 y = 175 }
+			maxWidth = 120
+			format = center
+			font = "aldrich_32_outline"
+			text = Iberian_Council_reformism_number_tt
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "camera_left_info"
+			position = { x = 17 y = 250 }
+
+			gridboxtype = {
+				name = "council_column1_factions"
+				position = { x = 0 y = 0 }
+				size = { width = 146 height = 150 }
+				slotsize = { width = 100%% height = 26 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+		containerWindowType = {
+			name = "camera_center_info"
+			position = { x = 178 y = 250 }
+
+			gridboxtype = {
+				name = "council_column2_factions"
+				position = { x = 0 y = 0 }
+				size = { width = 146 height = 150 }
+				slotsize = { width = 100%% height = 26 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+		containerWindowType = {
+			name = "camera_right_info"
+			position = { x = 339 y = 250 }
+
+			gridboxtype = {
+				name = "council_column3_factions"
+				position = { x = 0 y = 0 }
+				size = { width = 146 height = 150 }
+				slotsize = { width = 100%% height = 26 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_groups_is_law_active"
+			position = { x = 25 y = 360 }
+			maxWidth = 482
+			format = center
+			font = "aldrich_18_outline"
+			text = Iberian_Council_is_law_active_text
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "Iberian_Council_groups_law_box"
+			spriteType = "GFX_IBR_legislative_council_law_box"
+			position = { x = 50 y = 370 }
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_groups_law_name"
+			position = { x = 58 y = 377 }
+			maxWidth = 237
+			maxHeight = 42
+			format = center
+			font = "aldrich_22_outline"
+			text = Iberian_Council_active_law_name_text			
+			vertical_alignment = center
+		}
+
+		instantTextBoxType = {
+			name = "Iberian_Council_groups_bill_reformism_title"
+			position = { x = 297 y = 380 }
+			maxWidth = 156
+			maxHeight = 20
+			format = center
+			font = "aldrich_18_outline"
+			text = "Iberian_Council_legislative_bill_reformism_title_text"
+			text_color_code = W
+		}
+
+		iconType = {
+			name = "Iberian_Council_groups_reformism_bill_bar"
+			spriteType = "GFX_Iberian_Council_reformism_bill_bar"
+			position = { x = 301 y = 402 }
+			pdx_tooltip = Iberian_Council_legislative_reformism_bill_bar_text
+		}
+	}
+	containerWindowType = {
+		name = "IberianCouncilSeat"
+		position = { x = 0 y = 0 }
+
+		iconType = { 
+			name = "parliament_dot_icon"
+			quadTextureSprite = "GFX_IBR_IberianCouncil_Seat_groups"
+			pdx_tooltip = IBR_council_seat_tt
+		}
+	}
+	containerWindowType = {
+		name = "IBR_council_faction_info"
+		position = { x = 0 y = 0 }
+		size = { width = 146 height = 26 }
+
+		iconType = { 
+			position = { x = 0 y = 0 }
+			name = "info_box"
+			quadTextureSprite = "GFX_IBR_council_faction_info_box_groups"
+			frame = 1
+			pdx_tooltip = IBR_council_faction_info_tt
+		}
+
+		instantTextBoxType = {
+			name = "party_name"
+			position = { x = 20 y = 4 }
+			maxWidth = 57
+			maxHeight = 50
+			format = center
+			font = "aldrich_18_outline"
+			text = "[Get_Faction_Name_Short_dynamic]"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "current_seats"
+			position = { x = 90 y = 6 }
+			maxWidth = 55
+			maxHeight = 50
+			format = center
+			font = "aldrich_14_outline"
+			text = "[Get_Current_Supporting_Deputies_dynamic]"
+			alwaystransparent = yes
+		}
+	}
+}
+
+	

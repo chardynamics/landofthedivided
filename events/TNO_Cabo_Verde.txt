@@ -1,0 +1,478 @@
+add_namespace = CPV_skeleton
+add_namespace = CPV_POR
+
+country_event = { #
+	id = CPV_skeleton.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CPV_skeleton.1" }
+	title = CPV_skeleton.1
+	desc = CPV_skeleton.1.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = CPV_skeleton.1.a
+		ai_chance = { base = 1000 }
+		#POR = { country_event = { id = CPV_POR.1 days = 3 } }
+		#RPP = { country_event = { id = CPV_POR.1 days = 3 } }
+		country_event = { id = CPV_skeleton.2 days = 30 }
+	}
+}
+
+country_event = { #Time Moves Ever Forward
+	id = CPV_skeleton.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CPV_skeleton.2" }
+	title = CPV_skeleton.2
+	desc = CPV_skeleton.2.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		trigger = { #Portugal is at peace
+			OR = {
+				AND = {
+					POR = { has_war = no }
+					POR = { exists = yes }
+				}
+				AND = {
+					RPP = { has_war = no }
+					RPP = { exists = yes }
+				}
+				AND = {
+					GNS = { has_war = no }
+					GNS = { exists = yes }
+				}
+			}
+		}
+		name = CPV_skeleton.2.a
+		ai_chance = { base = 1000 }
+		country_event = { id = CPV_skeleton.3 days = 5 }
+	}
+	option = {
+		trigger = { #WAW is over
+			OR = {
+				has_global_flag = WAC_SCENARIO_1_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_2_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+				has_global_flag = WAC_SCENARIO_3_PALF_VICTORY
+			}
+		}
+		name = CPV_skeleton.2.a
+		ai_chance = { base = 1000 }
+		country_event = { id = CPV_skeleton.4 days = 5 }
+	}
+	option = {
+		trigger = { #Waiting
+			AND = {
+				NOT = { has_global_flag = WAC_SCENARIO_1_PALF_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_1_WAA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_2_FMA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_2_PALF_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_2_WAA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_3_FMA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_3_PALF_VICTORY }
+			}
+			NOT = { check_variable = { CPV_timer = 8 } }
+			NOT = {
+				OR = {
+					AND = {
+						POR = { has_war = no }
+						POR = { exists = yes }
+					}
+					AND = {
+						RPP = { has_war = no }
+						RPP = { exists = yes }
+					}
+					AND = {
+						GNS = { has_war = no }
+						GNS = { exists = yes }
+					}
+				}
+			}
+		}
+		name = CPV_skeleton.2.a
+		ai_chance = { base = 1000 }
+		country_event = { id = CPV_skeleton.2 days = 15 }
+		add_to_variable = { CPV_timer = 1 }
+	}
+	option = {
+		trigger = { #Time's Up
+			check_variable = { CPV_timer = 8 }
+		}
+		name = CPV_skeleton.2.a
+		ai_chance = { base = 1000 }
+		country_event = { id = CPV_skeleton.5 days = 5 }
+	}
+}
+
+country_event = { #Returning to Portugal
+	id = CPV_skeleton.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CPV_skeleton.3" }
+	title = CPV_skeleton.3
+	desc = CPV_skeleton.3.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #But which Portugal?
+		name = CPV_skeleton.3.a
+		ai_chance = { base = 1000 }
+		remove_ideas = CPV_Tarrafal_Shocks
+		add_ideas = CPV_New_Old_Colony
+		if = { #Kingdom
+			limit = {
+				POR = {
+					has_war = no
+					exists = yes
+				}
+			}
+			POR = {
+				set_autonomy = {
+					target = CPV
+					autonomous_state = autonomy_colony
+					end_wars = no
+					end_civil_wars = no
+				}
+				#country_event = { id = CPV_POR.3 }
+			}
+			if = {
+				limit = { POR = { check_variable = { ECON_SPHERE_LEADER = BRA } } }
+				econ_join_sphere_BRA = yes
+			}
+			else_if = {
+				limit = { POR = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+				econ_join_sphere_USA = yes
+			}
+			else_if = {
+				limit = { POR = { check_variable = { ECON_SPHERE_LEADER = GER } } }
+				econ_join_sphere_GER = yes
+			}
+			else_if = {
+				limit = { POR = { check_variable = { ECON_SPHERE_LEADER = ITA } } }
+				econ_join_sphere_ITA = yes
+			}
+		}
+		else_if = { #Republic
+			limit = {
+				RPP = {
+					has_war = no
+					exists = yes
+				}
+			}
+			RPP = {
+				set_autonomy = {
+					target = CPV
+					autonomous_state = autonomy_colony
+					end_wars = no
+					end_civil_wars = no
+				}
+				#country_event = { id = CPV_POR.3 }
+			}
+			if = {
+				limit = { RPP = { check_variable = { ECON_SPHERE_LEADER = BRA } } }
+				econ_join_sphere_BRA = yes
+			}
+			else_if = {
+				limit = { RPP = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+				econ_join_sphere_USA = yes
+			}
+			else_if = {
+				limit = { RPP = { check_variable = { ECON_SPHERE_LEADER = GER } } }
+				econ_join_sphere_GER = yes
+			}
+			else_if = {
+				limit = { RPP = { check_variable = { ECON_SPHERE_LEADER = ITA } } }
+				econ_join_sphere_ITA = yes
+			}
+		}
+		else_if = { #Edgy Kingdom
+			limit = {
+				GNS = {
+					has_war = no
+					exists = yes
+				}
+			}
+			GNS = {
+				set_autonomy = {
+					target = CPV
+					autonomous_state = autonomy_colony
+					end_wars = no
+					end_civil_wars = no
+				}
+				#country_event = { id = CPV_POR.3 }
+			}
+			if = {
+				limit = { GNS = { check_variable = { ECON_SPHERE_LEADER = BRA } } }
+				econ_join_sphere_BRA = yes
+			}
+			else_if = {
+				limit = { GNS = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+				econ_join_sphere_USA = yes
+			}
+			else_if = {
+				limit = { GNS = { check_variable = { ECON_SPHERE_LEADER = GER } } }
+				econ_join_sphere_GER = yes
+			}
+			else_if = {
+				limit = { GNS = { check_variable = { ECON_SPHERE_LEADER = ITA } } }
+				econ_join_sphere_ITA = yes
+			}
+		}
+		set_politics = { ruling_party = despotism }
+		set_popularities = {
+			despotism = 35
+			socialist = 45
+			socialist_2 = 5
+			conservatism = 15
+		}
+	}
+}
+
+country_event = { #Aftermath of the WAW
+	id = CPV_skeleton.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CPV_skeleton.4" }
+	title = CPV_skeleton.4
+	desc = CPV_skeleton.4.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #Coup Roulette Time
+		name = CPV_skeleton.4.a
+		ai_chance = { base = 1000 }
+		remove_ideas = CPV_Tarrafal_Shocks
+		if = { #FMA Won
+			limit = {
+				OR = {
+					has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+					has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+				}
+			}
+			FFR = { add_to_faction = CPV }
+			add_ideas = { FRU_Faction }
+			add_ideas = CPV_Loans_Lawyers
+			set_politics = { ruling_party = conservatism }
+			set_popularities = {
+				despotism = 5
+				socialist = 40
+				socialist_2 = 10
+				conservatism = 45
+			}
+			drop_cosmetic_tag = yes
+			if = {
+				limit = { SEN = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+				econ_join_sphere_USA = yes
+				USA = { country_event = { id = CPV_FOR.5 days = 1 } }
+			}
+			if = {
+				limit = { SEN = { check_variable = { ECON_SPHERE_LEADER = FFR } } }
+				econ_join_sphere_FFR = yes
+			}
+		}
+		if = { #WAA Won
+			limit = {
+				OR = {
+					has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+				}
+			}
+			SEN = { add_to_faction = CPV }
+			add_ideas = { WAF_Faction }
+			add_ideas = CPV_Loans_Lawyers
+			set_politics = { ruling_party = conservatism }
+			set_popularities = {
+				despotism = 5
+				socialist = 40
+				socialist_2 = 10
+				conservatism = 45
+			}
+			drop_cosmetic_tag = yes
+			if = {
+				limit = { SEN = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+				econ_join_sphere_USA = yes
+				USA = { country_event = { id = CPV_FOR.5 days = 1 } }
+			}
+			if = {
+				limit = { SEN = { check_variable = { ECON_SPHERE_LEADER = SEN } } }
+				econ_join_sphere_SEN = yes
+			}
+		}
+		else_if = { #WAA Won
+			limit = {
+				has_global_flag = WAC_SCENARIO_2_WAA_VICTORY
+			}
+			SEN = { add_to_faction = CPV }
+			add_ideas = { WAF_Faction }
+			add_ideas = CPV_Archipelagic_Neutrality
+			remove_country_leader_role = {
+				character = CPV_Aristides_Pereira
+				ideology = socialist_african_socialism_subtype
+			}
+			CPV_Jose_Andre_Leitao_da_Graca = {
+				promote_character = socialist_african_socialism_subtype
+			}
+			CPV_Aristides_Pereira = {
+				promote_character = socialist_2_subtype
+			}
+			set_politics = { ruling_party = socialist }
+			set_popularities = {
+				despotism = 5
+				socialist = 30
+				socialist_2 = 45
+				conservatism = 20
+			}
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GNB_palf #Generic
+			if = {
+				limit = { SEN = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+				econ_join_sphere_USA = yes
+				USA = { country_event = { id = CPV_FOR.5 days = 1 } }
+			}
+			if = {
+				limit = { SEN = { check_variable = { ECON_SPHERE_LEADER = SEN } } }
+				econ_join_sphere_SEN = yes
+			}
+		}
+		else_if = { #PALF Won
+			limit = {
+				OR = {
+					has_global_flag = WAC_SCENARIO_1_PALF_VICTORY
+					has_global_flag = WAC_SCENARIO_2_PALF_VICTORY
+					has_global_flag = WAC_SCENARIO_3_PALF_VICTORY
+				}
+			}
+			CAO = { add_to_faction = CPV }
+			CAO = {
+				set_autonomy = {
+					target = CPV
+					autonomous_state = autonomy_associated
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			econ_join_sphere_CAO = yes
+			add_ideas = PALF_Satellite_peace
+			add_ideas = CPV_Towards_Federation
+			set_politics = { ruling_party = socialist }
+			set_popularities = {
+				despotism = 5
+				socialist = 65
+				socialist_2 = 10
+				conservatism = 20
+			}
+			set_cosmetic_tag = CPV_palf
+		}
+	}
+}
+
+country_event = { #Giving the Natives the Reins
+	id = CPV_skeleton.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CPV_skeleton.5" }
+	title = CPV_skeleton.5
+	desc = CPV_skeleton.5.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #Coup Roulette Time
+		name = CPV_skeleton.5.a
+		ai_chance = { base = 1000 }
+		remove_ideas = CPV_Tarrafal_Shocks
+		add_ideas = CPV_Loans_Lawyers
+		set_politics = { ruling_party = conservatism }
+		set_popularities = {
+			despotism = 5
+			socialist = 40
+			socialist_2 = 10
+			conservatism = 45
+		}
+		drop_cosmetic_tag = yes
+		set_country_flag = IWC_government_fate
+		POR = { country_event = { id = CPV_POR.2 days = 1 } }
+		RPP = { country_event = { id = CPV_POR.2 days = 1 } }
+		GNS = { country_event = { id = CPV_POR.2 days = 1 } }
+		PPR = { country_event = { id = CPV_POR.2 days = 1 } }
+	}
+}
+
+#Events for Portugal
+country_event = { #Cabo Verde is Not Doing Well
+	id = CPV_POR.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CPV_POR.1" }
+	title = CPV_POR.1.t
+	desc = CPV_POR.1.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = CPV_POR.1.a
+		ai_chance = { base = 1000 }
+	}
+}
+
+
+country_event = { #Bad Times
+	id = CPV_POR.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CPV_POR.2" }
+	title = CPV_POR.2.t
+	desc = CPV_POR.2.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = CPV_POR.2.a
+		ai_chance = { base = 1000 }
+	}
+}
+
+country_event = { #Cabe Verde Returns
+	id = CPV_POR.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CPV_POR.3" }
+	title = CPV_POR.3.t
+	desc = CPV_POR.3.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = CPV_POR.3.a
+		ai_chance = { base = 1000 }
+	}
+}
+
+country_event = { #Cabe Verde Returns - Native Run Version
+	id = CPV_POR.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CPV_POR.4" }
+	title = CPV_POR.4.t
+	desc = CPV_POR.4.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = CPV_POR.4.a
+	}
+}

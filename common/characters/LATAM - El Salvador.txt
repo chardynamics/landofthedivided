@@ -1,0 +1,203 @@
+characters = {
+	ELS_Rodolfo_Cordon_Cea = {
+		name = ELS_Rodolfo_Cordon_Cea
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Rodolfo_Cordon_Cea.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Rodolfo_Cordon_Cea_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Julio_Adalberto_Rivera = {
+		name = ELS_Julio_Adalberto_Rivera
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Julio_Adalberto_Rivera_Civilian.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Julio_Adalberto_Rivera_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Fidel_Sanchez_Hernandez = {
+		name = ELS_Fidel_Sanchez_Hernandez
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Fidel_Sanchez_Hernandez.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Fidel_Sanchez_Hernandez_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Feliciano_Avelar = {
+		name = ELS_Feliciano_Avelar
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Feliciano_Avelar.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = paternalism_anocracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Arturo_Armando_Molina = {
+		name = ELS_Arturo_Armando_Molina
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Arturo_Armando_Molina.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Arturo_Armando_Molina_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Fidel_Torres = {
+		name = ELS_Fidel_Torres
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Fidel_Torres.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Fidel_Torres_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Jose_Alberto_Medrano = {
+		name = ELS_Jose_Alberto_Medrano
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Jose_Alberto_Medrano.png" } }
+	}
+	ELS_Julio_Faustino_Sosa = {
+		name = ELS_Julio_Faustino_Sosa
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Julio_Faustino_Sosa.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Julio_Faustino_Sosa_DESC"
+			expire = "1994.4.20"
+			ideology = fascism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Jose_Napoleon_Duarte = {
+		name = ELS_Jose_Napoleon_Duarte
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Jose_Napoleon_Duarte.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Jose_Napoleon_Duarte_DESC"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_christian_democracy_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ELS_Jose_Napoleon_Duarte_DESC"
+			expire = "1994.4.20"
+			ideology = liberalism_christian_liberalism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ELS_Jose_Napoleon_Duarte_DESC"
+			expire = "1994.4.20"
+			ideology = progressivism_1_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Collective_Leadership = {
+		name = ELS_Collective_Leadership
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Directorio_Civico_Militar.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Collective_Leadership_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ELS_Collective_Leadership_DESC"
+			expire = "1994.4.20"
+			ideology = paternalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Ricardo_Falla_Caceres = {
+		name = ELS_Ricardo_Falla_Caceres
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Ricardo_Falla_Caceres.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Ricardo_Falla_Caceres_DESC"
+			expire = "1994.4.20"
+			ideology = paternalism_oligarchy_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ELS_Ricardo_Falla_Caceres_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_institutional_despotism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Antonio_Rodriguez_Porth = {
+		name = ELS_Antonio_Rodriguez_Porth
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Antonio_Rodriguez_Porth.png" } }
+	}
+	ELS_Salvador_Cayetano_Carpio = {
+		name = ELS_Salvador_Cayetano_Carpio
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Salvador_Cayetano_Carpio.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Salvador_Cayetano_Carpio_DESC"
+			expire = "1994.4.20"
+			ideology = communist_amazonism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Fabio_Castillo_Figueroa = {
+		name = ELS_Fabio_Castillo_Figueroa
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Fabio_Castillo_Figueroa.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Fabio_Castillo_Figueroa_DESC"
+			expire = "1994.4.20"
+			ideology = socialist_revolutionary_gaitanismo_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = paternalism_oligarchy_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = despotism_institutional_despotism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	ELS_Carlos_Humberto_Romero = {
+		name = ELS_Carlos_Humberto_Romero
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Carlos_Romero.png" } }
+	}
+	ELS_Ruben_Alonso_Rosales = {
+		name = ELS_Ruben_Alonso_Rosales
+		portraits = { civilian = { large = "gfx/leaders/ELS/Portrait_El_Salvador_Ruben_Alonso_Rosales_Civilian.png" } }
+		country_leader = {
+			desc = "POLITICS_ELS_Ruben_Alonso_Rosales_DESC"
+			expire = "1994.4.20"
+			ideology = paternalism_oligarchy_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ELS_Ruben_Alonso_Rosales_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_institutional_despotism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+}

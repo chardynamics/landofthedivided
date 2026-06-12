@@ -1,0 +1,293 @@
+# Easter Coup
+defined_text = {
+	name = get_ven_city_title
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 0 }
+		}
+		localization_key = VEN_selected_city_0_localization_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 1 }
+		}
+		localization_key = VEN_selected_city_1_localization_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 2 }
+		}
+		localization_key = VEN_selected_city_2_localization_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 3 }
+		}
+		localization_key = VEN_selected_city_3_localization_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 4 }
+		}
+		localization_key = VEN_selected_city_4_localization_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 5 }
+		}
+		localization_key = VEN_selected_city_5_localization_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 6 }
+		}
+		localization_key = VEN_selected_city_6_localization_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 7 }
+		}
+		localization_key = VEN_selected_city_7_localization_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 8 }
+		}
+		localization_key = VEN_selected_city_8_localization_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 9 }
+		}
+		localization_key = VEN_selected_city_9_localization_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 10 }
+		}
+		localization_key = VEN_selected_city_10_localization_key
+	}
+}
+
+defined_text = {
+	name = get_ven_city_desc
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 0 }
+		}
+		localization_key = VEN_selected_city_0_desc_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 1 }
+		}
+		localization_key = VEN_selected_city_1_desc_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 2 }
+		}
+		localization_key = VEN_selected_city_2_desc_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 3 }
+		}
+		localization_key = VEN_selected_city_3_desc_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 4 }
+		}
+		localization_key = VEN_selected_city_4_desc_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 5 }
+		}
+		localization_key = VEN_selected_city_5_desc_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 6 }
+		}
+		localization_key = VEN_selected_city_6_desc_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 7 }
+		}
+		localization_key = VEN_selected_city_7_desc_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 8 }
+		}
+		localization_key = VEN_selected_city_8_desc_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 9 }
+		}
+		localization_key = VEN_selected_city_9_desc_key
+	}
+	text = {
+		trigger = {
+			check_variable = { VEN_selected_city = 10 }
+		}
+		localization_key = VEN_selected_city_10_desc_key
+	}
+}
+
+defined_text = {
+	name = get_EC_puerto_plata_victor
+	text = {
+		trigger = {
+			has_global_flag = PPI_Trujillo_Victory
+		}
+		localization_key = EC_puerto_plata_victor_trujillo_localization_key
+	}
+	text = {
+		trigger = {
+			has_global_flag = PPI_Rebel_Victory
+		}
+		localization_key = EC_puerto_plata_victor_rebel_localization_key
+	}
+}
+
+defined_text = {
+	name = get_EC_puerto_plata_victor2
+	text = {
+		trigger = {
+			has_global_flag = PPI_Trujillo_Victory
+		}
+		localization_key = EC_puerto_plata_victor_trujillo_localization_key2
+	}
+	text = {
+		trigger = {
+			has_global_flag = PPI_Rebel_Victory
+		}
+		localization_key = EC_puerto_plata_victor_rebel_localization_key2
+	}
+}
+
+defined_text = {
+	name = get_EC_puerto_plata_victor3
+	text = {
+		trigger = {
+			has_global_flag = PPI_Trujillo_Victory
+		}
+		localization_key = EC_puerto_plata_victor_trujillo_localization_key3
+	}
+	text = {
+		trigger = {
+			has_global_flag = PPI_Rebel_Victory
+		}
+		localization_key = EC_puerto_plata_victor_rebel_localization_key3
+	}
+}
+
+
+defined_text = {
+	name = get_EC_side
+	text = {
+		trigger = {
+			tag = IBR
+		}
+		localization_key = EC_coup_side_localization_key
+	}
+	text = {
+		trigger = {
+			OR = {
+				tag = BRA
+				tag = MEX
+			}
+		}
+		localization_key = EC_gov_side_localization_key
+	}
+}
+# # # # # # # # # # # # # # # #
+# # # # Venezuela Coup! # # # # 
+# # # # # # # # # # # # # # # #
+defined_text = {
+	name = get_vencoup_district_name
+	text = {
+		trigger = { check_variable = { VEN_caracas_nights_selected_district = 1 } }
+		localization_key = VEN_district_1_txt
+	}
+	text = {
+		trigger = { check_variable = { VEN_caracas_nights_selected_district = 2 } }
+		localization_key = VEN_district_2_txt
+	}
+	text = {
+		trigger = { check_variable = { VEN_caracas_nights_selected_district = 3 } }
+		localization_key = VEN_district_3_txt
+	}
+	text = {
+		trigger = { check_variable = { VEN_caracas_nights_selected_district = 4 } }
+		localization_key = VEN_district_4_txt
+	}
+	text = {
+		trigger = { check_variable = { VEN_caracas_nights_selected_district = 5 } }
+		localization_key = VEN_district_5_txt
+	}
+	text = {
+		localization_key = VEN_district_none_txt
+	}
+}
+defined_text = {
+	name = get_vencoup_district_name_2
+	text = {
+		trigger = { check_variable = { VEN_caracas_nights_effect_district = 1 } }
+		localization_key = VEN_district_1_txt
+	}
+	text = {
+		trigger = { check_variable = { VEN_caracas_nights_effect_district = 2 } }
+		localization_key = VEN_district_2_txt
+	}
+	text = {
+		trigger = { check_variable = { VEN_caracas_nights_effect_district = 3 } }
+		localization_key = VEN_district_3_txt
+	}
+	text = {
+		trigger = { check_variable = { VEN_caracas_nights_effect_district = 4 } }
+		localization_key = VEN_district_4_txt
+	}
+	text = {
+		trigger = { check_variable = { VEN_caracas_nights_effect_district = 5 } }
+		localization_key = VEN_district_5_txt
+	}
+	text = {
+		localization_key = VEN_district_none_txt
+	}
+}
+defined_text = {
+	name = Get_CN_Desc
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_CaracasNights } tag = IBR VEN = { has_country_flag = VEN_Villalba_1963 } }
+		localization_key = IBR_CN_desc_1
+	}
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_CaracasNights } tag = IBR VEN = { has_country_flag = VEN_COPEI_1963 } }
+		localization_key = IBR_CN_desc_2
+	}
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_CaracasNights } tag = MEX VEN = { has_country_flag = VEN_Villalba_1963 } }
+		localization_key = MEX_VC_desc_1
+	}
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_CaracasNights } tag = MEX VEN = { has_country_flag = VEN_COPEI_1963 } }
+		localization_key = MEX_VC_desc_2
+	}
+}
+defined_text = {
+	name = Get_CN_fakemission_tt
+	text = {
+		trigger = { tag = IBR }
+		localization_key = IBR_CN_fakemission_tt
+	}
+	text = {
+		trigger = { tag = MEX }
+		localization_key = MEX_CN_fakemission_tt
+	}
+}

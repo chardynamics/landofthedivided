@@ -1,0 +1,348 @@
+ideas = {
+	#############
+	## SPIRITS ##
+	#############
+	country = {
+		PAR_la_ley_del_mbarete = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_la_ley_del_mbarete" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_la_ley_del_mbarete
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				admin_efficiency_monthly_rate = -0.1
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_high_tt
+			}
+		}
+		PAR_arcadian_backwater = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_arcadian_backwater" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_arcadian_backwater
+			removal_cost = -1
+			modifier = {
+				taxable_population_modifier = -0.15
+				poverty_monthly_rate = -0.05
+				production_units_to_GDP_ratio_modifier = -0.25
+			}
+		}
+		PAR_condor_legion = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_condor_legion" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = TNO_condor_legion_tt
+				army_core_defence_factor = 0.1
+				experience_gain_army_unit_factor = 0.05
+			}
+		}
+		PAR_new_national_state_morinigo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_new_national_state_morinigo" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_new_national_state_morinigo
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.25
+				war_support_factor = 0.1
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_improve_trade_unions_policy_effectiveness_med_tt
+			}
+		}
+		PAR_new_national_state_benitez_vera = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_new_national_state_benitez_vera" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_new_national_state_benitez_vera
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.25
+				war_support_factor = 0.1
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_med_tt
+				custom_modifier_tooltip = TNO_improve_trade_unions_policy_effectiveness_med_tt
+			}
+		}
+		PAR_the_barefoot_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_the_barefoot_revolution" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_the_barefoot_revolution
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.25
+				war_support_factor = 0.1
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_med_tt
+				agriculture_monthly_rate = 0.15
+			}
+		}
+		PAR_battling_for_democracy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_battling_for_democracy" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_battling_for_democracy
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.1
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_low_tt
+				admin_efficiency_monthly_rate = 0.75
+			}
+		}
+		PAR_peace_and_progress = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_peace_and_progress" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_peace_and_progress
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = 1.45
+				army_professionalism_monthly_rate = 0.25
+				custom_modifier_tooltip = TNO_improve_security_policy_effectiveness_med_tt
+			}
+		}
+		PAR_second_liberal_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_second_liberal_revolution" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_second_liberal_revolution
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = 2.5
+				inflation_rate_modifier = -0.50
+				academic_base_monthly_rate = 0.30
+				poverty_monthly_rate = 0.05
+			}
+		}
+		PAR_second_february_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_second_february_revolution" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_second_february_revolution
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = 2
+				custom_modifier_tooltip = TNO_improve_trade_unions_policy_effectiveness_med_tt
+				admin_efficiency_monthly_rate = 0.45
+				poverty_monthly_rate = 0.10
+			}
+		}
+		PAR_new_national_ideology = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_new_national_ideology" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_new_national_ideology
+			removal_cost = -1
+			modifier = {
+				gdp_growth_modifier = 1.75
+				agriculture_monthly_rate = 0.65
+				custom_modifier_tooltip = TNO_improve_pensions_policy_effectiveness_med_tt
+				poverty_monthly_rate = 0.15
+			}
+		}
+		PAR_price_of_peace = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_price_of_peace" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_price_of_peace
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.2
+				army_professionalism_monthly_rate = 0.2
+				military_expenditures_factor = 0.20
+			}
+		}
+		PAR_makeshift_military = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_makeshift_military" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_makeshift_military
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.2
+				army_org_factor = -0.2
+				army_professionalism_monthly_rate = -0.2
+				army_cost_modifier = -0.50
+			}
+		}
+		PAR_the_chokehold_communists = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_the_chokehold_communists" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_the_chokehold_communists
+			removal_cost = -1
+			targeted_modifier = {
+				tag = ARG
+				extra_trade_to_target_factor = -0.5
+			}
+			targeted_modifier = {
+				tag = BRA
+				extra_trade_to_target_factor = -0.5
+			}
+			modifier = {
+				gdp_growth_modifier = -1.5
+			}
+		}
+		PAR_the_chokehold = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_the_chokehold" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_the_chokehold
+			removal_cost = -1
+			targeted_modifier = {
+				tag = ARG
+				extra_trade_to_target_factor = 0.5
+			}
+			targeted_modifier = {
+				tag = BRA
+				extra_trade_to_target_factor = -0.5
+			}
+			modifier = {
+				gdp_growth_modifier = -0.5
+			}
+		}
+		PAR_bush_war = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_bush_war" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_bush_war
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = -100
+				stability_factor = -0.2
+			}
+		}
+
+		#Occupation tag ideas
+		URP_king_without_country = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea URP_king_without_country" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = URP_king_without_country
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.1
+			}
+		}
+		URP_duel_marionettes = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea URP_duel_marionettes" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = URP_Duel_of_the_Marrionettes
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.2
+				admin_efficiency_monthly_rate = -1
+			}
+		}
+		URP_reascension = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea URP_reascension" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = URP_reascension
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				poverty_monthly_rate = -0.5
+			}
+		}
+
+		BRP_rural_insurgency = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRP_rural_insurgency" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = BRP_Rural_Insurgency
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				political_power_factor = -0.5
+				admin_efficiency_monthly_rate = -2
+				poverty_monthly_rate = -1
+			}
+		}
+		BRP_forced_liberalisation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRP_forced_liberalisation" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = BRP_Forced_Liberalization
+			removal_cost = -1
+			modifier = {
+				agriculture_monthly_rate = 0.5
+				poverty_monthly_rate = -1
+			}
+		}
+		BRP_brain_drain = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRP_brain_drain" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = BRP_brain_drain
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				health_care_policy_monthly_rate = -3
+				academic_base_monthly_rate = -3
+			}
+		}
+
+		ARP_casados_estate = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARP_casados_estate" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = ARP_casados_estate
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = 0.05
+			}
+		}
+		ARP_king_cotton = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARP_king_cotton" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = ARP_king_cotton
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				academic_base_monthly_rate = -1
+			}
+			targeted_modifier = {
+				tag = ARG
+				extra_trade_to_target_factor = 0.8
+				trade_cost_for_target_factor = -0.3
+				cic_to_target_factor = 0.5
+			}
+		}
+	}
+
+	hidden_ideas = {
+		PAR_twelve_day_war_buff_hidden = {
+			targeted_modifier = {
+				tag = BOL
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.5
+			}
+			modifier = {
+				attrition = -0.5
+				out_of_supply_factor = -0.8
+				supply_consumption_factor = -0.5
+				org_loss_when_moving = -0.5
+				army_speed_factor = 0.4
+				army_org_factor = 0.33
+				army_org_regain = 0.5
+			}
+		}
+		PAR_twelve_day_war_debuff_hidden = {
+			modifier = {
+				org_loss_when_moving = 0.5
+				army_speed_factor = -0.4
+				army_org_factor = -0.35
+				army_org_regain = -0.4
+				army_defence_factor = -0.33
+				army_attack_factor = -0.33
+			}
+		}
+	}
+}

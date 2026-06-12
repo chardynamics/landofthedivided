@@ -1,0 +1,407 @@
+ideas = {
+	country = {
+		CAM_Dictatorial_Devaraja = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_Dictatorial_Devaraja" }
+
+			picture = CAM_Dictatorial_Devaraja
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.15
+				army_morale_factor = 0.2
+				political_power_factor = 0.05
+			}
+		}
+		CAM_The_Unloving_Father = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_The_Unloving_Father" }
+
+			picture = CAM_The_Unloving_Father
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				mobilization_speed = -0.15
+				monthly_population = -0.025
+				stability_factor = -0.05
+			}
+		}
+		CAM_The_North_South_Axis = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_The_North_South_Axis" }
+
+			picture = CAM_The_North_South_Axis
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.25
+				admin_efficiency_monthly_rate = -1
+				political_parties_policy_monthly_rate = -0.25
+			}
+		}
+		CAM_Spilling_The_Masters_Tea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_Spilling_The_Masters_Tea" }
+
+			picture = CAM_Spilling_The_Masters_Tea
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.10
+				war_support_factor = 0.25
+				army_speed_factor = 0.15
+			}
+		}
+		CAM_The_Five_Year_Plan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_The_Five_Year_Plan" }
+
+			picture = CAM_The_Five_Year_Plan
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				civilian_expenditures_factor = -0.07
+				local_resources_factor = 0.10
+				trade_opinion_factor = 0.5
+				consumer_goods_use_modifier = 0.3
+				GDP_to_sphere_leader_modifier = 0.03
+			}
+			targeted_modifier = {
+				tag = JAP
+				extra_trade_to_target_factor = 0.07
+			}
+		}
+		CAM_Jewel_Of_The_Republic = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_Jewel_Of_The_Republic" }
+
+			picture = CAM_Jewel_Of_The_Republic
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				consumer_goods_use_modifier = 0.02
+			}
+		}
+		CAM_The_Veal_Thom_War = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_The_Veal_Thom_War" }
+
+			picture = GFX_idea_CAM_The_Veal_Thom_War
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				max_dig_in = 1
+				mobilization_speed = 0.05
+			}
+		}
+		CAM_Traditional_Devaraja = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_Traditional_Devaraja" }
+
+			picture = GFX_idea_CAM_Traditional_Devaraja
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.15
+				army_morale_factor = 0.5
+				political_power_factor = 0.15
+			}
+		}
+		CAM_Devaraja_Chained = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_Devaraja_Chained" }
+
+			picture = GFX_idea_CAM_Devaraja_Chained
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				army_morale_factor = -0.15
+				political_power_factor = -0.10
+			}
+		}
+		CAM_Dictatorial_Devaraja_Lon_Nol = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_Dictatorial_Devaraja_Lon_Nol" }
+
+			picture = GFX_idea_CAM_Dictatorial_Devaraja_Lon_Nol
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				army_morale_factor = 0.25
+				political_power_factor = 0.10
+			}
+		}
+		CAM_Dictatorial_Devaraja_Lon_Non = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_Dictatorial_Devaraja_Lon_Non" }
+
+			picture = GFX_idea_CAM_Dictatorial_Devaraja_Lon_Non
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				army_morale_factor = 0.15
+				political_power_factor = 0.10
+			}
+		}
+		CAM_Republican_Revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_Republican_Revolution" }
+
+			picture = GFX_idea_CAM_Republican_Revolution
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = 0.05
+				army_morale_factor = 0.30
+			}
+		}
+		CAM_Bubbling_Northern_Tensions = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_Bubbling_Northern_Tensions" }
+
+			picture = CAM_The_North_South_Axis
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.05
+				admin_efficiency_monthly_rate = -1
+				army_speed_factor = 0.05
+			}
+		}
+		CAM_New_Kampuchean_Revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_New_Kampuchean_Revolution" }
+
+			picture = GFX_idea_CAM_New_Kampuchean_Revolution
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.2
+				annual_gdp_growth_factor = 0.25
+				consumer_goods_use_modifier = -0.1
+			}
+		}
+		CAM_A_Confused_Revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_A_Confused_Revolution" }
+
+			picture = CAM_A_Confused_Revolution
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.10
+				drift_defence_factor = -0.2
+			}
+		}
+		CAM_The_Squabbling_Brothers = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_The_Squabbling_Brothers" }
+
+			picture = GFX_idea_CAM_The_Squabbling_Brothers
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.25
+			}
+			targeted_modifier = {
+				tag = VIC
+				extra_trade_to_target_factor = 0.1
+			}
+		}
+		CAM_The_Managerial_State = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_The_Managerial_State" }
+
+			picture = GFX_idea_CAM_The_Managerial_State
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				political_power_gain = -0.1
+				admin_efficiency_monthly_rate = 0.5
+			}
+			targeted_modifier = {
+				tag = JAP
+				extra_trade_to_target_factor = 0.1
+			}
+		}
+		CAM_The_Second_Five_Year_Plan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_The_Second_Five_Year_Plan" }
+
+			picture = CAM_The_Five_Year_Plan
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				civilian_expenditures_factor = -0.08
+				local_resources_factor = 0.15
+				trade_opinion_factor = 0.5
+				consumer_goods_use_modifier = 0.35
+				GDP_to_sphere_leader_modifier = 0.035
+			}
+			targeted_modifier = {
+				tag = JAP
+				extra_trade_to_target_factor = 0.08
+			}
+		}
+		CAM_The_Third_Five_Year_Plan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_The_Third_Five_Year_Plan" }
+
+			picture = CAM_The_Five_Year_Plan
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				civilian_expenditures_factor = -0.1
+				local_resources_factor = 0.25
+				trade_opinion_factor = 0.5
+				consumer_goods_use_modifier = 0.5
+				GDP_to_sphere_leader_modifier = 0.05
+			}
+			targeted_modifier = {
+				tag = JAP
+				extra_trade_to_target_factor = 0.1
+			}
+		}
+		CAM_Expansionist_Pariah = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAM_Expansionist_Pariah" }
+
+			picture = GFX_idea_CAM_Expansionist_Pariah
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.4
+				army_morale_factor = 0.1
+			}
+		}
+	}
+}

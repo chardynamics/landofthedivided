@@ -1,0 +1,256 @@
+unique_id = ODF_achievements
+
+##### Neuschwabenland #####
+ODF_this_is_a_good_thing = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAG
+	}
+
+	happened = {
+		has_country_flag = ODF_this_is_a_good_thing_trigger
+	}
+}
+
+ODF_to_serve_men = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAG
+	}
+
+	happened = {
+		has_country_flag = ODF_to_serve_men_trigger
+	}
+}
+
+ODF_oppenheimer_who = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAG
+	}
+
+	happened = {
+		has_country_flag = ODF_oppenheimer_who_trigger
+	}
+}
+
+ODF_penguins_of_madagascar = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAG
+	}
+
+	happened = {
+		has_country_flag = ODF_penguins_of_madagascar_trigger
+	}
+}
+
+##### Argentine Antarctica #####
+ODF_dogs_live_for_the_moment = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAA
+	}
+
+	happened = {
+		has_country_flag = ODF_dogs_live_for_the_moment_trigger
+	}
+}
+
+ODF_penguin_emperor = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAA
+	}
+
+	happened = {
+		has_country_flag = ODF_penguin_emperor_trigger
+	}
+}
+
+ODF_just_like_scott = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAA
+	}
+
+	happened = {
+		has_country_flag = ODF_just_like_scott_trigger
+	}
+}
+
+ODF_the_last_crusade = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAA
+	}
+
+	happened = {
+		has_country_flag = ODF_the_last_crusade_trigger
+	}
+}
+
+##### OFN Antarctic Administration #####
+ODF_operation_deep_freeze = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAO
+	}
+
+	happened = {
+		has_country_flag = ODF_operation_deep_freeze_trigger
+	}
+}
+
+ODF_finish_iceman = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAO
+	}
+
+	happened = {
+		has_country_flag = ODF_finish_iceman_trigger
+	}
+}
+
+ODF_waddle_through_the_jungle = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAO
+	}
+
+	happened = {
+		has_country_flag = AAO_win_mcw
+		has_country_flag = AAO_win_saf
+		has_country_flag = AAO_win_phi
+	}
+}
+
+ODF_who_goes_there = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAO
+	}
+
+	happened = {
+		has_country_flag = ODF_who_goes_there_trigger
+	}
+}
+
+##### Chilean Antarctic Territory #####
+
+ODF_Si_vis_pacem_para_bellum = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAC
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			check_variable = { AAC_unlocked_infantry_weapons > 0 }
+			check_variable = { AAC_unlocked_support_weapons > 0 }
+			check_variable = { AAC_unlocked_body_kit > 0 }
+			check_variable = { AAC_unlocked_polar_warfare > 0 }
+			check_variable = { AAC_unlocked_creature_comforts > 0 }
+			tooltip = ODF_Si_vis_pacem_para_bellum_trigger
+		}
+	}
+}
+
+ODF_Super_Soldier_Program = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAC
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			check_variable = { AAC_Skill_Array^0 > 75 }
+			check_variable = { AAC_Skill_Array^1 > 75 }
+			check_variable = { AAC_Skill_Array^2 > 75 }
+			check_variable = { AAC_Skill_Array^3 > 75 }
+			tooltip = ODF_Super_Soldier_Program_trigger
+		}
+		
+	}
+}
+
+ODF_Dynamic_Duo = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAC
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			check_variable = { AAC_Diplo_Meter = 9 }
+			tooltip = ODF_Dynamic_Duo_trigger
+		}	
+	}
+}
+
+ODF_Alea_iacta_est = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAC
+	}
+
+	happened = {
+		has_country_flag = ODF_Alea_iacta_est_trigger
+	}
+}
+
+
+ODF_The_Nutty_Professor = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAC
+	}
+
+	happened = {
+		has_country_flag = ODF_The_Nutty_Professor_trigger
+	}
+}
+
+ODF_Good_News_Everyone = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAC
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_government = paternalism
+			has_country_flag = AAC_Marine_Mission_Success
+			has_country_flag = AAC_OAS_recognition_success
+			tooltip = ODF_Good_News_Everyone_trigger
+		}
+	}
+}
+
+ODF_Im_The_Captain_Now = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAC
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_government = despotism
+			has_country_flag = AAC_Marine_Mission_Success
+			has_country_flag = AAC_OAS_recognition_success
+			tooltip = ODF_Im_The_Captain_Now_trigger
+		}
+	}
+}
+
+ODF_Best_Served_Cold = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AAC
+	}
+
+	happened = {
+		has_country_flag = ODF_Best_Served_Cold_trigger
+	}
+}

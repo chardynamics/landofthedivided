@@ -1,0 +1,442 @@
+﻿##########################################
+####     Kingdom of Spain events ####
+##########################################
+
+add_namespace = FSR_wars
+
+country_event = {
+	id = FSR_wars.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.1" }
+	title = FSR_wars.1.t
+	desc = FSR_wars.1.d
+	picture = GFX_report_event_generic_telephone
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FSR_wars.1.a
+	}
+}
+
+country_event = {
+	id = FSR_wars.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.2" }
+	title = FSR_wars.2.t
+	desc = FSR_wars.2.d
+	picture = GFX_report_event_IBR_guy_paper_meeting
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FSR_wars.2.a
+	}
+}
+
+country_event = {
+	id = FSR_wars.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.3" }
+	title = FSR_wars.3.t
+	desc = FSR_wars.3.d
+	picture = GFX_report_event_BRA_amazonian_church
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FSR_wars.3.a
+	}
+}
+
+country_event = {
+	id = FSR_wars.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.4" }
+	title = FSR_wars.4.t
+	desc = FSR_wars.4.d
+	picture = GFX_report_event_VYT_vyatka_city
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FSR_wars.4.a
+	}
+}
+
+country_event = {
+	id = FSR_wars.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.5" }
+	title = FSR_wars.5.t
+	desc = FSR_wars.5.d
+	picture = GFX_report_event_BRA_reading_newspaper
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FSR_wars.5.a
+	}
+}
+
+country_event = {
+	id = FSR_wars.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.6" }
+	title = FSR_wars.6.t
+	desc = FSR_wars.6.d
+	picture = GFX_report_event_MEX_Madrazo_LM_talking
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FSR_wars.6.a
+	}
+}
+
+country_event = {
+	id = FSR_wars.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.7" }
+	title = FSR_wars.7.t
+	desc = FSR_wars.7.d
+	picture = GFX_report_event_generic_dark_forest
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FSR_wars.7.a
+	}
+}
+
+country_event = {
+	id = FSR_wars.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.8" }
+	title = FSR_wars.8.t
+	desc = FSR_wars.8.d
+	picture = GFX_report_event_BRA_amazonian_church
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FSR_wars.8.a
+	}
+}
+
+country_event = {
+	id = FSR_wars.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.9" }
+	title = FSR_wars.9.t
+	desc = FSR_wars.9.d
+	picture = GFX_report_event_KOM_execution
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FSR_wars.9.a
+	}
+}
+
+country_event = {
+	id = FSR_wars.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.10" }
+	title = FSR_wars.10.t
+	desc = FSR_wars.10.d
+	picture = GFX_report_event_IBR_soldier
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = FSR_wars.10.a
+	}
+}
+
+country_event = {#To play when capitulating Galicia
+	id = FSR_wars.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.11" }
+	title = FSR_wars.11.t
+	desc = FSR_wars.11.d
+	picture = GFX_report_event_GER_ss_loading_truck
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+
+	option = {
+		name = FSR_wars.11.a
+	}
+}
+
+country_event = {#To play when capitulating Galicia
+	id = FSR_wars.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.12" }
+	title = FSR_wars.12.t
+	desc = FSR_wars.12.d
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+
+	picture = GFX_report_event_generic_court_case_1
+	option = { 
+		name = FSR_wars.12.a
+	}
+}
+
+country_event = {#To play when capitulating Asturias
+	id = FSR_wars.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.13" }
+	title = FSR_wars.13.t
+	desc = FSR_wars.13.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_radio_electronics_station
+	option = { 
+		name = FSR_wars.13.a
+	}
+}
+
+country_event = {#To play when capitulating Euskadi
+	id = FSR_wars.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.14" }
+	title = FSR_wars.14.t
+	desc = FSR_wars.14.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_IBR_factory_sabotage
+	option = { 
+		name = FSR_wars.14.a
+	}
+}
+
+country_event = {#To play when capitulating Euskadi
+	id = FSR_wars.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.15" }
+	title = FSR_wars.15.t
+	desc = FSR_wars.15.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_generic_prisoners_2
+	option = { 
+		name = FSR_wars.15.a
+	}
+}
+
+country_event = {#To play when capturing Zaragoza
+	id = FSR_wars.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.16" }
+	title = FSR_wars.16.t
+	desc = FSR_wars.16.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_antarctica_mcmurdo_radio_operator_headset
+	option = { 
+		name = FSR_wars.16.a
+	}
+}
+
+country_event = {#To play when capturing Guadalajara
+	id = FSR_wars.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.17" }
+	title = FSR_wars.17.t
+	desc = FSR_wars.17.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_IBR_indian_soldiers_on_stage
+	option = { 
+		name = FSR_wars.17.a
+	}
+}
+
+country_event = {#To play when capturing Madrid
+	id = FSR_wars.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.18" }
+	title = FSR_wars.18.t
+	desc = FSR_wars.18.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_IBR_meeting_table
+	option = { 
+		name = FSR_wars.18.a
+	}
+}
+
+country_event = {#To play when capturing Toledo
+	id = FSR_wars.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.19" }
+	title = FSR_wars.19.t
+	desc = FSR_wars.19.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_IBR_meeting_table
+	option = { 
+		name = FSR_wars.19.a
+	}
+}
+
+country_event = {#To play when capturing Valencia
+	id = FSR_wars.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.20" }
+	title = FSR_wars.20.t
+	desc = FSR_wars.20.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_generic_gas_mask_crowd
+	option = { 
+		name = FSR_wars.20.a
+	}
+}
+
+country_event = {#To play when capturing Cartagena
+	id = FSR_wars.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.21" }
+	title = FSR_wars.21.t
+	desc = FSR_wars.21.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_IBR_barcelona_rubble
+	option = { 
+		name = FSR_wars.21.a
+	}
+}
+
+country_event = {#To play when capturing Badajoz
+	id = FSR_wars.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.22" }
+	title = FSR_wars.22.t
+	desc = FSR_wars.22.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_IBR_poor_people_in_line
+	option = { 
+		name = FSR_wars.22.a
+	}
+}
+
+country_event = {#To play when capturing Cordoba
+	id = FSR_wars.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.23" }
+	title = FSR_wars.23.t
+	desc = FSR_wars.23.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_generic_port
+	option = { 
+		name = FSR_wars.23.a
+	}
+}
+
+country_event = {#To play when capturing Sevilla
+	id = FSR_wars.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.24" }
+	title = FSR_wars.24.t
+	desc = FSR_wars.24.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_generic_radio1	
+	option = { 
+		name = FSR_wars.24.a
+	}
+}
+
+country_event = {#To play when capturing Cadiz
+	id = FSR_wars.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.25" }
+	title = FSR_wars.25.t
+	desc = FSR_wars.25.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_IBR_iberianwars_cadiz_fire
+	option = { 
+		name = FSR_wars.25.a
+	}
+}
+
+country_event = {#To play when capturing Barcelona
+	id = FSR_wars.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.26" }
+	title = FSR_wars.26.t
+	desc = FSR_wars.26.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_CAU_execution
+	option = { 
+		name = FSR_wars.26.a
+	}
+}
+
+country_event = {#To play when capturing Girona
+	id = FSR_wars.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FSR_wars.27" }
+	title = FSR_wars.27.t
+	desc = FSR_wars.27.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = FSR_can_see_conquer_events
+	}
+	picture = GFX_report_event_generic_ruins
+	option = { 
+		name = FSR_wars.27.a
+	}
+}

@@ -1,0 +1,583 @@
+heavy_armor_support = { #Buffing Heavy Tanks
+	track = armor
+	name = SUBDOCTRINE_HEAVY_ARMOR_SUPPORT
+	description = SUBDOCTRINE_HEAVY_ARMOR_SUPPORT_DESC
+	icon = GFX_spearpoints_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		NOT = { has_doctrine = unconventional_warfare }
+		NOT = { has_doctrine = maneuver_warfare }
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = { #Please update me for DV
+			factor = 0
+			NOT = { #KD's Notes - Yeah, sorry but I doubt any of the other AI tags can produce it
+				tag = OMS
+				tag = WRS
+				tag = SAM
+				tag = GOR
+			}
+		}
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = cat_heavy_armor
+			name = cat_heavy_armor
+		}
+	}
+	heavy_tank = {
+		default_morale = 0.1
+		max_organisation = 10
+	}
+
+	rewards = {
+		draw_the_line_well_cross_it = {
+			enable_tactic = tactic_breakthrough
+			enable_tactic = tactic_blitz
+			heavy_tank = {
+				breakthrough = 0.1
+				supply_consumption = -0.1
+			}
+		}
+		grease_monkey_nightmare = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = maintenance_company_tech
+					name = maintenance_company_tech
+				}
+			}
+			heavy_tank = {
+				max_organisation = 5
+			}
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					reliability = 0.1
+				}
+			}
+		}
+
+		determination_that_is_incorruptable = {
+			heavy_tank = {
+				breakthrough = 0.1
+				defense = 0.1
+				default_morale = 0.15
+			}
+		}
+		not_in_the_least_anachronistic = {
+			heavy_tank = {
+				soft_attack = 0.05
+			}
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					maximum_speed = 0.1
+					reliability = 0.15
+				}
+			}
+		}
+		blood_and_iron = {
+			heavy_tank = {
+				max_organisation = 10
+				soft_attack = 0.1
+				hard_attack = 0.1
+			}
+		}
+	}
+}
+
+##MBT Support
+medium_armor_support = { #Buffing MBT
+	track = armor
+	name = SUBDOCTRINE_MEDIUM_ARMOR_SUPPORT
+	description = SUBDOCTRINE_MEDIUM_ARMOR_SUPPORT_DESC
+	icon = GFX_combined_blitz_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		NOT = { has_doctrine = unconventional_warfare }
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = { #Please update me for DV
+			factor = 0
+			NOT = { #KD's Notes - Yeah, sorry but I doubt any of the other AI tags can produce it
+				tag = USA
+				tag = GER
+				tag = JAP
+				tag = NOV
+				tag = SVR
+				tag = VYT
+				tag = FRA
+				tag = ITA
+				tag = ENG
+				tag = CAN
+				tag = TOM
+				tag = AST
+				tag = SAF
+			}
+		}
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = MBT
+			name = MBT
+		}
+	}
+	MBT = {
+		soft_attack = 0.05
+		max_organisation = 5
+	}
+
+	rewards = {
+		lead_the_charge = {
+			enable_tactic = tactic_breakthrough
+			MBT = {
+				breakthrough = 0.1
+				default_morale = 0.1
+			}
+			equipment_bonus = {
+				MBT_chassis = {
+					maximum_speed = 0.1
+				}
+			}
+		}
+		ninety_mm_battlecry = {
+			MBT = {
+				breakthrough = 0.1
+				soft_attack = 0.05
+				hard_attack = 0.05
+
+			}
+		}
+		knights_and_squires = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = recon_tech
+					name = recon_tech
+				}
+			}
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = engineers_tech
+					name = engineers_tech
+				}
+			}
+			mbt_engineer = {
+				soft_attack = 0.2
+				hard_attack = 0.1
+				default_morale = 0.2
+			}
+			mbt_recon = {
+				soft_attack = 0.2
+				hard_attack = 0.1
+				default_morale = 0.2
+			}
+			equipment_bonus = {
+				MBT_chassis = {
+					maximum_speed = 0.1
+				}
+			}
+		}
+		virtuous_service = {
+			MBT = {
+				max_organisation = 10
+				defense = 0.1
+			}
+			MBT_engineer = {
+				default_morale = 0.1
+				max_organisation = 5
+				entrenchment = 5
+				defense = 0.1
+			}
+			MBT_recon = {
+				default_morale = 0.1
+				max_organisation = 10
+				recon = 2
+				defense = 0.1
+			}
+			equipment_bonus = {
+				MBT_chassis = {
+					reliability = 0.1
+				}
+			}
+		}
+		saints_and_soldiers = {
+			MBT = {
+				max_organisation = 5
+				default_morale = 0.1
+				soft_attack = 0.1
+				hard_attack = 0.1
+			}
+		}
+	}
+}
+
+##Light Armor Support
+light_armor_support = { #Buffing the Underutilized Units
+	track = armor
+	name = SUBDOCTRINE_LIGHT_ARMOR_SUPPORT
+	description = SUBDOCTRINE_LIGHT_ARMOR_SUPPORT_DESC
+	icon = GFX_IFV_support_medium
+
+	xp_cost = 35
+	xp_type = army
+
+	available = {
+		NOT = { has_doctrine = unconventional_warfare }
+	}
+
+	ai_will_do = { #Default Choice, thus lower AI weight
+		base = 5
+	}
+
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = IFV
+			name = IFV
+		}
+	}
+	IFV = {
+		max_organisation = 5
+		soft_attack = 0.05
+	}
+
+	rewards = {
+		tool_for_every_job = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = recon_tech
+					name = recon_tech
+				}
+			}
+			IFV = {
+				supply_consumption = -0.1
+				hard_attack = 0.05
+			}
+			IFV_recon = {
+				supply_consumption = -0.1
+				hard_attack = 0.2
+				max_organisation = 5
+			}
+		}
+		friend_of_every_man = {
+			IFV = {
+				max_organisation = 10
+				defense = 0.1
+			}
+			IFV_recon = {
+				max_organisation = 10
+				recon = 1
+				defense = 0.1
+			}
+		}
+		high_roller_by_design = {
+			enable_tactic = tactic_blitz
+			IFV = {
+				breakthrough = 0.1
+				ap_attack = 0.1
+				hard_attack = 0.05
+			}
+			IFV_recon = {
+				breakthrough = 0.2
+				ap_attack = 0.1
+				hard_attack = 0.1
+			}
+		}
+		one_thousand_more_miles_on_the_clock = {
+			enable_tactic = tactic_breakthrough
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = engine_improvements
+					name = engine_improvements
+				}
+			}
+			equipment_bonus = {
+				IFV_chassis = {
+					maximum_speed = 0.1
+					reliability = 0.1
+				}
+			}
+			IFV_recon = {
+				default_morale = 0.1
+			}
+		}
+		woe_the_middle_child = {
+			IFV = {
+				max_organisation = 5
+				default_morale = 0.1
+				soft_attack = 0.1
+				hard_attack = 0.1
+			}
+			IFV_recon = {
+				max_organisation = 5
+				default_morale = 0.1
+				soft_attack = 0.1
+				hard_attack = 0.15
+			}
+		}
+	}
+}
+
+##Armored Car Support
+armored_car_support = { #Buffing the Underutilized Units
+	track = armor
+	name = SUBDOCTRINE_ARMORED_CAR_SUPPORT
+	description = SUBDOCTRINE_ARMORED_CAR_SUPPORT_DESC
+	icon = GFX_adaptive_command_training_medium
+
+	xp_cost = 35
+	xp_type = army
+
+	available = {
+		always = yes
+	}
+
+	ai_will_do = { ##Welcome to KD's Doctrine Rework, I'm manually assigned doctrines to tags
+		base = 10
+		modifier = { #Please update me for DV
+			factor = 0
+			NOT = {
+				OR = {
+					tag = URL
+					tag = MGN
+					tag = DRL
+					tag = ORE
+					tag = VOR
+					tag = ONG #Disable me with the Russia Rework
+					tag = STC
+					tag = PAR
+					tag = ECU
+					tag = PAN
+					tag = COS
+					tag = NIC
+					tag = BLZ
+					tag = JAM
+					tag = GUC
+					tag = ULS
+					tag = ICE
+					tag = ARM
+					tag = NEP
+					tag = YEM
+					tag = NYM
+					tag = OMA
+					tag = YAK
+					tag = PRC
+					tag = YGR
+					tag = FAV
+					tag = LEB
+					tag = CYP
+					tag = MNT
+					tag = TUN
+					tag = GUL
+					tag = KMC
+					tag = FIJ
+					tag = BAH
+					tag = HAI
+					tag = TRI
+					tag = SLO
+					tag = TNS
+					tag = GEO
+					tag = ALB
+					tag = TUN
+					tag = EQG
+					tag = SAO
+					tag = GNB
+					tag = CBV
+					tag = MAD
+					tag = MDN
+					tag = KLT
+					tag = TRK
+					tag = TAJ
+					tag = KYR
+					tag = BLR
+					tag = PAL
+					tag = JOR
+					tag = BKU
+					tag = CAM
+					tag = LAO
+					tag = VIN
+					tag = VIC
+					tag = XIK
+					tag = QIN
+					tag = TIB
+					tag = XIN
+					tag = BHU
+					tag = SHX
+					tag = GAN
+					tag = MEN
+				}
+			}
+		}
+
+	}
+
+	industrial_capacity_factory = 0.05
+	effect = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = recon_tech
+			name = recon_tech
+		}
+	}
+	armored_car = {
+		breakthrough = 0.1
+		max_organisation = 5
+	}
+	IFV = {
+		max_organisation = 5
+		breakthrough = 0.1
+	}
+
+	rewards = {
+		improved_recon = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = recon_tech
+					name = recon_tech
+				}
+			}
+			AC_recon = {
+				recon = 1
+				soft_attack = 0.2
+				max_organisation = 5
+				breakthrough = 0.1
+					}
+			IFV_recon = {
+				recon = 1
+				soft_attack = 0.2
+				max_organisation = 5
+			}
+		}
+		more_than_a_vehicle = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = engine_improvements
+					name = engine_improvements
+				}
+			}
+			armored_car = {
+				default_morale = 0.2
+			}
+			IFV = {
+				default_morale = 0.1
+			}
+			AC_recon = {
+				default_morale = 0.1
+			}
+			IFV_recon = {
+				default_morale = 0.1
+			}
+			equipment_bonus = {
+				armored_car_chassis = {
+					reliability = 0.1
+				}
+			}
+			equipment_bonus = {
+				IFV_chassis = {
+					reliability = 0.075
+				}
+			}
+		}
+		strategic_positioning = {
+			armored_car = {
+				breakthrough = 0.2
+				ap_attack = 0.2
+			}
+			IFV = {
+				ap_attack = 0.1
+			}
+			AC_recon = {
+				breakthrough = 0.2
+				ap_attack = 0.2
+			}
+			IFV_recon = {
+				breakthrough = 0.2
+				ap_attack = 0.15
+			}
+			equipment_bonus = {
+				armored_car_chassis = {
+					maximum_speed = 0.1
+				}
+			}
+			equipment_bonus = {
+				IFV_chassis = {
+					maximum_speed = 0.1
+				}
+			}
+		}
+		we_brave_few = {
+			enable_tactic = tactic_blitz
+			armored_car = {
+				breakthrough = 0.2
+				initiative = 1
+				max_organisation = 15
+			}
+			IFV = {
+				max_organisation = 10
+				breakthrough = 0.1
+			}
+			AC_recon = {
+				max_organisation = 15
+				breakthrough = 0.2
+			}
+			IFV_recon = {
+				max_organisation = 15
+				breakthrough = 0.2
+			}
+		}
+		not_size_that_matters = {
+			enable_tactic = tactic_breakthrough
+			armored_car = {
+				breakthrough = 0.15
+				soft_attack = 0.2
+				hard_attack = 0.15
+			}
+			IFV = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+			}
+			AC_recon = {
+				breakthrough = 0.1
+				soft_attack = 0.25
+				hard_attack = 0.2
+			}
+			IFV_recon = {
+				breakthrough = 0.1
+				soft_attack = 0.1
+				hard_attack = 0.15
+			}
+		}
+	}
+}

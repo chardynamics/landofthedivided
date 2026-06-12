@@ -1,0 +1,368 @@
+guiTypes = {
+	
+	###############################################################
+	########                   PL Mechanic                 ########
+	###############################################################
+
+	containerWindowType = {
+		name = "TNO_CSS_decisions_pl_GUI"
+		size = { width = 0 height = 380 }
+		position = { x = 0 y = 0 }
+		clipping = no
+
+		containerWindowType = {
+			name = "bill_info"
+			position = { x = 10 y = 0 }
+
+			iconType = {
+				name = "pl_queue_icon"
+				spriteType = "GFX_set_need_amount_button"
+				position = { x = 330 y = -12 }
+				pdx_tooltip = BRA_pl_queue_icon_tt
+			}
+
+			instantTextBoxType = {
+				name = "current_bill"
+				position = { x = 10 y = -5 }
+				maxWidth = 370
+				font = "aldrich_24_outline"
+				text = "[BRA_pl_current_bill]"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "current_bill_desc"
+				position = { x = 6 y = 44 }
+				maxWidth = 470
+				maxHeight = 150
+				font = "aldrich_18_outline"
+				text = "[BRA_pl_current_bill_desc]"
+				alwaystransparent = yes
+				scrollbarType = standardtext_slider
+			}
+			
+			instantTextBoxType = {
+				name = "num_supporters"
+				position = { x = 83 y = -4 }
+				maxWidth = 360
+				format = right
+				font = "aldrich_24_outline"
+				text = "[BRA_pl_supporters_total_text]"
+				alwaystransparent = yes
+			}
+
+			
+			iconType = {
+				name = "Info"
+				spriteType = "GFX_BRA_info_button"
+				position = { x = 460 y = -10 }
+				pdx_tooltip = BRA_pl_info_tt
+			}
+
+		}
+
+		containerWindowType = {
+			name = "supporters"
+			position = { x = 6 y = 206 }
+
+			iconType = {
+				name = "supporters_box"
+				spriteType = "GFX_BRA_pl_supporters_box"
+				position = { x = -1 y = -1 }
+				pdx_tooltip = BRA_pl_support_tt
+			}
+
+			gridboxtype = {
+				name = "supporter_pips"
+				position = { x = -226 y = 5 }
+				size = { width = 484 height = 66 }
+				slotsize = { width = 22 height = 22 }
+				max_slots_vertical = 3
+				add_horizontal = no
+			}
+		}
+
+		containerWindowType = {
+			name = "supporter_counts"
+			position = { x = 5 y = 290 }
+
+			containerWindowType = {
+				name = "pl_supporters_ptb"
+				position = { x = 0 y = 0 }
+
+				iconType = {
+					name = "ptb_color"
+					spriteType = "GFX_BRA_Map_Parliament_Candidate"
+					position = { x = 5 y = 1 }
+					frame = 3
+				}
+
+				instantTextBoxType = {
+					name = "ptb_party_name"
+					position = { x = 32 y = 0 }
+					maxWidth = 81
+					format = left
+					orientation = upper_left
+					font = "aldrich_22_outline"
+					text = BRA_party_ptb_c
+				}
+
+				instantTextBoxType = {
+					name = "ptb_party_seats"
+					position = { x = 102 y = 0 }
+					maxWidth = 59
+					format = center
+					orientation = upper_left
+					font = "aldrich_22_outline"
+					text = BRA_supporters_ptb
+				}
+
+				iconType = {
+					name = "ptb_box"
+					spriteType = "GFX_BRA_pl_party_box_wide"
+					position = { x = 0 y = -3 }
+				}
+				buttonType = {
+					name = "pl_add_ptb_button"
+					position = { x = 157 y = 5 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+					scale = 0.35
+					pdx_tooltip = "BRA_pl_add_support"
+				}
+				buttonType = {
+					name = "pl_sub_ptb_button"
+					position = { x = 92 y = 5 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+					scale = 0.35
+					pdx_tooltip = "BRA_pl_sub_support"
+				}
+			}
+
+			containerWindowType = {
+				name = "pl_supporters_psd"
+				position = { x = 166 y = 0 }
+
+				iconType = {
+					name = "psd_color"
+					spriteType = "GFX_BRA_Map_Parliament_Candidate"
+					position = { x = 5 y = 1 }
+					frame = 1
+				}
+
+				instantTextBoxType = {
+					name = "psd_party_name"
+					position = { x = 32 y = 0 }
+					maxWidth = 81
+					format = left
+					orientation = upper_left
+					font = "aldrich_22_outline"
+					text = BRA_party_psd_c
+				}
+
+				instantTextBoxType = {
+					name = "psd_party_seats"
+					position = { x = 102 y = 0 }
+					maxWidth = 59
+					format = center
+					orientation = upper_left
+					font = "aldrich_22_outline"
+					text = BRA_supporters_psd
+				}
+
+				iconType = {
+					name = "psd_box"
+					spriteType = "GFX_BRA_pl_party_box_wide"
+					position = { x = 0 y = -3 }
+				}
+				buttonType = {
+					name = "pl_add_psd_button"
+					position = { x = 157 y = 5 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+					scale = 0.35
+					pdx_tooltip = "BRA_pl_add_support"
+				}
+				buttonType = {
+					name = "pl_sub_psd_button"
+					position = { x = 92 y = 5 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+					scale = 0.35
+					pdx_tooltip = "BRA_pl_sub_support"
+				}
+			}
+
+			containerWindowType = {
+				name = "pl_supporters_udn"
+				position = { x = 332 y = 0 }
+
+				iconType = {
+					name = "udn_color"
+					spriteType = "GFX_BRA_Map_Parliament_Candidate"
+					position = { x = 5 y = 1 }
+					frame = 2
+				}
+
+				instantTextBoxType = {
+					name = "udn_party_name"
+					position = { x = 32 y = 0 }
+					maxWidth = 81
+					format = left
+					orientation = upper_left
+					font = "aldrich_22_outline"
+					text = BRA_party_udn_c
+				}
+
+				instantTextBoxType = { 
+					name = "udn_party_seats"
+					position = { x = 95 y = 0 }
+					maxWidth = 75
+					format = center
+					orientation = upper_left
+					font = "aldrich_22_outline"
+					text = BRA_supporters_udn
+				}
+
+				iconType = {
+					name = "udn_box"
+					spriteType = "GFX_BRA_pl_party_box_wide"
+					position = { x = 0 y = -3 }
+				}
+				buttonType = {
+					name = "pl_add_udn_button"
+					position = { x = 157 y = 5 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+					scale = 0.35
+					pdx_tooltip = "BRA_pl_add_support"
+				}
+				buttonType = {
+					name = "pl_sub_udn_button"
+					position = { x = 92 y = 5 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+					scale = 0.35
+					pdx_tooltip = "BRA_pl_sub_support"
+				}
+			}
+
+			containerWindowType = {
+				name = "pl_supporters_psp"
+				position = { x = 83 y = 30 }
+
+				iconType = {
+					name = "psp_color"
+					spriteType = "GFX_BRA_Map_Parliament_Candidate"
+					position = { x = 5 y = 1 }
+					frame = 4
+				}
+
+				instantTextBoxType = {
+					name = "psp_party_name"
+					position = { x = 32 y = 0 }
+					maxWidth = 81
+					format = left
+					orientation = upper_left
+					font = "aldrich_22_outline"
+					text = BRA_party_psp_c
+				}
+
+				instantTextBoxType = {
+					name = "psp_party_seats"
+					position = { x = 102 y = 0 }
+					maxWidth = 59
+					format = center
+					orientation = upper_left
+					font = "aldrich_22_outline"
+					text = BRA_supporters_psp
+				}
+
+				iconType = {
+					name = "psp_box"
+					spriteType = "GFX_BRA_pl_party_box_wide"
+					position = { x = 0 y = -3 }
+				}
+				buttonType = {
+					name = "pl_add_psp_button"
+					position = { x = 157 y = 5 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+					scale = 0.35
+					pdx_tooltip = "BRA_pl_add_support"
+				}
+				buttonType = {
+					name = "pl_sub_psp_button"
+					position = { x = 92 y = 5 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+					scale = 0.35
+					pdx_tooltip = "BRA_pl_sub_support"
+				}
+			}
+
+			containerWindowType = {
+				name = "pl_supporters_prp"
+				position = { x = 249 y = 30 }
+
+				iconType = {
+					name = "prp_color"
+					spriteType = "GFX_BRA_Map_Parliament_Candidate"
+					position = { x = 5 y = 1 }
+					frame = 5
+				}
+
+				instantTextBoxType = {
+					name = "prp_party_name"
+					position = { x = 32 y = 0 }
+					maxWidth = 81
+					format = left
+					orientation = upper_left
+					font = "aldrich_22_outline"
+					text = BRA_party_prp_c
+				}
+
+				instantTextBoxType = {
+					name = "prp_party_seats"
+					position = { x = 102 y = 0 }
+					maxWidth = 59
+					format = center
+					orientation = upper_left
+					font = "aldrich_22_outline"
+					text = BRA_supporters_prp
+				}
+
+				iconType = {
+					name = "prp_box"
+					spriteType = "GFX_BRA_pl_party_box_wide"
+					position = { x = 0 y = -3 }
+				}
+				buttonType = {
+					name = "pl_add_prp_button"
+					position = { x = 157 y = 5 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+					scale = 0.35
+					pdx_tooltip = "BRA_pl_add_support"
+				}
+				buttonType = {
+					name = "pl_sub_prp_button"
+					position = { x = 92 y = 5 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+					scale = 0.35
+					pdx_tooltip = "BRA_pl_sub_support"
+				}
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "TNO_CSS_decisions_pl_supporter_entry"
+		size = { width = 22 height = 22 }
+
+		iconType = {
+			position = { x = 0 y = 0 }
+			name = "supporter_outline"
+			quadTextureSprite = "GFX_BRA_Map_Parliament_Seat_Outline"
+			pdx_tooltip = BRA_pl_senator_tt
+		}
+		iconType = {
+			position = { x = 0 y = 0 }
+			name = "supporter_pip"
+			quadTextureSprite = "GFX_BRA_Map_Parliament_Seat"
+			pdx_tooltip = BRA_pl_senator_tt
+		}
+	}
+}

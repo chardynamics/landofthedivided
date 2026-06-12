@@ -1,0 +1,762 @@
+characters = {
+	VEN_Power_Vacuum = {
+		name = VEN_Power_Vacuum
+		#portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Wolfgang_Larrazabal.png" } }
+	}
+	VEN_Wolfgang_Larrazabal = {
+		name = VEN_Wolfgang_Larrazabal
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Wolfgang_Larrazabal.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_WOLFGANG_LARRAZABAL"
+			expire = "1994.4.20"
+			ideology = progressivism_left_wing_populism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Rafael_Caldera = {
+		name = VEN_Rafael_Caldera
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Rafael_Caldera.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_RAFAEL_CALDERA"
+			expire = "1994.4.20"
+			ideology = conservatism_christian_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_RAFAEL_CALDERA"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_christian_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Jovito_Villalba = {
+		name = VEN_Jovito_Villalba
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/VEN/Portrait_Venezuela_Jovito_Villalba.png"
+				small = GFX_idea_VEN_Jovito_Villalba
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_JOVITO_VILLALBA"
+			expire = "1994.4.20"
+			ideology = liberalism_national_liberal_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = VEN_Jovito_Villalba_hog
+			allowed = { original_tag = VEN }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	VEN_Raul_Leoni = {
+		name = VEN_Raul_Leoni
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Raul_Leoni.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_RAUL_LEONI"
+			expire = "1994.4.20"
+			ideology = progressivism_1_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_RAUL_LEONI"
+			expire = "1994.4.20"
+			ideology = progressivism_gaitanismo_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Gonzalo_Barrios = {
+		name = VEN_Gonzalo_Barrios
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Gonzalo_Barrios.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_GONZALO_BARRIOS"
+			expire = "1994.4.20"
+			ideology = progressivism_gaitanismo_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Fabricio_Ojeda = {
+		name = VEN_Fabricio_Ojeda
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/VEN/Portrait_Venezuela_Fabricio_Ojeda.png"
+				small = GFX_idea_VEN_Fabricio_Ojeda
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_FABRICIO_OJEDA"
+			expire = "1994.4.20"
+			ideology = socialist_revolutionary_gaitanismo_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = VEN_Fabricio_Ojeda_eco
+			allowed = { original_tag = VEN }
+			traits = {
+				economy_minister
+				ojeda_eco_trait
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	#68 Election
+	VEN_Luis_Beltran_Prieto_Figueroa = {
+		name = VEN_Luis_Beltran_Prieto_Figueroa
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Luis_Beltran_Figueroa.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_LUIS_BELTRAN_PRIETO_FIGUEROA"
+			expire = "1994.4.20"
+			ideology = socialist_1_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_LUIS_BELTRAN_PRIETO_FIGUEROA"
+			expire = "1994.4.20"
+			ideology = socialist_social_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Alirio_Ugarte_Pelayo = {
+		name = VEN_Alirio_Ugarte_Pelayo
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Alirio_Ugarte_Pelayo.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_ALIRIO_UGARTE_PELAYO"
+			expire = "1994.4.20"
+			ideology = socialist_revolutionary_gaitanismo_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Francisco_Arreaza = {
+		name = VEN_Francisco_Arreaza
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Francisco_Arreaza.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_Francisco_Arreaza"
+			expire = "1994.4.20"
+			ideology = liberalism_national_liberal_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Miguel_Angel_Burelli = {
+		name = VEN_Miguel_Angel_Burelli
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/VEN/Portrait_Venezuela_Miguel_Angel_Burelli.png"
+				small = GFX_idea_VEN_Miguel_Angel_Burelli
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_MIGUEL_ANGEL_BURELLI"
+			expire = "1994.4.20"
+			ideology = liberalism_national_liberal_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_MIGUEL_ANGEL_BURELLI"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_big_tent_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = VEN_Miguel_Angel_Burelli_hog
+			allowed = { original_tag = VEN }
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = VEN_Miguel_Angel_Burelli_for
+			allowed = { original_tag = VEN }
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	VEN_Luis_Augusto_Dubuc = {
+		name = VEN_Luis_Augusto_Dubuc
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/VEN/Portrait_Venezuela_Luis_Augusto_Dubuc.png"
+				#small = GFX_idea_VEN_Luis_Augusto_Dubuc
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_LUIS_AUGUSTO_DUBUC"
+			expire = "1994.4.20"
+			ideology = paternalism_provisional_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Reinaldo_Leandro_Mora = {
+		name = VEN_Reinaldo_Leandro_Mora
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/VEN/Portrait_Venezuela_Reinaldo_Leandro_Mora.png"
+				#small = GFX_idea_VEN_Reinaldo_Leandro_Mora
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_REINALDO_MORA"
+			expire = "1994.4.20"
+			ideology = progressivism_gaitanismo_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Carlos_Andres_Perez = {
+		name = VEN_Carlos_Andres_Perez
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/VEN/Portrait_Venezuela_Carlos_Andres_Perez.png"
+				small = GFX_idea_VEN_Carlos_Andres_Perez
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_CARLOS_ANDRES_PEREZ"
+			expire = "1994.4.20"
+			ideology = progressivism_left_wing_populism_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = VEN_Leonardo_Montiel_Ortega_econ
+			allowed = { original_tag = VEN }
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	VEN_Lorenzo_Fernandez = {
+		name = VEN_Lorenzo_Fernandez
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Lorenzo_Fernandez.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_LORENZO_FERNANDEZ"
+			expire = "1994.4.20"
+			ideology = conservatism_christian_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_LORENZO_FERNANDEZ"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_christian_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	#1973 Elections
+	VEN_Leonardo_Montiel_Ortega = {
+		name = VEN_Leonardo_Montiel_Ortega
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Leonardo_Montiel_Ortega.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_LEONARDO_MONTIEL_ORTEGA"
+			expire = "1994.4.20"
+			ideology = liberalism_national_liberal_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = VEN_Leonardo_Montiel_Ortega_econ
+			allowed = { original_tag = VEN }
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	VEN_Jaime_Lusinchi = {
+		name = VEN_Jaime_Lusinchi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/VEN/Portrait_Venezuela_Jaime_Lusinchi.png"
+				small = GFX_idea_VEN_Jaime_Lusinchi
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_JAIME_LUSINCHI"
+			expire = "1994.4.20"
+			ideology = progressivism_gaitanismo_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = VEN_Jaime_Lusinchi_econ
+			allowed = { original_tag = VEN }
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	#Placeholder Leaders
+	VEN_Alfredo_Tarre_Murzi = {
+		name = VEN_Alfredo_Tarre_Murzi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/VEN/Portrait_Venezuela_Alfredo_Tarre_Murzi.png"
+				small = GFX_idea_VEN_Alfredo_Tarre_Murzi
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_ALFREDO_TARRE_MURZI"
+			expire = "1994.4.20"
+			ideology = progressivism_christian_progressivism_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = VEN_Alfredo_Tarre_Murzi_sec
+			allowed = { original_tag = VEN }
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	VEN_Domingo_Alberto_Rangel = {
+		name = VEN_Domingo_Alberto_Rangel
+		#portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Domingo_Alberto_Rangel.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_DOMINGO_ALBERTO_RANGEL"
+			expire = "1994.4.20"
+			ideology = socialist_2_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_German_Borregales = {
+		name = VEN_German_Borregales
+		#portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_German_Borregales.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_GERMAN_BORREGALES"
+			expire = "1994.4.20"
+			ideology = fascism_falangism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	#Ministers - Dem
+
+	##Military Paths
+	VEN_Felix_Roman_Moreno = {
+		name = VEN_Felix_Roman_Moreno
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Felix_Roman_Moreno.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_FELIX_ROMAN_MORENO"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Jesus_Maria_Castro_Leon = {
+		name = VEN_Jesus_Maria_Castro_Leon
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Jesus_Maria_Castro_Leon.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_JESUS_MARIA_CASTRO_LEON"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	#Mendoza
+	VEN_Eugenio_Mendoza = {
+		name = VEN_Eugenio_Mendoza
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Eugenio_Mendoza.png" } }
+	}
+	VEN_Pedro_Tinoco = {
+		name = VEN_Pedro_Tinoco
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Pedro_Tinoco.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_PEDRO_TINOCO"
+			expire = "1994.4.20"
+			ideology = paternalism_paternalistic_developmentalism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_PEDRO_TINOCO"
+			expire = "1994.4.20"
+			ideology = despotism_managerial_state_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Arturo_Uslar_Pietri = {
+		name = VEN_Arturo_Uslar_Pietri
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Arturo_Uslar_Pietri.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_ARTURO_USLAR_PIETRI"
+			expire = "1994.4.20"
+			ideology = conservatism_progressive_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_ARTURO_USLAR_PIETRI"
+			expire = "1994.4.20"
+			ideology = paternalism_oligarchy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	#Trejo
+	#PerezJimenez
+	VEN_Oscar_Tamayo_Suarez = {
+		name = VEN_Oscar_Tamayo_Suarez
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Oscar_Tamayo_Suarez.png" } }
+	}
+	VEN_Roberto_Casanova = {
+		name = VEN_Roberto_Casanova
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Roberto_Casanova.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_ROBERTO_CASANOVA"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Luis_Felipe_Llovera_Paez = {
+		name = VEN_Luis_Felipe_Llovera_Paez
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Luis_Felipe_Llovera_Paez.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_LUIS_FELIPE_LLOVERA_PAEZ"
+			expire = "1994.4.20"
+			ideology = despotism_managerial_state_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_LUIS_FELIPE_LLOVERA_PAEZ"
+			expire = "1994.4.20"
+			ideology = paternalism_anocracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Marcos_Perez_Jimenez = {
+		name = VEN_Marcos_Perez_Jimenez
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Marcos_Perez_Jimenez.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_MARCOS_PEREZ_JIMENEZ"
+			expire = "1994.4.20"
+			ideology = fascism_fascist_populism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_MARCOS_PEREZ_JIMENEZ"
+			expire = "1994.4.20"
+			ideology = despotism_personalistic_dictatorship_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_MARCOS_PEREZ_JIMENEZ"
+			expire = "1994.4.20"
+			ideology = paternalism_peronism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Margot_Perez_Jimenez = {
+		name = VEN_Margot_Perez_Jimenez
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Margot_Perez_Jimenez.png" } }
+		gender = female
+		country_leader = {
+			desc = "POLITICS_VEN_MARGOT_PEREZ_JIMENEZ"
+			expire = "1994.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_MARGOT_PEREZ_JIMENEZ"
+			expire = "1994.4.20"
+			ideology = paternalism_anocracy_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_MARGOT_PEREZ_JIMENEZ"
+			expire = "1994.4.20"
+			ideology = fascism_fascist_populism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	#Vidal
+	VEN_Juan_Dios_Moncada_Vidal = {
+		name = VEN_Juan_Dios_Moncada_Vidal
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Juan_de_Dios_Moncada_Vidal.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_JUAN_DIOS_MONCADA_VIDAL_PAZ"
+			expire = "1994.4.20"
+			ideology = fascism_revolutionary_nationalism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_VEN_JUAN_DIOS_MONCADA_VIDAL_PAZ_70s"
+			expire = "1994.4.20"
+			ideology = ultranationalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Nicolas_Hurtado_Barrios = {
+		name = VEN_Nicolas_Hurtado_Barrios
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Nicolas_Hurtado_Barrios.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_NICOLAS_HURTADO_BARRIOS"
+			expire = "1994.4.20"
+			ideology = despotism_military_socialism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Manuel_Azuaje_Ortega = {
+		name = VEN_Manuel_Azuaje_Ortega
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Manuel_Azuaje_Ortega.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_MANUEL_AZUAJE_ORTEGA"
+			expire = "1994.4.20"
+			ideology = fascism_revolutionary_nationalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VNI_Rathvon_Tompkins = {
+		name = VEN_Rathvon_Tompkins
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrat_Venezuela_Rathvon_Tompkins.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_RATHVAN_TOMPKINS"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VNI_Governance_Council = {
+		name = VEN_Governance_Council
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Governance_Council.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_GOVERNANCE_COUNCIL"
+			expire = "1994.4.20"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VNI_Enrique_Tejera_Paris = {
+		name = VNI_Enrique_Tejera_Paris
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Enrique_Tejera_Paris.png" } }
+		country_leader = {
+			desc = "POLITICS_ENRIQUE_TEJERA_PARIS"
+			expire = "1994.4.20"
+			ideology = paternalism_transitioning_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Americo_Silva = {
+		name = VEN_Americo_Silva
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Americo_Silva.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_AMERICO_SILVA"
+			expire = "1994.4.20"
+			ideology = communist_amazonism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	##Commies Venezuela
+	VNS_Buro_Politico = {
+		name = VEN_Buro_Politico
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Buro_Politico.png" } }
+		country_leader = {
+			#desc = "POLITICS_VEN_GUSTAVO_MACHADO"
+			expire = "1994.4.20"
+			ideology = socialist_revolutionary_frontism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VNS_Gustavo_Machado = {
+		name = VEN_Gustavo_Machado
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Gustavo_Machado.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_GUSTAVO_MACHADO"
+			expire = "1994.4.20"
+			ideology = communist_bolshevism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VNS_Teodoro_Petkoff = {
+		name = VEN_Teodoro_Petkoff
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Teodoro_Petkoff.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_TEODOR_PETKOFF"
+			expire = "1994.4.20"
+			ideology = socialist_social_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VNS_Douglas_Bravo = {
+		name = VEN_Douglas_Bravo
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Douglas_Bravo.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_DOUGLAS_BRAVO"
+			expire = "1994.4.20"
+			ideology = communist_guevarism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VNS_Eduardo_Gallegos_Mancera = {
+		name = VEN_Eduardo_Gallegos_Mancera
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Eduardo_Gallegos_Mancera.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_AMERICO_MARTIN"
+			expire = "1994.4.20"
+			ideology = communist_bolshevism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VNS_Pedro_Ortega_Diaz = {
+		name = VEN_Pedro_Ortega_Diaz
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Pedro_Ortega_Diaz.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_AMERICO_MARTIN"
+			expire = "1994.4.20"
+			ideology = communist_bolshevism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VNS_Americo_Martin = {
+		name = VEN_Americo_Martin
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Americo_Martin.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_AMERICO_MARTIN"
+			expire = "1994.4.20"
+			ideology = socialist_revolutionary_gaitanismo_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VNS_Americo_Silva = {
+		name = VEN_Americo_Silva
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Americo_Silva.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_AMERICO_SILVA"
+			expire = "1994.4.20"
+			ideology = communist_amazonism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	##Guyana Occupation leaders
+	VEN_Averrel_John_Melville = {
+		name = VEN_Averrel_John_Melville
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_VEN_Averrel_John_Melville.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_AVERELL_MELVILLE"
+			expire = "1994.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Alberto_Paoli_Chalbaud = {
+		name = VEN_Alberto_Paoli_Chalbaud
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_VEN_Alberto_Paoli_Chalbaud.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_ALBERTO_CHALBAUD"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	VEN_Pedro_Medina_Silva = {
+		name = VEN_Pedro_Medina_Silva
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_VEN_Pedro_Medina_Silva.png" } }
+		country_leader = {
+			desc = "POLITICS_VEN_PEDRO_SILVA"
+			expire = "1994.4.20"
+			ideology = despotism_military_socialism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	##Flores
+	VEN_Pablo_Antonio_Flores = {
+		name = VEN_Pablo_Antonio_Flores
+		portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Pablo_Antonio_Flores.png" } }
+		country_leader = {
+			#desc = "POLITICS_VEN_PEDRO_SILVA"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+}

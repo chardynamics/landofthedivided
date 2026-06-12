@@ -1,0 +1,64 @@
+﻿defined_text = {
+	name = GetTipDesc
+	text = {
+		localization_key = "TNO_tips_and_tricks_entry_desc_[?current_tip_id]"
+	}
+}
+
+defined_text = {
+	name = GetTipTitle
+	text = {
+		localization_key = "TNO_tips_and_tricks_entry_title_[?current_tip_id]"
+	}
+}
+
+defined_text = { # crazy that i have to do it this way...
+	name = GetTipCategory
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = { global.tip_category_array^current_tip_id = 0 }
+			}
+		}
+		localization_key = "TNO_tips_and_tricks_entry_brackets"
+	}
+}
+
+defined_text = {
+	name = GetTipCategoryProper
+	text = {
+		localization_key = "TNO_tips_and_tricks_entry_category_[?global.tip_category_array^current_tip_id]"
+	}
+}
+
+defined_text = {
+	name = GetTipContentsType
+	text = {
+		trigger = {
+			#check_variable = { g = global.tip_contents_folder_array^f }
+
+			is_in_array = {
+				array = global.tip_contents_folder_array
+				value = g
+			}
+		}
+		localization_key = "Tips_and_Tricks_Contents_Folder_Entry" 
+	}
+	text = {
+		localization_key = "Tips_and_Tricks_Contents_Content_Entry" 
+	}
+}
+
+defined_text = {
+	name = GetTipContentsFolder
+	text = {
+		localization_key = "TNO_tips_and_tricks_entry_category_[?f]" 
+	}
+}
+
+defined_text = {
+	name = GetTipContentsContent
+	text = {
+		localization_key = "TNO_tips_and_tricks_entry_title_[?g]" 
+	}
+}

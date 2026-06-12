@@ -1,0 +1,692 @@
+spriteTypes = {
+	#overview tab
+	spriteType = {
+		name = "GFX_overview_background"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/overview_background.dds"
+		transparencecheck = yes	
+	}
+	spriteType = {
+		name = "GFX_header_blocker"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/header_blocker.dds"
+		transparencecheck = yes	
+	}
+	spriteType = {
+		name = "GFX_cold_war_info"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/cold_war_info.dds"
+	}
+	spriteType = {
+		name = "GFX_flag_outline_bra"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/flag_outline_bra.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_flag_outline_arg"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/flag_outline_arg.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_overview_nuclear_button"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/overview_nuclear_button.dds"
+	}
+	progressbartype = {
+		name = "GFX_power_balance_bar"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/power_balance_bra.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/power_balance_arg.dds"
+		size = { x = 302 y = 42 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	spriteType = {
+		name = "GFX_power_balance_midpoint"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/power_balance_midpoint.dds"
+	}
+	spriteType = {
+		name = "GFX_scores_bg_arg"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/scores_bg_arg.dds"
+	}
+	spriteType = {
+		name = "GFX_scores_bg_bra"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/scores_bg_bra.dds"
+	}
+	spriteType = {
+		name = "GFX_tension_1"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/tension_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tension_2"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/tension_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tension_3"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/tension_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tension_4"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/tension_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tension_5"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/tension_5.dds"
+	}
+	progressbartype = {
+		name = "GFX_tension_bar"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/tension_bar_full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/tension_bar_empty.dds"
+		size = { x = 56 y = 168 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_proxy_icon"
+		textureFile = "gfx/interface/proxy_wars/south_american_cold_war/proxy_icon.dds"
+		noOfFrames = 2
+		animation_rate_fps = 0.8
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_proxy_icon_locked"
+		textureFile = "gfx/interface/proxy_wars/south_american_cold_war/proxy_icon_locked.dds"
+		noOfFrames = 2
+		animation_rate_fps = 0.8
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+
+	#use lower transparency versions in the assets
+	#set colour intensity to full for shaders
+	#define assets also as icons for overlay
+	
+	#map
+	progressbartype = {
+		name = "GFX_SAmap_belize_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_belize_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 5 y = 11 }
+		steps = 10000
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_bolivia_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_bolivia_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 40 y = 58 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_bolivia_santa_cruz_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_bolivia_santa_cruz_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 49 y = 58 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_cayenne_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_cayenne_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 11 y = 14 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_chile_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_chile_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 31 y = 188 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_colombia_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_colombia_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 51 y = 73 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_ng_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_ng_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 14 y = 20 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_bog_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_bog_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 51 y = 73 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_cru_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_cru_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 35 y = 36 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_costa_rica_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_costa_rica_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 12 y = 12 }
+		steps = 10000	
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_cuba_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_cuba_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 44 y = 15 }
+		steps = 10000	
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_dominica_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_dominica_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 15 y = 8 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_ecuador_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_ecuador_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 22 y = 26 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_el_salvador_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_el_salvador_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 10 y = 5 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_guatemala_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_guatemala_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 15 y = 17 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_guyana_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_guyana_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 22 y = 29 }
+		steps = 10000
+		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_haiti_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_haiti_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 11 y = 8 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_honduras_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_honduras_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 23 y = 13 }
+		steps = 10000	
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_nicaragua_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_nicaragua_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 18 y = 18 }
+		steps = 10000	
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_panama_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_panama_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 24 y = 9 }
+		steps = 10000	
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+
+	progressbartype = {
+		name = "GFX_SAmap_paraguay_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_paraguay_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 41 y = 45 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_peru_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_peru_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 54 y = 80 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_santa_cruz_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_santa_cruz_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 27 y = 17 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_camba_santa_cruz_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_camba_santa_cruz_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 33 y = 37 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_suriname_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_suriname_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 16 y = 15 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_uruguay_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_uruguay_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 21 y = 22 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_venezuela_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_venezuela_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 57 y = 46 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_wif_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_wif_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 8 y = 4 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_alt_bolivia_santa_cruz_full_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_alt_bolivia_santa_cruz_full_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 51 y = 58 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_alt_santa_cruz_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_alt_santa_cruz_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 31 y = 28 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_alt_bolivia_small_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_alt_bolivia_small_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 34 y = 58 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_camba_bolivia_small_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_camba_bolivia_small_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 25 y = 58 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+	progressbartype = {
+		name = "GFX_SAmap_alt_paraguay_small_fill"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/SAmap_alt_paraguay_small_fill.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/map_fill/colors.dds"
+		color = { 1 0.06 0 0 }
+		size = { x = 41 y = 45 }
+		steps = 10000		
+		effectFile = "gfx/FX/map_fill_palette.shader"
+	}
+
+
+	spriteType = {
+		name = "GFX_SAmap_argentina"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_argentina.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_brazil"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_brazil.dds"	
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_mexico"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_mexico.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_belize"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_belize.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_bolivia"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_bolivia.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_cayenne"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_cayenne.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_chile"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_chile.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_colombia"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_colombia.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_ng"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_ng.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_bog"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_bog.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_cru"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_cru.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_colombia_civil_war"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_colombia_civil_war.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_costa_rica"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_costa_rica.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_cuba"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_cuba.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_dominica"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_dominica.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_ecuador"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_ecuador.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_el_salvador"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_el_salvador.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_guatemala"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_guatemala.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_guyana"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_guyana.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_haiti"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_haiti.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_honduras"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_honduras.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_nicaragua"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_nicaragua.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_paraguay"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_paraguay.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_panama"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_panama.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_peru"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_peru.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_santa_cruz"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_santa_cruz.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_camba_santa_cruz"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_camba_santa_cruz.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_suriname"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_suriname.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_uruguay"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_uruguay.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_usa"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_usa.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_venezuela"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_venezuela.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_wif"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_wif.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_blank"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_blank.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_alt_argentina_triple_alliance"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_alt_argentina_triple_alliance.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_alt_bolivia_santa_cruz_full"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_alt_bolivia_santa_cruz_full.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_alt_santa_cruz"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_alt_santa_cruz.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_alt_brazil_triple_alliance"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_alt_brazil_triple_alliance.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_alt_brazil_triple_alliance_cayenne"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_alt_brazil_triple_alliance_cayenne.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_alt_brazil_cayenne"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_alt_brazil_cayenne.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_alt_bolivia_small"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_alt_bolivia_small.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_camba_bolivia_small"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_camba_bolivia_small.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_alt_paraguay_small"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_alt_paraguay_small.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SAmap_bolivia_santa_cruz"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/map/SAmap_bolivia_santa_cruz.dds"
+		transparencecheck = yes
+	}
+
+	###################
+	# Nuclear Program #
+	###################
+
+	spriteType = {
+		name = "GFX_south_america_cold_war_nuclear_cover_bra"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/south_america_cold_war_nuclear_cover_bra.dds"
+	}
+	spriteType = {
+		name = "GFX_south_america_cold_war_nuclear_cover_arg"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/south_america_cold_war_nuclear_cover_arg.dds"
+	}
+	spritetype = {
+		name = "GFX_south_america_cold_war_nuclear_background"
+		textureFile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/nuclear_program_gui_bg.dds"
+	}
+	spritetype = {
+		name = "GFX_south_america_cold_war_nuclear_program_gui_budget_outline"
+		textureFile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/nuclear_program_gui_budget_outline.dds"
+	}
+	spritetype = {
+		name = "GFX_south_america_cold_war_nuclear_program_gui_budget_outline_white"
+		textureFile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/nuclear_program_gui_budget_outline_white.dds"
+	}
+	spritetype = {
+		name = "GFX_south_america_cold_war_nuclear_program_gui_pie_filling"
+		textureFile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/nuclear_program_gui_pie_filling.dds"
+	}
+	spritetype = {
+		name = "GFX_south_america_cold_war_nuclear_program_gui_pie_outline"
+		textureFile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/nuclear_program_gui_pie_outline.dds"
+	}
+	spritetype = {
+		name = "GFX_south_america_cold_war_nuclear_program_gui_supporter_outline"
+		textureFile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/nuclear_program_gui_supporter_outline.dds"
+	}
+	spritetype = {
+		name = "GFX_south_america_cold_war_nuclear_program_gui_info_outline"
+		textureFile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/nuclear_program_gui_info_outline.dds"
+	}
+
+	progressbartype = {
+		name = "GFX_south_america_cold_war_nuclear_program_gui_progress_pie"
+		textureFile1 = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/nuclear_program_gui_pie_filling.dds"
+		textureFile2 = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/nuclear_program_gui_pie_empty.dds"
+		size = { 
+			x = 130
+			y = 130
+		}
+		effectFile = "gfx/FX/progress_radial_gap.lua"
+		horizontal = yes
+	}
+	
+	spritetype = {
+		name = "GFX_south_america_cold_war_nuclear_program_budget_select_screen"
+		textureFile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/budget_select_screen.dds"
+	}
+
+	spritetype = {
+		name = "GFX_SACW_nuclear_funding_slider_thumb"
+		texturefile = "gfx/interface/economy_gui/econ_crt_slider_dot.dds"
+		effectfile = "gfx/FX/BRA_nuclear_funding_slider_thumb_anim.shader"
+	}
+
+	spritetype = {
+		name = "GFX_SACW_nuclear_funding_slider_background"
+		texturefile = "gfx/interface/proxy_wars/south_american_cold_war/nuclear_program/SACW_nuclear_funding_slider_background.dds"
+	}
+}

@@ -1,0 +1,5 @@
+COL_Decay_Nation = {
+	enable = { has_war = yes }
+	army_org_factor = CCW_decay_nation_modifier
+	surrender_limit = CCW_decay_nation_modifier
+}

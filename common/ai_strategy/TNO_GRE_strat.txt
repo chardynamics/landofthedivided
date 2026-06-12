@@ -1,0 +1,23 @@
+GRE_hellas = { 
+	allowed = {
+		tag = GRE
+	}
+	enable = {
+		has_war_with = ITA
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = ITA
+		value = 500
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = ALB
+		value = 500
+	}
+	ai_strategy = {
+		type = garrison
+		value = 250
+	}
+}

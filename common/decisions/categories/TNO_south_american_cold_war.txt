@@ -1,0 +1,10 @@
+ARG_SACW_category = {
+	allowed = { original_tag = ARG }
+	visible = { has_country_flag = TNO_SACW_mech_Active }
+	#visible_when_empty = yes
+}
+BRA_SACW_category = {
+	allowed = { original_tag = BRA }
+	visible = { has_country_flag = TNO_SACW_mech_Active }
+	#visible_when_empty = yes
+}

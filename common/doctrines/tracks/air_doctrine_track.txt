@@ -1,0 +1,61 @@
+
+fighter_aircraft = {
+	name = DOCTRINE_TRACK_FIGHTER_AIRCRAFT
+	background = "GFX_air_superiority_bg"
+	icon = "GFX_doctrine_milestone_fighter_air"
+	icon_frame = "GFX_doctrine_decor_air"
+	mastery = {
+		multiplier = 8.0 
+		equipment = {
+			fighter
+			interceptor
+		}
+	}
+}
+
+# helicopter = {
+# 	name = DOCTRINE_TRACK_HELICOPTER
+# 	background = "GFX_battlefield_destruction_bg"
+# 	icon = "GFX_doctrine_milestone_helicopter_air"
+# 	icon_frame = "GFX_doctrine_decor_air"
+# 	mastery = {
+# 		multiplier = 8.0 
+# 		equipment = {
+# 			helicopter
+# 		}
+# 	}
+# }
+
+bomber_aircraft = {
+	name = DOCTRINE_TRACK_BOMBER_AIRCRAFT
+	background = "GFX_strategic_destruction_bg"
+	icon = "GFX_doctrine_milestone_heavy_air"
+	icon_frame = "GFX_doctrine_decor_air"
+	mastery = {
+		multiplier = 8.0 
+		equipment = {
+			tactical_bomber
+			strategic_bomber
+		}
+	}
+}
+
+operations_aerial = {
+	name = DOCTRINE_TRACK_OPERATIONS
+	background = "GFX_operational_destruction_bg"
+	icon = "GFX_doctrine_milestone_medium_air"
+	icon_frame = "GFX_doctrine_decor_air"
+	mastery = {
+		multiplier = 1.0 
+		equipment = {
+			fighter
+			interceptor
+			cas
+			naval_bomber
+			suicide
+			scout_plane
+			tactical_bomber
+			strategic_bomber
+		}
+	}
+}

@@ -1,0 +1,372 @@
+spriteTypes = {
+	progressbartype = {
+		name = "GFX_IBR_wars_political_opposition_progress_bar"
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_opposition_bar.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_legitimacy_bar_bg.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { 
+			x = 448
+			y = 27
+		}
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+
+	progressbartype = {
+		name = "GFX_IBR_wars_legitimacy_progress_bar"
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_opposition_bar_bg.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_legitimacy_bar_bg.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { 
+			x = 448
+			y = 27
+		}
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_legitimacy_bar
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_homefront_legitimacy.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_homefront_empty_cricle.dds"
+		size = { 
+			x = 202
+			y = 202
+		}
+		effectFile = "gfx/FX/progress_radial.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = GFX_IBR_wars_opposition_bar
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_homefront_opposition.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_homefront_empty_cricle.dds"
+		size = { 
+			x = 202
+			y = 202
+		}
+		effectFile = "gfx/FX/progress_radial.lua"
+		horizontal = yes
+	}
+
+	spriteType = {
+		name = "GFX_Iberian_Wars_Info_Icon"
+		texturefile = "gfx/interface/iberian_wars/Iberian_Wars_Info_Icon.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_homefront_circle
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_homefront_circle.dds"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_homefront_grid
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_homefront_grid.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_flag_overlay
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_flag_overlay.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_flag_overlay_selected
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_flag_overlay_selected.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_handling_request
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_handling_request.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_no_foreign_supporters
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_no_foreign_supporters.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_select_request
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_select_request.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_small_button
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_small_button.dds"
+	}
+	
+	spriteType = {
+		name = GFX_IBR_wars_small_button_unavailable
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_small_button_unavailable.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_request_type_button
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_request_type_button.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_request_button
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_request_button.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_request_type_button_positive
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_request_type_button_positive.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_supporters_line
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_supporters_line.dds"
+	}
+
+	#Pie charts and images 
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_BSQ
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_BSQ.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_BSQ_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_GAL
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_GAL.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_GAL_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_CTL
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_CTL.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_CTL_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_CNT
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_CNT.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_CNT_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_BTA
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_BTA.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_BTA_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_ADL
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_ADL.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_ADL_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_SPR
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_SPR.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_SPR_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_SPS
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_SPS.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_SPS_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_FZL
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_FZL.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_FZL_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_POR
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_POR.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_POR_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_RPP
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_RPP.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_RPP_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_PPR
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_PPR.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_PPR_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_FSR
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_FSR.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_FSR_symbol.dds"
+		size = {
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_USA
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_USA.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_USA_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_GER
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_GER.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_GER_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	progressbartype = {
+		name = GFX_IBR_wars_influence_pie_ITA
+		textureFile1 = "gfx/interface/iberian_wars/iberian_wars_influence_pie_ITA.dds"
+		textureFile2 = "gfx/interface/iberian_wars/iberian_wars_ITA_symbol.dds"
+		size = { 
+			x = 180
+			y = 180
+		}
+		effectFile = "gfx/FX/progress_radial_img.lua"
+		steps = 100000
+	}
+
+	###
+	spriteType = {
+		name = GFX_IBR_wars_influence_pie_overlay
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_influence_pie_overlay.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_political_image
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_political_image.dds"
+	}
+
+	spriteType = {
+		name = GFX_iberian_wars_military_image
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_military_image.dds"
+	}
+
+	spriteType = {
+		name = GFX_IBR_wars_bar_container
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_bar_container.dds"
+	}
+	spriteType = {
+		name = GFX_iberiawars_military_box
+		texturefile = "gfx/interface/iberian_wars/iberiawars_military_box.dds"
+	}
+	spriteType = {
+		name = GFX_iberiawars_military_button
+		texturefile = "gfx/interface/iberian_wars/iberiawars_military_button.dds"
+	}
+###Banners 
+	spriteType = {
+		name = GFX_iberian_wars_federal_banner
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_federal_banner.dds"
+	}
+
+	spriteType = {
+		name = GFX_iberian_wars_catalonia_banner
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_catalonia_banner.dds"
+	}
+
+	spriteType = {
+		name = GFX_iberian_wars_CNT_banner
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_CNT_banner.dds"
+	}
+
+	spriteType = {
+		name = GFX_iberian_wars_PPR_banner
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_PPR_banner.dds"
+	}
+
+	spriteType = {
+		name = GFX_iberian_wars_BSQ_banner
+		texturefile = "gfx/interface/iberian_wars/iberian_wars_BSQ_banner.dds"
+	}
+
+}

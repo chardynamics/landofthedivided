@@ -1,0 +1,108 @@
+guiTypes = {
+	containerWindowType = {
+		name = "BRA_Riots_GUI"
+		size = { width = 520 height = 650 }
+		containerWindowType = {
+			name = "brazil_riots_gui_container"
+			size = { width = 479 height = 301 }
+			position = { x = 16 y = 40 }
+			iconType = {
+				name = "brazil_riots_sky"
+				spriteType = "GFX_brazil_riots_sky"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_Riots_STR_tooltip"
+			}
+			iconType = {
+				name = "brazil_riots_clouds"
+				spriteType = "GFX_brazil_riots_clouds"
+				position = { x = 1 y = 0 }
+				pdx_tooltip = "BRA_Riots_ANG_tooltip"
+			}
+			iconType = {
+				name = "union_logo"
+				spriteType = "GFX_brazil_riots_cgt_logo"
+				position = { x = 184 y = 20 }
+				pdx_tooltip = "BRA_Riots_STR_tooltip"
+			}
+			iconType = {
+				name = "overlay"
+				spriteType = "GFX_BRA_Riots_overlay"
+				position = { x = -5 y = -5 }
+				alwaystransparent = yes
+			}
+		}
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_Burgundy_GUI_Info_Button"
+			position = { x = 456 y = -12 }
+			pdx_tooltip = TNO_BRA_Riots_Info_tt
+		}
+		iconType = {
+			name = "CGT_button"
+			spriteType = "GFX_BRA_Riots_CGT_Logo"
+			position = { x = 39 y = 430 }
+		}
+		iconType = {
+			name = "CGT_selected"
+			spriteType = "GFX_BRA_Riots_CGT_Logo_Selected"
+			position = { x = 39 y = 430 }
+		}
+
+		iconType = {
+			name = "MSD_button"
+			spriteType = "GFX_BRA_Riots_MSD_Logo"
+			position = { x = 263 y = 430 }
+		}
+		iconType = {
+			name = "MSD_selected"
+			spriteType = "GFX_BRA_Riots_MSD_Logo_Selected"
+			position = { x = 263 y = 430 }
+		}
+		
+		instantTextboxType = {
+			name = Econ_Damage_text
+			position = { x = 141 y = 480 }
+			font = "aldrich_24_outline"
+			text = BRA_Riots_Econ_Damage
+			maxWidth = 240
+			maxHeight = 24
+			format = center
+		}
+		
+		iconType = {
+			name = "BRA_Econ_damage_Progbar_Border"
+			spriteType = "GFX_GNG_RIOTS_WIDE_PROGBAR_Border"
+			position = { x = 30 y = 505 }
+			PDX_tooltip = "BRA_Riots_econ_damage_tooltip" 
+		}
+
+		iconType = {
+			name = "BRA_Econ_Damage_bar"
+			spriteType = "GFX_brazil_wide_prog_bar"
+			position = { x = 35 y = 508 }
+			PDX_tooltip = "BRA_Riots_econ_damage_tooltip"
+		}
+
+		instantTextboxType = {
+			name = "Army_Status"
+			position = { x = 1 y = 540 }
+			font = "aldrich_24_outline"
+			text = [BRA_Riots_Army_Response]
+			PDX_tooltip = "BRA_Riots_UDN_concern_tooltip"
+			maxWidth = 520
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "Select_text"
+			position = { x = 1 y = 580 }
+			font = "aldrich_24_outline"
+			text = [BRA_Riots_Selected]
+			maxWidth = 520
+			maxHeight = 50
+			format = center
+		}
+	}
+}

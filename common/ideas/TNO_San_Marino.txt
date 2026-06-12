@@ -1,0 +1,179 @@
+ideas = {
+	country = {
+		SNM_princely_sovereign_council = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_princely_sovereign_council" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SNM_the_princely_and_sovereign_council
+			modifier = {
+				political_power_gain = -0.10
+				stability_factor = -0.05
+			}
+		}
+		SNM_burgeoning_indust = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_burgeoning_indust" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SNM_burgeoning_industrialization
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		SNM_rising_discontent = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_rising_discontent" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SNM_rising_discontent
+			modifier = {
+				stability_factor = -0.05
+				drift_defence_factor = -0.10
+			}
+		}
+		SNM_the_popular_and_republican_council = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_the_popular_and_republican_council" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_democracy_survives
+			modifier = {
+			
+			}
+		}
+		SNM_the_first_five_year_plan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_the_first_five_year_plan" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_planned_economy
+			modifier = {
+			
+			}
+		}
+		SNM_red_flags_over_monte_titano = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_red_flags_over_monte_titano" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_communism_ascendant
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = 0.25
+			}
+		}
+		SNM_the_fascist_and_corporative_council = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_the_fascist_and_corporative_council" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SNM_the_princely_and_sovereign_council
+			modifier = {
+			
+			}
+		}
+		SNM_istituto_per_la_pianificazione_economica = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_istituto_per_la_pianificazione_economica" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_breakneck_industrialization
+			modifier = {
+			
+			}
+		}
+		SNM_the_fires_of_squadrismo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_the_fires_of_squadrismo" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ITA_brigate_nere
+			modifier = {
+			
+			}
+		}
+		SNM_the_grand_and_general_council = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_the_grand_and_general_council" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SNM_the_grand_and_general_council
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.05
+			}
+		}
+		SNM_economic_reorganization = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_economic_reorganization" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_feeling_the_market
+			modifier = {
+				consumer_goods_use_modifier = 0.1
+				gdp_growth_modifier = 0.02
+				trade_opinion_factor = 0.25
+			}
+		}
+		SNM_the_spirit_of_the_arengo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SNM_the_spirit_of_the_arengo" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_ministry_strengthened
+			modifier = {
+			
+			}
+		}
+	}
+}

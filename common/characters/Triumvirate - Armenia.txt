@@ -1,0 +1,218 @@
+characters = {
+	# Country leaders #
+	ARM_Parliament = {
+		name = ARM_Parliament
+		portraits = {
+			civilian = {
+				#large = ""
+			}
+		}
+		country_leader = {
+			#desc = ""
+			expire = "1999.1.1"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	ARM_Karen_Demirchyan = {
+		name = ARM_Karen_Demirchyan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Karen_Demirchyan.png"
+			}
+		}
+		country_leader = {
+			#desc = ""
+			expire = "1999.1.1"
+			ideology = socialist_social_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	ARM_Haykaz_Khachatryan = {
+		name = ARM_Haykaz_Khachatryan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Hayaz_Khachatryan.png"
+			}
+		}
+		country_leader = {
+			#desc = ""
+			expire = "1999.1.1"
+			ideology = liberal_conservatism_christian_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+
+	ARM_Gevork_Vartanyan = {
+		name = ARM_Gevork_Vartanyan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Gevork_Vartanyan.png"
+			}
+		}
+		country_leader = {
+			#desc = ""
+			expire = "1999.1.1"
+			ideology = communist_national_communism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			#desc = ""
+			expire = "1999.1.1"
+			ideology = socialist_left_wing_nationalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	ARM_Migirdic_Sellefyan = { #Մկրտիչ Շելեֆյանը #Mkrtich Shelefyan
+		name = ARM_Migirdic_Sellefyan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Migirdic_Sellefyan.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MIGIRDIC_SELLEFYAN_DESC"
+			expire = "1999.1.1"
+			ideology = paternalism_oligarchy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	
+	ARM_Zakar_Tarver = { #Ռուբեն-Զաքար Զաքարյան #Ruben-Zakar Zakaryan
+		name = ARM_Zakar_Tarver
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Zakar_Tarver.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ZAKAR_TARVER_DESC"
+			expire = "1999.1.1"
+			ideology = liberalism_social_liberalism_subtype
+
+			traits = { }
+			id = -1
+		}
+	}
+
+	ARM_Marius_Yuzbashyan = {
+		name = ARM_Marius_Yuzbashyan
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Marius_Aramovich.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MARIUS_YUZBASHYAN_DESC"
+			expire = "1999.1.1"
+			ideology = communist_national_communism_subtype
+			traits = { }
+			id = -1
+		}
+		corps_commander = {
+			traits = { guerrilla_fighter }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	ARM_Petros_Poghosyan = {
+		name = ARM_Petros_Poghosyan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Petros_Poghosyan.png"
+			}
+			army = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Petros_Poghosyan.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_PETROS_POGHOSYAN_DESC"
+			expire = "1999.1.1"
+			ideology = paternalism_social_nationalism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_PETROS_POGHOSYAN_DESC"
+			expire = "1999.1.1"
+			ideology = ultranationalism_subtype
+			traits = { }
+			id = -1
+		}
+		corps_commander = {
+			traits = { guerrilla_fighter }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	# Ministers #
+	
+	ARM_Gourgen_Yanikian = {
+		name = ARM_Gourgen_Yanikian
+		portraits = {
+			civilian = {
+				small = "GFX_idea_ARM_minister_Gourgen_Yanikian"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ARM_Gourgen_Yanikian_for
+			allowed = { original_tag = ARM }
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ARM_Arshavir_Shirakian = {
+		name = ARM_Arshavir_Shirakian
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Arshavir_Shirakian.png"
+			}
+			army = {
+				large = "gfx/leaders/ARM/Portrait_ARM_Arshavir_Shirakian.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ARM_Arshavir_Shirakian_sec
+			allowed = { original_tag = ARM }
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		field_marshal = {
+			traits = { career_officer logistics_wizard thorough_planner }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+}

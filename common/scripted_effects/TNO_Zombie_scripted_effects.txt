@@ -1,0 +1,558 @@
+Update_Zombie_Portraits = { #Now triggered once at start of Zombies, instead of weekly
+	USA = {
+		if = {
+			limit = { has_character = USA_Richard_Nixon }
+			USA_Richard_Nixon = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Nixon.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = USA_John_F_Kennedy }
+			USA_John_F_Kennedy = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_JFK.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = USA_John_McCormack }
+			USA_John_McCormack = {
+				set_character_name = USA_John_F_Kennedy
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_JFK.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = USA_Francis_Yockey }
+			USA_Francis_Yockey = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Yockey.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = USA_Robert_F_Kennedy }
+			USA_Robert_F_Kennedy = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_RFK.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = USA_Strom_Thurmond }
+			USA_Strom_Thurmond = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Strom.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = USA_George_Wallace }
+			USA_George_Wallace = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Wallace.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = USA_Wallace_F_Bennett }
+			USA_Wallace_F_Bennett = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_WFB.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = USA_Lyndon_B_Johnson }
+			USA_Lyndon_B_Johnson = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_LBJ.png" }
+				}
+			}
+		}
+	}
+	GER = {
+		if = {
+			limit = { has_character = GER_reinhard_heydrich }
+			GER_reinhard_heydrich = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Heydrich.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = GER_albert_speer }
+			GER_albert_speer = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Speer.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = GER_martin_bormann }
+			GER_martin_bormann = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Bormann.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = GER_hermann_goring }
+			GER_hermann_goring = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Goering.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = GER_helmut_schmidt } #???
+			GER_helmut_schmidt = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Schmidt.png" }
+				}
+			}
+		}
+	}
+	HGR = {
+		if = {
+			limit = { has_character = GER_reinhard_heydrich }
+			GER_reinhard_heydrich = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Heydrich.png" }
+				}
+			}
+		}
+	}
+	BGR = {
+		if = {
+			limit = { has_character = GER_martin_bormann }
+			GER_martin_bormann = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Bormann.png" }
+				}
+			}
+		}
+	}
+	GGR = {
+		if = {
+			limit = { has_character = GER_hermann_goring }
+			GER_hermann_goring = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Goering.png" }
+				}
+			}
+		}
+	}
+	SGR = {
+		if = {
+			limit = { has_character = GER_albert_speer }
+			GER_albert_speer = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Speer.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = GER_helmut_schmidt } #???
+			GER_helmut_schmidt = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Schmidt.png" }
+				}
+			}
+		}
+	}
+	BRG = {
+		if = {
+			limit = { has_character = BRG_Heinrich_Himmler }
+			BRG_Heinrich_Himmler = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Himmler.png" }
+				}
+			}
+		}
+	}
+	IBR = {
+		if = {
+			limit = { has_character = IBR_Francisco_Franco }
+			IBR_Francisco_Franco = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Franco.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = IBR_Antonio_Salazar }
+			IBR_Antonio_Salazar = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Salazar.png" }
+				}
+			}
+		}
+	}
+	SPA = {
+		if = {
+			limit = { has_character = IBR_Francisco_Franco }
+			IBR_Francisco_Franco = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Franco.png" }
+				}
+			}
+		}
+	}
+	POR = {
+		if = {
+			limit = { has_character = IBR_Antonio_Salazar }
+			IBR_Antonio_Salazar = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Salazar.png" }
+				}
+			}
+		}
+	}
+	ITA = {
+		if = {
+			limit = { has_character = ITA_Carlo_Scorza }
+			ITA_Carlo_Scorza = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Scorza.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = ITA_Galeazzo_Ciano }
+			ITA_Galeazzo_Ciano = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Ciano.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = ITA_Umberto_II }
+			ITA_Umberto_II = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Umberto.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = ITA_Aldo_Moro }
+			ITA_Aldo_Moro = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Moro.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = ITA_Pietro_Nenni }
+			ITA_Pietro_Nenni = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Nenni.png" }
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_leader = { character = ITA_Carlo_Scorza ruling_only = yes }
+					has_country_leader = { character = ITA_Galeazzo_Ciano ruling_only = yes }
+					has_country_leader = { character = ITA_Umberto_II ruling_only = yes }
+					has_country_leader = { character = ITA_Aldo_Moro ruling_only = yes }
+					has_country_leader = { character = ITA_Pietro_Nenni ruling_only = yes }
+					has_country_leader = { character = ZOM_Zombie_Mussolini ruling_only = yes }
+				}
+			}
+			set_politics = { ruling_party = fascism }
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = ZOM_Zombie_Mussolini
+				promote_leader = yes
+				country_leader = {
+					ideology = fascism_subtype
+					expire = "1999.1.1"
+					id = -1
+				}
+			}
+		}
+	}
+	AMR = {
+		if = {
+			limit = { has_character = AMR_Konstantin_Rodzaevsky }
+			AMR_Konstantin_Rodzaevsky = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Rodzaevsky.png" }
+					army = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Rodzaevsky.png" }
+				}
+			}
+		}
+	}
+	KEM = {
+		if = {
+			limit = { has_character = KEM_Rurik_II }
+			KEM_Rurik_II = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Rurik.png" }
+				}
+			}
+		}
+	}
+	IRK = {
+		if = {
+			limit = { has_character = IRK_Genrikh_Yagoda }
+			IRK_Genrikh_Yagoda = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Yagoda.png" }
+				}
+			}
+		}
+	}
+	WRS = {
+		if = {
+			limit = { has_character = WRS_Mikhail_Tukhachevsky }
+			WRS_Mikhail_Tukhachevsky = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Tukhachevsky.png" }
+					army = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Tukhachevsky.png" }
+				}
+			}
+		}
+	}
+	SVR = {
+		if = {
+			limit = { has_character = SVR_Konstantin_Rokossovsky }
+			SVR_Konstantin_Rokossovsky = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Rokossovsky.png" }
+					army = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Rokossovsky.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = SVR_Pavel_Batov }
+			SVR_Pavel_Batov = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Batov.png" }
+					army = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Batov.png" }
+				}
+			}
+		}
+	}
+	TYM = {
+		if = {
+			limit = { has_character = TYM_Lazar_Kaganovich }
+			random_list = {
+				50 = {
+					TYM_Lazar_Kaganovich = {
+						set_character_name = ZOM_Zombie_Stalin
+						set_portraits = {
+							civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Stalin.png" }
+						}
+					}
+				}
+				50 = {
+					TYM_Lazar_Kaganovich = {
+						set_portraits = {
+							civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Kaganovich.png" }
+						}
+					}
+				}
+			}
+		}
+	}
+	INS = {
+		if = {
+			limit = { has_character = INS_Suharto }
+			INS_Suharto = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Suharto.png" }
+				}
+			}
+		}
+		if = {
+			limit = { has_character = INS_Sukarno }
+			INS_Sukarno = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Sukarno.png" }
+					army = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Sukarno.png" }
+				}
+			}
+		}
+	}
+	MGN = {
+		if = {
+			limit = { has_character = MGN_Trofim_Lysenko }
+			MGN_Trofim_Lysenko = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Lysenko.png" }
+				}
+			}
+		}
+	}
+	BRY = {
+		if = {
+			limit = { has_character = BRY_Valery_Sablin }
+			BRY_Valery_Sablin = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Sablin.png" }
+				}
+			}
+		}
+	}
+	KOM = {
+		if = {
+			limit = { has_character = KOM_Svetlana_Stalina }
+			KOM_Svetlana_Stalina = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Stalina.png" }
+				}
+			}
+		}
+	}
+	OMS = {
+		if = {
+			limit = { has_character = OMS_Dmitry_Yazov }
+			OMS_Dmitry_Yazov = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Yazov.png" }
+					army = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Yazov.png" }
+				}
+			}
+		}
+	}
+	YUN = {
+		if = {
+			limit = { has_character = YUN_long_yun }
+			YUN_long_yun = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Yun.png" }
+					army = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Yun.png" }
+				}
+			}
+		}
+	}
+	DRL = {
+		if = {
+			limit = { has_character = DRL_Oskar_Dirlewanger }
+			DRL_Oskar_Dirlewanger = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Dirle.png" }
+					army = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Dirle.png" }
+				}
+			}
+		}
+	}
+	MEN = { #Moved to Mengjiang since MON is cut
+		if = {
+			limit = { has_character = MEN_Demchugdongrub }
+			MEN_Demchugdongrub = {
+				set_character_name = ZOM_Zombie_Sternberg
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Sternberg.png" }
+				}
+			}
+		}
+	}
+	CHT = {
+		if = {
+			limit = { has_character = CHT_Mikhail_II }
+			CHT_Mikhail_II = {
+				set_character_name = ZOM_Zombie_Kolchak
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Kolchak.png" }
+				}
+			}
+		}
+	}
+	TOM = {
+		if = {
+			limit = { has_character = TOM_Boris_Pasternak }
+			TOM_Boris_Pasternak = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Pasternak.png" }
+				}
+			}
+		}
+	}
+	PRC = {
+		if = {
+			limit = { has_character = PRC_Aleksandr_Vasilevsky }
+			PRC_Aleksandr_Vasilevsky = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Vasilevsky.png" }
+					army = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Vasilevsky.png" }
+				}
+			}
+		}
+	}
+	SAM = {
+		if = {
+			limit = { has_character = SAM_Andrey_Vlasov }
+			SAM_Andrey_Vlasov = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Vlasov.png" }
+					army = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Zombie_Vlasov.png" }
+				}
+			}
+		}
+	}
+	CHI = {
+		if = {
+			limit = { has_character = CHI_gao_zongwu }
+			CHI_gao_zongwu = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Zongwu.png" }
+				}
+			}
+		}
+	}
+	OMO = {
+		if = {
+			limit = { has_character = OMO_Alexander_Men }
+			OMO_Alexander_Men = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Men.png" }
+				}
+			}
+		}
+	}
+	NOV = {
+		if = {
+			limit = { has_character = NOV_Alexander_Pokryshkin }
+			NOV_Alexander_Pokryshkin = {
+				set_portraits = {
+					civilian = { large = "gfx/leaders/ZOM/Portrait_ZOM_Halloween_Survivor_Pokryshkin.png" }
+				}
+			}
+		}
+	}
+}
+
+Update_Zombie_Portraits_Mussolini = {
+	ITA = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_leader = { character = ITA_Carlo_Scorza ruling_only = yes }
+					has_country_leader = { character = ITA_Galeazzo_Ciano ruling_only = yes }
+					has_country_leader = { character = ITA_Umberto_II ruling_only = yes }
+					has_country_leader = { character = ITA_Aldo_Moro ruling_only = yes }
+					has_country_leader = { character = ITA_Pietro_Nenni ruling_only = yes }
+					has_country_leader = { character = ZOM_Zombie_Mussolini ruling_only = yes }
+				}
+			}
+			set_politics = { ruling_party = fascism }
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = ZOM_Zombie_Mussolini
+				promote_leader = yes
+				country_leader = {
+					ideology = fascism_subtype
+					expire = "1999.1.1"
+					id = -1
+				}
+			}
+		}
+	}
+}

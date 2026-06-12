@@ -1,0 +1,885 @@
+ideas = {
+	country = {
+		IBR_State_Exemplary = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_State_Exemplary" }
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_state_of_union_exemplary
+
+			modifier = {
+				political_power_gain = 0.35
+				stability_factor = 0.2
+			}
+		}
+
+		IBR_State_Strong = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_State_Strong" }
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_state_of_union_strong
+
+			modifier = {
+				political_power_gain = 0.3
+				stability_factor = 0.15
+			}
+		}
+
+		IBR_State_MedStrong = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_State_MedStrong" }
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_state_of_union_medium_strong
+
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.10
+			}
+		}
+
+		IBR_State_Med = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_State_Med" }
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_state_of_union_medium
+
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.1
+			}
+		}
+
+		IBR_State_MedWeak = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_State_MedWeak" }
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_state_of_union_medium_weak
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.05
+			}
+		}
+
+		IBR_State_Weak = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_State_Weak" }
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_state_of_union_weak
+
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.15
+			}
+		}
+
+		IBR_returning_campaign = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_returning_campaign" }
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_liberalization
+
+			modifier = {
+				political_power_gain = 0.1
+				monthly_population = 0.2
+				stability_factor = -0.1
+			}
+		}
+		IBR_Dissolving_Iberian_Union = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Dissolving_Iberian_Union" }
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_dissolving_union
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.10
+			}
+		}
+
+		IBR_Severing_Economic_Ties = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Severing_Economic_Ties" }
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_severing_economic_ties
+
+			modifier = {
+				consumer_goods_use_modifier = 0.15
+				production_factory_efficiency_gain_factor = -0.25
+				production_factory_start_efficiency_factor = -0.25
+			}
+		}
+
+		IBR_Severing_Military_Ties = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Severing_Military_Ties" }
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_severing_military_ties
+
+			modifier = {
+				planning_speed = -0.25
+				army_org_factor = -0.25
+				offence = -0.1
+				defence = -0.1
+				conscription_factor = -0.75
+			}
+		}
+
+		IBR_Dissolved_Federal_Government = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Dissolved_Federal_Government" }
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_dissolved_federal_government
+
+			modifier = {
+				political_power_factor = -0.90
+			}
+		}
+
+		IBR_collapsing_military = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_collapsing_military" }
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_severing_military_ties
+
+			modifier = {
+				planning_speed = -0.5
+				army_speed_factor = -0.55
+				army_org_factor = -0.25
+				offence = -0.2
+				defence = -0.2
+				attrition = 0.1
+				conscription_factor = -0.75
+				custom_modifier_tooltip = worsen_army_professionalism_big
+			}
+		}
+
+		IBR_Disorderly_Federal_Army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Disorderly_Federal_Army" }
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_disorderly_federal_army
+
+			modifier = {
+				planning_speed = -0.2
+				#army_speed_factor = -0.1 #KD's Notes - Looks bad on tooltip
+				army_infantry_attack_factor = 0.1
+				command_power_gain_mult = -0.15
+				military_costs_misc = 0.075
+				land_doctrine_cost_factor = 0.15
+				air_doctrine_cost_factor = 0.15
+				naval_doctrine_cost_factor = 0.15
+			}
+		}
+
+		IBR_Disorderly_Federal_Army_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Disorderly_Federal_Army_2" }
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_disorderly_federal_army_removed
+
+			modifier = {
+				planning_speed = 0.05
+				max_planning_factor = 0.05
+				army_attack_factor = -0.05
+				coordination_bonus = 0.1
+				military_costs_misc = 0.025
+				land_doctrine_cost_factor = 0.05
+				air_doctrine_cost_factor = 0.05
+				naval_doctrine_cost_factor = 0.05
+			}
+		}
+
+		IBR_Betray_Old_Guard = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Betray_Old_Guard" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_regime_and_family
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.1
+				drift_defence_factor = -0.2
+				civilian_annual_cost = 0.02
+			}
+		}
+
+		IBR_Iberian_Economic_Nightmare = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Iberian_Economic_Nightmare" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_iberian_economic_nightmare
+
+			modifier = {
+				
+			}
+		}
+		IBR_Iberian_Economic_Miracle = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Iberian_Economic_Miracle" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_miracle
+
+			modifier = {
+			}
+		}
+	
+		IBR_Crippled_Sovereignty = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Crippled_Sovereignty" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_two_halves_whole
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.15
+				admin_program_cost_factor = 0.15
+			}
+		}
+		IBR_Crippled_Sovereignty_notsomuch = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Crippled_Sovereignty_notsomuch" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_two_halves_whole_dem
+
+			modifier = {
+				stability_factor = -0.125
+				political_power_gain = -0.1
+				admin_program_cost_factor = 0.05
+			}
+		}
+		IBR_Torn_Apart = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Torn_Apart" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_dissolving_union
+
+			modifier = {
+				stability_factor = -0.50
+				political_power_cost = 1
+				production_factory_max_efficiency_factor = -0.5
+				admin_program_cost_factor = 0.25
+				custom_modifier_tooltip = worsen_admin_efficiency_big
+			}
+		}
+		IBR_last_days_nation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_last_days_nation" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_dissolved_federal_government
+
+			modifier = {
+				political_power_gain = -2
+				drift_defence_factor = -1
+				production_factory_max_efficiency_factor = -1
+				stability_weekly = -1
+				custom_modifier_tooltip = worsen_admin_efficiency_big
+			}
+		}
+		IBR_out_with_salazar_yesmen = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_out_with_salazar_yesmen" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_out_with_salazar_yesmen
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.15
+			}
+		}
+		IBR_AAS_RND_cooperation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_AAS_RND_cooperation" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = IBR_aas_rnd_cooperation
+
+			modifier = {
+				stability_factor = 0.05
+				encryption_factor = 0.15
+				decryption_factor = 0.15
+			}
+		}
+		IBR_AAS_HVA_cooperation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_AAS_HVA_cooperation" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = IBR_aas_rnd_cooperation
+
+			modifier = {
+				stability_factor = 0.1
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+			}
+		}
+
+		IBR_Council_Dissolved = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Council_Dissolved" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IBR_council_dissolved
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.25
+			}
+		}
+
+		IBR_liberalisation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_liberalisation" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = IBR_liberalization
+
+			modifier = {
+				consumer_goods_use_modifier = 0.15
+				stability_weekly = 0.0005
+				political_power_gain = 0.2
+
+			}
+		}
+		IBR_Colonial_Effects = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Colonial_Effects" }
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IBR_plus_ultra
+
+			modifier = {
+			}
+		}
+		IBR_Mediterranean_Tech_Exchange = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Mediterranean_Tech_Exchange" }
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = IBR_mediterranean_tech_exchange
+
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+	}
+	hidden_ideas = {
+		IBR_expanded_counterintelligence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_expanded_counterintelligence" }
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ibr_iberian_union
+
+			modifier = {
+				political_power_gain = 0.1
+				encryption_factor = 0.25
+			}
+		}
+
+		IBR_Wars_surrender_limit_decrease = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IBR_Wars_surrender_limit_decrease" }
+
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			picture = generic_refugee_crisis
+
+			modifier = {
+				surrender_limit = -0.15
+			}
+		}
+
+		#################################TOKEN IDEAS FOR COUNCIL LAWS 
+		IBR_dummy_law = {}
+		IBR_dummy_law_Desc = {}
+		IBR_dummy_law_amendment_1 = {}
+		IBR_dummy_law_amendment_2 = {}
+
+		IBR_law_migration_management = {}
+		IBR_law_migration_management_Desc = {}
+		IBR_law_migration_management_am_c_1 = {}
+		IBR_law_migration_management_am_h_1 = {}
+		IBR_law_migration_management_am_h_2 = {}
+		IBR_law_migration_management_am_m_1 = {}
+		IBR_law_migration_management_am_m_2 = {}
+		IBR_law_migration_management_am_i_1 = {}
+		IBR_law_migration_management_am_i_2 = {}
+
+		IBR_law_counter_insurgency = {}
+		IBR_law_counter_insurgency_Desc = {}
+		IBR_law_counter_insurgency_am_c_1 = {}
+		IBR_law_counter_insurgency_am_h_1 = {}
+		IBR_law_counter_insurgency_am_h_2 = {}
+		IBR_law_counter_insurgency_am_m_1 = {}
+		IBR_law_counter_insurgency_am_m_2 = {}
+		IBR_law_counter_insurgency_am_i_1 = {}
+		IBR_law_counter_insurgency_am_i_2 = {}
+
+		IBR_law_charter_iberians = {}
+		IBR_law_charter_iberians_Desc = {}
+		IBR_law_charter_iberians_am_c_1 = {}
+		IBR_law_charter_iberians_am_h_1 = {}
+		IBR_law_charter_iberians_am_h_2 = {}
+		IBR_law_charter_iberians_am_m_1 = {}
+		IBR_law_charter_iberians_am_m_2 = {}
+		IBR_law_charter_iberians_am_i_1 = {}
+		IBR_law_charter_iberians_am_i_2 = {}
+
+		IBR_law_organic_union = {}
+		IBR_law_organic_union_Desc = {}
+
+		IBR_law_tariffs_reorganization = {}
+		IBR_law_tariffs_reorganization_Desc = {}
+		IBR_law_tariffs_reorganization_am_c_1 = {}
+		IBR_law_tariffs_reorganization_am_h_1 = {}
+		IBR_law_tariffs_reorganization_am_h_2 = {}
+		IBR_law_tariffs_reorganization_am_m_1 = {}
+		IBR_law_tariffs_reorganization_am_m_2 = {}
+		IBR_law_tariffs_reorganization_am_i_1 = {}
+		IBR_law_tariffs_reorganization_am_i_2 = {}
+
+		IBR_law_rd_investment = {}
+		IBR_law_rd_investment_Desc = {}
+		IBR_law_rd_investment_investment_1 = {}
+		IBR_law_rd_investment_investment_2 = {}
+		IBR_law_rd_investment_investment_3 = {}
+		IBR_law_rd_investment_investment_4 = {}
+		IBR_law_rd_investment_investment_5 = {}
+
+		IBR_law_industrial_regulation = {}
+		IBR_law_industrial_regulation_Desc = {}
+		IBR_law_industrial_regulation_am_c_1 = {}
+		IBR_law_industrial_regulation_am_h_1 = {}
+		IBR_law_industrial_regulation_am_h_2 = {}
+		IBR_law_industrial_regulation_am_m_1 = {}
+		IBR_law_industrial_regulation_am_m_2 = {}
+		IBR_law_industrial_regulation_am_i_1 = {}
+		IBR_law_industrial_regulation_am_i_2 = {}
+		
+		IBR_law_national_development = {}
+		IBR_law_national_development_Desc = {}
+
+		IBR_law_national_development_investment_1 = {}
+		IBR_law_national_development_investment_2 = {}
+		IBR_law_national_development_investment_3 = {}
+		IBR_law_national_development_investment_4 = {}
+		IBR_law_national_development_investment_5 = {}
+		IBR_law_national_development_investment_6 = {}
+		IBR_law_national_development_investment_7 = {}
+
+		IBR_law_agricultural_investment = {}
+		IBR_law_agricultural_investment_Desc = {}
+		IBR_law_agricultural_investment_am_c_1 = {}
+		IBR_law_agricultural_investment_am_h_1 = {}
+		IBR_law_agricultural_investment_am_h_2 = {}
+		IBR_law_agricultural_investment_am_m_1 = {}
+		IBR_law_agricultural_investment_am_m_2 = {}
+		IBR_law_agricultural_investment_am_i_1 = {}
+		IBR_law_agricultural_investment_am_i_2 = {}
+
+		IBR_law_national_sponsorship = {}
+		IBR_law_national_sponsorship_Desc = {}
+		IBR_law_national_sponsorship_investment_1 = {}
+		IBR_law_national_sponsorship_investment_2 = {}
+		IBR_law_national_sponsorship_investment_3 = {}
+		IBR_law_national_sponsorship_investment_4 = {}
+		IBR_law_national_sponsorship_investment_5 = {}
+
+		IBR_law_national_consumption = {}
+		IBR_law_national_consumption_Desc = {}
+		IBR_law_national_consumption_am_c_1 = {}
+		IBR_law_national_consumption_am_h_1 = {}
+		IBR_law_national_consumption_am_h_2 = {}
+		IBR_law_national_consumption_am_m_1 = {}
+		IBR_law_national_consumption_am_m_2 = {}
+		IBR_law_national_consumption_am_i_1 = {}
+		IBR_law_national_consumption_am_i_2 = {}
+
+		IBR_law_national_infrastructure = {}
+		IBR_law_national_infrastructure_Desc = {}
+		IBR_law_national_infrastructure_investment_1 = {}
+		IBR_law_national_infrastructure_investment_2 = {}
+		IBR_law_national_infrastructure_investment_3 = {}
+		IBR_law_national_infrastructure_investment_4 = {}
+		IBR_law_national_infrastructure_investment_5 = {}
+		IBR_law_national_infrastructure_investment_6 = {}
+		IBR_law_national_infrastructure_investment_7 = {}
+
+		IBR_law_industrial_promotion = {}
+		IBR_law_industrial_promotion_Desc = {}
+		IBR_law_industrial_promotion_am_c_1 = {}
+		IBR_law_industrial_promotion_am_h_1 = {}
+		IBR_law_industrial_promotion_am_h_2 = {}
+		IBR_law_industrial_promotion_am_m_1 = {}
+		IBR_law_industrial_promotion_am_m_2 = {}
+		IBR_law_industrial_promotion_am_i_1 = {}
+		IBR_law_industrial_promotion_am_i_2 = {}
+
+		IBR_law_tariff_expansion = {}
+		IBR_law_tariff_expansion_Desc = {}
+		IBR_law_tariff_expansion_am_c_1 = {}
+		IBR_law_tariff_expansion_am_h_1 = {}
+		IBR_law_tariff_expansion_am_h_2 = {}
+		IBR_law_tariff_expansion_am_m_1 = {}
+		IBR_law_tariff_expansion_am_m_2 = {}
+		IBR_law_tariff_expansion_am_i_1 = {}
+		IBR_law_tariff_expansion_am_i_2 = {}
+
+		IBR_law_industrial_reorganisation = {}
+		IBR_law_industrial_reorganisation_Desc = {}
+		IBR_law_industrial_reorganisation_am_c_1 = {}
+		IBR_law_industrial_reorganisation_am_h_1 = {}
+		IBR_law_industrial_reorganisation_am_h_2 = {}
+		IBR_law_industrial_reorganisation_am_m_1 = {}
+		IBR_law_industrial_reorganisation_am_m_2 = {}
+		IBR_law_industrial_reorganisation_am_i_1 = {}
+		IBR_law_industrial_reorganisation_am_i_2 = {}
+
+		IBR_law_defense_council = {}
+		IBR_law_defense_council_Desc = {}
+		IBR_law_defense_council_am_c_1 = {}
+		IBR_law_defense_council_am_h_1 = {}
+		IBR_law_defense_council_am_h_2 = {}
+		IBR_law_defense_council_am_m_1 = {}
+		IBR_law_defense_council_am_m_2 = {}
+		IBR_law_defense_council_am_i_1 = {}
+		IBR_law_defense_council_am_i_2 = {}
+
+		IBR_law_trade_union_controlled = {}
+		IBR_law_trade_union_controlled_Desc = {}
+		IBR_law_trade_union_controlled_am_c_1 = {}
+		IBR_law_trade_union_controlled_am_h_1 = {}
+		IBR_law_trade_union_controlled_am_h_2 = {}
+		IBR_law_trade_union_controlled_am_m_1 = {}
+		IBR_law_trade_union_controlled_am_m_2 = {}
+		IBR_law_trade_union_controlled_am_i_1 = {}
+		IBR_law_trade_union_controlled_am_i_2 = {}
+
+		IBR_law_security_education = {}
+		IBR_law_security_education_Desc = {}
+		IBR_law_security_education_am_c_1 = {}
+		IBR_law_security_education_am_h_1 = {}
+		IBR_law_security_education_am_h_2 = {}
+		IBR_law_security_education_am_m_1 = {}
+		IBR_law_security_education_am_m_2 = {}
+		IBR_law_security_education_am_i_1 = {}
+		IBR_law_security_education_am_i_2 = {}
+
+		IBR_law_youth_opportunities = {}
+		IBR_law_youth_opportunities_Desc = {}
+		IBR_law_youth_opportunities_am_c_1 = {}
+		IBR_law_youth_opportunities_am_h_1 = {}
+		IBR_law_youth_opportunities_am_h_2 = {}
+		IBR_law_youth_opportunities_am_m_1 = {}
+		IBR_law_youth_opportunities_am_m_2 = {}
+		IBR_law_youth_opportunities_am_i_1 = {}
+		IBR_law_youth_opportunities_am_i_2 = {}
+
+		IBR_law_noncommissioned_officer = {}
+		IBR_law_noncommissioned_officer_Desc = {}
+		IBR_law_noncommissioned_officer_am_c_1 = {}
+		IBR_law_noncommissioned_officer_am_h_1 = {}
+		IBR_law_noncommissioned_officer_am_h_2 = {}
+		IBR_law_noncommissioned_officer_am_m_1 = {}
+		IBR_law_noncommissioned_officer_am_m_2 = {}
+		IBR_law_noncommissioned_officer_am_i_1 = {}
+		IBR_law_noncommissioned_officer_am_i_2 = {}
+
+		IBR_law_education_auth = {}
+		IBR_law_education_auth_Desc = {}
+		IBR_law_education_auth_am_c_1 = {}
+		IBR_law_education_auth_am_h_1 = {}
+		IBR_law_education_auth_am_h_2 = {}
+		IBR_law_education_auth_am_m_1 = {}
+		IBR_law_education_auth_am_m_2 = {}
+		IBR_law_education_auth_am_i_1 = {}
+		IBR_law_education_auth_am_i_2 = {}
+
+		IBR_law_social_security = {}
+		IBR_law_social_security_event_1 = {}
+		IBR_law_social_security_event_2 = {}
+
+		IBR_law_trade_union_decorp = {}
+		IBR_law_trade_union_decorp_event_1 = {}
+		IBR_law_trade_union_decorp_event_2 = {}
+
+		IBR_law_villamejor_pacts = {}
+		IBR_law_villamejor_pacts_event_1 = {}
+		IBR_law_villamejor_pacts_event_2 = {}
+
+		IBR_law_education_centrists = {}
+		IBR_law_education_centrists_event_1 = {}
+		IBR_law_education_centrists_event_2 = {}
+
+		IBR_law_security_forces = {}
+		IBR_law_security_forces_event_1 = {}
+		IBR_law_security_forces_event_2 = {}
+
+		IBR_law_gender_equality = {}
+		IBR_law_gender_equality_event_1 = {}
+		IBR_law_gender_equality_event_2 = {}
+
+		IBR_law_family_rights = {}
+		IBR_law_family_rights_event_1 = {}
+		IBR_law_family_rights_event_2 = {}
+
+		IBR_law_education_natcon = {}
+		IBR_law_education_natcon_event_1 = {}
+		IBR_law_education_natcon_event_2 = {}
+
+		IBR_law_municipal_services = {}
+		IBR_law_municipal_services_event_1 = {}
+		IBR_law_municipal_services_event_2 = {}
+
+		IBR_law_feminine_rights = {}
+		IBR_law_feminine_rights_event_1 = {}
+		IBR_law_feminine_rights_event_2 = {}
+
+		IBR_law_constitution_auth = {}
+		IBR_law_constitution_dem = {}
+
+		################################# Ideology tokens
+		IBR_despotism_2_auth = {} #UN-FET-JONS Technocrats
+		IBR_despotism_3_auth = {} #UN-FET-JONS Conservatives
+		IBR_fascism_2_auth = {} #UN-FET-JONS Traditionalists
+		IBR_fascism_auth = {} #UN-FET-JONS Radicals
+		IBR_paternalism_auth = {} ##UN-FET-JONS Reformists
+		IBR_communist_auth = {} #Communist opposition groups
+		IBR_socialist_auth = {} #Socialist opposition groups
+		IBR_liberal_conservatism_auth = {} #Liberal opposition groups
+
+		IBR_paternalism_1_auth = {} #UN-FET-JONS A Choupana
+
+		#Pre-democracy
+		IBR_despotism_pre_democracy = {} #UN-FET-JONS
+		IBR_liberalism_pre_democracy = {} #Liberal opposition
+		IBR_liberal_conservatism_pre_democracy = {} #Christian democratic opposition
+		IBR_progressivism_pre_democracy = {} #Progressive opposition
+		IBR_fascism_pre_democracy = {} #Reactionary opposition
+
+		#Political Party Registry
+		IBR_socialism_1_party_registry = {} #ASP
+		IBR_socialism_party_registry = {} #PSOE
+
+		IBR_progressivism_1_party_registry = {} #DADS
+		IBR_progressivism_party_registry = {} #FSD
+		IBR_progressivism_2_party_registry = {} #ID
+
+		IBR_liberalism_1_party_registry = {} #PPD
+		IBR_liberalism_party_registry = {} #FPDL
+
+		IBR_liberal_conservatism_party_registry = {} #PP
+
+		IBR_conservatism_1_party_registry = {} #FPD
+		IBR_conservatism_party_registry = {} #PDC
+		IBR_conservatism_2_party_registry = {} #RD
+
+		IBR_paternalism_1_party_registry = {} #ANP
+
+		#Election called
+		IBR_communism_democracy = {} #LL
+		IBR_communism_1_democracy = {} #FEPU
+
+		IBR_communism_legal_democracy = {} #PCE
+		IBR_communism_1_legal_democracy = {} #PCP
+
+		IBR_socialism_democracy = {} #APS
+		IBR_socialism_1_democracy = {} #Socialist regional parties
+
+		IBR_liberalism_democracy = {} #EDC
+		IBR_liberalism_1_democracy = {} #Liberal regional parties
+
+		IBR_liberal_conservatism_democracy = {} #CD	
+
+		IBR_conservatism_democracy = {} #Conservative regional parties
+
+		IBR_paternalism_democracy = {} #AP
+
+		#Left-wing pop CD ending
+		IBR_progressivism_left_wing_cd_ending = {} #CD
+		IBR_liberal_conservatism_left_wing_cd_ending = {} #EDC
+
+		#Christian democrat CD ending
+		IBR_progressivism_right_wing_cd_ending = {} #ASD
+
+		#PatCon AP ending
+		IBR_conservatism_populist_ap_ending = {} #AP
+		IBR_conservatism_1_populist_ap_ending = {} #Conservative regional parties
+		IBR_paternalism_populist_ap_ending = {} #DDI
+
+		#Anocracy AP ending
+		IBR_conservatism_1_neoregimentalist_ap_ending = {} #FSI
+	}
+}

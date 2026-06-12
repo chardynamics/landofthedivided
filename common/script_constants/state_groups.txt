@@ -1,0 +1,14 @@
+state_groups = {
+	schema = {
+		any_key = yes
+		array = state
+	}
+
+	example_state_group = {
+		1
+		2
+		3
+		4
+		5
+	}
+}

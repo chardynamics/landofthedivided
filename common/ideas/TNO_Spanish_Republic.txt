@@ -1,0 +1,45 @@
+ideas = {
+	country = {
+		SPR_coordinacion_democratica = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SPR_coordinacion_democratica" }
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = SPR_coordinacion_democratica
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+
+		SPR_polarized_high_command = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SPR_polarized_high_command" }
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = SPR_polarized_high_command
+			removal_cost = -1
+
+			modifier = {
+				command_power_gain = -0.05
+				experience_gain_army_factor = -0.1
+			}
+		}
+		SPR_Andalusian_Tensions = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SPR_Andalusian_Tensions" }
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = SPR_Andalusian_Tensions
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.1
+				conscription_factor = -0.15
+			}
+		}
+	}
+}

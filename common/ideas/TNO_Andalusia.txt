@@ -1,0 +1,46 @@
+ideas = {
+	country = {
+		ADL_unscathed_now = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ADL_unscathed_now" }
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			picture = ADL_unscathed_for_now
+
+			modifier = {
+				gdp_growth_modifier = 1.0
+				consumer_goods_use_modifier = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		ADL_pacifism_outburst = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ADL_pacifism_outburst" }
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			picture = ADL_Pacifism_Outburst
+
+			modifier = {
+				war_support_factor = -0.1
+				mobilization_speed = -0.15
+			}
+		}
+	}
+}

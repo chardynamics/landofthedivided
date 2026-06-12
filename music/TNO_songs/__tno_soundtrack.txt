@@ -1,0 +1,1036 @@
+music_station = "tno_soundtrack"
+
+# Please keep this file alphabetically sorted (but with the main theme at the top), thank you very much!
+# Run sortsongs.py if you really care about sorting for do some texteditor magic
+
+music = {
+	song = maintheme
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_a_bar_in_samara
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_a_bullet_for_the_gauleiter
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_a_desert_called_peace
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_a_knifes_edge
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_a_missile_over_the_pole
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_a_narrow_path
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_a_night_in_brasilia
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_a_storm_of_silence
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_abandoned_sanity
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_absent_humanity
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_adder
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_affront
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_african_attrition
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_air_ace
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_an_elegy_of_great_desperation
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { has_global_flag = AFTER_MIDNIGHT_COMMENCED }
+		}
+		modifier = {
+			factor = 25
+			has_global_flag = AFTER_MIDNIGHT_COMMENCED
+		}
+	}
+}
+
+music = {
+	song = tno_song_antagonism
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_antarctic_extinction
+	chance = {
+		modifier = {
+			factor = 100
+			is_Antarctic_nation = yes
+		}
+	}
+}
+
+music = {
+	song = tno_song_apollyon
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_armor
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_arms_race
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_aurora
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_back_against_the_wall
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_backroom_deal
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_barrymores_on_bank
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_bedtime_story
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_best_served_cold
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_between_the_bombings
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_bittersweet_victory
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_black_market
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_bleeding_dawn
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_bloemfontein_blues
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_bonfires_in_siberia
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_born_under_grey_skies
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_bottom_of_the_world
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_briefing_room
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_broken_arrow
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_burgundian_lullaby
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_carpet_bombing
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_children_of_abdelkader_jazair
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_cipher
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_clocks_ticking
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_co_prosperity
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_condor
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_confusion
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_consideration
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_corporate_mandated_fun
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_corruption
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_cutting_ties
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_day_by_day
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_der_gerfrorene_adler
+	chance = {
+		modifier = {
+			factor = 100
+			is_Antarctic_nation = yes
+		}
+	}
+}
+
+music = {
+	song = tno_song_devastation
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_dirty_war
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_disaster_suite_of_the_obscure
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_domination
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_dominance
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_dont_waver
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_downtime
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_dread
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_drums_of_hyperborea
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_early_warning
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_echoes
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_einsatzzentrale
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_eireanns_sorrow
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_el_tapado
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_empire_state
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_entropy
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_evolve
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_exhausted
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_experiments
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_eyes_on_the_enemy
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_failed_state
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_fall_britannia
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_filling_graves
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_fog_of_war
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_from_the_ashes
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_gary_indiana
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_ghosts_in_the_street
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_goosestep
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_gotterdammerung
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_grief
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_habakkuk
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_her_most_loyal_resistance
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_hinterlands
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_hostility
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_hurry_up_and_wait
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_iceworm
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_in_shelter
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_infiltration
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_into_iram
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_irradiated
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_jakarta
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_judgement
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_juking_the_stats
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_jungle_ops
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_lamentation
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_lebensraum
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_limbo
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_logistics
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_lonesome
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_look_at_the_time
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_lost_battle
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_lost_paradise
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_management
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_mangifera_antarctici
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_march_of_the_wehrmacht
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_massacre_of_oviedo
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_minutes_to_midnight
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_mission_preparation
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_modern_tordesillas
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_montevideo_nights
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_morning_on_the_kamchatka
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_mout
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_nachrichtendienst
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_nation_building
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_new_computers
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_no_going_back
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_no_going_back
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_nuclear_waste
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_nycto
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_oas_affairs
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_oligarchs_delight
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_open_market
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_operation_deep_freeze
+	chance = {
+		modifier = {
+			factor = 100
+			is_Antarctic_nation = yes
+		}
+	}
+}
+
+music = {
+	song = tno_song_optimism
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_order_and_progress
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_our_flag_was_still_there
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_pacific_hatred
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_palace_coup
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_panzerally
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_paradise_lost
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_penelopes_lament
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_pervitin
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_phoenix
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_planned_storm
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_plans_within_plans
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_plotting_in_the_dark
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_preventive_measures
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_project_lockheed
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_proxy
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_puerto_plata
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_pulling_strings
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_ramp_up_the_quotas
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_red_sun_rampant
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_reflection
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_remembering_in_moskowien
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_remnants
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_reprisals
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_return_no_more
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_revenge
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_revolutions
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_rookery
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_russian_fairytale
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_schwarzen_adler
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_scourge
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_scramble
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_scrape_the_barrel
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_shadow_over_germania
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_silicon_dreams
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_smoke_and_mirrors
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_smuta
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_so_far_from_god
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_south_atlantic_war
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_stand_ready_and_go
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_standoff
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_starward_gaze
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_strangelove
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_surounded
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_tamarimizu
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_technical_support
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_technopocalypse
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_tension
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_backyard
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_brothers_cousteau
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_company
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_end
+
+	chance = {
+		modifier = {
+			factor = 300
+
+			has_country_flag = big_event_nuclear_war
+			has_global_flag = TNO_my_world_is_on_fire_how_about_yours
+		}
+	}
+}
+
+music = {
+	song = tno_song_the_fire_of_olympus
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_great_raid
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_great_trial
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_huddled_masses
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_kingston_plot
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_last_light
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_measure_of_man
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_plan
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_return
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_the_time_is_now
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_those_who_are_left
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_tides
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_toolbox_theory
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_torment
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_training_day
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_tremble
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_triumph
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_tyranny
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_ugly_american
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_uneasy_peace
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_uvb_77
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_vassal
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_waiting_to_strike
+	chance = { factor = 1 }
+}
+
+music = {
+	song = tno_song_welfare
+	chance = { factor = 1 }
+}

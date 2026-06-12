@@ -1,0 +1,1527 @@
+on_actions = {
+	#EVENTS
+	on_startup = {
+		effect = {
+			IBR = {
+				#country_event = { id = IBR_road.1 days = 7 } # Road Construction Chain - Jan 8, 1962 REMOVED PER IiM
+
+				# Caudillo Events
+				country_event = { id = IBR_caudillo.1 days = 30 } # Quite Apart - Jan, 1962
+				country_event = { id = IBR_caudillo.2 days = 44 } # Estado Novo, Velho Caudilho - Feb, 1962
+				country_event = { id = IBR_caudillo.3 days = 1060 } # A Friendly Game - Nov 26 1964
+				country_event = { id = IBR_post_salazar.1 days = 2285 } # The Death of Salazar - Apr 4 1968
+				country_event = { id = IBR_caudillo.300 days = 3220 } # A Nasty Cough - Oct 26 1970
+				country_event = { id = IBR_caudillo.301 days = 4538 } # Death of Franco (DEM) - Jun 5 1974
+				country_event = { id = IBR_caudillo.302 days = 4538 } # Death of Franco (DIC) - Jun 5 1974
+
+				# Minister Replacements
+				country_event = { id = IBRMinisterReplacement.1 days = 334 }
+				country_event = { id = IBRMinisterReplacement.3 days = 181 }
+				country_event = { id = IBRMinisterReplacement.6 days = 1826 }
+				country_event = { id = IBRMinisterReplacement.7 days = 790 }
+				country_event = { id = IBRMinisterReplacement.8 days = 1704 }
+				country_event = { id = IBRMinisterReplacement.10 days = 181 }
+
+				# Major Events
+				country_event = { id = IBR.101 days = 220 }				# Union Day - Aug 9 1962
+				country_event = { id = IBR.102 days = 333 }				# Day of Portuguese Solidarity - Nov 30 1962
+				country_event = { id = IBR.103 days = 513 }				# Lisbon Train Station Roof Collapses - May 29 1963
+				country_event = { id = IBR_galvao.1 days = 701 }		# Galvao Chain - Dec 3, 1963
+				country_event = { id = IBR.104 days = 862 }				# The Academic Crisis - May 12 1964
+				country_event = { id = IBR_barcelona.1 days = 1190 }	# Battle of Barcelona - Apr 5, 1965
+				country_event = { id = IBR_lisbon_flood.1 days = 2155 }	# Lisbon Flood - Nov 26, 1967
+				country_event = { id = IBR.106 days = 2750 }			# Agustin Munoz Grandes Is Dead! - Jul 13 1969
+				country_event = { id = IBR.107 days = 3043 }			# The First of May - May 2 1970
+
+				# Women
+				country_event = { id = IBR.200 days = 311 } # Pilar of Femininity - Nov 8 1962
+				country_event = { id = IBR.201 days = 810 } # Formation of the National Spirit - Mar 21 1964
+				country_event = { id = IBR.202 days = 1618 } # Freedom in a Pill - Jun 7 1966
+				country_event = { id = IBR.203 days = 2008 } # Tides of Change - Jul 2 1967
+				country_event = { id = IBR.204 days = 2753 } # The Woman Mayor of Bilbao - Jul 16 1969
+
+				# General
+				country_event = { id = IBR.300 days = 92 random_hours = 720 }
+				country_event = { id = IBR.301 days = 2299 } # The Tito Bustillo Cave - Apr 18 1968
+				country_event = { id = IBR.302 days = 2912 } # Lost in the Christmas Market - Dec 22 1969
+				country_event = { id = IBR.303 days = 3197 } # Trouble in Paradise - Oct 3 1970
+				country_event = { id = IBR.304 days = 3333 } # Ghost of the Auxilio Social - Feb 16 1971
+				country_event = { id = IBR.305 days = 3525 } # The New Curriculum - Aug 27 1971
+				country_event = { id = IBR.306 days = 3848 } # No More Church For Me - Jul 15 1972
+				country_event = { id = IBR.307 days = 3900 } # Hunt for a Francesinha - Sept 5 1972
+				country_event = { id = IBR.308 days = 4218 } # Swedes in Biscay - Jul 20 1973
+				country_event = { id = IBR.309 days = 4273 } # The Mausoleum of Pozo Moro - Sep 13 1973
+				country_event = { id = IBR.310 days = 4467 } # Colorful Cross Promotion - Mar 26 1974
+
+				# Movies, Music, Arts, Sports
+				country_event = { id = IBR.400 days = 360 } # La Gran Familia - Dec 27 1962
+				country_event = { id = IBR.401 days = 704 } # Os Verdes Anos - Dec 6 1963
+				country_event = { id = IBR.402 days = 1541 } # La Ciudad No Es Para Mí - Mar 22 1966
+				country_event = { id = IBR.403 days = 1724 } # Black Is Black - Sep 21 1966
+				country_event = { id = IBR.404 days = 2584 } # El Sulfato Atomico - Jan 28 1969
+				country_event = { id = IBR.405 days = 3094 } # Castanuela (DEM) - June 22 1970
+				country_event = { id = IBR.406 days = 3094 } # Castanuela (DIC) - June 22 1970
+				country_event = { id = IBR.407 days = 3101 } # The Match of the Century - Jun 29 1970
+				country_event = { id = IBR.410 days = 3232 } # No Desearás al Vecino del Quinto - Nov 7 1970
+				country_event = { id = IBR.411 days = 3396 } # The King of Football - Apr 20 1971
+				country_event = { id = IBR.412 days = 3470 } # Picasso's Return - July 3 1971
+				country_event = { id = IBR.413 days = 3622 } # El Noi del Poble-sec - Dec 2 1971
+				country_event = { id = IBR.414 days = 3709 } # Mi Querida Senorita - Feb 27 1972
+				country_event = { id = IBR.415 days = 3735 } # The Death of the 'King of Fashion' - Mar 24 1972
+				country_event = { id = IBR.416 days = 3767 } # Un, Dos, Tres - Apr 25 1972
+				country_event = { id = IBR.417 days = 4116 } # The Death of Picasso (Return) - April 9 1973
+				country_event = { id = IBR.418 days = 4116 } # The Death of Picasso (Exile) - April 9 1973
+			}
+			ITA = {
+				country_event = { id = ita.105 days = 198 } #end of insurrection in Kenya
+
+				#Scorza outcomes
+				country_event = { id = nscorza.1201 days = 10 }
+				country_event = { id = nscorza.1301 days = 10 }
+
+				country_event = { id = itaintro.25 days = 124 }
+			}
+			IEA = {
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 0
+							has_game_rule = { rule = IEA_LEADER_PATH option = IEA_LEADER_PATH_GUILLET }
+						}
+						country_event = { id = IEA.41 days = 297 } # Ameado dies # Oct 24 1962 Cerulli
+					}
+					50 = {
+						modifier = {
+							factor = 0
+							has_game_rule = { rule = IEA_LEADER_PATH option = IEA_LEADER_PATH_CERULLI }
+						}
+						country_event = { id = IEA.42 days = 297 } # Ameado dies # Oct 24 1962 Guillet
+					}
+				}
+			}
+			TUR = {
+				country_event = { id = turkey_skeleton.1 days = 94 } # Spring Protests
+				country_event = { id = turkey_skeleton.2 days = 477 } # 1963 elections: to standardize the dates.
+				country_event = { id = armenia.0 days = 20 } #Armenia content beginning
+				country_event = { id = turkey_skeleton.21 days = 3489 } # Glowing Crescent
+			}
+			SLG = {
+				country_event = { id = SLG.8 days = 212 }
+			}
+		}
+	}
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	#IBR STABILITY CHECK
+	#on_daily_IBR = {
+	#	effect = {
+	#		IBR_stability_update = yes
+	#	}
+	#	effect = {
+	#		if = {
+	#			limit = { has_country_flag = IBR_legislative_council_rogue }
+	#			IBR_Rogue_Council_ticker = yes
+	#		}
+	#	}
+	#}
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	#STARTUP DEFINITIONS
+	on_startup = {
+		effect = {
+			IBR = {
+				set_variable = {
+					IBRIberiaStability = 60
+				}
+				set_variable = { #20 to -20
+					IBR_military_alignment = 13
+				}
+				set_variable = { #20 to -20
+					IBR_church_alignment = 7
+				}
+				set_variable = { #10 to -10
+					IBR_bureaucrat_alignment = -5
+				}
+				set_variable = { #15 to -15
+					IBR_business_alignment = -7
+				}
+				set_variable = { #10 to -10
+					IBR_settlers_alignment = -9
+				}
+				set_variable = { #10 to -10
+					IBR_native_alignment = 4
+				}
+				set_variable = { #15 to -15
+					IBR_foreign_alignment = 4
+				}
+				set_variable = { #15 to -15
+					IBR_intellectual_alignment = 3
+				}
+				set_variable = { #10 to -10
+					IBR_majority_alignment = 2
+				}
+				set_variable = { #10 to -10
+					IBR_regional_alignment = 0
+				}
+				set_variable = {
+					IBR_caudillo_popularity_bar = 62
+				}
+			}
+		}
+	}
+
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	on_state_control_changed = { #Italo-Turkish War
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = {
+						OR = {
+							IME = {
+								surrender_progress > 0.75
+							}
+							AND = {
+								state = 455
+								ROOT = {
+									controls_state = 1248
+								}
+							}
+							AND = {
+								state = 1248
+								ROOT = {
+									controls_state = 455
+								}
+							}
+							AND = {
+								OR = {
+									state = 1306
+									state = 1305
+									state = 454
+									state = 455
+								}
+								ROOT = {
+									controls_state = 1306
+									controls_state = 1305
+									controls_state = 454
+									controls_state = 455
+								}
+							}
+						}
+					}
+					FROM = {
+						original_tag = IME
+					}
+					ROOT = {
+						original_tag = TUR
+					}
+				}
+				TUR = {
+					country_event = { id = itatur.2 hours = 3 }
+				}
+				log = "[GetDateText]: [Root.GetName]: on_state_control_changed turkey winning ITW"
+			}
+			if = {
+				limit = {
+					ITA = {
+						NOT = { has_country_flag = ITA_wait_scorza }
+					}
+					FROM.FROM = {
+						OR = {
+							SNS = {
+								surrender_progress > 0.8
+							}
+							AND = {
+								OR = {
+									state = 1240
+									state = 554
+									state = 1371
+								}
+								IME = {
+									controls_state = 1240
+									controls_state = 554
+									controls_state = 1371
+								}
+							}
+							AND = {
+								OR = {
+									is_core_of = TUR
+									state = 677
+									state = 680
+									state = 1241
+									state = 1242
+									state = 1243
+								}
+								NOT = {
+									state = 553
+									state = 554
+								}
+							}
+						}
+					}
+					FROM = {
+						original_tag = TUR
+					}
+					ROOT = {
+						original_tag = IME
+					}
+				}
+				ITA = {
+					country_event = { id = itatur.3 hours = 3 }
+				}
+				log = "[GetDateText]: [Root.GetName]: on_state_control_changed IME winning ITW"
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_country_flag = ITA_wait_scorza
+					}
+					FROM.FROM = {
+						OR = {
+							SNS = {
+								has_capitulated = yes
+							}
+							AND = {
+								state = 680
+								ROOT = {
+									controls_state = 1241
+									controls_state = 1242
+								}
+							}
+							AND = {
+								state = 1241
+								ROOT = {
+									controls_state = 680
+									controls_state = 1242
+								}
+							}
+							AND = {
+								state = 1242
+								ROOT = {
+									controls_state = 680
+									controls_state = 1241
+								}
+							}
+							AND = {
+								is_core_of = TUR
+								NOT = {
+									state = 553
+									state = 554
+									state = 1240
+								}
+							}
+						}
+					}
+					FROM = {
+						original_tag = TUR
+					}
+					ROOT = {
+						original_tag = IME
+					}
+				}
+				ITA = {
+					country_event = { id = itatur.30 hours = 3 }
+				}
+				log = "[GetDateText]: [Root.GetName]: on_state_control_changed IME winning ITW scorza"
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					ITA = {
+						controls_state = 459
+					}
+				}
+				ILG = {
+					transfer_state = 459
+					transfer_state = 1007
+					transfer_state = 513
+					transfer_state = 1006
+					transfer_state = 1147
+					transfer_state = 1154
+					country_event = { id = ILG.7 }
+				}
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = ITA
+						has_country_flag = ITA_race_war_1
+					}
+					FROM = {
+						OR = {
+							tag = ALB
+							tag = MNT
+							tag = LBA
+							tag = TUN
+						}
+					}
+					FROM.FROM = {
+						num_of_controlled_states > 14
+					}
+				}
+				ITA = {
+					country_event = {
+						id = scorzaracewar.6
+						hours = 3
+					}
+				}
+			}
+		}
+	}
+	###################IBERIAN WARS CITYFALL EVENTS
+	on_state_control_changed = {
+		###Country loses state
+		effect = {
+			if = {
+				limit = { has_global_flag = IBW_CONFLICT }
+				if = {
+					limit = {
+						FROM = { tag = CNT }
+						FROM.FROM = { state = 986 }
+					}
+					CNT = {
+						country_event = {
+							id = iberiawars_cityfall.1
+						}
+						country_event = {
+							id = iberiawars_cityfall.11
+							days = 7
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = { tag = CTL }
+						FROM.FROM = { state = 986 }
+					}
+					CTL = {
+						country_event = {
+							id = iberiawars_cityfall.10
+						}
+						country_event = {
+							id = iberiawars_cityfall.22
+							days = 7
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = { tag = GAL }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 982 }
+						}
+						GAL = {
+							country_event = {
+								id = iberiawars_cityfall.24
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 171 }
+						}
+						GAL = {
+							country_event = {
+								id = iberiawars_cityfall.37
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = { tag = BSQ }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 740 }
+						}
+						if = {
+							limit = {
+								BSQ = {
+									has_country_flag = IBR_Wars_BSQ_ETA_coup_flag
+								}
+							}
+							BSQ = {
+								country_event = {
+									id = iberiawars_cityfall.13
+								}
+							}
+						}
+						else = {
+							BSQ = {
+								country_event = {
+									id = iberiawars_cityfall.12
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 984 }
+							}
+							if = {
+							limit = {
+								BSQ = {
+									has_country_flag = IBR_Wars_BSQ_ETA_coup_flag
+								}
+							}
+							BSQ = {
+								country_event = {
+									id = iberiawars_cityfall.31
+								}
+							}
+						}
+						else = {
+							BSQ = {
+								country_event = {
+									id = iberiawars_cityfall.30
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = { tag = SPR }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 1702 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.3
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1001 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.9
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 169 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.14
+							}
+							country_event = {
+								id = iberiawars_cityfall.34
+								days = 7
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 168 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.15
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 988 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.18
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 173 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.28
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 167 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.35
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = { tag = SPS }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 999 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.23
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1013 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.27
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 983 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.29
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 995 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.36
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 166 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.38
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = { tag = POR }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 997 }
+						}
+						POR = {
+							country_event = {
+								id = iberiawars_cityfall.5
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 998 }
+						}
+						POR = {
+							country_event = {
+								id = iberiawars_cityfall.7
+							}
+							country_event = {
+								id = iberiawars_cityfall.16
+								days = 7
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = { tag = GNS }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 997 }
+						}
+						GNS = {
+							country_event = {
+								id = iberiawars_cityfall.32
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 998 }
+						}
+						GNS = {
+							country_event = {
+								id = iberiawars_cityfall.8
+							}
+							country_event = {
+								id = iberiawars_cityfall.17
+								days = 7
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = { tag = RPP }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 1000 }
+						}
+						RPP = {
+							country_event = {
+								id = iberiawars_cityfall.19
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1004 }
+						}
+						RPP = {
+							country_event = {
+								id = iberiawars_cityfall.20
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 112 }
+						}
+						RPP = {
+							country_event = {
+								id = iberiawars_cityfall.25
+							}
+							country_event = {
+								id = iberiawars_cityfall.33
+								days = 7
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1674 }
+						}
+						RPP = {
+							country_event = {
+								id = iberiawars_cityfall.26
+							}
+						}
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 997 }
+						}
+						RPP = {
+							country_event = {
+								id = iberiawars_cityfall.6
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 998 }
+						}
+						RPP = {
+							country_event = {
+								id = iberiawars_cityfall.45
+							}
+						}
+					}
+				}
+				###Country conquers a state
+				else_if = {
+					limit = {
+						ROOT = { tag = SPR }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 999 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.53
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1013 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.60
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 983 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.62
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 995 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.70
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 166 }
+						}
+						SPR = {
+							country_event = {
+								id = iberiawars_cityfall.72
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = { tag = SPS }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 986 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.2
+							}
+							country_event = {
+								id = iberiawars_cityfall.41
+								days = 7
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1702 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.4
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1001 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.40
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 993 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.42
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 169 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.43
+							}
+							country_event = {
+								id = iberiawars_cityfall.68
+								days = 7
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 168 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.44
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 988 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.47
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 982 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.54
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 173 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.61
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 984 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.63
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 167 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.69
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 171 }
+						}
+						SPS = {
+							country_event = {
+								id = iberiawars_cityfall.71
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = { tag = POR }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 1000 }
+						}
+						POR = {
+							country_event = {
+								id = iberiawars_cityfall.48
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1004 }
+						}
+						POR = {
+							country_event = {
+								id = iberiawars_cityfall.51
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 112 }
+						}
+						POR = {
+							country_event = {
+								id = iberiawars_cityfall.55
+							}
+							country_event = {
+								id = iberiawars_cityfall.65
+								days = 7
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1674 }
+						}
+						POR = {
+							country_event = {
+								id = iberiawars_cityfall.57
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = { tag = GNS }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 1000 }
+						}
+						GNS = {
+							country_event = {
+								id = iberiawars_cityfall.49
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1004 }
+						}
+						GNS = {
+							country_event = {
+								id = iberiawars_cityfall.52
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 112 }
+						}
+						GNS = {
+							country_event = {
+								id = iberiawars_cityfall.56
+							}
+							country_event = {
+								id = iberiawars_cityfall.66
+								days = 7
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1674 }
+						}
+						GNS = {
+							country_event = {
+								id = iberiawars_cityfall.58
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = { tag = PPR }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 998 }
+						}
+						PPR = {
+							country_event = {
+								id = iberiawars_cityfall.39
+							}
+							country_event = {
+								id = iberiawars_cityfall.46
+								days = 7
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1004 }
+						}
+						PPR = {
+							country_event = {
+								id = iberiawars_cityfall.21
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 112 }
+						}
+						PPR = {
+							country_event = {
+								id = iberiawars_cityfall.73
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1000 }
+						}
+						PPR = {
+							country_event = {
+								id = iberiawars_cityfall.50
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1674 }
+						}
+						PPR = {
+							country_event = {
+								id = iberiawars_cityfall.59
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 997 }
+						}
+						PPR = {
+							country_event = {
+								id = iberiawars_cityfall.64
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 112 }
+						}
+						PPR = {
+							country_event = {
+								id = iberiawars_cityfall.67
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = { tag = FSR }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { state = 982 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.11
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 171 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.12
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 983 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.13
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 993 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.14
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 984 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.15
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 166 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.16
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 999 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.17
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1013 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.18
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1702 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.19
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 167 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.20
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 168 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.21
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 1001 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.22
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 988 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.23
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 169 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.24
+							}
+							country_event = {
+								id = FSR_wars.25
+								days = 7
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM.FROM = { state = 986 }
+						}
+						FSR = {
+							country_event = {
+								id = FSR_wars.26
+							}
+							country_event = {
+								id = FSR_wars.27
+								days = 7
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	################### Evil and Intimidating Colonial Costs & Revenue Code
+	on_monthly_IBR = { #Monthly Costs & Revenue Evolution
+		effect = {
+			set_temp_variable = { IBR_monthly_colonial_multiplier = GDP_growth_real }
+			divide_temp_variable = { IBR_monthly_colonial_multiplier = 1200 } #Because it's for one month (thus divided by 12) and since the value needs to be a procentage
+
+			if = {
+				limit = { SLG = { is_subject_of = IBR } }
+				set_temp_variable = { IBR_monthly_colonial_multiplier_SLG = SLG.GDP_growth_real }
+				divide_temp_variable = { IBR_monthly_colonial_multiplier_SLG = 1200 }
+			}
+			if = {
+				limit = { MOR = { is_subject_of = IBR } }
+				set_temp_variable = { IBR_monthly_colonial_multiplier_MOR = MOR.GDP_growth_real }
+				divide_temp_variable = { IBR_monthly_colonial_multiplier_MOR = 1200 }
+			}
+			if = {
+				limit = { ANG = { is_subject_of = IBR } }
+				set_temp_variable = { IBR_monthly_colonial_multiplier_ANG = ANG.GDP_growth_real }
+				divide_temp_variable = { IBR_monthly_colonial_multiplier_ANG = 1200 }
+			}
+			if = {
+				limit = { MZB = { is_subject_of = IBR } }
+				set_temp_variable = { IBR_monthly_colonial_multiplier_MZB = MZB.GDP_growth_real }
+				divide_temp_variable = { IBR_monthly_colonial_multiplier_MZB = 1200 }
+			}
+
+			if = {
+				limit = { GNB = { is_subject_of = IBR } }
+				set_temp_variable = { IBR_monthly_colonial_multiplier_GNB = GNB.GDP_growth_real }
+				divide_temp_variable = { IBR_monthly_colonial_multiplier_GNB = 1200 }
+			}
+			else = {
+				set_temp_variable = { IBR_monthly_colonial_multiplier_GNB = IBR_monthly_colonial_multiplier }
+			}
+
+			if = {
+				limit = { EQG = { is_subject_of = IBR } }
+				set_temp_variable = { IBR_monthly_colonial_multiplier_EQG = EQG.GDP_growth_real }
+				divide_temp_variable = { IBR_monthly_colonial_multiplier_EQG = 1200 }
+			}
+			else = {
+				set_temp_variable = { IBR_monthly_colonial_multiplier_EQG = IBR_monthly_colonial_multiplier }
+			}
+
+			if = {
+				limit = { CPV = { is_subject_of = IBR } }
+				set_temp_variable = { IBR_monthly_colonial_multiplier_CPV = CPV.GDP_growth_real }
+				divide_temp_variable = { IBR_monthly_colonial_multiplier_CPV = 1200 }
+			}
+			else = {
+				set_temp_variable = { IBR_monthly_colonial_multiplier_CPV = IBR_monthly_colonial_multiplier }
+			}
+
+			if = {
+				limit = { SAO = { is_subject_of = IBR } }
+				set_temp_variable = { IBR_monthly_colonial_multiplier_SAO = SAO.GDP_growth_real }
+				divide_temp_variable = { IBR_monthly_colonial_multiplier_SAO = 1200 }
+			}
+			else = {
+				set_temp_variable = { IBR_monthly_colonial_multiplier_SAO = IBR_monthly_colonial_multiplier }
+			}
+
+			#Revenue
+			set_temp_variable = { IBR_colonial_angola_revenue_mult = IBR_monthly_colonial_multiplier_ANG }
+			set_temp_variable = { IBR_colonial_mozambique_revenue_mult = IBR_monthly_colonial_multiplier_MZB }
+			set_temp_variable = { IBR_colonial_morocco_revenue_mult = IBR_monthly_colonial_multiplier_MOR }
+			set_temp_variable = { IBR_colonial_guinea_bissau_revenue_mult = IBR_monthly_colonial_multiplier_GNB }
+			set_temp_variable = { IBR_colonial_sao_tome_revenue_mult = IBR_monthly_colonial_multiplier_SAO }
+			set_temp_variable = { IBR_colonial_cabo_verde_revenue_mult = IBR_monthly_colonial_multiplier_CPV }
+			set_temp_variable = { IBR_colonial_equatorial_guinea_revenue_mult = IBR_monthly_colonial_multiplier_EQG }
+			set_temp_variable = { IBR_colonial_algeria_revenue_mult = IBR_monthly_colonial_multiplier_SLG }
+			set_temp_variable = { IBR_western_sahara_revenue_mult = IBR_colonial_monthly_colonial_multiplier }
+			IBR_colonial_misc_revenue_change = yes
+
+			#Costs
+			if = {
+				limit = { check_variable = { GDP_growth_real > 0 } } #Costs don't get cheaper just because your economy is going down the gutter, well, not quite anyhow
+				divide_temp_variable = { IBR_monthly_colonial_multiplier = 2 } #Since Costs would grow significantly slower than revenue
+
+				set_temp_variable = { IBR_colonial_angola_costs_mult = IBR_monthly_colonial_multiplier_ANG }
+				set_temp_variable = { IBR_colonial_mozambique_costs_mult = IBR_monthly_colonial_multiplier_MZB }
+				set_temp_variable = { IBR_colonial_morocco_costs_mult = IBR_monthly_colonial_multiplier_MOR }
+				set_temp_variable = { IBR_colonial_guinea_bissau_costs_mult = IBR_monthly_colonial_multiplier }
+				set_temp_variable = { IBR_colonial_sao_tome_costs_mult = IBR_monthly_colonial_multiplier }
+				set_temp_variable = { IBR_colonial_cabo_verde_costs_mult = IBR_monthly_colonial_multiplier }
+				set_temp_variable = { IBR_colonial_equatorial_guinea_costs_mult = IBR_monthly_colonial_multiplier }
+				set_temp_variable = { IBR_colonial_algeria_costs_mult = IBR_monthly_colonial_multiplier_SLG }
+				set_temp_variable = { IBR_colonial_western_sahara_costs_mult = IBR_monthly_colonial_multiplier }
+				IBR_colonial_misc_costs_change = yes
+			}
+		}
+	}
+
+	###################Portuguese reclamation check, see if RPP was kicked out of the mainland
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = IBR_wars_portuguese_reclamation
+					RPP = {
+						has_war = yes
+						NOT = {
+							controls_state = 1004
+							controls_state = 179
+							controls_state = 1000
+							controls_state = 112
+							controls_state = 998
+							controls_state = 181
+							controls_state = 180
+							controls_state = 997
+							controls_state = 1672
+							controls_state = 1673
+							controls_state = 1674
+						}
+					}
+				}
+				RPP = {
+					country_event = {
+						id = iberiawarspeace.13
+					}
+				}
+			}
+		}
+	}
+	###################Spanish-Portuguese War - Check if GNS is kicked out of Galicia to propose ceasefire
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = IBR_Wars_Spanish_Portuguese_War_over_GAL_flag
+					GNS = {
+						has_war = yes
+						NOT = {
+							controls_state = 171
+							controls_state = 982
+						}
+					}
+				}
+				GNS = {
+					set_country_flag = GNS_ceasefire_offered
+					country_event = {
+						id = GNS_wars.102
+					}
+				}
+			}
+		}
+	}
+	###################Spanish-Portuguese War - Check if PPR is kicked out of Galicia to propose PCP coup and ceasefire
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					PPR = {
+						has_war = yes
+						has_war_with = SPR
+						NOT = {
+							controls_state = 171
+							controls_state = 982
+						}
+					}
+				}
+				PPR = {
+					set_country_flag = PPR_ceasefire_offered
+					country_event = {
+						id = PPR_wars.102
+					}
+				}
+			}
+		}
+	}
+	################### Third Morocco War
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					IBR = {
+						has_war = yes
+						has_war_with = MOR
+						controls_state = 1546
+						controls_state = 1545
+					}
+				}
+				IBR = {
+					activate_mission = IBR_The_Pyrrhic_Solution
+				}
+			}
+
+			if = {
+				limit = {
+					IBR = {
+						has_war = yes
+						has_war_with = MOR
+						controls_state = 1546
+						controls_state = 1545
+						controls_state = 290
+						controls_state = 1005
+					}
+				}
+				IBR = {
+					remove_mission = IBR_The_Pyrrhic_Solution
+					activate_mission = IBR_The_Return_To_1912
+				}
+			}
+
+			if = {
+				limit = {
+					IBR = {
+						has_war = yes
+						has_war_with = MOR
+						OR = {
+							controls_state = 461
+							MOR = {
+								surrender_progress > 0.44
+							}
+						}
+					}
+				}
+				IBR = {
+					country_event = {
+						id = MOR_moroccowar.6
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}

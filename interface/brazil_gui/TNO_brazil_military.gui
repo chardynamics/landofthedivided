@@ -1,0 +1,368 @@
+guiTypes = {
+
+	###############################################################
+	########            Armed Forces Mechanic              ########
+	###############################################################
+
+	containerWindowType = {
+		name = "TNO_CSS_decisions_scripted_military_GUI"
+		size = { width = 0 height = 410 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_BRA_info_button"
+			position = { x = 18 y = -11 }
+			pdx_tooltip = BRA_military_info_tt
+		}
+
+		iconType = {
+			name = "crest_fill"
+			spriteType = "GFX_BRA_Military_Crest_Fill"
+			position = { x = 204 y = 38 }
+		}
+		iconType = {
+			name = "crest"
+			spriteType = "GFX_BRA_Military_Crest"
+			position = { x = 178 y = -10 }
+			pdx_tooltip = BRA_military_dominant_tt
+			pdx_tooltip_delayed = BRA_military_dominant_tt_delay
+		}
+		iconType = {
+			name = "crest_bad"
+			spriteType = "GFX_BRA_Military_Crest_Bad"
+			position = { x = 178 y = -10 }
+			pdx_tooltip = BRA_military_dominant_tt
+			pdx_tooltip_delayed = BRA_military_dominant_tt_delay
+		}
+		
+		containerWindowType = {
+			name = "hardliners_box"
+			position = { x = 122 y = 220 }
+
+			instantTextBoxType = {
+				name = "hardliners_title"
+				position = { x = -150 y = 45 } 
+				maxWidth = 300
+				format = center
+				font = "aldrich_24_outline"
+				text = BRA_military_hardliners_name
+				pdx_tooltip = BRA_military_hardliners_tt
+			}
+
+			instantTextBoxType = {
+				name = "hardliners_value"
+				pdx_tooltip = BRA_military_hardliners_tt
+				position = { x = -75 y = 0 }
+				maxWidth = 150
+				format = center
+				font = "aldrich_48_outline"
+				text = BRA_military_hardliners_power
+				pdx_tooltip = BRA_military_hardliners_tt
+			}
+
+			buttonType = {
+				name = "add_hardliners_button"
+				position = { x = 40 y = 15 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_add_hardliners_tt
+			}
+			buttonType = {
+				name = "sub_hardliners_button"
+				position = { x = -58 y = 15 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_sub_hardliners_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "sorbonne_box"
+			position = { x = 380 y = 220 }
+
+			instantTextBoxType = {
+				name = "sorbonne_title"
+				position = { x = -150 y = 45 }
+				maxWidth = 300
+				format = center
+				font = "aldrich_24_outline"
+				text = BRA_military_sorbonne_name
+				pdx_tooltip = BRA_military_sorbonne_tt
+			}
+
+			instantTextBoxType = {
+				name = "sorbonne_value"
+				position = { x = -75 y = 0 }
+				maxWidth = 150
+				format = center
+				font = "aldrich_48_outline"
+				text = BRA_military_sorbonne_power
+				pdx_tooltip = BRA_military_sorbonne_tt
+			}
+
+			buttonType = {
+				name = "add_sorbonne_button"
+				position = { x = 40 y = 15 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_add_sorbonne_tt
+			}
+			buttonType = {
+				name = "sub_sorbonne_button"
+				position = { x = -58 y = 15 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_sub_sorbonne_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "constitutionalists_box_2"
+			position = { x = 122 y = 301 }
+
+			instantTextBoxType = {
+				name = "constitutionalists_title_2"
+				position = { x = -150 y = 45 }
+				maxWidth = 300
+				format = center
+				font = "aldrich_24_outline"
+				text = BRA_military_constitutionalists_name
+				pdx_tooltip = BRA_military_constitutionalists_tt
+			}
+
+			instantTextBoxType = {
+				name = "constitutionalists_value_2"
+				position = { x = -75 y = 0 }
+				maxWidth = 150
+				format = center
+				font = "aldrich_48_outline"
+				text = BRA_military_constitutionalists_power
+				pdx_tooltip = BRA_military_constitutionalists_tt
+			}
+
+			buttonType = {
+				name = "add_constitutionalists_button"
+				position = { x = 40 y = 15 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_add_constitutionalists_tt
+			}
+			buttonType = {
+				name = "sub_constitutionalists_button"
+				position = { x = -58 y = 15 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_sub_constitutionalists_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "progressistas_box"
+			position = { x = 380 y = 301 }
+
+			instantTextBoxType = {
+				name = "progressistas_title"
+				position = { x = -150 y = 45 }
+				maxWidth = 300
+				format = center
+				font = "aldrich_24_outline"
+				text = BRA_military_progressistas_name
+				pdx_tooltip = BRA_military_progressistas_tt
+			}
+
+			instantTextBoxType = {
+				name = "progressistas_value"
+				position = { x = -75 y = 0 }
+				maxWidth = 150
+				format = center
+				font = "aldrich_48_outline"
+				text = BRA_military_progressistas_power
+				pdx_tooltip = BRA_military_progressistas_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "constitutionalists_box"
+			position = { x = 251 y = 265 }
+
+			instantTextBoxType = {
+				name = "constitutionalists_title"
+				position = { x = -150 y = 45 }
+				maxWidth = 300
+				format = center
+				font = "aldrich_24_outline"
+				text = BRA_military_constitutionalists_name
+				pdx_tooltip = BRA_military_constitutionalists_tt
+			}
+
+			instantTextBoxType = {
+				name = "constitutionalists_value"
+				position = { x = -75 y = 0 }
+				maxWidth = 150
+				format = center
+				font = "aldrich_48_outline"
+				text = BRA_military_constitutionalists_power
+				pdx_tooltip = BRA_military_constitutionalists_tt
+			}
+
+			buttonType = {
+				name = "add_constitutionalists_button"
+				position = { x = 40 y = 15 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_add_constitutionalists_tt
+			}
+			buttonType = {
+				name = "sub_constitutionalists_button"
+				position = { x = -58 y = 15 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_sub_constitutionalists_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "loyalty_bar"
+			position = { x = 110 y = 22 }
+
+			iconType = {
+				name = "loyalty_bar"
+				spriteType = "GFX_BRA_Military_Loyalty_Bar"
+				position = { x = 0 y = 1 }
+				frame = 25
+			}
+			iconType = {
+				name = "loyalty_bar_low"
+				spriteType = "GFX_BRA_Military_Loyalty_Bar_Low"
+				position = { x = 0 y = 1 }
+				frame = 100
+			}
+			iconType = {
+				name = "frame"
+				spriteType = "GFX_BRA_Military_Bar_Frame"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = BRA_military_loyalty_tt
+				pdx_tooltip_delayed = BRA_military_loyalty_tt_delay
+			}
+			iconType = {
+				name = "frame_bad"
+				spriteType = "GFX_BRA_Military_Bar_Frame_Bad"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = BRA_military_loyalty_tt
+				pdx_tooltip_delayed = BRA_military_loyalty_tt_delay
+			}
+			buttonType = {
+				name = "add_loyalty_button"
+				position = { x = 30 y = 1 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_add_loyalty_tt
+			}
+			buttonType = {
+				name = "sub_loyalty_button"
+				position = { x = 30 y = 163 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_sub_loyalty_tt
+			}
+
+			instantTextBoxType = {
+				name = "loyalty_title"
+				position = { x = -50 y = -30 }
+				maxWidth = 126
+				format = center
+				font = "aldrich_30_outline"
+				text = "[BRA_military_loyalty_title]"
+				alwaystransparent = yes
+			}
+			#instantTextBoxType = {
+			#	name = "nepotism_level"
+			#	position = { x = -55 y = 185 }
+			#	maxWidth = 136
+			#	format = center
+			#	font = "aldrich_20_outline"
+			#	text = "[BRA_military_loyalty_level]"
+			#	alwaystransparent = yes
+			#}
+		}
+
+		containerWindowType = {
+			name = "nepotism_bar"
+			position = { x = 369 y = 22 }
+
+			
+			iconType = {
+				name = "nepotism_bar"
+				spriteType = "GFX_BRA_Military_Nepotism_Bar"
+				position = { x = 0 y = 1 }
+				frame = 25
+			}
+			iconType = {
+				name = "frame"
+				spriteType = "GFX_BRA_Military_Bar_Frame"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = BRA_military_nepotism_tt
+				pdx_tooltip_delayed = BRA_military_nepotism_tt_delay
+			}
+			iconType = {
+				name = "frame_bad"
+				spriteType = "GFX_BRA_Military_Bar_Frame_Bad"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = BRA_military_nepotism_tt
+				pdx_tooltip_delayed = BRA_military_nepotism_tt_delay
+			}
+			buttonType = {
+				name = "add_nepotism_button"
+				position = { x = 30 y = 1 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_add_nepotism_tt
+			}
+			buttonType = {
+				name = "sub_nepotism_button"
+				position = { x = 30 y = 163 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+				pdx_tooltip = BRA_military_debug_sub_nepotism_tt
+			}
+
+			instantTextBoxType = {
+				name = "nepotism_title"
+				position = { x = -70 y = -30 }
+				maxWidth = 166
+				format = center
+				font = "aldrich_30_outline"
+				text = BRA_military_nepotism_title
+				alwaystransparent = yes
+			}
+			
+			#instantTextBoxType = {
+			#	name = "nepotism_level"
+			#	position = { x = -50 y = 185 }
+			#	maxWidth = 126
+			#	format = center
+			#	font = "aldrich_20_outline"
+			#	text = "[BRA_military_nepotism_level]"
+			#	alwaystransparent = yes
+			#}
+		}
+
+		iconType = {
+			name = "coup_warning"
+			spriteType = "GFX_BRA_Military_Coup_Warning"
+			position = { x = 74 y = 94 }
+		}
+		
+		instantTextBoxType = {
+			name = "military_expectations"
+			position = { x = -240 y = 380 }
+			maxWidth = 1000
+			format = center
+			font = "aldrich_24_outline"
+			text = BRA_military_expectations_gui
+			pdx_tooltip = BRA_military_expectations_gui_tt
+		}
+
+	}
+}

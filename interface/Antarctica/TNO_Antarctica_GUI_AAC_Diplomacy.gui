@@ -1,0 +1,99 @@
+guiTypes = {
+	containerWindowType = {
+		name = "Antarctica_GUI_AAC_Diplomacy"
+		position = { x = 0 y = 0 }
+		size = { width = 0 height = 315 }
+
+		iconType = {
+			name = "Antarctica_GUI_AAC_Diplomacy_Image"
+			position = { x = 11 y = -20 }
+		}
+		
+		instantTextboxType = {
+			name = "progress_title"
+			position = { x = 21 y = 100 }
+			font = "aldrich_24_outline"
+			text = "AAC_Diplomacy_Progress_Title"
+			maxWidth = 450
+			format = center
+		}
+		containerWindowType = {
+			name = "AAC_Diplomacy_Progress_Container"
+			position = { x = 51 y = 130 }
+			
+			iconType = {
+				name = "Antarctica_GUI_AAC_Diplomacy_Progressbar_Frame"
+				position = { x = 0 y = 30 }
+			
+				quadTextureSprite = "GFX_Antarctica_GUI_AAC_Diplomacy_Progressbar_Frame"
+			}
+			iconType = {
+				name = "Antarctica_GUI_AAC_Diplomacy_Progressbar"
+				position = { x = 2 y = 31 }
+			
+				quadTextureSprite = "GFX_Antarctica_GUI_AAC_Diplomacy_Progressbar"
+			}
+			iconType = {
+				name = "Antarctica_GUI_AAC_Diplomacy_Progressbar_Threshold"
+				position = { x = 2 y = 31 }
+				quadTextureSprite = "GFX_Antarctica_GUI_AAC_Diplomacy_Progressbar_Threshold"
+				pdx_tooltip = "Antarctica_GUI_AAC_Diplomacy_Progressbar_tt"
+			}
+			iconType = {
+				name = "Antarctica_GUI_AAC_Diplomacy_Threshold_X"
+				position = { x = 2 y = 26 }
+			
+				quadTextureSprite = "GFX_Antarctica_GUI_AAC_Diplomacy_Threshold_X"
+			}
+		}
+
+		instantTextboxType = {
+			name = "Diplo_Clauses_Text"
+			position = { x = 51 y = 200 }
+			font = "aldrich_22_outline"
+			text = "AAC_Diplo_Clauses"
+			maxWidth = 450
+			format = left
+		}
+
+		containerWindowType = {
+			name = "Deal_Gridbox_Container"
+			size = { width = 482 height = 100 }
+			position = { x = 41 y = 225 }
+			clipping = yes
+			verticalScrollbar = "left_vertical_slider"
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			gridboxtype = {
+				name = "Deal_Gridbox"
+				position = { x = 0 y = 0 }
+				size = { width = 47 height = 28 }
+				slotsize = { width = 47 height = 20 }
+				max_slots_horizontal = 1
+			}
+		}
+		
+	}
+
+	## Contenders Entry ## 
+	containerWindowType = {
+		name = "Deal_Gridbox_Entry"
+		position = { x = 0 y = 0 }
+		size = { width = 41 height = 28 }
+
+		instantTextboxType = {
+			name = "Deal_Text"
+			position = { x = 30 y = 0 }
+			font = "aldrich_18_outline"
+			text = "AAC_Diplo_Concession_Text"
+			maxWidth = 450
+			format = left
+		}
+
+	}		
+}

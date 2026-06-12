@@ -1,0 +1,20 @@
+Antarctica_weekly_legitimacy = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+}
+
+Antarctica_weekly_militarization = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+}
+
+Antarctica_daily_supply = {
+	color_type = bad
+	value_type = number
+	precision = 2
+	category = country
+}

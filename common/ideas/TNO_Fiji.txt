@@ -1,0 +1,78 @@
+ideas = {
+	country = {
+		FIJ_divided_islands = {
+
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea FIJ_divided_islands"
+				TNO_improve_religious_rights_policy_effectiveness_monthly_low = yes
+			}
+
+			on_remove = {
+				TNO_worsen_religious_rights_policy_effectiveness_monthly_low = yes
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIJ_divided_islands
+
+			removal_cost = -1
+
+			modifier = {
+				custom_modifier_tooltip = TNO_improve_religious_rights_policy_effectiveness_monthly_low_tt
+				stability_factor = -0.1
+				political_power_gain = -0.15
+			}
+		}
+		FIJ_the_pacific_vanguard = {
+
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FIJ_the_pacific_vanguard" }
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIJ_the_pacific_vanguard
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				army_defence_factor = 0.2
+				production_speed_bunker_factor = 0.15
+			}
+		}
+		FIJ_economic_doldrums = {
+
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FIJ_economic_doldrums" }
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIJ_economic_doldrums
+
+			removal_cost = -1
+
+			modifier = {
+				gdp_growth_modifier = -0.1
+				poverty_monthly_rate = -0.02
+			}
+
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.25
+			}
+		}
+	}
+}

@@ -1,0 +1,592 @@
+#######################
+###IBERIAN WARS###
+#######################
+FRS_BoP_category = {
+
+	FRS_IBRWARS_Support_SPS = {
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_ofn_stationing
+		visible = {
+			TNO_fopo_IBW_selected = yes
+			has_global_flag = IBW_CONFLICT
+			IBR_Wars_SPS_support_trigger = yes
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 0
+		days_re_enable = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Support_SPS"
+			SPS = {
+				save_event_target_as = IBR_new_supported_faction
+			}
+			IBR_wars_add_to_proxy = yes
+		}
+	}
+
+	FRS_IBRWARS_Support_FSR = {
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_ofn_stationing
+		visible = {
+			TNO_fopo_IBW_selected = yes
+			has_global_flag = IBW_CONFLICT
+			IBR_Wars_FSR_support_trigger = yes
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 0
+		days_re_enable = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Support_FSR"
+			remove_from_array = { ROOT.Iberian_Wars_supported_factions = SPS.id }
+			FSR = {
+				save_event_target_as = IBR_new_supported_faction
+			}
+			IBR_wars_add_to_proxy = yes
+		}
+	}
+
+	FRS_IBRWARS_Support_FZL = {
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_ofn_stationing
+		visible = {
+			TNO_fopo_IBW_selected = yes
+			has_global_flag = IBW_CONFLICT
+			IBR_Wars_FZL_support_trigger = yes
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 0
+		days_re_enable = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Support_FZL"
+			remove_from_array = { ROOT.Iberian_Wars_supported_factions = SPS.id }
+			FZL = {
+				save_event_target_as = IBR_new_supported_faction
+			}
+			IBR_wars_add_to_proxy = yes
+		}
+	}
+
+	FRS_IBR_Wars_mission_request = {
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_clock
+		priority = 20
+
+		activation = {
+			always = no
+		}
+		available = {
+			set_temp_variable = { IBR_Wars_current_request_quantity_temp = IBR_Wars_current_request_quantity }
+			subtract_from_temp_variable = { IBR_Wars_current_request_quantity_temp = 1 }
+			if = {
+				limit = { check_variable = { IBR_Wars_current_request_type = 1 } }
+				#has_equipment = { }
+			}
+			else_if = {
+				limit = { check_variable = { IBR_Wars_current_request_type = 2 } }
+				#has_equipment = { }
+			}
+			else_if = {
+				limit = { check_variable = { IBR_Wars_current_request_type = 3 } }
+				#has_equipment = { }
+			}
+			else_if = {
+				limit = { check_variable = { IBR_Wars_current_request_type = 4 } }
+				has_equipment = { infantry_equipment > IBR_Wars_current_request_quantity_temp }
+			}
+			else_if = {
+				limit = { check_variable = { IBR_Wars_current_request_type = 5 } }
+				has_equipment = { support_equipment > IBR_Wars_current_request_quantity_temp }
+			}
+			else_if = {
+				limit = { check_variable = { IBR_Wars_current_request_type = 6 } }
+				has_equipment = { artillery_equipment > IBR_Wars_current_request_quantity_temp }
+			}
+			else_if = {
+				limit = { check_variable = { IBR_Wars_current_request_type = 7 } }
+				has_equipment = { motorized_equipment > IBR_Wars_current_request_quantity_temp }
+			}
+			else_if = {
+				limit = { check_variable = { IBR_Wars_current_request_type = 8 } }
+				if = {
+					limit = { has_dlc = "No Step Back" }
+					has_equipment = { IFV_chassis > IBR_Wars_current_request_quantity_temp }
+				}
+				else = {
+					has_equipment = { IFV_equipment > IBR_Wars_current_request_quantity_temp }
+				}
+			}
+			else_if = {
+				limit = { check_variable = { IBR_Wars_current_request_type = 9 } }
+				if = {
+					limit = { has_dlc = "No Step Back" }
+					has_equipment = { MBT_chassis > IBR_Wars_current_request_quantity_temp }
+				}
+				else = {
+					has_equipment = { MBT_equipment > IBR_Wars_current_request_quantity_temp }
+				}
+			}
+			else_if = {
+				limit = { check_variable = { IBR_Wars_current_request_type = 10 } }
+				has_equipment = { fighter_equipment > IBR_Wars_current_request_quantity_temp }
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = var:IBR_Wars_current_request_days
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout FRS_IBR_Wars_mission_request"
+			clr_country_flag = supporter_request_flag
+
+			var:IBR_Wars_request_sender_var = {
+				set_temp_variable = { IBR_Wars_temp_negative_influence = IBR_Wars_current_requester_influence_change }
+				multiply_temp_variable = { IBR_Wars_temp_negative_influence = -1 }
+				set_temp_variable = { IBR_Wars_influence_category_temp = 0 }
+				set_temp_variable = { IBR_Wars_influence_change_temp = IBR_Wars_temp_negative_influence }
+				IBR_Wars_change_influence = yes
+			}
+			var:IBR_Wars_request_sender_var = {
+				clr_country_flag = sent_request_FRS
+				set_temp_variable = { alert_id = token:Alert_IBR_Wars_request_rejected }
+				set_variable = { alert_data = FRS.id }
+				add_TNO_alert = yes
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBR_Wars_mission_request"
+			clr_country_flag = supporter_request_flag
+
+			var:IBR_Wars_request_sender_var = {
+				clr_country_flag = sent_request_FRS
+				set_temp_variable = { alert_id = token:Alert_IBR_Wars_request_accepted }
+				set_variable = { alert_data = FRS.id }
+				add_TNO_alert = yes
+			}
+			if = {
+				limit = {
+					check_variable = { IBR_Wars_current_request_type = 1 }
+				}
+				set_temp_variable = { IBR_Wars_loan_temp = IBR_Wars_current_request_quantity }
+				divide_temp_variable = { IBR_Wars_loan_temp = 1000 }
+				set_temp_variable = { temp_econ_spending_amount = IBR_Wars_loan_temp }
+				econ_spend_money_once_effect_raw_money = yes
+				var:IBR_Wars_request_sender_var = {
+					set_temp_variable = { money_reserves_temp = IBR_Wars_loan_temp }
+					econ_money_reserves_change_raw_money = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { IBR_Wars_current_request_type = 2 }
+				}
+				set_temp_variable = { IBR_Wars_temp_fuel_negative = IBR_Wars_current_request_quantity }
+				multiply_temp_variable = { IBR_Wars_temp_fuel_negative = -1 }
+				add_fuel = IBR_Wars_temp_fuel_negative
+				var:IBR_Wars_request_sender_var = {
+					add_fuel = IBR_Wars_current_request_quantity
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { IBR_Wars_current_request_type = 3 }
+				}
+				var:IBR_Wars_request_sender_var = {
+					set_temp_variable = { homefront_commodities_total_temp = IBR_Wars_current_request_quantity }
+					IBR_wars_change_hc_quantity = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { IBR_Wars_current_request_type = 4 }
+				}
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = IBR_Wars_current_request_quantity
+					target = var:IBR_Wars_request_sender_var
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { IBR_Wars_current_request_type = 5 }
+				}
+				send_equipment = {
+					equipment = support_equipment
+					amount = IBR_Wars_current_request_quantity
+					target = var:IBR_Wars_request_sender_var
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { IBR_Wars_current_request_type = 6 }
+				}
+				send_equipment = {
+					equipment = artillery_equipment
+					amount = IBR_Wars_current_request_quantity
+					target = var:IBR_Wars_request_sender_var
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { IBR_Wars_current_request_type = 7 }
+				}
+				send_equipment = {
+					equipment = motorized_equipment
+					amount = IBR_Wars_current_request_quantity
+					target = var:IBR_Wars_request_sender_var
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { IBR_Wars_current_request_type = 8 }
+				}
+				if = {
+					limit = { has_dlc = "No Step Back" }
+					send_equipment = {
+						equipment = IFV_chassis
+						amount = IBR_Wars_current_request_quantity
+						target = var:IBR_Wars_request_sender_var
+					}
+				}
+				else = {
+					send_equipment = {
+						equipment = IFV_equipment
+						amount = IBR_Wars_current_request_quantity
+						target = var:IBR_Wars_request_sender_var
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { IBR_Wars_current_request_type = 9 }
+				}
+				if = {
+					limit = { has_dlc = "No Step Back" }
+					send_equipment = {
+						equipment = MBT_chassis
+						amount = IBR_Wars_current_request_quantity
+						target = var:IBR_Wars_request_sender_var
+					}
+				}
+				else = {
+					send_equipment = {
+						equipment = MBT_equipment
+						amount = IBR_Wars_current_request_quantity
+						target = var:IBR_Wars_request_sender_var
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { IBR_Wars_current_request_type = 10 }
+				}
+				send_equipment = {
+					equipment = jet_fighter_equipment_2
+					amount = IBR_Wars_current_request_quantity
+					target = var:IBR_Wars_request_sender_var
+				}
+			}
+			var:IBR_Wars_request_sender_var = {
+				set_temp_variable = { IBR_Wars_influence_category_temp = 0 }
+				set_temp_variable = { IBR_Wars_influence_change_temp = ROOT.IBR_Wars_current_requester_influence_change }
+				IBR_Wars_change_influence = yes
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	FRS_IBRWARS_Meet_Staff = {
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_ofn_stationing
+		visible = {
+			TNO_fopo_IBW_selected = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+
+			modifier = {
+			command_power < 24.99
+				add = 100
+			}
+		}
+
+		cost = 30
+		days_re_enable = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Meet_Staff"
+			add_command_power = 25
+		}
+
+	}
+
+	FRS_IBRWARS_Send_Volunteers = {
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_military_hat
+
+		visible = {
+			TNO_fopo_IBW_selected = yes
+			NOT = { var:IBR_Wars_currently_selected_faction_var = { has_country_flag = IBRWARS_has_volunteers_FRS } }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IBR_WARS_send_volunteers_independent_trigger_tt
+				check_variable = { Iberian_Wars_independent_influence > 49.99 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Send_Volunteers"
+			set_temp_variable = { target = IBR_Wars_currently_selected_faction_var }
+			TNO_increase_volunteer_cap_1 = yes
+			var:IBR_Wars_currently_selected_faction_var = { set_country_flag = IBRWARS_has_volunteers_FRS }
+		}
+	}
+
+	FRS_IBRWARS_Loan_Money = {
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_money
+
+		visible = {
+			TNO_fopo_IBW_selected = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 50
+		days_re_enable = var:IBR_wars_50_day_cooldown_var
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Loan_Money"
+			add_political_power = 35
+			var:IBR_Wars_currently_selected_faction_var = {
+				set_temp_variable = { money_reserves_temp = 0.2 }
+				econ_money_reserves_change_raw_money = yes
+				set_temp_variable = { IBR_Wars_influence_category_temp = 0 }
+				set_temp_variable = { IBR_Wars_influence_change_temp = 2 }
+				IBR_Wars_change_influence = yes
+			}
+			set_temp_variable = { debt_temp = 0.2 }
+			econ_national_debt_change = yes
+		}
+
+	}
+
+	FRS_IBRWARS_Shipment_A = {
+		ai_will_do = { base = 10 }
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_arms_crate
+		visible = {
+			TNO_fopo_IBW_selected = yes
+			#is_in_array = { USA.Iberian_Wars_supported_factions = POR.id }
+			#has_country_flag = IBRWARS_Aid_POR
+		}
+		available = {
+			command_power > 9.99
+		}
+		custom_cost_trigger = {
+			command_power > 9.99
+			has_equipment = {
+				infantry_equipment > 749
+			}
+		}
+		custom_cost_text = decision_cost_10_cp
+		days_re_enable = var:IBR_wars_15_day_cooldown_var
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Shipment_A"
+			hidden_effect = { add_command_power = -10 }
+			send_equipment = {
+				target = IBR_Wars_currently_selected_faction_var
+				type = infantry_equipment
+				amount = 750
+			}
+			var:IBR_Wars_request_sender_var = {
+				set_temp_variable = { IBR_Wars_influence_category_temp = 0 }
+				set_temp_variable = { IBR_Wars_influence_change_temp = 2 }
+				IBR_Wars_change_influence = yes
+			}
+			set_temp_variable = { money_reserves_temp = 0.075 }
+			econ_money_reserves_change_raw_money = yes
+		}
+	}
+
+	FRS_IBRWARS_Shipment_B = {
+		ai_will_do = { base = 10 }
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_supply
+		visible = {
+			TNO_fopo_IBW_selected = yes
+		}
+		available = {
+			command_power > 9.99
+		}
+		custom_cost_trigger = {
+			command_power > 9.99
+			has_equipment = {
+				support_equipment > 199
+			}
+			has_equipment = {
+				anti_tank_equipment > 499
+			}
+		}
+		custom_cost_text = decision_cost_10_cp
+		days_re_enable = var:IBR_wars_15_day_cooldown_var
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Shipment_B"
+			hidden_effect = { add_command_power = -10 }
+			send_equipment = {
+				target = IBR_Wars_currently_selected_faction_var
+				type = anti_tank_equipment
+				amount = 500
+			}
+			send_equipment = {
+				target = IBR_Wars_currently_selected_faction_var
+				type = support_equipment
+				amount = 200
+			}
+			var:IBR_Wars_request_sender_var = {
+				set_temp_variable = { IBR_Wars_influence_category_temp = 0 }
+				set_temp_variable = { IBR_Wars_influence_change_temp = 2 }
+				IBR_Wars_change_influence = yes
+			}
+			set_temp_variable = { money_reserves_temp = 0.115 }
+			econ_money_reserves_change_raw_money = yes
+		}
+	}
+
+	FRS_IBRWARS_Shipment_C = {
+		ai_will_do = { base = 10 }
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_market_motorized
+		visible = {
+			TNO_fopo_IBW_selected = yes
+		}
+		available = {
+			command_power > 9.99
+		}
+		custom_cost_trigger = {
+			command_power > 9.99
+			has_equipment = {
+				motorized_equipment > 249
+			}
+		}
+		custom_cost_text = decision_cost_10_cp
+		days_re_enable = var:IBR_wars_20_day_cooldown_var
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Shipment_C"
+			hidden_effect = { add_command_power = -10 }
+			send_equipment = {
+				target = IBR_Wars_currently_selected_faction_var
+				type = motorized_equipment
+				amount = 250
+			}
+			var:IBR_Wars_request_sender_var = {
+				set_temp_variable = { IBR_Wars_influence_category_temp = 0 }
+				set_temp_variable = { IBR_Wars_influence_change_temp = 4 }
+				IBR_Wars_change_influence = yes
+			}
+			set_temp_variable = { money_reserves_temp = 0.2 }
+			econ_money_reserves_change_raw_money = yes
+		}
+	}
+
+	FRS_IBRWARS_Shipment_D = {
+		ai_will_do = { base = 10 }
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_tank
+		visible = {
+			TNO_fopo_IBW_selected = yes
+		}
+		available = {
+			command_power > 14.99
+		}
+		custom_cost_trigger = {
+			command_power > 14.99
+			has_equipment = { MBT_chassis > 99 }
+
+		}
+		custom_cost_text = decision_cost_15_cp
+		days_re_enable = var:IBR_wars_30_day_cooldown_var
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Shipment_D"
+			hidden_effect = { add_command_power = -15 }
+			send_equipment = {
+				equipment = IFV_chassis
+				amount = 100
+				target = IBR_Wars_currently_selected_faction_var
+			}
+			var:IBR_Wars_request_sender_var = {
+				set_temp_variable = { IBR_Wars_influence_category_temp = 0 }
+				set_temp_variable = { IBR_Wars_influence_change_temp = 5 }
+				IBR_Wars_change_influence = yes
+			}
+			set_temp_variable = { money_reserves_temp = 0.2 }
+			econ_money_reserves_change_raw_money = yes
+		}
+	}
+
+	FRS_IBRWARS_Shipment_E = {
+		ai_will_do = { base = 10 }
+		allowed = { original_tag = FRS }
+		icon = GFX_decision_generic_tank_upgrade
+		visible = {
+			TNO_fopo_IBW_selected = yes
+		}
+		available = {
+			command_power > 14.99
+		}
+		custom_cost_trigger = {
+			command_power > 14.99
+			has_equipment = { MBT_chassis > 99 }
+		}
+		custom_cost_text = decision_cost_15_cp
+		days_re_enable = var:IBR_wars_30_day_cooldown_var
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRS_IBRWARS_Shipment_E"
+			hidden_effect = { add_command_power = -15 }
+			send_equipment = {
+				equipment = MBT_chassis
+				amount = 100
+				target = IBR_Wars_currently_selected_faction_var
+			}
+			var:IBR_Wars_request_sender_var = {
+				set_temp_variable = { IBR_Wars_influence_category_temp = 0 }
+				set_temp_variable = { IBR_Wars_influence_change_temp = 6 }
+				IBR_Wars_change_influence = yes
+			}
+			set_temp_variable = { money_reserves_temp = 0.2 }
+			econ_money_reserves_change_raw_money = yes
+		}
+	}
+}

@@ -1,0 +1,138 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_Easter_Coup_GUI"
+		position = { x = 29 y = 131 }
+		size = { width = 496 height = 506 }
+
+		iconType = {
+			name = "venezuela_map"
+			position = { x = 11 y = 11 }
+			spriteType = "GFX_EC_venezuela_map"
+		}
+		iconType = {
+			name = "outline"
+			position = { x = -2 y = -2 }
+			spriteType = "GFX_EC_outline"
+		}
+		instantTextBoxType = {
+			name = "VEN_selected_city_title"
+			position = { x = 166 y = 342 }
+			text = VEN_selected_city_title_txt
+			font = "aldrich_18_outline"
+			format = left
+			maxWidth = 320
+			text_color_code = Y
+		}
+		instantTextBoxType = {
+			name = "VEN_selected_city_desc"
+			position = { x = 166 y = 363 }
+			text = VEN_selected_city_desc_txt
+			font = "aldrich_18_outline"
+			format = left
+			maxWidth = 318
+		}
+		iconType = {
+			name = "ven_secrecy_bar"
+			position = { x = 10 y = 294 }
+			spriteType = "GFX_ven_secrecy_bar"
+		}
+		iconType = {
+			name = "ven_coup_bar"
+			position = { x = 254 y = 294 }
+			spriteType = "GFX_ven_coup_bar"
+		}
+		instantTextBoxType = {
+			name = "VEN_secrecy_text"
+			position = { x = 9 y = 295 }
+			text = VEN_secrecy_text_txt
+			format = center
+			vertical_alignment = center
+			font = "aldrich_20_outline"
+			maxWidth = 233
+			maxheight = 40
+			text_color_code = Y
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "VEN_progress_text"
+			position = { x = 253 y = 295 }
+			text = VEN_progress_text_txt
+			format = center
+			vertical_alignment = center
+			font = "aldrich_20_outline"
+			maxWidth = 233
+			maxheight = 40
+			text_color_code = Y
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ven_ec_info_box"
+			position = { x = 445 y = 14 }
+			spriteType = "GFX_BRA_info_button"
+			pdx_tooltip = easter_coup_info_tt
+		}
+
+		iconType = {
+			name = "ven_city_pic"
+			position = { x = 10 y = 341 }
+			spriteType = "GFX_ec_city_pics"
+		}
+
+		gridboxtype = {
+			name = "ven_road_gridbox"
+			position = { x = 0 y = 0 }
+		}
+		gridboxtype = {
+			name = "ven_city_gridbox"
+			position = { x = 0 y = 0 }
+		}
+		containerWindowType = {
+			name = "fake_mission_1"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_1_background"
+				spriteType = "GFX_fopo_fake_mission_frame"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_title"
+				position = { x = 50 y = 9 }
+				text = IBR_EC_fakemission_title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline"
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_duration"
+				position = { x = 136 y = 8 }
+				text = IBR_EC_fakemission_duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline"
+				maxWidth = 315
+				maxheight = 32
+				alwaystransparent = yes
+			}
+		}
+	}
+	containerWindowType = {
+		name = "ven_road_entry"
+		iconType = {
+			name = "ven_road_icon"
+			spriteType = "GFX_blank"
+		}
+	}
+	containerWindowType = {
+		name = "ven_city_entry"
+		buttonType = {
+			name = "ven_city_button"
+			spriteType = "GFX_EC_city"
+		}
+	}
+}

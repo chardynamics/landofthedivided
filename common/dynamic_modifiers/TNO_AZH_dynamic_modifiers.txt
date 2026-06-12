@@ -1,0 +1,17 @@
+AZH_black_years_dynamic_modifier = {
+	icon = GFX_idea_IND_black_years_dynamic_modifier
+	enable = { always = yes }
+	conscription_factor = AZH_black_years_modifier_0
+	army_defence_factor = AZH_black_years_modifier_0
+	monthly_population = AZH_black_years_modifier_0
+	production_speed_buildings_factor = AZH_black_years_modifier_0
+	weekly_manpower = AZH_black_years_modifier_1 #needs a different one due to how the modifier's values work
+}
+
+AZH_war_weariness = {
+	enable = {
+		always = yes
+	}
+	#icon = "GFX_idea_RUS_soviet_soldiers"
+	forced_surrender_limit = AZH_surrender_limit
+}

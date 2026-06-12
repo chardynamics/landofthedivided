@@ -1,0 +1,1251 @@
+TNO_admin_title_asia = {
+	#Sorted by country alphabetically and Admin Titles are set in this order:
+	##Admin Titles
+	##Assoc Regions
+	##Sub-Admin Titles
+	##Subdivisions
+
+	#Burma
+	BUR = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 640
+					state = 762
+					state = 1307
+					state = 1309
+					state = 1310
+					state = 1319
+					state = 2213
+					state = 2215
+					state = 2216
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_State }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 1311
+					state = 1313
+					state = 2214
+					state = 2217
+					state = 288
+					state = 842
+					state = 872
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Division }
+		}
+	}
+	set_variable = { 1308.AdminTitle = token:Admin_Title_Special_Division }
+
+	#China
+	for_each_scope_loop = {
+		array = global.greater_china_states
+		if = {
+			limit = {
+				controller = {
+					OR = {
+						tag = CHI
+						is_in_array = { global.chinese_warlords = THIS }
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						check_variable = { china_state_ref = 15 }
+						check_variable = { china_state_ref = 36 }
+					}
+				}
+				set_variable = { AdminTitle = token:Admin_Title_SAR }
+			}
+			else_if = {
+				limit = { has_variable = china_city_ref }
+				set_variable = { AdminTitle = token:Admin_Title_Municipality }
+			}
+			else = {
+				set_variable = { AdminTitle = token:Admin_Title_ASR }
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.greater_china_states
+		if = {
+			limit = {
+				controller = {
+					OR = {
+						tag = CHI
+						is_in_array = { global.chinese_warlords = THIS }
+					}
+				}
+			}
+			### Admin Regions
+			if = {
+				limit = { check_variable = { china_state_ref = 0 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Nanjing_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 1 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Shanghai_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 2 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Jiangsu_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 3 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Huaihai_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 4 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Zhejiang_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 5 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Ouhai_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 6 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Anhui_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 7 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Beijing_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 8 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Tianjin_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 9 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Qingdao_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 10 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Zhili_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 11 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Hebei_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 12 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Taiyue_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 13 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Shandong_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 14 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Shanxi_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 15 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Chongqing_SAR }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 16 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Chuandong_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 17 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Chuanxi_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 18 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Guizhou_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 19 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Guangxi_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 20 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Yunnan_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 21 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Xikang_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 22 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Tibet_Area }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 23 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Wuhan_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 24 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Jiangxi_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 25 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Ganjiang_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 26 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Hubei_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 27 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Hunan_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 28 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Hengnan_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 29 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Henan_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 30 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Zhongyuan_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 31 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Xiamen_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 32 } }
+				set_variable = { AssocRegion = token:Assoc_Region_PRD_SAR }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 33 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Fujian_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 34 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Xingquan_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 35 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Guangdong_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 36 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Qiongya_SAR }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 37 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Taiwan_SAR }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 38 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Shaanxi_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 39 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Hanzhong_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 40 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Longxi_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 41 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Gansu_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 42 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Qinghai_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 43 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Xinjiang_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 44 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Mukden_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 45 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Changchun_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 46 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Harbin_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 47 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Dalian_Municipality }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 48 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Liaoning_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 49 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Jilin_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 50 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Heilongjiang_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 51 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Jinghai_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 52 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Beihai_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 53 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Kuye_SAR }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 54 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Chahar_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 55 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Suiyuan_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 56 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Rehe_Province }
+			}
+			else_if = {
+				limit = { check_variable = { china_state_ref = 57 } }
+				set_variable = { AssocRegion = token:Assoc_Region_Mongolia_Area }
+			}
+			### Macro Regions
+			if = {
+				limit = { check_variable = { china_region_ref = 0 } }
+				set_variable = { AssocRegion2 = token:Assoc_Region_East_China }
+			}
+			else_if = {
+				limit = { check_variable = { china_region_ref = 1 } }
+				set_variable = { AssocRegion2 = token:Assoc_Region_North_China }
+			}
+			else_if = {
+				limit = { check_variable = { china_region_ref = 2 } }
+				set_variable = { AssocRegion2 = token:Assoc_Region_Southwest_China }
+			}
+			else_if = {
+				limit = { check_variable = { china_region_ref = 3 } }
+				set_variable = { AssocRegion2 = token:Assoc_Region_South_Central_China }
+			}
+			else_if = {
+				limit = { check_variable = { china_region_ref = 4 } }
+				set_variable = { AssocRegion2 = token:Assoc_Region_South_China }
+			}
+			else_if = {
+				limit = { check_variable = { china_region_ref = 5 } }
+				set_variable = { AssocRegion2 = token:Assoc_Region_Northwest_China }
+			}
+			else_if = {
+				limit = { check_variable = { china_region_ref = 6 } }
+				set_variable = { AssocRegion2 = token:Assoc_Region_Northeast_China }
+			}
+			else_if = {
+				limit = { check_variable = { china_region_ref = 7 } }
+				set_variable = { AssocRegion2 = token:Assoc_Region_Frontier }
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.greater_china_states
+		if = {
+			limit = {
+				controller = {
+					OR = {
+						tag = CHI
+						is_in_array = { global.chinese_warlords = THIS }
+					}
+				}
+			}
+			if = {
+				limit = { check_variable = { AssocRegion = token:Assoc_Region_Tibet_Area } }
+				set_variable = { SubAdminTitle = token:Admin_Title_Dzong }
+			}
+			else_if = {
+				limit = { check_variable = { AssocRegion = token:Assoc_Region_Mongolia_Area } }
+				set_variable = { SubAdminTitle = token:Admin_Title_Leagues_Banners }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						check_variable = { AssocRegion = token:Assoc_Region_Qinghai_Province }
+						check_variable = { AssocRegion = token:Assoc_Region_Chahar_Province }
+						check_variable = { AssocRegion = token:Assoc_Region_Suiyuan_Province }
+					}
+				}
+				set_variable = { SubAdminTitle = token:Admin_Title_Counties_Leagues_Banners }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						check_variable = { AssocRegion = token:Assoc_Region_Nanjing_Municipality }
+						check_variable = { AssocRegion = token:Assoc_Region_Shanghai_Municipality }
+						check_variable = { AssocRegion = token:Assoc_Region_Beijing_Municipality }
+						check_variable = { AssocRegion = token:Assoc_Region_Tianjin_Municipality }
+						check_variable = { AssocRegion = token:Assoc_Region_Qingdao_Municipality }
+						check_variable = { AssocRegion = token:Assoc_Region_Wuhan_Municipality }
+						check_variable = { AssocRegion = token:Assoc_Region_Xiamen_Municipality }
+						check_variable = { AssocRegion = token:Assoc_Region_Chongqing_SAR }
+						check_variable = { AssocRegion = token:Assoc_Region_PRD_SAR }
+					}
+				}
+				set_variable = { SubAdminTitle = token:Admin_Title_District }
+			}
+			else = {
+				set_variable = { SubAdminTitle = token:Admin_Title_County }
+			}
+		}
+	}
+
+	#India
+	##AZH
+	AZH = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 733
+					state = 1347
+					state = 1888
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Division }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 733
+					state = 1347
+					state = 1888
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Admin_Region }
+		}
+	}
+	set_variable = { 763.AssocRegion = token:Assoc_Region_Orissa_PMA }
+	every_state = {
+		limit = {
+			OR = {
+				state = 1266
+				state = 1923
+				state = 1924
+				state = 1925
+				state = 1926
+				state = 1927
+				state = 1928
+				state = 1929
+				state = 1930
+				state = 1931
+				state = 1932
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Bihar_AR }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 223
+				state = 430
+				state = 431
+				state = 432
+				state = 435
+				state = 1303
+				state = 1342
+				state = 1344
+				state = 1345
+				state = 1346
+				state = 1348
+				state = 1349
+				state = 1477
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Bengal_AR }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 434
+				state = 1337
+				state = 1338
+				state = 1339
+				state = 1340
+				state = 1343
+				state = 1351
+				state = 1476
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Assam_AR }
+	}
+	AZH = {
+		every_owned_state = {
+			limit = { check_variable = { AdminTitle = token:Admin_Title_Division } }
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+		every_owned_state = {
+			limit = { check_variable = { AdminTitle = token:Admin_Title_Admin_Region } }
+			set_variable = { SubAdminTitle = token:Admin_Title_Division }
+		}
+	}
+	##PAK/KLT
+	PAK = {
+		every_owned_state = {
+			limit = { NOT = { state = 442 } }
+			set_variable = { AdminTitle = token:Admin_Title_Division }
+		}
+		every_owned_state = {
+			limit = {
+				check_variable = { AdminTitle = token:Admin_Title_Division }
+			 }
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+		set_variable = { 442.SubAdminTitle = token:Admin_Title_Division }
+	}
+	KLT = {
+		every_owned_state = {
+			set_variable = { AdminTitle = token:Admin_Title_Division }
+		}
+		every_owned_state = {
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+	}
+	##ROI
+	IND = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 980
+					state = 321
+					state = 932
+					state = 424
+					state = 427
+					state = 930
+					state = 1350
+					state = 426
+					state = 2210
+					state = 2460
+					state = 281
+					state = 710
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Division }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 281
+					state = 321
+					state = 710
+					state = 980
+					state = 2210
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Union_Territory }
+		}
+	}
+	set_variable = { 932.AdminTitle = token:Admin_Title_State }
+	every_state = {
+		limit = {
+			OR = {
+				state = 205
+				state = 220
+				state = 240
+				state = 253
+				state = 254
+				state = 258
+				state = 265
+				state = 433
+				state = 439
+				state = 895
+				state = 926
+				state = 928
+				state = 1478
+				state = 2206
+				state = 2207
+				state = 2208
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Punjab_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 440
+				state = 1317
+				state = 1444
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Himachal_Pradesh_UT }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 236
+				state = 441
+				state = 927
+				state = 1318
+				state = 2460
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Jammu_Kashmir_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 443
+				state = 1316
+				state = 1475
+				state = 1911
+				state = 1912
+				state = 1913
+				state = 1914
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Sindh_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 1915
+				state = 1916
+				state = 1917
+				state = 1918
+				state = 1919
+				state = 1920
+				state = 1921
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Rajasthan_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 1948
+				state = 1949
+				state = 1950
+				state = 1951
+				state = 1952
+				state = 1953
+				state = 1954
+				state = 1955
+				state = 1956
+				state = 1957
+				state = 1958
+				state = 1959
+				state = 1960
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Uttar_Pradesh_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 1933
+				state = 1934
+				state = 1935
+				state = 1936
+				state = 1937
+				state = 1938
+				state = 1939
+				state = 1940
+				state = 1941
+				state = 1942
+				state = 1943
+				state = 1944
+				state = 1945
+				state = 1946
+				state = 1947
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Madhya_Pradesh_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 208
+				state = 255
+				state = 428
+				state = 1314
+				state = 1727
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Gujarat_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 248
+				state = 429
+				state = 436
+				state = 437
+				state = 892
+				state = 894
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Maharashtra_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 425
+				state = 438
+				state = 766
+				state = 931
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Mysore_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 320
+				state = 423
+				state = 893
+				state = 966
+				state = 967
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Madras_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 424
+				state = 427
+				state = 930
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Andhra_Pradesh_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 426
+				state = 767
+				state = 1350
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Orissa_State }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 1922
+				state = 2476
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Bihar_UT }
+	}
+	IND = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 710
+					state = 2460
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+	}
+
+	#Japan
+	JAP = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 630
+					state = 631
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Urban_Prefecture }
+		}
+		set_variable = { 282.AdminTitle = token:Admin_Title_Metropolis }
+		##Taiwan
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 524
+					state = 1850
+					state = 1851
+					state = 1852
+					state = 1853
+					state = 1856
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Prefecture_Shu }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 1854
+					state = 1855
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Prefecture_Cho }
+		}
+		##Islands, Territories, and Treaty Ports
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 523
+					state = 632
+					state = 648
+					state = 737
+					state = 809
+					state = 810
+					state = 1332
+					state = 2320
+					state = 2321
+					state = 2488
+					state = 2489
+					state = 2518
+					state = 2523
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Territory }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 633
+					state = 634
+					state = 638
+					state = 643
+					state = 645
+					state = 646
+					state = 647
+					state = 684
+					state = 725
+					state = 734
+					state = 2487
+					state = 2490
+					state = 2491
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Subprefecture }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 768
+					state = 769
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Treaty_Port }
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 282
+				state = 645
+				state = 648
+				state = 1827
+				state = 1828
+				state = 1234
+				state = 1824
+				state = 1825
+				state = 1826
+				state = 1827
+				state = 2487
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Kanto }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 533
+				state = 555
+				state = 642
+				state = 1821
+				state = 1822
+				state = 1823
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Tohoku }
+	}
+	set_variable = { 536.AssocRegion = token:Assoc_Region_Hokkaido }
+	every_state = {
+		limit = {
+			OR = {
+				state = 1830
+				state = 1831
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Koshin }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 532
+				state = 534
+				state = 535
+				state = 1829
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Hokuriku }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 531
+				state = 1832
+				state = 1833
+				state = 1834
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Tokai }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 630
+				state = 631
+				state = 1835
+				state = 1836
+				state = 1837
+				state = 1838
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Kinki }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 650
+				state = 1840
+				state = 1841
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Sanyo }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 529
+				state = 1839
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Sanin }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 530
+				state = 1842
+				state = 1843
+				state = 1844
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Shikoku }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 528
+				state = 639
+				state = 1845
+				state = 1846
+				state = 1847
+				state = 1848
+				state = 1849
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Kyushu }
+	}
+	set_variable = { 526.AssocRegion = token:Assoc_Region_Okinawa }
+	every_state = {
+		limit = {
+			OR = {
+				state = 629
+				state = 632
+				state = 633
+				state = 634
+				state = 638
+				state = 643
+				state = 646
+				state = 647
+				state = 684
+				state = 725
+				state = 734
+				state = 2490
+				state = 2491
+				state = 2518
+				state = 2523
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Nanyo }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 524
+				state = 1850
+				state = 1851
+				state = 1852
+				state = 1853
+				state = 1854
+				state = 1855
+				state = 1856
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Taiwan_Jap }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 525
+				state = 527
+				state = 560
+				state = 655
+				state = 962
+				state = 963
+				state = 1018
+				state = 1024
+				state = 1816
+				state = 1817
+				state = 1818
+				state = 1819
+				state = 1820
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Korea }
+	}
+	set_variable = { 537.AssocRegion =  token:Assoc_Region_Sakhalin }
+	every_state = {
+		limit = {
+			OR = {
+				state = 523
+				state = 734
+				state = 737
+				state = 1332
+				state = 2320
+				state = 2321
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_New_Guinea }
+	}
+	JAP = { #Putting here because the assoc regions need to be added first before the admin titles
+		##Hokkaido and Korea
+		every_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { AssocRegion = token:Assoc_Region_Hokkaido }
+					check_variable = { AssocRegion = token:Assoc_Region_Korea }
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Circuit }
+		}
+		##Mainland Japan
+		every_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { AssocRegion = token:Assoc_Region_Kanto }
+					check_variable = { AssocRegion = token:Assoc_Region_Tohoku }
+					check_variable = { AssocRegion = token:Assoc_Region_Koshin }
+					check_variable = { AssocRegion = token:Assoc_Region_Hokuriku }
+					check_variable = { AssocRegion = token:Assoc_Region_Tokai }
+					check_variable = { AssocRegion = token:Assoc_Region_Kinki }
+					check_variable = { AssocRegion = token:Assoc_Region_Sanyo }
+					check_variable = { AssocRegion = token:Assoc_Region_Sanin }
+					check_variable = { AssocRegion = token:Assoc_Region_Shikoku }
+					check_variable = { AssocRegion = token:Assoc_Region_Kyushu }
+					check_variable = { AssocRegion = token:Assoc_Region_Okinawa }
+				}
+				NOT = {
+					state = 282
+					state = 630
+					state = 631
+					state = 645
+					state = 648
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Prefecture }
+		}
+	}
+
+	#Kazakhstan
+	KAZ = {
+		every_owned_state = {
+			set_variable = { AdminTitle = token:Admin_Title_Region }
+		}
+	}
+
+	#Thailand
+	THA = {
+		every_owned_state = {
+			set_variable = { AdminTitle = token:Admin_Title_Province }
+		}
+	}
+
+	#Turkey + Puppets
+	TUR = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 341
+					state = 1243
+					state = 1565
+					state = 1567
+					state = 1988
+					state = 2148
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Province }
+		}
+	}
+	set_variable = { 1779.AdminTitle = token:Admin_Title_Province }
+	set_variable = { 1993.AdminTitle = token:Admin_Title_Special_Zone }
+	every_state = {
+		limit = {
+			OR = {
+				state = 163
+				state = 339
+				state = 343
+				state = 349
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Aegean }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 354
+				state = 355
+				state = 356
+				state = 1448
+				state = 1565
+				state = 1986
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Black_Sea }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 49
+				state = 346
+				state = 348
+				state = 1987
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Central_Anatolia }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 352
+				state = 353
+				state = 1567
+				state = 1989
+				state = 1990
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_East_Anatolia }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 340
+				state = 341
+				state = 345
+				state = 347
+				state = 1267
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Marmara }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 342
+				state = 344
+				state = 1449
+				state = 1988
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Mediterranean }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 350
+				state = 677
+				state = 781
+				state = 1243
+				state = 1334
+				state = 1446
+				state = 1779
+				state = 1780
+				state = 1781
+				state = 1991
+				state = 1992
+				state = 1993
+				state = 2148
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Southeast_Anatolia }
+	}
+	TUR = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { AssocRegion = token:Assoc_Region_Aegean }
+					check_variable = { AssocRegion = token:Assoc_Region_Black_Sea }
+					check_variable = { AssocRegion = token:Assoc_Region_Central_Anatolia }
+					check_variable = { AssocRegion = token:Assoc_Region_East_Anatolia }
+					check_variable = { AssocRegion = token:Assoc_Region_Marmara }
+					check_variable = { AssocRegion = token:Assoc_Region_Mediterranean }
+					check_variable = { AssocRegion = token:Assoc_Region_Southeast_Anatolia }
+					check_variable = { AssocRegion = token:Assoc_Region_Cyprus_Province }
+				}
+				NOT = { check_variable = { AdminTitle = token:Admin_Title_Province } }
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Province }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { AssocRegion = token:Assoc_Region_Aegean }
+					check_variable = { AssocRegion = token:Assoc_Region_Black_Sea }
+					check_variable = { AssocRegion = token:Assoc_Region_Central_Anatolia }
+					check_variable = { AssocRegion = token:Assoc_Region_East_Anatolia }
+					check_variable = { AssocRegion = token:Assoc_Region_Marmara }
+					check_variable = { AssocRegion = token:Assoc_Region_Mediterranean }
+					check_variable = { AssocRegion = token:Assoc_Region_Southeast_Anatolia }
+					check_variable = { AssocRegion = token:Assoc_Region_Cyprus_Province }
+				}
+				check_variable = { AdminTitle = token:Admin_Title_Province }
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+	}
+
+	BKU = {
+		every_owned_state = {
+			limit = {
+				check_variable = { AssocRegion = token:Assoc_Region_Southeast_Anatolia }
+				NOT = {
+					check_variable = { AdminTitle = token:Admin_Title_Province }
+					check_variable = { AdminTitle = token:Admin_Title_Special_Zone }
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Province }
+		}
+		every_owned_state = {
+			limit = {
+				check_variable = { AdminTitle = token:Admin_Title_Province }
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+	}
+
+	#Iraq
+	IRQ = {
+		every_owned_state = {
+			set_variable = { AdminTitle = token:Admin_Title_Banner }
+		}
+	}
+}

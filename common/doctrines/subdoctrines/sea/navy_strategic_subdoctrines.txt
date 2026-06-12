@@ -1,0 +1,143 @@
+unholy_ghosts = {
+	track = strategic
+	name = SUBDOCTRINE_UNHOLY_GHOSTS
+	description = SUBDOCTRINE_UNHOLY_GHOSTS_DESC
+	icon = GFX_the_hidden_arm_medium
+
+	xp_cost = 100
+	xp_type = navy
+
+
+	ai_will_do = {
+		base = 1
+	}
+
+	# EFFECTS
+
+	submarine = {
+		naval_range = 0.05
+		naval_speed = 0.05
+	}
+	equipment_bonus = {
+		submarine = {
+			build_cost_ic = 0.1
+		}
+	}
+	navy_submarine_attack_factor = 0.10
+
+
+	rewards = {
+		terror_from_the_deep = {
+			submarine = {
+				naval_torpedo_hit_chance_factor = 0.10
+				surface_detection = 0.1
+			}
+			navy_weather_penalty = -0.1
+			naval_torpedo_reveal_chance_factor = -0.1
+
+		}
+		tithe_below_the_tides = {
+			naval_cost_modifier = 0.1
+			submarine = {
+				naval_range = 0.25
+				sub_visibility = -0.25
+				fuel_consumption = -0.25
+			}
+		}
+		silence_of_the_dead = {
+			submarine = {
+				sub_visibility = -0.2
+			}
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = 0.03
+				}
+			}
+		}
+		alone_in_the_dark = {
+			equipment_bonus = {
+				submarine = {
+					reliability = 0.05
+				}
+			}
+			submarine = {
+				max_organisation = 10
+			}
+		}
+		wielders_of_apocalypse = {
+			effect = {
+				set_temp_variable = { var = global_coverage_change_temp value = 0.06 }
+				nuclear_global_coverage_change = yes
+			}
+			coordination_bonus = 0.06
+		}
+	}
+}
+
+hunt_in_the_depths = {
+	track = strategic
+	name = SUBDOCTRINE_HUNT_IN_THE_DEPTHS
+	description = SUBDOCTRINE_HUNT_IN_THE_DEPTHS_DESC
+	icon = GFX_undersea_coordination_tactics_medium
+
+	xp_cost = 100
+	xp_type = navy
+
+	ai_will_do = {
+		base = 1
+	}
+	# EFFECTS
+	submarine = {
+		sub_detection = 0.05
+		sub_visibility = -0.05
+	}
+
+
+	rewards = {
+		mind_the_gaps = {
+			equipment_bonus = {
+				capital_ship = {
+					sub_detection = 0.2
+					surface_detection = 0.05
+				}
+				screen_ship = {
+					sub_detection = 0.2
+					surface_detection = 0.05
+				}
+			}
+		}
+		borrow_the_cloak = {
+			submarine = {
+				sub_visibility = -0.2
+			}
+		}
+		plug_the_breach= {
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = 0.02
+					reliability = 0.2
+					max_strength = 0.1
+				}
+			}
+		}
+		follow_the_trail = {
+			submarine = {
+				sub_detection = 0.15
+			}
+			destroyer = {
+				sub_detection = 0.1
+				sub_attack = 0.1
+			}
+		}
+		prepare_the_strike = {
+			submarine = {
+				sub_detection = 0.5
+			}
+			destroyer = {
+				sub_detection = 0.5
+				sub_attack = 0.5
+			}
+			air_nav_efficiency = 0.05
+		}
+	}
+}

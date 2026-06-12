@@ -1,0 +1,1298 @@
+### PAKISTAN SKELETON EVENTS ###
+
+add_namespace = PAK
+add_namespace = PAK_Germany # For Pakistan's relationship with Germany/ascension into the Pakt (get it)
+add_namespace = subcontinentalcrisis
+
+### PAKISTAN SKELETON EVENTS ###
+country_event = { # Pakistan movement coups Nawabzada - April 1962
+	id = PAK.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.1" }
+	title = PAK.1.t
+	desc = PAK.1.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK.1.a
+		retire_character = PAK_Nawabzada_Shahabuddin_Khan
+		set_politics = {
+			ruling_party = ultranationalism
+		}
+		set_popularities = {
+			progressivism = 30
+			ultranationalism = 70
+		}
+		promote_character = PAK_Abdul_Qayyum_Khan
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = PAK_PM
+		AFG = {
+			end_puppet = PAK
+		}
+		TNO_force_update_renamings = yes
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = PAK_the_sandcastle
+				add_idea = PAK_carrying_all_before_them
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					HasGermanAsiaInterest = yes
+				}
+				news_event = WORLD_PAK.1
+			}
+			PAK = {
+				country_event = { id = PAK.2 days = 419 }
+			}
+		}
+	}
+}
+
+country_event = { # Kalat taken over by Pakistan movement - July 1963
+	id = PAK.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.2" }
+	title = PAK.2.t
+	desc = PAK.2.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK.2.a
+		2459 = { remove_claim_by = AFG }
+		KLT = {
+			every_state = {
+				limit = { is_core_of = KLT }
+				remove_core_of = KLT
+				add_core_of = PAK
+			}
+		}
+		annex_country = {
+			target = KLT
+			transfer_troops = yes
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasGermanAsiaInterest = yes
+				}
+				news_event = WORLD_PAK.2
+			}
+		}
+	}
+}
+
+country_event = { # Operation Bin Qasim declared - March 1965
+	id = PAK.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.3" }
+	title = PAK.3.t
+	desc = PAK.3.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK.3.a
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = PAK_DOMINION
+		PAK_add_obq_claims = yes
+		declare_war_on = {
+			target = IND
+			type = annex_everything
+		}
+		set_global_flag = PAK_obq_ongoing
+		country_event = { id = PAK.30 days = 180 } # if OBQ goes on too long Pakistan gets hit w/ massive debuffs
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = WORLD_PAK.3
+			}
+			USA = { country_event = USA_IND.22 }
+			JAP = { country_event = jap_india.17 }
+			GER = {
+				country_event = { id = PAK_Germany.3 hours = 1 }
+				set_temp_variable = { target = PAK }
+				set_temp_variable = { number = 1 }
+				TNO_set_num_volunteers = yes
+				set_temp_variable = { Victory_ID = 40 }
+				Cold_War_GUI_AddVictory = yes
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Tribal Infantry Division\" start_experience_factor = 0.1"
+					owner = PAK
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Tribal Infantry Division\" start_experience_factor = 0.1"
+					owner = PAK
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Tribal Infantry Division\" start_experience_factor = 0.1"
+					owner = PAK
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Tribal Infantry Division\" start_experience_factor = 0.1"
+					owner = PAK
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Tribal Infantry Division\" start_experience_factor = 0.1"
+					owner = PAK
+				}
+			}
+		}
+	}
+}
+
+country_event = { # hits Pakistan with massive debuffs if OBQ goes on for too long
+	id = PAK.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.30" }
+	title = PAK.30.t
+	desc = PAK.30.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = PAK_obq_success
+		}
+	}
+
+	option = {
+		name = PAK.30.a
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = PAK_obq_success
+				}
+			}
+			add_ideas = {
+				PAK_obq_out_of_time
+			}
+		}
+	}
+}
+
+country_event = { # Pakistan beats India - 1965
+	id = PAK.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.4" }
+	title = PAK.4.t
+	desc = PAK.4.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK.4.a
+		remove_ideas = PAK_carrying_all_before_them
+		add_ideas = {
+			PAK_one_flag_a_thousand_nations
+			PAK_an_administrative_chimera
+			PAK_the_fires_must_burn
+			PAK_networks_upon_networks
+		}
+		remove_ideas = {
+			PAK_between_the_worlds
+			PAK_pashtun_rule_british_policies
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = PAK_despotism_party_post_obq_long
+			name = PAK_despotism_party_post_obq
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			long_name = PAK_ultranationalism_party_post_obq_long
+			name = PAK_ultranationalism_party_post_obq
+		}
+		set_popularities = {
+			socialist = 10
+			socialist_2 = 20
+			progressivism = 5
+			despotism = 15
+			despotism_2 = 10
+			ultranationalism = 40
+		}
+		clr_global_flag = PAK_obq_ongoing
+		set_global_flag = PAK_obq_success
+		delete_units = {
+			division_template = "Tribal Infantry Division"
+			disband = yes
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Corporate_Oligopoly }
+		econ_subtype_change = yes
+		PAK_remove_obq_claims = yes
+		1316 = {
+			add_to_array = { global.state_with_lore = THIS.id }
+		}
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = WORLD_PAK.4
+			}
+			PAK = {
+				country_event = { id = PAK.5 days = 86 }
+			}
+			GER = {
+				country_event = { id = PAK_Germany.5 days = 10 }
+				set_temp_variable = { Victory_ID = 40 }
+				set_temp_variable = { Victory_Outcome = 5 }
+				set_temp_variable = { Victory_Points = 300 }
+				Cold_War_GUI_ManipulateVictory = yes
+				TNO_fopo_remove_operation_bin_qasim_tab = yes 
+				set_temp_variable = { target = PAK }
+				TNO_clear_num_volunteers = yes
+			}
+		}
+	}
+}
+
+country_event = { # Khan plots to dissolve Assembly, is stopped - 1965
+	id = PAK.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.5" }
+	title = PAK.5.t
+	desc = PAK.5.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # wtf Qayyum
+		name = PAK.5.a
+		hidden_effect = {
+			PAK = {
+				country_event = { id = PAK.6 days = 114 }
+			}
+		}
+	}
+}
+
+country_event = { # Assembly over, Noon elected - 1966
+	id = PAK.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.6" }
+	title = PAK.6.t
+	desc = PAK.6.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK.6.a
+		#retire_character = PAK_Abdul_Qayyum_Khan
+		drop_cosmetic_tag = yes
+		set_party_name = {
+			ideology = despotism
+			long_name = PAK_despotism_party_post_cc_long
+			name = PAK_despotism_party_post_cc
+		}
+		set_party_name = {
+			ideology = despotism_2
+			long_name = PAK_despotism_2_party_post_cc_long
+			name = PAK_despotism_2_party_post_cc
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			long_name = PAK_ultranationalism_party_post_cc_long
+			name = PAK_ultranationalism_party_post_cc
+		}
+		set_popularities = {
+			socialist_2 = 10
+			despotism = 60
+			despotism_2 = 15
+			despotism_3 = 10
+			ultranationalism = 5
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = despotism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 60
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		promote_character = PAK_Feroz_Khan_Noon
+		swap_ideas = {
+			remove_idea = PAK_networks_upon_networks
+			add_idea = PAK_an_army_of_patronage
+		}
+		swap_ideas = {
+			remove_idea = PAK_an_administrative_chimera
+			add_idea = PAK_the_parliamentary_dictatorship
+		}
+		remove_ideas = {
+			tno_political_parties_controlled_opposition
+			tno_immigration_quota_immigration
+			tno_vote_franchise_no_voting
+			tno_conscription_broadened_conscription
+			tno_trade_laws_limited_exports
+		}
+		add_ideas = {
+			PAK_the_scrap_of_paper
+			tno_political_parties_multiparty_system
+			tno_immigration_open_immigration
+			tno_vote_franchise_universal
+			tno_conscription_volunteer_only
+			tno_trade_laws_free_trade
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasGermanAsiaInterest = yes
+				}
+				news_event = WORLD_PAK.5
+			}
+			PAK = {
+				country_event = { id = PAK.7 days = 703 }
+			}
+		}
+	}
+}
+
+country_event = { # Frontier Emergency, state of emergency declared, 1968
+	id = PAK.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.7" }
+	title = PAK.7.t
+	desc = PAK.7.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK.7.a
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasGermanAsiaInterest = yes
+				}
+				news_event = WORLD_PAK.6
+			}
+			PAK = {
+				country_event = { id = PAK.8 days = 1 }
+				country_event = { id = PAK.9 days = 308 }
+			}
+		}
+	}
+}
+
+country_event = { # who does the opposition go with?
+	id = PAK.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.8" }
+	title = PAK.8.t
+	desc = PAK.8.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Daultana
+		name = PAK.8.a
+		ai_chance = {
+			factor = 1
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = PAK_69_ELECTIONS_PATH option = PAK_69_ELECTIONS_PATH_BHUTTO }
+				}
+			}
+		}
+		set_country_flag = PAK_daultana_oppo
+	}
+	option = { # Bhutto
+		name = PAK.8.b
+		ai_chance = {
+			factor = 1
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = PAK_69_ELECTIONS_PATH option = PAK_69_ELECTIONS_PATH_DAULTANA }
+				}
+			}
+		}
+		set_country_flag = PAK_bhutto_oppo
+	}
+}
+
+country_event = { # Elections!!! - late 1969
+	id = PAK.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.9" }
+	title = PAK.9.t
+	desc = PAK.9.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Noon relected
+		name = PAK.9.a
+		ai_chance = {
+			factor = 1
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = PAK_69_ELECTIONS_PATH option = PAK_69_ELECTIONS_PATH_DAULTANA }
+					has_game_rule = { rule = PAK_69_ELECTIONS_PATH option = PAK_69_ELECTIONS_PATH_BHUTTO }
+				}
+			}
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = despotism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 60
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasGermanAsiaInterest = yes
+				}
+				news_event = WORLD_PAK.7
+			}
+			PAK = {
+				country_event = { id = PAK.10 days = 428 }
+			}
+		}
+	}
+	option = { # Noon defeated
+		name = PAK.9.b
+		ai_chance = {
+			factor = 1
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = PAK_69_ELECTIONS_PATH option = PAK_69_ELECTIONS_PATH_NOON }
+				}
+			}
+		}
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = despotism
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 60
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		if = { # Oppo backed Daultana
+			limit = { has_country_flag = PAK_daultana_oppo }
+			set_party_name = {
+				ideology = despotism
+				long_name = PAK_despotism_party_daultana_long
+				name = PAK_despotism_party_daultana
+			}
+			set_party_name = {
+				ideology = despotism_2
+				long_name = PAK_despotism_2_party_daultana_long
+				name = PAK_despotism_2_party_daultana
+			}
+			set_party_name = {
+				ideology = ultranationalism
+				long_name = PAK_ultranationalism_party_daultana_long
+				name = PAK_ultranationalism_party_daultana
+			}
+			set_popularities = {
+				socialist_2 = 10
+				despotism = 40
+				despotism_2 = 35
+				despotism_3 = 10
+				ultranationalism = 5
+			}
+			add_country_leader_role = {
+				character = PAK_Mumtaz_Daultana
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_MUMTAZ_DAULTANA_DESC"
+					ideology = despotism_aristocratic_republicanism_subtype
+					traits = { }
+					expire = "1999.1.1"
+					id = -1
+				}
+			}
+			add_country_leader_role = {
+				character = PAK_Feroz_Khan_Noon
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism_2_subtype
+					traits = { }
+					expire = "1999.1.1"
+					id = -1
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_ai = no
+						HasGermanAsiaInterest = yes
+					}
+					news_event = WORLD_PAK.9
+				}
+			}
+		}
+		else_if = { # Oppo backed Bhutto
+			limit = { has_country_flag = PAK_bhutto_oppo }
+			set_party_name = {
+				ideology = despotism
+				long_name = PAK_despotism_party_bhutto_long
+				name = PAK_despotism_party_bhutto
+			}
+			set_party_name = {
+				ideology = despotism_3
+				long_name = PAK_despotism_3_party_bhutto_long
+				name = PAK_despotism_3_party_bhutto
+			}
+			set_popularities = {
+				socialist_2 = 10
+				despotism = 45
+				despotism_2 = 5
+				despotism_3 = 40
+			}
+			add_country_leader_role = {
+				character = PAK_Zulfikar_Ali_Bhutto
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_ZULFIKAR_ALI_BHUTTO_DESC"
+					ideology = despotism_aristocratic_republicanism_subtype
+					traits = { }
+					expire = "1999.1.1"
+					id = -1
+				}
+			}
+			add_country_leader_role = {
+				character = PAK_Feroz_Khan_Noon
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism_3_subtype
+					traits = { }
+					expire = "1999.1.1"
+					id = -1
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_ai = no
+						HasGermanAsiaInterest = yes
+					}
+					news_event = WORLD_PAK.8
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Noon dies - Decemember 1970
+	id = PAK.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK.10" }
+	title = PAK.10.t
+	desc = PAK.10.desc
+	#picture =
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK.10.a
+		PAK = {
+			retire_character = PAK_Feroz_Khan_Noon
+			promote_character = PAK_Jahanara_Shahnawaz
+		}
+	}
+}
+
+### PAKISTAN GERMANY FORPOL EVENTS ###
+country_event = { # Germany Intel Report 1
+	id = PAK_Germany.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.1" }
+	title = PAK_Germany.1.t
+	desc = PAK_Germany.1.desc
+	picture = GFX_report_event_PAK_pakistani_flag_raised
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.1.a
+	}
+}
+
+country_event = { # The Line Made Closer
+	id = PAK_Germany.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.2" }
+	title = PAK_Germany.2.t
+	desc = PAK_Germany.2.desc
+	picture = GFX_report_event_PAK_balochistan_entry
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.2.a
+	}
+}
+
+country_event = { # Germany Intel Report 2 (Post-OBQ declaration)
+	id = PAK_Germany.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.3" }
+	title = PAK_Germany.3.t
+	desc = PAK_Germany.3.desc
+	picture = GFX_report_event_PAK_pakistani_war_combat
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.3.a
+		TNO_fopo_add_operation_bin_qasim_tab = yes
+	}
+}
+
+country_event = { # From Middle to East
+	id = PAK_Germany.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.4" }
+	title = PAK_Germany.4.t
+	desc = PAK_Germany.4.desc
+	picture = GFX_report_event_PAK_middle_to_east
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.4.a
+	}
+}
+
+country_event = { # From the Indus to the Rhine
+	id = PAK_Germany.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.5" }
+	title = PAK_Germany.5.t
+	desc = PAK_Germany.5.desc
+	picture = GFX_report_event_PAK_join_EEC
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.5.a
+		GER = { add_to_faction = PAK }
+		PAK = { 
+			econ_join_sphere_GER = yes
+			add_ideas = Pakt_Bundnispartner
+		}
+		JAP = { country_event = { id = jap_india.26 days = 1 } }
+	}
+}
+
+country_event = { # Double, Double
+	id = PAK_Germany.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.6" }
+	title = PAK_Germany.6.t
+	desc = PAK_Germany.6.desc
+	picture = GFX_report_event_PAK_indus_to_rhine
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.6.a
+	}
+}
+
+country_event = { # Toil
+	id = PAK_Germany.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.7" }
+	title = PAK_Germany.7.t
+	desc = PAK_Germany.7.desc
+	picture = GFX_report_event_PAK_child_labour
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.7.a
+	}
+}
+
+country_event = { # Smoke and Mirrors
+	id = PAK_Germany.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.8" }
+	title = PAK_Germany.8.t
+	desc = PAK_Germany.8.desc
+	picture = GFX_report_event_PAK_smokes_and_mirrors
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.8.a
+	}
+}
+
+country_event = { # Herding Cats
+	id = PAK_Germany.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.9" }
+	title = PAK_Germany.9.t
+	desc = PAK_Germany.9.desc
+	picture = GFX_report_event_PAK_herding_cats
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.9.a
+	}
+}
+
+country_event = { # Back in Black
+	id = PAK_Germany.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.10" }
+	title = PAK_Germany.10.t
+	desc = PAK_Germany.10.desc
+	picture = GFX_report_event_PAK_back_in_black
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.10.a
+	}
+}
+
+country_event = { # Don't Blink
+	id = PAK_Germany.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.11" }
+	title = PAK_Germany.11.t
+	desc = PAK_Germany.11.desc
+	picture = GFX_report_event_PAK_dont_blink
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.11.a
+	}
+}
+
+country_event = { # Pay Your Own Way
+	id = PAK_Germany.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.12" }
+	title = PAK_Germany.12.t
+	desc = PAK_Germany.12.desc
+	picture = GFX_report_event_pakistani_negotiators
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.12.a
+	}
+}
+
+country_event = { # The EEC's Easter Frontier
+	id = PAK_Germany.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.13" }
+	title = PAK_Germany.13.t
+	desc = PAK_Germany.13.desc
+	picture = GFX_report_event_PAK_join_EEC
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.13.a
+	}
+}
+
+country_event = { # Namarië
+	id = PAK_Germany.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.14" }
+	title = PAK_Germany.14.t
+	desc = PAK_Germany.14.desc
+	picture = GFX_report_event_PAK_namarie
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.14.a
+	}
+}
+
+country_event = { # The Shattered State
+	id = PAK_Germany.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.15" }
+	title = PAK_Germany.15.t
+	desc = PAK_Germany.15.desc
+	picture = GFX_report_event_PAK_military_base
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.15.a
+	}
+}
+
+country_event = { # A Crumbling Army
+	id = PAK_Germany.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.16" }
+	title = PAK_Germany.16.t
+	desc = PAK_Germany.16.desc
+	picture = GFX_report_event_PAK_protestors
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.16.a
+	}
+}
+
+country_event = { # The Watch on the Havel
+	id = PAK_Germany.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PAK_Germany.17" }
+	title = PAK_Germany.17.t
+	desc = PAK_Germany.17.desc
+	picture = GFX_report_event_PAK_pakistani_flag_raised
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = PAK_Germany.17.a
+	}
+}
+
+### SUBCONTINENTAL CRISIS EVENTS ###
+country_event = { # Subcontinental Crisis test event
+	id = subcontinentalcrisis.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.1" 
+
+		hidden_effect = {
+			set_global_flag = subcontinental_crisis_ongoing_buildup
+			set_variable = { JAP.SC_readiness_actual = 2 }
+			set_variable = { GER.SC_readiness_actual = 2 }
+			set_variable = { SC_buildup_progression = 0 }
+			set_variable = { SC_buildup_rate = 1.7 }
+			set_temp_variable = { temp_uncertainty = 100 }
+			SC_set_opposing_displayed_info = yes
+	
+			# Adds to Ongoing Conflicts
+			GER = {
+				set_temp_variable = { Victory_ID = 37 }
+				Cold_War_GUI_AddVictory = yes
+
+				# German/Pakistan buildup flavor
+				country_event = {
+					id = PAK_Germany.8
+					days = 18
+					random_days = 4
+				}
+				country_event = {
+					id = PAK_Germany.9
+					days = 38
+					random_days = 4
+				}
+			}
+			JAP = {
+				set_temp_variable = { Victory_ID = 37 }
+				Cold_War_GUI_AddVictory = yes
+
+				# Japanese/Indian buildup flavor
+				country_event = {
+					id = jap_india.35
+					days = 18
+					random_days = 4
+				}
+				country_event = {
+					id = jap_india.36
+					days = 38
+					random_days = 4
+				}
+			}
+
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = SC_WORLD.6 } #crisis starting news event
+			}
+
+			GER = { 
+				set_variable = { subcont_x_GER = 12 }
+				set_variable = { subcont_x_PAK = 61 }
+				set_variable = { subcont_x_AZH = 399 }
+				set_variable = { subcont_x_JAP = 448 }
+				set_variable = { subcont_overlay_x_GER = 11 }
+				set_variable = { subcont_overlay_x_PAK = 60 }
+				set_variable = { subcont_overlay_x_AZH = 398 }
+				set_variable = { subcont_overlay_x_JAP = 447 }
+				set_variable = { CC_player_readiness_display = GER.CC_readiness_actual }
+				set_temp_variable = { temp_uncertainty = 100 }
+				SC_set_opposing_displayed_info = yes
+				set_variable = { SC_buildup_progression = 0 }
+				set_variable = { SC_buildup_rate = 1.7 }
+			}
+			JAP = { 
+				set_variable = { subcont_x_JAP = 12 }
+				set_variable = { subcont_x_AZH = 61 }
+				set_variable = { subcont_x_GER = 399 }
+				set_variable = { subcont_x_PAK = 448 }
+				set_variable = { subcont_overlay_x_JAP = 11 }
+				set_variable = { subcont_overlay_x_AZH = 60 }
+				set_variable = { subcont_overlay_x_GER = 398 }
+				set_variable = { subcont_overlay_x_PAK = 447 }
+				set_variable = { CC_player_readiness_display = JAP.CC_readiness_actual }
+				set_temp_variable = { temp_uncertainty = 100 }
+				SC_set_opposing_displayed_info = yes
+				set_variable = { SC_buildup_progression = 0 }
+				set_variable = { SC_buildup_rate = 1.7 }
+			}
+			SC_update_certainty = yes
+		}
+	}
+
+	title = subcontinentalcrisis.1.t
+	desc = subcontinentalcrisis.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = subcontinentalcrisis.1.a
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.53 #GER gets fully involved
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.53" }
+	title = subcontinentalcrisis.53.t
+	desc = subcontinentalcrisis.53.d
+	picture = GFX_report_event_USA_oval_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.53.a
+		hidden_effect = {
+			clr_global_flag = subcontinental_crisis_ongoing_buildup
+			set_global_flag = subcontinental_crisis_ongoing_confrontation
+			activate_mission = GER_SC_breaking_point_timer
+			GER = {
+				# German/Pakistan confrontation flavor
+				country_event = {
+					id = PAK_Germany.11
+					days = 28
+					random_days = 4
+				}
+				country_event = {
+					id = PAK_Germany.12
+					days = 48
+					random_days = 4
+				}
+			}
+			JAP = {
+				activate_mission = JAP_SC_breaking_point_timer
+
+				# Japanese/Indian confrontation flavor
+				country_event = {
+					id = jap_india.37
+				}
+				country_event = {
+					id = jap_india.38
+					days = 38
+					random_days = 4
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = SC_WORLD.7
+			}
+		}
+		custom_effect_tooltip = SC_confrontation_start_tt
+		give_guarantee = PAK
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.100 # Leadup Event #1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.100" }
+	title = subcontinentalcrisis.100.t
+	desc = subcontinentalcrisis.100.d
+	picture = GFX_report_event_AZH_coup1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.100.a
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.101 # Leadup Event #2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.101" }
+	title = subcontinentalcrisis.101.t
+	desc = subcontinentalcrisis.101.d
+	picture = GFX_report_event_GER_abwehr_intelligence
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.101.a
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.102 # German Intelligence Report
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.102" }
+	title = subcontinentalcrisis.102.t
+	desc = subcontinentalcrisis.102.d
+	picture = GFX_report_event_GER_abwehr_intelligence
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.102.a
+
+		TNO_fopo_add_subcontinental_crisis_tab = yes 
+		SC_set_opposing_displayed_info = yes 
+		custom_effect_tooltip = subcontinentalcrisis_has_started
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.103 # Japanese Intelligence Report
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.103"
+	}
+	title = subcontinentalcrisis.103.t
+	desc = subcontinentalcrisis.103.d
+	picture = GFX_report_event_AZH_coup2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.103.a
+
+		TNO_fopo_add_subcontinental_crisis_tab = yes 
+		SC_set_opposing_displayed_info = yes
+		custom_effect_tooltip = subcontinentalcrisis_has_started
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.110 # Stalemate - GER event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.110" }
+	title = subcontinentalcrisis.110.t
+	desc = subcontinentalcrisis.110.d
+	picture = GFX_report_event_GER_abwehr_intelligence
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.110.a
+		TNO_fopo_remove_subcontinental_crisis_tab = yes
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.111 # Stalemate - JAP event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.111" }
+	title = subcontinentalcrisis.111.t
+	desc = subcontinentalcrisis.111.d
+	picture = GFX_report_event_JAP_dinner
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.111.a
+		TNO_fopo_remove_subcontinental_crisis_tab = yes
+		hidden_effect = { country_event = { id = jap_india.39 days = 90 } }
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.120 #pakt victory outcome - GER event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.120" }
+	title = subcontinentalcrisis.120.t
+	desc = subcontinentalcrisis.120.d
+	picture = GFX_report_event_GER_abwehr_intelligence
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.120.a
+		TNO_fopo_remove_subcontinental_crisis_tab = yes
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.121 #pakt victory outcome - JAP event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.121" }
+	title = subcontinentalcrisis.121.t
+	desc = subcontinentalcrisis.121.d
+	picture = GFX_report_event_JAP_army_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.121.a
+		TNO_fopo_remove_subcontinental_crisis_tab = yes
+		hidden_effect = { 
+			country_event = { id = jap_india.31 days = 3 }
+			country_event = { id = jap_india.39 days = 90 }			
+		}
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.130 #cps victory outcome - GER event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.130" }
+	title = subcontinentalcrisis.130.t
+	desc = subcontinentalcrisis.130.d
+	picture = GFX_report_event_GER_abwehr_intelligence
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.130.a
+		TNO_fopo_remove_subcontinental_crisis_tab = yes
+		hidden_effect = { country_event = { id = PAK_Germany.14 days = 3 } }
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.131 #cps victory outcome - JAP event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.131" }
+	title = subcontinentalcrisis.131.t
+	desc = subcontinentalcrisis.131.d
+	picture = GFX_report_event_IND_jai_hind
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.131.a
+		TNO_fopo_remove_subcontinental_crisis_tab = yes
+		hidden_effect = { 
+			country_event = { id = jap_india.28 days = 10 }
+			country_event = { id = jap_india.39 days = 90 }
+			country_event = { id = jap_india.40 days = 365 }
+		}
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.140 # Nuclear War - GER Event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.140" }
+	title = subcontinentalcrisis.140.t
+	desc = subcontinentalcrisis.140.d
+	picture = GFX_report_event_SGR_speer_war_room
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.140.a
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.141 # Nuclear War - Shared Event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.141" }
+	title = subcontinentalcrisis.141.t
+	desc = subcontinentalcrisis.141.d
+	picture = GFX_report_event_GER_anarchy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.141.a
+		TNO_fopo_remove_subcontinental_crisis_tab = yes
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.142 # Nuclear War - JAP Event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.142" }
+	title = subcontinentalcrisis.142.t
+	desc = subcontinentalcrisis.142.d
+	picture = GFX_report_event_JAP_army_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = subcontinentalcrisis.142.a
+	}
+}
+
+country_event = {
+	id = subcontinentalcrisis.1010 #ends azh-pak war if it goes on for too long
+	immediate = { log = "[GetDateText]: [Root.GetName]: event subcontinentalcrisis.1010" }
+	title = subcontinentalcrisis.1010.t
+	desc = subcontinentalcrisis.1010.d
+	picture = GFX_report_event_PAK_herding_cats
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = AZH_PAK_war
+	}
+
+	option = {
+		name = subcontinentalcrisis.1010.a
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = AZH_PAK_war }
+				AZH = {
+					annex_country = {
+						target = PAK
+						transfer_troops = no
+					}
+				}
+				JAP = { #if PAK capitulates AZH within the 90 days
+					add_to_faction = AZH 
+				}
+			}
+		}
+	}
+}

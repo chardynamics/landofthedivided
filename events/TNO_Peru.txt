@@ -1,0 +1,255 @@
+################################
+#####     Peru Events     ######
+#####      ###   ###      ######
+#####      ###   ###      ######
+#####      ###   ###      ######
+#####        Feliz        ######
+#####     Bicentenario!   ######
+################################
+
+add_namespace = peru
+add_namespace = peru_skel
+
+######################
+## Skeleton Content ##
+######################
+
+#1962 Elections
+country_event = {
+	id = peru_skel.1
+	title = peru_skel.1.t
+	desc = peru_skel.1.desc
+	#picture =
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #AP-UD
+		name = peru_skel.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = PRU_63_ELECTION_PATH option = PRU_63_ELECTION_PATH_UNO_ODRIA }
+			}
+		}
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+		}
+		add_country_leader_trait = presidente_peru_latin
+		set_country_flag = PRU_belaunde_president
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = LATAM_news.52
+			}
+		}
+		set_party_name = {
+			ideology = liberalism
+			name = PRU_ap_party
+			long_name = PRU_ap_party_long
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.2
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		country_event = {
+			id = peru_skel.3
+			days = 2242
+		}
+
+		if = {
+			limit = { has_country_flag = IBR_Want_Peru_Puppet }
+			IBR = { country_event = { id = IBR_latam.10 } }
+		}
+	}
+	option = { #UNO
+		name = peru_skel.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = PRU_63_ELECTION_PATH option = PRU_63_ELECTION_PATH_AP-UD_BELAUNDE }
+			}
+			modifier = {
+				factor = 1.5
+				has_country_flag = IBR_Want_Peru_Puppet
+			}
+		}
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = yes
+		}
+		add_country_leader_trait = presidente_peru_latin
+		set_country_flag = PRU_odria_president
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = LATAM_news.53
+			}
+		}
+		add_popularity = {
+			ideology = paternalism
+			popularity = 0.2
+		}
+		country_event = {
+			id = peru_skel.2
+			days = 2142
+		}
+
+		if = {
+			limit = { has_country_flag = IBR_Want_Peru_Puppet }
+			IBR = { country_event = { id = IBR_latam.9 } }
+		}
+	}
+}
+
+#Odria Self-Coup
+country_event = {
+	id = peru_skel.2
+	title = peru_skel.2.t
+	desc = peru_skel.2.desc
+	#picture =
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Sigma Tip #157: Coup Yourself
+		name = peru_skel.2.a
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereAmericasInterest = yes
+			}
+			news_event = {
+				id = LATAM_news.54
+			}
+		}
+		add_country_leader_role = {
+			character = PRU_Manuel_Arturo_Odria
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_MANUEL_ARTURO_ODRIA_DESC"
+				expire = "1994.4.20"
+				ideology = despotism_personalistic_dictatorship_subtype
+				traits = { }
+				id = -1
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		PRU_Manuel_Arturo_Odria = {
+			set_portraits = {
+				civilian = { large = "gfx/leaders/PRU/Portrait_PRU_Manuel_Odria.png" }
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						country_exists = CLC
+						CLC = { check_variable = { ECON_SPHERE_LEADER = IBR } }
+					}
+					AND = {
+						country_exists = COL
+						COL = { check_variable = { ECON_SPHERE_LEADER = IBR } }
+					}
+					AND = {
+						country_exists = CLD
+						country_exists = IBR
+					}
+				}
+			}
+			econ_join_sphere_IBR = yes
+			remove_ideas = OFN_Observer
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						country_exists = CLC
+						CLC = { check_variable = { ECON_SPHERE_LEADER = JAP } }
+					}
+					AND = {
+						country_exists = CLC
+						CLC = { check_variable = { ECON_SPHERE_LEADER = ITA } }
+					}
+					AND = {
+						country_exists = COL
+						COL = { check_variable = { ECON_SPHERE_LEADER = ITA } }
+					}
+				}
+			}
+			econ_join_sphere_JAP = yes
+			remove_ideas = OFN_Observer
+		}
+		else = {
+			econ_join_sphere_USA = yes #Failsafe
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Corporate_Oligopoly }
+		econ_subtype_change = yes
+		PRU = {
+			set_variable = { TNO_SA_influence^global.UNALIGNED = 100 }
+			set_variable = { TNO_SA_influence^global.BRAZIL = 0 }
+			set_variable = { TNO_SA_influence^global.ARGENTINA = 0 }
+		}
+		set_popularities = {
+			communist = 6
+			socialist = 5
+			progressivism = 11
+			liberalism = 16
+			conservatism = 22
+			despotism = 35
+			fascism = 5
+		}
+	}
+}
+
+#Bedoyas Succeeds Belaunde
+country_event = {
+	id = peru_skel.3
+	title = peru_skel.3.t
+	desc = peru_skel.3.desc
+	#picture =
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Democracy
+		name = peru_skel.3.a
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = LATAM_news.55
+			}
+		}
+		promote_character = PRU_Luis_Bedoya_Reyes
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = yes
+		}
+		set_party_name = {
+			ideology = progressivism
+			name = PRU_progressivism_bedoya_party
+			long_name = PRU_progressivism_bedoya_party_long
+		}
+		add_popularity = {
+			ideology = progressivism
+			popularity = 0.2
+		}
+	}
+}

@@ -1,0 +1,29 @@
+###########################################
+################ Euskadi trees ##########
+###########################################
+# War Tree
+focus_tree = {
+	id = BSQ_war_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BSQ
+		}
+	}
+	default = no
+	shared_focus = BSQ_gora_euskadi_askatuta
+}
+
+focus_tree = {
+	id = BSQ_ETA_war_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BSQ
+		}
+	}
+	default = no
+	shared_focus = BSQ_gora_euskadi_ta_askatasuna
+}

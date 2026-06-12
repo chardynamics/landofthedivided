@@ -1,0 +1,568 @@
+TNO_fopo_bra_negotiations_startup = {
+	ZZZ = {
+		activate_mission = TNO_ZZZ_nuke_neg_turn_countdown
+	}
+	set_variable = { TNO_nuke_negotiations_bias_BRA = 50 }
+	set_variable = { BRA_nuke_negotiations_ofn = 0 }
+	set_variable = { BRA_nuke_negotiations_nuke_coop = 0 }
+	set_variable = { BRA_nuke_negotiations_payment = 0 }
+	set_variable = { BRA_nuke_negotiations_assets = 0 }
+	set_variable = { TNO_nuke_negotiations_turn = 1 }
+	set_variable = { TNO_nuke_negotiations_succeed_chance = 0 }
+	set_variable = { TNO_nuke_negotiations_fail_chance = 0 }
+
+	if = {
+		limit = { original_tag = BRA }
+		if = {
+			limit = { NOT = { BRA = { is_in_faction_with = USA } } }
+			set_variable = { TNO_nuke_negotiations_usa_policy = 3 }
+		}
+		else = {
+			set_variable = { TNO_nuke_negotiations_usa_policy = 4 }
+		}
+	}
+}
+
+BRA_nuke_negotiations_turn_change = {
+	if = {
+		limit = {
+			check_variable = { TNO_nuke_negotiations_turn = 1 } # ofn membership
+		}
+		ZZZ = {
+			activate_mission = TNO_ZZZ_nuke_neg_turn_countdown
+		}
+		if = {
+			limit = { original_tag = BRA }
+			if = {
+				limit = { NOT = { check_variable = { TNO_nuke_negotiations_bra_policy = 0 } } }
+				random_list = {
+					TNO_nuke_negotiations_succeed_chance = {
+						set_variable = { TNO_nuke_neg_ofn_policy = TNO_nuke_negotiations_bra_policy }
+					}
+					TNO_nuke_negotiations_fail_chance = {
+						set_variable = { TNO_nuke_neg_ofn_policy = TNO_nuke_negotiations_usa_policy }
+					}
+				}
+				set_variable = { TNO_nuke_negotiations_bra_policy = 0 }
+				set_variable = { TNO_nuke_negotiations_usa_policy = 4 }
+			}
+			else = {
+				set_variable = { TNO_nuke_neg_ofn_policy = TNO_nuke_negotiations_usa_policy }
+			}
+		}
+		if = {
+			limit = { check_variable = { TNO_nuke_neg_ofn_policy = 1 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = 50 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_ofn_policy = 2 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = 10 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_ofn_policy = 4 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = -10 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_ofn_policy = 5 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = -20 }
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { TNO_nuke_negotiations_turn = 2 } # nuclear cooperation
+		}
+		ZZZ = {
+			activate_mission = TNO_ZZZ_nuke_neg_turn_countdown
+		}
+		if = {
+			limit = { original_tag = BRA }
+			if = {
+				limit = { NOT = { check_variable = { TNO_nuke_negotiations_bra_policy = 0 } } }
+				random_list = {
+					TNO_nuke_negotiations_succeed_chance = {
+						set_variable = { TNO_nuke_neg_nuke_coop_policy = TNO_nuke_negotiations_bra_policy }
+					}
+					TNO_nuke_negotiations_fail_chance = {
+						set_variable = { TNO_nuke_neg_nuke_coop_policy = TNO_nuke_negotiations_usa_policy }
+					}
+				}
+				set_variable = { TNO_nuke_negotiations_bra_policy = 0 }
+				set_variable = { TNO_nuke_negotiations_usa_policy = 4 }
+			}
+			else = {
+				set_variable = { TNO_nuke_neg_nuke_coop_policy = TNO_nuke_negotiations_usa_policy }
+			}
+		}
+		if = {
+			limit = { check_variable = { TNO_nuke_neg_nuke_coop_policy = 1 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = 30 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_nuke_coop_policy = 2 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = 20 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_nuke_coop_policy = 3 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = 10 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_nuke_coop_policy = 5 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = -20 }
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { TNO_nuke_negotiations_turn = 3 } # payments
+		}
+		ZZZ = {
+			activate_mission = TNO_ZZZ_nuke_neg_turn_countdown
+		}
+		if = {
+			limit = { original_tag = BRA }
+			if = {
+				limit = { NOT = { check_variable = { TNO_nuke_negotiations_bra_policy = 0 } } }
+				random_list = {
+					TNO_nuke_negotiations_succeed_chance = {
+						set_variable = { TNO_nuke_neg_payment_policy = TNO_nuke_negotiations_bra_policy }
+					}
+					TNO_nuke_negotiations_fail_chance = {
+						set_variable = { TNO_nuke_neg_payment_policy = TNO_nuke_negotiations_usa_policy }
+					}
+				}
+				set_variable = { TNO_nuke_negotiations_bra_policy = 0 }
+				set_variable = { TNO_nuke_negotiations_usa_policy = 4 }
+			}
+			else = {
+				set_variable = { TNO_nuke_neg_payment_policy = TNO_nuke_negotiations_usa_policy }
+			}
+		}
+		if = {
+			limit = { check_variable = { TNO_nuke_neg_payment_policy = 1 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = 40 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_payment_policy = 2 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = 20 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_payment_policy = 3 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = 10 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_payment_policy = 5 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = -20 }
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { TNO_nuke_negotiations_turn = 4 } # us assets
+		}
+		if = {
+			limit = { original_tag = BRA }
+			if = {
+				limit = { NOT = { check_variable = { TNO_nuke_negotiations_bra_policy = 0 } } }
+				random_list = {
+					TNO_nuke_negotiations_succeed_chance = {
+						set_variable = { TNO_nuke_neg_assets_policy = TNO_nuke_negotiations_bra_policy }
+					}
+					TNO_nuke_negotiations_fail_chance = {
+						set_variable = { TNO_nuke_neg_assets_policy = TNO_nuke_negotiations_usa_policy }
+					}
+				}
+			}
+			else = {
+				set_variable = { TNO_nuke_neg_assets_policy = TNO_nuke_negotiations_usa_policy }
+			}
+		}
+		if = {
+			limit = { check_variable = { TNO_nuke_neg_assets_policy = 1 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = 10 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_assets_policy = 2 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = -10 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_assets_policy = 3 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = -20 }
+		}
+		else_if = {
+			limit = { check_variable = { TNO_nuke_neg_assets_policy = 4 } }
+			add_to_variable = { TNO_nuke_negotiations_bias_BRA = -30 }
+		}
+	}
+	add_to_variable = { TNO_nuke_negotiations_turn = 1 }
+}
+
+BRA_nuke_negotiations_end_negotiations = {
+	custom_effect_tooltip = BRA_nuke_negotiations_end_neg_tt
+	TNO_fopo_remove_nuke_negotiations_tab = yes
+	if = {
+		limit = { tag = BRA }
+		set_temp_variable = { temp_bill = token:BRA_BRAZIL_AMERICA_ARMS_TREATY }
+		set_variable = { BRA_pl_ptb_support_bill@var:temp_bill = 0.2 }
+		set_variable = { BRA_pl_psd_support_bill@var:temp_bill = 0.2 }
+		BRA_lacerda_calculate_udn_bill_support = yes
+		set_variable = { BRA_pl_psp_support_bill@var:temp_bill = 0.6 }
+		if = {
+			limit = { has_country_flag = BRA_lacerda_psp_support_flag }
+			if = {
+				limit = { check_variable = { BRA_pl_psp_support_bill@var:temp_bill < BRA_lacerda_psp_support } }
+				set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+			}
+			if = {
+				limit = { check_variable = { BRA_lacerda_psp_support = 0 } }
+				set_variable = { BRA_pl_psp_support_bill@var:temp_bill = BRA_lacerda_psp_support }
+			}
+		}
+		set_variable = { BRA_pl_prp_support_bill@var:temp_bill = 0.6 }
+		BRA_initialize_bill = yes
+		set_variable = { BRA_pl_vote_days@var:temp_bill = 14 }
+		BRA_call_bill_vote = yes
+
+		country_event = {
+			id = brazil_lacerda.73
+			days = 10
+		}
+	}
+	else_if = {
+		limit = { tag = USA }
+		country_event = brazil_lacerda.74
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_negotiations_bias_BRA > 19
+			}
+		}
+		set_variable = { TNO_fopo_nuke_neg_treaty_bias = 1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_negotiations_bias_BRA < 40
+				TNO_nuke_negotiations_bias_BRA > 19
+			}
+		}
+		set_variable = { TNO_fopo_nuke_neg_treaty_bias = 2 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_negotiations_bias_BRA < 60
+				TNO_nuke_negotiations_bias_BRA > 39
+			}
+		}
+		set_variable = { TNO_fopo_nuke_neg_treaty_bias = 3 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_negotiations_bias_BRA < 80
+				TNO_nuke_negotiations_bias_BRA > 59
+			}
+		}
+		set_variable = { TNO_fopo_nuke_neg_treaty_bias = 4 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_negotiations_bias_BRA > 79
+			}
+		}
+		set_variable = { TNO_fopo_nuke_neg_treaty_bias = 5 }
+	}
+}
+
+BRA_nuke_negotiations_calc_effects = {
+
+	if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_ofn_policy = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_ofn_policy = 2
+			}
+		}
+		BRA = { army_funding_minimal_increase_low = yes }
+		BRA = { naval_funding_minimal_increase_low = yes }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_ofn_policy = 3
+			}
+		}
+		BRA = { army_funding_minimal_increase_med = yes }
+		BRA = { naval_funding_minimal_increase_med = yes }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_ofn_policy = 4
+			}
+		}
+		BRA = { army_funding_minimal_increase_med = yes }
+		BRA = { naval_funding_minimal_increase_med = yes }
+		if = {
+			limit = {
+				NOT = {
+					BRA = {
+						has_completed_focus = BRA_OFN_policing_duties
+					}
+				}
+				BRA = {
+					has_completed_focus = BRA_token_force
+				}
+			}
+			BRA = {
+				complete_national_focus = BRA_OFN_policing_duties
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_ofn_policy = 5
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					BRA = {
+						has_completed_focus = BRA_OFN_policing_duties
+					}
+				}
+				BRA = {
+					has_completed_focus = BRA_token_force
+				}
+			}
+			BRA = {
+				complete_national_focus = BRA_OFN_policing_duties
+			}
+		}
+		BRA = { army_funding_minimal_increase_high = yes }
+		BRA = { naval_funding_minimal_increase_high = yes }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_nuke_coop_policy = 1
+			}
+		}
+		MEX = {
+			add_opinion_modifier = {
+				target = BRA
+				modifier = BRA_tlatelolco_broke
+			}
+		}
+		set_country_flag = BRA_SACW_Nukes_developed
+		set_variable = { nuclear_stockpile = 24 }
+		set_variable = { nuclear_stockpile_k = nuclear_stockpile }
+		divide_variable = { nuclear_stockpile_k = 1000 }
+		set_variable = { nuclear_global_coverage = 0.1 }
+		calculate_strike_capability = yes
+		set_technology = {
+			ICBM = 1
+			MRBM = 1
+			SRBM = 1
+			nuclear_reactors = 1
+			nuclear_weapons = 1
+		}
+		set_temp_variable = { SACW_supporter_tag_temp = USA }
+		SACW_add_suppoter = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_nuke_coop_policy = 2
+			}
+		}
+		MEX = {
+			add_opinion_modifier = {
+				target = BRA
+				modifier = BRA_tlatelolco_broke
+			}
+		}
+		set_technology = {
+			ICBM = 1
+		}
+
+		set_temp_variable = { SACW_supporter_tag_temp = USA }
+		SACW_add_suppoter = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_nuke_coop_policy = 3
+			}
+		}
+		MEX = {
+			add_opinion_modifier = {
+				target = BRA
+				modifier = BRA_tlatelolco_broke
+			}
+		}
+		set_temp_variable = { SACW_supporter_tag_temp = USA }
+		SACW_add_suppoter = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_nuke_coop_policy = 4
+			}
+		}
+		MEX = {
+			add_opinion_modifier = {
+				target = BRA
+				modifier = BRA_tlatelolco_broke
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_nuke_coop_policy = 5
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_payment_policy = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_payment_policy = 2
+			}
+		}
+		BRA = {
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_payment_policy = 3
+			}
+		}
+		BRA = {
+			set_temp_variable = { temp_econ_spending_amount = 0.25 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_payment_policy = 4
+			}
+		}
+		BRA = {
+			set_temp_variable = { temp_econ_spending_amount = 0.5 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_payment_policy = 5
+			}
+		}
+		BRA = {
+			set_temp_variable = { temp_econ_spending_amount = 0.75 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_assets_policy = 1
+			}
+		}
+		BRA = {
+			diplomatic_relation = {
+				country = USA
+				relation = docking_rights
+				active = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_assets_policy = 2
+			}
+		}
+		BRA = {
+			add_stability = -0.02
+		}
+		set_temp_variable = { tempTension = 2 }
+		SA_change_tension = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_assets_policy = 3
+			}
+		}
+		BRA = {
+			add_stability = -0.03
+		}
+		set_temp_variable = { tempTension = 3 }
+		SA_change_tension = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				TNO_nuke_neg_assets_policy = 4
+			}
+		}
+		BRA = {
+			add_stability = -0.05
+		}
+		set_temp_variable = { tempTension = 5 }
+		SA_change_tension = yes
+		USA = {
+			set_temp_variable = { NetworkChange = 5 }
+			Espionage_AddNetworkStrength_SouthAmerica = yes
+		}
+	}
+	clear_variable = TNO_nuke_negotiations_turn
+}
+
+TNO_nuke_neg_succeed_chance_change = {
+	set_temp_variable = { amount = TNO_nuke_negotiations_succeed_chance_temp }
+	if = {
+		limit = { check_variable = { TNO_nuke_negotiations_succeed_chance_temp < 0 } }
+		multiply_temp_variable = { amount = -1 }
+		custom_effect_tooltip = TNO_nuke_neg_succeed_change_decrease_tt
+	}
+	else = {
+		custom_effect_tooltip = TNO_nuke_neg_succeed_change_increase_tt
+	}
+	add_to_variable = { TNO_nuke_negotiations_succeed_chance = TNO_nuke_negotiations_succeed_chance_temp }
+	subtract_from_variable = { TNO_nuke_negotiations_fail_chance = TNO_nuke_negotiations_succeed_chance_temp }
+	clamp_variable = {
+		var = TNO_nuke_negotiations_succeed_chance
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = TNO_nuke_negotiations_fail_chance
+		min = 0
+		max = 100
+	}
+}

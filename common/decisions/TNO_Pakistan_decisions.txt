@@ -1,0 +1,78 @@
+PAK_OBQ_control_claims_category = {
+	PAK_OBQ_control_claims_timer = {
+		allowed = { original_tag = PAK }
+		activation = {
+			has_global_flag = PAK_obq_ongoing
+			OR = {
+				count_triggers = {
+					amount = 11
+					205 = { is_controlled_by = PAK }
+					220 = { is_controlled_by = PAK }
+					236 = { is_controlled_by = PAK }
+					253 = { is_controlled_by = PAK }
+					265 = { is_controlled_by = PAK }
+					433 = { is_controlled_by = PAK }
+					441 = { is_controlled_by = PAK }
+					443 = { is_controlled_by = PAK }
+					926 = { is_controlled_by = PAK }
+					927 = { is_controlled_by = PAK }
+					928 = { is_controlled_by = PAK }
+					1316 = { is_controlled_by = PAK }
+					1318 = { is_controlled_by = PAK }
+					1475 = { is_controlled_by = PAK }
+					1478 = { is_controlled_by = PAK }
+					1911 = { is_controlled_by = PAK }
+					1912 = { is_controlled_by = PAK }
+					1913 = { is_controlled_by = PAK }
+					1914 = { is_controlled_by = PAK }
+					2206 = { is_controlled_by = PAK }
+					2207 = { is_controlled_by = PAK }
+					2208 = { is_controlled_by = PAK }
+					2460 = { is_controlled_by = PAK }
+				}
+				PAK = { controls_state = 980 }
+			}
+		}
+		available = {
+			PAK = { controls_state = 980 }
+		}
+		cancel_trigger = {
+			count_triggers = {
+				amount = 11
+				205 = { NOT = { is_controlled_by = PAK } }
+				220 = { NOT = { is_controlled_by = PAK } }
+				236 = { NOT = { is_controlled_by = PAK } }
+				253 = { NOT = { is_controlled_by = PAK } }
+				265 = { NOT = { is_controlled_by = PAK } }
+				433 = { NOT = { is_controlled_by = PAK } }
+				441 = { NOT = { is_controlled_by = PAK } }
+				443 = { NOT = { is_controlled_by = PAK } }
+				926 = { NOT = { is_controlled_by = PAK } }
+				927 = { NOT = { is_controlled_by = PAK } }
+				928 = { NOT = { is_controlled_by = PAK } }
+				1316 = { NOT = { is_controlled_by = PAK } }
+				1318 = { NOT = { is_controlled_by = PAK } }
+				1475 = { NOT = { is_controlled_by = PAK } }
+				1478 = { NOT = { is_controlled_by = PAK } }
+				1911 = { NOT = { is_controlled_by = PAK } }
+				1912 = { NOT = { is_controlled_by = PAK } }
+				1913 = { NOT = { is_controlled_by = PAK } }
+				1914 = { NOT = { is_controlled_by = PAK } }
+				2206 = { NOT = { is_controlled_by = PAK } }
+				2207 = { NOT = { is_controlled_by = PAK } }
+				2208 = { NOT = { is_controlled_by = PAK } }
+				2460 = { NOT = { is_controlled_by = PAK } }
+			}
+		}
+		days_mission_timeout = 20
+		is_good = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete PAK_OBQ_control_claims_timer"
+			PAK_obq_success_effect = yes
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout PAK_OBQ_control_claims_timer"
+			PAK_obq_success_effect = yes
+		}
+	}
+}

@@ -1,0 +1,140 @@
+airspace_dominance = {
+	track = naval_aviation
+	name = SUBDOCTRINE_AIRSPACE_DOMINANCE
+	description = SUBDOCTRINE_AIRSPACE_DOMINANCE_DESC
+	icon = GFX_quick_reaction_groups_medium
+
+	xp_cost = 100
+	xp_type = navy
+
+	available = {
+		has_doctrine = carrier_task_force
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	# EFFECTS
+	coordination_bonus = 0.05
+	carrier = {
+		max_organisation = 5
+	}
+	rewards = {
+		forward_reconnaissance = {
+			carrier = {
+				surface_detection = 0.08
+			}
+			night_spotting_chance = 0.08
+		}
+		air_fleet_intel_coordination = {
+			coordination_bonus = 0.03
+			navy_carrier_air_targetting_factor = 0.06
+		}
+		fleet_air_cover = {
+			sortie_efficiency = 0.05
+			navy_carrier_air_agility_factor = 0.04
+		}
+		branch_interoperability = {
+			air_cas_efficiency = 0.03
+			air_superiority_efficiency = 0.03
+		}
+		carrier_task_forces = {
+			strike_force_movement_org_loss = -0.1
+			sortie_efficiency = 0.15
+			air_carrier_night_penalty_reduction_factor = 0.1
+		}
+	}
+}
+
+concentrated_strike = {
+	track = naval_aviation
+	name = SUBDOCTRINE_CONCENTRATED_STRIKE
+	description = SUBDOCTRINE_CONCENTRATED_STRIKE_DESC
+	icon = GFX_modern_kantai_kessen_medium
+
+	xp_cost = 100
+	xp_type = navy
+
+	available = {
+		has_doctrine = carrier_strike_force
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	# EFFECTS
+	naval_critical_score_chance_factor = 0.05
+
+	rewards = {
+		intensive_drilling = {
+			sortie_efficiency = 0.06
+			carrier_sortie_hours_delay = 1
+		}
+		night_operations = {
+			air_carrier_night_penalty_reduction_factor = 0.08
+			night_spotting_chance = 0.06
+		}
+		carrier_concentration = {
+			sortie_efficiency = 0.1
+			air_carrier_night_penalty_reduction_factor = 0.05
+		}
+		ambush_tactics = {
+			carrier = {
+				surface_detection = 0.05
+				naval_speed = 0.05
+			}
+
+		}
+		offence_oriented_air_operations = {
+			navy_carrier_air_attack_factor = 0.15
+			navy_carrier_air_targetting_factor = 0.15
+		}
+	}
+}
+
+postern_operations = {
+	track = naval_aviation
+	name = SUBDOCTRINE_POSTERN_OPERATIONS
+	description = SUBDOCTRINE_POSTERN_OPERATIONS_DESC
+	icon = GFX_maritime_patrol_medium
+
+	xp_cost = 100
+	xp_type = navy
+
+	available = {
+		has_doctrine = naval_bastion_doctrine
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	# EFFECTS
+	carrier = {
+		reliability = 0.1
+		max_organisation = 5
+	}
+
+	rewards = {
+		coastal_patrols = {
+			naval_detection = 0.06
+			air_interception_detect_factor = 0.05
+		}
+		land_based_aerial_cover = {
+			navy_anti_air_attack_factor = 0.08
+			air_power_projection_factor = 0.12
+		}
+		standoff_tactics = {
+			naval_strike_targetting_factor = 0.12
+		}
+		land_sea_support_operations = {
+			air_nav_efficiency = 0.1
+		}
+		seaways_denial = {
+			naval_strike_targetting_factor = 0.1
+			air_nav_efficiency = 0.12
+		}
+	}
+}

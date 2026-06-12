@@ -1,0 +1,98 @@
+guiTypes = {
+	
+	###############################################################
+	########       Adhemar Personal Wealth Mechanic        ########
+	###############################################################
+
+	containerWindowType = {
+		name = "TNO_BRA_decisions_adhemar_moneybag_GUI"
+		size = { width = 0 height = 265 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "bill_background"
+			spriteType = "GFX_BRA_adhemar_bill_background"
+			position = { x = 1 y = -6 }
+		}
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_BRA_info_button"
+			position = { x = 440 y = -20 }
+			pdx_tooltip = BRA_adhemar_moneybags_info_tt
+		}
+
+		containerWindowType = {
+			name = "adhemar_money_container"
+			position = { x = 32 y = 35 }
+
+
+			iconType = {
+				name = "bill_base"
+				spriteType = "GFX_BRA_adhemar_bill_base"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_adhemar_moneybags_money_tooltip"
+			}
+
+			iconType = {
+				name = "adhemar_portrait"
+				spriteType = "GFX_BRA_adhemar_portrait"
+				position = { x = 298 y = 57 }
+			}
+
+			containerWindowType = {
+				name = "adhemar_money_number"
+				position = { x = 153 y = 76 }
+
+			
+				gridboxtype = {
+					name = "money_digits"
+
+					position = { x = -67 y = 0 }
+					size = { width = 150 height = 38 }
+					slotsize = { width = 15 height = 38 }
+
+					add_horizontal = yes
+				}
+
+				iconType = {
+					name = "money_m"
+					spriteType = "GFX_BRA_adhemar_money_m"
+					position = { x = 16 y = 0 }
+				}
+			}
+		}
+		containerWindowType = {
+			name = "adhemar_money_container_reverse"
+			position = { x = 32 y = 35 }
+
+
+			iconType = {
+				name = "bill_base_reverse"
+				spriteType = "GFX_BRA_adhemar_bill_base_reverse"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "BRA_adhemar_moneybags_legacy_tooltip"
+			}
+
+			iconType = {
+				name = "scene"
+				spriteType = "GFX_BRA_adhemar_scene"
+				position = { x = 76 y = 28 }
+			}
+		}
+
+	}
+
+	containerWindowType = {
+		name = "TNO_BRA_adhemar_money_number"
+		size = { width = 15 height = 38 }
+
+		iconType = {
+			name = "money"
+			spriteType = "GFX_BRA_adhemar_money_font"
+			position = { x = 0 y = 0 }
+		}
+
+	}
+
+}

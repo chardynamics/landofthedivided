@@ -1,0 +1,23 @@
+ideas = {
+	country = {
+		SEN_idea_senegalese_stiffness = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SEN_idea_senegalese_stiffness" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			picture = SEN_senegalese_stiffness
+
+			modifier = {
+				army_org_factor = 0.10
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				conscription_factor = 0.1
+			}
+		}
+	}
+}

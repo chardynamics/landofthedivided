@@ -1,0 +1,51 @@
+add_namespace = TNO_CCP_DF
+
+country_event = { # Custom event to partition AAG
+	id = TNO_CCP_DF.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TNO_CCP_DF.1" }
+	title = TNO_CCP_DF.1.t
+	desc = TNO_CCP_DF.1.desc
+	picture = GFX_report_event_antarctica_mountains_storm_sun
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNO_CCP_DF.1.a
+		
+		ai_chance = {
+			factor = 1
+		}
+		AAG = { country_event = { id = antarctica_aag_alert_event.21 } }
+		every_country = {
+			news_event = {
+				id = antarctica_news_events.8
+				hours = 12
+			}
+		}
+	}
+}
+
+country_event = { # Custom event to starve AAG
+	id = TNO_CCP_DF.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TNO_CCP_DF.2" }
+	title = TNO_CCP_DF.2.t
+	desc = TNO_CCP_DF.2.desc
+	picture = GFX_report_event_antarctica_mountains_storm_sun
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNO_CCP_DF.2.a
+		
+		ai_chance = {
+			factor = 1
+		}
+
+		if = {
+			limit = {
+				NOT = { has_global_flag = german_civil_war_end }
+			}
+			AAG = { country_event = { id = antarctica_aag_survival.300 } }
+		}
+	}
+}

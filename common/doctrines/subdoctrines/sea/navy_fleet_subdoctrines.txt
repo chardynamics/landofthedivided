@@ -1,0 +1,146 @@
+task_forces = {
+	track = fleet
+	name = SUBDOCTRINE_TASK_FORCES
+	description = SUBDOCTRINE_TASK_FORCES_DESC
+	icon = GFX_superior_screen_organization_medium
+
+	xp_cost = 100
+	xp_type = navy
+
+	available = {
+		has_doctrine = carrier_task_force
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	# EFFECTS
+	screening_efficiency = 0.08
+	coordination_bonus = 0.02
+
+	rewards = {
+		organizational_flexibility = {
+			naval_morale_factor = 0.08
+			navy_org_factor = 0.08
+		}
+		hunter_killer_groups = {
+			naval_detection = 0.06
+			naval_torpedo_reveal_chance_factor = -0.1
+		}
+		command_delegation = {
+			positioning = 0.05
+			screening_efficiency = 0.05
+		}
+		forward_radar_picket = {
+			spotting_chance = 0.08
+			naval_retreat_chance = 0.05
+			navy_anti_air_attack_factor = 0.05
+		}
+		mission_specific_assignments = {
+			coordination_bonus = 0.06
+			convoy_escort_efficiency = 0.06
+		}
+	}
+}
+
+attack_squadrons = {
+	track = fleet
+	name = SUBDOCTRINE_ATTACK_SQUADRONS
+	description = SUBDOCTRINE_ATTACK_SQUADRONS_DESC
+	icon = GFX_strike_groups_medium
+
+	xp_cost = 100
+	xp_type = navy
+
+	available = {
+		has_doctrine = carrier_strike_force
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	# EFFECTS
+	equipment_bonus = {
+		capital_ship = {
+			hg_attack = 0.05
+		}
+		screen_ship = {
+			lg_attack = 0.05
+		}
+	}
+	submarine = {
+		torpedo_attack = 0.1
+	}
+
+	rewards = {
+		rapid_deployment = {
+			coordination_bonus = 0.04
+			naval_speed_factor = 0.08
+		}
+		detection_avoidance_tactics = {
+			navy_visibility = -0.08
+			naval_night_attack = 0.06
+		}
+		strategic_concentration = {
+			ships_at_battle_start = 0.15
+			navy_org_factor = 0.05
+		}
+		strike_flotillas = {
+			strike_force_movement_org_loss = -0.1
+			screening_efficiency = 0.05
+			navy_submarine_detection_factor = 0.05
+		}
+		fleet_showdown = {
+			ships_at_battle_start = 0.1
+			navy_screen_attack_factor = 0.1
+			navy_capital_ship_attack_factor = 0.1
+		}
+	}
+}
+
+overwhelming_firepower = {
+	track = fleet
+	name = SUBDOCTRINE_OVERWHELMING_FIREPOWER
+	description = SUBDOCTRINE_OVERWHELMING_FIREPOWER_DESC
+	icon = GFX_heavy_missile_ship_focus_medium
+
+	xp_cost = 100
+	xp_type = navy
+
+	available = {
+		has_doctrine = naval_bastion_doctrine
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	# EFFECTS
+	naval_strike_targetting_factor = 0.05
+	naval_critical_score_chance_factor = 0.03
+
+	rewards = {
+		missile_supremacy = {
+			naval_light_gun_hit_chance_factor = 0.06
+			naval_heavy_gun_hit_chance_factor = 0.06
+		}
+		fleet_maneuver = {
+			navy_max_range_factor = 0.1
+			naval_speed_factor = 0.05
+		}
+		centralized_command = {
+			coordination_bonus = 0.06
+			positioning = 0.06
+		}
+		anti_access_area_denial = {
+			convoy_raiding_efficiency_factor = 0.1
+			naval_torpedo_hit_chance_factor = 0.1
+		}
+		strategic_deterrence = {
+			navy_screen_attack_factor = 0.15
+			navy_capital_ship_attack_factor = 0.15
+		}
+	}
+}

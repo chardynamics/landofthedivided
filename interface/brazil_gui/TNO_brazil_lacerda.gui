@@ -1,0 +1,511 @@
+guiTypes = {
+
+	###############################################################
+	########            Lacerda Coup Mechanic              ########
+	###############################################################
+
+	containerWindowType = {
+		name = "TNO_CSS_decisions_lacerda_coup_GUI"
+		size = { width = 0 height = 520 }
+		position = { x = 0 y = 0 }
+
+		containerWindowType = {
+			name = "torches"
+			position = { x = 25 y = 0 }
+
+			containerWindowType = {
+				name = "mil_torch"
+				position = { x = 0 y = 0 }
+
+				iconType = {
+					name = "mil_torch"
+					spriteType = "GFX_BRA_Lacerda_Military_Torch"
+					frame = 4
+					position = { x = 0 y = 0 }
+					pdx_tooltip = BRA_lacerda_mil_torch_tt
+					pdx_tooltip_delayed = BRA_lacerda_mil_torch_tt_delay
+				}
+
+				instantTextBoxType = {
+					name = "mil_title"
+					position = { x = -50 y = 210 }
+					maxWidth = 160
+					maxHeight = 50
+					format = center
+					font = "aldrich_24_outline"
+					text = BRA_lacerda_mil_title
+					pdx_tooltip = BRA_lacerda_mil_torch_tt
+					pdx_tooltip_delayed = BRA_lacerda_mil_torch_tt_delay
+				}
+
+				buttonType = {
+					name = "add_mil_torch_button"
+					position = { x = 40 y = 163 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+					scale = 0.5
+					pdx_tooltip = BRA_lacerda_add_mil_torch_tt
+				}
+				buttonType = {
+					name = "sub_mil_torch_button"
+					position = { x = 0 y = 163 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+					scale = 0.5
+					pdx_tooltip = BRA_lacerda_sub_mil_torch_tt
+				}
+			}
+
+			containerWindowType = {
+				name = "govt_torch"
+				position = { x = 394 y = 0 }
+
+				iconType = {
+					name = "govt_torch"
+					spriteType = "GFX_BRA_Lacerda_Govt_Torch"
+					frame = 6
+					position = { x = 0 y = 0 }
+					pdx_tooltip = BRA_lacerda_govt_torch_tt
+					pdx_tooltip_delayed = BRA_lacerda_govt_torch_tt_delay
+				}
+
+				instantTextBoxType = {
+					name = "govt_title"
+					position = { x = -30 y = 210 }
+					maxWidth = 120
+					maxHeight = 50
+					format = center
+					font = "aldrich_24_outline"
+					text = BRA_lacerda_govt_title
+					pdx_tooltip = BRA_lacerda_govt_torch_tt
+					pdx_tooltip_delayed = BRA_lacerda_govt_torch_tt_delay
+				}
+
+				buttonType = {
+					name = "add_govt_torch_button"
+					position = { x = 40 y = 163 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+					scale = 0.5
+					pdx_tooltip = BRA_lacerda_add_govt_torch_tt
+				}
+				buttonType = {
+					name = "sub_govt_torch_button"
+					position = { x = 0 y = 163 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+					scale = 0.5
+					pdx_tooltip = BRA_lacerda_sub_govt_torch_tt
+				}
+			}
+
+			containerWindowType = {
+				name = "voter_torch"
+				position = { x = 314 y = 70 }
+
+				iconType = {
+					name = "voter_torch"
+					spriteType = "GFX_BRA_Lacerda_Voter_Torch"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = BRA_lacerda_voter_torch_tt
+					pdx_tooltip_delayed = BRA_lacerda_voter_torch_tt_delay
+				}
+
+				instantTextBoxType = {
+					name = "voter_title"
+					position = { x = -40 y = 210 }
+					maxWidth = 140
+					maxHeight = 50
+					format = center
+					font = "aldrich_24_outline"
+					text = BRA_lacerda_voter_title
+					pdx_tooltip = BRA_lacerda_voter_torch_tt
+					pdx_tooltip_delayed = BRA_lacerda_voter_torch_tt_delay
+				}
+
+				buttonType = {
+					name = "add_voter_torch_button"
+					position = { x = 40 y = 163 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+					scale = 0.5
+					pdx_tooltip = BRA_lacerda_add_voter_torch_tt
+				}
+				buttonType = {
+					name = "sub_voter_torch_button"
+					position = { x = 0 y = 163 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+					scale = 0.5
+					pdx_tooltip = BRA_lacerda_sub_voter_torch_tt
+				}
+			}
+
+			containerWindowType = {
+				name = "usa_torch"
+				position = { x = 80 y = 70 }
+
+				iconType = {
+					name = "usa_torch"
+					spriteType = "GFX_BRA_Lacerda_USA_Torch"
+					frame = 2
+					position = { x = 0 y = 0 }
+					pdx_tooltip = BRA_lacerda_usa_torch_tt
+					pdx_tooltip_delayed = BRA_lacerda_usa_torch_tt_delay
+				}
+
+				instantTextBoxType = {
+					name = "usa_title"
+					position = { x = -30 y = 210 }
+					maxWidth = 120
+					maxHeight = 50
+					format = center
+					font = "aldrich_24_outline"
+					text = BRA_lacerda_usa_title
+					pdx_tooltip = BRA_lacerda_usa_torch_tt
+					pdx_tooltip_delayed = BRA_lacerda_usa_torch_tt_delay
+				}
+
+				buttonType = {
+					name = "add_usa_torch_button"
+					position = { x = 40 y = 163 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+					scale = 0.5
+					pdx_tooltip = BRA_lacerda_add_usa_torch_tt
+				}
+				buttonType = {
+					name = "sub_usa_torch_button"
+					position = { x = 0 y = 163 }
+					quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+					scale = 0.5
+					pdx_tooltip = BRA_lacerda_sub_usa_torch_tt
+				}
+			}
+
+			iconType = {
+				name = "jango_poster"
+				position = { x = 155 y = -2 }
+				spriteType = GFX_BRA_Lacerda_Jango_Poster
+			}
+			iconType = {
+				name = "lacerda_poster"
+				position = { x = 155 y = -2 }
+				spriteType = GFX_BRA_Lacerda_Lacerda_Poster
+				frame = 11
+			}
+			buttonType = {
+				name = "secure_power"
+				position = { x = 149 y = 216 }
+				spriteType = GFX_BRA_Lacerda_Secure_Power
+				pdx_tooltip = BRA_lacerda_coup_secure_power
+			}
+		}
+
+		instantTextBoxType = {
+			name = "category_description"
+			position = { x = 11 y = 350 }
+			maxWidth = 482
+			maxHeight = 2000
+			format = left
+			font = "aldrich_18_outline"
+			text = BRA_lacerda_coup_category_description
+			alwaystransparent = yes
+		}
+	}
+
+	###############################################################
+	########            Lacerda UDN Mechanic               ########
+	###############################################################
+	containerWindowType = {
+		name = "TNO_BRA_decisions_udn_management"
+		size = { width = 0 height = 342 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "UDN_seal"
+			position = { x = 305 y = 20 }
+			scale = 0.75
+			spriteType = "GFX_decision_BRA_decisions_UDN_seal"
+			pdx_tooltip = BRA_lacerda_udn_seal_tt
+		}
+		iconType = {
+			name = "UDN_seal_progbar"
+			position = { x = 374 y = 59 }
+			spriteType = "GFX_decision_BRA_decisions_UDN_seal_progbar"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BRA_lacerda_udn_party_loyal"
+			position = { x = 300 y = 287 }
+			maxWidth = 200
+			maxHeight = 50
+			format = center
+			font = "aldrich_30_outline"
+			text = BRA_lacerda_udn_party_loyal
+			pdx_tooltip = BRA_lacerda_udn_party_loyal_tt
+		}
+		iconType = {
+			name = "info"
+			position = { x = 392 y = -62 }
+			spriteType = "GFX_BRA_info_button"
+			pdx_tooltip = BRA_lacerda_udn_info_tt
+		}
+		iconType = {
+			name = "compass"
+			position = { x = 11 y = 0 }
+			spriteType = "GFX_decision_BRA_decisions_UDN_compass"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BRA_lacerda_udn_dot_liberalism"
+			position = { x = 102 y = 15 }
+			maxWidth = 100
+			maxHeight = 50
+			format = center
+			font = "aldrich_12_outline"
+			text = BRA_lacerda_udn_dot_liberalism
+		}
+		instantTextBoxType = {
+			name = "BRA_lacerda_udn_dot_statism"
+			position = { x = 100 y = 252 }
+			maxWidth = 100
+			maxHeight = 50
+			format = center
+			font = "aldrich_12_outline"
+			text = BRA_lacerda_udn_dot_statism
+		}
+		instantTextBoxType = {
+			name = "BRA_lacerda_udn_dot_cooperation"
+			position = { x = 27 y = 132 }
+			maxWidth = 90
+			maxHeight = 14
+			vertical_alignment = center
+			font = "aldrich_12_outline"
+			text = BRA_lacerda_udn_dot_cooperation
+		}
+		instantTextBoxType = {
+			name = "BRA_lacerda_udn_dot_intransigence"
+			position = { x = 186 y = 132 }
+			maxWidth = 90
+			maxHeight = 14
+			vertical_alignment = center
+			font = "aldrich_12_outline"
+			text = BRA_lacerda_udn_dot_intransigence
+		}
+		iconType = {
+			name = "BRA_lacerda_udn_button_realistas"
+			position = { x = 12 y = 1 }
+			spriteType = "GFX_decision_BRA_decisions_compass_button"
+			pdx_tooltip = BRA_lacerda_udn_button_realistas_tt
+			pdx_tooltip_delayed = BRA_lacerda_udn_button_realistas_tt_delayed
+		}
+		iconType = {
+			name = "BRA_lacerda_udn_button_banda_de_musica"
+			position = { x = 149 y = 1 }
+			spriteType = "GFX_decision_BRA_decisions_compass_button"
+			pdx_tooltip = BRA_lacerda_udn_button_banda_de_musica_tt
+			pdx_tooltip_delayed = BRA_lacerda_udn_button_banda_de_musica_tt_delayed
+		}
+		iconType = {
+			name = "BRA_lacerda_udn_button_bossa_nova"
+			position = { x = 12 y = 139 }
+			spriteType = "GFX_decision_BRA_decisions_compass_button"
+			pdx_tooltip = BRA_lacerda_udn_button_bossa_nova_tt
+			pdx_tooltip_delayed = BRA_lacerda_udn_button_bossa_nova_tt_delayed
+		}
+		iconType = {
+			name = "BRA_lacerda_udn_button_liberais"
+			position = { x = 149 y = 139 }
+			spriteType = "GFX_decision_BRA_decisions_compass_button"
+			pdx_tooltip = BRA_lacerda_udn_button_liberais_tt
+			pdx_tooltip_delayed = BRA_lacerda_udn_button_liberais_tt_delayed
+		}
+		containerWindowType = {
+			name = "dot"
+			position = { x = 149 y = 137 }
+			iconType = {
+				name = "dot_pos"
+				position = { x = 149 y = 137 }
+				spriteType = "GFX_decision_BRA_decisions_UDN_tangle_dot"
+				scale = 0.75
+				pdx_tooltip = BRA_lacerda_udn_dot_tt
+				centerposition = yes
+			}
+		}
+		instantTextBoxType = {
+			name = "BRA_lacerda_udn_party_state"
+			position = { x = -37 y = 287 }
+			maxWidth = 374
+			maxHeight = 110
+			format = center
+			font = "aldrich_30_outline"
+			text = BRA_lacerda_udn_party_state
+			pdx_tooltip = BRA_lacerda_udn_party_state_tt
+		}
+	}
+	###############################################################
+	########            Lacerda OAS Mechanic               ########
+	###############################################################
+
+	containerWindowType = {
+		name = "TNO_BRA_decisions_lacerda_oas_GUI"
+		size = { width = 0 height = 520 }
+		position = { x = 0 y = 0 }
+
+		containerWindowType = {
+			name = "oas_logo"
+			position = { x = 21 y = 0 }
+
+			iconType = {
+				name = "oas_background"
+				position = { x = 0 y = 0 }
+				spriteType = GFX_BRA_Lacerda_OAS_Background
+			}
+
+
+			iconType = {
+				name = "flag_argentina"
+				position = { x = 157 y = 360 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Argentina
+				pdx_tooltip = BRA_lacerda_oas_flag_argentina_tt
+			}
+			iconType = {
+				name = "flag_bolivia"
+				position = { x = 108 y = 338 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Bolivia
+				pdx_tooltip = BRA_lacerda_oas_flag_bolivia_tt
+			}
+			iconType = {
+				name = "flag_brazil"
+				position = { x = 76 y = 320 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Brazil
+				pdx_tooltip = BRA_lacerda_oas_flag_brazil_tt
+			}
+			iconType = {
+				name = "flag_chile"
+				position = { x = 55 y = 303 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Chile
+				pdx_tooltip = BRA_lacerda_oas_flag_chile_tt
+			}
+			iconType = {
+				name = "flag_colombia"
+				position = { x = 41 y = 265 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Colombia
+				pdx_tooltip = BRA_lacerda_oas_flag_colombia_tt
+			}
+			iconType = {
+				name = "flag_costa_rica"
+				position = { x = 38 y = 221 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Costa_Rica
+				pdx_tooltip = BRA_lacerda_oas_flag_costa_rica_tt
+			}
+			iconType = {
+				name = "flag_cuba"
+				position = { x = 45 y = 180 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Cuba
+				pdx_tooltip = BRA_lacerda_oas_flag_cuba_tt
+			}
+			iconType = {
+				name = "flag_ecuador"
+				position = { x = 50 y = 143 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Ecuador
+				pdx_tooltip = BRA_lacerda_oas_flag_ecuador_tt
+			}
+			iconType = {
+				name = "flag_el_salvador"
+				position = { x = 70 y = 104 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_El_Salvador
+				pdx_tooltip = BRA_lacerda_oas_flag_el_salvador_tt
+			}
+			iconType = {
+				name = "flag_wif"
+				position = { x = 95 y = 76 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_WIF
+				pdx_tooltip = BRA_lacerda_oas_flag_wif_tt
+			}
+			iconType = {
+				name = "flag_guatemala"
+				position = { x = 128 y = 52 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Guatemala
+				pdx_tooltip = BRA_lacerda_oas_flag_guatemala_tt
+			}
+			iconType = {
+				name = "flag_guyana"
+				position = { x = 170 y = 41 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Guyana
+				pdx_tooltip = BRA_lacerda_oas_flag_guyana_tt
+			}
+			iconType = {
+				name = "flag_haiti"
+				position = { x = 232 y = 41 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Haiti
+				pdx_tooltip = BRA_lacerda_oas_flag_haiti_tt
+			}
+			iconType = {
+				name = "flag_honduras"
+				position = { x = 232 y = 52 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Honduras
+				pdx_tooltip = BRA_lacerda_oas_flag_honduras_tt
+			}
+			iconType = {
+				name = "flag_mexico"
+				position = { x = 232 y = 76 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Mexico
+				pdx_tooltip = BRA_lacerda_oas_flag_mexico_tt
+			}
+			iconType = {
+				name = "flag_nicaragua"
+				position = { x = 232 y = 104 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Nicaragua
+				pdx_tooltip = BRA_lacerda_oas_flag_nicaragua_tt
+			}
+			iconType = {
+				name = "flag_panama"
+				position = { x = 232 y = 143 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Panama
+				pdx_tooltip = BRA_lacerda_oas_flag_panama_tt
+			}
+			iconType = {
+				name = "flag_paraguay"
+				position = { x = 232 y = 180 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Paraguay
+				pdx_tooltip = BRA_lacerda_oas_flag_paraguay_tt
+			}
+			iconType = {
+				name = "flag_peru"
+				position = { x = 232 y = 221 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Peru
+				pdx_tooltip = BRA_lacerda_oas_flag_peru_tt
+			}
+			iconType = {
+				name = "flag_dominican_republic"
+				position = { x = 232 y = 265 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Dominican_Republic
+				pdx_tooltip = BRA_lacerda_oas_flag_dominican_republic_tt
+			}
+			iconType = {
+				name = "flag_usa"
+				position = { x = 232 y = 303 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_USA
+				pdx_tooltip = BRA_lacerda_oas_flag_usa_tt
+			}
+			iconType = {
+				name = "flag_suriname"
+				position = { x = 232 y = 320 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Suriname
+				pdx_tooltip = BRA_lacerda_oas_flag_suriname_tt
+			}
+			iconType = {
+				name = "flag_uruguay"
+				position = { x = 232 y = 338 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Uruguay
+				pdx_tooltip = BRA_lacerda_oas_flag_uruguay_tt
+			}
+			iconType = {
+				name = "flag_venezuela"
+				position = { x = 232 y = 360 }
+				spriteType = GFX_BRA_Lacerda_OAS_Flag_Venezuela
+				pdx_tooltip = BRA_lacerda_oas_flag_venezuela_tt
+			}
+
+
+
+		}
+
+
+	}
+}

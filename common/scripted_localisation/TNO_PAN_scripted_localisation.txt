@@ -1,0 +1,1056 @@
+defined_text = {
+	name = GetPanamaOpenTab
+	text = {
+		trigger = {
+			has_country_flag = PAN_Coalition_1_Selected
+		}
+		localization_key = GFX_Panama_Coalition_GUI_Tab_1_Overlay
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_Coalition_2_Selected
+		}
+		localization_key = GFX_Panama_Coalition_GUI_Tab_2_Overlay
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_Coalition_3_Selected
+		}
+		localization_key = GFX_Panama_Coalition_GUI_Tab_3_Overlay
+	}
+}
+
+defined_text = {
+	name = GetPanamaCoalitionDesc
+	text = {
+		trigger = {
+			has_country_flag = PAN_Coalition_1_Selected
+		}
+		localization_key = Panama_corruption_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_Coalition_2_Selected
+		}
+		localization_key = Panama_coalition_stab_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_Coalition_3_Selected
+		}
+		localization_key = Panama_coalition_deals_desc
+	}
+}
+
+defined_text = {
+	name = GetPanamaCoalitionDescLowTitle
+	text = {
+		trigger = {
+			has_country_flag = PAN_Coalition_1_Selected
+		}
+		localization_key = Panama_corruption_low_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_Coalition_2_Selected
+		}
+		localization_key = Panama_coalition_low_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_Coalition_3_Selected
+		}
+		localization_key = Panama_coalition_low_title
+	}
+}
+
+defined_text = {
+	name = Panamaparty
+	text = {
+		trigger = {
+			check_variable = { Panamaparty > 0 }
+			check_variable = { Panamaparty < 21 }
+		}
+		localization_key = Panamaparty_low
+	}
+	text = {
+		trigger = {
+			check_variable = { Panamaparty > 20 }
+			check_variable = { Panamaparty < 41 }
+		}
+		localization_key = Panamaparty_average
+	}
+	text = {
+		trigger = {
+			check_variable = { Panamaparty > 40 }
+			check_variable = { Panamaparty < 61 }
+		}
+		localization_key = Panamaparty_high
+	}
+	text = {
+		trigger = {
+			check_variable = { Panamaparty > 61 }
+			check_variable = { Panamaparty < 80 }
+		}
+		localization_key = Panamaparty_really_high
+	}
+}
+
+defined_text = {
+	name = ConspiratorBranch
+	text = {
+		trigger = {
+			check_variable = { ConspiratorBranch = 0 }
+		}
+		localization_key = investigation_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ConspiratorBranch = 10 }
+		}
+		localization_key = investigation_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ConspiratorBranch = 15 }
+		}
+		localization_key = investigation_3_branch
+	}
+}
+
+defined_text = {
+	name = ConspiratorUSA
+	text = {
+		trigger = {
+			check_variable = { ConspiratorUSA = 0 }
+		}
+		localization_key = investigation_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ConspiratorUSA = 10 }
+		}
+		localization_key = investigation_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ConspiratorUSA = 15 }
+		}
+		localization_key = investigation_3_usa
+	}
+}
+
+defined_text = {
+	name = ConspiratorLocation
+	text = {
+		trigger = {
+			check_variable = { ConspiratorLocation = 0 }
+		}
+		localization_key = investigation_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ConspiratorLocation = 10 }
+		}
+		localization_key = investigation_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ConspiratorLocation = 15 }
+		}
+		localization_key = investigation_3_location
+	}
+}
+
+defined_text = {
+	name = ConspiratorParty
+	text = {
+		trigger = {
+			check_variable = { ConspiratorParty = 0 }
+		}
+		localization_key = investigation_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ConspiratorParty = 10 }
+		}
+		localization_key = investigation_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ConspiratorParty = 15 }
+		}
+		localization_key = investigation_3_party
+	}
+}
+
+defined_text = {
+	name = ConspiratorIdentity
+	text = {
+		trigger = {
+			check_variable = { ConspiratorIdentity = 0 }
+		}
+		localization_key = investigation_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ConspiratorIdentity = 10 }
+		}
+		localization_key = investigation_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ConspiratorIdentity = 15 }
+		}
+		localization_key = investigation_identity_3
+	}
+}
+
+defined_text = {
+	name = getPANCACountry
+	text = {
+		trigger = {
+			has_country_flag = PAN_Guatemala_window_open
+		}
+		localization_key = PAN_guatemala
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_ElSalvador_window_open
+		}
+		localization_key = PAN_elsalvador
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_Honduras_window_open
+		}
+		localization_key = PAN_honduras
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_Nicaragua_window_open
+		}
+		localization_key = PAN_nicaragua
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_CostaRica_window_open
+		}
+		localization_key = PAN_costarica
+	}
+}
+defined_text = {
+	name = ruralPSpopularity
+	text = {
+		trigger = {
+			check_variable = { ruralPSpopularity < 1 }
+		}
+		localization_key = PS_popularity_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ruralPSpopularity = 10 }
+		}
+		localization_key = PS_popularity_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ruralPSpopularity = 20 }
+		}
+		localization_key = PS_popularity_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ruralPSpopularity > 29 }
+		}
+		localization_key = PS_popularity_4
+	}
+}
+defined_text = {
+	name = urbanPSpopularity
+	text = {
+		trigger = {
+			check_variable = { urbanPSpopularity < 1 }
+		}
+		localization_key = PS_popularity_1
+	}
+	text = {
+		trigger = {
+			check_variable = { urbanPSpopularity = 10 }
+		}
+		localization_key = PS_popularity_2
+	}
+	text = {
+		trigger = {
+			check_variable = { urbanPSpopularity = 20 }
+		}
+		localization_key = PS_popularity_3
+	}
+	text = {
+		trigger = {
+			check_variable = { urbanPSpopularity > 29 }
+		}
+		localization_key = PS_popularity_4
+	}
+}
+defined_text = {
+	name = oligarchPSpopularity
+	text = {
+		trigger = {
+			check_variable = { oligarchPSpopularity < 1 }
+		}
+		localization_key = PS_popularity_1
+	}
+	text = {
+		trigger = {
+			check_variable = { oligarchPSpopularity = 10 }
+		}
+		localization_key = PS_popularity_2
+	}
+	text = {
+		trigger = {
+			check_variable = { oligarchPSpopularity = 20 }
+		}
+		localization_key = PS_popularity_3
+	}
+	text = {
+		trigger = {
+			check_variable = { oligarchPSpopularity > 29 }
+		}
+		localization_key = PS_popularity_4
+	}
+}
+defined_text = {
+	name = militaryPSpopularity
+	text = {
+		trigger = {
+			check_variable = { militaryPSpopularity < 1 }
+		}
+		localization_key = PS_popularity_1
+	}
+	text = {
+		trigger = {
+			check_variable = { militaryPSpopularity = 10 }
+		}
+		localization_key = PS_popularity_2
+	}
+	text = {
+		trigger = {
+			check_variable = { militaryPSpopularity = 20 }
+		}
+		localization_key = PS_popularity_3
+	}
+	text = {
+		trigger = {
+			check_variable = { militaryPSpopularity > 29 }
+		}
+		localization_key = PS_popularity_4
+	}
+}
+defined_text = {
+	name = minorityPSpopularity
+	text = {
+		trigger = {
+			check_variable = { minorityPSpopularity < 1 }
+		}
+		localization_key = PS_popularity_1
+	}
+	text = {
+		trigger = {
+			check_variable = { minorityPSpopularity = 10 }
+		}
+		localization_key = PS_popularity_2
+	}
+	text = {
+		trigger = {
+			check_variable = { minorityPSpopularity = 20 }
+		}
+		localization_key = PS_popularity_3
+	}
+	text = {
+		trigger = {
+			check_variable = { minorityPSpopularity > 29 }
+		}
+		localization_key = PS_popularity_4
+	}
+}
+
+defined_text = {
+	name = PANUSAalignment
+	text = {
+		trigger = {
+			check_variable = { PANUSAalignment = 0 }
+		}
+		localization_key = USAalignment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { PANUSAalignment = 10 }
+		}
+		localization_key = USAalignment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { PANUSAalignment = 20 }
+		}
+		localization_key = USAalignment_3
+	}
+}
+
+defined_text = {
+	name = URUUSAalignment
+	text = {
+		trigger = {
+			check_variable = { URUUSAalignment = 0 }
+		}
+		localization_key = USAalignment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { URUUSAalignment = 10 }
+		}
+		localization_key = USAalignment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { URUUSAalignment = 20 }
+		}
+		localization_key = USAalignment_3
+	}
+}
+
+defined_text = {
+	name = BRAUSAalignment
+	text = {
+		trigger = {
+			check_variable = { BRAUSAalignment = 0 }
+		}
+		localization_key = USAalignment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BRAUSAalignment = 10 }
+		}
+		localization_key = USAalignment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BRAUSAalignment = 20 }
+		}
+		localization_key = USAalignment_3
+	}
+}
+
+
+defined_text = {
+	name = PARUSAalignment
+	text = {
+		trigger = {
+			check_variable = { PARUSAalignment = 0 }
+		}
+		localization_key = USAalignment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { PARUSAalignment = 10 }
+		}
+		localization_key = USAalignment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { PARUSAalignment = 20 }
+		}
+		localization_key = USAalignment_3
+	}
+}
+
+
+defined_text = {
+	name = ARGUSAalignment
+	text = {
+		trigger = {
+			check_variable = { ARGUSAalignment = 0 }
+		}
+		localization_key = USAalignment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ARGUSAalignment = 10 }
+		}
+		localization_key = USAalignment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ARGUSAalignment = 20 }
+		}
+		localization_key = USAalignment_3
+	}
+}
+
+defined_text = {
+	name = CHLUSAalignment
+	text = {
+		trigger = {
+			check_variable = { CHLUSAalignment = 0 }
+		}
+		localization_key = USAalignment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { CHLUSAalignment = 10 }
+		}
+		localization_key = USAalignment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { CHLUSAalignment = 20 }
+		}
+		localization_key = USAalignment_3
+	}
+}
+
+defined_text = {
+	name = noriegaUSsupport
+	text = {
+		trigger = {
+			check_variable = { noriegaUSsupport < 10 }
+		}
+		localization_key = noriegaUSsupport_1
+	}
+	text = {
+		trigger = {
+			check_variable = { noriegaUSsupport > 9 }
+			check_variable = { noriegaUSsupport < 20 }
+		}
+		localization_key = noriegaUSsupport_2
+	}
+	text = {
+		trigger = {
+			check_variable = { noriegaUSsupport > 19 }
+			check_variable = { noriegaUSsupport < 30 }
+		}
+		localization_key = noriegaUSsupport_3
+	}
+	text = {
+		trigger = {
+			check_variable = { noriegaUSsupport > 29 }
+		}
+		localization_key = noriegaUSsupport_4
+	}
+}
+
+defined_text = {
+	name = canadaavailability
+	text = {
+		trigger = {
+			check_variable = { canadaavailability = 0 }
+		}
+		localization_key = noriega_markets_unavailable
+	}
+	text = {
+		trigger = {
+			check_variable = { canadaavailability = 10 }
+		}
+		localization_key = noriega_markets_available
+	}
+}
+
+
+defined_text = {
+	name = usaavailability
+	text = {
+		trigger = {
+			check_variable = { usaavailability = 0 }
+		}
+		localization_key = noriega_markets_unavailable
+	}
+	text = {
+		trigger = {
+			check_variable = { usaavailability = 10 }
+		}
+		localization_key = noriega_markets_available
+	}
+}
+
+defined_text = {
+	name = mexicoavailability
+	text = {
+		trigger = {
+			check_variable = { mexicoavailability = 0 }
+		}
+		localization_key = noriega_markets_unavailable
+	}
+	text = {
+		trigger = {
+			check_variable = { mexicoavailability = 10 }
+		}
+		localization_key = noriega_markets_available
+	}
+}
+
+defined_text = {
+	name = centralamericaavailability
+	text = {
+		trigger = {
+			check_variable = { centralamericaavailability = 0 }
+		}
+		localization_key = noriega_markets_unavailable
+	}
+	text = {
+		trigger = {
+			check_variable = { centralamericaavailability = 10 }
+		}
+		localization_key = noriega_markets_available
+	}
+}
+
+defined_text = {
+	name = caribbeanavailability
+	text = {
+		trigger = {
+			check_variable = { caribbeanavailability = 0 }
+		}
+		localization_key = noriega_markets_unavailable
+	}
+	text = {
+		trigger = {
+			check_variable = { caribbeanavailability = 10 }
+		}
+		localization_key = noriega_markets_available
+	}
+}
+
+defined_text = {
+	name = alaskaavailability
+	text = {
+		trigger = {
+			check_variable = { alaskaavailability = 0 }
+		}
+		localization_key = noriega_markets_unavailable
+	}
+	text = {
+		trigger = {
+			check_variable = { alaskaavailability = 10 }
+		}
+		localization_key = noriega_markets_available
+	}
+}
+
+defined_text = {
+	name = hawaiiavailability
+	text = {
+		trigger = {
+			check_variable = { hawaiiavailability = 0 }
+		}
+		localization_key = noriega_markets_unavailable
+	}
+	text = {
+		trigger = {
+			check_variable = { hawaiiavailability = 10 }
+		}
+		localization_key = noriega_markets_available
+	}
+}
+
+defined_text = {
+	name = drugquality
+	text = {
+		trigger = {
+			check_variable = { drugquality < 25 }
+		}
+		localization_key = drugquality_1
+	}
+	text = {
+		trigger = {
+				check_variable = { drugquality > 24 }
+				check_variable = { drugquality < 50 }
+		}
+		localization_key = drugquality_2
+	}
+	text = {
+		trigger = {
+				check_variable = { drugquality > 49 }
+				check_variable = { drugquality < 75 }
+		}
+		localization_key = drugquality_3
+	}
+	text = {
+		trigger = {
+				check_variable = { drugquality > 74 }
+				check_variable = { drugquality < 101 }
+		}
+		localization_key = drugquality_4
+	}
+}
+
+defined_text = {
+	name = noriegapresence
+	text = {
+		trigger = {
+			check_variable = { noriegapresence < 25 }
+		}
+		localization_key = noriegapresence_1
+	}
+	text = {
+		trigger = {
+				check_variable = { noriegapresence > 24 }
+				check_variable = { noriegapresence < 50 }
+		}
+		localization_key = noriegapresence_2
+	}
+	text = {
+		trigger = {
+				check_variable = { noriegapresence > 49 }
+				check_variable = { noriegapresence < 75 }
+		}
+		localization_key = noriegapresence_3
+	}
+	text = {
+		trigger = {
+				check_variable = { noriegapresence > 74 }
+		}
+		localization_key = noriegapresence_4
+	}
+}
+
+defined_text = {
+	name = PANselectedcolumbianstate
+	text = {
+		trigger = {
+			has_country_flag = PAN_columbianstate_meta
+		}
+		localization_key = PANselectedcolumbianstate_1
+	}
+	text = {
+		trigger = {
+		has_country_flag = PAN_columbianstate_amazonas
+		}
+		localization_key = PANselectedcolumbianstate_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_columbianstate_cauca
+		}
+		localization_key = PANselectedcolumbianstate_3
+	}
+	text = {
+		trigger = {
+		has_country_flag = PAN_columbianstate_choca
+		}
+		localization_key = PANselectedcolumbianstate_4
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_columbianstate_bolivar
+		}
+		localization_key = PANselectedcolumbianstate_5
+	}
+	text = {
+		trigger = {
+		has_country_flag = PAN_columbianstate_la_guarjira
+		}
+		localization_key = PANselectedcolumbianstate_6
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_columbianstate_cundinmarca
+		}
+		localization_key = PANselectedcolumbianstate_7
+	}
+}
+
+defined_text = {
+	name = panama_nationalism
+	text = {
+		trigger = {
+			check_variable = { panama_nationalism < 25 }
+		}
+		localization_key = panama_nationalism_1
+	}
+	text = {
+		trigger = {
+			check_variable = { panama_nationalism > 24 }
+			check_variable = { panama_nationalism < 50 }
+		}
+		localization_key = panama_nationalism_2
+	}
+	text = {
+		trigger = {
+			check_variable = { panama_nationalism > 49 }
+			check_variable = { panama_nationalism < 75 }
+		}
+		localization_key = panama_nationalism_3
+	}
+	text = {
+		trigger = {
+			check_variable = { panama_nationalism > 74 }
+		}
+		localization_key = panama_nationalism_4
+	}
+}
+
+defined_text = {
+	name = coup_threat
+	text = {
+		trigger = {
+			check_variable = { corruption < 80 }
+				check_variable = { party_stability > 20 }
+		}
+		localization_key = coup_threat_low
+	}
+	text = {
+		trigger = {
+			if = {
+				check_variable = { corruption > 79 }
+				check_variable = { corruption < 90 }
+			}
+			else_if = {
+				check_variable = { party_stability > 10 }
+				check_variable = { party_stability < 21 }
+			}
+		}
+		localization_key = coup_threat_average
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { corruption > 89 }
+				check_variable = { party_stability < 11 }
+			}
+		}
+		localization_key = coup_threat_high
+	}
+}
+
+defined_text = {
+	name = CAFTOavailabletext
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = CAFTO_gui_menu_unlocked
+			}
+		}
+		localization_key = CAFTOavailabletext_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = CAFTO_gui_menu_unlocked
+		}
+		localization_key = CAFTOavailabletext_2
+	}
+}
+
+defined_text = {
+	name = PDFnotcurrentleader
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PAN_torrijos_gone
+			}
+		}
+		localization_key = PDFnotcurrentleader_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_torrijos_gone
+		}
+		localization_key = PDFnotcurrentleader_2
+	}
+}
+
+defined_text = {
+	name = PDFcurrentleader
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PAN_torrijos_gone
+			}
+		}
+		localization_key = PDFcurrentleader_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = PAN_torrijos_gone
+		}
+		localization_key = PDFcurrentleader_2
+	}
+}
+defined_text = {
+	name = Panama1968elections
+	text = {
+		trigger = {
+			has_country_flag = PLN_1964_election
+		}
+		localization_key = Panama1968elections_PLN
+	}
+	text = {
+		trigger = {
+			has_country_flag = PS_1964_election
+		}
+		localization_key = Panama1968elections_PS
+	}
+}
+defined_text = {
+		name = CurrentElectionFocus
+		text = {
+			trigger = {
+				has_country_flag = PAN_elections_urban_support
+			}
+			localization_key = CurrentElectionFocus_urban
+		}
+		text = {
+			trigger = {
+				has_country_flag = PAN_elections_rural_support
+			}
+			localization_key = CurrentElectionFocus_rural
+		}
+		text = {
+			trigger = {
+				NOT = {
+					AND = {
+						has_country_flag = PAN_elections_rural_support
+						has_country_flag = PAN_elections_urban_support
+					}
+				}
+			}
+			localization_key = CurrentElectionFocus_neither
+		}
+}
+defined_text = {
+	name = CAFTOconservativeoutlook
+	text = {
+		trigger = {
+			check_variable = { CAFTOconservativeoutlook = -1 }
+		}
+		localization_key = CAFTOconservativeoutlook_low
+	}
+	text = {
+		trigger = {
+			check_variable = { CAFTOconservativeoutlook = 0 }
+		}
+		localization_key = CAFTOconservativeoutlook_med
+	}
+	text = {
+		trigger = {
+			check_variable = { CAFTOconservativeoutlook = 1 }
+		}
+		localization_key = CAFTOconservativeoutlook_high
+	}
+}
+defined_text = {
+	name = CAFTOliberaloutlook
+	text = {
+		trigger = {
+			check_variable = { CAFTOliberaloutlook = -1 }
+		}
+		localization_key = CAFTOliberaloutlook_low
+	}
+	text = {
+		trigger = {
+			check_variable = { CAFTOliberaloutlook = 0 }
+		}
+		localization_key = CAFTOliberaloutlook_med
+	}
+	text = {
+		trigger = {
+			check_variable = { CAFTOliberaloutlook = 1 }
+		}
+		localization_key = CAFTOliberaloutlook_high
+	}
+}
+defined_text = {
+	name = CAFTOsocilaistoutlook
+	text = {
+		trigger = {
+			check_variable = { CAFTOsocilaistoutlook = -1 }
+		}
+		localization_key = CAFTOsocilaistoutlook_low
+	}
+	text = {
+		trigger = {
+			check_variable = { CAFTOsocilaistoutlook = 0 }
+		}
+		localization_key = CAFTOsocilaistoutlook_med
+	}
+	text = {
+		trigger = {
+			check_variable = { CAFTOsocilaistoutlook = 1 }
+		}
+		localization_key = CAFTOsocilaistoutlook_high
+	}
+}
+
+defined_text = {
+	name = PANSurgerykey
+	text = {
+		trigger = {
+			has_country_flag = surgery_W
+		}
+		localization_key = PANSurgerykey_W
+	}
+	text = {
+		trigger = {
+			has_country_flag = surgery_A
+		}
+		localization_key = PANSurgerykey_A
+	}
+	text = {
+		trigger = {
+			has_country_flag = surgery_S
+		}
+		localization_key = PANSurgerykey_S
+	}
+	text = {
+		trigger = {
+			has_country_flag = surgery_D
+		}
+		localization_key = PANSurgerykey_D
+	}
+}
+
+defined_text = {
+	name = PANSurgeryresults
+	text = {
+		trigger = {
+			has_country_flag = surgery_success
+		}
+		localization_key = PANSurgeryresults_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = surgery_failure
+		}
+		localization_key = PANSurgeryresults_failiure
+	}
+}
+
+defined_text = {
+	name = SurgeryRequirement
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = PANSurgery1_success
+			}
+		}
+		localization_key = SurgeryRequirement_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = PANSurgery1_success
+			NOT = {
+				has_country_flag = PANSurgery2_success
+			}
+		}
+		localization_key = SurgeryRequirement_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = PANSurgery1_success
+			has_country_flag = PANSurgery2_success
+			NOT = {
+				has_country_flag = PANSurgery3_success
+			}
+		}
+		localization_key = SurgeryRequirement_3
+	}
+}

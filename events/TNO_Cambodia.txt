@@ -1,0 +1,951 @@
+add_namespace = CAM_Skeleton
+
+country_event = { #Koeuss is le kill, HoG Achar Sok [July 1962]
+	id = CAM_Skeleton.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.1" }
+	title = CAM_Skeleton.1.t
+	desc = CAM_Skeleton.1.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.2.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = paternalism
+		}
+		add_country_leader_role = {
+			character = CAM_Son_Ngoc_Thanh
+			promote_leader = yes
+			country_leader = {
+				ideology = paternalism_social_nationalism_subtype
+				expire = "1994.4.20"
+				id = -1
+			}
+		}
+		remove_ideas = {
+			#ideas#
+			#ministers#
+			CAM_Achar_Sok_for
+		}	
+		add_ideas = {
+			CAM_Achar_Sok_hog
+		}
+	}
+}
+
+country_event = { #veal thom war start [June 1963]
+	id = CAM_Skeleton.2
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.2" 
+		country_event = { id = CAM_Skeleton.3 days = 30 }
+	}
+	title = CAM_Skeleton.2.t
+	desc = CAM_Skeleton.2.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.2.a
+		ai_chance = { factor = 10 }
+		2247 = {
+			set_demilitarized_zone = yes
+		}
+		add_ideas = {
+			CAM_The_Veal_Thom_War
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.1
+			}
+		}
+	}
+	
+}
+
+country_event = { #decide marshall law or Lon Nol as PM [July 1963]
+	id = CAM_Skeleton.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.3" }
+	title = CAM_Skeleton.3.t
+	desc = CAM_Skeleton.3.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = { #marshall law 
+		name = CAM_Skeleton.3.a
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_POST_ACHAR_SOK option = CAM_POST_ACHAR_SOK_LON_NOL } 
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+		}
+		add_country_leader_role = {
+			character = CAM_Son_Ngoc_Thanh
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism_civilian_dictatorship_subtype
+				expire = "1994.4.20"
+				id = -1
+			}
+		}
+		set_popularities = {
+			communist = 1
+			socialist = 3
+			paternalism = 7
+			paternalism_1 = 30
+			despotism = 44
+			fascism = 15
+			national_socialism = 0
+			ultranationalism = 0
+			
+		}
+		remove_ideas = {
+			#ideas#
+			#ministers#
+			CAM_Achar_Sok_hog
+		}	
+		add_ideas = {
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.9
+			}
+		}
+		country_event = { id = CAM_Skeleton.4 days = 611 }
+	}
+	option = { #Lon Nol as PM
+		name = CAM_Skeleton.3.b
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_POST_ACHAR_SOK option = CAM_POST_ACHAR_SOK_MARTIAL_LAW } 
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+		}
+		add_country_leader_role = {
+			character = CAM_Son_Ngoc_Thanh
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism_civilian_dictatorship_subtype
+				expire = "1994.4.20"
+				id = -1
+			}
+		}
+		set_popularities = {
+			communist = 1
+			socialist = 3
+			paternalism = 7
+			paternalism_1 = 30
+			despotism = 44
+			fascism = 15
+			national_socialism = 0
+			ultranationalism = 0
+			
+		}
+		remove_ideas = {
+			#ideas#
+			#ministers#
+			CAM_Achar_Sok_hog
+		}	
+		add_ideas = {
+			CAM_Lon_Nol_hog
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.2
+			}
+		}
+		country_event = { id = CAM_Skeleton.13 days = 762 }
+	}
+}
+
+country_event = { #new Kampuchean revolution [February 1965]
+	id = CAM_Skeleton.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.4" }
+	title = CAM_Skeleton.4.t
+	desc = CAM_Skeleton.4.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.4.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = fascism
+		}
+		add_country_leader_role = {
+			character = CAM_Son_Ngoc_Thanh
+			promote_leader = yes
+			country_leader = {
+				ideology = fascism_revolutionary_nationalism_subtype
+				expire = "1994.4.20"
+				id = -1
+			}
+		}
+		set_popularities = {
+			communist = 1
+			socialist = 3
+			paternalism = 7
+			paternalism_1 = 30
+			despotism = 15
+			fascism = 44
+			national_socialism = 0
+			ultranationalism = 0
+			
+		}
+		set_party_name = {
+			ideology = fascism
+			name = CAM_fascism_party_midgame
+			long_name = CAM_fascism_party_midgame_long
+		}
+		2247 = {
+			set_demilitarized_zone = no
+		}
+		remove_ideas = {
+			CAM_The_Veal_Thom_War
+		}
+		add_ideas = {
+			CAM_New_Kampuchean_Revolution
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.10
+			}
+		}
+		country_event = { id = CAM_Skeleton.5 }
+	}
+}
+
+country_event = { #readmit the political left or Yem Sambuar rises 
+	id = CAM_Skeleton.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.5" }
+	title = CAM_Skeleton.5.t
+	desc = CAM_Skeleton.5.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = { # readmit the left 
+		name = CAM_Skeleton.5.a
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_POST_CHHUOEN option = CAM_POST_CHHUOEN_ARREST }
+					has_game_rule = { rule = CAM_POST_CHHUOEN option = CAM_POST_CHHUOEN_COUP } 
+				}
+			}
+		}
+		country_event = { id = CAM_Skeleton.6 days = 1611 }
+	}
+	option = { #Yem Sambuar rises
+		name = CAM_Skeleton.5.b
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_POST_CHHUOEN option = CAM_POST_CHHUOEN_ASSASSINATION }
+				}
+			}
+		}
+		country_event = { id = CAM_Skeleton.9 }
+	}
+}
+
+country_event = { #comprehensive land reform or reintroduce the 5YP
+	id = CAM_Skeleton.6
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.6" 
+		country_event = { id = CAM_Skeleton.7 days = 427 }
+	}
+	title = CAM_Skeleton.6.t
+	desc = CAM_Skeleton.6.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+	immediate = { remove_ideas = CAM_The_Five_Year_Plan }
+
+	option = { # land reform
+		name = CAM_Skeleton.6.a
+		ai_chance = { factor = 10 }
+		tno_improve_agriculture = yes
+	}
+	option = { #5YP
+		name = CAM_Skeleton.6.b
+		ai_chance = { factor = 20 } #Better for the AI
+		add_ideas = {
+			CAM_The_Second_Five_Year_Plan
+		}
+	}
+}
+
+country_event = { #Pach Chhoeun is assassinated [September 1970]
+	id = CAM_Skeleton.7
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.7"
+		country_event = { id = CAM_Skeleton.19 }
+	}
+	title = CAM_Skeleton.7.t
+	desc = CAM_Skeleton.7.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = { # Khieu Samphan Hog
+		name = CAM_Skeleton.7.a
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_PACH_SUCCESSOR option = CAM_PACH_SUCCESSOR_SICHAU }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.11
+			}
+		}
+		add_country_leader_role = {
+			character = CAM_Son_Ngoc_Thanh
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_SON_NGOC_THANH_REVNAT_DESC"
+				ideology = fascism_revolutionary_nationalism_subtype
+				expire = "1994.4.20"
+				id = -1
+			}
+		}
+		if = {
+			limit = { has_idea = CAM_The_Second_Five_Year_Plan }
+			add_ideas = CAM_The_Third_Five_Year_Plan
+			remove_ideas = {
+				CAM_The_Second_Five_Year_Plan
+				CAM_The_Five_Year_Plan
+			}
+		}
+		else = {
+			add_ideas = CAM_The_Second_Five_Year_Plan
+			remove_ideas = {
+				CAM_The_Five_Year_Plan
+			}
+		}
+	}
+	option = { #Ea Sichau Hog
+		name = CAM_Skeleton.7.b
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_PACH_SUCCESSOR option = CAM_PACH_SUCCESSOR_SAMPHAN }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.11
+			}
+		}
+		if = {
+			limit = { has_idea = CAM_The_Second_Five_Year_Plan }
+			add_ideas = CAM_The_Third_Five_Year_Plan
+			remove_ideas = {
+				CAM_The_Second_Five_Year_Plan
+				CAM_The_Five_Year_Plan
+			}
+		}
+		else = {
+			add_ideas = CAM_The_Second_Five_Year_Plan
+			remove_ideas = {
+				CAM_The_Five_Year_Plan
+			}
+		}
+		country_event = { id = CAM_Skeleton.8 days = 303 }
+	}
+}
+
+country_event = { #5YP causes rural instabilty [July 1971]
+	id = CAM_Skeleton.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.8" }
+	title = CAM_Skeleton.8.t
+	desc = CAM_Skeleton.8.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = { # Lean into anti-viet rhetoric (and sets flag for viet minh invasion)
+		name = CAM_Skeleton.8.a
+		ai_chance = { factor = 10 }
+		set_country_flag = Kampuchea_second_indochinese_invasion
+	}
+}
+
+country_event = { #Thanh leans on Sirikmatak 
+	id = CAM_Skeleton.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.9" }
+	title = CAM_Skeleton.9.t
+	desc = CAM_Skeleton.9.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = { # Lon Nol coup
+		name = CAM_Skeleton.9.a
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_POST_CHHUOEN option = CAM_POST_CHHUOEN_ARREST }
+				}
+			}
+		}
+		country_event = { id = CAM_Skeleton.10 days = 1642 }
+	}
+	option = { #Thanh house arrest
+		name = CAM_Skeleton.9.b
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_POST_CHHUOEN option = CAM_POST_CHHUOEN_COUP }
+				}
+			}
+		}
+		country_event = { id = CAM_Skeleton.12 days = 1611 }
+	}
+}
+
+country_event = { #Lon Nol coup (and sets flag for viet minh invasion) [August 1969]
+	id = CAM_Skeleton.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.10" }
+	title = CAM_Skeleton.10.t
+	desc = CAM_Skeleton.10.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.10.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = despotism
+		}
+		promote_character = { character = CAM_Lon_Nol ideology = despotism_civilian_dictatorship_subtype }
+		remove_ideas = {
+			#ideas#
+			#ministers#
+			CAM_Dictatorial_Devaraja
+			CAM_The_North_South_Axis
+			CAM_Spilling_The_Masters_Tea
+		}
+		set_popularities = {
+			communist = 1
+			socialist = 3
+			paternalism = 7
+			paternalism_1 = 30
+			despotism = 44
+			fascism = 15
+			national_socialism = 0
+			ultranationalism = 0
+			
+		}	
+		add_ideas = {
+			CAM_Dictatorial_Devaraja_Lon_Nol
+			CAM_Expansionist_Pariah
+		}
+		set_party_name = {
+			ideology = despotism
+			name = CAM_despotism_party_lon_nol
+			long_name = CAM_despotism_party_lon_nol_long
+		}
+		set_country_flag = Kampuchea_second_indochinese_invasion
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.13
+			}
+		}
+		country_event = { id = CAM_Skeleton.11 days = 974 }
+	}
+}
+
+country_event = { #Lon NoN coup (if Vietnam isn't communist) [March 1972]
+	id = CAM_Skeleton.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.11" }
+	title = CAM_Skeleton.11.t
+	desc = CAM_Skeleton.11.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.11.a
+		ai_chance = { factor = 10 }
+		if = {
+			limit = {
+				NOT = { VIC = { has_cosmetic_tag = VIC_Viet_Minh_Victory } }
+			}
+			set_popularities = {
+				communist = 1
+				socialist = 3
+				paternalism = 7
+				paternalism_1 = 30
+				despotism = 44
+				fascism = 15
+				national_socialism = 0
+				ultranationalism = 0
+				
+			}
+			set_politics = {
+				ruling_party = despotism
+			}
+			promote_character = { character = CAM_Lon_Non ideology = despotism_civilian_dictatorship_subtype }
+			remove_ideas = {
+				#ideas#
+				#ministers#
+				CAM_Dictatorial_Devaraja_Lon_Nol
+				CAM_Expansionist_Pariah
+			}	
+			add_ideas = {
+				CAM_Dictatorial_Devaraja_Lon_Non
+				CAM_The_North_South_Axis
+				CAM_Spilling_The_Masters_Tea
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					HasSphereInterest = yes
+				}
+				news_event = {
+					id = WORLD_CAM.14
+				}
+			}
+		}
+	}
+	
+}
+
+country_event = { #Thanh house arrest + Sambuar in power [July 1969]
+	id = CAM_Skeleton.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.12" }
+	title = CAM_Skeleton.12.t
+	desc = CAM_Skeleton.12.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.12.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = despotism
+		}
+		add_country_leader_role = {
+			character = CAM_Son_Ngoc_Thanh
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_SON_NGOC_THANH_MANSTATE_DESC"
+				ideology = despotism_managerial_state_subtype
+				expire = "1994.4.20"
+				id = -1
+			}
+		}
+		set_popularities = {
+			communist = 1
+			socialist = 3
+			paternalism = 7
+			paternalism_1 = 30
+			despotism = 44
+			fascism = 15
+			national_socialism = 0
+			ultranationalism = 0
+			
+		} 
+		remove_ideas = {
+			#ideas#
+			#ministers#
+			CAM_Dictatorial_Devaraja
+		}	
+		add_ideas = {
+			CAM_Devaraja_Chained
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.12
+			}
+		}
+	}
+}
+
+country_event = { #Thanh concludes the Veal Thom war [August 1965]
+	id = CAM_Skeleton.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.13" }
+	title = CAM_Skeleton.13.t
+	desc = CAM_Skeleton.13.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.13.a
+		ai_chance = { factor = 10 }
+		
+		2247 = {
+			set_demilitarized_zone = no
+			remove_core_of = LAO
+			remove_claim_by = CAM
+			add_claim_by = LAO
+			add_core_of = CAM
+			transfer_state_to = CAM
+		}
+		remove_ideas = {
+			CAM_The_Veal_Thom_War
+		}
+		country_event = { id = CAM_Skeleton.14 days = 162 }
+	}
+}
+
+country_event = { #Thanh appoints Sambuar as PM [January 1966]
+	id = CAM_Skeleton.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.14" }
+	title = CAM_Skeleton.14.t
+	desc = CAM_Skeleton.14.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.14.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = despotism
+		}
+		add_country_leader_role = {
+			character = CAM_Son_Ngoc_Thanh
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism_managerial_state_subtype
+				expire = "1994.4.20"
+				id = -1
+			}
+		}
+		country_event = { id = CAM_Skeleton.15 days = 396 }
+	}
+}
+
+country_event = { #Kampuchean civil war begins [February 1967]
+	id = CAM_Skeleton.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.15" }
+	title = CAM_Skeleton.15.t
+	desc = CAM_Skeleton.15.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.15.a # Thanh house arrest cuck path
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_CIVIL_WAR option = CAM_CIVIL_WAR_HU_NIM }
+					has_game_rule = { rule = CAM_CIVIL_WAR option = CAM_CIVIL_WAR_SIHANOUK }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.3
+			}
+		}
+		country_event = { id = CAM_Skeleton.16 days = 1155 }
+	}
+	option = {
+		name = CAM_Skeleton.15.b # Hu Nim WJT
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_CIVIL_WAR option = CAM_CIVIL_WAR_GOV }
+					has_game_rule = { rule = CAM_CIVIL_WAR option = CAM_CIVIL_WAR_SIHANOUK }
+					NOT = { CHI = { has_government = fascism } } #Prevent it occuring if China fell to Long Yun
+					NOT = { country_exists = CHI }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.3
+			}
+		}
+		country_event = { id = CAM_Skeleton.17 days = 1155 }
+	}
+	option = {
+		name = CAM_Skeleton.15.c #Sihanouk
+		ai_chance = {
+			base = 10
+			modifier = { 
+				factor = 0
+				OR = {
+					has_game_rule = { rule = CAM_CIVIL_WAR option = CAM_CIVIL_WAR_GOV }
+					has_game_rule = { rule = CAM_CIVIL_WAR option = CAM_CIVIL_WAR_HU_NIM }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.3
+			}
+		}
+		country_event = { id = CAM_Skeleton.18 days = 1155 }
+	}
+}
+
+country_event = { #Thanh house arrest + Son Sann in power [April 1970]
+	id = CAM_Skeleton.16
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.16"
+	}
+	title = CAM_Skeleton.16.t
+	desc = CAM_Skeleton.16.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.16.a
+		ai_chance = { factor = 10 }
+		set_politics = { ruling_party = fascism }
+		add_country_leader_role = {
+			character = CAM_Son_Ngoc_Thanh
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_SON_NGOC_THANH_CORP_DESC"
+				ideology = fascism_corporate_statism_subtype
+				expire = "1994.4.20"
+				id = -1
+			}
+		}
+		remove_ideas = {
+			#ideas#
+			#ministers#
+			CAM_Dictatorial_Devaraja
+			Sphere_Economic_Dependent
+		}	
+		add_ideas = {
+			CAM_Devaraja_Chained
+			Sphere_Fully_Dependent
+		}
+		set_party_name = {
+			ideology = fascism
+			name = CAM_fascism_party_midgame
+			long_name = CAM_fascism_party_midgame_long
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.5
+			}
+		}
+		set_popularities = {
+			communist = 1
+			socialist = 3
+			paternalism = 7
+			paternalism_1 = 30
+			despotism = 15
+			fascism = 44
+			national_socialism = 0
+			ultranationalism = 0
+			
+		}
+		#Effects of Civil War
+		set_temp_variable = { temp_econ_GDP_boost_percentage = -0.03 }
+		econ_GDP_boost_once_percentage = yes
+	}
+}
+
+country_event = { #Hu Nim in power [April 1970]
+	id = CAM_Skeleton.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.17" }
+	title = CAM_Skeleton.17.t
+	desc = CAM_Skeleton.17.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.17.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = despotism
+		}
+		promote_character = { character = CAM_Hu_Nim ideology = despotism_wang_jingwei_thought_subtype }
+		remove_ideas = {
+			#ideas#
+			CAM_Dictatorial_Devaraja
+			CAM_The_Unloving_Father
+			CAM_The_North_South_Axis
+			#ministers#
+		}	
+		add_ideas = {
+			CAM_Republican_Revolution
+			CAM_Bubbling_Northern_Tensions
+		}
+		add_opinion_modifier = {
+			target = CHI
+			modifier = CAM_republican_rev
+		}
+		set_party_name = {
+			ideology = despotism
+			name = CAM_despotism_party_kmt
+			long_name = CAM_despotism_party_kmt_long
+		}
+		set_cosmetic_tag = CAM_kmt
+		set_country_flag = Kampuchea_second_indochinese_invasion
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.4
+			}
+		}
+		set_popularities = {
+			communist = 1
+			socialist = 3
+			paternalism = 7
+			paternalism_1 = 0
+			despotism = 74
+			fascism = 15
+			national_socialism = 0
+			ultranationalism = 0
+		}
+		set_temp_variable = { temp_econ_GDP_boost_percentage = -0.05 }
+		econ_GDP_boost_once_percentage = yes
+	}
+}
+
+country_event = { #Sihanouk in power [April 1970]
+	id = CAM_Skeleton.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.18" }
+	title = CAM_Skeleton.18.t
+	desc = CAM_Skeleton.18.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.18.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = despotism
+		}
+		promote_character = { character = CAM_Norodom_Sihanouk ideology = despotism_civilian_dictatorship_subtype }
+		remove_ideas = {
+			#ideas#
+			CAM_Dictatorial_Devaraja
+			#ministers#
+		}	
+		add_ideas = {
+			CAM_Traditional_Devaraja
+		}
+		set_party_name = {
+			ideology = despotism
+			name = CAM_despotism_party_norodom
+			long_name = CAM_despotism_party_norodom_long
+		}
+		set_country_flag = Kampuchea_second_indochinese_invasion
+		every_country = {
+			limit = {
+				is_ai = no
+				HasSphereInterest = yes
+			}
+			news_event = {
+				id = WORLD_CAM.6
+			}
+		}
+		set_popularities = {
+			communist = 1
+			socialist = 3
+			paternalism = 7
+			paternalism_1 = 0
+			despotism = 74
+			fascism = 15
+			national_socialism = 0
+			ultranationalism = 0
+		}
+		set_temp_variable = { temp_econ_GDP_boost_percentage = -0.05 }
+		econ_GDP_boost_once_percentage = yes
+	}
+}
+
+country_event = { #Change Son Ngoc Thanh's portrait in the 70s
+	id = CAM_Skeleton.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CAM_Skeleton.19" }
+	title = CAM_Skeleton.19.t
+	desc = CAM_Skeleton.19.d
+	is_triggered_only = yes
+	picture = GFX_report_event_IBR_cow_in_field
+
+	option = {
+		name = CAM_Skeleton.19.a
+		ai_chance = { factor = 10 }
+		CAM_Son_Ngoc_Thanh = {
+			set_portraits = {
+				civilian = { large = "gfx/leaders/CAM/Portrait_Cambodia_Son_Ngoc_Thanh_70s.png" }
+			}
+		}
+	}
+}

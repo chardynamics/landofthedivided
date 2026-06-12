@@ -1,0 +1,16 @@
+########################################
+#### Carlist Kingdom of Spain tree ####
+########################################
+
+focus_tree = {
+	id = FSR_war_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FSR
+		}
+	}
+	default = no
+	shared_focus = FSR_the_sane_choice
+}

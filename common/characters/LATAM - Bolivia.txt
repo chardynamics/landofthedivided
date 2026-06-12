@@ -1,0 +1,445 @@
+characters = {
+	BOL_David_Terrazas = {
+		name = BOL_David_Terrazas
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_David_Terrazas.png" } }
+		country_leader = {
+			desc = "POLITICS_DAVID_TERRAZAS"
+			expire = "1994.4.20"
+			ideology = liberalism_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_DAVID_TERRAZAS"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			traits = { oligarch_shield_terrazas }
+			id = -1
+		}
+	}
+	BOL_Armando_Alba_Zambrana = {
+		name = BOL_Armando_Alba_Zambrana
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_Bolivia_Alba_Zambrana.png" } }
+		country_leader = {
+			desc = "POLITICS_ARMANDO_ALBA_ZAMBRANA"
+			expire = "1994.4.20"
+			ideology = liberalism_subtype
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_ARMANDO_ALBA_ZAMBRANA"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			traits = { el_senor_del_habla_zambrana fallen_hero_zambrana }
+			id = -1
+		}
+	}
+	BOL_Eduardo_Montes_y_Montes = {
+		name = BOL_Eduardo_Montes_y_Montes
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_BOL_Eduardo_Montes_y_Montes.png" } }
+		country_leader = {
+			desc = "POLITICS_EDUARDO_MONTES_Y_MONTES"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_subtype
+			id = -1
+		}
+	}
+	BOL_Mamerto_Urriolagoitia = {
+		name = BOL_Mamerto_Urriolagoitia
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BOL/Portrait_Bolivia_Mamerto_Urriolagoitia.png"
+				small = "GFX_idea_BOL_minister_Mamerto_Urriolagoitia"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_Mamerto_Urriolagoitia"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = BOL_Mamerto_Urriolagoitia_for
+			allowed = { original_tag = BOL }
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BOL_Luis_Fernando_Guachalla = {
+		name = BOL_Luis_Fernando_Guachalla
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BOL/Portrait_Bolivia_Luis_Fernando_Guachalla.png"
+				small = "gfx/interface/ideas/ministers/BOL/BOL_minister_luis_fernando_guachalla.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_Luis_Fernando_Guachalla"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = BOL_Luis_Fernando_Guachalla_for
+			allowed = { original_tag = BOL }
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BOL_Alberto_Crespo_Carpio = {
+		name = BOL_Alberto_Crespo_Carpio
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/ministers/BOL/BOL_minister_Alberto_Crespo_Carpio.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BOL_Alberto_Crespo_Carpio_sec
+			allowed = { original_tag = BOL }
+			traits = {
+				security_minister
+				sec_retired_general
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BOL_Antenor_Patino = {
+		name = BOL_Antenor_Patino
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BOL/Portrait_Bolivia_Antenor_Patino.png"
+				small = "gfx/interface/ideas/ministers/BOL/BOL_minister_Antenor_Patino.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_Antenor_Patino"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = BOL_Antenor_Patino_eco
+			allowed = { original_tag = BOL }
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BOL_Alfredo_Mollinedo = {
+		name = BOL_Alfredo_Mollinedo
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/ministers/BOL/BOL_minister_Alfredo_Mollinedo.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_Antenor_Patino"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = BOL_Alfredo_Mollinedo_hog
+			allowed = { original_tag = BOL }
+			traits = {
+				head_of_government
+				hog_happy_amateur
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BOL_Rene_Barrientos = {
+		name = BOL_Rene_Barrientos
+		portraits = {
+			civilian = { large = "gfx/leaders/BOL/Portrait_Bolivia_Rene_Barrientos_60.png" } }
+		country_leader = {
+			desc = "POLITICS_RENE_BARRIENTOS"
+			expire = "1994.4.20"
+			ideology = despotism_personalistic_dictatorship_subtype
+			traits = { the_people_general_barrientos }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_RENE_BARRIENTOS"
+			expire = "1994.4.20"
+			ideology = paternalism_national_conservatism_subtype
+			traits = { the_people_general_barrientos }
+			id = -1
+		}
+		corps_commander = {
+			skill = 2
+			legacy_id = -1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	BOL_Alfredo_Ovando_Candia = {
+		name = BOL_Alfredo_Ovando_Candia
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BOL/Portrait_Bolivia_Ovando_Candia.png"
+				small = "GFX_idea_BOL_Alfredo_Ovando"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ALFREDO_OVANDO_CANDIA"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { the_half_stepter_ovando }
+			id = -1
+		}
+		corps_commander = {
+			skill = 3
+			legacy_id = -1
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = BOL_Alfredo_Ovando_Candia_sec
+			allowed = { original_tag = BOL }
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BOL_Rogelio_Miranda_Baldivia = {
+		name = BOL_Rogelio_Miranda_Baldivia
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_BOL_Rogelio_Miranda_Baldivia_60.png" } }
+		country_leader = {
+			desc = "POLITICS_ROGELIO_MIRANDA_BALDIVIA"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { the_conservative_miranda }
+			id = -1
+		}
+		corps_commander = {
+			skill = 2
+			legacy_id = -1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	BOL_Juan_Pereda = {
+		name = BOL_Juan_Pereda
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_BOL_Juan_Pereda.png" } }
+		country_leader = {
+			desc = "POLITICS_JUAN_PEDERA"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			id = -1
+		}
+		corps_commander = {
+			skill = 2
+			legacy_id = -1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	BOL_Gualberto_Villarroel = {
+		name = BOL_Gualberto_Villarroel
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_Bolivia_Gualberto_Villarroel.png" } }
+		country_leader = {
+			desc = "POLITICS_GUALBERTO_VILLARROEL"
+			expire = "1994.4.20"
+			ideology = despotism_military_socialism_subtype
+			traits = { the_friend_of_the_poor_villarroel }
+			id = -1
+		}
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = despotism_3_subtype
+			id = -1
+		}
+		corps_commander = {
+			skill = 2
+			legacy_id = -1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	BOL_Enrique_Hertzog = {
+		name = BOL_Enrique_Hertzog
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_BOL_Enrique_Hertzog.png" } }
+		country_leader = {
+			desc = "POLITICS_ENRIQUE_HERTZOG"
+			expire = "1994.4.20"
+			ideology = paternalism_oligarchy_subtype
+			traits = { oligarch_doctor_hertzog }
+			id = -1
+		}
+	}
+	BOL_Luis_Adolfo_Siles = {
+		name = BOL_Luis_Adolfo_Siles
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_Luis_Adolfo_Siles.png" } }
+		country_leader = {
+			desc = "POLITICS_LUIS_ADOLFO_SILES"
+			expire = "1994.4.20"
+			ideology = paternalism_national_conservatism_subtype
+			id = -1
+		}
+	}
+	BOL_Bernardino_Bilbao_Rioja = {
+		name = BOL_Bernardino_Bilbao_Rioja
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_Bolivia_Bernardino_Bilbao_Rioja.png" } }
+		country_leader = {
+			desc = "POLITICS_BERNARDINO_BILBAO_RIOJA"
+			expire = "1994.4.20"
+			ideology = fascism_subtype
+			traits = { the_hero_of_villamontes_bilbao }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_BERNARDINO_BILBAO_RIOJA"
+			expire = "1994.4.20"
+			ideology = paternalism_national_conservatism_subtype
+			traits = { the_hero_of_villamontes_bilbao }
+			id = -1
+		}
+	}
+	BOL_Oscar_Unzaga = {
+		name = BOL_Oscar_Unzaga
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_Bolivia_Oscar_Unzaga.png" } }
+		country_leader = {
+			desc = "POLITICS_OSCAR_UNZAGA"
+			expire = "1994.4.20"
+			ideology = fascism_falangism_subtype
+			traits = { el_chapu_ungaza }
+			id = -1
+		}
+	}
+	BOL_Walter_Guevara = {
+		name = BOL_Walter_Guevara
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_BOL_Walter_Chevara.png" } }
+		country_leader = {
+			desc = "POLITICS_WALTER_GUEVARA"
+			expire = "1994.4.20"
+			ideology = paternalism_national_conservatism_subtype
+			traits = { the_authentic_ideologue_guevara }
+			id = -1
+		}
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = paternalism_1_subtype
+			id = -1
+		}
+	}
+	BOL_Juan_Jose_Torres = {
+		name = BOL_Juan_Jose_Torres
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_BOL_Juan_Jose_Torres_60.png" } }
+		country_leader = {
+			desc = "POLITICS_JUAN_JOSE_TORRES"
+			expire = "1994.4.20"
+			ideology = socialist_revolutionary_frontism_subtype
+			traits = { jj_torres }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_JUAN_JOSE_TORRES"
+			expire = "1994.4.20"
+			ideology = despotism_military_socialism_subtype
+			traits = { jj_torres }
+			id = -1
+		}
+	}
+	BOL_Juan_Lechin_Oquendo = {
+		name = BOL_Juan_Lechin_Oquendo
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_Bolivia_BOL_Juan_Lechin_Oquendo.png" } }
+		country_leader = {
+			desc = "POLITICS_JUAN_LECHIN_OQUENDO"
+			expire = "1994.4.20"
+			ideology = socialist_syndicalism_subtype
+			traits = { the_paramount_leader_of_the_COB_lechin }
+			id = -1
+		}
+	}
+	BOL_Victor_Paz_Estenssoro = {
+		name = BOL_Victor_Paz_Estenssoro
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portait_Bolivia_Victor_Paz_Estenssoro.png" } }
+		country_leader = {
+			desc = "POLITICS_VICTOR_PAZ_ESTENSSORO"
+			expire = "1994.4.20"
+			ideology = liberalism_national_liberal_subtype
+			traits = { don_victor_paz }
+			id = -1
+		}
+	}
+	BOL_Hernan_Zuazo = {
+		name = BOL_Hernan_Zuazo
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = progressivism_left_wing_populism_subtype
+			id = -1
+		}
+	}
+	BOL_Guillermo_Lora = {
+		name = BOL_Guillermo_Lora
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = communist_marxism_leninism_subtype
+			id = -1
+		}
+	}
+	BOL_Hugo_Gonzalez_Moscoso = {
+		name = BOL_Hugo_Gonzalez_Moscoso
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = communist_1_subtype
+			id = -1
+		}
+	}
+	BOL_Fausto_Reinaga = {
+		name = BOL_Fausto_Reinaga
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = fascism_2_subtype
+			id = -1
+		}
+	}
+	BOL_Collapsed_Authority = {
+		name = BOL_Collapsed_Authority
+		portraits = { civilian = { large = "gfx/leaders/BOL/Portrait_Bolivia_Collapsed_Authority.png" } }
+	}
+}

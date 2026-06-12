@@ -1,0 +1,137 @@
+guiTypes = {
+	
+	###############################################################
+	########            Lott Quadros Mechanic              ########
+	###############################################################
+
+	containerWindowType = {
+		name = "TNO_CSS_decisions_scripted_lottquadros_GUI"
+		size = { width = 0 height = 465 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_BRA_info_button"
+			position = { x = 440 y = -7 }
+			pdx_tooltip = BRA_lottquadros_info_tt
+		}
+
+		containerWindowType = {
+			name = "TNO_CSS_decisions_scripted_lottquadros_container1"
+			size = { width = 0 height = 0 }
+			position = { x = 18 y = -14 }
+
+			iconType = {
+				name = "Lott"
+				spriteType = "GFX_BRA_GUI_lott"
+				position = { x = 50 y = 10 }
+				scale = 1.00
+				Orientation = "CENTER"
+			}
+
+			iconType = {
+				name = "Quadros"
+				spriteType = "GFX_BRA_GUI_quadros"
+				position = { x = 252 y = 10 }
+				scale = 1.00
+				Orientation = "CENTER"
+			}
+
+			iconType = {
+				name = "lottquadros_Meter"
+				spriteType = "GFX_BRA_lottquadros_Progressbar"
+				position = { x = 43 y = 238 }
+				#frame = 64
+				pdx_tooltip = BRA_lottquadros_bar_tooltip
+				# pdx_tooltip_delayed = BRA_lottquadros_Progressbar_tooltip_delayed
+				Orientation = "CENTER"
+			}
+
+			instantTextBoxType = {
+				name = "quadros_influence"
+				position = { x = 43 y = 281 }
+				maxWidth = 374
+				maxHeight = 2000
+				format = right
+				font = "aldrich_18_outline"
+				text = BRA_lottquadros_quadros_influence
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "lott_influence"
+				position = { x = 43 y = 281 }
+				maxWidth = 374
+				maxHeight = 2000
+				format = left
+				font = "aldrich_18_outline"
+				text = BRA_lottquadros_lott_influence
+				alwaystransparent = yes
+			}
+
+			#iconType = {
+			#	name = "PSD"
+			#	spriteType = "GFX_BRA_GUI_PSD"
+			#	position = { x = 420 y = 462 }
+			#	scale = 1.00
+			#}
+#
+			#iconType = {
+			#	name = "UDN"
+			#	spriteType = "GFX_BRA_GUI_UDN"
+			#	position = { x = 11 y = 462 }
+			#	scale = 1.00
+			#}
+
+			instantTextBoxType = {
+				name = "category_description"
+				position = { x = 0 y = 340 }
+				maxWidth = 482
+				maxHeight = 2000
+				format = left
+				font = "aldrich_18_outline"
+				text = BRA_lottquadros_category_description
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "relationship_status"
+				position = { x = -15 y = 305 }
+				maxWidth = 482
+				maxHeight = 2000
+				format = center
+				font = "aldrich_20_outline"
+				text = BRA_lottquadros_status_long
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "lottquadros_quadros_button"
+				position = { x = 420 y = 255 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+			}
+
+			buttonType = {
+				name = "lottquadros_lott_button"
+				position = { x = 20 y = 255 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+			}
+
+			buttonType = {
+				name = "lottquadros_coop_plus_button"
+				position = { x = 430 y = 305 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+			}
+
+			buttonType = {
+				name = "lottquadros_coop_minus_button"
+				position = { x = 10 y = 305 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+			}
+		}
+	}
+}

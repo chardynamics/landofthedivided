@@ -1,0 +1,52 @@
+sub_units = {
+
+	anti_tank = {
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		group = support
+
+		type = {
+			infantry
+			support
+		}
+
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+			category_antitank
+			category_artillery
+		}
+
+
+		combat_width = 0
+
+		essential = {
+			anti_tank_equipment
+			infantry_equipment
+		}
+
+		need = {
+			anti_tank_equipment = 72
+			infantry_equipment = 100
+		}
+		manpower = 400
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		training_time = 120
+		weight = 0.1
+		equipment_capture_factor = -0.02
+		supply_consumption = 0.1
+		entrenchment = 1
+		# Support nerfs to combat abilities
+		breakthrough = -0.45
+		soft_attack = -0.1
+		hard_attack = 1.2
+	}
+}

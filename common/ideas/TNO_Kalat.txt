@@ -1,0 +1,46 @@
+ideas = {
+	#############
+	## SPIRITS ##
+	#############
+	country = {
+		KLT_sandemans_spectre = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KLT_sandemans_spectre" }
+
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = KLT_sandemans_spectre
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.15
+				resistance_damage_to_garrison = -0.2
+				monthly_population = -0.2
+			}
+		}
+		KLT_not_a_nation_but_an_alliance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KLT_not_a_nation_but_an_alliance" }
+
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = KLT_not_a_nation_but_an_alliance
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.2
+				taxable_population_factor = -0.5
+			}
+		}
+	}
+}

@@ -1,0 +1,1346 @@
+## Generics ##
+
+#Hello, this is KD, this system may sound complicated but I'm here to explain how to set-up and expand this system step-by-step
+#The first thing to know is the AI simply won't use a chassis without a defined "template", thus this file is very important
+
+### IFV
+generic_IFV = { #First we name the set of "templates" we are about to design
+	category = land #Then we define whether it is for tanks (land) or ships (naval), TNO does not use the air designer
+
+	available_for = {} #This block defines what countries can use it, you enter their tag here. If kept empty, every tag can use it
+
+	roles = { #This is the role of the template, for the AI to use it, it will need to match the role of the division templates you want the equipment to be used in
+		armor
+		land_light_tank
+	}
+
+	priority = { #This block determines how important this particular set of templates is compared to others
+		factor = 100
+		modifier = {
+			factor = 15
+			has_template_containing_unit = IFV
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_template_containing_unit = IFV }
+		}
+	}
+
+	early_IFV_default = { #Every individual template needs a name as well, for simplicity, use the same ones as the equipment
+		priority = { #This will determine the priority of this particular template compared to others in the set
+			factor = 35
+			modifier = { #You can use modifiers to change the priority of the template
+				OR = {
+					has_tech = NSB_IFV_1950
+					has_tech = NSB_MBT_1950
+				}
+				factor = 0
+			}
+		}
+
+		target_variant = { 		#Here we define how the actual template will look
+			match_value = 1000 		#This is the value of the template when finished, the AI will construct the ones with the highest value
+			type = IFV_chassis_0 	#This block defines the particular equipment/chassis to be used
+			modules = { 			#From he we define the individual modules the template will use
+				main_armament_slot = { 		#All tanks require a main armament
+					any_of = { 				#I recommend using any_of and within a list of the specific equipment you want in the slot, slotted from best to worst
+						IFV_cannon_4
+						IFV_cannon_3
+						IFV_cannon_2
+						IFV_cannon
+					}
+					upgrade > current 		#This block makes it so the AI will automatically upgrade to better versisons of the module category if available
+				}
+				turret_type_slot = IFV_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						tank_radio_2
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						smoke_emitter
+						smoke_launchers
+						additional_armour
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					module = tank_special_module
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						fire_control_system
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = { 	#This block defines the value of the upgrades that can be added on to the build
+				tank_nsb_engine_upgrade = 4 #Remember to make sure the template has enough speed to be valid. It needs, at the minimum, 5km per hour.
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = { #In this block, you list all modules the AI can use to fill the empty slots. Any modules not on this list will not be used. The AI will always prioritize the modules at the top of the list.
+			IFV_cannon_4
+			IFV_cannon_3
+			IFV_cannon_2
+			IFV_cannon
+			#Armor
+			IFV_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+
+	basic_IFV_default = {
+		priority = {
+			factor = 35
+			modifier = { 
+				OR = {
+					has_tech = NSB_IFV_1960
+					#has_tech = NSB_MBT_1960
+				}
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = IFV_chassis_1
+			modules = {
+				main_armament_slot = {
+					module = IFV_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = IFV_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			IFV_cannon_4
+			IFV_cannon_3
+			IFV_cannon_2
+			IFV_cannon
+			#Armor
+			IFV_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+
+	modern_IFV_default = {
+		priority = {
+			factor = 35
+			modifier = { 
+				OR = {
+					has_tech = NSB_IFV_1970
+					#has_tech = NSB_MBT_1970
+				}
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = IFV_chassis_2
+			modules = {
+				main_armament_slot = {
+					module = IFV_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = IFV_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			IFV_cannon_4
+			IFV_cannon_3
+			IFV_cannon_2
+			IFV_cannon
+			#Armor
+			IFV_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+
+
+	advanced_IFV_default = {
+		priority = {
+			factor = 35
+			modifier = { 
+				OR = {
+					has_tech = NSB_IFV_1980
+					#has_tech = NSB_MBT_1980
+				}
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = IFV_chassis_3
+			modules = {
+				main_armament_slot = {
+					module = IFV_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = IFV_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			IFV_cannon_4
+			IFV_cannon_3
+			IFV_cannon_2
+			IFV_cannon
+			#Armor
+			IFV_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+
+	advanced_IFV_default = {
+		priority = {
+			factor = 35
+			modifier = { 
+				OR = {
+					has_tech = NSB_IFV_1990
+					#has_tech = NSB_MBT_1990
+				}
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = IFV_chassis_4
+			modules = {
+				main_armament_slot = {
+					module = IFV_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = IFV_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			IFV_cannon_4
+			IFV_cannon_3
+			IFV_cannon_2
+			IFV_cannon
+			#Armor
+			IFV_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+}
+
+## MBT
+#Skipping 1945 Chassis for my own sanity
+generic_MBT = {
+	category = land
+
+	available_for = {}
+
+	roles = {
+		armor
+		land_medium_tank
+	}
+
+	priority = {
+		factor = 100
+		modifier = {
+			factor = 10
+			has_template_containing_unit = MBT
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_template_containing_unit = MBT }
+		}
+	}
+
+	basic_MBT_default = {
+		priority = {
+			factor = 35
+			modifier = { 
+				has_tech = NSB_MBT_1960
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = MBT_chassis_1
+			modules = {
+				main_armament_slot = {
+					module = MBT_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = MBT_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			MBT_cannon_4
+			MBT_cannon_3
+			MBT_cannon_2
+			MBT_cannon
+			#Armor
+			MBT_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+
+	modern_MBT_default = {
+		priority = {
+			factor = 35
+			modifier = { 
+				has_tech = NSB_MBT_1970
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = MBT_chassis_2
+			modules = {
+				main_armament_slot = {
+					module = MBT_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = MBT_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			MBT_cannon_4
+			MBT_cannon_3
+			MBT_cannon_2
+			MBT_cannon
+			#Armor
+			MBT_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+
+
+	advanced_MBT_default = {
+		priority = {
+			factor = 35
+			modifier = { 
+				has_tech = NSB_MBT_1980
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = MBT_chassis_3
+			modules = {
+				main_armament_slot = {
+					module = MBT_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = MBT_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			MBT_cannon_4
+			MBT_cannon_3
+			MBT_cannon_2
+			MBT_cannon
+			#Armor
+			MBT_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+
+	awesome_MBT_default = {
+		priority = {
+			factor = 35
+			modifier = { 
+				has_tech = NSB_MBT_1990
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = MBT_chassis_4
+			modules = {
+				main_armament_slot = {
+					module = MBT_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = MBT_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			MBT_cannon_4
+			MBT_cannon_3
+			MBT_cannon_2
+			MBT_cannon
+			#Armor
+			MBT_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+}
+
+
+generic_heavy = {
+	category = land
+
+	available_for = {}
+
+	roles = {
+		armor
+		land_heavy_tank
+	}
+
+	priority = {
+		factor = 100
+		modifier = {
+			factor = 100
+			has_template_containing_unit = heavy_tank
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_template_containing_unit = heavy_tank }
+		}
+	}
+
+	basic_heavy_default = {
+		priority = {
+			factor = 35
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = heavy_tank_chassis_1
+			modules = {
+				main_armament_slot = {
+					module = heavy_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = Heavy_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			heavy_cannon_4
+			heavy_cannon_3
+			heavy_cannon_2
+			heavy_cannon
+			#Armor
+			Heavy_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+
+
+	modern_heavy_default = {
+		priority = {
+			factor = 35
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = heavy_tank_chassis_2
+			modules = {
+				main_armament_slot = {
+					module = heavy_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = Heavy_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			heavy_cannon_4
+			heavy_cannon_3
+			heavy_cannon_2
+			heavy_cannon
+			#Armor
+			Heavy_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+
+	advanced_heavy_default = {
+		priority = {
+			factor = 35
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = heavy_tank_chassis_3
+			modules = {
+				main_armament_slot = {
+					module = heavy_main_armament
+					upgrade > current
+
+				}
+				turret_type_slot = Heavy_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_control_system
+						auto_loader
+						tank_radio_1
+						command_optics
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			heavy_cannon_4
+			heavy_cannon_3
+			heavy_cannon_2
+			heavy_cannon
+			#Armor
+			Heavy_three_man_tank_turret
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_control_system
+			auto_loader
+			tank_radio_1
+			tank_radio_2
+			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+}
+
+generic_APC = {
+	category = land
+
+	available_for = {}
+
+	roles = {
+		armor
+		land_medium_tank
+	}
+
+	priority = {
+		factor = 100
+		modifier = {
+			factor = 10
+			has_template_containing_unit = APC
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_template_containing_unit = APC }
+		}
+	}
+
+	basic_APC_default = {
+		priority = {
+			factor = 35
+			modifier = { 
+				has_tech = NSB_MBT_1960
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = APC_chassis
+			modules = {
+				APC_designation_slot = APC_infantry
+				APC_armament_slot = apc_armament
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_protection_equipment
+						expanded_toolbox
+						expanded_fuel_capacity
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				ac_nsb_engine_upgrade = 4
+				ac_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			APC_infantry
+			APC_infantry_weapon
+			APC_infantry_weapon_2
+			APC_infantry_weapon_3
+			APC_infantry_weapon_4
+			#Armor
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_protection_equipment
+			expanded_toolbox
+			expanded_fuel_capacity
+			#Smoke
+			spall_liner
+			nuclear_protection
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			fire_control_system
+			additional_armour
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+}

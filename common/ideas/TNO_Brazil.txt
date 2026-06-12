@@ -1,0 +1,2795 @@
+#
+# ██████╗ ██████╗  █████╗ ███████╗██╗██╗
+# ██╔╝╝██╗██╔╝╝██╗██╔╝╝██╗╚╝╝███╔╝██║██║
+# ██████╔╝██████╔╝███████║  ███╔╝ ██║██║
+# ██╔╝╝██╗██╔╝╝██╗██╔╝╝██║ ███╔╝  ██║██║
+# ██████╔╝██║  ██║██║  ██║███████╗██║███████╗
+# ╚╝╝╝╝╝╝ ╚╝╝  ╚╝╝╚╝╝  ╚╝╝╚╝╝╝╝╝╝╝╚╝╝╚╝╝╝╝╝╝╝
+#
+
+# If something breaks, annoy Anna
+
+# Politics
+	# The Populist Republic # For Lott and Quadros
+	# The 100 Days # For 100 Days
+	# Democracy Enforced # No longer used
+	# False Dawn # Post 100 days democratic leaders
+	# Death of the Dream # For Military Coup
+	# The PSP Revolution # For Adhemar post 65
+# Military
+	# Overbearing Military
+	# Constitutionalist Dominance
+	# Militarist Rebirth
+	# Day of the Jackboot
+	# Divisions of Cardinals
+	# Sword of Damocles
+	# Institutionalised Military
+	# Bastion of the Crow
+	# Exercito Social Progressista
+	# Military Stalemate
+# Economy
+	# Rapid Industrialisation
+	# The Tropical Titan
+	# The Brazilian Miracle
+	# Brazil's Black Swan: The Oil Crisis
+	# Brazilian Phoenix
+	# The Lost Decade
+	# Love It or Leave It
+# Land Reform
+	# Latifundos Crisis
+	# Countryside Strikes
+	# The Burning Farmland
+	# Minor Agrarian Reform
+	# Radical Agrarian Reform
+	# Completed Agrarian Reform
+	# The Silent Country
+	# Agro-Industrial Complex
+# Other
+	# National spirits that don't fit into either category
+	# I.E. Duplicates and outdated ones
+# Hidden
+	# Will have to be organised properly at some point
+
+ideas = {
+	country = { # Politics
+		#adhemar corruption variable idea
+		BRA_squeaky_clean_idea = { #1
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_squeaky_clean_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_squeaky_clean_idea
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+		BRA_a_handshake_here_and_there_idea = { #2
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_a_handshake_here_and_there_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_Reality_of_governance
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_power_gain = -0.05
+			}
+		}
+		BRA_the_reality_of_governance_idea = { #3
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_the_reality_of_governance_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_Reality_of_governance
+
+			modifier = {
+				stability_factor = -0.07
+				political_power_gain = -0.05
+				consumer_goods_use_modifier = 0.05
+				research_speed_factor = -0.05
+			}
+		}
+		BRA_dirty_hands_idea = { #4
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_dirty_hands_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_Reality_of_governance
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.1
+				consumer_goods_use_modifier = 0.1
+				research_speed_factor = -0.1
+			}
+		}
+		BRA_ruled_by_favours_idea = { #5
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_ruled_by_favours_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_Reality_of_governance
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				political_power_gain = -0.13
+				consumer_goods_use_modifier = 0.15
+				research_speed_factor = -0.15
+				admin_efficiency_monthly_rate = -0.05
+			}
+		}
+		BRA_conmans_paradise_idea = { #6
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_conmans_paradise_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_Reality_of_governance
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.15
+				political_power_gain = -0.15
+				consumer_goods_use_modifier = 0.2
+				research_speed_factor = -0.2
+				admin_efficiency_monthly_rate = -0.1
+			}
+		}
+
+		BRA_the_populist_republic = { # The Populist Republic
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_the_populist_republic"
+			}
+
+			picture = BRA_populist_republic
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.05
+				political_power_gain = -0.05
+				consumer_goods_production_factor = 0.1
+				research_speed_factor = -0.1
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_hundred_days = { # The 100 Days
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_hundred_days"
+			}
+
+			picture = BRA_hundred_days
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.1
+				political_power_gain = -0.2
+				consumer_goods_production_factor = 0.1
+				research_speed_factor = -0.1
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_democracy_enforced = { # Democracy Enforced
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_democracy_enforced"
+			}
+
+			picture = BRA_democracy_enforced
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.05
+				political_power_gain = -0.1
+				consumer_goods_production_factor = 0.1
+				research_speed_factor = -0.1
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_false_dawn = { # False Dawn
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_false_dawn"
+			}
+
+			picture = BRA_false_dawn
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.05
+				political_power_gain = -0.1
+				consumer_goods_production_factor = 0.1
+				research_speed_factor = -0.1
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_death_of_the_dream = { # Death of the Dream
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_death_of_the_dream"
+			}
+
+			picture = BRA_Death_of_the_Dream
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				political_power_gain = 0.1
+				consumer_goods_production_factor = 0.2
+				research_speed_factor = -0.15
+				political_parties_policy_monthly_rate = -0.01
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_UDN_Counterrevolution = { # The Counterrevolution
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_UDN_Counterrevolution"
+			}
+
+			picture = BRA_UDN_Counterrevolution
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.10
+				political_power_gain = -0.15
+				consumer_goods_production_factor = 0.3
+				custom_modifier_tooltip = BRA_udn_counterrevolution_inflation_modifier_tt
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_imperial_presidency = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_imperial_presidency"
+			}
+
+			picture = BRA_imperial_presidency
+			modifier = {
+				stability_factor = -0.20
+				war_support_factor = -0.10
+				political_power_gain = 0.50
+				consumer_goods_production_factor = 0.3
+				research_speed_factor = -0.3
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_general_strke_lacerda = { # A Grande Greve de 1969
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_general_strke_lacerda"
+			}
+
+			picture = BRA_a_grande_greve_de_1968
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				production_speed_buildings_factor = -0.5
+				consumer_goods_factor = 0.25
+				production_units_to_GDP_ratio_modifier = -0.5
+				industrial_capacity_factory = -0.75
+				industrial_capacity_dockyard = -0.75
+				custom_modifier_tooltip = BRA_general_strke_lacerda_gdp_growth_tt
+			}
+		}
+
+		BRR_brazilian_revolution = { # Communist Rebellion
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRR_brazilian_revolution"
+			}
+
+			picture = BRR_brazilian_revolution
+
+			modifier = {
+				army_morale = 0.2
+				stability_factor = -0.15
+				war_support_factor = 0.15
+				weekly_manpower = 10000
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+		}
+
+		BRA_Vai_Passar = { # Civil war 
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_Vai_Passar"
+			}
+
+			picture = BRA_Vai_Passar
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_speed_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = 0.1
+			}
+		}
+
+		BRA_psp_revolution_adhemar = { # The PSP Revolution
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_false_dawn"
+			}
+
+			picture = BRA_psp_revolution
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.05
+				political_power_gain = 0.10
+				consumer_goods_production_factor = 0.2
+				research_speed_factor = -0.1
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_permanent_polarization = { # Permanent Polarization
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_permanent_polarization"
+				set_variable = { BRA_pl_ptb_modifier_lacerda = 0 }
+				set_variable = { BRA_pl_psd_modifier_lacerda = 0 }
+			}
+			on_remove = {
+				set_variable = { BRA_pl_ptb_modifier_lacerda = 1 }
+				set_variable = { BRA_pl_psd_modifier_lacerda = 1 }
+			}
+
+			picture = BRA_permanent_polarization
+			modifier = {
+				political_power_gain = 0.2
+				gdp_growth_modifier = -1.5
+				monthly_credit_rating_progress = -1
+				custom_modifier_tooltip = BRA_permanent_polarization_tt
+			}
+			cancel = { check_variable = { BRA_lacerda_udn_manage_pol < 0 } }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_tripartite_system = { # Tripartite System
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_tripartite_system"
+				set_variable = { BRA_lacerda_udn_manage_unity_max = 80 }
+				set_variable = { BRA_pl_psd_support_pct_min = 0.75 }
+			}
+			on_remove = {
+				set_variable = { BRA_lacerda_udn_manage_unity_max = 100 }
+				set_variable = { BRA_pl_psd_support_pct_min = 0 }
+			}
+
+			picture = generic_true_meritocracy
+			modifier = {
+				stability_factor = 0.05
+				gdp_growth_modifier = 0.5
+				custom_modifier_tooltip = BRA_tripartite_system_tt
+				political_power_factor = -0.05
+			}
+			cancel = { check_variable = { BRA_lacerda_udn_manage_pol > 0 } }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+	}
+
+	country = { # Military
+		BRA_overbearing_military = { # Overbearing Military
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_overbearing_military"
+			}
+
+			picture = BRA_overbearing_military
+			modifier = {
+				stability_factor = -0.05
+				experience_gain_army = 0.01
+				army_professionalism_monthly_rate = -0.25
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_constitutionalist_dominance = { # Constitutionalist Dominance
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_constitutionalist_dominance"
+			}
+
+			picture = BRA_Constitutionalist_Dominance
+			modifier = {
+				stability_factor = 0.1
+				experience_gain_army = 0.05
+				despotism_drift = -0.05
+				army_professionalism_monthly_rate = 0.25
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_militarist_rebirth = { # Militarist Rebirth
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_militarist_rebirth"
+			}
+
+			picture = BRA_overbearing_military
+			modifier = {
+				stability_factor = 0.05
+				experience_gain_army = 0.05
+				army_professionalism_monthly_rate = -0.5
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_day_of_the_jackboot = { # Day of the Jackboot
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_day_of_the_jackboot"
+			}
+
+			picture = BRA_Day_of_the_Jackboot
+			modifier = {
+				stability_factor = 0.05
+				experience_gain_army = 0.02
+				despotism_drift = 0.01
+				army_professionalism_monthly_rate = -0.25
+				security_policy_monthly_rate = 0.01
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_divisions_of_cardinals = { # Divisions of Cardinals
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_divisions_of_cardinals"
+			}
+
+			picture = BRA_divisions_of_cardinals
+			modifier = {
+				stability_factor = -0.05
+				experience_gain_army = 0.01
+				army_professionalism_monthly_rate = -0.25
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_sword_of_damocles = { # Sword of Damocles
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_sword_of_damocles"
+			}
+
+			picture = BRA_overbearing_military
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.05
+				experience_gain_army = 0.01
+				despotism_drift = 0.01
+				army_professionalism_monthly_rate = -0.5
+				security_policy_monthly_rate = -0.01
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_institutionalised_military = { # Institutionalised Military
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_institutionalised_military"
+			}
+
+			picture = BRA_overbearing_military
+			modifier = {
+				experience_gain_army = 0.05
+				despotism_drift = 0.02
+				army_professionalism_monthly_rate = 0.25
+				security_policy_monthly_rate = 0.03
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_institutionalised_military_2 = { # Institutionalised Military (w/o the ideology drift)
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_institutionalised_military_2"
+			}
+
+			picture = BRA_overbearing_military
+			modifier = {
+				experience_gain_army = 0.05
+				army_professionalism_monthly_rate = 0.25
+				security_policy_monthly_rate = 0.03
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_bastion_of_the_crow = { # Bastion of the Crow
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_bastion_of_the_crow"
+			}
+
+			picture = BRA_bastion_of_the_crow
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.15
+				experience_gain_army = 0.05
+				army_professionalism_monthly_rate = -0.25
+				security_policy_monthly_rate = 0.01
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_exercito_social_progressista_idea = { # Exercito Social Progressista
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_exercito_social_progressista_idea"
+			}
+
+			picture = BRA_exercito_social_progressista
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.15
+				experience_gain_army = 0.05
+				army_professionalism_monthly_rate = -0.25
+				security_policy_monthly_rate = 0.01
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_military_stalemate = { # Military Stalemate
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_military_stalemate"
+			}
+
+			picture = BRA_overbearing_military
+			modifier = {
+				stability_factor = -0.05
+				experience_gain_army = 0.01
+				army_professionalism_monthly_rate = -0.25
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+	}
+
+	country = { # Economy
+		BRA_rapid_industrialisation = { # Rapid Industrialisation
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_rapid_industrialisation"
+			}
+
+			picture = generic_rapid_industrialization
+			modifier = {
+				consumer_goods_use_modifier = 0.10
+				monthly_population = 0.05
+				production_speed_buildings_factor = 0.05
+				free_production_units_modifier = 5
+				inflation_rate_modifier = 0.250
+				production_speed_thermoelectric_plant_factor = 0.15
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_the_tropical_titan = { # The Tropical Titan
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_the_tropical_titan"
+			}
+
+			picture = BRA_the_tropical_titan
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_use_modifier = 0.10
+				monthly_population = 0.05
+				production_speed_buildings_factor = 0.05
+				free_production_units_modifier = 10
+				inflation_rate_modifier = 0.250
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_the_brazilian_miracle = { # The Brazilian Miracle
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_the_brazilian_miracle"
+			}
+
+			picture = BRA_the_brazilian_miracle
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_use_modifier = 0.10
+				monthly_population = 0.05
+				production_speed_buildings_factor = 0.05
+				free_production_units_modifier = 5
+				inflation_rate_modifier = 0.250
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_brazils_black_swan_the_oil_crisis = { # Brazil's Black Swan: The Oil Crisis
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_brazils_black_swan_the_oil_crisis"
+			}
+
+			picture = BRA_brazils_black_swan_the_oil_crisis
+			modifier = {
+				fuel_gain_factor = -0.4
+				production_oil_factor = -0.5
+				political_power_factor = -0.25
+				stability_factor = -0.15
+				production_speed_buildings_factor = -0.35
+				consumer_goods_use_modifier = 0.25
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				trade_opinion_factor = -0.5
+				gdp_growth_modifier = -3
+				personnel_cost_modifier = 0.25
+				inflation_rate_modifier = 2
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_brazilian_phoenix = { # Brazilian Phoenix
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_brazilian_phoenix"
+			}
+
+			picture = BRA_brazilian_phoenix
+			modifier = {
+				#
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_the_lost_decade = { # The Lost Decade
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_the_lost_decade"
+			}
+
+			picture = BRA_the_lost_decade
+			modifier = {
+				#
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_love_it_or_leave_it = { # Love It or Leave It
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_love_it_or_leave_it"
+			}
+
+			picture = BRA_love_it_or_leave_it
+			modifier = {
+				#
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_lacerdas_dream = { # Lacerda's Dream
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_lacerdas_dream"
+			}
+
+			picture = generic_economic_reconstruction_2
+			modifier = {
+				gdp_growth_modifier = 4
+				free_production_units_modifier = 2
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = { check_variable = { BRA_lacerda_udn_manage_econ > 0 } }
+			removal_cost = -1
+		}
+
+		BRA_black_cat_white_cat = { # Black Cat, White Cat
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_black_cat_white_cat"
+			}
+
+			picture = generic_shadow_economy
+			modifier = {
+				income_tax_rate_modifier_factor = 0.15
+				offices_coverage_modifier = 0.10
+				inflation_rate_modifier = 1.25
+				stability_factor = -0.05
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = { check_variable = { BRA_lacerda_udn_manage_econ < 0 } }
+			removal_cost = -1
+		}
+	}
+
+	country = { # Land Reform
+		BRA_latifundos_crisis = { # Latifundos Crisis
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_latifundos_crisis"
+			}
+
+			picture = BRA_latifundos_crisis
+			modifier = {
+				political_power_gain = -0.05
+				consumer_goods_use_modifier = 0.1
+				taxable_population_modifier = -0.15
+				gdp_growth_modifier = -1.5
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_countryside_strikes = { # Countryside Strikes
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_countryside_strikes"
+			}
+
+			picture = BRA_countryside_strikes
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.07
+				consumer_goods_use_modifier = 0.15
+				taxable_population_modifier = -0.15
+				gdp_growth_modifier = -3
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_the_burning_farmland = { # The Burning Farmland
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_the_burning_farmland"
+			}
+
+			picture = BRA_the_burning_farmland
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.1
+				consumer_goods_use_modifier = 0.15
+				taxable_population_modifier = -0.2
+				gdp_growth_modifier = -5
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_minor_agrarian_reform = { # Minor Agrarian Reform
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_minor_agrarian_reform"
+			}
+
+			picture = BRA_Agrarian_Reform_Weak
+			modifier = {
+				political_power_gain = -0.05
+				consumer_goods_use_modifier = 0.1
+				taxable_population_modifier = -0.1
+				gdp_growth_modifier = -1
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_radical_agrarian_reform = { # Radical Agrarian Reform
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_radical_agrarian_reform"
+			}
+
+			picture = BRA_Agrarian_Reform
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.1
+				consumer_goods_use_modifier = 0.05
+				taxable_population_modifier = -0.07
+				gdp_growth_modifier = -1.5
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_completed_agrarian_reform = { # Completed Agrarian Reform
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_completed_agrarian_reform"
+			}
+
+			picture = BRA_Agrarian_Reform_Strong
+			modifier = {
+				stability_factor = 0.1
+				taxable_population_modifier = 0.05
+				gdp_growth_modifier = 2
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_the_silent_country = { # The Silent Country
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_the_silent_country"
+			}
+
+			picture = BRA_the_silent_country
+			modifier = {
+				taxable_population_modifier = -0.15
+				consumer_goods_use_modifier = 0.1
+				gdp_growth_modifier = -1.5
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+
+		BRA_agro_industrial_complex = { # Agro-Industrial Complex
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_agro_industrial_complex"
+			}
+
+			picture = BRA_agro_industrial_complex
+			modifier = {
+				#
+			}
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+	}
+
+	country = { # Other
+		## Rampant Corruption
+		BRA_idea_rampant_corruption = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_rampant_corruption" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.10
+				consumer_goods_use_modifier = 0.10
+				research_speed_factor = -0.10
+			}
+			picture = generic_rampant_corruption
+		}
+		BRA_idea_the_war_on_corruption = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_the_war_on_corruption" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.15
+				consumer_goods_use_modifier = -0.05
+				research_speed_factor = -0.05
+				stability_factor = 0.05
+			}
+			picture = GNG_corruption_asias_finest
+		}
+		BRA_idea_lacerda_corruption_reforms = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_lacerda_corruption_reforms" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.05
+				consumer_goods_use_modifier = -0.05
+				research_speed_factor = -0.05
+				stability_factor = 0.05
+			}
+			picture = GNG_corruption_asias_finest
+		}
+		## LobsterConflict
+		BRA_idea_Lobster_conflict = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_Lobster_conflict" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			cancel = { date > 1964.01.01 }
+			modifier = {
+				stability_weekly = -0.0025
+				political_power_gain = -0.10
+			}
+			picture = BRA_lobster_war
+		}
+		BRA_idea_Lobster_conflict_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_Lobster_conflict_2" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			cancel = { date > 1964.01.01 }
+			modifier = {
+				stability_weekly = -0.0025
+			}
+			picture = BRA_lobster_war
+		}
+		BRA_idea_Lobster_conflict_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_Lobster_conflict_3" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			cancel = { date > 1964.01.01 }
+			modifier = {
+				political_power_gain = -0.10
+			}
+			picture = BRA_lobster_war
+		}
+		BRA_idea_Lobster_conflict_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_Lobster_conflict_4" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			cancel = { date > 1964.01.01 }
+			modifier = {
+			}
+			picture = BRA_lobster_war
+		}
+		BRA_idea_Lobster_conflict_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_Lobster_conflict_5" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			cancel = { date > 1964.01.01 }
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.15
+			}
+			picture = BRA_lobster_war
+		}
+		BRA_idea_Bountiful_Harvest = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_Bountiful_Harvest" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.025
+				gdp_growth_modifier = 0.15
+			}
+
+			picture = BRA_lobster_war
+		}
+		BRA_idea_RK_settlement = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_RK_settlement" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+			}
+
+			picture = BRA_lobster_settlement
+		}
+		BRA_idea_RK_settlement_good_cg = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_RK_settlement_good_cg" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_production_factor = 0.05
+				stability_factor = 0.05
+			}
+
+			picture = BRA_lobster_settlement
+		}
+		BRA_idea_RK_settlement_bad_cg = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_RK_settlement_bad_cg" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_production_factor = -0.05
+				stability_factor = 0.05
+			}
+
+			picture = BRA_lobster_settlement
+		}
+		BRA_idea_RK_settlement_small_good_cg = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_RK_settlement_small_good_cg" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_production_factor = 0.01
+				stability_factor = 0.05
+			}
+
+			picture = BRA_lobster_settlement
+		}
+		BRA_idea_RK_settlement_small_bad_cg = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_RK_settlement_small_bad_cg" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_production_factor = -0.01
+				stability_factor = 0.05
+			}
+
+			picture = BRA_lobster_settlement
+		}
+		BRA_idea_RK_settlement_manpower = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_RK_settlement_manpower" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 25
+				stability_factor = 0.05
+			}
+
+			picture = BRA_lobster_settlement
+		}
+		BRA_idea_RK_settlement_good_cg_mp = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_RK_settlement_good_cg_mp" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_production_factor = 0.05
+				stability_factor = 0.05
+				weekly_manpower = 25
+			}
+
+			picture = BRA_lobster_settlement
+		}
+		BRA_idea_RK_settlement_bad_cg_mp = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_RK_settlement_bad_cg_mp" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_production_factor = -0.05
+				stability_factor = 0.05
+				weekly_manpower = 25
+			}
+
+			picture = BRA_lobster_settlement
+		}
+		BRA_idea_RK_settlement_small_bad_cg_mp = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_RK_settlement_small_bad_cg_mp" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_production_factor = -0.01
+				stability_factor = 0.05
+				weekly_manpower = 25
+			}
+
+			picture = BRA_lobster_settlement
+		}
+		BRA_adhemar_germans_are_back = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_adhemar_germans_are_back"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_the_germans_are_back
+
+			modifier = {
+				stability_factor = -0.03
+				misc_income_modifier = 0.1
+				gdp_growth_modifier = 1
+			}
+		}
+		BRA_the_eagle_rises = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_the_eagle_rises"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_the_eagle_rises
+
+			modifier = {
+				stability_factor = -0.05
+				misc_income_modifier = 0.15
+				gdp_growth_modifier = 2.5
+			}
+		}
+		BRA_National_Pharmaceutics = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_National_Pharmaceutics"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_National_Pharmaceutics
+
+			modifier = {
+				healthcare_monthly_rate = 0.1
+				misc_income_modifier = 0.02
+			}
+		}
+		BRA_parana_crisis = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_parana_crisis"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_parana_crisis
+
+			modifier = {
+				stability_factor = -0.15
+				conscription_factor = -0.15
+				political_power_gain = -0.10
+			}
+		}
+		BRA_calmed_south = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_calmed_south"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_calmed_south
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		BRA_silent_south = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_silent_south"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_silent_south
+
+			modifier = {
+				political_power_gain = 0.05
+				conscription_factor = -0.05
+			}
+		}
+		BRA_tense_south = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_tense_south"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_tense_south
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				conservatism_drift = 0.01
+			}
+		}
+		BRA_pacified_south = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_pacified_south"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_pacified_south
+
+			modifier = {
+				stability_factor = 0.05
+				conscription_factor = -0.05
+			}
+		}
+		BRA_lacerda_paulista_riots = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_paulista_riots"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_paulista_riots
+
+			modifier = {
+				#
+			}
+		}
+		BRA_Liberdade_in_Ashes = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_Liberdade_in_Ashes"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_paulista_riots
+
+			modifier = {
+				#
+			}
+		}
+
+		BRA_idea_build_more_roads = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_build_more_roads" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.25
+			}
+
+			picture = generic_lackluster_infrastructure
+		}
+
+		BRA_idea_south_african_immigration = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_south_african_immigration" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+			}
+
+			picture = generic_refugee_crisis
+		}
+
+		BRA_idea_joint_military_operations = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_joint_military_operations" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				max_planning_factor = 0.1
+				planning_speed = 0.1
+			}
+
+			picture = BRA_joint_operations
+		}
+
+		BRA_idea_eletrobras = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_eletrobras" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				gdp_growth_modifier = 0.5
+				misc_costs_modifier = 0.2
+				country_resource_power = 10
+			}
+
+			picture = BRA_eletrobras
+		}
+
+		BRA_idea_japanese_inmigration = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_japanese_inmigration" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				monthly_population = 0.02
+			}
+			picture = generic_japanese_immigration
+		}
+
+		##Nationwide Chaos at Coup Spawn
+
+		BRA_idea_nationwide_chaos_max = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_nationwide_chaos_max" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				political_power_factor = -0.05
+				consumer_goods_production_factor = -0.10
+			}
+
+			picture = BRA_nationwide_chaos_max
+		}
+		BRA_idea_nationwide_chaos_high = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_nationwide_chaos_high" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.1
+				political_power_factor = -0.05
+				consumer_goods_production_factor = -0.10
+			}
+
+			picture = BRA_nationwide_chaos_high
+		}
+		BRA_idea_nationwide_chaos_medhigh = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_nationwide_chaos_medhigh" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.05
+				political_power_factor = -0.05
+				consumer_goods_production_factor = -0.10
+			}
+
+			picture = BRA_nationwide_chaos_medhigh
+		}
+		BRA_idea_nationwide_chaos_med = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_nationwide_chaos_med" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.05
+				political_power_factor = -0.05
+				consumer_goods_production_factor = -0.10
+			}
+
+			picture = BRA_nationwide_chaos_med
+		}
+		BRA_idea_nationwide_chaos_lowmed = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_nationwide_chaos_lowmed" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.05
+				consumer_goods_production_factor = -0.05
+			}
+
+			picture = BRA_nationwide_chaos_lowmed
+		}
+		BRA_idea_nationwide_chaos_low = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_nationwide_chaos_low" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.05
+			}
+
+			picture = BRA_nationwide_chaos_low
+		}
+
+		BRA_the_lott_act = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_the_lott_act" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_chained_military
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+			}
+		}
+
+		BRA_infrastructure_cut = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_infrastructure_cut" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = -0.2
+				repair_speed_infrastructure_factor = -0.2
+			}
+		}
+
+		BRA_Agrarian_Reform = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_Agrarian_Reform" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRA_Agrarian_Reform
+			removal_cost = -1
+			modifier = {
+				consumer_goods_production_factor = 0.05
+			}
+		}
+
+		BRA_Agrarian_Reform_Weaker = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_Agrarian_Reform_Weaker" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRA_Agrarian_Reform_Weak
+			removal_cost = -1
+			modifier = {
+				consumer_goods_production_factor = 0.03
+			}
+		}
+
+		BRA_Agrarian_Reform_Stronger = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_Agrarian_Reform_Stronger" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRA_Agrarian_Reform_Strong
+			removal_cost = -1
+			modifier = {
+				consumer_goods_production_factor = 0.08
+			}
+		}
+
+		BRA_democracy_survives = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_democracy_survives" }
+			picture = BRA_democracy_survives
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				political_power_gain = 0.1
+			}
+		}
+
+		BRA_saw_blockade = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_saw_blockade" }
+			picture = BRA_naval_blockade
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.10
+			}
+		}
+
+		BRA_brazilian_tech_assistance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_brazilian_tech_assistance" }
+			picture = BRA_Brazilian_tech_assistance_idea
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+		}
+
+		BRA_brazilian_search_and_destroy_operations = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_brazilian_search_and_destroy_operations" }
+			picture = BRA_Brazilian_search_and_destroy_operations_idea
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_growth = -0.25
+			}
+		}
+
+		BRA_anti_piracy_operations = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_anti_piracy_operations" }
+			picture = generic_solid_naval_force
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				gdp_growth_modifier = 0.15
+			}
+		}
+
+		BRA_operation_stranglehold_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_operation_stranglehold_idea" }
+			picture = generic_naval_guns
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		BRA_idea_formalised_high_command = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_formalised_high_command" }
+			picture = generic_officer_expansion
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				planning_speed = 0.1
+				army_org_factor = 0.05
+			}
+		}
+
+		BRA_idea_formalised_high_command_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_formalised_high_command_2" }
+			picture = generic_officer_expansion
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				planning_speed = 0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+
+		BRA_idea_american_advisor = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_american_advisor" }
+			picture = generic_attache
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		BRA_idea_american_advisor_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_american_advisor_2" }
+			picture = generic_attache
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		BRA_idea_martial_law = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_martial_law" }
+			picture = x
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.01
+			}
+		}
+
+		BRA_the_healthcare_act = {
+			#picture = GFX_BRA_democracy_survives
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {#TODO
+			}
+		}
+
+		BRA_idea_the_builders_dreams_dashed = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_the_builders_dreams_dashed" }
+			picture = x
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = -0.3
+				political_power_gain = -0.1
+			}
+		}
+		BRA_idea_anti_trust_laws = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_anti_trust_laws" }
+			picture = generic_wealth_seized
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_use_modifier = -0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				gdp_growth_modifier = 1
+			}
+		}
+	}
+
+	hidden_ideas = { # Hidden
+		BRA_army_nepotism_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_army_nepotism_1" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army_nepotism
+			on_add = {
+				remove_ideas = {
+					BRA_army_nepotism_2
+					BRA_army_nepotism_3
+					BRA_army_nepotism_4
+					BRA_army_nepotism_5
+					BRA_army_nepotism_6
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+			}
+		}
+
+		BRA_army_nepotism_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_army_nepotism_2" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army_nepotism
+			on_add = {
+				remove_ideas = {
+					BRA_army_nepotism_1
+					BRA_army_nepotism_3
+					BRA_army_nepotism_4
+					BRA_army_nepotism_5
+					BRA_army_nepotism_6
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = -0.03
+				army_org_factor = -0.03
+				army_org_regain = -0.03
+			}
+		}
+
+		BRA_army_nepotism_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_army_nepotism_3" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army_nepotism
+			on_add = {
+				remove_ideas = {
+					BRA_army_nepotism_1
+					BRA_army_nepotism_2
+					BRA_army_nepotism_4
+					BRA_army_nepotism_5
+					BRA_army_nepotism_6
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = -0.07
+				army_org_factor = -0.07
+				army_org_regain = -0.07
+			}
+		}
+
+		BRA_army_nepotism_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_army_nepotism_4" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army_nepotism
+			on_add = {
+				remove_ideas = {
+					BRA_army_nepotism_1
+					BRA_army_nepotism_2
+					BRA_army_nepotism_3
+					BRA_army_nepotism_5
+					BRA_army_nepotism_6
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = -0.11
+				army_org_factor = -0.11
+				army_org_regain = -0.11
+			}
+		}
+
+		BRA_army_nepotism_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_army_nepotism_5" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army_nepotism
+			on_add = {
+				remove_ideas = {
+					BRA_army_nepotism_1
+					BRA_army_nepotism_2
+					BRA_army_nepotism_3
+					BRA_army_nepotism_4
+					BRA_army_nepotism_6
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = -0.15
+				army_org_factor = -0.15
+				army_org_regain = -0.15
+			}
+		}
+
+		BRA_army_nepotism_6 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_army_nepotism_6" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army_nepotism
+			on_add = {
+				remove_ideas = {
+					BRA_army_nepotism_1
+					BRA_army_nepotism_2
+					BRA_army_nepotism_3
+					BRA_army_nepotism_4
+					BRA_army_nepotism_5
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = -0.20
+				army_org_factor = -0.20
+				army_org_regain = -0.20
+			}
+		}
+
+		BRA_increase_90_percent_pop = { #buffing this, should be fun to see the results
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_increase_90_percent_pop" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 1.15
+			}
+		}
+		BRA_officersalaries_econ = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add hidden econ. idea BRA_officersalaries_econ" }
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				military_costs_misc = 0.01
+			}
+		}
+		BRA_increase_small_civspending_econ = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add hidden econ. idea BRA_increase_small_civspending_econ" }
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				civilian_annual_cost = 0.03
+			}
+		}
+		BRA_decrease_taxes_econ = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add hidden econ. idea BRA_decrease_taxes_econ" }
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				taxable_population_modifier = -0.02
+			}
+		}
+
+
+		###############################################################
+		########            Kubitschek Goals Plan              ########
+		###############################################################
+
+		# Mario Pinotti
+		BRA_gp_cd_member_0 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_0" }
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				BRA_gp_healthcare_progress_bonus = 0.15
+			}
+		}
+
+		# Erik de Carvalho
+		BRA_gp_cd_member_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_1" }
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+			}
+		}
+
+		# Oscar Niemeyer
+		BRA_gp_cd_member_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_2" }
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				BRA_megaproject_construction_speed = 0.05
+				BRA_gp_megaproject_bonus = 0.15
+			}
+		}
+
+		# Celso Furtado
+		BRA_gp_cd_member_3 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_3"
+				add_to_variable = { BRA_develop_region_industry_trend^1 = 0.10 }
+				add_to_variable = { BRA_develop_region_mech_rate_trend^1 = 0.10 }
+			}
+			on_remove = {
+				add_to_variable = { BRA_develop_region_industry_trend^1 = -0.10 }
+				add_to_variable = { BRA_develop_region_mech_rate_trend^1 = -0.10 }
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				BRA_megaproject_construction_speed = 0.10
+			}
+		}
+
+		# Tancredo Neves
+		BRA_gp_cd_member_4 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_4"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				BRA_bill_support = 0.10
+			}
+		}
+
+		# Osvino Ferreira Alves
+		BRA_gp_cd_member_5 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_5"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				BRA_military_weekly_const_power = 0.25
+				BRA_gp_energy_progress_bonus = 0.10
+			}
+		}
+
+		# Waldemar Levy Cardoso
+		BRA_gp_cd_member_6 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_6"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				# TODO military loyalty over time
+			}
+		}
+
+		# Friedrich Schultz-Wenk
+		BRA_gp_cd_member_7 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_7"
+				add_to_variable = { BRA_develop_region_industry_trend^3 = 0.20 }
+				add_to_variable = { BRA_develop_region_industry_trend^4 = 0.20 }
+			}
+			on_remove = {
+				add_to_variable = { BRA_develop_region_industry_trend^3 = -0.20 }
+				add_to_variable = { BRA_develop_region_industry_trend^4 = -0.20 }
+			}
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {}
+		}
+
+		# Mario Wallace Simonsen
+		BRA_gp_cd_member_8 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_8"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				BRA_gp_failure_penalty = -0.30
+			}
+		}
+
+		# Paulo Freire
+		BRA_gp_cd_member_9 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_9"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				BRA_gp_education_progress_bonus = 0.15
+			}
+		}
+
+		# Roberto Campos
+		BRA_gp_cd_member_10 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_10"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				BRA_gp_development_progress_bonus = 0.15
+			}
+		}
+
+		# Dante Pellacani
+		BRA_gp_cd_member_11 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_11"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				BRA_gp_people_optimism_weekly = 0.5
+			}
+		}
+
+		# Plínio Arruda
+		BRA_gp_cd_member_12 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add hidden CD member idea BRA_gp_cd_member_12"
+				add_to_variable = { BRA_develop_region_mech_rate_trend^0 = 0.10 }
+				add_to_variable = { BRA_develop_region_mech_rate_trend^1 = 0.10 }
+				add_to_variable = { BRA_develop_region_mech_rate_trend^2 = 0.10 }
+				add_to_variable = { BRA_develop_region_mech_rate_trend^3 = 0.10 }
+				add_to_variable = { BRA_develop_region_mech_rate_trend^4 = 0.10 }
+			}
+			on_remove = {
+				add_to_variable = { BRA_develop_region_mech_rate_trend^0 = -0.10 }
+				add_to_variable = { BRA_develop_region_mech_rate_trend^1 = -0.10 }
+				add_to_variable = { BRA_develop_region_mech_rate_trend^2 = -0.10 }
+				add_to_variable = { BRA_develop_region_mech_rate_trend^3 = -0.10 }
+				add_to_variable = { BRA_develop_region_mech_rate_trend^4 = -0.10 }
+			}
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {}
+		}
+
+		BRA_National_School_Expanding_Program_hidden_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_National_School_Expanding_Program_hidden_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_schools_factor = 0.2
+			}
+		}
+
+		BRA_guaranteed_maternity_leave_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_guaranteed_maternity_leave_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+			}
+		}
+
+		BRA_german_science_brazilian_resources_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_german_science_brazilian_resources_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				trade_opinion_factor = 0.3
+			}
+		}
+		BRA_A_Roof_Over_Their_Heads_Idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_A_Roof_Over_Their_Heads_Idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_schools_factor = 0.1
+				production_speed_hospitals_factor = 0.1
+			}
+		}
+		BRA_infinite_jobs_infinite_votes_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_infinite_jobs_infinite_votes_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BRA_new_times_new_allegences_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_new_times_new_allegences_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				misc_income_modifier = 0.3
+			}
+		}
+		BRA_a_gamblers_paradise_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_a_gamblers_paradise_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				misc_income_modifier = 0.4
+			}
+		}
+		BRA_modernized_casinos_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_modernized_casinos_idea"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = BRA_rampant_corruption_idea
+
+			modifier = {
+				misc_income_modifier = 0.8
+			}
+		}
+		## Highway (stand-in for the dynamic modifier)
+		BRA_idea_trans_amazon_highway = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_trans_amazon_highway" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			picture = BRA_highway
+		}
+
+		BRA_idea_trans_amazon_complete = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_idea_trans_amazon_complete" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_use_modifier = -0.20
+			}
+
+			picture = BRA_highway
+		}
+		BRA_Japanese_Ban_Repeal = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_Japanese_Ban_Repeal"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = x
+
+			modifier = {
+				monthly_population = 0.25
+				consumer_goods_production_factor = 0.05
+			}
+		}
+		BRA_Japanese_Ban_Repeal_2 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_Japanese_Ban_Repeal_2"
+			}
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = x
+
+			modifier = {
+				monthly_population = 0.35
+				consumer_goods_production_factor = 0.075
+			}
+		}
+		BRA_fight_swift = { # Oil Crisis War Plans - Fight Swift
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_military_stalemate"
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				supply_consumption_factor = 0.25
+				army_speed_factor = 0.10
+			}
+		}
+		BRA_fight_thrifty = { # Oil Crisis War Plans - Fight Thrifty
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea BRA_military_stalemate"
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.1
+				planning_speed = 0.05
+				max_planning_factor = 0.05
+				army_speed_factor = -0.1
+			}
+		}
+		BRA_guanabara_dreaming_state_modifier_natspirit_1 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_guanabara_dreaming_state_modifier_natspirit_1"
+			}
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				poverty_monthly_rate = 0.01
+			}
+		}
+		BRA_guanabara_dreaming_state_modifier_natspirit_2 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_guanabara_dreaming_state_modifier_natspirit_2"
+			}
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				poverty_monthly_rate = 0.02
+				stability_factor = 0.02
+				free_production_units_modifier = 1
+			}
+		}
+		BRA_guanabara_dreaming_state_modifier_natspirit_3 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_guanabara_dreaming_state_modifier_natspirit_3"
+			}
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				poverty_monthly_rate = 0.03
+				stability_factor = 0.04
+				free_production_units_modifier = 2
+				gdp_growth_modifier = 0.50
+				inflation_rate_modifier = -0.50
+			}
+		}
+		BRA_guanabara_dreaming_state_modifier_natspirit_4 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea BRA_guanabara_dreaming_state_modifier_natspirit_4"
+			}
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				poverty_monthly_rate = 0.03
+				stability_factor = 0.05
+				free_production_units_modifier = 3
+				gdp_growth_modifier = 1.00
+				inflation_rate_modifier = -1.00
+				political_power_factor = 0.10
+				admin_efficiency_monthly_rate = 1.50
+			}
+		}
+	}
+}

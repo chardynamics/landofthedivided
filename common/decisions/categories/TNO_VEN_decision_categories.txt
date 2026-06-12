@@ -1,0 +1,22 @@
+VNS_peoples_momentum_category = {
+	#icon = 
+	#picture = 
+
+	allowed = {
+		tag = VNS
+	}
+	visible = {
+		has_global_flag = VEN_venezuela_revolution_ongoing
+	}
+}
+
+VEN_debug = {
+	icon = GFX_decision_category_debug
+	allowed = {
+		tag = VEN
+	}
+	visible = {
+		is_debug = yes
+		is_ai = no
+	}
+}

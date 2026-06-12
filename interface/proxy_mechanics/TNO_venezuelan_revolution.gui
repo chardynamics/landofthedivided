@@ -1,0 +1,75 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_Venezuelan_Revolution_GUI"
+		position = { x = 29 y = 131 }
+		size = { width = 496 height = 506 }
+
+		containerWindowType = {
+			name = "inner"
+			position = { x = 527 y = 48 }
+		}
+
+		instantTextboxType = {
+			name = "desc"
+			position = { x = 15 y = 8 }
+			font = "aldrich_18_outline"
+			text = "VEN_VR_desc"
+			maxWidth = 470
+			format = left
+		}
+		iconType = {
+			name = "info_frame"
+			spriteType = "GFX_channel_crisis_info_frame"
+			position = { x = 411 y = -28 }
+			pdx_tooltip = "VR_info_tt"
+			pdx_tooltip_delayed = "VR_info_tt_delayed"
+		}
+		iconType = {
+			name = "seal"
+			position = { x = 130 y = 75 }
+			spriteType = "GFX_fopo_iberia_seal"
+		}
+		iconType = {
+			name = "background"
+			spriteType = "GFX_venezuelan_revolution_background"
+			position = { x = 10 y = 229 }
+		}
+		iconType = {
+			name = "rebels"
+			spriteType = "GFX_rebels"
+			position = { x = 15 y = 229 }
+			#pdx_tooltip = "VR_info_tt"
+			#pdx_tooltip_delayed = "VR_info_tt_delayed"
+		}
+		iconType = {
+			name = "government_troops"
+			spriteType = "GFX_government_troops"
+			position = { x = 15 y = 229 }
+		}
+		iconType = {
+			name = "rock"
+			spriteType = "GFX_rock"
+			position = { x = 13 y = 288	}
+		}
+		iconType = {
+			name = "rebel2"
+			spriteType = "GFX_rebel2"
+			position = { x = 13 y = 321 }
+		}
+		iconType = {
+			name = "rebel1"
+			spriteType = "GFX_rebel1"
+			position = { x = 29 y = 390 }
+		}	
+		iconType = {
+			name = "foliage"
+			spriteType = "GFX_foliage"
+			position = { x = 10 y = 229 }
+		}
+		iconType = {
+			name = "rebel6"
+			spriteType = "GFX_rebel6"
+			position = { x = 377 y = 390 }
+		}
+	}
+}

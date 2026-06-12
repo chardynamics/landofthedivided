@@ -1,0 +1,231 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_south_atlantic_war_GUI"
+		size = { width = 525 height = 450 }
+		position = { x = 29 y = 131 }
+		size = { width = 496 height = 506 }
+
+		containerWindowType = {
+			name = "group_selector"
+			position = { x = 527 y = 94 }
+
+			iconType = {
+				name = "hide_decisions"
+				spriteType = "GFX_BOL_hide_first_decision"
+				position = { x = 0 y = -50 }
+			}
+			containerWindowType = {
+				name = "select_generic"
+				position = { x = 0 y = -47 }
+
+				iconType = {
+					name = "general_icon"
+					spriteType = "GFX_SATW_generic"
+					position = { x = 6 y = 6 }
+				}
+				iconType = {
+					name = "button_generic"
+					spriteType = "GFX_BOL_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "SATW_generic_decisions_tt"
+				}
+			}
+			containerWindowType = {
+				name = "select_escalation"
+				position = { x = 42 y = -47 }
+
+				iconType = {
+					name = "escalation_icon"
+					spriteType = "GFX_SATW_escalation"
+					position = { x = 6 y = 6 }
+				}
+				iconType = {
+					name = "button_escalation"
+					spriteType = "GFX_BOL_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "SATW_escalation_decisions_tt"
+				}
+			}
+			containerWindowType = {
+				name = "select_exhaustion"
+				position = { x = 84 y = -47 }
+
+				iconType = {
+					name = "exhaustion_icon"
+					spriteType = "GFX_SATW_exhaustion"
+					position = { x = 6 y = 6 }
+				}
+				iconType = {
+					name = "button_exhaustion"
+					spriteType = "GFX_BOL_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "SATW_exhaustion_decisions_tt"
+				}
+			}
+			containerWindowType = {
+				name = "select_foreign_power"
+				position = { x = 128 y = -47 }
+
+				iconType = {
+					name = "for_int_icon"
+					spriteType = "GFX_SATW_foreign_intervention"
+					position = { x = 6 y = 6 }
+				}
+				iconType = {
+					name = "button_foreign_power"
+					spriteType = "GFX_BOL_group_button"
+					position = { x = 0 y = 0 }
+					pdx_tooltip = "SATW_for_int_decisions_tt"
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "upper"
+			size = { width = 450 height = 500 }
+			position = { x = 100 y = 50 }
+
+
+			iconType = {
+				name = "info_box"
+				spriteType = "GFX_BRA_info_button"
+				position = { x = 354 y = -83 }
+				pdx_tooltip = TNO_fopo_satw_info
+			}
+
+			containerWindowType = {
+				name = "ihateyou"
+				size = { width = 450 height = 500 }
+				position = { x = -51 y = 100 }
+
+				iconType = {
+					name = "monitors"
+					position = { x = 20 y = 10 }
+					spriteType = "GFX_SATW_monitors"
+				}
+				iconType = {
+					name = "heartbeat_argentna"
+					position = { x = 55 y = 30 }
+					spriteType = "GFX_SATW_heartbeat"
+				}
+				iconType = {
+					name = "heartbeat_brazil"
+					position = { x = 295 y = 30 }
+					spriteType = "GFX_SATW_heartbeat"
+				}
+				iconType = {
+					name = "escalation_skulls"
+					position = { x = 100 y = 23 }
+					spriteType = "GFX_SATW_skulls"
+					pdx_tooltip = SATW_Esclation_tt
+					pdx_tooltip_delayed = SATW_Esclation_tt_delayed
+				}
+				iconType = {
+					name = "exhaustion_argentina_flag"
+					position = { x = 55 y = 125 }
+					spriteType = "GFX_SATW_flags_ARG"
+					pdx_tooltip = SATW_ARG_exhaustion_tt
+					pdx_tooltip_delayed = SATW_ARG_exhaustion_tt_delayed
+				}
+				iconType = {
+					name = "exhaustion_brazil_flag"
+					position = { x = 315 y = 125 }
+					spriteType = "GFX_SATW_flags_BRA"
+					pdx_tooltip = SATW_BRA_exhaustion_tt
+					pdx_tooltip_delayed = SATW_BRA_exhaustion_tt_delayed
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "lower"
+			size = { width = 100 height = 100 }
+			position = { x = 75 y = 103 }
+
+			instantTextboxType = {
+				name = "foreign_powers_text"
+				position = { x = -25 y = 302 }
+				font = "aldrich_24_outline"
+				text = TNO_SATW_foreign_powers_text
+				maxWidth = 400
+				format =  center
+			}
+
+			iconType = {
+				name = "usa_flag_outline"
+				position = { x = -21 y = 330 }
+				spriteType = "GFX_flag_outline_bra"
+				pdx_tooltip = SATW_USA_Alignment_tt
+			}
+
+			iconType = {
+				name = "usa_flag"
+				position = { x = 25 y = 360 }
+				spriteType = "GFX_flag_medium_plain"
+			}
+
+			instantTextboxType = {
+				name = "satw_usa_alignment"
+				position = { x = -75 y = 392 }
+				font = "aldrich_18_outline"
+				text = TNO_SATW_USA_support_text
+				maxWidth = 200
+				format = center
+			}
+
+			iconType = {
+				name = "japan_flag_outline"
+				position = { x = 129 y = 330 }
+				spriteType = "GFX_flag_outline_bra"
+				pdx_tooltip = SATW_JAP_Alignment_tt
+			}
+
+			iconType = {
+				name = "japan_flag"
+				position = { x = 175 y = 360 }
+				spriteType = "GFX_flag_medium_plain"
+			}
+
+			instantTextboxType = {
+				name = "satw_japan_alignment"
+				position = { x = 75 y = 392 }
+				font = "aldrich_18_outline"
+				text = TNO_SATW_JAP_support_text
+				maxWidth = 200
+				format = center
+			}
+
+			iconType = {
+				name = "germany_flag_outline"
+				position = { x = 279 y = 330 }
+				spriteType = "GFX_flag_outline_bra"
+				pdx_tooltip = SATW_GER_Alignment_tt
+			}
+
+			iconType = {
+				name = "germany_flag"
+				position = { x = 325 y = 360 }
+				spriteType = "GFX_flag_medium_plain"
+			}
+
+			instantTextboxType = {
+				name = "satw_germany_alignment"
+				position = { x = 225 y = 392 }
+				font = "aldrich_18_outline"
+				text = TNO_SATW_GER_support_text
+				maxWidth = 200
+				format = center
+			}
+			iconType = {
+				name = "Nuclear_TV_Error"
+				quadTextureSprite = "GFX_SATW_tv_error"
+				position = { x = 0 y = -40 }
+			}
+			iconType = {
+				name = "Nuclear_Alert_Bar"
+				quadTextureSprite = "GFX_SATW_nuclear_alert"
+				position = { x = 0 y = 0 }
+			}
+		}
+	}
+}

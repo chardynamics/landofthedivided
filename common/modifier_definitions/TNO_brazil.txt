@@ -1,0 +1,146 @@
+BRA_megaproject_construction_speed = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+
+BRA_bill_support = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+
+
+# Weekly faction power growth
+BRA_military_weekly_const_power = {
+	color_type = good
+	value_type = number
+	precision = 3
+	category = country
+}
+BRA_military_weekly_sorbonne_power = {
+	color_type = good
+	value_type = number
+	precision = 3
+	category = country
+}
+BRA_military_weekly_hardliners_power = {
+	color_type = good
+	value_type = number
+	precision = 3
+	category = country
+}
+
+BRA_Riots_Strength_Tick_modifier = {
+	color_type = bad
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+
+BRA_Riots_Radicalism_Tick_modifier = {
+	color_type = bad
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+
+BRA_Riots_Violence_Tick_modifier = {
+	color_type = bad
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+
+BRA_Riots_Despair_Tick_modifier = {
+	color_type = bad
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+
+
+###############################################################
+########            Kubitschek Goals Plan              ########
+###############################################################
+
+# Modifies the penalty to Optimism when a goal is failed
+BRA_gp_failure_penalty = {
+	color_type = bad
+	value_type = percentage
+	precision = 3
+	category = country
+}
+
+# How much a megaproject affects optimism
+BRA_gp_megaproject_bonus = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+
+
+# Weekly Optimism gain/loss per group
+BRA_gp_people_optimism_weekly = {
+	color_type = good
+	value_type = number
+	precision = 3
+	category = country
+}
+BRA_gp_business_optimism_weekly = {
+	color_type = good
+	value_type = number
+	precision = 3
+	category = country
+}
+BRA_gp_creditors_optimism_weekly = {
+	color_type = good
+	value_type = number
+	precision = 3
+	category = country
+}
+
+# Bonus/malus towards things which contribute to Goal progress
+BRA_gp_energy_progress_bonus = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+BRA_gp_education_progress_bonus = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+BRA_gp_healthcare_progress_bonus = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+BRA_gp_development_progress_bonus = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+BRA_gp_infrastructure_progress_bonus = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+
+###############################################################
+########            Lacerda Party Management           ########
+###############################################################
+BRA_monthly_udn_loyalty_modifier = {
+	color_type = good
+	value_type = number
+	precision = 0
+	category = country
+}

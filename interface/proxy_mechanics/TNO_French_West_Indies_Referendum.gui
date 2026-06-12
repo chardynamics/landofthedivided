@@ -1,0 +1,112 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_French_West_Indies_Referendum_GUI"
+		position = { x = 29 y = 131 }
+		size = { width = 496 height = 506 }
+
+		containerWindowType = {
+			name = "inner"
+			position = { x = 0 y = 0 }
+
+			instantTextboxType = {
+				name = "desc"
+				position = { x = 118 y = 10 }
+				font = "aldrich_16_outline"
+				text = "[GetFWIReferendumCategoryDesc]"
+				maxWidth = 370
+				format = left
+			}
+
+			containerWindowType = {
+				name = "dial"
+				position = { x = 129 y = 210 }
+
+				iconType = {
+					name = "dial_base"
+					position = { x = 1 y = -1 }
+					spriteType = "GFX_FWI_Referendum_Dial"
+				}
+
+
+				instantTextboxType = {
+					name = "independence"
+					position = { x = 3 y = 185 }
+					font = "aldrich_18_outline"
+					text = TNO_french_west_indies_referendum_mendesist
+					maxWidth = 105
+					format = center
+				}
+				instantTextboxType = {
+					name = "membership"
+					position = { x = 234 y = 185 }
+					font = "aldrich_18_outline"
+					text = TNO_french_west_indies_referendum_gaullist
+					maxWidth = 101
+					format = center
+				}
+				iconType = {
+					name = "FWI_Referendum_Bar"
+					quadTextureSprite = "GFX_FWI_Referendum_Bar"
+					position = { x = 3 y = -162 }
+					alwaystransparent = yes
+				}
+
+				instantTextboxType = {
+					name = "vote_split"
+					position = { x = 122 y = 140 }
+					font = "aldrich_22_outline"
+					text = "[FWI_referendum_vote_split]"
+					maxWidth = 101
+					format = center
+				}
+
+			}
+
+			instantTextboxType = {
+				name = "desc2"
+				position = { x = 118 y = 444 }
+				font = "aldrich_20_outline"
+				text = TNO_french_west_indies_referendum_chance
+				maxWidth = 370
+				format = center
+			}
+		}
+		## Fake missions
+		containerWindowType = {
+			name = "fake_mission_1"
+			position = { x = 527 y = 48 }
+
+			iconType = {
+				name = "fake_mission_1_background"
+				spriteType = "GFX_fopo_fake_mission_frame" 
+				position = { x = 0 y = 0 }
+				pdx_tooltip = USA_FWI_referendum_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_title"
+				position = { x = 50 y = 9 }
+				text = USA_FWI_referendum_FakeMission_1_Title
+				format = left
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = USA_FWI_referendum_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "fake_mission_1_duration"
+				position = { x = 136 y = 8 }
+				text = USA_FWI_referendum_FakeMission_1_Duration
+				format = right
+				vertical_alignment = center
+				font = "aldrich_18_outline" 
+				maxWidth = 315
+				maxheight = 32
+				pdx_tooltip = USA_FWI_referendum_FakeMission_1_tt
+				alwaystransparent = yes
+			}
+		}
+	}
+}

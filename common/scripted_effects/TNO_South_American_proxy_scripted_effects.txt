@@ -1,0 +1,843 @@
+BOL_initialize_bolivian_mining_war = {
+
+	BRA = {
+		TNO_fopo_add_bolivian_mining_war_tab = yes
+		set_temp_variable = { alert_id = token:Alert_LATAM_Mining_Wars }
+		add_TNO_alert_unless_exists = yes
+	}
+
+	BOL = {
+		add_ideas = BOL_Mining_War
+
+		set_global_flag = BOL_mining_war_ongoing
+
+		clear_array = BOL_police_influence
+		clear_array = BOL_labor_influence
+		clear_array = BOL_peasants_influence
+		clear_array = BOL_elites_influence
+		clear_array = BOL_military_influence
+
+		set_variable = { BOL_BRA_faction = 0 }
+		set_variable = { BOL_ARG_faction = 1 }
+		set_variable = { BOL_CHL_faction = 2 }
+		set_variable = { BRA_actions_counter = 0 }
+
+		if = { # punishment for collapsing transandean treaty
+			limit = { has_global_flag = LATAM_andean_failure }
+			# Setup police
+			add_to_array = { BOL_police_influence = 15 } # Brazil
+			add_to_array = { BOL_police_influence = 35 } # Argentina
+			add_to_array = { BOL_police_influence = 50 } # Chile
+
+			# Setup labor
+			add_to_array = { BOL_labor_influence = 5 } # Brazil
+			add_to_array = { BOL_labor_influence = 50 } # Argentina
+			add_to_array = { BOL_labor_influence = 45 } # Chile
+
+			# Setup peasants
+			add_to_array = { BOL_peasants_influence = 10 } # Brazil
+			add_to_array = { BOL_peasants_influence = 55 } # Argentina
+			add_to_array = { BOL_peasants_influence = 35 } # Chile
+
+			# Setup elites
+			add_to_array = { BOL_elites_influence = 35 } # Brazil
+			add_to_array = { BOL_elites_influence = 35 } # Argentina
+			add_to_array = { BOL_elites_influence = 30 } # Chile
+
+			# Setup military
+			add_to_array = { BOL_military_influence = 45 } # Brazil
+			add_to_array = { BOL_military_influence = 35 } # Argentina
+			add_to_array = { BOL_military_influence = 20 } # Chile
+		}
+		else = { # no transandean collapse
+			# Setup police
+			add_to_array = { BOL_police_influence = 40 } # Brazil
+			add_to_array = { BOL_police_influence = 35 } # Argentina
+			add_to_array = { BOL_police_influence = 25 } # Chile
+
+			# Setup labor
+			add_to_array = { BOL_labor_influence = 25 } # Brazil
+			add_to_array = { BOL_labor_influence = 35 } # Argentina
+			add_to_array = { BOL_labor_influence = 40 } # Chile
+
+			# Setup peasants
+			add_to_array = { BOL_peasants_influence = 15 } # Brazil
+			add_to_array = { BOL_peasants_influence = 45 } # Argentina
+			add_to_array = { BOL_peasants_influence = 40 } # Chile
+
+			# Setup elites
+			add_to_array = { BOL_elites_influence = 55 } # Brazil
+			add_to_array = { BOL_elites_influence = 35 } # Argentina
+			add_to_array = { BOL_elites_influence = 10 } # Chile
+
+			# Setup military
+			add_to_array = { BOL_military_influence = 60 } # Brazil
+			add_to_array = { BOL_military_influence = 25 } # Argentina
+			add_to_array = { BOL_military_influence = 15 } # Chile
+		}
+
+
+		set_variable = { BOL_selected_group = 0 }
+		BOL_change_selected_group = yes
+
+		BOL_recompute_bolivian_mining_war = yes
+	}
+
+	hidden_effect = { # These activate on their own, but that leaves the timers at 0 for the 1st day
+		ZZZ = {
+			activate_mission = ZZZ_MiningWar_timer
+			activate_mission = ZZZ_BRA_MiningWar_arg_chl_move
+		}
+	}
+}
+
+BOL_finish_bolivian_mining_war = {
+	BRA = {
+		TNO_fopo_remove_bolivian_mining_war_tab = yes
+		set_temp_variable = { alert_id = token:Alert_LATAM_Mining_Wars }
+		remove_TNO_alert = yes
+	}
+
+	BOL = {
+		remove_ideas = BOL_Mining_War
+
+		clr_global_flag = BOL_mining_war_ongoing
+
+		BOL_recompute_bolivian_mining_war = yes
+
+		if = {
+			# No winner (leftist coup)
+			limit = {
+				OR = {
+					AND = {
+						check_variable = { BOL_winning_faction = -1 }
+						has_game_rule = {
+							rule = BOL_MINING_WAR
+							option = DEFAULT
+						}
+					}
+					has_game_rule = {
+						rule = BOL_MINING_WAR
+						option = BOL_MINING_WAR_LEFTIST
+					}
+				}
+			}
+			country_event = { id = LATAM_bolivia_crisis.110 }
+		}
+		else_if = {
+			# Brazil wins
+			limit = {
+				OR = {
+					AND = {
+						check_variable = { BOL_winning_faction = BOL_BRA_faction }
+						has_game_rule = {
+							rule = BOL_MINING_WAR
+							option = DEFAULT
+						}
+					}
+					has_game_rule = {
+						rule = BOL_MINING_WAR
+						option = BOL_MINING_WAR_GOVERNMENT
+					}
+				}
+			}
+			country_event = { id = LATAM_bolivia_crisis.105 }
+		}
+		else_if = {
+			# Argentina wins
+			limit = {
+				OR = {
+					AND = {
+						check_variable = { BOL_winning_faction = BOL_ARG_faction }
+						has_game_rule = {
+							rule = BOL_MINING_WAR
+							option = DEFAULT
+						}
+					}
+					has_game_rule = {
+						rule = BOL_MINING_WAR
+						option = BOL_MINING_WAR_NATIONALIST
+					}
+				}
+			}
+			country_event = { id = LATAM_bolivia_crisis.109 }
+		}
+		else = {
+			# Chile wins
+			country_event = { id = LATAM_bolivia_crisis.107 }
+		}
+	}
+	USA = {
+		clr_country_flag = USA_CIA_bolivia_mining_war
+	}
+}
+
+
+BOL_change_selected_group = {
+	BOL = {
+		clear_array = BOL_selected_group_arr
+
+		add_to_array = { BOL_selected_group_arr = 1 }
+		add_to_array = { BOL_selected_group_arr = 1 }
+		add_to_array = { BOL_selected_group_arr = 1 }
+		add_to_array = { BOL_selected_group_arr = 1 }
+		add_to_array = { BOL_selected_group_arr = 1 }
+
+		set_variable = { BOL_selected_group_arr^BOL_selected_group = 2 }
+
+		set_variable = { BOL_selected_group_frame = BOL_selected_group }
+		add_to_variable = { BOL_selected_group_frame = 1 }
+	}
+}
+
+BOL_recompute_bolivian_mining_war = {
+	BOL = {
+		set_temp_variable = { total = 0 }
+		for_each_loop = {
+			array = BOL_police_influence
+			value = influence_amnt
+
+			add_to_temp_variable = { total = influence_amnt }
+		}
+		for_each_loop = {
+			array = BOL_police_influence
+			index = idx
+
+			multiply_variable = { BOL_police_influence^idx = 100 }
+			divide_variable = { BOL_police_influence^idx = total }
+		}
+
+		set_temp_variable = { total = 0 }
+		for_each_loop = {
+			array = BOL_labor_influence
+			value = influence_amnt
+
+			add_to_temp_variable = { total = influence_amnt }
+		}
+		for_each_loop = {
+			array = BOL_labor_influence
+			index = idx
+
+			multiply_variable = { BOL_labor_influence^idx = 100 }
+			divide_variable = { BOL_labor_influence^idx = total }
+		}
+
+		set_temp_variable = { total = 0 }
+		for_each_loop = {
+			array = BOL_peasants_influence
+			value = influence_amnt
+
+			add_to_temp_variable = { total = influence_amnt }
+		}
+		for_each_loop = {
+			array = BOL_peasants_influence
+			index = idx
+
+			multiply_variable = { BOL_peasants_influence^idx = 100 }
+			divide_variable = { BOL_peasants_influence^idx = total }
+		}
+
+		set_temp_variable = { total = 0 }
+		for_each_loop = {
+			array = BOL_elites_influence
+			value = influence_amnt
+
+			add_to_temp_variable = { total = influence_amnt }
+		}
+		for_each_loop = {
+			array = BOL_elites_influence
+			index = idx
+
+			multiply_variable = { BOL_elites_influence^idx = 100 }
+			divide_variable = { BOL_elites_influence^idx = total }
+		}
+
+		set_temp_variable = { total = 0 }
+		for_each_loop = {
+			array = BOL_military_influence
+			value = influence_amnt
+
+			add_to_temp_variable = { total = influence_amnt }
+		}
+		for_each_loop = {
+			array = BOL_military_influence
+			index = idx
+
+			multiply_variable = { BOL_military_influence^idx = 100 }
+			divide_variable = { BOL_military_influence^idx = total }
+		}
+	}
+
+	BOL_redraw_icons = yes
+}
+
+BOL_redraw_icons = {
+	BOL = {
+		clear_array = BOL_influences_BRA
+		clear_array = BOL_influences_ARG
+		clear_array = BOL_influences_CHL
+
+		add_to_array = { BOL_influences_BRA = BOL_police_influence^BOL_BRA_faction }
+		add_to_array = { BOL_influences_BRA = BOL_labor_influence^BOL_BRA_faction }
+		add_to_array = { BOL_influences_BRA = BOL_peasants_influence^BOL_BRA_faction }
+		add_to_array = { BOL_influences_BRA = BOL_elites_influence^BOL_BRA_faction }
+		add_to_array = { BOL_influences_BRA = BOL_military_influence^BOL_BRA_faction }
+
+		add_to_array = { BOL_influences_ARG = BOL_police_influence^BOL_ARG_faction }
+		add_to_array = { BOL_influences_ARG = BOL_labor_influence^BOL_ARG_faction }
+		add_to_array = { BOL_influences_ARG = BOL_peasants_influence^BOL_ARG_faction }
+		add_to_array = { BOL_influences_ARG = BOL_elites_influence^BOL_ARG_faction }
+		add_to_array = { BOL_influences_ARG = BOL_military_influence^BOL_ARG_faction }
+
+		add_to_array = { BOL_influences_CHL = BOL_police_influence^BOL_CHL_faction }
+		add_to_array = { BOL_influences_CHL = BOL_labor_influence^BOL_CHL_faction }
+		add_to_array = { BOL_influences_CHL = BOL_peasants_influence^BOL_CHL_faction }
+		add_to_array = { BOL_influences_CHL = BOL_elites_influence^BOL_CHL_faction }
+		add_to_array = { BOL_influences_CHL = BOL_military_influence^BOL_CHL_faction }
+
+		clear_array = BOL_influence_xs
+		clear_array = BOL_influence_ys
+		clear_array = BOL_influence_winners
+
+		set_variable = { BOL_BRA_groups_won = 0 }
+		set_variable = { BOL_ARG_groups_won = 0 }
+		set_variable = { BOL_CHL_groups_won = 0 }
+
+		for_each_loop = {
+			array = BOL_influences_BRA
+			index = idx
+
+			set_temp_variable = { tmp_x = 0 }
+			add_to_temp_variable = { tmp_x = BOL_influences_BRA^idx }
+
+			set_temp_variable = { tmp_y = BOL_influences_ARG^idx }
+			subtract_from_temp_variable = { tmp_y = BOL_influences_CHL^idx }
+			add_to_temp_variable = { tmp_y = 100 }
+			divide_temp_variable = { tmp_y = 2 }
+
+
+			divide_temp_variable = { tmp_x = 100 }
+			multiply_temp_variable = { tmp_x = 270 }
+
+			divide_temp_variable = { tmp_y = 100 }
+			multiply_temp_variable = { tmp_y = 313 }
+
+			add_to_array = { BOL_influence_xs = tmp_x }
+			add_to_array = { BOL_influence_ys = tmp_y }
+
+			add_to_array = { BOL_influence_winners = BOL_BRA_faction }
+			if = {
+				limit = {
+					check_variable = { BOL_influences_ARG^idx > BOL_influences_BRA^idx }
+					check_variable = { BOL_influences_ARG^idx > BOL_influences_CHL^idx }
+				}
+				set_variable = { BOL_influence_winners^idx = BOL_ARG_faction }
+				add_to_variable = { BOL_ARG_groups_won = 1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { BOL_influences_CHL^idx > BOL_influences_BRA^idx }
+					check_variable = { BOL_influences_CHL^idx > BOL_influences_ARG^idx }
+				}
+				set_variable = { BOL_influence_winners^idx = BOL_CHL_faction }
+				add_to_variable = { BOL_CHL_groups_won = 1 }
+			}
+			else = {
+				add_to_variable = { BOL_BRA_groups_won = 1 }
+			}
+		}
+
+		set_variable = { BOL_winning_faction = -1 }
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						check_variable = { BOL_BRA_groups_won > 2 }
+						has_game_rule = {
+							rule = BOL_MINING_WAR
+							option = DEFAULT
+						}
+					}
+					has_game_rule = {
+						rule = BOL_MINING_WAR
+						option = BOL_MINING_WAR_GOVERNMENT
+					}
+				}
+			}
+			set_variable = { BOL_winning_faction = BOL_BRA_faction }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						check_variable = { BOL_ARG_groups_won > 2 }
+						has_game_rule = {
+							rule = BOL_MINING_WAR
+							option = DEFAULT
+						}
+					}
+					has_game_rule = {
+						rule = BOL_MINING_WAR
+						option = BOL_MINING_WAR_NATIONALIST
+					}
+				}
+			}
+			set_variable = { BOL_winning_faction = BOL_ARG_faction }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						check_variable = { BOL_CHL_groups_won > 2 }
+						has_game_rule = {
+							rule = BOL_MINING_WAR
+							option = DEFAULT
+						}
+					}
+					has_game_rule = {
+						rule = BOL_MINING_WAR
+						option = BOL_MINING_WAR_FALANGIST
+					}
+				}
+			}
+			set_variable = { BOL_winning_faction = BOL_CHL_faction }
+		}
+
+	}
+}
+
+BOL_spend_BRA_action = {
+	hidden_effect = {
+		BOL = {
+			add_to_variable = { BRA_actions_counter = 1 }
+			country_event = { id = LATAM_bolivia_crisis.1004 days = 7 }
+		}
+	}
+}
+
+BOL_increase_influence_police = {
+	custom_effect_tooltip = BOL_increase_influence_police_tooltip
+	log = "Adding [?tmp_amount] influence to faction [?tmp_faction]"
+
+	set_variable = { BOL.amount = tmp_amount }
+	set_variable = { BOL.faction = tmp_faction }
+	BOL = {
+		add_to_variable = { BOL_police_influence^faction = amount }
+		clamp_variable = { var = BOL_police_influence^faction min = 0 max = 100 }
+
+		set_temp_variable = { total = 100 }
+		subtract_from_temp_variable = { total = BOL_police_influence^faction }
+
+		for_each_loop = {
+			array = BOL_police_influence
+			index = idx
+
+			if = {
+				limit = { NOT = { check_variable = { faction = idx } } }
+				set_temp_variable = { to_subtract = amount }
+				multiply_temp_variable = { to_subtract = BOL_police_influence^idx }
+				divide_temp_variable = { to_subtract = total }
+
+				subtract_from_variable = { BOL_police_influence^idx = to_subtract }
+				clamp_variable = { var = BOL_police_influence^idx min = 0 max = 100 }
+			}
+		}
+		BOL_recompute_bolivian_mining_war = yes
+	}
+}
+
+BOL_increase_influence_labor = {
+	custom_effect_tooltip = BOL_increase_influence_labor_tooltip
+	log = "Adding [?tmp_amount] influence to faction [?tmp_faction]"
+
+	set_variable = { BOL.amount = tmp_amount }
+	set_variable = { BOL.faction = tmp_faction }
+	BOL = {
+		add_to_variable = { BOL_labor_influence^faction = amount }
+		clamp_variable = { var = BOL_labor_influence^faction min = 0 max = 100 }
+
+		set_temp_variable = { total = 100 }
+		subtract_from_temp_variable = { total = BOL_labor_influence^faction }
+
+		for_each_loop = {
+			array = BOL_labor_influence
+			index = idx
+
+			if = {
+				limit = { NOT = { check_variable = { faction = idx } } }
+				set_temp_variable = { to_subtract = amount }
+				multiply_temp_variable = { to_subtract = BOL_labor_influence^idx }
+				divide_temp_variable = { to_subtract = total }
+
+				subtract_from_variable = { BOL_labor_influence^idx = to_subtract }
+				clamp_variable = { var = BOL_labor_influence^idx min = 0 max = 100 }
+			}
+		}
+		BOL_recompute_bolivian_mining_war = yes
+	}
+}
+
+
+
+BOL_increase_influence_peasants = {
+	custom_effect_tooltip = BOL_increase_influence_peasants_tooltip
+	log = "Adding [?tmp_amount] influence to faction [?tmp_faction]"
+
+	set_variable = { BOL.amount = tmp_amount }
+	set_variable = { BOL.faction = tmp_faction }
+	BOL = {
+		add_to_variable = { BOL_peasants_influence^faction = amount }
+		clamp_variable = { var = BOL_peasants_influence^faction min = 0 max = 100 }
+
+		set_temp_variable = { total = 100 }
+		subtract_from_temp_variable = { total = BOL_peasants_influence^faction }
+
+		for_each_loop = {
+			array = BOL_peasants_influence
+			index = idx
+
+			if = {
+				limit = { NOT = { check_variable = { faction = idx } } }
+
+				set_temp_variable = { to_subtract = amount }
+				multiply_temp_variable = { to_subtract = BOL_peasants_influence^idx }
+				divide_temp_variable = { to_subtract = total }
+
+				subtract_from_variable = { BOL_peasants_influence^idx = to_subtract }
+
+				clamp_variable = { var = BOL_peasants_influence^idx min = 0 max = 100 }
+			}
+		}
+		BOL_recompute_bolivian_mining_war = yes
+	}
+}
+
+
+
+BOL_increase_influence_elites = {
+	custom_effect_tooltip = BOL_increase_influence_elites_tooltip
+	log = "Adding [?tmp_amount] influence to faction [?tmp_faction]"
+
+	set_variable = { BOL.amount = tmp_amount }
+	set_variable = { BOL.faction = tmp_faction }
+	BOL = {
+		add_to_variable = { BOL_elites_influence^faction = amount }
+		clamp_variable = { var = BOL_elites_influence^faction min = 0 max = 100 }
+
+		set_temp_variable = { total = 100 }
+		subtract_from_temp_variable = { total = BOL_elites_influence^faction }
+
+		for_each_loop = {
+			array = BOL_elites_influence
+			index = idx
+
+			if = {
+				limit = { NOT = { check_variable = { faction = idx } } }
+				set_temp_variable = { to_subtract = amount }
+				multiply_temp_variable = { to_subtract = BOL_elites_influence^idx }
+				divide_temp_variable = { to_subtract = total }
+
+				subtract_from_variable = { BOL_elites_influence^idx = to_subtract }
+				clamp_variable = { var = BOL_elites_influence^idx min = 0 max = 100 }
+			}
+		}
+		BOL_recompute_bolivian_mining_war = yes
+	}
+}
+
+
+
+
+BOL_increase_influence_military = {
+	custom_effect_tooltip = BOL_increase_influence_military_tooltip
+	log = "Adding [?tmp_amount] influence to faction [?tmp_faction]"
+
+	set_variable = { BOL.amount = tmp_amount }
+	set_variable = { BOL.faction = tmp_faction }
+	BOL = {
+		add_to_variable = { BOL_military_influence^faction = amount }
+		clamp_variable = { var = BOL_military_influence^faction min = 0 max = 100 }
+
+		set_temp_variable = { total = 100 }
+		subtract_from_temp_variable = { total = BOL_military_influence^faction }
+
+		for_each_loop = {
+			array = BOL_military_influence
+			index = idx
+
+			if = {
+				limit = { NOT = { check_variable = { faction = idx } } }
+				set_temp_variable = { to_subtract = amount }
+				multiply_temp_variable = { to_subtract = BOL_military_influence^idx }
+				divide_temp_variable = { to_subtract = total }
+
+				subtract_from_variable = { BOL_military_influence^idx = to_subtract }
+				clamp_variable = { var = BOL_military_influence^idx min = 0 max = 100 }
+			}
+		}
+		BOL_recompute_bolivian_mining_war = yes
+	}
+}
+
+BOL_random_enemy_action = {
+	custom_effect_tooltip = BRA_faction_random_action_tooltip
+
+	hidden_effect = {
+		set_temp_variable = { what_do = random }
+
+		if = {
+			# AI influences a group that is almost in their control
+			limit = { check_variable = { what_do > 0.66 } }
+
+			set_temp_variable = { min_difference = 999 }
+			set_temp_variable = { min_category = 0 }
+
+
+			set_temp_variable = { difference = BOL.BOL_police_influence^BOL.BOL_BRA_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_police_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 0 }
+			}
+			set_temp_variable = { difference = BOL.BOL_police_influence^BOL.BOL_CHL_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_police_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 0 }
+			}
+			set_temp_variable = { difference = BOL.BOL_police_influence^BOL.BOL_ARG_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_police_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 0 }
+			}
+
+
+			set_temp_variable = { difference = BOL.BOL_labor_influence^BOL.BOL_BRA_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_labor_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 1 }
+			}
+			set_temp_variable = { difference = BOL.BOL_labor_influence^BOL.BOL_CHL_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_labor_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 1 }
+			}
+			set_temp_variable = { difference = BOL.BOL_labor_influence^BOL.BOL_ARG_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_labor_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 1 }
+			}
+
+
+			set_temp_variable = { difference = BOL.BOL_peasants_influence^BOL.BOL_BRA_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_peasants_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 2 }
+			}
+			set_temp_variable = { difference = BOL.BOL_peasants_influence^BOL.BOL_CHL_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_peasants_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 2 }
+			}
+			set_temp_variable = { difference = BOL.BOL_peasants_influence^BOL.BOL_ARG_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_peasants_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 2 }
+			}
+
+
+			set_temp_variable = { difference = BOL.BOL_elites_influence^BOL.BOL_BRA_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_elites_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 3 }
+			}
+			set_temp_variable = { difference = BOL.BOL_elites_influence^BOL.BOL_CHL_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_elites_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 3 }
+			}
+			set_temp_variable = { difference = BOL.BOL_elites_influence^BOL.BOL_ARG_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_elites_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 3 }
+			}
+
+
+			set_temp_variable = { difference = BOL.BOL_military_influence^BOL.BOL_BRA_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_military_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 4 }
+			}
+			set_temp_variable = { difference = BOL.BOL_military_influence^BOL.BOL_CHL_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_military_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 4 }
+			}
+			set_temp_variable = { difference = BOL.BOL_military_influence^BOL.BOL_ARG_faction }
+			subtract_from_temp_variable = { difference = BOL.BOL_military_influence^tmp_faction }
+			if = {
+				limit = {
+					check_variable = { difference < min_difference }
+					check_variable = { difference > 0 }
+				}
+				set_temp_variable = { min_difference = difference }
+				set_temp_variable = { min_category = 4 }
+			}
+
+			set_temp_variable = { tmp_amount = 7.5 }
+			if = {
+				limit = { check_variable = { min_category = 0 } }
+				BOL_increase_influence_police = yes
+			}
+			else_if = {
+				limit = { check_variable = { min_category = 1 } }
+				BOL_increase_influence_labor = yes
+			}
+			else_if = {
+				limit = { check_variable = { min_category = 2 } }
+				BOL_increase_influence_peasants = yes
+			}
+			else_if = {
+				limit = { check_variable = { min_category = 3 } }
+				BOL_increase_influence_elites = yes
+			}
+			else_if = {
+				limit = { check_variable = { min_category = 4 } }
+				BOL_increase_influence_military = yes
+			}
+
+
+		}
+		else_if = {
+			# AI influences a random group and loses some influence
+			# in a random group
+			limit = { check_variable = { what_do > 0.33 } }
+
+			set_temp_variable = { tmp_amount = 12.5 }
+			random_list = {
+				1 = {
+					BOL_increase_influence_police = yes
+				}
+				1 = {
+					BOL_increase_influence_labor = yes
+				}
+				1 = {
+					BOL_increase_influence_peasants = yes
+				}
+				1 = {
+					BOL_increase_influence_elites = yes
+				}
+				1 = {
+					BOL_increase_influence_military = yes
+				}
+			}
+			set_temp_variable = { tmp_amount = 7.5 }
+			random_list = {
+				1 = {
+					BOL_increase_influence_police = yes
+				}
+				1 = {
+					BOL_increase_influence_labor = yes
+				}
+				1 = {
+					BOL_increase_influence_peasants = yes
+				}
+				1 = {
+					BOL_increase_influence_elites = yes
+				}
+				1 = {
+					BOL_increase_influence_military = yes
+				}
+			}
+		}
+		else = {
+			# AI influences a random group
+			set_temp_variable = { tmp_amount = 7.5 }
+			random_list = {
+				1 = {
+					BOL_increase_influence_police = yes
+				}
+				1 = {
+					BOL_increase_influence_labor = yes
+				}
+				1 = {
+					BOL_increase_influence_peasants = yes
+				}
+				1 = {
+					BOL_increase_influence_elites = yes
+				}
+				1 = {
+					BOL_increase_influence_military = yes
+				}
+			}
+		}
+	}
+}

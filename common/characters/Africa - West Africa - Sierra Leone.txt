@@ -1,0 +1,225 @@
+characters = {
+	SIE_David_Lansana = {
+		name = SIE_David_Lansana
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIE/Portrait_Sierra_Leone_David_Lansana.png"
+				small = "GFX_idea_SIE_David_Lansana"
+			}
+			army = {
+				large = "gfx/leaders/SIE/Portrait_Sierra_Leone_David_Lansana.png"
+				small = "GFX_idea_SIE_David_Lansana"
+			}
+		}
+		field_marshal = {
+			traits = { offensive_doctrine politically_connected }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		country_leader = {
+			desc = "POLITICS_DAVID_LANSANA_DESC"
+			expire = "1999.1.1"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = SIE_David_Lansana_hog
+			allowed = { original_tag = SIE }
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SIE_William_Henry_Fitzjohn = {
+		name = SIE_William_Henry_Fitzjohn
+		portraits = {
+			civilian = { small = "GFX_idea_SIE_William_Henry_Fitzjohn" }
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = SIE_William_Henry_Fitzjohn_for
+			allowed = { original_tag = SIE }
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SIE_Joseph_Saidu_Momoh = {
+		name = SIE_Joseph_Saidu_Momoh
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SIE_Joseph_Saidu_Momoh"
+			}
+			army = {
+				large = "GFX_leader_unknown"
+				small = "GFX_idea_SIE_Joseph_Saidu_Momoh"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist trait_cautious }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = SIE_Joseph_Saidu_Momoh_eco
+			allowed = { original_tag = SIE }
+			traits = {
+				economy_minister
+				eco_military_entrepreneur
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SIE_Andrew_Juxon_Smith = {
+		name = SIE_Andrew_Juxon_Smith
+		portraits = {
+			civilian = {
+				large = "GFX_leader_unknown"
+				small = "GFX_idea_SIE_Andrew_Juxon_Smith"
+			}
+			army = {
+				large = "GFX_leader_unknown"
+				small = "GFX_idea_SIE_Andrew_Juxon_Smith"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless harsh_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		country_leader = {
+			#desc = "POLITICS_ANDREW_JUXON_SMITH_DESC"
+			expire = "1999.1.1"
+			ideology = fascism_subtype
+			traits = { }
+			id = -1
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = SIE_Andrew_Juxon_Smith_sec
+			allowed = { original_tag = SIE }
+			traits = {
+				security_minister
+				sec_back_stabber
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SIE_ITA_Wallace_Johnson = {
+		name = SIE_ITA_Wallace_Johnson
+		portraits = {
+			civilian = { large = "gfx/leaders/SIE/Portrait_Sierra_Leone_I_T_A_Wallace_Johnson.png" }
+		}
+		country_leader = {
+			#desc = "POLITICS_WALLACE-JOHNSON_DESC"
+			expire = "1999.1.1"
+			ideology = socialist_panafricanism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	SIE_Siaka_Stevens = {
+		name = SIE_Siaka_Stevens
+		portraits = {
+			civilian = { large = "GFX_leader_unknown" }
+		}
+		country_leader = {
+			#desc = "POLITICS_SIAKA_STEVENS_DESC"
+			expire = "1999.1.1"
+			ideology = progressivism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	SIE_Milton_Margai = {
+		name = SIE_Milton_Margai
+		portraits = {
+			civilian = { large = "GFX_leader_unknown" }
+		}
+		country_leader = {
+			#desc = "POLITICS_MILTON_MARGAI_DESC"
+			expire = "1999.1.1"
+			ideology = liberalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	SIE_John_Amadu_Bangura = {
+		name = SIE_John_Amadu_Bangura
+		portraits = {
+			civilian = { large = "GFX_leader_unknown" }
+			army = { large = "GFX_leader_unknown" }
+		}
+		corps_commander = {
+			traits = { infantry_officer bearer_of_artillery }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		country_leader = {
+			#desc = "POLITICS_JOHN_AMADU_BANGURA_DESC"
+			expire = "1999.1.1"
+			ideology = paternalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	SIE_Samuel_Hinga_Norman = {
+		name = SIE_Samuel_Hinga_Norman
+		portraits = {
+			army = { large = "GFX_leader_unknown" }
+		}
+		corps_commander = {
+			traits = { organizer skilled_staffer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	SIE_Foday_Sankoh = {
+		name = SIE_Foday_Sankoh
+		portraits = {
+			army = { large = "GFX_leader_unknown" }
+		}
+		corps_commander = {
+			traits = { trickster }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

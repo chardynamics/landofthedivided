@@ -1,0 +1,652 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "TNO_Iberia_terrorism_window_open"
+		size = { width = 220 height = 128 }
+		position = { x = 0 y = 289 }
+
+		buttonType ={
+			name = "ibr_terrorism_menu_open"
+			spriteType = "GFX_AAS_Icon"
+			position = { x = 238 y = 41 }
+			pdx_tooltip = "scripted_gui_open_tt_ibr_ter"
+			scale = 0.65
+		}
+		
+		iconType = {
+			name = "gui_alert"
+			spriteType = "GFX_gui_alert"
+			position = { x=185 y=-16 }
+		}
+	}
+
+	containerWindowType = {
+		name = "TNO_Iberia_terrorism_window_main"
+		size = { width = 849 height = 681 }
+		position = { x = 538 y = 77 }
+		moveable = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_1b_no_border"
+		}
+
+		iconType = {
+			name = "IBR_Background"
+			spriteType = "GFX_Iberia_Background"
+			position = { x = 12 y = 16 }
+		}
+
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_title"
+			position = { x = 0 y = 22 }
+			font = "aldrich_48_outline"
+			text = "IBR_Axencia_GUI_title"
+			maxWidth = 849
+			maxHeight = 48
+			format = center
+		}
+		
+		### CNT TEXT ###
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_CNT_title"
+			position = { x = 12 y = 77 }
+			font = "aldrich_36_outline"
+			text = "IBR_CNT_name"
+			maxWidth = 412
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_CNT_title_full"
+			position = { x = 62 y = 120 }
+			font = "aldrich_16_outline"
+			text = IBR_CNT_name_long
+			maxWidth = 312
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_CNT_activity"
+			position = { x = 8 y = 149 }
+			font = "aldrich_18_outline"
+			text = "IBR_activity_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_CNT_supplies"
+			position = { x = 121 y = 149 }
+			font = "aldrich_18_outline"
+			text = "IBR_supplies_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_CNT_support"
+			position = { x = 236 y = 149 }
+			font = "aldrich_18_outline"
+			text = "IBR_support_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		### FSLP TEXT ###
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_FSLP_title"
+			position = { x = 425 y = 77 }
+			font = "aldrich_36_outline"
+			text = "IBR_FSLP_name"
+			maxWidth = 412
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_FSLP_title_full"
+			position = { x = 475 y = 120 }
+			font = "aldrich_16_outline"
+			text = "IBR_FSLP_name_long"
+			maxWidth = 312
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_FSLP_activity"
+			position = { x = 412 y = 149 }
+			font = "aldrich_18_outline"
+			text = "IBR_activity_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_FSLP_supplies"
+			position = { x = 525 y = 149 }
+			font = "aldrich_18_outline"
+			text = "IBR_supplies_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_FSLP_support"
+			position = { x = 640 y = 149 }
+			font = "aldrich_18_outline"
+			text = "IBR_support_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		### ETA TEXT ###
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_ETA_title"
+			position = { x = 12 y = 331 }
+			font = "aldrich_36_outline"
+			text = "IBR_ETA_name"
+			maxWidth = 412
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_ETA_title_full"
+			position = { x = 62 y = 374 }
+			font = "aldrich_16_outline"
+			text = IBR_ETA_name_long
+			maxWidth = 312
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_ETA_activity"
+			position = { x = 8 y = 404 }
+			font = "aldrich_18_outline"
+			text = "IBR_activity_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_ETA_supplies"
+			position = { x = 121 y = 404 }
+			font = "aldrich_18_outline"
+			text = "IBR_supplies_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_ETA_support"
+			position = { x = 236 y = 404 }
+			font = "aldrich_18_outline"
+			text = "IBR_support_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		### BTA TEXT ###
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_BTA_title"
+			position = { x = 425 y = 331 }
+			font = "aldrich_36_outline"
+			text = "IBR_BTA_name"
+			maxWidth = 412
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_BTA_title_full"
+			position = { x = 475 y = 374 }
+			font = "aldrich_16_outline"
+			text = IBR_BTA_name_long
+			maxWidth = 312
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_BTA_activity"
+			position = { x = 412 y = 404 }
+			font = "aldrich_18_outline"
+			text = "IBR_activity_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_BTA_supplies"
+			position = { x = 525 y = 404 }
+			font = "aldrich_18_outline"
+			text = "IBR_supplies_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_BTA_support"
+			position = { x = 640 y = 404 }
+			font = "aldrich_18_outline"
+			text = "IBR_support_loc"
+			format = center
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "TNO_Iberia_terrorism_AAS_resources_title"
+			position = { x = 0 y = 589 }
+			font = "aldrich_22_outline"
+			text = "IBR_AAS_Resources_loc"
+			format = center
+			alwaystransparent = yes
+			maxWidth = 849
+		}
+
+		containerWindowType = {
+			name = "IBR_GUI_Assets"
+			position = { x = 12 y = 16 }
+			size = { width = 849 height = 655 }
+
+			#####AAS RESOURCES LOC
+
+			instantTextBoxType = {
+				name = "AAS_Resources_Display"
+				position = { x = 313 y = 594 }
+				font = "aldrich_36_outline"
+				format = center
+				borderSize = { X = 0 y = 0 }
+				text = "IBR_AAS_LOC"
+			}
+
+			###Info button
+
+			iconType = {
+				name = "iberia_info_button"
+				position = { x = 7 y = 7 }
+				spriteType = "GFX_Iberia_InfoButton"
+				pdx_tooltip = "IBR_INFO_TT"
+			}
+
+			###Strike Buttons
+
+			buttonType = {
+				name = "StrikeCNTEnabled_button"
+				position = { x = 115 y = 574 }
+				quadTextureSprite = "GFX_Iberia_StrikeEnabled"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_strike_cnt_tt"
+				text = "[GetIBR_StrikeCNT_text]"
+				multiline = yes
+			}
+			iconType = {
+				name = "StrikeCNTDisabled_button"
+				spriteType = "GFX_Iberia_StrikeDisabled"
+				position = { x = 115 y = 574 }
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "StrikeETAEnabled_button"
+				position = { x = 229 y = 574 }
+				quadTextureSprite = "GFX_Iberia_StrikeEnabled"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_strike_eta_tt"
+				text = "[GetIBR_StrikeETA_text]"
+				multiline = yes
+			}
+			iconType = {
+				name = "StrikeETADisabled_button"
+				position = { x = 229 y = 574 }
+				spriteType = "GFX_Iberia_StrikeDisabled"
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "StrikeFSLPEnabled_button"
+				position = { x = 519 y = 574 }
+				quadTextureSprite = "GFX_Iberia_StrikeEnabled"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_strike_fslp_tt"
+				text = "[GetIBR_StrikeFSLP_text]"
+				multiline = yes
+			}
+			iconType = {
+				name = "StrikeFSLPDisabled_button"
+				position = { x = 519 y = 574 }
+				spriteType = "GFX_Iberia_StrikeDisabled"
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "StrikeBTAEnabled_button"
+				position = { x = 633 y = 574 }
+				quadTextureSprite = "GFX_Iberia_StrikeEnabled"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_strike_bta_tt"
+				text = "[GetIBR_StrikeBTA_text]"
+				multiline = yes
+			}
+			iconType = {
+				name = "StrikeBTADisabled_button"
+				position = { x = 633 y = 574 }
+				spriteType = "GFX_Iberia_StrikeDisabled"
+				alwaystransparent = yes
+			}
+
+			###CNT Buttons
+
+			buttonType = {
+				name = "CNT_CrackdownButton"
+				position = { x = 47 y = 263 }
+				quadTextureSprite = "GFX_Iberia_CrackdownButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_CNT_CRACKDOWN_TT"
+				text = IBR_CNT_CRACKDOWN
+				multiline = yes
+			}
+			buttonType = {
+				name = "CNT_RaidButton"
+				position = { x = 162 y = 263 }
+				quadTextureSprite = "GFX_Iberia_RaidButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_CNT_RAID_TT"
+				text = IBR_CNT_RAID
+				multiline = yes
+			}
+			buttonType = {
+				name = "CNT_PropagandaButton"
+				position = { x = 275 y = 263 }
+				quadTextureSprite = "GFX_Iberia_PropagandaButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_CNT_PROPAGANDA_TT"
+				text = IBR_CNT_PROPAGANDA
+				multiline = yes
+			}
+
+			###ETA Buttons
+
+			buttonType = {
+				name = "ETA_CrackdownButton"
+				position = { x = 47 y = 518 }
+				quadTextureSprite = "GFX_Iberia_CrackdownButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_ETA_CRACKDOWN_TT"
+				text = IBR_CNT_CRACKDOWN
+				multiline = yes
+			}
+			buttonType = {
+				name = "ETA_RaidButton"
+				position = { x = 162 y = 518 }
+				quadTextureSprite = "GFX_Iberia_RaidButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_ETA_RAID_TT"
+				text = IBR_CNT_RAID
+				multiline = yes
+			}
+			buttonType = {
+				name = "ETA_PropagandaButton"
+				position = { x = 275 y = 518 }
+				quadTextureSprite = "GFX_Iberia_PropagandaButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_ETA_PROPAGANDA_TT"
+				text = IBR_CNT_PROPAGANDA
+				multiline = yes
+			}
+
+			###FSLP Buttons
+
+			buttonType = {
+				name = "FSLP_CrackdownButton"
+				position = { x = 451 y = 263 }
+				quadTextureSprite = "GFX_Iberia_CrackdownButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_FSLP_CRACKDOWN_TT"
+				text = IBR_CNT_CRACKDOWN
+				multiline = yes
+			}
+			buttonType = {
+				name = "FSLP_RaidButton"
+				position = { x = 566 y = 263 }
+				quadTextureSprite = "GFX_Iberia_RaidButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_FSLP_RAID_TT"
+				text = IBR_CNT_RAID
+				multiline = yes
+			}
+			buttonType = {
+				name = "FSLP_PropagandaButton"
+				position = { x = 679 y = 263 }
+				quadTextureSprite = "GFX_Iberia_PropagandaButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_FSLP_PROPAGANDA_TT"
+				text = IBR_CNT_PROPAGANDA
+				multiline = yes
+			}
+
+			###BTA Buttons
+
+			buttonType = {
+				name = "BTA_CrackdownButton"
+				position = { x = 451 y = 518 }
+				quadTextureSprite = "GFX_Iberia_CrackdownButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_BTA_CRACKDOWN_TT"
+				text = IBR_CNT_CRACKDOWN
+				multiline = yes
+			}
+			buttonType = {
+				name = "BTA_RaidButton"
+				position = { x = 566 y = 518 }
+				quadTextureSprite = "GFX_Iberia_RaidButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_BTA_RAID_TT"
+				text = IBR_CNT_RAID
+				multiline = yes
+			}
+			buttonType = {
+				name = "BTA_PropagandaButton"
+				position = { x = 679 y = 518 }
+				quadTextureSprite = "GFX_Iberia_PropagandaButton"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "IBR_BTA_PROPAGANDA_TT"
+				text = IBR_CNT_PROPAGANDA
+				multiline = yes
+			}
+
+			###Bar Graphs
+			iconType = {
+				name = "CNT_activity_bar"
+				spriteType = "GFX_Iberia_terrorism_activity_bar"
+				position = { x = 62 y = 159 }
+			}
+			iconType = {
+				name = "CNT_supplies_bar"
+				spriteType = "GFX_Iberia_terrorism_supplies_bar"
+				position = { x = 177 y = 159 }
+			}
+			iconType = {
+				name = "CNT_support_bar"
+				spriteType = "GFX_Iberia_terrorism_support_bar"
+				position = { x = 290 y = 159 }
+			}
+			iconType = {
+				name = "ETA_activity_bar"
+				spriteType = "GFX_Iberia_terrorism_activity_bar"
+				position = { x = 62 y = 414 }
+			}
+			iconType = {
+				name = "ETA_supplies_bar"
+				spriteType = "GFX_Iberia_terrorism_supplies_bar"
+				position = { x = 177 y = 414 }
+			}
+			iconType = {
+				name = "ETA_support_bar"
+				spriteType = "GFX_Iberia_terrorism_support_bar"
+				position = { x = 290 y = 414 }
+			}
+			iconType = {
+				name = "FSLP_activity_bar"
+				spriteType = "GFX_Iberia_terrorism_activity_bar"
+				position = { x = 466 y = 159 }
+			}
+			iconType = {
+				name = "FSLP_supplies_bar"
+				spriteType = "GFX_Iberia_terrorism_supplies_bar"
+				position = { x = 581 y = 159 }
+			}
+			iconType = {
+				name = "FSLP_support_bar"
+				spriteType = "GFX_Iberia_terrorism_support_bar"
+				position = { x = 694 y = 159 }
+				pdx_tooltip = "IBR_FSLP_GREEN_TT"
+			}
+			iconType = {
+				name = "BTA_activity_bar"
+				spriteType = "GFX_Iberia_terrorism_activity_bar"
+				position = { x = 466 y = 414 }
+			}
+			iconType = {
+				name = "BTA_supplies_bar"
+				spriteType = "GFX_Iberia_terrorism_supplies_bar"
+				position = { x = 581 y = 414 }
+			}
+			iconType = {
+				name = "BTA_support_bar"
+				spriteType = "GFX_Iberia_terrorism_support_bar"
+				position = { x = 694 y = 414 }
+			}
+
+			###Bar Box
+			iconType = {
+				name = "CNT_activity_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 56 y = 154 }
+				pdx_tooltip = "IBR_CNT_BLUE_TT"
+			}
+			iconType = {
+				name = "CNT_supplies_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 171 y = 154 }
+				pdx_tooltip = "IBR_CNT_RED_TT"
+			}
+			iconType = {
+				name = "CNT_support_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 284 y = 154 }
+				pdx_tooltip = "IBR_CNT_GREEN_TT"
+			}
+			iconType = {
+				name = "ETA_activity_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 56 y = 409 }
+				pdx_tooltip = "IBR_ETA_BLUE_TT"
+			}
+			iconType = {
+				name = "ETA_supplies_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 171 y = 409 }
+				pdx_tooltip = "IBR_ETA_RED_TT"
+			}
+			iconType = {
+				name = "ETA_support_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 284 y = 409 }
+				pdx_tooltip = "IBR_ETA_GREEN_TT"
+			}
+			iconType = {
+				name = "FSLP_activity_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 460 y = 154 }
+				pdx_tooltip = "IBR_FSLP_BLUE_TT"
+			}
+			iconType = {
+				name = "FSLP_supplies_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 575 y = 154 }
+				pdx_tooltip = "IBR_FSLP_RED_TT"
+			}
+			iconType = {
+				name = "FSLP_support_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 688 y = 154 }
+				pdx_tooltip = "IBR_FSLP_GREEN_TT"
+			}
+			iconType = {
+				name = "BTA_activity_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 460 y = 409 }
+				pdx_tooltip = "IBR_BTA_BLUE_TT"
+			}
+			iconType = {
+				name = "BTA_supplies_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 575 y = 409 }
+				pdx_tooltip = "IBR_BTA_RED_TT"
+			}
+			iconType = {
+				name = "BTA_support_bar_box"
+				spriteType = "GFX_Iberia_BarBox"
+				position = { x = 688 y = 409 }
+				pdx_tooltip = "IBR_BTA_GREEN_TT"
+			}
+
+			##########################
+			
+			iconType = {
+				name = "Disbanded_Overlay_BTA"
+				spriteType = "GFX_Disbanded_Overlay"
+				position = { x = 439 y = 390 }
+			}
+			iconType = {
+				name = "Disbanded_Overlay_ETA"
+				spriteType = "GFX_Disbanded_Overlay"
+				position = { x = 27 y = 390 }
+			}
+			iconType = {
+				name = "Disbanded_Overlay_FSLP"
+				spriteType = "GFX_Disbanded_Overlay"
+				position = { x = 439 y = 135 }
+			}
+			iconType = {
+				name = "Disbanded_Overlay_CNT"
+				spriteType = "GFX_Disbanded_Overlay"
+				position = { x = 27 y = 135 }
+			}
+			
+			buttonType = {
+				name = "close_button"
+				position = { x = -46 y = 3 }
+				quadTextureSprite = "GFX_crt_closebutton"
+				buttonFont = "aldrich_18_outline"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_RIGHT"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+			}
+		}
+	}
+}

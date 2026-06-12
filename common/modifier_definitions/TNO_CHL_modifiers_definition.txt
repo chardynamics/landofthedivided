@@ -1,0 +1,27 @@
+##########################
+# Chile Custom Modifiers #
+##########################
+
+# Liberal
+chl_liberal_monthly_rate = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+}
+
+# Conservative
+chl_moderate_monthly_rate = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+}
+
+# Technocrat
+chl_technocrat_monthly_rate = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+}

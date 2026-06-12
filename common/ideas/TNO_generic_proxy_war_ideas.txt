@@ -6,7 +6,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-
+			cancel = { has_war = no }
 			picture = generic_american_bombing
 
 			modifier = {
@@ -23,7 +23,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-
+			cancel = { has_war = no }
 			picture = generic_naval_guns
 
 			modifier = {
@@ -40,6 +40,7 @@ ideas = {
 			on_remove = {
 				subtract_from_variable = { USA.USA_mil_adv = 0.05 }
 			}
+			cancel = { has_war = no }
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_attache
@@ -85,6 +86,7 @@ ideas = {
 			on_remove = {
 				subtract_from_variable = { USA.USA_sab_eff = 0.03 }
 			}
+			cancel = { has_war = no }
 			allowed = { always = no }
 			removal_cost = -1
 			picture = USA_cia_seal
@@ -130,7 +132,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_intensified_bombing
-
+			cancel = { has_war = no }
 			modifier = {
 				planning_speed = -0.15
 				army_defence_factor = -0.05
@@ -146,6 +148,7 @@ ideas = {
 			on_remove = {
 				subtract_from_variable = { JAP.JAP_mil_adv = 0.05 }
 			}
+			cancel = { has_war = no }
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_attache
@@ -191,6 +194,7 @@ ideas = {
 			on_remove = {
 				subtract_from_variable = { JAP.JAP_sab_eff = 0.03 }
 			}
+			cancel = { has_war = no }
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_japanese_spies
@@ -209,6 +213,7 @@ ideas = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea JAP_partisan_attacks"
 			}
+			cancel = { has_war = no }
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_japanese_spies
@@ -219,10 +224,11 @@ ideas = {
 			}
 		}
 
-		JAP_army_infiltrartion = {
+		JAP_army_infiltration = {
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea JAP_army_infiltrartion"
+				log = "[GetDateText]: [Root.GetName]: add idea JAP_army_infiltration"
 			}
+			cancel = { has_war = no }
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_japanese_spies
@@ -243,7 +249,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_intensified_bombing
-
+			cancel = { has_war = no }
 			modifier = {
 				planning_speed = -0.15
 				army_defence_factor = -0.05
@@ -259,6 +265,7 @@ ideas = {
 			on_remove = {
 				subtract_from_variable = { GER.GER_mil_adv = 0.05 }
 			}
+			cancel = { has_war = no }
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_attache
@@ -304,6 +311,7 @@ ideas = {
 			on_remove = {
 				subtract_from_variable = { GER.GER_sab_eff = 0.03 }
 			}
+			cancel = { has_war = no }
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_german_spies
@@ -318,10 +326,11 @@ ideas = {
 			}
 		}
 
-		Generic_recieving_intel = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Generic_recieving_intel" }
+		Generic_receiving_intel = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Generic_receiving_intel" }
 			allowed = { always = no }
 			removal_cost = -1
+			cancel = { has_war = no }
 			picture = generic_spy
 			modifier = {
 				army_defence_factor = 0.025
@@ -361,9 +370,9 @@ ideas = {
 			picture = generic_bureaucracy_purged
 			modifier = {
 				political_power_gain = -0.3
-				army_attack_factor = -0.9
-				army_defence_factor = -0.9
-				army_speed_factor = -0.05
+				army_org_factor = -0.80
+				army_morale_factor = -0.6
+				army_speed_factor = -0.15
 			}
 		}
 		CA_Turkes_Kenes_Apathy = {
@@ -422,13 +431,130 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-
+			cancel = { has_war = no }
 			picture = generic_intensified_bombing
 
 			modifier = {
 				planning_speed = -0.15
 				army_defence_factor = -0.05
 				army_speed_factor = -0.05
+			}
+		}
+		
+		IBR_sabotage_effort = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea IBR_sabotage_effort"
+			}
+			cancel = { has_war = no }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_army_problems
+			modifier = {
+				industrial_capacity_factory = -0.1
+				army_attack_factor = -0.025
+			}
+			targeted_modifier = {
+				tag = IBR
+				army_attack_factor = 0.03
+				command_power_gain = 0.03
+			}
+		}
+		
+		IBR_military_advisors = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea IBR_military_advisors"
+			}
+			cancel = { has_war = no }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_attache
+			modifier = {
+				experience_gain_army_factor = 0.2
+				planning_speed = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = IBR
+				experience_gain_army = 0.05
+				command_power_gain = 0.05
+			}
+		}
+
+		### MEX IDEAS ###
+
+		MEX_military_advisors = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MEX_military_advisors"
+			}
+			cancel = { has_war = no }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_attache
+			modifier = {
+				experience_gain_army_factor = 0.2
+				planning_speed = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = MEX
+				experience_gain_army = 0.05
+				command_power_gain = 0.05
+			}
+		}
+
+		MEX_Plane_Bombing = { ##
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MEX_Plane_Bombing" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			cancel = { has_war = no }
+			picture = generic_intensified_bombing
+
+			modifier = {
+				planning_speed = -0.15
+				army_defence_factor = -0.05
+				army_speed_factor = -0.05
+				custom_modifier_tooltip = proxy_war_worsen_poverty_tt
+			}
+		}
+
+		MEX_sabotage_effort = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MEX_sabotage_effort"
+			}
+			cancel = { has_war = no }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_army_problems
+			modifier = {
+				industrial_capacity_factory = -0.1
+				army_attack_factor = -0.025
+			}
+			targeted_modifier = {
+				tag = MEX
+				army_attack_factor = 0.03
+				command_power_gain = 0.03
+			}
+		}
+
+		MEX_technician_aid = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MEX_technician_aid"
+			}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_breakneck_industrialization
+			modifier = {
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = MEX
+				political_power_gain = 0.05
 			}
 		}
 
@@ -442,6 +568,7 @@ ideas = {
 			on_remove = {
 				subtract_from_variable = { BRA.BRA_mil_adv = 0.05 }
 			}
+			cancel = { has_war = no }
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_attache
@@ -464,7 +591,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-
+			cancel = { has_war = no }
 			picture = generic_intensified_bombing
 
 			modifier = {
@@ -483,6 +610,7 @@ ideas = {
 			on_remove = {
 				subtract_from_variable = { BRA.BRA_sab_eff = 0.03 }
 			}
+			cancel = { has_war = no }
 			allowed = { always = no }
 			removal_cost = -1
 			picture = generic_army_problems
@@ -519,5 +647,32 @@ ideas = {
 			}
 		}
 		
+		### TUR IDEAS ###
+
+		TUR_military_advisors = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea TUR_military_advisors"
+				add_to_variable = { TUR.TUR_mil_adv = 0.05 }
+			}
+			on_remove = {
+				subtract_from_variable = { TUR.TUR_mil_adv = 0.05 }
+			}
+			cancel = { has_war = no }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_attache
+			modifier = {
+				experience_gain_army_factor = 0.2
+				planning_speed = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			targeted_modifier = { #For tooltip purpose only
+				tag = TUR
+				experience_gain_army = 0.05
+				command_power_gain = 0.05
+			}
+		}
+
 	}
 }

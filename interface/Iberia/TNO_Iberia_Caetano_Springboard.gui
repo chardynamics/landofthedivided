@@ -1,0 +1,64 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_IBR_Caetano_Springboard_GUI"
+		size = { width = 482 height = 118 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_BRA_Map_Info_Button"
+			position = { x = 393 y = -63 } 
+			pdx_tooltip = TNO_IBR_Caetano_Springboard_Info
+		}
+
+		iconType = {
+			name = "Iberia_Caetano_Springboard_Background"
+			spriteType = "GFX_Iberia_Caetano_Springboard_Background"
+			position = { x = 11 y = -20 }
+		}
+
+		containerWindowType = {
+			name = "Iberia_Caetano_Springboard_Caetano_Pie_Container"
+			position = { x = 194 y = -8 }
+
+			iconType = {
+				name = "Iberia_Caetano_Springboard_Pie_Spain_1"
+				spriteType = "GFX_Iberia_Caetano_Springboard_Pie_Spain"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "Iberia_Caetano_Springboard_Pie_Caetano"
+				spriteType = "GFX_Iberia_Caetano_Springboard_Pie_Caetano"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "Iberia_Caetano_Springboard_Caetano_Pie_Overlay"
+				spriteType = "GFX_haiti_pie_overlay"
+				position = { x = -10 y = -9 }
+			}
+		}
+
+		containerWindowType = {
+			name = "Iberia_Caetano_Springboard_Choupana_Pie_Container"
+			position = { x = 357 y = -8 }
+
+			iconType = {
+				name = "Iberia_Caetano_Springboard_Pie_Spain_2"
+				spriteType = "GFX_Iberia_Caetano_Springboard_Pie_Spain"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "Iberia_Caetano_Springboard_Pie_Choupana"
+				spriteType = "GFX_Iberia_Caetano_Springboard_Pie_Choupana"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name = "Iberia_Caetano_Springboard_Caetano_Pie_Overlay"
+				spriteType = "GFX_haiti_pie_overlay"
+				position = { x = -10 y = -9 }
+			}
+		}
+	}
+}
+
+	

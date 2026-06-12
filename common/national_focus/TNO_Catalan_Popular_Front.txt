@@ -1,0 +1,16 @@
+
+############ War Tree ############
+
+focus_tree = {
+	id = CNT_war_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CNT
+		}
+	}
+	default = no
+	shared_focus = CNT_revolutionary_catalonia_reborn
+}
+

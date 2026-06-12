@@ -1,0 +1,22 @@
+TNO_ARG_presidential_scorer = {
+	targets = {
+		target_array = ARG.ARG_POL_country_array_for_sorting
+		score = {
+			base = 0
+			modifier = {
+				add = ARG_pres_sorting_var
+			}
+		}
+	}
+}
+TNO_ARG_presidential_state_scorer = {
+	targets = {
+		target_array = ARG.ARG_POL_country_array_for_sorting
+		score = {
+			base = 0
+			modifier = {
+				add = ARG_state_pop_for_sorting
+			}
+		}
+	}
+}

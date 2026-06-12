@@ -1,0 +1,114 @@
+guiTypes = {
+	###############################################################
+	########             Hundred Days Mechanic             ########
+	###############################################################
+	containerWindowType = {
+		name = "TNO_CSS_decisions_hundred_days_GUI"
+		size = { width = 0 height = 540 }
+		position = { x = 0 y = 0 }
+
+		containerWindowType = {
+			name = "supporter_counts"
+			position = { x = 8 y = 400 }
+
+			instantTextBoxType = {
+				name = "category_description"
+				position = { x = 0 y = 0 }
+				maxWidth = 482
+				format = left
+				font = "aldrich_18_outline"
+				text = BRA_hd_category_description
+				alwaystransparent = yes
+			}
+		}
+
+		iconType = {
+			name = "Info"
+			spriteType = "GFX_BRA_info_button"
+			position = { x = 460 y = -14 }
+			pdx_tooltip = BRA_hundred_days_info_tt
+		}
+
+		containerWindowType = {
+			name = "pie"
+			position = { x = 52 y = -12 }
+
+			iconType = {
+				name = "hd_pie1"
+				spriteType = "GFX_BRA_hd_pie1"
+				position = { x = 0 y = 0 }
+				frame = 68
+			}
+			iconType = {
+				name = "hd_pie2"
+				spriteType = "GFX_BRA_hd_pie2"
+				position = { x = 0 y = 0 }
+				frame = 41
+			}
+			iconType = {
+				name = "hd_pie3"
+				spriteType = "GFX_BRA_hd_pie3"
+				position = { x = 0 y = 0 }
+				frame = 23
+			}
+
+			buttonType = {
+				name = "hd_add_kubitschek_button"
+				position = { x = -30 y = 60 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+				pdx_tooltip = "BRA_hd_debug_add_support_tt"
+			}
+			buttonType = {
+				name = "hd_sub_kubitschek_button"
+				position = { x = -30 y = 85 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+				pdx_tooltip = "BRA_hd_debug_sub_support_tt"
+			}
+			buttonType = {
+				name = "hd_add_lacerda_button"
+				position = { x = -30 y = 300 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+				pdx_tooltip = "BRA_hd_debug_add_support_tt"
+			}
+			buttonType = {
+				name = "hd_sub_lacerda_button"
+				position = { x = -30 y = 325 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+				pdx_tooltip = "BRA_hd_debug_sub_support_tt"
+			}
+
+			buttonType = {
+				name = "hd_add_adhemar_button"
+				position = { x = 410 y = 300 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+				pdx_tooltip = "BRA_hd_debug_add_support_tt"
+			}
+			buttonType = {
+				name = "hd_sub_adhemar_button"
+				position = { x = 410 y = 325 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+				pdx_tooltip = "BRA_hd_debug_sub_support_tt"
+			}
+			buttonType = {
+				name = "hd_add_goulart_button"
+				position = { x = 410 y = 60 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Plus"
+				scale = 0.5
+				pdx_tooltip = "BRA_hd_debug_add_support_tt"
+			}
+			buttonType = {
+				name = "hd_sub_goulart_button"
+				position = { x = 410 y = 85 }
+				quadTextureSprite = "GFX_BRG_DomesticGUI_Minus"
+				scale = 0.5
+				pdx_tooltip = "BRA_hd_debug_sub_support_tt"
+			}
+		}
+	}
+}

@@ -1,0 +1,314 @@
+ideas = {
+	country = {
+		#Start
+		HON_USS_Honduras = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_USSS_Honduras" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_USS_Honduras
+
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = 0.125
+			}
+			targeted_modifier = { tag = USA experience_gain_army = 0.01 }
+		}
+		HON_Creeping_Colonels = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_Creeping_Colonels" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Institutionalized_Military
+
+			modifier = {
+				army_attack_factor = 0.075
+				army_org_factor = 0.1
+				surrender_limit = 0.75
+			}
+		}
+
+		HON_Banana_Kings = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HON_Banana_Kings"
+				set_temp_variable = { gdp_growth_temp = 0.2 }
+				econ_gdp_growth_change = yes
+			}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Banana_Kings
+
+			modifier = {
+				gdp_growth_modifier = 0.02
+				stability_factor = -0.1
+				regulations_policy_monthly_rate = -0.5
+
+			}
+			targeted_modifier = { tag = USA extra_trade_to_target_factor = 0.25 }
+			on_remove = { set_temp_variable = { gdp_growth_temp = -0.2 } econ_gdp_growth_change = yes }
+		}
+
+		HON_Border_Tensions = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_Border_Tensions" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Border_Tensions
+
+			modifier = {
+				war_support_factor = 0.15
+				agriculture_monthly_rate = -1
+				poverty_monthly_rate = -0.04
+			}
+		}
+
+		#Democracy Path
+		HON_Honduran_Gaitan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_Honduran_Gaitan" }
+			cancel = { NOT = { has_country_leader = { character = HON_Modesto_Rodas_Alvarado ruling_only = yes } } }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Honduran_Gaitan
+
+			modifier = {
+				political_power_gain = 0.1
+				production_speed_buildings_factor = 0.05
+				pensions_policy_monthly_rate = 0.5
+				unemployment_policy_monthly_rate = 0.5
+			}
+		}
+		#Oligarch Path
+		HON_If_It_Aint_Broke = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_If_It_Aint_Broke" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_If_It_Aint_Broke
+
+			modifier = {
+				stability_factor = 0.075
+				stability_weekly = 0.01
+				admin_efficiency_monthly_rate = 1
+			}
+		}
+		#Military Path
+		HON_Just_Like_Anyone_Else = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_Just_Like_Anyone_Else" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Just_Like_Anyone_Else
+
+			modifier = {
+				political_power_factor = 0.05
+				army_org_factor = 0.12
+				security_policy_monthly_rate = 0.3
+
+			}
+		}
+
+		#Football War Win
+		#Democracy
+		HON_Sobreviviendo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_Sobreviviendo" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Sobreviviendo
+
+			modifier = {
+				war_support_factor = 0.10
+				misc_income_modifier = 0.4
+			}
+			targeted_modifier = { tag = ELS misc_costs_modifier = 0.4 }
+			
+		}
+		HON_La_Republica_Liberal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_La_Republica_Liberal" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_La_Republica_Liberal
+
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.15
+				poverty_monthly_rate = 0.04
+			}
+		}
+		HON_King_Banana_Queen_Land_Reform = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HON_King_Banana_Queen_Land_Reform" 
+				set_temp_variable = { gdp_growth_temp = 0.15 }
+				econ_gdp_growth_change = yes
+			}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Banana_and_Queen_Land_Reform
+
+			modifier = {
+				agriculture_monthly_rate = 5
+				regulations_policy_monthly_rate = 0.5
+			}
+			targeted_modifier = { tag = USA extra_trade_to_target_factor = 0.2 }
+			on_remove = { set_temp_variable = { gdp_growth_temp = -0.15 } econ_gdp_growth_change = yes }
+		}
+		#Oligarch
+		HON_Viva_El_Cariacismo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_Viva_El_Cariacismo" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Viva_El_Cariacismo
+
+			modifier = {
+				stability_factor = 0.125
+				local_resources_factor = 0.1 
+				admin_efficiency_monthly_rate = -1
+			}
+		}
+		HON_Leaving_the_Nest = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_Leaving_the_Nest" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Leaving_the_Nest
+
+			modifier = {
+				political_power_gain = 0.03
+				stability_factor = 0.075
+				custom_modifier_tooltip = HON_Leaving_the_NestEffect
+			}
+			targeted_modifier = { tag = USA extra_trade_to_target_factor = -0.05 }
+		}
+		#Military
+		HON_All_Thanks_to = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_All_Thanks_to" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_All_Thanks_To
+
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				conscription_factor = 0.05
+			}
+		}
+		HON_The_Second_Somoza = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_The_Second_Somoza" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Second_Somoza
+
+			modifier = {
+				political_parties_policy_monthly_rate = 0.5
+				admin_efficiency_monthly_rate = 1
+				penal_system_policy_monthly_rate = 0.3
+			}
+		}
+
+		#Football War Loss
+		HON_La_Tragedia_Nacional = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_La_Tragedia_Nacional" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_La_Tragedia_Nacional
+
+			modifier = {
+				stability_factor = -0.20
+				war_support_factor = -0.20
+				conscription_factor = -0.10
+			}
+		}
+		#Arellano Survival
+		HON_Second_Somoza = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_Second_Somoza" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Second_Somoza
+
+			modifier = {
+				political_parties_policy_monthly_rate = 0.3
+				admin_efficiency_monthly_rate = -1
+				penal_system_policy_monthly_rate = 0.1
+			}
+		}
+		HON_Rapid_Reshaping = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_Rapid_Reshaping" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_A_Rapid_Reshaping
+
+			modifier = {
+				stability_factor = -0.125
+				war_support_factor = -0.05
+				command_power_gain = 1
+			}
+		}
+		#Fascist Coup
+		HON_A_New_Direction = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_A_New_Direction" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_A_New_Direction
+
+			modifier = {
+				army_attack_factor = 0.10
+				army_core_defence_factor = 0.15
+				conscription_policy_monthly_rate = 4
+			}
+		}
+		HON_Scuttling_the_Ship = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_Scuttling_the_Ship" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Scuttling_the_Ship
+
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.075
+				war_support_factor = 0.15
+			}
+		}
+		HON_Tearing_at_the_Seams = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HON_Tearing_at_the_Seams"
+				set_temp_variable = { gdp_growth_temp = -2 }
+				econ_gdp_growth_change = yes
+			}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Tearing_at_the_Seams
+
+			modifier = {
+				gdp_growth_modifier = -0.02
+				industrial_equipment_monthly_rate = -6
+				poverty_monthly_rate = -0.03
+			}
+			targeted_modifier = { tag = USA extra_trade_to_target_factor = -1 }
+			on_remove = { set_temp_variable = { gdp_growth_temp = 2 } econ_gdp_growth_change = yes }
+		}
+		#Commie Coup
+		HON_Peasants_Honduras = {
+			on_add = { 
+				log = "[GetDateText]: [Root.GetName]: add idea HON_Peasants_Honduras"
+				set_temp_variable = { gdp_growth_temp = -0.5 }
+				econ_gdp_growth_change = yes
+			}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_Peasants_Honduras
+
+			modifier = {
+				gdp_growth_modifier = -0.005
+				stability_factor = 0.20
+				consumer_goods_expected_value = -0.20
+				poverty_monthly_rate = 0.02
+			}
+			on_remove = { set_temp_variable = { gdp_growth_temp = 0.5 } econ_gdp_growth_change = yes }
+		}
+		HON_In_The_Red = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HON_In_The_Red" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = HON_In_The_Red
+
+			modifier = {
+				political_power_factor = 0.15
+				monthly_credit_rating_progress = -8
+				misc_costs_modifier = 0.9
+			}
+		}
+	}
+}

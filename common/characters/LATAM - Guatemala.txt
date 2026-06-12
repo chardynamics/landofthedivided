@@ -1,0 +1,127 @@
+characters = {
+	GUA_Mario_Mendez_Montenegro = {
+		name = GUA_Mario_Mendez_Montenegro
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Mario_Mendez_Montenegro.png" } }
+		country_leader = {
+			desc = "POLITICS_GUA_Mario_Mendez_Montenegro_DESC"
+			expire = "1994.4.20"
+			ideology = socialist_social_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GUA_Julio_Mendez_Montenegro = {
+		name = GUA_Julio_Mendez_Montenegro
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Julio_Mendez_Montenegro.png" } }
+		country_leader = {
+			desc = "POLITICS_GUA_Julio_Mendez_Montenegro_DESC"
+			expire = "1994.4.20"
+			ideology = liberalism_social_liberalism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GUA_Carlos_Manuel_Arana_Osorio = {
+		name = GUA_Carlos_Manuel_Arana_Osorio
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Carlos_Arano_Osario.png" } }
+		country_leader = {
+			desc = "POLITICS_GUA_Carlos_Manuel_Arana_Osorio_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GUA_Miguel_Ydigoras_Fuentes = {
+		name = GUA_Miguel_Ydigoras_Fuentes
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Miguel_Ydigoras_Fuentes.png" } }
+		country_leader = {
+			desc = "POLITICS_GUA_Miguel_Ydigoras_Fuentes_DESC"
+			expire = "1994.4.20"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_GUA_Miguel_Ydigoras_Fuentes_DESC"
+			expire = "1994.4.20"
+			ideology = fascism_fascist_populism_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_GUA_Miguel_Ydigoras_Fuentes_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GUA_Hermenegildo_Cuencia_Diaz = {
+		name = GUA_Hermenegildo_Cuencia_Diaz
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Hermenegildo_Cuencia_Diaz.png" } }
+	}
+	GUA_Manuel_Colom_Argueta = {
+		name = GUA_Manuel_Colom_Argueta
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Manuel_Colom_Argueta.png" } }
+	}
+	GUA_Marco_Antonio_Yon_Sosa = {
+		name = GUA_Marco_Antonio_Yon_Sosa
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Marco_Antonio_Yon_Sosa.png" } }
+	}
+	GUA_Jacobo_Arbenz = {
+		name = GUA_Jacobo_Arbenz
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Jacobo_Arbenz.png" } }
+		country_leader = {
+			desc = "POLITICS_GUA_Jacobo_Arbenz_DESC"
+			expire = "1994.4.20"
+			ideology = socialist_social_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GUA_Oscar_Adolfo_Mijangos_Lopez = {
+		name = GUA_Oscar_Adolfo_Mijangos_Lopez
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Oscar_Adolfo_Mijangos_Lopez.png" } }
+		country_leader = {
+			desc = "POLITICS_GUA_Oscar_Adolfo_Mijangos_Lopez_DESC"
+			expire = "1994.4.20"
+			ideology = socialist_social_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GUA_Rene_de_Leon_Schlotter = {
+		name = GUA_Rene_de_Leon_Schlotter
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Rene_de_Leon_Schlotter.png" } }
+		country_leader = {
+			desc = "POLITICS_GUA_Rene_de_Leon_Schlotter_DESC"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_christian_democracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	GUA_Mario_Sandaval_Alarcon = {
+		name = GUA_Mario_Sandaval_Alarcon
+		portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Mario_Sandaval_Alorcon.png" } }
+		country_leader = {
+			desc = "POLITICS_GUA_Mario_Sandaval_Alarcon_DESC"
+			expire = "1994.4.20"
+			ideology = paternalism_right_wing_populism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	#Placeholder
+	GUA_Jose_Manuel_Fortuny = {
+		name = GUA_Jose_Manuel_Fortuny
+		#portraits = { civilian = { large = "gfx/leaders/GUA/Portrait_Guatemala_Jose_Manuel_Fortuny.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = communist_bolshevism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+}

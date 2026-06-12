@@ -1,0 +1,549 @@
+add_namespace = GNB_skeleton
+add_namespace = GNB_FOR
+
+country_event = { #Assess the Situation
+	id = GNB_skeleton.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNB_skeleton.2" }
+	title = GNB_skeleton.2
+	desc = GNB_skeleton.2.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		trigger = { #WAC is not over
+			AND = {
+				NOT = { has_global_flag = WAC_SCENARIO_1_PALF_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_1_WAA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_2_FMA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_2_PALF_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_2_WAA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_3_FMA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_3_PALF_VICTORY }
+			}
+			OR = {
+				AND = {	
+					OR = {
+						CAO = { has_war_with = FFR }
+						CAO = { has_war_with = SEN }
+					}
+					CAO = { exists = yes }
+				}
+				AND = {
+					OR = {
+						FFR = { has_war_with = CAO }
+						FFR = { has_war_with = SEN }
+					}
+					FFR = { exists = yes }
+				}
+				AND = {
+					OR = {
+						SEN = { has_war_with = CAO }
+						SEN = { has_war_with = FFR }
+					}
+					SEN = { exists = yes }
+				}
+			}
+		}
+		name = GNB_skeleton.2.a
+		ai_chance = { base = 10 }
+		country_event = { id = GNB_skeleton.6 days = 300 }
+	}
+	option = {
+		trigger = { #WAC is over
+			OR = {
+				has_global_flag = WAC_SCENARIO_1_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+				has_global_flag = WAC_SCENARIO_2_PALF_VICTORY
+				has_global_flag = WAC_SCENARIO_2_WAA_VICTORY
+				has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+				has_global_flag = WAC_SCENARIO_3_PALF_VICTORY
+			}
+		}
+		name = GNB_skeleton.2.b
+		ai_chance = { base = 10 }
+		country_event = { id = GNB_skeleton.6 days = 5 }
+	}
+	option = {
+		trigger = { #Edge-case WAC not started
+			AND = {
+				NOT = { has_global_flag = WAC_SCENARIO_1_PALF_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_1_WAA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_2_FMA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_2_PALF_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_2_WAA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_3_FMA_VICTORY }
+				NOT = { has_global_flag = WAC_SCENARIO_3_PALF_VICTORY }
+			}
+			AND = {
+				AND = {
+					NOT = {
+						CAO = { has_war_with = FFR }
+						CAO = { has_war_with = SEN }
+					}
+					CAO = { exists = yes }
+				}
+				AND = {
+					NOT = {
+						FFR = { has_war_with = CAO }
+						FFR = { has_war_with = SEN }
+					}
+					FFR = { exists = yes }
+				}
+				AND = {
+					NOT = {
+						SEN = { has_war_with = FFR }
+						SEN = { has_war_with = CAO }
+					}
+					SEN = { exists = yes }
+				}
+			}
+		}
+		name = GNB_skeleton.2.c
+		ai_chance = { base = 10 }
+		set_country_flag = IWC_government_fate
+	}
+}
+
+country_event = { #Go back to Portugal
+	id = GNB_skeleton.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNB_skeleton.3" }
+	title = GNB_skeleton.3
+	desc = GNB_skeleton.3.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #But which Portugal?
+		name = GNB_skeleton.3.a
+		ai_chance = { base = 10 }
+		remove_faction_status = yes
+		leave_faction = yes
+		remove_ideas = GNB_finite_status_quo
+		remove_ideas = GNB_Foreign_Occupation
+		add_ideas = GNB_hell_on_earth
+		add_ideas = GNB_paigc_offensive
+		if = { #Kingdom
+			limit = {
+				POR = {
+					has_war = no
+					exists = yes
+				}
+			}
+			POR = {
+				set_autonomy = {
+					target = GNB
+					autonomous_state = autonomy_colony
+					end_wars = no
+					end_civil_wars = no
+				}
+				#country_event = { id = GNB_POR.3 }
+			}
+			if = {
+				limit = { POR = { check_variable = { ECON_SPHERE_LEADER = BRA } } }
+				econ_join_sphere_BRA = yes
+			}
+			else_if = {
+				limit = { POR = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+				econ_join_sphere_USA = yes
+			}
+			else_if = {
+				limit = { POR = { check_variable = { ECON_SPHERE_LEADER = GER } } }
+				econ_join_sphere_GER = yes
+			}
+			else_if = {
+				limit = { POR = { check_variable = { ECON_SPHERE_LEADER = ITA } } }
+				econ_join_sphere_ITA = yes
+			}
+		}
+		else_if = { #Republic
+			limit = {
+				RPP = {
+					has_war = no
+					exists = yes
+				}
+			}
+			RPP = {
+				set_autonomy = {
+					target = GNB
+					autonomous_state = autonomy_colony
+					end_wars = no
+					end_civil_wars = no
+				}
+				#country_event = { id = GNB_POR.3 }
+			}
+			if = {
+				limit = { RPP = { check_variable = { ECON_SPHERE_LEADER = BRA } } }
+				econ_join_sphere_BRA = yes
+			}
+			else_if = {
+				limit = { RPP = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+				econ_join_sphere_USA = yes
+			}
+			else_if = {
+				limit = { RPP = { check_variable = { ECON_SPHERE_LEADER = GER } } }
+				econ_join_sphere_GER = yes
+			}
+			else_if = {
+				limit = { RPP = { check_variable = { ECON_SPHERE_LEADER = ITA } } }
+				econ_join_sphere_ITA = yes
+			}
+		}
+		else_if = { #Edgy Kingdom
+			limit = {
+				GNS = {
+					has_war = no
+					exists = yes
+				}
+			}
+			GNS = {
+				set_autonomy = {
+					target = GNB
+					autonomous_state = autonomy_colony
+					end_wars = no
+					end_civil_wars = no
+				}
+				#country_event = { id = GNB_POR.3 }
+			}
+			if = {
+				limit = { GNS = { check_variable = { ECON_SPHERE_LEADER = BRA } } }
+				econ_join_sphere_BRA = yes
+			}
+			else_if = {
+				limit = { GNS = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+				econ_join_sphere_USA = yes
+			}
+			else_if = {
+				limit = { GNS = { check_variable = { ECON_SPHERE_LEADER = GER } } }
+				econ_join_sphere_GER = yes
+			}
+			else_if = {
+				limit = { GNS = { check_variable = { ECON_SPHERE_LEADER = ITA } } }
+				econ_join_sphere_ITA = yes
+			}
+		}
+		set_politics = { ruling_party = despotism }
+		set_popularities = {
+			despotism = 10
+			socialist = 70
+			conservatism = 20
+		}
+	}
+}
+
+country_event = { #Join the War Effort
+	id = GNB_skeleton.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNB_skeleton.4" }
+	title = GNB_skeleton.4
+	desc = GNB_skeleton.4.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #Pick the Scenario
+		name = GNB_skeleton.4.a
+		ai_chance = { base = 10 }
+		if = { #First Scenario
+			limit = {
+				has_global_flag = WAC_scenario_1
+			}
+			SEN = { add_to_faction = GNB }
+			add_ideas = WAA_Faction
+			add_ideas = { WAA_Protectorate }
+			set_country_flag = GNB_joined_WAC
+
+		}
+		else_if = { #Second Scenario
+			limit = {
+				has_global_flag = WAC_scenario_2
+			}
+			FFR = { add_to_faction = GNB }
+			add_ideas = { FMA_Faction }
+			set_country_flag = GNB_joined_WAC
+
+		}
+		else_if = { #Third Scenario
+			limit = {
+				has_global_flag = WAC_scenario_3
+			}
+			FFR = { add_to_faction = GNB }
+			add_ideas = { FMA_Faction }
+			set_country_flag = GNB_joined_WAC
+
+		}
+	}
+}
+
+country_event = { #Capitulation Consequences
+	id = GNB_skeleton.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNB_skeleton.5" }
+	title = GNB_skeleton.5
+	desc = GNB_skeleton.5.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #And Now What?
+		name = GNB_skeleton.5.a
+		ai_chance = { base = 10 }
+		GNB = {
+			remove_ideas = GNB_finite_status_quo
+			if = { #FMA Won
+				limit = {
+					OR = {
+						has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+						has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+					}
+				}
+				transfer_state = 296
+				add_ideas = FMA_Faction
+				add_ideas = GNB_Foreign_Occupation
+				add_ideas = GNB_paigc_offensive
+				set_politics = { ruling_party = despotism }
+				set_popularities = {
+					despotism = 10
+					socialist = 70
+					conservatism = 20
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = GNB_french_forces_party_long
+					name = GNB_french_forces_party
+				}
+				retire_country_leader = yes
+				promote_character = GNB_Transitional_Council
+				if = {
+					limit = { SEN = { check_variable = { ECON_SPHERE_LEADER = FFR } } }
+					econ_join_sphere_FFR = yes
+				}
+				if = {
+					limit = { SEN = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+					econ_join_sphere_USA = yes
+				}
+				set_country_flag = IWC_government_fate
+				set_country_flag = GNB_Capitulated
+			}
+			else_if = { #WAA Won
+				limit = {
+					has_global_flag = WAC_SCENARIO_2_WAA_VICTORY
+				}
+				GNB = { transfer_state = 296 }
+				SEN = { add_to_faction = GNB }
+				add_ideas = WAA_Protectorate
+				add_ideas = GNB_Foreign_Occupation
+				add_ideas = GNB_bissau_crisis
+				set_politics = { ruling_party = despotism }
+				set_popularities = {
+					despotism = 10
+					socialist = 70
+					conservatism = 20
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = GNB_interim_party_long
+					name = GNB_interim_party
+				}
+				retire_country_leader = yes
+				promote_character = GNB_Transitional_Council
+				country_event = { id = GNB_skeleton.7 days = 50 }
+				if = {
+					limit = { SEN = { check_variable = { ECON_SPHERE_LEADER = SEN } } }
+					econ_join_sphere_SEN = yes
+				}
+				if = {
+					limit = { SEN = { check_variable = { ECON_SPHERE_LEADER = USA } } }
+					econ_join_sphere_USA = yes
+				}
+				set_country_flag = IWC_government_fate
+				set_country_flag = GNB_Capitulated
+				drop_cosmetic_tag = yes
+			}
+			else_if = { #WAA Won
+				limit = {
+					has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+				}
+				GNB = { transfer_state = 296 }
+				add_ideas = WAA_Protectorate
+				add_ideas = GNB_Foreign_Occupation
+				add_ideas = GNB_paigc_offensive
+				retire_country_leader = yes
+				promote_character = GNB_Transitional_Council
+				country_event = { id = GNB_skeleton.7 days = 50 }
+				set_politics = { ruling_party = despotism }
+				set_popularities = {
+					despotism = 10
+					socialist = 70
+					conservatism = 20
+				}
+				drop_cosmetic_tag = yes
+			}
+			else_if = { #PALF Won
+				limit = {
+					OR = {
+						has_global_flag = WAC_SCENARIO_1_PALF_VICTORY
+						has_global_flag = WAC_SCENARIO_2_PALF_VICTORY
+						has_global_flag = WAC_SCENARIO_3_PALF_VICTORY
+					}
+				}
+				add_ideas = PALF_Satellite_peace
+				add_ideas = GNB_Foreign_Occupation
+				add_ideas = GNB_fling_terrorism
+				remove_all_ministers = yes
+				add_ideas = GNB_Francisco_Mendes_hog
+				add_ideas = GNB_Victor_Saude_for
+				add_ideas = GNB_Constantino_Teixeira_eco
+				add_ideas = GNB_Francisco_Mendes_sec
+				CAO = { add_to_faction = GNB }
+				CAO = {
+					set_autonomy = {
+						target = GNB
+						autonomous_state = autonomy_associated
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+				econ_join_sphere_CAO = yes
+				set_politics = { ruling_party = socialist }
+				set_popularities = {
+					socialist = 70
+					conservatism = 30
+				}
+				set_cosmetic_tag = GNB_palf
+			}
+		}
+	}
+}
+
+country_event = { #Congratulations you missed the war
+	id = GNB_skeleton.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNB_skeleton.6" }
+	title = GNB_skeleton.6
+	desc = GNB_skeleton.6.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = { GNB = { is_subject = yes } } #just in case this event somehow fires after Guinea has already rejoined Portugal
+	}
+
+	fire_only_once = yes
+
+	option = { #But which Portugal?
+		name = GNB_skeleton.6.a
+		ai_chance = { base = 10 }
+		if = { #FMA Won
+			limit = {
+				OR = {
+					has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+					has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+					has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+				}
+			}
+			add_ideas = GNB_Foreign_Occupation
+			remove_ideas = GNB_finite_status_quo
+			add_ideas = GNB_paigc_offensive
+			set_country_flag = IWC_government_fate
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = WAC_SCENARIO_2_FMA_VICTORY
+						has_global_flag = WAC_SCENARIO_3_FMA_VICTORY
+					}
+				}
+				FFR = { add_to_faction = GNB }
+				add_ideas = FMA_Faction
+				econ_join_sphere_FFR = yes
+			}
+			else_if = {
+				limit = {
+					has_global_flag = WAC_SCENARIO_1_WAA_VICTORY
+				}
+				SEN = { add_to_faction = GNB }
+				add_ideas = WAA_Protectorate
+				econ_join_sphere_SEN = yes
+			}
+		}
+		else_if = { #WAA Won
+			limit = {
+				has_global_flag = WAC_SCENARIO_2_WAA_VICTORY
+			}
+			SEN = {
+				declare_war_on = {
+					target = GNB
+					type = annex_everything
+				}
+			}
+			GUI = {
+				declare_war_on = {
+					target = GNB
+					type = annex_everything
+				}
+			}
+		}
+		else_if = { #PALF Won
+			limit = {
+				OR = {
+					has_global_flag = WAC_SCENARIO_1_PALF_VICTORY
+					has_global_flag = WAC_SCENARIO_2_PALF_VICTORY
+					has_global_flag = WAC_SCENARIO_3_PALF_VICTORY
+				}
+			}
+			country_event = { id = GNB_skeleton.5 hours = 20 }
+		}
+		else = { # Still Ongoing
+			set_country_flag = IWC_government_fate
+		}
+	}
+}
+
+country_event = { #New Government
+	id = GNB_skeleton.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GNB_skeleton.7" }
+	title = GNB_skeleton.7
+	desc = GNB_skeleton.7.d
+	picture = GFX_report_event_IBR_election_line
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { 
+		name = GNB_skeleton.7.a
+		ai_chance = { base = 10 }
+		if = {
+			limit = {
+				AND = {
+					NOT = { is_subject_of = POR }
+					NOT = { is_subject_of = RPP }
+					NOT = { is_subject_of = GNS }
+				}
+			}
+			remove_ideas = GNB_Foreign_Occupation
+			remove_ideas = GNB_paigc_offensive
+			remove_all_ministers = yes
+			add_ideas = GNB_Francisco_Mendes_hog
+			add_ideas = GNB_Victor_Saude_for
+			add_ideas = GNB_Constantino_Teixeira_eco
+			add_ideas = GNB_Francisco_Mendes_sec
+			set_politics = { ruling_party = paternalism }
+			set_popularities = {
+				paternalism = 65
+				conservatism = 35
+			}
+			set_party_name = {
+				ideology = paternalism
+				name = GNB_socialist_party
+				long_name = GNB_socialist_party_long
+			}
+		}
+	}
+}
+

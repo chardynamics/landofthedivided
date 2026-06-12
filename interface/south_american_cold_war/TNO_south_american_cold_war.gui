@@ -1,0 +1,673 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_SA_South_American_Cold_War_BoP_GUI"
+		position = { x = 27 y = 92 }
+		size = { width = 500 height = 558 }
+		### Top Bar ###
+		containerWindowType = {
+			name = "TNO_GlobalConflicts_GUI_TopBar"
+			position = { x = 41 y = -24 }
+			
+			# Title
+			instantTextBoxType = {
+				name = "TNO_SA_South_American_Cold_War_BoP_GUI_Title"
+				position = { x = 0 y = -73 }
+				font = "vt323_72_WT_outline"
+				text = SACW_title
+				maxWidth = 857
+				maxHeight = 58
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			# Info Button
+			iconType = {
+				name = "GlobalConflicts_GUI_InfoBtn"
+				spriteType = "GFX_ParliamentMechanic_InfoButton"
+				position = { x = 899 y = -44 }
+				pdx_tooltip = SACW_big_cold_war_info_button
+			}
+		}
+
+		iconType = {
+			name = "tabs"
+			spriteType = "GFX_fopo_crisis_box_bg"
+			position = { x = 0 y = -1 }
+		}
+		iconType = {
+			name = "tabs_2"
+			spriteType = "GFX_fopo_crisis_box_bg"
+			position = { x = 529 y = -1 }
+		}
+		
+		iconType = {
+			name = "header_blocker"
+			position = { x = 7 y = 8 }
+			spriteType = "GFX_header_blocker"
+		}
+		gridboxtype = {
+			name = "SA_tabs"
+			position = { x = -176 y = 1 }
+			size = { width = 480 height = 45 }
+			slotsize = { width = 120 height = 45 }
+			add_horizontal = yes
+		}
+		gridboxtype = {
+			name = "SA_tabs_2"
+			position = { x = -176 y = 1 }
+			size = { width = 480 height = 45 }
+			slotsize = { width = 120 height = 45 }
+			add_horizontal = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "TNO_SA_overview"
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "overview_background"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_overview_background"
+		}
+
+		iconType = {
+			name = "brazil_flag"
+			position = { x = 50 y = 81 }
+			spriteType = "GFX_flag_medium_plain"
+		}
+		buttonType = {
+			name = "brazil_flag_button"
+			position = { x = 4 y = 51 }
+			spriteType = "GFX_flag_outline_bra"
+			pdx_tooltip = SACW_brazil_tt
+		}
+		
+		iconType = {
+			name = "argentina_flag"
+			position = { x = 444 y = 81 }
+			spriteType = "GFX_flag_medium_plain"
+		}
+		buttonType = {
+			name = "argentina_flag_button"
+			position = { x = 398 y = 51 }
+			spriteType = "GFX_flag_outline_arg"
+			pdx_tooltip = SACW_argentina_tt
+		}
+
+		iconType = {
+			name = "power_balance_bar"
+			position = { x = 96 y = 60 }
+			spriteType = "GFX_power_balance_bar"
+			pdx_tooltip = SACW_bar_tt
+		}
+		iconType = {
+			name = "power_balance_mid"
+			position = { x = 0 y = 42 }
+			spriteType = "GFX_power_balance_midpoint"
+		}
+
+		iconType = {
+			name = "cold_war_info"
+			position = { x = 295 y = 126 }
+			spriteType = "GFX_cold_war_info"
+			pdx_tooltip = cold_war_info_tt
+		}
+
+		#Cold War Score
+		iconType = {
+			name = "cold_war_score_bg"
+			position = { x = 298 y = 156 }
+		}
+
+		instantTextboxType = {
+			name = "cold_war_score_nation"
+			position = { x = 299 y = 165 }
+			font = "aldrich_24_outline"
+			text = "[GetSacwNation]"
+			maxWidth = 184
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "cold_war_score_political_title"
+			position = { x = 321 y = 195 }
+			font = "aldrich_20_outline"
+			text = "SA_cold_war_score_political_title"
+			maxWidth = 90
+			pdx_tooltip = SA_cold_war_score_political_tt
+		}
+		instantTextboxType = {
+			name = "cold_war_score_economic_title"
+			position = { x = 321 y = 215 }
+			font = "aldrich_20_outline"
+			text = "SA_cold_war_score_economic_title"
+			maxWidth = 90
+			pdx_tooltip = SA_cold_war_score_economic_tt
+		}
+		instantTextboxType = {
+			name = "cold_war_score_military_title"
+			position = { x = 321 y = 235 }
+			font = "aldrich_20_outline"
+			text = "SA_cold_war_score_military_title"
+			maxWidth = 90
+			pdx_tooltip = SA_cold_war_score_military_tt
+		}
+
+		instantTextboxType = {
+			name = "cold_war_score_political"
+			position = { x = 430 y = 195 }
+			font = "aldrich_20_outline"
+			text = "SA_cold_war_score_political"
+			maxWidth = 90
+			pdx_tooltip = SA_cold_war_score_political_tt
+		}
+		instantTextboxType = {
+			name = "cold_war_score_economic"
+			position = { x = 430 y = 215 }
+			font = "aldrich_20_outline"
+			text = "SA_cold_war_score_economic"
+			maxWidth = 90
+			pdx_tooltip = SA_cold_war_score_economic_tt
+		}
+		instantTextboxType = {
+			name = "cold_war_score_military"
+			position = { x = 430 y = 235 }
+			font = "aldrich_20_outline"
+			text = "SA_cold_war_score_military"
+			maxWidth = 90
+			pdx_tooltip = SA_cold_war_score_military_tt
+		}
+
+		instantTextboxType = {
+			name = "cold_war_score_total"
+			position = { x = 321 y = 280 }
+			font = "aldrich_20_outline"
+			text = "SA_cold_war_score_total"
+			maxWidth = 180
+		}
+
+		#Tension
+		instantTextboxType = {
+			name = "tension"
+			position = { x = 299 y = 503 }
+			font = "aldrich_20_outline"
+			text = "SA_tension_text"
+			maxWidth = 184
+			format = center
+			pdx_tooltip = SAmap_tenstion_tt
+		}
+
+		iconType = {
+			name = "tension_5"
+			position = { x = 356 y = 324 }
+			spriteType = "GFX_tension_5"
+			pdx_tooltip = SAmap_tenstion_tt
+		}
+		iconType = {
+			name = "tension_4"
+			position = { x = 356 y = 358 }
+			spriteType = "GFX_tension_4"
+			pdx_tooltip = SAmap_tenstion_tt
+		}
+		iconType = {
+			name = "tension_3"
+			position = { x = 356 y = 392 }
+			spriteType = "GFX_tension_3"
+			pdx_tooltip = SAmap_tenstion_tt
+		}
+		iconType = {
+			name = "tension_2"
+			position = { x = 356 y = 426 }
+			spriteType = "GFX_tension_2"
+			pdx_tooltip = SAmap_tenstion_tt
+		}
+		iconType = {
+			name = "tension_1"
+			position = { x = 356 y = 460 }
+			spriteType = "GFX_tension_1"
+			pdx_tooltip = SAmap_tenstion_tt
+		}
+
+		iconType = {
+			name = "tension_bar"
+			position = { x = 297 y = 322 }
+			spriteType = "GFX_tension_bar"
+			pdx_tooltip = SAmap_tenstion_tt
+		}
+
+		
+
+		containerWindowType = {
+			name = "map_container"
+			position = { x = 8 y = 127 } 
+
+			gridboxtype = {
+				name = "SAmap_nations_fill"
+				position = { x = 0 y = 0 }
+				format = "UPPER_LEFT"
+				add_horizontal = yes
+				slotsize = { width = 0 height = 0 }
+			}
+			gridboxtype = {
+				name = "SAmap_nations"
+				position = { x = 0 y = 0 }
+				format = "UPPER_LEFT"
+				add_horizontal = yes
+				slotsize = { width = 0 height = 0 }
+			}
+
+			# PROXY ICONS
+
+			buttonType = {
+				name = "proxy_icon_paraguay"
+				position = { x = 150 y = 210 }
+				spritetype = "GFX_proxy_icon"
+				pdx_tooltip = SACW_proxy_icon_paraguay_tt
+			}
+			buttonType = {
+				name = "proxy_icon_bolivia"
+				position = { x = 122 y = 188 }
+				spritetype = "GFX_proxy_icon"
+				pdx_tooltip = SACW_proxy_icon_bolivia_tt
+			}
+			buttonType = {
+				name = "proxy_icon_colombia"
+				position = { x = 92 y = 98 }
+				spritetype = "GFX_proxy_icon"
+				pdx_tooltip = SACW_proxy_icon_colombia_tt
+			}
+			buttonType = {
+				name = "proxy_icon_cayenne"
+				position = { x = 183 y = 93 }
+				spritetype = "GFX_proxy_icon"
+				pdx_tooltip = SACW_proxy_icon_cayenne_tt
+			}
+			buttonType = {
+				name = "proxy_icon_satw"
+				position = { x = 171 y = 237 }
+				spritetype = "GFX_proxy_icon"
+				pdx_tooltip = SACW_proxy_icon_satw_tt
+			}
+			iconType = {
+				name = "proxy_icon_locked_dominicana"
+				position = { x = 110 y = 28 }
+				spritetype = "GFX_proxy_icon_locked"
+				pdx_tooltip = SACW_proxy_icon_locked_dominicana_tt
+			}
+			iconType = {
+				name = "proxy_icon_locked_haiti"
+				position = { x = 85 y = 28 }
+				spritetype = "GFX_proxy_icon_locked"
+				pdx_tooltip = SACW_proxy_icon_locked_haiti_tt
+			}
+			iconType = {
+				name = "proxy_icon_locked_jamaica"
+				position = { x = 68 y = 32 }
+				spritetype = "GFX_proxy_icon_locked"
+				pdx_tooltip = SACW_proxy_icon_locked_jamaica_tt
+			}
+			iconType = {
+				name = "proxy_icon_locked_trinidad"
+				position = { x = 147 y = 60 }
+				spritetype = "GFX_proxy_icon_locked"
+				pdx_tooltip = SACW_proxy_icon_locked_trinidad_tt
+			}
+		}	
+	}
+
+	containerWindowType = {
+		name = "SAmap_nation_fill_entry"
+		iconType = {
+			name = "SAmap_nation_fill"
+		}
+	}
+	containerWindowType = {
+		name = "SAmap_nation_entry"
+		iconType = {
+			name = "SAmap_nation"
+			pdx_tooltip = SAmap_nation_tt
+		}
+	}
+	
+	###################
+	# Nuclear Program #
+	###################
+	containerWindowType = {
+		name = "TNO_south_america_nuclear_race_gui"
+		size = { width = 496 height = 600 }
+		position = { x = 529 y = 0 }
+		
+		icontype = {
+			name = "south_america_nuclear_race_bg"
+			position = { x = 0 y = 0 }
+			spritetype = "GFX_south_america_cold_war_nuclear_background"
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "TNO_south_america_nuclear_race_gui_supporter"
+			position = { x = 7 y = 78 }
+
+			iconType = {
+				name = "supporter_outline"
+				position = { x = -4 y = 0 }
+				spriteType = "GFX_south_america_cold_war_nuclear_program_gui_supporter_outline"
+				alwaystransparent = yes
+			}
+
+			instantTextboxType = {
+				name = "supporter_text"
+				position = { x = -2 y = -25 }
+				font = "aldrich_24_outline"
+				text = "SA_nuclear_supporter"
+			}
+			
+			containerWindowType = {
+				name = "SACW_nuclear_supporters_List_Container"
+				size = { width = 478 height = 61 }
+				position = { x = -4 y = 0 }
+				clipping = yes
+				horizontalScrollbar = "TNO_SACW_nuclear_race_HorizontalSlider"
+				margin = { top = 0 left = 0 bottom = 0 right = 0 }
+
+				background = {
+					name = "SACW_supporters_List_Background"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+				}
+
+				gridboxtype = {
+					name = "SACW_nuclear_supporters_List"
+					position = { x = 24 y = 0 }
+					size = { width = 47 height = 28 }
+					slotsize = { width = 88 height = 28 }
+					max_slots_vertical = 1
+				}
+			}
+		}
+		
+		containerWindowType = {
+			name = "TNO_south_america_nuclear_race_gui_budget"
+			position = { x = 111 y = 165 }
+
+			instantTextboxType = {
+				name = "budget_amount_text"
+				position = { x = -62 y = 0 }
+				font = "aldrich_28_outline"
+				text = "SA_nuclear_budget_text"
+				format = center
+				maxWidth = 400
+				pdx_tooltip = "SACW_nuclear_budget_days_remaining_tt"
+			}
+		}
+
+		containerWindowType = {
+			name = "TNO_south_america_nuclear_race_gui_progress_pie"
+			position = { x = 290 y = 255 }
+
+			iconType = {
+				name = "progress_pie_outline"
+				spriteType = "GFX_south_america_cold_war_nuclear_program_gui_pie_outline"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}			
+			iconType = {
+				name = "progress_pie"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_south_america_cold_war_nuclear_program_gui_progress_pie"
+				alwaystransparent = yes
+			}
+
+			instantTextboxType = {
+				name = "progress_text"
+				position = { x = -85 y = 145 }
+				font = "aldrich_18_outline"
+				text = "SA_nuclear_progress_desc"
+				format = center
+				maxWidth = 300
+			}
+		}
+
+		containerWindowType = {
+			name = "TNO_south_america_nuclear_race_gui_info"
+			position = { x = 7 y = 247 }
+
+			iconType = {
+				name = "OASsymbol"
+				position = { x = -4 y = -35 }
+				spriteType = "GFX_OAS_symbol"
+				pdx_tooltip = SACW_nuclear_mechanic_tooltip_tt
+			}
+
+			iconType = {
+				name = "info_outline"
+				position = { x = -4 y = 0 }
+				spriteType = "GFX_south_america_cold_war_nuclear_program_gui_info_outline"
+				alwaystransparent = yes
+			}
+
+			instantTextboxType = {
+				name = "info_text"
+				position = { x = 0 y = 22 }
+				font = "aldrich_20_outline"
+				text = "SA_nuclear_info_desc"
+				format = center
+				maxWidth = 210
+			}
+		}
+		
+		icontype = {
+			name = "south_america_nuclear_race_cover_bra"
+			position = { x = 0 y = 40 }
+			spritetype = "GFX_south_america_cold_war_nuclear_cover_bra"
+			alwaystransparent = no
+		}
+
+		icontype = {
+			name = "south_america_nuclear_race_cover_arg"
+			position = { x = 0 y = 40 }
+			spritetype = "GFX_south_america_cold_war_nuclear_cover_arg"
+			alwaystransparent = no
+		}
+		
+	}
+	containerWindowType = {
+		name = "TNO_SACW_Nuclear_Supporters_Entry"
+		size = { width = 300 height = 144 }
+		position = { x = -4 y = 0 }
+		iconType = {
+			name = "SACW_nuclear_supporters_Entry_Flag"
+			position = { x = 47 y = 30 }
+			quadTextureSprite = "GFX_flag_medium_plain"
+		}
+
+		iconType = {
+			name = "SACW_nuclear_supporters_Entry_Overlay"
+			position = { x = 4 y = 3 }
+			spriteType = "GFX_flag_overlay_stateview_large"
+			pdx_tooltip = SACW_nuclear_supporter_name_tt
+		}
+	}
+	extendedScrollbarType = {
+		name = "TNO_SACW_nuclear_race_HorizontalSlider"
+		position = { x = 0 y = 20 }
+		size = { width = 100 height = 18 }
+		tileSize = { width = 0 height = 0 }
+		maxValue = 1
+		minValue = 0
+		stepSize = 0.1
+		startValue = 0
+		horizontal = yes
+		orientation = lower_left
+		origo = lower_left
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_scrollbar_horisontal_bg"
+		}
+
+		slider = {
+			name = "Slider"
+			quadTextureSprite = "GFX_scroll_drager"
+			position = { x = 0 y = -2 }
+		}
+
+		track = {
+			name = "Track"
+			quadTextureSprite = "GFX_scroll_track_horisontal"
+			position = { x = 0 y = 3 }
+			alwaystransparent = yes
+		}
+
+		decreaseButton = {
+			name = "Decrease"
+			quadTextureSprite = "GFX_scroll_left"
+			position = { x = 3 y = 1 }
+		}
+
+		increaseButton = {
+			name = "Increase"
+			quadTextureSprite = "GFX_scroll_right"
+			position = { x = -19 y = -17 }
+		}
+
+	}
+	
+	containerWindowType = {
+		name = "TNO_SACW_select_nuclear_budget_gui"
+		size = { width = 380 height = 340 }
+		orientation = center
+		origo = center
+		moveable = yes
+		hide_position = { x = 0 y = 110% }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 250
+		show_sound = menu_open_window
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_1b_no_border"
+		}
+
+		instantTextboxType = {
+			name = "budget_header"
+			font = "aldrich_24_outline"
+			text = "SA_nuclear_budget_header"
+			orientation = center_up
+			position = { x = -170 y = 25 }
+			maxWidth = 340
+			maxHeight = 24
+			format = center
+			vertical_alignment = center
+		}
+
+		containerWindowType = {
+			name = "TNO_SACW_nuclear_funding_confirm_container"
+			size = { width = 99 height = 48 }
+			position = { x = 0 y = -25 }
+			orientation = center_down
+			origo = center_down
+
+			buttonType = {
+				name = "budget_confirm_button"
+				spriteType = "GFX_south_america_cold_war_nuclear_program_gui_budget_outline"
+				buttontext = "SA_nuclear_budget_confirm"
+				buttonFont = "aldrich_20_outline"
+				pdx_tooltip = SACW_nuclear_budget_confirm_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "TNO_SACW_nuclear_funding_progress_container"
+			size = { width = 130 height = 130 }
+			position = { x = 25 y = -35 }
+			orientation = center_left
+			origo = center_left
+			clipping = no
+
+			iconType = {
+				name = "progress_pie_outline"
+				spriteType = "GFX_south_america_cold_war_nuclear_program_gui_pie_outline"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "progress_pie"
+				spriteType = "GFX_south_america_cold_war_nuclear_program_gui_progress_pie"
+				alwaystransparent = yes
+			}
+
+			instantTextboxType = {
+				name = "progress_text"
+				position = { x = 140 y = 10 }
+				font = "aldrich_18_outline"
+				text = "SA_nuclear_progress_desc"
+				format = center
+				maxWidth = 200
+			}
+		}
+	
+		containerWindowType = {
+			name = "TNO_SACW_nuclear_funding_slider_container"
+			size = { width = 303 height = 24 }
+			position = { x = 0 y = -90 }
+			orientation = center_down
+			origo = center_down
+			clipping = no
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+			}
+
+			iconType = {
+				name = "TNO_SACW_nuclear_funding_slider_background"
+				spriteType = "GFX_SACW_nuclear_funding_slider_background"
+				position = { x = 0 y = 11 }
+				alwaystransparent = yes
+			}
+
+			gridboxtype = {
+				name = "TNO_SACW_nuclear_funding_slider_gridbox"
+				slotsize = { width = 1 height = 1 }
+				add_horizontal = yes
+			}
+
+			iconType = {
+				name = "TNO_SACW_nuclear_funding_slider_thumb"
+				spriteType = "GFX_SACW_nuclear_funding_slider_thumb"
+				position = { x = 0 y = 12 }
+				alwaystransparent = yes
+				centerposition = yes
+			}
+
+			buttonType = {
+				name = "TNO_SACW_nuclear_funding_slider_decrease"
+				spriteType = "GFX_econ_crt_slider_left"
+				position = { x = -9 y = 12 }
+				pdx_tooltip = "TNO_SACW_nuclear_funding_slider_decrease_tt"
+				centerposition = yes
+			}
+
+			buttonType = {
+				name = "TNO_SACW_nuclear_funding_slider_increase"
+				spriteType = "GFX_econ_crt_slider_right"
+				position = { x = 312 y = 12 }
+				pdx_tooltip = "TNO_SACW_nuclear_funding_slider_increase_tt"
+				centerposition = yes
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "TNO_SACW_nuclear_funding_slider_entry"
+		size = { width = 3 height = 24 }
+
+		buttonType = {
+			name = "TNO_SACW_nuclear_funding_slider_slice"
+			size = { x = 3 y = 24 }
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			pdx_tooltip = TNO_SACW_nuclear_funding_slider_slice_tt
+		}
+	}
+}

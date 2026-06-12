@@ -1,0 +1,105 @@
+ideas = {
+	country = {
+		RPP_dis_united_coalition = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RPP_dis_united_coalition" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = RPP_disunited_coalition
+			modifier = {
+				stability_factor = -0.075
+				conscription_factor = -0.01
+			}
+		}
+
+		RPP_true_lusophone_dream = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RPP_true_lusophone_dream" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = RPP_lusophone_dream
+			modifier = {
+				political_power_factor = 0.1
+				misc_income_modifier = 0.05
+			}
+		}
+		##############Madeira ideas
+		RPP_trouble_savages = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RPP_trouble_savages" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = RPP_trouble_with_savages
+			modifier = {
+			}
+		}
+
+		RPP_second_son = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RPP_second_son" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_suffocated_economy
+			modifier = {
+			}
+		}
+	}
+
+	hidden_ideas = {
+		###########Confederation ideas --- hidden for now
+		RPP_fully_ofn_dependent = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RPP_fully_ofn_dependent" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#picture = --- no need for generics if it's hidden, will request a real icon for an hotfix or something
+			modifier = {
+				political_power_factor = -0.10
+				misc_income_modifier = 0.25
+				stability_factor = 0.20
+			}
+		}
+
+		RPP_deep_wound_heart = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RPP_deep_wound_heart" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#picture = RPP_Deep_Wounds_To_The_Heart --- also needs a rework
+			modifier = {
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+				war_support_factor = 0.20
+			}
+			targeted_modifier = {
+				tag = GER #DIE!!!!!
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.5
+			}
+		}
+	}
+}

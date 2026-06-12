@@ -1,0 +1,2645 @@
+ideas = {
+	#################################################
+	#                  Dummy Ideas                  #
+	#################################################
+
+	#Format is as follows
+	# Endo-Exo stuff
+	## Default
+	## Endonym
+	## Exonym
+	# Admin Title stuff
+	## Short Name
+	## Admin Region
+	## Title Interaction
+
+	#|=====[ ADMIN TITLES ]=====|#
+	hidden_ideas = {
+		Admin_Title_Reichsgau = { 
+			on_add = {
+				remove_ideas = Admin_Title_Reichsgau 
+				set_temp_variable = { i = token:Admin_Title_Reichsgau } 
+			} 
+		}
+
+		Admin_Title_Concession = {
+			on_add = {
+				remove_ideas = Admin_Title_Concession
+				set_temp_variable = { i = token:Admin_Title_Concession }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_State = {
+			on_add = {
+				remove_ideas = Admin_Title_State
+				set_temp_variable = { i = token:Admin_Title_State }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_portuguese_endonym = i }
+				add_to_array = { global.has_arabic_endonym = i }
+				add_to_array = { global.has_burmese_endonym = i }
+				add_to_array = { global.has_indian_endonym = i }
+			}
+		}
+
+		Admin_Title_Province = {
+			on_add = {
+				remove_ideas = Admin_Title_Province
+				set_temp_variable = { i = token:Admin_Title_Province }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_portuguese_endonym = i }
+				add_to_array = { global.has_italian_endonym = i }
+				add_to_array = { global.has_turkish_endonym = i }
+				add_to_array = { global.has_thai_endonym = i }
+				add_to_array = { global.has_finnish_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_Federal_District = {
+			on_add = {
+				remove_ideas = Admin_Title_Federal_District
+				set_temp_variable = { i = token:Admin_Title_Federal_District }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_portuguese_endonym = i }		
+			}
+		}
+
+		Admin_Title_Municipality = {
+			on_add = {
+				remove_ideas = Admin_Title_Municipality
+				set_temp_variable = { i = token:Admin_Title_Municipality }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_portuguese_endonym = i }
+				add_to_array = { global.has_arabic_endonym = i }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_swedish_endonym = i }
+				add_to_array = { global.has_finnish_endonym = i }
+			}
+		}
+
+		Admin_Title_City = {
+			on_add = {
+				remove_ideas = Admin_Title_City
+				set_temp_variable = { i = token:Admin_Title_City }
+				add_to_array = { global.has_swedish_endonym = i }
+				add_to_array = { global.has_finnish_endonym = i }
+			}
+		}
+
+		Admin_Title_Division = {
+			on_add = {
+				remove_ideas = Admin_Title_Division
+				set_temp_variable = { i = token:Admin_Title_Division }
+				add_to_array = { global.has_burmese_endonym = i }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_Special_Division = {
+			on_add = {
+				remove_ideas = Admin_Title_Special_Division
+				set_temp_variable = { i = token:Admin_Title_Special_Division }
+				add_to_array = { global.has_burmese_endonym = i }
+			}
+		}
+
+		Admin_Title_Department = {
+			on_add = {
+				remove_ideas = Admin_Title_Department
+				set_temp_variable = { i = token:Admin_Title_Department }
+				add_to_array = { global.has_greek_endonym = i }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_french_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_Territory = {
+			on_add = {
+				remove_ideas = Admin_Title_Territory
+				set_temp_variable = { i = token:Admin_Title_Territory }
+				add_to_array = { global.has_japanese_default = i }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Admin_Title_Metropolis = {
+			on_add = {
+				remove_ideas = Admin_Title_Metropolis
+				set_temp_variable = { i = token:Admin_Title_Metropolis }
+				add_to_array = { global.has_japanese_default = i }
+			}
+		}
+
+		Admin_Title_Governorate = {
+			on_add = {
+				remove_ideas = Admin_Title_Governorate
+				set_temp_variable = { i = token:Admin_Title_Governorate }
+				add_to_array = { global.has_arabic_endonym = i }
+				add_to_array = { global.has_italian_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_Subprefecture = {
+			on_add = {
+				remove_ideas = Admin_Title_Subprefecture
+				set_temp_variable = { i = token:Admin_Title_Subprefecture }
+				add_to_array = { global.has_japanese_default = i }
+			}
+		}
+
+		Admin_Title_County = {
+			on_add = {
+				remove_ideas = Admin_Title_County
+				set_temp_variable = { i = token:Admin_Title_County }
+				add_to_array = { global.has_spanish_default = i }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_swedish_endonym = i }
+			}
+		}
+
+		Admin_Title_Shrieval_County = {
+			on_add = {
+				remove_ideas = Admin_Title_Shrieval_County
+				set_temp_variable = { i = token:Admin_Title_Shrieval_County }
+			}
+		}
+
+		Admin_Title_Crown_Dependency = {
+			on_add = {
+				remove_ideas = Admin_Title_Crown_Dependency
+				set_temp_variable = { i = token:Admin_Title_Crown_Dependency }
+			}
+		}
+
+		Admin_Title_Overseas_Territory = {
+			on_add = {
+				remove_ideas = Admin_Title_Overseas_Territory
+				set_temp_variable = { i = token:Admin_Title_Overseas_Territory }
+			}
+		}
+
+		Admin_Title_Treaty_Port = {
+			on_add = {
+				remove_ideas = Admin_Title_Treaty_Port
+				set_temp_variable = { i = token:Admin_Title_Treaty_Port }
+				add_to_array = { global.has_japanese_default = i }
+				add_to_array = { global.has_italian_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_Colonial_Province = {
+			on_add = {
+				remove_ideas = Admin_Title_Colonial_Province
+				set_temp_variable = { i = token:Admin_Title_Colonial_Province }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Admin_Title_Colony = {
+			on_add = {
+				remove_ideas = Admin_Title_Colony
+				set_temp_variable = { i = token:Admin_Title_Colony }
+				add_to_array = { global.has_portuguese_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_Region = {
+			on_add = {
+				remove_ideas = Admin_Title_Region
+				set_temp_variable = { i = token:Admin_Title_Region }
+				add_to_array = { global.has_russian_default = i }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Admin_Title_Special_Commissariat = {
+			on_add = {
+				remove_ideas = Admin_Title_Special_Commissariat
+				set_temp_variable = { i = token:Admin_Title_Special_Commissariat }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Admin_Title_Special_District = {
+			on_add = {
+				remove_ideas = Admin_Title_Special_District
+				set_temp_variable = { i = token:Admin_Title_Special_District }
+				add_to_array = { global.has_japanese_default = i }
+			}
+		}
+
+		Admin_Title_Circuit = {
+			on_add = {
+				remove_ideas = Admin_Title_Circuit
+				set_temp_variable = { i = token:Admin_Title_Circuit }
+				add_to_array = { global.has_japanese_default = i }
+			}
+		}
+
+		Admin_Title_Banner = {
+			on_add = {
+				remove_ideas = Admin_Title_Banner
+				set_temp_variable = { i = token:Admin_Title_Banner }
+				add_to_array = { global.has_arabic_endonym = i }
+			}
+		}
+
+		Admin_Title_Urban_Prefecture = {
+			on_add = {
+				remove_ideas = Admin_Title_Urban_Prefecture
+				set_temp_variable = { i = token:Admin_Title_Urban_Prefecture }
+				add_to_array = { global.has_japanese_default = i }
+			}
+		}
+
+		Admin_Title_Prefecture = {
+			on_add = {
+				remove_ideas = Admin_Title_Prefecture
+				set_temp_variable = { i = token:Admin_Title_Prefecture }
+				add_to_array = { global.has_japanese_default = i }
+				add_to_array = { global.has_greek_endonym = i }
+			}
+		}
+
+		Admin_Title_Prefecture_Shu = {
+			on_add = {
+				remove_ideas = Admin_Title_Prefecture_Shu
+				set_temp_variable = { i = token:Admin_Title_Prefecture_Shu }
+				add_to_array = { global.has_japanese_default = i }
+			}
+		}
+
+		Admin_Title_Prefecture_Cho = {
+			on_add = {
+				remove_ideas = Admin_Title_Prefecture_Cho
+				set_temp_variable = { i = token:Admin_Title_Prefecture_Cho }
+				add_to_array = { global.has_japanese_default = i }
+			}
+		}
+
+		Admin_Title_Canal_Zone = {
+			on_add = {
+				remove_ideas = Admin_Title_Canal_Zone
+				set_temp_variable = { i = token:Admin_Title_Canal_Zone }
+				add_to_array = { global.has_italian_endonym = i }
+			}
+		}
+
+		Admin_Title_Military_Territory = {
+			on_add = {
+				remove_ideas = Admin_Title_Military_Territory
+				set_temp_variable = { i = token:Admin_Title_Military_Territory }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_portuguese_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_Special_Zone = {
+			on_add = {
+				remove_ideas = Admin_Title_Special_Zone
+				set_temp_variable = { i = token:Admin_Title_Special_Zone }
+				add_to_array = { global.has_turkish_endonym = i }
+			}
+		}
+
+		Admin_Title_Civil_Administration = {
+			on_add = {
+				remove_ideas = Admin_Title_Civil_Administration
+				set_temp_variable = { i = token:Admin_Title_Civil_Administration }
+			}
+		}
+
+		Admin_Title_Unc_Territory = {
+			on_add = {
+				remove_ideas = Admin_Title_Unc_Territory
+				set_temp_variable = { i = token:Admin_Title_Unc_Territory }
+				add_to_array = { global.has_short_name = i }
+			}
+		}
+
+		Admin_Title_Inc_Territory = {
+			on_add = {
+				remove_ideas = Admin_Title_Inc_Territory
+				set_temp_variable = { i = token:Admin_Title_Inc_Territory }
+				add_to_array = { global.has_short_name = i }
+			}
+		}
+
+		Admin_Title_ASR = {
+			on_add = {
+				remove_ideas = Admin_Title_ASR
+				set_temp_variable = { i = token:Admin_Title_ASR }
+				add_to_array = { global.has_chinese_endonym = i }
+			}
+		}
+
+		Admin_Title_SAR = {
+			on_add = {
+				remove_ideas = Admin_Title_SAR
+				set_temp_variable = { i = token:Admin_Title_SAR }
+				add_to_array = { global.has_chinese_endonym = i }
+			}
+		}
+
+		Admin_Title_Commune = {
+			on_add = {
+				remove_ideas = Admin_Title_Commune
+				set_temp_variable = { i = token:Admin_Title_Commune }
+				add_to_array = { global.has_italian_default = i }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Admin_Title_Federal_Territory = {
+			on_add = {
+				remove_ideas = Admin_Title_Federal_Territory
+				set_temp_variable = { i = token:Admin_Title_Federal_Territory }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_portuguese_endonym = i }
+			}
+		}
+
+		Admin_Title_Judicial_Department = {
+			on_add = {
+				remove_ideas = Admin_Title_Judicial_Department
+				set_temp_variable = { i = token:Admin_Title_Judicial_Department }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Admin_Title_National_Territory = {
+			on_add = {
+				remove_ideas = Admin_Title_National_Territory
+				set_temp_variable = { i = token:Admin_Title_National_Territory }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Admin_Title_Port = {
+			on_add = {
+				remove_ideas = Admin_Title_Port
+				set_temp_variable = { i = token:Admin_Title_Port }
+				add_to_array = { global.has_arabic_endonym = i }
+			}
+		}
+
+		Admin_Title_Dzong = {
+			on_add = {
+				remove_ideas = Admin_Title_Dzong
+				set_temp_variable = { i = token:Admin_Title_Dzong }
+				add_to_array = { global.has_chinese_endonym = i }
+			}
+		}
+
+		Admin_Title_Leagues_Banners = {
+			on_add = {
+				remove_ideas = Admin_Title_Leagues_Banners
+				set_temp_variable = { i = token:Admin_Title_Leagues_Banners }
+				add_to_array = { global.has_chinese_endonym = i }
+			}
+		}
+
+		Admin_Title_Counties_Leagues_Banners = {
+			on_add = {
+				remove_ideas = Admin_Title_Counties_Leagues_Banners
+				set_temp_variable = { i = token:Admin_Title_Counties_Leagues_Banners }
+				add_to_array = { global.has_chinese_endonym = i }
+			}
+		}
+
+		Admin_Title_District = {
+			on_add = {
+				remove_ideas = Admin_Title_District
+				set_temp_variable = { i = token:Admin_Title_District }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_french_default = i }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_portuguese_endonym = i }
+				add_to_array = { global.has_dutch_endonym = i }
+				add_to_array = { global.has_indian_endonym = i }		
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_Borough = {
+			on_add = {
+				remove_ideas = Admin_Title_Borough
+				set_temp_variable = { i = token:Admin_Title_Borough }
+			}
+		}
+
+		Admin_Title_Census_Area = {
+			on_add = {
+				remove_ideas = Admin_Title_Census_Area
+				set_temp_variable = { i = token:Admin_Title_Census_Area }
+			}
+		}
+
+		Admin_Title_Boroughs_Census_Areas = {
+			on_add = {
+				remove_ideas = Admin_Title_Boroughs_Census_Areas
+				set_temp_variable = { i = token:Admin_Title_Boroughs_Census_Areas }
+			}
+		}
+
+		Admin_Title_Parish = {
+			on_add = {
+				remove_ideas = Admin_Title_Parish
+				set_temp_variable = { i = token:Admin_Title_Parish }
+			}
+		}
+
+		Admin_Title_COG = {
+			on_add = {
+				remove_ideas = Admin_Title_COG
+				set_temp_variable = { i = token:Admin_Title_COG }
+			}
+		}
+
+		Admin_Title_Districts_Unorganized_Atolls = {
+			on_add = {
+				remove_ideas = Admin_Title_Districts_Unorganized_Atolls
+				set_temp_variable = { i = token:Admin_Title_Districts_Unorganized_Atolls }
+			}
+		}
+
+		Admin_Title_Parishes_Municipalities = {
+			on_add = {
+				remove_ideas = Admin_Title_Parishes_Municipalities
+				set_temp_variable = { i = token:Admin_Title_Parishes_Municipalities }
+			}
+		}
+
+		Admin_Title_Parishes_Dependencies = {
+			on_add = {
+				remove_ideas = Admin_Title_Parishes_Dependencies
+				set_temp_variable = { i = token:Admin_Title_Parishes_Dependencies }
+			}
+		}
+
+		Admin_Title_Self_Governing_Colony = {
+			on_add = {
+				remove_ideas = Admin_Title_Self_Governing_Colony
+				set_temp_variable = { i = token:Admin_Title_Self_Governing_Colony }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_Territorial_Council = {
+			on_add = {
+				remove_ideas = Admin_Title_Territorial_Council
+				set_temp_variable = { i = token:Admin_Title_Territorial_Council }
+				add_to_array = { global.has_french_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Admin_Title_Constituent_Country = {
+			on_add = {
+				remove_ideas = Admin_Title_Constituent_Country
+				set_temp_variable = { i = token:Admin_Title_Constituent_Country }
+				add_to_array = { global.has_dutch_endonym = i }
+			}
+		}
+
+		Admin_Title_Union_Territory = {
+			on_add = {
+				remove_ideas = Admin_Title_Union_Territory
+				set_temp_variable = { i = token:Admin_Title_Union_Territory }
+				add_to_array = { global.has_indian_endonym = i }
+			}
+		}
+
+		Admin_Title_Admin_Region = {
+			on_add = {
+				remove_ideas = Admin_Title_Admin_Region
+				set_temp_variable = { i = token:Admin_Title_Admin_Region }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+			}
+		}
+
+		Admin_Title_PMA = {
+			on_add = {
+				remove_ideas = Admin_Title_PMA
+				set_temp_variable = { i = token:Admin_Title_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+			}
+		}
+
+		Admin_Title_Urban_District = {
+			on_add = {
+				remove_ideas = Admin_Title_Urban_District
+				set_temp_variable = { i = token:Admin_Title_Urban_District }
+				add_to_array = { global.has_german_default = i }
+			}
+		}
+
+		Admin_Title_District_Area = {
+			on_add = {
+				remove_ideas = Admin_Title_District_Area
+				set_temp_variable = { i = token:Admin_Title_District_Area }
+				add_to_array = { global.has_german_default = i }
+			}
+		}
+	}
+
+	#|=====[ ASSOC. REGIONS ]=====|#
+	hidden_ideas = {
+		Assoc_Region_Kyiv = {
+			on_add = {
+				remove_ideas = Assoc_Region_Kyiv
+				set_temp_variable = { i = token:Assoc_Region_Kyiv }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_ukranian_endonym = i }
+				#add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Yekaterinoslav = {
+			on_add = {
+				remove_ideas = Assoc_Region_Yekaterinoslav
+				set_temp_variable = { i = token:Assoc_Region_Yekaterinoslav }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_ukranian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Chernihiv = {
+			on_add = {
+				remove_ideas = Assoc_Region_Chernihiv
+				set_temp_variable = { i = token:Assoc_Region_Chernihiv }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_ukranian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Zhytomyr = {
+			on_add = {
+				remove_ideas = Assoc_Region_Zhytomyr
+				set_temp_variable = { i = token:Assoc_Region_Zhytomyr }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_ukranian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Volyn = {
+			on_add = {
+				remove_ideas = Assoc_Region_Volyn
+				set_temp_variable = { i = token:Assoc_Region_Volyn }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_ukranian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Yuzivka = {
+			on_add = {
+				remove_ideas = Assoc_Region_Yuzivka
+				set_temp_variable = { i = token:Assoc_Region_Yuzivka }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_ukranian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Crimea = {
+			on_add = {
+				remove_ideas = Assoc_Region_Crimea
+				set_temp_variable = { i = token:Assoc_Region_Crimea }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_ukranian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Galicia_Ukraine = {
+			on_add = {
+				remove_ideas = Assoc_Region_Galicia_Ukraine
+				set_temp_variable = { i = token:Assoc_Region_Galicia_Ukraine }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_ukranian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Aegean = {
+			on_add = {
+				remove_ideas = Assoc_Region_Aegean
+				set_temp_variable = { i = token:Assoc_Region_Aegean }
+				add_to_array = { global.has_turkish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Black_Sea = {
+			on_add = {
+				remove_ideas = Assoc_Region_Black_Sea
+				set_temp_variable = { i = token:Assoc_Region_Black_Sea }
+				add_to_array = { global.has_turkish_endonym = i }
+			}
+		}
+		Assoc_Region_Central_Anatolia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Central_Anatolia
+				set_temp_variable = { i = token:Assoc_Region_Central_Anatolia }
+				add_to_array = { global.has_turkish_endonym = i }
+			}
+		}
+
+		Assoc_Region_East_Anatolia = {
+			on_add = {
+				remove_ideas = Assoc_Region_East_Anatolia
+				set_temp_variable = { i = token:Assoc_Region_East_Anatolia }
+				add_to_array = { global.has_turkish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Marmara = {
+			on_add = {
+				remove_ideas = Assoc_Region_Marmara
+				set_temp_variable = { i = token:Assoc_Region_Marmara }
+				add_to_array = { global.has_turkish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Mediterranean = {
+			on_add = {
+				remove_ideas = Assoc_Region_Mediterranean
+				set_temp_variable = { i = token:Assoc_Region_Mediterranean }
+				add_to_array = { global.has_turkish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Southeast_Anatolia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Southeast_Anatolia
+				set_temp_variable = { i = token:Assoc_Region_Southeast_Anatolia }
+				add_to_array = { global.has_turkish_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Cyprus_Dept = {
+			on_add = {
+				remove_ideas = Assoc_Region_Cyprus_Dept
+				set_temp_variable = { i = token:Assoc_Region_Cyprus_Dept }
+				add_to_array = { global.has_greek_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Cyprus_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Cyprus_Province
+				set_temp_variable = { i = token:Assoc_Region_Cyprus_Province }
+				add_to_array = { global.has_turkish_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Nanjing_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Nanjing_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Nanjing_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Shanghai_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Shanghai_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Shanghai_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Jiangsu_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Jiangsu_Province
+				set_temp_variable = { i = token:Assoc_Region_Jiangsu_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Huaihai_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Huaihai_Province
+				set_temp_variable = { i = token:Assoc_Region_Huaihai_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Zhejiang_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Zhejiang_Province
+				set_temp_variable = { i = token:Assoc_Region_Zhejiang_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Ouhai_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Ouhai_Province
+				set_temp_variable = { i = token:Assoc_Region_Ouhai_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Anhui_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Anhui_Province
+				set_temp_variable = { i = token:Assoc_Region_Anhui_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Beijing_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Beijing_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Beijing_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Tianjin_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Tianjin_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Tianjin_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Qingdao_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Qingdao_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Qingdao_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Zhili_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Zhili_Province
+				set_temp_variable = { i = token:Assoc_Region_Zhili_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Hebei_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Hebei_Province
+				set_temp_variable = { i = token:Assoc_Region_Hebei_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Taiyue_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Taiyue_Province
+				set_temp_variable = { i = token:Assoc_Region_Taiyue_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Shandong_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Shandong_Province
+				set_temp_variable = { i = token:Assoc_Region_Shandong_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Shanxi_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Shanxi_Province
+				set_temp_variable = { i = token:Assoc_Region_Shanxi_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Chongqing_SAR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Chongqing_SAR
+				set_temp_variable = { i = token:Assoc_Region_Chongqing_SAR }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Chuandong_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Chuandong_Province
+				set_temp_variable = { i = token:Assoc_Region_Chuandong_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Chuanxi_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Chuanxi_Province
+				set_temp_variable = { i = token:Assoc_Region_Chuanxi_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Guizhou_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Guizhou_Province
+				set_temp_variable = { i = token:Assoc_Region_Guizhou_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Guangxi_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Guangxi_Province
+				set_temp_variable = { i = token:Assoc_Region_Guangxi_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Yunnan_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Yunnan_Province
+				set_temp_variable = { i = token:Assoc_Region_Yunnan_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Xikang_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Xikang_Province
+				set_temp_variable = { i = token:Assoc_Region_Xikang_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Tibet_Area = {
+			on_add = {
+				remove_ideas = Assoc_Region_Tibet_Area
+				set_temp_variable = { i = token:Assoc_Region_Tibet_Area }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Wuhan_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Wuhan_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Wuhan_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Jiangxi_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Jiangxi_Province
+				set_temp_variable = { i = token:Assoc_Region_Jiangxi_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Ganjiang_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Ganjiang_Province
+				set_temp_variable = { i = token:Assoc_Region_Ganjiang_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Hubei_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Hubei_Province
+				set_temp_variable = { i = token:Assoc_Region_Hubei_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Hunan_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Hunan_Province
+				set_temp_variable = { i = token:Assoc_Region_Hunan_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Hengnan_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Hengnan_Province
+				set_temp_variable = { i = token:Assoc_Region_Hengnan_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Henan_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Henan_Province
+				set_temp_variable = { i = token:Assoc_Region_Henan_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Zhongyuan_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Zhongyuan_Province
+				set_temp_variable = { i = token:Assoc_Region_Zhongyuan_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Xiamen_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Xiamen_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Xiamen_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_PRD_SAR = {
+			on_add = {
+				remove_ideas = Assoc_Region_PRD_SAR
+				set_temp_variable = { i = token:Assoc_Region_PRD_SAR }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Fujian_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Fujian_Province
+				set_temp_variable = { i = token:Assoc_Region_Fujian_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Xingquan_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Xingquan_Province
+				set_temp_variable = { i = token:Assoc_Region_Xingquan_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Guangdong_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Guangdong_Province
+				set_temp_variable = { i = token:Assoc_Region_Guangdong_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Qiongya_SAR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Qiongya_SAR
+				set_temp_variable = { i = token:Assoc_Region_Qiongya_SAR }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Taiwan_SAR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Taiwan_SAR
+				set_temp_variable = { i = token:Assoc_Region_Taiwan_SAR }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Shaanxi_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Shaanxi_Province
+				set_temp_variable = { i = token:Assoc_Region_Shaanxi_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Hanzhong_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Hanzhong_Province
+				set_temp_variable = { i = token:Assoc_Region_Hanzhong_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Longxi_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Longxi_Province
+				set_temp_variable = { i = token:Assoc_Region_Longxi_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Gansu_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Gansu_Province
+				set_temp_variable = { i = token:Assoc_Region_Gansu_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Qinghai_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Qinghai_Province
+				set_temp_variable = { i = token:Assoc_Region_Qinghai_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Xinjiang_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Xinjiang_Province
+				set_temp_variable = { i = token:Assoc_Region_Xinjiang_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Mukden_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Mukden_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Mukden_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Changchun_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Changchun_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Changchun_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Harbin_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Harbin_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Harbin_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Dalian_Municipality = {
+			on_add = {
+				remove_ideas = Assoc_Region_Dalian_Municipality
+				set_temp_variable = { i = token:Assoc_Region_Dalian_Municipality }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Liaoning_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Liaoning_Province
+				set_temp_variable = { i = token:Assoc_Region_Liaoning_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Jilin_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Jilin_Province
+				set_temp_variable = { i = token:Assoc_Region_Jilin_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Heilongjiang_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Heilongjiang_Province
+				set_temp_variable = { i = token:Assoc_Region_Heilongjiang_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Jinghai_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Jinghai_Province
+				set_temp_variable = { i = token:Assoc_Region_Jinghai_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Beihai_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Beihai_Province
+				set_temp_variable = { i = token:Assoc_Region_Beihai_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Kuye_SAR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Kuye_SAR
+				set_temp_variable = { i = token:Assoc_Region_Kuye_SAR }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Chahar_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Chahar_Province
+				set_temp_variable = { i = token:Assoc_Region_Chahar_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Suiyuan_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Suiyuan_Province
+				set_temp_variable = { i = token:Assoc_Region_Suiyuan_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Rehe_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Rehe_Province
+				set_temp_variable = { i = token:Assoc_Region_Rehe_Province }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Mongolia_Area = {
+			on_add = {
+				remove_ideas = Assoc_Region_Mongolia_Area
+				set_temp_variable = { i = token:Assoc_Region_Mongolia_Area }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_East_China = {
+			on_add = {
+				remove_ideas = Assoc_Region_East_China
+				set_temp_variable = { i = token:Assoc_Region_East_China }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_North_China = {
+			on_add = {
+				remove_ideas = Assoc_Region_North_China
+				set_temp_variable = { i = token:Assoc_Region_North_China }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Southwest_China = {
+			on_add = {
+				remove_ideas = Assoc_Region_Southwest_China
+				set_temp_variable = { i = token:Assoc_Region_Southwest_China }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_South_Central_China = {
+			on_add = {
+				remove_ideas = Assoc_Region_South_Central_China
+				set_temp_variable = { i = token:Assoc_Region_South_Central_China }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_South_China = {
+			on_add = {
+				remove_ideas = Assoc_Region_South_China
+				set_temp_variable = { i = token:Assoc_Region_South_China }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Northwest_China = {
+			on_add = {
+				remove_ideas = Assoc_Region_Northwest_China
+				set_temp_variable = { i = token:Assoc_Region_Northwest_China }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Northeast_China = {
+			on_add = {
+				remove_ideas = Assoc_Region_Northeast_China
+				set_temp_variable = { i = token:Assoc_Region_Northeast_China }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Frontier = {
+			on_add = {
+				remove_ideas = Assoc_Region_Frontier
+				set_temp_variable = { i = token:Assoc_Region_Frontier }
+				add_to_array = { global.has_chinese_endonym = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Interior = {
+			on_add = {
+				remove_ideas = Assoc_Region_Interior
+				set_temp_variable = { i = token:Assoc_Region_Interior }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Montevideo = {
+			on_add = {
+				remove_ideas = Assoc_Region_Montevideo
+				set_temp_variable = { i = token:Assoc_Region_Montevideo }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Far_North = {
+			on_add = {
+				remove_ideas = Assoc_Region_Far_North
+				set_temp_variable = { i = token:Assoc_Region_Far_North }
+				add_to_array = { global.has_spanish_default = i }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Near_North = {
+			on_add = {
+				remove_ideas = Assoc_Region_Near_North
+				set_temp_variable = { i = token:Assoc_Region_Near_North }
+				add_to_array = { global.has_spanish_default = i }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Central_Core = {
+			on_add = {
+				remove_ideas = Assoc_Region_Central_Core
+				set_temp_variable = { i = token:Assoc_Region_Central_Core }
+				add_to_array = { global.has_spanish_default = i }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_CCP_TB = {
+			on_add = {
+				remove_ideas = Assoc_Region_CCP_TB
+				set_temp_variable = { i = token:Assoc_Region_CCP_TB }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_english_exonym = i }
+				add_to_array = { global.has_short_name = i }
+			}
+		}
+
+		Assoc_Region_Lakes = {
+			on_add = {
+				remove_ideas = Assoc_Region_Lakes
+				set_temp_variable = { i = token:Assoc_Region_Lakes }
+				add_to_array = { global.has_spanish_default = i }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Canals = {
+			on_add = {
+				remove_ideas = Assoc_Region_Canals
+				set_temp_variable = { i = token:Assoc_Region_Canals }
+				add_to_array = { global.has_spanish_default = i }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Estonia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Estonia
+				set_temp_variable = { i = token:Assoc_Region_Estonia }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Latvia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Latvia
+				set_temp_variable = { i = token:Assoc_Region_Latvia }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Lithuania = {
+			on_add = {
+				remove_ideas = Assoc_Region_Lithuania
+				set_temp_variable = { i = token:Assoc_Region_Lithuania }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Belarus = {
+			on_add = {
+				remove_ideas = Assoc_Region_Belarus
+				set_temp_variable = { i = token:Assoc_Region_Belarus }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Tula = {
+			on_add = {
+				remove_ideas = Assoc_Region_Tula
+				set_temp_variable = { i = token:Assoc_Region_Tula }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Penza = {
+			on_add = {
+				remove_ideas = Assoc_Region_Penza
+				set_temp_variable = { i = token:Assoc_Region_Penza }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Kursk = {
+			on_add = {
+				remove_ideas = Assoc_Region_Kursk
+				set_temp_variable = { i = token:Assoc_Region_Kursk }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Moscow = {
+			on_add = {
+				remove_ideas = Assoc_Region_Moscow
+				set_temp_variable = { i = token:Assoc_Region_Moscow }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Volgograd = {
+			on_add = {
+				remove_ideas = Assoc_Region_Volgograd
+				set_temp_variable = { i = token:Assoc_Region_Volgograd }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Saratov = {
+			on_add = {
+				remove_ideas = Assoc_Region_Saratov
+				set_temp_variable = { i = token:Assoc_Region_Saratov }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Saint_Petersburg = {
+			on_add = {
+				remove_ideas = Assoc_Region_Saint_Petersburg
+				set_temp_variable = { i = token:Assoc_Region_Saint_Petersburg }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Voronezh = {
+			on_add = {
+				remove_ideas = Assoc_Region_Voronezh
+				set_temp_variable = { i = token:Assoc_Region_Voronezh }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Azerbaijan = {
+			on_add = {
+				remove_ideas = Assoc_Region_Azerbaijan
+				set_temp_variable = { i = token:Assoc_Region_Azerbaijan }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Caucasus_Mountain = {
+			on_add = {
+				remove_ideas = Assoc_Region_Caucasus_Mountain
+				set_temp_variable = { i = token:Assoc_Region_Caucasus_Mountain }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Georgia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Georgia
+				set_temp_variable = { i = token:Assoc_Region_Georgia }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Kalmykia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Kalmykia
+				set_temp_variable = { i = token:Assoc_Region_Kalmykia }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Kuban = {
+			on_add = {
+				remove_ideas = Assoc_Region_Kuban
+				set_temp_variable = { i = token:Assoc_Region_Kuban }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Stavropol = {
+			on_add = {
+				remove_ideas = Assoc_Region_Stavropol
+				set_temp_variable = { i = token:Assoc_Region_Stavropol }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Chaco = {
+			on_add = {
+				remove_ideas = Assoc_Region_Chaco
+				set_temp_variable = { i = token:Assoc_Region_Chaco }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_english_exonym = i }
+			}
+		}
+
+		Assoc_Region_Paranena = {
+			on_add = {
+				remove_ideas = Assoc_Region_Paranena
+				set_temp_variable = { i = token:Assoc_Region_Paranena }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_english_exonym = i }
+			}
+		}
+
+		Assoc_Region_Galicia_Iberia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Galicia_Iberia
+				set_temp_variable = { i = token:Assoc_Region_Galicia_Iberia }
+				add_to_array = { global.has_portuguese_endonym = i }
+			}
+		}
+
+		Assoc_Region_Asturias = {
+			on_add = {
+				remove_ideas = Assoc_Region_Asturias
+				set_temp_variable = { i = token:Assoc_Region_Asturias }
+			}
+		}
+
+		Assoc_Region_Leon = {
+			on_add = {
+				remove_ideas = Assoc_Region_Leon
+				set_temp_variable = { i = token:Assoc_Region_Leon }
+			}
+		}
+
+		Assoc_Region_Old_Castile = {
+			on_add = {
+				remove_ideas = Assoc_Region_Old_Castile
+				set_temp_variable = { i = token:Assoc_Region_Old_Castile }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Basque_Country = {
+			on_add = {
+				remove_ideas = Assoc_Region_Basque_Country
+				set_temp_variable = { i = token:Assoc_Region_Basque_Country }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Navarre = {
+			on_add = {
+				remove_ideas = Assoc_Region_Navarre
+				set_temp_variable = { i = token:Assoc_Region_Navarre }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Aragon = {
+			on_add = {
+				remove_ideas = Assoc_Region_Aragon
+				set_temp_variable = { i = token:Assoc_Region_Aragon }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Catalonia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Catalonia
+				set_temp_variable = { i = token:Assoc_Region_Catalonia }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Valencia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Valencia
+				set_temp_variable = { i = token:Assoc_Region_Valencia }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Balearic_Islands = {
+			on_add = {
+				remove_ideas = Assoc_Region_Balearic_Islands
+				set_temp_variable = { i = token:Assoc_Region_Balearic_Islands }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_italian_endonym = i }
+			}
+		}
+
+		Assoc_Region_Murcia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Murcia
+				set_temp_variable = { i = token:Assoc_Region_Murcia }
+			}
+		}
+
+		Assoc_Region_New_Castile = {
+			on_add = {
+				remove_ideas = Assoc_Region_New_Castile
+				set_temp_variable = { i = token:Assoc_Region_New_Castile }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Andalusia = {
+			on_add = {
+				remove_ideas = Assoc_Region_Andalusia
+				set_temp_variable = { i = token:Assoc_Region_Andalusia }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Extremadura = {
+			on_add = {
+				remove_ideas = Assoc_Region_Extremadura
+				set_temp_variable = { i = token:Assoc_Region_Extremadura }
+				add_to_array = { global.has_portuguese_endonym = i }
+			}
+		}
+
+		Assoc_Region_Kanto = {
+			on_add = {
+				remove_ideas = Assoc_Region_Kanto
+				set_temp_variable = { i = token:Assoc_Region_Kanto }
+			}
+		}
+
+		Assoc_Region_Tohoku = {
+			on_add = {
+				remove_ideas = Assoc_Region_Tohoku
+				set_temp_variable = { i = token:Assoc_Region_Tohoku }
+			}
+		}
+
+		Assoc_Region_Hokkaido = {
+			on_add = {
+				remove_ideas = Assoc_Region_Hokkaido
+				set_temp_variable = { i = token:Assoc_Region_Hokkaido }
+			}
+		}
+
+		Assoc_Region_Koshin = {
+			on_add = {
+				remove_ideas = Assoc_Region_Koshin
+				set_temp_variable = { i = token:Assoc_Region_Koshin }
+			}
+		}
+
+		Assoc_Region_Hokuriku = {
+			on_add = {
+				remove_ideas = Assoc_Region_Hokuriku
+				set_temp_variable = { i = token:Assoc_Region_Hokuriku }
+			}
+		}
+
+		Assoc_Region_Tokai = {
+			on_add = {
+				remove_ideas = Assoc_Region_Tokai
+				set_temp_variable = { i = token:Assoc_Region_Tokai }
+			}
+		}
+
+		Assoc_Region_Kinki = {
+			on_add = {
+				remove_ideas = Assoc_Region_Kinki
+				set_temp_variable = { i = token:Assoc_Region_Kinki }
+			}
+		}
+
+		Assoc_Region_Sanyo = {
+			on_add = {
+				remove_ideas = Assoc_Region_Sanyo
+				set_temp_variable = { i = token:Assoc_Region_Sanyo }
+			}
+		}
+
+		Assoc_Region_Sanin = {
+			on_add = {
+				remove_ideas = Assoc_Region_Sanin
+				set_temp_variable = { i = token:Assoc_Region_Sanin }
+			}
+		}
+
+		Assoc_Region_Shikoku = {
+			on_add = {
+				remove_ideas = Assoc_Region_Shikoku
+				set_temp_variable = { i = token:Assoc_Region_Shikoku }
+			}
+		}
+
+		Assoc_Region_Kyushu = {
+			on_add = {
+				remove_ideas = Assoc_Region_Kyushu
+				set_temp_variable = { i = token:Assoc_Region_Kyushu }
+			}
+		}
+
+		Assoc_Region_Okinawa = {
+			on_add = {
+				remove_ideas = Assoc_Region_Okinawa
+				set_temp_variable = { i = token:Assoc_Region_Okinawa }
+			}
+		}
+
+		Assoc_Region_Nanyo = {
+			on_add = {
+				remove_ideas = Assoc_Region_Nanyo
+				set_temp_variable = { i = token:Assoc_Region_Nanyo }
+			}
+		}
+
+		Assoc_Region_Taiwan_Jap = {
+			on_add = {
+				remove_ideas = Assoc_Region_Taiwan_Jap
+				set_temp_variable = { i = token:Assoc_Region_Taiwan_Jap }
+			}
+		}
+
+		Assoc_Region_Korea = {
+			on_add = {
+				remove_ideas = Assoc_Region_Korea
+				set_temp_variable = { i = token:Assoc_Region_Korea }
+				add_to_array = { global.has_japanese_default = i }
+			}
+		}
+
+		Assoc_Region_Sakhalin = {
+			on_add = {
+				remove_ideas = Assoc_Region_Sakhalin
+				set_temp_variable = { i = token:Assoc_Region_Sakhalin }
+				add_to_array = { global.has_japanese_default = i }
+			}
+		}
+
+		Assoc_Region_New_Guinea = {
+			on_add = {
+				remove_ideas = Assoc_Region_New_Guinea
+				set_temp_variable = { i = token:Assoc_Region_New_Guinea }
+				add_to_array = { global.has_japanese_default = i }
+			}
+		}
+
+		Assoc_Region_Beni_Dept = {
+			on_add = {
+				remove_ideas = Assoc_Region_Beni_Dept
+				set_temp_variable = { i = token:Assoc_Region_Beni_Dept }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_La_Paz_Dept = {
+			on_add = {
+				remove_ideas = Assoc_Region_La_Paz_Dept
+				set_temp_variable = { i = token:Assoc_Region_La_Paz_Dept }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Santa_Cruz_Dept = {
+			on_add = {
+				remove_ideas = Assoc_Region_Santa_Cruz_Dept
+				set_temp_variable = { i = token:Assoc_Region_Santa_Cruz_Dept }
+				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_RG_Netherlands = {
+			on_add = {
+				remove_ideas = Assoc_Region_RG_Netherlands
+				set_temp_variable = { i = token:Assoc_Region_RG_Netherlands }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_White_Karelia_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_White_Karelia_Province
+				set_temp_variable = { i = token:Assoc_Region_White_Karelia_Province }
+				add_to_array = { global.has_finnish_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_British_West_Indies = {
+			on_add = {
+				remove_ideas = Assoc_Region_British_West_Indies
+				set_temp_variable = { i = token:Assoc_Region_British_West_Indies }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_French_West_Indies = {
+			on_add = {
+				remove_ideas = Assoc_Region_French_West_Indies
+				set_temp_variable = { i = token:Assoc_Region_French_West_Indies }
+				add_to_array = { global.has_french_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Netherlands_Antilles = {
+			on_add = {
+				remove_ideas = Assoc_Region_Netherlands_Antilles
+				set_temp_variable = { i = token:Assoc_Region_Netherlands_Antilles }
+				add_to_array = { global.has_dutch_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Cibao = {
+			on_add = {
+				remove_ideas = Assoc_Region_Cibao
+				set_temp_variable = { i = token:Assoc_Region_Cibao }
+			}
+		}
+
+		Assoc_Region_East = {
+			on_add = {
+				remove_ideas = Assoc_Region_East
+				set_temp_variable = { i = token:Assoc_Region_East }
+				add_to_array = { global.has_spanish_default = i }
+			}
+		}
+
+		Assoc_Region_South = {
+			on_add = {
+				remove_ideas = Assoc_Region_South
+				set_temp_variable = { i = token:Assoc_Region_South }
+				add_to_array = { global.has_spanish_default = i }
+			}
+		}
+
+		Assoc_Region_Lesser_Antilles = {
+			on_add = {
+				remove_ideas = Assoc_Region_Lesser_Antilles
+				set_temp_variable = { i = token:Assoc_Region_Lesser_Antilles }
+				add_to_array = { global.has_french_endonym = i }
+				add_to_array = { global.has_dutch_endonym = i }
+			}
+		}
+
+		Assoc_Region_Greater_Antilles = {
+			on_add = {
+				remove_ideas = Assoc_Region_Greater_Antilles
+				set_temp_variable = { i = token:Assoc_Region_Greater_Antilles }
+				add_to_array = { global.has_french_endonym = i }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+
+		Assoc_Region_Lucayan_Archipelago = {
+			on_add = {
+				remove_ideas = Assoc_Region_Lucayan_Archipelago
+				set_temp_variable = { i = token:Assoc_Region_Lucayan_Archipelago }
+			}
+		}
+
+		Assoc_Region_Punjab_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Punjab_State
+				set_temp_variable = { i = token:Assoc_Region_Punjab_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Punjab_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Punjab_PMA
+				set_temp_variable = { i = token:Assoc_Region_Punjab_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Punjab_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Punjab_AR
+				set_temp_variable = { i = token:Assoc_Region_Punjab_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Himachal_Pradesh_UT = {
+			on_add = {
+				remove_ideas = Assoc_Region_Himachal_Pradesh_UT
+				set_temp_variable = { i = token:Assoc_Region_Himachal_Pradesh_UT }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Himachal_Pradesh_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Himachal_Pradesh_State
+				set_temp_variable = { i = token:Assoc_Region_Himachal_Pradesh_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Himachal_Pradesh_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Himachal_Pradesh_PMA
+				set_temp_variable = { i = token:Assoc_Region_Himachal_Pradesh_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Himachal_Pradesh_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Himachal_Pradesh_AR
+				set_temp_variable = { i = token:Assoc_Region_Himachal_Pradesh_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Jammu_Kashmir_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Jammu_Kashmir_State
+				set_temp_variable = { i = token:Assoc_Region_Jammu_Kashmir_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Jammu_Kashmir_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Jammu_Kashmir_PMA
+				set_temp_variable = { i = token:Assoc_Region_Jammu_Kashmir_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Jammu_Kashmir_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Jammu_Kashmir_AR
+				set_temp_variable = { i = token:Assoc_Region_Jammu_Kashmir_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Sindh_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Sindh_State
+				set_temp_variable = { i = token:Assoc_Region_Sindh_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Sindh_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Sindh_PMA
+				set_temp_variable = { i = token:Assoc_Region_Sindh_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Sindh_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Sindh_AR
+				set_temp_variable = { i = token:Assoc_Region_Sindh_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Rajasthan_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Rajasthan_State
+				set_temp_variable = { i = token:Assoc_Region_Rajasthan_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Rajasthan_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Rajasthan_PMA
+				set_temp_variable = { i = token:Assoc_Region_Rajasthan_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Rajasthan_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Rajasthan_AR
+				set_temp_variable = { i = token:Assoc_Region_Rajasthan_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Uttar_Pradesh_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Uttar_Pradesh_State
+				set_temp_variable = { i = token:Assoc_Region_Uttar_Pradesh_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Uttar_Pradesh_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Uttar_Pradesh_PMA
+				set_temp_variable = { i = token:Assoc_Region_Uttar_Pradesh_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Uttar_Pradesh_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Uttar_Pradesh_AR
+				set_temp_variable = { i = token:Assoc_Region_Uttar_Pradesh_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Madhya_Pradesh_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Madhya_Pradesh_State
+				set_temp_variable = { i = token:Assoc_Region_Madhya_Pradesh_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Madhya_Pradesh_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Madhya_Pradesh_PMA
+				set_temp_variable = { i = token:Assoc_Region_Madhya_Pradesh_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Madhya_Pradesh_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Madhya_Pradesh_AR
+				set_temp_variable = { i = token:Assoc_Region_Madhya_Pradesh_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Gujarat_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Gujarat_State
+				set_temp_variable = { i = token:Assoc_Region_Gujarat_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Gujarat_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Gujarat_PMA
+				set_temp_variable = { i = token:Assoc_Region_Gujarat_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Gujarat_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Gujarat_AR
+				set_temp_variable = { i = token:Assoc_Region_Gujarat_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Maharashtra_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Maharashtra_State
+				set_temp_variable = { i = token:Assoc_Region_Maharashtra_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Maharashtra_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Maharashtra_PMA
+				set_temp_variable = { i = token:Assoc_Region_Maharashtra_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Maharashtra_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Maharashtra_AR
+				set_temp_variable = { i = token:Assoc_Region_Maharashtra_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Mysore_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Mysore_State
+				set_temp_variable = { i = token:Assoc_Region_Mysore_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Mysore_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Mysore_PMA
+				set_temp_variable = { i = token:Assoc_Region_Mysore_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Mysore_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Mysore_AR
+				set_temp_variable = { i = token:Assoc_Region_Mysore_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Madras_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Madras_State
+				set_temp_variable = { i = token:Assoc_Region_Madras_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Madras_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Madras_PMA
+				set_temp_variable = { i = token:Assoc_Region_Madras_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Madras_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Madras_AR
+				set_temp_variable = { i = token:Assoc_Region_Madras_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Andhra_Pradesh_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Andhra_Pradesh_State
+				set_temp_variable = { i = token:Assoc_Region_Andhra_Pradesh_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Andhra_Pradesh_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Andhra_Pradesh_PMA
+				set_temp_variable = { i = token:Assoc_Region_Andhra_Pradesh_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Andhra_Pradesh_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Andhra_Pradesh_AR
+				set_temp_variable = { i = token:Assoc_Region_Andhra_Pradesh_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Orissa_UT = {
+			on_add = {
+				remove_ideas = Assoc_Region_Orissa_UT
+				set_temp_variable = { i = token:Assoc_Region_Orissa_UT }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }				
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Orissa_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Orissa_State
+				set_temp_variable = { i = token:Assoc_Region_Orissa_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Orissa_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Orissa_PMA
+				set_temp_variable = { i = token:Assoc_Region_Orissa_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Orissa_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Orissa_AR
+				set_temp_variable = { i = token:Assoc_Region_Orissa_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Bihar_UT = {
+			on_add = {
+				remove_ideas = Assoc_Region_Bihar_UT
+				set_temp_variable = { i = token:Assoc_Region_Bihar_UT }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Bihar_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Bihar_State
+				set_temp_variable = { i = token:Assoc_Region_Bihar_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Bihar_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Bihar_PMA
+				set_temp_variable = { i = token:Assoc_Region_Bihar_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Bihar_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Bihar_AR
+				set_temp_variable = { i = token:Assoc_Region_Bihar_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Bengal_UT = {
+			on_add = {
+				remove_ideas = Assoc_Region_Bengal_UT
+				set_temp_variable = { i = token:Assoc_Region_Bengal_UT }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Bengal_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Bengal_State
+				set_temp_variable = { i = token:Assoc_Region_Bengal_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Bengal_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Bengal_AR
+				set_temp_variable = { i = token:Assoc_Region_Bengal_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Assam_UT = {
+			on_add = {
+				remove_ideas = Assoc_Region_Assam_UT
+				set_temp_variable = { i = token:Assoc_Region_Assam_UT }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Assam_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Assam_State
+				set_temp_variable = { i = token:Assoc_Region_Assam_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Assam_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Assam_AR
+				set_temp_variable = { i = token:Assoc_Region_Assam_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Haryana_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Haryana_State
+				set_temp_variable = { i = token:Assoc_Region_Haryana_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Haryana_PMA = {
+			on_add = {
+				remove_ideas = Assoc_Region_Haryana_PMA
+				set_temp_variable = { i = token:Assoc_Region_Haryana_PMA }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Haryana_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Haryana_AR
+				set_temp_variable = { i = token:Assoc_Region_Haryana_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_NWFP = {
+			on_add = {
+				remove_ideas = Assoc_Region_NWFP
+				set_temp_variable = { i = token:Assoc_Region_NWFP }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Jammu_Kashmir_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Jammu_Kashmir_Province
+				set_temp_variable = { i = token:Assoc_Region_Jammu_Kashmir_Province }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Punjab_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Punjab_Province
+				set_temp_variable = { i = token:Assoc_Region_Punjab_Province }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Sindh_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Sindh_Province
+				set_temp_variable = { i = token:Assoc_Region_Sindh_Province }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Balochistan_Province = {
+			on_add = {
+				remove_ideas = Assoc_Region_Balochistan_Province
+				set_temp_variable = { i = token:Assoc_Region_Balochistan_Province }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Balochistan_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Balochistan_State
+				set_temp_variable = { i = token:Assoc_Region_Balochistan_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Balochistan_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Balochistan_AR
+				set_temp_variable = { i = token:Assoc_Region_Balochistan_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Gandhara_State = {
+			on_add = {
+				remove_ideas = Assoc_Region_Gandhara_State
+				set_temp_variable = { i = token:Assoc_Region_Gandhara_State }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.is_admin_region = i }
+				add_to_array = { global.has_title_interaction = i }
+			}
+		}
+
+		Assoc_Region_Gandhara_AR = {
+			on_add = {
+				remove_ideas = Assoc_Region_Gandhara_AR
+				set_temp_variable = { i = token:Assoc_Region_Gandhara_AR }
+				add_to_array = { global.has_indian_endonym = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+
+		Assoc_Region_Yaroslavl = {
+			on_add = {
+				remove_ideas = Assoc_Region_Yaroslavl
+				set_temp_variable = { i = token:Assoc_Region_Yaroslavl }
+				add_to_array = { global.has_german_default = i }
+				add_to_array = { global.has_short_name = i }
+				add_to_array = { global.is_admin_region = i }
+			}
+		}
+	}
+
+	#|=====[ DESCS ]=====|#
+	hidden_ideas = {
+		Admin_Title_Territory_Desc = {}
+		Admin_Title_Special_Zone_Desc = {}
+		Assoc_Region_Santa_Cruz_Dept_Desc = {}
+		Assoc_Region_British_West_Indies_Desc = {}
+		STATE_1706_Desc = {
+			on_add = {
+				remove_ideas = STATE_1706_Desc
+				set_temp_variable = { i = token:STATE_1706_Desc }
+				add_to_array = { global.has_spanish_endonym = i }
+			}
+		}
+		STATE_2442_Desc = {}
+	}
+}

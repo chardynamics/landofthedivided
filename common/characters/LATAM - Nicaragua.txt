@@ -1,0 +1,107 @@
+characters = {
+	NIC_Power_Vacuum = {
+		name = NIC_Power_Vacuum
+		portraits = { civilian = { large = "gfx/leaders/NIC/Portrait_Nicaragua_Government_Triumvirate.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	NIC_Luis_Somoza_Debayle = {
+		name = NIC_Luis_Somoza_Debayle
+		portraits = { civilian = { large = "gfx/leaders/NIC/Portrait_Nicaragua_Luis_Somoza_Debayle.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			desc = "POLITICS_NIC_LUIS_SOMOZA_DEBAYLE_DESC"
+			traits = { }
+			id = -1
+		}
+	}
+	NIC_Hope_Somoza_Portocarrero = {
+		name = NIC_Hope_Somoza_Portocarrero
+		portraits = { civilian = { large = "gfx/leaders/NIC/Portrait_Nicaragua_Hope_Somoza_Debayle.png" } }
+		gender = female
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			desc = "POLITICS_NIC_HOPE_SOMOZA_PORTOCARRERO_DESC"
+			traits = { }
+			id = -1
+		}
+	}
+	NIC_Anastasio_Somoza_Debayle = {
+		name = NIC_Anastasio_Somoza_Debayle
+		portraits = { civilian = { large = "gfx/leaders/NIC/Portrait_Nicaragua_Anastasio_Somoza_Debayle.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = fascism_aristocratic_fascism_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	NIC_Lorenzo_Guerrero = {
+		name = NIC_Lorenzo_Guerrero
+		portraits = { civilian = { large = "gfx/leaders/NIC/Portrait_Nicaragua_Lorenzo_Guerrero.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = despotism_interim_government_subtype
+			desc = "POLITICS_NIC_LORENZO_GUERRERO_DESC"
+			traits = { }
+			id = -1
+		}
+	}
+	NIC_Government_Triumvirate = {
+		name = NIC_Government_Triumvirate
+		portraits = { civilian = { large = "gfx/leaders/NIC/Portrait_Nicaragua_Government_Triumvirate.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			desc = "POLITICS_NIC_GOVERNMENT_TRIUMVIRATE_DESC"
+			traits = { }
+			id = -1
+		}
+	}
+	NIC_Cornelio_Hueck = {
+		name = NIC_Cornelio_Hueck
+		portraits = { civilian = { large = "gfx/leaders/NIC/Portrait_Nicaragua_Cornelio_Hendrik_Hueck.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			desc = "POLITICS_NIC_CORNELIO_HUECK_DESC"
+			traits = { }
+			id = -1
+		}
+	}
+	NIC_Carlos_Fonseca = {
+		name = NIC_Carlos_Fonseca
+		portraits = { civilian = { large = "gfx/leaders/NIC/Portrait_Nicaragua_Carlos_Fonseca.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = socialist_revolutionary_frontism_subtype
+			desc = "POLITICS_NIC_CARLOS_FONSECA_DESC"
+			traits = { }
+			id = -1
+		}
+	}
+	NIC_Pedro_Joaquin_Chamorro = {
+		name = NIC_Pedro_Joaquin_Chamorro
+		portraits = { civilian = { large = "gfx/leaders/NIC/Portrait_Nicaragua_Pedro_Joaquin_Chamorro.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = paternalism_provisional_government_subtype
+			desc = "POLITICS_NIC_PEDRO_JOAQUIN_CHAMORRO_DESC"
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_big_tent_subtype
+			desc = "POLITICS_NIC_PEDRO_JOAQUIN_CHAMORRO_DESC"
+			traits = { }
+			id = -1
+		}
+	}
+}

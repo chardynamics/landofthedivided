@@ -1,0 +1,6138 @@
+##SORTED BY STARTING TAG, AND THEN STATE ID NUMBER
+#AFG
+state_control_effect_267 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		set_state_name = STATE_267_afg
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10737 name = VICTORY_POINTS_10737_afg }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10737
+	}
+}
+state_control_effect_415 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		set_state_name = STATE_415_afg
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 5064 name = VICTORY_POINTS_5064_afg }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 5064
+	}
+}
+state_control_effect_1469 = {
+	if = {
+		limit = { is_controlled_by = AFG }		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1469_afg
+			set_province_name = { id = 15971 name = VICTORY_POINTS_15971_afg }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 15971
+	}
+}
+state_control_effect_1470 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_1470_afg_1962
+			if = {
+				limit = { has_global_flag = TNO_exonym_mode }
+				set_state_name = STATE_1470_1962
+			}
+		}
+		else = {
+			reset_state_name = yes
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12248 name = VICTORY_POINTS_12248_afg }
+		}
+	}
+	else = {
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_1470_1962
+		}
+		else = {
+			reset_state_name = yes
+		}
+		reset_province_name = 12248
+	}
+}
+state_control_effect_1471 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_1471_afg_1962
+			if = {
+				limit = { has_global_flag = TNO_exonym_mode }
+				set_state_name = STATE_1472_1962
+			}
+		}
+		else = {
+			reset_state_name = yes
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_state_name = STATE_1471_afg
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 14753 name = VICTORY_POINTS_14753_afg }
+		}
+	}
+	else = {
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_1471_1962
+		}
+		else = {
+			reset_state_name = yes
+		}
+		reset_province_name = 14753
+	}
+}
+state_control_effect_1472 = {
+	if = {
+		limit = { is_controlled_by = AFG }		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1472_afg
+		}
+	}
+	else = {
+		reset_state_name = yes
+	}
+}
+state_control_effect_1473 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		set_state_name = STATE_1473_afg		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 18628 name = VICTORY_POINTS_18628_afg }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18628
+	}
+}
+state_control_effect_1474 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		set_state_name = STATE_1474_afg		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 18633 name = VICTORY_POINTS_18628_afg }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18633
+	}
+}
+state_control_effect_1883 = {
+	if = {
+		limit = { is_controlled_by = AFG }		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1883_afg
+			set_province_name = { id = 18658 name = VICTORY_POINTS_18658_afg }
+			set_province_name = { id = 12831 name = VICTORY_POINTS_12831_afg }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18658
+		reset_province_name = 12831
+	}
+}
+state_control_effect_1884 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_1884_1962
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_state_name = STATE_1884_afg_1962
+			}
+		}
+		else = {
+			reset_state_name = yes
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_state_name = STATE_1884_afg
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12314 name = VICTORY_POINTS_12314_afg }
+			set_province_name = { id = 14749 name = VICTORY_POINTS_14749_afg }
+		}
+	}
+	else = {
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_1884_1962
+		}
+		else = {
+			reset_state_name = yes
+		}
+		reset_province_name = 12314
+		reset_province_name = 14749
+	}
+}
+state_control_effect_1885 = {
+	if = {
+		limit = { is_controlled_by = AFG }		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1885_afg
+			set_province_name = { id = 12653 name = VICTORY_POINTS_12653_afg }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 12653
+	}
+}
+state_control_effect_2185 = {
+	if = {
+		limit = { is_controlled_by = AFG }		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2185_afg
+		}
+	}
+	else = {
+		reset_state_name = yes
+	}
+}
+state_control_effect_2186 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_2186_afg_1962
+			if = {
+				limit = { has_global_flag = TNO_exonym_mode }
+				set_state_name = STATE_2186_1962
+			}
+		}
+		else = {
+			reset_state_name = yes
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_state_name = STATE_2186_afg
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7584 name = VICTORY_POINTS_7584_afg }
+		}
+	}
+	else = {
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_2186_1962
+		}
+		else = {
+			reset_state_name = yes
+		}
+		reset_province_name = 7584
+	}
+}
+state_control_effect_2188 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_2188_1962	
+		}
+		else = {
+			reset_state_name = yes
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_state_name = STATE_2188_afg
+			}
+		}
+		if = {
+			limit = { date < 1972.1.1 }
+			set_province_name = { id = 18639 name = VICTORY_POINTS_18639_1962 }
+		}
+		else = {
+			reset_province_name = 18639
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 18639 name = VICTORY_POINTS_18639_afg }
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_2188_1962
+		}
+		else = {
+			reset_state_name = yes
+		}
+		if = {
+			limit = { date < 1972.1.1 }
+			set_province_name = { id = 18639 name = VICTORY_POINTS_18639_1962 }
+		}
+		else = {
+			reset_province_name = 18639
+		}
+	}
+}
+state_control_effect_2189 = {
+	if = {
+		limit = { is_controlled_by = AFG }		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2189_afg
+			set_province_name = { id = 18655 name = VICTORY_POINTS_18655_afg }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18655
+	}
+}
+state_control_effect_2190 = {
+	if = {
+		limit = { is_controlled_by = AFG }		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2190_afg
+			set_province_name = { id = 10781 name = VICTORY_POINTS_10781_afg }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10781
+	}
+}
+state_control_effect_2191 = {
+	if = {
+		limit = { is_controlled_by = AFG }		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2191_afg
+			set_province_name = { id = 10789 name = VICTORY_POINTS_10789_afg }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10789
+	}
+}
+state_control_effect_2192 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_2192_1962	
+		}
+		else = {
+			reset_state_name = yes
+		}
+		if = {
+			limit = { date < 1970.1.1 }
+			set_province_name = { id = 18631 name = VICTORY_POINTS_18631_1962 }
+		}
+		else = {
+			reset_province_name = 18631
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 18631 name = VICTORY_POINTS_18631_afg }
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_2192_1962
+		}
+		else = {
+			reset_state_name = yes
+		}
+		if = {
+			limit = { date < 1970.1.1 }
+			set_province_name = { id = 18631 name = VICTORY_POINTS_18631_1962 }
+		}
+		else = {
+			reset_province_name = 18631
+		}
+	}
+}
+state_control_effect_2193 = {
+	if = {
+		limit = { is_controlled_by = AFG }
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_2193_afg_1962
+			if = {
+				limit = { has_global_flag = TNO_exonym_mode }
+				set_state_name = STATE_2193_1962
+			}
+		}
+		else = {
+			reset_state_name = yes
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_state_name = STATE_2193_afg
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = { date < 1964.1.1 }
+			set_state_name = STATE_2186_1962
+		}
+		else = {
+			reset_state_name = yes
+		}
+	}
+}
+state_control_effect_2461 = {
+	if = {
+		limit = { is_controlled_by = AFG }		
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2461_afg
+		}
+	}
+	else = {
+		reset_state_name = yes
+	}
+}
+
+#CHI
+state_control_effect_605 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = SIC
+				is_controlled_by = GAN
+			}
+		}
+		set_state_name = STATE_605_jap
+		set_province_name = { id = 1367 name = VICTORY_POINTS_1367_jap }
+		set_province_name = { id = 4925 name = VICTORY_POINTS_4925_jap }
+		set_province_name = { id = 8026 name = VICTORY_POINTS_8026_jap }
+		set_province_name = { id = 12141 name = VICTORY_POINTS_12141_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1367
+		reset_province_name = 4925
+		reset_province_name = 8026
+		reset_province_name = 12141
+	}
+}
+state_control_effect_813 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			is_controlled_by = JAP
+		}
+		set_state_name = STATE_813_jap
+		set_province_name = { id = 4042 name = VICTORY_POINTS_4042_jap }
+		set_province_name = { id = 7014 name = VICTORY_POINTS_7014_jap }
+		set_province_name = { id = 10076 name = VICTORY_POINTS_10076_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4042
+		reset_province_name = 7014
+		reset_province_name = 10076
+	}
+}
+state_control_effect_1021 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			is_controlled_by = JAP
+		}
+		set_province_name = { id = 1184 name = VICTORY_POINTS_1200_jap }
+	}
+	else = {
+		reset_province_name = 1184
+	}
+}
+state_control_effect_1022 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			is_controlled_by = JAP
+		}
+		set_state_name = STATE_1022_jap
+		set_province_name = { id = 1200 name = VICTORY_POINTS_1200_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1200
+	}
+}
+state_control_effect_1537 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = SIC
+			}
+		}
+		set_state_name = STATE_1537_jap
+		set_province_name = { id = 5048 name = VICTORY_POINTS_5048_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 5048
+	}
+}
+state_control_effect_1538 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = SIC
+			}
+		}
+		set_state_name = STATE_1538_jap
+		set_province_name = { id = 6999 name = VICTORY_POINTS_6999_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 6999
+	}
+}
+
+#GAN
+state_control_effect_283 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = GAN
+			}
+		}
+		set_state_name = STATE_283_gan_jap
+		set_province_name = { id = 7911 name = VICTORY_POINTS_7911_gan_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7911
+	}
+}
+state_control_effect_616 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = GAN
+			}
+		}
+		set_state_name = STATE_616_gan_jap
+		set_province_name = { id = 8127 name = VICTORY_POINTS_8127_gan_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 8127
+	}
+}
+state_control_effect_764 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = GAN
+			}
+		}
+		set_state_name = STATE_764_gan_jap
+		set_province_name = { id = 7971 name = VICTORY_POINTS_7971_gan_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7971
+	}
+}
+state_control_effect_1302 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = GAN
+			}
+		}
+		set_province_name = { id = 1630 name = VICTORY_POINTS_1630_gan_jap }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12776 name = VICTORY_POINTS_12776_gan_jap }
+			set_state_name = STATE_1302_gan_jap
+		}
+		else = {
+			reset_province_name = 12776
+			reset_state_name = yes
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1630
+		reset_province_name = 12776
+	}
+}
+
+#GNG
+state_control_effect_326 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = GNG
+				is_controlled_by = JAP
+
+			}
+		}
+		set_province_name = { id = 10062 name = VICTORY_POINTS_10062_gng_jap }
+		set_state_name = STATE_326_gng_jap
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10062 name = VICTORY_POINTS_10062_chi }
+			set_state_name = STATE_326_chi
+		}
+		else = {
+			reset_province_name = 10062
+			set_state_name = STATE_326_chi
+		}
+	}
+}
+
+state_control_effect_592 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = GNG
+				is_controlled_by = JAP
+			}
+		}
+		set_province_name = { id = 1047 name = VICTORY_POINTS_1047_gng_jap }
+		set_state_name = STATE_592_gng_jap
+	}
+	else = {
+		reset_province_name = 1047
+		reset_state_name = yes
+	}
+}
+
+state_control_effect_593 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = GNG
+				is_controlled_by = JAP
+
+			}
+		}
+		set_province_name = { id = 4165 name = VICTORY_POINTS_4165_gng_jap }
+		set_province_name = { id = 4207 name = VICTORY_POINTS_4207_gng_jap }
+		set_province_name = { id = 7067 name = VICTORY_POINTS_7067_gng_jap }
+		set_province_name = { id = 7108 name = VICTORY_POINTS_7108_gng_jap }
+		set_province_name = { id = 7182 name = VICTORY_POINTS_7182_gng_jap }
+		set_province_name = { id = 9938 name = VICTORY_POINTS_9938_gng_jap }
+		set_province_name = { id = 9978 name = VICTORY_POINTS_9978_gng_jap }
+		set_province_name = { id = 15742 name = VICTORY_POINTS_15742_gng_jap }
+		set_state_name = STATE_593_gng_jap
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4165
+		reset_province_name = 4207
+		reset_province_name = 7067
+		reset_province_name = 7108
+		reset_province_name = 7182
+		reset_province_name = 9938
+		reset_province_name = 9978
+		reset_province_name = 15742
+	}
+}
+
+state_control_effect_729 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = GNG
+				is_controlled_by = JAP
+			}
+		}
+		set_province_name = { id = 4189 name = VICTORY_POINTS_4189_gng_jap }
+		set_state_name = STATE_729_gng_jap
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4189 name = VICTORY_POINTS_4189_chi }
+			set_state_name = STATE_729_chi
+		}
+		else = {
+			reset_province_name = 4189
+			set_state_name = STATE_729_chi
+		}
+	}
+}
+
+state_control_effect_1017 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = GNG
+				is_controlled_by = JAP
+
+			}
+		}
+		set_province_name = { id = 1087 name = VICTORY_POINTS_1087_gng_jap }
+		set_province_name = { id = 1131 name = VICTORY_POINTS_1131_gng_jap }
+		set_province_name = { id = 1187 name = VICTORY_POINTS_1187_gng_jap }
+		set_province_name = { id = 7039 name = VICTORY_POINTS_7039_gng_jap }
+		set_province_name = { id = 7152 name = VICTORY_POINTS_7152_gng_jap }
+		set_province_name = { id = 9963 name = VICTORY_POINTS_9963_gng_jap }
+		set_province_name = { id = 10105 name = VICTORY_POINTS_10105_gng_jap }
+		set_province_name = { id = 11938 name = VICTORY_POINTS_11938_gng_jap }
+		set_province_name = { id = 12077 name = VICTORY_POINTS_12077_gng_jap }
+		set_province_name = { id = 14740 name = VICTORY_POINTS_14740_gng_jap }
+		set_province_name = { id = 8802 name = VICTORY_POINTS_8802_gng_jap }
+		set_state_name = STATE_1017_gng_jap
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1087
+		reset_province_name = 1131
+		reset_province_name = 1187
+		reset_province_name = 7039
+		reset_province_name = 7152
+		reset_province_name = 9963
+		reset_province_name = 10105
+		reset_province_name = 11938
+		reset_province_name = 12077
+		reset_province_name = 14740
+		reset_province_name = 8802
+	}
+}
+
+state_control_effect_1438 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = GNG
+				is_controlled_by = JAP
+
+			}
+		}
+		set_province_name = { id = 4092 name = VICTORY_POINTS_4092_gng_jap }
+		set_province_name = { id = 9997 name = VICTORY_POINTS_9997_gng_jap }
+		set_province_name = { id = 10080 name = VICTORY_POINTS_10080_gng_jap }
+		set_province_name = { id = 11941 name = VICTORY_POINTS_11941_gng_jap }
+		set_state_name = STATE_1438_gng_jap
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4092
+		reset_province_name = 9997
+		reset_province_name = 10080
+		reset_province_name = 11941
+	}
+}
+
+state_control_effect_1439 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = GNG
+				is_controlled_by = JAP
+
+			}
+		}
+		set_province_name = { id = 1120 name = VICTORY_POINTS_1120_gng_jap }
+		set_province_name = { id = 1162 name = VICTORY_POINTS_1162_gng_jap }
+		set_province_name = { id = 1202 name = VICTORY_POINTS_1202_gng_jap }
+		set_province_name = { id = 19526 name = VICTORY_POINTS_19526_gng_jap }
+		set_state_name = STATE_1439_gng_jap
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1120
+		reset_province_name = 1162
+		reset_province_name = 1202
+		reset_province_name = 19526
+	}
+}
+
+state_control_effect_1464 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = GNG
+				is_controlled_by = JAP
+
+			}
+		}
+		set_province_name = { id = 1018 name = VICTORY_POINTS_1018_gng_jap }
+		set_province_name = { id = 4023 name = VICTORY_POINTS_4023_gng_jap }
+		set_province_name = { id = 7135 name = VICTORY_POINTS_7135_gng_jap }
+		set_province_name = { id = 10004 name = VICTORY_POINTS_10004_gng_jap }
+		set_province_name = { id = 11981 name = VICTORY_POINTS_11981_gng_jap }
+		set_state_name = STATE_1464_gng_jap
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1018
+		reset_province_name = 4023
+		reset_province_name = 7135
+		reset_province_name = 10004
+		reset_province_name = 11981
+	}
+}
+
+#GUX
+state_control_effect_594 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = GNG
+				AND = {
+					GUX = { has_country_leader = { character = GUX_takeda_goro } }
+					is_controlled_by = GUX
+				}
+			}
+		}
+		set_state_name = STATE_594_jap
+		set_province_name = { id = 4077 name = VICTORY_POINTS_4077_jap }
+		set_province_name = { id = 7137 name = VICTORY_POINTS_7137_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4077
+		reset_province_name = 7137
+	}
+}
+state_control_effect_599 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = GNG
+				AND = {
+					GUX = { has_country_leader = { character = GUX_takeda_goro } }
+					is_controlled_by = GUX
+				}
+			}
+		}
+		set_state_name = STATE_599_jap
+		set_province_name = { id = 1597 name = VICTORY_POINTS_1597_jap }
+		set_province_name = { id = 4152 name = VICTORY_POINTS_4152_jap }
+		set_province_name = { id = 10404 name = VICTORY_POINTS_10404_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1597
+		reset_province_name = 4152
+		reset_province_name = 10404
+	}
+}
+
+#IND/AZH
+#Bengal
+state_control_effect_223 = {
+	set_state_name = STATE_223_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 18947 name = VICTORY_POINTS_18947_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10389 name = VICTORY_POINTS_10389_ind }
+			set_province_name = { id = 18947 name = VICTORY_POINTS_18947_azh }
+		}
+	}
+	else = {
+		reset_province_name = 18947
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10389 name = VICTORY_POINTS_10389_ind }
+			set_province_name = { id = 18947 name = VICTORY_POINTS_18947_ind }
+		}
+	}
+}
+state_control_effect_431 = {
+	set_province_name = { id = 4644 name = VICTORY_POINTS_4644_ind_eng }
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_state_name = STATE_431_azh
+		set_province_name = { id = 10077 name = VICTORY_POINTS_10077_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_431_ind
+			set_province_name = { id = 1444 name = VICTORY_POINTS_1444_ind }
+			set_province_name = { id = 10077 name = VICTORY_POINTS_10077_ind }
+			set_province_name = { id = 18977 name = VICTORY_POINTS_18977_ind }
+		}
+	}
+	else = {
+		set_state_name = STATE_431_ind
+		reset_province_name = 10077
+		if = {
+		limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 1444 name = VICTORY_POINTS_1444_ind }
+			set_province_name = { id = 10077 name = VICTORY_POINTS_10077_ind }
+			set_province_name = { id = 18977 name = VICTORY_POINTS_18977_ind }
+		}
+	}
+}
+state_control_effect_432 = {
+	set_state_name = STATE_432_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 10443 name = VICTORY_POINTS_10443_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7662 name = VICTORY_POINTS_7662_ind }
+			set_province_name = { id = 10443 name = VICTORY_POINTS_10443_ind }
+			set_province_name = { id = 4616 name = VICTORY_POINTS_4616_ind }
+		}
+	}
+	else = {
+		reset_province_name = 10443
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7662 name = VICTORY_POINTS_7662_ind }
+			set_province_name = { id = 10443 name = VICTORY_POINTS_10443_ind }
+			set_province_name = { id = 4616 name = VICTORY_POINTS_4616_ind }
+		}
+	}
+}
+state_control_effect_1342 = {
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_state_name = STATE_1342_azh
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1342_ind
+			set_province_name = { id = 7220 name = VICTORY_POINTS_7220_ind }
+			set_province_name = { id = 4204 name = VICTORY_POINTS_4204_ind }
+			set_province_name = { id = 4062 name = VICTORY_POINTS_4062_ind }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1342_ind
+			set_province_name = { id = 7220 name = VICTORY_POINTS_7220_ind }
+			set_province_name = { id = 4204 name = VICTORY_POINTS_4204_ind }
+			set_province_name = { id = 4062 name = VICTORY_POINTS_4062_ind }
+		}
+	}
+}
+state_control_effect_1344 = {
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 10035 name = VICTORY_POINTS_10035_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10035 name = VICTORY_POINTS_10035_ind }
+			set_province_name = { id = 18961 name = VICTORY_POINTS_18961_ind }
+		}
+	}
+	else = {
+		reset_province_name = 10035
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10035 name = VICTORY_POINTS_10035_ind }
+			set_province_name = { id = 18961 name = VICTORY_POINTS_18961_ind }
+		}
+	}
+}
+state_control_effect_1345 = {
+	set_state_name = STATE_1345_ind	
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 9991 name = VICTORY_POINTS_9991_azh }
+		set_province_name = { id = 11968 name = VICTORY_POINTS_11968_azh }
+		set_province_name = { id = 16141 name = VICTORY_POINTS_16141_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 9991 name = VICTORY_POINTS_9991_ind }
+			set_province_name = { id = 11968 name = VICTORY_POINTS_11968_ind }
+			set_province_name = { id = 12010 name = VICTORY_POINTS_12010_ind }
+			set_province_name = { id = 16140 name = VICTORY_POINTS_16140_ind }
+			set_province_name = { id = 16141 name = VICTORY_POINTS_16141_azh }
+		}
+	}
+	else = {
+		reset_province_name = 9991
+		reset_province_name = 11968
+		reset_province_name = 16141
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 9991 name = VICTORY_POINTS_9991_ind }
+			set_province_name = { id = 11968 name = VICTORY_POINTS_11968_ind }
+			set_province_name = { id = 12010 name = VICTORY_POINTS_12010_ind }
+			set_province_name = { id = 16140 name = VICTORY_POINTS_16140_ind }
+			set_province_name = { id = 16141 name = VICTORY_POINTS_16141_azh }
+		}
+	}
+}
+state_control_effect_1346 = {
+	set_state_name = STATE_1346_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 12050 name = VICTORY_POINTS_12050_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 2843 name = VICTORY_POINTS_2843_ind }
+			set_province_name = { id = 12050 name = VICTORY_POINTS_12050_ind }
+		}
+	}
+	else = {
+		reset_province_name = 12050
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 2843 name = VICTORY_POINTS_2843_ind }
+			set_province_name = { id = 12050 name = VICTORY_POINTS_12050_ind }
+		}
+	}
+}
+state_control_effect_1348 = {
+	set_state_name = STATE_1348_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 11929 name = VICTORY_POINTS_11929_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 11929 name = VICTORY_POINTS_11929_ind }
+			set_province_name = { id = 12423 name = VICTORY_POINTS_12423_ind }
+			set_province_name = { id = 16142 name = VICTORY_POINTS_16142_ind }
+			set_province_name = { id = 18846 name = VICTORY_POINTS_18846_ind }
+			set_province_name = { id = 10416 name = VICTORY_POINTS_10416_ind }
+		}
+	}
+	else = {
+		reset_province_name = 11929
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 11929 name = VICTORY_POINTS_11929_ind }
+			set_province_name = { id = 12423 name = VICTORY_POINTS_12423_ind }
+			set_province_name = { id = 16142 name = VICTORY_POINTS_16142_ind }
+			set_province_name = { id = 18846 name = VICTORY_POINTS_18846_ind }
+			set_province_name = { id = 10416 name = VICTORY_POINTS_10416_ind }
+		}
+	}
+}
+state_control_effect_1349 = {
+	set_state_name = STATE_1349_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 4245 name = VICTORY_POINTS_4245_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4245 name = VICTORY_POINTS_4245_ind }
+		}
+	}
+	else = {
+		reset_province_name = 4245
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4245 name = VICTORY_POINTS_4245_ind }
+		}
+	}
+}
+#East Punjab
+state_control_effect_254 = {
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 19006 name = VICTORY_POINTS_19006_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 19006 name = VICTORY_POINTS_19006_ind }
+			set_province_name = { id = 16040 name = VICTORY_POINTS_16040_ind }
+			set_province_name = { id = 12868 name = VICTORY_POINTS_12868_ind }
+		}
+	}
+	else = {
+		reset_province_name = 19006
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 19006 name = VICTORY_POINTS_19006_ind }
+			set_province_name = { id = 16040 name = VICTORY_POINTS_16040_ind }
+			set_province_name = { id = 12868 name = VICTORY_POINTS_12868_ind }
+		}
+	}
+}
+state_control_effect_440 = { # universal renaming 
+	set_state_name = STATE_440_ind
+	if = {
+		limit = { date < 1972.1.1 }
+		set_province_name = { id = 12708 name = VICTORY_POINTS_12708_1962 }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12708 name = VICTORY_POINTS_12708_ind }
+		}
+	}
+	else = {
+		reset_province_name = 12708
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12708 name = VICTORY_POINTS_12708_ind }
+		}
+	}
+}
+#Gujarat
+state_control_effect_428 = {
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 9975 name = VICTORY_POINTS_9975_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_428_ind
+			set_province_name = { id = 9975 name = VICTORY_POINTS_9975_ind }
+		}
+	}
+	else = {
+		reset_province_name = 9975
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_428_ind
+			set_province_name = { id = 9975 name = VICTORY_POINTS_9975_ind }
+		}
+	}
+}
+#Maharashtra
+state_control_effect_429 = {
+	set_state_name = STATE_429_ind
+	set_province_name = { id = 12142 name = VICTORY_POINTS_12142_ind_eng }	
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 10270 name = VICTORY_POINTS_10270_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10270 name = VICTORY_POINTS_10270_ind }
+			set_province_name = { id = 16086 name = VICTORY_POINTS_16086_ind }
+			set_province_name = { id = 12295 name = VICTORY_POINTS_12295_ind }
+			set_province_name = { id = 16085 name = VICTORY_POINTS_16085_ind }
+			set_province_name = { id = 12142 name = VICTORY_POINTS_12142_ind }
+		}
+	}
+	else = {
+		reset_province_name = 10270
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10270 name = VICTORY_POINTS_10270_ind }
+			set_province_name = { id = 16086 name = VICTORY_POINTS_16086_ind }
+			set_province_name = { id = 12295 name = VICTORY_POINTS_12295_ind }
+			set_province_name = { id = 16085 name = VICTORY_POINTS_16085_ind }
+			set_province_name = { id = 12142 name = VICTORY_POINTS_12142_ind }
+		}
+	}
+}
+state_control_effect_436 = { #universal renaming
+	set_state_name = STATE_436_ind
+	if = {
+		limit = { has_global_flag = TNO_endonym_mode }
+		set_province_name = { id = 10030 name = VICTORY_POINTS_10030_ind }
+		set_province_name = { id = 18975 name = VICTORY_POINTS_18975_ind }
+	}
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 4557 name = VICTORY_POINTS_4557_azh_ind } 
+	}
+	else = {
+		reset_province_name = 4557
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4557 name = VICTORY_POINTS_4557_azh_ind }
+		}
+	}
+	if = {
+		limit = { date < 1964.1.1 }
+		set_province_name = { id = 7619 name = VICTORY_POINTS_7619_1962 }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7619 name = VICTORY_POINTS_7619_ind_1962 }
+		}
+	}
+	else = {
+		reset_province_name = 7619
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7619 name = VICTORY_POINTS_7619_ind }
+		}
+	}
+}
+state_control_effect_892 = {
+	set_state_name = STATE_892_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 4072 name = VICTORY_POINTS_4072_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4072 name = VICTORY_POINTS_4072_ind }
+			set_province_name = { id = 7177 name = VICTORY_POINTS_7177_ind }
+			set_province_name = { id = 10019 name = VICTORY_POINTS_10019_ind }
+		}
+	}
+	else = {
+		reset_province_name = 4072
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4072 name = VICTORY_POINTS_4072_ind }
+			set_province_name = { id = 7177 name = VICTORY_POINTS_7177_ind }
+			set_province_name = { id = 10019 name = VICTORY_POINTS_10019_ind }
+		}
+	}
+}
+state_control_effect_894 = {
+	set_province_name = { id = 7013 name = VICTORY_POINTS_7013_ind_eng }
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 1349 name = VICTORY_POINTS_1349_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_894_ind
+			set_province_name = { id = 1349 name = VICTORY_POINTS_1349_azh }
+			set_province_name = { id = 7232 name = VICTORY_POINTS_7232_ind }
+			set_province_name = { id = 7013 name = VICTORY_POINTS_7013_ind }
+		}
+	}
+	else = {
+		reset_province_name = 1349
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_894_ind
+			set_province_name = { id = 1349 name = VICTORY_POINTS_1349_ind }
+			set_province_name = { id = 7232 name = VICTORY_POINTS_7232_ind }
+			set_province_name = { id = 7013 name = VICTORY_POINTS_7013_ind }
+		}
+	}
+}
+#West Punjab
+state_control_effect_433 = { 
+	set_state_name = STATE_433_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 18989 name = VICTORY_POINTS_18989_azh }
+		set_province_name = { id = 10173 name = VICTORY_POINTS_10173_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 8022 name = VICTORY_POINTS_8022_ind }
+			set_province_name = { id = 18989 name = VICTORY_POINTS_18989_ind }
+			set_province_name = { id = 10173 name = VICTORY_POINTS_10173_azh }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_province_name = 18989
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = PAK }
+		reset_province_name = 18989
+		set_province_name = { id = 10173 name = VICTORY_POINTS_10173_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 8022 name = VICTORY_POINTS_8022_ind }
+			set_province_name = { id = 18989 name = VICTORY_POINTS_18989_ind }
+			set_province_name = { id = 10173 name = VICTORY_POINTS_10173_azh }
+		}
+	}
+	else = {
+		reset_province_name = 18989
+		reset_province_name = 10173
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 8022 name = VICTORY_POINTS_8022_ind }
+			set_province_name = { id = 18989 name = VICTORY_POINTS_18989_ind }
+			set_province_name = { id = 10173 name = VICTORY_POINTS_10173_ind }
+		}
+	}
+}
+state_control_effect_2207 = { #universal renaming
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = PAK
+				is_controlled_by = AZH
+			}
+		}
+		set_state_name = STATE_2207_azh_pak
+		set_province_name = { id = 16025 name = VICTORY_POINTS_16025_azh_pak_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 16025 name = VICTORY_POINTS_16025_azh_pak }
+			set_province_name = { id = 18954 name = VICTORY_POINTS_18954_ind }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 16025
+		set_state_name = STATE_2207_ind
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 16025 name = VICTORY_POINTS_16025_ind }
+			set_province_name = { id = 18954 name = VICTORY_POINTS_18954_ind }
+		}
+	}
+}
+#Arunachal Pradesh
+state_control_effect_434 = { #universal renaming
+	if = {
+		limit = { date < 1972.1.1 }
+		set_state_name = STATE_434_ind_eng_1962
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_434_ind_1962
+		}
+	}
+	else = {
+		reset_state_name = yes
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_434_ind
+		}
+	}
+}
+#Jammu and Kashmir
+state_control_effect_441 = { # universal renaming 
+	if = {
+		limit = { is_controlled_by = PAK }
+		set_province_name = { id = 16011 name = VICTORY_POINTS_16011_pak_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_441_ind
+			set_province_name = { id = 1910 name = VICTORY_POINTS_1910_ind }
+			set_province_name = { id = 18880 name = VICTORY_POINTS_18880_ind }
+			set_province_name = { id = 16011 name = VICTORY_POINTS_16011_pak }
+		}
+	}
+	else = {
+		reset_province_name = 16011
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_441_ind
+			set_province_name = { id = 1910 name = VICTORY_POINTS_1910_ind }
+			set_province_name = { id = 18880 name = VICTORY_POINTS_18880_ind }
+			set_province_name = { id = 16011 name = VICTORY_POINTS_16011_ind }
+		}
+	}
+}
+#Andaman and Nicobar Islands
+state_control_effect_733 = { #universal renaming
+	if = {
+		limit = {
+			is_controlled_by = AZH
+		}
+		set_state_name = STATE_733_azh_eng
+		set_province_name = { id = 12251 name = VICTORY_POINTS_12251_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_733_azh
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 12251
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_733_ind
+			set_province_name = { id = 12251 name = VICTORY_POINTS_12251_ind }
+		}
+	}
+}
+#Karnataka
+state_control_effect_425 = {
+	set_state_name = STATE_425_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 1359 name = VICTORY_POINTS_1359_azh }
+		set_province_name = { id = 10259 name = VICTORY_POINTS_10259_azh }
+		set_province_name = { id = 5032 name = VICTORY_POINTS_5032_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 1359 name = VICTORY_POINTS_1359_ind }
+			set_province_name = { id = 10259 name = VICTORY_POINTS_10259_ind }
+			set_province_name = { id = 10324 name = VICTORY_POINTS_10324_ind }
+			set_province_name = { id = 10799 name = VICTORY_POINTS_10799_ind }
+			set_province_name = { id = 5032 name = VICTORY_POINTS_5032_ind }
+		}
+	}
+	else = {
+		reset_province_name = 1359
+		reset_province_name = 10259
+		reset_province_name = 5032
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 1359 name = VICTORY_POINTS_1359_ind }
+			set_province_name = { id = 10259 name = VICTORY_POINTS_10259_ind }
+			set_province_name = { id = 10324 name = VICTORY_POINTS_10324_ind }
+			set_province_name = { id = 10799 name = VICTORY_POINTS_10799_ind }
+			set_province_name = { id = 5032 name = VICTORY_POINTS_5032_ind }
+		}
+	}
+}
+state_control_effect_438 = {
+	set_state_name = STATE_438_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 4315 name = VICTORY_POINTS_4315_azh }
+		set_province_name = { id = 7244 name = VICTORY_POINTS_7244_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4315 name = VICTORY_POINTS_4315_ind }
+			set_province_name = { id = 7244 name = VICTORY_POINTS_7244_ind }
+			set_province_name = { id = 12146 name = VICTORY_POINTS_12146_ind }
+			set_province_name = { id = 1412 name = VICTORY_POINTS_1412_ind }
+		}
+	}
+	else = {
+		reset_province_name = 4315
+		reset_province_name = 7244
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4315 name = VICTORY_POINTS_4315_ind }
+			set_province_name = { id = 7244 name = VICTORY_POINTS_7244_ind }
+			set_province_name = { id = 12146 name = VICTORY_POINTS_12146_ind }
+			set_province_name = { id = 1412 name = VICTORY_POINTS_1412_ind }
+		}
+	}
+}
+state_control_effect_766 = {
+	set_state_name = STATE_766_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 8011 name = VICTORY_POINTS_8011_azh }
+		set_province_name = { id = 8100 name = VICTORY_POINTS_8100_azh }
+		set_province_name = { id = 7395 name = VICTORY_POINTS_7395_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7395 name = VICTORY_POINTS_7395_ind }
+			set_province_name = { id = 8011 name = VICTORY_POINTS_8011_ind }
+			set_province_name = { id = 8100 name = VICTORY_POINTS_8100_ind }
+			set_province_name = { id = 10208 name = VICTORY_POINTS_10208_ind }
+			set_province_name = { id = 19005 name = VICTORY_POINTS_19005_ind }
+		}
+	}
+	else = {
+		reset_province_name = 8011
+		reset_province_name = 8100
+		reset_province_name = 7395
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7395 name = VICTORY_POINTS_7395_ind }
+			set_province_name = { id = 8011 name = VICTORY_POINTS_8011_ind }
+			set_province_name = { id = 8100 name = VICTORY_POINTS_8100_ind }
+			set_province_name = { id = 10208 name = VICTORY_POINTS_10208_ind }
+			set_province_name = { id = 19005 name = VICTORY_POINTS_19005_ind }
+		}
+	}
+}
+state_control_effect_931 = {
+	set_state_name = STATE_931_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 7250 name = VICTORY_POINTS_7250_azh }
+		set_province_name = { id = 12105 name = VICTORY_POINTS_12105_azh_ind }
+		set_province_name = { id = 16092 name = VICTORY_POINTS_16092_azh_ind }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7250 name = VICTORY_POINTS_7250_ind }
+			set_province_name = { id = 4278 name = VICTORY_POINTS_4278_ind }
+		}
+	}
+	else = {
+		reset_province_name = 7250
+		reset_province_name = 12105
+		reset_province_name = 16092
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7250 name = VICTORY_POINTS_7250_ind }
+			set_province_name = { id = 4278 name = VICTORY_POINTS_4278_ind }
+			set_province_name = { id = 12105 name = VICTORY_POINTS_12105_azh_ind }
+			set_province_name = { id = 16092 name = VICTORY_POINTS_16092_azh_ind }
+		}
+	}
+}
+state_control_effect_2210 = { #universal renaming
+	if = {
+		limit = { date < 1973.1.1 }
+		set_state_name = STATE_2210_1962
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2210_ind_1962
+		}
+	}
+	else = {
+		reset_state_name = yes
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2210_ind
+		}
+	}
+}
+#Tamil Nadu
+state_control_effect_320 = {
+	set_state_name = STATE_320_ind_eng
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 10149 name = VICTORY_POINTS_10149_azh_eng }
+		set_province_name = { id = 16094 name = VICTORY_POINTS_16094_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_320_ind
+			set_province_name = { id = 10149 name = VICTORY_POINTS_10149_azh }
+			set_province_name = { id = 16094 name = VICTORY_POINTS_16094_azh }
+		}
+	}
+	else = {
+		reset_province_name = 10149
+		reset_province_name = 16094
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_320_ind
+			set_province_name = { id = 10149 name = VICTORY_POINTS_10149_ind }
+			set_province_name = { id = 16094 name = VICTORY_POINTS_16094_ind }
+		}
+	}
+}
+state_control_effect_423 = {
+	set_state_name = STATE_423_ind_eng
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 10274 name = VICTORY_POINTS_10274_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_423_ind
+			set_province_name = { id = 10274 name = VICTORY_POINTS_10274_azh }
+			set_province_name = { id = 7363 name = VICTORY_POINTS_7363_ind }
+			set_province_name = { id = 8067 name = VICTORY_POINTS_8067_ind }
+			set_province_name = { id = 12247 name = VICTORY_POINTS_12247_ind }
+			set_province_name = { id = 10808 name = VICTORY_POINTS_10808_ind }
+		}
+	}
+	else = {
+		reset_province_name = 10274
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_423_ind
+			set_province_name = { id = 10274 name = VICTORY_POINTS_10274_ind }
+			set_province_name = { id = 7363 name = VICTORY_POINTS_7363_ind }
+			set_province_name = { id = 8067 name = VICTORY_POINTS_8067_ind }
+			set_province_name = { id = 12247 name = VICTORY_POINTS_12247_ind }
+			set_province_name = { id = 10808 name = VICTORY_POINTS_10808_ind }
+		}
+	}
+}
+state_control_effect_893 = {
+	set_state_name = STATE_893_ind_eng
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 10278 name = VICTORY_POINTS_10278_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_893_ind
+			set_province_name = { id = 10278 name = VICTORY_POINTS_10278_azh }
+			set_province_name = { id = 4420 name = VICTORY_POINTS_4420_ind }
+		}
+	}
+	else = {
+		reset_province_name = 10278
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_893_ind
+			set_province_name = { id = 10278 name = VICTORY_POINTS_10278_ind }
+			set_province_name = { id = 4420 name = VICTORY_POINTS_4420_ind }
+		}
+	}
+}
+state_control_effect_967 = {
+	set_state_name = STATE_967_ind_eng
+	set_province_name = { id = 7402 name = VICTORY_POINTS_7402_ind_eng }
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 4327 name = VICTORY_POINTS_4327_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_967_ind
+			set_province_name = { id = 4327 name = VICTORY_POINTS_4327_ind }
+			set_province_name = { id = 7402 name = VICTORY_POINTS_7402_ind }
+			set_province_name = { id = 1409 name = VICTORY_POINTS_1409_ind }
+			set_province_name = { id = 7288 name = VICTORY_POINTS_7288_ind }
+			set_province_name = { id = 7265 name = VICTORY_POINTS_7265_ind }
+		}
+	}
+	else = {
+		reset_province_name = 4327
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_967_ind
+			set_province_name = { id = 4327 name = VICTORY_POINTS_4327_ind }
+			set_province_name = { id = 7402 name = VICTORY_POINTS_7402_ind }
+			set_province_name = { id = 1409 name = VICTORY_POINTS_1409_ind }
+			set_province_name = { id = 7288 name = VICTORY_POINTS_7288_ind }
+			set_province_name = { id = 7265 name = VICTORY_POINTS_7265_ind }
+		}
+	}
+}
+#Assam
+state_control_effect_1888 = {
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 18858 name = VICTORY_POINTS_18858_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1888_ind
+		}
+	}
+	else = {
+		reset_province_name = 18858
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1888_ind
+		}
+	}
+}
+#Bihar
+state_control_effect_1924 = {
+	set_state_name = STATE_1924_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 7475 name = VICTORY_POINTS_7475_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7475 name = VICTORY_POINTS_7475_ind }
+			set_province_name = { id = 13222 name = VICTORY_POINTS_13222_ind }
+			set_province_name = { id = 18940 name = VICTORY_POINTS_18940_ind }
+		}
+	}
+	else = {
+		reset_province_name = 7475
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7475 name = VICTORY_POINTS_7475_ind }
+			set_province_name = { id = 13222 name = VICTORY_POINTS_13222_ind }
+			set_province_name = { id = 18940 name = VICTORY_POINTS_18940_ind }
+		}
+	}
+}
+#Odissa
+state_control_effect_1350 = {
+	set_state_name = STATE_1350_ind
+	set_province_name = { id = 12462 name = VICTORY_POINTS_12462_ind_eng }
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 16103 name = VICTORY_POINTS_16103_azh_ind }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10116 name = VICTORY_POINTS_10116_ind }
+			set_province_name = { id = 12462 name = VICTORY_POINTS_12462_ind }
+		}
+	}
+	else = {
+		reset_province_name = 16103
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 16103 name = VICTORY_POINTS_16103_azh_ind }
+			set_province_name = { id = 10116 name = VICTORY_POINTS_10116_ind }
+			set_province_name = { id = 12462 name = VICTORY_POINTS_12462_ind }
+		}
+	}
+}
+#Goa
+state_control_effect_321 = {
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 1273 name = VICTORY_POINTS_1273_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1888_ind
+			set_province_name = { id = 1273 name = VICTORY_POINTS_1273_azh }
+		}
+	}
+	else = {
+		reset_province_name = 1273
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1888_ind
+		}
+	}
+}
+#Andhra Pradesh
+state_control_effect_424 = {
+	set_province_name = { id = 18963 name = VICTORY_POINTS_18963_ind_eng }
+	set_province_name = { id = 1228 name = VICTORY_POINTS_1228_ind_eng }
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 4321 name = VICTORY_POINTS_4321_azh }
+		set_province_name = { id = 12180 name = VICTORY_POINTS_12180_azh }
+		set_province_name = { id = 1430 name = VICTORY_POINTS_1430_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_424_ind
+			set_province_name = { id = 1228 name = VICTORY_POINTS_1228_ind }
+			set_province_name = { id = 1430 name = VICTORY_POINTS_1430_ind }
+			set_province_name = { id = 4237 name = VICTORY_POINTS_4237_ind }
+			set_province_name = { id = 4321 name = VICTORY_POINTS_4321_ind }
+			set_province_name = { id = 10001 name = VICTORY_POINTS_10001_ind }
+			set_province_name = { id = 10255 name = VICTORY_POINTS_10255_ind }
+			set_province_name = { id = 12180 name = VICTORY_POINTS_12180_ind }
+			set_province_name = { id = 18963 name = VICTORY_POINTS_18963_ind }
+		}
+	}
+	else = {
+		reset_province_name = 1430
+		reset_province_name = 4321
+		reset_province_name = 12180
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_424_ind
+			set_province_name = { id = 1228 name = VICTORY_POINTS_1228_ind }
+			set_province_name = { id = 1430 name = VICTORY_POINTS_1430_ind }
+			set_province_name = { id = 4237 name = VICTORY_POINTS_4237_ind }
+			set_province_name = { id = 4321 name = VICTORY_POINTS_4321_ind }
+			set_province_name = { id = 10001 name = VICTORY_POINTS_10001_ind }
+			set_province_name = { id = 10255 name = VICTORY_POINTS_10255_ind }
+			set_province_name = { id = 12180 name = VICTORY_POINTS_12180_ind }
+			set_province_name = { id = 18963 name = VICTORY_POINTS_18963_ind }
+		}
+	}
+}
+state_control_effect_930 = {
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 7310 name = VICTORY_POINTS_7310_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_930_ind
+			set_province_name = { id = 16096 name = VICTORY_POINTS_16096_ind }
+			set_province_name = { id = 16095 name = VICTORY_POINTS_16095_ind }
+			set_province_name = { id = 10756 name = VICTORY_POINTS_10756_ind }
+			set_province_name = { id = 19004 name = VICTORY_POINTS_19004_ind }
+		}
+	}
+	else = {
+		reset_province_name = 7310
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_930_ind
+			set_province_name = { id = 16096 name = VICTORY_POINTS_16096_ind }
+			set_province_name = { id = 16095 name = VICTORY_POINTS_16095_ind }
+			set_province_name = { id = 10756 name = VICTORY_POINTS_10756_ind }
+			set_province_name = { id = 19004 name = VICTORY_POINTS_19004_ind }
+		}
+	}
+}
+#Kerala
+state_control_effect_932 = {
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 1238 name = VICTORY_POINTS_1238_azh_ind }
+		set_province_name = { id = 1321 name = VICTORY_POINTS_1321_azh }
+		set_province_name = { id = 7447 name = VICTORY_POINTS_7447_azh }
+		set_province_name = { id = 7391 name = VICTORY_POINTS_7391_azh }
+		set_province_name = { id = 10190 name = VICTORY_POINTS_10190_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_932_ind
+			set_province_name = { id = 1321 name = VICTORY_POINTS_1321_ind }
+			set_province_name = { id = 7447 name = VICTORY_POINTS_7447_ind }
+			set_province_name = { id = 7391 name = VICTORY_POINTS_7391_ind }
+			set_province_name = { id = 10190 name = VICTORY_POINTS_10190_azh }
+		}
+	}
+	else = {
+		reset_province_name = 1238
+		reset_province_name = 1321
+		reset_province_name = 7447
+		reset_province_name = 7391
+		reset_province_name = 10190
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_932_ind
+			set_province_name = { id = 1238 name = VICTORY_POINTS_1238_azh_ind }
+			set_province_name = { id = 1321 name = VICTORY_POINTS_1321_ind }
+			set_province_name = { id = 7447 name = VICTORY_POINTS_7447_ind }
+			set_province_name = { id = 7391 name = VICTORY_POINTS_7391_ind }
+			set_province_name = { id = 10190 name = VICTORY_POINTS_10190_ind }
+		}
+	}
+}
+#Sindh
+state_control_effect_1914 = {
+	set_state_name = STATE_1914_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 10735 name = VICTORY_POINTS_10735_azh_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7049 name = VICTORY_POINTS_7049_ind }
+			set_province_name = { id = 10735 name = VICTORY_POINTS_10735_azh }
+		}
+	}
+	else = {
+		reset_province_name = 10735
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7049 name = VICTORY_POINTS_7049_ind }
+			set_province_name = { id = 10735 name = VICTORY_POINTS_10735_ind }
+		}
+	}
+}
+#Madhya Pradesh
+state_control_effect_1933 = {
+	set_state_name = STATE_1933_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 12080 name = VICTORY_POINTS_12080_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12080 name = VICTORY_POINTS_12080_ind }
+			set_province_name = { id = 10872 name = VICTORY_POINTS_10872_ind }
+			set_province_name = { id = 7205 name = VICTORY_POINTS_7205_ind }
+		}
+	}
+	else = {
+		reset_province_name = 12080
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12080 name = VICTORY_POINTS_12080_ind }
+			set_province_name = { id = 10872 name = VICTORY_POINTS_10872_ind }
+			set_province_name = { id = 7205 name = VICTORY_POINTS_7205_ind }
+		}
+	}
+}
+state_control_effect_1940 = {
+	set_state_name = STATE_1940_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 10801 name = VICTORY_POINTS_10801_azh_ind }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 18825 name = VICTORY_POINTS_18825_ind }
+			set_province_name = { id = 12799 name = VICTORY_POINTS_12799_ind }
+			set_province_name = { id = 18829 name = VICTORY_POINTS_18829_ind }
+			set_province_name = { id = 4883 name = VICTORY_POINTS_4883_ind }
+		}
+	}
+	else = {
+		reset_province_name = 10801
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10801 name = VICTORY_POINTS_10801_azh_ind }
+			set_province_name = { id = 18825 name = VICTORY_POINTS_18825_ind }
+			set_province_name = { id = 12799 name = VICTORY_POINTS_12799_ind }
+			set_province_name = { id = 18829 name = VICTORY_POINTS_18829_ind }
+			set_province_name = { id = 4883 name = VICTORY_POINTS_4883_ind }
+		}
+	}
+}
+#Uttar Pradesh
+state_control_effect_1951 = {
+	set_state_name = STATE_1951_ind
+	if = {
+		limit = { is_controlled_by = AZH }
+		set_province_name = { id = 16048 name = VICTORY_POINTS_16048_azh }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 5002 name = VICTORY_POINTS_5002_ind }
+			set_province_name = { id = 16048 name = VICTORY_POINTS_16048_ind }
+			set_province_name = { id = 13223 name = VICTORY_POINTS_13223_ind }
+			set_province_name = { id = 18921 name = VICTORY_POINTS_18921_ind }
+			set_province_name = { id = 18920 name = VICTORY_POINTS_18920_ind }
+		}
+	}
+	else = {
+		reset_province_name = 16048
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 5002 name = VICTORY_POINTS_5002_ind }
+			set_province_name = { id = 16048 name = VICTORY_POINTS_16048_ind }
+			set_province_name = { id = 13223 name = VICTORY_POINTS_13223_ind }
+			set_province_name = { id = 18921 name = VICTORY_POINTS_18921_ind }
+			set_province_name = { id = 18920 name = VICTORY_POINTS_18920_ind }
+		}
+	}
+}
+#INS
+state_control_effect_817 = {
+	set_state_name = STATE_817_ins
+	set_province_name = { id = 7658 name = VICTORY_POINTS_7658_ins }
+	if = {
+		limit = {
+			is_controlled_by = NII
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_817_nii
+		set_province_name = { id = 7658 name = VICTORY_POINTS_7658_nii }
+	}
+}
+state_control_effect_2262 = {
+	set_state_name = STATE_2262_ins_eng
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = INS
+				controller = { is_in_faction_with = INS }
+				is_controlled_by = FRI
+				AND = {
+					controller = { is_in_faction_with = FRI }
+					NOT = { is_controlled_by = NII }
+				}
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_2262_ins
+	}
+	if = {
+		limit = {
+			is_controlled_by = NII
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_2262_nii
+		set_province_name = { id = 10509 name = VICTORY_POINTS_10509_nii }
+	}
+}
+state_control_effect_2263 = {
+	set_state_name = STATE_2263_ins_eng
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = INS
+				controller = { is_in_faction_with = INS }
+				is_controlled_by = FRI
+				AND = {
+					controller = { is_in_faction_with = FRI }
+					NOT = { is_controlled_by = NII }
+				}
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_2263_ins
+		set_province_name = { id = 19331 name = VICTORY_POINTS_19331_ins }
+	}
+	if = {
+		limit = {
+			is_controlled_by = NII
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_2263_nii
+	}
+}
+state_control_effect_2317 = {
+	if = {
+		limit = {
+			is_controlled_by = INS
+			controller = { is_in_faction_with = INS }
+			INS = {
+				NOT = {
+					has_country_leader = {
+						character = INS_Suharto
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		set_state_name = STATE_2317_ins
+		set_province_name = { id = 12371 name = VICTORY_POINTS_12371_ins }
+	}
+	else_if = {
+		limit = {
+			is_controlled_by = INS
+			controller = { is_in_faction_with = INS }
+			INS = {
+				has_country_leader = {
+					character = INS_Suharto
+					ruling_only = yes
+				}
+			}
+		}
+		set_state_name = STATE_2317_ins_suharto
+		set_province_name = { id = 12371 name = VICTORY_POINTS_12371_ins_suharto }
+	}
+	else_if = {
+		limit = {
+			is_controlled_by = FRI
+			controller = { is_in_faction_with = FRI }
+		}
+		set_state_name = STATE_2317_fri_eng
+		reset_province_name = 12371
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2317_fri
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 12371
+	}
+}
+
+#JAP
+state_control_effect_537 = {
+	if = { #Karafuto
+		limit = { is_controlled_by = JAP }
+		reset_state_name = yes
+		reset_province_name = 12446
+		reset_province_name = 1755
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = CHI
+				is_controlled_by = YUN
+			}
+		}
+		set_province_name = { id = 12446 name = VICTORY_POINTS_12446_chi }
+		set_province_name = { id = 1755 name = VICTORY_POINTS_1755_chi }
+		set_state_name = STATE_537_chi
+	}
+	else = {
+		set_state_name = STATE_537_rus
+		if = {
+			limit = {
+				controller = {
+					OR = {
+						has_government = socialist
+						has_government = communist
+					}
+				}
+			}
+			set_province_name = { id = 12446 name = VICTORY_POINTS_12446_sov }
+		}
+		else = {
+			set_province_name = { id = 12446 name = VICTORY_POINTS_12446_rus }
+		}
+	}
+}
+
+state_control_effect_591 = {
+	if = { #Hainan
+		limit = {
+			OR = {
+				is_controlled_by = GNG
+				is_controlled_by = JAP
+
+			}
+		}
+		set_province_name = { id = 11981 name = VICTORY_POINTS_11981_gng_jap }
+		set_province_name = { id = 994 name = VICTORY_POINTS_994_gng_jap }
+		set_province_name = { id = 1070 name = VICTORY_POINTS_1070_gng_jap }
+		set_state_name = STATE_591_gng_jap
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 994
+		reset_province_name = 1070
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 11981 name = VICTORY_POINTS_11981_chi }
+		}
+		else = { reset_province_name = 11981 }
+	}
+}
+
+state_control_effect_629 = {
+	if = {
+		limit = { is_controlled_by = JAP }
+		reset_province_name = 4180
+		reset_province_name = 13052
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_629_jap
+			set_province_name = { id = 12021 name = VICTORY_POINTS_12021_jap }
+		}
+		else = {
+			reset_state_name = yes
+			reset_province_name = 12021
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 12021
+		reset_province_name = 4180
+		reset_province_name = 13052
+	}
+}
+
+state_control_effect_809 = {
+	if = {
+		limit = { is_controlled_by = JAP }
+		reset_state_name = yes
+		reset_province_name = 957
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = MAN
+				is_controlled_by = CHI
+				is_controlled_by = YUN
+			}
+		}
+		set_state_name = STATE_809_chi
+		set_province_name = { id = 957 name = VICTORY_POINTS_957_chi }
+	}
+	else = {
+		set_state_name = STATE_809_rus
+		set_province_name = { id = 957 name = VICTORY_POINTS_957_rus }
+	}
+}
+state_control_effect_810 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 1150
+	}
+	else = {
+		set_state_name = STATE_810_chi
+		set_province_name = { id = 1150 name = VICTORY_POINTS_1150_chi }
+	}
+}
+state_control_effect_811 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 4205
+	}
+	else = {
+		set_state_name = STATE_811_chi
+		set_province_name = { id = 4205 name = VICTORY_POINTS_4205_chi }
+	}
+}
+state_control_effect_812 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 10000
+	}
+	else = {
+		set_state_name = STATE_812_chi
+		set_province_name = { id = 10000 name = VICTORY_POINTS_10000_chi }
+	}
+}
+
+#Korea
+
+state_control_effect_655 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 10110
+		reset_province_name = 11948
+		reset_province_name = 1177
+	}
+	else = {
+		set_state_name = STATE_655_kor
+		set_province_name = { id = 10110 name = VICTORY_POINTS_10110_kor }
+		set_province_name = { id = 11948 name = VICTORY_POINTS_11948_kor }
+		set_province_name = { id = 1177 name = VICTORY_POINTS_1177_kor }
+	}
+}
+
+state_control_effect_963 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 1054
+		reset_province_name = 12060
+		reset_province_name = 15856
+	}
+	else = {
+		set_state_name = STATE_963_kor
+		set_province_name = { id = 1054 name = VICTORY_POINTS_1054_kor }
+		set_province_name = { id = 12060 name = VICTORY_POINTS_12060_kor }
+		set_province_name = { id = 15856 name = VICTORY_POINTS_15856_kor }
+	}
+}
+
+state_control_effect_1818 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 11977
+		reset_province_name = 4126
+	}
+	else = {
+		set_state_name = STATE_1818_kor
+		set_province_name = { id = 11977 name = VICTORY_POINTS_11977_kor }
+		set_province_name = { id = 4126 name = VICTORY_POINTS_4126_kor }
+	}
+}
+
+state_control_effect_1816 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 4056
+		reset_province_name = 4086
+		reset_province_name = 1081
+	}
+	else = {
+		set_state_name = STATE_1816_kor
+		set_province_name = { id = 4056 name = VICTORY_POINTS_4056_kor }
+		set_province_name = { id = 4086 name = VICTORY_POINTS_4086_kor }
+		set_province_name = { id = 1081 name = VICTORY_POINTS_1081_kor }
+	}
+}
+
+state_control_effect_1819 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 1100
+		reset_province_name = 15856
+	}
+	else = {
+		set_state_name = STATE_1819_kor
+		set_province_name = { id = 1100 name = VICTORY_POINTS_1100_kor }
+		set_province_name = { id = 15856 name = VICTORY_POINTS_15856_kor }
+	}
+}
+
+state_control_effect_525 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 7204
+		reset_province_name = 11992
+	}
+	else = {
+		set_state_name = STATE_525_kor
+		set_province_name = { id = 7204 name = VICTORY_POINTS_7204_kor }
+		set_province_name = { id = 11992 name = VICTORY_POINTS_11992_kor }
+	}
+}
+
+state_control_effect_1018 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 1148
+		reset_province_name = 4004
+		reset_province_name = 10036
+	}
+	else = {
+		set_state_name = STATE_1018_kor
+		set_province_name = { id = 1148 name = VICTORY_POINTS_1148_kor }
+		set_province_name = { id = 4004 name = VICTORY_POINTS_4004_kor }
+		set_province_name = { id = 10036 name = VICTORY_POINTS_10036_kor }
+	}
+}
+
+state_control_effect_962 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 7125
+		reset_province_name = 12040
+		reset_province_name = 7221
+	}
+	else = {
+		set_state_name = STATE_962_kor
+		set_province_name = { id = 7125 name = VICTORY_POINTS_7125_kor }
+		set_province_name = { id = 12040 name = VICTORY_POINTS_12040_kor }
+		set_province_name = { id = 7221 name = VICTORY_POINTS_7221_kor }
+	}
+}
+
+state_control_effect_1817 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 4107
+	}
+	else = {
+		set_state_name = STATE_1817_kor
+		set_province_name = { id = 4107 name = VICTORY_POINTS_4107_kor }
+	}
+}
+
+state_control_effect_560 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 4052
+		reset_province_name = 10065
+	}
+	else = {
+		set_state_name = STATE_560_kor
+		set_province_name = { id = 4052 name = VICTORY_POINTS_4052_kor }
+		set_province_name = { id = 10065 name = VICTORY_POINTS_10065_kor }
+	}
+}
+
+state_control_effect_1024 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 11835
+		reset_province_name = 912
+		reset_province_name = 6963
+	}
+	else = {
+		set_state_name = STATE_1024_kor
+		set_province_name = { id = 11835 name = VICTORY_POINTS_11835_kor }
+		set_province_name = { id = 912 name = VICTORY_POINTS_912_kor }
+		set_province_name = { id = 6963 name = VICTORY_POINTS_6963_kor }
+	}
+}
+
+state_control_effect_527 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 3981
+		reset_province_name = 3852
+	}
+	else = {
+		set_state_name = STATE_527_kor
+		set_province_name = { id = 3981 name = VICTORY_POINTS_3981_kor }
+		set_province_name = { id = 3852 name = VICTORY_POINTS_3852_kor }
+	}
+}
+
+state_control_effect_1820 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 6922
+		reset_province_name = 898
+		reset_province_name = 6944
+	}
+	else = {
+		set_state_name = STATE_1820_kor
+		set_province_name = { id = 6922 name = VICTORY_POINTS_6922_kor }
+		set_province_name = { id = 898 name = VICTORY_POINTS_898_kor }
+		set_province_name = { id = 6944 name = VICTORY_POINTS_6944_kor }
+	}
+}
+
+state_control_effect_524 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 15887
+		reset_province_name = 7186
+		reset_province_name = 15888
+	}
+	else = {
+		set_state_name = STATE_524_chi
+		set_province_name = { id = 15887 name = VICTORY_POINTS_15887_chi }
+		set_province_name = { id = 7186 name = VICTORY_POINTS_7186_chi }
+		set_province_name = { id = 15888 name = VICTORY_POINTS_15888_chi }
+	}
+}
+
+state_control_effect_1850 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 7214
+	}
+	else = {
+		set_state_name = STATE_1850_chi
+		set_province_name = { id = 7214 name = VICTORY_POINTS_7214_chi }
+	}
+}
+
+state_control_effect_1851 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 11959
+		reset_province_name = 15895
+	}
+	else = {
+		set_state_name = STATE_1851_chi
+		set_province_name = { id = 11959 name = VICTORY_POINTS_11959_chi }
+		set_province_name = { id = 15895 name = VICTORY_POINTS_15895_chi }
+	}
+}
+
+state_control_effect_1852 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_province_name = 1091
+		reset_province_name = 15893
+	}
+	else = {
+		set_province_name = { id = 15893 name = VICTORY_POINTS_15893_chi }
+		reset_province_name = 1091
+	}
+}
+
+state_control_effect_1853 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 12068
+		reset_province_name = 11914
+	}
+	else = {
+		set_state_name = STATE_1853_chi
+		set_province_name = { id = 12068 name = VICTORY_POINTS_12068_chi }
+		set_province_name = { id = 11914 name = VICTORY_POINTS_11914_chi }
+	}
+}
+
+state_control_effect_1854 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 9955
+	}
+	else = {
+		set_state_name = STATE_1854_chi
+		set_province_name = { id = 9955 name = VICTORY_POINTS_9955_chi }
+	}
+}
+
+state_control_effect_1855 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 1175
+	}
+	else = {
+		set_state_name = STATE_1855_chi
+		set_province_name = { id = 1175 name = VICTORY_POINTS_1175_chi }
+	}
+}
+
+state_control_effect_1856 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+		reset_province_name = 15897
+	}
+	else = {
+		set_state_name = STATE_1856_chi
+		set_province_name = { id = 15897 name = VICTORY_POINTS_15897_chi }
+	}
+}
+
+state_control_effect_2488 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+	}
+	else = {
+		set_state_name = STATE_2488_chi
+	}
+}
+
+state_control_effect_2489 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		reset_state_name = yes
+	}
+	else = {
+		set_state_name = STATE_2489_chi
+	}
+}
+
+state_control_effect_2523 = {
+	if = {
+		limit = {
+			is_controlled_by = JAP
+		}
+		set_state_name = STATE_2523_jap_eng
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2523_jap
+		}
+	}
+	else = {
+		reset_state_name = yes
+	}
+}
+
+#MAN
+state_control_effect_328 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = MAN
+				is_controlled_by = JAP
+			}
+		}
+		set_state_name = STATE_328_man
+		set_province_name = { id = 14633 name = VICTORY_POINTS_14633_man }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 14633
+	}
+}
+state_control_effect_408 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = MAN
+				is_controlled_by = JAP
+			}
+		}
+		reset_province_name = 6989
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+			reset_province_name = 6961
+			reset_province_name = 11750
+		}
+		else = {
+			reset_state_name = yes
+			reset_province_name = 6961
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 11750 name = VICTORY_POINTS_11750_man }
+				else = { reset_province_name = 11750 }
+			}
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 6961
+		reset_province_name = 6989
+		reset_province_name = 11750
+	}
+}
+state_control_effect_610 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = MAN
+				is_controlled_by = MEN
+				is_controlled_by = MON
+				is_controlled_by = JAP
+			}
+		}
+		reset_province_name = 6937
+	}
+	else = {
+		set_province_name = { id = 6937 name = VICTORY_POINTS_6937_chi }
+	}
+}
+state_control_effect_715 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = MAN
+				is_controlled_by = JAP
+			}
+		}
+		set_province_name = { id = 1847 name = VICTORY_POINTS_1847_man }
+		set_province_name = { id = 7894 name = VICTORY_POINTS_7894_man }
+	}
+	else = {
+		reset_province_name = 1847
+		reset_province_name = 7894
+	}
+}
+state_control_effect_1265 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = MAN
+				is_controlled_by = JAP
+			}
+		}
+		set_state_name = STATE_1265_man
+		set_province_name = { id = 11771 name = VICTORY_POINTS_11771_man }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 11771
+	}
+}
+state_control_effect_1641 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = MAN
+				is_controlled_by = JAP
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_province_name = 12478
+		}
+		else = {
+			set_province_name = { id = 12478 name = VICTORY_POINTS_12478_man }
+		}
+		reset_province_name = 3978
+	}
+	else = {
+		set_province_name = { id = 3978 name = VICTORY_POINTS_3978_chi }
+		reset_province_name = 12478
+	}
+}
+state_control_effect_1642 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = MAN
+				is_controlled_by = JAP
+			}
+		}
+		set_province_name = { id = 7812 name = VICTORY_POINTS_7812_man }
+		set_province_name = { id = 14629 name = VICTORY_POINTS_14629_man }
+	}
+	else = {
+		reset_province_name = 7812
+		reset_province_name = 14629
+	}
+}
+state_control_effect_1643 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = MAN
+				is_controlled_by = JAP
+			}
+		}
+		set_province_name = { id = 13150 name = VICTORY_POINTS_13150_man }
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 13150 name = VICTORY_POINTS_13150_chi }
+		}
+		else = { reset_province_name = 13150 }
+	}
+}
+state_control_effect_1646 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = MAN
+				is_controlled_by = JAP
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			set_province_name = { id = 12263 name = VICTORY_POINTS_12263_chi }
+		}
+		else = {
+			reset_province_name = 12263
+		}
+	}
+	else = {
+		set_province_name = { id = 12263 name = VICTORY_POINTS_12263_chi }
+	}
+}
+
+#KAZ
+state_control_effect_402 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		set_state_name = STATE_402_kaz
+		reset_province_name = 1314
+		reset_province_name = 4294
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 1314 name = VICTORY_POINTS_1314_kaz }
+			set_province_name = { id = 7370 name = VICTORY_POINTS_7370_kaz }
+			set_province_name = { id = 7341 name = VICTORY_POINTS_7341_kaz }
+			set_province_name = { id = 4294 name = VICTORY_POINTS_4294_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		set_state_name = STATE_402_rus
+		set_province_name = { id = 1314 name = VICTORY_POINTS_1314_rus }
+		set_province_name = { id = 4294 name = VICTORY_POINTS_4294_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1314
+		reset_province_name = 7370
+		reset_province_name = 7341
+		reset_province_name = 4294
+	}
+}
+state_control_effect_404 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		set_state_name = STATE_404_kaz
+		reset_province_name = 4333
+		reset_province_name = 1312
+		reset_province_name = 12177
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4333 name = VICTORY_POINTS_4333_kaz }
+			set_province_name = { id = 4232 name = VICTORY_POINTS_4232_kaz }
+			set_province_name = { id = 1402 name = VICTORY_POINTS_1402_kaz }
+			set_province_name = { id = 4389 name = VICTORY_POINTS_4389_kaz }
+			set_province_name = { id = 1312 name = VICTORY_POINTS_1312_kaz }
+			set_province_name = { id = 12177 name = VICTORY_POINTS_12177_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		set_province_name = { id = 4333 name = VICTORY_POINTS_4333_rus }
+		set_province_name = { id = 1312 name = VICTORY_POINTS_1312_rus }
+		set_province_name = { id = 12177 name = VICTORY_POINTS_12177_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4333
+		reset_province_name = 4232
+		reset_province_name = 1402
+		reset_province_name = 4389
+		reset_province_name = 1312
+		reset_province_name = 12177
+	}
+}
+state_control_effect_406 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		set_state_name = STATE_406_kaz
+		reset_province_name = 3618
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 3618 name = VICTORY_POINTS_3618_kaz }
+			set_province_name = { id = 642 name = VICTORY_POINTS_642_kaz }
+			set_province_name = { id = 11701 name = VICTORY_POINTS_11701_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		set_state_name = STATE_406_rus
+		set_province_name = { id = 3618 name = VICTORY_POINTS_3618_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 3618
+		reset_province_name = 642
+		reset_province_name = 11701
+	}
+}
+state_control_effect_407 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_407_kaz
+		}
+		reset_province_name = 11537
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_407_rus
+		}
+		set_province_name = { id = 11537 name = VICTORY_POINTS_11537_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 11537
+	}
+}
+state_control_effect_583 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		set_state_name = STATE_583_kaz
+		reset_province_name = 7429
+		reset_province_name = 7233
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12257 name = VICTORY_POINTS_12257_kaz }
+			set_province_name = { id = 1363 name = VICTORY_POINTS_1363_kaz }
+			set_province_name = { id = 10284 name = VICTORY_POINTS_10284_kaz }
+			set_province_name = { id = 12229 name = VICTORY_POINTS_12229_kaz }
+			set_province_name = { id = 7429 name = VICTORY_POINTS_7429_kaz }
+			set_province_name = { id = 7233 name = VICTORY_POINTS_7233_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		set_province_name = { id = 7429 name = VICTORY_POINTS_7429_rus }
+		set_province_name = { id = 7233 name = VICTORY_POINTS_7233_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 12257
+		reset_province_name = 1363
+		reset_province_name = 10284
+		reset_province_name = 12229
+		reset_province_name = 7429
+		reset_province_name = 7233
+	}
+}
+state_control_effect_587 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		set_state_name = STATE_587_kaz
+		reset_province_name = 12329
+		reset_province_name = 7597
+		reset_province_name = 4300
+		reset_province_name = 4374
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12329 name = VICTORY_POINTS_12329_kaz }
+			set_province_name = { id = 4300 name = VICTORY_POINTS_4300_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		set_state_name = STATE_587_rus
+		set_province_name = { id = 12329 name = VICTORY_POINTS_12329_rus }
+		set_province_name = { id = 7597 name = VICTORY_POINTS_7597_rus }
+		set_province_name = { id = 4300 name = VICTORY_POINTS_4300_rus }
+		set_province_name = { id = 4374 name = VICTORY_POINTS_4374_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 12329
+		reset_province_name = 7597
+		reset_province_name = 4300
+		reset_province_name = 4374
+	}
+}
+state_control_effect_588 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10630 name = VICTORY_POINTS_10630_kaz }
+			set_province_name = { id = 7317 name = VICTORY_POINTS_7317_kaz }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10630
+		reset_province_name = 7317
+	}
+}
+state_control_effect_589 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		reset_state_name = yes
+		reset_province_name = 4224
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10146 name = VICTORY_POINTS_10146_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		set_state_name = STATE_589_rus
+		set_province_name = { id = 4224 name = VICTORY_POINTS_4224_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10146
+		reset_province_name = 4224
+	}
+}
+state_control_effect_590 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		set_state_name = STATE_590_kaz
+		reset_province_name = 1418
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 1662 name = VICTORY_POINTS_1662_kaz }
+			set_province_name = { id = 1418 name = VICTORY_POINTS_1418_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		set_state_name = STATE_590_kaz
+		set_province_name = { id = 1418 name = VICTORY_POINTS_1418_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1662
+		reset_province_name = 1418
+	}
+}
+state_control_effect_1802 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		reset_province_name = 10601
+		reset_province_name = 10366
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1802_kaz
+			set_province_name = { id = 10601 name = VICTORY_POINTS_10601_kaz }
+			set_province_name = { id = 18669 name = VICTORY_POINTS_18669_kaz }
+			set_province_name = { id = 14742 name = VICTORY_POINTS_14742_kaz }
+			set_province_name = { id = 10366 name = VICTORY_POINTS_10366_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1802_rus
+		}
+		set_province_name = { id = 10601 name = VICTORY_POINTS_10601_rus }
+		set_province_name = { id = 10366 name = VICTORY_POINTS_10366_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10601
+		reset_province_name = 18669
+		reset_province_name = 14742
+		reset_province_name = 10366
+	}
+}
+state_control_effect_1803 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		set_state_name = STATE_1803_kaz
+		reset_province_name = 12640
+		reset_province_name = 4773
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12640 name = VICTORY_POINTS_12640_kaz }
+			set_province_name = { id = 12340 name = VICTORY_POINTS_12340_kaz }
+			set_province_name = { id = 10603 name = VICTORY_POINTS_10603_kaz }
+			set_province_name = { id = 4773 name = VICTORY_POINTS_4773_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		set_state_name = STATE_1803_rus
+		set_province_name = { id = 12640 name = VICTORY_POINTS_12640_rus }
+		set_province_name = { id = 4773 name = VICTORY_POINTS_4773_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 12640
+		reset_province_name = 12340
+		reset_province_name = 10603
+		reset_province_name = 4773
+	}
+}
+state_control_effect_1804 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		set_state_name = STATE_1804_kaz
+		reset_province_name = 10619
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10619 name = VICTORY_POINTS_10619_kaz }
+			set_province_name = { id = 7795 name = VICTORY_POINTS_7795_kaz }
+			set_province_name = { id = 10550 name = VICTORY_POINTS_10550_kaz }
+			set_province_name = { id = 4845 name = VICTORY_POINTS_4845_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		set_state_name = STATE_1804_rus
+		set_province_name = { id = 10619 name = VICTORY_POINTS_10619_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10619
+		reset_province_name = 7795
+		reset_province_name = 10550
+		reset_province_name = 4845
+	}
+}
+state_control_effect_1805 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+			has_global_flag = TNO_endonym_mode
+		}
+		set_province_name = { id = 7784 name = VICTORY_POINTS_7784_kaz }
+	}
+	else = {
+		reset_province_name = 7784
+	}
+}
+state_control_effect_1806 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		reset_province_name = 1864
+		reset_province_name = 12427
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1806_kaz
+			set_province_name = { id = 1864 name = VICTORY_POINTS_1864_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1806_rus
+		}
+		set_province_name = { id = 1864 name = VICTORY_POINTS_1864_rus }
+		set_province_name = { id = 12427 name = VICTORY_POINTS_12427_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1864
+		reset_province_name = 12427
+	}
+}
+state_control_effect_1807 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		set_state_name = STATE_1807_kaz
+		reset_province_name = 10308
+		reset_province_name = 10211
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10308 name = VICTORY_POINTS_10308_kaz }
+			set_province_name = { id = 10211 name = VICTORY_POINTS_10211_kaz_rus }
+			set_province_name = { id = 4309 name = VICTORY_POINTS_4309_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		reset_state_name = yes
+		set_province_name = { id = 10308 name = VICTORY_POINTS_10308_rus }
+		set_province_name = { id = 10211 name = VICTORY_POINTS_10211_kaz_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10308
+		reset_province_name = 10211
+		reset_province_name = 4309
+	}
+}
+state_control_effect_1808 = {
+	if = {
+		limit = {
+			is_controlled_by = KAZ
+		}
+		reset_province_name = 7874
+		reset_province_name = 1694
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1808_kaz
+			set_province_name = { id = 1694 name = VICTORY_POINTS_1694_kaz }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = KZR
+				controller = { is_russian_nation = yes }
+				controller = { has_country_leader = { character = KAZ_Pavel_Fitin ruling_only = yes } }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1808_rus
+		}
+		set_province_name = { id = 7874 name = VICTORY_POINTS_7874_rus }
+		set_province_name = { id = 1694 name = VICTORY_POINTS_1694_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7874
+		reset_province_name = 1694
+	}
+}
+
+#KRK
+state_control_effect_750 = {
+	set_province_name = { id = 1614 name = VICTORY_POINTS_1614_rus }
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = KRK
+				is_controlled_by = UZB
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_750_krk
+		set_province_name = { id = 13269 name = VICTORY_POINTS_13269_krk }
+		set_province_name = { id = 18620 name = VICTORY_POINTS_18620_krk }
+		set_province_name = { id = 1614 name = VICTORY_POINTS_1614_krk }
+		set_province_name = { id = 10395 name = VICTORY_POINTS_10395_krk }
+		set_province_name = { id = 13270 name = VICTORY_POINTS_13270_krk }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 13269
+		reset_province_name = 18620
+		reset_province_name = 1614
+		reset_province_name = 10395
+		reset_province_name = 13270
+	}
+}
+state_control_effect_2194 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = KRK
+				is_controlled_by = UZB
+			}
+		}
+		if = {
+			limit = { date < 1969.1.1 }
+			set_state_name = STATE_2194_krk_1962
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 12454 name = VICTORY_POINTS_12454_krk_1962 }
+			}
+		}
+		else = {
+			set_state_name = STATE_2194_krk_1969
+			set_province_name = { id = 12454 name = VICTORY_POINTS_12454_1969 }
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 12454 name = VICTORY_POINTS_12454_krk_1969 }
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = { date < 1969.1.1 }
+			reset_state_name = yes
+			reset_province_name = 12454
+		}
+		else = {
+			set_state_name = STATE_2194_1969
+			set_province_name = { id = 12454 name = VICTORY_POINTS_12454_1969 }
+		}
+	}
+}
+
+#KYR
+state_control_effect_586 = {
+	if = {
+		limit = { has_global_flag = TNO_exonym_mode }
+		set_state_name = STATE_586_eng
+		set_province_name = { id = 12583 name = VICTORY_POINTS_12583_eng }
+	}
+	if = {
+		limit = {
+			is_controlled_by = KYR
+		}
+		if = {
+			limit = { controller = { has_country_leader = { character = KYR_Kaliynur_Usenbekov ruling_only = yes } } }
+			set_state_name = STATE_586_rus
+			set_province_name = { id = 12583 name = VICTORY_POINTS_12583_rus }
+			set_province_name = { id = 18683 name = VICTORY_POINTS_18683_rus }
+		}
+		else = {
+			set_state_name = STATE_586_kyr
+			reset_province_name = 12583
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 12583 name = VICTORY_POINTS_12583_kyr }
+			}
+			reset_province_name = 18683
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 12583
+		reset_province_name = 18683
+	}
+}
+state_control_effect_732 = {
+	if = {
+		limit = {
+			is_controlled_by = KYR
+		}
+		if = {
+			limit = { controller = { has_country_leader = { character = KYR_Kaliynur_Usenbekov ruling_only = yes } } }
+			set_province_name = { id = 13271 name = VICTORY_POINTS_13271_rus }
+			set_province_name = { id = 18697 name = VICTORY_POINTS_18697_rus }
+		}
+		else = {
+			reset_province_name = 13271
+			reset_province_name = 18697
+		}
+
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_732_kyr
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 13271
+		reset_province_name = 18697
+	}
+}
+state_control_effect_1466 = {
+	if = {
+		limit = {
+			is_controlled_by = KYR
+		}
+		if = {
+			limit = { controller = { has_country_leader = { character = KYR_Kaliynur_Usenbekov ruling_only = yes } } }
+			set_state_name = STATE_1466_rus
+			set_province_name = { id = 18674 name = VICTORY_POINTS_18674_rus }
+		}
+		else = {
+			set_state_name = STATE_1466_kyr
+			reset_province_name = 18674
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 18674 name = VICTORY_POINTS_18674_kyr }
+			}
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18674
+	}
+}
+state_control_effect_2195 = {
+	if = {
+		limit = {
+			is_controlled_by = KYR
+		}
+		if = {
+			limit = { controller = { has_country_leader = { character = KYR_Kaliynur_Usenbekov ruling_only = yes } } }
+			set_state_name = STATE_2195_rus
+			set_province_name = { id = 1459 name = VICTORY_POINTS_1459_rus_kyr }
+			set_province_name = { id = 11687 name = VICTORY_POINTS_11687_rus }
+			set_province_name = { id = 18670 name = VICTORY_POINTS_18670_rus }
+			set_province_name = { id = 18685 name = VICTORY_POINTS_18685_rus }
+
+			if = {
+				limit = { date > 1963.12.31 }
+				set_province_name = { id = 18676 name = VICTORY_POINTS_18676_rus_1964 }
+			}
+		}
+		else = {
+			set_state_name = STATE_2195_kyr
+			set_province_name = { id = 1459 name = VICTORY_POINTS_1459_rus_kyr }
+			set_province_name = { id = 11687 name = VICTORY_POINTS_11687_kyr }
+			set_province_name = { id = 18670 name = VICTORY_POINTS_18670_kyr }
+			set_province_name = { id = 18685 name = VICTORY_POINTS_18685_kyr }
+
+			if = {
+				limit = { date > 1963.12.31 }
+				set_province_name = { id = 18676 name = VICTORY_POINTS_18676_uzb_eng_1964 }
+			}
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1459
+		reset_province_name = 11687
+		reset_province_name = 18670
+		reset_province_name = 18685
+
+		if = {
+			limit = { date < 1964.1.1 }
+			reset_province_name = 18676
+		}
+		else = {
+			set_province_name = { id = 18676 name = VICTORY_POINTS_18676_uzb_eng_1964 }
+		}
+	}
+}
+state_control_effect_2196 = {
+	if = {
+		limit = {
+			is_controlled_by = KYR
+		}
+		if = {
+			limit = { controller = { has_country_leader = { character = KYR_Kaliynur_Usenbekov ruling_only = yes } } }
+			set_province_name = { id = 13256 name = VICTORY_POINTS_13256_rus }
+			set_province_name = { id = 18668 name = VICTORY_POINTS_18668_rus }
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_state_name = STATE_2196_rus
+			}
+		}
+		else = {
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_state_name = STATE_2196_kyr
+			}
+			set_province_name = { id = 10488 name = VICTORY_POINTS_10488_kyr }
+			set_province_name = { id = 13256 name = VICTORY_POINTS_13256_kyr }
+			set_province_name = { id = 18617 name = VICTORY_POINTS_18617_kyr }
+			set_province_name = { id = 18668 name = VICTORY_POINTS_18668_kyr }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10488
+		reset_province_name = 13256
+		reset_province_name = 18617
+		reset_province_name = 18668
+	}
+}
+state_control_effect_2197 = {
+	if = {
+		limit = {
+			is_controlled_by = KYR
+		}
+		if = {
+			limit = { controller = { has_country_leader = { character = KYR_Kaliynur_Usenbekov ruling_only = yes } } }
+			set_province_name = { id = 1483 name = VICTORY_POINTS_1483_rus }
+			set_province_name = { id = 2058 name = VICTORY_POINTS_2058_rus }
+			set_province_name = { id = 12430 name = VICTORY_POINTS_12430_rus }
+			set_province_name = { id = 13259 name = VICTORY_POINTS_13259_rus }
+			set_province_name = { id = 18664 name = VICTORY_POINTS_18664_rus }
+		}
+		else = {
+			set_state_name = STATE_2197_kyr
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 18672 name = VICTORY_POINTS_18672_kyr }
+			}
+			reset_province_name = 1483
+			reset_province_name = 2058
+			reset_province_name = 12430
+			reset_province_name = 13259
+			reset_province_name = 18664
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1483
+		reset_province_name = 2058
+		reset_province_name = 12430
+		reset_province_name = 13259
+		reset_province_name = 18664
+	}
+}
+
+#MEN
+state_control_effect_612 = {
+	if = {
+		limit = {
+			is_controlled_by = MEN
+		}
+		set_state_name = STATE_612_men
+		set_province_name = { id = 6904 name = VICTORY_POINTS_6904_men }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 19727 name = VICTORY_POINTS_19727_men }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = CHI
+				is_controlled_by = YUN
+			}
+		}
+		set_state_name = STATE_612_chi
+		reset_province_name = 6904
+		set_province_name = { id = 19727 name = VICTORY_POINTS_19727_chi }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 6904
+		reset_province_name = 19727
+	}
+}
+state_control_effect_621 = {
+	if = {
+		limit = { is_controlled_by = MEN }
+		set_state_name = STATE_621_men
+	}
+	else = {
+		reset_state_name = yes
+	}
+}
+state_control_effect_955 = {
+	if = {
+		limit = { is_controlled_by = MEN }
+		set_state_name = STATE_955_men
+		set_province_name = { id = 19563 name = VICTORY_POINTS_19563_men }
+		set_province_name = { id = 1959 name = VICTORY_POINTS_1959_men }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = CHI
+				is_controlled_by = YUN
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 19563
+		if = {
+			limit = { has_global_flag = TNO_endonym_flag }
+			set_province_name = { id = 19563 name = VICTORY_POINTS_19563_chi }
+		}
+		reset_province_name = 1959
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 19563
+		reset_province_name = 1959
+	}
+}
+state_control_effect_2406 = {
+	if = {
+		limit = { is_controlled_by = MEN }
+		set_state_name = STATE_2406_men
+		if = {
+			limit = { has_global_flag = TNO_endonym_flag }
+			set_province_name = { id = 19547 name = VICTORY_POINTS_19547_men }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = CHI
+				is_controlled_by = YUN
+			}
+		}
+		reset_state_name = yes
+		if = {
+			limit = { has_global_flag = TNO_endonym_flag }
+			set_province_name = { id = 19547 name = VICTORY_POINTS_19547_chi }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 19547
+	}
+}
+state_control_effect_2407 = {
+	if = {
+		limit = { is_controlled_by = MEN }
+		set_state_name = STATE_2407_men
+		set_province_name = { id = 10372 name = VICTORY_POINTS_10372_men }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10372
+	}
+}
+state_control_effect_2408 = {
+	if = {
+		limit = { is_controlled_by = MEN }
+		reset_state_name = yes
+		reset_province_name = 16863
+		set_province_name = { id = 19502 name = VICTORY_POINTS_19502_men }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = CHI
+				is_controlled_by = YUN
+			}
+		}
+		set_state_name = STATE_2408_chi
+		set_province_name = { id = 16863 name = VICTORY_POINTS_16863_chi }
+		reset_province_name = 19502
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 16863
+		reset_province_name = 19502
+	}
+}
+state_control_effect_2409 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = CHI
+				is_controlled_by = YUN
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_2409_chi
+	}
+	else = {
+		reset_state_name = yes
+	}
+}
+state_control_effect_2422 = {
+	if = {
+		limit = { is_controlled_by = MEN }
+		set_state_name = STATE_2422_men
+		set_province_name = { id = 10507 name = VICTORY_POINTS_10507_men }
+		set_province_name = { id = 13230 name = VICTORY_POINTS_13230_men }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10507
+		reset_province_name = 13230
+	}
+}
+
+#MLY/SHO
+state_control_effect_336 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.japanese_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_336_jap
+		set_province_name = { id = 10297 name = VICTORY_POINTS_10297_jap }
+		set_province_name = { id = 14696 name = VICTORY_POINTS_14696_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10297
+		reset_province_name = 14696
+	}
+}
+state_control_effect_751 = {
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					is_controlled_by = SHO
+					SHO = { has_government = despotism }
+				}
+				is_controlled_by = JHR
+			}
+		}
+		set_state_name = STATE_751_jap
+		set_province_name = { id = 12299 name = VICTORY_POINTS_12299_jap }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = MLY
+				AND = {
+					is_controlled_by = SHO
+					NOT = { SHO = { has_government = despotism } }
+				}
+			}
+		}
+		set_state_name = STATE_751_mly
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12299 name = VICTORY_POINTS_12299_mly }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 12299
+	}
+}
+state_control_effect_803 = {
+	if = {
+		limit = {
+			is_controlled_by = SHO
+			SHO = { has_government = despotism }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_803_jap
+		set_province_name = { id = 14701 name = VICTORY_POINTS_14701_jap }
+		set_province_name = { id = 12215 name = VICTORY_POINTS_12215_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 14701
+		reset_province_name = 12215
+	}
+}
+state_control_effect_804 = {
+	if = {
+		limit = {
+			is_controlled_by = SHO
+			SHO = { has_government = despotism }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_804_jap
+		set_province_name = { id = 4424 name = VICTORY_POINTS_4424_jap }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = MLY
+				AND = {
+					is_controlled_by = SHO
+					NOT = { SHO = { has_government = despotism } }
+				}
+			}
+		}
+		set_state_name = STATE_804_mly
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4424 name = VICTORY_POINTS_4424_mly }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4424
+	}
+}
+state_control_effect_805 = {
+	if = {
+		limit = {
+			is_controlled_by = SHO
+			SHO = { has_government = despotism }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_805_jap
+	}
+	else = {
+		reset_state_name = yes
+	}
+}
+state_control_effect_806 = {
+	if = {
+		limit = {
+			is_controlled_by = SHO
+			SHO = { has_government = despotism }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_806_jap
+		set_province_name = { id = 14699 name = VICTORY_POINTS_14699_jap }
+		set_province_name = { id = 14694 name = VICTORY_POINTS_14694_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 14699
+		reset_province_name = 14694
+	}
+}
+state_control_effect_1451 = {
+	if = {
+		limit = {
+			is_controlled_by = SHO
+			SHO = { has_government = despotism }
+		}
+		set_state_name = STATE_1451_jap
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 14702 name = VICTORY_POINTS_14702_jap }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 14702
+	}
+}
+state_control_effect_1453 = {
+	if = {
+		limit = {
+			is_controlled_by = SHO
+			SHO = { has_government = despotism }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1453_jap
+		set_province_name = { id = 7427 name = VICTORY_POINTS_7427_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7427
+	}
+}
+
+#NRB
+state_control_effect_333 = {
+	if = {
+		limit = {
+			is_controlled_by = NRB
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_333_jap
+	}
+	else = { reset_state_name = yes }
+}
+state_control_effect_807 = {
+	if = {
+		limit = {
+			is_controlled_by = NRB
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_807_jap
+		set_province_name = { id = 7387 name = VICTORY_POINTS_7387_jap }
+	}
+	else_if = {
+		limit = {
+			is_controlled_by = BRU
+			has_global_flag = TNO_endonym_mode
+		}
+		set_province_name = { id = 7387 name = VICTORY_POINTS_7387_bru }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7387
+	}
+}
+state_control_effect_808 = {
+	if = {
+		limit = { is_controlled_by = NRB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_808_jap
+			set_province_name = { id = 10199 name = VICTORY_POINTS_10199_jap }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10199
+	}
+}
+state_control_effect_2299 = {
+	if = {
+		limit = { is_controlled_by = NRB }
+		set_state_name = STATE_2299_jap
+	}
+	else = { reset_state_name = yes }
+}
+state_control_effect_2301 = {
+	if = {
+		limit = { is_controlled_by = NRB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2301_jap
+		}
+		set_province_name = { id = 10212 name = VICTORY_POINTS_10212_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10212
+	}
+}
+
+#PAK/KLT
+#Pakistan
+state_control_effect_442 = {
+	if = {
+		limit = {
+			is_controlled_by = PAK
+			PAK = { is_puppet_of = AFG }
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_442_pak
+			set_province_name = { id = 16003 name = VICTORY_POINTS_16003_afg }
+		}
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_442_pak
+			set_province_name = { id = 16003 name = VICTORY_POINTS_16003_pak }
+		}
+	}
+}
+state_control_effect_929 = {
+	if = {
+		limit = {
+			is_controlled_by = PAK
+			PAK = { is_puppet_of = AFG }
+		}
+		set_state_name = STATE_929_afg
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 15993 name = VICTORY_POINTS_15993_afg }
+		}
+	}
+	else = {
+		set_state_name = STATE_929_pak
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 15993 name = VICTORY_POINTS_15993_pak }
+		}
+	}
+}
+state_control_effect_1889 = {
+	if = {
+		limit = { date < 1976.1.1 }
+		set_province_name = { id = 15995 name = VICTORY_POINTS_15995_1962 }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1889_pak
+			set_province_name = { id = 15995 name = VICTORY_POINTS_15995_pak_1962 }
+		}
+	}
+	else = {
+		reset_province_name = 15995
+		set_state_name = STATE_1889_pak
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 15995 name = VICTORY_POINTS_15995_pak }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+}
+state_control_effect_1894 = {
+	if = {
+		limit = {
+			is_controlled_by = PAK
+			PAK = { is_puppet_of = AFG }
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 16002 name = VICTORY_POINTS_16002_afg }
+		}
+	}
+	else = {
+		set_state_name = STATE_1894_pak
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 1978 name = VICTORY_POINTS_1978_pak }
+		}
+	}
+}
+state_control_effect_1895 = {
+	if = {
+		limit = {
+			is_controlled_by = PAK
+			PAK = { is_puppet_of = AFG }
+		}
+		reset_state_name = yes
+		reset_province_name = 15998
+	}
+	else = {
+		set_state_name = STATE_1895_pak
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 15998 name = VICTORY_POINTS_15998_pak }
+		}
+	}
+}
+state_control_effect_1896 = {
+	if = {
+		limit = {
+			is_controlled_by = PAK
+			PAK = { is_puppet_of = AFG }
+		}
+		reset_state_name = yes
+		reset_province_name = 12717
+	}
+	else = {
+		set_state_name = STATE_1896_pak
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12717 name = VICTORY_POINTS_12717_pak }
+		}
+	}
+}
+state_control_effect_1897 = {
+	if = {
+		limit = {
+			is_controlled_by = PAK
+			PAK = { is_puppet_of = AFG }
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 18884 name = VICTORY_POINTS_18884_afg }
+		}
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12763 name = VICTORY_POINTS_12763_pak }
+		}
+	}
+}
+state_control_effect_1898 = {
+	if = {
+		limit = {
+			is_controlled_by = PAK
+			PAK = { is_puppet_of = AFG }
+		}
+		reset_province_name = 16005
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 16005 name = VICTORY_POINTS_16005_pak }
+		}
+	}
+}
+state_control_effect_1899 = {
+	if = {
+		limit = {
+			is_controlled_by = PAK
+			PAK = { is_puppet_of = AFG }
+		}
+		reset_state_name = yes
+		reset_province_name = 16006
+	}
+	else = {
+		set_state_name = STATE_1899_pak
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 16006 name = VICTORY_POINTS_16006_pak }
+		}
+	}
+}
+#Kalat
+state_control_effect_444 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { is_subject_of = AFG }
+				controller = { is_puppet_of = AFG }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_444_afg
+			set_province_name = { id = 13594 name = VICTORY_POINTS_13594_afg }
+		}
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_444_pak
+			set_province_name = { id = 13594 name = VICTORY_POINTS_13594_pak }
+		}
+	}
+}
+state_control_effect_445 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { is_subject_of = AFG }
+				controller = { is_puppet_of = AFG }
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 15996
+	}
+	else = {
+		set_state_name = STATE_445_pak
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 15996 name = VICTORY_POINTS_15996_pak }
+		}
+	}
+}
+state_control_effect_749 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { is_subject_of = AFG }
+				controller = { is_puppet_of = AFG }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_749_afg
+		}
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_749_pak
+		}
+	}
+}
+state_control_effect_1533 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { is_subject_of = AFG }
+				controller = { is_puppet_of = AFG }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1533_afg
+		}
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1533_pak
+		}
+	}
+}
+state_control_effect_1534 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { is_subject_of = AFG }
+				controller = { is_puppet_of = AFG }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1534_afg
+			set_province_name = { id = 8066 name = VICTORY_POINTS_8066_afg }
+		}
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1534_pak
+			set_province_name = { id = 8066 name = VICTORY_POINTS_8066_pak }
+		}
+	}
+}
+state_control_effect_1891 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { is_subject_of = AFG }
+				controller = { is_puppet_of = AFG }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1891_afg
+			set_province_name = { id = 8098 name = VICTORY_POINTS_8098_afg }
+		}	
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 8098 name = VICTORY_POINTS_8098_pak }
+		}
+	}
+}
+state_control_effect_1892 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { is_subject_of = AFG }
+				controller = { is_puppet_of = AFG }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1892_afg
+			set_province_name = { id = 13483 name = VICTORY_POINTS_13483_afg }
+		}	
+	}
+	else = {
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 13483 name = VICTORY_POINTS_13483_pak }
+		}
+	}
+}
+
+#PER/IRI/IRL/IRC/IRB/IRA
+state_control_effect_266 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		set_state_name = STATE_266_per
+		set_province_name = { id = 10837 name = VICTORY_POINTS_10837_per_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10837 name = VICTORY_POINTS_10837_per }
+			set_province_name = { id = 18729 name = VICTORY_POINTS_18729_per }
+			set_province_name = { id = 18766 name = VICTORY_POINTS_18766_per }
+			set_province_name = { id = 18733 name = VICTORY_POINTS_18733_per }
+		}
+	}
+	else = {
+		set_state_name = STATE_266_per_eng
+		set_province_name = { id = 10837 name = VICTORY_POINTS_10837_per_eng }
+		reset_province_name = 18729
+		reset_province_name = 18766
+		reset_province_name = 18733
+	}
+}
+state_control_effect_410 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_410_per
+		set_province_name = { id = 18746 name = VICTORY_POINTS_18746_per }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18746
+	}
+}
+state_control_effect_411 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_411_per
+		set_province_name = { id = 18753 name = VICTORY_POINTS_18753_per }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18753
+	}
+}
+state_control_effect_412 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		if = {
+			limit = { date < 1970.1.1 }
+			set_province_name = { id = 13602 name = VICTORY_POINTS_13602_1962 }
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 13602 name = VICTORY_POINTS_13602_per_1962 }
+			}
+		}
+		else = {
+			reset_province_name = 13602
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 13602 name = VICTORY_POINTS_13602_per }
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 8117 name = VICTORY_POINTS_8117_per }
+			set_province_name = { id = 18712 name = VICTORY_POINTS_18712_per }
+			set_province_name = { id = 10881 name = VICTORY_POINTS_10881_per }
+			set_province_name = { id = 13599 name = VICTORY_POINTS_13599_per }
+			set_province_name = { id = 15161 name = VICTORY_POINTS_15161_per }
+			set_province_name = { id = 13605 name = VICTORY_POINTS_13605_per }
+		}
+	}
+	else = {
+		if = {
+			limit = { date < 1970.1.1 }
+			reset_province_name = 13602
+		}
+		else = {
+			set_province_name = { id = 13602 name = VICTORY_POINTS_13602_1970 }
+		}
+	}
+}
+state_control_effect_413 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			is_controlled_by = IRI
+		}
+		set_province_name = { id = 5005 name = VICTORY_POINTS_5005_islam }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_413_per
+			set_province_name = { id = 10774 name = VICTORY_POINTS_10774_per }
+			set_province_name = { id = 18702 name = VICTORY_POINTS_18702_per }
+			set_province_name = { id = 15160 name = VICTORY_POINTS_15160_per }
+			set_province_name = { id = 18718 name = VICTORY_POINTS_18718_per }
+			set_province_name = { id = 18701 name = VICTORY_POINTS_18701_per }
+			set_province_name = { id = 15159 name = VICTORY_POINTS_15159_per }
+			set_province_name = { id = 5005 name = VICTORY_POINTS_5005_islam_per }
+		}
+	}
+	else_if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			NOT = { is_controlled_by = IRI }
+		}
+		set_province_name = { id = 5005 name = VICTORY_POINTS_5005_per_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_413_per
+			set_province_name = { id = 18794 name = VICTORY_POINTS_18794_per }
+			set_province_name = { id = 18763 name = VICTORY_POINTS_18763_per }
+			set_province_name = { id = 18772 name = VICTORY_POINTS_18772_per }
+			set_province_name = { id = 18786 name = VICTORY_POINTS_18786_per }
+			set_province_name = { id = 18798 name = VICTORY_POINTS_18798_per }
+			set_province_name = { id = 5005 name = VICTORY_POINTS_5005_per }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_province_name = 5005
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10774
+		reset_province_name = 18702
+		reset_province_name = 15160
+		reset_province_name = 18718
+		reset_province_name = 18701
+		reset_province_name = 15159
+		set_province_name = { id = 5005 name = VICTORY_POINTS_5005_per_eng }
+	}
+}
+state_control_effect_414 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		set_state_name = STATE_414_per
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 13603 name = VICTORY_POINTS_13603_per }
+			set_province_name = { id = 13604 name = VICTORY_POINTS_13604_per }
+			set_province_name = { id = 15163 name = VICTORY_POINTS_15163_per }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 13603
+		reset_province_name = 13604
+		reset_province_name = 15163
+	}
+}
+state_control_effect_416 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		set_state_name = STATE_416_per_eng
+		set_province_name = { id = 1957 name = VICTORY_POINTS_1957_per_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_416_per
+			set_province_name = { id = 18765 name = VICTORY_POINTS_18765_per }
+			set_province_name = { id = 1957 name = VICTORY_POINTS_1957_per }
+			set_province_name = { id = 18720 name = VICTORY_POINTS_18720_per }
+			set_province_name = { id = 18728 name = VICTORY_POINTS_18728_per }
+			set_province_name = { id = 2000 name = VICTORY_POINTS_2000_per }
+		}
+	}
+	else = {
+		set_state_name = STATE_416_per_eng
+		set_province_name = { id = 1957 name = VICTORY_POINTS_1957_per_eng }
+		reset_province_name = 18720
+		reset_province_name = 18728
+		reset_province_name = 2000
+	}
+}
+state_control_effect_418 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		set_state_name = STATE_418_per
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 8093 name = VICTORY_POINTS_8093_per }
+			set_province_name = { id = 18727 name = VICTORY_POINTS_18727_per }
+			set_province_name = { id = 18723 name = VICTORY_POINTS_18723_per }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 8093
+		reset_province_name = 18727
+		reset_province_name = 18723
+	}
+}
+state_control_effect_419 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_419_per
+		set_province_name = { id = 4901 name = VICTORY_POINTS_4901_per }
+		set_province_name = { id = 12861 name = VICTORY_POINTS_12861_per }
+		set_province_name = { id = 12793 name = VICTORY_POINTS_12793_per }
+		set_province_name = { id = 4755 name = VICTORY_POINTS_4755_per }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4901
+		reset_province_name = 12861
+		reset_province_name = 12793
+		reset_province_name = 4755
+	}
+}
+state_control_effect_420 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			OR = {
+				is_controlled_by = PER
+				is_controlled_by = IRC
+			}
+		}
+		set_province_name = { id = 4609 name = VICTORY_POINTS_4609_monarchy }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_420_per
+			set_province_name = { id = 4637 name = VICTORY_POINTS_4637_per }
+			set_province_name = { id = 15144 name = VICTORY_POINTS_15144_per }
+			set_province_name = { id = 4609 name = VICTORY_POINTS_4609_monarchy_per }
+		}
+	}
+	else_if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			NOT = { 
+				is_controlled_by = PER
+				is_controlled_by = IRC
+			}
+		}
+		reset_province_name = 4609
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_420_per
+			set_province_name = { id = 4637 name = VICTORY_POINTS_4637_per }
+			set_province_name = { id = 15144 name = VICTORY_POINTS_15144_per }
+			set_province_name = { id = 4609 name = VICTORY_POINTS_4609_per }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4637 
+		reset_province_name = 15144 
+		reset_province_name = 4609
+	}
+}
+state_control_effect_421 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			is_controlled_by = IRI
+		}
+		set_state_name = STATE_421_per
+		set_province_name = { id = 2026 name = VICTORY_POINTS_2026_islam }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 18802 name = VICTORY_POINTS_18802_per }
+			set_province_name = { id = 18768 name = VICTORY_POINTS_18768_per }
+			set_province_name = { id = 18761 name = VICTORY_POINTS_18761_per }
+			set_province_name = { id = 15151 name = VICTORY_POINTS_15151_per }
+			set_province_name = { id = 4928 name = VICTORY_POINTS_4928_per }
+			set_province_name = { id = 18747 name = VICTORY_POINTS_18747_per }
+			set_province_name = { id = 2026 name = VICTORY_POINTS_2026_islam_per }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else_if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			NOT = { is_controlled_by = IRI }
+		}
+		set_state_name = STATE_421_per
+		reset_province_name = 2026
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 18802 name = VICTORY_POINTS_18802_per }
+			set_province_name = { id = 18768 name = VICTORY_POINTS_18768_per }
+			set_province_name = { id = 18761 name = VICTORY_POINTS_18761_per }
+			set_province_name = { id = 15151 name = VICTORY_POINTS_15151_per }
+			set_province_name = { id = 4928 name = VICTORY_POINTS_4928_per }
+			set_province_name = { id = 18747 name = VICTORY_POINTS_18747_per }
+			set_province_name = { id = 2026 name = VICTORY_POINTS_2026_per }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18802
+		reset_province_name = 18768
+		reset_province_name = 18761
+		reset_province_name = 15151
+		reset_province_name = 4928
+		reset_province_name = 18747
+		reset_province_name = 2026
+	}
+}
+state_control_effect_971 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_971_per
+		set_province_name = { id = 18756 name = VICTORY_POINTS_18756_per }
+		set_province_name = { id = 9816 name = VICTORY_POINTS_9816_per }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18756
+		reset_province_name = 9816
+	}
+}
+state_control_effect_972 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		set_state_name = STATE_972_per_eng
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_972_per
+			set_province_name = { id = 7982 name = VICTORY_POINTS_7982_per }
+		}
+	}
+	else = {
+		set_state_name = STATE_972_per_eng
+		reset_province_name = 7982
+	}
+}
+state_control_effect_973 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			OR = {
+				is_controlled_by = PER
+				is_controlled_by = IRC
+			}
+		}
+		set_province_name = { id = 18798 name = VICTORY_POINTS_18798_monarchy }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_973_per
+			set_province_name = { id = 18794 name = VICTORY_POINTS_18794_per }
+			set_province_name = { id = 18763 name = VICTORY_POINTS_18763_per }
+			set_province_name = { id = 18772 name = VICTORY_POINTS_18772_per }
+			set_province_name = { id = 18786 name = VICTORY_POINTS_18786_per }
+			set_province_name = { id = 18798 name = VICTORY_POINTS_18798_monarchy_per }
+		}
+	}
+	else_if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			NOT = { 
+				is_controlled_by = PER
+				is_controlled_by = IRC
+			}
+		}
+		reset_province_name = 18798
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_973_per
+			set_province_name = { id = 18794 name = VICTORY_POINTS_18794_per }
+			set_province_name = { id = 18763 name = VICTORY_POINTS_18763_per }
+			set_province_name = { id = 18772 name = VICTORY_POINTS_18772_per }
+			set_province_name = { id = 18786 name = VICTORY_POINTS_18786_per }
+			set_province_name = { id = 18798 name = VICTORY_POINTS_18798_per }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18794 
+		reset_province_name = 18763 
+		reset_province_name = 18772
+		reset_province_name = 18786  
+		reset_province_name = 18798 
+	}
+}
+state_control_effect_974 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			OR = {
+				is_controlled_by = PER
+				is_controlled_by = IRC
+			}
+		}
+		set_state_name = STATE_974_monarchy_per
+		set_province_name = { id = 12773 name = VICTORY_POINTS_12773_monarchy }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 5098 name = VICTORY_POINTS_5098_per }
+			set_province_name = { id = 18806 name = VICTORY_POINTS_18806_per }
+			set_province_name = { id = 12773 name = VICTORY_POINTS_12773_monarchy_per }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			set_state_name = STATE_974_monarchy_per_eng
+		}
+	}
+	else_if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			NOT = { 
+				is_controlled_by = PER
+				is_controlled_by = IRC
+			}
+		}
+		set_state_name = STATE_974_per
+		reset_province_name = 12773
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 5098 name = VICTORY_POINTS_5098_per }
+			set_province_name = { id = 18806 name = VICTORY_POINTS_18806_per }
+			set_province_name = { id = 12773 name = VICTORY_POINTS_12773_per }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 5098 
+		reset_province_name = 18806 
+		reset_province_name = 12773 
+	}
+}
+state_control_effect_975 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_975_per
+		set_province_name = { id = 15156 name = VICTORY_POINTS_15156_per }
+		set_province_name = { id = 18817 name = VICTORY_POINTS_18817_per }
+		set_province_name = { id = 18814 name = VICTORY_POINTS_18814_per }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 15156
+		reset_province_name = 18817
+		reset_province_name = 18814
+	}
+}
+state_control_effect_976 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_976_per
+		set_province_name = { id = 18745 name = VICTORY_POINTS_18745_per }
+		set_province_name = { id = 5050 name = VICTORY_POINTS_5050_per }
+		set_province_name = { id = 18760 name = VICTORY_POINTS_18760_per }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18745
+		reset_province_name = 5050
+		reset_province_name = 18760
+	}
+}
+state_control_effect_977 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_977_per
+		set_province_name = { id = 5067 name = VICTORY_POINTS_5067_per }
+		set_province_name = { id = 18751 name = VICTORY_POINTS_18751_per }
+		set_province_name = { id = 15154 name = VICTORY_POINTS_15154_per }
+		set_province_name = { id = 10922 name = VICTORY_POINTS_10922_per }	
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 5067
+		reset_province_name = 18751
+		reset_province_name = 15154
+		reset_province_name = 10922
+	}
+}
+state_control_effect_978 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_province_name = { id = 15152 name = VICTORY_POINTS_15152_per }
+	}
+	else = {
+		reset_province_name = 15152
+	}
+}
+state_control_effect_979 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_979_per
+		set_province_name = { id = 18799 name = VICTORY_POINTS_18799_per }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18799
+	}
+}
+state_control_effect_1360 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1360_per
+		set_province_name = { id = 18716 name = VICTORY_POINTS_18716_per }
+		set_province_name = { id = 12895 name = VICTORY_POINTS_12895_per }
+	}
+	else_if = {
+		limit = { 
+			is_controlled_by = IRB
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1360_irb
+		set_province_name = { id = 18716 name = VICTORY_POINTS_18716_irb }
+		set_province_name = { id = 12895 name = VICTORY_POINTS_12895_irb }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18716
+		reset_province_name = 12895
+	}
+}
+state_control_effect_1361 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		set_state_name = STATE_1361_per
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4553 name = VICTORY_POINTS_4553_per }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4553
+	}
+}
+state_control_effect_1362 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			OR = {
+				is_controlled_by = PER
+				is_controlled_by = IRC
+			}
+		}
+		set_province_name = { id = 18736 name = VICTORY_POINTS_18736_monarchy }
+		set_province_name = { id = 18776 name = VICTORY_POINTS_18776_monarchy }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1362_per
+			set_province_name = { id = 18801 name = VICTORY_POINTS_18801_per }
+			set_province_name = { id = 10768 name = VICTORY_POINTS_10768_per }
+			set_province_name = { id = 10385 name = VICTORY_POINTS_10385_per }
+			set_province_name = { id = 18807 name = VICTORY_POINTS_18807_per }
+			set_province_name = { id = 18736 name = VICTORY_POINTS_18736_monarchy_per }
+			set_province_name = { id = 18776 name = VICTORY_POINTS_18776_monarchy_per }
+		}
+	}
+	else_if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+			NOT = { 
+				is_controlled_by = PER
+				is_controlled_by = IRC
+			}
+		}
+		reset_province_name = 18736
+		reset_province_name = 18776
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1362_per
+			set_province_name = { id = 18801 name = VICTORY_POINTS_18801_per }
+			set_province_name = { id = 10768 name = VICTORY_POINTS_10768_per }
+			set_province_name = { id = 10385 name = VICTORY_POINTS_10385_per }
+			set_province_name = { id = 18807 name = VICTORY_POINTS_18807_per }
+			set_province_name = { id = 18736 name = VICTORY_POINTS_18736_per }
+			set_province_name = { id = 18776 name = VICTORY_POINTS_18776_per }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18801 
+		reset_province_name = 10768 
+		reset_province_name = 10385
+		reset_province_name = 18807
+		reset_province_name = 18736
+		reset_province_name = 18776
+	}
+}
+state_control_effect_1363 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		set_state_name = STATE_1363_per
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7602 name = VICTORY_POINTS_7602_per }
+			set_province_name = { id = 18739 name = VICTORY_POINTS_18739_per }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7602
+		reset_province_name = 18739
+	}
+}
+state_control_effect_2124 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		set_state_name = STATE_2124_per
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7969 name = VICTORY_POINTS_7969_per }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7969
+	}
+}
+state_control_effect_2126 = {
+	if = {
+		limit = { 
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		set_state_name = STATE_2126_per
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 829 name = VICTORY_POINTS_829_per }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 829
+	}
+}
+state_control_effect_2184 = {
+	if = {
+		limit = {
+			controller = { is_in_array = { global.persian_names = THIS } }
+		}
+		set_state_name = STATE_2184_per_eng
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2184_per
+			set_province_name = { id = 13593 name = VICTORY_POINTS_13593_per }
+			set_province_name = { id = 18703 name = VICTORY_POINTS_18703_per }
+		}
+	}
+	else = {
+		set_state_name = STATE_2184_per_eng
+		reset_province_name = 13593
+		reset_province_name = 18703
+	}
+}
+
+#PHI/SPH/UPH
+state_control_effect_327 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 14711
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_327_fil
+			set_province_name = { id = 14711 name = VICTORY_POINTS_14711_fil }
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_327_jap
+			set_province_name = { id = 14711 name = VICTORY_POINTS_14711_jap }
+		}
+	}
+}
+state_control_effect_623 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 7275
+		reset_province_name = 7323
+		reset_province_name = 1288
+		reset_province_name = 14710
+		reset_province_name = 14708
+		reset_province_name = 10280
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_623_fil_com
+			set_province_name = { id = 7275 name = VICTORY_POINTS_7275_fil_com }
+			set_province_name = { id = 1288 name = VICTORY_POINTS_1288_fil_com }
+		}
+		else_if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_623_fil
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_623_jap
+			set_province_name = { id = 7275 name = VICTORY_POINTS_7275_jap }
+			set_province_name = { id = 7323 name = VICTORY_POINTS_7323_jap }
+			set_province_name = { id = 1288 name = VICTORY_POINTS_1288_jap }
+			set_province_name = { id = 14710 name = VICTORY_POINTS_14710_jap }
+			set_province_name = { id = 14708 name = VICTORY_POINTS_14708_jap }
+			set_province_name = { id = 10280 name = VICTORY_POINTS_10280_jap }
+		}
+	}
+}
+state_control_effect_624 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 14717
+		reset_province_name = 4228
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_624_fil_com
+			set_province_name = { id = 14717 name = VICTORY_POINTS_14717_fil_com }
+		}
+		else_if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_624_fil_com
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_624_jap
+			set_province_name = { id = 14717 name = VICTORY_POINTS_14717_jap }
+			set_province_name = { id = 4228 name = VICTORY_POINTS_4228_jap }
+		}
+	}
+}
+state_control_effect_625 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 1224
+		reset_province_name = 4373
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_625_fil
+			set_province_name = { id = 1224 name = VICTORY_POINTS_1224_fil_com }
+			set_province_name = { id = 4373 name = VICTORY_POINTS_4373_fil_com }
+		}
+		else_if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_625_fil
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_625_jap
+			set_province_name = { id = 1224 name = VICTORY_POINTS_1224_jap }
+			set_province_name = { id = 4373 name = VICTORY_POINTS_4373_jap }
+		}
+	}
+}
+state_control_effect_626 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 10272
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_626_fil
+			set_province_name = { id = 10272 name = VICTORY_POINTS_10272_fil_com }
+		}
+		else_if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_626_fil
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_626_jap
+			set_province_name = { id = 10272 name = VICTORY_POINTS_10272_jap }
+		}
+	}
+}
+state_control_effect_627 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 7284
+		reset_province_name = 12217
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_627_fil
+			set_province_name = { id = 7284 name = VICTORY_POINTS_7284_fil_com_jap }
+			set_province_name = { id = 12217 name = VICTORY_POINTS_12217_fil_com }
+		}
+		else_if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_627_fil
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_627_jap
+			set_province_name = { id = 7284 name = VICTORY_POINTS_7284_fil_com_jap }
+			set_province_name = { id = 12217 name = VICTORY_POINTS_12217_jap }
+		}
+	}
+}
+state_control_effect_628 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 12118
+		reset_province_name = 14723
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_628_fil
+			set_province_name = { id = 12118 name = VICTORY_POINTS_12118_fil_com_jap }
+		}
+		else_if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_628_fil
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_627_jap
+			set_province_name = { id = 12118 name = VICTORY_POINTS_12118_fil_com_jap }
+			set_province_name = { id = 14723 name = VICTORY_POINTS_14723_jap }
+		}
+	}
+}
+state_control_effect_1455 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 10241
+		reset_province_name = 12253
+		reset_province_name = 14706
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_1455_fil_com
+			set_province_name = { id = 12253 name = VICTORY_POINTS_12253_fil_com }
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1455_jap
+			set_province_name = { id = 10241 name = VICTORY_POINTS_10241_jap }
+			set_province_name = { id = 12253 name = VICTORY_POINTS_12253_jap }
+			set_province_name = { id = 14706 name = VICTORY_POINTS_14706_jap }
+		}
+	}
+}
+state_control_effect_1456 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 4101
+		reset_province_name = 10252
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_1456_fil_com
+		}
+		else_if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1456_fil
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1456_jap
+			set_province_name = { id = 4101 name = VICTORY_POINTS_4101_jap }
+			set_province_name = { id = 10252 name = VICTORY_POINTS_10252_jap }
+		}
+	}
+}
+state_control_effect_1457 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 12236
+		reset_province_name = 14712
+		reset_province_name = 14714
+		reset_province_name = 14716
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_1457_fil
+			set_province_name = { id = 12236 name = VICTORY_POINTS_12236_fil_com }
+			set_province_name = { id = 14712 name = VICTORY_POINTS_14712_fil_com }
+			set_province_name = { id = 14714 name = VICTORY_POINTS_14714_fil_com }
+		}
+		else_if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1457_fil
+			set_province_name = { id = 14712 name = VICTORY_POINTS_14712_fil }
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1457_jap
+			set_province_name = { id = 12236 name = VICTORY_POINTS_12236_jap }
+			set_province_name = { id = 14712 name = VICTORY_POINTS_14712_jap }
+			set_province_name = { id = 14714 name = VICTORY_POINTS_14714_jap }
+			set_province_name = { id = 14716 name = VICTORY_POINTS_14716_jap }
+		}
+	}
+}
+state_control_effect_1458 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 1261
+		reset_province_name = 14722
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_1458_fil
+			set_province_name = { id = 1261 name = VICTORY_POINTS_1261_fil_com }
+		}
+		else_if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1458_fil
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1458_jap
+			set_province_name = { id = 1261 name = VICTORY_POINTS_1261_jap }
+			set_province_name = { id = 14722 name = VICTORY_POINTS_14722_jap }
+		}
+	}
+}
+state_control_effect_1459 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 7445
+		reset_province_name = 4241
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1459_fil
+			set_province_name = { id = 4241 name = VICTORY_POINTS_4241_fil }
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1459_jap
+			set_province_name = { id = 7445 name = VICTORY_POINTS_7445_jap }
+			set_province_name = { id = 4241 name = VICTORY_POINTS_4241_jap }
+		}
+	}
+}
+state_control_effect_1460 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 12158
+		reset_province_name = 12273
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_1460_fil_com_jap
+			set_province_name = { id = 12273 name = VICTORY_POINTS_12273_fil_com_jap }
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1460_fil_com_jap
+			set_province_name = { id = 12158 name = VICTORY_POINTS_12158_jap }
+			set_province_name = { id = 12273 name = VICTORY_POINTS_12273_fil_com_jap }
+		}
+	}
+}
+state_control_effect_1461 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 14738
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1461_fil
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1461_jap
+			set_province_name = { id = 14738 name = VICTORY_POINTS_14738_jap }
+		}
+	}
+}
+state_control_effect_1462 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 14731
+		reset_province_name = 10243
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1462_jap
+			set_province_name = { id = 14731 name = VICTORY_POINTS_14731_jap }
+			set_province_name = { id = 10243 name = VICTORY_POINTS_10243_jap }
+		}
+	}
+}
+state_control_effect_1463 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 14737
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_state_name = STATE_1463_fil_com
+			set_province_name = { id = 14737 name = VICTORY_POINTS_14737_fil_com }
+		}
+		else_if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 14737 name = VICTORY_POINTS_14737_fil }
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1463_jap
+			set_province_name = { id = 14737 name = VICTORY_POINTS_14737_jap }
+		}
+	}
+}
+state_control_effect_2324 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = SPH
+				is_controlled_by = PHI
+				is_controlled_by = UPH
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 4429
+		if = {
+			limit = {
+				controller = { has_country_leader = { character = SPH_Luis_Taruc ruling_only = yes } }
+				has_global_flag = TNO_endonym_mode
+			}
+			set_province_name = { id = 4429 name = VICTORY_POINTS_4429_fil_com }
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = FGB }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2324_jap
+			set_province_name = { id = 4429 name = VICTORY_POINTS_4429_jap }
+		}
+	}
+}
+
+#QIN
+state_control_effect_604 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = GAN
+				is_controlled_by = JAP
+			}
+		}
+		set_province_name = { id = 10834 name = VICTORY_POINTS_10834_jap }
+		set_province_name = { id = 13239 name = VICTORY_POINTS_13239_jap }
+	}
+	else = {
+		reset_province_name = 10834
+		reset_province_name = 13239
+	}
+}
+state_control_effect_906 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = GAN
+				is_controlled_by = JAP
+			}
+		}
+		set_state_name = STATE_906_jap
+		set_province_name = { id = 4536 name = VICTORY_POINTS_4536_jap }
+		set_province_name = { id = 10490 name = VICTORY_POINTS_10490_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4536
+		reset_province_name = 10490
+	}
+}
+
+#TAJ
+state_control_effect_742 = {
+	if = {
+		limit = {
+			is_controlled_by = TAJ
+		}
+		if = {
+			limit = { controller = { has_country_leader = { character = TAJ_Bobodzhan_Gafurov ruling_only = yes } } }
+			set_state_name = STATE_742_rus
+			set_province_name = { id = 10205 name = VICTORY_POINTS_10205_rus }
+		}
+		else = {
+			reset_state_name = yes
+			reset_province_name = 10205
+		}
+
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 12218 name = VICTORY_POINTS_12218_taj }
+		}
+		else = {
+			reset_province_name = 12218
+		}
+	}
+}
+state_control_effect_2198 = {
+	if = {
+		limit = {
+			is_controlled_by = TAJ
+		}
+		set_state_name = STATE_2198_taj
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 1919 name = VICTORY_POINTS_1919_taj }
+			set_province_name = { id = 1216 name = VICTORY_POINTS_1216_taj }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1919
+		reset_province_name = 1216
+	}
+}
+state_control_effect_2199 = {
+	if = {
+		limit = {
+			is_controlled_by = TAJ
+		}
+		set_state_name = STATE_2199_taj
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 18692 name = VICTORY_POINTS_18692_taj }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 18692
+	}
+}
+state_control_effect_2200 = {
+	if = {
+		limit = {
+			is_controlled_by = TAJ
+		}
+		set_state_name = STATE_2200_taj
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4542 name = VICTORY_POINTS_4542_taj }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4542
+	}
+}
+
+#TIB
+state_control_effect_322 = {
+	if = {
+		limit = {
+			is_controlled_by = TIB
+		}
+		reset_state_name = yes
+		reset_province_name = 1991
+		reset_province_name = 2014
+		reset_province_name = 8029
+		reset_province_name = 12784
+	}
+	else = {
+		set_state_name = STATE_322_chi
+		set_province_name = { id = 1991 name = VICTORY_POINTS_8029_chi }
+		set_province_name = { id = 2014 name = VICTORY_POINTS_2014_chi }
+		set_province_name = { id = 8029 name = VICTORY_POINTS_8029_chi }
+		set_province_name = { id = 12784 name = VICTORY_POINTS_12784_chi }
+	}
+}
+state_control_effect_601 = {
+	if = {
+		limit = {
+			is_controlled_by = TIB
+		}
+		reset_state_name = yes
+		reset_province_name = 4964
+	}
+	else = {
+		set_state_name = STATE_601_chi
+		set_province_name = { id = 4964 name = VICTORY_POINTS_4964_chi }
+	}
+}
+state_control_effect_765 = {
+	if = {
+		limit = {
+			is_controlled_by = TIB
+		}
+		reset_province_name = 7926
+	}
+	else = {
+		set_province_name = { id = 7926 name = VICTORY_POINTS_7926_chi }
+	}
+}
+state_control_effect_1962 = {
+	if = {
+		limit = {
+			is_controlled_by = TIB
+		}
+		reset_state_name = yes
+		reset_province_name = 12730
+	}
+	else = {
+		set_state_name = STATE_1962_chi
+		set_province_name = { id = 12730 name = VICTORY_POINTS_12730_chi }
+	}
+}
+state_control_effect_1963 = {
+	if = {
+		limit = {
+			is_controlled_by = TIB
+		}
+		reset_state_name = yes
+		reset_province_name = 16138
+	}
+	else_if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = SIC
+			}
+		}
+		set_state_name = STATE_1963_jap
+		set_province_name = { id = 16138 name = VICTORY_POINTS_16138_jap }
+	}
+	else = {
+		set_state_name = STATE_1963_chi
+		set_province_name = { id = 16138 name = VICTORY_POINTS_16138_chi }
+	}
+}
+
+#TRK
+state_control_effect_584 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = TRK
+				is_controlled_by = UTL
+			}
+		}
+		if = {
+			limit = { controller = { has_country_leader = { character = TRK_Poda_Annaorazov ruling_only = yes } } }
+			set_state_name = STATE_584_rus
+			set_province_name = { id = 12333 name = VICTORY_POINTS_12333_rus }
+		}
+		else = {
+			set_state_name = STATE_584_trk
+		}
+
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_584_trk
+			set_province_name = { id = 12333 name = VICTORY_POINTS_12333_trk }
+			set_province_name = { id = 4599 name = VICTORY_POINTS_4599_trk }
+		}
+	}
+	else = {
+		set_state_name = STATE_584_rus
+		set_province_name = { id = 12333 name = VICTORY_POINTS_12333_rus }
+		reset_province_name = 4599
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+			reset_province_name = 12333
+			reset_province_name = 4599
+		}
+	}
+}
+state_control_effect_2201 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = TRK
+				is_controlled_by = UTL
+			}
+		}
+		set_state_name = STATE_2201_trk
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+
+			set_province_name = { id = 7477 name = VICTORY_POINTS_7477_trk }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7477
+	}
+}
+state_control_effect_2202 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = TRK
+				is_controlled_by = UTL
+			}
+		}
+		if = {
+			limit = { controller = { has_country_leader = { character = TRK_Poda_Annaorazov ruling_only = yes } } }
+			set_province_name = { id = 10435 name = VICTORY_POINTS_10435_rus }
+		}
+		else = {
+			reset_province_name = 10435
+		}
+
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10435 name = VICTORY_POINTS_10435_trk }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10435
+	}
+}
+state_control_effect_2203 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = TRK
+				is_controlled_by = UTL
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7560 name = VICTORY_POINTS_7560_trk }
+			set_province_name = { id = 18626 name = VICTORY_POINTS_18626_trk }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7560
+		reset_province_name = 18626
+	}
+}
+state_control_effect_2204 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = TRK
+				is_controlled_by = UTL
+			}
+		}
+		set_state_name = STATE_2204_trk
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 10742 name = VICTORY_POINTS_10742_trk }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 10742
+	}
+}
+
+state_control_effect_1468 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = TRK
+				is_controlled_by = UTL
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1468_trk
+			set_province_name = { id = 18678 name = VICTORY_POINTS_18678_trk }
+			set_province_name = { id = 18686 name = VICTORY_POINTS_18686_trk }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 12239
+		reset_province_name = 18678
+	}
+}
+
+#UZB
+state_control_effect_405 = {
+	if = {
+		limit = {
+			is_controlled_by = UZB
+		}
+		set_state_name = STATE_405_uzb
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 7682 name = VICTORY_POINTS_7682_uzb }
+			set_province_name = { id = 10671 name = VICTORY_POINTS_10671_uzb }
+			set_province_name = { id = 18680 name = VICTORY_POINTS_18680_uzb }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7682
+		reset_province_name = 10671
+		reset_province_name = 18680
+	}
+}
+state_control_effect_585 = {
+	if = {
+		limit = {
+			is_controlled_by = UZB
+		}
+		set_state_name = STATE_585_uzb
+		if = {
+			limit = { controller = { has_country_leader = { character = UZB_Fayzulla_Khodzhayev ruling_only = yes } } }
+			set_province_name = { id = 18627 name = VICTORY_POINTS_18627_rus }
+			set_province_name = { id = 18684 name = VICTORY_POINTS_18684_rus }
+		}
+		else = {
+			reset_province_name = 18627
+			reset_province_name = 18684
+		}
+
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 1573 name = VICTORY_POINTS_1573_uzb }
+			set_province_name = { id = 1576 name = VICTORY_POINTS_1576_uzb }
+			set_province_name = { id = 18627 name = VICTORY_POINTS_18627_uzb }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1573
+		reset_province_name = 1576
+		reset_province_name = 18627
+		reset_province_name = 18684
+	}
+}
+state_control_effect_1467 = {
+	if = {
+		limit = {
+			is_controlled_by = UZB
+		}
+		set_state_name = STATE_1467_uzb
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 18687 name = VICTORY_POINTS_18687_uzb }
+		}
+	}
+	else_if = {
+		limit = {
+			is_controlled_by = KYR
+		}
+		set_state_name = STATE_1467_kyr
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 18687 name = VICTORY_POINTS_18687_kyr }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1573
+		reset_province_name = 1576
+		reset_province_name = 18627
+		reset_province_name = 18684
+	}
+}
+#VIN/VIC
+state_control_effect_671 = {
+	if = {
+		limit = {
+			is_controlled_by = VIN
+			NOT = { VIN = { has_cosmetic_tag = VIN_republic } }
+		}
+		set_state_name = STATE_671_vin_monarchy
+		set_province_name = { id = 4379 name = VICTORY_POINTS_4379_vin_monarchy_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4379 name = VICTORY_POINTS_4379_vin_monarchy }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			set_state_name = STATE_671_vin_monarchy_eng
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					is_controlled_by = VIN
+					VIN = { has_cosmetic_tag = VIN_republic }
+				}
+				is_controlled_by = VIC
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 4379
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_671_vin
+			set_province_name = { id = 4379 name = VICTORY_POINTS_4379_vin }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4379
+	}
+}
+state_control_effect_878 = {
+	if = {
+		limit = {
+			is_controlled_by = VIN
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_878_vin
+			set_province_name = { id = 4401 name = VICTORY_POINTS_4401_vin }
+		}
+	}
+	else_if = {
+		limit = {
+			is_controlled_by = VIC
+		}
+		set_state_name = STATE_878_vic
+		set_province_name = { id = 4401 name = VICTORY_POINTS_4401_vic_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 4401 name = VICTORY_POINTS_4401_vic }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			set_state_name = STATE_878_vic_eng
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4401
+	}
+}
+state_control_effect_2258 = {
+	if = {
+		limit = {
+			is_controlled_by = VIN
+			NOT = { VIN = { has_cosmetic_tag = VIN_republic } }
+		}
+		set_state_name = STATE_2258_vin_monarchy_eng
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2258_vin_monarchy
+			set_province_name = { id = 7303 name = VICTORY_POINTS_7303_vin }
+		}	
+	}
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					is_controlled_by = VIN
+					VIN = { has_cosmetic_tag = VIN_republic }
+				}
+				is_controlled_by = VIC
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 4379
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2258_vin
+			set_province_name = { id = 7303 name = VICTORY_POINTS_7303_vin }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7303
+	}
+}
+
+#XIK
+state_control_effect_905 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = SIC
+			}
+		}
+		set_province_name = { id = 2067 name = VICTORY_POINTS_2067_jap }
+		set_province_name = { id = 7988 name = VICTORY_POINTS_7988_jap }
+		set_province_name = { id = 12724 name = VICTORY_POINTS_12724_jap }
+		set_state_name = STATE_905_jap
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 2067
+		reset_province_name = 7988
+		reset_province_name = 12724
+	}
+}
+state_control_effect_964 = {
+	if = {
+		limit = {
+			is_controlled_by = TIB
+		}
+		set_state_name = STATE_964_tib
+		set_province_name = { id = 4407 name = VICTORY_POINTS_4407_tib }
+	}
+	else_if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = SIC
+			}
+		}
+		set_province_name = { id = 4407 name = VICTORY_POINTS_4407_jap }
+		set_state_name = STATE_964_jap
+	}
+	else = {
+		set_state_name = STATE_964_chi
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_province_name = 4407
+		}
+		else = { set_province_name = { id = 4407 name = VICTORY_POINTS_4407_chi } }
+	}
+}
+
+#XIN
+state_control_effect_617 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = GAN
+				is_controlled_by = JAP
+			}
+		}
+		set_state_name = STATE_617_jap
+		set_province_name = { id = 1703 name = VICTORY_POINTS_1703_jap }
+		set_province_name = { id = 4709 name = VICTORY_POINTS_4709_jap }
+		set_province_name = { id = 12656 name = VICTORY_POINTS_12656_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1703
+		reset_province_name = 4709
+		reset_province_name = 12656
+	}
+}
+state_control_effect_618 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = GAN
+				is_controlled_by = JAP
+			}
+		}
+		set_province_name = { id = 1708 name = VICTORY_POINTS_1708_jap }
+		set_province_name = { id = 4823 name = VICTORY_POINTS_4823_jap }
+	}
+	else = {
+		reset_province_name = 1708
+		reset_province_name = 4823
+	}
+}
+state_control_effect_619 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = GAN
+				is_controlled_by = JAP
+			}
+		}
+		set_state_name = STATE_619_jap
+		set_province_name = { id = 1766 name = VICTORY_POINTS_1766_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1766
+	}
+}
+state_control_effect_957 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = GAN
+				is_controlled_by = JAP
+			}
+		}
+		set_state_name = STATE_957_jap
+		set_province_name = { id = 4704 name = VICTORY_POINTS_4704_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4704
+	}
+}
+state_control_effect_958 = {
+	if = {
+		limit = {
+			has_global_flag = TNO_endonym_mode
+			OR = {
+				is_controlled_by = GAN
+				is_controlled_by = JAP
+			}
+		}
+		set_state_name = STATE_958_jap
+		set_province_name = { id = 1943 name = VICTORY_POINTS_1943_jap }
+		set_province_name = { id = 5736 name = VICTORY_POINTS_5736_jap }
+		set_province_name = { id = 8042 name = VICTORY_POINTS_8042_jap }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 1943
+		reset_province_name = 5736
+		reset_province_name = 8042
+	}
+}

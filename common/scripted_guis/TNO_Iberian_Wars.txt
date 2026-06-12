@@ -1,0 +1,495 @@
+scripted_gui = {
+	iberian_wars_pol_mechanic_gui = {
+		context_type = decision_category
+		window_name = "IBR_wars_pol_mechanic_GUI"
+
+		visible = {
+			always = yes
+		}
+
+		effects = {
+			Iberian_Wars_supporters_Entry_Flag_click = {
+				ROOT = {
+					set_variable = { IBR_Wars_currently_selected_supporter_var = PREV.id }
+					set_variable = { IBR_Wars_current_request_days = 15 }
+					set_variable = { IBR_Wars_current_request_type = Iberian_Wars_request_types^0 }
+					IBR_wars_change_request_type_variables = yes
+				}
+			}
+
+			Iberian_Wars_request_types_Entry_button_click = {
+				set_variable = { IBR_Wars_current_request_type = Iberian_Wars_request_types_v }
+				IBR_wars_change_request_type_variables = yes
+			}
+
+			IBR_wars_request_days_increase_button_click = {
+				add_to_variable = { IBR_Wars_current_request_days = 1 }
+				clamp_variable = {
+					var = IBR_Wars_current_request_days
+					min = 15
+					max = 60
+				}
+				IBR_wars_change_request_type_variables = yes
+			}
+			IBR_wars_request_days_increase_button_shift_click = {
+				add_to_variable = { IBR_Wars_current_request_days = 5 }
+				clamp_variable = {
+					var = IBR_Wars_current_request_days
+					min = 15
+					max = 60
+				}
+				IBR_wars_change_request_type_variables = yes
+			}
+			IBR_wars_request_days_increase_button_control_click = {
+				set_variable = { IBR_Wars_current_request_days = 60 }
+				IBR_wars_change_request_type_variables = yes
+			}
+
+			IBR_wars_request_days_decrease_button_click = {
+				add_to_variable = { IBR_Wars_current_request_days = -1 }
+				clamp_variable = {
+					var = IBR_Wars_current_request_days
+					min = 15
+					max = 60
+				}
+				IBR_wars_change_request_type_variables = yes
+			}
+			IBR_wars_request_days_decrease_button_shift_click = {
+				add_to_variable = { IBR_Wars_current_request_days = -5 }
+				clamp_variable = {
+					var = IBR_Wars_current_request_days
+					min = 15
+					max = 60
+				}
+				IBR_wars_change_request_type_variables = yes
+			}
+			IBR_wars_request_days_decrease_button_control_click = {
+				set_variable = { IBR_Wars_current_request_days = 15 }
+				IBR_wars_change_request_type_variables = yes
+			}
+
+			IBR_wars_request_quantity_increase_button_click = {
+				add_to_variable = { IBR_Wars_current_request_quantity = IBR_Wars_current_request_quantity_small_increase }
+				clamp_variable = {
+					var = IBR_Wars_current_request_quantity
+					min = IBR_Wars_current_request_quantity_min
+					max = IBR_Wars_current_request_quantity_max
+				}
+				set_variable = { IBR_Wars_current_request_type_loan = IBR_Wars_current_request_quantity }
+				divide_variable = { IBR_Wars_current_request_type_loan = 1000 }
+			}
+			IBR_wars_request_quantity_increase_button_shift_click = {
+				add_to_variable = { IBR_Wars_current_request_quantity = IBR_Wars_current_request_quantity_big_increase }
+				clamp_variable = {
+					var = IBR_Wars_current_request_quantity
+					min = IBR_Wars_current_request_quantity_min
+					max = IBR_Wars_current_request_quantity_max
+				}
+				set_variable = { IBR_Wars_current_request_type_loan = IBR_Wars_current_request_quantity }
+				divide_variable = { IBR_Wars_current_request_type_loan = 1000 }
+			}
+			IBR_wars_request_quantity_increase_button_control_click = {
+				set_variable = { IBR_Wars_current_request_quantity = IBR_Wars_current_request_quantity_max }
+				set_variable = { IBR_Wars_current_request_type_loan = IBR_Wars_current_request_quantity }
+				divide_variable = { IBR_Wars_current_request_type_loan = 1000 }
+			}
+
+			IBR_wars_request_quantity_decrease_button_click = {
+				subtract_from_variable = { IBR_Wars_current_request_quantity = IBR_Wars_current_request_quantity_small_decrease }
+				clamp_variable = {
+					var = IBR_Wars_current_request_quantity
+					min = IBR_Wars_current_request_quantity_min
+					max = IBR_Wars_current_request_quantity_max
+				}
+				set_variable = { IBR_Wars_current_request_type_loan = IBR_Wars_current_request_quantity }
+				divide_variable = { IBR_Wars_current_request_type_loan = 1000 }
+			}
+			IBR_wars_request_quantity_decrease_button_shift_click = {
+				subtract_from_variable = { IBR_Wars_current_request_quantity = IBR_Wars_current_request_quantity_big_decrease }
+				clamp_variable = {
+					var = IBR_Wars_current_request_quantity
+					min = IBR_Wars_current_request_quantity_min
+					max = IBR_Wars_current_request_quantity_max
+				}
+				set_variable = { IBR_Wars_current_request_type_loan = IBR_Wars_current_request_quantity }
+				divide_variable = { IBR_Wars_current_request_type_loan = 1000 }
+			}
+			IBR_wars_request_quantity_decrease_button_control_click = {
+				set_variable = { IBR_Wars_current_request_quantity = IBR_Wars_current_request_quantity_min }
+				set_variable = { IBR_Wars_current_request_type_loan = IBR_Wars_current_request_quantity }
+				divide_variable = { IBR_Wars_current_request_type_loan = 1000 }
+			}
+
+			IBR_wars_request_finish_button_click = {
+				#Calculate how much influence is at stake
+				set_temp_variable = { IBR_Wars_current_request_days_group_temp = IBR_Wars_current_request_days }
+				divide_temp_variable = { IBR_Wars_current_request_days_group_temp = 15 }
+				round_temp_variable = IBR_Wars_current_request_days_group_temp
+				set_temp_variable = { influence_increase = 0.5 }
+				multiply_temp_variable = { influence_increase = IBR_Wars_current_request_days_group_temp }
+				var:IBR_Wars_currently_selected_supporter_var = {
+					set_variable = { IBR_Wars_current_request_type = ROOT.IBR_Wars_current_request_type }
+					set_variable = { IBR_Wars_current_request_quantity = ROOT.IBR_Wars_current_request_quantity }
+					set_variable = { IBR_Wars_current_request_days = ROOT.IBR_Wars_current_request_days }
+					set_variable = { IBR_Wars_current_requester_influence_change = ROOT.IBR_Wars_current_requester_influence_change }
+				}
+				IBR_Wars_Initiate_Request_Mission_New = yes
+			}
+		}
+
+		dynamic_lists = {
+			Iberian_Wars_supporters_List = {
+				array = Iberian_Wars_supporters
+				index = Iberian_Wars_supporters_i
+				entry_container = Iberian_Wars_supporters_Entry
+				change_scope = yes
+			}
+			IBR_wars_request_type_list = {
+				array = Iberian_Wars_request_types
+				index = Iberian_Wars_request_types_i
+				value = Iberian_Wars_request_types_v
+				entry_container = Iberian_Wars_request_types_Entry
+			}
+		}
+
+		triggers = {
+			IBR_wars_no_supporters_display_visible = {
+				NOT = {
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+			}
+			IBR_wars_current_supporter_busy_display_visible = {
+				if = {
+					limit = {
+						tag = SPR
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_SPR_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+				if = {
+					limit = {
+						tag = SPS
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_SPS_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+				if = {
+					limit = {
+						tag = FZL
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_FZL_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+				if = {
+					limit = {
+						tag = FSR
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_FSR_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+				if = {
+					limit = {
+						tag = POR
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_POR_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+				if = {
+					limit = {
+						tag = RPP
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_RPP_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+				if = {
+					limit = {
+						tag = GNS
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_GNS_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+				if = {
+					limit = {
+						tag = GAL
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_GAL_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+				if = {
+					limit = {
+						tag = BSQ
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_BSQ_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+				if = {
+					limit = {
+						tag = CTL
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_CTL_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+				if = {
+					limit = {
+						tag = ADL
+					}
+					var:IBR_Wars_currently_selected_supporter_var = {
+						has_country_flag = supporter_request_from_ADL_flag
+					}
+					has_variable = ROOT.Iberian_Wars_supporters^0
+				}
+			}
+			IBR_wars_no_selected_supporter_display_visible = {
+				has_variable = ROOT.Iberian_Wars_supporters^0
+				check_variable = {
+					IBR_Wars_currently_selected_supporter_var = ZZZ
+				}
+			}
+
+			IBR_wars_request_days_increase_button_click_enabled = {
+				check_variable = { IBR_Wars_current_request_days < 60 }
+			}
+			IBR_wars_request_days_decrease_button_click_enabled = {
+				check_variable = { IBR_Wars_current_request_days > 15 }
+			}
+			IBR_wars_request_quantity_increase_button_click_enabled = {
+				check_variable = { IBR_Wars_current_request_quantity < IBR_Wars_current_request_quantity_max }
+			}
+			IBR_wars_request_quantity_decrease_button_click_enabled = {
+				check_variable = { IBR_Wars_current_request_quantity > IBR_Wars_current_request_quantity_min }
+			}
+			IBR_wars_request_finish_button_click_enabled = {
+				var:IBR_Wars_currently_selected_supporter_var = {
+					NOT = { has_country_flag = supporter_request_flag }
+				}
+			}
+		}
+		properties = {
+			IBR_wars_political_opposition_progress_bar = {
+				frame = IBR_wars_political_opposition_var
+			}
+			IBR_wars_legitimacy_progress_bar = {
+				frame = IBR_wars_legitimacy_var
+			}
+			IBR_wars_political_image = {
+				image = "[ROOT.IBR_wars_political_banner]"
+			}
+			Iberian_Wars_supporters_Entry_Flag = {
+				image = "[THIS.GetFlag]"
+			}
+
+			Iberian_Wars_supporters_Entry_Flag_overlay = {
+				image = "[THIS.IBR_Wars_flag_overlay_selection]"
+			}
+
+			Iberian_Wars_request_types_Entry_button = {
+				image = "[ROOT.IBR_wars_request_type_button_state]"
+			}
+			IBR_Wars_independent_pie = {
+				image = [ROOT.IBR_Wars_independent_pie_tag_image]
+				frame = IBR_Wars_independent_frame
+			}
+			IBR_Wars_USA_pie = {
+				frame = IBR_Wars_USA_frame
+			}
+			IBR_Wars_GER_pie = {
+				frame = IBR_Wars_GER_frame
+			}
+			IBR_Wars_ITA_pie = {
+				frame = IBR_Wars_ITA_frame
+			}
+		}
+	}
+}
+
+scripted_gui = {
+	iberian_wars_mil_mechanic_gui = {
+		context_type = decision_category
+		window_name = "IBR_wars_mil_mechanic_GUI"
+
+		visible = {
+			always = yes
+		}
+
+		effects = {
+			IBR_wars_command_gain_button_click = {
+				add_to_variable = { command_power_gain_ibrwars = 0.3 }
+				clamp_variable = {
+					var = command_power_gain_ibrwars
+					min = -0.4
+					max = 2
+				}
+				set_temp_variable = { pp_substract = command_power_gain_cost_ibrwars }
+				multiply_temp_variable = { pp_substract = -1 }
+				add_political_power = var:pp_substract
+			}
+			IBR_wars_max_command_button_click = {
+				add_to_variable = { max_command_power_ibrwars = 5 }
+				clamp_variable = {
+					var = max_command_power_ibrwars
+					min = -100
+					max = 100
+				}
+				set_temp_variable = { pp_substract = max_command_power_cost_ibrwars }
+				multiply_temp_variable = { pp_substract = -1 }
+				add_political_power = var:pp_substract
+			}
+			IBR_wars_recruitable_population_button_click = {
+				add_to_variable = { conscription_factor_ibrwars = 0.005 }
+				clamp_variable = {
+					var = conscription_factor_ibrwars
+					min = -0.15
+					max = 0.25
+				}
+				set_temp_variable = { pp_substract = conscription_factor_cost_ibrwars }
+				multiply_temp_variable = { pp_substract = -1 }
+				add_political_power = var:pp_substract
+			}
+			IBR_wars_supply_consumption_button_click = {
+				add_to_variable = { supply_consumption_factor_ibrwars = -0.03 }
+				clamp_variable = {
+					var = supply_consumption_factor_ibrwars
+					min = -0.25
+					max = 0.15
+				}
+				set_temp_variable = { pp_substract = supply_consumption_factor_cost_ibrwars }
+				multiply_temp_variable = { pp_substract = -1 }
+				add_command_power = var:pp_substract
+			}
+			IBR_wars_army_org_button_click = {
+				add_to_variable = { army_org_factor_ibrwars = 0.03 }
+				clamp_variable = {
+					var = army_org_factor_ibrwars
+					min = -0.15
+					max = 0.25
+				}
+				set_temp_variable = { pp_substract = army_org_factor_cost_ibrwars }
+				multiply_temp_variable = { pp_substract = -1 }
+				add_command_power = var:pp_substract
+			}
+			IBR_wars_army_speed_button_click = {
+				add_to_variable = { army_speed_factor_ibrwars = 0.02 }
+				clamp_variable = {
+					var = army_speed_factor_ibrwars
+					min = -0.15
+					max = 0.25
+				}
+				set_temp_variable = { pp_substract = army_speed_factor_cost_ibrwars }
+				multiply_temp_variable = { pp_substract = -1 }
+				add_command_power = var:pp_substract
+			}
+			IBR_wars_army_attack_button_click = {
+				add_to_variable = { army_attack_factor_ibrwars = 0.02 }
+				clamp_variable = {
+					var = army_attack_factor_ibrwars
+					min = -0.15
+					max = 0.25
+				}
+				set_temp_variable = { pp_substract = army_attack_factor_cost_ibrwars }
+				multiply_temp_variable = { pp_substract = -1 }
+				add_command_power = var:pp_substract
+			}
+			IBR_wars_army_defense_button_click = {
+				add_to_variable = { army_defence_factor_ibrwars = 0.02 }
+				clamp_variable = {
+					var = army_defence_factor_ibrwars
+					min = -0.15
+					max = 0.25
+				}
+				set_temp_variable = { pp_substract = army_defence_factor_cost_ibrwars }
+				multiply_temp_variable = { pp_substract = -1 }
+				add_command_power = var:pp_substract
+			}
+		}
+
+		triggers = {
+			IBR_wars_command_gain_button_click_enabled = {
+				check_variable = {
+					var = political_power
+					value = command_power_gain_cost_ibrwars
+					compare = greater_than_or_equals
+				}
+				check_variable = { command_power_gain_ibrwars < 2 }
+			}
+			IBR_wars_max_command_button_click_enabled = {
+				check_variable = {
+					var = political_power
+					value = max_command_power_cost_ibrwars
+					compare = greater_than_or_equals
+				}
+				check_variable = { max_command_power_ibrwars < 100 }
+			}
+			IBR_wars_recruitable_population_button_click_enabled = {
+				check_variable = {
+					var = political_power
+					value = conscription_factor_cost_ibrwars
+					compare = greater_than_or_equals
+				}
+				check_variable = { conscription_factor_ibrwars < 0.25 }
+			}
+			IBR_wars_supply_consumption_button_click_enabled = {
+				check_variable = {
+					var = command_power
+					value = supply_consumption_factor_cost_ibrwars
+					compare = greater_than_or_equals
+				}
+				check_variable = { supply_consumption_factor_ibrwars > -0.25 }
+			}
+			IBR_wars_army_org_button_click_enabled = {
+				check_variable = {
+					var = command_power
+					value = army_org_factor_cost_ibrwars
+					compare = greater_than_or_equals
+				}
+				check_variable = { army_org_factor_ibrwars < 0.25 }
+			}
+			IBR_wars_army_speed_button_click_enabled = {
+				check_variable = {
+					var = command_power
+					value = army_speed_factor_cost_ibrwars
+					compare = greater_than_or_equals
+				}
+				check_variable = { army_speed_factor_ibrwars < 0.25 }
+			}
+			IBR_wars_army_attack_button_click_enabled = {
+				check_variable = {
+					var = command_power
+					value = army_attack_factor_cost_ibrwars
+					compare = greater_than_or_equals
+				}
+				check_variable = { army_attack_factor_ibrwars < 0.25 }
+			}
+			IBR_wars_army_defense_button_click_enabled = {
+				check_variable = {
+					var = command_power
+					value = army_defence_factor_cost_ibrwars
+					compare = greater_than_or_equals
+				}
+				check_variable = { army_defence_factor_ibrwars < 0.25 }
+			}
+		}
+
+		properties = {
+		}
+	}
+}

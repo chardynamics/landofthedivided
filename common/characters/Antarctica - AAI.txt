@@ -1,0 +1,24 @@
+characters = {
+	AAI_Giovanni_Torrisi = {
+		name = AAI_Giovanni_Torrisi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Antarctica/Portrait_AAI_Giovanni_Torrisi.png"
+				small = "gfx/interface/ideas/ministers/AAI/AAI_minister_Giovanni_Torrisi.dds"
+			}
+			army = {
+				large = "gfx/leaders/Antarctica/Portrait_AAI_Giovanni_Torrisi.png"
+				small = "gfx/interface/ideas/ministers/AAI/AAI_minister_Giovanni_Torrisi.dds"
+			}
+		}
+		country_leader = {
+			ideology = fascism_antarctic_administration_subtype
+			expire = "1999.1.1"
+			desc = AAI_Giovanni_Torrisi_desc
+			traits = {
+				fascism
+			}
+			id = -1
+		}
+	}
+}

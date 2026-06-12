@@ -1,0 +1,17 @@
+characters = {
+	URP_Fernando_Levi_Ruffinelli = {
+		name = URP_Fernando_Levi_Ruffinelli
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/URP/Portrait_URP_Fernando_Levi_Ruffinelli.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FERNANDO_RUFFINELLI"
+			expire = "1999.1.1"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+}

@@ -58,7 +58,7 @@ leader_traits = {
 		ai_will_do = { factor = 1 }
 	}
 
-	career_burocrat = {
+	career_bureaucrat = {
 		random = no
 		political_power_gain = 0.20
 
@@ -99,45 +99,57 @@ leader_traits = {
 
 	iberian_council_trait = {
 		random = no
-		stability_factor = 0.05
-		political_power_gain = 0.05
+		political_power_gain = 0.2
+		stability_factor = 0.1
 		ai_will_do = { factor = 1 }
 	}
 
 	strong_salazar_trait = {
 		random = no
-		stability_factor = -0.07
-		interest_rate_modifier = 0.02
-		inflation_rate_modifier = -0.1
+		political_power_gain = 0.15
+		production_speed_buildings_factor = 0.1
+		interest_rate_modifier = -3.5
+		ai_will_do = { factor = 1 }
+	}
+	weak_salazar_trait = {
+		random = no
+		political_power_gain = 0.15
+		production_speed_buildings_factor = 0.075
+		interest_rate_modifier = -2
+		ai_will_do = { factor = 1 }
+	}
+
+	advisor_salazar_trait = {
+		random = no
+		political_power_gain = 0.1
+		production_speed_buildings_factor = 0.075
+		interest_rate_modifier = -1.25
 		ai_will_do = { factor = 1 }
 	}
 
 	strong_franco_trait = {
 		random = no
-		stability_factor = -0.1
+		political_power_gain = 0.15
 		training_time_army_factor = -0.1
-		conscription_factor = 0.05
-		army_morale_factor = 0.1
-		army_defence_factor = 0.1
-		army_attack_factor = 0.1
+		army_defence_factor = 0.075
+		army_attack_factor = 0.075
 
 		ai_will_do = { factor = 1 }
 	}
-
 	weak_franco_trait = {
 		random = no
-		training_time_army_factor = -0.05
-		conscription_factor = 0.02
-		army_morale_factor = 0.05
+		political_power_gain = 0.15
+		training_time_army_factor = -0.075
 		army_defence_factor = 0.05
 		army_attack_factor = 0.05
 		ai_will_do = { factor = 1 }
 	}
-
-	weak_salazar_trait = {
+	advisor_franco_trait = {
 		random = no
-		interest_rate_modifier = 0.01
-		inflation_rate_modifier = -0.2
+		political_power_gain = 0.1
+		training_time_army_factor = -0.075
+		army_defence_factor = 0.05
+		army_attack_factor = 0.05
 		ai_will_do = { factor = 1 }
 	}
 
@@ -324,28 +336,6 @@ leader_traits = {
 		random = no
 		political_power_gain = 0.05
 		production_speed_buildings_factor = 0.075
-		ai_will_do = { factor = 1 }
-	}
-
-	the_apathetic_reichskommissar = {	#Siegfried Kasche
-		random = no
-		stability_factor = 0.05
-		political_power_gain = -0.025
-		ai_will_do = { factor = 1 }
-	}
-
-	the_puritan_of_pleskau = {	#Herbert Backe
-		random = no
-		political_power_gain = 0.05
-		consumer_goods_use_modifier = -0.05
-		conscription_factor = -0.05
-		ai_will_do = { factor = 1 }
-	}
-
-	the_black_baron_of_basegi = {	#Sergey Protopopov
-		random = no
-		army_attack_factor = 0.025
-		army_defence_factor = 0.025
 		ai_will_do = { factor = 1 }
 	}
 
@@ -553,8 +543,8 @@ leader_traits = {
 	hog_junta_militar_latin = { # Junta Militar
 		random = no
 		political_power_gain = -0.5
-		offence = 0.2
-		defence = 0.2
+		army_attack_factor = 0.2
+		army_defence_factor = 0.2
 
 		ai_will_do = { factor = 1 }
 	}
@@ -626,7 +616,7 @@ leader_traits = {
 		random = no
 		stability_factor = 0.05
 		inflation_rate_modifier = 0.2
-		GDP_growth_modifier = 0.3
+		gdp_growth_modifier = 0.3
 		GNG_rnd_audio_video_modifier = 0.1
 
 		ai_will_do = { factor = 1 }
@@ -636,7 +626,7 @@ leader_traits = {
 		random = no
 		stability_factor = 0.075
 		inflation_rate_modifier = 0.1
-		GDP_growth_modifier = 0.35
+		gdp_growth_modifier = 0.35
 		GNG_rnd_audio_video_modifier = 0.15
 
 		ai_will_do = { factor = 1 }
@@ -646,7 +636,7 @@ leader_traits = {
 		random = no
 		stability_factor = 0.035
 		inflation_rate_modifier = 0.2
-		GDP_growth_modifier = 0.3
+		gdp_growth_modifier = 0.3
 		GNG_rnd_audio_video_modifier = 0.125
 
 		ai_will_do = { factor = 1 }
@@ -687,7 +677,7 @@ leader_traits = {
 		random = no
 		stability_factor = -0.05
 		political_power_gain = 0.15
-		GDP_growth_modifier = 0.15
+		gdp_growth_modifier = 0.15
 		GNG_rnd_computational_power_modifier = 0.1
 
 		ai_will_do = { factor = 1 }
@@ -697,7 +687,7 @@ leader_traits = {
 		random = no
 		stability_factor = 0.05
 		political_power_gain = 0.30
-		GDP_growth_modifier = 0.15
+		gdp_growth_modifier = 0.15
 		GNG_rnd_computational_power_modifier = 0.2
 		poverty_monthly_rate = -0.01
 
@@ -739,7 +729,7 @@ leader_traits = {
 	as_nanjing_so_too_guangdong = { # Nagano Shigeto
 		random = no
 		political_power_gain = -1
-		army_org_factor	= 0.1
+		army_org_factor = 0.1
 		army_attack_factor = 0.1
 
 		ai_will_do = { factor = 1 }
@@ -855,8 +845,7 @@ leader_traits = {
 
 	el_rey_pajaro = {
 		random = no
-		army_attack_factor = 0.1
-		political_power_gain = -0.5
+		political_power_gain = 0.15
 		stability_factor = -0.1
 
 		ai_will_do = { factor = 1 }
@@ -870,7 +859,7 @@ leader_traits = {
 
 	el_duce = {
 		random = no
-		fascism_drift = 0.02
+		political_power_gain = 0.25
 		war_support_factor = 0.1
 
 		ai_will_do = { factor = 1 }
@@ -888,7 +877,7 @@ leader_traits = {
 		random = no
 		army_attack_factor = 0.1
 		production_speed_infrastructure_factor = 0.1
-		production_factory_max_efficiency_factor = 0.03
+		production_factory_max_efficiency_factor = 0.05
 
 		ai_will_do = { factor = 1 }
 	}
@@ -1027,6 +1016,74 @@ leader_traits = {
 		political_power_factor = 0.15
 		#modifier that makes you lose less political trust in the mechanic
 
+		ai_will_do = { factor = 1 }
+	}
+	
+	the_cowed_prefect = { # Globotschnik
+		random = no
+		stability_factor = -0.1
+		political_power_factor = -0.15
+		war_support_factor = -0.125
+
+		ai_will_do = { factor = 1 }
+	}
+
+	the_cowed_prefect_1 = { # Globotschnik if the wehrmacht coup was avoided
+		random = no
+		stability_factor = -0.05
+		political_power_factor = -0.1
+		war_support_factor = -0.0625
+
+		ai_will_do = { factor = 1 }
+	}
+
+	last_of_the_heimwehr = { # Globotschnik wins against Helldorf
+		random = no
+		political_power_factor = 0.1
+		admin_efficiency_monthly_rate = -1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	rohms_diodochus = { # Helldorf
+		random = no
+		political_power_factor = 0.15
+		admin_costs_misc = 0.025
+
+		ai_will_do = { factor = 1 }
+	}
+
+	augur_of_the_secret_germany = { # Stauffenberg
+		random = no
+		war_support_factor = 0.1
+		compliance_gain = -0.05
+
+		ai_will_do = { factor = 1 }
+	}
+
+	the_russian_fuhrer = { # Oktan
+		random = no
+		political_power_factor = -0.15
+		compliance_gain = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	consul_of_kreisau = { # Schulenburg
+		random = no
+		stability_factor = -0.075
+		political_parties_policy_monthly_rate = 0.5
+
+		ai_will_do = { factor = 1 }
+	}
+
+	generalissimo_banzer = {
+		random = no
+		stability_factor = 0.1
+		war_support_factor = 0.1
+		army_attack_factor = 0.1
+		army_defence_factor = 0.1
+		decryption_factor = 0.1
 		ai_will_do = { factor = 1 }
 	}
 }

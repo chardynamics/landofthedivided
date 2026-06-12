@@ -1,0 +1,731 @@
+
+#Falangist Spain War Tree
+
+shared_focus = {
+	id = SPS_the_burning_peninsula
+	icon = GFX_focus_SPS_The_Burning_Peninsula
+	cost = 2
+	bypass = { always = yes }
+	x = 5
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_the_burning_peninsula"
+		custom_effect_tooltip = SPS_the_burning_peninsula_tt
+	}
+}
+
+shared_focus = {
+	id = SPS_the_end_of_weakness
+	icon = GFX_focus_SPS_end_of_weakness
+	cost = 2
+	prerequisite = { focus = SPS_the_burning_peninsula }
+	relative_position_id = SPS_the_burning_peninsula
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_the_end_of_weakness"
+		add_command_power = 15
+		add_stability = 0.05
+		TNO_improve_training_policy_effectiveness_med = yes
+		TNO_improve_army_professionalism_med = yes
+		set_temp_variable = { IBR_wars_opposition_temp = -3 }
+		IBR_wars_change_political_opposition = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_the_restoration_of_falangism
+	icon = GFX_focus_SPS_restoration_of_nationalism
+	cost = 2
+	prerequisite = { focus = SPS_the_burning_peninsula }
+	relative_position_id = SPS_the_burning_peninsula
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_the_restoration_of_falangism"
+		add_political_power = 65
+		add_war_support = 0.075
+		set_temp_variable = { IBR_wars_legitimacy_temp = 5 }
+		IBR_wars_change_legitimacy = yes
+
+	}
+}
+
+shared_focus = {
+	id = SPS_the_beginning_of_a_new_iberia
+	icon = GFX_focus_SPS_la_reconquista_comienza
+	cost = 2
+	prerequisite = { focus = SPS_the_end_of_weakness }
+	prerequisite = { focus = SPS_the_restoration_of_falangism }
+	relative_position_id = SPS_the_burning_peninsula
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_the_beginning_of_a_new_iberia"
+		add_political_power = 25
+		add_stability = 0.1
+		TNO_improve_admin_efficiency_med = yes
+		set_temp_variable = { IBR_wars_political_gain_temp = 0.15 }
+		IBR_wars_change_political_power_gain = yes
+		set_temp_variable = { IBR_wars_command_gain_temp = 0.1 }
+		IBR_wars_change_command_power_gain = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_in_the_souls_of_the_people
+	icon = GFX_focus_SPS_in_the_peoples_soul
+	cost = 2
+	ai_will_do = { factor = 1000 }
+	prerequisite = { focus = SPS_the_beginning_of_a_new_iberia }
+	relative_position_id = SPS_the_beginning_of_a_new_iberia
+	x = -3
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_in_the_souls_of_the_people"
+		add_political_power = 45
+		set_temp_variable = { IBR_wars_legitimacy_temp = 7.5 }
+		IBR_wars_change_legitimacy = yes
+		TNO_improve_public_meetings_policy_effectiveness_med = yes
+		TNO_improve_press_rights_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_and_on_the_battlefields
+	icon = GFX_focus_generic_the_snipers_plot
+	cost = 2
+	prerequisite = { focus = SPS_the_beginning_of_a_new_iberia }
+	relative_position_id = SPS_the_beginning_of_a_new_iberia
+	x = 8
+	y = 1
+	ai_will_do = { factor = 500 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_and_on_the_battlefields"
+		add_war_support = 0.02
+		set_temp_variable = { IBR_wars_army_attack_temp = 0.025 }
+		IBR_wars_change_army_attack = yes
+		set_temp_variable = { IBR_wars_army_organisation_temp = 0.02 }
+		IBR_wars_change_army_organisation = yes
+		set_temp_variable = { IBR_wars_recuitable_population_temp = 0.025 }
+		IBR_wars_change_recuitable_population = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_convincing_the_unconvinced
+	icon = GFX_focus_BRA_Convince_the_People
+	cost = 2
+	prerequisite = { focus = SPS_in_the_souls_of_the_people }
+	relative_position_id = SPS_in_the_souls_of_the_people
+	x = -1
+	y = 1
+	ai_will_do = { factor = 500 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_convincing_the_unconvinced"
+		set_temp_variable = { IBR_wars_legitimacy_temp = 5 }
+		IBR_wars_change_legitimacy = yes
+		TNO_improve_press_rights_policy_effectiveness_high = yes
+		TNO_improve_trade_unions_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_spreading_the_good_word
+	icon = GFX_focus_IBR_television_announcement
+	cost = 2
+	prerequisite = { focus = SPS_in_the_souls_of_the_people }
+	relative_position_id = SPS_in_the_souls_of_the_people
+	x = 1
+	y = 1
+	ai_will_do = { factor = 490 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_spreading_the_good_word"
+		add_political_power = 35
+		set_temp_variable = { IBR_wars_legitimacy_temp = 3.25 }
+		IBR_wars_change_legitimacy = yes
+		TNO_improve_religious_rights_policy_effectiveness_low = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_agencia_por_la_limpieza_social
+	icon = GFX_focus_GNS_point_out_dissidents
+	cost = 2
+	prerequisite = { focus = SPS_convincing_the_unconvinced }
+	relative_position_id = SPS_in_the_souls_of_the_people
+	x = -2
+	y = 2
+	ai_will_do = { factor = 650 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_agencia_por_la_limpieza_social"
+		tno_penal_system_worsen = yes
+		add_political_power = 35
+		set_temp_variable = { IBR_wars_opposition_temp = -5 }
+		IBR_wars_change_political_opposition = yes
+		TNO_improve_security_policy_effectiveness_high = yes
+		TNO_improve_penal_system_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_elevating_the_cause
+	icon = GFX_focus_SPS_Elevating_the_Cause
+	cost = 2
+	prerequisite = { focus = SPS_spreading_the_good_word }
+	relative_position_id = SPS_in_the_souls_of_the_people
+	x = 2
+	y = 2
+	ai_will_do = { factor = 500 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_elevating_the_cause"
+		add_political_power = 50
+		add_stability = 0.065
+		set_temp_variable = { IBR_wars_legitimacy_temp = 7.5 }
+		IBR_wars_change_legitimacy = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_the_foundations_of_a_state
+	icon = GFX_focus_generic_meet_bureaucrat_admin
+	cost = 2
+	prerequisite = { focus = SPS_convincing_the_unconvinced }
+	prerequisite = { focus = SPS_spreading_the_good_word }
+	relative_position_id = SPS_in_the_souls_of_the_people
+	x = 0
+	y = 2
+	ai_will_do = { factor = 600 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_the_foundations_of_a_state"
+		set_temp_variable = { IBR_wars_political_gain_temp = 0.215 }
+		IBR_wars_change_political_power_gain = yes
+		TNO_improve_admin_efficiency_high = yes
+		TNO_improve_political_parties_policy_effectiveness_med = yes
+		TNO_improve_security_policy_effectiveness_low = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_with_allies_amidst_the_union
+	icon = GFX_focus_MEX_partners_investment
+	cost = 2
+	prerequisite = { focus = SPS_agencia_por_la_limpieza_social }
+	prerequisite = { focus = SPS_the_foundations_of_a_state }
+	relative_position_id = SPS_in_the_souls_of_the_people
+	mutually_exclusive = { focus = SPS_with_traitors_surrounding_us }
+	x = -1
+	y = 3
+	ai_will_do = { factor = 500 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_with_allies_amidst_the_union"
+		add_political_power = 65
+		set_temp_variable = { IBR_wars_legitimacy_temp = 6.5 }
+		IBR_wars_change_legitimacy = yes
+		set_temp_variable = { money_reserves_temp = 0.15 }
+		econ_money_reserves_change_raw_money = yes
+		TNO_improve_political_parties_policy_effectiveness_med = yes
+		set_temp_variable = { IBR_wars_opposition_temp = 2 }
+		IBR_wars_change_political_opposition = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_with_traitors_surrounding_us
+	icon = GFX_focus_generic_firing_squad_execution
+	cost = 2
+	prerequisite = { focus = SPS_elevating_the_cause }
+	prerequisite = { focus = SPS_the_foundations_of_a_state }
+	relative_position_id = SPS_in_the_souls_of_the_people
+	mutually_exclusive = { focus = SPS_with_allies_amidst_the_union }
+	x = 1
+	y = 3
+	ai_will_do = { factor = 500 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_with_traitors_surrounding_us"
+		add_command_power = 25
+		set_temp_variable = { IBR_wars_opposition_temp = -7.5 }
+		IBR_wars_change_political_opposition = yes
+		set_temp_variable = { IBR_wars_legitimacy_temp = -2.5 }
+		IBR_wars_change_legitimacy = yes
+		TNO_improve_security_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_the_militias_take_hold
+	icon = GFX_focus_generic_quiet_on_the_plateau
+	cost = 2
+	prerequisite = { focus = SPS_and_on_the_battlefields }
+	relative_position_id = SPS_and_on_the_battlefields
+	x = -5
+	y = 1
+	ai_will_do = { factor = 1000 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_the_militias_take_hold"
+		set_temp_variable = { IBR_wars_recuitable_population_temp = 0.025 }
+		IBR_wars_change_recuitable_population = yes
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = SPS
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 500
+			producer = SPS
+		}
+		TNO_improve_conscription_policy_effectiveness_high = yes
+		TNO_worsen_military_supervision_policy_effectiveness_high = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_a_page_from_the_civil_war
+	icon = GFX_focus_generic_do_or_die_brigades
+	cost = 2
+	prerequisite = { focus = SPS_the_militias_take_hold }
+	relative_position_id = SPS_and_on_the_battlefields
+	mutually_exclusive = { focus = SPS_a_cohesive_fighting_force }
+	x = -6
+	y = 2
+	ai_will_do = { factor = 500 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_a_page_from_the_civil_war"
+		set_temp_variable = { IBR_wars_army_attack_temp = 0.025 }
+		IBR_wars_change_army_attack = yes
+		set_temp_variable = { IBR_wars_army_speed_temp = 0.05 }
+		IBR_wars_change_army_speed = yes
+		set_temp_variable = { IBR_wars_supply_consumption_temp = -0.025 }
+		IBR_wars_change_supply_consumption = yes
+		TNO_improve_army_professionalism_low = yes
+		TNO_improve_training_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_a_cohesive_fighting_force
+	icon = GFX_focus_ENG_the_crews_on_auxiliary
+	cost = 2
+	prerequisite = { focus = SPS_the_militias_take_hold }
+	relative_position_id = SPS_and_on_the_battlefields
+	mutually_exclusive = { focus = SPS_a_page_from_the_civil_war }
+	x = -4
+	y = 2
+	ai_will_do = { factor = 500 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_a_cohesive_fighting_force"
+		set_temp_variable = { IBR_wars_army_organisation_temp = 0.065 }
+		IBR_wars_change_army_organisation = yes
+		set_temp_variable = { IBR_wars_supply_consumption_temp = 0.025 }
+		IBR_wars_change_supply_consumption = yes
+		TNO_improve_army_professionalism_med = yes
+		TNO_improve_training_policy_effectiveness_high = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_maintaining_the_frontline
+	icon = GFX_focus_generic_reinforce_frontier
+	cost = 2
+	prerequisite = {
+		focus = SPS_a_page_from_the_civil_war
+		focus = SPS_a_cohesive_fighting_force
+	}
+	relative_position_id = SPS_and_on_the_battlefields
+	x = -5
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_maintaining_the_frontline"
+		add_political_power = 15
+		set_temp_variable = { IBR_wars_army_defense_temp = 0.045 }
+		IBR_wars_change_army_defense = yes
+		set_temp_variable = { IBR_wars_recuitable_population_temp = 0.025 }
+		IBR_wars_change_recuitable_population = yes
+		TNO_improve_army_professionalism_low = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_a_spanish_war_economy
+	icon = GFX_focus_generic_industrial_progress_green
+	cost = 2
+	prerequisite = { focus = SPS_and_on_the_battlefields }
+	relative_position_id = SPS_and_on_the_battlefields
+	x = 0
+	y = 1
+	ai_will_do = { factor = 100 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_a_spanish_war_economy"
+		set_temp_variable = { gdp_growth_temp = 0.45 }
+		econ_gdp_growth_change = yes
+		army_funding_maximal_increase_high = yes
+		army_funding_minimal_increase_high = yes
+		social_funding_maximal_decrease_high = yes
+		social_funding_minimal_decrease_high = yes
+		set_temp_variable = { econ_centralization_temp = 10 }
+		econ_centralization_change = yes
+		TNO_improve_industrial_expertise_med = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_making_use_of_international_aid
+	icon = GFX_focus_MEX_emergency_relief_package
+	cost = 2
+	prerequisite = { focus = SPS_a_spanish_war_economy }
+	relative_position_id = SPS_and_on_the_battlefields
+	x = -1
+	y = 2
+	ai_will_do = { factor = 100 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_making_use_of_international_aid"
+		set_temp_variable = { gdp_growth_temp = 0.25 }
+		econ_gdp_growth_change = yes
+		set_temp_variable = { money_reserves_temp = 0.5 }
+		econ_money_reserves_change_raw_money = yes
+		set_temp_variable = { interest_rates_temp = -0.5 }
+		econ_interest_rates_change = yes
+		set_temp_variable = { homefront_commodities_total_temp = 10 }
+		IBR_wars_change_hc_quantity = yes
+		TNO_improve_poverty_med = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_mobilize_the_industries
+	icon = GFX_focus_generic_arms_factory_red
+	cost = 2
+	prerequisite = { focus = SPS_a_spanish_war_economy }
+	relative_position_id = SPS_and_on_the_battlefields
+	x = 1
+	y = 2
+	ai_will_do = { factor = 500 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_mobilize_the_industries"
+		set_temp_variable = { gdp_growth_temp = 0.35 }
+		econ_gdp_growth_change = yes
+		set_temp_variable = { IBR_wars_free_prod_units_temp = 2 }
+		IBR_wars_change_free_prod_units = yes
+		set_temp_variable = { hc_production_core_states_temp = 0.05 }
+		IBR_wars_change_hc_production_core_states_modifier = yes
+		TNO_improve_industrial_expertise_med = yes
+		TNO_improve_industrial_equipment_med = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_the_question_of_logistics
+	icon = GFX_focus_generic_accept_their_aid
+	cost = 2
+	prerequisite = { focus = SPS_making_use_of_international_aid }
+	prerequisite = { focus = SPS_mobilize_the_industries }
+	relative_position_id = SPS_and_on_the_battlefields
+	x = 0
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_the_question_of_logistics"
+		set_temp_variable = { hc_consumption_population_temp = -0.05 }
+		IBR_wars_change_hc_consumption_population_modifier = yes
+		set_temp_variable = { IBR_wars_supply_consumption_temp = -0.05 }
+		IBR_wars_change_supply_consumption = yes
+		set_temp_variable = { IBR_wars_opposition_temp = 3 }
+		IBR_wars_change_political_opposition = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_the_old_guard_rises_strong
+	icon = GFX_focus_IBR_falangist_flag
+	cost = 2
+	prerequisite = { focus = SPS_and_on_the_battlefields }
+	relative_position_id = SPS_and_on_the_battlefields
+	x = 5
+	y = 1
+	ai_will_do = { factor = 500 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_the_old_guard_rises_strong"
+		set_temp_variable = { IBR_wars_political_gain_temp = 0.15 }
+		IBR_wars_change_political_power_gain = yes
+		set_temp_variable = { IBR_wars_max_command_temp = 5 }
+		IBR_wars_change_max_command_power = yes
+		set_temp_variable = { IBR_wars_army_speed_temp = -0.065 }
+		IBR_wars_change_army_speed = yes
+		TNO_improve_admin_efficiency_med = yes
+		TNO_improve_army_professionalism_med = yes
+		TNO_improve_political_parties_policy_effectiveness_med = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_pulling_from_the_unions_ranks
+	icon = GFX_focus_IBR_iberian_army
+	cost = 2
+	prerequisite = { focus = SPS_the_old_guard_rises_strong }
+	relative_position_id = SPS_and_on_the_battlefields
+	mutually_exclusive = { focus = SPS_a_pure_movement }
+	x = 4
+	y = 2
+	ai_will_do = { factor = 100 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_pulling_from_the_unions_ranks"
+		set_temp_variable = { IBR_wars_recuitable_population_temp = 0.03 }
+		IBR_wars_change_recuitable_population = yes
+		set_temp_variable = { IBR_wars_army_organisation_temp = 0.05 }
+		IBR_wars_change_army_organisation = yes
+		TNO_improve_army_professionalism_med = yes
+		TNO_improve_conscription_policy_effectiveness_med = yes
+		set_temp_variable = { IBR_wars_legitimacy_temp = 3 }
+		IBR_wars_change_legitimacy = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_a_pure_movement
+	icon = GFX_focus_IBR_new_blue_division
+	cost = 2
+	prerequisite = { focus = SPS_the_old_guard_rises_strong }
+	relative_position_id = SPS_and_on_the_battlefields
+	mutually_exclusive = { focus = SPS_pulling_from_the_unions_ranks }
+	x = 6
+	y = 2
+	ai_will_do = { factor = 100 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_a_pure_movement"
+		set_temp_variable = { IBR_wars_army_attack_temp = 0.015 }
+		IBR_wars_change_army_attack = yes
+		set_temp_variable = { IBR_wars_army_defense_temp = 0.02 }
+		IBR_wars_change_army_defense = yes
+		TNO_improve_political_parties_policy_effectiveness_med = yes
+		TNO_improve_army_professionalism_low = yes
+		set_temp_variable = { IBR_wars_opposition_temp = -3 }
+		IBR_wars_change_political_opposition = yes
+
+	}
+}
+
+shared_focus = {
+	id = SPS_a_competent_high_command
+	icon = GFX_focus_generic_military_contacts
+	cost = 2
+	prerequisite = {
+		focus = SPS_pulling_from_the_unions_ranks
+		focus = SPS_a_pure_movement
+	}
+	relative_position_id = SPS_and_on_the_battlefields
+	x = 5
+	y = 3
+	ai_will_do = { factor = 100 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_a_competent_high_command"
+		army_experience = 15
+		add_command_power = 10
+		set_temp_variable = { IBR_wars_command_gain_temp = 0.2 }
+		IBR_wars_change_command_power_gain = yes
+		TNO_improve_army_professionalism_high = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_a_defensive_doctrine
+	icon = GFX_focus_YUN_the_best_defense
+	cost = 2
+	prerequisite = { focus = SPS_maintaining_the_frontline }
+	prerequisite = { focus = SPS_the_question_of_logistics }
+	prerequisite = { focus = SPS_a_competent_high_command }
+	relative_position_id = SPS_and_on_the_battlefields
+	mutually_exclusive = { focus = SPS_grinding_at_the_union }
+	mutually_exclusive = { focus = SPS_breaking_the_stalemates }
+	mutually_exclusive = { focus = SPS_striking_down_from_the_skies }
+	x = -3
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_a_defensive_doctrine"
+		set_temp_variable = { IBR_wars_army_defense_temp = 0.1 }
+		IBR_wars_change_army_defense = yes
+		set_temp_variable = { IBR_wars_army_attack_temp = -0.1 }
+		IBR_wars_change_army_attack = yes
+		set_temp_variable = { IBR_wars_supply_consumption_temp = -0.1 }
+		IBR_wars_change_supply_consumption = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_grinding_at_the_union
+	icon = GFX_focus_generic_for_power
+	cost = 2
+	prerequisite = { focus = SPS_maintaining_the_frontline }
+	prerequisite = { focus = SPS_the_question_of_logistics }
+	prerequisite = { focus = SPS_a_competent_high_command }
+	relative_position_id = SPS_and_on_the_battlefields
+	mutually_exclusive = { focus = SPS_a_defensive_doctrine }
+	mutually_exclusive = { focus = SPS_breaking_the_stalemates }
+	mutually_exclusive = { focus = SPS_striking_down_from_the_skies }
+	x = -1
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_grinding_at_the_union"
+		set_temp_variable = { IBR_wars_army_attack_temp = 0.025 }
+		IBR_wars_change_army_attack = yes
+		set_temp_variable = { IBR_wars_army_organisation_temp = 0.065 }
+		IBR_wars_change_army_organisation = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_breaking_the_stalemates
+	icon = GFX_focus_generic_modern_counterinsurgency
+	cost = 2
+	prerequisite = { focus = SPS_maintaining_the_frontline }
+	prerequisite = { focus = SPS_the_question_of_logistics }
+	prerequisite = { focus = SPS_a_competent_high_command }
+	relative_position_id = SPS_and_on_the_battlefields
+	mutually_exclusive = { focus = SPS_a_defensive_doctrine }
+	mutually_exclusive = { focus = SPS_grinding_at_the_union }
+	mutually_exclusive = { focus = SPS_striking_down_from_the_skies }
+	x = 1
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_breaking_the_stalemates"
+		set_temp_variable = { IBR_wars_army_attack_temp = 0.065 }
+		IBR_wars_change_army_attack = yes
+		set_temp_variable = { IBR_wars_army_speed_temp = 0.0.45 }
+		IBR_wars_change_army_speed = yes
+		set_temp_variable = { IBR_wars_army_organisation_temp = -0.1 }
+		IBR_wars_change_army_organisation = yes
+	}
+}
+
+shared_focus = {
+	id = SPS_striking_down_from_the_skies
+	icon = GFX_focus_generic_bomb_em_into_the_stone_age
+	cost = 2
+	prerequisite = { focus = SPS_maintaining_the_frontline }
+	prerequisite = { focus = SPS_the_question_of_logistics }
+	prerequisite = { focus = SPS_a_competent_high_command }
+	relative_position_id = SPS_and_on_the_battlefields
+	mutually_exclusive = { focus = SPS_a_defensive_doctrine }
+	mutually_exclusive = { focus = SPS_grinding_at_the_union }
+	mutually_exclusive = { focus = SPS_breaking_the_stalemates }
+	x = 3
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_striking_down_from_the_skies"
+		if = {
+			limit = {
+				has_tech = fighter_1970
+			}
+			add_equipment_to_stockpile = {
+			type = jet_fighter_equipment_3
+			amount = 20
+			producer = SPS
+			}
+		}
+		else_if = {
+			limit = {
+				has_tech = fighter_1960
+			}
+			add_equipment_to_stockpile = {
+			type = jet_fighter_equipment_2
+			amount = 20
+			producer = SPS
+			}
+		}
+		else_if = {
+			limit = {
+				has_tech = fighter_1950
+			}
+			add_equipment_to_stockpile = {
+			type = jet_fighter_equipment_1
+			amount = 20
+			producer = SPS
+			}
+		}
+		else_if = {
+			limit = {
+				has_tech = fighter_1945
+			}
+			add_equipment_to_stockpile = {
+			type = fighter_equipment_1
+			amount = 20
+			producer = SPS
+			}
+		}
+		if = {
+			limit = {
+				has_tech = heavy_air_1970
+			}
+			add_equipment_to_stockpile = {
+			type = jet_strat_bomber_equipment_3
+			amount = 20
+			producer = SPS
+			}
+		}
+		else_if = {
+			limit = {
+				has_tech = heavy_air_1960
+			}
+			add_equipment_to_stockpile = {
+			type = jet_strat_bomber_equipment_2
+			amount = 20
+			producer = SPS
+			}
+		}
+		else_if = {
+			limit = {
+				has_tech = heavy_air_1950
+			}
+			add_equipment_to_stockpile = {
+			type = jet_strat_bomber_equipment_1
+			amount = 20
+			producer = SPS
+			}
+		}
+		else_if = {
+			limit = {
+				has_tech = heavy_air_1945
+			}
+			add_equipment_to_stockpile = {
+			type = strat_bomber_equipment_1
+			amount = 20
+			producer = SPS
+			}
+		}
+		SPR = {
+			set_temp_variable = { IBR_wars_army_organisation_temp = -0.02 }
+			IBR_wars_change_army_organisation = yes
+			set_temp_variable = { IBR_wars_supply_consumption_temp = -0.02 }
+			IBR_wars_change_supply_consumption = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = SPS_por_la_patria_el_pan_y_la_justicia
+	icon = GFX_focus_SPS_por_la_patria_pan_justicia
+	cost = 2
+	prerequisite = {
+		focus = SPS_with_allies_amidst_the_union
+		focus = SPS_with_traitors_surrounding_us
+	}
+	prerequisite = {
+		focus = SPS_a_defensive_doctrine
+		focus = SPS_grinding_at_the_union
+		focus = SPS_breaking_the_stalemates
+		focus = SPS_striking_down_from_the_skies
+	}
+	relative_position_id = SPS_the_beginning_of_a_new_iberia
+	x = 0
+	y = 6
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus SPS_por_la_patria_el_pan_y_la_justicia"
+		add_political_power = 75
+		add_command_power = 25
+		set_temp_variable = { IBR_wars_legitimacy_temp = 5 }
+		IBR_wars_change_legitimacy = yes
+		set_temp_variable = { IBR_wars_army_attack_temp = 0.0725 }
+		IBR_wars_change_army_attack = yes
+		TNO_improve_conscription_policy_effectiveness_high = yes
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+	}
+}

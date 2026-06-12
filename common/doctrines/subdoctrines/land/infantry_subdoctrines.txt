@@ -1,0 +1,710 @@
+light_infantry_primacy = { #Buffing Light Infantry
+	track = infantry
+	name = SUBDOCTRINE_LIGHT_INFANTRY_PRIMACY
+	description = SUBDOCTRINE_LIGHT_INFANTRY_PRIMACY_DESC
+	icon = GFX_marine_elite_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		has_doctrine = unconventional_warfare
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+			name = infantry_weapons
+		}
+	}
+	light_infantry = {
+		default_morale = 0.1
+		max_organisation = 10
+	}
+
+	rewards = {
+		flesh_and_bone = {
+			light_infantry = {
+				max_organisation = 5
+				default_morale = 0.1
+				defense = 0.05
+			}
+		}
+		flood_the_field = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = logistics_tech
+					name = logistics_tech
+				}
+			}
+			land_reinforce_rate = 0.02
+			training_time_army_factor = -0.10
+			light_infantry = {
+				default_morale = 0.1
+				supply_consumption = -0.1
+			}
+		}
+		fob_mastery = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = recon_tech
+					name = recon_tech
+				}
+			}
+			dig_in_speed_factor = 0.5
+			light_infantry = {
+				defense = 0.15
+				entrenchment = 2
+				breakthrough = 0.1
+				ap_attack = 0.1
+			}
+			logistics_company = {
+				max_organisation = 10
+				default_morale = 0.1
+				defense = 0.1
+			}
+		}
+		fire_force = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+					name = infantry_weapons
+				}
+			}
+			enable_tactic = tactic_infantry_charge
+			army_speed_factor = 0.1
+			light_infantry = {
+				breakthrough = 0.15
+				max_organisation = 5
+			}
+			signal_company = {
+				max_organisation = 10
+				default_morale = 0.1
+				defense = 0.1
+			}
+		}
+		wolf_warriors = {
+			experience_gain_army_unit_factor = 0.15
+			light_infantry = {
+				experience_loss_factor = -0.15
+				entrenchment = 2
+				max_organisation = 10
+				equipment_capture_factor = 0.01
+			}
+			recon = {
+				defense = 0.15
+				breakthrough = 0.1
+				recon = 2
+				ap_attack = 0.1
+			}
+		}
+	}
+}
+
+regular_infantry_primacy = { #Buffing Regular Infantry
+	track = infantry
+	name = SUBDOCTRINE_REGULAR_INFANTRY_PRIMACY
+	description = SUBDOCTRINE_REGULAR_INFANTRY_PRIMACY_DESC
+	icon = GFX_conscription_reserves_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		NOT = { has_doctrine = unconventional_warfare }
+		NOT = { has_doctrine = maneuver_warfare }
+	}
+
+	ai_will_do = {
+		base = 5 #Default, thus lower base AI weight
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+			name = infantry_weapons
+		}
+	}
+	infantry = {
+		default_morale = 0.1
+		max_organisation = 10
+	}
+
+	rewards = {
+		discipline_and_vigor = {
+			infantry = {
+				max_organisation = 5
+				default_morale = 0.1
+				maximum_speed = 0.1
+				supply_consumption = -0.1
+			}
+			military_police = {
+				max_organisation = 10
+				default_morale = 0.2
+				experience_loss_factor = -0.1
+			}
+		}
+		diy_households = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = engineers_tech
+					name = engineers_tech
+				}
+			}
+			infantry = {
+				max_organisation = 5
+				defense = 0.05
+				entrenchment = 2
+			}
+			engineer = {
+				max_organisation = 10
+				default_morale = 0.2
+				entrenchment = 5
+			}
+		}
+		no_mountain_too_high = {
+			enable_tactic = tactic_infantry_charge
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = mountaineers_tech
+					name = mountaineers_tech
+				}
+			}
+			mountaineers = {
+				max_organisation = 15
+				default_morale = 0.1
+				defense = 0.05
+				breakthrough = 0.1
+				entrenchment = 4
+			}
+		}
+		all_the_bells_and_whistles = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = hospital_tech
+					name = hospital_tech
+				}
+			}
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = maintenance_company_tech
+					name = maintenance_company_tech
+				}
+			}
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = signal_company_tech
+					name = signal_company_tech
+				}
+			}
+			field_hospital = {
+				default_morale = 0.1
+				max_organisation = 0.1
+				casualty_trickleback = 0.05
+				experience_loss_factor = -0.05
+			}
+			maintenance_company = {
+				default_morale = 0.1
+				max_organisation = 0.1
+				reliability_factor = 0.05
+				equipment_capture_factor = 0.05
+			}
+			signal_company = {
+				default_morale = 0.1
+				max_organisation = 0.1
+				initiative = 0.05
+				equipment_capture_factor = 0.05
+			}
+		}
+		hearts_of_iron = {
+			elite_infantry = {
+				max_organisation = 10
+				defense = 0.05
+				entrenchment = 3
+				maximum_speed = 0.1
+				supply_consumption = -0.1
+			}
+			infantry = {
+				ap_attack = 0.1
+				soft_attack = 0.1
+				hard_attack = 0.1
+			}
+			mountaineers = {
+				ap_attack = 0.1
+				soft_attack = 0.1
+				hard_attack = 0.1
+				max_organisation = 5
+			}
+		}
+
+	}
+}
+
+motorized_infantry_primacy = { #Buffing Motorized Infantry
+	track = infantry
+	name = SUBDOCTRINE_MOTORIZED_INFANTRY_PRIMACY
+	description = SUBDOCTRINE_MOTORIZED_INFANTRY_PRIMACY_DESC
+	icon = GFX_army_supply_chain_extension_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		has_doctrine = maneuver_warfare
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = { #Please update me for DV
+			factor = 0
+			NOT = { #KD's Notes - Yeah, sorry but I doubt any of the other AI tags can produce it
+				tag = WRS
+				tag = OMS
+				tag = TYM
+				tag = NOV
+			}
+		}
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = motorized_equipment
+			name = motorized_equipment
+		}
+	}
+	motorized = {
+		default_morale = 0.1
+		max_organisation = 10
+	}
+
+	rewards = {
+		five_minute_pitstops = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = maintenance_company_tech
+					name = maintenance_company_tech
+				}
+			}
+			motorized = {
+				default_morale = 0.1
+				supply_consumption = -0.1
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					reliability = 0.05
+				}
+			}
+			maintenance_company = {
+				default_morale = 0.1
+				max_organisation = 0.1
+				reliability_factor = 0.1
+				equipment_capture_factor = 0.05
+			}
+		}
+		need_for_speed = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = recon_tech
+					name = recon_tech
+				}
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					maximum_speed = 0.1
+					equipment_capture_factor = 0.01
+				}
+			}
+			mot_recon = {
+				maximum_speed = 0.1
+				default_morale = 0.1
+				max_organisation = 0.1
+				recon = 1
+				equipment_capture_factor = 0.05
+			}
+		}
+		burnin_rubber_savin_lives = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = hospital_tech
+					name = hospital_tech
+				}
+			}
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = logistics_tech
+					name = logistics_tech
+				}
+			}
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = signal_company_tech
+					name = signal_company_tech
+				}
+			}
+			logistics_company = {
+				default_morale = 0.1
+				max_organisation = 0.1
+				casualty_trickleback = 0.05
+				experience_loss_factor = -0.05
+			}
+			field_hospital = {
+				default_morale = 0.1
+				max_organisation = 0.1
+				casualty_trickleback = 0.05
+				experience_loss_factor = -0.05
+			}
+			signal_company = {
+				default_morale = 0.1
+				max_organisation = 0.1
+				initiative = 0.05
+				equipment_capture_factor = 0.05
+			}
+		}
+		it_followed_me_home = {
+			motorized = {
+				equipment_capture_factor = 0.01
+			}
+			mot_artillery_brigade = {
+				default_morale = 0.1
+				max_organisation = 10
+				supply_consumption = -0.1
+				reliability = 0.1
+			}
+
+			mot_anti_air_brigade = {
+				default_morale = 0.1
+				max_organisation = 10
+				supply_consumption = -0.1
+				reliability = 0.1
+			}
+		}
+		wheels_of_steel = {
+			motorized = {
+				max_organisation = 15
+				ap_attack = 0.1
+				soft_attack = 0.15
+				hard_attack = 0.15
+				experience_loss_factor = -0.01
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					maximum_speed = 0.1
+					reliability = 0.05
+				}
+			}
+		}
+	}
+}
+
+mechanized_infantry_primacy = { #Buffing Mechanized Infantry
+	track = infantry
+	name = SUBDOCTRINE_MECHANIZED_INFANTRY_PRIMACY
+	description = SUBDOCTRINE_MECHANIZED_INFANTRY_PRIMACY_DESC
+	icon = GFX_armored_cavalry_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		has_doctrine = maneuver_warfare
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = { #Please update me for DV
+			factor = 0
+			NOT = { #KD's Notes - Yeah, sorry but I doubt any of the other AI tags can produce it
+				tag = USA
+				tag = GER
+				tag = CAN
+				tag = AST
+				tag = ENG
+			}
+		}
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = APC
+			name = APC
+		}
+	}
+	APC = {
+		default_morale = 0.1
+		max_organisation = 10
+	}
+
+	rewards = {
+		top_gear = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = maintenance_company_tech
+					name = maintenance_company_tech
+				}
+			}
+			equipment_bonus = {
+				APC_chassis = {
+					maximum_speed = 0.1
+					reliability = 0.05
+				}
+			}
+			maintenance_company = {
+				default_morale = 0.1
+				max_organisation = 0.1
+				reliability_factor = 0.1
+				equipment_capture_factor = 0.05
+			}
+		}
+		all_inclusive_transportation = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = hospital_tech
+					name = hospital_tech
+				}
+			}
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = logistics_tech
+					name = logistics_tech
+				}
+			}
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = signal_company_tech
+					name = signal_company_tech
+				}
+			}
+			APC = {
+				equipment_capture_factor = 0.01
+				casualty_trickleback = 0.01
+				experience_loss_factor = -0.01
+				default_morale = 0.1
+			}
+		}
+		fasten_your_ammo_belt = {
+			motorized = {
+				equipment_capture_factor = 0.01
+			}
+			APC = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+				ap_attack = 0.1
+				max_organisation = 5
+			}
+		}
+		hotshot_mentality = {
+			APC = {
+				breakthrough = 0.1
+				defense = 0.1
+				max_organisation = 5
+			}
+		}
+		twisted_metal = {
+			APC = {
+				max_organisation = 15
+				soft_attack = 0.15
+				hard_attack = 0.15
+				experience_loss_factor = -0.01
+			}
+			equipment_bonus = {
+				APC_chassis = {
+					reliability = 0.1
+				}
+			}
+		}
+	}
+}
+
+cavalry_infantry_primacy = { #Buffing... Cavalry?
+	track = infantry
+	name = SUBDOCTRINE_CAVALRY_INFANTRY_PRIMACY
+	description = SUBDOCTRINE_CAVALRY_INFANTRY_PRIMACY_DESC
+	icon = GFX_mounted_infantry_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		OR = {
+			has_doctrine = unconventional_warfare
+			has_doctrine = maneuver_warfare
+		}
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = { #Please update me for DV
+			factor = 0
+			NOT = { #KD's Notes - Why
+				tag = AZD
+				tag = MAU
+				tag = TRK
+				tag = KRK
+				tag = AFG
+				tag = YEM
+				tag = OMA
+				tag = NYM
+				tag = AYR
+				tag = MEN
+				tag = MAU
+				tag = SOK
+			}
+		}
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+			name = infantry_weapons
+		}
+	}
+	cavalry = {
+		default_morale = 0.1
+		max_organisation = 10
+	}
+
+	rewards = {
+		three_centuries_and_counting = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = recon_tech
+					name = recon_tech
+				}
+			}
+			org_loss_when_moving = -0.2
+			cavalry = {
+				max_organisation = 10
+				soft_attack = 0.1
+				recon = 1
+			}
+			recon = {
+				defense = 0.15
+				breakthrough = 0.1
+				recon = 2
+				ap_attack = 0.1
+			}
+		}
+		horse_drawn_pounder_carriages = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = cat_anti_air
+					name = cat_anti_air
+				}
+			}
+			anti_air = {
+				soft_attack = 0.1
+				max_organisation = 15
+			}
+			anti_tank = {
+				hard_attack = 0.1
+				max_organisation = 15
+			}
+			artillery = {
+				soft_attack = 0.1
+				max_organisation = 15
+			}
+			cavalry = {
+				hard_attack = 0.2
+				ap_attack = 0.5
+			}
+		}
+		mastering_nature = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = logistics_tech
+					name = logistics_tech
+				}
+			}
+			land_reinforce_rate = 0.01
+			org_loss_when_moving = -0.35
+			cavalry = {
+				max_organisation = 10
+				supply_consumption = -0.2
+			}
+			logistics_company = {
+				default_morale = 0.1
+				max_organisation = 15
+				casualty_trickleback = 0.05
+				experience_loss_factor = -0.05
+			}
+		}
+		ride_the_lightning = {
+			cavalry = {
+				equipment_capture_factor = 0.02
+				max_organisation = 5
+				breakthrough = 0.3
+				maximum_speed = 0.2
+			}
+		}
+
+		evil_intimidating_horse = {
+			cavalry = {
+				max_organisation = 15
+				max_strength = 0.2
+				breakthrough = 0.3
+				soft_attack = 0.25
+				hard_attack = 0.2
+				ap_attack = 0.2
+			}
+		}
+	}
+}

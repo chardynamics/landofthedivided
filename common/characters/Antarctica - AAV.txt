@@ -1,0 +1,19 @@
+characters = {
+	AAV_Julio_Musso = {
+		name = AAV_Julio_Musso
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Antarctica/Portrait_AAV_Julio_Musso.png"
+			}
+		}
+		country_leader = {
+			ideology = paternalism_antarctic_administration_subtype
+			expire = 1999.1.1
+			desc = POLITICS_JULIO_MUSSO_DESC
+			traits = {
+				liberalism
+			}
+			id = -1
+		}
+	}
+}

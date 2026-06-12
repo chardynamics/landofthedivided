@@ -1,0 +1,218 @@
+###BELIZE IDEAS###
+ideas = {
+	country = {
+		### Starting Ideas
+		BLZ_The_Fading_Order = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_The_Fading_Order" }
+
+			allowed = { always = no }
+			picture = BLZ_The_Fading_Order
+			removal_cost = -1
+
+			modifier = {
+				annual_gdp_growth_factor = -0.25
+				poverty_monthly_rate = -0.02
+				admin_efficiency_monthly_rate = -0.25
+				stability_factor = -0.15
+			}
+		}
+		BLZ_A_New_Home = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_A_New_Home" }
+
+			allowed = { always = no }
+			picture = BLZ_a_new_home
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_use_modifier = 0.10
+				income_tax_rate_modifier_factor = 0.05
+				business_tax_rate_modifier = 0.025
+			}
+		}
+		BLZ_A_City_Upon_A_Hill = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_A_City_Upon_A_Hill" }
+
+			allowed = { always = no }
+			picture = BLZ_a_city_upon_a_hill
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.15
+				admin_efficiency_monthly_rate = 0.5
+				offices_coverage_modifier = 0.10
+			}
+		}
+		BLZ_Insecurity_State = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_Insecurity_State" }
+
+			allowed = { always = no }
+			picture = BLZ_Insecurity_State
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				extra_trade_to_overlord_factor = -0.2
+				security_policy_monthly_rate = -0.15
+			}
+		}
+		BLZ_A_Nation_Under_Siege = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_A_Nation_Under_Siege" }
+
+			allowed = { always = no }
+			picture = BLZ_nation_under_siege
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.15
+				production_speed_naval_base_factor = 0.1
+				production_speed_air_base_factor = 0.1
+			}
+		}
+		BLZ_Colonial_Undertow = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_Colonial_Undertow" }
+
+			allowed = { always = no }
+			picture = BLZ_Colonial_Undertow
+			removal_cost = -1
+
+			modifier = {
+				gdp_growth_modifier = -0.50
+				poverty_monthly_rate = -0.03
+				agriculture_monthly_rate = -0.20
+				industrial_expertise_monthly_rate = -0.20
+			}
+		}
+		### Path-Specific Ideas
+		#Goldson
+		BLZ_Citrus_State = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_Citrus_State" }
+
+			allowed = { always = no }
+			picture = BLZ_Citrus_State
+			removal_cost = -1
+
+			modifier = {
+				gdp_growth_modifier = 3.50
+				poverty_monthly_rate = -0.01
+				agriculture_monthly_rate = 0.10
+				industrial_expertise_monthly_rate = 0.20
+				regulations_policy_monthly_rate = -0.15
+			}
+		}
+		BLZ_Democratic_Dawn = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_Democratic_Dawn" }
+
+			allowed = { always = no }
+			picture = BLZ_Democratic_Dawn
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.15
+				vote_franchise_policy_monthly_rate = 0.50
+				admin_efficiency_monthly_rate = 0.25
+			}
+		}
+		BLZ_Old_Wounds = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_Old_Wounds" }
+
+			allowed = { always = no }
+			picture = BLZ_Old_Wounds
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.15
+			}
+			targeted_modifier = {
+				tag = GUA
+				extra_trade_to_target_factor = -0.30
+			}
+		}
+		#Price
+		BLZ_Rural_Reform = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_Rural_Reform" }
+
+			allowed = { always = no }
+			picture = BLZ_Rural_Reform
+			removal_cost = -1
+
+			modifier = {
+				gdp_growth_modifier = 1.50
+				poverty_monthly_rate = 0.05
+				agriculture_monthly_rate = 0.40
+				industrial_expertise_monthly_rate = 0.10
+			}
+		}
+		BLZ_Look_Latin = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_Look_Latin" }
+
+			allowed = { always = no }
+			picture = BLZ_Look_Latin
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.1
+				misc_income_modifier = 0.07
+			}
+			targeted_modifier = {
+				tag = MEX
+				extra_trade_to_target_factor = 0.30
+			}
+		}
+		BLZ_Back_With_Bang = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_Back_With_Bang" }
+
+			allowed = { always = no }
+			picture = BLZ_Back_With_Bang
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.15
+				public_meetings_policy_monthly_rate = 0.50
+				admin_efficiency_monthly_rate = 0.25
+			}
+		}
+		#Fairweather
+		BLZ_Into_Hurricane = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_Into_Hurricane" }
+
+			allowed = { always = no }
+			picture = BLZ_Into_Hurricane
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.30
+				military_expenditures_factor = 0.05
+				army_defence_factor = 0.15
+			}
+		}
+		#Guatemala-Related
+		BLZ_New_Masters = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_New_Masters" }
+
+			allowed = { always = no }
+			picture = BLZ_New_Masters
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.3
+				war_support_factor = -0.05
+				extra_trade_to_overlord_factor = 0.50
+			}
+		}
+		BLZ_Compromise_Treaty = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BLZ_Compromise_Treaty" }
+
+			allowed = { always = no }
+			picture = BLZ_Compromise_Treaty
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = 0.15
+				annual_gdp_growth_factor = 0.25
+			}
+		}
+	}
+}

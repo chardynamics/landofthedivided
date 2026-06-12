@@ -1,0 +1,106 @@
+BRA_megaproject_development = {
+	production_units_use = BRA_megaproject_pus
+	political_power_cost = BRA_develop_pp_cost
+	misc_costs_modifier = BRA_megaproject_cost
+}
+
+BRA_development_modifier = {
+	monthly_population = BRA_development_monthly_population
+	taxable_population_modifier = BRA_development_taxable_population_modifier
+}
+
+BRA_corruption_level = {
+	enable = { always = yes }
+	political_power_gain = BRA_pp_gain
+	research_speed_factor = BRA_research_factor
+	consumer_goods_use_modifier = BRA_consumer_goods_factor
+}
+
+BRA_misc_costs_and_etc = {
+	enable = { always = yes }
+	misc_costs_modifier = BRA_misc_costs
+	misc_income_modifier = BRA_misc_income
+	gdp_growth_modifier = BRA_riots_gdp_growth_modifier
+	consumer_goods_production_factor = BRA_riots_prod_modifier
+	political_power_gain = BRA_riots_pp_modifier
+}
+
+BRA_udn_manage_dynmod = {
+	enable = { always = yes }
+	BRA_monthly_udn_loyalty_modifier = BRA_monthly_udn_loyalty
+	political_power_gain = BRA_udn_pp_gain
+}
+
+BRA_liberdade_on_fire_dynmod = {
+	enable = { always = yes }
+	political_power_gain = BRA_libertad_on_fire_pp
+	stability_weekly = BRA_libertad_on_fire_stab
+	command_power_gain = BRA_libertad_on_fire_cp
+	inflation_rate_modifier = BRA_libertad_on_fire_inflation
+	poverty_monthly_rate = BRA_libertad_on_fire_poverty 
+	health_care_policy_monthly_rate = BRA_libertad_on_fire_health
+	security_policy_monthly_rate = BRA_libertad_on_fire_sec
+	press_rights_policy_monthly_rate = BRA_libertad_on_fire_press
+	penal_system_policy_monthly_rate = BRA_libertad_on_fire_penal
+}
+BRA_liberdade_in_ashes_dynmod = {
+	enable = { always = yes }
+	stability_weekly = BRA_libertad_on_fire_stab
+	civilian_annual_cost = BRA_libertad_on_fire_spend
+	poverty_monthly_rate = BRA_libertad_on_fire_poverty
+	health_care_policy_monthly_rate = BRA_libertad_on_fire_health
+	security_policy_monthly_rate = BRA_libertad_on_fire_sec
+	press_rights_policy_monthly_rate = BRA_libertad_on_fire_press
+	education_policy_monthly_rate = BRA_libertad_on_fire_edu
+}
+
+BRA_udn_counterrevolution_dynmod = {
+	enable = { always = yes }
+	inflation_rate_modifier = BRA_fiscal_inflation_rate
+}
+
+BRA_lacerda_strikes_dynmod = {
+	enable = { always = yes }
+	gdp_growth_modifier = BRA_strikes_gdp_hit
+}
+
+BRA_crise_petrolifera_dynmod = {
+	icon = GFX_idea_BRA_brazils_black_swan_the_oil_crisis
+	enable = { always = yes }
+	gdp_growth_modifier = BRA_crise_petrolifera_gdp_growth
+	production_speed_buildings_factor = BRA_crise_petrolifera_construction_speed
+	production_factory_max_efficiency_factor = BRA_crise_petrolifera_factory_output
+	consumer_goods_use_modifier = BRA_crise_petrolifera_consumer_goods
+	base_fuel_gain_factor = BRA_crise_petrolifera_fuel_gain
+	war_support_factor = BRA_crise_petrolifera_war_support
+	org_loss_when_moving = BRA_crise_petrolifera_org_loss
+	admin_efficiency_monthly_rate = BRA_crise_petrolifera_admin_efficiency
+	misc_income_modifier = BRA_crise_petrolifera_misc_income
+	interest_rate_modifier = BRA_crise_petrolifera_interest_rate
+}
+
+BRA_guanabara_dreaming_state_modifier = {
+	icon = GFX_idea_BRA_guanabara_dreaming
+	enable = { always = yes }
+
+	state_production_speed_buildings_factor = BRA.BRA_guanabara_state_production_speed_buildings_factor
+	poverty_monthly_rate = BRA.BRA_guanabara_poverty_monthly_rate
+	stability_factor = BRA.BRA_guanabara_stability_factor
+	free_production_units_modifier = BRA.BRA_guanabara_free_production_units_modifier
+	gdp_growth_modifier = BRA.BRA_guanabara_gdp_growth_modifier
+	inflation_rate_modifier = BRA.BRA_guanabara_inflation_rate_modifier
+	political_power_factor = BRA.BRA_guanabara_political_power_factor
+	admin_efficiency_monthly_rate = BRA.BRA_guanabara_admin_efficiency_monthly_rate
+}
+
+BRA_guanabara_dreaming_state_modifier_natspirit = { # National dynmod for non-state effects displayed on Guanabara Dreaming state modifier
+	enable = { always = yes }
+
+	poverty_monthly_rate = BRA.BRA_guanabara_poverty_monthly_rate
+	stability_factor = BRA.BRA_guanabara_stability_factor
+	free_production_units_modifier = BRA.BRA_guanabara_free_production_units_modifier
+	gdp_growth_modifier = BRA.BRA_guanabara_gdp_growth_modifier
+	inflation_rate_modifier = BRA.BRA_guanabara_inflation_rate_modifier
+	political_power_factor = BRA.BRA_guanabara_political_power_factor
+	admin_efficiency_monthly_rate = BRA.BRA_guanabara_admin_efficiency_monthly_rate
+}

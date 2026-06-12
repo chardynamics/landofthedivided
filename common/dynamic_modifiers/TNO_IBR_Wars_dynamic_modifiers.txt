@@ -1,0 +1,103 @@
+Iberian_Wars_dynamic_modifier = {
+	enable = { always = yes }
+	political_power_gain = political_power_gain_ibrwars
+	command_power_gain = command_power_gain_ibrwars
+	max_command_power = max_command_power_ibrwars
+	conscription_factor = conscription_factor_ibrwars
+	supply_consumption_factor = supply_consumption_factor_ibrwars
+	army_org_factor = army_org_factor_ibrwars
+	army_speed_factor = army_speed_factor_ibrwars
+	army_attack_factor = army_attack_factor_ibrwars
+	army_defence_factor = army_defence_factor_ibrwars
+	minimum_training_level = minimum_training_level_ibrwars
+	production_factory_max_efficiency_factor = max_efficiency_factor_ibrwars
+	production_factory_efficiency_gain_factor = efficiency_gain_factor_ibrwars
+	production_speed_buildings_factor = speed_buildings_factor_ibrwars
+	free_production_units_modifier = free_prod_units_ibrwars
+	consumer_goods_use_modifier = consumer_goods_use_ibrwars
+	supply_node_range = supply_node_range_ibrwars
+	gdp_growth_modifier = -3.5
+}
+
+Iberian_Wars_energy_dynamic_modifier = {
+	enable = { always = yes }
+	country_resource_power = extra_power_ibrwars
+}
+
+Iberian_Wars_homefront_commodities_dynamic_modifier = {
+	enable = { always = yes }
+	IBR_wars_hc_production_base = hc_production_base_ibrwars
+	IBR_wars_hc_production_core_states = hc_production_core_states_ibrwars
+	IBR_wars_hc_production_occupied_states = hc_production_occupied_states_ibrwars
+	IBR_wars_hc_consumption_base = hc_consumption_base_ibrwars
+	IBR_wars_hc_consumption_population = hc_consumption_population_ibrwars
+	IBR_wars_hc_consumption_core_states = hc_consumption_core_states_ibrwars
+	IBR_wars_hc_consumption_occupied_states = hc_consumption_occupied_states_ibrwars
+}
+
+Iberian_Wars_legitimacy_opposition_dynamic_modifier = {
+	enable = { always = yes }
+	#Legitimacy part
+	war_support_weekly = war_support_weekly_ibrwars
+	mobilization_speed = mobilization_speed_ibrwars
+	compliance_growth = compliance_growth_ibrwars
+	#Internal opposition part
+	stability_weekly = stability_weekly_ibrwars
+	non_core_manpower = non_core_manpower_ibrwars
+	political_power_gain = political_power_gain_opp_ibrwars
+}
+
+Iberian_Wars_hc_effects_dynamic_modifier = {
+	free_production_units_modifier = hc_effects_free_pus_ibrwars
+	supply_consumption_factor = hc_effects_supply_factor_ibrwars
+}
+
+Iberian_Wars_target_supply_state_dynamic_modifier = {
+	enable = { always = yes }
+	local_supplies_for_controller = -0.25
+}
+
+Iberian_Wars_reorganize_units_state_dynamic_modifier = {
+	enable = { always = yes }
+	army_speed_factor = 0.25
+	army_org_factor = 0.25
+	army_attack_factor = -0.1
+	army_defence_factor = -0.1
+}
+
+Iberian_Wars_defensive_focus_state_dynamic_modifier = {
+	enable = { always = yes }
+	army_defence_factor = 0.25
+}
+
+Iberian_Wars_offensive_focus_state_dynamic_modifier = {
+	enable = { always = yes }
+	army_attack_factor = 0.25
+}
+
+Iberian_Wars_planned_offensive_state_dynamic_modifier = {
+	enable = { always = yes }
+	remove_trigger = {
+		THIS = {
+			is_controlled_by = ROOT
+		}
+	}
+	attacker_modifier = yes
+	army_attack_factor = 0.25
+	army_org_factor = 0.15
+	army_speed_factor = 0.1
+	air_cas_efficiency = 0.15
+}
+
+Iberian_Wars_supplied_resistance_state_dynamic_modifier = {
+	enable = { always = yes }
+	remove_trigger = {
+		THIS = {
+			is_controlled_by = ROOT
+		}
+	}
+	army_defence_factor = -0.1
+	army_speed_factor = -0.1
+	attrition = 0.2
+
+}

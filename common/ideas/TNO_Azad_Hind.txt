@@ -1,0 +1,572 @@
+ideas = {
+	###############
+	# Hidden ideas
+	###############
+	hidden_ideas = {
+		AZH_JAP_military_advisors_0 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_JAP_military_advisors_0" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.1
+			}
+		}
+		AZH_JAP_military_advisors_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_JAP_military_advisors_1" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.2
+			}
+		}
+		AZH_JAP_military_advisors_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_JAP_military_advisors_2" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.3
+			}
+		}
+		AZH_JAP_military_advisors_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_JAP_military_advisors_3" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.4
+			}
+		}
+		AZH_JAP_military_advisors_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_JAP_military_advisors_4" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.5
+			}
+		}
+		AZH_JAP_administrative_assistance_0 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_JAP_administrative_assistance_0" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		AZH_JAP_administrative_assistance_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_JAP_administrative_assistance_1" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.2
+			}
+		}
+		AZH_JAP_administrative_assistance_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_JAP_administrative_assistance_2" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.3
+			}
+		}
+		AZH_JAP_administrative_assistance_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_JAP_administrative_assistance_3" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.4
+			}
+		}
+		AZH_JAP_administrative_assistance_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_JAP_administrative_assistance_4" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.5
+			}
+		}
+		AZH_IRW_hidden_debuff = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_IRW_hidden_debuff" }
+			picture = generic_preparing_the_militias
+			allowed = {
+				always = no
+			}
+			cancel = { has_war = no }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.15
+				army_defence_factor = -0.1
+			}
+		}
+
+	}
+	###############
+	# Country ideas
+	###############
+	country = {
+		AZH_Hindustan_Land_Development_Authority = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea AZH_Hindustan_Land_Development_Authority"
+				admin_funding_minimal_increase_med = yes
+			}
+			on_remove = {
+				admin_funding_minimal_decrease_med = yes
+			}
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_hindustan_land_development_authority
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				stability_factor = 0.15
+				custom_modifier_tooltip = admin_funding_minimal_increase_med_tt
+			}
+		}
+		AZH_The_Language_Problem = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_The_Language_Problem" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_the_language_problem
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.1
+			}
+		}
+		AZH_What_Is_Subhasism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_What_Is_Subhasism" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_what_is_subhasism
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.03
+			}
+		}
+
+		AZH_The_Crossroads_of_the_Subhasist_Revolution = { # The Crossroads of the Subhasist Revolution
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_The_Crossroads_of_the_Subhasist_Revolution" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_The_Crossroads_of_the_Subhasist_Revolution
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.03
+				war_support_factor = 0.05
+				custom_modifier_tooltip = TNO_improve_political_parties_policy_effectiveness_med_tt
+			}
+		}
+
+		AZH_A_New_Hammer_for_Old_Problems = { # A New Hammer for Old Problems
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_A_New_Hammer_for_Old_Problems" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_A_New_Hammer_for_Old_Problems
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = -0.02
+				resistance_activity = 0.1
+				required_garrison_factor = 0.1
+			}
+		}
+
+		AZH_The_Old_Ghosts_of_Communalism = { # The Old Ghosts of Communalism
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_The_Old_Ghosts_of_Communalism" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_The_Old_Ghosts_of_Communalism
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				army_org_factor = -0.05
+				custom_modifier_tooltip = TNO_worsen_religious_rights_policy_effectiveness_low_tt
+			}
+		}
+
+
+		AZH_Frontline_of_Anti_Imperialism = { # Frontline of Anti-Imperialism
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_Frontline_of_Anti_Imperialism" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_Frontline_of_Anti_Imperialismsm
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = Azad_Hind_GEAPO_tt
+				send_volunteer_size = 2
+			}
+		}
+
+		# Econ Natspirits
+
+		AZH_Thirteen_Years_of_Progress = { # Thirteen Years of Progress
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_Thirteen_Years_of_Progress" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_Thirteen_Years_of_Progress
+			removal_cost = -1
+			modifier = {
+				production_speed_schools_factor = 0.1
+				production_speed_hospitals_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				gdp_growth_modifier = 1.5
+			}
+		}
+		
+		AZH_Old_Wine_in_a_New_Bottle = { # Old Wine in a New Bottle
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_Old_Wine_in_a_New_Bottle" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_Old_Wine_in_a_New_Bottle
+			removal_cost = -1
+			modifier = {
+				production_speed_schools_factor = 0.1
+				local_resources_factor = 0.10
+				production_factory_max_efficiency_factor = 0.1
+				gdp_growth_modifier = 1.5
+			}
+		}
+
+		AZH_A_Gentle_Leviathan = { # A Gentle Leviathan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_A_Gentle_Leviathan" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_A_Gentle_Leviathan
+			removal_cost = -1
+			modifier = {
+				consumer_goods_use_modifier = 0.3
+				industrial_capacity_factory = 0.05
+				stability_factor = 0.1
+				gdp_growth_modifier = 1.5
+				poverty_monthly_rate = 0.01
+			}
+		}
+
+		AZH_The_Revolution_in_Sight = { # The Revolution in Sight
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_The_Revolution_in_Sight" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_The_Revolution_in_Sight
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_use_modifier = 0.075
+				poverty_monthly_rate = 0.04
+			}
+		}
+
+		AZH_Everything_According_to_Plan = { # Everything According to Plan
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_Everything_According_to_Plan" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_Everything_According_to_Plan
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.3
+				consumer_goods_use_modifier = -0.2
+				production_speed_buildings_factor = 0.2
+				production_speed_infrastructure_factor = 0.3
+				production_speed_naval_base_factor = 0.3
+			}
+		}
+
+		AZH_A_Thousand_Promises = { # A Thousand Promises
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_A_Thousand_Promises" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_A_Thousand_Promises
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				political_power_factor = -0.10
+				drift_defence_factor = 0.15
+				army_morale_factor = 0.05
+			}
+		}
+
+		AZH_Nation_and_Labour = { # Nation and Labour
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_Nation_and_Labour" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_Nation_and_Labour
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.15
+				consumer_goods_use_modifier = 0.1
+				monthly_population = 0.15
+			}
+		}
+
+		AZH_The_Inheritance_of_Doctrine = { # The Inheritance of Doctrine
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_The_Inheritance_of_Doctrine" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_The_Inheritance_of_Doctrine
+			removal_cost = -1
+			modifier = {
+				production_speed_schools_factor = 0.1
+				production_speed_hospitals_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				gdp_growth_modifier = 1.5
+			}
+		}
+
+		AZH_A_Titan_of_the_Sphere = { # A Titan of the Sphere
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_A_Titan_of_the_Sphere" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_A_Titan_of_the_Sphere
+			removal_cost = -1
+			modifier = {
+				poverty_monthly_rate = -0.01
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				gdp_growth_modifier = 2
+			}
+			targeted_modifier = {
+				tag = JAP
+				extra_trade_to_target_factor = 0.07
+			}
+		}
+		
+		AZH_Only_the_Best = { # Only the Best
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_Only_the_Best" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = AZH_Only_the_Best
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources = 0.05
+				gdp_growth_modifier = 0.5
+				monthly_credit_rating_progress = 0.5
+				planning_speed = 0.15
+				land_doctrine_cost_factor = 0.2
+			}
+		}
+
+		# Pandora's Box
+
+		AZH_pandoras_box_1 = { # Closed
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_pandoras_box_1" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = IND_Pandoras_Box_1
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.5
+				army_defence_factor = 0.2
+				max_dig_in_factor = 0.2
+				attrition = -0.1
+				free_production_units_modifier = 2
+			}
+		}
+		AZH_pandoras_box_2 = { # Unsealed
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_pandoras_box_2" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = IND_Pandoras_Box_2
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.4
+				gdp_growth_modifier = -0.5
+				army_defence_factor = 0.1
+				max_dig_in_factor = 0.1
+				attrition = -0.05
+				free_production_units_modifier = 4
+			}
+			targeted_modifier = {
+				tag = JAP
+				send_volunteer_size = 1
+			}
+		}
+		AZH_pandoras_box_3 = { # Cracked
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_pandoras_box_3" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = IND_Pandoras_Box_3
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				stability_weekly = -0.0025
+				war_support_factor = -0.25
+				gdp_growth_modifier = -2.5
+				army_defence_factor = 0.1
+				max_dig_in_factor = 0.1
+				attrition = -0.05
+				free_production_units_modifier = 6
+			}
+			targeted_modifier = {
+				tag = JAP
+				send_volunteer_size = 3
+			}
+		}
+		AZH_pandoras_box_4 = { # Open
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_pandoras_box_4" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = IND_Pandoras_Box_4
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				stability_weekly = -0.0050
+				gdp_growth_modifier = -4
+				free_production_units_modifier = 8
+			}
+			targeted_modifier = {
+				tag = JAP
+				send_volunteer_size = 4
+			}
+			targeted_modifier = {
+				tag = IND
+				attack_bonus_against = 0.1
+				defense_bonus_against = -0.05
+			}
+		}
+		AZH_pandoras_box_5 = { # Empty
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_pandoras_box_5" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = IND_Pandoras_Box_5
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+				stability_weekly = -0.0075
+				gdp_growth_modifier = -5.5
+				army_speed_factor = 0.1
+				max_dig_in_factor = -0.1
+				free_production_units_modifier = 10
+			}
+			targeted_modifier = {
+				tag = JAP
+				send_volunteer_size = 5
+			}
+			targeted_modifier = {
+				tag = IND
+				attack_bonus_against = 0.2
+				defense_bonus_against = -0.1
+			}
+		}
+		AZH_blockade_1 = { # Weak Blockade
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_blockade_1" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			cancel = { has_war = no }
+			picture = generic_well_supplied_army
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		AZH_blockade_2 = { # Mid Blockade
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_blockade_2" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			cancel = { has_war = no }
+			picture = generic_supply_stockpile
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+				war_support_factor = -0.05
+				industrial_capacity_factory = -0.1
+			}
+		}
+		AZH_blockade_3 = { # Strong Blockade
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_blockade_3" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			cancel = { has_war = no }
+			picture = generic_undersupplied_army
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+				industrial_capacity_factory = -0.15
+			}
+		}
+		AZH_to_the_victor_go_the_spoils_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_to_the_victor_go_the_spoils_1" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = generic_fractured_food_supply
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.1 
+				army_attack_factor = 0.1
+				army_morale_factor = -0.05
+			}
+		}
+		AZH_to_the_victor_go_the_spoils_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_to_the_victor_go_the_spoils_2" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = generic_fractured_food_supply
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				army_attack_factor = 0.15
+				army_morale_factor = -0.10
+			}
+		}
+		AZH_to_the_victor_go_the_spoils_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AZH_to_the_victor_go_the_spoils_3" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = generic_fractured_food_supply
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.2
+				army_attack_factor = 0.2
+				army_morale_factor = -0.15
+			}
+		}
+	}
+}

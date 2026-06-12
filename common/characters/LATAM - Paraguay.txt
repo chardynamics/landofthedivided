@@ -1,0 +1,204 @@
+characters = {
+	PAR_Higinio_Morinigo = {
+		name = PAR_Higinio_Morinigo
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Higinio_Morínigo.png" } }
+		country_leader = {
+			desc = "POLITICS_HIGINIO_MORINIGO_DESC"
+			expire = "1994.4.20"
+			ideology = fascism_corporate_statism_subtype
+			id = -1
+		}
+	}
+	PAR_Karl_Richert = {
+		name = PAR_Karl_Richert
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = national_socialism_subtype
+			id = -1
+		}
+	}
+	PAR_Mutshuito_Villasboa = {
+		name = PAR_Mutshuito_Villasboa
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Mutshuito_Villasboa.png" } }
+	}
+	PAR_Juan_Natalicio_Gonzalez = {
+		name = PAR_Juan_Natalicio_Gonzalez
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Juan_Natalicio_Gonzalez.png" } }
+		country_leader = {
+			desc = "POLITICS_JUAN_NATALICIO_GONZALEZ_DESC"
+			expire = "1994.4.20"
+			ideology = fascism_3_subtype
+			id = -1
+		}
+	}
+	PAR_Alfredo_Stroessner = {
+		name = PAR_Alfredo_Stroessner
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Alfredo_Stroessner.png" } }
+	}
+	PAR_Federico_Chaves = {
+		name = PAR_Federico_Chaves
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Federico_Chaves.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = paternalism_national_conservatism_subtype
+			id = -1
+		}
+	}
+	PAR_Epifanio_Mendez_Fleitas = {
+		name = PAR_Epifanio_Mendez_Fleitas
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Epifanio_Mendez_Fleitas.png" } }
+	}
+	PAR_Bernardino_Gorostiaga = {
+		name = PAR_Bernardino_Gorostiaga
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Epifanio_Mendez_Fleitas.png" } }
+	}
+	PAR_Waldino_Ramon_Lovera = {
+		name = PAR_Waldino_Ramon_Lovera
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			id = -1
+		}
+	}
+	PAR_Agustin_Goiburu = {
+		name = PAR_Agustin_Goiburu
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+	}
+	PAR_Gustavo_Gonzalez = {
+		name = PAR_Gustavo_Gonzalez
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_PAR_Gustavo_Gonzalez.png" } }
+		country_leader = {
+			desc = "POLITICS_GUSTAVO_GONZALEZ_DESC"
+			expire = "1994.4.20"
+			ideology = liberal_conservatism_oligarchic_liberalism_subtype
+			id = -1
+		}
+	}
+	PAR_Luis_Resck = {
+		name = PAR_Luis_Resck
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+		country_leader = {
+			expire = "1994.4.20"
+			ideology = progressivism_christian_progressivism_subtype
+			id = -1
+		}
+	}
+	PAR_Rafael_Franco = {
+		name = PAR_Rafael_Franco
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Rafael_Franco.png" } }
+		country_leader = {
+			desc = "POLITICS_RAFAEL_FRANCO_DESC"
+			expire = "1994.4.20"
+			ideology = socialist_left_wing_nationalism_subtype
+			id = -1
+		}
+	}
+	PAR_Oscar_Creydt = {
+		name = PAR_Oscar_Creydt
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_PAR_Oscar_Creydt.png" } }
+		country_leader = {
+			desc = "POLITICS_OSCAR_CREYDT_DESC"
+			expire = "1994.4.20"
+			ideology = communist_national_communism_subtype
+			id = -1
+		}
+	}
+	PAR_Victoriano_Benitez_Vera = {
+		name = PAR_Victoriano_Benitez_Vera
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Victoriano_Benitez_Vera.png" } }
+		country_leader = {
+			desc = "POLITICS_VICTORIANO_BENITEZ_VERA_DESC"
+			expire = "1994.4.20"
+			ideology = fascism_2_subtype
+			id = -1
+		}
+	}
+	PAR_Enzo_Debernardi = {
+		name = PAR_Enzo_Debernardi
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+	}
+	PAR_Juan_Manuel_Frutos_Pane = {
+		name = PAR_Juan_Manuel_Frutos_Pane
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Juan_Manuel_Frutos_Pane.png" } }
+	}
+	PAR_Luis_Maria_Argana = {
+		name = PAR_Luis_Maria_Argana
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+	}
+	PAR_Edgar_Ynsfran = {
+		name = PAR_Edgar_Ynsfran
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_PAR_Edgar_Ynsfran.png" } }
+	}
+	PAR_Sabino_Augusto_Montanaro = {
+		name = PAR_Sabino_Augusto_Montanaro
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+	}
+	PAR_Juan_Ramon_Chaves = {
+		name = PAR_Juan_Ramon_Chaves
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+	}
+	PAR_Eulogio_Estigarribia = {
+		name = PAR_Eulogio_Estigarribia
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+	}
+	PAR_FULNA_Provisional_Junta = {
+		name = PAR_FULNA_Provisional_Junta
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_PAR_Junta_Provisional_de_FULNA.png" } }
+	}
+	PAR_Che_Guevara = {
+		name = PAR_Che_Guevara
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Ernesto_Guevara.png" } }
+	}
+	PAR_Alfredo_Ramos = {
+		name = PAR_Alfredo_Ramos
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_PAR_Alfredo_Ramos.png" } }
+		country_leader = {
+			desc = "POLITICS_ALFREDO_RAMOS_DESC"
+			expire = "1994.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			id = -1
+		}
+	}
+	PAR_Domingo_Laino = {
+		name = PAR_Domingo_Laino
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+	}
+	PAR_Fernando_Levi_Ruffinelli = {
+		name = PAR_Fernando_Levi_Ruffinelli
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+	}
+	PAR_Miguel_Angel_Soler = {
+		name = PAR_Miguel_Angel_Soler
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Miguel_Angel_Soler.png" } }
+	}
+	PAR_Obdulio_Barthe = {
+		name = PAR_Obdulio_Barthe
+		portraits = { civilian = { large = "gfx/leaders/Portrait_Mr_Placeholder_the_Third.png" } }
+	}
+	PAR_Francisco_Alcibiades_Britez_Borges = {
+		name = PAR_Francisco_Alcibiades_Britez_Borges
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_PAR_Francisco_Alcibiades_Britez_Borges.png" } }
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	PAR_Andrez_Rodriguez_Pedotti = {
+		name = PAR_Andrez_Rodriguez_Pedotti
+		portraits = { civilian = { large = "gfx/leaders/PAR/Portrait_Paraguay_Andrez_Rodriguez_Pedotti.png" } }
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

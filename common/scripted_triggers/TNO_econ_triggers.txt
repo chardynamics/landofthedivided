@@ -1,0 +1,694 @@
+# # UX Triggers
+econ_macroView = {
+	NOT = { check_variable = { TT_EconBase_activetab = 2 } }
+	NOT = { check_variable = { TT_EconBase_activetab = 3 } }
+}
+
+econ_socialView = {
+	check_variable = { TT_EconBase_activetab = 2 }
+}
+
+econ_tradeView = {
+	check_variable = { TT_EconBase_activetab = 3 }
+}
+
+econ_BRGView = {
+	check_variable = { TT_EconBase_activetab = 1 }
+}
+
+# PU analogous of the num_of_civilian_factories_available_for_projects trigger
+# Argument: pu_check
+num_of_pus_available_for_projects = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_num_of_pus_available_for_projects_tt
+		set_temp_variable = { pu_use = PU_extra }
+		add_to_temp_variable = { pu_use = pu_check }
+		NOT = { check_variable = { pu_use > production_units } }
+	}
+}
+
+# Checks if greater than or equal aluminium to `stockpile_temp` temp var
+stockpile_has_aluminium = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_stockpile_has_aluminium_tt
+		check_variable = { var = TNO_stockpile^2 value = stockpile_temp compare = greater_than_or_equals }
+	}
+}
+
+# Checks if greater than or equal rubber to `stockpile_temp` temp var
+stockpile_has_rubber = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_stockpile_has_rubber_tt
+		check_variable = { var = TNO_stockpile^3 value = stockpile_temp compare = greater_than_or_equals }
+	}
+}
+
+# Checks if greater than or equal tungsten to `stockpile_temp` temp var
+stockpile_has_tungsten = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_stockpile_has_tungsten_tt
+		check_variable = { var = TNO_stockpile^4 value = stockpile_temp compare = greater_than_or_equals }
+	}
+}
+
+# Checks if greater than or equal steel to `stockpile_temp` temp var
+stockpile_has_steel = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_stockpile_has_steel_tt
+		check_variable = { var = TNO_stockpile^5 value = stockpile_temp compare = greater_than_or_equals }
+	}
+}
+
+# Checks if greater than or equal chromium to `stockpile_temp` temp var
+stockpile_has_chromium = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_stockpile_has_chromium_tt
+		check_variable = { var = TNO_stockpile^6 value = stockpile_temp compare = greater_than_or_equals }
+	}
+}
+
+# Checks if greater than or equal uranium to `stockpile_temp` temp var
+stockpile_has_uranium = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_stockpile_has_uranium_tt
+		check_variable = { var = TNO_stockpile^7 value = stockpile_temp compare = greater_than_or_equals }
+	}
+}
+
+# Checks if greater than or equal consumer goods to `stockpile_temp` temp var
+stockpile_has_consumer_goods = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_stockpile_has_consumer_goods_tt
+		check_variable = { var = TNO_stockpile^8 value = stockpile_temp compare = greater_than_or_equals }
+	}
+}
+
+#Checking for the Same Societal Development Tier
+TNO_Same_Academic_Base_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Same_Academic_Base_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				ROOT = { has_idea = tno_academic_base_mass_illiteracy }
+				FROM = { has_idea = tno_academic_base_mass_illiteracy }
+			}
+			AND = {
+				ROOT = { has_idea = tno_academic_base_basic_literacy }
+				FROM = { has_idea = tno_academic_base_basic_literacy }
+			}
+			AND = {
+				ROOT = { has_idea = tno_academic_base_primary_schooling }
+				FROM = { has_idea = tno_academic_base_primary_schooling }
+			}
+			AND = {
+				ROOT = { has_idea = tno_academic_base_secondary_schooling }
+				FROM = { has_idea = tno_academic_base_secondary_schooling }
+			}
+			AND = {
+				ROOT = { has_idea = tno_academic_base_tertiary_schooling }
+				FROM = { has_idea = tno_academic_base_tertiary_schooling }
+			}
+		}
+	}
+}
+
+TNO_Worse_Academic_Base_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Worse_Academic_Base_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				FROM = { has_idea = tno_academic_base_mass_illiteracy }
+				OR = {
+					ROOT = { has_idea = tno_academic_base_basic_literacy }
+					ROOT = { has_idea = tno_academic_base_primary_schooling }
+					ROOT = { has_idea = tno_academic_base_secondary_schooling }
+					ROOT = { has_idea = tno_academic_base_tertiary_schooling }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_academic_base_basic_literacy }
+				OR = {
+					ROOT = { has_idea = tno_academic_base_primary_schooling }
+					ROOT = { has_idea = tno_academic_base_secondary_schooling }
+					ROOT = { has_idea = tno_academic_base_tertiary_schooling }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_academic_base_primary_schooling }
+				OR = {
+					ROOT = { has_idea = tno_academic_base_secondary_schooling }
+					ROOT = { has_idea = tno_academic_base_tertiary_schooling }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_academic_base_secondary_schooling }
+				ROOT = { has_idea = tno_academic_base_tertiary_schooling }
+			}
+		}
+	}
+}
+
+TNO_Same_Agriculture_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Same_Agriculture_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				ROOT = { has_idea = tno_agriculture_subsistence }
+				FROM = { has_idea = tno_agriculture_subsistence }
+			}
+			AND = {
+				ROOT = { has_idea = tno_agriculture_centralized }
+				FROM = { has_idea = tno_agriculture_centralized }
+			}
+			AND = {
+				ROOT = { has_idea = tno_agriculture_mass_mechanized }
+				FROM = { has_idea = tno_agriculture_mass_mechanized }
+			}
+			AND = {
+				ROOT = { has_idea = tno_agriculture_modern }
+				FROM = { has_idea = tno_agriculture_modern }
+			}
+		}
+	}
+}
+
+TNO_Worse_Agriculture_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Worse_Agriculture_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				FROM = { has_idea = tno_agriculture_subsistence }
+				OR = {
+					ROOT = { has_idea = tno_agriculture_centralized }
+					ROOT = { has_idea = tno_agriculture_mass_mechanized }
+					ROOT = { has_idea = tno_agriculture_modern }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_agriculture_centralized }
+				OR = {
+					ROOT = { has_idea = tno_agriculture_mass_mechanized }
+					ROOT = { has_idea = tno_agriculture_modern }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_agriculture_mass_mechanized }
+				ROOT = { has_idea = tno_agriculture_modern }
+			}
+		}
+	}
+}
+
+
+TNO_Same_Administrative_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Same_Administrative_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				ROOT = { has_idea = tno_admin_efficiency_organized_chaos }
+				FROM = { has_idea = tno_admin_efficiency_organized_chaos }
+			}
+			AND = {
+				ROOT = { has_idea = tno_admin_efficiency_nonexistent_state_apparatus }
+				FROM = { has_idea = tno_admin_efficiency_nonexistent_state_apparatus }
+			}
+			AND = {
+				ROOT = { has_idea = tno_admin_efficiency_illegitimate_administration }
+				FROM = { has_idea = tno_admin_efficiency_illegitimate_administration }
+			}
+			AND = {
+				ROOT = { has_idea = tno_admin_efficiency_deficient_administrative_systems }
+				FROM = { has_idea = tno_admin_efficiency_deficient_administrative_systems }
+			}
+			AND = {
+				ROOT = { has_idea = tno_admin_efficiency_functional_administrative_systems }
+				FROM = { has_idea = tno_admin_efficiency_functional_administrative_systems }
+			}
+			AND = {
+				ROOT = { has_idea = tno_admin_efficiency_streamlined_bureaucracy }
+				FROM = { has_idea = tno_admin_efficiency_streamlined_bureaucracy }
+			}
+		}
+	}
+}
+
+TNO_Worse_Administrative_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Worse_Administrative_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				FROM = { has_idea = tno_admin_efficiency_organized_chaos }
+				OR = {
+					ROOT = { has_idea = tno_admin_efficiency_nonexistent_state_apparatus }
+					ROOT = { has_idea = tno_admin_efficiency_illegitimate_administration }
+					ROOT = { has_idea = tno_admin_efficiency_deficient_administrative_systems }
+					ROOT = { has_idea = tno_admin_efficiency_functional_administrative_systems }
+					ROOT = { has_idea = tno_admin_efficiency_streamlined_bureaucracy }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_admin_efficiency_nonexistent_state_apparatus }
+				OR = {
+					ROOT = { has_idea = tno_admin_efficiency_illegitimate_administration }
+					ROOT = { has_idea = tno_admin_efficiency_deficient_administrative_systems }
+					ROOT = { has_idea = tno_admin_efficiency_functional_administrative_systems }
+					ROOT = { has_idea = tno_admin_efficiency_streamlined_bureaucracy }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_admin_efficiency_illegitimate_administration }
+				OR = {
+					ROOT = { has_idea = tno_admin_efficiency_deficient_administrative_systems }
+					ROOT = { has_idea = tno_admin_efficiency_functional_administrative_systems }
+					ROOT = { has_idea = tno_admin_efficiency_streamlined_bureaucracy }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_admin_efficiency_deficient_administrative_systems }
+				OR = {
+					ROOT = { has_idea = tno_admin_efficiency_functional_administrative_systems }
+					ROOT = { has_idea = tno_admin_efficiency_streamlined_bureaucracy }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_admin_efficiency_functional_administrative_systems }
+				ROOT = { has_idea = tno_admin_efficiency_streamlined_bureaucracy }
+			}
+		}
+	}
+}
+
+
+TNO_Same_Industrial_Equipment_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Same_Industrial_Equipment_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				ROOT = { has_idea = tno_industrial_equipment_hand_tools }
+				FROM = { has_idea = tno_industrial_equipment_hand_tools }
+			}
+			AND = {
+				ROOT = { has_idea = tno_industrial_equipment_power_tools }
+				FROM = { has_idea = tno_industrial_equipment_power_tools }
+			}
+			AND = {
+				ROOT = { has_idea = tno_industrial_equipment_manufacturing_lines }
+				FROM = { has_idea = tno_industrial_equipment_manufacturing_lines }
+			}
+			AND = {
+				ROOT = { has_idea = tno_industrial_equipment_factory_complexes }
+				FROM = { has_idea = tno_industrial_equipment_factory_complexes }
+			}
+			AND = {
+				ROOT = { has_idea = tno_industrial_equipment_modern }
+				FROM = { has_idea = tno_industrial_equipment_modern }
+			}
+		}
+	}
+}
+
+TNO_Worse_Industrial_Equipment_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Worse_Industrial_Equipment_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				FROM = { has_idea = tno_industrial_equipment_hand_tools }
+				OR = {
+					ROOT = { has_idea = tno_industrial_equipment_power_tools }
+					ROOT = { has_idea = tno_industrial_equipment_manufacturing_lines }
+					ROOT = { has_idea = tno_industrial_equipment_factory_complexes }
+					ROOT = { has_idea = tno_industrial_equipment_modern }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_industrial_equipment_power_tools }
+				OR = {
+					ROOT = { has_idea = tno_industrial_equipment_manufacturing_lines }
+					ROOT = { has_idea = tno_industrial_equipment_factory_complexes }
+					ROOT = { has_idea = tno_industrial_equipment_modern }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_industrial_equipment_manufacturing_lines }
+				OR = {
+					ROOT = { has_idea = tno_industrial_equipment_factory_complexes }
+					ROOT = { has_idea = tno_industrial_equipment_modern }
+				}
+			}
+			AND = {
+				ROOT = { has_idea = tno_industrial_equipment_factory_complexes }
+				ROOT = { has_idea = tno_industrial_equipment_modern }
+			}
+		}
+	}
+}
+
+
+TNO_Same_Industrial_Expertise_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Same_Industrial_Expertise_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				ROOT = { has_idea = tno_industrial_expertise_pre_industrial }
+				FROM = { has_idea = tno_industrial_expertise_pre_industrial }
+			}
+			AND = {
+				ROOT = { has_idea = tno_industrial_expertise_incompetent }
+				FROM = { has_idea = tno_industrial_expertise_incompetent }
+			}
+			AND = {
+				ROOT = { has_idea = tno_industrial_expertise_nascent }
+				FROM = { has_idea = tno_industrial_expertise_nascent }
+			}
+			AND = {
+				ROOT = { has_idea = tno_industrial_expertise_experienced }
+				FROM = { has_idea = tno_industrial_expertise_experienced }
+			}
+			AND = {
+				ROOT = { has_idea = tno_industrial_expertise_innovative }
+				FROM = { has_idea = tno_industrial_expertise_innovative }
+			}
+		}
+	}
+}
+
+TNO_Worse_Industrial_Expertise_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Worse_Industrial_Expertise_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				FROM = { has_idea = tno_industrial_expertise_pre_industrial }
+				OR = {
+					ROOT = { has_idea = tno_industrial_expertise_incompetent }
+					ROOT = { has_idea = tno_industrial_expertise_nascent }
+					ROOT = { has_idea = tno_industrial_expertise_experienced }
+					ROOT = { has_idea = tno_industrial_expertise_innovative }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_industrial_expertise_incompetent }
+				OR = {
+					ROOT = { has_idea = tno_industrial_expertise_nascent }
+					ROOT = { has_idea = tno_industrial_expertise_experienced }
+					ROOT = { has_idea = tno_industrial_expertise_innovative }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_industrial_expertise_nascent }
+				OR = {
+					ROOT = { has_idea = tno_industrial_expertise_experienced }
+					ROOT = { has_idea = tno_industrial_expertise_innovative }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_industrial_expertise_experienced }
+				ROOT = { has_idea = tno_industrial_expertise_innovative }
+			}
+		}
+	}
+}
+
+TNO_Same_Healthcare_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Same_Healthcare_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				ROOT = { has_idea = tno_healthcare_rudimentary }
+				FROM = { has_idea = tno_healthcare_rudimentary }
+			}
+			AND = {
+				ROOT = { has_idea = tno_healthcare_makeshift }
+				FROM = { has_idea = tno_healthcare_makeshift }
+			}
+			AND = {
+				ROOT = { has_idea = tno_healthcare_nascent }
+				FROM = { has_idea = tno_healthcare_nascent }
+			}
+			AND = {
+				ROOT = { has_idea = tno_healthcare_developed }
+				FROM = { has_idea = tno_healthcare_developed }
+			}
+			AND = {
+				ROOT = { has_idea = tno_healthcare_advanced }
+				FROM = { has_idea = tno_healthcare_advanced }
+			}
+		}
+	}
+}
+
+TNO_Worse_Healthcare_Tier = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Worse_Healthcare_Tier_tt #Don't bother adding loc, not meant to be seen
+		OR = {
+			AND = {
+				FROM = { has_idea = tno_healthcare_rudimentary }
+				OR = {
+					ROOT = { has_idea = tno_healthcare_makeshift }
+					ROOT = { has_idea = tno_healthcare_nascent }
+					ROOT = { has_idea = tno_healthcare_developed }
+					ROOT = { has_idea = tno_healthcare_advanced }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_healthcare_makeshift }
+				OR = {
+					ROOT = { has_idea = tno_healthcare_nascent }
+					ROOT = { has_idea = tno_healthcare_developed }
+					ROOT = { has_idea = tno_healthcare_advanced }
+				}
+			}
+			AND = {
+				ROOT = { has_idea = tno_healthcare_nascent }
+				OR = {
+					FROM = { has_idea = tno_healthcare_developed }
+					ROOT = { has_idea = tno_healthcare_advanced }
+				}
+			}
+			AND = {
+				FROM = { has_idea = tno_healthcare_developed }
+				ROOT = { has_idea = tno_healthcare_advanced }
+			}
+		}
+	}
+}
+## Army Laws Conditions
+#Flametrowers
+TNO_KD_Can_Research_Flamethrowers = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Flamethrowers_tt
+		AND = {
+			NOT = { has_idea = tno_military_supervision_watchdog_groups }
+			NOT = { has_idea = tno_military_supervision_total_supervision }
+		}
+	}
+}
+
+#Spec Ops Training
+TNO_KD_Can_Research_Basic_SPECOPS = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Basic_SPECOPS_tt
+		AND = {
+			NOT = { has_idea = tno_training_none }
+			NOT = { has_idea = tno_training_minimal_training }
+			#Soc Dev Check
+			NOT = { has_idea = tno_army_professionalism_untrained }
+			NOT = { has_idea = tno_army_professionalism_reluctant_conscripts }
+		}
+	}
+}
+TNO_KD_Can_Research_Modern_SPECOPS = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Modern_SPECOPS_tt
+		AND = {
+			NOT = { has_idea = tno_training_none }
+			NOT = { has_idea = tno_training_minimal_training }
+			NOT = { has_idea = tno_training_basic_training }
+			OR = {
+				check_variable = { tno_training_effectiveness_actual > 35 }
+				NOT = { has_country_flag = tno_playable_country } #Failsafe for the AI
+			}
+			#Soc Dev Check
+			#OR = {
+			#	has_idea = tno_army_professionalism_political_interference
+			#	has_idea = tno_army_professionalism_professional
+			#	has_idea = tno_army_professionalism_spartan_discipline
+			#}
+		}
+	}
+}
+
+TNO_KD_Can_Research_Advanced_SPECOPS = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Advanced_SPECOPS_tt
+		AND = {
+			has_idea = tno_training_advanced_training_methods
+			OR = {
+				check_variable = { tno_training_effectiveness_actual > 35 }
+				NOT = { has_country_flag = tno_playable_country } #Failsafe for the AI
+			}
+			#Soc Dev Check
+			OR = {
+				has_idea = tno_army_professionalism_professional
+				has_idea = tno_army_professionalism_spartan_discipline
+			}
+		}
+	}
+}
+
+##Industrial Law Checks
+TNO_KD_Can_Research_Basic_Manufactoring = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Basic_Manufactoring_tt
+		OR = {
+			has_idea = tno_industrial_equipment_power_tools
+			has_idea = tno_industrial_equipment_manufacturing_lines
+			has_idea = tno_industrial_equipment_factory_complexes
+			has_idea = tno_industrial_equipment_modern
+			has_idea = tno_industrial_equipment_cutting_edge
+		}
+		NOT = { has_idea = tno_industrial_expertise_pre_industrial } #For simplicity's sake
+	}
+}
+
+TNO_KD_Can_Research_Rudimentary_Manufactoring = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Rudimentary_Manufactoring_tt
+		OR = {
+			has_idea = tno_industrial_equipment_manufacturing_lines
+			has_idea = tno_industrial_equipment_factory_complexes
+			has_idea = tno_industrial_equipment_modern
+			has_idea = tno_industrial_equipment_cutting_edge
+		}
+		NOT = { has_idea = tno_industrial_expertise_pre_industrial } #For simplicity's sake
+	}
+}
+
+TNO_KD_Can_Research_Developed_Manufactoring = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Developed_Manufactoring_tt
+		OR = {
+			has_idea = tno_industrial_equipment_factory_complexes
+			has_idea = tno_industrial_equipment_modern
+			has_idea = tno_industrial_equipment_cutting_edge
+		}
+		NOT = { has_idea = tno_industrial_expertise_pre_industrial } #For simplicity's sake
+	}
+}
+
+TNO_KD_Can_Research_Modern_Manufactoring = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Modern_Manufactoring_tt
+		OR = {
+			has_idea = tno_industrial_equipment_modern
+			has_idea = tno_industrial_equipment_cutting_edge
+		}
+		NOT = { has_idea = tno_industrial_expertise_pre_industrial } #For simplicity's sake
+	}
+}
+
+TNO_KD_Can_Research_Advanced_Manufactoring = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Advanced_Manufactoring_tt
+		has_idea = tno_industrial_equipment_cutting_edge
+		NOT = { has_idea = tno_industrial_expertise_pre_industrial } #For simplicity's sake
+	}
+}
+
+##Industrial Expertise
+TNO_KD_Can_Research_Rudimentary_Expertise = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Rudimentary_Expertise_tt
+		OR = {
+			has_idea = tno_industrial_expertise_incompetent
+			has_idea = tno_industrial_expertise_nascent
+			has_idea = tno_industrial_expertise_experienced
+			has_idea = tno_industrial_expertise_innovative
+		}
+	}
+}
+
+TNO_KD_Can_Research_Incompetent_Expertise = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Incompetent_Expertise_tt
+		OR = {
+			has_idea = tno_industrial_expertise_nascent
+			has_idea = tno_industrial_expertise_experienced
+			has_idea = tno_industrial_expertise_innovative
+		}
+	}
+}
+
+TNO_KD_Can_Research_Experienced_Expertise = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Experienced_Expertise_tt
+		OR = {
+			has_idea = tno_industrial_expertise_experienced
+			has_idea = tno_industrial_expertise_innovative
+		}
+	}
+}
+
+TNO_KD_Can_Research_Innovative_Expertise = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Innovative_Expertise_tt
+		has_idea = tno_industrial_expertise_innovative
+	}
+}
+
+##Administration
+
+
+##Research Facilities
+TNO_KD_Can_Research_Basic_Tech = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Basic_Tech_tt
+		OR = {
+			has_idea = tno_research_facilities_basic
+			has_idea = tno_research_facilities_outdated
+			has_idea = tno_research_facilities_modern
+			has_idea = tno_research_facilities_advanced
+			has_idea = tno_research_facilities_cutting_edge
+		}
+	}
+}
+
+TNO_KD_Can_Research_Outdated_Tech = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Outdated_Tech_tt
+		OR = {
+			has_idea = tno_research_facilities_outdated
+			has_idea = tno_research_facilities_modern
+			has_idea = tno_research_facilities_advanced
+			has_idea = tno_research_facilities_cutting_edge
+			AND = {
+				date > 1969.12.30
+				has_idea = tno_research_facilities_basic
+			}
+		}
+	}
+}
+
+TNO_KD_Can_Research_Modern_Tech = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Modern_Tech_tt
+		OR = {
+			has_idea = tno_research_facilities_modern
+			has_idea = tno_research_facilities_advanced
+			has_idea = tno_research_facilities_cutting_edge
+			AND = {
+				date > 1969.12.30
+				has_idea = tno_research_facilities_outdated
+			}
+		}
+	}
+}
+
+TNO_KD_Can_Research_Advanced_Tech = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_KD_Can_Research_Advanced_Tech_tt
+		OR = {
+			has_idea = tno_research_facilities_advanced
+			has_idea = tno_research_facilities_cutting_edge
+		}
+	}
+}

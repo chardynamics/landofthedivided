@@ -1,0 +1,163 @@
+operational_spreading_our_wings = {
+	track = operations_aerial
+	name = SUBDOCTRINE_OPERATIONAL_SPREADING_OUR_WINGS 
+	description = SUBDOCTRINE_OPERATIONAL_SPREADING_OUR_WINGS_DESC
+	icon = GFX_standardized_bombing_formations_medium
+
+	xp_cost = 50
+	xp_type = air
+
+	available = {
+		has_doctrine = air_power_projection
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+
+	air_range_factor = 0.1
+	air_accidents_factor = -0.05
+	air_fuel_consumption_factor = -0.1
+
+	rewards = {
+		expeditionary_aviation = {
+			production_speed_air_base_factor = 0.25 
+			air_range_factor = 0.05
+			air_accidents_factor = -0.05
+			air_weather_penalty = -0.05
+		}
+		ground_support_crews = {
+			air_cas_efficiency = 0.05
+			air_nav_efficiency = 0.05
+			air_strategic_bomber_bombing_factor = 0.05
+		}
+		carrier_based_escort_wings = {
+			air_escort_efficiency = 0.1
+			air_superiority_efficiency = 0.05
+			air_carrier_night_penalty_reduction_factor = 0.15
+			carrier = {
+				build_cost_ic = -0.05
+			}
+		}
+		stratotanker_initiative = {
+			air_range_factor = 0.2
+			air_maximum_speed_factor = 0.05
+			air_strategic_bomber_bombing_factor = 0.05
+			air_nav_efficiency = 0.05
+		}
+		integrated_operational_command = {
+			ground_attack_factor = 0.1
+			air_strategic_bomber_bombing_factor = 0.1
+			air_night_penalty = -0.1
+			air_accidents_factor = -0.1
+			air_weather_penalty = -0.1
+		}
+	}
+}
+
+operational_data_refinement_initiative = {
+	track = operations_aerial
+	name = SUBDOCTRINE_OPERATIONAL_DATA_REFINEMENT_INITIATIVE
+	description = SUBDOCTRINE_OPERATIONAL_DATA_REFINEMENT_INITIATIVE_DESC
+	icon = GFX_countermeasure_systems_medium
+
+	xp_cost = 50
+	xp_type = air
+
+	available = {
+		has_doctrine = air_power_projection
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+
+	air_interception_detect_factor = 0.1
+	air_superiority_detect_factor = 0.1
+
+	rewards = {
+		intelligence_attaches = {
+			ground_attack_factor = 0.05
+			air_strategic_bomber_bombing_factor = 0.05
+			air_night_penalty = -0.05
+		}
+		ground_radar_arrays = {
+			production_speed_radar_station_factor = 0.25
+			air_intercept_efficiency = 0.1
+			air_superiority_efficiency = 0.05
+		}
+		reconnaissance_drones = {
+			ground_attack_factor = 0.1
+			air_strategic_bomber_bombing_factor = 0.05
+		}
+		military_satellite_constellation = {
+			air_cas_efficiency = 0.05
+			air_strategic_bomber_bombing_factor = 0.05
+			air_nav_efficiency = 0.05
+		}
+		operational_omniscience = {
+			air_attack_factor = 0.1
+			ground_attack_factor = 0.1
+			air_interception_detect_factor = 0.1
+			air_superiority_detect_factor = 0.1
+		}
+	}
+}
+
+operational_mastery_of_the_spheres = {
+	track = operations_aerial
+	name = SUBDOCTRINE_OPERATIONAL_MASTERY_OF_THE_SPHERES
+	description = SUBDOCTRINE_OPERATIONAL_MASTERY_OF_THE_SPHERES_DESC
+	icon = GFX_low_risk_engagements_medium
+
+	xp_cost = 50
+	xp_type = air
+
+	available = {
+		has_doctrine = tactical_aviation
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+
+	air_mission_efficiency = 0.05
+
+	rewards = {
+		multilayered_defence_bubble = {
+			air_intercept_efficiency = 0.15
+			air_interception_detect_factor = 0.1
+			production_speed_radar_station_factor = 0.1
+		}
+		civilian_asset_integration = {
+			fighter = { build_cost_ic = -0.05 }
+			cas = { build_cost_ic = -0.05 }
+			category_tac_bomber = { build_cost_ic = -0.05 }
+			category_strat_bomber = { build_cost_ic = -0.05 }
+		}
+		trierarchy_of_the_air = {
+			air_ace_bonuses_factor = 0.05
+			air_ace_generation_chance_factor = 0.05
+			weekly_bombing_war_support = 0.003
+		}
+		intelligence_coordination = {
+			ground_attack_factor = 0.05
+			air_superiority_detect_factor = 0.05
+			air_interception_detect_factor = 0.05
+		}
+		castles_in_the_sky = {
+			enemy_army_bonus_air_superiority_factor = -0.05
+			interceptor = {
+				air_defence = 0.1
+				air_attack = 0.05
+				air_agility = 0.05
+			}
+		}
+	}
+}

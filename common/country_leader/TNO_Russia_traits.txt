@@ -81,8 +81,8 @@ leader_traits = {
 
 	the_militant_shepherd = { # Antipin
 		random = no
-		offence = 0.05
-		defence = 0.1
+		army_attack_factor = 0.05
+		army_defence_factor = 0.1
 		attrition = -0.05
 		war_support_factor = 0.1
 	}
@@ -149,14 +149,14 @@ leader_traits = {
 		army_morale_factor = 0.05
 	}
 
-	ultravisionary_socialist = { # Zhadanov Initial
+	ultravisionary_socialist = { # Zhdanov Initial
 		random = no
 		stability_factor = -0.05
 		research_speed_factor = 0.07
 		drift_defence_factor = 0.07
 	}
 
-	paramount_leader = { # Zhadanov Reveal
+	paramount_leader = { # Zhdanov Reveal
 		random = no
 		political_power_gain = 0.15
 		# opinion_gain_monthly_same_ideology_factor = -0.05
@@ -226,14 +226,14 @@ leader_traits = {
 	the_supreme_commander_of_the_great_trial = { # Yazov
 		random = no
 		political_power_factor = 0.1
-		offence = 0.05
+		army_attack_factor = 0.05
 	}
 
 	######################
 	## |=={ Samara }==| ##
 	######################
 
-	the_king_in_the_making = { # Oktan
+	the_king_in_the_making = { # Artsezo
 		random = no
 		misc_costs_modifier = 0.05
 	}

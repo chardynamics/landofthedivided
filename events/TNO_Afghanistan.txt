@@ -1,0 +1,1495 @@
+# by Jane
+
+add_namespace = AFG
+
+country_event = { # Daoud Khan sacked, March 1963
+	id = AFG.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AFG.1" }
+	title = AFG.1.t
+	desc = AFG.1.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.1.a
+		ai_chance = { factor = 10 }
+		promote_character = AFG_Muhammad_Yusuf_Khan
+		country_event = { id = AFG.2 days = 426 }
+	}
+}
+
+country_event = { # 1964 Loya Jirga
+	id = AFG.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AFG.2" }
+	title = AFG.2.t
+	desc = AFG.2.d
+	picture = GFX_report_event_lazar_generic_2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.2.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = despotism
+			last_election = "1961.4.20"
+			election_frequency = 36
+			elections_allowed = yes
+		}
+		set_popularities = {
+			communist = 10
+			socialist = 10
+			progressivism = 10
+			liberalism = 10
+			liberal_conservatism = 0
+			conservatism = 10
+			paternalism = 20
+			despotism = 20
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 10
+		}
+		set_party_name = {
+			ideology = communist
+			name = AFG_communist_party_dem
+			long_name = AFG_communist_party_dem_long
+		}
+		set_party_name = {
+			ideology = socialist
+			name = AFG_socialist_party_dem
+			long_name = AFG_socialist_party_dem_long
+		}
+		set_party_name = {
+			ideology = progressivism
+			name = AFG_progressivism_party_dem
+			long_name = AFG_progressivism_party_dem_long
+		}
+		set_party_name = {
+			ideology = liberalism
+			name = AFG_liberalism_party_dem
+			long_name = AFG_liberalism_party_dem_long
+		}
+		set_party_name = {
+			ideology = conservatism
+			name = AFG_conservatism_party_dem
+			long_name = AFG_conservatism_party_dem_long
+		}
+		set_party_name = {
+			ideology = paternalism
+			name = AFG_despotism_party
+			long_name = AFG_despotism_party_long
+		}
+		set_party_name = {
+			ideology = despotism
+			name = AFG_despotism_party_dem
+			long_name = AFG_despotism_party_dem
+		}
+		remove_ideas = AFG_Embryonic_Political_Structures
+		promote_character = AFG_Maulana_Muhammad_Ataullah_Faizani
+		promote_character = AFG_Ghulam_Muhammad_Farhad
+		promote_character = AFG_Mir_Muhammad_Seddiq_Farhang
+		promote_character = AFG_Muhammad_Hashem_Maiwandwal
+		promote_character = AFG_Hafizullah_Amin
+		add_country_leader_role = {
+			character = AFG_Mohammed_Zahir_Shah
+			promote_leader = yes
+			country_leader = {
+				expire = "1999.1.1"
+				ideology = despotism_royal_dictatorship_subtype
+				traits = { }
+				id = -1
+			}	
+		}
+		country_event = { id = AFG.3 days = 602 }
+	}
+}
+
+country_event = { # 1965 elections
+	id = AFG.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AFG.3" }
+	title = AFG.3.t
+	desc = AFG.3.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = { # Maiwandwal
+		name = AFG.3.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = AFG_1965_ELECTIONS
+						option = AFG_1965_ELECTIONS_PRO
+					}
+					has_game_rule = {
+						rule = AFG_1965_ELECTIONS
+						option = AFG_1965_ELECTIONS_LIB
+					}
+				}
+			}
+		}
+		set_popularities = {
+			communist = 10
+			socialist = 30
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 30
+			despotism = 10
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 20
+		}
+		set_politics = {
+			ruling_party = paternalism
+			last_election = "1965.8.26"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		set_party_name = {
+			ideology = socialist
+			name = AFG_paternalism_party
+			long_name = AFG_paternalism_party_long
+		}
+		country_event = { id = AFG.4 days = 777 }
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30054
+				days = 1
+			}
+		}
+	}
+	option = { # Farhang
+		name = AFG.3.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = AFG_1965_ELECTIONS
+						option = AFG_1965_ELECTIONS_SOC
+					}
+					has_game_rule = {
+						rule = AFG_1965_ELECTIONS
+						option = AFG_1965_ELECTIONS_LIB
+					}
+				}
+			}
+		}
+		set_popularities = {
+			communist = 10
+			socialist = 0
+			progressivism = 30
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 30
+			despotism = 20
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 10
+		}
+		set_politics = {
+			ruling_party = paternalism
+			last_election = "1965.8.26"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		set_party_name = {
+			ideology = progressivism
+			name = AFG_paternalism_party
+			long_name = AFG_paternalism_party_long
+		}
+		country_event = { id = AFG.4 days = 777 }
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30055
+				days = 1
+			}
+		}
+	}
+	option = { # Farhad
+		name = AFG.3.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = AFG_1965_ELECTIONS
+						option = AFG_1965_ELECTIONS_SOC
+					}
+					has_game_rule = {
+						rule = AFG_1965_ELECTIONS
+						option = AFG_1965_ELECTIONS_PRO
+					}
+				}
+			}
+		}
+		set_popularities = {
+			communist = 30
+			socialist = 0
+			progressivism = 0
+			liberalism = 30
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 20
+			despotism = 10
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 10
+		}
+		set_politics = {
+			ruling_party = paternalism
+			last_election = "1965.8.26"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		set_party_name = {
+			ideology = liberalism
+			name = AFG_paternalism_party
+			long_name = AFG_paternalism_party_long
+		}
+		country_event = { id = AFG.4 days = 777 }
+		every_country = {		
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30056
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # Abdullah Yaqta appointed October 1967
+	id = AFG.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AFG.4" }
+	title = AFG.4.t
+	desc = AFG.4.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.4.a
+		ai_chance = { factor = 10 }
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_ultranationalism_party_dem
+			long_name = AFG_ultranationalism_party_dem_long
+		}
+		set_party_name = {
+			ideology = socialist
+			name = AFG_socialist_party_dem
+			long_name = AFG_socialist_party_dem_long
+		}
+		set_party_name = {
+			ideology = progressivism
+			name = AFG_progressivism_party_dem
+			long_name = AFG_progressivism_party_dem_long
+		}
+		set_party_name = {
+			ideology = liberalism
+			name = AFG_liberalism_party_dem
+			long_name = AFG_liberalism_party_dem_long
+		}
+		set_party_name = {
+			ideology = liberal_conservatism
+			name = AFG_paternalism_party
+			long_name = AFG_paternalism_party_long
+		}
+		set_popularities = {
+			communist = 20
+			socialist = 0
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 30
+			conservatism = 0
+			paternalism = 20
+			despotism = 10
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 20
+		}
+		promote_character = AFG_Abdullah_Yaqta
+		promote_character = AFG_Muhammad_Nabi_Mohammedi
+		country_event = { id = AFG.5 days = 30 }
+	}
+}
+
+country_event = { # Etemadi appointed November 1967
+	id = AFG.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AFG.5" }
+	title = AFG.5.t
+	desc = AFG.5.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.5.a
+		ai_chance = { factor = 10 }
+		set_party_name = {
+			ideology = liberal_conservatism
+			name = AFG_liberal_conservatism_party
+			long_name = AFG_liberal_conservatism_party_long
+		}
+		set_popularities = {
+			communist = 15
+			socialist = 30
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 20
+			despotism = 20
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 15
+		}
+		set_party_name = {
+			ideology = socialist
+			name = AFG_paternalism_party
+			long_name = AFG_paternalism_party_long
+		}
+		promote_character = AFG_Mohammad_Noor_Ahmad_Etemadi
+		country_event = { id = AFG.7 days = 82 }
+	}
+}
+
+country_event = { # 1969 Elections
+	id = AFG.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AFG.6" }
+	title = AFG.6.t
+	desc = AFG.6.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = { # Badakshi
+		name = AFG.6.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = AFG_1969_ELECTIONS
+						option = AFG_1969_ELECTIONS_ETE
+					}
+					has_game_rule = {
+						rule = AFG_1969_ELECTIONS
+						option = AFG_1969_ELECTIONS_MUH
+					}
+				}
+			}
+		}
+		promote_character = AFG_Tahir_Badakshi
+		set_popularities = {
+			communist = 0
+			socialist = 40
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 10
+			despotism = 20
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 30
+		}
+		set_politics = {
+			ruling_party = paternalism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		country_event = { id = AFG.8 days = 522 }
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30057
+				days = 1
+			}
+		}
+	}
+	option = { # Etemadi
+		name = AFG.6.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = AFG_1969_ELECTIONS
+						option = AFG_1969_ELECTIONS_BAD
+					}
+					has_game_rule = {
+						rule = AFG_1969_ELECTIONS
+						option = AFG_1969_ELECTIONS_MUH
+					}
+				}
+			}
+		}
+		set_popularities = {
+			communist = 15
+			socialist = 40
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 15
+			despotism = 15
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 15
+		}
+		set_politics = {
+			ruling_party = paternalism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		country_event = { id = AFG.8 days = 522 }
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30058
+				days = 1
+			}
+		}
+	}
+	option = { # Muhammadi
+		name = AFG.6.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = AFG_1969_ELECTIONS
+						option = AFG_1969_ELECTIONS_BAD
+					}
+					has_game_rule = {
+						rule = AFG_1969_ELECTIONS
+						option = AFG_1969_ELECTIONS_ETE
+					}
+				}
+			}
+		}
+		set_party_name = {
+			ideology = socialist
+			name = AFG_SIZA_party_dem
+			long_name = AFG_SIZA_party_dem_long
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_paternalism_party
+			long_name = AFG_paternalism_party_long
+		}
+		set_politics = {
+			ruling_party = paternalism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		set_popularities = {
+			communist = 25
+			socialist = 0
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 15
+			despotism = 20
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 40
+		}
+		promote_character = AFG_Tahir_Badakshi
+		country_event = { id = AFG.8 days = 522 }
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30065
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # 1968 party pops
+	id = AFG.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AFG.7" }
+	title = AFG.7.t
+	desc = AFG.7.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.7.a
+		ai_chance = { factor = 10 }
+		#replace w/ something useful in the rework
+		country_event = { id = AFG.6 days = 574 }
+	}
+}
+
+country_event = { # Abdul Zahir appointed 1971
+	id = AFG.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AFG.8" }
+	title = AFG.8.t
+	desc = AFG.8.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.8.a
+		ai_chance = { factor = 10 }
+		set_popularities = {
+			communist = 30
+			socialist = 0
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 30
+			conservatism = 0
+			paternalism = 10
+			despotism = 0
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 30
+		}
+		set_party_name = {
+			ideology = socialist
+			name = AFG_SIZA_party_dem
+			long_name = AFG_SIZA_party_dem_long
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_ultranationalism_party_dem
+			long_name = AFG_ultranationalism_party_dem_long
+		}
+		set_party_name = {
+			ideology = liberal_conservatism
+			name = AFG_paternalism_party
+			long_name = AFG_paternalism_party_long
+		}
+		promote_character = AFG_Tahir_Badakshi
+		country_event = { id = AFG.9 days = 365 }
+	}
+}
+
+country_event = { # Musa Shafiq appointed 1972
+	id = AFG.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AFG.9" }
+	title = AFG.9.t
+	desc = AFG.9.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.9.a
+		ai_chance = { factor = 10 }
+		
+		set_popularities = {
+			communist = 30
+			socialist = 0
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 40
+			conservatism = 0
+			paternalism = 0
+			despotism = 0
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 30
+		}
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_NEWDEM
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_DAOKHA
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_MAOCOU
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_FUNCOU
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_AMICOU
+						}
+					}
+				}
+				country_event = { id = AFG.10 days = 30 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_NATUNI
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_DAOKHA
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_MAOCOU
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_FUNCOU
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_AMICOU
+						}
+					}
+				}
+				country_event = { id = AFG.11 days = 30 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_NEWDEM
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_NATUNI
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_MAOCOU
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_FUNCOU
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_AMICOU
+						}
+					}
+				}
+				country_event = { id = AFG.12 days = 30 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_NATUNI
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_NEWDEM
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_DAOKHA
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_FUNCOU
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_AMICOU
+						}
+					}
+				}
+				country_event = { id = AFG.13 days = 30 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_NATUNI
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_NEWDEM
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_DAOKHA
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_MAOCOU
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_AMICOU
+						}
+					}
+				}
+				country_event = { id = AFG.14 days = 30 }
+			}
+			1 = { #Amin
+				modifier = {
+					factor = 0
+					OR = {
+						has_global_flag = CHI_Lost_GAW
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_NATUNI
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_NEWDEM
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_DAOKHA
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_MAOCOU
+						}
+						has_game_rule = {
+							rule = AFG_1973_SUCCESSOR
+							option = AFG_1973_SUCCESSOR_FUNCOU
+						}
+					}
+				}
+				country_event = { id = AFG.15 days = 30 }
+			}
+		}
+	}
+}
+
+country_event = { # National Unity Party 1973
+	id = AFG.10
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event AFG.10"
+		remove_ideas = AFG_The_Two_Mohammeds
+	}
+	title = AFG.10.t
+	desc = AFG.10.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.10.a
+		ai_chance = { factor = 10 }
+		AFG_Mohammed_Zahir_Shah = { 
+			promote_character = despotism_absolute_monarchy_subtype
+			set_portraits = {
+				civilian = {
+					large = "gfx/leaders/AFG/Portrait_Afghanistan_Mohammed_Zahir_Shah_70s.png"
+				}
+				army = {
+					large = "gfx/leaders/AFG/Portrait_Afghanistan_Mohammed_Zahir_Shah_70s.png"
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_popularities = {
+			paternalism = 40
+			despotism = 60
+		}
+		set_party_name = {
+			ideology = communist
+			name = AFG_communist_party_endgame
+			long_name = AFG_communist_party_endgame_long
+		}
+		set_party_name = {
+			ideology = despotism
+			name = AFG_despotism_party
+			long_name = AFG_despotism_party_long
+		}
+		set_party_name = {
+			ideology = paternalism
+			name = AFG_paternalism_party_endgame
+			long_name = AFG_paternalism_party_endgame_long
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_ultranationalism_party_endgame
+			long_name = AFG_ultranationalism_party_endgame_long
+		}
+		promote_character = AFG_Faiz_Ahmad
+		promote_character = AFG_Khalilullah_Khalili
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30060
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # New Democracy 1973 (to do just merge dem path into this tbh)
+	id = AFG.11
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event AFG.11"
+		remove_ideas = AFG_The_Two_Mohammeds
+	}
+	title = AFG.11.t
+	desc = AFG.11.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.11.a
+		ai_chance = { factor = 10 }
+		AFG_Mohammed_Zahir_Shah = {
+			set_portraits = {
+				civilian = {
+					large = "gfx/leaders/AFG/Portrait_Afghanistan_Mohammed_Zahir_Shah_70s.png"
+				}
+				army = {
+					large = "gfx/leaders/AFG/Portrait_Afghanistan_Mohammed_Zahir_Shah_70s.png"
+				}
+			}
+		}
+		add_country_leader_role = {
+			character = AFG_Mohammed_Zahir_Shah
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+				expire = "1999.1.1"
+				ideology = paternalism_transitioning_democracy_subtype
+				traits = {}
+				id = -1
+			}
+		}
+		set_politics = {
+			ruling_party = paternalism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = paternalism
+			name = AFG_paternalism_party_endgame
+			long_name = AFG_paternalism_party_endgame_long
+		}
+		set_popularities = {
+			communist = 20
+			socialist = 0
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 60
+			despotism = 0
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 20
+		}
+		set_party_name = {
+			ideology = communist
+			name = AFG_communist_party_endgame
+			long_name = AFG_communist_party_endgame_long
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_ultranationalism_party_endgame
+			long_name = AFG_ultranationalism_party_endgame_long
+		}
+		promote_character = AFG_Faiz_Ahmad
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30061
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # Daoud Khan's many coups
+	id = AFG.12
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event AFG.12" 
+		remove_ideas = AFG_The_Two_Mohammeds
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30062
+				days = 1
+			}
+		}
+	}
+	title = AFG.12.t
+	desc = AFG.12.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = { # SocNat
+		name = AFG.12.a
+		set_politics = {
+			ruling_party = paternalism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_CIVDIC
+					}
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_REVNAT
+					}
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_NATSOC
+					}
+				}
+			}
+		}
+		set_popularities = {
+			paternalism = 60
+			fascism = 20
+			ultranationalism = 20
+		}
+		set_party_name = {
+			ideology = communist
+			name = AFG_communist_party_endgame
+			long_name = AFG_communist_party_endgame_long
+		}
+		set_party_name = {
+			ideology = despotism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = paternalism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = fascism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		promote_character = AFG_Faiz_Ahmad
+		AFG_Ahmad_Shah_Khan = { promote_character = despotism_absolute_monarchy_subtype }
+		AFG_Mohammad_Daoud_Khan = { promote_character = paternalism_social_nationalism_subtype }
+		set_cosmetic_tag = AFG_republic
+		set_global_flag = AFG_DK_IND
+		if = {
+			limit = {
+				OR = {
+					country_exists = AZH
+					AND = {
+						country_exists = IND
+						IND = { has_country_leader = { character = AZH_Abid_Hasan_Safrani ruling_only = yes } }
+					}
+				}
+			}
+			econ_join_sphere_JAP = yes
+			every_country = {
+				limit = { is_subject_of = AFG }
+				econ_join_sphere_JAP = yes
+			}
+		}
+	}
+	option = { # Kemalism
+		name = AFG.12.b
+		set_politics = {
+			ruling_party = paternalism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_SOCNAT
+					}
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_REVNAT
+					}
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_NATSOC
+					}
+				}
+			}
+		}
+		set_popularities = {
+			despotism = 35
+			paternalism = 65
+		}
+		set_party_name = {
+			ideology = communist
+			name = AFG_communist_party_endgame
+			long_name = AFG_communist_party_endgame_long
+		}
+		set_party_name = {
+			ideology = despotism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = paternalism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = fascism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		promote_character = AFG_Faiz_Ahmad
+		add_country_leader_role = {
+			character = AFG_Mohammed_Zahir_Shah
+			promote_leader = yes
+			country_leader = {
+				expire = "1999.1.1"
+				ideology = despotism_royal_dictatorship_subtype
+				traits = { }
+				id = -1
+			}	
+		}
+		add_country_leader_role = {
+			character = AFG_Mohammad_Daoud_Khan
+			promote_leader = yes
+			country_leader = {
+				#desc = ""
+				expire = "1994.4.20"
+				ideology = paternalism_kemalism_subtype
+				traits = { }
+				id = -1
+			}
+		}
+		set_cosmetic_tag = AFG_republic
+		econ_join_sphere_TUR = yes
+		every_country = {
+			limit = { is_subject_of = AFG }
+			econ_join_sphere_TUR = yes
+			if = {
+				limit = { NOT = { TUR = { has_idea = Sphere_Observer } } }
+				remove_ideas = Sphere_Observer
+			}
+		}
+		set_global_flag = AFG_DK_TUR
+	}
+	option = { # RevNat
+		name = AFG.12.c
+		set_politics = {
+			ruling_party = fascism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_SOCNAT
+					}
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_CIVDIC
+					}
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_NATSOC
+					}
+				}
+			}
+		}
+		set_popularities = {
+			fascism = 60
+			despotism = 20
+			ultranationalism = 20
+		}
+		set_party_name = {
+			ideology = communist
+			name = AFG_communist_party_endgame
+			long_name = AFG_communist_party_endgame_long
+		}
+		set_party_name = {
+			ideology = despotism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = paternalism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = fascism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		promote_character = AFG_Faiz_Ahmad
+		AFG_Ahmad_Shah_Khan = { promote_character = despotism_absolute_monarchy_subtype }
+		AFG_Mohammad_Daoud_Khan = { promote_character = fascism_revolutionary_nationalism_subtype }
+		set_cosmetic_tag = AFG_republic
+		econ_join_sphere_JAP = yes
+		add_ideas = Sphere_Observer
+		every_country = {
+			limit = { is_subject_of = AFG }
+			econ_join_sphere_JAP = yes
+		}
+		set_global_flag = AFG_DK_JAP
+	}
+	option = { # Natsoc
+		name = AFG.12.d
+		set_politics = {
+			ruling_party = national_socialism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { GER = { has_government = national_socialism } }
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_SOCNAT
+					}
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_CIVDIC
+					}
+					has_game_rule = {
+						rule = AFG_DAOUD_KHAN
+						option = AFG_DAOUD_KHAN_REVNAT
+					}
+				}
+			}
+		}
+		set_popularities = {
+			national_socialism = 60
+			despotism = 40
+		}
+		set_party_name = {
+			ideology = communist
+			name = AFG_communist_party_endgame
+			long_name = AFG_communist_party_endgame_long
+		}
+		set_party_name = {
+			ideology = despotism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = paternalism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		set_party_name = {
+			ideology = fascism
+			name = AFG_national_socialism_party
+			long_name = AFG_national_socialism_party_long
+		}
+		promote_character = AFG_Faiz_Ahmad
+		AFG_Ahmad_Shah_Khan = { promote_character = despotism_absolute_monarchy_subtype }
+		AFG_Mohammad_Daoud_Khan = { promote_character = national_socialism_subtype }
+		set_cosmetic_tag = AFG_republic
+		join_zollverein = yes
+		if = {
+			limit = { has_global_flag = german_civil_war_speervic }
+			join_zollverein = yes
+			every_country = {
+				limit = { is_subject_of = AFG }
+				join_zollverein = yes
+			}
+		}
+		econ_join_sphere_GER = yes
+		add_ideas = Pakt_Observer
+		every_country = {
+			limit = { is_subject_of = AFG }
+			econ_join_sphere_GER = yes
+			remove_ideas = Sphere_Observer
+		}
+	}
+}
+
+country_event = { # Maoist coup
+	id = AFG.13
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event AFG.13"
+		remove_ideas = AFG_The_Two_Mohammeds
+	}
+	title = AFG.13.t
+	desc = AFG.13.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.13.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = communist
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_popularities = {
+			communist = 60
+			socialist = 20
+			ultranationalism = 20
+		}
+		set_party_name = {
+			ideology = despotism
+			name = AFG_despotism_party
+			long_name = AFG_despotism_party_long
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_ultranationalism_party_endgame
+			long_name = AFG_ultranationalism_party_endgame_long
+		}
+		end_puppet = TAJ
+		end_puppet = KYR
+		end_puppet = UTL
+		AFG_Ahmad_Shah_Khan = { promote_character = despotism_absolute_monarchy_subtype }
+		set_cosmetic_tag = AFG_mao
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30063
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # Fundamentalist coup
+	id = AFG.14
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event AFG.14"
+		remove_ideas = AFG_The_Two_Mohammeds
+	}
+	title = AFG.14.t
+	desc = AFG.14.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.14.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = despotism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_popularities = {
+			communist = 40
+			despotism = 60
+		}
+		set_party_name = {
+			ideology = despotism
+			name = AFG_ultranationalism_party_endgame
+			long_name = AFG_ultranationalism_party_endgame_long
+		}
+		set_party_name = {
+			ideology = communist
+			name = AFG_communist_party_endgame
+			long_name = AFG_communist_party_endgame_long
+		}
+		promote_character = AFG_Burnahuddin_Rabbani
+		promote_character = AFG_Faiz_Ahmad
+		# AFG_Ahmad_Shah_Khan = { promote_character = despotism_absolute_monarchy_subtype }
+		set_cosmetic_tag = AFG_islamist
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30064
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # Aminist coup
+	id = AFG.15
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event AFG.15"
+		remove_ideas = AFG_The_Two_Mohammeds
+	}
+	title = AFG.15.t
+	desc = AFG.15.d
+	picture = GFX_report_event_lazar_generic_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AFG.15.a
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = despotism
+			last_election = "1969.8.29"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_popularities = {
+			communist = 15
+			despotism = 70
+			ultranationalism = 15
+		}
+		set_party_name = {
+			ideology = despotism
+			name = AFG_despotism_party_dem
+			long_name = AFG_despotism_party_dem_long
+		}
+		set_party_name = {
+			ideology = communist
+			name = AFG_communist_party_endgame
+			long_name = AFG_communist_party_endgame_long
+		}
+		set_party_name = {
+			ideology = ultranationalism
+			name = AFG_ultranationalism_party_endgame
+			long_name = AFG_ultranationalism_party_endgame_long
+		}
+		promote_character = AFG_Faiz_Ahmad
+		AFG_Ahmad_Shah_Khan = { promote_character = paternalism_national_conservatism_subtype }
+		random_list = {
+			1 = {
+				add_country_leader_role = {
+					character = AFG_Hafizullah_Amin
+					promote_leader = yes
+					country_leader = {
+						#desc = ""
+						expire = "1994.4.20"
+						ideology = despotism_chiang_kai_shek_thought_subtype
+						traits = { }
+						id = -1
+					}
+				}
+			}
+			1 = {
+				# WJT Amin
+				modifier = {
+					factor = 0
+					OR = {
+						CHI = { has_country_leader = { character = YUN_sun_fo ruling_only = yes } }
+						YUN = { has_country_leader = { character = YUN_sun_fo ruling_only = yes } }
+					}
+				}
+				promote_character = AFG_Hafizullah_Amin
+			}
+		}
+		set_cosmetic_tag = AFG_republic_amin
+		every_country = {
+			limit = { 
+				is_ai = no 
+				HasGermanAsiaInterest = yes
+			}
+			news_event = {
+				id = WORLD.30066
+				days = 1
+			}
+		}
+	}
+}

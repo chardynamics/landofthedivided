@@ -1,0 +1,321 @@
+carrier_task_force = {
+	folder = naval
+
+	name = GRAND_DOCTRINE_CARRIER_TASK_FORCE
+	description = GRAND_DOCTRINE_CARRIER_TASK_FORCE_DESC
+	icon = GFX_battle_groups_medium
+	available = {
+		always = yes
+	}
+
+	xp_cost = 100
+	xp_type = navy
+
+	ai_will_do = {
+		base = 1
+	}
+
+	tracks = {
+		naval_aviation
+		fleet
+		strategic
+		operational
+	}
+
+	# EFFECTS
+	sortie_efficiency = 0.08
+	convoy_escort_efficiency = 0.04
+	convoy_raiding_efficiency_factor = 0.04
+
+	milestones = {
+		{
+			#Naval Aviation
+			max_command_power = 5
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = capital_ships_milestone_var
+						}
+					}
+					set_variable = { capital_ships_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { capital_ships_milestone_var = 1 }
+				}
+			}
+		}
+		{
+			#Fleet
+			coordination_bonus = 0.05
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = screens_milestone_var
+						}
+					}
+					set_variable = { screens_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { screens_milestone_var = 1 }
+				}
+			}
+		}
+		{
+			#Strategic
+			research_facilities_monthly_rate = 0.5
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = submarines_milestone_var
+						}
+					}
+					set_variable = { submarines_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { submarines_milestone_var = 1 }
+				}
+			}
+		}
+		{
+			#Operations
+			industrial_capacity_dockyard = 0.05
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = operations_naval_milestone_var
+						}
+					}
+					set_variable = { operations_naval_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { operations_naval_milestone_var = 1 }
+				}
+			}
+		}
+	}
+}
+
+carrier_strike_force = {
+	folder = naval
+
+	name = GRAND_DOCTRINE_CARRIER_STRIKE_FORCE
+	description = GRAND_DOCTRINE_CARRIER_STRIKE_FORCE_DESC
+	icon = GFX_blue_water_navy_medium
+	available = {
+		always = yes
+	}
+
+	xp_cost = 100
+	xp_type = navy
+
+	ai_will_do = {
+		base = 1
+
+		modifier = {
+			factor = 10
+			is_major = no
+		}
+	}
+
+	tracks = {
+		naval_aviation
+		fleet
+		strategic
+		operational
+	}
+
+	# EFFECTS
+
+	naval_strike_targetting_factor = 0.08
+	port_strike = 0.08
+
+	milestones = {
+		{
+			#Naval Aviation
+			command_power_gain_mult = 0.05
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = capital_ships_milestone_var
+						}
+					}
+					set_variable = { capital_ships_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { capital_ships_milestone_var = 1 }
+				}
+			}
+		}
+		{
+			#Fleet
+			naval_critical_score_chance_factor = 0.05
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = screens_milestone_var
+						}
+					}
+					set_variable = { screens_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { screens_milestone_var = 1 }
+				}
+			}
+		}
+		{
+			#Strategic
+			research_facilities_monthly_rate = 0.5
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = submarines_milestone_var
+						}
+					}
+					set_variable = { submarines_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { submarines_milestone_var = 1 }
+				}
+			}
+		}
+		{
+			#Operational
+			war_support_factor = 0.05
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = operations_naval_milestone_var
+						}
+					}
+					set_variable = { operations_naval_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { operations_naval_milestone_var = 1 }
+				}
+			}
+		}
+	}
+}
+
+naval_bastion_doctrine = {
+	folder = naval
+
+	name = GRAND_DOCTRINE_NAVAL_BASTION_DOCTRINE
+	description = GRAND_DOCTRINE_NAVAL_BASTION_DOCTRINE_DESC
+	icon = GFX_green_water_navy_medium
+	available = {
+		always = yes
+	}
+
+	xp_cost = 100
+	xp_type = navy
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			factor = 0
+			any_owned_state = { is_coastal = yes }
+		}
+	}
+
+	tracks = {
+		naval_aviation
+		fleet
+		strategic
+		operational
+	}
+
+	amphibious_invasion_defence = 0.2
+	navy_fuel_consumption_factor = -0.10
+
+	milestones = {
+		{
+			#Naval Aviation
+			naval_strike_targetting_factor = 0.05
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = capital_ships_milestone_var
+						}
+					}
+					set_variable = { capital_ships_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { capital_ships_milestone_var = 1 }
+				}
+			}
+		}
+		{
+			#Fleet
+			naval_industry_cost_modifier = -0.05
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = screens_milestone_var
+						}
+					}
+					set_variable = { screens_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { screens_milestone_var = 1 }
+				}
+			}
+		}
+		{
+			#Strategic
+			research_facilities_monthly_rate = 0.5
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = submarines_milestone_var
+						}
+					}
+					set_variable = { submarines_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { submarines_milestone_var = 1 }
+				}
+			}
+		}
+		{
+			#Operational
+			naval_cost_modifier = -0.05
+
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = operations_naval_milestone_var
+						}
+					}
+					set_variable = { operations_naval_milestone_var = 1 }
+				}
+				else = {
+					add_to_variable = { operations_naval_milestone_var = 1 }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,171 @@
+add_namespace = MOC
+
+country_event = { #Charlotte abdicates, Rainier takes over
+	id = MOC.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MOC.1" }
+	title = MOC.1.t
+	desc = MOC.1.desc
+
+	#picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MOC.1.a
+		ai_chance = { factor = 0 }
+		ITA = {
+			set_autonomy = {
+				target = MOC
+				autonomy_state = autonomy_reliant
+			}
+		}
+		set_politics = {
+			ruling_party = paternalism
+		}
+		set_popularities = {
+			paternalism = 40
+			liberalism = 15
+			conservatism = 15
+			liberal_conservatism = 10
+			progressivism = 10
+			socialist = 5
+			fascism = 5
+		}
+		swap_ideas = {
+			remove_idea = MOC_casino_monte_carlo
+			add_idea = MOC_the_casinos_renaissance
+		}
+		swap_ideas = {
+			remove_idea = MOC_rainier_reform
+			add_idea = MOC_rainiers_constitution
+		}
+		swap_ideas = {
+			remove_idea = MOC_italian_oversight
+			add_idea = MOC_italian_interference
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = { id = WORLD.4218 days = 3 }
+		}
+	}
+}
+
+country_event = { #Red Revolution
+	id = MOC.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MOC.2" }
+	title = MOC.2.t
+	desc = MOC.2.desc
+	#picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MOC.2.a
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = socialist
+		}
+		set_popularities = {
+			communist = 30
+			socialist = 70
+		}
+		set_cosmetic_tag = MOC_Red
+		remove_all_ministers = yes
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Worker_Directed }
+		econ_subtype_change = yes
+		swap_ideas = {
+			remove_idea = MOC_casino_monte_carlo
+			add_idea = MOC_the_red_resort
+		}
+		swap_ideas = {
+			remove_idea = MOC_rainier_reform
+			add_idea = MOC_union_des_syndicats_de_monaco
+		}
+		swap_ideas = {
+			remove_idea = MOC_italian_oversight
+			add_idea = MOC_italian_guidance
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = { id = WORLD.4217 days = 3 }
+		}
+	}
+}
+
+country_event = { #Fascist Coup
+	id = MOC.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MOC.3" }
+	title = MOC.3.t
+	desc = MOC.3.desc
+	#picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MOC.3.a
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = fascism
+		}
+		set_popularities = {
+			fascism = 55
+			despotism = 20
+			conservatism = 5
+			liberal_conservatism = 5
+			socialist = 10
+			communist = 5
+		}
+		remove_all_ministers = yes
+		swap_ideas = {
+			remove_idea = MOC_casino_monte_carlo
+			add_idea = MOC_europes_art_gallery
+		}
+		swap_ideas = {
+			remove_idea = MOC_rainier_reform
+			add_idea = MOC_a_toy_model_of_fascism
+		}
+		swap_ideas = {
+			remove_idea = MOC_italian_oversight
+			add_idea = MOC_italian_domination
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = { id = WORLD.4219 days = 3 }
+		}
+	}
+}
+country_event = { #The SBM is on the verge of ruin
+	id = MOC.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MOC.4" }
+	title = MOC.4.t
+	desc = MOC.4.desc
+
+	#picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MOC.4.a
+		ai_chance = { factor = 0 }
+		every_country = {
+			limit = {
+				is_ai = no
+				HasEuropeInterest = yes
+			}
+			news_event = { id = WORLD.4220 }
+		}
+	}
+}

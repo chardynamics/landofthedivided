@@ -1,0 +1,22 @@
+scripted_gui = {
+	UKR_Ukraine_Must_Survive_GUI = {
+		context_type = decision_category
+		window_name = "UKR_Ukraine_Must_Survive_GUI"
+
+		visible = {
+		}
+
+		effects = {
+		}
+
+		triggers = {
+			UKR_Ukraine_Must_Survive_bar_1_visible = { has_country_flag = UKR_ukraine_must_survive_preparation_phase }
+			UKR_Ukraine_Must_Survive_bar_2_visible = { has_country_flag = UKR_ukraine_must_survive_insurgency_phase }
+		}
+
+		properties = {
+			UKR_Ukraine_Must_Survive_bar_1 = { frame = UKR_survive_variable }
+			UKR_Ukraine_Must_Survive_bar_2 = { frame = UKR_survive_variable }
+		}
+	}
+}

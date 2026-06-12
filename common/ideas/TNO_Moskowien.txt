@@ -1,0 +1,262 @@
+ideas = {
+	country = {
+		MCW_An_Empty_Throne = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_An_Empty_Throne" }
+			picture = MCW_an_empty_throne
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.15
+				political_parties_policy_monthly_rate = -0.25
+			}
+		}
+		MCW_Puppet_Kings_Court = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Puppet_Kings_Court" }
+			picture = MCW_puppet_kings_court
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				resistance_activity = -0.1
+				required_garrison_factor = -0.1
+			}
+		}
+		MCW_The_Wasteland = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_The_Wasteland" }
+			picture = MCW_the_wasteland
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.6
+				monthly_population = -0.1
+				gdp_growth_modifier = -0.5
+			}
+		}
+		MCW_Crown_Of_The_Old_Fighter = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Crown_Of_The_Old_Fighter" }
+			picture = MCW_crown_of_the_old_fighter
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				political_power_factor = -0.05
+				political_parties_policy_monthly_rate = -0.1
+			}
+		}
+		MCW_Purgatory = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Purgatory" }
+			picture = MCW_purgatory
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.5
+				monthly_population = -0.08
+				gdp_growth_modifier = -0.3
+			}
+		}
+		MCW_Vassals_At_Most = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Vassals_At_Most" }
+			picture = MCW_vassals_at_most
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				resistance_activity = 0.1
+				required_garrison_factor = 0.1
+			}
+		}
+		MCW_Crown_Of_The_Perfumed_Rioter = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Crown_Of_The_Perfumed_Rioter" }
+			picture = MCW_crown_of_the_perfumed_rioter
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.2
+				party_popularity_stability_factor = 0.15
+			}
+		}
+		MCW_Marching_On_Heaven = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Marching_On_Heaven" }
+			picture = MCW_marching_on_heaven
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				admin_efficiency_monthly_rate = -0.02
+				political_parties_policy_monthly_rate = 0.25
+			}
+		}
+		MCW_Levies_At_Most = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Levies_At_Most" }
+			picture = MCW_levies_at_most
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				security_policy_monthly_rate = -0.3
+				war_support_factor = 0.25
+			}
+		}
+		MCW_Crown_Of_The_Cowed_Prefect = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Crown_Of_The_Cowed_Prefect" }
+			picture = MCW_crown_of_the_cowed_prefect
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				political_power_factor = -0.05
+				political_parties_policy_monthly_rate = -0.1
+			}
+		}
+		MCW_Marching_On_The_Earthly_Kingdom = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Marching_On_The_Earthly_Kingdom" }
+			picture = MCW_marching_on_the_earthly_kingdom
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.5
+				monthly_population = -0.08
+				gdp_growth_modifier = -0.3
+				political_power_gain = 0.1
+			}
+		}
+		MCW_Knighthood_For_The_Loyal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Knighthood_For_The_Loyal" }
+			picture = MCW_knighthood_for_the_loyal
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				resistance_activity = 0.1
+				required_garrison_factor = 0.1
+				war_support_factor = -0.1
+			}
+		}
+		MCW_The_Brass_Throne = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_The_Brass_Throne" }
+			picture = MCW_the_brass_throne
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.075
+				political_power_factor = -0.1
+				political_parties_policy_monthly_rate = -0.2
+			}
+		}
+		MCW_Ghost_Carnival = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Ghost_Carnival" }
+			picture = MCW_ghost_carnival
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.8
+				monthly_population = -0.2
+				gdp_growth_modifier = -1.25
+			}
+		}
+		MCW_Dance_Of_The_Jesters = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Dance_Of_The_Jesters" }
+			picture = MCW_dance_of_the_jesters
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				resistance_activity = -0.2
+				required_garrison_factor = -0.2
+				political_power_gain = -0.1
+			}
+		}
+		MCW_Crown_Of_The_Red_Count = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Crown_Of_The_Red_Count" }
+			picture = MCW_crown_of_the_red_count
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.05
+				political_parties_policy_monthly_rate = -0.1
+			}
+		}
+		MCW_Scrying_Bulwark = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Scrying_Bulwark" }
+			picture = MCW_scrying_bulwark
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.5
+				monthly_population = -0.08
+				gdp_growth_modifier = -0.3
+			}
+		}
+		MCW_Dance_Of_The_Courtier = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Dance_Of_The_Courtier" }
+			picture = MCW_dance_of_the_courtier
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				resistance_activity = -0.15
+				required_garrison_factor = -0.15
+			}
+		}
+		MCW_Crown_Of_The_False_Son = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Crown_Of_The_False_Son" }
+			picture = MCW_crown_of_the_false_son
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = -0.05
+				political_parties_policy_monthly_rate = -0.1
+			}
+		}
+		MCW_Empire_Of_Ash = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Empire_Of_Ash" }
+			picture = MCW_empire_of_ash
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.5
+				monthly_population = -0.08
+				gdp_growth_modifier = -0.3
+			}
+		}
+		MCW_The_Suit_And_The_Butcher = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_The_Suit_And_The_Butcher" }
+			picture = MCW_the_suit_and_the_butcher
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				resistance_activity = -0.3
+				required_garrison_factor = -0.3
+			}
+		}
+		MCW_Marching_On_The_Earthly_Realm = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_Marching_On_The_Earthly_Realm" }
+			picture = MCW_marching_on_the_earthly_kingdom
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				resistance_activity = -0.2
+				required_garrison_factor = -0.2
+				stability_factor = 0.1
+			}
+		}
+	}
+}

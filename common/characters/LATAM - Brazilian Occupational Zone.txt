@@ -1,0 +1,17 @@
+characters = {
+	BRP_Carlos_de_Meira_Mattos = {
+		name = BRP_Carlos_de_Meira_Mattos
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BRP/Portrait_BRP_Carlos_de_Meira_Mattos.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CARLOS_MATTOS"
+			expire = "1999.1.1"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+			id = -1
+		}
+	}
+}

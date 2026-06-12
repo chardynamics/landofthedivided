@@ -1,0 +1,1693 @@
+ideas = {
+	country = {
+		Antarctica_Territory_Generic_Idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Antarctica_Territory_Generic_Idea" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_Territory_Generic_Idea
+			modifier = {
+				conscription = -1
+				recruitable_population = -1
+				resistance_target = -1
+				production_speed_buildings_factor = -1
+				monthly_population = -1
+				political_power_gain = -0.5
+			}
+		}
+		AAN_Antarctic_Anarchy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAN_Antarctic_Anarchy" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = antarctic_anarchy
+			modifier = {
+				Army_org = -10
+				Army_morale_factor = -1
+				Training_time_factor = 0.00
+				Army_defence_factor = -1
+				Mobilization_speed = -1
+				Conscription_factor = -1
+				Political_power_gain = -1
+				Industrial_capacity_factory = -1
+				Production_speed_buildings_factor = -1
+				research_speed_factor = -10
+				resistance_target = -1
+			}
+		}
+
+		AAF_The_French_Southern_and_Antarctic_Lands = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAF_The_French_Southern_and_Antarctic_Lands" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAF_The_French_Southern_and_Antarctic_Lands_Variant_2
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+
+		AAF_Logistikbasis_Kerguelen_Variant_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAF_Logistikbasis_Kerguelen_Variant_1" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAF_Logistikbasis_Kerguelen_Variant_1
+			modifier = {
+				supply_consumption_factor = -0.1
+				attrition = -0.1
+			}
+		}
+		
+		AAF_Logistikbasis_Kerguelen_Variant_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAF_Logistikbasis_Kerguelen_Variant_2" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAF_Logistikbasis_Kerguelen_Variant_2
+			modifier = {
+				supply_consumption_factor = -0.1
+				attrition = -0.1
+			}
+		}
+		
+		AAF_Logistikbasis_Kerguelen_Variant_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAF_Logistikbasis_Kerguelen_Variant_3" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAF_Logistikbasis_Kerguelen_Variant_3
+			modifier = {
+				supply_consumption_factor = -0.1
+				attrition = -0.1
+			}
+		}
+
+		AAF_The_Brothers_Cousteau_Variant_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAF_The_Brothers_Cousteau_Variant_1" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAF_The_Brothers_Cousteau_Variant_1
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+
+		AAF_The_Brothers_Cousteau_Variant_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAF_The_Brothers_Cousteau_Variant_2" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAF_The_Brothers_Cousteau_Variant_2
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+
+		AAF_The_Brothers_Cousteau_Variant_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAF_The_Brothers_Cousteau_Variant_3" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAF_The_Brothers_Cousteau_Variant_3
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+		
+		AAJ_Nobu_Shirase_Land = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAJ_Nobu_Shirase_Land" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAJ_Nobu_Shirase_Land
+			modifier = {
+				Antarctica_weekly_legitimacy = 1
+			}
+		}
+		AAJ_Nissui = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAJ_Nissui" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAJ_Nissui
+			modifier = {
+				# TODO
+			}
+		}
+		AAJ_Hogei_no_Chi = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAJ_Hogei_no_Chi" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAJ_Hogei_no_Chi
+			modifier = {
+				# TODO
+			}
+		}
+		AAJ_Shirase_Nobu_Tokubetsu_Konkyochitai = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAJ_Shirase_Nobu_Tokubetsu_Konkyochitai" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAJ_Shirase_Nobu_Tokubetsu_Konkyochitai
+			modifier = {
+				Antarctica_weekly_militarization = 1
+			}
+		}
+		
+		AAO_McMurdo_Station = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAO_McMurdo_Station" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAO_McMurdo_Station
+			modifier = {
+				out_of_supply_factor = -0.1
+				naval_attrition = -0.2
+				army_morale_factor = 0.15
+				naval_morale_factor = 0.15
+			}
+		}
+		AAO_OFN_Tensions = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAO_OFN_Tensions" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAO_OFN_Tensions
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+		AAO_Cohesion_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAO_Cohesion_1" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = BRA_nationwide_chaos_high
+			modifier = {
+				political_power_factor = -0.2
+				command_power_gain_mult = -0.2
+				war_support_factor = -0.4
+				stability_factor = -0.4
+				Antarctica_weekly_legitimacy = -2
+			}
+		}
+		AAO_Cohesion_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAO_Cohesion_2" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = BRA_nationwide_chaos_med
+			modifier = {
+				political_power_factor = -0.1
+				command_power_gain_mult = -0.1
+				war_support_factor = -0.2
+				stability_factor = -0.2
+				Antarctica_weekly_legitimacy = -1
+			}
+		}
+		AAO_Cohesion_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAO_Cohesion_3" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = BRA_nationwide_chaos_medhigh
+			modifier = {
+				political_power_factor = -0.05
+				command_power_gain_mult = -0.05
+			}
+		}
+		AAO_Cohesion_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAO_Cohesion_4" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = BRA_nationwide_chaos_lowmed
+			modifier = {
+				political_power_factor = 0.1
+				command_power_gain_mult = 0.1
+				war_support_factor = 0.2
+				stability_factor = 0.2
+				Antarctica_weekly_legitimacy = 1
+			}
+		}
+		AAO_Cohesion_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAO_Cohesion_5" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = BRA_nationwide_chaos_low
+			modifier = {
+				political_power_factor = 0.2
+				command_power_gain_mult = 0.2
+				war_support_factor = 0.4
+				stability_factor = 0.4
+				Antarctica_weekly_legitimacy = 2
+			}
+		}
+		AAO_Combat_Boost = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAO_Combat_Boost" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_weapons_production
+			modifier = {
+				army_attack_factor = 0.2
+				army_defence_factor = 0.2
+				planning_speed = 0.15
+				max_planning_factor = 0.15
+				recon_factor = 0.1
+			}
+		}
+		
+		AAG_Aircraft_Testing_Site = { # only 
+			on_add = { log = "ERROR: [GetDateText]: [Root.GetName]: add idea AAG_Aircraft_Testing_Site - should not happen, this is unused and only for bookmarks" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = no
+			}
+			removal_cost = -1
+			picture = AAG_Aircraft_Testing_Site
+			modifier = {
+				research_sharing_per_country_bonus_factor = 0.05
+				air_weather_penalty = -0.15
+			}
+		}
+		AAG_Precarious_Supply_Situation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAG_Precarious_Supply_Situation" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAG_Precarious_Supply_Situation
+			modifier = {
+				no_supply_grace = -24
+				out_of_supply_factor = -0.10
+			}
+		}
+		AAG_Alone_in_the_Cold = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAG_Alone_in_the_Cold" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAG_Alone_in_the_Cold
+			modifier = {
+				political_power_factor = -0.5
+				stability_factor = -0.25
+			}
+		}
+		AAG_Combat_Boost = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAG_Combat_Boost" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_german_training
+			modifier = {
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				planning_speed = 0.15
+				max_planning_factor = 0.15
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
+			}
+		}
+
+		AAA_Dreams_Of_The_South_Pole = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_Dreams_Of_The_South_Pole" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAA_Dreams_Of_The_South_Pole
+			modifier = {
+				no_supply_grace = 168
+				supply_consumption_factor = -0.25
+			}
+		}
+		AAA_War_Legacy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_War_Legacy" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAA_War_Legacy
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.3
+				Antarctica_weekly_militarization = 1
+			}
+		}
+		AAA_Azules_ARG = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_Azules_ARG" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAA_Azules_ARG
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+		AAA_Colorado_ARG = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_Colorado_ARG" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAA_Colorado_ARG
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+		AAA_Scientific_Brilliance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_Scientific_Brilliance" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAA_Scientific_Brilliance
+			modifier = {
+				research_sharing_per_country_bonus = 0.2
+			}
+		}
+		AAA_Scientific_Mediocrity = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_Scientific_Mediocrity" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAA_Scientific_Mediocrity
+			modifier = {
+				research_sharing_per_country_bonus = 0.05
+			}
+		}
+		AAA_Scientific_Failure = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_Scientific_Failure" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAA_Scientific_Failure
+		}
+		AAA_Op90_Resounding_Success = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_Op90_Resounding_Success" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = 0.2
+				research_speed_factor = 0.05
+			}
+			removal_cost = -1
+			picture = AAA_Op90_Resounding_Success
+		}
+		AAA_Op90_Nominal_Success = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_Op90_Nominal_Success" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = 0.15
+				research_speed_factor = 0.05
+			}
+			removal_cost = -1
+			picture = AAA_Op90_Nominal_Success
+		}
+		AAA_Op90_Tragic_Success = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_Op90_Tragic_Success" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = -0.1
+				research_speed_factor = 0.05
+			}
+			removal_cost = -1
+			picture = AAA_Op90_Tragic_Success
+		}
+		AAA_Op90_Disaster = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAA_Op90_Disaster" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAA_Op90_Disaster
+		}
+
+		AAC_Unrecognized_Antarctic_Claims = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAC_Unrecognized_Antarctic_Claims" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAC_Unrecognized_Antarctic_Claims
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.3
+				Antarctica_weekly_legitimacy = -1
+			}
+		}
+
+		AAC_American_Backed_Antarctic_Claims = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAC_American_Backed_Antarctic_Claims" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAC_Unrecognized_Antarctic_Claims
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+
+		AAC_Recognized_Antarctic_Claims = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAC_Recognized_Antarctic_Claims" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAC_Unrecognized_Antarctic_Claims
+			modifier = {
+				Antarctica_weekly_legitimacy = 0.25
+			}
+		}
+		
+		AAC_Jealous_Defence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAC_Jealous_Defence" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAC_Jealous_Defence
+			modifier = {
+				max_dig_in = 5
+				army_core_defence_factor = 0.10
+			}
+		}
+		
+		AAB_Burgundian_Think_Tank = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAB_Burgundian_Think_Tank" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAB_Burgundian_Think_Tank
+			modifier = {
+				research_speed_factor = -0.10
+				encryption_factor = 0.35
+			}
+		}
+
+		AAB_Vital_Research = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAB_Vital_Research" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAB_Vital_Research
+			modifier = {
+				supply_consumption_factor = -0.10
+				custom_modifier_tooltip = AAB_Vital_Research_tt
+			}
+		}
+
+		AAV_Legal_Infallibility = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAV_Legal_Infallibility" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAV_Legal_Infallibility
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+
+		AAV_Skeleton_Crew = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAV_Skeleton_Crew" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAV_Skeleton_Crew
+			modifier = {
+				army_defence_factor = -0.15
+				army_attack_factor = -0.15
+				command_power_gain = -0.1
+			}
+		}
+
+		AAV_The_Creeping_Dark = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAV_The_Creeping_Dark" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAV_The_Creeping_Dark
+			modifier = {
+				war_support_factor = -0.15
+				political_power_gain = -0.05
+			}
+		}
+
+		AAR_Misplacement_to_Correct = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAR_Misplacement_to_Correct" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAR_Misplacement_to_Correct
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.1
+			}
+		}
+		AAR_Borrowed_Time = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAR_Borrowed_Time" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAR_Borrowed_Time
+			modifier = {
+				war_support_factor = -0.1
+				max_dig_in = -3
+			}
+		}
+		AAR_Task_Force_Antarctica = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAR_Task_Force_Antarctica" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAR_Task_Force_Antarctica
+			modifier = {
+				command_power_gain = 0.1
+				air_cas_present_factor = 0.15
+			}
+		}
+
+		AAI_Distant_Outpost = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAI_Distant_Outpost" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAI_Distant_Outpost
+			modifier = {
+				war_support_factor = -0.1
+				command_power_gain = -0.1
+			}
+		}
+		AAI_Kingmaker = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAI_Kingmaker" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAI_Kingmaker
+			modifier = {
+				political_power_factor = 0.05
+				planning_speed = 0.2
+			}
+		}
+		AAI_Hooks_Harpoons = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AAI_Hooks_Harpoons" }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = AAI_Hooks_Harpoons
+			modifier = {
+				stability_factor = 0.1
+				research_speed_factor = -0.1
+			}
+		}
+
+
+		# Whaling Ideas
+		# Whaling Banned
+		Antarctica_whaling_banned_AAA = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_banned_AAA"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_banned_AAA
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_banned_AAC = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_banned_AAC"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_banned_AAC
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_banned_AAF = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_banned_AAF"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_banned_AAF
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_banned_AAG = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_banned_AAG"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_banned_AAG
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_banned_AAI = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_banned_AAI"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_banned_AAI
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_banned_AAO = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_banned_AAO"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_banned_AAO
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_banned_AAR = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_banned_AAR"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_banned_AAR
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_banned_AAU = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_banned_AAU"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_banned_AAU
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_banned_AAV = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_banned_AAV"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_banned_AAV
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_banned_AAZ = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_banned_AAZ"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_banned_AAZ
+			modifier = {
+			}
+		}
+
+		# Whaling Allowed
+		Antarctica_whaling_AAA = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_AAA"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_AAA
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_AAC = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_AAC"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_AAC
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_AAF = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_AAF"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_AAF
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_AAG = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_AAG"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_AAG
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_AAI = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_AAI"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_AAI
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_AAO = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_AAO"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_AAO
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_AAR = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_AAR"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_AAR
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_AAU = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_AAU"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_AAU
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_AAV = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_AAV"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_AAV
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_AAZ = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_AAZ"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_AAZ
+			modifier = {
+			}
+		}
+
+		# Whaling Booming
+
+		Antarctica_whaling_booming_AAA = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_booming_AAA"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_booming_AAA
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_booming_AAC = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_booming_AAC"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_booming_AAC
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_booming_AAF = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_booming_AAF"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_booming_AAF
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_booming_AAG = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_booming_AAG"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_booming_AAG
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_booming_AAI = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_booming_AAI"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_booming_AAI
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_booming_AAO = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_booming_AAO"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_booming_AAO
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_booming_AAR = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_booming_AAR"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_booming_AAR
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_booming_AAU = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_booming_AAU"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_booming_AAU
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_booming_AAV = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_booming_AAV"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_booming_AAV
+			modifier = {
+			}
+		}
+
+		Antarctica_whaling_booming_AAZ = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea Antarctica_whaling_booming_AAZ"
+				set_variable = { Antarctica_WhalingLevel = 1 }
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = Antarctica_whaling_booming_AAZ
+			modifier = {
+			}
+		}
+	}
+
+	hidden_ideas = {
+		### AAC Diplo Mech Tokens
+		AAC_Diplo_Deal_test_1 = {} 
+		AAC_Diplo_Deal_test_2 = {}
+
+		AAC_Diplo_Deal_Preamble = {}
+		AAC_Diplo_Deal_URG_Marine_Exercises_Cancelled = {}
+		AAC_Diplo_Deal_URG_Scheduled_Mine_Removal = {}
+		AAC_Diplo_Deal_URG_American_Intervention_Denounced = {}
+		AAC_Diplo_Deal_URG_Commitment_to_Antarctic_Sovereignty = {}
+		AAC_Diplo_Deal_URG_OAS_Diplomatic_Offensive = {}
+		AAC_Diplo_Deal_URG_Uruguayan_Claims_Recognized = {}
+		AAC_Diplo_Deal_URG_Lip_Service_Paid_to_Urugayan_Claims = {}
+
+		AAC_Diplo_Deal_PRU_Peruvian_Basing_Rights_Granted_Unconditionally = {
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		AAC_Diplo_Deal_PRU_Peace_Talks_Promised = {}
+		AAC_Diplo_Deal_PRU_Affirm_Commitment_to_Demilitarize_Antarctica_in_the_Future = {}
+		AAC_Diplo_Deal_PRU_Supported_Peruvian_Claims_Against_Ecuador = {}
+		AAC_Diplo_Deal_PRU_Whaling_and_Fishing_Rights_Granted = {}
+
+		AAC_Diplo_Deal_ECU_OAA_Support_Affirmed = {}
+		AAC_Diplo_Deal_ECU_Logistical_Support_to_OAA = {}
+		AAC_Diplo_Deal_ECU_Basing_Rights_Granted_to_Ecuador = {
+			modifier = {
+				Antarctica_daily_supply = -0.02
+			}
+		}
+		AAC_Diplo_Deal_ECU_A_Bigger_Base_Than_Peruvian_One_Promised = {
+			modifier = {
+				Antarctica_daily_supply = -0.02
+			}
+		}
+
+		AAC_Diplo_Deal_VEN_Subsidized_Oil_Deal = {}
+		AAC_Diplo_Deal_VEN_Oil_For_Arturo_Prat = {}
+		AAC_Diplo_Deal_VEN_Anti_Argentine_Smear_Campaign = {}
+		AAC_Diplo_Deal_VEN_Independent_Focus = {}
+
+		AAC_Diplo_Deal_HAI_Joint_Counterinsurgency_Exercises = {}
+		AAC_Diplo_Deal_HAI_Haitian_Mango_Shipments = {}
+		AAC_Diplo_Deal_HAI_Discounted_Haitian_Mango_Shipments = {}
+
+		AAC_Diplo_Deal_CUB_Loopholes_in_Recognition = {}
+		AAC_Diplo_Deal_CUB_Cuban_Antarctic_Base = {
+			modifier = {
+				Antarctica_weekly_militarization = 0.1
+			}
+		}
+		AAC_Diplo_Deal_CUB_Italians_Must_Go = {}
+		AAC_Diplo_Deal_CUB_Cuban_Cigar_Shipment = {}
+
+		AAC_Diplo_Deal_CentAm_Support_Canal_Nationalization = {}
+		AAC_Diplo_Deal_CentAm_Priority_Canal_Passage = {}
+		AAC_Diplo_Deal_CentAm_Rare_Metals_to_Panama = {}
+		AAC_Diplo_Deal_CentAm_Unconditional_Costa_Rican_Support = {}
+		AAC_Diplo_Deal_CentAm_A_Different_Type_of_Colony = {}
+		AAC_Diplo_Deal_CentAm_The_Avian_Agreement = {}
+		AAC_Diplo_Deal_CentAm_Honduran_Banana_Bonanza = {}
+		AAC_Diplo_Deal_CentAm_Honduran_Bananas = {}
+		AAC_Diplo_Deal_CentAm_Discounted_Luxury_Coffee_Imports = {}
+		AAC_Diplo_Deal_CentAm_Luxury_Coffee_Shipments_Imports = {}
+		AAC_Diplo_Deal_CentAm_Cheap_Coffee_Imports = {}
+
+		AAC_Diplo_Deal_MEX_An_Antifascist_Antarctica = {}
+		AAC_Diplo_Deal_MEX_Joint_Antifascist_Military_Exercises = {}
+		AAC_Diplo_Deal_MEX_Copper_Trade_Deal = {}
+		AAC_Diplo_Deal_MEX_Discounted_Copper_Trade_Deal = {}
+		AAC_Diplo_Deal_MEX_Financed_Mexican_Antarctic_Base = {
+			modifier = {
+				Antarctica_weekly_legitimacy = 0.1
+			}
+		}
+		AAC_Diplo_Deal_MEX_Land_For_Mexican_Antarctic_Base = {
+			modifier = {
+				Antarctica_weekly_legitimacy = 0.1
+			}
+		}
+		AAC_Diplo_Deal_MEX_Pastry_Ploy = {}
+
+		### AAC Marine Mech Tokens
+		# Infantry Weapon
+		AAC_Marine_Equipment_CHL_M14 = {}
+		AAC_Marine_Equipment_USA_M19024A_Springfield = {}
+		AAC_Marine_Equipment_BRA_INA_Model_953 = {}
+		AAC_Marine_Equipment_JAP_Arisaka_Type_15 = {}
+		AAC_Marine_Equipment_CAN_Rifle_No_9_Mk_I = {}
+		AAC_Marine_Equipment_TUR_T58_Atmaca = {}
+
+		# Body Kit
+		AAC_Marine_Equipment_USA_47_Winter_Parka = {}
+		AAC_Marine_Equipment_AAC_Dry_Scuba_Kit = {}
+		AAC_Marine_Equipment_BRA_M2_Flamethrower = {}
+		AAC_Marine_Equipment_JAP_Body_Armor = {}
+		AAC_Marine_Equipment_CAN_Inuit_Polar_Clothes = {}
+		AAC_Marine_Equipment_TUR_makeshift_grenade_bandolier = {}
+
+		# Support Weapon
+		AAC_Marine_Equipment_CHL_Mk2_Fragmentation_Grenade = {}
+		AAC_Marine_Equipment_USA_M18A1_Claymore = {}
+		AAC_Marine_Equipment_BRA_RL_83_Blindicide = {}
+		AAC_Marine_Equipment_JAP_Type_22_Kuyu = {}
+		AAC_Marine_Equipment_CAN_L21A1 = {}
+		AAC_Marine_Equipment_TUR_granatwerfer_34 = {}
+		
+		# Polar Warfare
+		AAC_Marine_Equipment_AAC_Tucker_Snow_Cat = {}
+		AAC_Marine_Equipment_AAC_Thiokol_Trackmaster = {}
+		AAC_Marine_Equipment_AAC_High_Performance_Dog_Sled = {}
+		AAC_Marine_Equipment_AAC_Extra_Huskies = {}
+		AAC_Marine_Equipment_CAN_60_Ski_Doo = {}
+		AAC_Marine_Equipment_USA_57_Polaris_Snow_Traveler = {}
+
+		# Creature Comforts
+		AAC_Marine_Equipment_HON_Fresh_Bananas = {}
+		AAC_Marine_Equipment_HAI_Frozen_Mangos = {}
+		AAC_Marine_Equipment_CUB_Cigars = {}
+		AAC_Marine_Equipment_ELS_Deluxe_Coffee = {}
+		AAC_Marine_Equipment_CHL_Pisco = {}
+		AAC_Marine_Equipment_SWI_Rolex_Explorer_Watches = {}
+	}
+}

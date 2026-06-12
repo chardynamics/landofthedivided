@@ -1,0 +1,293 @@
+ideas = {
+	country = {
+		NZL_Establishment = { # A More Harmonious Establishment
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Establishment" }
+			picture = NZL_political_landscape
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		NZL_Establishment_2 = { # The Abnormal New Normal
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Establishment_2" }
+			picture = NZL_political_landscape_2
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}
+		NZL_Culture_War = { # Anglo Dominance
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Culture_War" }
+			picture = NZL_culture_war
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = 0.05
+				gdp_growth_modifier = -0.25
+			}
+			targeted_modifier = {
+				tag = CAN
+				extra_trade_to_target_factor = 0.20
+			}
+		}
+		NZL_Culture_War_2 = { # Waning Anglo Influence
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Culture_War_2" }
+			picture = NZL_culture_war_2
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = 0.025
+				gdp_growth_modifier = -0.20
+			}
+			targeted_modifier = {
+				tag = CAN
+				extra_trade_to_target_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.5
+			}
+		}
+		NZL_Culture_War_3 = { # The Best of Both Worlds
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Culture_War_3" }
+			picture = NZL_culture_war_3
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				gdp_growth_modifier = -0.15
+			}
+			targeted_modifier = {
+				tag = CAN
+				extra_trade_to_target_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.10
+			}
+		}
+		NZL_Culture_War_4 = { # Growing American Influence
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Culture_War_4" }
+			picture = NZL_culture_war_4
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.025
+				gdp_growth_modifier = -0.10
+			}
+			targeted_modifier = {
+				tag = CAN
+				extra_trade_to_target_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.15
+			}
+		}
+		NZL_Culture_War_5 = { # American Dominance
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Culture_War_5" }
+			picture = NZL_culture_war_5
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
+				gdp_growth_modifier = -0.05
+			}
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.20
+			}
+		}
+		NZL_Onto_World_Stage = { # Bearer of the Torch
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Onto_World_Stage" }
+			picture = NZL_world_stage
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				max_training = 0.15
+				war_support_factor = 0.1
+				army_attack_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		
+		NZL_Onto_World_Stage_2 = { # Kindler of the Flame
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Onto_World_Stage_2" }
+			picture = NZL_world_stage_2	
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				max_training = 0.1
+				war_support_factor = 0.05
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		NZL_Onto_World_Stage_3 = { # Burnt by the Fire
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Onto_World_Stage_3" }
+			picture = NZL_world_stage_3
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				max_training = 0.05
+				army_attack_factor = 0.025
+				army_morale_factor = 0.025
+			}
+		}
+		NZL_Onto_World_Stage_4 = { # Set Ablaze
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Onto_World_Stage_4" }
+			picture = NZL_world_stage_4
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.05
+				army_attack_factor = -0.025
+				army_morale_factor = -0.025
+			}
+		}
+		NZL_Onto_World_Stage_5 = { # Warden of the Ashes
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Onto_World_Stage_5" }
+			picture = NZL_world_stage_5
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.1
+				army_attack_factor = -0.075
+				army_morale_factor = -0.075
+				conscription_factor = -0.05
+			}
+		}
+		NZL_Onto_World_Stage_6 = { # Backstage
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Onto_World_Stage_6" }
+			picture = NZL_world_stage_6
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.2
+				army_attack_factor = -0.1
+				army_morale_factor = -0.1
+				conscription_factor = -0.05
+			}
+		}
+		NZL_Social_Fabric = { # Pristine
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Social_Fabric" }
+			picture = NZL_social_fabric
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				stability_factor = 0.1
+			}
+		}
+		NZL_Social_Fabric_2 = { # Worn
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Social_Fabric_2" }
+			picture = NZL_social_fabric_2
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.5
+				industrial_capacity_factory = 0.025
+				industrial_capacity_dockyard = 0.02	
+				stability_factor = 0.05
+			}
+		}
+		NZL_Social_Fabric_3 = { # Fractured
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Social_Fabric_3" }
+			picture = NZL_social_fabric_3
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = -0.5
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.02	
+				stability_factor = -0.05
+			}
+		}
+		NZL_Social_Fabric_4 = { # In Tatters
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NZL_Social_Fabric_4" }
+			picture = NZL_social_fabric_4
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = -0.10
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				stability_factor = -0.1
+			}
+		}
+	}
+}

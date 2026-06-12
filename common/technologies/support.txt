@@ -1,0 +1,2623 @@
+technologies = {
+
+	military_infrastructure1 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
+		supply_consumption_factor = -0.02
+		military_expenditures_factor = -0.01
+
+		path = {
+			leads_to_tech = military_infrastructure2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1945
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 0 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+		}
+	}
+
+	military_infrastructure2 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
+		supply_consumption_factor = -0.03
+		military_expenditures_factor = -0.02
+		barracks_coverage_modifier = 0.05
+
+		path = {
+			leads_to_tech = military_infrastructure3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1955
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 4 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+
+		}
+	}
+
+	military_infrastructure3 = {
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+		}
+		supply_consumption_factor = -0.03
+		military_expenditures_factor = -0.02
+		barracks_coverage_modifier = 0.05
+
+		path = {
+			leads_to_tech = military_infrastructure4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1965
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 8 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+
+		}
+	}
+
+	military_infrastructure4 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+		}
+		supply_consumption_factor = -0.03
+		military_expenditures_factor = -0.02
+		barracks_coverage_modifier = 0.05
+
+		path = {
+			leads_to_tech = military_infrastructure5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1975
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 12 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+
+		}
+	}
+
+	military_infrastructure5 = {
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
+		supply_consumption_factor = -0.03
+		military_expenditures_factor = -0.02
+		barracks_coverage_modifier = 0.05
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1985
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 16 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+
+		}
+	}
+
+	command_and_control1 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		army_org_regain = 0.02
+
+		path = {
+			leads_to_tech = command_and_control2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1945
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 0 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+
+		}
+	}
+
+	command_and_control2 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		experience_gain_army_factor = 0.05
+		experience_gain_navy_factor = 0.05
+		experience_gain_air_factor = 0.05
+		command_power_gain_mult = 0.05
+		army_professionalism_monthly_rate = 0.025
+		army_org_regain = 0.1
+		army_org_factor = 0.05
+		navy_org_factor = 0.05
+
+		path = {
+			leads_to_tech = command_and_control3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1955
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 4 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 50
+				OR = {
+					tag = USA
+					tag = GER
+					tag = JAP
+				}
+			}
+
+		}
+	}
+
+	command_and_control3 = {
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		experience_gain_army_factor = 0.05
+		experience_gain_navy_factor = 0.05
+		experience_gain_air_factor = 0.05
+		command_power_gain_mult = 0.05
+		army_professionalism_monthly_rate = 0.025
+		army_org_regain = 0.1
+		army_org_factor = 0.05
+		navy_org_factor = 0.05
+
+		path = {
+			leads_to_tech = command_and_control4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1965
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 8 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 50
+				OR = {
+					tag = USA
+					tag = GER
+					tag = JAP
+				}
+			}
+
+		}
+	}
+
+	command_and_control4 = {
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		experience_gain_army_factor = 0.05
+		experience_gain_navy_factor = 0.05
+		experience_gain_air_factor = 0.05
+		command_power_gain_mult = 0.05
+		army_professionalism_monthly_rate = 0.025
+		army_org_regain = 0.1
+		army_org_factor = 0.05
+		navy_org_factor = 0.05
+
+		path = {
+			leads_to_tech = command_and_control5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1975
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 12 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 50
+				OR = {
+					tag = USA
+					tag = GER
+					tag = JAP
+				}
+			}
+
+		}
+	}
+
+	command_and_control5 = {
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		experience_gain_army_factor = 0.05
+		experience_gain_navy_factor = 0.05
+		experience_gain_air_factor = 0.05
+		command_power_gain_mult = 0.05
+		army_professionalism_monthly_rate = 0.025
+		army_org_regain = 0.1
+		army_org_factor = 0.05
+		navy_org_factor = 0.05
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1985
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 16 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 50
+				OR = {
+					tag = USA
+					tag = GER
+					tag = JAP
+				}
+			}
+
+		}
+	}
+
+	tech_support = {
+
+		enable_equipments = {
+			support_equipment_1
+		}
+
+		path = {
+			leads_to_tech = tech_engineers
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = tech_recon
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_field_hospital
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = tech_logistics_company
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_military_police
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_signal_company
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_maintenance_company
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_scout_helicopter_company
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_transport_helicopter_company
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_attack_helicopter_company
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1918
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 0 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tech_scout_helicopter_company = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = {
+			helicopter_engines = 1
+			scout_helicopter_1960 = 1
+			tech_recon2 = 1
+		}
+		enable_subunits = {
+			scout_helicopter_company
+		}
+		#path = {
+		#	leads_to_tech = tech_scout_helicopter_company2
+		#	research_cost_coeff = 1
+		#}
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1960
+		folder = {
+			name = support_folder
+			position = { x = 18 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 0
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+		}
+	}
+
+	#tech_scout_helicopter_company2 = {
+	#
+	#	scout_helicopter_company = {
+	#		recon = 2
+	#	}
+	#	path = {
+	#		leads_to_tech = tech_scout_helicopter_company3
+	#		research_cost_coeff = 1
+	#	}
+	#	research_cost = 1.5
+	#	start_year = 1970
+	#	folder = {
+	#		name = support_folder
+	#		position = { x = 18 y = 18 }
+	#	}
+	#
+	#	categories = {
+	#		support_tech
+	#		helicopter_support
+	#		recon_tech
+	#	}
+	#
+	#	ai_will_do = {
+	#		factor = 0
+	#
+	#	}
+	#}
+	#tech_scout_helicopter_company3 = {
+	#
+	#	scout_helicopter_company = {
+	#		recon = 2
+	#	}
+	#	path = {
+	#		leads_to_tech = tech_scout_helicopter_company4
+	#		research_cost_coeff = 1
+	#	}
+	#
+	#	research_cost = 1.5
+	#	start_year = 1980
+	#	folder = {
+	#		name = support_folder
+	#		position = { x = 18 y = 24 }
+	#	}
+	#
+	#	categories = {
+	#		support_tech
+	#		helicopter_support
+	#		recon_tech
+	#	}
+	#
+	#	ai_will_do = {
+	#		factor = 0
+	#
+	#	}
+	#}
+	#tech_scout_helicopter_company4 = {
+	#
+	#	scout_helicopter_company = {
+	#		recon = 2
+	#	}
+	#
+	#	research_cost = 1.5
+	#	start_year = 1990
+	#	folder = {
+	#		name = support_folder
+	#		position = { x = 18 y = 30 }
+	#	}
+	#
+	#	categories = {
+	#		support_tech
+	#		helicopter_support
+	#		recon_tech
+	#	}
+	#
+	#	ai_will_do = {
+	#		factor = 0
+	#
+	#	}
+	#}
+
+	tech_transport_helicopter_company = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = {
+			helicopter_engines = 1
+			transport_helicopter_1960 = 1
+		}
+		enable_subunits = { ###todo: make either of the base logistics/field hospital techs a prerequisite. Or have this possibly lead to two further techs for those
+			transport_helicopter_company #medevac
+			transport_helicopter_supply_company
+		}
+		#path = {
+		#	leads_to_tech = tech_transport_helicopter_company2
+		#	research_cost_coeff = 1
+		#}
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1960
+		folder = {
+			name = support_folder
+			position = { x = 16 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+			hospital_tech
+			logistics_tech
+		}
+
+		ai_will_do = {
+			factor = 0
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+		}
+	}
+	#tech_transport_helicopter_company2 = {
+	#
+	#	transport_helicopter_company = {
+	#		casualty_trickleback = 0.05
+	#		experience_loss_factor = -0.05
+	#	}
+	#	path = {
+	#		leads_to_tech = tech_transport_helicopter_company3
+	#		research_cost_coeff = 1
+	#	}
+	#	research_cost = 1.5
+	#	start_year = 1970
+	#	folder = {
+	#		name = support_folder
+	#		position = { x = 16 y = 18 }
+	#	}
+	#
+	#	categories = {
+	#		support_tech
+	#		helicopter_support
+	#		hospital_tech
+	#	}
+	#
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#}
+	#tech_transport_helicopter_company3 = {
+	#
+	#	transport_helicopter_company = {
+	#		casualty_trickleback = 0.05
+	#		experience_loss_factor = -0.05
+	#	}
+	#	path = {
+	#		leads_to_tech = tech_transport_helicopter_company4
+	#		research_cost_coeff = 1
+	#	}
+	#
+	#	research_cost = 1.5
+	#	start_year = 1980
+	#	folder = {
+	#		name = support_folder
+	#		position = { x = 16 y = 24 }
+	#	}
+	#
+	#	categories = {
+	#		support_tech
+	#		helicopter_support
+	#		hospital_tech
+	#	}
+	#
+	#	ai_will_do = {
+	#		factor = 0
+	#
+	#	}
+	#}
+	#tech_transport_helicopter_company4 = {
+	#
+	#	transport_helicopter_company = {
+	#		casualty_trickleback = 0.05
+	#		experience_loss_factor = -0.05
+	#	}
+	#
+	#	research_cost = 1.5
+	#	start_year = 1990
+	#	folder = {
+	#		name = support_folder
+	#		position = { x = 16 y = 30 }
+	#	}
+	#
+	#	categories = {
+	#		support_tech
+	#		helicopter_support
+	#		engineers_tech
+	#	}
+	#
+	#	ai_will_do = {
+	#		factor = 0
+	#
+	#	}
+	#}
+
+	tech_attack_helicopter_company = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = {
+			helicopter_engines = 1
+			attack_helicopter_1960 = 1
+		}
+		enable_subunits = {
+			attack_helicopter_company
+		}
+		path = {
+			leads_to_tech = tech_attack_helicopter_company2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1960
+		folder = {
+			name = support_folder
+			position = { x = 14 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 30
+			}
+			modifier = {
+				factor = 150
+				num_of_military_factories > 50
+			}
+		}
+	}
+
+	tech_attack_helicopter_company2 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		attack_helicopter_company = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		path = {
+			leads_to_tech = tech_attack_helicopter_company3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1970
+		folder = {
+			name = support_folder
+			position = { x = 14 y = 18 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 30
+			}
+			modifier = {
+				factor = 150
+				num_of_military_factories > 50
+			}
+		}
+	}
+	tech_attack_helicopter_company3 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		attack_helicopter_company = {
+			breakthrough = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		path = {
+			leads_to_tech = tech_attack_helicopter_company4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1980
+		folder = {
+			name = support_folder
+			position = { x = 14 y = 24 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 30
+			}
+			modifier = {
+				factor = 150
+				num_of_military_factories > 50
+			}
+		}
+	}
+	tech_attack_helicopter_company4 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		attack_helicopter_company = {
+			breakthrough = 0.05
+			ap_attack = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1990
+		folder = {
+			name = support_folder
+			position = { x = 14 y = 30 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 30
+			}
+			modifier = {
+				factor = 150
+				num_of_military_factories > 50
+			}
+		}
+	}
+
+	tech_engineers = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		enable_subunits = {
+			engineer
+		}
+
+		path = {
+			leads_to_tech = tech_engineers2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1945
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 3 }
+		}
+
+		categories = {
+			support_tech
+			engineers_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	tech_engineers2 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_1 = 1 }
+		enable_subunits = {
+			mbt_engineer
+		}
+
+		engineer = {
+			entrenchment = 2
+
+			fort = {
+				defence = 0.10
+				attack = 0.10
+			}
+		}
+
+
+		path = {
+			leads_to_tech = tech_engineers3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1950
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 7 }
+		}
+
+		categories = {
+			support_tech
+			engineers_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	tech_engineers3 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_2 = 1 }
+		engineer = {
+			entrenchment = 2
+			river = {
+				attack = 0.05
+				defence = 0.05
+			}
+			fort = {
+				defence = 0.05
+				attack = 0.05
+			}
+			urban = {
+				defence = 0.05
+				attack = 0.05
+			}
+		}
+
+		mbt_engineer = {
+			entrenchment = 3
+			river = {
+				attack = 0.075
+				defence = 0.075
+			}
+			fort = {
+				defence = 0.075
+				attack = 0.075
+			}
+			urban = {
+				defence = 0.075
+				attack = 0.075
+			}
+		}
+
+		path = {
+			leads_to_tech = tech_engineers4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1960
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			engineers_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	tech_engineers4 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_3 = 1 }
+		engineer = {
+			entrenchment = 2
+			equipment_capture_factor = 0.01
+			river = {
+				attack = 0.05
+				defence = 0.05
+			}
+			fort = {
+				defence = 0.05
+				attack = 0.05
+			}
+			urban = {
+				defence = 0.05
+				attack = 0.05
+			}
+		}
+
+		mbt_engineer = {
+			entrenchment = 3
+			river = {
+				attack = 0.075
+				defence = 0.075
+			}
+			fort = {
+				defence = 0.075
+				attack = 0.075
+			}
+			urban = {
+				defence = 0.075
+				attack = 0.075
+			}
+		}
+
+		path = {
+			leads_to_tech = tech_engineers5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1970
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 18 }
+		}
+
+		categories = {
+			support_tech
+			engineers_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	tech_engineers5 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_4 = 1 }
+		engineer = {
+			entrenchment = 2
+			river = {
+				attack = 0.05
+				defence = 0.05
+			}
+			fort = {
+				defence = 0.05
+				attack = 0.05
+			}
+			urban = {
+				defence = 0.05
+				attack = 0.05
+			}
+		}
+
+		mbt_engineer = {
+			entrenchment = 3
+			river = {
+				attack = 0.075
+				defence = 0.075
+			}
+			fort = {
+				defence = 0.075
+				attack = 0.075
+			}
+			urban = {
+				defence = 0.075
+				attack = 0.075
+			}
+		}
+
+		path = {
+			leads_to_tech = tech_engineers6
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1980
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 24 }
+		}
+
+		categories = {
+			support_tech
+			engineers_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	tech_engineers6 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_4 = 1 }
+		engineer = {
+			entrenchment = 2
+			river = {
+				attack = 0.05
+				defence = 0.05
+			}
+			fort = {
+				defence = 0.05
+				attack = 0.05
+			}
+			urban = {
+				defence = 0.05
+				attack = 0.05
+			}
+		}
+
+		mbt_engineer = {
+			entrenchment = 3
+			river = {
+				attack = 0.075
+				defence = 0.075
+			}
+			fort = {
+				defence = 0.075
+				attack = 0.075
+			}
+			urban = {
+				defence = 0.075
+				attack = 0.075
+			}
+		}
+				
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1990
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 30 }
+		}
+
+		categories = {
+			support_tech
+			engineers_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	tech_recon = {
+		enable_subunits = {
+			recon
+			mot_recon
+			AC_recon
+			IFV_recon
+			MBT_recon
+		}
+		dependencies = {
+			night_vision_1 = 1
+			infantry_kit_2 = 1
+		}
+		path = {
+			leads_to_tech = tech_recon2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1945
+		folder = {
+			name = support_folder
+			position = { x = 2 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 15
+
+			modifier = {
+				factor = 50
+				is_major = yes
+			}
+
+		}
+	}
+
+	tech_recon2 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		dependencies = {
+			radio = 1
+			night_vision_2 = 1
+			infantry_kit_3 = 1
+		}
+		recon = { ###note: cut down on buff difference if it proves to be tech creep/unbalanced
+			recon = 2
+		}
+		mot_recon = {
+			recon = 2.5
+		}
+		AC_recon = {
+			recon = 3
+		}
+		IFV_recon = {
+			recon = 2.5
+		}
+		MBT_recon = {
+			recon = 2
+		}
+
+		path = {
+			leads_to_tech = tech_recon3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1950
+		folder = {
+			name = support_folder
+			position = { x = 2 y = 7 }
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+
+		}
+	}
+
+	tech_recon3 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		dependencies = {
+			radio = 1
+			night_vision_3 = 1
+			infantry_kit_4 = 1
+		}
+		recon = {
+			recon = 2
+			initiative = 0.01
+		}
+		mot_recon = {
+			recon = 2.5
+		}
+		AC_recon = {
+			recon = 3
+		}
+		IFV_recon = {
+			recon = 2.5
+		}
+		MBT_recon = {
+			recon = 2
+		}
+		path = {
+			leads_to_tech = tech_recon4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1960
+		folder = {
+			name = support_folder
+			position = { x = 2 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+
+		}
+	}
+	tech_recon4 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = {
+			night_vision_4 = 1
+			infantry_kit_6 = 1
+		}
+		recon = {
+			recon = 2
+			equipment_capture_factor = 0.01
+			initiative = 0.01
+		}
+		mot_recon = {
+			recon = 2.5
+			equipment_capture_factor = 0.01
+			initiative = 0.02
+		}
+		AC_recon = {
+			recon = 3
+			equipment_capture_factor = 0.01
+			initiative = 0.02
+		}
+		IFV_recon = {
+			recon = 2.5
+			equipment_capture_factor = 0.01
+			initiative = 0.02
+		}
+		MBT_recon = {
+			recon = 2
+			equipment_capture_factor = 0.02
+			initiative = 0.01
+		}
+		scout_helicopter_company = {
+			recon = 4
+			initiative = 0.05
+		}
+		path = {
+			leads_to_tech = tech_recon5
+			research_cost_coeff = 1
+		}
+				
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1970
+		folder = {
+			name = support_folder
+			position = { x = 2 y = 18 }
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+
+		}
+	}
+	tech_recon5 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = {
+			night_vision_5 = 1
+			infantry_kit_7 = 1
+		}
+		recon = {
+			recon = 2
+		}
+		mot_recon = {
+			recon = 2.5
+		}
+		AC_recon = {
+			recon = 3
+		}
+		IFV_recon = {
+			recon = 2.5
+		}
+		MBT_recon = {
+			recon = 2
+		}
+		scout_helicopter_company = {
+			recon = 4
+		}
+		path = {
+			leads_to_tech = tech_recon6
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1980
+		folder = {
+			name = support_folder
+			position = { x = 2 y = 24 }
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+
+		}
+	}
+	tech_recon6 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = {
+			night_vision_5 = 1
+			infantry_kit_9 = 1
+		}
+		recon = {
+			recon = 2
+		}
+		mot_recon = {
+			recon = 2.5
+		}
+		AC_recon = {
+			recon = 3
+		}
+		IFV_recon = {
+			recon = 2.5
+		}
+		MBT_recon = {
+			recon = 2
+		}
+		scout_helicopter_company = {
+			recon = 4
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1990
+		folder = {
+			name = support_folder
+			position = { x = 2 y = 30 }
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+
+		}
+	}
+
+	tech_military_police = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		enable_subunits = {
+			military_police
+		}
+
+		path = {
+			leads_to_tech = tech_military_police2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1945
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			military_police_tech
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	tech_military_police2 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		military_police = {
+			suppression_factor = 0.1
+			experience_loss_factor = -0.05
+			default_morale = 0.1
+		}
+
+
+		path = {
+			leads_to_tech = tech_military_police3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1950
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 7 }
+		}
+
+		categories = {
+			support_tech
+			military_police_tech
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+	}
+
+	tech_military_police3 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		military_police = {
+			suppression_factor = 0.1
+			experience_loss_factor = -0.05
+			default_morale = 0.1
+		}
+		path = {
+			leads_to_tech = tech_military_police4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1960
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			military_police_tech
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+	}
+	tech_military_police4 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		military_police = {
+			suppression_factor = 0.1
+			experience_loss_factor = -0.05
+			default_morale = 0.1
+		}
+		path = {
+			leads_to_tech = tech_military_police5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1970
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 18 }
+		}
+
+		categories = {
+			support_tech
+			military_police_tech
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+	}
+	tech_military_police5 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		military_police = {
+			suppression_factor = 0.1
+			experience_loss_factor = -0.05
+			default_morale = 0.1
+		}
+		path = {
+			leads_to_tech = tech_military_police6
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1980
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 24 }
+		}
+
+		categories = {
+			support_tech
+			military_police_tech
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+	}
+	tech_military_police6 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		military_police = {
+			suppression_factor = 0.1
+			experience_loss_factor = -0.05
+			default_morale = 0.1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1990
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 30 }
+		}
+
+		categories = {
+			support_tech
+			military_police_tech
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+	}
+
+	tech_maintenance_company = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		enable_subunits = {
+			maintenance_company
+		}
+
+		path = {
+			leads_to_tech = tech_maintenance_company2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1945
+		folder = {
+			name = support_folder
+			position = { x = 6 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			maintenance_company_tech
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		enable_equipment_modules = {
+			expanded_toolbox
+		}
+	}
+
+	tech_maintenance_company2 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_1 = 1 }
+		maintenance_company = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.1
+		}
+
+
+		path = {
+			leads_to_tech = tech_maintenance_company3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1950
+		folder = {
+			name = support_folder
+			position = { x = 6 y = 7 }
+		}
+
+		categories = {
+			support_tech
+			maintenance_company_tech
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tech_maintenance_company3 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_2 = 1 }
+		maintenance_company = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.1
+		}
+		path = {
+			leads_to_tech = tech_maintenance_company4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1960
+		folder = {
+			name = support_folder
+			position = { x = 6 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			maintenance_company_tech
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	tech_maintenance_company4 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_3 = 1 }
+		maintenance_company = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.1
+		}
+		path = {
+			leads_to_tech = tech_maintenance_company5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1970
+		folder = {
+			name = support_folder
+			position = { x = 6 y = 18 }
+		}
+
+		categories = {
+			support_tech
+			maintenance_company_tech
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	tech_maintenance_company5 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_4 = 1 }
+		maintenance_company = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.1
+		}
+		path = {
+			leads_to_tech = tech_maintenance_company6
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1980
+		folder = {
+			name = support_folder
+			position = { x = 6 y = 24 }
+		}
+
+		categories = {
+			support_tech
+			maintenance_company_tech
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	tech_maintenance_company6 = {
+
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_4 = 1 }
+		maintenance_company = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.1
+		}
+		path = {
+			leads_to_tech = tech_maintenance_company4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1990
+		folder = {
+			name = support_folder
+			position = { x = 6 y = 30 }
+		}
+
+		categories = {
+			support_tech
+			maintenance_company_tech
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tech_field_hospital = {
+
+		enable_subunits = {
+			field_hospital
+		}
+
+		path = {
+			leads_to_tech = tech_field_hospital2
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			motorized_infantry = 1
+		}
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1945
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			hospital_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	tech_field_hospital2 = {
+		dependencies = { combat_support_equipment_1 = 1 }
+		field_hospital = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.10
+		}
+
+		path = {
+			leads_to_tech = tech_field_hospital3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1950
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 7 }
+		}
+
+		categories = {
+			support_tech
+			hospital_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 7
+		}
+	}
+
+	tech_field_hospital3 = {
+		dependencies = { combat_support_equipment_1 = 1 }
+		field_hospital = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.10
+		}
+		path = {
+			leads_to_tech = tech_field_hospital4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1960
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			hospital_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 7
+		}
+	}
+	tech_field_hospital4 = {
+		dependencies = { combat_support_equipment_2 = 1 }
+		field_hospital = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.10
+		}
+		transport_helicopter_company = {
+			casualty_trickleback = 0.15
+			experience_loss_factor = -0.15
+		}
+		path = {
+			leads_to_tech = tech_field_hospital5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1970
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 18 }
+		}
+
+		categories = {
+			support_tech
+			hospital_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 7
+		}
+	}
+	tech_field_hospital5 = {
+		dependencies = { combat_support_equipment_4 = 1 }
+		field_hospital = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.10
+		}
+		transport_helicopter_company = {
+			casualty_trickleback = 0.15
+			experience_loss_factor = -0.15
+		}
+		path = {
+			leads_to_tech = tech_field_hospital6
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1980
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 24 }
+		}
+
+		categories = {
+			support_tech
+			hospital_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 7
+		}
+	}
+	tech_field_hospital6 = {
+		dependencies = { combat_support_equipment_4 = 1 }
+		field_hospital = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.10
+		}
+
+		transport_helicopter_company = {
+			casualty_trickleback = 0.15
+			experience_loss_factor = -0.15
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1990
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 30 }
+		}
+
+		categories = {
+			support_tech
+			hospital_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 7
+		}
+	}
+
+	tech_logistics_company = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		enable_subunits = {
+			logistics_company
+		}
+
+		path = {
+			leads_to_tech = tech_logistics_company2
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			motorized_infantry = 1
+		}
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1945
+		folder = {
+			name = support_folder
+			position = { x = 10 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			logistics_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	tech_logistics_company2 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		logistics_company = {
+			supply_consumption_factor = -0.05
+			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.05
+			default_morale = 0.2
+		}
+		no_supply_grace = 8
+
+
+		path = {
+			leads_to_tech = tech_logistics_company3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1950
+		folder = {
+			name = support_folder
+			position = { x = 10 y = 7 }
+		}
+
+		categories = {
+			support_tech
+			logistics_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 9
+
+		}
+	}
+
+	tech_logistics_company3 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		logistics_company = {
+			supply_consumption_factor = -0.05
+			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.05
+			default_morale = 0.2
+		}
+		no_supply_grace = 8
+		path = {
+			leads_to_tech = tech_logistics_company4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1960
+		folder = {
+			name = support_folder
+			position = { x = 10 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			logistics_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 9
+
+		}
+	}
+
+	tech_logistics_company4 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		logistics_company = {
+			supply_consumption_factor = -0.05
+			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.05
+			default_morale = 0.2
+		}
+		no_supply_grace = 8
+		transport_helicopter_supply_company = {
+			supply_consumption_factor = -0.15
+			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.1
+			default_morale = 0.5
+		}
+		path = {
+			leads_to_tech = tech_logistics_company5
+			research_cost_coeff = 1
+		}
+				
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1970
+		folder = {
+			name = support_folder
+			position = { x = 10 y = 18 }
+		}
+
+		categories = {
+			support_tech
+			logistics_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 9
+
+		}
+	}
+	tech_logistics_company5 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		logistics_company = {
+			supply_consumption_factor = -0.05
+			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.05
+			default_morale = 0.2
+		}
+		no_supply_grace = 8
+		transport_helicopter_supply_company = {
+			supply_consumption_factor = -0.15
+			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.1
+			default_morale = 0.5
+		}
+		path = {
+			leads_to_tech = tech_logistics_company6
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1980
+		folder = {
+			name = support_folder
+			position = { x = 10 y = 24 }
+		}
+
+		categories = {
+			support_tech
+			logistics_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 9
+
+		}
+	}
+	tech_logistics_company6 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		logistics_company = {
+			supply_consumption_factor = -0.05
+			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.05
+			default_morale = 0.2
+		}
+		no_supply_grace = 8
+		transport_helicopter_supply_company = {
+			supply_consumption_factor = -0.15
+			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.1
+			default_morale = 0.5
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1990
+		folder = {
+			name = support_folder
+			position = { x = 10 y = 30 }
+		}
+
+		categories = {
+			support_tech
+			logistics_tech
+			motorized_equipment
+		}
+
+		ai_will_do = {
+			factor = 9
+
+		}
+	}
+
+	tech_signal_company = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		enable_subunits = {
+			signal_company
+		}
+
+		path = {
+			leads_to_tech = tech_signal_company2
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			radio = 1
+			motorized_infantry = 1
+		}
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1945
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			signal_company_tech
+			electronics
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	tech_signal_company2 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		signal_company = {
+			initiative = 0.05
+			equipment_capture_factor = 0.01
+		}
+
+
+		path = {
+			leads_to_tech = tech_signal_company3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1950
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 7 }
+		}
+
+		categories = {
+			support_tech
+			signal_company_tech
+			electronics
+		}
+
+		ai_will_do = {
+			factor = 20
+
+		}
+	}
+
+	tech_signal_company3 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		signal_company = {
+			initiative = 0.05
+			equipment_capture_factor = 0.01
+		}
+		path = {
+			leads_to_tech = tech_signal_company4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1960
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			signal_company_tech
+			electronics
+		}
+
+		ai_will_do = {
+			factor = 20
+
+		}
+	}
+	tech_signal_company4 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		signal_company = {
+			initiative = 0.05
+			equipment_capture_factor = 0.01
+		}
+		path = {
+			leads_to_tech = tech_signal_company5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1970
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 18 }
+		}
+
+		categories = {
+			support_tech
+			signal_company_tech
+			electronics
+		}
+
+		ai_will_do = {
+			factor = 20
+
+		}
+	}
+	tech_signal_company5 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		signal_company = {
+			initiative = 0.05
+			equipment_capture_factor = 0.01
+		}
+		path = {
+			leads_to_tech = tech_signal_company6
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1980
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 24 }
+		}
+
+		categories = {
+			support_tech
+			signal_company_tech
+			electronics
+		}
+
+		ai_will_do = {
+			factor = 20
+
+		}
+	}
+	tech_signal_company6 = {
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		signal_company = {
+			initiative = 0.05
+			equipment_capture_factor = 0.01
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1990
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 30 }
+		}
+
+		categories = {
+			support_tech
+			signal_company_tech
+			electronics
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+}

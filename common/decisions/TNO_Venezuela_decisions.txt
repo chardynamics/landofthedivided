@@ -1,0 +1,1649 @@
+VNS_peoples_momentum_category = {
+	VNS_PeoplesMomentum_timer = {
+		icon = GFX_decision_generic_border_war
+		activation = {
+			always = no
+		}
+		available = {
+			NOT = { has_global_flag = VEN_venezuela_revolution_ongoing }
+		}
+		cancel_effect = {
+			remove_mission = VNS_PeoplesMomentum_timer
+		}
+		is_good = yes
+		days_mission_timeout = 14
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision VNS_PeoplesMomentum_timer"
+			activate_mission = VNS_PeoplesMomentum_timer
+			VEN = {
+				VEN_legitimacy_decrease_small = yes
+				if = {
+					limit = {
+						has_country_leader = { character = VEN_Pablo_Antonio_Flores ruling_only = yes }
+					}
+					VEN_legitimacy_decrease_med = yes
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						check_variable = { VEN_Legitimacy > 64.99 }
+						surrender_progress > 0.3
+					}
+				}
+				country_event = {
+					id = VEN_revolution.17
+					days = 14
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						check_variable = { VEN_Legitimacy > 74.99 }
+						surrender_progress > 0.4
+					}
+				}
+				country_event = {
+					id = VEN_revolution.16
+					days = 21
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						check_variable = { VEN_Legitimacy > 84.99 }
+						surrender_progress > 0.5
+					}
+				}
+				country_event = {
+					id = VEN_revolution.18
+					days = 28
+				}
+			}
+			random_list = {
+				1 = {}
+				1 = {}
+				1 = {
+					VEN = {
+						random_controlled_state = {
+							limit = {
+								NOT = { has_dynamic_modifier = { modifier = VEN_faln_state_modifier } }
+								NOT = { state = 307 }
+							}
+							add_dynamic_modifier = { modifier = VEN_faln_state_modifier }
+							if = {
+								limit = { is_core_of = VEN }
+								remove_core_of = VEN
+							}
+							if = {
+								limit = { has_resistance = no }
+								force_enable_resistance = { occupier = VEN occupied = VNS }
+								start_resistance = VNS
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					surrender_progress > 0.6
+				}
+				random_list = {
+					1 = {}
+					1 = {
+						VEN = {
+							random_controlled_state = {
+								limit = {
+									NOT = { has_dynamic_modifier = { modifier = VEN_faln_state_modifier } }
+									NOT = { state = 307 }
+								}
+								add_dynamic_modifier = { modifier = VEN_faln_state_modifier }
+								if = {
+									limit = { is_core_of = VEN }
+									remove_core_of = VEN
+								}
+								if = {
+									limit = { has_resistance = no }
+									force_enable_resistance = { occupier = VEN occupied = VNS }
+									start_resistance = VNS
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					surrender_progress > 0.7
+				}
+				VEN = {
+					random_controlled_state = {
+						limit = {
+							NOT = { has_dynamic_modifier = { modifier = VEN_faln_state_modifier } }
+							NOT = { state = 307 }
+						}
+						add_dynamic_modifier = { modifier = VEN_faln_state_modifier }
+						if = {
+							limit = { is_core_of = VEN }
+							remove_core_of = VEN
+						}
+						if = {
+							limit = { has_resistance = no }
+							force_enable_resistance = { occupier = VEN occupied = VNS }
+							start_resistance = VNS
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+VEN_debug = {
+	VEN_debug_fire_venrev = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_debug_fire_venrev"
+			add_to_variable = { VEN_Commies = 8 }
+			clamp_variable = {
+				var = VEN_Commies
+				min = 0
+				max = 8
+			}
+			VEN_update_dynmod_effects = yes
+			VEN_commie_check = yes
+			VEN_Spawn_Commies = yes
+		}
+	}
+
+	VEN_debug_fire_moncada_invasion_guyana = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_debug_fire_invasion_guyana"
+			if = {
+				limit = {
+					country_exists = CLC
+					NOT = { CLC = { has_cosmetic_tag = CLC_andi } }
+				}
+				create_faction_from_template = { name = Bolivarian_Alliance icon = GFX_Unitarian_Bolivarian_Alliance_Member template = faction_template_generic }
+				add_to_faction = CLC
+				CLC = {
+					set_faction_leader = yes
+					set_country_flag = UBA_MEMBER
+				}
+			}
+			set_party_name = {
+				ideology = socialist
+				long_name = VEN_socialist_2_party_long
+				name = VEN_socialist_2_party
+			}
+			add_country_leader_role = {
+				character = VEN_Domingo_Alberto_Rangel
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_VEN_DOMINGO_ALBERTO_RANGEL"
+					expire = "1994.4.20"
+					ideology = socialist_subtype
+					traits = { }
+					id = -1
+				}
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+				last_election = "1964.12.1"
+				election_frequency = 48
+			}
+			VEN_Juan_Dios_Moncada_Vidal = { promote_character = fascism_revolutionary_nationalism_subtype }
+			remove_all_ministers = yes
+			add_ideas = {
+				VEN_democracys_decimated_corpse
+				VEN_drowned_in_pitch_black
+				VEN_bolivar_anew
+			}
+			remove_ideas = {
+				VEN_black_gold_raw_gold
+				VEN_game_of_the_three_kings
+				VEN_democracys_fraying_lifeline
+				VEN_the_crimson_spectre
+			}
+			econ_leave_sphere = yes
+			remove_ideas = OFN_Observer
+
+			set_popularities = {
+				ultranationalism = 3
+				fascism = 33
+				despotism = 12
+				paternalism = 19
+				conservatism = 3
+				liberal_conservatism = 3
+				liberalism = 5
+				progressivism = 7
+				communist = 15
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = VEN_vidal_long
+				name = VEN_vidal
+			}
+			set_party_name = {
+				ideology = despotism
+				long_name = VEN_vidal_long
+				name = VEN_vidal
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = VEN_vidal_long
+				name = VEN_vidal
+			}
+			set_party_name = {
+				ideology = ultranationalism
+				long_name = VEN_vidal_long
+				name = VEN_vidal
+			}
+			set_party_name = {
+				ideology = socialist
+				long_name = VNS_communist_party_long
+				name = VNS_communist_party
+			}
+			set_party_name = {
+				ideology = communist
+				long_name = VNS_communist_party_long
+				name = VNS_communist_party
+			}
+			add_country_leader_role = {
+				character = VEN_Americo_Silva
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_VEN_AMERICO_SILVA"
+					expire = "1994.4.20"
+					ideology = socialist_subtype
+					traits = { }
+					id = -1
+				}
+			}
+			VEN_Juan_Dios_Moncada_Vidal = { set_portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Juan_de_Dios_Moncada_Vidal_Bolivarian.png" } } }
+			remove_ideas = VEN_the_crimson_spectre
+			remove_dynamic_modifier = { modifier = VEN_CrimsonSpectre_dynamic_modifier }
+			add_ideas = {
+				VEN_drowned_in_pitch_black
+				VEN_bolivar_anew
+			}
+			remove_ideas = {
+				VEN_vanguards_of_the_flag
+				VEN_the_crimson_spectre
+				VEN_black_gold_raw_gold
+				VEN_black_gold_raw_gold_alt
+			}
+			set_cosmetic_tag = VEN_bolivarian
+
+			GUY = {
+				country_event = {
+					id = ESQ_scripted.6
+				}
+			}
+		}
+	}
+
+	VEN_debug_unite_grancommie = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_debug_unite_grancommie"
+			CLL = { change_tag_from = VEN }
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = VEN
+						is_owned_by = VNS
+						is_owned_by = COL
+						is_owned_by = CLC
+						is_owned_by = CLD
+					}
+				}
+				transfer_state_to = CLL
+				add_core_of = CLL
+				set_demilitarized_zone = no
+			}
+			CLL = {
+				set_cosmetic_tag = COL_GranCommie
+				set_capital = { state = 2449 }
+				annex_country = {
+					target = VEN
+					target = VNS
+					transfer_troops = yes
+				}
+				set_politics = { ruling_party = despotism }
+				promote_character = CLL_Revolutionary_Congress
+				set_party_name = {
+					ideology = communist
+					long_name = COL_PSUB_long
+					name = COL_PSUB
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = COL_PSUB_long
+					name = COL_PSUB
+				}
+				set_popularities = {
+					communist = 100
+				}
+				remove_ideas = {
+					CLL_Shoulders_of_Giants
+					CLL_Revolutionary_Coalition
+					CLL_Revolutionary_Coalition_2
+					CLL_Jewel_of_the_East
+					CLL_Far_From_Any_Road
+					CLL_Red_Rose_Army
+					CLL_Burning_Plains
+					CLL_american_air_support
+					CLL_military_advisors
+					CLL_engineers
+					CLL_air_supply
+					CLL_guerrilla_training
+				}
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = VEN_news.70
+				}
+			}
+		}
+	}
+
+	VEN_debug_unite_GranFasc = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_debug_unite_GranFasc"
+			CLC = { change_tag_from = VEN }
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = VEN
+						is_owned_by = VNS
+						is_owned_by = COL
+						is_owned_by = CLL
+						is_owned_by = CLD
+					}
+				}
+				transfer_state_to = CLC
+				add_core_of = CLC
+				set_demilitarized_zone = no
+			}
+			1551 = { transfer_state_to = CLC }
+			CLC = {
+				set_cosmetic_tag = COL_GranFasc
+				set_capital = { state = 2449 }
+				annex_country = {
+					target = VEN
+					target = VNS
+					transfer_troops = yes
+				}
+				set_party_name = {
+					ideology = fascism
+					long_name = COL_PNB_long
+					name = COL_PNB
+				}
+				set_party_name = {
+					ideology = despotism
+					long_name = COL_PNB_long
+					name = COL_PNB
+				}
+				set_popularities = {
+					fascism = 100
+				}
+				set_politics = { ruling_party = despotism }
+				promote_character = CLC_Gran_Bolivarian_Council
+				remove_ideas = {
+					CLC_Reactionary_Den
+					CLC_La_Violencia
+					CLC_Shoulders_of_Giants
+					CLC_Agrarian_Crisis
+					CLC_Land_of_Blood_Coffee
+					CLC_Land_of_Blood_Coffee_2
+					CLC_Promise_of_Palmaseca
+					CLC_Party_Oedipus_Tyrannus
+					CLC_Party_La_Vorragine
+					CLC_Party_Ship_of_Theseus
+					CLC_Party_Crown_Tyranny_Law
+					CLC_A_Blurred_Line
+					CLC_Blues_of_Modernity
+					CLC_New_Venice
+					CLC_Birds_of_Prey_A
+					CLC_Birds_of_Prey_B
+					CLC_Birds_of_Prey_C
+					CLC_Japanese_advisors
+					CLC_Japanese_technical_assistance
+					CLC_Japanese_training
+				}
+				remove_dynamic_modifier = { modifier = CLC_Japanese_Support_dynmod }
+				create_faction_from_template = { name = Bolivarian_Alliance icon = GFX_Unitarian_Bolivarian_Alliance_Member template = faction_template_generic }
+				set_country_flag = UBA_MEMBER
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = VEN_news.70
+				}
+			}
+		}
+	}
+
+	VEN_debug_fire_1963 = {
+		icon = GFX_decision_generic_visibility_indent
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			NOT = {
+				has_country_flag = VEN_debug_1963
+			}
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_fire_1963"
+			set_country_flag = VEN_debug_1963
+		}
+	}
+
+	VEN_debug_1963_caldera = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			has_country_flag = VEN_debug_1963
+			NOT = {
+				has_country_flag = VEN_debug_1963_selected
+			}
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_1963_caldera"
+			set_country_flag = VEN_COPEI_1963
+			set_party_name = {
+				ideology = progressivism
+				long_name = VEN_progressivism_1_party_long
+				name = VEN_progressivism_1_party
+			}
+			retire_country_leader = yes
+			VEN_Raul_Leoni = { promote_character = progressivism_gaitanismo_subtype }
+
+			set_politics = {
+				ruling_party = liberal_conservatism
+				elections_allowed = yes
+				last_election = "1964.12.1"
+				election_frequency = 48
+			}
+			set_popularities = {
+				fascism = 1
+				despotism = 11
+				paternalism = 9
+				conservatism = 10
+				liberal_conservatism = 15
+				liberalism = 13
+				progressivism = 14
+				socialist_1 = 9
+				socialist = 8
+				socialist_2 = 3
+				communist = 7
+			}
+			remove_all_ministers = yes
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = VEN_news.7
+				}
+			}
+			set_country_flag = VEN_debug_1963_selected
+		}
+	}
+
+	VEN_debug_1963_barrios = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			has_country_flag = VEN_debug_1963
+			NOT = {
+				has_country_flag = VEN_debug_1963_selected
+			}
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_1963_barrios"
+			set_country_flag = VEN_Barrios_1963
+			set_party_name = {
+				ideology = progressivism
+				long_name = VEN_progressivism_1_party_long
+				name = VEN_progressivism_1_party
+			}
+			retire_country_leader = yes
+			promote_character = VEN_Gonzalo_Barrios
+			set_politics = {
+				ruling_party = progressivism
+				elections_allowed = yes
+				last_election = "1964.12.1"
+				election_frequency = 48
+			}
+			set_popularities = {
+				fascism = 1
+				despotism = 11
+				paternalism = 10
+				conservatism = 9
+				liberal_conservatism = 12
+				liberalism = 13
+				progressivism = 16
+				socialist_1 = 9
+				socialist = 9
+				socialist_2 = 3
+				communist = 7
+			}
+			remove_all_ministers = yes
+			remove_ideas = VEN_game_of_the_three_kings
+			add_ideas = VEN_game_of_the_three_kings_barrios
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = VEN_news.5
+				}
+			}
+			set_country_flag = VEN_debug_1963_selected
+		}
+	}
+
+	VEN_debug_1963_leoni = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			has_country_flag = VEN_debug_1963
+			NOT = {
+				has_country_flag = VEN_debug_1963_selected
+			}
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_1963_leoni"
+			set_country_flag = VEN_Leoni_1963
+			set_party_name = {
+				ideology = progressivism
+				long_name = VEN_progressivism_1_party_long
+				name = VEN_progressivism_1_party
+			}
+			retire_country_leader = yes
+			VEN_Raul_Leoni = { promote_character = progressivism_gaitanismo_subtype }
+			set_politics = {
+				ruling_party = progressivism
+				elections_allowed = yes
+				last_election = "1964.12.1"
+				election_frequency = 48
+			}
+			set_popularities = {
+				fascism = 1
+				despotism = 11
+				paternalism = 10
+				conservatism = 9
+				liberal_conservatism = 12
+				liberalism = 13
+				progressivism = 16
+				socialist_1 = 9
+				socialist = 9
+				socialist_2 = 3
+				communist = 7
+			}
+			remove_all_ministers = yes
+			remove_ideas = VEN_game_of_the_three_kings
+			add_ideas = VEN_game_of_the_three_kings_barrios
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = VEN_news.5
+				}
+			}
+			set_country_flag = VEN_debug_1963_selected
+		}
+	}
+
+	VEN_debug_1963_ojeda = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			has_country_flag = VEN_debug_1963
+			NOT = {
+				has_country_flag = VEN_debug_1963_selected
+			}
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_1963_ojeda"
+			set_country_flag = VEN_Ojeda_1963
+			set_party_name = {
+				ideology = progressivism
+				long_name = VEN_progressivism_1_party_long
+				name = VEN_progressivism_1_party
+			}
+			retire_country_leader = yes
+			VEN_Raul_Leoni = { promote_character = progressivism_gaitanismo_subtype }
+			set_politics = {
+				ruling_party = socialist
+				elections_allowed = yes
+				last_election = "1964.12.1"
+				election_frequency = 48
+			}
+			set_popularities = {
+				fascism = 1
+				despotism = 11
+				paternalism = 10
+				conservatism = 9
+				liberal_conservatism = 12
+				liberalism = 11
+				progressivism = 14
+				socialist_1 = 8
+				socialist = 14
+				socialist_2 = 3
+				communist = 7
+			}
+			remove_all_ministers = yes
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = VEN_news.4
+				}
+			}
+			VEN_commie_decrease_med = yes
+			set_country_flag = VEN_debug_1963_selected
+		}
+	}
+
+	VEN_debug_1963_villalba = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			has_country_flag = VEN_debug_1963
+			NOT = {
+				has_country_flag = VEN_debug_1963_selected
+			}
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_1963_villalba"
+			set_country_flag = VEN_Villalba_1963
+			set_party_name = {
+				ideology = progressivism
+				long_name = VEN_progressivism_1_party_long
+				name = VEN_progressivism_1_party
+			}
+			retire_country_leader = yes
+			VEN_Raul_Leoni = { promote_character = progressivism_gaitanismo_subtype }
+			set_politics = {
+				ruling_party = liberalism
+				elections_allowed = yes
+				last_election = "1964.12.1"
+				election_frequency = 48
+			}
+			set_popularities = {
+				fascism = 1
+				despotism = 11
+				paternalism = 10
+				conservatism = 9
+				liberal_conservatism = 10
+				liberalism = 18
+				progressivism = 14
+				socialist_1 = 9
+				socialist = 8
+				socialist_2 = 3
+				communist = 7
+			}
+			remove_all_ministers = yes
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = VEN_news.3
+				}
+			}
+			VEN_commie_increase_small = yes
+			set_country_flag = VEN_debug_1963_selected
+		}
+	}
+
+	VEN_debug_fire_1968 = {
+		icon = GFX_decision_generic_visibility_indent
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			NOT = {
+				has_country_flag = VEN_debug_1968
+			}
+			has_country_flag = VEN_debug_1963_selected
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_fire_1968"
+			set_country_flag = VEN_debug_1968
+		}
+	}
+
+	VEN_debug_1968_urd = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			has_country_flag = VEN_debug_1968
+			NOT = {
+				has_country_flag = VEN_debug_1968_selected
+			}
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_1968_urd"
+			add_ideas = VEN_the_jewel_of_the_caribbean
+			remove_ideas = VEN_democracys_fraying_lifeline
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = VEN_Villalba_1963
+						AND = {
+							NOT = { has_country_flag = VEN_Ojeda_1963 }
+							NOT = { has_country_flag = VEN_Dubuc_1963 }
+							NOT = { has_country_flag = VEN_Villalba_1963 }
+						}
+					}
+				}
+				retire_character = VEN_Jovito_Villalba
+				VEN_Miguel_Angel_Burelli = {
+					promote_character = liberalism_national_liberal_subtype
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = VEN_Dubuc_1963 }
+				retire_character = VEN_Jovito_Villalba
+				promote_character = VEN_Francisco_Arreaza
+				add_country_leader_role = {
+					character = VEN_Luis_Felipe_Llovera_Paez
+					promote_leader = yes
+					country_leader = {
+						desc = "POLITICS_VEN_LUIS_FELIPE_LLOVERA_PAEZ"
+						expire = "1994.4.20"
+						ideology = paternalism_anocracy_subtype
+						traits = { }
+						id = -1
+					}
+				}
+				set_politics = {
+					ruling_party = liberalism
+					elections_allowed = yes
+					last_election = "1969.12.1"
+					election_frequency = 48
+				}
+				set_popularities = {
+					fascism = 1
+					despotism = 5
+					paternalism = 7
+					conservatism = 10
+					liberal_conservatism = 12
+					liberalism = 23
+					progressivism = 14
+					socialist_1 = 9
+					socialist = 10
+					communist = 9
+				}
+				remove_all_ministers = yes
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = VEN_news.19
+					}
+				}
+				set_country_flag = VEN_arreaza_1968
+			}
+			else_if = {
+				limit = { has_country_flag = VEN_Ojeda_1963 }
+				retire_country_leader = yes
+				promote_character = VEN_Alirio_Ugarte_Pelayo
+				set_politics = {
+					ruling_party = socialist
+					elections_allowed = yes
+					last_election = "1969.12.1"
+					election_frequency = 48
+				}
+				set_popularities = {
+					fascism = 1
+					despotism = 7
+					paternalism = 7
+					conservatism = 8
+					liberal_conservatism = 14
+					liberalism = 10
+					progressivism = 12
+					socialist_1 = 11
+					socialist = 23
+					communist = 7
+				}
+				set_party_name = {
+					ideology = socialist
+					long_name = VEN_socialist_party_long
+					name = VEN_socialist_party
+				}
+				remove_all_ministers = yes
+				add_ideas = {
+					VEN_One_Under_Bandera
+					VEN_the_quiet_revolution
+				}
+				remove_ideas = {
+					VEN_game_of_the_three_kings
+					VEN_game_of_the_three_kings_barrios
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = VEN_news.20
+					}
+				}
+				set_country_flag = VEN_alirio_1968
+			}
+			if = {
+				limit = { has_country_flag = VEN_Villalba_1963 }
+				set_politics = {
+					ruling_party = liberalism
+					elections_allowed = yes
+					last_election = "1969.12.1"
+					election_frequency = 48
+				}
+				VEN_Miguel_Angel_Burelli = {
+					promote_character = liberalism_national_liberal_subtype
+				}
+				set_popularities = {
+					fascism = 1
+					despotism = 5
+					paternalism = 6
+					conservatism = 9
+					liberal_conservatism = 11
+					liberalism = 25
+					progressivism = 15
+					socialist_1 = 10
+					socialist = 5
+					socialist_2 = 6
+					communist = 7
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = VEN_news.21
+					}
+				}
+				set_country_flag = VEN_burelli_1968
+			}
+			else = {
+				set_politics = {
+					ruling_party = liberal_conservatism
+					elections_allowed = yes
+					last_election = "1969.12.1"
+					election_frequency = 48
+				}
+				remove_country_leader_role = {
+					character = VEN_Rafael_Caldera
+					ideology = liberal_conservatism_subtype
+				}
+				remove_country_leader_role = {
+					character = VEN_Lorenzo_Fernandez
+					ideology = liberal_conservatism_subtype
+				}
+				VEN_Miguel_Angel_Burelli = {
+					promote_character = liberal_conservatism_big_tent_subtype
+				}
+				set_party_name = {
+					ideology = liberal_conservatism
+					long_name = VEN_URD_long
+					name = VEN_URD
+				}
+				set_popularities = {
+					fascism = 1
+					despotism = 5
+					paternalism = 6
+					conservatism = 20
+					liberal_conservatism = 25
+					progressivism = 15
+					socialist_1 = 10
+					socialist = 5
+					socialist_2 = 6
+					communist = 7
+				}
+				remove_all_ministers = yes
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = VEN_news.21
+					}
+				}
+				set_country_flag = VEN_burelli_1968
+			}
+			set_country_flag = VEN_debug_1968_selected
+		}
+	}
+
+	VEN_debug_1968_copei = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			has_country_flag = VEN_debug_1968
+			NOT = {
+				has_country_flag = VEN_debug_1968_selected
+			}
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_1968_copei"
+			add_ideas = VEN_the_jewel_of_the_caribbean
+			remove_ideas = VEN_democracys_fraying_lifeline
+			if = {
+				limit = { has_country_flag = VEN_COPEI_1963 }
+				retire_country_leader = yes
+				VEN_Lorenzo_Fernandez = {
+					promote_character = liberal_conservatism_subtype
+					promote_character = conservatism_christian_conservatism_subtype
+				}
+			}
+			#Otherwise it is the same candidate
+			else = { VEN_Rafael_Caldera = { set_portraits = { civilian = { large = "gfx/leaders/VEN/Portrait_Venezuela_Rafael_Caldera_70s.png" } } } }
+			set_party_name = {
+				ideology = paternalism
+				long_name = VEN_MPJDem
+				name = VEN_MPJDem
+			}
+			if = { # Fernandez (URD) Victory
+				limit = { has_country_flag = VEN_COPEI_1963 }
+				set_popularities = {
+					fascism = 1
+					despotism = 5
+					paternalism = 9
+					conservatism = 10
+					liberal_conservatism = 15
+					liberalism = 14
+					progressivism = 15
+					socialist_1 = 9
+					socialist = 8
+					socialist_2 = 5
+					communist = 11
+				}
+				remove_all_ministers = yes
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = VEN_news.27
+					}
+				}
+				set_country_flag = VEN_fernandez_1968
+			}
+			else = { # Caldera (URD) Victory
+				add_popularity = {
+					ideology = progressivism
+					popularity = -0.01
+				}
+				add_popularity = {
+					ideology = liberalism
+					popularity = -0.02
+				}
+				add_popularity = {
+					ideology = conservatism
+					popularity = 0.01
+				}
+				add_popularity = {
+					ideology = liberal_conservatism
+					popularity = 0.02
+				}
+				set_politics = {
+					ruling_party = liberal_conservatism
+					elections_allowed = yes
+					last_election = "1969.12.1"
+					election_frequency = 48
+				}
+				remove_all_ministers = yes
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = VEN_news.26
+					}
+				}
+				set_country_flag = VEN_caldera_1968
+			}
+			set_country_flag = VEN_debug_1968_selected
+		}
+	}
+
+	VEN_debug_1968_ad = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			has_country_flag = VEN_debug_1968
+			NOT = {
+				has_country_flag = VEN_debug_1968_selected
+			}
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_1968_ad"
+			add_ideas = VEN_the_jewel_of_the_caribbean
+			remove_ideas = VEN_democracys_fraying_lifeline
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = VEN_Leoni_1963
+						has_country_flag = VEN_Barrios_1963
+					}
+				}
+				retire_character = VEN_Raul_Leoni
+				promote_character = VEN_Reinaldo_Leandro_Mora
+			}
+			else = {
+				retire_character = VEN_Raul_Leoni
+				retire_character = VEN_Gonzalo_Barrios
+				promote_character = VEN_Carlos_Andres_Perez
+			}
+			if = { # Lleandro Mora (AD) Victory
+				limit = {
+					OR = {
+						has_country_flag = VEN_Barrios_1963
+						has_country_flag = VEN_Leoni_1963
+					}
+					NOT = { has_country_flag = VEN_Prieto_Candidate }
+				}
+				set_popularities = {
+					fascism = 1
+					despotism = 5
+					paternalism = 7
+					conservatism = 10
+					liberal_conservatism = 15
+					liberalism = 15
+					progressivism = 15
+					socialist_1 = 10
+					socialist = 9
+					socialist_2 = 3
+					communist = 9
+				}
+				set_politics = {
+					ruling_party = progressivism
+					elections_allowed = yes
+					last_election = "1969.12.1"
+					election_frequency = 48
+				}
+				remove_all_ministers = yes
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = VEN_news.22
+					}
+				}
+				set_country_flag = VEN_leandro_1968
+			}
+			else_if = { # Perez (AD) Victory
+				limit = {
+					NOT = {
+						OR = {
+							has_country_flag = VEN_Barrios_1963
+							has_country_flag = VEN_Leoni_1963
+						}
+						has_country_flag = VEN_Prieto_Candidate
+					}
+				}
+				add_popularity = {
+					ideology = socialist
+					popularity = -0.01
+				}
+				add_popularity = {
+					ideology = progressivism
+					popularity = 0.01
+				}
+				set_politics = {
+					ruling_party = progressivism
+					elections_allowed = yes
+					last_election = "1969.12.1"
+					election_frequency = 48
+				}
+				remove_all_ministers = yes
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = VEN_news.24
+					}
+				}
+				set_country_flag = VEN_cap_1968
+			}
+			set_country_flag = VEN_debug_1968_selected
+		}
+	}
+
+	VEN_debug_1968_prieto = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+			has_country_flag = VEN_debug_1968
+			NOT = {
+				has_country_flag = VEN_debug_1968_selected
+			}
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_1968_prieto"
+			add_ideas = VEN_the_jewel_of_the_caribbean
+			remove_ideas = VEN_democracys_fraying_lifeline
+			retire_character = VEN_Fabricio_Ojeda
+			set_country_flag = VEN_Prieto_Candidate
+			VEN_Luis_Beltran_Prieto_Figueroa = { promote_character = socialist_social_democracy_subtype }
+			set_politics = {
+				ruling_party = socialist
+				elections_allowed = yes
+				last_election = "1969.12.1"
+				election_frequency = 48
+			}
+			set_party_name = {
+				ideology = socialist
+				long_name = VEN_socialist_1_party_long
+				name = VEN_socialist_1_party
+			}
+			set_party_name = {
+				ideology = socialist_1
+				long_name = VEN_socialist_party_long
+				name = VEN_socialist_party
+			}
+			add_popularity = {
+				ideology = progressivism
+				popularity = -0.04
+			}
+			add_popularity = {
+				ideology = socialist_1
+				popularity = -0.01
+			}
+			add_popularity = {
+				ideology = socialist
+				popularity = 0.05
+			}
+			remove_all_ministers = yes
+			remove_ideas = {
+				VEN_game_of_the_three_kings
+				VEN_game_of_the_three_kings_barrios
+			}
+			add_ideas = VEN_game_of_the_three_kings_prieto
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = VEN_news.25
+				}
+			}
+			set_country_flag = VEN_debug_1968_selected
+			set_country_flag = VEN_prieto_1968
+		}
+	}
+
+	VEN_debug_join_mex = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_join_mex"
+			econ_join_sphere_MEX = yes
+		}
+	}
+
+	VEN_debug_join_ibr = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_join_ibr"
+			econ_join_sphere_IBR = yes
+		}
+	}
+
+	VEN_debug_join_usa = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_join_usa"
+			econ_join_sphere_USA = yes
+		}
+	}
+
+	VEN_debug_join_ger = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_join_ger"
+			econ_join_sphere_GER = yes
+		}
+	}
+
+	VEN_debug_mpj_returns = {
+		icon = GFX_decision_debug
+
+		available = {
+			tag = VEN
+			is_ai = no
+		}
+
+		visible = {
+			tag = VEN
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		custom_cost_trigger = { always = yes } #no cost
+
+		days_remove = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_debug_mpj_returns"
+			econ_join_sphere_IBR = yes
+			add_ideas = {
+				VEN_black_gold_raw_gold_alt
+				VEN_eagles_in_the_sky
+				VEN_all_roads_led_to_rome
+				VEN_caesars_gambit
+			}
+			remove_ideas = {
+				VEN_black_gold_raw_gold
+				VEN_game_of_the_three_kings
+				VEN_game_of_the_three_kings_barrios
+				VEN_democracys_fraying_lifeline
+			}
+			remove_ideas = OFN_Observer
+			remove_opinion_modifier = { target = MEX modifier = MEX_united_in_liberty }
+			MEX = { remove_opinion_modifier = { target = VEN modifier = MEX_united_in_liberty } }
+			set_popularities = {
+				fascism = 13
+				despotism = 31
+				despotism_1 = 6
+				paternalism = 20
+				conservatism = 8
+				liberal_conservatism = 2
+				liberalism = 2
+				progressivism = 4
+				socialist = 4
+				communist = 10
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = VEN_MPJ_long
+				name = VEN_MPJ
+			}
+			set_party_name = {
+				ideology = despotism
+				long_name = VEN_MPJ_long
+				name = VEN_MPJ
+			}
+			set_party_name = {
+				ideology = fascism_1
+				long_name = VEN_MPJ_long
+				name = VEN_MPJ
+			}
+			set_party_name = {
+				ideology = conservatism
+				long_name = VEN_independent
+				name = VEN_independent
+			}
+			set_country_flag = VEN_Right_Government
+			retire_country_leader = yes
+			VEN_Marcos_Perez_Jimenez = {
+				promote_character = paternalism_peronism_subtype
+				promote_character = despotism_personalistic_dictatorship_subtype
+				promote_character = fascism_fascist_populism_subtype
+			}
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = VEN_MPJ_long
+				name = VEN_MPJ
+			}
+			set_party_name = {
+				ideology = despotism_1
+				long_name = VEN_MPJ_long
+				name = VEN_MPJ
+			}
+			add_country_leader_role = {
+				character = VEN_Marcos_Perez_Jimenez
+				promote_leader = yes
+				country_leader = {
+					expire = "1994.4.20"
+					ideology = despotism_1_subtype
+					traits = { }
+					id = -1
+				}
+			}
+			set_cosmetic_tag = VEN_mpj
+		}
+	}
+}

@@ -1,0 +1,91 @@
+scripted_gui = {
+	IBR_caudillo_bar_GUI = {
+		context_type = decision_category
+		window_name = "IBR_caudillo_popularity_GUI"
+
+		visible = {
+			always = yes
+		}
+
+		effects = {
+
+		}
+
+		triggers = {
+			IBR_caudillo_popularity_progress_bar_visible = {
+				AND = {
+					NOT = {
+						has_country_flag = IBR_legislative_council_rogue
+					}
+					NOT = {
+						has_country_flag = IBRDemUnion
+					}
+				}
+				
+			}
+			IBR_council_rogue_progress_bar_visible = {				
+				AND = {
+					has_country_flag = IBR_legislative_council_rogue
+					NOT = {
+						has_country_flag = IBRDemUnion
+					}
+				}			
+			}
+
+			IBR_council_opposition_progress_bar_visible = {
+				has_country_flag = IBRDemUnion
+			}
+
+			IBR_council_conservatives_progress_bar_visible = {
+				has_country_flag = IBRDemUnion
+			}
+
+			IBR_council_background_bar_visible = {
+				has_country_flag = IBRDemUnion
+			}
+
+			IBR_Portrait_Portuguese_gui_visible = {
+				NOT = { has_country_flag = IBRDemUnion }
+			}
+
+			IBR_Portrait_Spanish_gui_visible = {
+				NOT = { has_country_flag = IBRDemUnion }
+			}
+
+			IBR_Portrait_Opposition_gui_visible = {
+				has_country_flag = IBRDemUnion
+			}
+
+			IBR_Portrait_Government_gui_visible = {
+				has_country_flag = IBRDemUnion
+			}
+
+			IBR_Portrait_Conservatives_gui_visible = {
+				has_country_flag = IBRDemUnion
+			}
+		}
+
+		properties = {
+			IBR_caudillo_popularity_progress_bar = {
+				frame = IBR_caudillo_popularity_bar
+			}
+			IBR_council_rogue_progress_bar = {
+				frame = IBR_caudillo_popularity_bar
+			}
+			IBR_Portrait_Portuguese_gui = {
+				image = "[ROOT.IBR_caudillo_GUI_get_POR_Caudillo]"
+			}
+			IBR_Portrait_Spanish_gui = {
+				image = "[ROOT.IBR_caudillo_GUI_get_SPA_Caudillo]"
+			}
+
+			IBR_council_opposition_progress_bar = {
+				frame = IBR_pre_election_opposition_influence
+			}
+			
+			IBR_council_conservatives_progress_bar = {
+				frame = IBR_pre_election_conservatives_influence
+			}
+		}
+	}
+}

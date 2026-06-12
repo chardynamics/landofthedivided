@@ -1,0 +1,322 @@
+add_namespace = BRA_scripted
+
+country_event = { # Military Coup Trigger
+	id = BRA_scripted.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRA_scripted.1" }
+	title = BRA_scripted.1.t
+	desc = BRA_scripted.1.desc
+	picture = x
+
+	trigger = {
+		date > 1968.6.10
+		tag = BRA
+		NOT = {
+			has_government = despotism
+		}
+		is_ai = yes
+	}
+
+	fire_only_once = yes
+
+	option = { # Coup
+		name = BRA_scripted.1.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_country_leader = {
+					character = BRA_Juscelino_Kubitschek
+					ruling_only = yes
+				}
+				add = 15
+			}
+			modifier = {
+				has_country_flag = BRA_sorbonne_jk
+				add = 20
+			}
+
+			modifier = {
+				has_country_leader = {
+					character = BRA_Carlos_Lacerda
+					ruling_only = yes
+				}
+				add = 10
+			}
+			modifier = {
+				has_country_flag = BRA_lacerda_coup_happened
+				add = 5
+			}
+			modifier = {
+				has_country_flag = BRA_sorbonne_lacerda
+				add = 10
+			}
+
+			modifier = {
+				has_country_leader = {
+					character = BRA_Joao_Goulart
+					ruling_only = yes
+				}
+				add = 50
+			}
+			modifier = {
+				has_country_flag = BRA_punished_jango
+				add = 5
+			}
+
+			modifier = {
+				has_country_leader = {
+					character = BRA_Adhemar_de_Barros
+					ruling_only = yes
+				}
+				add = 35
+			}
+
+			modifier = {
+				has_country_leader = {
+					character = BRA_Janio_Quadros
+					ruling_only = yes
+				}
+				add = 30
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BRA_COUP_LATE option = BRA_COUP_LATE_NO }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { BRA_military_sorbonne_power > BRA_military_hardliners_power }
+			}
+			BRA_Ernesto_Geisel = {
+				promote_character = yes
+			}
+		}
+		else = {
+			BRA_Costa_e_Silva = {
+				promote_character = yes
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			BRA_Generic_Vacant_hog
+			BRA_Generic_Vacant_for
+			BRA_Generic_Vacant_eco
+			BRA_Generic_Vacant_sec
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = BRA_despotism_party_long
+			name = BRA_despotism_party
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.3
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = LATAM_news.150 days = 1 }
+		}
+	}
+
+	option = { # No Coup
+		name = BRA_scripted.1.b
+		ai_chance = {
+			base = 1000
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BRA_COUP_LATE option = BRA_COUP_LATE_YES }
+			}
+		}
+	}
+}
+
+country_event = { # Castelo Branco's fate
+	id = BRA_scripted.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRA_scripted.3" }
+	title = BRA_scripted.3.t
+	desc = BRA_scripted.3.desc
+	picture = x
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRA
+		date > 1967.3.14
+		has_country_leader = {
+			character = BRA_Humberto_Castelo_Branco
+			ruling_only = yes
+		}
+		is_ai = yes
+	}
+
+	option = { #Costa e Silva
+		name = BRA_scripted.3.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BRA_CASTELO_SUCCESSOR option = BRA_CASTELO_SUCCESSOR_GEISEL }
+			}
+		}
+		BRA_Costa_e_Silva = {
+			promote_character = yes
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			BRA_Generic_Vacant_hog
+			BRA_Generic_Vacant_for
+			BRA_Generic_Vacant_eco
+			BRA_Generic_Vacant_sec
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = LATAM_news.152 days = 1 }
+		}
+	}
+
+	option = { #Geisel
+		name = BRA_scripted.3.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = BRA_CASTELO_SUCCESSOR option = BRA_CASTELO_SUCCESSOR_SILVA }
+			}
+		}
+		country_event = { id = BRA_scripted.300 days = 365 }
+	}
+}
+
+country_event = { # Geisel succeeds Castelo Branco
+	id = BRA_scripted.300
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRA_scripted.300" }
+	title = BRA_scripted.300.t
+	desc = BRA_scripted.300.desc
+	picture = x
+
+	is_triggered_only = yes
+	trigger = { is_ai = yes }	
+	fire_only_once = yes
+
+	option = {
+		name = BRA_scripted.300.a
+		BRA_Ernesto_Geisel = {
+			promote_character = yes
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			BRA_Generic_Vacant_hog
+			BRA_Generic_Vacant_for
+			BRA_Generic_Vacant_eco
+			BRA_Generic_Vacant_sec
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = LATAM_news.153 days = 1 }
+		}
+	}
+}
+
+country_event = { # The death of Costa e Silva
+	id = BRA_scripted.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRA_scripted.4" }
+	title = BRA_scripted.4.t
+	desc = BRA_scripted.4.desc
+	picture = x
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRA
+		date > 1969.8.30
+		has_country_leader = {
+			character = BRA_Costa_e_Silva
+			ruling_only = yes
+		}
+		is_ai = yes	
+	}
+
+	option = {
+		name = BRA_scripted.4.a
+		BRA_Emergency_Junta = {
+			promote_character = yes
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			BRA_Generic_Vacant_hog
+			BRA_Generic_Vacant_for
+			BRA_Generic_Vacant_eco
+			BRA_Generic_Vacant_sec
+		}
+		country_event = { id = BRA_scripted.400 days = 60 }
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = LATAM_news.154 days = 1 }
+		}
+	}
+}
+
+country_event = { # Medici Appointed
+	id = BRA_scripted.400
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRA_scripted.400" }
+	title = BRA_scripted.400.t
+	desc = BRA_scripted.400.desc
+	picture = x
+
+	is_triggered_only = yes
+	trigger = { is_ai = yes }	
+	fire_only_once = yes
+
+	option = {
+		name = BRA_scripted.4.a
+		BRA_Emilio_Medici = {
+			promote_character = yes
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = LATAM_news.155 days = 1 }
+		}
+	}
+}
+
+country_event = { # Punished Goulart
+	id = BRA_scripted.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRA_scripted.5" }
+	title = BRA_scripted.5.t
+	desc = BRA_scripted.5.desc
+	picture = x
+
+	is_triggered_only = yes
+	trigger = { is_ai = yes }	
+	fire_only_once = yes
+
+	option = {
+		name = BRA_scripted.5.a
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = yes
+		}
+	}
+
+	option = {
+		name = BRA_scripted.5.b
+	}
+}

@@ -1,0 +1,16 @@
+country_groups = {
+	schema = {
+		any_key = yes
+		array = country
+	}
+
+	nordics = {
+		SWE
+		NOR
+		FIN
+		RFI
+		DEN
+		ICE
+		FAR
+	}
+}

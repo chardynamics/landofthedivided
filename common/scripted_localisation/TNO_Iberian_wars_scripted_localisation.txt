@@ -1,0 +1,1276 @@
+﻿defined_text = {
+	name = IBR_wars_political_banner
+	text = {
+		trigger = {
+			tag = IBR
+		}
+		localization_key = GFX_iberian_wars_federal_banner
+	}
+	text = {
+		trigger = {
+			tag = CTL
+		}
+		localization_key = GFX_iberian_wars_catalonia_banner
+	}
+	text = {
+		trigger = {
+			tag = CNT
+		}
+		localization_key = GFX_iberian_wars_CNT_banner
+	}
+	text = {
+		trigger = {
+			tag = PPR
+		}
+		localization_key = GFX_iberian_wars_PPR_banner
+	}
+	text = {
+		trigger = {
+			tag = BSQ
+		}
+		localization_key = GFX_iberian_wars_BSQ_banner
+	}
+
+}
+
+defined_text = {
+	name = IBR_wars_request_type_button_state
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = Iberian_Wars_request_types_v
+			}
+		}
+		localization_key = GFX_IBR_wars_request_type_button_positive
+	}
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = {
+					IBR_Wars_current_request_type = Iberian_Wars_request_types_v
+				}
+			}
+		}
+		localization_key = GFX_IBR_wars_request_type_button
+	}
+}
+
+defined_text = {
+	name = IBR_Wars_independent_pie_tag_image
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = BSQ }
+				tag = BSQ
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_BSQ
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = GAL }
+				tag = GAL
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_GAL
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = CTL }
+				tag = CTL
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_CTL
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = CNT }
+				tag = CNT
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_CNT
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = TBA }
+				tag = TBA
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_BTA
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = ADL }
+				tag = ADL
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_ADL
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = SPR }
+				tag = SPR
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_SPR
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = SPS }
+				tag = SPS
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_SPS
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = FSR }
+				tag = FSR
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_FSR
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = FZL }
+				tag = FZL
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_FZL
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = RPP }
+				tag = RPP
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_RPP
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = PPR }
+				tag = BSQ
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_PPR
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { IBR_Wars_currently_selected_faction_var = POR }
+				tag = POR
+				check_variable = { IBR_Wars_currently_selected_faction_var = GNS }
+				tag = GNS
+			}
+		}
+		localization_key = GFX_IBR_wars_influence_pie_POR
+	}
+}
+
+defined_text = {
+	name = IBR_wars_request_type_button_text
+	text = {
+		localization_key = "IBR_wars_request_type_[?Iberian_Wars_request_types_v]"
+	}
+}
+
+defined_text = {
+	name = IBR_Wars_accepted_request_tt
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = 1
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_tt_loan
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = 2
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_tt_fuel
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = 3
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_tt_hc
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = 4
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_tt_infantry
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = 5
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_tt_support
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = 6
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_tt_artillery
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = 7
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_tt_trucks
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = 8
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_tt_ifv
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = 9
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_tt_mbt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_current_request_type = 10
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_tt_jets
+	}
+}
+
+defined_text = {
+	name = IBR_Wars_accepted_request_influence_tt
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_currently_selected_supporter_var = USA
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_influence_tt_USA
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_currently_selected_supporter_var = GER
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_influence_tt_GER
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_currently_selected_supporter_var = ITA
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_influence_tt_ITA
+	}
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = {
+				IBR_Wars_currently_selected_supporter_var = USA
+				}
+				check_variable = {
+				IBR_Wars_currently_selected_supporter_var = GER
+				}
+				check_variable = {
+				IBR_Wars_currently_selected_supporter_var = ITA
+				}
+			}
+		}
+		localization_key = IBR_Wars_accepted_request_influence_tt_none
+	}
+}
+
+defined_text = {
+	name = IBR_Wars_rejected_request_tt
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_currently_selected_supporter_var = USA
+			}
+		}
+		localization_key = IBR_Wars_rejected_request_tt_USA
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_currently_selected_supporter_var = GER
+			}
+		}
+		localization_key = IBR_Wars_rejected_request_tt_GER
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				IBR_Wars_currently_selected_supporter_var = ITA
+			}
+		}
+		localization_key = IBR_Wars_rejected_request_tt_ITA
+	}
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = {
+				IBR_Wars_currently_selected_supporter_var = USA
+				}
+				check_variable = {
+				IBR_Wars_currently_selected_supporter_var = GER
+				}
+				check_variable = {
+				IBR_Wars_currently_selected_supporter_var = ITA
+				}
+			}
+		}
+		localization_key = IBR_Wars_rejected_request_tt_none
+	}
+}
+
+defined_text = {
+	name = IBR_Wars_flag_overlay_selection
+	text = {
+		trigger = {
+			check_variable = {
+				ROOT.IBR_Wars_currently_selected_supporter_var = THIS
+			}
+		}
+		localization_key = GFX_IBR_wars_flag_overlay_selected
+	}
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = {
+				ROOT.IBR_Wars_currently_selected_supporter_var = THIS
+				}
+			}
+		}
+		localization_key = GFX_IBR_wars_flag_overlay
+	}
+}
+
+defined_text = {
+	name = GetIBRwarsCommandGaintt
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power_gain_ibrwars
+				value = 2
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_command_gain_button_max
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = political_power
+				value = command_power_gain_cost_ibrwars
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_command_gain_button_allowed
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = political_power
+				value = command_power_gain_cost_ibrwars
+				compare = less_than
+			}
+		}
+		localization_key = iberia_wars_command_gain_button_forbidden
+	}
+}
+
+defined_text = {
+	name = GetIBRwarsMaxCommandtt
+	text = {
+		trigger = {
+			check_variable = {
+				var = max_command_power_ibrwars
+				value = 100
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_max_command_button_max
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = political_power
+				value = max_command_power_cost_ibrwars
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_max_command_button_allowed
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = political_power
+				value = max_command_power_cost_ibrwars
+				compare = less_than
+			}
+		}
+		localization_key = iberia_wars_max_command_button_forbidden
+	}
+}
+
+defined_text = {
+	name = GetIBRwarsRecruitablePopulationtt
+	text = {
+		trigger = {
+			check_variable = {
+				var = conscription_factor_ibrwars
+				value = 0.25
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_recruitable_population_button_max
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = political_power
+				value = conscription_factor_cost_ibrwars
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_recruitable_population_button_allowed
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = political_power
+				value = conscription_factor_cost_ibrwars
+				compare = less_than
+			}
+		}
+		localization_key = iberia_wars_recruitable_population_button_forbidden
+	}
+}
+
+defined_text = {
+	name = GetIBRwarsSupplyConsumptiontt
+	text = {
+		trigger = {
+			check_variable = {
+				var = supply_consumption_factor_ibrwars
+				value = -0.25
+				compare = less_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_supply_consumption_button_max
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = supply_consumption_factor_cost_ibrwars
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_supply_consumption_button_allowed
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = supply_consumption_factor_cost_ibrwars
+				compare = less_than
+			}
+		}
+		localization_key = iberia_wars_supply_consumption_button_forbidden
+	}
+}
+
+defined_text = {
+	name = GetIBRwarsArmyOrganisationtt
+	text = {
+		trigger = {
+			check_variable = {
+				var = army_org_factor_ibrwars
+				value = 0.25
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_army_organisation_button_max
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = army_org_factor_cost_ibrwars
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_army_organisation_button_allowed
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = army_org_factor_cost_ibrwars
+				compare = less_than
+			}
+		}
+		localization_key = iberia_wars_army_organisation_button_forbidden
+	}
+}
+
+defined_text = {
+	name = GetIBRwarsArmySpeedtt
+	text = {
+		trigger = {
+			check_variable = {
+				var = army_speed_factor_ibrwars
+				value = 0.25
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_army_speed_button_max
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = army_speed_factor_cost_ibrwars
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_army_speed_button_allowed
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = army_speed_factor_cost_ibrwars
+				compare = less_than
+			}
+		}
+		localization_key = iberia_wars_army_speed_button_forbidden
+	}
+}
+
+defined_text = {
+	name = GetIBRwarsArmyAttacktt
+	text = {
+		trigger = {
+			check_variable = {
+				var = army_attack_factor_ibrwars
+				value = 0.25
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_army_attack_button_max
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = army_attack_factor_cost_ibrwars
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_army_attack_button_allowed
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = army_attack_factor_cost_ibrwars
+				compare = less_than
+			}
+		}
+		localization_key = iberia_wars_army_attack_button_forbidden
+	}
+}
+
+defined_text = {
+	name = GetIBRwarsArmyDefensett
+	text = {
+		trigger = {
+			check_variable = {
+				var = army_defence_factor_ibrwars
+				value = 0.25
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_army_defense_button_max
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = army_defence_factor_cost_ibrwars
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = iberia_wars_army_defense_button_allowed
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = army_defence_factor_cost_ibrwars
+				compare = less_than
+			}
+		}
+		localization_key = iberia_wars_army_defense_button_forbidden
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsBasqueWar
+	text = {
+		trigger = {
+			tag = BSQ
+		}
+		localization_key = iberia_wars_BSQ_basque_war_name
+	}
+	text = {
+		trigger = {
+			NOT = {
+				tag = BSQ
+			}
+		}
+		localization_key = iberia_wars_spain_basque_war_name
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsCataloniaWar
+	text = {
+		trigger = {
+			OR = {
+				tag = CTL
+				tag = CNT
+			}
+		}
+		localization_key = iberia_wars_CTL_catalonia_war_name
+	}
+	text = {
+		trigger = {
+			OR = {
+				tag = IBR
+				tag = SPS
+				tag = FZL
+				tag = FSR
+			}
+		}
+		localization_key = iberia_wars_spain_catalonia_war_name
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsGaliciaWar
+	text = {
+		trigger = {
+			tag = GAL
+		}
+		localization_key = iberia_wars_GAL_galicia_war_name
+	}
+	text = {
+		trigger = {
+			NOT = {
+				tag = GAL
+			}
+		}
+		localization_key = iberia_wars_spain_galicia_war_name
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsAsturiasWar
+	text = {
+		trigger = {
+			tag = TBA
+		}
+		localization_key = iberia_wars_TBA_asturias_war_name
+	}
+	text = {
+		trigger = {
+			NOT = {
+				tag = TBA
+			}
+		}
+		localization_key = iberia_wars_spain_asturias_war_name
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsAndaluciaWar
+	text = {
+		trigger = {
+			tag = ADL
+		}
+		localization_key = iberia_wars_ADL_andalucia_war_name
+	}
+	text = {
+		trigger = {
+			NOT = {
+				tag = ADL
+			}
+		}
+		localization_key = iberia_wars_spain_andalucia_war_name
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsPoLDecision1
+	text = {
+		trigger = {
+			OR = {
+				has_government = despotism
+				has_government = fascism
+				has_government = national_socialism
+			}
+		}
+		localization_key = iberia_wars_pol_decision_1_right
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsPoLDecision2
+	text = {
+		trigger = {
+			OR = {
+				has_government = despotism
+				has_government = fascism
+				has_government = national_socialism
+			}
+		}
+		localization_key = iberia_wars_pol_decision_2_right
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsLegDecision1
+	text = {
+		trigger = {
+			OR = {
+				has_government = despotism
+				has_government = fascism
+				has_government = national_socialism
+			}
+		}
+		localization_key = iberia_wars_leg_decision_1_right
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsLegDecision2
+	text = {
+		trigger = {
+			OR = {
+				has_government = despotism
+				has_government = fascism
+				has_government = national_socialism
+			}
+		}
+		localization_key = iberia_wars_leg_decision_2_right
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsPPDecision1
+	text = {
+		trigger = {
+			OR = {
+				has_government = despotism
+				has_government = fascism
+				has_government = national_socialism
+			}
+		}
+		localization_key = iberia_wars_pp_decision_1_right
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsPPDecision2
+	text = {
+		trigger = {
+			OR = {
+				has_government = despotism
+				has_government = fascism
+				has_government = national_socialism
+			}
+		}
+		localization_key = iberia_wars_pp_decision_2_right
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsPPDecision3
+	text = {
+		trigger = {
+			OR = {
+				has_government = despotism
+				has_government = fascism
+				has_government = national_socialism
+			}
+		}
+		localization_key = iberia_wars_pp_decision_3_right
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsPoliticalPowerGain
+	text = {
+		trigger = {
+			NOT = { check_variable = { political_power_gain_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_political_power_gain
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsCommandPowerGain
+	text = {
+		trigger = {
+			NOT = { check_variable = { command_power_gain_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_command_power_gain
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsMaxCommandPower
+	text = {
+		trigger = {
+			NOT = { check_variable = { max_command_power_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_max_command_power
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsRecruitablePopulation
+	text = {
+		trigger = {
+			NOT = { check_variable = { conscription_factor_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_recruitable_population
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsSupplyConsumption
+	text = {
+		trigger = {
+			NOT = { check_variable = { supply_consumption_factor_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_supply_consumption
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsArmyOrganisation
+	text = {
+		trigger = {
+			NOT = { check_variable = { army_org_factor_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_army_organisation
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsArmySpeed
+	text = {
+		trigger = {
+			NOT = { check_variable = { army_speed_factor_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_army_speed
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsArmyAttack
+	text = {
+		trigger = {
+			NOT = { check_variable = { army_attack_factor_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_army_attack
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsArmyDefence
+	text = {
+		trigger = {
+			NOT = { check_variable = { army_defence_factor_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_army_defence
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsMaxEfficiency
+	text = {
+		trigger = {
+			NOT = { check_variable = { max_efficiency_factor_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_max_efficiency
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsEfficiencyGain
+	text = {
+		trigger = {
+			NOT = { check_variable = { efficiency_gain_factor_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_efficiency_gain
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsConstructionSpeed
+	text = {
+		trigger = {
+			NOT = { check_variable = { speed_buildings_factor_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_construction_speed
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsUnitsGDPRatio
+	text = {
+		trigger = {
+			NOT = { check_variable = { units_to_GDP_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_units_GDP_ratio
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsConsumerGoodsUse
+	text = {
+		trigger = {
+			NOT = { check_variable = { consumer_goods_use_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_consumer_goods_use
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsSupplyNodeRange
+	text = {
+		trigger = {
+			NOT = { check_variable = { supply_node_range_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_supply_node_range
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsMinimumTraining
+	text = {
+		trigger = {
+			NOT = { check_variable = { minimum_training_level_ibrwars = 0 } }
+		}
+		localization_key = IBRWars_dummy_minimum_training_level
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsIndependentInfluence
+	text = {
+		trigger = {
+			NOT = { check_variable = { Iberian_Wars_independent_influence = 0 } }
+		}
+		localization_key = IBRWars_independent_influence_text
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsUSAInfluence
+	text = {
+		trigger = {
+			NOT = { check_variable = { Iberian_Wars_USA_influence = 0 } }
+		}
+		localization_key = IBRWars_USA_influence_text
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsGERInfluence
+	text = {
+		trigger = {
+			NOT = { check_variable = { Iberian_Wars_GER_influence = 0 } }
+		}
+		localization_key = IBRWars_GER_influence_text
+	}
+}
+
+defined_text = {
+	name = GetIBRWarsITAInfluence
+	text = {
+		trigger = {
+			NOT = { check_variable = { Iberian_Wars_ITA_influence = 0 } }
+		}
+		localization_key = IBRWars_ITA_influence_text
+	}
+}
+
+defined_text = {
+	name = IBR_wars_fopo_legitimacy_variable
+	text = {
+		trigger = {
+			has_country_flag = IBR_wars_no_supporting_yet_flag
+		}
+		localization_key = ""
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 0
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 10
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_legitimacy_variable_0_10
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 10
+					compare = greater_than
+				}
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 25
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_legitimacy_variable_11_25
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 25
+					compare = greater_than
+				}
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 40
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_legitimacy_variable_26_40
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 40
+					compare = greater_than
+				}
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 60
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_legitimacy_variable_41_60
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 60
+					compare = greater_than
+				}
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 80
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_legitimacy_variable_61_80
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 80
+					compare = greater_than
+				}
+				check_variable = {
+					var = IBR_wars_legitimacy_var
+					value = 100
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_legitimacy_variable_81_100
+	}
+	text = {
+		localization_key = IBR_wars_fopo_variable_woops
+	}
+}
+
+defined_text = {
+	name = IBR_wars_fopo_internal_opposition_variable
+	text = {
+		trigger = {
+			has_country_flag = IBR_wars_no_supporting_yet_flag
+		}
+		localization_key = ""
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 0
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 10
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_internal_opposition_variable_0_10
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 10
+					compare = greater_than
+				}
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 25
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_internal_opposition_variable_11_25
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 25
+					compare = greater_than
+				}
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 40
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_internal_opposition_variable_26_40
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 40
+					compare = greater_than
+				}
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 60
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_internal_opposition_variable_41_60
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 60
+					compare = greater_than
+				}
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 80
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_internal_opposition_variable_61_80
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 80
+					compare = greater_than
+				}
+				check_variable = {
+					var = IBR_wars_political_opposition_var
+					value = 100
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = IBR_wars_fopo_internal_opposition_variable_81_100
+	}
+	text = {
+		localization_key = IBR_wars_fopo_variable_woops
+	}
+}

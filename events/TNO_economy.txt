@@ -1,0 +1,313 @@
+﻿
+add_namespace = economy
+
+
+# Sphere quicksort here because Johan
+
+country_event = {
+	id = economy.0
+	title = economy.0.t
+	desc = economy.0.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event economy.0"
+		ZZZ = {
+			econ_recompile_all_spheres = yes
+			econ_get_world_gdp = yes
+			generate_econ_rankings = yes
+
+			# Market Stuff
+			setup_market_ZZZ = yes
+		}
+	}
+	option = {
+		name = economy.0.a
+	}
+}
+
+# TT Market system trade event MOVE ME
+country_event = {
+	id = economy.1
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		set_temp_variable = { amount = pending_trade_deals^0 }
+		if = {
+			limit = { check_variable = { amount < 0 } }
+			multiply_temp_variable = { amount = -1 }
+
+			subtract_from_variable = { PU_imports = amount }
+			log = "[GetDateText]: [Root.GetName]: Bulk import for [?amount] PU over"
+			} else = {
+			subtract_from_variable = { PU_exports = amount }
+			log = "[GetDateText]: [Root.GetName]: Bulk export for [?amount] PU over"
+		}
+		remove_from_array = { array = pending_trade_deals index = 0 }
+
+		update_prod_units_trade = yes
+	}
+
+	option = {
+		name = economy.1.a
+	}
+}
+
+# rerun recalculate_world_trade_influence at day 1
+country_event = {
+	id = economy.2
+	title = economy.2.t
+	desc = economy.2.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event economy.2"
+		ZZZ = {
+			recalculate_world_trade_influence = yes
+		}		
+	}
+	option = {
+		name = economy.2.a
+	}
+}
+
+
+country_event = {
+	id = economy.3
+	title = economy.3.t
+	desc = economy.3.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		every_country = {
+			limit = { is_ai = yes }
+			if = {
+				limit = { NOT = { has_country_flag = TNO_eliminate_building_demand } }
+				TNO_calculate_power_consumption = yes
+			}
+			#AI Central Bank
+			if = {
+				limit = { #Too Little Power and tag is small
+					check_variable = { production_units < 15 }
+					check_variable = { resource@power < production_units }
+				}
+				set_variable = { selected_central_bank_id = 3 }
+			}
+			else_if = {
+				limit = { #If Inflation is above 4, reduce inflation
+					check_variable = { clamped_inflation_rate > 4.0 }
+				}
+				set_variable = { selected_central_bank_id = 1 }
+			}
+			else_if = {
+				limit = { #If Inflation is below 2.7, the minimum it could be reduced to, boost GDP growth
+					check_variable = { clamped_inflation_rate < 2.7 }
+				}
+				set_variable = { selected_central_bank_id = 0 }
+			}
+
+			update_ai_slider_logic = yes
+
+			# Apply Austerity or Tax Cuts if needed
+			if = {
+				limit = {
+					AND = {
+						check_variable = { deficit_to_GDP_ratio > 10 }
+						check_variable = { total_expenditures > total_income }
+						check_variable = { deficit_to_GDP_ratio > GDP_growth_real }
+						OR = {
+							NOT = { has_idea = military_budget_cuts }
+							check_variable = { deficit_to_GDP_ratio > 15 }
+						}
+						OR = {
+							AND = {
+								NOT = { tag = JAP }
+								NOT = { tag = GER }
+								NOT = { tag = USA }
+								NOT = { tag = ITA }
+								NOT = { has_country_flag = is_russian_nation }
+								NOT = { has_government = progressivism }
+							}
+							check_variable = { deficit_to_GDP_ratio > 15 }
+						}
+					}
+				}
+				add_timed_idea = {
+					idea = civilian_budget_cuts
+					days = 180
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						check_variable = { deficit_to_GDP_ratio > 10 }
+						check_variable = { total_expenditures > total_income }
+						NOT = { has_war = yes }
+						NOT = { has_country_flag = TNO_eliminate_military_spending }
+						OR = {
+							NOT = { has_idea = civilian_budget_cuts }
+							check_variable = { deficit_to_GDP_ratio > 15 }
+						}
+						OR = {
+							AND = {
+								NOT = { tag = JAP }
+								NOT = { tag = GER }
+								NOT = { tag = USA }
+								NOT = { tag = ITA }
+								NOT = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_War_Communism } }
+								NOT = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Military_Directed } }
+							}
+							check_variable = { deficit_to_GDP_ratio > 15 }
+						}
+					}
+				}
+				add_timed_idea = {
+					idea = military_budget_cuts
+					days = 180
+				}
+			}
+
+			if = { #AI Tax Cuts
+				limit = {
+					AND = {
+						check_variable = { total_expenditures < total_income } #You have a surplus
+						OR = { #Debt is low
+							check_variable = { debt_to_GDP_ratio < 0.5 }
+							AND = { #Account for Free-Marketeers
+								check_variable = { debt_to_GDP_ratio < 0.8 }
+								OR = {
+									#has_government = conservatism
+									has_country_leader_ideology = liberal_conservatism_market_liberalism_subtype
+									has_country_leader_ideology = paternalism_corporate_paternalism_subtype
+									has_country_leader_ideology = despotism_corporatocracy_subtype
+									has_country_leader_ideology = paternalism_paternalistic_developmentalism_subtype
+								}
+							}
+							AND = { #Account for Free-Marketeers
+								check_variable = { debt_to_GDP_ratio < 1 }
+								check_variable = { GDP_growth_real < 0 }
+							}
+						}
+						NOT = { has_country_flag = temp_tax_change }
+					}
+				}
+				add_to_variable = { tax_cut_value_income = income_tax_rate }
+				multiply_variable = { tax_cut_value_income = 0.15 }
+
+				set_variable = { tax_cut_value_business = modifier@business_tax_rate_modifier }
+				add_to_variable = { tax_cut_value_business = business_tax_rate }
+				multiply_variable = { tax_cut_value_business = 0.15 }
+
+				set_variable = { tax_cut_value_sales = modifier@sales_tax_rate_modifier }
+				add_to_variable = { tax_cut_value_sales = sales_tax_rate }
+				multiply_variable = { tax_cut_value_sales = 0.15 }
+
+				if = { limit = { check_variable = { tax_cut_value_sales < 0.02 } }
+					set_variable = { tax_cut_value_sales = 0.02 }
+				}
+
+				if = { limit = { check_variable = { tax_cut_value_business < 0.02 } }
+					set_variable = { tax_cut_value_business = 0.02 }
+				}
+
+				if = { limit = { check_variable = { tax_cut_value_income < 0.02 } }
+					set_variable = { tax_cut_value_income = 0.02 }
+				}
+				multiply_variable = { tax_cut_value_income = -1 }
+				multiply_variable = { tax_cut_value_business = -1 }
+				multiply_variable = { tax_cut_value_sales = -1 }
+				add_dynamic_modifier = {
+					modifier = tax_cut_dynmod
+					days = 180
+				}
+				set_country_flag = {
+					flag = temp_tax_change
+					days = 180
+					value = 1
+				}
+				add_political_power = 20
+			}
+
+			AI_War_Tax_Check = yes
+
+			if = { #AI Tax Hike
+				limit = {
+					AND = {
+						check_variable = { total_expenditures > total_income } #You have a deficit
+						OR = {
+							has_war = no
+							has_country_flag = war_taxes_enabled
+						}
+						OR = { #Debt is high
+							check_variable = { debt_to_GDP_ratio > 0.85 }
+							AND = { #Account for Free-Marketeers
+								check_variable = { debt_to_GDP_ratio < 1 }
+								OR = {
+									#has_government = conservatism
+									has_country_leader_ideology = liberal_conservatism_market_liberalism_subtype
+									has_country_leader_ideology = paternalism_corporate_paternalism_subtype
+									has_country_leader_ideology = despotism_corporatocracy_subtype
+									has_country_leader_ideology = paternalism_paternalistic_developmentalism_subtype
+								}
+							}
+						}
+						NOT = { has_country_flag = temp_tax_change }
+					}
+				}
+				set_variable = { tax_hike_value_income = modifier@income_tax_rate_modifier_factor }
+				add_to_variable = { tax_hike_value_income = income_tax_rate }
+				multiply_variable = { tax_hike_value_income = 0.15 }
+
+				set_variable = { tax_hike_value_business = modifier@business_tax_rate_modifier }
+				add_to_variable = { tax_hike_value_business = business_tax_rate }
+				multiply_variable = { tax_hike_value_business = 0.15 }
+
+				set_variable = { tax_hike_value_sales = modifier@sales_tax_rate_modifier }
+				add_to_variable = { tax_hike_value_sales = sales_tax_rate }
+				multiply_variable = { tax_hike_value_sales = 0.15 }
+
+				if = { limit = { check_variable = { tax_hike_value_sales < 0.02 } }
+					set_variable = { tax_hike_value_sales = 0.02 }
+				}
+
+				if = { limit = { check_variable = { tax_hike_value_business < 0.02 } }
+					set_variable = { tax_hike_value_business = 0.02 }
+				}
+
+				if = { limit = { check_variable = { tax_hike_value_income < 0.02 } }
+					set_variable = { tax_hike_value_income = 0.02 }
+				}
+				add_dynamic_modifier = {
+					modifier = tax_hike_dynmod
+					days = 180
+				}
+				set_country_flag = {
+					flag = temp_tax_change
+					days = 180
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = economy.3.a
+	}
+}
+
+country_event = { #KD's Consequences of Development
+	id = economy.5 #Fired via event for simplicy
+	title = economy.5.t
+	desc = economy.5.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event economy.5"
+		every_country = {
+			every_owned_state = { TNO_KD_Consequences_of_Development = yes }
+		}
+		country_event = { id = economy.5 days = 364 } #Fires once every year
+	}
+	option = {
+		name = economy.5.a
+	}
+}

@@ -1,0 +1,62 @@
+SATW_dummy_prepare_category = {
+	SATW_ARG_prepare_BRA_dummy = {
+		activation = {
+			check_variable = { global.SA_tension > 59 }
+			original_tag = ARG
+		}
+		available = {
+			check_variable = { global.SA_tension < 60 }
+		}
+		is_good = yes
+		war_with_on_timeout = BRA
+		days_mission_timeout = 0
+	}
+	SATW_ARG_prepare_PAR_dummy = {
+		activation = {
+			check_variable = { global.SA_tension > 59 }
+			original_tag = ARG
+		}
+		available = {
+			check_variable = { global.SA_tension < 60 }
+		}
+		is_good = yes
+		war_with_on_timeout = PAR
+		days_mission_timeout = 0
+	}
+	SATW_ARG_prepare_URG_dummy = {
+		activation = {
+			check_variable = { global.SA_tension > 59 }
+			original_tag = ARG
+		}
+		available = {
+			check_variable = { global.SA_tension < 60 }
+		}
+		is_good = yes
+		war_with_on_timeout = URG
+		days_mission_timeout = 0
+	}
+	SATW_ARG_prepare_BOL_dummy = {
+		activation = {
+			check_variable = { global.SA_tension > 59 }
+			original_tag = ARG
+		}
+		available = {
+			check_variable = { global.SA_tension < 60 }
+		}
+		is_good = yes
+		war_with_on_timeout = BOL
+		days_mission_timeout = 0
+	}
+	SATW_ARG_prepare_CHL_dummy = {
+		activation = {
+			check_variable = { global.SA_tension > 59 }
+			original_tag = ARG
+		}
+		available = {
+			check_variable = { global.SA_tension < 60 }
+		}
+		is_good = yes
+		war_with_on_timeout = CHL
+		days_mission_timeout = 0
+	}
+}

@@ -1,0 +1,7422 @@
+add_namespace = Caribbean_scripted
+
+add_namespace = Caribbean_flavor
+add_namespace = Caribbean_News
+
+##OLD Content Pending Removal
+add_namespace = wif_crisis
+
+#KD's Notes - This skeleton made me go bananas
+
+country_event = { #Set-Up
+	id = Caribbean_scripted.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.0" }
+	title = Caribbean_scripted.0.t
+	desc = Caribbean_scripted.0.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.0.a
+		ai_chance = { factor = 1 }
+		IBR = { country_event = { id = Caribbean_flavor.1 days = 97 } } #Gun Smuggling from the DR -1 Stability
+
+		MEX = { country_event = { id = Caribbean_flavor.3 days = 189 } } #Trinidad wants investments
+		#4&7 are Triggered in Hispaniola Events File
+		#5 is for the result of a FBI Op
+		USA = { country_event = { id = Caribbean_flavor.2 days = 369 } } #WIC Anniversary
+		USA = { country_event = { id = Caribbean_flavor.6 days = 353 } } #Adams discusses retirement
+
+		USA = { set_variable = { Caribbean_Stability = 10 } } #Starting Variable
+		#Chain
+		country_event = { id = Caribbean_scripted.1 days = 378 } #Barbados Elections
+	}
+}
+
+country_event = { #Barbados Election
+	id = Caribbean_scripted.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.1" }
+	title = Caribbean_scripted.1.t
+	desc = Caribbean_scripted.1.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.1.a
+		ai_chance = { factor = 1 }
+		#Pending World Event
+		BRB = {
+			set_politics = { ruling_party = liberal_conservatism }
+			promote_character = BRB_Hugh_Springer
+			set_popularities = {
+				progressivism = 24
+				liberalism = 21
+				liberalism_2 = 17
+				liberal_conservatism = 38
+			}
+		}
+		#KD's Notes - Events will only trigger if the right scenario occured due to using a trigger condition inside them
+		IBR = { country_event = { id = Caribbean_flavor.8 days = 140 } } #Gun Smuggling if the DR Won -1 Stability
+		IBR = { country_event = { id = Caribbean_flavor.9 days = 140 } } #Gun Smuggling if the DR Lost
+
+
+		#Chain
+		country_event = { id = Caribbean_scripted.2 days = 378 } #Regional Instability
+	}
+}
+
+
+country_event = { #Regional Instability
+	id = Caribbean_scripted.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.2" }
+	title = Caribbean_scripted.2.t
+	desc = Caribbean_scripted.2.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.2.a
+		ai_chance = { factor = 1 }
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.1
+			}
+		}
+
+		USA = { subtract_from_variable = { Caribbean_Stability = 1 } }
+		MEX = { country_event = { id = Caribbean_flavor.13 days = 9 } } #Interview with Manley
+		USA = {
+			country_event = { id = Caribbean_flavor.12 days = 9 } #US Report on Jamaican Instability - CIA Op
+			country_event = { id = Caribbean_flavor.14 days = 31 } #Banana Strikes in Windward Optional +1 Stability
+			country_event = { id = Caribbean_flavor.11 days = 101 } #Protests Near Military Base -1 Stability
+			country_event = { id = Caribbean_flavor.15 days = 369 } #Richard Hart Speech -1 Stability
+			#Caribbean_flavor.5 is for the CIA Op Result, don't ask me why
+		}
+
+		#Chain
+		country_event = { id = Caribbean_scripted.3 days = 378 } #Anguilla Secedes
+	}
+}
+
+country_event = { #Anguilla Secedes
+	id = Caribbean_scripted.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.3" }
+	title = Caribbean_scripted.3.t
+	desc = Caribbean_scripted.3.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.3.a
+		ai_chance = { factor = 1 }
+		AGL = {
+			904 = { add_core_of = AGL }
+			904 = { transfer_state_to = AGL }
+			econ_join_sphere_USA = yes
+		}
+		USA = { subtract_from_variable = { Caribbean_Stability = 1 } } #Stability will now be between 4 (Worst Case) and 6 (Best Case)
+		USA = { country_event = { id = Caribbean_flavor.16 days = 5 } } #Crisis Reaction - Has Gamerule
+		IBR = { country_event = { id = Caribbean_flavor.17 days = 200 } } #If Trujillo Exists, he tries to further destabilize the situation
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.2
+			}
+		}
+
+		#Chain
+		country_event = { id = Caribbean_scripted.4 days = 30 } #Response to US Reaction
+		country_event = { id = Caribbean_scripted.6 days = 200 } #Crane Conference Set-Up
+	}
+}
+
+
+
+country_event = { #Response to US Reaction
+	id = Caribbean_scripted.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.4" }
+	title = Caribbean_scripted.4.t
+	desc = Caribbean_scripted.4.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #Canada Refuses Anguillan Demands
+		name = Caribbean_scripted.4.a
+		trigger = { CAN = { has_country_flag = CAR_US_Pressured } }
+		ai_chance = {
+			factor = 10
+		}
+		CAN = { clr_country_flag = CAR_US_Pressured }
+		CAN = { set_country_flag = CAN_AGL_Territory }
+		country_event = { id = Caribbean_scripted.5 days = 30 } #Anguilla Crisis Solution- Locked to Territory
+	}
+	option = { #Canada Accepts Anguillan Demands
+		name = Caribbean_scripted.4.b
+		trigger = { NOT = { CAN = { has_country_flag = CAR_US_Pressured } } }
+		ai_chance = {
+			factor = 15
+		}
+		country_event = { id = Caribbean_scripted.5 days = 30 } #Anguilla Crisis Solution
+	}
+}
+
+country_event = { #Anguilla Crisis Solution
+	id = Caribbean_scripted.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.5" }
+	title = Caribbean_scripted.5.t
+	desc = Caribbean_scripted.5.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #Canada gives it self-governance
+		name = Caribbean_scripted.5.a
+		trigger = { CAN = { has_country_flag = CAN_AGL_Territory } }
+		ai_chance = {
+			factor = 10
+		}
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.3
+			}
+		}
+
+		CAN = { clr_country_flag = CAN_AGL_Territory }
+		USA = { add_to_faction = AGL }
+		CAN = { set_autonomy = { target = AGL autonomy_state = autonomy_colony } }
+		AGL = {
+			set_cosmetic_tag = AGL_colonial
+			meta_effect = { #sets up next election date in country ui
+				text = {
+					set_politics = {
+						ruling_party = liberalism
+						last_election = "[current_election_date]"
+						elections_allowed = yes
+						election_frequency = 48
+					}
+				}
+				current_election_date = "[?global.date.GetDateStringNoHour]"
+			}
+			set_popularities = { liberalism = 100 }
+			remove_ideas = OFN_Observer
+			add_ideas = OFN_Dependent_Member
+			add_ideas = WFI_Political_Purgatory
+		}
+		904 = {
+			set_temp_variable = { admin_title_temp = token:Admin_Title_Self_Governing_Colony }
+			TNO_adjust_admin_title = yes
+		}
+	}
+
+	option = { #Canada Orders Anguilla to rejoin the Federation
+		name = Caribbean_scripted.5.a
+		trigger = { NOT = { CAN = { has_country_flag = CAN_AGL_Territory } } }
+		ai_chance = {
+			factor = 10
+		}
+		SKN = {
+			annex_country = { target = AGL }
+			every_owned_state = { remove_core_of = AGL }
+		}
+		904 = {
+			set_temp_variable = { admin_title_temp = token:Admin_Title_Colony }
+			TNO_adjust_admin_title = yes
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_British_West_Indies }
+			TNO_adjust_assoc_region = yes
+			hidden_effect = {
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+				TNO_adjust_assoc_region_2 = yes
+			}
+		}
+		if = { #If Stability Low, Canada Invades
+			limit = { USA = { check_variable = { Caribbean_Stability < 6 } } } #worst case
+			USA = { subtract_from_variable = { Caribbean_Stability = 1 } } #Invasion Lowers Stability by 1 - Now Between 4 and 6 - no?
+			904 = { set_demilitarized_zone = yes }
+			USA = { country_event = { id = Caribbean_flavor.18 days = 3 } } #Mexico Condemns Invasion
+			MEX = { country_event = { id = Caribbean_flavor.18 days = 3 } } #Mexico Condemns Invasion
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.5
+				}
+			}
+
+			USA = {
+				set_temp_variable = { Victory_ID = 67 } # *sigh* - Frosty
+				set_temp_variable = { Victory_Outcome = 2 }
+				set_temp_variable = { Victory_Points = -10 }
+				Cold_War_GUI_AddVictory = yes
+			}
+		}
+		else = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.4
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Crane Conference Setup
+	id = Caribbean_scripted.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.6" }
+	title = Caribbean_scripted.6.t
+	desc = Caribbean_scripted.6.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.6.a
+		ai_chance = { factor = 1 }
+		USA = {
+			clr_country_flag = USA_CIA_Operation_Brandenburg_Unlocked #Remove the mission if it was not finished yet
+
+			country_event = { id = Caribbean_flavor.19 days = 3 } #Apply Federation Pressure
+			country_event = { id = Caribbean_flavor.20 days = 56 } #Getting Bustamante on board
+			country_event = { id = Caribbean_flavor.21 days = 104 } #US at Conference
+
+		}
+		MEX = { country_event = { id = Caribbean_flavor.22 days = 104 } } #Manley discusses Conference
+		IBR = { country_event = { id = Caribbean_flavor.23 days = 104 } } #Iberia at the Conference
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.6
+				days = 106
+			}
+		}
+	}
+}
+
+#KD's Notes - Next up we have the prep for the Canadian Constitution Patriation, which is triggered in the on_startup file at 1253 days after January 1st 1962
+
+country_event = { #Canadian Constitution Patriation
+	id = Caribbean_scripted.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.7" }
+	title = Caribbean_scripted.7.t
+	desc = Caribbean_scripted.7.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.7.a
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { id = Caribbean_flavor.24 days = 10 } #Constitutional Congress Scheduled
+			country_event = { id = Caribbean_flavor.25 days = 31 } #Getting Bustamante on board
+			country_event = { id = Caribbean_flavor.26 days = 60 } #Bustamante Goes Rogue
+
+		}
+
+		MEX = {
+			country_event = { id = Caribbean_flavor.27 days = 10 } #Constitutional Congress Scheduled
+			country_event = { id = Caribbean_flavor.28 days = 31 } #Getting Bustamante on board
+			country_event = { id = Caribbean_flavor.29 days = 60 } #Bustamante Goes Rogue
+
+		}
+
+		IBR = {
+			country_event = { id = Caribbean_flavor.30 days = 10 } #Mata-Lledo encourages Bustamante to go Rogue
+			country_event = { id = Caribbean_flavor.31 days = 62 } #Mata-Lledo witnesses a giant protest
+
+		}
+
+		country_event = { id = Caribbean_scripted.8 days = 64 } #Proxy Start - Follow-up triggers for all tags involved
+
+		#Canadian Constitution Patrition
+		#KD's Notes - Don't ask me why it's on this file
+		if = {
+			limit = {
+				CAN = { has_government = liberalism }
+			}
+			random_list = {
+				25 = {
+					every_country = {
+						limit = {
+							is_ai = no
+							HasAmericasInterest = yes
+						}
+						news_event = {
+							id = WORLD.18219
+							days = 30
+						}
+					}
+				}
+				25 = {
+					every_country = {
+						limit = {
+							is_ai = no
+							HasAmericasInterest = yes
+						}
+						news_event = {
+							id = WORLD.18221
+							days = 30
+						}
+					}
+				}
+				25 = {
+					every_country = {
+						limit = {
+							is_ai = no
+							HasAmericasInterest = yes
+						}
+						news_event = {
+							id = WORLD.18223
+							days = 30
+						}
+					}
+				}
+				25 = {
+					every_country = {
+						limit = {
+							is_ai = no
+							HasAmericasInterest = yes
+						}
+						news_event = {
+							id = WORLD.18225
+							days = 30
+						}
+					}
+				}
+			}
+		}
+		else = {
+			random_list = {
+				25 = {
+					every_country = {
+						limit = {
+							is_ai = no
+							HasAmericasInterest = yes
+						}
+						news_event = {
+							id = WORLD.18220
+							days = 30
+						}
+					}
+				}
+				25 = {
+					every_country = {
+						limit = {
+							is_ai = no
+							HasAmericasInterest = yes
+						}
+						news_event = {
+							id = WORLD.18222
+							days = 30
+						}
+					}
+				}
+				25 = {
+					every_country = {
+						limit = {
+							is_ai = no
+							HasAmericasInterest = yes
+						}
+						news_event = {
+							id = WORLD.18224
+							days = 30
+						}
+					}
+				}
+				25 = {
+					every_country = {
+						limit = {
+							is_ai = no
+							HasAmericasInterest = yes
+						}
+						news_event = {
+							id = WORLD.18226
+							days = 30
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #PROXY START EVENT
+	id = Caribbean_scripted.8
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.8"
+	}
+	title = Caribbean_scripted.8.t
+	desc = Caribbean_scripted.8.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.8.a
+		ai_chance = { factor = 1 }
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.7
+				hours = 4
+			}
+		}
+
+		KingstonRiots_Initialize = yes
+		USA = {
+			set_temp_variable = { Victory_ID = 65 }
+			set_temp_variable = { Victory_Outcome = 0 }
+			Cold_War_GUI_AddVictory = yes
+		}
+		#KD's Notes - Make this ( Caribbean_flavor.42 ) the event that triggers the proxy to enter a conclusion/end-game period by triggering a mission to end it in a month.
+		USA = { country_event = { id = Caribbean_flavor.42 days = 88 } }
+		MEX = { country_event = { id = Caribbean_flavor.42 days = 88 } }
+		IBR = { country_event = { id = Caribbean_flavor.42 days = 88 } }
+
+		#KD's Notes - These 3 events add the proxy for the relevant tag
+		USA = { country_event = { id = Caribbean_flavor.32 } }
+		MEX = { country_event = { id = Caribbean_flavor.32 } }
+		IBR = { country_event = { id = Caribbean_flavor.32 } }
+	}
+}
+
+
+############# Jamaican Crisis
+
+country_event = { #Canada Choose Path - DEPRECATED, but kept for debug triggering
+	id = Caribbean_scripted.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.10" }
+	title = Caribbean_scripted.10.t
+	desc = Caribbean_scripted.10.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = { #Federation
+		name = Caribbean_scripted.10.a
+		ai_chance = {
+			factor = 1
+		}
+		country_event = { id = Caribbean_scripted.11 days = 3 }
+	}
+	option = { #Decolonization
+		name = Caribbean_scripted.10.b
+		ai_chance = {
+			factor = 1
+		}
+		country_event = { id = Caribbean_scripted.12 days = 3 }
+	}
+	#option = { #Imperialism
+	#	name = Caribbean_scripted.10.c
+	#	ai_chance = {
+	#		factor = 0
+	#	}
+	#	country_event = { id = Caribbean_scripted.13 days = 3 }
+	#}
+}
+
+country_event = { #Federation
+	id = Caribbean_scripted.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.11" }
+	title = Caribbean_scripted.11.t
+	desc = Caribbean_scripted.11.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.11.a
+		ai_chance = { factor = 1 }
+		hidden_effect = { TNO_Caribbean_Federation_Form = yes }
+	}
+}
+
+country_event = { #Caribbean Springtime
+	id = Caribbean_scripted.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.12" }
+	title = Caribbean_scripted.12.t
+	desc = Caribbean_scripted.12.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.12.a
+		ai_chance = { factor = 1 }
+		set_global_flag = CAR_Springtime
+		hidden_effect = { TNO_Caribbean_Springtime = yes }
+	}
+}
+
+country_event = { #Imperialism Path - Deprecated?
+	id = Caribbean_scripted.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.13" }
+	title = Caribbean_scripted.13.t
+	desc = Caribbean_scripted.13.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.13.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#Rest of the Caribbean_scripted events here occur AFTER the proxy
+
+###Jamaica Outcomes:
+#Jamaica Stays and Approves Federation +1 Stability
+#Busta Crackdown
+#Manley Takes Power -1 Stability
+#Socialist Revolution -1 Stability
+
+#Jamaica Skeleton Post-Proxy is handled in the TNO_Jamaica Event File
+
+#Now Caribbean_Stability is between 3 and 9
+
+#########################################
+#### West Indies Federation Skeleton ####
+#########################################
+
+country_event = { #First Election
+	id = Caribbean_scripted.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.14" }
+	title = Caribbean_scripted.14.t
+	desc = Caribbean_scripted.14.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.14.a
+		ai_chance = { factor = 1 }
+
+		set_politics = {
+			ruling_party = liberal_conservatism #Shearer is already party leader
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		set_popularities = {
+			conservatism = 14
+			liberal_conservatism = 31
+			liberalism = 24
+			liberalism_1 = 12
+			progressivism = 6
+			progressivism_1 = 13
+		}
+		#And now to fire every flavor event until the Oil Crisis
+		USA = { country_event = { id = Caribbean_flavor.56 hours = 2 } } #Election Reaction
+		USA = { country_event = { id = Caribbean_flavor.57 days = 64 } } #American Expat
+		USA = { country_event = { id = Caribbean_flavor.58 days = 70 } } #West Indies Commission Disbands
+		IBR = { country_event = { id = Caribbean_flavor.59 days = 70 } } #Conclusion of Investigation into Foreign Criminal Activities
+		USA = { country_event = { id = Caribbean_flavor.60 days = 300 } } #Fruit Company Complains
+		USA = { country_event = { id = Caribbean_flavor.61 days = 354 } } #Thomas Sowell Intro
+		USA = { country_event = { id = Caribbean_flavor.62 days = 389 } } #Bob Marley Concert
+	}
+}
+
+## Oil Crisis - Actual Skeleton
+country_event = { #Oil Crisis Shocks
+	id = Caribbean_scripted.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.15" }
+	title = Caribbean_scripted.15.t
+	desc = Caribbean_scripted.15.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.15.a
+		ai_chance = { factor = 1 }
+		USA = { country_event = { id = Caribbean_flavor.63 hours = 5 } } #Overview of Crisis
+		USA = { country_event = { id = Caribbean_flavor.64 days = 6 } } #Emergency Meeting - Path Split
+		#Chain
+		country_event = { id = Caribbean_scripted.16 days = 30 } #Check for US Intervention
+	}
+}
+
+country_event = { #Check for US Intervention
+	id = Caribbean_scripted.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.16" }
+	title = Caribbean_scripted.16.t
+	desc = Caribbean_scripted.16.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = { #Bailout
+		name = Caribbean_scripted.16.a
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = WIN_Canadian_Bailout }
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.14
+				hours = 5
+			}
+		}
+		remove_ideas = {
+			WIN_Palm_Maple_Oak
+			WIN_Enter_Hurricane
+		}
+		add_ideas = {
+			WIN_Maple_Autumn
+			WIN_Follow_North_Star
+		}
+		USA = { country_event = { id = Caribbean_flavor.65 days = 100 } }
+		USA = { country_event = { id = Caribbean_flavor.66 days = 124 } }
+
+		#Chain
+		country_event = { id = Caribbean_scripted.17 days = 125 } #Black Power Revolution
+	}
+
+	option = { #Restructure
+		name = Caribbean_scripted.16.b
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = WIN_Economic_Restructure }
+		USA = { country_event = { id = Caribbean_flavor.75 days = 40 } }
+		USA = { country_event = { id = Caribbean_flavor.76 days = 76 } }
+		#Chain
+		country_event = { id = Caribbean_scripted.19 days = 125 } #Path Check
+	}
+}
+
+country_event = { #Black Power Revolution
+	id = Caribbean_scripted.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.17" }
+	title = Caribbean_scripted.17.t
+	desc = Caribbean_scripted.17.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.17.a
+		ai_chance = { factor = 1 }
+		691 = { #REPLACE ME WITH STATE FOR TOBAGO
+			set_demilitarized_zone = yes
+		}
+		USA = { country_event = { id = Caribbean_flavor.67 } } #Situation Room
+		#Next Flavor Events until Government Collapse are triggered from the above event
+		#Chain
+		country_event = { id = Caribbean_scripted.18 days = 100 } #Government Collapse
+	}
+}
+
+country_event = { #Government Collapse
+	id = Caribbean_scripted.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.18" }
+	title = Caribbean_scripted.18.t
+	desc = Caribbean_scripted.18.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.18.a
+		ai_chance = { factor = 1 }
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		set_popularities = {
+			conservatism = 12
+			liberal_conservatism = 24
+			liberalism = 31
+			liberalism_1 = 10
+			progressivism = 6
+			progressivism_1 = 17
+		}
+		promote_character = WIN_ANR_Robinson
+		set_cosmetic_tag = WIN_puppeted
+
+		USA = { country_event = { id = Caribbean_flavor.74 } } # #Shearer got Sheared
+	}
+}
+
+country_event = { #Path Check for US Reforms
+	id = Caribbean_scripted.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.19" }
+	title = Caribbean_scripted.19.t
+	desc = Caribbean_scripted.19.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.19.a
+		ai_chance = { factor = 1 }
+		remove_ideas = WIN_Enter_Hurricane
+		if = { #Sowell Plan
+			limit = { has_country_flag = WIN_Sowell_Plan }
+			add_ideas = WIN_New_Captain
+			set_cosmetic_tag = WIN_unitary
+			if = { #Williams Actually Secedes
+				limit = { check_variable = { USA.Caribbean_Stability < 6 } }
+				country_event = { id = Caribbean_scripted.20 days = 42 }
+			}
+			else = { #Williams Backs Down
+				USA = { country_event = { id = Caribbean_flavor.79 days = 11 } } #Sowell Gloats
+
+				every_country = {
+					limit = {
+						is_ai = no
+						HasAmericasInterest = yes
+					}
+					news_event = {
+						id = Caribbean_News.18
+						days = 43
+					}
+				}
+			}
+			country_event = { id = Caribbean_scripted.21 days = 364 } #Adams Election
+			#flavor.80 and flavor.81 triggered by scripted.21
+		}
+		else = { #Williams Plan
+			MEX = { country_event = { id = Caribbean_flavor.82 days = 13 } } #Mexico Reacts
+			USA = { country_event = { id = Caribbean_flavor.83 days = 32 } } #Canada Grumbles
+			add_ideas = WIN_Charting_Course
+			set_cosmetic_tag = WIN_federated
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.19
+					days = 43
+				}
+			}
+			#Chain
+			country_event = { id = Caribbean_scripted.22 days = 364 } #Manley Election
+		}
+	}
+}
+
+country_event = { #Trinidad Secedes
+	id = Caribbean_scripted.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.20" }
+	title = Caribbean_scripted.20.t
+	desc = Caribbean_scripted.20.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.20.a
+		ai_chance = { factor = 1 }
+		691 = {
+			add_core_of = TRI
+			transfer_state_to = TRI
+			remove_core_of = WIF
+		}
+		TRI = {
+			drop_cosmetic_tag = yes
+			set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+			econ_subtype_change = yes
+			remove_ideas = OFN_Dependent_Member
+			add_ideas = OFN_Observer
+		}
+
+		CAN = { end_puppet = TRI }
+		USA = { country_event = { id = Caribbean_flavor.77 hours = 2 } } #Reaction
+		MEX = { country_event = { id = Caribbean_flavor.78 days = 36 } } #Trinidad aligns with the Veracruz
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.17
+				hours = 5
+			}
+		}
+		#Chain
+		country_event = { id = Caribbean_scripted.18 days = 100 } #Government Collapse
+	}
+}
+
+country_event = { #Adams Election
+	id = Caribbean_scripted.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.21" }
+	title = Caribbean_scripted.21.t
+	desc = Caribbean_scripted.21.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.21.a
+		ai_chance = { factor = 1 }
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = liberalism #Manley is already party leader
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 48
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		retire_country_leader = yes
+		promote_character = WIN_Tom_Adams
+		set_popularities = {
+			conservatism = 19
+			liberal_conservatism = 17
+			liberalism = 30
+			liberalism_2 = 16
+			progressivism = 6
+			progressivism_1 = 12
+		}
+		set_party_name = {
+			ideology = liberalism
+			long_name = WIN_liberalism_1_party_long
+			name = WIN_liberalism_1_party
+		}
+		set_party_name = {
+			ideology = liberalism_2
+			long_name = WIN_liberalism_party_long
+			name = WIN_liberalism_party
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_American_Capitalism }
+		econ_subtype_change = yes
+			
+		remove_ideas = {
+			WIN_Palm_Maple_Oak
+			WIN_Shadow_Federation
+		}
+		add_ideas = {
+			WIN_Sturdy_Oak
+			WIN_United_States_Caribbean
+		}
+		USA = { country_event = { id = Caribbean_flavor.80 hours = 5 } } #Elections in the West Indies
+		USA = { country_event = { id = Caribbean_flavor.81 days = 84 } } #Privatization Plans
+
+	}
+}
+
+country_event = { #Manley Election
+	id = Caribbean_scripted.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.22" }
+	title = Caribbean_scripted.22.t
+	desc = Caribbean_scripted.22.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.22.a
+		ai_chance = { factor = 1 }
+		meta_effect = { #sets up next election date in country ui
+			text = {
+				set_politics = {
+					ruling_party = liberalism #Manley is already party leader
+					last_election = "[current_election_date]"
+					elections_allowed = yes
+					election_frequency = 48
+				}
+			}
+			current_election_date = "[?global.date.GetDateStringNoHour]"
+		}
+		remove_ideas = {
+			WIN_Palm_Maple_Oak
+			WIN_Shadow_Federation
+		}
+		add_ideas = {
+			WIN_Young_Palm
+			WIN_Federate_or_Die
+		}
+		retire_country_leader = yes
+		promote_character = WIN_Michael_Manley
+		set_popularities = {
+			conservatism = 10
+			liberal_conservatism = 17
+			liberalism = 31
+			liberalism_1 = 11
+			progressivism = 9
+			progressivism_1 = 22
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		USA = { country_event = { id = Caribbean_flavor.84 hours = 5 } } #Elections in the West Indies - Manley Wins
+		MEX = { country_event = { id = Caribbean_flavor.85 days = 67 } } #Manley meets with Mexico
+		USA = { country_event = { id = Caribbean_flavor.86 days = 100 } } #JLP-led Protests
+		USA = { country_event = { id = Caribbean_flavor.87 days = 300 } } #State Department Worries
+	}
+}
+
+#########################################
+#### Federation Not Formed Skeleton #####
+#########################################
+
+### East Caribbean Union Skeleton
+
+country_event = { # East Caribbean Union Forms
+	id = Caribbean_scripted.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.23" }
+	title = Caribbean_scripted.23.t
+	desc = Caribbean_scripted.23.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.23.a
+		ai_chance = { factor = 1 }
+		set_cosmetic_tag = TRI_ECU_unitary
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		remove_ideas = {
+			TRI_Fragmented_Politics
+			TRI_undersea_riches
+			WFI_Political_Purgatory
+		}
+		add_ideas = {
+			TRI_Beyond_Slavery_and_Capitalism
+			TRI_First_Among_Unequals
+			TRI_Doc_Knows_Best
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.29
+				hours = 4
+			}
+		}
+		692 = {
+			add_core_of = TRI
+			transfer_state_to = TRI
+			remove_core_of = SVI
+		}
+		900 = {
+			add_core_of = TRI
+			transfer_state_to = TRI
+			remove_core_of = GND
+		}
+		CAN = { end_puppet = TRI }
+		every_state = {
+			limit = {
+				OR = {
+					state = 691
+					state = 692
+					state = 900
+				}
+			}
+			TNO_clear_admin_title = yes
+			TNO_clear_assoc_region = yes
+			if = {
+				limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Lesser_Antilles } }
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+				TNO_adjust_assoc_region = yes
+				TNO_clear_assoc_region_2 = yes
+			}
+		}
+		USA = {
+			country_event = {
+				id = Caribbean_flavor.88
+				days = 14
+			}
+		}
+		MEX = {
+			country_event = {
+				id = Caribbean_flavor.89
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = { # Fillibuster Revolt
+	id = Caribbean_scripted.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.24" }
+	title = Caribbean_scripted.24.t
+	desc = Caribbean_scripted.24.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.24.a
+		ai_chance = { factor = 1 }
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.30
+				hours = 4
+			}
+		}
+		900 = {
+			add_core_of = GND
+			transfer_state_to = GND
+			remove_core_of = TRI
+			add_claim_by = TRI
+		}
+		GND = {
+			add_country_leader_role = {
+				character = GND_Eric_Gairy
+				promote_leader = yes
+				country_leader = {
+					desc = POLITICS_GND_ERIC_GAIRY_DESC
+					ideology = despotism_interim_government_subtype
+				}
+			}
+			set_popularities = {
+				despotism = 100
+			}
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			drop_cosmetic_tag = yes
+			remove_ideas = OFN_Dependent_Member
+			add_ideas = OFN_Observer
+			add_ideas = GND_Mongoose_Revolution
+			add_ideas = GND_Grenadian_Connection
+		}
+		USA = {
+			country_event = {
+				id = Caribbean_flavor.96
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # OAS Negotiations
+	id = Caribbean_scripted.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.25" }
+	title = Caribbean_scripted.25.t
+	desc = Caribbean_scripted.25.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.25.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_OAS }
+					AND = {
+						NOT = {
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_OAS }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_MEX }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_OAS }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_USA }
+						}
+						check_variable = { USA.Caribbean_Stability > 6 }
+					}
+					AND = {
+						NOT = {
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_OAS }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_MEX }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_OAS }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_USA }
+						}
+						USA = { has_country_flag = OAS_ECU_grenada }
+						check_variable = { USA.Caribbean_Stability > 4 }
+						NOT = {
+							MEX = {
+								has_country_flag = OAS_ECU_williams
+							}
+						}
+					}
+				}
+			}
+			USA = {
+				country_event = {
+					id = Caribbean_flavor.101
+					days = 1
+				}
+			}
+			MEX = {
+				country_event = {
+					id = Caribbean_flavor.101
+					days = 1
+				}
+			}
+			country_event = {
+				id = Caribbean_scripted.28
+				days = 30
+			}
+		}
+		else_if = { # Grenada reintegrated with OAS support
+			limit = {
+				OR = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_OAS }
+					AND = {
+						NOT = {
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_OAS }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_MEX }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_OAS }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_USA }
+						}
+						check_variable = { Caribbean_Stability < 5 }
+					}
+					AND = {
+						NOT = {
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_OAS }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_MEX }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_OAS }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_USA }
+						}
+						MEX = { has_country_flag = OAS_ECU_williams }
+						check_variable = { USA.Caribbean_Stability < 7 }
+						NOT = {
+							USA = {
+								has_country_flag = OAS_ECU_grenada
+							}
+						}
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.32
+					hours = 4
+				}
+			}
+			USA = {
+				country_event = {
+					id = Caribbean_flavor.102
+					days = 1
+				}
+			}
+			MEX = {
+				country_event = {
+					id = Caribbean_flavor.102
+					days = 1
+				}
+			}
+			USA = {
+				if = {
+					limit = {
+						check_variable = { Caribbean_Stability > 5 }
+					}
+					country_event = {
+						id = Caribbean_flavor.118
+						days = 250
+					}
+				}
+				else = {
+					country_event = {
+						id = Caribbean_flavor.115
+						days = 250
+					}
+				}
+			}
+			900 = {
+				add_core_of = TRI
+				transfer_state_to = TRI
+				remove_core_of = GND
+			}
+		}
+		else = {
+			USA = {
+				country_event = {
+					id = Caribbean_flavor.103
+					days = 1
+				}
+				country_event = {
+					id = Caribbean_flavor.104
+					days = 21
+				}
+			}
+			MEX = {
+				country_event = {
+					id = Caribbean_flavor.103
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Eric Williams declares independence from Britain
+	id = Caribbean_scripted.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.26" }
+	title = Caribbean_scripted.26.t
+	desc = Caribbean_scripted.26.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.26.a
+		ai_chance = { factor = 1 }
+		set_popularities = {
+			paternalism = 63
+			conservatism = 15
+			progressivism = 15
+			socialist = 7
+		}
+		leave_faction = yes
+		remove_ideas = OFN_Dependent_Member
+		add_ideas = OFN_Observer
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.35
+				hours = 4
+			}
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		MEX = {
+			country_event = {
+				id = Caribbean_flavor.116
+				days = 14
+			}
+		}
+		USA = {
+			country_event = {
+				id = Caribbean_flavor.117
+				days = 14
+			}
+		}
+		remove_ideas = TRI_Doc_Knows_Best
+		add_ideas = TRI_Doc_Without_Borders
+	}
+}
+
+country_event = {# Eric Williams sells out to America
+	id = Caribbean_scripted.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.27" }
+	title = Caribbean_scripted.27.t
+	desc = Caribbean_scripted.27.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.27.a
+		ai_chance = { factor = 1 }
+		set_cosmetic_tag = TRI_ECU_federated
+		econ_join_sphere_USA = yes
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Social_Market }
+		econ_subtype_change = yes
+		set_politics = {
+			ruling_party = liberalism
+		}
+		set_popularities = {
+			conservatism = 24
+			liberalism = 43
+			progressivism = 24
+			socialist = 9
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.36
+				hours = 4
+			}
+		}
+		USA = {
+			country_event = {
+				id = Caribbean_flavor.119
+				days = 14
+			}
+		}
+		MEX = {
+			country_event = {
+				id = Caribbean_flavor.120
+				days = 14
+			}
+		}
+		remove_ideas = TRI_Doc_Knows_Best
+		add_ideas = TRI_Paging_Doc_Williams
+	}
+}
+
+country_event = { # Williams Failure, America Backs Grenada
+	id = Caribbean_scripted.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.28" }
+	title = Caribbean_scripted.28.t
+	desc = Caribbean_scripted.28.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.28.a
+		ai_chance = { factor = 1 }
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.39
+				hours = 4
+			}
+		}
+		USA = {
+			country_event = {
+				id = Caribbean_flavor.121
+				days = 14
+			}
+		}
+		TRI = {
+			if = {
+				limit = {
+					check_variable = { USA.Caribbean_Stability > 5 }
+				}
+				country_event = {
+					id = Caribbean_scripted.29
+					days = 300
+				}
+			}
+			else = {
+				country_event = {
+					id = Caribbean_scripted.30
+					days = 300
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Dissolution of the ECU
+	id = Caribbean_scripted.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.29" }
+	title = Caribbean_scripted.29.t
+	desc = Caribbean_scripted.29.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.29.a
+		ai_chance = { factor = 1 }
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.37
+				hours = 4
+			}
+		}
+		remove_ideas = {
+			TRI_Beyond_Slavery_and_Capitalism
+			TRI_Doc_Knows_Best
+			TRI_First_Among_Unequals
+		}
+		add_ideas = {
+			TRI_undersea_riches
+			TRI_OFN_Outpost
+		}
+		drop_cosmetic_tag = yes
+		set_politics = {
+			ruling_party = liberal_conservatism
+			elections_allowed = yes
+		}
+		set_popularities = {
+			paternalism = 20
+			liberal_conservatism = 30
+			conservatism = 23
+			progressivism = 23
+			socialist = 4
+		}
+		econ_join_sphere_USA = yes
+		692 = {
+			add_core_of = SVI
+			transfer_state_to = SVI
+			remove_core_of = TRI
+		}
+		900 = {
+			remove_claim_by = TRI
+		}
+		remove_ideas = {
+			TRI_Doc_Knows_Best
+			TRI_First_Among_Unequals
+		}
+		SVI = {
+			promote_character = SVI_Robert_Milton_Cato
+			set_politics = {
+				ruling_party = socialist
+				elections_allowed = yes
+			}
+			set_popularities = {
+				progressivism = 18
+				progressivism_1 = 11
+				conservatism = 12
+				liberalism = 22
+				socialist = 37
+			}
+			drop_cosmetic_tag = yes
+			remove_ideas = OFN_Dependent_Member
+			add_ideas = OFN_Observer
+			econ_join_sphere_MEX = yes
+			set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+			econ_subtype_change = yes
+		}
+		USA = {
+			country_event = {
+				id = Caribbean_flavor.124
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_scripted.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.30" }
+	title = Caribbean_scripted.30.t
+	desc = Caribbean_scripted.30.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.30.a
+		ai_chance = { factor = 1 }
+		add_country_leader_role = {
+			character = TRI_Eric_Williams
+			promote_leader = yes
+			country_leader = {
+				desc = POLITICS_TRI_ERIC_WILLIAMS_DESC
+				ideology = despotism_institutional_despotism_subtype
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		set_popularities = {
+			despotism = 60
+			paternalism_1 = 30
+			socialist = 10
+		}
+		set_party_name = {
+			ideology = paternalism_1
+			long_name = TRI_despotism_party_long
+			name = TRI_despotism_party
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Stabilizing_Development }
+		econ_subtype_change = yes
+		leave_faction = yes
+		remove_ideas = OFN_Dependent_Member
+		add_ideas = OFN_Observer
+		USA = {
+			country_event = {
+				id = Caribbean_flavor.125
+				days = 10
+			}
+		}
+		MEX = {
+			country_event = {
+				id = Caribbean_flavor.126
+				days = 10
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = { id = Caribbean_News.38 }
+		}
+		remove_ideas = TRI_Doc_Knows_Best
+		add_ideas = TRI_Generalissimo_Williams
+	}
+}
+
+country_event = {
+	id = Caribbean_scripted.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.31" }
+	title = Caribbean_scripted.31.t
+	desc = Caribbean_scripted.31.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_scripted.31.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { IBR = { has_government = despotism } }
+			add_country_leader_role = {
+				character = GND_Eric_Gairy
+				promote_leader = yes
+				country_leader = {
+					desc = POLITICS_GND_ERIC_GAIRY_DESC
+					ideology = fascism_fascist_populism_subtype
+				}
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			set_popularities = {
+				fascism = 41
+				despotism = 23
+				conservatism = 5
+				progressivism_2 = 10
+				socialist = 12
+				communist = 9
+			}
+		}
+		else = {
+			add_country_leader_role = {
+				character = GND_Eric_Gairy
+				promote_leader = yes
+				country_leader = {
+					desc = POLITICS_GND_ERIC_GAIRY_DESC
+					ideology = despotism_aristocratic_republicanism_subtype
+				}
+			}
+			set_popularities = {
+				despotism = 64
+				conservatism = 5
+				progressivism_2 = 10
+				socialist = 12
+				communist = 9
+			}
+		}
+		USA = {
+			country_event = {
+				id = Caribbean_flavor.122
+				days = 1
+			}
+		}
+		IBR = {
+			country_event = {
+				id = Caribbean_flavor.123
+				days = 1
+			}
+		}
+	}
+}
+
+### Caribbean Springtime Skeleton
+
+#KD's Notes - We'll be jumping to event count 200 for both the Caribbean_flavor and Caribbean_scripted namespaces for simplicy's sake
+
+## ANTIGUA
+country_event = { #Antigua Operation Unlocked
+	id = Caribbean_scripted.200
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.200" }
+	title = Caribbean_scripted.200.t
+	desc = Caribbean_scripted.200.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.200.a
+		ai_chance = { factor = 1 }
+		USA = { country_event = { id = Caribbean_flavor.200 days = 1 } } #Operation Available - 201 is for Operation Result
+		#Chain
+		country_event = { id = Caribbean_scripted.201 days = 756 } #Emergency Check
+		country_event = { id = Caribbean_scripted.202 days = 1120 } #Elections
+	}
+}
+
+country_event = { #Emergency Check
+	id = Caribbean_scripted.201
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.201" }
+	title = Caribbean_scripted.201.t
+	desc = Caribbean_scripted.201.desc
+	picture = GFX_report_event_MAD_phone_call
+	trigger = { USA = { check_variable = { Caribbean_Stability < 5 } } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.201.a
+		ai_chance = { factor = 1 }
+		set_politics = { ruling_party = despotism }
+		set_popularities = {
+			despotism = 65
+			liberalism = 35
+		}
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.20
+				hours = 4
+			}
+		}
+
+		USA = { country_event = { id = Caribbean_flavor.202 days = 1 } } #Tourists React to Coup
+	}
+}
+
+country_event = { #Election 1972
+	id = Caribbean_scripted.202
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.202" }
+	title = Caribbean_scripted.202.t
+	desc = Caribbean_scripted.202.desc
+	picture = GFX_report_event_MAD_phone_call
+	trigger = { NOT = { has_government = despotism } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.202.a
+		ai_chance = { factor = 1 }
+		USA = { clr_country_flag = USA_CIA_Operation_Catnip_Unlocked }
+		random_list = {
+			50 = { #The Bird Soars
+				if = {
+					limit = { has_country_flag = ANT_US_Aid }
+					set_popularities = {
+						liberal_conservatism = 70
+						liberalism = 30
+					}
+					USA = { country_event = { id = Caribbean_flavor.203 days = 2 } } #Corrupt Election Win
+				}
+				#Unification Attempt
+				USA = { country_event = { id = Caribbean_flavor.218 days = 15 } } #First Meet-up
+				USA = { country_event = { id = Caribbean_flavor.205 days = 54 } } #Alluding to Unification Attempt
+				USA = { country_event = { id = Caribbean_flavor.217 days = 98 } } #Unification Attempt Flavor Event
+				SKN = { country_event = { id = Caribbean_scripted.203 days = 100 } } #Unification Attempt
+			}
+			50 = { #Walter Wins
+				modifier = {
+					factor = 0
+					has_country_flag = ANT_US_Aid
+				}
+				set_politics = { ruling_party = liberalism }
+				set_popularities = {
+					liberal_conservatism = 45
+					liberalism = 55
+				}
+				remove_ideas = ANT_Reign_Rooster
+				remove_ideas = ANT_Magpie_Treasure
+				add_ideas = ANT_Northern_Migration
+				set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+				econ_subtype_change = yes
+				USA = { country_event = { id = Caribbean_flavor.204 days = 30 } } #Vere Bird Flees the Country
+			}
+		}
+	}
+}
+
+country_event = { #Unification - Fires for SKN
+	id = Caribbean_scripted.203
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.203" }
+	title = Caribbean_scripted.203.t
+	desc = Caribbean_scripted.203.desc
+	picture = GFX_report_event_MAD_phone_call
+	trigger = { has_government = liberal_conservatism }
+
+	is_triggered_only = yes
+
+	option = { #It sounds nice but they are very corrupt
+		name = Caribbean_scripted.203.a
+		ai_chance = { factor = 1 }
+		set_cosmetic_tag = SKN_federal
+		annex_country = {
+			target = ANT
+			transfer_troops = yes
+		}
+		set_temp_variable = { gdp_growth_temp = 1.15 }
+		econ_gdp_growth_change = yes
+		if = {
+			limit = { check_variable = { Caribbean_Stability > 7 } }
+			2522 = { add_core_of = SKN } #Montserrat
+			2522 = { transfer_state_to = SKN }
+			2522 = { remove_core_of = CAN }
+
+			2444 = { add_core_of = SKN } #British Virgin Islands
+			2444 = { transfer_state_to = SKN }
+			2444 = { remove_core_of = CAN }
+
+			2522 = {
+				TNO_clear_admin_title = yes
+				TNO_clear_assoc_region = yes
+				if = {
+					limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Lesser_Antilles } }
+					set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+					TNO_adjust_assoc_region = yes
+					TNO_clear_assoc_region_2 = yes
+				}
+			}
+			2444 = {
+				TNO_clear_admin_title = yes
+				TNO_clear_assoc_region = yes
+				if = {
+					limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Lesser_Antilles } }
+					set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+					TNO_adjust_assoc_region = yes
+					TNO_clear_assoc_region_2 = yes
+				}
+			}
+		}
+		remove_ideas = {
+			SKN_Under_Microscope
+			SKN_Patchwork_Colony
+			SKN_Underdevelopment
+			SKN_Sugar_Mass
+			SKN_Malliouhana_Slumbers
+		}
+		add_ideas = {
+			SKN_Federalist_Bulwark
+			SKN_Pepperpot_Stew
+		}
+		every_owned_state = { remove_core_of = ANT }
+		every_owned_state = { remove_core_of = CAN }
+
+		retire_country_leader = yes
+		promote_character = SKN_Frederick_Albert_Phillips
+
+		set_party_name = {
+			ideology = liberal_conservatism
+			name = SKN_coalition
+			long_name = SKN_coalition
+		}
+		set_popularities = {
+			liberal_conservatism = 60
+			progressivism = 15
+			liberalism = 15
+			paternalism = 10
+		}
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.21
+				hours = 4
+			}
+		}
+
+		USA = { add_to_variable = { Caribbean_Stability = 1 } }
+	}
+}
+## SAINT KITTS
+country_event = { #Skeleton Start - Coup Crisis
+	id = Caribbean_scripted.204
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.204" }
+	title = Caribbean_scripted.204.t
+	desc = Caribbean_scripted.204.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.204.a
+		ai_chance = { factor = 1 }
+		USA = { country_event = { id = Caribbean_flavor.207 days = 1 } } #Reaction on Coup Start
+
+		#Chain
+		country_event = { id = Caribbean_scripted.205 days = 64 } #Corrupt Elections Check
+		#country_event = { id = Caribbean_scripted.206 days = 1092 } #Elections - Deprecated for now
+		country_event = { id = Caribbean_scripted.207 days = 200 } #Republic Declared
+	}
+}
+
+country_event = { #Coup Attempt Result
+	id = Caribbean_scripted.205
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.205" }
+	title = Caribbean_scripted.205.t
+	desc = Caribbean_scripted.205.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.205.a
+		ai_chance = { factor = 1 }
+		if = { #Coup Attempted
+			limit = { USA = { check_variable = { Caribbean_Stability < 5 } } }
+			set_politics = { ruling_party = despotism }
+			set_popularities = {
+				despotism = 65
+				liberal_conservatism = 35
+			}
+			USA = { country_event = { id = Caribbean_flavor.210 } } #Result Reaction
+			USA = { country_event = { id = Caribbean_flavor.211 days = 10 } } #Trying to Win Back Favor - Optional +1 Stability
+			USA = { country_event = { id = Caribbean_flavor.212 days = 184 } } #Imprisoned Coupists Flavor
+			MEX = { country_event = { id = Caribbean_flavor.213 days = 184 } } #Warming Up to Mexico
+			USA = { country_event = { id = Caribbean_flavor.214 days = 184 } } #US Receives word of deals with Cuba
+			USA = { subtract_from_variable = { Caribbean_Stability = 1 } }
+
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.22
+					hours = 4
+				}
+			}
+
+		}
+		else = { #Conspiracy Dies Out
+			USA = { country_event = { id = Caribbean_flavor.208 } } #Result Reaction if Conspiracy Foiled
+			USA = { country_event = { id = Caribbean_flavor.209 days = 78 } } #US is Sorry
+
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.23
+					hours = 4
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Election 1971
+	id = Caribbean_scripted.206
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.206" }
+	title = Caribbean_scripted.206.t
+	desc = Caribbean_scripted.206.desc
+	picture = GFX_report_event_MAD_phone_call
+	trigger = { NOT = { has_government = despotism } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.206.a
+		ai_chance = { factor = 1 }
+		random_list = {
+			50 = { #Bradshaw Rules On
+				set_popularities = {
+					liberal_conservatism = 40
+					progressivism = 60
+				}
+			}
+			50 = { #Herbert Wins
+				set_politics = { ruling_party = liberal_conservatism }
+				set_popularities = {
+					liberal_conservatism = 55
+					progressivism = 45
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Republic Declared
+	id = Caribbean_scripted.207
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.207" }
+	title = Caribbean_scripted.207.t
+	desc = Caribbean_scripted.207.desc
+	picture = GFX_report_event_MAD_phone_call
+	trigger = {
+		has_government = despotism
+		NOT = { has_country_flag = US_Aid_Offered }
+	}
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.207.a
+		ai_chance = { factor = 1 }
+		drop_cosmetic_tag = yes
+		leave_faction = yes
+		remove_ideas = OFN_Dependent_Member
+		econ_join_sphere_MEX = yes
+		set_cosmetic_tag = GUA_MEX #Reused simply for the color
+		add_ideas = OFN_Observer
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+		CAN = { end_puppet = SKN }
+		#USA = { country_event = { id = Caribbean_flavor.209 } } #US Reaction
+		USA = { subtract_from_variable = { Caribbean_Stability = 1 } }
+		907 = {
+			TNO_clear_admin_title = yes
+			TNO_clear_assoc_region = yes
+			if = {
+				limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Lesser_Antilles } }
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+				TNO_adjust_assoc_region = yes
+				TNO_clear_assoc_region_2 = yes
+			}
+		}
+	}
+}
+
+## SAINT LUCIA
+country_event = { #Election 1971
+	id = Caribbean_scripted.208
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.208"
+		USA = { clr_country_flag = USA_CIA_Operation_Shingle_Unlocked }
+	}
+	title = Caribbean_scripted.208.t
+	desc = Caribbean_scripted.208.desc
+	picture = GFX_report_event_MAD_phone_call
+	trigger = { NOT = { has_government = despotism } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.208.a
+		ai_chance = { factor = 1 }
+		if = { #Compton
+			limit = {
+				OR = {
+					USA = { check_variable = { Caribbean_Stability > 7 } }
+					has_country_flag = SLU_Shingle_Success
+				}
+			}
+			set_politics = { ruling_party = conservatism }
+			set_party_name = { #Right wing parties uniting to defeat the woke left :wholesome:
+				ideology = conservatism
+				name = SLU_conservatism_merge
+				long_name = SLU_conservatism_merge_long
+			}
+			set_popularities = {
+				progressivism = 23
+				liberalism = 21
+				conservatism = 56
+			}
+			USA = { add_to_variable = { Caribbean_Stability = 1 } }
+			USA = { country_event = { id = Caribbean_flavor.226 days = 10 } } #Compton is bad for Business
+		}
+		else_if = { #Liberal Charles
+			limit = {
+				USA = { check_variable = { Caribbean_Stability > 5 } }
+				USA = { check_variable = { Caribbean_Stability < 8 } }
+			}
+			set_popularities = { #Right wing parties don't unite, left wins. Says a lot about society
+				progressivism = 26
+				liberalism = 40
+				conservatism = 24
+				conservatism_1 = 10
+			}
+			USA = { add_to_variable = { Caribbean_Stability = 1 } }
+			#USA = { country_event = { id = Caribbean_flavor.224 days = 35 } } #Diner Scene
+			MEX = { country_event = { id = Caribbean_flavor.227 days = 58 } } #Saint Lucia Requests Loan
+		}
+		else = { #Left Charles
+			set_politics = { ruling_party = progressivism }
+			set_popularities = { #the left has gone insane
+				progressivism = 40
+				liberalism = 26
+				conservatism = 24
+				conservatism_1 = 10
+			}
+			country_event = { id = Caribbean_scripted.209 days = 88 } #Republic Declared
+			#USA = { country_event = { id = Caribbean_flavor.225 days = 35 } } #FBI Organized Meeting
+			MEX = { country_event = { id = Caribbean_flavor.227 days = 58 } } #Saint Lucia Requests Loan
+		}
+	}
+}
+
+country_event = { #Republic Declared
+	id = Caribbean_scripted.209
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.209" }
+	title = Caribbean_scripted.209.t
+	desc = Caribbean_scripted.209.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.209.a
+		ai_chance = { factor = 1 }
+		drop_cosmetic_tag = yes
+		leave_faction = yes
+		remove_ideas = OFN_Dependent_Member
+		add_ideas = OFN_Observer
+
+		econ_join_sphere_MEX = yes
+		CAN = { end_puppet = SLU }
+		USA = { subtract_from_variable = { Caribbean_Stability = 1 } }
+		MEX = { country_event = { id = Caribbean_flavor.228 } } #Mexico Reaction
+		902 = { 
+			TNO_clear_admin_title = yes
+			TNO_clear_assoc_region = yes 
+			if = {
+				limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Lesser_Antilles } }
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+				TNO_adjust_assoc_region = yes
+				TNO_clear_assoc_region_2 = yes
+			}
+		}
+	}
+}
+
+## DOMINICA
+country_event = { #Operation Tight-Fit Unlocked
+	id = Caribbean_scripted.210
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.210" }
+	title = Caribbean_scripted.210.t
+	desc = Caribbean_scripted.210.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.210.a
+		ai_chance = { factor = 1 }
+		USA = { country_event = { id = Caribbean_flavor.229 } } #US Event unlocking the Operation
+		MEX = { country_event = { id = Caribbean_flavor.231 days = 91 } } #Mexico Asked for Experts
+		#230 is for Operation Success
+		country_event = { id = Caribbean_scripted.211 days = 91 } #Operation Result
+		country_event = { id = Caribbean_scripted.212 days = 364 } #1970 Elections
+	}
+}
+
+country_event = { #Operation Result
+	id = Caribbean_scripted.211
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.211" }
+	title = Caribbean_scripted.211.t
+	desc = Caribbean_scripted.211.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.211.a
+		ai_chance = { factor = 1 }
+		USA = { clr_country_flag = USA_CIA_Operation_Tight_Fit_Unlocked }
+		if = {
+			limit = { DMI = { has_country_flag = DMI_Impeachment } }
+			retire_country_leader = yes
+			set_politics = { ruling_party = liberalism }
+			add_country_leader_role = {
+				character = DMI_Nicholson_Ducreay
+				promote_leader = yes
+				country_leader = {
+					expire = "1977.8.6.1"
+					desc = "POLITICS_DMI_NICHOLSON_DUCREAY_DESC"
+					ideology = liberalism_social_liberalism_subtype
+					id = -1
+				}
+			}
+			set_popularities = {
+				progressivism = 15
+				liberalism = 55
+				conservatism = 30
+			}
+			remove_ideas = {
+				DMI_Cultural_Revolution
+				DMI_Peeling_Banana
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.24
+					hours = 4
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Election 1970
+	id = Caribbean_scripted.212
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.212" }
+	title = Caribbean_scripted.212.t
+	desc = Caribbean_scripted.212.desc
+	picture = GFX_report_event_MAD_phone_call
+	trigger = { NOT = { has_government = despotism } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.212.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { #No Ducreay - Eugenia Wins
+				AND = {
+					USA = { check_variable = { Caribbean_Stability > 5 } }
+					NOT = { has_country_flag = DMI_Impeachment }
+				}
+			}
+			set_politics = { ruling_party = conservatism }
+			set_popularities = {
+				progressivism = 25
+				liberalism = 35
+				conservatism = 40
+			}
+			remove_ideas = DMI_Peeling_Banana
+			USA = { add_to_variable = { Caribbean_Stability = 1 } }
+			USA = { country_event = { id = Caribbean_flavor.233 days = 10 } } #Eugenia is also bad for business
+		}
+
+
+		else_if = { #No Ducreay - LeBlance Wins
+			limit = {
+				AND = {
+					USA = { check_variable = { Caribbean_Stability < 6 } }
+					NOT = { has_country_flag = DMI_Impeachment }
+				}
+			}
+			set_politics = { ruling_party = progressivism }
+			set_popularities = {
+				progressivism = 35
+				liberalism = 25
+				conservatism = 40
+			}
+			country_event = { id = Caribbean_scripted.213 days = 300 } #Revolution Declared
+		}
+
+
+		else = { #Ducreay in charge election
+			USA = { subtract_from_variable = { Caribbean_Stability = 1 } } #Your Actions have Consequences
+			USA = { country_event = { id = Caribbean_flavor.232 days = 58 } } #LeBlanc Gives Speech Decrying Corruption
+			random_list = {
+				50 = {
+					set_politics = { ruling_party = conservatism }
+					set_popularities = {
+						progressivism = 25
+						liberalism = 35
+						conservatism = 40
+					}
+				}
+				50 = {
+					set_politics = { ruling_party = liberalism }
+					set_popularities = {
+						progressivism = 10
+						liberalism = 50
+						conservatism = 40
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Republic Declared
+	id = Caribbean_scripted.213
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.213" }
+	title = Caribbean_scripted.213.t
+	desc = Caribbean_scripted.213.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.213.a
+		ai_chance = { factor = 1 }
+		drop_cosmetic_tag = yes
+		leave_faction = yes
+		remove_ideas = OFN_Dependent_Member
+		add_ideas = OFN_Observer
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Stabilizing_Development }
+		econ_subtype_change = yes
+		econ_join_sphere_MEX = yes
+		set_cosmetic_tag = GUA_MEX #Reused simply for the color
+
+		set_politics = { ruling_party = despotism }
+		set_popularities = {
+			despotism = 65
+			liberalism = 15
+			conservatism = 20
+		}
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.25
+				hours = 4
+			}
+		}
+
+		CAN = { end_puppet = DMI }
+		USA = { subtract_from_variable = { Caribbean_Stability = 1 } }
+		USA = { country_event = { id = Caribbean_flavor.234 days = 5 } } #US Article Naming LeBlanc Hitler
+		MEX = { country_event = { id = Caribbean_flavor.235 days = 5 } } #Meeting about joining Veracruz
+		903 = { 
+			TNO_clear_admin_title = yes
+			TNO_clear_assoc_region = yes
+			if = {
+				limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Lesser_Antilles } }
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+				TNO_adjust_assoc_region = yes
+				TNO_clear_assoc_region_2 = yes
+			}
+		}
+	}
+}
+
+
+## BARBADOS
+country_event = { #1970 Election in Barbados
+	id = Caribbean_scripted.214
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.214" }
+	title = Caribbean_scripted.214.t
+	desc = Caribbean_scripted.214.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.214.a
+		ai_chance = { factor = 1 }
+		retire_country_leader = yes
+		promote_character = BRB_Tom_Adams
+
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.26 #24 is triggered by the scripted effects file
+				hours = 4
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				HasAmericasInterest = yes
+			}
+			news_event = {
+				id = Caribbean_News.27 #24 is triggered by the scripted effects file
+				days = 300
+			}
+		}
+
+		set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Dirigisme }
+		econ_subtype_change = yes
+
+		country_event = { id = Caribbean_scripted.215 days = 688 } #Customs Union Evolution Check
+
+		USA = { country_event = { id = Caribbean_flavor.237 days = 5 } } #Adams praises the US
+		#MEX = { country_event = { id = Caribbean_flavor.238 days = 300 } } #Mexico and Barbados - Deprecated?
+	}
+}
+
+country_event = { #Customs Union Evolution Check
+	id = Caribbean_scripted.215
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_scripted.215" }
+	title = Caribbean_scripted.215.t
+	desc = Caribbean_scripted.215.desc
+	picture = GFX_report_event_MAD_phone_call
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_scripted.215.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { USA = { check_variable = { Caribbean_Stability < 6 } } }
+			USA = { country_event = { id = Caribbean_flavor.239 days = 5 } } #Into a Defence Agreement
+		}
+		else = {
+			USA = { country_event = { id = Caribbean_flavor.240 days = 5 } } #Towards Greater Economic Cooperation
+		}
+	}
+}
+
+### FLAVOR EVENT ZONE
+country_event = {
+	id = Caribbean_flavor.1
+	picture = GFX_report_event_IBR_gonzalez_mata
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.1"
+	}
+	title = Caribbean_flavor.1.t
+	desc = Caribbean_flavor.1.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.1.a
+		ai_chance = { factor = 1 }
+		USA = { subtract_from_variable = { Caribbean_Stability = 1 } }
+		custom_effect_tooltip = USA_Caribbean_Situation_Worsens_small
+		JAM = {
+			TNO_worsen_admin_efficiency_low = yes
+			TNO_worsen_trade_laws_policy_effectiveness_low = yes
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.2
+	picture = GFX_report_event_USA_william_hastie
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.2"
+	}
+	title = Caribbean_flavor.2.t
+	desc = Caribbean_flavor.2.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.2.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.3
+	picture = GFX_report_event_TRI_eric_williams_handshake
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.3"
+	}
+	title = Caribbean_flavor.3.t
+	desc = Caribbean_flavor.3.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.3.a
+		ai_chance = { factor = 1 }
+		add_political_power = 5
+		TNO_improve_trade_laws_policy_effectiveness_low = yes
+		TRI = {
+			set_temp_variable = { gdp_growth_temp = 0.15 }
+			econ_gdp_growth_change = yes
+		}
+		add_opinion_modifier = { target = TRI modifier = MEX_close_relationship }
+		reverse_add_opinion_modifier = { target = TRI modifier = MEX_close_relationship }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.4
+	picture = GFX_report_event_JAM_bustamante_meeting
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.4"
+	}
+	title = Caribbean_flavor.4.t
+	desc = Caribbean_flavor.4.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.4.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			add_popularity = {
+				ideology = paternalism
+				popularity = 0.02
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.5
+	picture = GFX_report_event_generic_boats
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.5"
+	}
+	title = Caribbean_flavor.5.t
+	desc = Caribbean_flavor.5.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.5.a
+		ai_chance = { factor = 1 }
+		Espionage_SuccessEffect = yes
+		JAM = {
+			TNO_worsen_vote_franchise_policy_effectiveness_low = yes
+			set_country_flag = JAM_Brandenburg_Completed
+		}
+		clr_country_flag = USA_CIA_Operation_Brandenburg_Unlocked
+		clr_country_flag = TNO_Espionage_DoingSpecialMission
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.6
+	picture = GFX_report_event_WIF_grantley_adams_proposal
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.6"
+	}
+	title = Caribbean_flavor.6.t
+	desc = Caribbean_flavor.6.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.6.a
+		ai_chance = { factor = 1 }
+		add_political_power = 20
+		add_to_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = Caribbean_flavor.6.tt
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.7
+	picture = GFX_report_event_USA_black_panthers_1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.7"
+	}
+	title = Caribbean_flavor.7.t
+	desc = Caribbean_flavor.7.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.7.a
+		ai_chance = { factor = 1 }
+		CAL = {
+			add_manpower = 2042
+			TNO_improve_training_policy_effectiveness_low = yes
+		}
+		JAM = {
+			add_popularity = {
+				ideology = communist
+				popularity = 0.02
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.8
+	picture = GFX_report_event_IBR_gonzalez_mata
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.8"
+	}
+	trigger = { has_global_flag = PPI_Trujillo_Victory }
+	title = Caribbean_flavor.8.t
+	desc = Caribbean_flavor.8.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.8.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = Caribbean_Destabilization_tt
+		JAM = {
+			TNO_worsen_admin_efficiency_high = yes
+			TNO_worsen_security_policy_effectiveness_med = yes
+			TNO_worsen_vote_franchise_policy_effectiveness_med = yes
+		}
+		USA = { subtract_from_variable = { Caribbean_Stability = 1 } }
+		custom_effect_tooltip = USA_Caribbean_Situation_Worsens_small
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.9
+	picture = GFX_report_event_DOM_trujillo
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.9"
+	}
+	trigger = { has_global_flag = PPI_Rebel_Victory }
+	title = Caribbean_flavor.9.t
+	desc = Caribbean_flavor.9.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.9.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			TNO_worsen_trade_laws_policy_effectiveness_low = yes
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.10
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.10"
+	}
+	title = Caribbean_flavor.10.t
+	desc = Caribbean_flavor.10.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.10.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.11
+	picture = GFX_report_event_TRI_riots
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.11"
+	}
+	title = Caribbean_flavor.11.t
+	desc = Caribbean_flavor.11.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.11.a
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+		TRI = {
+			TNO_worsen_public_meetings_policy_effectiveness_med = yes
+			TNO_worsen_trade_laws_policy_effectiveness_low = yes
+		}
+		subtract_from_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Worsens_small
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.12
+	picture = GFX_report_event_USA_fbi_button
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.12"
+	}
+	title = Caribbean_flavor.12.t
+	desc = Caribbean_flavor.12.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.12.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		set_country_flag = USA_CIA_Operation_Brandenburg_Unlocked
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.13
+	picture = GFX_report_event_JAM_norman_manley
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.13"
+	}
+	title = Caribbean_flavor.13.t
+	desc = Caribbean_flavor.13.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.13.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		JAM = {
+			add_popularity = {
+				ideology = socialist
+				popularity = 0.02
+			}
+		}
+		subtract_from_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Worsens_small
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.14
+	picture = GFX_report_event_generic_banana_republic
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.14"
+	}
+	title = Caribbean_flavor.14.t
+	desc = Caribbean_flavor.14.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.14.a
+		ai_chance = { factor = 1 }
+		trigger = { has_political_power > 4 }
+		add_political_power = -5
+		DMI = {
+			TNO_improve_poverty_med = yes
+			TNO_improve_regulations_policy_effectiveness_med = yes
+		}
+		set_temp_variable = { temp_econ_spending_amount = 0.02 }
+		econ_spend_money_once_effect_raw_money = yes
+		set_temp_variable = { gdp_growth_temp = -0.1 }
+		econ_gdp_growth_change = yes
+		add_to_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Improves_small
+	}
+	option = { #
+		name = Caribbean_flavor.14.b
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		TNO_improve_trade_laws_policy_effectiveness_low = yes
+		set_temp_variable = { gdp_growth_temp = 0.1 }
+		econ_gdp_growth_change = yes
+		DMI = {
+			set_temp_variable = { gdp_growth_temp = 0.15 }
+			econ_gdp_growth_change = yes
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.15
+	picture = GFX_report_event_USA_black_panthers_announcement
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.15"
+	}
+	title = Caribbean_flavor.15.t
+	desc = Caribbean_flavor.15.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.15.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		TNO_worsen_public_meetings_policy_effectiveness_low = yes
+		JAM = {
+			add_popularity = {
+				ideology = communist
+				popularity = 0.02
+			}
+			TNO_worsen_public_meetings_policy_effectiveness_low = yes
+		}
+		TRI = {
+			add_popularity = {
+				ideology = socialist
+				popularity = 0.01
+			}
+		}
+		DMI = {
+			add_popularity = {
+				ideology = socialist
+				popularity = 0.01
+			}
+		}
+		SVI = {
+			add_popularity = {
+				ideology = socialist
+				popularity = 0.01
+			}
+		}
+		subtract_from_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Worsens_small
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.16
+	picture = GFX_report_event_USA_OFN_meeting
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.16"
+	}
+	title = Caribbean_flavor.16.t
+	desc = Caribbean_flavor.16.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.16.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = SKN_ANGUILLA option = SKN_ANGUILLA_REFUSE }
+			}
+		}
+		CAN = { set_country_flag = CAR_US_Pressured }
+		custom_effect_tooltip = Caribbean_flavor_Canadian_Occupation_tt
+	}
+
+	option = { #
+		name = Caribbean_flavor.16.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = SKN_ANGUILLA option = SKN_ANGUILLA_ACCEPT }
+			}
+		}
+		add_to_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Improves_small
+		custom_effect_tooltip = Caribbean_flavor_Federation_tt
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.17
+	picture = GFX_report_event_IBR_gonzalez_mata
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.17"
+	}
+	title = Caribbean_flavor.17.t
+	trigger = { DOM = { has_government = fascism } }
+	desc = Caribbean_flavor.17.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.17.a
+		ai_chance = { factor = 1 }
+		add_political_power = -1
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.18
+	picture = GFX_report_event_usa_soldier_latin_america
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.18"
+	}
+	title = Caribbean_flavor.18.t
+	desc = Caribbean_flavor.18.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.18.a
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+		custom_effect_tooltip = USA_Caribbean_Situation_Worsens_small
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.19
+	picture = GFX_report_event_USA_william_hastie
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.19"
+	}
+	title = Caribbean_flavor.19.t
+	desc = Caribbean_flavor.19.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.19.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.20
+	picture = GFX_report_event_JAM_bustamante_meeting
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.20"
+	}
+	title = Caribbean_flavor.20.t
+	desc = Caribbean_flavor.20.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.20.a
+		ai_chance = { factor = 1 }
+		add_political_power = 2
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.21
+	picture = GFX_report_event_USA_OFN_meeting
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.21"
+	}
+	title = Caribbean_flavor.21.t
+	desc = Caribbean_flavor.21.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.21.a
+		ai_chance = { factor = 1 }
+		add_to_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Improves_small
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.22
+	picture = GFX_report_event_MEX_gomez_maganda
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.22"
+	}
+	title = Caribbean_flavor.22.t
+	desc = Caribbean_flavor.22.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.22.a
+		ai_chance = { factor = 1 }
+		add_command_power = 5
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.23
+	picture = GFX_report_event_IBR_gonzalez_mata
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.23"
+	}
+	title = Caribbean_flavor.23.t
+	desc = Caribbean_flavor.23.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.23.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			add_popularity = {
+				ideology = paternalism
+				popularity = 0.01
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.24
+	picture = GFX_report_event_USA_william_hastie
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.24"
+	}
+	title = Caribbean_flavor.24.t
+	desc = Caribbean_flavor.24.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.24.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			add_stability = -0.05
+			TNO_improve_vote_franchise_policy_effectiveness_monthly_med = yes
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.25
+	picture = GFX_report_event_USA_william_hastie
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.25"
+	}
+	title = Caribbean_flavor.25.t
+	desc = Caribbean_flavor.25.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.25.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		JAM = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = paternalism
+				popularity = 0.01
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.26
+	picture = GFX_report_event_JAM_bustamante_meeting
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.26"
+	}
+	title = Caribbean_flavor.26.t
+	desc = Caribbean_flavor.26.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.26.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = paternalism
+				popularity = 0.02
+			}
+			TNO_worsen_admin_efficiency_med = yes
+			TNO_worsen_public_meetings_policy_effectiveness_med = yes
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.27
+	picture = GFX_report_event_MEX_gomez_maganda
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.27"
+	}
+	title = Caribbean_flavor.27.t
+	desc = Caribbean_flavor.27.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.27.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = USA_subtract_OFN_unity
+		USA = { subtract_from_variable = { OFN_unity = 1 } }
+		JAM = { TNO_worsen_public_meetings_policy_effectiveness_med = yes }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.28
+	picture = GFX_report_event_JAM_norman_manley
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.28"
+	}
+	title = Caribbean_flavor.28.t
+	desc = Caribbean_flavor.28.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.28.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.29
+	picture = GFX_report_event_MEX_gomez_maganda
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.29"
+	}
+	title = Caribbean_flavor.29.t
+	desc = Caribbean_flavor.29.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.29.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			TNO_worsen_vote_franchise_policy_effectiveness_monthly_med = yes
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.30
+	picture = GFX_report_event_JAM_bustamante_meeting
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.30"
+	}
+	title = Caribbean_flavor.30.t
+	desc = Caribbean_flavor.30.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.30.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = tno_political_parties_multiparty_system_dummy
+					add_idea = tno_political_parties_dominant_party_system_dummy
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.31
+	picture = GFX_report_event_JAM_rodney
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.31"
+	}
+	title = Caribbean_flavor.31.t
+	desc = Caribbean_flavor.31.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.31.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+##JAMAICA RIOTS START EVENT
+#KD's Notes - The events following it are also part of the proxy
+country_event = {
+	id = Caribbean_flavor.32
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.32"
+
+		hidden_effect = {
+			#TNO_fopo_add_jamaican_crisis_tab = yes
+		}
+	}
+	title = Caribbean_flavor.32.t
+	desc = Caribbean_flavor.32.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.32.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			add_stability = -0.15
+			tno_political_parties_worsen = yes
+			TNO_worsen_admin_efficiency_med = yes
+			TNO_worsen_security_policy_effectiveness_high = yes
+			TNO_worsen_public_meetings_policy_effectiveness_high = yes
+		}
+		custom_effect_tooltip = JAM_Kingston_Riots_Started_tt
+		TNO_fopo_add_kingston_riots_tab = yes
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.33
+	picture = GFX_report_event_USA_fbi_button
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.33"
+	}
+	title = Caribbean_flavor.33.t
+	desc = Caribbean_flavor.33.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.33.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.34
+	picture = GFX_report_event_USA_william_hastie
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.34"
+	}
+	title = Caribbean_flavor.34.t
+	desc = Caribbean_flavor.34.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.34.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		set_temp_variable = { change_v = -0.25 }
+		KingstonRiots_ChangeViolenceFactor = yes
+		set_temp_variable = { change_v = 0.15 }
+		KingstonRiots_ChangeFervorFactor = yes
+
+		set_temp_variable = { change_v = -15 }
+		KingstonRiots_ChangeViolence = yes
+		set_temp_variable = { change_v = 10 }
+		KingstonRiots_ChangeFervor = yes
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.35
+	picture = GFX_report_event_JAM_seaga
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.35"
+	}
+	title = Caribbean_flavor.35.t
+	desc = Caribbean_flavor.35.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.35.a
+		add_political_power = -5
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.36
+	picture = GFX_report_event_MEX_gomez_maganda
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.36"
+	}
+	title = Caribbean_flavor.36.t
+	desc = Caribbean_flavor.36.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.36.a
+		ai_chance = { factor = 1 }
+		add_political_power = 5
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.37
+	picture = GFX_report_event_GER_radio_espionage
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.37"
+	}
+	title = Caribbean_flavor.37.t
+	desc = Caribbean_flavor.37.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.37.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.38
+	picture = GFX_report_event_MEX_land_invasion
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.38"
+	}
+	title = Caribbean_flavor.38.t
+	desc = Caribbean_flavor.38.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.38.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.39
+	picture = GFX_report_event_IBR_gonzalez_mata
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.39"
+	}
+	title = Caribbean_flavor.39.t
+	desc = Caribbean_flavor.39.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.39.a
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 50
+			target = JAM
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.40
+	picture = GFX_report_event_generic_crate_of_guns
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.40"
+	}
+	title = Caribbean_flavor.40.t
+	desc = Caribbean_flavor.40.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.40.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.41
+	picture = GFX_report_event_JAM_bustamante_meeting
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.41"
+	}
+	title = Caribbean_flavor.41.t
+	desc = Caribbean_flavor.41.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.41.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #Jamaica Farewell - Ends Proxy
+	id = Caribbean_flavor.42
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.42"
+	}
+	title = Caribbean_flavor.42.t
+	desc = Caribbean_flavor.42.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.42.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			TNO_improve_poverty_med = yes
+			TNO_improve_vote_franchise_policy_effectiveness_monthly_med = yes
+			TNO_improve_security_policy_effectiveness_monthly_med = yes
+			TNO_improve_political_parties_policy_effectiveness_monthly_med = yes
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.43
+	picture = GFX_report_event_generic_police_brutality
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.43"
+	}
+	title = Caribbean_flavor.43.t
+	desc = Caribbean_flavor.43.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.43.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			add_manpower = -37
+			tno_political_parties_worsen = yes
+		}
+		add_political_power = 100
+		set_temp_variable = { gdp_growth_temp = 0.2 }
+		econ_gdp_growth_change = yes
+		IBR_improve_foreign_opinion = yes
+		IBR_improve_intellectual_opinion = yes
+		custom_effect_tooltip = IBR_Consequences_Jamaica_tt
+		TNO_worsen_trade_laws_policy_effectiveness_med = yes
+		TNO_worsen_admin_efficiency_high = yes
+		set_temp_variable = { IBR_stability_temp = -5 }
+		IBR_stability_change = yes
+		custom_effect_tooltip = IBR_OFN_proxy_alignment_loss
+		subtract_from_variable = { IBR.IBR_OFN_Alignment = 2 }
+		custom_effect_tooltip = IBR_PKT_proxy_alignment_gain
+		add_to_variable = { IBR.IBR_PKT_Alignment = 2 }
+		hidden_effect = {
+			IBR_improve_foreign_opinion = yes
+			JAM = {
+				set_country_flag = expanded_trade_with_IBR
+				set_temp_variable = { temp_modifier = 35 }
+				add_to_trade_modifier_PREV = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.44
+	picture = GFX_report_event_generic_OAS
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.44"
+	}
+	title = Caribbean_flavor.44.t
+	desc = Caribbean_flavor.44.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.44.a
+		ai_chance = { factor = 1 }
+		add_political_power = -50
+		TNO_worsen_admin_efficiency_med = yes
+		TNO_worsen_trade_laws_policy_effectiveness_med = yes
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.45
+	picture = GFX_report_event_generic_revolution_colour
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.45"
+	}
+	title = Caribbean_flavor.45.t
+	desc = Caribbean_flavor.45.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.45.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { tag = IBR }
+			add_political_power = -35
+			custom_effect_tooltip = IBR_Consequences_Jamaica_Loss_tt
+		}
+		else = { add_political_power = -75 }
+		TNO_worsen_trade_laws_policy_effectiveness_low = yes
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.46
+	picture = GFX_report_event_JAM_norman_manley
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.46"
+	}
+	title = Caribbean_flavor.46.t
+	desc = Caribbean_flavor.46.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.46.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { tag = MEX }
+			add_political_power = 75
+			TNO_improve_trade_laws_policy_effectiveness_med = yes
+			hidden_effect = {
+				JAM = {
+					set_temp_variable = { temp_modifier = 35 }
+					add_to_trade_modifier_PREV = yes
+				}
+			}
+		}
+		else_if = {
+			limit = { tag = IBR }
+			add_political_power = -35
+			custom_effect_tooltip = IBR_Consequences_Jamaica_Loss_tt
+		}
+		else = {
+			add_political_power = -50
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.47
+	picture = GFX_report_event_TRI_eric_williams_speech
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.47"
+	}
+	title = Caribbean_flavor.47.t
+	desc = Caribbean_flavor.47.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.47.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.48
+	picture = GFX_report_event_TRI_eric_williams_handshake
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.48"
+	}
+	title = Caribbean_flavor.48.t
+	desc = Caribbean_flavor.48.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.48.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+### Post-Proxy Events
+country_event = {
+	id = Caribbean_flavor.49
+	picture = GFX_report_event_USA_william_hastie
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.49"
+	}
+	title = Caribbean_flavor.49.t
+	desc = Caribbean_flavor.49.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.49.a
+		ai_chance = { factor = 1 }
+		add_political_power = 75
+		TNO_improve_trade_laws_policy_effectiveness_med = yes
+		JAM = {
+			tno_political_parties_improve = yes
+			TNO_improve_admin_efficiency_high = yes
+		}
+		add_to_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Improves_small
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.50
+	picture = GFX_report_event_generic_map
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.50"
+	}
+	title = Caribbean_flavor.50.t
+	desc = Caribbean_flavor.50.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.50.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = { tag = IBR }
+			add_political_power = -35
+			custom_effect_tooltip = IBR_Consequences_Jamaica_Loss_tt
+		}
+		else = {
+			add_political_power = -50
+		}
+	}
+}
+
+### POST-RIOTS FLAVOR ###
+### WIF Path
+
+country_event = {
+	id = Caribbean_flavor.51
+	picture = GFX_report_event_JAM_shack
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.51"
+	}
+	title = Caribbean_flavor.51.t
+	desc = Caribbean_flavor.51.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.51.a
+		ai_chance = { factor = 1 }
+		JAM = {
+			add_stability = -0.05
+			effect_tooltip = {
+				add_ideas = JAM_Posses_Gather
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.52
+	picture = GFX_report_event_JAM_norman_manley
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.52"
+	}
+	title = Caribbean_flavor.52.t
+	desc = Caribbean_flavor.52.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.52.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.53
+	picture = GFX_report_event_IBR_gonzalez_mata
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.53"
+	}
+	title = Caribbean_flavor.53.t
+	desc = Caribbean_flavor.53.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.53.a
+		ai_chance = { factor = 1 }
+		add_political_power = -5
+		TNO_worsen_trade_laws_policy_effectiveness_low = yes
+		IBR_worsen_foreign_opinion = yes
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.54
+	picture = GFX_report_event_WIF_grantley_adams
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.54"
+	}
+	title = Caribbean_flavor.54.t
+	desc = Caribbean_flavor.54.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.54.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		add_to_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Improves_small
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.55
+	picture = GFX_report_event_WIF_grantley_adams_proposal
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.55"
+	}
+	title = Caribbean_flavor.55.t
+	desc = Caribbean_flavor.55.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.55.a
+		ai_chance = { factor = 1 }
+		add_political_power = 5
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.56
+	picture = GFX_report_event_WIF_hugh_shearer
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.56"
+	}
+	title = Caribbean_flavor.56.t
+	desc = Caribbean_flavor.56.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.56.a
+		ai_chance = { factor = 1 }
+		WIN = { TNO_improve_admin_efficiency_med = yes }
+		WIN = {
+			set_temp_variable = { temp_modifier = 50 }
+			add_to_trade_modifier_PREV = yes 
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.57
+	picture = GFX_report_event_generic_cruise_ship
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.57"
+	}
+	title = Caribbean_flavor.57.t
+	desc = Caribbean_flavor.57.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.57.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.58
+	picture = GFX_report_event_USA_william_hastie
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.58"
+	}
+	title = Caribbean_flavor.58.t
+	desc = Caribbean_flavor.58.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.58.a
+		ai_chance = { factor = 1 }
+		WIN = { TNO_improve_admin_efficiency_med = yes }
+		add_to_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Improves_small
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.59
+	picture = GFX_report_event_IBR_gonzalez_mata
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.59"
+	}
+	title = Caribbean_flavor.59.t
+	desc = Caribbean_flavor.59.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.59.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.60
+	picture = GFX_report_event_USA_bennett_talking
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.60"
+	}
+	title = Caribbean_flavor.60.t
+	desc = Caribbean_flavor.60.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.60.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.61
+	picture = GFX_report_event_USA_thomas_sowell
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.61"
+	}
+	title = Caribbean_flavor.61.t
+	desc = Caribbean_flavor.61.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.61.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.62
+	picture = GFX_report_event_JAM_rasta
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.62"
+	}
+	title = Caribbean_flavor.62.t
+	desc = Caribbean_flavor.62.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.62.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.63
+	picture = GFX_report_event_USA_thomas_sowell
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.63"
+	}
+	title = Caribbean_flavor.63.t
+	desc = Caribbean_flavor.63.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.63.a
+		ai_chance = { factor = 1 }
+		WIN = {
+			add_stability = -0.01
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.64
+	picture = GFX_report_event_USA_thomas_sowell
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.64"
+	}
+	title = Caribbean_flavor.64.t
+	desc = Caribbean_flavor.64.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.64.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = WIN_DEBT_CRISIS option = WIN_DEBT_CRISIS_USA }
+					has_game_rule = { rule = WIN_DEBT_CRISIS option = WIN_DEBT_CRISIS_WILLIAMS }
+				}
+			}
+		}
+		custom_effect_tooltip = USA_Canadian_Plan_tt
+		WIN = { set_country_flag = WIN_Canadian_Bailout }
+	}
+	option = { #
+		name = Caribbean_flavor.64.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = WIN_DEBT_CRISIS option = WIN_DEBT_CRISIS_CAN }
+			}
+		}
+		custom_effect_tooltip = USA_American_Plan_tt
+		WIN = { set_country_flag = WIN_Economic_Restructure }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.65
+	picture = GFX_report_event_usa_soldier_latin_america
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.65"
+	}
+	title = Caribbean_flavor.65.t
+	desc = Caribbean_flavor.65.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.65.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.66
+	picture = GFX_report_event_TRI_riots
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.66"
+	}
+	title = Caribbean_flavor.66.t
+	desc = Caribbean_flavor.66.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.66.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #Situation Room, Path Split for handling the Black Power Riots
+	id = Caribbean_flavor.67
+	picture = GFX_report_event_USA_oval_office_potus
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.67"
+	}
+	title = Caribbean_flavor.67.t
+	desc = Caribbean_flavor.67.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.67.a
+		ai_chance = {
+			factor = 1
+		}
+		custom_effect_tooltip = USA_WIF_Intervention_tt
+		hidden_effect = {
+			country_event = { id = Caribbean_flavor.68 days = 11 }
+			country_event = { id = Caribbean_flavor.69 days = 30 } #Demilitarized State
+			country_event = { id = Caribbean_flavor.70 days = 50 }
+
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.15
+					days = 40
+				}
+			}
+		}
+	}
+	option = { #
+		name = Caribbean_flavor.67.b
+		ai_chance = {
+			factor = 1
+		}
+		add_command_power = -5
+		add_political_power = -5
+		custom_effect_tooltip = USA_American_Intervention_tt
+		hidden_effect = {
+			country_event = { id = Caribbean_flavor.71 days = 5 } #Demilitarized State
+			country_event = { id = Caribbean_flavor.72 days = 21 }
+			MEX = { country_event = { id = Caribbean_flavor.72 days = 21 } }
+			country_event = { id = Caribbean_flavor.73 days = 50 }
+
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.16
+					hours = 122
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.68
+	picture = GFX_report_event_MEX_land_invasion
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.68"
+	}
+	title = Caribbean_flavor.68.t
+	desc = Caribbean_flavor.68.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.68.a
+		ai_chance = { factor = 1 }
+		WIN = {
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.69
+	picture = GFX_report_event_generic_dead_soldier
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.69"
+	}
+	title = Caribbean_flavor.69.t
+	desc = Caribbean_flavor.69.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.69.a
+		ai_chance = { factor = 1 }
+		add_political_power = -15
+		custom_effect_tooltip = USA_Caribbean_Situation_Worsens_big
+		subtract_from_variable = { Caribbean_Stability = 3 } #Flavor Effect
+		hidden_effect = { 691 = { set_demilitarized_zone = no } }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.70
+	picture = GFX_report_event_USA_minor_riot_1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.70"
+	}
+	title = Caribbean_flavor.70.t
+	desc = Caribbean_flavor.70.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.70.a
+		ai_chance = { factor = 1 }
+		add_political_power = -20
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.71
+	picture = GFX_report_event_USA_army_reporter
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.71"
+	}
+	title = Caribbean_flavor.71.t
+	desc = Caribbean_flavor.71.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.71.a
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+		custom_effect_tooltip = USA_Caribbean_Situation_Worsens_small
+		subtract_from_variable = { Caribbean_Stability = 1 } #Flavor Effect
+		hidden_effect = { 691 = { set_demilitarized_zone = no } }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.72
+	picture = GFX_report_event_generic_OAS
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.72"
+	}
+	title = Caribbean_flavor.72.t
+	desc = Caribbean_flavor.72.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.72.a
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.73
+	picture = GFX_report_event_USA_civil_rights_3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.73"
+	}
+	title = Caribbean_flavor.73.t
+	desc = Caribbean_flavor.73.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.73.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.74
+	picture = GFX_report_event_USA_william_hastie
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.74"
+	}
+	title = Caribbean_flavor.74.t
+	desc = Caribbean_flavor.74.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.74.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.75
+	picture = GFX_report_event_USA_thomas_sowell
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.75"
+	}
+	title = Caribbean_flavor.75.t
+	desc = Caribbean_flavor.75.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.75.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.76
+	picture = GFX_report_event_TRI_eric_williams_speech
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.76"
+	}
+	title = Caribbean_flavor.76.t
+	desc = Caribbean_flavor.76.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.76.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = WIN_DEBT_CRISIS option = WIN_DEBT_CRISIS_USA }
+			}
+		}
+		WIN = { set_country_flag = WIN_Sowell_Plan }
+		custom_effect_tooltip = USA_Sowell_Reform_tt
+	}
+	option = { #
+		name = Caribbean_flavor.76.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = WIN_DEBT_CRISIS option = WIN_DEBT_CRISIS_WILLIAMS }
+			}
+		}
+		WIN = { set_country_flag = WIN_Williams_Plan }
+		custom_effect_tooltip = USA_Williams_Reform_tt
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.77
+	picture = GFX_report_event_USA_william_hastie
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.77"
+	}
+	title = Caribbean_flavor.77.t
+	desc = Caribbean_flavor.77.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.77.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.78
+	picture = GFX_report_event_TRI_eric_williams_handshake
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.78"
+	}
+	title = Caribbean_flavor.78.t
+	desc = Caribbean_flavor.78.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.78.a
+		ai_chance = { factor = 1 }
+		TRI = {
+			econ_join_sphere_MEX = yes
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.79
+	picture = GFX_report_event_USA_thomas_sowell
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.79"
+	}
+	title = Caribbean_flavor.79.t
+	desc = Caribbean_flavor.79.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.79.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.80
+	picture = GFX_report_event_generic_election
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.80"
+	}
+	title = Caribbean_flavor.80.t
+	desc = Caribbean_flavor.80.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.80.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.81
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.81" }
+	title = Caribbean_flavor.81.t
+	desc = Caribbean_flavor.81.desc
+	picture = GFX_report_event_USA_william_hastie
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.81.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.82
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.82" }
+	title = Caribbean_flavor.82.t
+	desc = Caribbean_flavor.82.desc
+	picture = GFX_report_event_TRI_eric_williams_speech
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.81.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.83
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.83" }
+	title = Caribbean_flavor.83.t
+	desc = Caribbean_flavor.83.desc
+	picture = GFX_report_event_TRI_eric_williams_handshake
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.83.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.84
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.84" }
+	title = Caribbean_flavor.84.t
+	desc = Caribbean_flavor.84.desc
+	picture = GFX_report_event_generic_election
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.84.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.85
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.85" }
+	title = Caribbean_flavor.85.t
+	desc = Caribbean_flavor.85.desc
+	picture = GFX_report_event_generic_meeting
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.85.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.86
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.86" }
+	title = Caribbean_flavor.86.t
+	desc = Caribbean_flavor.86.desc
+	picture = GFX_report_event_JAM_rodney
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.86.a
+		ai_chance = { factor = 1 }
+		WIN = {
+			add_stability = -0.03
+		}
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.87
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.87" }
+	title = Caribbean_flavor.87.t
+	desc = Caribbean_flavor.87.desc
+	picture = GFX_report_event_USA_fbi_button
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.87.a
+		ai_chance = { factor = 1 }
+		add_political_power = -15
+	}
+}
+
+### East Caribbean Union Flavour ###
+
+country_event = { #USA: Representative meets Williams
+	id = Caribbean_flavor.88
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.88" }
+	title = Caribbean_flavor.88.t
+	desc = Caribbean_flavor.88.desc
+	picture = GFX_report_event_USA_fbi_button
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.88.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = Caribbean_flavor.90
+				days = 80
+			}
+		}
+	}
+}
+
+country_event = { #MEX: ECU wants economic ties to Mexico
+	id = Caribbean_flavor.89
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.89" }
+	title = Caribbean_flavor.89.t
+	desc = Caribbean_flavor.89.desc
+	picture = GFX_report_event_WIF_grantley_adams_unhappy
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.89.a
+		ai_chance = { factor = 1 }
+		TRI = { econ_join_sphere_MEX = yes }
+		hidden_effect = {
+			country_event = {
+				id = Caribbean_flavor.91
+				days = 70
+			}
+		}
+	}
+}
+
+country_event = { #USA: Eric Gairy flees to USA
+	id = Caribbean_flavor.90
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.90" }
+	title = Caribbean_flavor.90.t
+	desc = Caribbean_flavor.90.desc
+	picture = GFX_report_event_IBR_ullastres_handshake
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.90.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = Caribbean_flavor.93
+				days = 800
+			}
+		}
+	}
+}
+
+country_event = { #MEX: ECU doing centralization
+	id = Caribbean_flavor.91
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.91" }
+	title = Caribbean_flavor.91.t
+	desc = Caribbean_flavor.91.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.91.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = Caribbean_flavor.92
+				days = 500
+			}
+		}
+	}
+}
+
+country_event = { #MEX: Press yaps about authoritarianism in Trinidad
+	id = Caribbean_flavor.92
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.92" }
+	title = Caribbean_flavor.92.t
+	desc = Caribbean_flavor.92.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.92.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = Caribbean_flavor.94
+				days = 500
+			}
+		}
+	}
+}
+
+country_event = { #USA: Oil workers strike in Trinidad
+	id = Caribbean_flavor.93
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.93" }
+	title = Caribbean_flavor.93.t
+	desc = Caribbean_flavor.93.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.93.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = Caribbean_flavor.95
+			days = 14
+		}
+	}
+}
+
+country_event = { #MEX: Trinidad Oil Boom
+	id = Caribbean_flavor.94
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.94" }
+	title = Caribbean_flavor.94.t
+	desc = Caribbean_flavor.94.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.94.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #USA: FBI-led resistance in Grenada
+	id = Caribbean_flavor.95
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.95" }
+	title = Caribbean_flavor.95.t
+	desc = Caribbean_flavor.95.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.95.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			TRI = {
+				country_event = {
+					id = Caribbean_scripted.24
+					days = 14
+				}
+			}
+		}
+	}
+}
+
+country_event = { #USA: Gairy in Grenada
+	id = Caribbean_flavor.96
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.96" }
+	title = Caribbean_flavor.96.t
+	desc = Caribbean_flavor.96.desc
+	picture = GFX_report_event_COG_boat
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.96.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = Caribbean_flavor.98
+				days = 7
+			}
+			MEX = {
+				country_event = {
+					id = Caribbean_flavor.97
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = { #MEX: Coup in Grenada
+	id = Caribbean_flavor.97
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.97" }
+	title = Caribbean_flavor.97.t
+	desc = Caribbean_flavor.97.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.97.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #USA: SD calls OAS Emergency Conference on Grenada
+	id = Caribbean_flavor.98
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.98" }
+	title = Caribbean_flavor.98.t
+	desc = Caribbean_flavor.98.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.98.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = Caribbean_flavor.99
+				days = 7
+			}
+			MEX = {
+				country_event = {
+					id = Caribbean_flavor.100
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = { #USA: Prep for OAS meeting
+	id = Caribbean_flavor.99
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.99" }
+	title = Caribbean_flavor.99.t
+	desc = Caribbean_flavor.99.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			TRI = {
+				country_event = {
+					id = Caribbean_scripted.25
+					days = 14
+				}
+			}
+		}
+	}
+
+	option = {
+		name = Caribbean_flavor.99.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_OAS }
+				}
+			}
+		}
+		set_country_flag = OAS_ECU_grenada
+	}
+
+	option = {
+		name = Caribbean_flavor.99.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_MEX }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_OAS }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_USA }
+				}
+			}
+		}
+		set_country_flag = OAS_ECU_williams
+	}
+
+	option = {
+		name = Caribbean_flavor.99.c
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_OAS }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_MEX }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_OAS }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_USA }
+				}
+			}
+		}
+		set_country_flag = OAS_ECU_hands_off
+	}
+}
+
+country_event = { #MEX: We help Williams?
+	id = Caribbean_flavor.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.100" }
+	title = Caribbean_flavor.100.t
+	desc = Caribbean_flavor.100.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.100.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_OAS }
+			}
+		}
+		set_country_flag = OAS_ECU_williams
+	}
+
+	option = {
+		name = Caribbean_flavor.100.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_OAS }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_MEX }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_USA }
+				}
+			}
+		}
+		set_country_flag = OAS_ECU_hands_off
+	}
+}
+
+country_event = { #USA/MEX: OAS supports independent Grenada
+	id = Caribbean_flavor.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.101" }
+	title = Caribbean_flavor.101.t
+	desc = Caribbean_flavor.101.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.101.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #USA/MEX: OAS supports Williams
+	id = Caribbean_flavor.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.102" }
+	title = Caribbean_flavor.102.t
+	desc = Caribbean_flavor.102.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.102.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #USA/MEX: Negotiations break down
+	id = Caribbean_flavor.103
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.103" }
+	title = Caribbean_flavor.103.t
+	desc = Caribbean_flavor.103.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.103.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #USA: What to do with Williams now?
+	id = Caribbean_flavor.104
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.104" }
+	title = Caribbean_flavor.104.t
+	desc = Caribbean_flavor.104.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.104.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_USA }
+				}
+			}
+		}
+		hidden_effect = {
+			MEX = {
+				country_event = {
+					id = Caribbean_flavor.105
+					days = 7
+				}
+			}
+		}
+	}
+
+	option = {
+		name = Caribbean_flavor.104.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_GND_USA }
+				}
+			}
+		}
+		hidden_effect = {
+			MEX = {
+				country_event = {
+					id = Caribbean_flavor.108
+					days = 100
+				}
+			}
+		}
+	}
+
+	option = {
+		name = Caribbean_flavor.104.c
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_MEX }
+				}
+			}
+		}
+		hidden_effect = {
+			USA = {
+				country_event = { id = Caribbean_flavor.127 days = 100 }
+				country_event = { id = Caribbean_flavor.129 days = 120 }
+			}
+			MEX = {
+				country_event = { id = Caribbean_flavor.128 days = 100 }
+				country_event = { id = Caribbean_flavor.130 days = 120 }
+			}
+		}
+	}
+}
+
+country_event = { #MEX: Williams is being bullied
+	id = Caribbean_flavor.105
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.105" }
+	title = Caribbean_flavor.105.t
+	desc = Caribbean_flavor.105.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = { # Support Williams
+		name = Caribbean_flavor.105.a
+		ai_chance = { factor = 2 }
+		ai_chance = {
+			factor = 2
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { USA.Caribbean_Stability > 6 }
+					NOT = {
+						OR = {
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_MEX }
+						}
+					}
+				}
+				USA = {
+					country_event = {
+						id = Caribbean_flavor.106
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+				}
+				USA = {
+					country_event = {
+						id = Caribbean_flavor.106
+					}
+				}
+			}
+			else = {
+				USA = {
+					country_event = {
+						id = Caribbean_flavor.107
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = Caribbean_flavor.105.b
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { USA.Caribbean_Stability > 3 }
+					NOT = {
+						OR = {
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+							has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_MEX }
+						}
+					}
+				}
+				USA = {
+					country_event = {
+						id = Caribbean_flavor.106
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = { rule = FATE_OF_GRENADA option = FATE_OF_GRENADA_TRI_USA }
+				}
+				USA = {
+					country_event = {
+						id = Caribbean_flavor.106
+					}
+				}
+			}
+			else = {
+				USA = {
+					country_event = {
+						id = Caribbean_flavor.107
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #USA: Williams concedes oil and bases
+	id = Caribbean_flavor.106
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.106" }
+	title = Caribbean_flavor.106.t
+	desc = Caribbean_flavor.106.desc
+	picture = GFX_report_event_TRI_eric_williams_handshake
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.106.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = Caribbean_flavor.118
+				days = 50
+			}
+		}
+	}
+}
+
+country_event = { #USA: Williams public crashout
+	id = Caribbean_flavor.107
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.107" }
+	title = Caribbean_flavor.107.t
+	desc = Caribbean_flavor.107.desc
+	picture = GFX_report_event_TRI_eric_williams_speech
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.107.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			MEX = {
+				country_event = {
+					id = Caribbean_flavor.108
+					days = 14
+				}
+			}
+		}
+	}
+}
+
+country_event = { #MEX: Williams to invade Grenada
+	id = Caribbean_flavor.108
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.108" }
+	title = Caribbean_flavor.108.t
+	desc = Caribbean_flavor.108.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.108.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = Caribbean_flavor.109
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = { #MEX: Grenada invasion prep
+	id = Caribbean_flavor.109
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.109" }
+	title = Caribbean_flavor.109.t
+	desc = Caribbean_flavor.109.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.109.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						DOM = { has_government = fascism }
+						DOM = { check_variable = { ECON_SPHERE_LEADER = IBR } }
+						DOM = { check_variable = { ECON_SPHERE_LEADER = SPA } }
+						AND = {
+							DOM = { check_variable = { ECON_SPHERE_LEADER = GER } }
+							IBR = { check_variable = { ECON_SPHERE_LEADER = GER } }
+						}
+						AND = {
+							DOM = { check_variable = { ECON_SPHERE_LEADER = GER } }
+							SPA = { check_variable = { ECON_SPHERE_LEADER = GER } }
+						}
+					}
+				}
+				IBR = {
+					country_event = {
+						id = Caribbean_flavor.110
+					}
+				}
+			}
+			else = {
+				MEX = {
+					country_event = {
+						id = Caribbean_flavor.112
+						days = 35
+					}
+				}
+			}
+			MEX = {
+				country_event = {
+					id = Caribbean_flavor.111
+					days = 28
+				}
+			}
+		}
+	}
+}
+
+country_event = { #IBR: Send mercs to Grenada?
+	id = Caribbean_flavor.110
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.110" }
+	title = Caribbean_flavor.110.t
+	desc = Caribbean_flavor.110.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.110.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			USA = {
+				country_event = {
+					id = Caribbean_flavor.111
+					days = 7
+				}
+			}
+			MEX = {
+				country_event = {
+					id = Caribbean_flavor.111
+					days = 7
+				}
+				country_event = {
+					id = Caribbean_flavor.113
+					days = 35
+				}
+			}
+		}
+	}
+}
+
+country_event = { #MEX: Invasion begins
+	id = Caribbean_flavor.111
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.111" }
+	title = Caribbean_flavor.111.t
+	desc = Caribbean_flavor.111.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.111.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #MEX: Invasion success
+	id = Caribbean_flavor.112
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.112" }
+	title = Caribbean_flavor.112.t
+	desc = Caribbean_flavor.112.desc
+	picture = GFX_report_event_JAM_shack
+	trigger = {
+		NOT = {
+			OR = {
+				DOM = { has_government = fascism }
+				DOM = { check_variable = { ECON_SPHERE_LEADER = IBR } }
+				DOM = { check_variable = { ECON_SPHERE_LEADER = SPA } }
+				AND = {
+					DOM = { check_variable = { ECON_SPHERE_LEADER = GER } }
+					IBR = { check_variable = { ECON_SPHERE_LEADER = GER } }
+				}
+				AND = {
+					DOM = { check_variable = { ECON_SPHERE_LEADER = GER } }
+					SPA = { check_variable = { ECON_SPHERE_LEADER = GER } }
+				}
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.33
+					hours = 4
+				}
+			}
+			country_event = {
+				id = Caribbean_flavor.115
+				days = 50
+			}
+			900 = {
+				transfer_state_to = TRI
+				add_core_of = TRI
+			}
+			IBR = {
+				set_country_flag = IBR_grenada_fail
+				country_event = {
+					id = Caribbean_flavor.114
+				}
+			}
+		}
+	}
+
+	option = {
+		name = Caribbean_flavor.112.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #MEX: Invasion failure
+	id = Caribbean_flavor.113
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.113" }
+	title = Caribbean_flavor.113.t
+	desc = Caribbean_flavor.113.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			IBR = {
+				country_event = {
+					id = Caribbean_flavor.114
+				}
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.34
+					hours = 4
+				}
+			}
+		}
+	}
+
+	option = {
+		name = Caribbean_flavor.113.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			GND = {
+				country_event = {
+					id = Caribbean_scripted.31
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = { #IBR: Grenada lost
+	id = Caribbean_flavor.114
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.114" }
+	title = {
+		trigger = { NOT = { has_country_flag = IBR_grenada_fail } }
+		key = Caribbean_flavor.114.t
+	}
+	title = {
+		trigger = { has_country_flag = IBR_grenada_fail }
+		key = Caribbean_flavor.114A.t
+	}
+	desc = {
+		trigger = { NOT = { has_country_flag = IBR_grenada_fail } }
+		key = Caribbean_flavor.114.desc
+	}
+	desc = {
+		trigger = { has_country_flag = IBR_grenada_fail }
+		key = Caribbean_flavor.114A.desc
+	}
+	picture = GFX_report_event_IBR_arritera_beach
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.114.a
+		trigger = { NOT = { has_country_flag = IBR_grenada_fail } }
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = IBR_OFN_regime_alignment_loss
+		subtract_from_variable = { IBR_OFN_Alignment = 1 }
+	}
+	option = {
+		name = Caribbean_flavor.114A.a
+		trigger = { has_country_flag = IBR_grenada_fail }
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = IBR_OFN_regime_alignment_loss
+		subtract_from_variable = { IBR_OFN_Alignment = 1 }
+	}
+}
+
+country_event = { #MEX: Williams consolidates the islands
+	id = Caribbean_flavor.115
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.115" }
+	title = Caribbean_flavor.115.t
+	desc = Caribbean_flavor.115.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.115.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			TRI = {
+				country_event = {
+					id = Caribbean_scripted.26
+					days = 300
+				}
+			}
+		}
+	}
+}
+
+country_event = { #MEX: Go Williams!
+	id = Caribbean_flavor.116
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.116" }
+	title = Caribbean_flavor.116.t
+	desc = Caribbean_flavor.116.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.116.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { DMI.ECON_SPHERE_LEADER = MEX }
+				}
+				TRI = {
+					annex_country = {
+						target = DMI
+						transfer_troops = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { SLU.ECON_SPHERE_LEADER = MEX }
+				}
+				TRI = {
+					annex_country = {
+						target = SLU
+						transfer_troops = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #USA: Damn Williams!
+	id = Caribbean_flavor.117
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.117" }
+	title = Caribbean_flavor.117.t
+	desc = Caribbean_flavor.117.desc
+	picture = GFX_report_event_WIF_map
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.117.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #USA: Oil and neoimperialism
+	id = Caribbean_flavor.118
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.118" }
+	title = Caribbean_flavor.118.t
+	desc = Caribbean_flavor.118.desc
+	picture = GFX_report_event_MEX_oil_deal
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.118.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			TRI = {
+				country_event = {
+					id = Caribbean_scripted.27
+					days = 300
+				}
+			}
+		}
+	}
+}
+
+country_event = { #USA: Williams in DC
+	id = Caribbean_flavor.119
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.119" }
+	title = Caribbean_flavor.119.t
+	desc = Caribbean_flavor.119.desc
+	picture = GFX_report_event_GNG_fountain_pen_generic
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.119.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				check_variable = { DMI.ECON_SPHERE_LEADER = USA }
+			}
+			hidden_effect = {
+				DMI = {
+					every_owned_state = {
+						add_core_of = TRI
+						remove_core_of = DMI
+					}
+				}
+			}
+			TRI = {
+				annex_country = {
+					target = DMI
+					transfer_troops = yes
+				}
+			}
+			903 = {
+				TNO_clear_admin_title = yes
+				TNO_clear_assoc_region = yes
+				if = {
+					limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Lesser_Antilles } }
+					set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+					TNO_adjust_assoc_region = yes
+					TNO_clear_assoc_region_2 = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { SLU.ECON_SPHERE_LEADER = USA }
+			}
+			hidden_effect = {
+				SLU = {
+					every_owned_state = {
+						add_core_of = TRI
+						remove_core_of = SLU
+					}
+				}
+			}
+			TRI = {
+				annex_country = {
+					target = SLU
+					transfer_troops = yes
+				}
+			}
+			902 = {
+				TNO_clear_admin_title = yes
+				TNO_clear_assoc_region = yes
+				if = {
+					limit = { check_variable = { AssocRegion2 = token:Assoc_Region_Lesser_Antilles } }
+					set_temp_variable = { assoc_region_temp = token:Assoc_Region_Lesser_Antilles }
+					TNO_adjust_assoc_region = yes
+					TNO_clear_assoc_region_2 = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { #MEX: Williams apologizes
+	id = Caribbean_flavor.120
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.120" }
+	title = Caribbean_flavor.120.t
+	desc = Caribbean_flavor.120.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.120.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #USA: Treaties with Grenada
+	id = Caribbean_flavor.121
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.121" }
+	title = Caribbean_flavor.121.t
+	desc = Caribbean_flavor.121.desc
+	picture = GFX_report_event_WIF_map
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.121.a
+		ai_chance = { factor = 1 }
+		add_to_faction = GND
+		hidden_effect = {
+			GND = {
+				set_politics = {
+					ruling_party = paternalism
+					elections_allowed = no
+				}
+				set_popularities = {
+					paternalism = 41
+					conservatism = 24
+					progressivism = 17
+					progressivism_2 = 6
+					socialist = 7
+					communist = 5
+				}
+				remove_ideas = OFN_Observer
+				add_ideas = OFN_Dependent_Member
+				add_country_leader_role = {
+					character = GND_Eric_Gairy
+					promote_leader = yes
+					country_leader = {
+						desc = POLITICS_GND_ERIC_GAIRY_DESC
+						ideology = paternalism_right_wing_populism_subtype
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #USA: Pro-Iberia Grenada
+	id = Caribbean_flavor.122
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.122" }
+	title = Caribbean_flavor.122.t
+	desc = Caribbean_flavor.122.desc
+	picture = GFX_report_event_cia_photo_collage
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.122.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #IBR: Eric Gairy consolidates power
+	id = Caribbean_flavor.123
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.123" }
+	title = Caribbean_flavor.123.t
+	desc = Caribbean_flavor.123.desc
+	picture = GFX_report_event_IBR_arritera_beach
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.123.a
+		ai_chance = { factor = 1 }
+		GND = { econ_join_sphere_IBR = yes }
+	}
+}
+
+country_event = { #USA: Trinidad PM reorients to us
+	id = Caribbean_flavor.124
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.124" }
+	title = Caribbean_flavor.124.t
+	desc = Caribbean_flavor.124.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.124.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #USA: Williams goes despot mode
+	id = Caribbean_flavor.125
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.125" }
+	title = Caribbean_flavor.125.t
+	desc = Caribbean_flavor.125.desc
+	picture = GFX_report_event_ICE_amerikkkan_military_base
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.125.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			TRI = {
+				country_event = {
+					id = Caribbean_scripted.30
+					days = 300
+				}
+			}
+		}
+	}
+}
+
+country_event = { #MEX: Williams is being paranoid
+	id = Caribbean_flavor.126
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.126" }
+	title = Caribbean_flavor.126.t
+	desc = Caribbean_flavor.126.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.126.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #USA: Troops to Grenada. Diplomatic backlash
+	id = Caribbean_flavor.127
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.127" }
+	title = Caribbean_flavor.127.t
+	desc = Caribbean_flavor.127.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.127.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #MEX: Denounce US imperialism
+	id = Caribbean_flavor.128
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.128" }
+	title = Caribbean_flavor.128.t
+	desc = Caribbean_flavor.128.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.128.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #USA: Diplomatic backlash
+	id = Caribbean_flavor.129
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.129" }
+	title = Caribbean_flavor.129.t
+	desc = Caribbean_flavor.129.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.129.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					HasAmericasInterest = yes
+				}
+				news_event = {
+					id = Caribbean_News.39
+					hours = 4
+				}
+			}
+			TRI = {
+				country_event = {
+					id = Caribbean_scripted.28
+				}
+			}
+		}
+	}
+}
+
+country_event = { #MEX: Williams aligns with us
+	id = Caribbean_flavor.130
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.130" }
+	title = Caribbean_flavor.130.t
+	desc = Caribbean_flavor.130.desc
+	picture = GFX_report_event_JAM_shack
+	is_triggered_only = yes
+
+	option = {
+		name = Caribbean_flavor.130.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+### OTHER ISLANDS FLAVOR EVENTS
+country_event = {
+	id = Caribbean_flavor.200
+	picture = GFX_report_event_WIF_vere_bird
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.200"
+	}
+	title = Caribbean_flavor.200.t
+	desc = Caribbean_flavor.200.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.200.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		set_country_flag = USA_CIA_Operation_Catnip_Unlocked
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.201
+	picture = GFX_report_event_USA_fbi_button
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.201"
+	}
+	title = Caribbean_flavor.201.t
+	desc = Caribbean_flavor.201.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.201.a
+		ai_chance = { factor = 1 }
+		Espionage_SuccessEffect = yes
+		ANT = { set_country_flag = ANT_US_Aid }
+		clr_country_flag = USA_CIA_Operation_Catnip_Unlocked
+		clr_country_flag = TNO_Espionage_DoingSpecialMission
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.202
+	picture = GFX_report_event_MAD_beachhead
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.202"
+	}
+	title = Caribbean_flavor.202.t
+	desc = Caribbean_flavor.202.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.202.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.203
+	picture = GFX_report_event_generic_beach
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.203"
+	}
+	title = Caribbean_flavor.203.t
+	desc = Caribbean_flavor.203.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.203.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.204
+	picture = GFX_report_event_WIF_vere_bird
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.204"
+	}
+	title = Caribbean_flavor.204.t
+	desc = Caribbean_flavor.204.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.204.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.205
+	picture = GFX_report_event_IBR_politicians_discussing
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.205"
+	}
+	title = Caribbean_flavor.205.t
+	desc = Caribbean_flavor.205.desc
+	trigger = { SKN = { has_government = liberal_conservatism } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.205.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.206
+	picture = GFX_report_event_IBR_carneiro_speech
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.206"
+	}
+	title = Caribbean_flavor.206.t
+	desc = Caribbean_flavor.206.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.206.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.207
+	picture = GFX_report_event_generic_boats
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.207"
+	}
+	title = Caribbean_flavor.207.t
+	desc = Caribbean_flavor.207.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.207.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.208
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.208"
+	}
+	title = Caribbean_flavor.208.t
+	desc = Caribbean_flavor.208.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.208.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.209
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.209"
+	}
+	title = Caribbean_flavor.209.t
+	desc = Caribbean_flavor.209.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.209.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+
+country_event = {
+	id = Caribbean_flavor.210
+	picture = GFX_report_event_YUN_battle
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.210"
+	}
+	title = Caribbean_flavor.210.t
+	desc = Caribbean_flavor.210.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.210.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.211
+	picture = GFX_report_event_USA_fbi_button
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.211"
+	}
+	title = Caribbean_flavor.211.t
+	desc = Caribbean_flavor.211.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.211.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { temp_econ_spending_amount = 0.075 }
+		econ_spend_money_once_effect_raw_money = yes
+		SKN = { set_country_flag = US_Aid_Offered }
+
+	}
+	option = { #
+		name = Caribbean_flavor.211.b
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.212
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.212"
+	}
+	title = Caribbean_flavor.212.t
+	desc = Caribbean_flavor.212.desc
+	trigger = { SKN = { has_country_flag = US_Aid_Offered } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.212.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.213
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.213"
+	}
+	title = Caribbean_flavor.213.t
+	desc = Caribbean_flavor.213.desc
+	trigger = { NOT = { SKN = { has_country_flag = US_Aid_Offered } } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.213.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.214
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.214"
+	}
+	title = Caribbean_flavor.214.t
+	desc = Caribbean_flavor.214.desc
+	trigger = { NOT = { SKN = { has_country_flag = US_Aid_Offered } } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.214.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.215
+	picture = GFX_report_event_GNG_MC_1000C_Vacuum_Cleaner
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.215"
+	}
+	title = Caribbean_flavor.215.t
+	desc = Caribbean_flavor.215.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.215.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		set_country_flag = USA_CIA_Operation_Shingle_Unlocked
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.216
+	picture = GFX_report_event_USA_fbi_button
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.216"
+	}
+	title = Caribbean_flavor.216.t
+	desc = Caribbean_flavor.216.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.216.a
+		ai_chance = { factor = 1 }
+		Espionage_SuccessEffect = yes
+		SLU = { set_country_flag = SLU_Shingle_Success }
+		clr_country_flag = USA_CIA_Operation_Shingle_Unlocked
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.217
+	picture = GFX_report_event_MAN_conference
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.217"
+	}
+	title = Caribbean_flavor.217.t
+	desc = Caribbean_flavor.217.desc
+	trigger = { SKN = { has_government = liberal_conservatism } }
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.217.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.218
+	picture = GFX_report_event_IBR_meeting_table
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.218"
+	}
+	title = Caribbean_flavor.218.t
+	desc = Caribbean_flavor.218.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.218.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.219
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.219"
+	}
+	title = Caribbean_flavor.219.t
+	desc = Caribbean_flavor.219.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.219.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.220
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.220"
+	}
+	title = Caribbean_flavor.220.t
+	desc = Caribbean_flavor.220.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.220.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.221
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.221"
+	}
+	title = Caribbean_flavor.221.t
+	desc = Caribbean_flavor.221.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.221.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.222
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.222"
+	}
+	title = Caribbean_flavor.222.t
+	desc = Caribbean_flavor.222.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.222.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.223
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.223"
+	}
+	title = Caribbean_flavor.223.t
+	desc = Caribbean_flavor.223.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.223.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.224
+	picture = GFX_report_event_generic_newspaper
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.224"
+	}
+	title = Caribbean_flavor.224.t
+	desc = Caribbean_flavor.224.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.224.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.225
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.225"
+	}
+	title = Caribbean_flavor.225.t
+	desc = Caribbean_flavor.225.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.225.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.226
+	picture = GFX_report_event_generic_office_1960
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.226"
+	}
+	title = Caribbean_flavor.226.t
+	desc = Caribbean_flavor.226.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.226.a
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.227
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.227"
+	}
+	title = Caribbean_flavor.227.t
+	desc = Caribbean_flavor.227.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.227.a
+		ai_chance = { factor = 1 }
+		set_temp_variable = { temp_econ_spending_amount = 0.075 }
+		econ_spend_money_once_effect_raw_money = yes
+		SLU = { econ_join_sphere_MEX = yes }
+		SLU = { set_cosmetic_tag = GUA_MEX } #Reused simply for the color
+	}
+	option = { #
+		name = Caribbean_flavor.227.b
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.228
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.228"
+	}
+	title = Caribbean_flavor.228.t
+	desc = Caribbean_flavor.228.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.228.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.229
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.229"
+	}
+	title = Caribbean_flavor.229.t
+	desc = Caribbean_flavor.229.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.229.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = LATAM_New_FBI_Mission
+		set_country_flag = USA_CIA_Operation_Tight_Fit_Unlocked
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.230
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.230"
+	}
+	title = Caribbean_flavor.230.t
+	desc = Caribbean_flavor.230.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.230.a
+		ai_chance = { factor = 1 }
+		Espionage_SuccessEffect = yes
+		DMI = { set_country_flag = DMI_Impeachment }
+		clr_country_flag = USA_CIA_Operation_Tight_Fit_Unlocked
+		clr_country_flag = TNO_Espionage_DoingSpecialMission
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.231
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.231"
+	}
+	title = Caribbean_flavor.231.t
+	desc = Caribbean_flavor.231.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.231.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.232
+	picture = GFX_report_event_generic_newspaper
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.232"
+	}
+	title = Caribbean_flavor.232.t
+	desc = Caribbean_flavor.232.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.232.a
+		ai_chance = { factor = 1 }
+		subtract_from_variable = { Caribbean_Stability = 1 }
+		custom_effect_tooltip = USA_Caribbean_Situation_Worsens_small
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.233
+	picture = GFX_report_event_IBR_meeting_table
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.233"
+	}
+	title = Caribbean_flavor.233.t
+	desc = Caribbean_flavor.233.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.233.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.234
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.234"
+	}
+	title = Caribbean_flavor.234.t
+	desc = Caribbean_flavor.234.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.234.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.235
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.235"
+	}
+	title = Caribbean_flavor.235.t
+	desc = Caribbean_flavor.235.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.235.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.236
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.236"
+	}
+	title = Caribbean_flavor.236.t
+	desc = Caribbean_flavor.236.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.236.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.237
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.237"
+	}
+	title = Caribbean_flavor.237.t
+	desc = Caribbean_flavor.237.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.237.a
+		ai_chance = { factor = 1 }
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.238
+	picture = GFX_report_event_JAM_crisis
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.238"
+	}
+	title = Caribbean_flavor.238.t
+	desc = Caribbean_flavor.238.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.238.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.239
+	picture = GFX_report_event_SCO_hands
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.239"
+	}
+	title = Caribbean_flavor.239.t
+	desc = Caribbean_flavor.239.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.239.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = Caribbean_flavor.240
+	picture = GFX_report_event_generic_handshake_2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event Caribbean_flavor.240"
+	}
+	title = Caribbean_flavor.240.t
+	desc = Caribbean_flavor.240.desc
+
+	is_triggered_only = yes
+
+	option = { #
+		name = Caribbean_flavor.240.a
+		ai_chance = { factor = 1 }
+		add_political_power = 5
+	}
+}
+
+### News Events ###
+news_event = { #Chaos Grips the British West Indies
+	id = Caribbean_News.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.1" }
+	title = Caribbean_News.1.t
+	desc = Caribbean_News.1.desc
+	picture = GFX_news_event_JAM_riots
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #The Caribbean buckles for a storm...
+		name = Caribbean_News.1.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { #Anguilla Secedes from the Leeward Islands
+	id = Caribbean_News.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.2" }
+	title = Caribbean_News.2.t
+	desc = Caribbean_News.2.desc
+	picture = GFX_news_event_WI_AGL_secedes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.2.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			AND = {
+				OR = {
+					tag = USA
+					is_in_faction_with = USA
+				}
+				NOT = { tag = CAN }
+			}
+		}
+	}
+	option = { #
+		name = Caribbean_News.2.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				OR = {
+					tag = USA
+					is_in_faction_with = USA
+					tag = MEX
+					tag = CAN
+				}
+			}
+		}
+	}
+
+	option = { #
+		name = Caribbean_News.2.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = MEX
+		}
+	}
+
+	option = { #
+		name = Caribbean_News.2.d
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = CAN
+		}
+	}
+}
+
+news_event = { #Anguillan Autonomy Recognized
+	id = Caribbean_News.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.3" }
+	title = Caribbean_News.3.t
+	desc = Caribbean_News.3.desc
+	picture = GFX_news_event_WI_AGL_recognized
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.3.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			OR = {
+				tag = USA
+				tag = MEX
+			}
+		}
+	}
+	option = { #
+		name = Caribbean_News.3.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				OR = {
+					tag = USA
+					tag = MEX
+					tag = CAN
+					AND = {
+						tag = ENG
+						NOT = { is_in_faction_with = USA }
+					}
+				}
+			}
+		}
+	}
+
+	option = { #
+		name = Caribbean_News.2.d #Intentional since it's the same loc piece repeated
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = CAN
+		}
+	}
+
+	option = { #
+		name = Caribbean_News.3.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			AND = {
+				tag = ENG
+				NOT = { is_in_faction_with = USA }
+			}
+		}
+	}
+}
+
+news_event = { #End of the Anguillian Secession
+	id = Caribbean_News.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.4" }
+	title = Caribbean_News.4.t
+	desc = Caribbean_News.4.desc
+	picture = GFX_news_event_WI_AGL_rejoined
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.4.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+	option = { #
+		name = Caribbean_News.4.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				OR = {
+					tag = MEX
+					tag = CAN
+					tag = USA
+				}
+			}
+		}
+	}
+
+	option = { #
+		name = Caribbean_News.2.d #Intentional since it's the same loc piece repeated
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = CAN
+		}
+	}
+
+	option = { #
+		name = Caribbean_News.4.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = MEX
+		}
+	}
+}
+
+news_event = { #The Anguillian Farce
+	id = Caribbean_News.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.5" }
+	title = Caribbean_News.5.t
+	desc = Caribbean_News.5.desc
+	picture = GFX_news_event_WI_AGL_rejoined
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.5.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			OR = {
+				tag = USA
+				tag = MEX
+			}
+		}
+	}
+
+	option = { #
+		name = Caribbean_News.5.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+			}
+		}
+	}
+
+	option = { #
+		name = Caribbean_News.5.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = GER
+					tag = MEX
+					tag = GER
+					tag = USA
+					tag = CAN
+				}
+			}
+		}
+	}
+
+	option = { #
+		name = Caribbean_News.2.d #Intentional since it's the same loc piece repeated
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = CAN
+		}
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.6" }
+	title = Caribbean_News.6.t
+	desc = Caribbean_News.6.desc
+	picture = GFX_news_event_WI_crane
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.6.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = { tag = MEX }
+			NOT = { tag = IBR }
+		}
+	}
+	option = { #
+		name = Caribbean_News.6.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = { #
+		name = Caribbean_News.6.c
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = IBR
+		}
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.7" }
+	title = Caribbean_News.7.t
+	desc = Caribbean_News.7.desc
+	picture = GFX_news_event_JAM_riots
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.7.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+	option = { #
+		name = Caribbean_News.7.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = IBR
+		}
+	}
+	option = { #
+		name = Caribbean_News.7.c
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = MEX
+		}
+	}
+	option = { #
+		name = Caribbean_News.7.d
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = {
+				tag = MEX
+				tag = IBR
+				tag = USA
+			}
+		}
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.8" }
+	title = Caribbean_News.8.t
+	desc = Caribbean_News.8.desc
+	picture = GFX_news_event_JAM_alexander_bustamante
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.8.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = {
+				OR = {
+					tag = USA
+					tag = IBR
+				}
+			}
+		}
+	}
+	option = { #
+		name = Caribbean_News.8.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+	option = { #
+		name = Caribbean_News.8.c
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = IBR
+		}
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.9" }
+	title = Caribbean_News.9.t
+	desc = Caribbean_News.9.desc
+	picture = GFX_news_event_JAM_riots
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.9.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = communist
+					has_government = socialist
+				}
+			}
+		}
+	}
+	option = { #
+		name = Caribbean_News.9.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			OR = {
+				has_government = communist
+				has_government = socialist
+			}
+		}
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.10" }
+	title = Caribbean_News.10.t
+	desc = Caribbean_News.10.desc
+	picture = GFX_news_event_JAM_michael_manley
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.10.a
+		ai_chance = { factor = 1 }
+
+		trigger = { # Placeholder, replace if not applicable - Frosty
+			NOT = {
+				OR = {
+					tag = USA
+					tag = MEX
+					check_variable = { ECON_SPHERE_LEADER = MEX }
+					check_variable = { ECON_SPHERE_LEADER = USA }
+				}
+			}
+		}
+	}
+	option = { #
+		name = Caribbean_News.10.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			OR = {
+				tag = USA
+				check_variable = { ECON_SPHERE_LEADER = USA }
+			}
+		}
+	}
+	option = { #
+		name = Caribbean_News.10.c
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			OR = {
+				tag = MEX
+				check_variable = { ECON_SPHERE_LEADER = MEX }
+			}
+		}
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.11" }
+	title = Caribbean_News.11.t
+	desc = Caribbean_News.11.desc
+	picture = GFX_news_event_JAM_donald_sangster
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.11.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = { tag = USA }
+		}
+	}
+	option = { #
+		name = Caribbean_News.11.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.12" }
+	title = Caribbean_News.12.t
+	desc = Caribbean_News.12.desc
+	picture = GFX_news_event_WI_caribbean_autumn
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.12.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = {
+				OR = {
+					tag = USA
+					tag = IBR
+					tag = MEX
+				}
+			}
+		}
+	}
+	option = { #
+		name = Caribbean_News.12.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+	option = { #
+		name = Caribbean_News.12.c
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = IBR
+		}
+	}
+	option = { #
+		name = Caribbean_News.12.d
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = MEX
+		}
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.13" }
+	title = Caribbean_News.13.t
+	desc = Caribbean_News.13.desc
+	picture = GFX_news_event_WI_Establishment_of_WIF
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.13.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = { tag = USA }
+		}
+	}
+	option = { #
+		name = Caribbean_News.13.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.14" }
+	title = Caribbean_News.14.t
+	desc = Caribbean_News.14.desc
+	picture = GFX_news_event_WI_Bailout
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.14.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = { tag = USA }
+		}
+	}
+	option = { #
+		name = Caribbean_News.14.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+}
+
+news_event = { #Tobago invasion by WI regiment
+	id = Caribbean_News.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.15" }
+	title = Caribbean_News.15.t
+	desc = Caribbean_News.15.desc
+	picture = GFX_news_event_WI_west_indies_regiment
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.15.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = { tag = USA }
+		}
+	}
+	option = { #
+		name = Caribbean_News.15.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+}
+
+news_event = { #Tobago Invasion by US
+	id = Caribbean_News.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.16" }
+	title = Caribbean_News.16.t
+	desc = Caribbean_News.16.desc
+	picture = GFX_news_event_WI_invasion_of_Tobago
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.16.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = { tag = USA }
+		}
+	}
+	option = { #
+		name = Caribbean_News.16.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+}
+
+news_event = { #Trinidad & Tobago secedes
+	id = Caribbean_News.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.17" }
+	title = Caribbean_News.17.t
+	desc = Caribbean_News.17.desc
+	picture = GFX_news_event_TRI_flag
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.17.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.18" }
+	title = Caribbean_News.18.t
+	desc = Caribbean_News.18.desc
+	picture = GFX_news_event_WI_Bailout
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.18.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = { tag = USA }
+		}
+	}
+	option = { #
+		name = Caribbean_News.18.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.19" }
+	title = Caribbean_News.19.t
+	desc = Caribbean_News.19.desc
+	picture = GFX_news_event_JAM_jamaica_flag
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.19.a
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			NOT = { tag = USA }
+		}
+	}
+	option = { #
+		name = Caribbean_News.19.b
+		ai_chance = { factor = 1 }
+
+		trigger = {
+			tag = USA
+		}
+	}
+}
+
+### Other Island News
+news_event = { #
+	id = Caribbean_News.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.20" }
+	title = Caribbean_News.20.t
+	desc = Caribbean_News.20.desc
+	picture = GFX_news_event_WI_vere_bird
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.20.a
+		ai_chance = { factor = 20 }
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.21" }
+	title = Caribbean_News.21.t
+	desc = Caribbean_News.21.desc
+	picture = GFX_news_event_WI_leeward_fed
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.21.a
+		ai_chance = { factor = 21 }
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.22" }
+	title = Caribbean_News.22.t
+	desc = Caribbean_News.22.desc
+	picture = GFX_news_event_WI_failed_mercs
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.22.a
+		ai_chance = { factor = 22 }
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.23" }
+	title = Caribbean_News.23.t
+	desc = Caribbean_News.23.desc
+	picture = GFX_news_event_WI_failed_mercs
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.23.a
+		ai_chance = { factor = 23 }
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.24" }
+	title = Caribbean_News.24.t
+	desc = Caribbean_News.24.desc
+	picture = GFX_news_event_GND_coup
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.24.a
+		ai_chance = { factor = 24 }
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.25" }
+	title = Caribbean_News.25.t
+	desc = Caribbean_News.25.desc
+	picture = GFX_news_event_WI_grenada_independence
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.25.a
+		trigger = { # PLACEHOLDER
+			NOT = {
+				OR = {
+					tag = USA
+					is_in_faction_with = USA
+					has_government = liberalism
+				}
+			}
+		}
+		ai_chance = { factor = 25 }
+	}
+	option = { #
+		name = Caribbean_News.25.b
+		trigger = {
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+				has_government = liberalism
+			}
+		}
+		ai_chance = { factor = 25 }
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.26" }
+	title = Caribbean_News.26.t
+	desc = Caribbean_News.26.desc
+	picture = GFX_news_event_WI_tom_adams
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.26.a
+		ai_chance = { factor = 26 }
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.27" }
+	title = Caribbean_News.27.t
+	desc = Caribbean_News.27.desc
+	picture = GFX_news_event_WI_caricom
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.27.a
+		ai_chance = { factor = 27 }
+	}
+}
+
+news_event = { #
+	id = Caribbean_News.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.28" }
+	title = Caribbean_News.28.t
+	desc = Caribbean_News.28.desc
+	picture = GFX_news_event_JAM_jamaica_flag
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = Caribbean_News.28.a
+		ai_chance = { factor = 28 }
+	}
+}
+
+news_event = { # East Caribbean Union Forms
+	id = Caribbean_News.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.29" }
+	title = Caribbean_News.29.t
+	desc = Caribbean_News.29.desc
+	picture = GFX_news_event_WI_ECU_Formed
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.29.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { # Fillibuster Revolt
+	id = Caribbean_News.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.30" }
+	title = Caribbean_News.30.t
+	desc = Caribbean_News.30.desc
+	picture = GFX_news_event_WI_eric_gairy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.30.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { # OAS Backs Independent Grenada
+	id = Caribbean_News.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.31" }
+	title = Caribbean_News.31.t
+	desc = Caribbean_News.31.desc
+	picture = GFX_news_event_WI_grenada_recognized
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.31.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { # OAS Backs Williams
+	id = Caribbean_News.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.32" }
+	title = Caribbean_News.32.t
+	desc = Caribbean_News.32.desc
+	picture = GFX_news_event_WI_GND_reintegrated
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.32.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { # Grenada Invasion Success
+	id = Caribbean_News.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.33" }
+	title = Caribbean_News.33.t
+	desc = Caribbean_News.33.desc
+	picture = GFX_news_event_GND_invasion_success
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.33.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { # Grenada Invasion Fails
+	id = Caribbean_News.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.34" }
+	title = Caribbean_News.34.t
+	desc = Caribbean_News.34.desc
+	picture = GFX_news_event_GND_invasion_fail
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.34.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { # Port of Spain Conference
+	id = Caribbean_News.35
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.35" }
+	title = Caribbean_News.35.t
+	desc = Caribbean_News.35.desc
+	picture = GFX_news_event_WI_TRI_all_caribbean_peoples_conference
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.35.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { # Federal Caribbean Union
+	id = Caribbean_News.36
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.36" }
+	title = Caribbean_News.36.t
+	desc = Caribbean_News.36.desc
+	picture = GFX_news_event_JAM_jamaica_flag
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.36.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { # Williams Resigns
+	id = Caribbean_News.37
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.37" }
+	title = Caribbean_News.37.t
+	desc = Caribbean_News.37.desc
+	picture = GFX_news_event_WI_ECU_dissolved
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.37.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { # Williams Emergency Powers
+	id = Caribbean_News.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.38" }
+	title = Caribbean_News.38.t
+	desc = Caribbean_News.38.desc
+	picture = GFX_news_event_WI_TRI_eric_williams_emergency
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.38.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+news_event = { # US Backs Grenada's Independence
+	id = Caribbean_News.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Caribbean_News.39" }
+	title = Caribbean_News.39.t
+	desc = Caribbean_News.39.desc
+	picture = GFX_news_event_WI_grenada_recognized
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = Caribbean_News.39.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+### Flavor
+
+country_event = { # Bob Marley
+	id = wif_crisis.300
+	immediate = { log = "[GetDateText]: [Root.GetName]: event wif_crisis.300" }
+	title = wif_crisis.300.t
+	desc = wif_crisis.300.d
+
+	picture = GFX_report_event_generic_radio1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = wif_crisis.300.a
+	}
+}
+
+country_event = { # Marley's album is a success after the referendum passes
+	id = wif_crisis.301
+	immediate = { log = "[GetDateText]: [Root.GetName]: event wif_crisis.301" }
+	title = wif_crisis.301.t
+	desc = wif_crisis.301.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = GFX_report_event_generic_radio1
+
+	option = {
+		name = wif_crisis.301.a
+		hidden_effect = {
+			USA = {
+				country_event = { id = wif_crisis.307 days = 2920 }
+			}
+			JAP = {
+				country_event = { id = wif_crisis.308 days = 2920 }
+			}
+		}
+	}
+}
+
+country_event = { # Marley's album is not as great as a success after the referendum fails
+	id = wif_crisis.302
+	immediate = { log = "[GetDateText]: [Root.GetName]: event wif_crisis.302" }
+	title = wif_crisis.302.t
+	desc = wif_crisis.302.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = GFX_report_event_generic_radio1
+
+	option = {
+		name = wif_crisis.302.a
+	}
+}
+
+country_event = { # Marley's album is okay, as the US forbids the Jamaican indep. ref.
+	id = wif_crisis.303
+	immediate = { log = "[GetDateText]: [Root.GetName]: event wif_crisis.303" }
+	title = wif_crisis.303.t
+	desc = wif_crisis.303.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = GFX_report_event_generic_radio1
+
+	option = {
+		name = wif_crisis.303.a
+	}
+}
+
+country_event = { # Deterioration
+	id = wif_crisis.304
+	immediate = { log = "[GetDateText]: [Root.GetName]: event wif_crisis.304" }
+	title = wif_crisis.304.t
+	desc = wif_crisis.304.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = GFX_report_event_generic_radio_mic
+
+	option = {
+		name = wif_crisis.304.a
+	}
+}
+
+country_event = { # I Shot the Sheriff
+	id = wif_crisis.305
+	immediate = { log = "[GetDateText]: [Root.GetName]: event wif_crisis.305" }
+	title = wif_crisis.305.t
+	desc = wif_crisis.305.d
+
+	picture = GFX_report_event_generic_radio_mic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = wif_crisis.305.a
+		hidden_effect = {
+			country_event = {
+				id = wif_crisis.306
+				days = 6
+			}
+		}
+	}
+}
+
+country_event = { # ...But I didn't Shoot the Deputy
+	id = wif_crisis.306
+	immediate = { log = "[GetDateText]: [Root.GetName]: event wif_crisis.306" }
+	title = wif_crisis.306.t
+	desc = wif_crisis.306.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = GFX_report_event_generic_radio1
+
+	option = {
+		name = wif_crisis.306.a
+	}
+}
+
+country_event = { # Reggae Craze - OFN
+	id = wif_crisis.307
+	immediate = { log = "[GetDateText]: [Root.GetName]: event wif_crisis.307" }
+	title = wif_crisis.307.t
+	desc = wif_crisis.307.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = GFX_report_event_JAM_rasta
+
+	option = {
+		name = wif_crisis.307.a
+	}
+}
+
+country_event = { # Reggae Craze - Sphere
+	id = wif_crisis.308
+	immediate = { log = "[GetDateText]: [Root.GetName]: event wif_crisis.308" }
+	title = wif_crisis.308.t
+	desc = wif_crisis.308.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = wif_crisis.308.a
+	}
+}

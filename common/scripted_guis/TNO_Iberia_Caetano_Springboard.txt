@@ -1,0 +1,31 @@
+scripted_gui = {
+	TNO_IBR_Caetano_Springboard_GUI = {
+		context_type = decision_category
+		window_name = "TNO_IBR_Caetano_Springboard_GUI"
+
+		visible = {
+			always = yes
+		}
+
+		triggers = {
+		}
+
+		effects = {
+		}
+
+		properties = {
+			Iberia_Caetano_Springboard_Pie_Caetano = {
+				frame = IBR_caetano_frame
+			}
+			Iberia_Caetano_Springboard_Pie_Spain_1 = {
+				frame = IBR_spain_1_frame
+			}
+			Iberia_Caetano_Springboard_Pie_Choupana = {
+				frame = IBR_choupana_frame
+			}
+			Iberia_Caetano_Springboard_Pie_Spain_2 = {
+				frame = IBR_spain_2_frame
+			}
+		}
+	}
+}
