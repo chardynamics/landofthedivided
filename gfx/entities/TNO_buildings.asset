@@ -42,3 +42,10 @@ entity = {
 	default_state = "idle"
 	scale = 1.2
 }
+
+entity = {
+	name = "building_thermoelectric_plant"
+	pdxmesh = "building_thermoelectric_plant"
+	default_state = "idle"
+	scale = 1.2
+}

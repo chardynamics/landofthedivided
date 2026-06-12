@@ -1252,10 +1252,6 @@ entity = {
 	name = "JAP_MBT_0_entity"
 }
 entity = {
-	clone = "JAP_MBT_1_entity"
-	name = "JAP_MBT_2_entity"
-}
-entity = {
 	name = "CHI_MBT_entity"
 	clone = "JAP_MBT_1_entity"
 	pdxmesh = "Type14_CHI_tank_mesh"
@@ -1301,6 +1297,10 @@ entity = {
 	game_data = {
 		texture_anim_speed = 0.5
 	}
+}
+entity = {
+	clone = "JAP_MBT_entity"
+	name = "JAP_MBT_2_entity"
 }
 entity = {
 	name = "JAP_IFV_entity"
@@ -1486,7 +1486,7 @@ entity = {
 	}
 }
 entity = {
-	name = "USA_MBT_entity"
+	name = "USA_MBT_2_entity"
 	pdxmesh = "M60A1_EARLY_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
@@ -1528,10 +1528,6 @@ entity = {
 	game_data = {
 		texture_anim_speed = 0.5
 	}
-}
-entity = {
-	name = "USA_MBT_2_entity"
-	clone = "USA_MBT_entity"
 }
 entity = {
 	name = "USA_MBT_3_entity"
@@ -1967,12 +1963,12 @@ entity = {
 entity = {
 	name = "BRA_MBT_entity"
 	pdxmesh = "M60_BRA_tank_mesh"
-	clone = "USA_MBT_entity"
+	clone = "USA_MBT_1_entity"
 }
 entity = {
 	name = "AST_MBT_entity"
 	pdxmesh = "M60_AST_tank_mesh"
-	clone = "USA_MBT_entity"
+	clone = "USA_MBT_1_entity"
 }
 
 entity = {
@@ -5006,22 +5002,22 @@ entity = {
 ############################################################
 ############################################################USA NATIONS BELOW
 entity = {
-	clone = "USA_MBT_entity"
+	clone = "USA_MBT_1_entity"
 	name = "MZB_USA_MBT_entity"
 	pdxmesh = "M60_OFN_tank_mesh"
 }
 entity = {
-	clone = "USA_MBT_entity"
+	clone = "USA_MBT_1_entity"
 	name = "ANG_USA_MBT_entity"
 	pdxmesh = "M60_OFN_tank_mesh"
 }
 entity = {
-	clone = "USA_MBT_entity"
+	clone = "USA_MBT_1_entity"
 	name = "COG_USA_MBT_entity"
 	pdxmesh = "M60_OFN_tank_mesh"
 }
 entity = {
-	clone = "USA_MBT_entity"
+	clone = "USA_MBT_1_entity"
 	name = "USC_MBT_entity"
 	pdxmesh = "M60_OFN_tank_mesh"
 }
@@ -5362,7 +5358,7 @@ entity = {
 
 entity = {
 	name = "FEN_alt_MBT_entity"
-	clone = "USA_MBT_entity"
+	clone = "USA_MBT_1_entity"
 }
 entity = {
 	name = "FEN_alt_MBT_2_entity"

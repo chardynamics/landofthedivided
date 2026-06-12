@@ -738,22 +738,6 @@ entity = {
 	attach = { name = artillery			artillery = "artillery_gun_entity" }
 	attach = { name = infantry			infantry = "middle_eastern_gfx_infantry_entity" }
 }
-######TVR
-entity = {
-	name = "TVR_artillery_entity"
-	clone = "generic_clone_artillery_entity"
-
-	attach = { name = artillery			artillery = "artillery_gun_entity" }
-	attach = { name = infantry			infantry = "TVR_infantry_entity" }
-}
-######ORL
-entity = {
-	name = "ORL_artillery_entity"
-	clone = "generic_clone_artillery_entity"
-
-	attach = { name = artillery			artillery = "artillery_gun_entity" }
-	attach = { name = infantry			infantry = "ORL_infantry_entity" }
-}
 ######CAN
 entity = {
 	name = "CAN_artillery_entity"
