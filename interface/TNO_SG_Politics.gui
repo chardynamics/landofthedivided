@@ -145,185 +145,53 @@ guiTypes = {
 		}
 
 		iconType = {
-			name = "faction_icon_einheitspakt"
+			name = "faction_icon_american_commonwealth"
 			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_einheitspakt"
+			quadTextureSprite = "GFX_american_commonwealth"
 			scale = 0.61334
-			pdx_tooltip = Einheitspakt
+			pdx_tooltip = american_commonwealth
 		}
 		iconType = {
-			name = "faction_icon_as"
+			name = "faction_icon_free_territories"
 			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_afrika_schild"
+			quadTextureSprite = "GFX_free_territories"
 			scale = 0.61334
-			pdx_tooltip = afrika_schild
+			pdx_tooltip = free_territories
 		}
 		iconType = {
-			name = "faction_icon_coprosperity"
+			name = "faction_icon_military_authority"
 			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_coprosperity"
+			quadTextureSprite = "GFX_military_authority"
 			scale = 0.61334
-			pdx_tooltip = Japanese_Co_Prosperity_Sphere
+			pdx_tooltip = military_authority
 		}
 		iconType = {
-			name = "faction_icon_generic"
+			name = "faction_icon_northern_accord"
 			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_generic_faction"
+			quadTextureSprite = "GFX_northern_accord"
 			scale = 0.61334
+			pdx_tooltip = northern_accord
 		}
 		iconType = {
-			name = "faction_icon_OFN"
-			position = {x = -30 y = -28}
-			quadTextureSprite = "GFX_OFN"
-			scale = 0.58334
-			pdx_tooltip = Organization_of_Free_Nations
-		}
-		iconType = {
-			name = "faction_icon_triumvirate"
+			name = "faction_icon_july_fourth_movement"
 			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_triumvirate"
+			quadTextureSprite = "GFX_july_fourth_movement"
 			scale = 0.61334
-			pdx_tooltip = triumvirate
+			pdx_tooltip = july_fourth_movement
 		}
 		iconType = {
-			name = "faction_icon_mediterranean_bloc"
+			name = "faction_icon_militar_frontera"
 			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_mediterranean_bloc"
+			quadTextureSprite = "GFX_militar_frontera"
 			scale = 0.61334
-			pdx_tooltip = IMPUR_ITA_BLOC
+			pdx_tooltip = militar_frontera
 		}
 		iconType = {
-			name = "faction_icon_imperial_alliance"
+			name = "faction_icon_tripartite_pact"
 			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_imperial_alliance"
+			quadTextureSprite = "GFX_tripartite_pact"
 			scale = 0.61334
-			pdx_tooltip = IMPUR_ITA_ALLY
-		}
-		iconType = {
-			name = "faction_icon_rome_pact"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_rome_pact"
-			scale = 0.61334
-			pdx_tooltip = IMPUR_ITA_PACT
-		}
-		iconType = {
-			name = "faction_icon_NLF"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_NLF"
-			scale = 0.2
-			pdx_tooltip = CHI_THE_NATIONAL_LIBERATION_FRONT
-		}
-		iconType = {
-			name = "faction_icon_FI"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_FI"
-			scale = 0.61334
-			pdx_tooltip = Fourth_International
-		}
-		iconType = {
-			name = "faction_icon_UA"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_UA"
-			scale = 0.61334
-			pdx_tooltip = ural_alliance
-		}
-		iconType = {
-			name = "faction_icon_FMA"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_FMA_faction"
-			scale = 0.61334
-			pdx_tooltip = Free_French_Alliance
-		}
-		iconType = {
-			name = "faction_icon_FRU"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_FRU_faction"
-			scale = 0.61334
-			pdx_tooltip = French_Union
-		}
-		iconType = {
-			name = "faction_icon_PALF"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_PALF_faction"
-			scale = 0.61334
-			pdx_tooltip = Cameroon_Alliance
-		}
-		iconType = {
-			name = "faction_icon_WAA"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_WAA_faction"
-			scale = 0.61334
-			pdx_tooltip = West_African_Alliance
-		}
-		iconType = {
-			name = "faction_icon_WAF"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_WAF_faction"
-			scale = 0.61334
-			pdx_tooltip = West_African_Federation
-		}
-		iconType = {
-			name = "faction_icon_Mano"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_Mano_faction"
-			scale = 0.61334
-			pdx_tooltip = Mano_Pact
-		}
-		iconType = {
-			name = "faction_icon_Haitian_United_Front"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_Haitian_United_Front_faction"
-			scale = 0.61334
-			pdx_tooltip = Haitian_United_Front
-		}
-		iconType = {
-			name = "faction_icon_Hispaniola_Front"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_Hispaniola_Front_faction"
-			scale = 0.61334
-			pdx_tooltip = Hispaniolan_Revolutionary_Front
-		}
-		iconType = {
-			name = "faction_icon_Central_Asia_Defense_League"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_Central_Asia_Defence_League_faction"
-			scale = 0.61334
-			pdx_tooltip = Central_Asia_Defense_League
-		}
-		iconType = {
-			name = "faction_icon_Central_Asian_Solidarity_Alliance"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_Central_Asian_Solidarity_Alliance_faction"
-			scale = 0.61334
-			pdx_tooltip = Central_Asian_Solidarity_Alliance
-		}
-		iconType = {
-			name = "faction_icon_Orungu_Alliance"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_Orungu_Alliance_faction"
-			scale = 0.61334
-			pdx_tooltip = Orungu_Alliance
-		}
-		iconType = {
-			name = "faction_icon_Revolutionary_Iranian_Liberation_Front"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_Revolutionary_Iranian_Liberation_Front_faction"
-			scale = 0.61334
-			pdx_tooltip = Revolutionary_Iranian_Liberation_Front
-		}
-		iconType = {
-			name = "faction_icon_Siberian_Mutual_Assistance_Compact"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_Siberian_Mutual_Assistance_Compact_faction"
-			scale = 0.61334
-			pdx_tooltip = Siberian_Mutual_Assistance_Compact
-		}
-		iconType = {
-			name = "faction_icon_Unitarian_Bolivarian_Alliance"
-			position = {x = -30 y = -26}
-			quadTextureSprite = "GFX_Unitarian_Bolivarian_Alliance_faction"
-			scale = 0.61334
-			pdx_tooltip = Unitarian_Bolivarian_Alliance
+			pdx_tooltip = tripartite_pact
 		}
 		instantTextboxType = {
 			name = "TNO_subideology"

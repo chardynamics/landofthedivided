@@ -8,86 +8,54 @@ scripted_map_modes = {
 				if = {
 					limit = {
 						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = GER }
+							check_variable = { ECON_SPHERE_LEADER = PHI }
 						}
-						NOT = { has_global_flag = german_civil_war_speervic }
 					}
-					set_temp_variable = { red = 0.235 }
-					set_temp_variable = { green = 0.235 }
-					set_temp_variable = { blue = 0.235 }
+					set_temp_variable = { red = 0.223 }
+					set_temp_variable = { green = 0.364 }
+					set_temp_variable = { blue = 0.447 }
 				}
-				else_if = {
+				if = {
 					limit = {
 						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = GER }
+							check_variable = { ECON_SPHERE_LEADER = CAN }
 						}
-						has_global_flag = german_civil_war_speervic
 					}
-					set_temp_variable = { red = 0 }
-					set_temp_variable = { green = 0.329 }
-					set_temp_variable = { blue = 0.556 }
+					set_temp_variable = { red = 0.607 }
+					set_temp_variable = { green = 0.243 }
+					set_temp_variable = { blue = 0.2 }
 				}
-				else_if = {
+				if = {
 					limit = {
 						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = JAP }
+							check_variable = { ECON_SPHERE_LEADER = SCA }
 						}
 					}
-					set_temp_variable = { red = 0.506 }
-					set_temp_variable = { green = 0.074 }
-					set_temp_variable = { blue = 0.180 }
+					set_temp_variable = { red = 1 }
+					set_temp_variable = { green = 1 }
+					set_temp_variable = { blue = 0 }
 				}
-				else_if = {
+				if = {
 					limit = {
 						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = ITA }
+							check_variable = { ECON_SPHERE_LEADER = DMA }
 						}
 					}
-					set_temp_variable = { red = 0.427 }
-					set_temp_variable = { green = 0.557 }
-					set_temp_variable = { blue = 0.376 }
+					set_temp_variable = { red = 0.498 }
+					set_temp_variable = { green = 0.522 }
+					set_temp_variable = { blue = 0.875 }
 				}
-				else_if = {
+				if = {
 					limit = {
 						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = IBR }
+							check_variable = { ECON_SPHERE_LEADER = BAR }
 						}
 					}
-					set_temp_variable = { red = 0.776 }
-					set_temp_variable = { green = 0.675 }
-					set_temp_variable = { blue = 0.509 }
+					set_temp_variable = { red = 0.765 }
+					set_temp_variable = { green = 1 }
+					set_temp_variable = { blue = 0 }
 				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = SPA }
-						}
-					}
-					set_temp_variable = { red = 0.816 }
-					set_temp_variable = { green = 0.714 }
-					set_temp_variable = { blue = 0.549 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = ARG }
-						}
-					}
-					set_temp_variable = { red = 0.470 }
-					set_temp_variable = { green = 0.615 }
-					set_temp_variable = { blue = 0.627 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = BRA }
-						}
-					}
-					set_temp_variable = { red = 0.407 }
-					set_temp_variable = { green = 0.537 }
-					set_temp_variable = { blue = 0.254 }
-				}
-				else_if = {
+				if = {
 					limit = {
 						FROM = {
 							check_variable = { ECON_SPHERE_LEADER = MEX }
@@ -97,120 +65,15 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.462 }
 					set_temp_variable = { blue = 0.357 }
 				}
-				else_if = {
+				if = {
 					limit = {
 						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = USA }
+							check_variable = { ECON_SPHERE_LEADER = RWP }
 						}
 					}
-					set_temp_variable = { red = 0.392 }
-					set_temp_variable = { green = 0.541 }
-					set_temp_variable = { blue = 0.745 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = SEN }
-						}
-					}
-					set_temp_variable = { red = 0.325 }
-					set_temp_variable = { green = 0.619 }
-					set_temp_variable = { blue = 0.462 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = FFR }
-						}
-					}
-					set_temp_variable = { red = 0.411 }
-					set_temp_variable = { green = 0.447 }
-					set_temp_variable = { blue = 0.894 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = FRA }
-						}
-					}
-					set_temp_variable = { red = 0.411 }
-					set_temp_variable = { green = 0.447 }
-					set_temp_variable = { blue = 0.894 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = CAO }
-						}
-					}
-					set_temp_variable = { red = 0.207 }
-					set_temp_variable = { green = 0.419 }
-					set_temp_variable = { blue = 0.262 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = ADN }
-						}
-					}
-					set_temp_variable = { red = 0.604 }
-					set_temp_variable = { green = 0.502 }
-					set_temp_variable = { blue = 0.416 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = CME }
-						}
-					}
-					set_temp_variable = { red = 0.87 }
-					set_temp_variable = { green = 0.0 }
-					set_temp_variable = { blue = 0.0 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = ENG }
-						}
-					}
-					set_temp_variable = { red = 0.465 }
-					set_temp_variable = { green = 0.129 }
-					set_temp_variable = { blue = 0.129 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = TUR }
-						}
-					}
-					set_temp_variable = { red = 0.631 }
-					set_temp_variable = { green = 0.271 }
-					set_temp_variable = { blue = 0.271 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = CLC }
-						}
-					}
-					set_temp_variable = { red = 0.098 }
-					set_temp_variable = { green = 0.364 }
-					set_temp_variable = { blue = 0.662 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { ECON_SPHERE_LEADER = DOM }
-						}
-					}
-					set_temp_variable = { red = 0.682 }
-					set_temp_variable = { green = 0.411 }
-					set_temp_variable = { blue = 0.247 }
-				}
-				else = {
-					set_temp_variable = { red = 0.5 }
-					set_temp_variable = { green = 0.5 }
-					set_temp_variable = { blue = 0.5 }
+					set_temp_variable = { red = 0.722 }
+					set_temp_variable = { green = 0.043 }
+					set_temp_variable = { blue = 0.431 }
 				}
 			}
 		}

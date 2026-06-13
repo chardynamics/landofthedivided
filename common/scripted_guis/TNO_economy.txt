@@ -2983,30 +2983,6 @@ scripted_gui = {
 			central_bank_policy_icon = { image = "[Get_Central_Bank_Policy_icon]" }
 		}
 	}
-
-	# # Burgundy Econ Cover
-	TNO_economy_BRG = {
-		window_name = "economy_view_BRG"
-		context_type = player_context
-		parent_window_token = trade_tab
-
-		visible = {
-			tag = BRG
-			has_country_flag = BRG_Econ_Off
-			econ_BRGView = yes
-		}
-	}
-	
-	# Antarctica Econ Cover
-	TNO_economy_Antarctica = {
-		window_name = "economy_view_Antarctica"
-		context_type = player_context
-		parent_window_token = trade_tab
-
-		visible = {
-			is_Antarctic_nation = yes
-		}
-	}
 }
 
 # # Econ Social Menu

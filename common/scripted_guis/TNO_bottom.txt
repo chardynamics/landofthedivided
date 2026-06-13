@@ -7,10 +7,9 @@ scripted_gui = {
 		window_name = "bottom_gui"
 
 		visible = {
-			#if = {
-			#	limit = { tag = BRG }
-			#	NOT = { has_country_flag = BRG_domestic_GUI_disabled }
-			#}
+			OR = {
+				has_country_flag = country_has_gui
+			}
 		}
 
 		triggers = {

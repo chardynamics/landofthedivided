@@ -3030,40 +3030,6 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 	}
-
-	# # Burgundy Econ View
-	containerWindowType = {
-		name = "economy_view_BRG"
-		position = { x = 0 y = 28 }
-		size = { width = 830 height = -1 }
-		clipping = no
-
-		iconType = {
-			name = "BRG_econ_window_overlay"
-			spriteType = "GFX_BRG_econ_window_overlay"
-			position = { x = 4 y = -24 }
-		}
-	}
-
-	#antarctic
-	containerWindowType = {
-		name = "economy_view_Antarctica"
-		position = { x = 0 y = 28 }
-		size = { width = 830 height = -1 }
-		clipping = no
-		
-		background = {
-			name = "Background"
-			quadTextureSprite = "GFX_tiled_window_thin_border2_hollow"
-		}
-		
-		iconType = {
-			name = "Antarctica_econ_window_overlay"
-			spriteType = "GFX_frozen_economy_screen"
-			position = { x = 4 y = -25 }
-			pdx_tooltip = Antarctica_econ_window_overlay_tt
-		}
-	}
 }
 
 # # Econ Macro Menu - Line Graphs
