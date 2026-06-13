@@ -2276,9 +2276,6 @@ econ_spend_money_once_effect_raw_money = { #Spend temp_econ_spending_amount bill
 							NOT = {
 								OR = {
 									tag = USA
-									tag = JAP
-									tag = GER
-									tag = ITA
 								}
 							}
 							check_variable = { temp_econ_spending_amount > 0.099 }
@@ -2288,7 +2285,6 @@ econ_spend_money_once_effect_raw_money = { #Spend temp_econ_spending_amount bill
 						AND = {
 							check_variable = { debt_to_GDP_ratio > 0.64 }
 							check_variable = { temp_econ_spending_amount > 0.029 }
-							tag = IBR
 						}
 					}
 				}
@@ -3358,152 +3354,6 @@ stockpile_consumer_goods_change = {
 
 
 ### ADD TO ECON SPHERES
-
-econ_join_sphere_USA = {
-	set_temp_variable = { target = USA }
-	econ_join_sphere_target = yes
-	set_variable = { America_Checkbox_var = 2 }
-	set_variable = { Pacific_Checkbox_var = 2 }
-}
-
-econ_join_sphere_GER = {
-	set_temp_variable = { target = GER }
-	econ_join_sphere_target = yes
-	set_variable = { Europe_Checkbox_var = 2 }
-	if = {
-		limit = {
-			BRA = {
-				has_country_flag = BRA_lift_germany_embargo_bill_passed
-			}
-		}
-		BRA = {
-			GER = { clear_sphere_embargo_with_PREV = yes } # BRA_bill_complete
-		}
-	}
-}
-
-econ_join_sphere_JAP = {
-	set_temp_variable = { target = JAP }
-	econ_join_sphere_target = yes
-	set_variable = { Asia_Checkbox_var = 2 }
-}
-
-econ_join_sphere_ITA = {
-	set_temp_variable = { target = ITA }
-	econ_join_sphere_target = yes
-	set_variable = { Europe_Checkbox_var = 2 }
-}
-
-econ_join_sphere_IBR = {
-	if = {
-		limit = { country_exists = IBR }
-		if = {
-			limit = { IBR = { has_country_flag = HAS_ECON_SPHERE } }
-			set_temp_variable = { target = IBR }
-			econ_join_sphere_target = yes
-		}
-		else_if = {
-			limit = { IBR = { check_variable = { ECON_SPHERE_LEADER = GER } } }
-			set_temp_variable = { target = GER }
-			econ_join_sphere_target = yes
-		}
-	}
-	if = {
-		limit = { country_exists = SPA }
-		set_temp_variable = { target = SPA }
-		econ_join_sphere_target = yes
-	}
-}
-
-econ_join_sphere_SPA = {
-	set_temp_variable = { target = SPA }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_TUR = {
-	set_temp_variable = { target = TUR }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_RUS = {
-	set_temp_variable = { target = RUS }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_ENG = {
-	set_temp_variable = { target = ENG }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_CHI = {
-	set_temp_variable = { target = CHI }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_BRA = {
-	set_temp_variable = { target = BRA }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_MEX = {
-	set_temp_variable = { target = MEX }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_SEN = {
-	set_temp_variable = { target = SEN }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_DOM = {
-	set_temp_variable = { target = DOM }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_CLC = {
-	set_temp_variable = { target = CLC }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_FFR = {
-	if = {
-		limit = {
-			OR = {
-				has_global_flag = FFR_reclamation_successful
-				has_global_flag = FFR_reconciliation_happened
-			}
-		}
-		set_temp_variable = { target = FRA }
-	}
-	else = { set_temp_variable = { target = FFR } }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_FRA = {
-	set_temp_variable = { target = FRA }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_CAO = {
-	set_temp_variable = { target = CAO }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_ADN = {
-	set_temp_variable = { target = ADN }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_CME = {
-	set_temp_variable = { target = CME }
-	econ_join_sphere_target = yes
-}
-
-econ_join_sphere_ARG = {
-	set_temp_variable = { target = ARG }
-	econ_join_sphere_target = yes
-}
-
 econ_join_sphere_target = {
 	econ_leave_sphere = yes
 	custom_effect_tooltip = econ_join_sphere_target_tt

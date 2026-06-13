@@ -79,37 +79,46 @@ PixelShader =
 		float4 main( VS_OUTPUT v ) : PDX_COLOR
 		{
 		    float vTime = (Time - AnimationTime);
-		    float value = determineValue(Offset, NextOffset);
-			
+			float value = determineValue(Offset, NextOffset);
+
 			float2 vDiff = float2(0.25f - v.vTexCoord.x, v.vTexCoord.y - 0.5f);
-			float vAngle = atan2TNO(vDiff) +  3.14159265f;
-			
-			float start = floor(value/1000.f);
-			float end = value - (start * 1000.f);
+			float vAngle = atan2TNO(vDiff) + 3.14159265f;
+
+			float start = floor(value / 1000.f);       
+			float end = value - (start * 1000.f);     
+
+			if (end < start) {
+				end += 100.f;
+			}
 			float difference = end - start;
-			
-			
-			float fTime = 1.f - (cos(vTime * 6.5f) + 1.f)/2.f;
+
+			float fTime = 1.f - (cos(vTime * 6.5f) + 1.f) / 2.f;
 			float truepoint = (difference * fTime) + start;
-			if(vTime > 0.5f){
+
+			// Clamp to `end` if past the midpoint
+			if (vTime > 0.5f) {
 				truepoint = end;
 			}
+			truepoint = fmod(truepoint, 100.f); 
 			truepoint /= 100.f;
-			
-			float trueAngle = truepoint * 3.14159265f * 2.f;
-			
-			float4 outColour = float4(0,0,0,0);
-			if(vAngle < trueAngle){
-				outColour = tex2D( MapTexture, v.vTexCoord.xy );
+
+			float fillStart = (start / 100.f) * 3.14159265f * 2.f;       // Starting angle
+			float fillEnd = (truepoint) * 3.14159265f * 2.f;             // Animated end angle
+
+			bool isFilled = false;
+			if (fillStart < fillEnd) {
+				isFilled = (vAngle >= fillStart) && (vAngle <= fillEnd);
+			} else {
+				isFilled = (vAngle >= fillStart) || (vAngle <= fillEnd);
 			}
-			else{
-				outColour = tex2D( MapTexture, float2(v.vTexCoord.x + 0.5f, v.vTexCoord.y) );
+
+			float4 outColour = float4(0, 0, 0, 0);
+			if (isFilled) {
+				outColour = tex2D(MapTexture, v.vTexCoord.xy);
+			} else {
+				outColour = tex2D(MapTexture, float2(v.vTexCoord.x + 0.5f, v.vTexCoord.y));
 			}
 			return outColour;
-			//float vLerp = saturate( ( vAngle - truepoint* 3.14159265f * 2.f) * 50.f );
-			//float4 vOne = tex2D( MapTexture, v.vTexCoord.xy );
-			//float4 vTwo = tex2D( MapTexture, float2(v.vTexCoord.x + 0.5f, v.vTexCoord.y) );
-			//return lerp( vOne, vTwo, vLerp );
 		}
 	]]
 
@@ -139,40 +148,47 @@ PixelShader =
 		float4 main( VS_OUTPUT v ) : PDX_COLOR
 		{
 			float vTime = (Time - AnimationTime);
-		    float value = determineValue(Offset, NextOffset);
-			
+			float value = determineValue(Offset, NextOffset);
+
 			float2 vDiff = float2(0.25f - v.vTexCoord.x, v.vTexCoord.y - 0.5f);
-			float vAngle = atan2TNO(vDiff) +  3.14159265f;
-			
-			float start = floor(value/1000.f);
-			float end = value - (start * 1000.f);
+			float vAngle = atan2TNO(vDiff) + 3.14159265f;
+
+			float start = floor(value / 1000.f);       
+			float end = value - (start * 1000.f);     
+
+			if (end < start) {
+				end += 100.f;
+			}
 			float difference = end - start;
-			
-			//if(v.vTexCoord.y < 0.5){
-			//	return float4(1,1,1,1);
-			//}
-			
-			float fTime = 1.f - (cos(vTime * 6.5f) + 1.f)/2.f;
+
+			float fTime = 1.f - (cos(vTime * 6.5f) + 1.f) / 2.f;
 			float truepoint = (difference * fTime) + start;
-			if(vTime > 0.5f){
+
+			// Clamp to `end` if past the midpoint
+			if (vTime > 0.5f) {
 				truepoint = end;
 			}
+			truepoint = fmod(truepoint, 100.f); 
 			truepoint /= 100.f;
-			
-			float trueAngle = truepoint * 3.14159265f * 2.f;
-			
-			float4 outColour = float4(0,0,0,0);
-			if(vAngle < trueAngle){
-				outColour = tex2D( MapTexture, v.vTexCoord.xy );
+
+			float fillStart = (start / 100.f) * 3.14159265f * 2.f;       // Starting angle
+			float fillEnd = (truepoint) * 3.14159265f * 2.f;             // Animated end angle
+
+			bool isFilled = false;
+			if (fillStart < fillEnd) {
+				isFilled = (vAngle >= fillStart) && (vAngle <= fillEnd);
+			} else {
+				isFilled = (vAngle >= fillStart) || (vAngle <= fillEnd);
 			}
-			else{
-				outColour = tex2D( MapTexture, float2(v.vTexCoord.x + 0.5f, v.vTexCoord.y) );
+
+			float4 outColour = float4(0, 0, 0, 0);
+			if (isFilled) {
+				outColour = tex2D(MapTexture, v.vTexCoord.xy);
+			} else {
+				outColour = tex2D(MapTexture, float2(v.vTexCoord.x + 0.5f, v.vTexCoord.y));
 			}
+			
 			return outColour;
-			//float vLerp = saturate( ( vAngle - truepoint* 3.14159265f * 2.f) * 50.f );
-			//float4 vOne = tex2D( MapTexture, v.vTexCoord.xy );
-			//float4 vTwo = tex2D( MapTexture, float2(v.vTexCoord.x + 0.5f, v.vTexCoord.y) );
-			//return lerp( vOne, vTwo, vLerp );
 		}	
 	]]
 

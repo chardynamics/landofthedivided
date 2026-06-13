@@ -482,7 +482,7 @@ PixelShader =
 			
 			lightingProperties._SpecularColor = vec3(vProperties.a);
 			#ifdef GLOSSINESS
-				lightingProperties._Glossiness = vProperties.g * 2048.0 * vProperties.g + 0.00001; // Small epsilon to avoid 0^0
+				lightingProperties._Glossiness = vProperties.g * 2560.0 * vProperties.g + 0.00001; // Small epsilon to avoid 0^0
 			#else
 				lightingProperties._Glossiness = SPECULAR_WIDTH;
 			#endif

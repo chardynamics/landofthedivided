@@ -1,9 +1,0 @@
-ARG_estates = {
-	enable = { always = yes }
-	stability_factor = ARG_status_dynmod_stab
-	political_power_gain = ARG_status_dynmod_pp
-	war_support_factor = ARG_status_dynmod_warsup
-	gdp_growth_modifier = ARG_status_dynmod_gdp_growth
-	experience_gain_army = ARG_status_dynmod_army_exp
-	command_power_gain = ARG_status_dynmod_comm_power
-}

@@ -55,7 +55,6 @@ scripted_gui = {
 
 		visible = {
 			is_controlled_by = ROOT
-			ROOT = { NOT = { is_Antarctic_nation = yes } }
 		}
 
 		properties = {

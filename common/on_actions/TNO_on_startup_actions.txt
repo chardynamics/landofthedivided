@@ -114,74 +114,13 @@ on_actions = {
 
 			#EVENTS
 			###WORLD EVENTS
-			every_country = {
-				limit = { is_ai = no }
-				news_event = { # TOKYO OLYMPICS
-					id = WORLD.581
-					days = 1027
-				}
-			}
-			every_country = {
-				limit = { is_ai = no }
-				news_event = { # 1970 WORLD CUP
-					id = WORLD.583
-					days = 3093
-				}
-			}
 
-			
 			# Tension Tab Setup
 			ZZZ = {
 				TNO_tension_setup = yes
 			}
 
 
-			ZZZ = {
-				# NOVELS IN 6 YEARS
-				random_list = {
-					1 = {
-						country_event = { id = novel.1 days = 2191 }
-					}
-					1 = {
-						country_event = { id = novel.2 days = 2191 }
-					}
-					1 = {
-						country_event = { id = novel.3 days = 2191 }
-					}
-					1 = {
-						country_event = { id = novel.4 days = 2191 }
-					}
-					1 = {
-						country_event = { id = novel.5 days = 2191 }
-					}
-				}
-				# NOVELS IN 12 YEARS
-				random_list = {
-					1 = {
-						country_event = { id = novel.10 days = 4383 }
-					}
-					1 = {
-						country_event = { id = novel.11 days = 4383 }
-					}
-					1 = {
-						country_event = { id = novel.12 days = 4383 }
-					}
-					1 = {
-						country_event = { id = novel.13 days = 4383 }
-					}
-				}
-			}
-			# Finland
-			
-			ZZZ = {
-				country_event = { id = sho.21 days = 2920 } # Johor reunification
-			}
-
-			# Mexico
-			
-			CUB = {
-				country_event = { id = CUB_scripted.1 }
-			}
 
 			#Fixing synth rubber tech bug; effect can only applied when research is completed
 			#This on action 're-researches' the techs in question to properly grant the effect
@@ -224,7 +163,6 @@ on_actions = {
 			}
 
 			ZZZ = {
-				country_event = { id = misc.5 days = 180 }
 				TNO_Initialize_Tips_and_Tricks = yes
 			}
 		}

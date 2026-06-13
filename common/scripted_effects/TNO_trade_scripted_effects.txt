@@ -786,22 +786,6 @@ update_superpower_embargoes = {
 # To be called when you want a country to cancel embargoes with supoerpower spheres, for example when
 # England leaves the pakt
 clear_superpower_embargoes = {
-	for_each_scope_loop = {
-		array = USA.faction_members
-		clear_embargo_PREV_mutual = yes
-	}
-	for_each_scope_loop = {
-		array = JAP.faction_members
-		clear_embargo_PREV_mutual = yes
-	}
-	for_each_scope_loop = {
-		array = GER.faction_members
-		clear_embargo_PREV_mutual = yes
-	}
-	for_each_scope_loop = {
-		array = ITA.faction_members
-		clear_embargo_PREV_mutual = yes
-	}
 }
 # Used for getting rid of embargoes between 1 nation and an entire sphere, called on the sphere leader
 clear_sphere_embargo_with_PREV = {
@@ -1030,20 +1014,6 @@ log_trade_nations_construct = {
 # This should be run by ZZZ
 setup_market_ZZZ = {
 	# Starting Insularities
-	USA = { set_variable = { SPHERE_INSULARITY = 5 } }
-	GER = { set_variable = { SPHERE_INSULARITY = 25 } }
-	JAP = { set_variable = { SPHERE_INSULARITY = 15 } }
-	IBR = { set_variable = { SPHERE_INSULARITY = 10 } }
-	TUR = { set_variable = { SPHERE_INSULARITY = 10 } }
-	ITA = { set_variable = { SPHERE_INSULARITY = 10 } }
-	ARG = { set_variable = { SPHERE_INSULARITY = 10 } }
-	BRA = { set_variable = { SPHERE_INSULARITY = 10 } }
-	ADN = { set_variable = { SPHERE_INSULARITY = 10 } }
-	CME = { set_variable = { SPHERE_INSULARITY = 15 } }
-	SEN = { set_variable = { SPHERE_INSULARITY = 10 } }
-	FFR = { set_variable = { SPHERE_INSULARITY = 10 } }
-	CAO = { set_variable = { SPHERE_INSULARITY = 15 } }
-	ENG = { set_variable = { SPHERE_INSULARITY = 5 } }
 
 	ZZZ = {
 		every_other_country = {

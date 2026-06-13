@@ -20,38 +20,7 @@ end_fiscal_crisis= {
 	remove_dynamic_modifier = { modifier = combatting_fiscal_crisis }
 	if = {
 		limit = {
-			NOT = {
-				tag = CHI
-				tag = GNG
-			}
 		}
 		country_lock_all_division_template = no
-	}
-}
-
-TNO_GRO_fiscal_crisis_out = {
-		if = { 
-		limit = { 
-			OR = {
-				has_cosmetic_tag = GRO_REICHSSTAAT
-				has_cosmetic_tag = GRO_REICHSSTAAT_2
-				has_cosmetic_tag = GRO_REICHSSTAAT_3
-			}
-			has_country_leader = {
-				character = GRO_Hans_Huttig
-				ruling_only = yes
-			}
-		}
-		set_variable = { GRO_fiscal_crisis_devastation = 0 }
-		add_stability = 0.2
-	}
-}
-
-TNO_CHI_fiscal_crisis_out = {
-	if = {
-		limit = {
-			NOT = { has_global_flag = CHI_Western_Insurrection_Crisis }
-		}
-		country_lock_all_division_template = yes
 	}
 }

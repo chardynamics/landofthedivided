@@ -99,7 +99,7 @@ static const float3 FAKE_CUBEMAP_COLOR 			= float3(0.0f, 0.0f, 0.0f);
 // SEVERE_WINTER_VALUE = ###,					defines.lua   (reload defines)
 
 
-static const float 	BORDER_TILE					= 0.4f;
+static const float 	BORDER_TILE					= 0.9f; //0.3f
 // BORDER_WIDTH		= ###						defines.lua   (reload defines)
 
 
@@ -129,7 +129,7 @@ static const float 	TREE_ROUGHNESS = 0.6f;
 
 //static const float  WATER_TILE					= 4.0f;
 static const float  WATER_TIME_SCALE			= 1.0f / 50.0f;
-static const float  WATER_HEIGHT = 9.5f;
+static const float  WATER_HEIGHT = 10.0f; // was 9.5f
 static const float  WATER_HEIGHT_RECP = 1.0f / WATER_HEIGHT;
 static const float  WATER_HEIGHT_RECP_SQUARED = WATER_HEIGHT_RECP * WATER_HEIGHT_RECP;
 
@@ -196,17 +196,17 @@ static const float GB_CAM_MAX = 1.0f;
 static const float GB_CAM_MAX_FILLING_CLAMP = 1.0f; // 0 to 1 value for clamping the fill when camera is at max distance
 static const float GB_THRESHOLD = 0.01f; // interpolation time
 static const float GB_THRESHOLD2 = 0.15f; // interpolation time
-//static const float3 GB_OUTLINE_COLOR = float3( 0.0f, 0.0f, 0.0f );
-static const float GB_OUTLINE_CUTOFF_SEA = 0.990f; // Magic number to balance cutoff on edges without neighbor (over Sea)
-static const float GB_OPACITY_NEAR = 1.0f; // Transparency when camera is near
-static const float GB_OPACITY_FAR = 1.0f;  // Transparency when camera is far
+static const float3 GB_OUTLINE_COLOR = float3( 0.694f, 0.694f, 0.694f );
+static const float GB_OUTLINE_CUTOFF_SEA = 0.990f; // was 0.990f, Magic number to balance cutoff on edges without neighbor (over Sea)
+static const float GB_OPACITY_NEAR = 1.05f; // was 1.0f, Transparency when camera is near
+static const float GB_OPACITY_FAR = 1.05f;  // was 1.0f, Transparency when camera is far
 static const float BORDER_NIGHT_DESATURATION_MAX = 0.2f; // how much border colors can get desaturated at night. 1.0f is full grey
 static const float BORDER_FOW_REMOVAL_FACTOR = 1.0f; // How much of the FOW that is removed from the borders. 1.0f is no FOW
 static const float BORDER_LIGHT_REMOVAL_FACTOR = 0.8f; // How much of the light calculations that are removed from the borders. 1.0f is no light
 static const float GB_STRENGTH_CH1 = 0.8; // Opacity of bottom layer
 static const float GB_STRENGTH_CH2 = 0.8; // Opacity of top layer
 static const float GB_FIRST_LAYER_PRIORITY = 0.4; // Priority for first/second layer when both are active at the same pixel
-static const float BORDER_MAP_TILE = 18000.0f;
+static const float BORDER_MAP_TILE = 18000.0f; //18000.0f
 
 // --------------------------------------------------------------
 // ------------------    SECONDARY COLOR MAP   ------------------

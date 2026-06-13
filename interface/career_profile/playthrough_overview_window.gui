@@ -123,7 +123,7 @@ guiTypes = {
 
 		#--------------------- END GAME VIEW BUTTONS ---------------------
 		
-		ButtonType = {
+		buttonType = {
 			name = "continue_button"
 			position = { x = 135 y = -35 }
 			orientation = center_down
@@ -134,7 +134,7 @@ guiTypes = {
 			pdx_tooltip = "ENDGAME_CONTINUE"
 		}
 
-		ButtonType = {
+		buttonType = {
 			name = "quit_button"
 			position = { x = 345 y = -35 }
 			orientation = center_down

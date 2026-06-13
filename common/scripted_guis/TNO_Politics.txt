@@ -18,252 +18,25 @@ scripted_gui = {
 				is_in_faction = yes
 				is_subject = yes
 			}
-			faction_icon_einheitspakt_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				GER = { is_faction_leader = yes }
-				OR = {
-					tag = GER
-					is_in_faction_with = GER
-				}
-			}
-			faction_icon_as_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				GRO = { is_faction_leader = yes }
-				OR = {
-					tag = GRO
-					is_in_faction_with = GRO
-				}
-			}
-			faction_icon_coprosperity_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				JAP = { is_faction_leader = yes }
-				OR = {
-					tag = JAP
-					is_in_faction_with = JAP
-				}
-			}
-			faction_icon_OFN_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				USA = { is_faction_leader = yes }
-				OR = {
-					tag = USA
-					is_in_faction_with = USA
-				}
-			}
-			faction_icon_UA_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				URL = { is_faction_leader = yes }
-				OR = {
-					tag = URL
-					is_in_faction_with = URL
-				}
-			}
-			faction_icon_FI_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				has_global_flag = FOURTH_INTERNATIONAL_FOUNDED
-				has_country_flag = FOURTH_INTERNATIONAL_MEMBER
-				OR = {
-					has_government = socialist
-					has_government = communist
-				}
-			}
-			faction_icon_triumvirate_visible = {
-				is_in_faction = yes
-				ITA = { is_faction_leader = yes }
-				OR = {
-					tag = ITA
-					is_in_faction_with = ITA
-				}
-				NOT = { has_global_flag = Triumvirate_Collapse }
-			}
-			faction_icon_mediterranean_bloc_visible = {
-				is_in_faction = yes
-				ITA = {
-					is_faction_leader = yes
-					has_idea = ITA_Mediterranean_Bloc_Leader
-				}
-				OR = {
-					tag = ITA
-					is_in_faction_with = ITA
-				}
-			}
-			faction_icon_imperial_alliance_visible = {
-				is_in_faction = yes
-				ITA = {
-					is_faction_leader = yes
-					has_idea = ITA_Imperial_Alliance_Leader
-				}
-				OR = {
-					tag = ITA
-					is_in_faction_with = ITA
-				}
-			}
-			faction_icon_rome_pact_visible = {
-				is_in_faction = yes
-				ITA = {
-					is_faction_leader = yes
-					has_idea = ITA_Rome_Pact_Leader
-				}
-				OR = {
-					tag = ITA
-					is_in_faction_with = ITA
-				}
-			}
-			faction_icon_NLF_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				CHI = { is_faction_leader = yes }
-				OR = {
-					tag = CHI
-					is_in_faction_with = CHI
-				}
-			}
-			faction_icon_PALF_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				has_country_flag = PALF_MEMBER
-			}
-			faction_icon_FMA_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				has_country_flag = FMA_MEMBER
-			}
-			faction_icon_FRU_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				has_country_flag = FRU_MEMBER
-			}
-			faction_icon_WAA_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				has_country_flag = WAA_MEMBER
-			}
-			faction_icon_WAF_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				has_country_flag = WAF_MEMBER
-			}
-			faction_icon_Mano_visible = {
-				is_in_faction = yes
-				#is_subject = no
-				has_idea = Mano_Member
-			}
-			faction_icon_Haitian_United_Front_visible = {
-				is_in_faction = yes
-				has_idea = HUF_Faction
-			}
-			faction_icon_Hispaniola_Front_visible = {
-				is_in_faction = yes
-				has_idea = HRF_Faction
-			}
-			faction_icon_Central_Asia_Defense_League_visible = {
-				is_in_faction = yes
-				has_country_flag = CADL_MEMBER
-			}
-			faction_icon_Central_Asian_Solidarity_Alliance_visible = {
-				is_in_faction = yes
-				has_country_flag = CASA_MEMBER
-			}
-			faction_icon_Orungu_Alliance_visible = {
-				is_in_faction = yes
-				has_country_flag = CAL_MEMBER
-			}
-			faction_icon_Revolutionary_Iranian_Liberation_Front_visible = {
-				is_in_faction = yes
-				has_country_flag = PER_RILF_MEMBER
-			}
-			faction_icon_Siberian_Mutual_Assistance_Compact_visible = {
-				is_in_faction = yes
-				has_country_flag = SMAC_MEMBER
-			}
-			faction_icon_Unitarian_Bolivarian_Alliance_visible = {
-				is_in_faction = yes
-				has_country_flag = UBA_MEMBER
-			}
 			faction_icon_generic_visible = {
 				is_in_faction = yes
 				#is_subject = no
 				NOT = {
 					AND = {
-						GER = { is_faction_leader = yes }
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-					}
-					AND = {
-						GRO = { is_faction_leader = yes }
-						OR = {
-							tag = GRO
-							is_in_faction_with = GRO
-						}
-					}
-					AND = {
-						JAP = { is_faction_leader = yes }
-						OR = {
-							tag = JAP
-							is_in_faction_with = JAP
-						}
-					}
-					AND = {
-						USA = { is_faction_leader = yes }
-						OR = {
-							tag = USA
-							is_in_faction_with = USA
-						}
-					}
-					AND = {
-						ITA = { is_faction_leader = yes }
-						OR = {
-							tag = ITA
-							is_in_faction_with = ITA
-						}
-					}
-					AND = {
-						CHI = { is_faction_leader = yes }
-						OR = {
-							tag = CHI
-							is_in_faction_with = CHI
-						}
-					}
-					AND = {
 						URL = { is_faction_leader = yes }
 						OR = {
-							tag = URL
-							is_in_faction_with = URL
+							tag = CAN
+							is_in_faction_with = CAN
 						}
 					}
-					has_country_flag = PALF_MEMBER
-					has_country_flag = FMA_MEMBER
-					has_country_flag = FRU_MEMBER
-					has_country_flag = WAA_MEMBER
-					has_country_flag = WAF_MEMBER
-					has_country_flag = CADL_MEMBER
-					has_country_flag = CASA_MEMBER
-					has_country_flag = CAL_MEMBER
-					has_country_flag = PER_RILF_MEMBER
-					has_country_flag = SMAC_MEMBER
 					has_country_flag = UBA_MEMBER
-					has_idea = Mano_Member
-					has_idea = HUF_Faction
-					has_idea = HRF_Faction
+					#has_idea = HRF_Faction
 				}
 			}
 			current_faction_status_visible = {
 				OR = {
 					is_in_faction = yes
-					has_idea = Pakt_Observer
-					has_idea = Sphere_Observer
-					has_idea = OFN_Observer
-					has_idea = TRI_Observer
-					has_idea = NLF_Member
-					has_idea = OFN_Suspended_Member
+					#has_idea = OFN_Suspended_Member
 				}
 			}
 		}

@@ -1,0 +1,165 @@
+﻿l_english:
+TNO_alert_tooltip: "§Y[Get_TNO_alert_name]§!"
+TNO_alert_desc: "§B[Get_TNO_alert_description]§!\n[!alert_click]\n§GRight-click to dismiss§!"
+
+TNO_alert_name_missing: "Name missing"
+TNO_alert_desc_missing: "Description missing"
+
+### ALERTS ###
+## GENERAL ##
+Alert_UnallocatedPU: "Free Production Units"
+Alert_UnallocatedPU_Desc: "We have free §GProduction Units§! which can be allocated."
+
+Alert_LostPU: "Lost Production Units"
+Alert_LostPU_Desc: "Due to changes in our economy, we have lost §GProduction Units§! compared to last month. We may alter our allocation."
+
+Alert_FiscalCrisis: "Fiscal Crisis Imminent"
+Alert_FiscalCrisis_Desc: "A Fiscal Crisis is imminent as our debt has reached an unsustainable level.\n§RA Fiscal Crisis will begin in approximately §Y[?Months_Till_Fiscal]§! §Bmonths§!.§!"
+
+Alert_HighTension: "High Tension Between Superpowers"
+Alert_HighTension_Desc: "Our Tension with an opposing Superpower is §Rover 90!§!"
+
+Alert_CGEmpty: "Consumer Goods Shortage!" 
+Alert_CGEmpty_Desc: "Our §YConsumer Goods§! stockpiles are §Rempty.§!\n"
+
+Alert_Proxy_War_Active: "Global Conflict(s) Active"
+Alert_Proxy_War_Active_Desc: "We have global conflict(s) active. Check the §YForeign Policy§! tab accessed via the country's politics menu."
+
+Alert_CreditRating_Improved: "Credit Rating Improved"
+Alert_CreditRating_Improved_Desc: "Our credit has improved to [GetCreditRatingValue], which grants lower interest rates and a higher debt ceiling!"
+
+Alert_CreditRating_Degraded: "Credit Rating Degraded"
+Alert_CreditRating_Degraded_Desc: "Our credit has degraded to [GetCreditRatingValue], which causes higher interest rates and a lower debt ceiling!"
+
+Alert_Lacking_Power: "National Power Outages"
+Alert_Lacking_Power_Desc: "We lack sufficient §YGrid Power§! to fully utilize our §GProduction Units§!.\n\nWe must generate more §YGrid Power§! by constructing power plants using §GCivilian Factories§!, lowering §OCivilian Consumption§! in the Production Units menu, or depowering some of our states by clicking the §YToggle Power§! icon in the State Information menu.\n\nUtilizing the §YCentral Bank Policy§! "Power Things Up" can also help alleviate our situation."
+
+Alert_Balanced_Power: "Looming National Power Outages"
+Alert_Balanced_Power_Desc: "At our current §YGDP Growth§! level, we are on track to §Rsuffer§! §eNational Power Outages§! within the next 6 §Bmonths§!.\n\nTo prevent it, we must generate more §YGrid Power§! by constructing more power plants using §GCivilian Factories§!, lowering §OCivilian Consumption§! in the Production Units menu, or depowering some of our states by clicking the §YToggle Power§! icon in the State Information menu.\n\nUtilizing the §YCentral Bank Policy§! "Power Things Up" can also alleviate our situation."
+
+## REICH ##
+# Bormann alerts
+Alert_KartenhausAction: "Kartenhaus Interactions Available"
+Alert_KartenhausAction_Desc: "We may now take another action targeting one of the Special Interest Groups."
+
+# Britain alerts
+Alert_SCO_ArmedForces_Paranoia: "Suspicious Armed Forces Activity"
+Alert_SCO_ArmedForces_Paranoia_Desc: "The Armed Forces of Scotland are doing suspicious activities, use the Decisions menu to interact with the situation."
+
+Alert_ENG_Election: "Election Action Available"
+Alert_ENG_Election_Desc: "We may now carry out political campaigning for the election."
+
+Alert_BRI_ChaosThreshold: "§RChaos§! Threshold Reached"
+Alert_BRI_ChaosThreshold_Desc: "Our Chaos level has reached a new threshold.\n\n§YEffects:§!"
+
+# Ukraine alerts
+Alert_UKR_BreadBasket_GovControl: "Low Government Control"
+Alert_UKR_BreadBasket_GovControl_Desc: "Insurgents have managed to secure majority control over the following region(s):"
+Alert_UKR_Breadbasket_GovControl_entry: "- §Y[?UKR_bb_map_array^temp_govcontrol_idx.GetName]§! ([?check_resistance_control:resistance_control^0|%%R0])"
+
+Alert_UKR_BreadBasket_ConsCycle: "Consumption Cycle Ending"
+Alert_UKR_BreadBasket_ConsCycle_Desc: "The Consumption Cycle will be ending soon."
+
+Alert_UKR_BreadBasket_ActionAvailable: "Breadbasket Action Available"
+Alert_UKR_BreadBasket_ActionAvailable_Desc: "An action in the Breadbasket is available."
+
+Alert_UKR_BreadBasket_DecisiveRegionWarning: "Opposition Group Emboldened"
+Alert_UKR_BreadBasket_DecisiveRegionWarning_Desc: "An opposition group in the Breadbasket has gathered enough control in their decisive region(s), making the effects of each §eactivity cycle§! worse."
+
+## OFN ##
+# US alerts
+Alert_US_Election: "Campaign Available"
+Alert_US_Election_Desc: "We may now campaign for the elections, use the GUI to pick a focus region."
+
+## LATAM ##
+# LATAM alerts
+Alert_LATAM_AndeanTreaty: "Transandean Treaty Negotiation Available"
+Alert_LATAM_AndeanTreaty_Desc: "We can now take a decision in the new round of the Transandean Treaty negotiation.\nOpen the Global Conflicts interface to take a decision."
+
+Alert_LATAM_Mining_Wars: "Mining Wars Action Available"
+Alert_LATAM_Mining_Wars_Desc: "We can now take a decision in the Mining Wars.\nOpen the Global Conflicts interface to take a decision."
+
+Alert_LATAM_Cayenne_Referendum: "Cayenne Referendum Decisions Available"
+Alert_LATAM_Cayenne_Referendum_Desc: "We can now take a decision in the Cayenne Referendum.\nOpen the Global Conflicts interface to take a decision."
+
+Alert_LATAM_Bush_War: "Bush War Action Available"
+Alert_LATAM_Bush_War_Desc: "We can now take a decision in the Bush War.\nOpen the Global Conflicts interface to take a decision."
+
+Alert_LATAM_SACW_Tensions_Cooling: "South American Cold War Tensions Have Cooled Down"
+Alert_LATAM_SACW_Tensions_Cooling_Desc: "The effects of [GetSAColdWarTensionLevel] tension are:\n[GetSAColdWarTensionLevelEffects]"
+
+Alert_LATAM_SACW_Tensions_Heating: "South American Cold War Tensions Have Heated Up"
+Alert_LATAM_SACW_Tensions_Heating_Desc: "The effects of [GetSAColdWarTensionLevel] tension are:\n[GetSAColdWarTensionLevelEffects]"
+
+Alert_LATAM_SACW_Victory_Level_Change: "The South American Cold War Victory Level Has Changed"
+Alert_LATAM_SACW_Victory_Level_Change_Desc: "We are currently [GetSACWCWSPercentage] - the §Yeffects§! of this are:\n[GetSACWCWSPercentageEffects]"
+
+# Brazil alerts
+Alert_BRA_SenadoVoting: "Senado Campaign Available"
+Alert_BRA_SenadoVoting_Desc: "We can now run another campaign in the Senado race."
+
+Alert_BRA_PresVoting: "Presidential Campaign Available"
+Alert_BRA_PresVoting_Desc: "We can now run another campaign in the presidential race."
+
+Alert_BRA_PLVoting: "Senado Vote Active"
+Alert_BRA_PLVoting_Desc: "[BRA_pl_current_bill] is currently being voted on in the Senado, use the Decisions menu to negotiate for votes."
+
+Alert_BRA_Development: "Development Edict Available"
+Alert_BRA_Development_Desc: "We can now enact another development edict."
+
+Alert_MEX_Project: "Project Available"
+Alert_MEX_Project_Desc: "§gWe can start working on new projects in the following§! §Y[?MEX_region_project_alert_array^num]§! §g[GetMEXEconProjectAlertRegions]: §!"
+Alert_MEX_Project_entry: "- §g[GetMEXEconRegionName]§!"
+
+Alert_MEX_Debt: "Debt Level Imminent"
+Alert_MEX_Debt_Desc: "§gThe following region(s) are at 90% or more of their debt capacity: §!"
+Alert_MEX_Debt_entry: "- §g[GetMEXEconRegionName]§!"
+
+## MEDITERRANEAN ##
+# Italy alerts
+Alert_GreatGame: "New Great Game Turn"
+Alert_GreatGame_Desc: "A new Great Game Turn has begun, use the Decisions menu to manipulate the situation to our favor."
+
+# Iberia alerts
+Alert_AAS_Resources: "AAS Resources Available"
+Alert_AAS_Resources_Desc: "The AAS has new resources to crush the separatist menace, use the AAS screen to manage them."
+
+Alert_IBR_Wars_request_accepted: "Aid Request Accepted"
+Alert_IBR_Wars_request_accepted_Desc: "[?alert_data.GetNameWithFlag] has accepted and sent our request for aid.\nWe may now make them another aid request."
+Alert_IBR_Wars_request_rejected: "Aid Request Rejected"
+Alert_IBR_Wars_request_rejected_Desc: "[?alert_data.GetNameWithFlag] has rejected our request for aid.\nWe may now make them another aid request."
+
+## MIDDLE EAST ##
+
+## AFRICA ##
+
+## RUSSIA ##
+# Smuta alerts
+Alert_RUS_Smuta_Chaos: "Critical Level of £smuta_chaos §RCivilian Chaos§!!"
+Alert_RUS_Smuta_Chaos_Desc: "We have more than §Y250§! of £smuta_chaos §RCivilian Chaos§! in the £smuta §fSmuta§! Decision Category!\nThis prevents us from attacking other §fContenders§! even if we have enough supplies."
+
+Alert_RUS_Smuta_Supplies: "£smuta_supplies §sMilitary Supplies§! Amassed"
+Alert_RUS_Smuta_Supplies_Desc: "We have more than §Y80%§! of £smuta_supplies §sMilitary Supplies§! in £smuta §fSmuta§! Decision Category!\nThis allows us to attack other §fContenders§!."
+
+Alert_RUS_Smuta_War: "Rumours of Attack!"
+Alert_RUS_Smuta_War_Desc: "A neighbouring §fContender§! started to prepare §Rwar§! on us. We do not know what §fContender§! it is."
+
+## ASIA ##
+# Guangdong alerts
+Alert_GNG_LegCo_Bill: "§SLegCo§! Bill in Voting"
+Alert_GNG_LegCo_Bill_Desc: "§FWe are currently voting on the [GNG_legco_bill_tooltip_dynamic_current] [GNG_get_legco_current_bill_tooltip]§! in the £GNG_legco_texticon §SLegislative Council§!.§!"
+
+Alert_GNG_Product_Cycle: "§YProduct Cycle§! Active"
+Alert_GNG_Product_Cycle_Desc: "§FWe are currently subsidizing the §m[GNG_products_current_product_title]§! by [GNG_get_product_cycle_company].§!"
+
+Alert_GNG_Economy_Check_Soon: "§YEconomic Check§! §RSoon§!"
+Alert_GNG_Economy_Check_Soon_Desc: "§FIn less than §Ytwo months§!, we need to have a §YGDP§! of §Y[?GNG_GDP_Goal|2]B§!.§!"
+
+Alert_GNG_PTRG: "§YPTRG§! Active"
+Alert_GNG_PTRG_Desc: "§FThe §YPTRG§! is currently §Yactive in service§!.§!"
+
+## ANTARCTICA ##
+Alert_ODF_Task_Forces: "Task Forces Information"
+Alert_ODF_Task_Forces_Desc: "We have [?Antarctic_Intelligence_Agents_Free] Task Forces available for use in the Grid System GUI.\n"
+Alert_ODF_Low_Stat: "Low Stat"
+Alert_ODF_Low_Stat_Desc: "One of our stats (militarization, legitimacy, or supply) is under 25.\n"
