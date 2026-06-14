@@ -1,8 +1,16 @@
 state={
 	id=50
 	name="STATE_50"
+
+	history = {
+		owner = PRC
+		add_core_of = PRC
+		buildings = {
+			
+		}
+	}
 	provinces={
-		123 6520 8166 8175 
+		123 6520 
 	}
 	manpower=25000
 	buildings_max_level_factor=1
