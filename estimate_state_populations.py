@@ -228,6 +228,7 @@ EXACT_POPULATIONS = {
     
     # Arkansas cities & counties
     "little rock, ar": 183133,
+    "little rock, ak": 183133,  # mod has AK but should be AR; use AR population
     "fayetteville, ar": 58047,
     "fort smith, ar": 80268,
     "jonesboro, ar": 55515,
@@ -1061,7 +1062,383 @@ EXACT_POPULATIONS = {
     
     # Navajo Nation & special regions
     "navajo nation, az": 174000,
+    
+    # Canadian cities (approx. 2000-era populations)
+    "toronto, on": 2481494,
+    "montreal, qc": 1039534,
+    "vancouver, bc": 545671,
+    "calgary, ab": 878866,
+    "edmonton, ab": 666104,
+    "winnipeg, mb": 619544,
+    "quebec, qc": 167517,
+    "quebec city, qc": 167517,
+    "halifax, ns": 359111,
+    "saskatoon, sk": 196811,
+    "regina, sk": 179246,
+    "brandon, mb": 39175,
+    "st. john, nb": 68352,
+    "saint john, nb": 68352,
+    "vancouver island, bc": 545671,
+    "ile de montreal, qc": 1039534,
+    "ile jesus, qc": 600000,
+    
+    # Mexican cities (approx. 2000-era populations)
+    "mexico city, mx": 8605239,
+    "guadalajara, ja": 1646183,
+    "monterrey, nl": 1088996,
+    "matamoros, ta": 397645,
+    "matamoros, tm": 397645,
+    "durango, dg": 418410,
+    "zacatecas, za": 135293,
+    "zacatecas, zacatecas": 135293,
+    "pinos, zacatecas": 2000,
+    "merida, yucatan": 556622,
+    "cancun, quintana roo": 167732,
+    "mezquitic, ja": 14100,
+    "colotlan, ja": 16000,
+    "puerto vallarta, ja": 143000,
+    "gomez palacio, dg": 190000,
+    "fresnillo, za": 124000,
+    "san luis potosi, sl": 245000,
+    "ciudad valles, sl": 112000,
+    "axtla de terrazas, sl": 30000,
+    "monctezuma, sl": 12000,
+    "laredos, tm": 120000,
+    "ciudad victoria, tm": 272000,
+    "los mochis, si": 256000,
+    "mazatlan, si": 204000,
+    "el carrizo, si": 10000,
+    
+    # Puerto Rico cities
+    "ponce, pr": 166300,
+    "mayaguez, pr": 88930,
+    "arecibo, pr": 96000,
+    "guayama, pr": 76500,
+    "san juan, pr": 395000,
+    "vieques, pr": 9000,
+    "isla de culebra, pr": 1800,
+    "isla de mona, pr": 1000,
+    
+    # Bahamas locations
+    "freeport, bs": 19829,
+    "new providence, bs": 250000,
+    "eleuthera, bs": 10000,
+    "andros, bs": 8500,
+    "cat island, bs": 2733,
+    "san salvador, bs": 5553,
+    "long island, bs": 3120,
+    "great exuma, bs": 5590,
+    "crooked island, bs": 365,
+    "mayaguana, bs": 880,
+    "inagua, bs": 11000,
+    
+    # Dominican Republic locations
+    "maria trinidad sanchez, do": 74000,
+    "samana, do": 100000,
+    "monte cristi, do": 84500,
+    "puerto plata, do": 180000,
+    "duarte, do": 295000,
+    "el seybo, do": 183000,
+    "la altagracia, do": 273000,
+    "santiago, do": 475000,
+    "hato mayor, do": 86000,
+    "la vega, do": 226000,
+    "dajabon, do": 40000,
+    "santo domingo, do": 1000000,
+    "la romana, do": 146000,
+    "san pedro de macoris, do": 200000,
+    "azua, do": 121000,
+    "peravia, do": 146000,
+    "barahona, do": 124000,
+    "la estrelleta, do": 20000,
+    "san juan, do": 101000,
+    
+    # Quebec subdivisions
+    "vaudreuil-soulanges, qc": 150000,
+    "anticosti island, qc": 6500,
+    "eastern townships, qc": 220000,
+    "magdalen islands, qc": 12800,
+    "lac-des-eaux-mortes, qc": 5000,
+    "degelis, qc": 20000,
+    "monteregie, qc": 1400000,
+    "ile marie, qc": 10000,
+    "ile bizardl, qc": 40000,
+    "ile perrot, qc": 34000,
+    
+    # Some other Canadian cities
+    "edmundston, nb": 16000,
+    "hanover, mb": 18000,
+    "maple creek, mb": 2500,
+    "cypress, ab": 7000,
+
+    # Remaining exact/guesstimated city, county, island, and regional names
+    "labrador": 26000,
+    "saint-pierre-et-miquelon": 6109,
+    "oklahoma": 3450645,
+    "illinois": 12419293,
+    "district of columbia": 601723,
+    "northern saskatchwan": 200000,
+    "da": 25000,
+    "lake, ohio": 230000,
+    "yucatan": 1685228,
+    "queretaro": 1404306,
+    "grand island": 41000,
+    "us virgin islands": 108612,
+    "newberry, mi": 1200,
+    "saint ignace, mi": 2500,
+    "houghton, mi": 7600,
+    "hopkins, ky": 130000,
+    "kidney island, nu": 100,
+    "belcher islands, nu": 2500,
+    "platte, wi": 10000,
+    "ottumwa, ia": 28729,
+    "land between the lakes, tn": 30000,
+    "tippecanoe, in": 150000,
+    "wausau, wi": 38426,
+    "willis, nd": 1200,
+    "twin islands, nu": 200,
+    "kindersley, sk": 4500,
+    "akimiski island, nu": 50,
+    "scottsbluff, ne": 14716,
+    "saint pierre, fr": 4400,
+    "miquelon, fr": 1700,
+    "charlton island, nu": 20,
+    "east lansing, mi": 47905,
+    "twin falls, id": 30857,
+    "tuscaloosa, al": 70603,
+    "magladen islands, qc": 12800,
+    "ionia, mi": 7000,
+    "miles city, mt": 8548,
+    "western okanogan highlands, wa": 35000,
+    "mount pleasant, mi": 25000,
+    "sandpoint, id": 6485,
+    "saint francis, me": 500,
+    "willapa hills, wa": 12000,
+    "muskegon, mi": 39330,
+    "clay, mn": 53000,
+    "isanti, mn": 5000,
+    "saint cloud, mn": 60413,
+    "alger, mi": 10000,
+    "sugar island, mi": 500,
+    "superior, wi": 27260,
+    "grand isle, vt": 7000,
+    "powder river, mt": 5000,
+    "hayward, wi": 16000,
+    "drummond island, mi": 1000,
+    "mackinac island, mi": 500,
+    "mackinac city, mi": 1200,
+    "clearwater, mn": 2500,
+    "beaver island, mi": 600,
+    "iosco, mi": 12000,
+    "lewis, ny": 25000,
+    "old faithful, wy": 1000,
+    "troy, ny": 50000,
+    "baileys harbor, wi": 1000,
+    "grand traverse, mi": 80000,
+    "worchester, ma": 170000,
+    "saint paul, mn": 272235,
+    "onondaga, ny": 432000,
+    "murray, mn": 8000,
+    "huron, mi": 20000,
+    "mason, mi": 14000,
+    "windham, ny": 2200,
+    "hamburg, ny": 60000,
+    "oakland, mi": 1200000,
+    "st. clair, mi": 170000,
+    "allegheny, pa": 1281666,
+    "detroit metro, mi": 4400000,
+    "mason city, ia": 28153,
+    "kent, mi": 575000,
+    "long island, ny": 7500000,
+    "mckean, pa": 44000,
+    "south bairoil, wy": 200,
+    "northumberland, pa": 93000,
+    "superior, wy": 1000,
+    "wamsutter, wy": 200,
+    "rawlins, wy": 8700,
+    "lancester, pa": 55000,
+    "wheeling, oh": 26000,
+    "washington, pa": 55000,
+    "mount vernon, il": 7600,
+    "steamboat springs, co": 6300,
+    "saint anne, il": 5500,
+    "walden, co": 625,
+    "aberdeen, md": 16000,
+    "spotslyvania, va": 96000,
+    "jefferson, mo": 200000,
+    "trinidad, co": 9500,
+    "roanoake, va": 96000,
+    "washington, va": 55000,
+    "elizabeth city, nc": 17000,
+    "wake, nc": 627000,
+    "wayne, ky": 20000,
+    "owens island, ky": 100,
+    "tucumcari, nm": 6800,
+    "oklahoma panhandle, ok": 54000,
+    "onslow, nc": 150000,
+    "northern channel islands, ca": 2000,
+    "tiptonville, ky": 5000,
+    "randolph, ar": 8000,
+    "searcy, ar": 18300,
+    "whiteville, nc": 5200,
+    "saluda, nc": 700,
+    "southern channel islands, ca": 2000,
+    "morgan, al": 111000,
+    "plainville, tx": 1700,
+    "weldona, co": 200,
+    "yoakum, tx": 6500,
+    "vernon, tx": 12000,
+    "wichita falls, tx": 102000,
+    "watson, ar": 1000,
+    "texarkana, tx": 30000,
+    "san angelo, tx": 82000,
+    "ile dondaine, qc": 10000,
+    "stephenville, tx": 17000,
+    "dallas-fort worth, tx": 5100000,
+    "navarro, tx": 47000,
+    "reeves, tx": 12000,
+    "ciudad obregon, so": 200000,
+    "nogales, so": 117000,
+    "victoria, tx": 57000,
+    "yellowstone, wy": 1500,
+    "grand manan island, me": 2600,
+    "bar harbor, me": 6000,
+    "shiprock, nm": 8300,
+    "portland, tx": 12000,
+    "miami-dade, fl": 2253362,
+    "aransas, tx": 23000,
+    "sterling, co": 14000,
+    "guadalupe y calvo, ch": 40000,
+    "salinas, ca": 151000,
+    "los angeles metro, ca": 10400000,
+    "san diego metro, ca": 3000000,
+    "montemorelos, nl": 42000,
+    "santa rosa, ca": 138000,
+    "sacremento, ca": 407018,
+    "yreka, ca": 7686,
+    "sequoia, ca": 2000,
+    "santa barbara, ca": 88415,
+    "mayaguna, bs": 500,
+    "pinedale, wy": 1600,
+    "huntsville, tx": 4400,
+    "sidney, ne": 6000,
+    "matanzas, cu": 648000,
+    "villa clara, cu": 815000,
+    "mayabeque, cu": 420000,
+    "artemisa, cu": 500000,
+    "ciego de avila, cu": 300000,
+    "sancti spiritus, cu": 430000,
+    "pinar del rio, cu": 533000,
+    "jardines del rey, cu": 20000,
+    "yosemite, ca": 2000,
+    "camaguey, cu": 780000,
+    "susanville, ca": 14790,
+    "tecuala, na": 25000,
+    "holguin, cu": 1050000,
+    "nord-oueste, ht": 620000,
+    "isla de juventud, cu": 86000,
+    "santiago de cuba, cu": 430000,
+    "granma, cu": 800000,
+    "guayalejo, vc": 40000,
+    "centre, ht": 600000,
+    "tepic, na": 220000,
+    "san francisco metro, ca": 4500000,
+    "ouest, ht": 2700000,
+    "isla maria madre, na": 100,
+    "isla de la gonave, ht": 70000,
+    "huejutla de reyes, vc": 80000,
+    "pedernales, do": 54000,
+    "sud-est, ht": 680000,
+    "nippes, ht": 266000,
+    "alexandra, la": 47000,
+    "phillipsburg, mt": 3800,
+
+    # Canadian regional subdivisions (estimated % of province)
+    "northern alberta": 400000,
+    "northern british columbia": 300000,
+    "northern saskatchewan": 200000,
+    "north manitoba": 250000,
+    "central northern manitoba": 300000,
+    "eastern northern manitoba": 200000,
+    "southern manitoba": 350000,
+    "baja california sur": 423516,
+    "este de nayarit": 200000,
 }
+
+
+
+# Multiplier to add surrounding population when using a city as the main state name
+CITY_SURROUND_MULTIPLIER = 1.2
+
+# Map common 2-letter region codes to their canonical names used in EXACT_POPULATIONS
+STATE_CODE_MAP = {
+    # US
+    'al': 'alabama','ak': 'alaska','az': 'arizona','ar': 'arkansas','ca': 'california','co': 'colorado',
+    'ct': 'connecticut','de': 'delaware','fl': 'florida','ga': 'georgia','hi': 'hawaii','id': 'idaho',
+    'il': 'illinois','in': 'indiana','ia': 'iowa','ks': 'kansas','ky': 'kentucky','la': 'louisiana',
+    'me': 'maine','md': 'maryland','ma': 'massachusetts','mi': 'michigan','mn': 'minnesota','ms': 'mississippi',
+    'mo': 'missouri','mt': 'montana','ne': 'nebraska','nv': 'nevada','nh': 'new hampshire','nj': 'new jersey',
+    'nm': 'new mexico','ny': 'new york','nc': 'north carolina','nd': 'north dakota','oh': 'ohio','ok': 'oklahoma',
+    'or': 'oregon','pa': 'pennsylvania','ri': 'rhode island','sc': 'south carolina','sd': 'south dakota',
+    'tn': 'tennessee','tx': 'texas','ut': 'utah','vt': 'vermont','va': 'virginia','wa': 'washington','wv': 'west virginia',
+    'wi': 'wisconsin','wy': 'wyoming',
+    # Canada
+    'bc': 'british columbia','on': 'ontario','qc': 'quebec','ab': 'alberta','mb': 'manitoba','sk': 'saskatchewan',
+    'ns': 'nova scotia','nb': 'new brunswick','pe': 'prince edward island','nl': 'newfoundland',
+    # Mexico (common abbreviation)
+    'mx': 'mexico',
+}
+
+
+def adjust_province_residuals(rows):
+    # Build quick lookup: code -> rows where name ends with ", CODE" (case-insensitive)
+    code_groups = {}
+    for r in rows:
+        name = r['name'] or ''
+        parts = [p.strip() for p in name.split(',')]
+        if len(parts) >= 2:
+            code = parts[-1].lower()
+            code_groups.setdefault(code, []).append(r)
+
+    # For each code where we have a mapped province/state total, subtract assigned populations
+    for code, group in code_groups.items():
+        if code not in STATE_CODE_MAP:
+            continue
+        province_key = STATE_CODE_MAP[code]
+        province_total = EXACT_POPULATIONS.get(province_key)
+        if not province_total:
+            continue
+
+        # Find the row that refers to the entire province (exact match of name to province_key)
+        province_row = None
+        for r in rows:
+            rn = (r['name'] or '').strip().lower()
+            if rn == province_key:
+                province_row = r
+                break
+
+        # Sum assigned populations for group (excluding province_row itself)
+        assigned = 0
+        for r in group:
+            if province_row and r['id'] == province_row['id']:
+                continue
+            try:
+                val = int(r['estimated_population'])
+            except Exception:
+                val = 0
+            assigned += val
+
+        if province_row:
+            residual = int(province_total - assigned)
+            if residual > 0:
+                # Only overwrite if province had no better exact estimate or was a plain name
+                try:
+                    prev = int(province_row['estimated_population']) if province_row['estimated_population'] else 0
+                except Exception:
+                    prev = 0
+                province_row['estimated_population'] = residual
+                province_row['estimate_source'] = 'residual_subtraction'
+
 
 STATE_POPULATION_PATTERNS = [
     (re.compile(r"^(.+),\s*([A-Z]{2})$", re.IGNORECASE), "city_state"),
@@ -1089,6 +1466,63 @@ PLACEHOLDER_CITY_POPULATION = 25000
 PLACEHOLDER_COUNTY_POPULATION = 50000
 PLACEHOLDER_ISLAND_POPULATION = 10000
 PLACEHOLDER_RURAL_POPULATION = 10000
+PLACEHOLDER_PROVINCE_POPULATION = 1000000
+
+# Canonical province / state totals (approx. 2000/2001-era census where practical)
+# These are used to avoid treating provinces like Ontario as 25k city fallbacks.
+PROVINCE_POPULATIONS = {
+    # Canada (approx. 2001 census)
+    "ontario": 11410046,
+    "quebec": 7237479,
+    "british columbia": 3907738,
+    "british columbia, bc": 3907738,
+    "alberta": 2974806,
+    "manitoba": 1119516,
+    "saskatchewan": 978933,
+    "nova scotia": 908007,
+    "new brunswick": 729498,
+    "newfoundland": 512930,
+    "prince edward island": 135851,
+    "nunavut": 29474,
+    "northwest territories": 41462,
+    "yukon": 30372,
+
+    # Short-hand common names
+    "pei": 135851,
+    "new brunswick, nb": 729498,
+    "ontario, on": 11410046,
+}
+# Mexican states (approx. 2000 census values for common large states)
+PROVINCE_POPULATIONS.update({
+    "distrito federal": 8605239,
+    "mexico": 14007000,
+    "estado de mexico": 14007000,
+    "jalisco": 6221000,
+    "veracruz": 6241000,
+    "puebla": 5388000,
+    "guanajuato": 4121000,
+    "nuevo leon": 3450000,
+    "chiapas": 3676000,
+    "chihuahua": 3241000,
+    "oaxaca": 3245000,
+    "baja california": 2839000,
+    "sinaloa": 2512000,
+    "sonora": 2168000,
+    "tabasco": 1815000,
+    "hidalgo": 2350000,
+    "coahuila": 2298070,
+    "tamaulipas": 3017000,
+    "durango": 1632000,
+    "zacatecas": 1490000,
+    "nayarit": 934000,
+    "tlaxcala": 962000,
+    "querétaro": 1404000,
+    "colima": 567000,
+    "yucatán": 1658289,
+    "quintana roo": 872000,
+    "campéche": 753000,
+    "aguascalientes": 944000,
+})
 
 
 def parse_localisation(file_path):
@@ -1132,7 +1566,16 @@ def guess_population(name):
     key = normalize_key(name)
     if key.startswith("state_"):
         return None, "placeholder"
+    # If there's an exact population, and the name looks like a city ("City, ST"),
+    # apply a small multiplier to account for suburbs/surrounding metro area.
     if key in EXACT_POPULATIONS:
+        # detect city,state pattern
+        if "," in name and re.search(r",\s*[A-Za-z]{2}$", name):
+            try:
+                base = int(EXACT_POPULATIONS[key])
+                return int(base * CITY_SURROUND_MULTIPLIER), "exact_city_adj"
+            except Exception:
+                return EXACT_POPULATIONS[key], "exact"
         return EXACT_POPULATIONS[key], "exact"
 
     # Generic special-case rules
@@ -1163,6 +1606,10 @@ def guess_population(name):
     # State/province rules with exact matches
     if key in EXACT_POPULATIONS:
         return EXACT_POPULATIONS[key], "exact"
+
+    # Province-level explicit totals (Canada, etc.)
+    if key in PROVINCE_POPULATIONS:
+        return PROVINCE_POPULATIONS[key], "province_exact"
 
     # City / county heuristics
     for regex, kind in STATE_POPULATION_PATTERNS:
@@ -1255,6 +1702,8 @@ def main():
     args = parse_args()
     localisation_map = parse_localisation(Path(args.localisation))
     rows = collect_states(localisation_map, Path(args.state_dir))
+    # Post-process to distribute province/state totals minus assigned city/county populations
+    adjust_province_residuals(rows)
     write_csv(rows, Path(args.output))
     if args.verbose:
         print(f"Wrote {len(rows)} state estimate rows to {args.output}")

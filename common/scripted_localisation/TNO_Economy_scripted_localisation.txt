@@ -2005,47 +2005,7 @@ defined_text = {
 		localization_key = econ_poverty_rate_change_NOV_MC4_number_tt
 	}
 }
-#ideas
-defined_text = {
-	name = econ_poverty_rate_change_ENG_reconstruction_of_England_sl
-	text = {
-		trigger = { has_idea = ENG_reconstruction_of_England }
-		localization_key = econ_poverty_rate_change_ENG_reconstruction_of_England_tt
-	}
-}
-defined_text = {
-	name = econ_poverty_rate_change_ENG_Lying_In_Ruins_sl
-	text = {
-		trigger = { has_idea = ENG_Lying_In_Ruins }
-		localization_key = econ_poverty_rate_change_ENG_Lying_In_Ruins_tt
-	}
-}
-defined_text = {
-	name = econ_poverty_rate_change_FEN_Reconstruction_Of_England_sl
-	text = {
-		trigger = { has_idea = FEN_Reconstruction_Of_England }
-		localization_key = econ_poverty_rate_change_FEN_Reconstruction_Of_England_tt
-	}
-}
-defined_text = {
-	name = econ_poverty_rate_change_FEN_Food_Insecurity_sl
-	text = {
-		trigger = { has_idea = FEN_Food_Insecurity }
-		localization_key = econ_poverty_rate_change_FEN_Food_Insecurity_tt
-	}
-	text = {
-		trigger = { has_idea = FEN_Food_Insecurity_2 }
-		localization_key = econ_poverty_rate_change_FEN_Food_Insecurity_2_tt
-	}
-	text = {
-		trigger = { has_idea = FEN_Food_Insecurity_3 }
-		localization_key = econ_poverty_rate_change_FEN_Food_Insecurity_3_tt
-	}
-	text = {
-		trigger = { has_idea = FEN_Food_Insecurity_4 }
-		localization_key = econ_poverty_rate_change_FEN_Food_Insecurity_4_tt
-	}
-}
+
 defined_text = {
 	name = econ_poverty_rate_change_endsieg_sl
 	text = {
