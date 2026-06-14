@@ -1,6 +1,12 @@
 state={
 	id=230
 	name="STATE_230"
+
+	history={
+		buildings = {
+			infrastructure = 10
+		}
+	}
 	provinces={
 		6717 
 	}

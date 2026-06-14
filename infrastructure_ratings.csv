@@ -1,0 +1,780 @@
+id,file,name,land_pixels,road_pixels,density,rating,status
+1,history/states/1-State_1.txt,British Columbia,22483,12612,0.5609571676,6,measured
+2,history/states/2-State_2.txt,"Hot Springs, AR",3451,2010,0.5824398725,7,measured
+3,history/states/3-State_3.txt,"Joplin, MO",6718,3809,0.5669842215,6,measured
+4,history/states/4-State_4.txt,"Ponce, PR",922,504,0.5466377440,6,measured
+5,history/states/5-State_5.txt,"Mayaguez, PR",775,405,0.5225806452,6,measured
+6,history/states/6-State_6.txt,Northern Alberta,149772,26174,0.1747589670,2,measured
+7,history/states/7-State_7.txt,"Arecibo, PR",1139,665,0.5838454785,7,measured
+8,history/states/8-State_8.txt,North Manitoba,43455,1015,0.0233574963,0,measured
+9,history/states/9-State_9.txt,Quebec,440433,26835,0.0609286770,1,measured
+10,history/states/10-State_10.txt,Labrador,84214,3359,0.0398864797,1,measured
+11,history/states/11-State_11.txt,"Floyd County, KY",7807,5019,0.6428845908,7,measured
+12,history/states/12-State_12.txt,"Newberry, MI",4296,1166,0.2714152700,3,measured
+13,history/states/13-State_13.txt,"Saint Ignace, MI",1424,627,0.4403089888,5,measured
+14,history/states/14-State_14.txt,Central Northern Manitoba,61936,6530,0.1054314131,1,measured
+15,history/states/15-State_15.txt,"Springfield, MO",11651,5698,0.4890567333,6,measured
+16,history/states/16-State_16.txt,"Houghton, MI",4720,2588,0.5483050847,6,measured
+17,history/states/17-State_17.txt,"Moresby Island, BC",4404,433,0.0983197094,1,measured
+18,history/states/18-State_18.txt,"Shannon, MO",7136,3044,0.4265695067,5,measured
+19,history/states/19-State_19.txt,"Evansville, IN",3500,1978,0.5651428571,6,measured
+20,history/states/20-State_20.txt,"Hopkins, KY",4222,3297,0.7809095216,8,measured
+21,history/states/21-State_21.txt,"Bloomington, IN",4419,3142,0.7110205929,8,measured
+22,history/states/22-State_22.txt,"Poplar Bluff, MO",9287,4579,0.4930548078,6,measured
+23,history/states/23-State_23.txt,Northern British Columbia,158153,15531,0.0982023737,1,measured
+24,history/states/24-State_24.txt,"Louisville, KY",4566,3324,0.7279894875,8,measured
+25,history/states/25-State_25.txt,"St. Louis, MO",637,610,0.9576138148,10,measured
+26,history/states/26-State_26.txt,World Border,90112,0,0.0000000000,0,wasteland
+27,history/states/27-State_27.txt,"Harrisonville, MO",3077,992,0.3223919402,4,measured
+28,history/states/28-State_28.txt,"St. Joseph, MO",5109,3748,0.7336073596,8,measured
+29,history/states/29-State_29.txt,"Adalair, MO",13375,6504,0.4862803738,6,measured
+30,history/states/30-State_30.txt,Saint-Pierre-et-Miquelon,19526,1003,0.0513674076,1,measured
+31,history/states/31-State_31.txt,"Kidney Island, NU",20,0,0.0000000000,0,measured
+32,history/states/32-State_32.txt,"Tupelo, MS",8406,4292,0.5105876755,6,measured
+33,history/states/33-State_33.txt,"Etowah, AL",3971,2644,0.6658272475,7,measured
+34,history/states/34-State_34.txt,"Knox, IL",6856,3657,0.5334014002,6,measured
+35,history/states/35-State_35.txt,"Howard, IN",2608,1992,0.7638036810,8,measured
+36,history/states/36-State_36.txt,"Coeur d'Alene, ID",5491,1734,0.3157894737,4,measured
+37,history/states/37-State_37.txt,"Kankakee, IL",6396,3557,0.5561288305,6,measured
+38,history/states/38-State_38.txt,"Belcher Islands, NU",1117,0,0.0000000000,0,measured
+39,history/states/39-State_39.txt,"Christian, KY",3073,2542,0.8272046860,9,measured
+40,history/states/40-State_40.txt,Eastern Northern Manitoba,78867,462,0.0058579634,0,measured
+41,history/states/41-State_41.txt,"Peoria, IL",4719,3366,0.7132867133,8,measured
+42,history/states/42-State_42.txt,Newfoundland,48239,13449,0.2787993118,4,measured
+43,history/states/43-State_43.txt,"Oxford, MS",4213,2465,0.5850937574,7,measured
+44,history/states/44-State_44.txt,"El Dorado, AR",7585,5083,0.6701384311,7,measured
+45,history/states/45-State_45.txt,Oklahoma,19997,260,0.0130019503,0,measured
+46,history/states/46-State_46.txt,"Champaign, IL",7130,4076,0.5716690042,6,measured
+47,history/states/47-State_47.txt,"Little Rock, AR",2195,1028,0.4683371298,6,measured
+48,history/states/48-State_48.txt,"Woodward, OK",4208,2371,0.5634505703,6,measured
+49,history/states/49-State_49.txt,"Bowling Green, KY",4781,3100,0.6483999163,7,measured
+50,history/states/50-State_50.txt,"Guayama, PR",845,545,0.6449704142,7,measured
+51,history/states/51-State_51.txt,"Petersburg, IL",2418,1657,0.6852770885,8,measured
+52,history/states/52-State_52.txt,"Platte, WI",2660,1527,0.5740601504,7,measured
+53,history/states/53-State_53.txt,"Buncombe, NC",29570,0,0.0000000000,0,measured
+54,history/states/54-State_54.txt,"Ottumwa, IA",4826,2205,0.4569001243,5,measured
+55,history/states/55-State_55.txt,"Iowa City, IA",7899,4584,0.5803266236,7,measured
+56,history/states/56-State_56.txt,"Dubuque, IA",7535,3929,0.5214333112,6,measured
+57,history/states/57-State_57.txt,"Waterloo, IA",6112,3886,0.6357984293,7,measured
+58,history/states/58-State_58.txt,"Covington, KY",5157,4426,0.8582509211,9,measured
+59,history/states/59-State_59.txt,"Indianapolis, IN",3059,2805,0.9169663289,9,measured
+60,history/states/60-State_60.txt,"Des Moines, IA",7991,4165,0.5212113628,6,measured
+61,history/states/61-State_61.txt,Illinois,48,0,0.0000000000,0,measured
+62,history/states/62-State_62.txt,"Vancouver, BC",91129,23187,0.2544415060,3,measured
+63,history/states/63-State_63.txt,Northern Saskatchwan,132902,11651,0.0876660998,1,measured
+64,history/states/64-State_64.txt,"North Kansas City, MO",863,683,0.7914252607,8,measured
+65,history/states/65-State_65.txt,"Rochester, MN",5254,3615,0.6880472021,8,measured
+66,history/states/66-State_66.txt,"Milwaukee, WI",3534,3031,0.8576683645,9,measured
+67,history/states/67-State_67.txt,"Sioux City, IA",12452,6627,0.5322036621,6,measured
+68,history/states/68-State_68.txt,"Green Bay, WI",2778,2130,0.7667386609,8,measured
+69,history/states/69-State_69.txt,Ontario,376087,40433,0.1075096986,1,measured
+70,history/states/70-State_70.txt,"Jackson, TN",7009,4744,0.6768440576,7,measured
+71,history/states/71-State_71.txt,"Land Between The Lakes, TN",139,88,0.6330935252,7,measured
+72,history/states/72-State_72.txt,"Madison, WI",4998,3393,0.6788715486,7,measured
+73,history/states/73-State_73.txt,"Lexington, KY",465,459,0.9870967742,10,measured
+74,history/states/74-State_74.txt,"Kalamazoo, MI",3474,2047,0.5892343120,7,measured
+75,history/states/75-State_75.txt,"Eau Claire, WI",8610,4745,0.5511033682,6,measured
+76,history/states/76-State_76.txt,"Appleton, WI",3106,1708,0.5499034127,6,measured
+77,history/states/77-State_77.txt,"Kansas City, MO",1480,1223,0.8263513514,9,measured
+78,history/states/78-State_78.txt,"Tippecanoe, IN",3094,2478,0.8009049774,8,measured
+79,history/states/79-State_79.txt,"Oshkosh, WI",3692,1931,0.5230227519,6,measured
+80,history/states/80-State_80.txt,"Wausau, WI",3268,1557,0.4764381885,6,measured
+81,history/states/81-State_81.txt,"La Crosse, WI",5564,2898,0.5208483106,6,measured
+82,history/states/82-State_82.txt,"Minot, ND",8986,4189,0.4661695972,5,measured
+83,history/states/83-State_83.txt,"Delaware, IN",4387,3271,0.7456120356,8,measured
+84,history/states/84-State_84.txt,"Willis, ND",8200,1394,0.1700000000,2,measured
+85,history/states/85-State_85.txt,"Edmonton, AB",60114,11374,0.1892071730,2,measured
+86,history/states/86-State_86.txt,"De Witt, AR",2481,1528,0.6158806933,7,measured
+87,history/states/87-State_87.txt,"Fargo, ND",9254,2283,0.2467041279,3,measured
+88,history/states/88-State_88.txt,"Vancouver Island, BC",14719,3890,0.2642842584,3,measured
+89,history/states/89-State_89.txt,"Sioux Falls, SD",4601,2170,0.4716366007,6,measured
+90,history/states/90-State_90.txt,"Chico, CA",4206,1923,0.4572039943,5,measured
+91,history/states/91-State_91.txt,"Mitchell, SD",6968,3491,0.5010045924,6,measured
+92,history/states/92-State_92.txt,"Vaudreuil-Soulanges, QC",291,207,0.7113402062,8,measured
+93,history/states/93-State_93.txt,"Twin Islands, NU",54,0,0.0000000000,0,measured
+94,history/states/94-State_94.txt,"Kindersley, SK",22948,5634,0.2455115914,3,measured
+95,history/states/95-State_95.txt,"Saskatoon, SK",92401,22103,0.2392073679,3,measured
+96,history/states/96-State_96.txt,Guantanamo Bay,871,218,0.2502870264,3,measured
+97,history/states/97-State_97.txt,"Ann Arbor, MI",2564,2046,0.7979719189,8,measured
+98,history/states/98-State_98.txt,"Brookings, SD",5736,2377,0.4144002789,5,measured
+99,history/states/99-State_99.txt,"Rapid City, SD",7068,4118,0.5826259196,7,measured
+100,history/states/100-State_100.txt,"Winnipeg, MB",42952,12318,0.2867852486,4,measured
+101,history/states/101-State_101.txt,"Birmingham, AL",3204,2589,0.8080524345,9,measured
+102,history/states/102-State_102.txt,"Dickinson, ND",11995,2687,0.2240100042,3,measured
+103,history/states/103-State_103.txt,"Pierre, SD",6798,2249,0.3308325978,4,measured
+104,history/states/104-State_104.txt,"Akimiski Island, NU",1341,0,0.0000000000,0,measured
+105,history/states/105-State_105.txt,"Beatrice, NE",3870,1979,0.5113695090,6,measured
+106,history/states/106-State_106.txt,"Pine Bluff, AR",3942,2960,0.7508878742,8,measured
+107,history/states/107-State_107.txt,"Anticosti Island, QC",3473,16,0.0046069680,0,measured
+108,history/states/108-State_108.txt,"Scottsbluff, NE",6615,2208,0.3337868481,4,measured
+109,history/states/109-State_109.txt,"Fremont, NE",8888,4260,0.4792979298,6,measured
+110,history/states/110-State_110.txt,"Grand Island, NE",15254,4335,0.2841877540,4,measured
+111,history/states/111-State_111.txt,"Meridian, MS",8342,3200,0.3836010549,5,measured
+112,history/states/112-State_112.txt,"Salina, KS",8041,3863,0.4804128840,6,measured
+113,history/states/113-State_113.txt,"Cowley, KS",8727,4255,0.4875673198,6,measured
+114,history/states/114-State_114.txt,"Saint Pierre, FR",96,0,0.0000000000,0,measured
+115,history/states/115-State_115.txt,"Charlton Island, NU",123,0,0.0000000000,0,measured
+116,history/states/116-State_116.txt,"East Lansing, MI",1692,1325,0.7830969267,8,measured
+117,history/states/117-State_117.txt,"Calgary, AB",25676,5336,0.2078205328,3,measured
+118,history/states/118-State_118.txt,"Miquelon, FR",15,0,0.0000000000,0,measured
+119,history/states/119-State_119.txt,"Durango, CO",7008,2237,0.3192066210,4,measured
+120,history/states/120-State_120.txt,"Eastern Townships, QC",33924,13290,0.3917580474,5,measured
+121,history/states/121-State_121.txt,"Hardin, KY",4049,2827,0.6981970857,8,measured
+122,history/states/122-State_122.txt,"Dodge City, KS",21719,9155,0.4215203278,5,measured
+123,history/states/123-State_123.txt,"Alamosa, CO",3221,1125,0.3492704129,4,measured
+124,history/states/124-State_124.txt,"Fort Smith, AR",4598,1796,0.3906046107,5,measured
+125,history/states/125-State_125.txt,"Twin Falls, ID",5796,1549,0.2672532781,3,measured
+126,history/states/126-State_126.txt,"Thornton, CO",3818,2082,0.5453116815,6,measured
+127,history/states/127-State_127.txt,"Tuscaloosa, AL",6438,2981,0.4630319975,5,measured
+128,history/states/128-State_128.txt,"Fort Collins, CO",4290,1807,0.4212121212,5,measured
+129,history/states/129-State_129.txt,"Fort Morgan, CO",4342,1783,0.4106402579,5,measured
+130,history/states/130-State_130.txt,"La Salle, LA",3357,1981,0.5901102175,7,measured
+131,history/states/131-State_131.txt,"Colorado Springs, CO",4900,2082,0.4248979592,5,measured
+132,history/states/132-State_132.txt,"Magladen Islands, QC",121,0,0.0000000000,0,measured
+133,history/states/133-State_133.txt,"Ionia, MI",2310,1203,0.5207792208,6,measured
+134,history/states/134-State_134.txt,"Lansing, MI",1233,826,0.6699107867,7,measured
+135,history/states/135-State_135.txt,"Miles City, MT",17915,3808,0.2125593078,3,measured
+136,history/states/136-State_136.txt,"Gillette, WY",20959,5513,0.2630373587,3,measured
+137,history/states/137-State_137.txt,"North Puget Sound, WA",1744,1329,0.7620412844,8,measured
+138,history/states/138-State_138.txt,"Flint, MI",2555,1634,0.6395303327,7,measured
+139,history/states/139-State_139.txt,"Great Falls, MT",16637,5431,0.3264410651,4,measured
+140,history/states/140-State_140.txt,"Northern Cascades, WA",14771,4068,0.2754045088,3,measured
+141,history/states/141-State_141.txt,New Brunswick,24026,7449,0.3100391243,4,measured
+142,history/states/142-State_142.txt,"Olympic Peninsula, WA",5508,1833,0.3327886710,4,measured
+143,history/states/143-State_143.txt,"Tucson, AZ",2650,820,0.3094339623,4,measured
+144,history/states/144-State_144.txt,"Idaho Falls, ID",5699,1512,0.2653097035,3,measured
+145,history/states/145-State_145.txt,"Cape Breton Island, NS",5156,2776,0.5384018619,6,measured
+146,history/states/146-State_146.txt,"Salt Lake City, UT",3428,1835,0.5352975496,6,measured
+147,history/states/147-State_147.txt,"Ogden, UT",5267,1833,0.3480159484,4,measured
+148,history/states/148-State_148.txt,"Lac-des-Eaux-Mortes, QC",271,0,0.0000000000,0,measured
+149,history/states/149-State_149.txt,"Provo, UT",12129,5486,0.4523043944,5,measured
+150,history/states/150-State_150.txt,"Western Okanogan Highlands, WA",5112,537,0.1050469484,1,measured
+151,history/states/151-State_151.txt,"Edmundston, NB",1829,326,0.1782394751,2,measured
+152,history/states/152-State_152.txt,Prince Edward Island,2546,1683,0.6610369207,7,measured
+153,history/states/153-State_153.txt,"Degelis, QC",2694,299,0.1109873794,1,measured
+154,history/states/154-State_154.txt,"Mount Pleasant, MI",2078,1148,0.5524542830,6,measured
+155,history/states/155-State_155.txt,"Brandon, MB",13359,6381,0.4776555131,6,measured
+156,history/states/156-State_156.txt,"Puget Islands, WA",2269,1209,0.5328338475,6,measured
+157,history/states/157-State_157.txt,"Eastern Okanogan Highlands, WA",2868,639,0.2228033473,3,measured
+158,history/states/158-State_158.txt,"Metaline Falls, WA",770,21,0.0272727273,0,measured
+159,history/states/159-State_159.txt,"Hanover, MB",9856,3302,0.3350243506,4,measured
+160,history/states/160-State_160.txt,"Sandpoint, ID",2594,684,0.2636854279,3,measured
+161,history/states/161-State_161.txt,"Kalispell, MT",8782,2046,0.2329765429,3,measured
+162,history/states/162-State_162.txt,"Essex, MA",1166,1097,0.9408233276,10,measured
+163,history/states/163-State_163.txt,Nova Scotia,18995,7570,0.3985259279,5,measured
+164,history/states/164-State_164.txt,"Vernal, UT",6897,1175,0.1703639263,2,measured
+165,history/states/165-State_165.txt,"Shreveport, LA",5510,2680,0.4863883848,6,measured
+166,history/states/166-State_166.txt,"Cypress, AB",2253,457,0.2028406569,3,measured
+167,history/states/167-State_167.txt,"Maple Creek, MB",8577,629,0.0733356652,1,measured
+168,history/states/168-State_168.txt,"Aroostook, ME",5186,1833,0.3534516005,4,measured
+169,history/states/169-State_169.txt,"South Puget Sound, WA",3254,2333,0.7169637369,8,measured
+170,history/states/170-State_170.txt,"Browning, MT",7617,1304,0.1711960089,2,measured
+171,history/states/171-State_171.txt,"Fayetteville, AR",5885,2687,0.4565845370,5,measured
+172,history/states/172-State_172.txt,"Columbia Basin, WA",16092,6161,0.3828610490,5,measured
+173,history/states/173-State_173.txt,"Pantex Plant, TX",26,12,0.4615384615,5,measured
+174,history/states/174-State_174.txt,"Saint Francis, ME",1026,0,0.0000000000,0,measured
+175,history/states/175-State_175.txt,"Cedar City, UT",15759,4260,0.2703217209,3,measured
+176,history/states/176-State_176.txt,"New Orleans, LA",1412,836,0.5920679887,7,measured
+177,history/states/177-State_177.txt,"Butte, MT",24714,5329,0.2156267703,3,measured
+178,history/states/178-State_178.txt,"Capitol Reef, UT",12333,1397,0.1132733317,0,wasteland
+179,history/states/179-State_179.txt,"Willapa Hills, WA",2475,1049,0.4238383838,5,measured
+180,history/states/180-State_180.txt,"Lafayette, LA",4139,1270,0.3068374003,4,measured
+181,history/states/181-State_181.txt,"Moscow, ID",13586,2663,0.1960105991,3,measured
+182,history/states/182-State_182.txt,"Mecklenberg, NC",4469,3002,0.6717386440,7,measured
+183,history/states/183-State_183.txt,"Southern Cascades, WA",8021,2281,0.2843785064,4,measured
+184,history/states/184-State_184.txt,"St. John, NB",4649,2399,0.5160249516,6,measured
+185,history/states/185-State_185.txt,"Yakima, WA",7996,2565,0.3207853927,4,measured
+186,history/states/186-State_186.txt,"Missoula, MT",7914,2065,0.2609299975,3,measured
+187,history/states/187-State_187.txt,"Naval Submarine Base Bangor, WA",9,6,0.6666666667,7,measured
+188,history/states/188-State_188.txt,"Piscataquis, ME",3386,0,0.0000000000,0,measured
+189,history/states/189-State_189.txt,"Middlesex, NJ",42,37,0.8809523810,9,measured
+190,history/states/190-State_190.txt,"Roseburg, OR",10437,3686,0.3531666188,4,measured
+191,history/states/191-State_191.txt,"Muskegon, MI",2601,1171,0.4502114571,5,measured
+192,history/states/192-State_192.txt,"Bismarck, ND",13179,3347,0.2539646407,3,measured
+193,history/states/193-State_193.txt,"Grand Forks, ND",15626,4950,0.3167797261,4,measured
+194,history/states/194-State_194.txt,"Conway, AR",5811,3259,0.5608329031,6,measured
+195,history/states/195-State_195.txt,"Mahoosuc Range, ME",1808,116,0.0641592920,1,measured
+196,history/states/196-State_196.txt,"Phillips, AR",4060,2557,0.6298029557,7,measured
+197,history/states/197-State_197.txt,"Natchitoches, LA",5079,2213,0.4357156921,5,measured
+198,history/states/198-State_198.txt,"Lake Charles, LA",4807,2172,0.4518410651,5,measured
+199,history/states/199-State_199.txt,"Clay, MN",3590,1961,0.5462395543,6,measured
+200,history/states/200-State_200.txt,"Isanti, MN",10607,5054,0.4764777977,6,measured
+201,history/states/201-State_201.txt,"Vancouver, WA",484,319,0.6590909091,7,measured
+202,history/states/202-State_202.txt,"Autauga, AL",2464,1407,0.5710227273,6,measured
+203,history/states/203-State_203.txt,"Downeast, ME",4387,2061,0.4697971279,6,measured
+204,history/states/204-State_204.txt,"Billings, MT",28226,8923,0.3161269751,4,measured
+205,history/states/205-State_205.txt,"West Mahoosuc, ME",1795,401,0.2233983287,3,measured
+206,history/states/206-State_206.txt,"Blue Mountains, WA",4029,1269,0.3149664929,4,measured
+207,history/states/207-State_207.txt,"Somerset, ME",3171,1543,0.4865972879,6,measured
+208,history/states/208-State_208.txt,"Alexandra, LA",4590,2776,0.6047930283,7,measured
+209,history/states/209-State_209.txt,"Bend, OR",11640,2535,0.2177835052,3,measured
+210,history/states/210-State_210.txt,"Queens, NY",229,111,0.4847161572,6,measured
+211,history/states/211-State_211.txt,"Phillipsburg, MT",7198,3372,0.4684634621,6,measured
+212,history/states/212-State_212.txt,"Mercer, ND",10000,1079,0.1079000000,1,measured
+213,history/states/213-State_213.txt,"Orange, NY",13,12,0.9230769231,9,measured
+214,history/states/214-State_214.txt,"Dothan, AL",5023,2542,0.5060720685,6,measured
+215,history/states/215-State_215.txt,"Monroe, LA",7998,3881,0.4852463116,6,measured
+216,history/states/216-State_216.txt,"Western Mountains, ME",4101,2388,0.5822970007,7,measured
+217,history/states/217-State_217.txt,"Pendleton, OR",20151,3886,0.1928440276,2,measured
+218,history/states/218-State_218.txt,"Monteregie, QC",1762,1383,0.7849035187,8,measured
+219,history/states/219-State_219.txt,"ile Marie, QC",10,10,1.0000000000,10,measured
+220,history/states/220-State_220.txt,"Baker, MT",15471,2739,0.1770409153,2,measured
+221,history/states/221-State_221.txt,"Penobscot Bay, ME",2111,1600,0.7579346281,8,measured
+222,history/states/222-State_222.txt,"Marquette, MI",3480,1360,0.3908045977,5,measured
+223,history/states/223-State_223.txt,"Great North Woods, NH",1410,1064,0.7546099291,8,measured
+224,history/states/224-State_224.txt,"Cascade, ID",16723,2522,0.1508102613,2,measured
+225,history/states/225-State_225.txt,"ile Jesus, QC",56,56,1.0000000000,10,measured
+226,history/states/226-State_226.txt,"ile de Montreal, QC",132,131,0.9924242424,10,measured
+227,history/states/227-State_227.txt,"Montgomery, Al",4543,3256,0.7167070218,8,measured
+228,history/states/228-State_228.txt,"Saint Cloud, MN",8540,4369,0.5115925059,6,measured
+229,history/states/229-State_229.txt,"ile Bizardl, QC",9,7,0.7777777778,8,measured
+230,history/states/230-State_230.txt,"ile Perrot, QC",18,18,1.0000000000,10,measured
+231,history/states/231-State_231.txt,"Northeast Kingdom, VT",1626,1064,0.6543665437,7,measured
+232,history/states/232-State_232.txt,"Portland Casco Bay, ME",4262,3463,0.8125293290,9,measured
+233,history/states/233-State_233.txt,"Cadillac, MI",3099,2059,0.6644078735,7,measured
+234,history/states/234-State_234.txt,"Jamestown, ND",1631,155,0.0950337216,1,measured
+235,history/states/235-State_235.txt,"Clarke, AL",2905,1479,0.5091222031,6,measured
+236,history/states/236-State_236.txt,"Franklin, VT",1998,1289,0.6451451451,7,measured
+237,history/states/237-State_237.txt,"Butler, AL",6716,3138,0.4672424062,6,measured
+238,history/states/238-State_238.txt,"Alger, MI",4610,1824,0.3956616052,5,measured
+239,history/states/239-State_239.txt,"Dillon, MT",10972,2275,0.2073459716,3,measured
+240,history/states/240-State_240.txt,"Sugar Island, MI",34,24,0.7058823529,8,measured
+241,history/states/241-State_241.txt,"Superior, WI",3314,1288,0.3886541943,5,measured
+242,history/states/242-State_242.txt,"St. Lawrence, NY",3192,1850,0.5795739348,7,measured
+243,history/states/243-State_243.txt,"Salmon, ID",6615,1102,0.1665910809,2,measured
+244,history/states/244-State_244.txt,"White Mountains, NH",2101,1428,0.6796763446,7,measured
+245,history/states/245-State_245.txt,"Manhattan, NYC",18,18,1.0000000000,10,measured
+246,history/states/246-State_246.txt,"St. Joseph Island, ON",169,4,0.0236686391,0,measured
+247,history/states/247-State_247.txt,"Athens, OH",4521,2864,0.6334881663,7,measured
+248,history/states/248-State_248.txt,"Grand Isle, VT",24,24,1.0000000000,10,measured
+249,history/states/249-State_249.txt,"Powder River, MT",7713,1443,0.1870867367,2,measured
+250,history/states/250-State_250.txt,"Addison, VT",1334,697,0.5224887556,6,measured
+251,history/states/251-State_251.txt,"Hayward, WI",11498,3942,0.3428422334,4,measured
+252,history/states/252-State_252.txt,"Manitoulin Island, ON",1126,190,0.1687388988,2,measured
+253,history/states/253-State_253.txt,"Rutland, VT",3587,2560,0.7136883189,8,measured
+254,history/states/254-State_254.txt,"Drummond Island, MI",124,0,0.0000000000,0,measured
+255,history/states/255-State_255.txt,"Cabell, WV",2406,1852,0.7697423109,8,measured
+256,history/states/256-State_256.txt,"Hardin, MT",3233,849,0.2626043922,3,measured
+257,history/states/257-State_257.txt,"Cockburn Island, ON",64,0,0.0000000000,0,wasteland
+258,history/states/258-State_258.txt,"East Bozeman, MT",5292,1752,0.3310657596,4,measured
+259,history/states/259-State_259.txt,"Madison, MT",2340,1104,0.4717948718,6,measured
+260,history/states/260-State_260.txt,"Merrimack, NH",1648,1428,0.8665048544,9,measured
+261,history/states/261-State_261.txt,"Sarasota, FL",1788,1213,0.6784116331,7,measured
+262,history/states/262-State_262.txt,"Ontario, OR",16494,3508,0.2126834000,3,measured
+263,history/states/263-State_263.txt,"Mackinac Island, MI",37,13,0.3513513514,4,measured
+264,history/states/264-State_264.txt,"Toledo, OH",3794,3098,0.8165524512,9,measured
+265,history/states/265-State_265.txt,"Stevens Point, WI",8918,3012,0.3377438888,4,measured
+266,history/states/266-State_266.txt,"Dayton, OH",7084,5826,0.8224167137,9,measured
+267,history/states/267-State_267.txt,"Mackinac City, MI",1142,700,0.6129597198,7,measured
+268,history/states/268-State_268.txt,"Grafton, NH",1670,965,0.5778443114,7,measured
+269,history/states/269-State_269.txt,"Clearwater, MN",15563,4931,0.3168412260,4,measured
+270,history/states/270-State_270.txt,"Beaver Island, MI",53,13,0.2452830189,3,measured
+271,history/states/271-State_271.txt,"Harding, SD",10282,1353,0.1315891850,2,measured
+272,history/states/272-State_272.txt,"Iosco, MI",1585,787,0.4965299685,6,measured
+273,history/states/273-State_273.txt,"Hamilton, NY",3247,1509,0.4647366800,5,measured
+274,history/states/274-State_274.txt,"Strafford, NH",1343,1277,0.9508562919,10,measured
+275,history/states/275-State_275.txt,"Mobridge, SD",7142,1167,0.1633996080,2,measured
+276,history/states/276-State_276.txt,"Aberdeen, SD",13346,3946,0.2956691143,4,measured
+277,history/states/277-State_277.txt,"Concord, NH",1445,1174,0.8124567474,9,measured
+278,history/states/278-State_278.txt,"Medford, OR",6239,2252,0.3609552813,4,measured
+279,history/states/279-State_279.txt,"Watertown, SD",8344,2937,0.3519894535,4,measured
+280,history/states/280-State_280.txt,"Lewis, NY",4967,2885,0.5808335011,7,measured
+281,history/states/281-State_281.txt,"Old Faithful, WY",673,384,0.5705794948,6,measured
+282,history/states/282-State_282.txt,"Troy, NY",2251,1411,0.6268325189,7,measured
+283,history/states/283-State_283.txt,"Casper, WY",16785,3553,0.2116770926,3,measured
+284,history/states/284-State_284.txt,"Philadelphia, PA",223,215,0.9641255605,10,measured
+285,history/states/285-State_285.txt,"Schenectady, NY",3047,1241,0.4072858549,5,measured
+286,history/states/286-State_286.txt,"Richland, OH",4099,3293,0.8033666748,8,measured
+287,history/states/287-State_287.txt,"Roberts, ID",10872,3585,0.3297461369,4,measured
+288,history/states/288-State_288.txt,"Boise, ID",7162,2452,0.3423624686,4,measured
+289,history/states/289-State_289.txt,"Baileys Harbor, WI",279,0,0.0000000000,0,measured
+290,history/states/290-State_290.txt,"Grand Traverse, MI",4466,2299,0.5147783251,6,measured
+291,history/states/291-State_291.txt,"Oswego, NY",2360,1055,0.4470338983,5,measured
+292,history/states/292-State_292.txt,"Hillsborough, NH",533,465,0.8724202627,9,measured
+293,history/states/293-State_293.txt,"Windham, VT",1570,807,0.5140127389,6,measured
+294,history/states/294-State_294.txt,"Nampa, ID",8625,584,0.0677101449,1,measured
+295,history/states/295-State_295.txt,"Jackson, WY",9274,2747,0.2962044425,4,measured
+296,history/states/296-State_296.txt,"Crescent City, CA",2136,893,0.4180711610,5,measured
+297,history/states/297-State_297.txt,"Jerome, ID",5694,1934,0.3396557780,4,measured
+298,history/states/298-State_298.txt,"Marshall, MN",3743,2489,0.6649746193,7,measured
+299,history/states/299-State_299.txt,"Suffolk, MA",227,227,1.0000000000,10,measured
+300,history/states/300-State_300.txt,"Worchester, MA",2748,2377,0.8649927220,9,measured
+301,history/states/301-State_301.txt,"Wayne, NY",2318,1700,0.7333908542,8,measured
+302,history/states/302-State_302.txt,"Berkshire, MA",2191,1904,0.8690095847,9,measured
+303,history/states/303-State_303.txt,"Mojave, CA",31710,8749,0.2759066541,3,measured
+304,history/states/304-State_304.txt,"Saint Paul, MN",3207,1919,0.5983785469,7,measured
+305,history/states/305-State_305.txt,"Chenango, NY",3055,2102,0.6880523732,8,measured
+306,history/states/306-State_306.txt,"Delaware, NY",1805,782,0.4332409972,5,measured
+307,history/states/307-State_307.txt,"Plymouth, MA",1988,1874,0.9426559356,10,measured
+308,history/states/308-State_308.txt,"Onondaga, NY",1882,1249,0.6636556854,7,measured
+309,history/states/309-State_309.txt,"Trippe, SD",14796,1743,0.1178021087,2,measured
+310,history/states/310-State_310.txt,"Pocatello, ID",4271,1765,0.4132521658,5,measured
+311,history/states/311-State_311.txt,"Murray, MN",3953,2598,0.6572223628,7,measured
+312,history/states/312-State_312.txt,"Huron, MI",2277,1252,0.5498462890,6,measured
+313,history/states/313-State_313.txt,"Monroe, NY",540,505,0.9351851852,10,measured
+314,history/states/314-State_314.txt,"Genesse, NY",1774,1265,0.7130777903,8,measured
+315,history/states/315-State_315.txt,"Barnstable, MA",431,397,0.9211136891,9,measured
+316,history/states/316-State_316.txt,"Columbia, NY",1142,982,0.8598949212,9,measured
+317,history/states/317-State_317.txt,"Mason, MI",2443,1285,0.5259926320,6,measured
+318,history/states/318-State_318.txt,"Saginaw, MI",1654,1243,0.7515114873,8,measured
+319,history/states/319-State_319.txt,"Providence, RI",968,931,0.9617768595,10,measured
+320,history/states/320-State_320.txt,"Albany, NY",1029,977,0.9494655005,10,measured
+321,history/states/321-State_321.txt,"New London, CT",2130,2030,0.9530516432,10,measured
+322,history/states/322-State_322.txt,"Mankato, MN",5752,3175,0.5519819193,6,measured
+323,history/states/323-State_323.txt,"Ithaca, NY",2952,2162,0.7323848238,8,measured
+324,history/states/324-State_324.txt,"Lovelock, NV",11799,3380,0.2864649547,4,measured
+325,history/states/325-State_325.txt,"Cattaraugus, NY",2610,1534,0.5877394636,7,measured
+326,history/states/326-State_326.txt,"Buffalo, NY",423,416,0.9834515366,10,measured
+327,history/states/327-State_327.txt,"Windham, NY",2817,1411,0.5008874689,6,measured
+328,history/states/328-State_328.txt,"Hartford, CT",2412,2298,0.9527363184,10,measured
+329,history/states/329-State_329.txt,"Benton Harbor, MI",1445,900,0.6228373702,7,measured
+330,history/states/330-State_330.txt,Grand Island,31,31,1.0000000000,10,measured
+331,history/states/331-State_331.txt,"Mojave, NV",53580,8284,0.1546099291,2,measured
+332,history/states/332-State_332.txt,"Detroit, MI",251,251,1.0000000000,10,measured
+333,history/states/333-State_333.txt,"Hamburg, NY",815,675,0.8282208589,9,measured
+334,history/states/334-State_334.txt,"Alpena, MI",2998,1097,0.3659106071,4,measured
+335,history/states/335-State_335.txt,"Steuben, NY",1180,771,0.6533898305,7,measured
+336,history/states/336-State_336.txt,"Oakland, MI",1335,930,0.6966292135,8,measured
+337,history/states/337-State_337.txt,"Dutchess, NY",1408,1311,0.9311079545,9,measured
+338,history/states/338-State_338.txt,"Orange, NY",2470,1812,0.7336032389,8,measured
+339,history/states/339-State_339.txt,"St. Clair, MI",1288,616,0.4782608696,6,measured
+340,history/states/340-State_340.txt,"Douglas, WY",6313,1907,0.3020750832,4,measured
+341,history/states/341-State_341.txt,"Chautauqua, NY",2411,1442,0.5980920780,7,measured
+342,history/states/342-State_342.txt,"Lackawanna, PA",4293,3032,0.7062660144,8,measured
+343,history/states/343-State_343.txt,"Fairfield, CT",671,640,0.9538002981,10,measured
+344,history/states/344-State_344.txt,"West Wendover, NV",7724,663,0.0858363542,1,measured
+345,history/states/345-State_345.txt,"Allegheny, PA",330,275,0.8333333333,9,measured
+346,history/states/346-State_346.txt,"Bradford, PA",5673,2921,0.5148951172,6,measured
+347,history/states/347-State_347.txt,"Davenport, IA",4135,2814,0.6805320435,7,measured
+348,history/states/348-State_348.txt,"Detroit Metro, MI",1187,1126,0.9486099410,10,measured
+349,history/states/349-State_349.txt,"Mason City, IA",6539,2781,0.4252943875,5,measured
+350,history/states/350-State_350.txt,"Council Bluffs, IA",4428,2665,0.6018518519,7,measured
+351,history/states/351-State_351.txt,"Kent, MI",2701,2006,0.7426878934,8,measured
+352,history/states/352-State_352.txt,"Delta, UT",23614,2182,0.0924028119,1,measured
+353,history/states/353-State_353.txt,"Erie, PA",2765,2007,0.7258589512,8,measured
+354,history/states/354-State_354.txt,"Long Island, NY",1156,1117,0.9662629758,10,measured
+355,history/states/355-State_355.txt,"Cheyenne, WY",14258,4295,0.3012343947,4,measured
+356,history/states/356-State_356.txt,"McKean, PA",4351,2337,0.5371179039,6,measured
+357,history/states/357-State_357.txt,"Sussex, NJ",2049,1973,0.9629087360,10,measured
+358,history/states/358-State_358.txt,"Cherry, NE",21834,5418,0.2481450948,3,measured
+359,history/states/359-State_359.txt,"Lehigh, PA",3311,3125,0.9438236182,10,measured
+360,history/states/360-State_360.txt,"South Bairoil, WY",1899,338,0.1779884150,2,measured
+361,history/states/361-State_361.txt,"Sandusky, OH",2904,2426,0.8353994490,9,measured
+362,history/states/362-State_362.txt,"Evanston, WY",5626,1838,0.3266974760,4,measured
+363,history/states/363-State_363.txt,"Northumberland, PA",5790,3813,0.6585492228,7,measured
+364,history/states/364-State_364.txt,"Rock Springs, WY",3120,1126,0.3608974359,4,measured
+365,history/states/365-State_365.txt,"Lawrence, PA",3184,2572,0.8077889447,9,measured
+366,history/states/366-State_366.txt,"Chicago Metro, IL",4946,4172,0.8435099070,9,measured
+367,history/states/367-State_367.txt,"Middlesex, NJ",1526,1447,0.9482306684,10,measured
+368,history/states/368-State_368.txt,"Superior, WY",497,10,0.0201207243,0,measured
+369,history/states/369-State_369.txt,"Rockford, IL",6016,4544,0.7553191489,8,measured
+370,history/states/370-State_370.txt,"Carson City, NV",3002,1867,0.6219187209,7,measured
+371,history/states/371-State_371.txt,"Centre, PA",3685,2620,0.7109905020,8,measured
+372,history/states/372-State_372.txt,"East Superior, WY",1527,456,0.2986247544,4,measured
+373,history/states/373-State_373.txt,"Wamsutter, WY",2272,327,0.1439260563,2,measured
+374,history/states/374-State_374.txt,"Monmouth, NJ",2182,1890,0.8661778185,9,measured
+375,history/states/375-State_375.txt,"Rawlins, WY",1243,403,0.3242156074,4,measured
+376,history/states/376-State_376.txt,"Bucks, PA",2266,2169,0.9571932921,10,measured
+377,history/states/377-State_377.txt,"Chicago, IL",968,941,0.9721074380,10,measured
+378,history/states/378-State_378.txt,"Lancester, PA",3023,2749,0.9093615614,9,measured
+379,history/states/379-State_379.txt,"Williams, OH",1627,1457,0.8955132145,9,measured
+380,history/states/380-State_380.txt,"Adobie Town Rim, WY",3683,387,0.1050773826,1,measured
+381,history/states/381-State_381.txt,"Greenville, MS",10607,5792,0.5460544923,6,measured
+382,history/states/382-State_382.txt,"Fort Wayne, IN",5093,4366,0.8572550560,9,measured
+383,history/states/383-State_383.txt,"Columbus, OH",3802,3338,0.8779589690,9,measured
+384,history/states/384-State_384.txt,"Ogallala, NE",2477,1481,0.5979006863,7,measured
+385,history/states/385-State_385.txt,"Gary, IN",2461,2263,0.9195449004,9,measured
+386,history/states/386-State_386.txt,"Wheeling, OH",3401,2106,0.6192296383,7,measured
+387,history/states/387-State_387.txt,"Blair, PA",3206,2267,0.7071116656,8,measured
+388,history/states/388-State_388.txt,"York, PA",4273,3199,0.7486543412,8,measured
+389,history/states/389-State_389.txt,"Camden, NJ",2440,2243,0.9192622951,9,measured
+390,history/states/390-State_390.txt,"Adams, IL",4005,1710,0.4269662921,5,measured
+391,history/states/391-State_391.txt,"Westmoreland, PA",1955,1730,0.8849104859,9,measured
+392,history/states/392-State_392.txt,"Jasper, IN",4377,3491,0.7975782499,8,measured
+393,history/states/393-State_393.txt,"Washington, PA",2035,1879,0.9233415233,9,measured
+394,history/states/394-State_394.txt,"Grand Junction, CO",10689,2255,0.2109645430,3,measured
+395,history/states/395-State_395.txt,"Newcastle, DE",467,446,0.9550321199,10,measured
+396,history/states/396-State_396.txt,"Mount Vernon, IL",9824,6752,0.6872964169,8,measured
+397,history/states/397-State_397.txt,"Steamboat Springs, CO",5419,959,0.1769699206,2,measured
+398,history/states/398-State_398.txt,"Saint Anne, IL",281,124,0.4412811388,5,measured
+399,history/states/399-State_399.txt,"Walden, CO",451,3,0.0066518847,0,measured
+400,history/states/400-State_400.txt,"Lincoln, NE",7394,3731,0.5045983230,6,measured
+401,history/states/401-State_401.txt,"Kit Carson, CO",22888,8469,0.3700192240,5,measured
+402,history/states/402-State_402.txt,"Aberdeen, MD",456,346,0.7587719298,8,measured
+403,history/states/403-State_403.txt,"Harford, MD",163,107,0.6564417178,7,measured
+404,history/states/404-State_404.txt,"Baltimore, MD",1366,1305,0.9553440703,10,measured
+405,history/states/405-State_405.txt,"Bartholomew, IN",5719,4051,0.7083406190,8,measured
+406,history/states/406-State_406.txt,"Carroll, MD",775,680,0.8774193548,9,measured
+407,history/states/407-State_407.txt,"Clinton, OH",3398,2652,0.7804590936,8,measured
+408,history/states/408-State_408.txt,"Randell, UT",6295,948,0.1505957109,0,wasteland
+409,history/states/409-State_409.txt,"North Platte, NE",7966,2440,0.3063017826,4,measured
+410,history/states/410-State_410.txt,"Kent, DE",710,578,0.8140845070,9,measured
+411,history/states/411-State_411.txt,"Queen Anne's, MD",2034,1033,0.5078662734,6,measured
+412,history/states/412-State_412.txt,"Frederick, MD",700,685,0.9785714286,10,measured
+413,history/states/413-State_413.txt,"Adams, NE",4999,2548,0.5097019404,6,measured
+414,history/states/414-State_414.txt,"Alleghany, MD",1113,872,0.7834681042,8,measured
+415,history/states/415-State_415.txt,"Berkeley, WV",832,778,0.9350961538,10,measured
+416,history/states/416-State_416.txt,"Morgantown, WV",3875,2847,0.7347096774,8,measured
+417,history/states/417-State_417.txt,"Mineral, WV",1891,1147,0.6065573770,7,measured
+418,history/states/418-State_418.txt,"Montgomery, MD",507,426,0.8402366864,9,measured
+419,history/states/419-State_419.txt,"Bishop, CA",5824,2073,0.3559409341,4,measured
+420,history/states/420-State_420.txt,"Sussex, DE",1049,827,0.7883698761,8,measured
+421,history/states/421-State_421.txt,"Monogalia, WV",3320,1805,0.5436746988,6,measured
+422,history/states/422-State_422.txt,"Breckenridge, CO",1402,619,0.4415121255,5,measured
+423,history/states/423-State_423.txt,"Frederick, VA",2990,2680,0.8963210702,9,measured
+424,history/states/424-State_424.txt,"Fairfax, VA",2545,2281,0.8962671906,9,measured
+425,history/states/425-State_425.txt,"Prince George's, MD",1966,1677,0.8530010173,9,measured
+426,history/states/426-State_426.txt,"Bowling Green, MO",7012,3638,0.5188248716,6,measured
+427,history/states/427-State_427.txt,"Bloomington, IL",2522,1495,0.5927835052,7,measured
+428,history/states/428-State_428.txt,"Aspen, CO",12246,2999,0.2448962927,3,measured
+429,history/states/429-State_429.txt,"Wood, WV",3766,2521,0.6694105151,7,measured
+430,history/states/430-State_430.txt,"Furnass, NE",907,466,0.5137816979,6,measured
+431,history/states/431-State_431.txt,"Wicomico, MD",1231,950,0.7717303006,8,measured
+432,history/states/432-State_432.txt,"Cincinnati, OH",2410,2253,0.9348547718,10,measured
+433,history/states/433-State_433.txt,"Dove Creek, CO",10489,2082,0.1984936600,3,measured
+434,history/states/434-State_434.txt,"Ellis, KS",13004,6598,0.5073823439,6,measured
+435,history/states/435-State_435.txt,"Albemarle, VA",5101,3807,0.7463242501,8,measured
+436,history/states/436-State_436.txt,"Topeka, KS",8333,4235,0.5082203288,6,measured
+437,history/states/437-State_437.txt,"King George's, VA",3057,2270,0.7425580635,8,measured
+438,history/states/438-State_438.txt,"Greenbrier, WV",6327,3043,0.4809546388,6,measured
+439,history/states/439-State_439.txt,"Accomack, VA",595,432,0.7260504202,8,measured
+440,history/states/440-State_440.txt,"Spotslyvania, VA",2141,1688,0.7884166277,8,measured
+441,history/states/441-State_441.txt,"Pueblo, CO",2532,564,0.2227488152,3,measured
+442,history/states/442-State_442.txt,"Moab, UT",7078,1313,0.1855043798,2,measured
+443,history/states/443-State_443.txt,"Lynchburg, VA",3111,2098,0.6743812279,7,measured
+444,history/states/444-State_444.txt,"Emporia, KS",8593,5372,0.6251600140,7,measured
+445,history/states/445-State_445.txt,"Springfield, IL",5593,3016,0.5392454854,6,measured
+446,history/states/446-State_446.txt,"Madison, KY",4814,3412,0.7087660989,8,measured
+447,history/states/447-State_447.txt,"Cabell, WV",2232,1634,0.7320788530,8,measured
+448,history/states/448-State_448.txt,"Mesquite, NV",2866,295,0.1029309142,1,measured
+449,history/states/449-State_449.txt,"Kanawha, WV",387,232,0.5994832041,7,measured
+450,history/states/450-State_450.txt,"Richmond, VA",1492,1394,0.9343163539,10,measured
+451,history/states/451-State_451.txt,"Jefferson, MO",4590,2147,0.4677559913,6,measured
+452,history/states/452-State_452.txt,"Raleight, WV",4189,2222,0.5304368584,6,measured
+453,history/states/453-State_453.txt,"Lawrence, KS",2608,1660,0.6365030675,7,measured
+454,history/states/454-State_454.txt,"Danville, VA",4718,3285,0.6962696058,8,measured
+455,history/states/455-State_455.txt,"Floyd, IN",1165,747,0.6412017167,7,measured
+456,history/states/456-State_456.txt,"Prince George, VA",2481,1674,0.6747279323,7,measured
+457,history/states/457-State_457.txt,"Gasconade, MO",5279,2533,0.4798257246,6,measured
+458,history/states/458-State_458.txt,"Las Vegas, NV",9537,3962,0.4154346230,5,measured
+459,history/states/459-State_459.txt,"Hampton Roads, VA",2507,2001,0.7981651376,8,measured
+460,history/states/460-State_460.txt,"Trinidad, CO",17301,4947,0.2859372291,4,measured
+461,history/states/461-State_461.txt,"Belleville, IL",560,200,0.3571428571,4,measured
+462,history/states/462-State_462.txt,"Kaibab, AZ",9689,1307,0.1348952420,2,measured
+463,history/states/463-State_463.txt,"Roanoake, VA",5928,4377,0.7383603239,8,measured
+464,history/states/464-State_464.txt,"Washington, VA",3258,2620,0.8041743401,9,measured
+465,history/states/465-State_465.txt,"Wichita, KS",10130,4542,0.4483711747,5,measured
+466,history/states/466-State_466.txt,"Wise, VA",3422,2158,0.6306253653,7,measured
+467,history/states/467-State_467.txt,"Elizabeth City, NC",3046,2038,0.6690741957,7,measured
+468,history/states/468-State_468.txt,"Mexican Hat, UT",2111,572,0.2709616296,3,measured
+469,history/states/469-State_469.txt,"Liberal, KS",9914,5151,0.5195682873,6,measured
+470,history/states/470-State_470.txt,"Navajo Nation, AZ",22326,5193,0.2325987638,3,measured
+471,history/states/471-State_471.txt,"Denver, CO",619,619,1.0000000000,10,measured
+472,history/states/472-State_472.txt,"Nash, NC",5414,3979,0.7349464352,8,measured
+473,history/states/473-State_473.txt,"Wake, NC",2383,2225,0.9336970206,10,measured
+474,history/states/474-State_474.txt,"Beaufort, NC",2973,1691,0.5687857383,6,measured
+475,history/states/475-State_475.txt,"Wayne, KY",2510,1249,0.4976095618,6,measured
+476,history/states/476-State_476.txt,"Mount Airy, NC",3425,2607,0.7611678832,8,measured
+477,history/states/477-State_477.txt,"Farmington, NM",1169,499,0.4268605646,5,measured
+478,history/states/478-State_478.txt,"Cibola, NM",36306,7117,0.1960282047,3,measured
+479,history/states/479-State_479.txt,"Pitt, NC",2810,2413,0.8587188612,9,measured
+480,history/states/480-State_480.txt,"Johnson City, TN",3502,3155,0.9009137636,9,measured
+481,history/states/481-State_481.txt,"Guilford, NC",3304,2731,0.8265738499,9,measured
+482,history/states/482-State_482.txt,"McCracken, KY",2780,2172,0.7812949640,8,measured
+483,history/states/483-State_483.txt,"Owens Island, KY",95,87,0.9157894737,9,measured
+484,history/states/484-State_484.txt,"Albuquerque, NM",880,418,0.4750000000,6,measured
+485,history/states/485-State_485.txt,"Knoxville, TN",6675,4467,0.6692134831,7,measured
+486,history/states/486-State_486.txt,"Tucumcari, NM",15896,3895,0.2450301963,3,measured
+487,history/states/487-State_487.txt,"Mecklenberg, NC",4752,3987,0.8390151515,9,measured
+488,history/states/488-State_488.txt,"Clayton, NM",9721,2336,0.2403044954,3,measured
+489,history/states/489-State_489.txt,"Gaston, NC",4702,2928,0.6227137388,7,measured
+490,history/states/490-State_490.txt,"Oklahoma Panhandle, OK",6453,3822,0.5922826592,7,measured
+491,history/states/491-State_491.txt,"Onslow, NC",3406,1836,0.5390487375,6,measured
+492,history/states/492-State_492.txt,"Clarksville, TN",2768,1776,0.6416184971,7,measured
+493,history/states/493-State_493.txt,"Enid, OK",7914,4004,0.5059388426,6,measured
+494,history/states/494-State_494.txt,"Buncombe, NC",4255,3504,0.8235017626,9,measured
+495,history/states/495-State_495.txt,"Tulsa, OK",10996,6482,0.5894870862,7,measured
+496,history/states/496-State_496.txt,"Dickson, TN",3458,2225,0.6434355119,7,measured
+497,history/states/497-State_497.txt,"Cumberland, NC",3718,2527,0.6796664874,7,measured
+498,history/states/498-State_498.txt,"Phoenix, AZ",2598,1872,0.7205542725,8,measured
+499,history/states/499-State_499.txt,"Coffee, TN",4589,3068,0.6685552408,7,measured
+500,history/states/500-State_500.txt,"Flagstaff, AZ",3074,1466,0.4769030579,6,measured
+501,history/states/501-State_501.txt,"Northern Channel Islands, CA",228,0,0.0000000000,0,measured
+502,history/states/502-State_502.txt,"Memphis, TN",4651,3161,0.6796387874,7,measured
+503,history/states/503-State_503.txt,"Nashville, TN",2719,2389,0.8786318499,9,measured
+504,history/states/504-State_504.txt,"Chattanooga, TN",4325,3120,0.7213872832,8,measured
+505,history/states/505-State_505.txt,"Tiptonville, KY",14,14,1.0000000000,10,measured
+506,history/states/506-State_506.txt,"New Hanover, NC",4107,2802,0.6822498174,7,measured
+507,history/states/507-State_507.txt,"Dumas, TX",10067,3460,0.3436972286,4,measured
+508,history/states/508-State_508.txt,"Jonesboro, AR",5858,3712,0.6336633663,7,measured
+509,history/states/509-State_509.txt,"Randolph, AR",3590,1670,0.4651810585,5,measured
+510,history/states/510-State_510.txt,"Santa Fe, NM",10819,4869,0.4500415935,5,measured
+511,history/states/511-State_511.txt,"Stillwater, OK",11992,7916,0.6601067378,7,measured
+512,history/states/512-State_512.txt,"Searcy, AR",3714,1423,0.3831448573,5,measured
+513,history/states/513-State_513.txt,"Haywood, NC",2189,1347,0.6153494746,7,measured
+514,history/states/514-State_514.txt,"Whiteville, NC",4136,3194,0.7722437137,8,measured
+515,history/states/515-State_515.txt,"Saluda, NC",210,200,0.9523809524,10,measured
+516,history/states/516-State_516.txt,"Maury, TN",6311,4817,0.7632704801,8,measured
+517,history/states/517-State_517.txt,"York, SC",5445,4335,0.7961432507,8,measured
+518,history/states/518-State_518.txt,"Greenville, SC",7974,6065,0.7605969401,8,measured
+519,history/states/519-State_519.txt,"Amarillo, TX",13034,4986,0.3825379776,5,measured
+520,history/states/520-State_520.txt,"Lawton, OK",9548,3582,0.3751571010,5,measured
+521,history/states/521-State_521.txt,"Myrtle Beach, SC",2157,1737,0.8052851182,9,measured
+522,history/states/522-State_522.txt,"Southern Channel Islands, CA",181,0,0.0000000000,0,measured
+523,history/states/523-State_523.txt,"Prescott, AZ",34991,9069,0.2591809322,3,measured
+524,history/states/524-State_524.txt,"Hall, GA",4732,3298,0.6969568893,8,measured
+525,history/states/525-State_525.txt,"Horry, SC",5162,4134,0.8008523828,8,measured
+526,history/states/526-State_526.txt,"Whitfield, GA",4863,3382,0.6954554802,8,measured
+527,history/states/527-State_527.txt,"Little River, AR",4494,2744,0.6105919003,7,measured
+528,history/states/528-State_528.txt,"Morgan, AL",5061,2711,0.5356648884,6,measured
+529,history/states/529-State_529.txt,"Huntsville, AL",3019,1824,0.6041735674,7,measured
+530,history/states/530-State_530.txt,"Sierra Vista, AZ",8454,2870,0.3394842678,4,measured
+531,history/states/531-State_531.txt,"McAlester, OK",12206,6785,0.5558741602,6,measured
+532,history/states/532-State_532.txt,"Ada, OK",12085,6570,0.5436491518,6,measured
+533,history/states/533-State_533.txt,"Hattiesburg, MS",5757,2978,0.5172833073,6,measured
+534,history/states/534-State_534.txt,"Lowndes, MS",1594,791,0.4962358846,6,measured
+535,history/states/535-State_535.txt,"Plainville, TX",10841,4371,0.4031915875,5,measured
+536,history/states/536-State_536.txt,"Weldona, CO",1597,326,0.2041327489,3,measured
+537,history/states/537-State_537.txt,"North Metro Atlanta, GA",3620,3101,0.8566298343,9,measured
+538,history/states/538-State_538.txt,"Richland, SC",5888,5002,0.8495244565,9,measured
+539,history/states/539-State_539.txt,"Roswell, NM",15011,4254,0.2833921791,4,measured
+540,history/states/540-State_540.txt,"Clovis, NM",13265,4103,0.3093102149,4,measured
+541,history/states/541-State_541.txt,"South Metro Atlanta, GA",6447,5040,0.7817589577,8,measured
+542,history/states/542-State_542.txt,"Yoakum, TX",4169,1386,0.3324538259,4,measured
+543,history/states/543-State_543.txt,"Lubbock, TX",7913,4228,0.5343106281,6,measured
+544,history/states/544-State_544.txt,"Vernon, TX",9711,4492,0.4625682216,5,measured
+545,history/states/545-State_545.txt,"Auburn, AL",7748,4422,0.5707279298,6,measured
+546,history/states/546-State_546.txt,"Atlanta, GA",637,598,0.9387755102,10,measured
+547,history/states/547-State_547.txt,"Charleston, SC",1151,697,0.6055603823,7,measured
+548,history/states/548-State_548.txt,"Pima, AZ",22452,5102,0.2272403349,3,measured
+549,history/states/549-State_549.txt,Baja California,32301,8215,0.2543264914,3,measured
+550,history/states/550-State_550.txt,"Beaufort, SC",5375,4564,0.8491162791,9,measured
+551,history/states/551-State_551.txt,"Columbia, GA",5250,3199,0.6093333333,7,measured
+552,history/states/552-State_552.txt,"Las Cruces, NM",9938,2763,0.2780237472,3,measured
+553,history/states/553-State_553.txt,Sonora,59156,9156,0.1547771993,2,measured
+554,history/states/554-State_554.txt,"Wichita Falls, TX",8516,5039,0.5917097229,7,measured
+555,history/states/555-State_555.txt,"Carlsbad, NM",14903,3909,0.2622961820,3,measured
+556,history/states/556-State_556.txt,"Watson, AR",30,0,0.0000000000,0,measured
+557,history/states/557-State_557.txt,"Houston, GA",7744,6601,0.8524018595,9,measured
+558,history/states/558-State_558.txt,"Texarkana, TX",8562,5341,0.6238028498,7,measured
+559,history/states/559-State_559.txt,"Chatham, GA",7832,6063,0.7741317671,8,measured
+560,history/states/560-State_560.txt,"San Angelo, TX",10077,4104,0.4072640667,5,measured
+561,history/states/561-State_561.txt,"Abilene, TX",8217,4591,0.5587197274,6,measured
+562,history/states/562-State_562.txt,"Duncan, AZ",1521,813,0.5345167653,6,measured
+563,history/states/563-State_563.txt,"Muscogee, GA",5774,4416,0.7648077589,8,measured
+564,history/states/564-State_564.txt,"Greater Dallas-Fort Worth Area, TX",6291,4328,0.6879669369,8,measured
+565,history/states/565-State_565.txt,"ile Dondaine, QC",14,14,1.0000000000,10,measured
+566,history/states/566-State_566.txt,"Citronelle, AL",3334,1387,0.4160167966,5,measured
+567,history/states/567-State_567.txt,"Stephenville, TX",10456,5576,0.5332823259,6,measured
+568,history/states/568-State_568.txt,"Longview, TX",4677,2823,0.6035920462,7,measured
+569,history/states/569-State_569.txt,"Jackson, MS",4470,2090,0.4675615213,6,measured
+570,history/states/570-State_570.txt,"Dallas-Fort Worth, TX",1618,1588,0.9814585909,10,measured
+571,history/states/571-State_571.txt,"Shreveport, LA",2107,1688,0.8011390603,8,measured
+572,history/states/572-State_572.txt,"Deming, NM",6493,869,0.1338364392,2,measured
+573,history/states/573-State_573.txt,"Lowndes, GA",6105,4072,0.6669942670,7,measured
+574,history/states/574-State_574.txt,"Odessa, TX",11062,3068,0.2773458687,3,measured
+575,history/states/575-State_575.txt,"Navarro, TX",10613,7261,0.6841609347,8,measured
+576,history/states/576-State_576.txt,"Thomas, GA",12846,8606,0.6699361669,7,measured
+577,history/states/577-State_577.txt,"Duluth, MN",20252,5245,0.2589867667,3,measured
+578,history/states/578-State_578.txt,"El Paso, TX",24682,5237,0.2121789158,3,measured
+579,history/states/579-State_579.txt,Chihuahua,106484,14331,0.1345835994,2,measured
+580,history/states/580-State_580.txt,"Tyler, TX",6391,3871,0.6056955093,7,measured
+581,history/states/581-State_581.txt,"Reeves, TX",11766,4936,0.4195138535,5,measured
+582,history/states/582-State_582.txt,"Adams, MS",7282,2899,0.3981049162,5,measured
+583,history/states/583-State_583.txt,"Barksdale AFB, LA",23,23,1.0000000000,10,measured
+584,history/states/584-State_584.txt,"Houma, LA",4024,1345,0.3342445328,4,measured
+585,history/states/585-State_585.txt,"Crockett, TX",10852,4306,0.3967932178,5,measured
+586,history/states/586-State_586.txt,da,2693,2111,0.7838841441,8,measured
+587,history/states/587-State_587.txt,"Waco, TX",6191,3587,0.5793894363,7,measured
+588,history/states/588-State_588.txt,"San Carlos, AZ",23227,6794,0.2925044130,4,measured
+589,history/states/589-State_589.txt,"Ciudad Obregon, SO",19303,2390,0.1238149510,2,measured
+590,history/states/590-State_590.txt,"Nogales, SO",1674,44,0.0262843489,0,measured
+591,history/states/591-State_591.txt,"Escambia, FL",8557,4297,0.5021619727,6,measured
+592,history/states/592-State_592.txt,"Fredericksburg, TX",15243,6956,0.4563406154,5,measured
+593,history/states/593-State_593.txt,"Alachua, FL",5987,4577,0.7644897277,8,measured
+594,history/states/594-State_594.txt,"Leon, FL",8157,4891,0.5996076989,7,measured
+595,history/states/595-State_595.txt,"Duval, FL",1923,1716,0.8923556942,9,measured
+596,history/states/596-State_596.txt,"Beaumont, TX",6461,3486,0.5395449621,6,measured
+597,history/states/597-State_597.txt,"Gulf Shores, AL",1653,1268,0.7670901391,8,measured
+598,history/states/598-State_598.txt,"Mobile, AL",1483,1031,0.6952124073,8,measured
+599,history/states/599-State_599.txt,"Gulfport, MS",3746,1975,0.5272290443,6,measured
+600,history/states/600-State_600.txt,"Baton Rouge, LA",5287,2092,0.3956875355,5,measured
+601,history/states/601-State_601.txt,"Klamath Falls, OR",6247,1784,0.2855770770,4,measured
+602,history/states/602-State_602.txt,"Bastrop, TX",6532,3261,0.4992345377,6,measured
+603,history/states/603-State_603.txt,"Salem, OR",7141,3475,0.4866265229,6,measured
+604,history/states/604-State_604.txt,"Marion, FL",3157,2432,0.7703515996,8,measured
+605,history/states/605-State_605.txt,"Daytona Beach, FL",2824,2305,0.8162181303,9,measured
+606,history/states/606-State_606.txt,"Hutchinson, MN",5657,2642,0.4670319958,5,measured
+607,history/states/607-State_607.txt,"Lake, Ohio",3899,3735,0.9579379328,10,measured
+608,history/states/608-State_608.txt,"Minneapolis, MN",767,520,0.6779661017,7,measured
+609,history/states/609-State_609.txt,"Eugene, OR",8827,5018,0.5684830633,6,measured
+610,history/states/610-State_610.txt,"Orlando, FL",4906,3464,0.7060741949,8,measured
+611,history/states/611-State_611.txt,"Houston, TX",4341,3042,0.7007601935,8,measured
+612,history/states/612-State_612.txt,"LaFourche, LA",2389,958,0.4010046044,5,measured
+613,history/states/613-State_613.txt,"San Antonio, TX",10062,4323,0.4296362552,5,measured
+614,history/states/614-State_614.txt,"Victoria, TX",14189,6465,0.4556346466,5,measured
+615,history/states/615-State_615.txt,Coahuila,70035,8393,0.1198400800,2,measured
+616,history/states/616-State_616.txt,"Yellowstone, WY",473,261,0.5517970402,0,wasteland
+617,history/states/617-State_617.txt,"Laredo, TX",13776,4864,0.3530778165,4,measured
+618,history/states/618-State_618.txt,"Omaha, NE",612,559,0.9133986928,9,measured
+619,history/states/619-State_619.txt,Baja California Sur,33161,5658,0.1706221163,2,measured
+620,history/states/620-State_620.txt,"Cleveland, OH",1746,1691,0.9684994273,10,measured
+621,history/states/621-State_621.txt,"Hillsborough, FL",5437,4306,0.7919808718,8,measured
+622,history/states/622-State_622.txt,"Grand Manan Island, ME",78,0,0.0000000000,0,measured
+623,history/states/623-State_623.txt,"Bar Harbor, ME",171,90,0.5263157895,6,measured
+624,history/states/624-State_624.txt,"Breton Sound Islands, LA",206,18,0.0873786408,0,wasteland
+625,history/states/625-State_625.txt,"Shiprock, NM",3014,1176,0.3901791639,5,measured
+626,history/states/626-State_626.txt,"Portland, TX",5189,2573,0.4958566198,6,measured
+627,history/states/627-State_627.txt,"Miami-Dade, FL",9290,5003,0.5385360603,6,measured
+628,history/states/628-State_628.txt,"Sarasota, FL",6914,3980,0.5756436216,7,measured
+629,history/states/629-State_629.txt,"Freeport, BS",1094,0,0.0000000000,0,measured
+630,history/states/630-State_630.txt,"Whiteman AFB, MO",10,1,0.1000000000,1,measured
+631,history/states/631-State_631.txt,"Aransas, TX",120,0,0.0000000000,0,measured
+632,history/states/632-State_632.txt,"Sterling, CO",2698,263,0.0974796145,1,measured
+633,history/states/633-State_633.txt,"Corpus Christi, TX",15256,4874,0.3194808600,4,measured
+634,history/states/634-State_634.txt,"Lee, FL",4753,2087,0.4390911004,5,measured
+635,history/states/635-State_635.txt,"Monterrey, NL",16739,5158,0.3081426609,4,measured
+636,history/states/636-State_636.txt,District of Columbia,54,54,1.0000000000,10,measured
+637,history/states/637-State_637.txt,"Laredos, TM",1048,565,0.5391221374,6,measured
+638,history/states/638-State_638.txt,"Los Mochis, SI",13479,2555,0.1895541212,2,measured
+639,history/states/639-State_639.txt,"Guadalupe y Calvo, CH",5189,567,0.1092696088,1,measured
+640,history/states/640-State_640.txt,"El Carrizo, SI",1508,321,0.2128647215,3,measured
+641,history/states/641-State_641.txt,"Kansas City, KS",481,439,0.9126819127,9,measured
+642,history/states/642-State_642.txt,"Gomez Palacio, DG",36862,6640,0.1801313005,2,measured
+643,history/states/643-State_643.txt,"Salinas, CA",7124,4220,0.5923638405,7,measured
+644,history/states/644-State_644.txt,"Eleuthera, BS",248,0,0.0000000000,0,measured
+645,history/states/645-State_645.txt,"Fremont-Winema, OR",21529,6070,0.2819452831,4,measured
+646,history/states/646-State_646.txt,"New Providence, BS",93,0,0.0000000000,0,measured
+647,history/states/647-State_647.txt,"Andros, BS",2461,0,0.0000000000,0,measured
+648,history/states/648-State_648.txt,"Cat Island, BS",195,0,0.0000000000,0,measured
+649,history/states/649-State_649.txt,"Overland Park, KS",1371,1031,0.7520058352,8,measured
+650,history/states/650-State_650.txt,"Minot AFB, ND",14,14,1.0000000000,10,measured
+651,history/states/651-State_651.txt,"Key West, FL",149,119,0.7986577181,8,measured
+652,history/states/652-State_652.txt,"Los Angeles, CA",2287,2112,0.9234805422,9,measured
+653,history/states/653-State_653.txt,"Matamoros, TA",16440,4007,0.2437347932,3,measured
+654,history/states/654-State_654.txt,"Los Angeles Metro, CA",8387,5028,0.5994992250,7,measured
+655,history/states/655-State_655.txt,"San Diego Metro, CA",2957,1467,0.4961109232,6,measured
+656,history/states/656-State_656.txt,"Elko, NV",20979,3763,0.1793698460,2,measured
+657,history/states/657-State_657.txt,"Montemorelos, NL",14470,2709,0.1872149274,2,measured
+658,history/states/658-State_658.txt,"San Salvador, BS",117,0,0.0000000000,0,measured
+659,history/states/659-State_659.txt,"King's Bay Naval Base, GA",13,13,1.0000000000,10,measured
+660,history/states/660-State_660.txt,"Santa Rosa, CA",7472,4886,0.6539079229,7,measured
+661,history/states/661-State_661.txt,"Sacremento, CA",2851,2106,0.7386881796,8,measured
+662,history/states/662-State_662.txt,"San Diego, CA",1074,902,0.8398510242,9,measured
+663,history/states/663-State_663.txt,"Long Island, BS",222,0,0.0000000000,0,measured
+664,history/states/664-State_664.txt,"Great Exuma, BS",101,0,0.0000000000,0,measured
+665,history/states/665-State_665.txt,"Yreka, CA",8013,3209,0.4004742294,5,measured
+666,history/states/666-State_666.txt,"Ely, NV",5436,1262,0.2321559971,3,measured
+667,history/states/667-State_667.txt,"Alturas, CA",10112,2817,0.2785799051,4,measured
+668,history/states/668-State_668.txt,"Mazatlan, SI",11707,3377,0.2884598958,4,measured
+669,history/states/669-State_669.txt,"Sequoia, CA",8177,2423,0.2963189434,0,wasteland
+670,history/states/670-State_670.txt,"Durango, DG",18598,1980,0.1064630605,1,measured
+671,history/states/671-State_671.txt,"Fresnillo, ZA",21720,3932,0.1810313076,2,measured
+672,history/states/672-State_672.txt,"Crooked Island, BS",386,0,0.0000000000,0,measured
+673,history/states/673-State_673.txt,"Tonopah, NV",8857,1947,0.2198261262,3,measured
+674,history/states/674-State_674.txt,"Santa Barbara, CA",9642,3904,0.4048952499,5,measured
+675,history/states/675-State_675.txt,"Mayaguna, BS",141,0,0.0000000000,0,measured
+676,history/states/676-State_676.txt,"Pine Bluffs, WY",1916,899,0.4692066806,6,measured
+677,history/states/677-State_677.txt,"Pinedale, WY",5099,817,0.1602274956,2,measured
+678,history/states/678-State_678.txt,"Austin, TX",1439,917,0.6372480890,7,measured
+679,history/states/679-State_679.txt,Turks and Caicos Islands,185,0,0.0000000000,0,measured
+680,history/states/680-State_680.txt,"Oklahoma City, OK",1963,1365,0.6953642384,8,measured
+681,history/states/681-State_681.txt,"Huntsville, TX",14505,6716,0.4630127542,5,measured
+682,history/states/682-State_682.txt,"Monctezuma, SL",17844,3987,0.2234364492,3,measured
+683,history/states/683-State_683.txt,"Sidney, NE",3203,1267,0.3955666563,5,measured
+684,history/states/684-State_684.txt,"Cody, WY",12825,3725,0.2904483431,4,measured
+685,history/states/685-State_685.txt,"Matanzas, CU",5599,1469,0.2623682801,3,measured
+686,history/states/686-State_686.txt,"Villa Clara, CU",3757,1043,0.2776151184,3,measured
+687,history/states/687-State_687.txt,"Zacatecas, ZA",14322,4112,0.2871107387,4,measured
+688,history/states/688-State_688.txt,"Ciudad Victoria, TM",17226,5551,0.3222454429,4,measured
+689,history/states/689-State_689.txt,"El Centro, CA",7067,2830,0.4004528088,5,measured
+690,history/states/690-State_690.txt,"Inagua, BS",684,0,0.0000000000,0,measured
+691,history/states/691-State_691.txt,"Mayabeque, CU",1480,866,0.5851351351,7,measured
+692,history/states/692-State_692.txt,"Bakersfield, CA",3427,2233,0.6515903122,7,measured
+693,history/states/693-State_693.txt,"Artemisa, CU",1040,427,0.4105769231,5,measured
+694,history/states/694-State_694.txt,"Havana, CU",542,166,0.3062730627,4,measured
+695,history/states/695-State_695.txt,"Fresno, CA",12704,6881,0.5416404282,6,measured
+696,history/states/696-State_696.txt,"Ciego de Avila, CU",3150,426,0.1352380952,2,measured
+697,history/states/697-State_697.txt,"Sancti Spiritus, CU",3121,903,0.2893303428,4,measured
+698,history/states/698-State_698.txt,"Pinar del Rio, CU",5249,421,0.0802057535,1,measured
+699,history/states/699-State_699.txt,"Cienfuegos, CU",2134,1229,0.5759137769,7,measured
+700,history/states/700-State_700.txt,"Jardines del Rey, CU",549,0,0.0000000000,0,measured
+701,history/states/701-State_701.txt,"Yosemite, CA",15950,5039,0.3159247649,0,wasteland
+702,history/states/702-State_702.txt,"Camaguey, CU",7173,875,0.1219852224,2,measured
+703,history/states/703-State_703.txt,"Susanville, CA",8442,3348,0.3965884861,5,measured
+704,history/states/704-State_704.txt,"Napa, CA",5331,3092,0.5800037516,7,measured
+705,history/states/705-State_705.txt,"Redding, CA",8517,3000,0.3522367031,4,measured
+706,history/states/706-State_706.txt,"Tecuala, NA",3134,548,0.1748564135,2,measured
+707,history/states/707-State_707.txt,"San Juan, PR",839,779,0.9284862932,9,measured
+708,history/states/708-State_708.txt,"Las Tunas, CU",3181,398,0.1251178875,2,measured
+709,history/states/709-State_709.txt,"Maria Trinidad Sanchez, DO",926,468,0.5053995680,6,measured
+710,history/states/710-State_710.txt,British Virgin Islands,47,0,0.0000000000,1,off_image
+711,history/states/711-State_711.txt,"Holguin, CU",4568,409,0.0895359019,1,measured
+712,history/states/712-State_712.txt,"Samana, DO",448,0,0.0000000000,0,measured
+713,history/states/713-State_713.txt,"Monte Cristi, DO",725,174,0.2400000000,3,measured
+714,history/states/714-State_714.txt,"Puerto Plata, DO",1089,605,0.5555555556,6,measured
+715,history/states/715-State_715.txt,"Duarte, DO",1183,371,0.3136094675,4,measured
+716,history/states/716-State_716.txt,Este de Nayarit,4346,248,0.0570639669,1,measured
+717,history/states/717-State_717.txt,US Virgin Islands,56,0,0.0000000000,1,off_image
+718,history/states/718-State_718.txt,"El Seybo, DO",940,87,0.0925531915,1,measured
+719,history/states/719-State_719.txt,"La Altagracia, DO",1570,264,0.1681528662,2,measured
+720,history/states/720-State_720.txt,"Kirtland AFB, NM",16,16,1.0000000000,10,measured
+721,history/states/721-State_721.txt,"Vieques, PR",86,0,0.0000000000,1,off_image
+722,history/states/722-State_722.txt,"Guantanamo, CU",2077,0,0.0000000000,0,measured
+723,history/states/723-State_723.txt,"Santiago, DO",1880,16,0.0085106383,0,measured
+724,history/states/724-State_724.txt,"Hato Mayor, DO",739,30,0.0405953992,1,measured
+725,history/states/725-State_725.txt,"Mezquitic, JA",2396,0,0.0000000000,0,measured
+726,history/states/726-State_726.txt,"Nord-Est, HT",794,234,0.2947103275,4,measured
+727,history/states/727-State_727.txt,"La Vega, DO",1596,384,0.2406015038,3,measured
+728,history/states/728-State_728.txt,"Isla de Culebra, PR",17,0,0.0000000000,1,off_image
+729,history/states/729-State_729.txt,"Nord-Oueste, HT",1194,0,0.0000000000,0,measured
+730,history/states/730-State_730.txt,"Dajabon, DO",1044,169,0.1618773946,2,measured
+731,history/states/731-State_731.txt,"Isla de Juventud, CU",1089,0,0.0000000000,0,measured
+732,history/states/732-State_732.txt,"Nord, HT",1056,354,0.3352272727,4,measured
+733,history/states/733-State_733.txt,"Santo Domingo, DO",2153,311,0.1444496052,2,measured
+734,history/states/734-State_734.txt,"Santiago de Cuba, CU",2767,1042,0.3765811348,5,measured
+735,history/states/735-State_735.txt,"Artibonite, HT",2341,466,0.1990602307,3,measured
+736,history/states/736-State_736.txt,"Granma, CU",4275,601,0.1405847953,2,measured
+737,history/states/737-State_737.txt,"La Romana, DO",246,22,0.0894308943,1,measured
+738,history/states/738-State_738.txt,"San Pedro de Macoris, DO",670,293,0.4373134328,5,measured
+739,history/states/739-State_739.txt,"Colotlan, JA",1919,138,0.0719124544,1,measured
+740,history/states/740-State_740.txt,"La Estrelleta, DO",724,86,0.1187845304,2,measured
+741,history/states/741-State_741.txt,Aguascalientes,2507,1297,0.5173514160,6,measured
+742,history/states/742-State_742.txt,"San Juan, DO",1919,231,0.1203751954,2,measured
+743,history/states/743-State_743.txt,"Guayalejo, VC",670,216,0.3223880597,4,measured
+744,history/states/744-State_744.txt,"Centre, HT",1734,312,0.1799307958,2,measured
+745,history/states/745-State_745.txt,"Brainerd, MN",6654,2287,0.3437030358,4,measured
+746,history/states/746-State_746.txt,"Pinos, Zacatecas",1092,45,0.0412087912,1,measured
+747,history/states/747-State_747.txt,"San Luis Potosi, SL",5545,2342,0.4223624887,5,measured
+748,history/states/748-State_748.txt,"Azua, DO",1839,553,0.3007069059,4,measured
+749,history/states/749-State_749.txt,"Peravia, DO",1173,463,0.3947144075,5,measured
+750,history/states/750-State_750.txt,"Ciudad Valles, SL",4957,1624,0.3276175106,4,measured
+751,history/states/751-State_751.txt,"San Francisco, CA",784,775,0.9885204082,10,measured
+752,history/states/752-State_752.txt,"Isla de Mona, PR",23,0,0.0000000000,0,measured
+753,history/states/753-State_753.txt,"Tepic, NA",5458,2459,0.4505313302,5,measured
+754,history/states/754-State_754.txt,Veracruz,4918,1897,0.3857259048,5,measured
+755,history/states/755-State_755.txt,Jalisco,6854,2160,0.3151444412,4,measured
+756,history/states/756-State_756.txt,"San Francisco Metro, CA",3821,2836,0.7422140801,8,measured
+757,history/states/757-State_757.txt,Quintana Roo,2964,763,0.2574224022,3,measured
+758,history/states/758-State_758.txt,"Axtla de Terrazas, SL",1561,581,0.3721973094,5,measured
+759,history/states/759-State_759.txt,Guanajuato,5978,1870,0.3128136501,4,measured
+760,history/states/760-State_760.txt,"Ouest, HT",2187,998,0.4563328761,5,measured
+761,history/states/761-State_761.txt,Yucatan,7744,2182,0.2817665289,4,measured
+762,history/states/762-State_762.txt,"Barahona, DO",1680,0,0.0000000000,0,measured
+763,history/states/763-State_763.txt,"Isla Maria Madre, NA",110,0,0.0000000000,0,measured
+764,history/states/764-State_764.txt,"Nellis AFB, NV",16,16,1.0000000000,10,measured
+765,history/states/765-State_765.txt,"Isla de la Gonave, HT",342,0,0.0000000000,0,measured
+766,history/states/766-State_766.txt,Queretaro,1441,611,0.4240111034,5,measured
+767,history/states/767-State_767.txt,"Huejutla de Reyes, VC",487,130,0.2669404517,3,measured
+768,history/states/768-State_768.txt,"Pedernales, DO",989,0,0.0000000000,0,measured
+769,history/states/769-State_769.txt,"Sud-Est, HT",754,0,0.0000000000,0,measured
+770,history/states/770-State_770.txt,"Puerto Vallarta, JA",721,12,0.0166435506,0,measured
+771,history/states/771-State_771.txt,Hidalgo,317,159,0.5015772871,6,measured
+772,history/states/772-State_772.txt,"Malmstrom AFB, MT",10,10,1.0000000000,10,measured
+773,history/states/773-State_773.txt,"Nippes, HT",822,204,0.2481751825,3,measured
+774,"history/states/774-Bronx, NY.txt","Queens, NY",121,121,1.0000000000,10,measured
+775,"history/states/775-Queens, NY.txt","Staten Island, NY",45,45,1.0000000000,10,measured
+776,"history/states/776-Brooklyn, NY.txt","The Bronx, NY",34,34,1.0000000000,10,measured
+777,"history/states/777-Staten Island, NY.txt","Brooklyn, NY",89,89,1.0000000000,10,measured
+778,"history/states/778-Saint Francis, KS.txt","Saint Francis, KS",527,315,0.5977229602,7,measured
+779,"history/states/779-Ohio, WV.txt","Ohio, WV",658,550,0.8358662614,9,measured
