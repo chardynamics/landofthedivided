@@ -1,22 +1,11 @@
-
 state={
 	id=50
 	name="STATE_50"
-
-	history={
-		owner = CAN
-		add_core_of = CAN
-		buildings = {
-
-		}
-
-	}
-
 	provinces={
-		601 2037 4839 8166 8175 
+		123 6520 8166 8175 
 	}
 	manpower=25000
-	state_category = metropolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	buildings_max_level_factor=1
+	state_category=metropolis
+	local_supplies=0
 }

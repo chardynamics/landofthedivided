@@ -1,25 +1,11 @@
-
 state={
 	id=707
 	name="STATE_707"
-
-	history={
-		owner = PRC
-		add_core_of = PRC
-		buildings = {
-
-		}
-		victory_points = {
-			6510 30 
-		}
-
-	}
-
 	provinces={
-		123 1303 1645 3321 4024 4667 6510 6515 6520 6535 6821 6822 6823 
+		4667 6510 
 	}
 	manpower=3808610
-	state_category = metropolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	buildings_max_level_factor=1
+	state_category=metropolis
+	local_supplies=0
 }
