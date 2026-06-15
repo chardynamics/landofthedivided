@@ -127,7 +127,7 @@ scripted_gui = {
 		parent_window_token = trade_tab
 
 		visible = {
-			NOT = { is_Antarctic_nation = yes }
+
 		}
 
 		### Tabs / Base
@@ -220,7 +220,6 @@ scripted_gui = {
 		triggers = {
 			production_units_toggle_alert_visible = {
 				NOT = { has_country_flag = has_opened_pu_menu }
-				NOT = { is_Antarctic_nation = yes }
 			}
 		}
 
@@ -849,7 +848,6 @@ scripted_gui = {
 		visible = {
 			econ_macroView = yes
 			econ_can_use_economy_system = yes
-			NOT = { is_Antarctic_nation = yes }
 		}
 
 		### | INDEX | ###
@@ -1337,15 +1335,6 @@ scripted_gui = {
 					idea = civilian_budget_cuts
 					days = 180
 				}
-				if = {
-					limit = { tag = IBR }
-					IBR_worsen_bureaucrats_opinion = yes
-					hidden_effect = { IBR_worsen_bureaucrats_opinion = yes } #Done Twice since the effect is pretty small
-				}
-				else_if = {
-					limit = { tag = JAP }
-					JAP_HoP_support_decrease_med = yes
-				}
 				update_economy_tab = yes
 			}
 
@@ -1353,16 +1342,6 @@ scripted_gui = {
 				add_timed_idea = {
 					idea = military_budget_cuts
 					days = 180
-				}
-				if = {
-					limit = { tag = IBR }
-					IBR_worsen_military_opinion = yes
-					hidden_effect = { IBR_worsen_military_opinion = yes }
-				}
-				else_if = {
-					limit = { tag = JAP }
-					JAP_IJA_decrease_small = yes
-					JAP_IJN_decrease_small = yes
 				}
 				update_economy_tab = yes
 			}
@@ -1398,20 +1377,6 @@ scripted_gui = {
 					flag = temp_tax_change
 					days = 180
 					value = 1
-				}
-				if = {
-					limit = { tag = IBR }
-					IBR_worsen_majority_opinion = yes
-					IBR_worsen_business_opinion = yes
-					hidden_effect = {
-						IBR_worsen_majority_opinion = yes
-						IBR_worsen_business_opinion = yes
-					}
-				}
-				else_if = {
-					limit = { tag = JAP }
-					JAP_HoP_support_decrease_small = yes
-					JAP_PA_support_decrease_med = yes
 				}
 				update_economy_tab = yes
 			}
@@ -1452,20 +1417,6 @@ scripted_gui = {
 					value = 1
 				}
 				add_political_power = 20
-				if = {
-					limit = { tag = IBR }
-					IBR_improve_majority_opinion = yes
-					IBR_improve_business_opinion = yes
-					hidden_effect = {
-						IBR_improve_majority_opinion = yes
-						IBR_improve_business_opinion = yes
-					}
-				}
-				else_if = {
-					limit = { tag = JAP }
-					JAP_HoP_support_increase_small = yes
-					JAP_PA_support_increase_med = yes
-				}
 				update_economy_tab = yes
 			}
 		}
@@ -1673,7 +1624,6 @@ scripted_gui = {
 					OR = {
 						has_war = yes
 						AND = {
-							has_country_flag = is_russian_nation
 							has_country_flag = is_warlord
 						}
 					}
@@ -3558,7 +3508,6 @@ scripted_gui = {
 		triggers = {
 			production_units_toggle_alert_visible = {
 				NOT = { has_country_flag = has_opened_pu_menu }
-				NOT = { is_Antarctic_nation = yes }
 			}
 		}
 
@@ -3938,7 +3887,6 @@ scripted_gui = {
 		triggers = {
 			production_units_toggle_alert_visible = {
 				NOT = { has_country_flag = has_opened_pu_menu }
-				NOT = { is_Antarctic_nation = yes }
 			}
 		}
 

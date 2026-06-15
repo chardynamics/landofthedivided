@@ -131,20 +131,6 @@ no_garrison = {
 			check_variable = { uncapped_resistance_target > -0.4 }
 			add = -60
 		}
-
-		# GCW has extra compliance gain, don't do that unless you're absolutely desperate
-		modifier = {
-			FROM = {
-				OR = {
-					tag = SGR
-					tag = BGR
-					tag = GGR
-					tag = HGR
-				}
-				surrender_progress < 0.8
-			}
-			add = -1000
-		}
 	}
 }
 

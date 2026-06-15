@@ -121,11 +121,9 @@ country_event = {
 						}
 						OR = {
 							AND = {
-								NOT = { tag = JAP }
-								NOT = { tag = GER }
-								NOT = { tag = USA }
-								NOT = { tag = ITA }
-								NOT = { has_country_flag = is_russian_nation }
+								NOT = { tag = CAN }
+								NOT = { tag = MEX }
+								NOT = { has_country_flag = is_warlord }
 								NOT = { has_government = progressivism }
 							}
 							check_variable = { deficit_to_GDP_ratio > 15 }

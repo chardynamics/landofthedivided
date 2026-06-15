@@ -350,27 +350,13 @@ Cold_War_GUI_Score_Calculation = {
 		multiply_variable = { Score_Diplomacy^5 = @sphere_perc_modifier }
 
 		# Faction Observers
-		if = {
-			limit = { tag = GER }
-			every_other_country = {
-				limit = { has_idea = Pakt_Observer }
-				add_to_variable = { PREV.Score_Diplomacy^6 = @score_per_observer }
-			}
-		}
-		else_if = {
-			limit = { tag = USA }
-			every_other_country = {
-				limit = { has_idea = OFN_Observer }
-				add_to_variable = { PREV.Score_Diplomacy^6 = @score_per_observer }
-			}
-		}
-		else_if = {
-			limit = { tag = JAP }
-			every_other_country = {
-				limit = { has_idea = Sphere_Observer }
-				add_to_variable = { PREV.Score_Diplomacy^6 = @score_per_observer }
-			}
-		}
+		#if = {
+		#	limit = { tag = GER }
+		#	every_other_country = {
+		#		limit = { has_idea = Pakt_Observer }
+		#		add_to_variable = { PREV.Score_Diplomacy^6 = @score_per_observer }
+		#	}
+		#}
 
 		# Power Projection
 		set_variable = { Score_Diplomacy^7 = 0 }

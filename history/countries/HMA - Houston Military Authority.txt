@@ -2,12 +2,13 @@ capital = 611
 
 
 # Vacant
-recruit_character = USA_Generic_Vacant
+
 fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 
 add_ideas = {
 	Military_Authority_Regional
-	#political#
+	USA_warlord_econ
+#political#
 	tno_political_parties_multiparty_system
 	tno_religious_rights_pluralism
 	tno_trade_unions_all_allowed
@@ -33,7 +34,7 @@ add_ideas = {
 	tno_education_public_education
 	tno_penal_system_incarceration
 	tno_gender_rights_women_in_the_workplace
-	tno_security_regulated_police
+	tno_security_crime_prevention
 	tno_regulations_moderate_regulations
 	#misc
 	tno_refugees_skilled

@@ -130,33 +130,6 @@ strong_tag_tank_production = {
 		value = 30
 	}
 }
-
-russian_ifv_production = {
-	abort = {
-		check_variable = { num_of_factories > 30 }
-	}
-	enable = {
-		NOT = {
-			has_country_flag = TNO_DIVISIONS_CAPPED
-		}
-		OR = {
-			check_variable = { num_of_factories > 6 } #KD's Notes - Reenables it for tags with enough
-			is_russian_nation = yes
-		}
-	}
-	#Air unit factors
-	ai_strategy = {
-		type = role_ratio
-			id = land_light_tank
-			value = 30
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = armor
-		value = 10
-	}
-}
-
 default_unit_production = {
 	abort = {
 		always = no

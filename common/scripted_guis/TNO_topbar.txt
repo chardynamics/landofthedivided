@@ -61,17 +61,14 @@ scripted_gui = {
 					has_global_flag = TNO_endonym_mode #native languages
 					has_global_flag = TNO_exonym_mode #full english 
 				}
-				AAA = { NOT = { has_country_flag = Antarctica_GUI_AAA_Op90_Active } }
 				NOT = { has_global_flag = TNO_my_world_is_on_fire_how_about_yours }
 			}
 			endonym_button_visible = { #appears while in endonym, click to switch to exonym
 				has_global_flag = TNO_endonym_mode #native languages
-				AAA = { NOT = { has_country_flag = Antarctica_GUI_AAA_Op90_Active } }
 				NOT = { has_global_flag = TNO_my_world_is_on_fire_how_about_yours }
 			}
 			exonym_button_visible = { #appears while in exonym, click to switch to default
 				has_global_flag = TNO_exonym_mode #full english
-				AAA = { NOT = { has_country_flag = Antarctica_GUI_AAA_Op90_Active } }
 				NOT = { has_global_flag = TNO_my_world_is_on_fire_how_about_yours }
 			}
 		}

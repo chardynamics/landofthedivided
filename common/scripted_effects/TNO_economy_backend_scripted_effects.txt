@@ -371,12 +371,6 @@ update_prod_units_amnt = {
 	round_variable = production_units_modifier
 	add_to_variable = { production_units = production_units_modifier }
 	round_variable = production_units
-	if = {
-		# fix for antarctica sometimes showing ghost pus
-		limit = { is_Antarctic_nation = yes }
-		set_variable = { production_units = 0 }
-	}
-	set_variable = { production_units_raw = production_units }
 
 	if = {
 		limit = { is_ai = yes }
@@ -602,7 +596,6 @@ update_production_unit_allocation = {
 				limit = {
 					OR = {
 						check_variable = { units_left < 1 }
-						is_Antarctic_nation = yes
 					}
 				}
 				set_temp_variable = { alert_id = token:Alert_UnallocatedPU }
@@ -1239,6 +1232,9 @@ AI_War_Tax_Check = {
 			AND = {
 				OR = {
 					has_war = yes
+					AND = {
+						has_country_flag = is_warlord
+					}
 				}
 				is_ai = yes
 				NOT = { has_country_flag = war_taxes_enabled }
@@ -1256,7 +1252,9 @@ AI_War_Tax_Check = {
 				is_ai = yes
 			}
 			NOT = {
-				
+				AND = {
+					has_country_flag = is_warlord
+				}
 			}
 		}
 		clr_country_flag = war_taxes_enabled
@@ -6101,11 +6099,9 @@ econ_calculations_ON_MONTHLY_AI = {
 				}
 				OR = {
 					AND = {
-						NOT = { tag = JAP }
-						NOT = { tag = GER }
-						NOT = { tag = USA }
-						NOT = { tag = ITA }
-						NOT = { has_country_flag = is_russian_nation }
+						NOT = { tag = CAN }
+						NOT = { tag = MEX }
+						NOT = { has_country_flag = is_warlord }
 						NOT = { has_government = progressivism }
 					}
 					check_variable = { deficit_to_GDP_ratio > 15 }
@@ -6358,52 +6354,47 @@ build_sphere_leader_array = {
 }
 
 fiscal_crisis_check = {
-	if = {
-		limit = { 
-			is_antarctic_nation = no
+	if = { 
+		limit = {
+			NOT = {
+				has_country_flag = ECON_ONGOING_FISCAL_CRISIS
+			}
 		}
-		if = { 
-			limit = {
+		if = { # Check for Fiscal Crisis, skip all other blocks if this is true
+		limit = {
+			check_variable = { debt_to_GDP_ratio < debt_ceiling }
 				NOT = {
-					has_country_flag = ECON_ONGOING_FISCAL_CRISIS
+					has_country_flag = Fiscal_Crisis_Active_Timer
 				}
 			}
-			if = { # Check for Fiscal Crisis, skip all other blocks if this is true
+		}
+		else_if = {
 			limit = {
+				check_variable = { debt_to_GDP_ratio > debt_ceiling }
+				NOT = {
+					has_country_flag = Fiscal_Crisis_Active_Timer
+				}
+			}
+			start_fiscal_crisis_alert = yes
+		}
+		else_if = {
+			limit = {
+				check_variable = { Months_Till_Fiscal = 0 }
+			}
+			start_fiscal_crisis = yes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = Fiscal_Crisis_Active_Timer
 				check_variable = { debt_to_GDP_ratio < debt_ceiling }
-					NOT = {
-						has_country_flag = Fiscal_Crisis_Active_Timer
-					}
-				}
 			}
-			else_if = {
-				limit = {
-					check_variable = { debt_to_GDP_ratio > debt_ceiling }
-					NOT = {
-						has_country_flag = Fiscal_Crisis_Active_Timer
-					}
-				}
-				start_fiscal_crisis_alert = yes
+			end_fiscal_crisis_alert = yes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = Fiscal_Crisis_Active_Timer
 			}
-			else_if = {
-				limit = {
-					check_variable = { Months_Till_Fiscal = 0 }
-				}
-				start_fiscal_crisis = yes
-			}
-			else_if = {
-				limit = {
-					has_country_flag = Fiscal_Crisis_Active_Timer
-					check_variable = { debt_to_GDP_ratio < debt_ceiling }
-				}
-				end_fiscal_crisis_alert = yes
-			}
-			else_if = {
-				limit = {
-					has_country_flag = Fiscal_Crisis_Active_Timer
-				}
-				add_to_variable = { Months_Till_Fiscal = -1 }
-			}
+			add_to_variable = { Months_Till_Fiscal = -1 }
 		}
 	}
 }
@@ -7042,15 +7033,6 @@ apply_central_bank_policy = {
 	divide_variable = { slush_amount_central_bank = 12 }
 	multiply_variable = { slush_amount_central_bank = 4 } 
 	set_temp_variable = { slush_amount = slush_amount_central_bank }
-	if = {
-		limit = {
-			AND = {
-				has_country_flag = BRA_adhemar_moneybags_category_allowed
-				NOT = { has_country_flag = BRA_adhemar_slush_fund_policy_temporarily_disabled }
-			}
-		}
-		BRA_adhemar_add_slush_fund = yes
-	}
 	set_variable = { central_bank_effectiveness_4_expenses_cost = slush_amount_central_bank }
 	divide_variable = { central_bank_effectiveness_4_expenses_cost = 10 }
 }
@@ -7479,16 +7461,6 @@ update_ai_slider_logic = {
 	else_if = {
 		limit = { NOT = { has_country_flag = TNO_AI_Defined_Slider } }
 		set_variable = { econ_army_expenditures_slider_pct = econ_army_expenditures_minimal_pct }
-	}
-	#Nukes
-	if = {
-		limit = {
-			OR = {
-				tag = BRG
-			}
-			NOT = { has_country_flag = TNO_AI_Defined_Slider }
-		}
-		set_variable = { econ_nuclear_expenditures_slider_pct = econ_nuclear_expenditures_minimal_pct }
 	}
 	#Navy
 	if = { #KD's Notes - Smart Move? No. But it is what they would realistically do

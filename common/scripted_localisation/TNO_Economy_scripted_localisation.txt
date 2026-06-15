@@ -2007,14 +2007,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = econ_poverty_rate_change_endsieg_sl
-	text = {
-		trigger = { has_idea = endsieg }
-		localization_key = econ_poverty_rate_change_endsieg_tt
-	}
-}
-
-defined_text = {
 	name = gdp_number_display_sl
 	text = {
 		localization_key = gdp_number_display_tooltip
@@ -4022,44 +4014,6 @@ defined_text = {
 
 defined_text = {
 	name = Get_economy_button_GFX
-	text = {
-		trigger = {
-			OR = {
-				tag = GER
-				tag = BGR
-				tag = GGR
-				tag = SGR
-				tag = HGR
-				tag = BRG
-				check_variable = { ECON_SPHERE_LEADER = GER }
-			}
-		}
-
-		localization_key = "GFX_economy_button_RM"
-	}
-
-	text = {
-		trigger = {
-			OR = {
-				tag = JAP
-				check_variable = { ECON_SPHERE_LEADER = JAP }
-			}
-		}
-
-		localization_key = "GFX_economy_button_JPY"
-	}
-
-	text = { # ask about coding this in for all russian folks
-		trigger = {
-			OR = {
-				is_russian_nation = yes
-				is_kazakh_nation = yes
-			}
-		}
-
-		localization_key = "GFX_economy_button_RUBLE"
-	}
-
 	text = {
 		localization_key = "GFX_economy_button_USD"
 	}

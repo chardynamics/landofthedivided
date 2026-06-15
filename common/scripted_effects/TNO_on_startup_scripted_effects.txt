@@ -30,7 +30,7 @@ TNO_startup_nation = {
 			#add_dynamic_modifier = { modifier = TNO_economy_type_capitalism_dynamic_modifier }
 			add_dynamic_modifier = { modifier = TNO_vol_troops_modifier }
 			if = {
-				limit = { NOT = { is_russian_nation = yes } }
+				limit = { NOT = { is_warlord = yes } }
 				add_dynamic_modifier = { modifier = TNO_deficit_effects_modifier }
 			}
 
@@ -70,12 +70,7 @@ TNO_startup_nation = {
 			set_variable = { army_professionalism_monthly_change = 0 }
 
 			set_variable = { research_facilities_counter = 0 }
-			if = {
-				limit = { is_Antarctic_nation = yes }
-				set_variable = { research_facilities_monthly_change = 1 }
-			} else = {
-				set_variable = { research_facilities_monthly_change = 0 }
-			}
+			set_variable = { research_facilities_monthly_change = 0 }
 		
 			set_variable = { industrial_equipment_counter = 0 }
 			set_variable = { industrial_equipment_monthly_change = 0 }
@@ -225,11 +220,11 @@ TNO_startup_nation = {
 			if = {
 				limit = { 
 					AND = {
-						is_russian_nation = yes
+						is_warlord = yes
 						is_ai = yes
 					}
 				}
-				add_ideas = RUS_stupid_ai_econ
+				add_ideas = USA_stupid_ai_econ
 			}
 		
 			#test due to weird shit
