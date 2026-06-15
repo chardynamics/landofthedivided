@@ -2,18 +2,20 @@ state={
 	id=281
 	name="STATE_281"
 	history = {
-		owner = WAR
-		add_core_of = WAR
+		owner = BAR
+		add_core_of = BAR
 		buildings = {
 			infrastructure = 6
 			
 			thermoelectric_plant = 1
 		}
+		victory_points = { 1031 4 }
 	}
 	provinces={
-		1438 4759 
+		1031 1438 4759 
 	}
 	manpower=1200
-	state_category = pastoral
-	buildings_max_level_factor=1.000
+	buildings_max_level_factor=1
+	state_category=pastoral
+	local_supplies=0
 }
