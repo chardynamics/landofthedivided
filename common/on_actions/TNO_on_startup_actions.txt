@@ -75,7 +75,6 @@ on_actions = {
 				set_variable = { xcycling = 0 }
 				set_variable = { ycycling = 0.125 }
 
-				SA_initalize_south_american_cold_war = yes
 				Global_Conflicts_Initalize = yes
 				Espionage_Initialize_Global_Vars = yes
 
@@ -143,10 +142,6 @@ on_actions = {
 			# Starting nuclear stockpiles for each of the three superpowers
 			
 			# Faction embargoes
-			set_global_flag = ofn_cps_embargo
-			set_global_flag = ofn_pakt_embargo
-			set_global_flag = pakt_cps_embargo
-			set_global_flag = pakt_italy_embargo
 			ZZZ = {
 				# needed for the bellow effect
 				resize_array = {
@@ -179,8 +174,6 @@ on_actions = {
 			ZZZ = {
 				TNO_tension_setup = yes
 			}
-
-
 
 			#Fixing synth rubber tech bug; effect can only applied when research is completed
 			#This on action 're-researches' the techs in question to properly grant the effect

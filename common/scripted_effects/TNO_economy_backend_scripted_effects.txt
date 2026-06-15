@@ -5227,19 +5227,6 @@ resolve_excessive_state_gdp = {
 	}
 }
 
-generate_russia_state_gdp = {
-	hidden_effect = {
-		# every_owned_state = {
-		# 	generate_state_gdps = yes
-		# }
-		calculate_total_state_gdp = yes
-		generate_country_gdp = yes
-		set_variable = { GDP_growth = 5.00 }
-		multiply_variable = { GDP = 1.5 } #already converted to billion
-		resolve_excessive_state_gdp = yes
-	}
-}
-
 econ_backfill_graphs = {
 	set_temp_variable = { econ_graph_month = 8 }
 	clear_array = econ_graph_months

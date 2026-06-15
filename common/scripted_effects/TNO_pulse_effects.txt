@@ -60,41 +60,6 @@ first_every_month_script = {
 		econ_get_world_gdp = yes
 	}
 
-	### COMECON
-	SocIntern_Refresh_Arrays = yes
-	event_target:SOCINTERN_LEADER_NATION = {
-		if = {
-			limit = { exists = no }
-			clr_country_flag = SOCINTERN_LEADER
-			clear_global_event_target = SOCINTERN_LEADER_NATION
-			ZZZ = {
-				SocIntern_Change_Leader = yes
-			}
-			if = {
-				limit = {
-					has_global_flag = {
-						flag = SOCINTERN_VOTE_IN_PROGRESS
-						days > 21
-					}
-				}
-				SocIntern_Tabulate_Votes = yes
-			}
-		}
-	}
-
-	every_country = {
-		clr_country_flag = COMECON_dev_withdrawal_made
-		clr_country_flag = COMECON_def_withdrawal_made
-		clr_country_flag = COMECON_dev_deposit_made
-		clr_country_flag = COMECON_def_deposit_made
-		clr_country_flag = COMECON_aid_sent
-
-		set_variable = { COMECON_lending_cap_one_shot = GDP }
-		set_variable = { COMECON_lending_cap_yearly = GDP }
-		divide_variable = { COMECON_lending_cap_one_shot = 20 }
-		divide_variable = { COMECON_lending_cap_yearly = 100 }
-	}
-
 	ZZZ_econ_inflation_cycling_calculation = yes
 
 	clear_array = GLOBAL.econ_sphere_leaders # necessary for some calcs :)
