@@ -165,6 +165,7 @@ on_actions = {
 			# foreign policy startup
 			every_country = {
 				resize_array = { world_conflict_guis = 1 }
+				d_create_army = yes
 			}
 
 			#EVENTS
@@ -218,6 +219,7 @@ on_actions = {
 			ZZZ = {
 				TNO_Initialize_Tips_and_Tricks = yes
 			}
+			
 		}
 	}
 }
