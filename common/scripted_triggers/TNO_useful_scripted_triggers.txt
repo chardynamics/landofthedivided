@@ -631,7 +631,6 @@ has_ROOT_at_least_1_div_in_current_state_scope = {
 
 econ_can_use_economy_system = {
 	NOT = { has_country_flag = can_not_use_econ_system }
-	NOT = { is_Antarctic_nation = yes }
 	exists = yes
 }
 

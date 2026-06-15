@@ -195,7 +195,6 @@ on_actions = {
 			if = {
 				limit = { check_variable = { pulse_month = 12 } }
 				set_variable = { pulse_month = 0 }
-				BRA_run_year_on_action = yes
 			}
 			Cold_War_GUI_Fully_Calculate_Scores = yes # Recalc scores
 		}
