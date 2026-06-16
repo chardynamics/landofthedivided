@@ -1,25 +1,19 @@
-
-state={
-	id=681
-	name="STATE_681"
-
-	history={
-		owner = HMA
-		add_core_of = HMA
-		buildings = {
-			infrastructure = 5
-
-		}
-
+state = { 
+	id = 681 
+	name = "STATE_681" 
+	manpower = 5280 
 	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = HMA 
+		
 		victory_points = { 6361 16 }
-}
-
-	provinces={
-		14 342 588 756 1233 1519 2136 2324 3306 4022 4644 6347 6357 6361 6364 6366 6383 8765 8769 8770 8774 
+		
+		buildings = { infrastructure = 5 }
+		
+		add_core_of = HMA 
 	}
-	manpower=5280
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 14 342 588 756 1233 1519 2136 2324 3306 4022 4644 6347 6357 6361 6364 6366 6383 8765 8769 8770 8774 }
 }

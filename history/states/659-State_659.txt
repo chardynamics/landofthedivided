@@ -1,34 +1,29 @@
-
-state={
-	id=659
-	name="STATE_659"
-
-	history={
-		owner = DMA
-		add_core_of = DMA
-		buildings = {
-			infrastructure = 10
-
-			thermoelectric_plant = 1
-			prisons = 1
-			barracks = 3
-			dockyard = 2
-			radar_station = 6
-			anti_air_building = 5
-			missile_silo = 1
-			8888 = {
-				naval_base = 10
-			}
-		}
-
+state = { 
+	id = 659 
+	name = "STATE_659" 
+	manpower = 1500 
 	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = DMA 
+		
 		victory_points = { 8888 4 }
-}
-	provinces={
-		8888 
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 1 
+			prisons = 1 
+			barracks = 3 
+			dockyard = 2 
+			radar_station = 6 
+			anti_air_building = 5 
+			missile_silo = 1 
+			8888 = { naval_base = 10 }
+		}
+		
+		add_core_of = DMA 
 	}
-	manpower=1500
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 8888 }
 }

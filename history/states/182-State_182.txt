@@ -1,33 +1,29 @@
-
-state={
-	id=182
-	name="STATE_182"
-
-	history={
-		owner = CMM
-		add_core_of = CMM
-		buildings = {
-			infrastructure = 7
-
-			thermoelectric_plant = 4
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
-		}
+state = { 
+	id = 182 
+	name = "STATE_182" 
+	manpower = 834544 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CMM 
 		
 		victory_points = { 4570 10 }
-
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 4 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
+		}
+		
+		add_core_of = CMM 
 	}
-
-	provinces={
-		1864 2033 3636 4570 5508 8552 8553 
-	}
-	manpower=834544
-	state_category = metropolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1864 2033 3636 4570 5508 8552 8553 }
 }

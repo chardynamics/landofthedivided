@@ -1,27 +1,27 @@
-state={
-	id=225
-	name="STATE_225"
-	history = {
-		owner = CAN
-		add_core_of = CAN
-		buildings = {
-			infrastructure = 10
-			
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
+state = { 
+	id = 225 
+	name = "STATE_225" 
+	manpower = 720000 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = CAN 
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
 		}
+		
+		add_core_of = CAN 
 	}
-	provinces={
-		6713 
-	}
-	manpower=720000
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 6713 }
 }

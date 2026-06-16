@@ -1,18 +1,16 @@
-state={
-	id=158
-	name="STATE_158"
-	history = {
-		owner = SWA
-		add_core_of = SWA
-		buildings = {
-			infrastructure = 0
-			
-		}
+state = { 
+	id = 158 
+	name = "STATE_158" 
+	manpower = 302 
+	
+	state_category = enclave 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SWA 
+		
+		buildings = { infrastructure = 0 }
+		
+		add_core_of = SWA 
 	}
-	provinces={
-		1779 
-	}
-	manpower=302
-	state_category = enclave
-	buildings_max_level_factor=1.000
+	provinces = { 1779 }
 }

@@ -1,18 +1,16 @@
-state={
-	id=597
-	name="STATE_597"
-	history = {
-		owner = GCC
-		add_core_of = GCC
-		buildings = {
-			infrastructure = 8
-			
-		}
+state = { 
+	id = 597 
+	name = "STATE_597" 
+	manpower = 6140 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = GCC 
+		
+		buildings = { infrastructure = 8 }
+		
+		add_core_of = GCC 
 	}
-	provinces={
-		363 6359 
-	}
-	manpower=6140
-	state_category = rural
-	buildings_max_level_factor=1.000
+	provinces = { 363 6359 }
 }

@@ -1,25 +1,19 @@
-
-state={
-	id=532
-	name="STATE_532"
-
-	history={
-		owner = OKC
-		add_core_of = OKC
-		buildings = {
-			infrastructure = 6
-
-		}
-
+state = { 
+	id = 532 
+	name = "STATE_532" 
+	manpower = 19209 
 	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = OKC 
+		
 		victory_points = { 1586 10 }
-}
-
-	provinces={
-		1586 1957 2228 2345 2514 2944 3810 3863 3976 6206 6222 6242 6246 8735 
+		
+		buildings = { infrastructure = 6 }
+		
+		add_core_of = OKC 
 	}
-	manpower=19209
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1586 1957 2228 2345 2514 2944 3810 3863 3976 6206 6222 6242 6246 8735 }
 }

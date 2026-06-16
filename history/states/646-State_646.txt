@@ -1,25 +1,26 @@
-state={
-	id=646
-	name="STATE_646"
-	history = {
-		owner = BAH
-		add_core_of = BAH
-		buildings = {
-			infrastructure = 0
-			
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-		}
+state = { 
+	id = 646 
+	name = "STATE_646" 
+	manpower = 300000 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = BAH 
+		
 		victory_points = { 6776 30 }
+		
+		buildings = { 
+			infrastructure = 0 
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = BAH 
 	}
-	provinces={
-		6776 
-	}
-	manpower=300000
-	state_category = large_city
-	buildings_max_level_factor=1.000
+	provinces = { 6776 }
 }

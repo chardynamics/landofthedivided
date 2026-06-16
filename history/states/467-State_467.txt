@@ -1,19 +1,19 @@
-state={
-	id=467
-	name="STATE_467"
-	history = {
-		owner = NOR
-		add_core_of = NOR
-		buildings = {
-			infrastructure = 7
-			
-			thermoelectric_plant = 3
+state = { 
+	id = 467 
+	name = "STATE_467" 
+	manpower = 20400 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = NOR 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 3 
 		}
+		
+		add_core_of = NOR 
 	}
-	provinces={
-		2056 2599 4571 4791 6044 6075 
-	}
-	manpower=20400
-	state_category = town
-	buildings_max_level_factor=1.000
+	provinces = { 2056 2599 4571 4791 6044 6075 }
 }

@@ -1,27 +1,27 @@
-state={
-	id=432
-	name="STATE_432"
-	history = {
-		add_claim_by = REO
-		owner = SOH
-		add_core_of = SOH
-		buildings = {
-			infrastructure = 10
-			
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-		}
+state = { 
+	id = 432 
+	name = "STATE_432" 
+	manpower = 397542 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SOH 
+		
 		victory_points = { 5963 25 }
-}
-	provinces={
-		914 3538 3713 4377 5963 
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_claim_by = REO 
+		add_core_of = SOH 
 	}
-	manpower=397542
-	state_category = large_city
-	buildings_max_level_factor=1.000
+	provinces = { 914 3538 3713 4377 5963 }
 }

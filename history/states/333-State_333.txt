@@ -1,23 +1,23 @@
-state={
-	id=333
-	name="STATE_333"
-	history = {
-		owner = ERE
-		add_core_of = ERE
-		buildings = {
-			infrastructure = 9
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-		}
+state = { 
+	id = 333 
+	name = "STATE_333" 
+	manpower = 72000 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = ERE 
+		
 		victory_points = { 317 25 }
-}
-	provinces={
-		317 3954 
+		
+		buildings = { 
+			infrastructure = 9 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = ERE 
 	}
-	manpower=72000
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 317 3954 }
 }

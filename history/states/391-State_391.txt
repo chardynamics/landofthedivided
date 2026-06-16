@@ -1,29 +1,25 @@
-
-state={
-	id=391
-	name="STATE_391"
-
-	history={
-		owner = RWP
-		add_core_of = RWP
-		buildings = {
-			infrastructure = 9
-
-			thermoelectric_plant = 4
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
+state = { 
+	id = 391 
+	name = "STATE_391" 
+	manpower = 443991 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = RWP 
+		
+		buildings = { 
+			infrastructure = 9 
+			thermoelectric_plant = 4 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
 		}
-
+		
+		add_core_of = RWP 
 	}
-
-	provinces={
-		2143 5091 5860 
-	}
-	manpower=443991
-	state_category = large_city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 2143 5091 5860 }
 }

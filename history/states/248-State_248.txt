@@ -1,20 +1,18 @@
-state={
-	id=248
-	name="STATE_248"
-	history = {
-		owner = VER
-		add_core_of = VER
-		buildings = {
-			infrastructure = 10
-			
-		}
+state = { 
+	id = 248 
+	name = "STATE_248" 
+	manpower = 8400 
 	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = VER 
+		
 		victory_points = { 6725 6 }
-}
-	provinces={
-		6725 
+		
+		buildings = { infrastructure = 10 }
+		
+		add_core_of = VER 
 	}
-	manpower=8400
-	state_category = rural
-	buildings_max_level_factor=1.000
+	provinces = { 6725 }
 }

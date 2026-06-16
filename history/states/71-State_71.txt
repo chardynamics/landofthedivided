@@ -1,24 +1,20 @@
-
-state={
-	id=71
-	name="STATE_71"
-
-	history={
-		owner = TMA
-		add_core_of = TMA
-		buildings = {
-			infrastructure = 7
-
-			hospitals = 1
+state = { 
+	id = 71 
+	name = "STATE_71" 
+	manpower = 36000 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = TMA 
+		
+		buildings = { 
+			infrastructure = 7 
+			hospitals = 1 
 		}
-
+		
+		add_core_of = TMA 
 	}
-
-	provinces={
-		8864 
-	}
-	manpower=36000
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 8864 }
 }

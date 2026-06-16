@@ -1,38 +1,33 @@
-
-state={
-	id=596
-	name="STATE_596"
-
-	history={
-		owner = HMA
-		add_core_of = HMA
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 3
-			schools = 1
-			hospitals = 1
-			prisons = 1
-			dockyard = 1
-			4911 = {
-				naval_base = 6
-			}
-		}
-
+state = { 
+	id = 596 
+	name = "STATE_596" 
+	manpower = 136639 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { 
+		oil = 19 
+		aluminium = 19 
+	} 
+	history = { 
+		owner = HMA 
+		
 		victory_points = { 4911 16 }
 		victory_points = { 6763 10 }
-}
-
-	resources = {
-		oil = 19
-		aluminium = 19
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 3 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+			dockyard = 1 
+			4911 = { naval_base = 6 }
+		}
+		
+		add_core_of = HMA 
 	}
-	provinces={
-		585 1250 1302 1554 1867 2793 4911 6377 6379 6398 6763 
-	}
-	manpower=136639
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 585 1250 1302 1554 1867 2793 4911 6377 6379 6398 6763 }
 }

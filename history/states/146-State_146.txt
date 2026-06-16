@@ -1,32 +1,34 @@
-
-state={
-	id=146
-	name="STATE_146"
-	history = {
-		owner = SUT
-		add_core_of = SUT
-		buildings = {
-			infrastructure = 6
-			air_base = 6
-			thermoelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
-		}
+state = { 
+	id = 146 
+	name = "STATE_146" 
+	manpower = 218277 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { 
+		oil = 22 
+		steel = 22 
+		uranium = 10 
+	} 
+	history = { 
+		owner = SUT 
+		
 		victory_points = { 3142 35 }
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 6 
+			thermoelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = SUT 
 	}
-	resources = {
-		oil = 22
-		steel = 22
-		uranium = 10
-	}
-	provinces={
-		1006 3142 5850 
-	}
-	manpower=218277
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1006 3142 5850 }
 }

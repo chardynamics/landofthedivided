@@ -1,19 +1,19 @@
-state={
-	id=174
-	name="STATE_174"
-	history = {
-		owner = CAN
-		add_core_of = CAN
-		buildings = {
-			infrastructure = 0
-			
-			thermoelectric_plant = 2
+state = { 
+	id = 174 
+	name = "STATE_174" 
+	manpower = 600 
+	
+	state_category = enclave 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = CAN 
+		
+		buildings = { 
+			infrastructure = 0 
+			thermoelectric_plant = 2 
 		}
+		
+		add_core_of = CAN 
 	}
-	provinces={
-		5435 5443 
-	}
-	manpower=600
-	state_category = enclave
-	buildings_max_level_factor=1.000
+	provinces = { 5435 5443 }
 }

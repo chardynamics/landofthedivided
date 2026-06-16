@@ -1,29 +1,25 @@
-
-state={
-	id=260
-	name="STATE_260"
-
-	history={
-		owner = SNH
-		add_core_of = SNH
-		buildings = {
-			infrastructure = 9
-
-			nuclear_reactor = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
-
+state = { 
+	id = 260 
+	name = "STATE_260" 
+	manpower = 138952 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SNH 
+		
 		victory_points = { 1627 6 }
-}
-
-	provinces={
-		1463 1627 5610 8612 
+		
+		buildings = { 
+			infrastructure = 9 
+			nuclear_reactor = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = SNH 
 	}
-	manpower=138952
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1463 1627 5610 8612 }
 }

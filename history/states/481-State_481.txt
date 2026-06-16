@@ -1,27 +1,28 @@
-state={
-	id=481
-	name="STATE_481"
-	history = {
-		owner = CHA
-		add_core_of = CHA
-		buildings = {
-			infrastructure = 9
-			air_base = 8
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			radar_station = 1
-		}
+state = { 
+	id = 481 
+	name = "STATE_481" 
+	manpower = 505257 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = CHA 
+		
 		victory_points = { 3621 25 }
-}
-	provinces={
-		2646 3194 3621 3927 4833 6117 
+		
+		buildings = { 
+			infrastructure = 9 
+			air_base = 8 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			radar_station = 1 
+		}
+		
+		add_core_of = CHA 
 	}
-	manpower=505257
-	state_category = large_city
-	buildings_max_level_factor=1.000
+	provinces = { 2646 3194 3621 3927 4833 6117 }
 }

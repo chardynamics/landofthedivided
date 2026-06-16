@@ -1,27 +1,27 @@
-state={
-	id=374
-	name="STATE_374"
-	history = {
-		owner = NJM
-		add_core_of = NJM
-		buildings = {
-			infrastructure = 9
-			
-			thermoelectric_plant = 3
-			hydroelectric_plant = 1
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
+state = { 
+	id = 374 
+	name = "STATE_374" 
+	manpower = 738361 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = NJM 
+		
+		buildings = { 
+			infrastructure = 9 
+			thermoelectric_plant = 3 
+			hydroelectric_plant = 1 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
 		}
+		
+		add_core_of = NJM 
 	}
-	provinces={
-		440 3746 4592 4951 5852 
-	}
-	manpower=738361
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 440 3746 4592 4951 5852 }
 }

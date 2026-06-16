@@ -1,25 +1,26 @@
-
-state={
-	id=689
-	name="STATE_689"
-	history = {
-		owner = SCA
-		add_core_of = SCA
-		buildings = {
-			infrastructure = 5
-			air_base = 4
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			hospitals = 1
-		}
+state = { 
+	id = 689 
+	name = "STATE_689" 
+	manpower = 37660 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SCA 
+		
 		victory_points = { 2160 5 }
 		victory_points = { 2831 20 }
+		
+		buildings = { 
+			infrastructure = 5 
+			air_base = 4 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			hospitals = 1 
+		}
+		
+		add_core_of = SCA 
 	}
-	provinces={
-		1998 2160 2831 3186 4555 6211 6227 8723 
-	}
-	manpower=37660
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1998 2160 2831 3186 4555 6211 6227 8723 }
 }

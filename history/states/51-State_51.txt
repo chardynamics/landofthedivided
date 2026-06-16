@@ -1,21 +1,19 @@
-
-state={
-	id=51
-	name="STATE_51"
-	history = {
-		owner = NGI
-		add_core_of = NGI
-		buildings = {
-			infrastructure = 8
-		}
+state = { 
+	id = 51 
+	name = "STATE_51" 
+	manpower = 2700 
 	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = NGI 
+		
 		victory_points = { 3498 16 }
-}
-	provinces={
-		2128 2978 3498 5967 
+		
+		buildings = { infrastructure = 8 }
+		
+		add_core_of = NGI 
 	}
-	manpower=2700
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 2128 2978 3498 5967 }
 }

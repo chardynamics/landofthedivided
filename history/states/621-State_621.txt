@@ -1,33 +1,31 @@
-state={
-	id=621
-	name="STATE_621"
-	history = {
-		owner = CFC
-		add_core_of = CFC
-		buildings = {
-			infrastructure = 8
-			
-			thermoelectric_plant = 3
-			hydroelectric_plant = 1
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 2
-			dockyard = 2
-			radar_station = 1
-			anti_air_building = 1
-			6423 = {
-				naval_base = 9
-			}
-		}
+state = { 
+	id = 621 
+	name = "STATE_621" 
+	manpower = 1198737 
 	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = CFC 
+		
 		victory_points = { 6429 16 }
-}
-	provinces={
-		3093 3290 3866 4002 6423 6424 6427 6429 
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 3 
+			hydroelectric_plant = 1 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 2 
+			dockyard = 2 
+			radar_station = 1 
+			anti_air_building = 1 
+			6423 = { naval_base = 9 }
+		}
+		
+		add_core_of = CFC 
 	}
-	manpower=1198737
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 3093 3290 3866 4002 6423 6424 6427 6429 }
 }

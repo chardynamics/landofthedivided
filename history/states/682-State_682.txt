@@ -1,20 +1,20 @@
-state={
-	id=682
-	name="STATE_682"
-	history = {
-		owner = MEX
-		add_core_of = MEX
-		buildings = {
-			infrastructure = 3
-			
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
+state = { 
+	id = 682 
+	name = "STATE_682" 
+	manpower = 14400 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = MEX 
+		
+		buildings = { 
+			infrastructure = 3 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
 		}
+		
+		add_core_of = MEX 
 	}
-	provinces={
-		176 383 1147 1777 1872 2234 2361 2862 2922 2945 3122 3620 4162 4439 4627 6499 6503 6514 6521 6531 6541 
-	}
-	manpower=14400
-	state_category = rural
-	buildings_max_level_factor=1.000
+	provinces = { 176 383 1147 1777 1872 2234 2361 2862 2922 2945 3122 3620 4162 4439 4627 6499 6503 6514 6521 6531 6541 }
 }

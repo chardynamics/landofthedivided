@@ -1,33 +1,33 @@
-
-state={
-	id=655
-	name="STATE_655"
-	history = {
-		owner = SCA
-		add_core_of = SCA
-		buildings = {
-			infrastructure = 6
-			air_base = 10
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 2
-			radar_station = 2
-			anti_air_building = 2
-		}
+state = { 
+	id = 655 
+	name = "STATE_655" 
+	manpower = 3600000 
+	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { aluminium = 3 } 
+	history = { 
+		owner = SCA 
+		
 		victory_points = { 6191 20 }
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 10 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 2 
+			radar_station = 2 
+			anti_air_building = 2 
+		}
+		
+		add_core_of = SCA 
 	}
-	resources = {
-		aluminium = 3
-	}
-	provinces={
-		890 2387 2470 6191 
-	}
-	manpower=3600000
-	state_category = megalopolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 890 2387 2470 6191 }
 }

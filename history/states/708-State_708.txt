@@ -1,26 +1,26 @@
-state={
-	id=708
-	name="STATE_708"
-	history = {
-		owner = CUB
-		add_core_of = CUB
-		buildings = {
-			infrastructure = 2
-			
-			thermoelectric_plant = 4
-			hydroelectric_plant = 1
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
+state = { 
+	id = 708 
+	name = "STATE_708" 
+	manpower = 623820 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = CUB 
+		
+		buildings = { 
+			infrastructure = 2 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 1 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
 		}
+		
+		add_core_of = CUB 
 	}
-	provinces={
-		649 1180 2048 4350 6525 
-	}
-	manpower=623820
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 649 1180 2048 4350 6525 }
 }

@@ -1,19 +1,19 @@
-state={
-	id=417
-	name="STATE_417"
-	history = {
-		owner = SVR
-		add_core_of = SVR
-		buildings = {
-			infrastructure = 7
-			
-			thermoelectric_plant = 1
+state = { 
+	id = 417 
+	name = "STATE_417" 
+	manpower = 32493 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SVR 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 1 
 		}
+		
+		add_core_of = SVR 
 	}
-	provinces={
-		216 4426 4427 5897 
-	}
-	manpower=32493
-	state_category = town
-	buildings_max_level_factor=1.000
+	provinces = { 216 4426 4427 5897 }
 }

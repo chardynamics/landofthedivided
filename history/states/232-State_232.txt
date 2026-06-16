@@ -1,31 +1,26 @@
-
-state={
-	id=232
-	name="STATE_232"
-
-	history={
-		owner = MAR
-		add_core_of = MAR
-		buildings = {
-			infrastructure = 9
-
-			thermoelectric_plant = 2
-			schools = 1
-			hospitals = 1
-			dockyard = 1
-			1063 = {
-				naval_base = 5
-			}
-		}
+state = { 
+	id = 232 
+	name = "STATE_232" 
+	manpower = 77098 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = MAR 
+		
 		victory_points = { 2263 35 }
-
+		
+		buildings = { 
+			infrastructure = 9 
+			thermoelectric_plant = 2 
+			schools = 1 
+			hospitals = 1 
+			dockyard = 1 
+			1063 = { naval_base = 5 }
+		}
+		
+		add_core_of = MAR 
 	}
-
-	provinces={
-		344 1063 1306 2263 2878 3399 4325 5606 8602 
-	}
-	manpower=77098
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 344 1063 1306 2263 2878 3399 4325 5606 8602 }
 }

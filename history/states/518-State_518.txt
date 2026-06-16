@@ -1,33 +1,27 @@
-
-state={
-	id=518
-	name="STATE_518"
-
-	history={
-		owner = SSC
-		add_core_of = SSC
-		buildings = {
-			infrastructure = 8
-
-			thermoelectric_plant = 1
-			nuclear_reactor = 1
-			schools = 1
-			hospitals = 1
-			1712 = {
-				dam = 1
-			}
-		}
-
+state = { 
+	id = 518 
+	name = "STATE_518" 
+	manpower = 67202 
 	
-		victory_points = { 6200 16 }
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SSC 
+		
 		victory_points = { 3305 10 }
-}
-
-	provinces={
-		1712 1828 2216 2663 3305 3859 3883 4551 4937 6189 6198 6200 6219 8724 
+		victory_points = { 6200 16 }
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 1 
+			nuclear_reactor = 1 
+			schools = 1 
+			hospitals = 1 
+			1712 = { dam = 1 }
+		}
+		
+		add_core_of = SSC 
 	}
-	manpower=67202
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1712 1828 2216 2663 3305 3859 3883 4551 4937 6189 6198 6200 6219 8724 }
 }

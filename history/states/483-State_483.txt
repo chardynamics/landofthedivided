@@ -1,18 +1,16 @@
-state={
-	id=483
-	name="STATE_483"
-	history = {
-		owner = TMA
-		add_core_of = TMA
-		buildings = {
-			infrastructure = 9
-			
-		}
+state = { 
+	id = 483 
+	name = "STATE_483" 
+	manpower = 120 
+	
+	state_category = tiny_island 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = TMA 
+		
+		buildings = { infrastructure = 9 }
+		
+		add_core_of = TMA 
 	}
-	provinces={
-		6739 
-	}
-	manpower=120
-	state_category = tiny_island
-	buildings_max_level_factor=1.000
+	provinces = { 6739 }
 }

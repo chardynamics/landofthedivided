@@ -1,23 +1,17 @@
-
-state={
-	id=419
-	name="STATE_419"
-
-	history={
-		owner = GBR
-		add_core_of = GBR
-		buildings = {
-			infrastructure = 4
-
-		}
-
+state = { 
+	id = 419 
+	name = "STATE_419" 
+	manpower = 4288 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = GBR 
+		
+		buildings = { infrastructure = 4 }
+		
+		add_core_of = GBR 
 	}
-
-	provinces={
-		390 428 1703 5939 5971 8671 
-	}
-	manpower=4288
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 390 428 1703 5939 5971 8671 }
 }

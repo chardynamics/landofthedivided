@@ -1,18 +1,16 @@
-state={
-	id=468
-	name="STATE_468"
-	history = {
-		owner = NAV
-		add_core_of = NAV
-		buildings = {
-			infrastructure = 3
-			
-		}
+state = { 
+	id = 468 
+	name = "STATE_468" 
+	manpower = 62 
+	
+	state_category = enclave 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = NAV 
+		
+		buildings = { infrastructure = 3 }
+		
+		add_core_of = NAV 
 	}
-	provinces={
-		137 4601 5069 
-	}
-	manpower=62
-	state_category = enclave
-	buildings_max_level_factor=1.000
+	provinces = { 137 4601 5069 }
 }

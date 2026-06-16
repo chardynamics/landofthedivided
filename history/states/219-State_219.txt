@@ -1,16 +1,13 @@
-state={
-	id=219
-	name="STATE_219"
-
-	history={
-		buildings = {
-			infrastructure = 10
-		}
+state = { 
+	id = 219 
+	name = "STATE_219" 
+	manpower = 12000 
+	
+	state_category = small_island 
+	buildings_max_level_factor = 1 
+	history = { 
+		
+		buildings = { infrastructure = 10 }
 	}
-	provinces={
-		6712 
-	}
-	manpower=12000
-	state_category = small_island
-	buildings_max_level_factor=1.000
+	provinces = { 6712 }
 }

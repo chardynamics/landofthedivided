@@ -1,24 +1,20 @@
-
-state={
-	id=531
-	name="STATE_531"
-
-	history={
-		owner = OKC
-		add_core_of = OKC
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 1
+state = { 
+	id = 531 
+	name = "STATE_531" 
+	manpower = 21890 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = OKC 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 1 
 		}
-
+		
+		add_core_of = OKC 
 	}
-
-	provinces={
-		191 451 1605 1849 2217 3081 3566 3846 3855 3979 4889 6223 6240 6248 8726 8737 8739 8740 
-	}
-	manpower=21890
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 191 451 1605 1849 2217 3081 3566 3846 3855 3979 4889 6223 6240 6248 8726 8737 8739 8740 }
 }

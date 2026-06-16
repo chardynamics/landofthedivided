@@ -1,21 +1,21 @@
-state={
-	id=393
-	name="STATE_393"
-	history = {
-		owner = RWP
-		add_core_of = RWP
-		buildings = {
-			infrastructure = 9
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
+state = { 
+	id = 393 
+	name = "STATE_393" 
+	manpower = 66000 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = RWP 
+		
+		buildings = { 
+			infrastructure = 9 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
 		}
+		
+		add_core_of = RWP 
 	}
-	provinces={
-		236 2148 4374 5863 5881 
-	}
-	manpower=66000
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 236 2148 4374 5863 5881 }
 }

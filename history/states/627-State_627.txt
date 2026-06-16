@@ -1,33 +1,33 @@
-state={
-	id=627
-	name="STATE_627"
-	history = {
-		owner = SFM
-		add_core_of = SFM
-		buildings = {
-			infrastructure = 6
-			air_base = 10
-			thermoelectric_plant = 4
-			hydroelectric_plant = 2
-			nuclear_reactor = 1
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			dockyard = 2
-			radar_station = 2
-			anti_air_building = 1
-			3909 = {
-				naval_base = 10
-			}
-		}
+state = { 
+	id = 627 
+	name = "STATE_627" 
+	manpower = 2704034 
+	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SFM 
+		
 		victory_points = { 3556 40 }
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 10 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 2 
+			nuclear_reactor = 1 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			dockyard = 2 
+			radar_station = 2 
+			anti_air_building = 1 
+			3909 = { naval_base = 10 }
+		}
+		
+		add_core_of = SFM 
 	}
-	provinces={
-		287 752 1235 1856 2190 2399 2527 2573 2709 3556 3757 3909 4531 6444 6449 6452 6453 6457 6462 
-	}
-	manpower=2704034
-	state_category = megalopolis
-	buildings_max_level_factor=1.000
+	provinces = { 287 752 1235 1856 2190 2399 2527 2573 2709 3556 3757 3909 4531 6444 6449 6452 6453 6457 6462 }
 }

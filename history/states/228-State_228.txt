@@ -1,28 +1,24 @@
-
-state={
-	id=228
-	name="STATE_228"
-
-	history={
-		owner = SMN
-		add_core_of = SMN
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-		}
-
+state = { 
+	id = 228 
+	name = "STATE_228" 
+	manpower = 72495 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SMN 
+		
 		victory_points = { 4988 10 }
-}
-
-	provinces={
-		469 1100 1140 2329 3192 3958 4988 5605 5628 5655 8607 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = SMN 
 	}
-	manpower=72495
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 469 1100 1140 2329 3192 3958 4988 5605 5628 5655 8607 }
 }

@@ -1,26 +1,22 @@
-
-state={
-	id=535
-	name="STATE_535"
-
-	history={
-		owner = STX
-		add_core_of = STX
-		buildings = {
-			infrastructure = 5
-
-			thermoelectric_plant = 1
-		}
-
+state = { 
+	id = 535 
+	name = "STATE_535" 
+	manpower = 2040 
 	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = STX 
+		
 		victory_points = { 4133 25 }
-}
-
-	provinces={
-		1194 1356 3014 3175 3662 3981 4133 6230 
+		
+		buildings = { 
+			infrastructure = 5 
+			thermoelectric_plant = 1 
+		}
+		
+		add_core_of = STX 
 	}
-	manpower=2040
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1194 1356 3014 3175 3662 3981 4133 6230 }
 }

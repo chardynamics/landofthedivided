@@ -1,26 +1,25 @@
-state={
-	id=278
-	name="STATE_278"
-	history = {
-		owner = SOR
-		add_core_of = SOR
-		buildings = {
-			infrastructure = 4
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-		}
+state = { 
+	id = 278 
+	name = "STATE_278" 
+	manpower = 75958 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	
+	resources = { aluminium = 13 } 
+	history = { 
+		owner = SOR 
+		
 		victory_points = { 3506 10 }
-}
-	resources = {
-		aluminium = 13
+		
+		buildings = { 
+			infrastructure = 4 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = SOR 
 	}
-	provinces={
-		863 2552 2897 3506 4706 5635 
-	}
-	manpower=75958
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 863 2552 2897 3506 4706 5635 }
 }

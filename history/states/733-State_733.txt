@@ -1,28 +1,29 @@
-state={
-	id=733
-	name="STATE_733"
-	history = {
-		owner = DOM
-		add_core_of = DOM
-		buildings = {
-			infrastructure = 2
-			
-			thermoelectric_plant = 3
-			hydroelectric_plant = 1
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			radar_station = 1
-			anti_air_building = 1
-		}
+state = { 
+	id = 733 
+	name = "STATE_733" 
+	manpower = 1200000 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = DOM 
+		
 		victory_points = { 6532 35 }
+		
+		buildings = { 
+			infrastructure = 2 
+			thermoelectric_plant = 3 
+			hydroelectric_plant = 1 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			radar_station = 1 
+			anti_air_building = 1 
+		}
+		
+		add_core_of = DOM 
 	}
-	provinces={
-		1346 6532 6537 
-	}
-	manpower=1200000
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 1346 6532 6537 }
 }

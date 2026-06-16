@@ -1,25 +1,25 @@
-
-state={
-	id=56
-	name="STATE_56"
-	history = {
-		owner = SIA
-		add_core_of = SIA
-		buildings = {
-			infrastructure = 6
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-		}
+state = { 
+	id = 56 
+	name = "STATE_56" 
+	manpower = 69055 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SIA 
+		
 		victory_points = { 3610 16 }
 		victory_points = { 4515 10 }
-}
-	provinces={
-		1396 1422 2236 3394 3610 4132 4515 5765 5792 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = SIA 
 	}
-	manpower=69055
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1396 1422 2236 3394 3610 4132 4515 5765 5792 }
 }

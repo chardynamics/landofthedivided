@@ -1,25 +1,21 @@
-
-state={
-	id=125
-	name="STATE_125"
-
-	history={
-		owner = BAR
-		add_core_of = BAR
-		buildings = {
-			infrastructure = 3
-
-			thermoelectric_plant = 1
-			hospitals = 1
+state = { 
+	id = 125 
+	name = "STATE_125" 
+	manpower = 37028 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = BAR 
+		
+		buildings = { 
+			infrastructure = 3 
+			thermoelectric_plant = 1 
+			hospitals = 1 
 		}
-
+		
+		add_core_of = BAR 
 	}
-
-	provinces={
-		3 1246 3532 4675 5735 5739 
-	}
-	manpower=37028
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 3 1246 3532 4675 5735 5739 }
 }

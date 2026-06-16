@@ -1,22 +1,19 @@
-
-state={
-	id=178
-	name="STATE_178"
-	history = {
-		owner = SUT
-		add_core_of = SUT
-		buildings = {
-			infrastructure = 0
-			
-		}
+state = { 
+	id = 178 
+	name = "STATE_178" 
+	manpower = 0 
 	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SUT 
+		
 		victory_points = { 3627 3 }
-}
-	provinces={
-		546 683 1974 2675 3475 3627 4294 5968 6028 6698 
+		
+		buildings = { infrastructure = 0 }
+		
+		add_core_of = SUT 
 	}
-	manpower=0
-	state_category = wasteland
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 546 683 1974 2675 3475 3627 4294 5968 6028 6698 }
 }

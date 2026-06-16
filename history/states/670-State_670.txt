@@ -1,29 +1,30 @@
-state={
-	id=670
-	name="STATE_670"
-	history = {
-		owner = MEX
-		add_core_of = MEX
-		buildings = {
-			infrastructure = 1
-			air_base = 8
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			radar_station = 1
-		}
+state = { 
+	id = 670 
+	name = "STATE_670" 
+	manpower = 502092 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = MEX 
+		
 		victory_points = { 2701 33 }
 		victory_points = { 5083 33 }
-}
-	provinces={
-		981 1501 1614 1807 2101 2535 2701 3051 3269 3403 3852 3917 4624 4902 5083 6484 6491 6492 6493 6494 6501 6502 
+		
+		buildings = { 
+			infrastructure = 1 
+			air_base = 8 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			radar_station = 1 
+		}
+		
+		add_core_of = MEX 
 	}
-	manpower=502092
-	state_category = large_city
-	buildings_max_level_factor=1.000
+	provinces = { 981 1501 1614 1807 2101 2535 2701 3051 3269 3403 3852 3917 4624 4902 5083 6484 6491 6492 6493 6494 6501 6502 }
 }

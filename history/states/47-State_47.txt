@@ -1,35 +1,30 @@
-
-state={
-	id=47
-	name="STATE_47"
-
-	history={
-		owner = AMA
-		add_core_of = AMA
-		buildings = {
-			infrastructure = 6
-			air_base = 6
-			thermoelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
+state = { 
+	id = 47 
+	name = "STATE_47" 
+	manpower = 219759 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { aluminium = 29 } 
+	history = { 
+		owner = AMA 
+		
+		victory_points = { 3442 30 }
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 6 
+			thermoelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
 		}
-		victory_points = {
-			3442 30 
-		}
-
+		
+		add_core_of = AMA 
 	}
-
-	resources = {
-		aluminium = 29
-	}
-	provinces={
-		1897 3442 4910 
-	}
-	manpower=219759
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1897 3442 4910 }
 }

@@ -1,23 +1,23 @@
-state={
-	id=94
-	name="STATE_94"
-	history = {
-		owner = CAN
-		add_core_of = CAN
-		buildings = {
-			infrastructure = 3
-			
-			thermoelectric_plant = 3
-			hydroelectric_plant = 3
-		}
+state = { 
+	id = 94 
+	name = "STATE_94" 
+	manpower = 5400 
 	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = CAN 
+		
 		victory_points = { 4751 25 }
 		victory_points = { 4953 6 }
-}
-	provinces={
-		11 118 195 1009 1103 1359 1833 2784 3711 3766 3857 3942 4219 4488 4751 4836 4953 5350 5375 5388 
+		
+		buildings = { 
+			infrastructure = 3 
+			thermoelectric_plant = 3 
+			hydroelectric_plant = 3 
+		}
+		
+		add_core_of = CAN 
 	}
-	manpower=5400
-	state_category = rural
-	buildings_max_level_factor=1.000
+	provinces = { 11 118 195 1009 1103 1359 1833 2784 3711 3766 3857 3942 4219 4488 4751 4836 4953 5350 5375 5388 }
 }

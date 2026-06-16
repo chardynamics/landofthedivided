@@ -1,39 +1,32 @@
-
-state={
-	id=760
-	name="STATE_760"
-
-	history={
-		owner = HAI
-		add_core_of = HAI
-		buildings = {
-			infrastructure = 5
-
-			thermoelectric_plant = 4
-			hydroelectric_plant = 2
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 2
-			dockyard = 3
-			radar_station = 2
-			anti_air_building = 2
-			6559 = {
-				naval_base = 10
-			}
+state = { 
+	id = 760 
+	name = "STATE_760" 
+	manpower = 3240000 
+	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = HAI 
+		
+		victory_points = { 6559 30 }
+		
+		buildings = { 
+			infrastructure = 5 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 2 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 2 
+			dockyard = 3 
+			radar_station = 2 
+			anti_air_building = 2 
+			6559 = { naval_base = 10 }
 		}
-		victory_points = {
-			6559 30 
-		}
-
+		
+		add_core_of = HAI 
 	}
-
-	provinces={
-		3777 4999 6555 6557 6559 6573 8815 
-	}
-	manpower=3240000
-	state_category = megalopolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 3777 4999 6555 6557 6559 6573 8815 }
 }

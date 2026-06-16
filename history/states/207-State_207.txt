@@ -1,30 +1,24 @@
-
-state={
-	id=207
-	name="STATE_207"
-
-	history={
-		owner = CMM
-		add_core_of = CMM
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			dockyard = 1
-			1267 = {
-				naval_base = 5
-			}
+state = { 
+	id = 207 
+	name = "STATE_207" 
+	manpower = 61065 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CMM 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			dockyard = 1 
+			1267 = { naval_base = 5 }
 		}
-
+		
+		add_core_of = CMM 
 	}
-
-	provinces={
-		581 1267 2822 4159 5526 
-	}
-	manpower=61065
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 581 1267 2822 4159 5526 }
 }

@@ -1,21 +1,19 @@
-
-state={
-	id=136
-	name="STATE_136"
-	history = {
-		owner = WAR
-		add_core_of = WAR
-		buildings = {
-			infrastructure = 3
-			
-		}
+state = { 
+	id = 136 
+	name = "STATE_136" 
+	manpower = 23575 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = WAR 
+		
 		victory_points = { 5668 25 }
+		
+		buildings = { infrastructure = 3 }
+		
+		add_core_of = WAR 
 	}
-	provinces={
-		185 398 886 961 1282 1402 2183 2623 2732 2962 3328 3552 5658 5668 5670 5677 5698 5706 
-	}
-	manpower=23575
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 185 398 886 961 1282 1402 2183 2623 2732 2962 3328 3552 5658 5668 5670 5677 5698 5706 }
 }

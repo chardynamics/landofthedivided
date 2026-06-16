@@ -1,25 +1,22 @@
-
-state={
-	id=215
-	name="STATE_215"
-
-	history={
-		owner = NOM
-		add_core_of = NOM
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
+state = { 
+	id = 215 
+	name = "STATE_215" 
+	manpower = 65472 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = NOM 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
 		}
-
+		
+		add_core_of = NOM 
 	}
-	provinces={
-		177 328 2542 4087 4134 4474 4670 6299 6309 8755 
-	}
-	manpower=65472
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 177 328 2542 4087 4134 4474 4670 6299 6309 8755 }
 }

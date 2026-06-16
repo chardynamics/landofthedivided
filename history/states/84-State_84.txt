@@ -1,22 +1,19 @@
-
-state={
-	id=84
-	name="STATE_84"
-	history = {
-		owner = SDA
-		add_core_of = SDA
-		buildings = {
-			infrastructure = 2
-			
-		}
+state = { 
+	id = 84 
+	name = "STATE_84" 
+	manpower = 1440 
 	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SDA 
+		
 		victory_points = { 861 6 }
-}
-	provinces={
-		861 1116 1204 2656 3138 5489 5531 
+		
+		buildings = { infrastructure = 2 }
+		
+		add_core_of = SDA 
 	}
-	manpower=1440
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 861 1116 1204 2656 3138 5489 5531 }
 }

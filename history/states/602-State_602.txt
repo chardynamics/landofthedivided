@@ -1,23 +1,17 @@
-
-state={
-	id=602
-	name="STATE_602"
-
-	history={
-		owner = HMA
-		add_core_of = HMA
-		buildings = {
-			infrastructure = 6
-
-		}
-
+state = { 
+	id = 602 
+	name = "STATE_602" 
+	manpower = 9834 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = HMA 
+		
+		buildings = { infrastructure = 6 }
+		
+		add_core_of = HMA 
 	}
-
-	provinces={
-		831 1255 2964 4356 4454 5011 6397 8778 
-	}
-	manpower=9834
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 831 1255 2964 4356 4454 5011 6397 8778 }
 }

@@ -1,23 +1,24 @@
-state={
-	id=389
-	name="STATE_389"
-	history = {
-		owner = NJM
-		add_core_of = NJM
-		buildings = {
-			infrastructure = 9
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
+state = { 
+	id = 389 
+	name = "STATE_389" 
+	manpower = 95181 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = NJM 
+		
 		victory_points = { 2873 15 }
+		
+		buildings = { 
+			infrastructure = 9 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = NJM 
 	}
-	provinces={
-		1490 2873 3787 4395 5849 
-	}
-	manpower=95181
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 1490 2873 3787 4395 5849 }
 }

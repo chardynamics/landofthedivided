@@ -1,26 +1,26 @@
-state={
-	id=723
-	name="STATE_723"
-	history = {
-		owner = DOM
-		add_core_of = DOM
-		buildings = {
-			infrastructure = 0
-			
-			thermoelectric_plant = 4
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			radar_station = 1
+state = { 
+	id = 723 
+	name = "STATE_723" 
+	manpower = 570000 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = DOM 
+		
+		buildings = { 
+			infrastructure = 0 
+			thermoelectric_plant = 4 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			radar_station = 1 
 		}
+		
+		add_core_of = DOM 
 	}
-	provinces={
-		3732 3886 5075 6528 6536 
-	}
-	manpower=570000
-	buildings_max_level_factor=1
-	state_category=large_city
-	local_supplies=0
+	provinces = { 3732 3886 5075 6528 6536 }
 }

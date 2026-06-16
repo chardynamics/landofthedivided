@@ -1,31 +1,27 @@
-
-state={
-	id=337
-	name="STATE_337"
-
-	history={
-		owner = HUD
-		add_core_of = HUD
-		buildings = {
-			infrastructure = 9
-
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-		}
-
+state = { 
+	id = 337 
+	name = "STATE_337" 
+	manpower = 336180 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = HUD 
+		
 		victory_points = { 703 6 }
-}
-
-	provinces={
-		285 703 4394 
+		
+		buildings = { 
+			infrastructure = 9 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = HUD 
 	}
-	manpower=336180
-	state_category = large_city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 285 703 4394 }
 }

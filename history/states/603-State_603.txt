@@ -1,28 +1,25 @@
-
-state={
-	id=603
-	name="STATE_603"
-
-	history={
-		owner = SOR
-		add_core_of = SOR
-		buildings = {
-			infrastructure = 6
-			air_base = 6
-			thermoelectric_plant = 1
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
+state = { 
+	id = 603 
+	name = "STATE_603" 
+	manpower = 164308 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SOR 
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 6 
+			thermoelectric_plant = 1 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
 		}
-
+		
+		add_core_of = SOR 
 	}
-
-	provinces={
-		2485 2501 3115 4487 4642 5569 
-	}
-	manpower=164308
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 2485 2501 3115 4487 4642 5569 }
 }

@@ -1,22 +1,20 @@
-state={
-	id=267
-	name="STATE_267"
-	history = {
-		owner = SPM
-		add_core_of = SPM
-		buildings = {
-			infrastructure = 7
-			
-			dockyard = 1
-			4736 = {
-				naval_base = 2
-			}
+state = { 
+	id = 267 
+	name = "STATE_267" 
+	manpower = 1440 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SPM 
+		
+		buildings = { 
+			infrastructure = 7 
+			dockyard = 1 
+			4736 = { naval_base = 2 }
 		}
+		
+		add_core_of = SPM 
 	}
-	provinces={
-		4736 
-	}
-	manpower=1440
-	state_category = pastoral
-	buildings_max_level_factor=1.000
+	provinces = { 4736 }
 }

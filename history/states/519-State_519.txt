@@ -1,34 +1,30 @@
-
-state={
-	id=519
-	name="STATE_519"
-
-	history={
-		owner = LMA
-		add_core_of = LMA
-		buildings = {
-			infrastructure = 5
-			air_base = 6
-			thermoelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
-		}
-
+state = { 
+	id = 519 
+	name = "STATE_519" 
+	manpower = 208352 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { oil = 29 } 
+	history = { 
+		owner = LMA 
+		
 		victory_points = { 3765 15 }
-
+		
+		buildings = { 
+			infrastructure = 5 
+			air_base = 6 
+			thermoelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = LMA 
 	}
-
-	resources = {
-		oil = 29
-	}
-	provinces={
-		62 303 372 407 750 1190 2295 2992 3086 3765 6171 
-	}
-	manpower=208352
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 62 303 372 407 750 1190 2295 2992 3086 3765 6171 }
 }

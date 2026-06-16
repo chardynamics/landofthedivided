@@ -1,32 +1,29 @@
-
-state={
-	id=678
-	name="STATE_678"
-
-	history={
-		owner = HMA
-		add_core_of = HMA
-		buildings = {
-			infrastructure = 7
-			air_base = 9
-			thermoelectric_plant = 4
-			hydroelectric_plant = 1
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
+state = { 
+	id = 678 
+	name = "STATE_678" 
+	manpower = 787874 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = HMA 
+		
+		buildings = { 
+			infrastructure = 7 
+			air_base = 9 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 1 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
 		}
-
+		
+		add_core_of = HMA 
 	}
-
-	provinces={
-		2131 3821 4993 8772 
-	}
-	manpower=787874
-	state_category = metropolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 2131 3821 4993 8772 }
 }

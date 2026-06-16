@@ -1,37 +1,31 @@
-
-state={
-	id=88
-	name="STATE_88"
-
-	history={
-		owner = CAN
-		add_core_of = CAN
-		buildings = {
-			infrastructure = 3
-
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			dockyard = 1
-			radar_station = 1
-			5390 = {
-				naval_base = 9
-			}
-		}
-
+state = { 
+	id = 88 
+	name = "STATE_88" 
+	manpower = 654805 
 	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CAN 
+		
 		victory_points = { 6685 10 }
-}
-
-	provinces={
-		513 835 913 1068 1162 1341 2392 2634 3057 5304 5363 5390 6641 6642 6648 6658 6659 6667 6669 6670 6671 6672 6678 6680 6682 6684 6685 8343 8371 8379 8402 8427 
+		
+		buildings = { 
+			infrastructure = 3 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			dockyard = 1 
+			radar_station = 1 
+			5390 = { naval_base = 9 }
+		}
+		
+		add_core_of = CAN 
 	}
-	manpower=654805
-	state_category = metropolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 513 835 913 1068 1162 1341 2392 2634 3057 5304 5363 5390 6641 6642 6648 6658 6659 6667 6669 6670 6671 6672 6678 6680 6682 6684 6685 8343 8371 8379 8402 8427 }
 }

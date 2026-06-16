@@ -1,23 +1,17 @@
-
-state={
-	id=327
-	name="STATE_327"
-
-	history={
-		owner = ALB
-		add_core_of = ALB
-		buildings = {
-			infrastructure = 6
-
-		}
-
+state = { 
+	id = 327 
+	name = "STATE_327" 
+	manpower = 2640 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = ALB 
+		
+		buildings = { infrastructure = 6 }
+		
+		add_core_of = ALB 
 	}
-
-	provinces={
-		3171 3189 
-	}
-	manpower=2640
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 3171 3189 }
 }

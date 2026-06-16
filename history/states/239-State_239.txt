@@ -1,25 +1,19 @@
-
-state={
-	id=239
-	name="STATE_239"
-
-	history={
-		owner = BAR
-		add_core_of = BAR
-		buildings = {
-			infrastructure = 3
-
-		}
-
+state = { 
+	id = 239 
+	name = "STATE_239" 
+	manpower = 4555 
 	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = BAR 
+		
 		victory_points = { 2004 6 }
-}
-
-	provinces={
-		1 271 441 617 1770 2004 2915 4482 8614 
+		
+		buildings = { infrastructure = 3 }
+		
+		add_core_of = BAR 
 	}
-	manpower=4555
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1 271 441 617 1770 2004 2915 4482 8614 }
 }

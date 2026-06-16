@@ -1,21 +1,19 @@
-
-state={
-	id=22
-	name="STATE_22"
-	history = {
-		owner = USM
-		add_core_of = USM
-		buildings = {
-			infrastructure = 6
-		}
+state = { 
+	id = 22 
+	name = "STATE_22" 
+	manpower = 20427 
 	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = USM 
+		
 		victory_points = { 238 6 }
-}
-	provinces={
-		154 238 1552 1653 1987 4115 4708 6060 6073 6097 6155 8702 
+		
+		buildings = { infrastructure = 6 }
+		
+		add_core_of = USM 
 	}
-	manpower=20427
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 154 238 1552 1653 1987 4115 4708 6060 6073 6097 6155 8702 }
 }

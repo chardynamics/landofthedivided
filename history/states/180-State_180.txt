@@ -1,28 +1,24 @@
-
-state={
-	id=180
-	name="STATE_180"
-
-	history={
-		owner = NOM
-		add_core_of = NOM
-		buildings = {
-			infrastructure = 4
-
-			thermoelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
+state = { 
+	id = 180 
+	name = "STATE_180" 
+	manpower = 152569 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = NOM 
+		
+		buildings = { 
+			infrastructure = 4 
+			thermoelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
 		}
-
+		
+		add_core_of = NOM 
 	}
-
-	provinces={
-		1205 2095 3722 4201 4776 6394 6758 8782 8786 8789 
-	}
-	manpower=152569
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1205 2095 3722 4201 4776 6394 6758 8782 8786 8789 }
 }

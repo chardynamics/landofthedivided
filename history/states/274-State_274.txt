@@ -1,24 +1,24 @@
-state={
-	id=274
-	name="STATE_274"
-	history = {
-		owner = BRA
-		add_core_of = BRA
-		buildings = {
-			infrastructure = 10
-			
-			thermoelectric_plant = 2
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
+state = { 
+	id = 274 
+	name = "STATE_274" 
+	manpower = 137076 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = BRA 
+		
 		victory_points = { 3233 4 }
-}
-	provinces={
-		3233 
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 2 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = BRA 
 	}
-	manpower=137076
-	state_category = city
-	buildings_max_level_factor=1.000
+	provinces = { 3233 }
 }

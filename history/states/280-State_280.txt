@@ -1,23 +1,19 @@
-
-state={
-	id=280
-	name="STATE_280"
-
-	history={
-		owner = WTB
-		add_core_of = WTB
-		buildings = {
-			infrastructure = 7
-
-		}
+state = { 
+	id = 280 
+	name = "STATE_280" 
+	manpower = 30000 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = WTB 
+		
 		victory_points = { 5052 25 }
+		
+		buildings = { infrastructure = 7 }
+		
+		add_core_of = WTB 
 	}
-
-	provinces={
-		213 298 3875 5052 
-	}
-	manpower=30000
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 213 298 3875 5052 }
 }

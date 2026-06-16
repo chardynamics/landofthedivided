@@ -1,33 +1,30 @@
-
-state={
-	id=470
-	name="STATE_470"
-
-	history={
-		owner = NAV
-		add_core_of = NAV
-		buildings = {
-			infrastructure = 3
-
-			thermoelectric_plant = 3
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
-		}
-		victory_points = { 2063 5 }
+state = { 
+	id = 470 
+	name = "STATE_470" 
+	manpower = 208800 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = NAV 
+		
 		victory_points = { 680 5 }
 		victory_points = { 1124 5 }
+		victory_points = { 2063 5 }
 		victory_points = { 6125 10 }
-
+		
+		buildings = { 
+			infrastructure = 3 
+			thermoelectric_plant = 3 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = NAV 
 	}
-
-	provinces={
-		680 880 1013 1070 1124 1182 1322 1921 2063 2982 3183 3382 4260 4548 5010 6066 6098 6108 6125 6160 
-	}
-	manpower=208800
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 680 880 1013 1070 1124 1182 1322 1921 2063 2982 3183 3382 4260 4548 5010 6066 6098 6108 6125 6160 }
 }

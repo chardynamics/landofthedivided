@@ -1,22 +1,17 @@
-
-state={
-	id=752
-	name="STATE_752"
-
-	history = {
-		owner = PRC
-		add_core_of = PRC
-		buildings = {
-			infrastructure = 0
-			
-		}
+state = { 
+	id = 752 
+	name = "STATE_752" 
+	manpower = 1200 
+	
+	state_category = small_island 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = PRC 
+		
+		buildings = { infrastructure = 0 }
+		
+		add_core_of = PRC 
 	}
-
-	provinces={
-		6825 
-	}
-	manpower=1200
-	state_category = small_island
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 6825 }
 }

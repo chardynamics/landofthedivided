@@ -1,29 +1,30 @@
-state={
-	id=741
-	name="STATE_741"
-	history = {
-		owner = MEX
-		add_core_of = MEX
-		buildings = {
-			infrastructure = 6
-			air_base = 9
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
-		}
+state = { 
+	id = 741 
+	name = "STATE_741" 
+	manpower = 944000 
 	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = MEX 
+		
 		victory_points = { 4381 33 }
-}
-	provinces={
-		740 3969 4381 4687 6549 6553 
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 9 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
+		}
+		
+		add_core_of = MEX 
 	}
-	manpower=944000
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 740 3969 4381 4687 6549 6553 }
 }

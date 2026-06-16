@@ -1,28 +1,26 @@
-state={
-	id=201
-	name="STATE_201"
-	history = {
-		owner = SWA
-		add_core_of = SWA
-		buildings = {
-			infrastructure = 7
-			
-			thermoelectric_plant = 1
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			1389 = {
-				dam = 1
-			}
-		}
+state = { 
+	id = 201 
+	name = "STATE_201" 
+	manpower = 172272 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SWA 
+		
 		victory_points = { 1389 16 }
-}
-	provinces={
-		1389 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 1 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			1389 = { dam = 1 }
+		}
+		
+		add_core_of = SWA 
 	}
-	manpower=172272
-	state_category = city
-	buildings_max_level_factor=1.000
+	provinces = { 1389 }
 }

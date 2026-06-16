@@ -1,20 +1,17 @@
-
-state={
-	id=616
-	name="STATE_616"
-	history = {
-		owner = MMS
-		add_core_of = MMS
-		buildings = {
-			infrastructure = 0
-			
-		}
+state = { 
+	id = 616 
+	name = "STATE_616" 
+	manpower = 1800 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = MMS 
+		
+		buildings = { infrastructure = 0 }
+		
+		add_core_of = MMS 
 	}
-	provinces={
-		8880 
-	}
-	manpower=1800
-	state_category = wasteland
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 8880 }
 }

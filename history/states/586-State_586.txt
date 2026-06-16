@@ -1,24 +1,23 @@
-state={
-	id=586
-	name="STATE_586"
-	history = {
-		owner = JMA
-		add_core_of = JMA
-		buildings = {
-			infrastructure = 8
-			
-			thermoelectric_plant = 1
-			dockyard = 1
-			6348 = {
-				naval_base = 4
-			}
-		}
+state = { 
+	id = 586 
+	name = "STATE_586" 
+	manpower = 25000 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = JMA 
+		
 		victory_points = { 6348 35 }
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 1 
+			dockyard = 1 
+			6348 = { naval_base = 4 }
+		}
+		
+		add_core_of = JMA 
 	}
-	provinces={
-		1405 2678 4898 6348 
-	}
-	manpower=25000
-	state_category = town
-	buildings_max_level_factor=1.000
+	provinces = { 1405 2678 4898 6348 }
 }

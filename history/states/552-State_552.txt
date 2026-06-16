@@ -1,21 +1,21 @@
-state={
-	id=552
-	name="STATE_552"
-	history = {
-		owner = AMO
-		add_core_of = AMO
-		buildings = {
-			infrastructure = 3
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
+state = { 
+	id = 552 
+	name = "STATE_552" 
+	manpower = 89120 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = AMO 
+		
+		buildings = { 
+			infrastructure = 3 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
 		}
+		
+		add_core_of = AMO 
 	}
-	provinces={
-		507 901 1189 1380 2257 3499 3551 4985 6288 6290 6303 
-	}
-	manpower=89120
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 507 901 1189 1380 2257 3499 3551 4985 6288 6290 6303 }
 }

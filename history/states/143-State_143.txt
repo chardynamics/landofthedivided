@@ -1,34 +1,31 @@
-
-state={
-	id=143
-	name="STATE_143"
-
-	history={
-		owner = AMO
-		add_core_of = AMO
-		buildings = {
-			infrastructure = 4
-			air_base = 8
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			radar_station = 1
-		}
+state = { 
+	id = 143 
+	name = "STATE_143" 
+	manpower = 584038 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { uranium = 6 } 
+	history = { 
+		owner = AMO 
+		
 		victory_points = { 6272 30 }
-
+		
+		buildings = { 
+			infrastructure = 4 
+			air_base = 8 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			radar_station = 1 
+		}
+		
+		add_core_of = AMO 
 	}
-
-	resources = {
-		uranium = 6
-	}
-	provinces={
-		1818 3936 6272 
-	}
-	manpower=584038
-	state_category = large_city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1818 3936 6272 }
 }

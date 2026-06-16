@@ -1,44 +1,44 @@
-
-state={
-	id=654
-	name="STATE_654"
-
-	history={
-		owner = SCA
-		add_core_of = SCA
-		buildings = {
-			infrastructure = 7
-			air_base = 10
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 3
-			radar_station = 4
-			anti_air_building = 3
-		}
+state = { 
+	id = 654 
+	name = "STATE_654" 
+	manpower = 12480000 
+	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { 
+		oil = 29 
+		aluminium = 6 
+	} 
+	history = { 
+		owner = SCA 
+		
+		victory_points = { 2481 20 }
+		victory_points = { 2481 20 }
+		victory_points = { 4917 20 }
+		victory_points = { 4986 20 }
+		victory_points = { 6129 15 }
+		victory_points = { 6129 20 }
+		victory_points = { 6147 30 }
 		victory_points = { 6154 30 }
 		victory_points = { 6157 25 }
-		victory_points = { 6147 30 }
-		victory_points = { 6129 15 }
-		victory_points = { 4917 20 }
-		victory_points = { 2481 20 }
-		victory_points = { 2481 20 }
-		victory_points = { 4986 20 }
-		victory_points = { 6129 20 }
+		
+		buildings = { 
+			infrastructure = 7 
+			air_base = 10 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 3 
+			radar_station = 4 
+			anti_air_building = 3 
+		}
+		
+		add_core_of = SCA 
 	}
-
-	resources = {
-		oil = 29
-		aluminium = 6
-	}
-	provinces={
-		929 2481 3092 3163 3959 4122 4224 4290 4917 4986 6129 6131 6147 6154 6157 6162 6179 
-	}
-	manpower=12480000
-	state_category = megalopolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 929 2481 3092 3163 3959 4122 4224 4290 4917 4986 6129 6131 6147 6154 6157 6162 6179 }
 }

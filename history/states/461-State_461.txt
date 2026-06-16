@@ -1,21 +1,21 @@
-state={
-	id=461
-	name="STATE_461"
-	history = {
-		add_core_of = NGI
-		owner = USM
-		add_core_of = USM
-		buildings = {
-			infrastructure = 4
-			
-			schools = 1
-			hospitals = 1
+state = { 
+	id = 461 
+	name = "STATE_461" 
+	manpower = 50569 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = USM 
+		
+		buildings = { 
+			infrastructure = 4 
+			schools = 1 
+			hospitals = 1 
 		}
+		
+		add_core_of = NGI 
+		add_core_of = USM 
 	}
-	provinces={
-		6046 
-	}
-	manpower=50569
-	state_category = town
-	buildings_max_level_factor=1.000
+	provinces = { 6046 }
 }

@@ -1,32 +1,28 @@
-
-state={
-	id=465
-	name="STATE_465"
-
-	history={
-		owner = OKC
-		add_core_of = OKC
-		buildings = {
-			infrastructure = 5
-			air_base = 8
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
+state = { 
+	id = 465 
+	name = "STATE_465" 
+	manpower = 413140 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { oil = 19 } 
+	history = { 
+		owner = OKC 
+		
+		buildings = { 
+			infrastructure = 5 
+			air_base = 8 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
 		}
-
+		
+		add_core_of = OKC 
 	}
-
-	resources = {
-		oil = 19
-	}
-	provinces={
-		237 532 605 1444 1997 2913 3240 4353 4593 6083 8691 
-	}
-	manpower=413140
-	state_category = large_city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 237 532 605 1444 1997 2913 3240 4353 4593 6083 8691 }
 }

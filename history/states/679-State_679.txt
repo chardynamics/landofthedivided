@@ -1,28 +1,23 @@
-
-state={
-	id=679
-	name="STATE_679"
-
-	history={
-		owner = ENG
-		add_core_of = ENG
-		buildings = {
-			infrastructure = 0
-			air_base = 2
-			thermoelectric_plant = 1
-			dockyard = 1
-			6810 = {
-				naval_base = 3
-			}
+state = { 
+	id = 679 
+	name = "STATE_679" 
+	manpower = 21240 
+	
+	state_category = small_island 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = ENG 
+		
+		buildings = { 
+			infrastructure = 0 
+			air_base = 2 
+			thermoelectric_plant = 1 
+			dockyard = 1 
+			6810 = { naval_base = 3 }
 		}
-
+		
+		add_core_of = ENG 
 	}
-
-	provinces={
-		6807 6808 6809 6810 
-	}
-	manpower=21240
-	state_category = small_island
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 6807 6808 6809 6810 }
 }

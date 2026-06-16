@@ -1,30 +1,27 @@
-
-state={
-	id=73
-	name="STATE_73"
-
-	history={
-		owner = TMA
-		add_core_of = TMA
-		buildings = {
-			infrastructure = 10
-
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-		}
-
+state = { 
+	id = 73 
+	name = "STATE_73" 
+	manpower = 312614 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = TMA 
+		
 		victory_points = { 1434 25 }
-}
-	provinces={
-		1434 
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = TMA 
 	}
-	manpower=312614
-	state_category = large_city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1434 }
 }

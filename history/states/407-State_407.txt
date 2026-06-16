@@ -1,24 +1,18 @@
-
-state={
-	id=407
-	name="STATE_407"
-
-	history={
-		add_claim_by = REO
-		owner = SOH
-		add_core_of = SOH
-		buildings = {
-			infrastructure = 8
-
-		}
-
+state = { 
+	id = 407 
+	name = "STATE_407" 
+	manpower = 5103 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SOH 
+		
+		buildings = { infrastructure = 8 }
+		
+		add_claim_by = REO 
+		add_core_of = SOH 
 	}
-
-	provinces={
-		1244 2923 3516 3528 4297 4774 
-	}
-	manpower=5103
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1244 2923 3516 3528 4297 4774 }
 }

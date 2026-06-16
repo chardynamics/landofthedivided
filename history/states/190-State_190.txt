@@ -1,29 +1,23 @@
-
-state={
-	id=190
-	name="STATE_190"
-
-	history={
-		owner = SOR
-		add_core_of = SOR
-		buildings = {
-			infrastructure = 4
-
-			dockyard = 1
-			5602 = {
-				naval_base = 4
-			}
-		}
-
+state = { 
+	id = 190 
+	name = "STATE_190" 
+	manpower = 24020 
 	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SOR 
+		
 		victory_points = { 2806 4 }
-}
-
-	provinces={
-		301 347 380 541 2806 3266 5585 5602 
+		
+		buildings = { 
+			infrastructure = 4 
+			dockyard = 1 
+			5602 = { naval_base = 4 }
+		}
+		
+		add_core_of = SOR 
 	}
-	manpower=24020
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 301 347 380 541 2806 3266 5585 5602 }
 }

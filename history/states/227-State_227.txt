@@ -1,27 +1,27 @@
-
-state={
-	id=227
-	name="STATE_227"
-	history = {
-		owner = ALF
-		add_core_of = ALF
-		buildings = {
-			infrastructure = 8
-			
-			thermoelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
-		}
+state = { 
+	id = 227 
+	name = "STATE_227" 
+	manpower = 241881 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = ALF 
+		
 		victory_points = { 1912 25 }
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = ALF 
 	}
-	provinces={
-		874 1912 2461 6310 6314 
-	}
-	manpower=241881
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 874 1912 2461 6310 6314 }
 }

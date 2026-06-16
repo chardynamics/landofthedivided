@@ -1,20 +1,18 @@
-state={
-	id=240
-	name="STATE_240"
-	history = {
-		owner = SPM
-		add_core_of = SPM
-		buildings = {
-			infrastructure = 8
-			
-		}
+state = { 
+	id = 240 
+	name = "STATE_240" 
+	manpower = 600 
 	
+	state_category = tiny_island 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SPM 
+		
 		victory_points = { 6721 4 }
-}
-	provinces={
-		6721 
+		
+		buildings = { infrastructure = 8 }
+		
+		add_core_of = SPM 
 	}
-	manpower=600
-	state_category = tiny_island
-	buildings_max_level_factor=1.000
+	provinces = { 6721 }
 }

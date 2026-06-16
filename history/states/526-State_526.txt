@@ -1,22 +1,22 @@
-state={
-	id=526
-	name="STATE_526"
-	history = {
-		owner = USG
-		add_core_of = USG
-		buildings = {
-			infrastructure = 8
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
+state = { 
+	id = 526 
+	name = "STATE_526" 
+	manpower = 100230 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = USG 
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
 		}
+		
+		add_core_of = USG 
 	}
-	provinces={
-		662 1990 4392 5066 6188 6204 
-	}
-	manpower=100230
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 662 1990 4392 5066 6188 6204 }
 }

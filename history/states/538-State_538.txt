@@ -1,26 +1,27 @@
-state={
-	id=538
-	name="STATE_538"
-	history = {
-		owner = SSC
-		add_core_of = SSC
-		buildings = {
-			infrastructure = 9
-			air_base = 8
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-		}
+state = { 
+	id = 538 
+	name = "STATE_538" 
+	manpower = 322816 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SSC 
+		
 		victory_points = { 6228 6 }
-}
-	provinces={
-		188 3825 3874 4576 6224 6228 
+		
+		buildings = { 
+			infrastructure = 9 
+			air_base = 8 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = SSC 
 	}
-	manpower=322816
-	state_category = large_city
-	buildings_max_level_factor=1.000
+	provinces = { 188 3825 3874 4576 6224 6228 }
 }

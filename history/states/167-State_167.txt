@@ -1,25 +1,21 @@
-
-state={
-	id=167
-	name="STATE_167"
-
-	history={
-		owner = CAN
-		add_core_of = CAN
-		buildings = {
-			infrastructure = 1
-
-			thermoelectric_plant = 3
-			hydroelectric_plant = 1
+state = { 
+	id = 167 
+	name = "STATE_167" 
+	manpower = 3000 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CAN 
+		
+		buildings = { 
+			infrastructure = 1 
+			thermoelectric_plant = 3 
+			hydroelectric_plant = 1 
 		}
-
+		
+		add_core_of = CAN 
 	}
-
-	provinces={
-		404 535 1813 2961 3421 4845 5432 5438 8511 8520 
-	}
-	manpower=3000
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 404 535 1813 2961 3421 4845 5432 5438 8511 8520 }
 }

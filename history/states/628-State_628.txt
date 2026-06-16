@@ -1,32 +1,29 @@
-
-state={
-	id=628
-	name="STATE_628"
-
-	history={
-		owner = SFM
-		add_core_of = SFM
-		buildings = {
-			infrastructure = 7
-			air_base = 8
-			thermoelectric_plant = 4
-			hydroelectric_plant = 1
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-		}
-
+state = { 
+	id = 628 
+	name = "STATE_628" 
+	manpower = 391148 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SFM 
+		
 		victory_points = { 3524 4 }
-}
-
-	provinces={
-		192 1379 3170 3524 3922 4521 4797 6440 8798 8799 
+		
+		buildings = { 
+			infrastructure = 7 
+			air_base = 8 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 1 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = SFM 
 	}
-	manpower=391148
-	state_category = large_city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 192 1379 3170 3524 3922 4521 4797 6440 8798 8799 }
 }

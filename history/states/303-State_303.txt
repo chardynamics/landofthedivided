@@ -1,30 +1,29 @@
-
-state={
-	id=303
-	name="STATE_303"
-
-	history={
-		owner = SCA
-		add_core_of = SCA
-		buildings = {
-			infrastructure = 3
-			air_base = 3
-			thermoelectric_plant = 4
-			hydroelectric_plant = 1
-		}
-		victory_points = { 6181 5 }
-		victory_points = { 1508 10 }
+state = { 
+	id = 303 
+	name = "STATE_303" 
+	manpower = 7779 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SCA 
+		
 		victory_points = { 927 5 }
 		victory_points = { 1268 5 }
-		victory_points = { 6100 10 }
+		victory_points = { 1508 10 }
 		victory_points = { 6055 1 }
+		victory_points = { 6100 10 }
+		victory_points = { 6181 5 }
+		
+		buildings = { 
+			infrastructure = 3 
+			air_base = 3 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 1 
+		}
+		
+		add_core_of = SCA 
 	}
-
-	provinces={
-		141 294 339 574 927 1268 1508 1654 1898 2085 2233 2271 2437 2447 2559 2672 2773 3141 3222 3283 3581 4826 4922 4987 5008 6055 6100 6103 6112 6126 6148 6178 6181 6201 
-	}
-	manpower=7779
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 141 294 339 574 927 1268 1508 1654 1898 2085 2233 2271 2437 2447 2559 2672 2773 3141 3222 3283 3581 4826 4922 4987 5008 6055 6100 6103 6112 6126 6148 6178 6181 6201 }
 }

@@ -1,25 +1,21 @@
-
-state={
-	id=361
-	name="STATE_361"
-
-	history={
-		add_claim_by = REO
-		owner = SOH
-		add_core_of = SOH
-		buildings = {
-			infrastructure = 9
-
-			thermoelectric_plant = 1
+state = { 
+	id = 361 
+	name = "STATE_361" 
+	manpower = 33412 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SOH 
+		
+		buildings = { 
+			infrastructure = 9 
+			thermoelectric_plant = 1 
 		}
-
+		
+		add_claim_by = REO 
+		add_core_of = SOH 
 	}
-
-	provinces={
-		1891 1918 3972 5055 
-	}
-	manpower=33412
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1891 1918 3972 5055 }
 }

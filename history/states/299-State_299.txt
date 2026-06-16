@@ -1,32 +1,29 @@
-
-state={
-	id=299
-	name="STATE_299"
-
-	history={
-		owner = BRA
-		add_core_of = BRA
-		buildings = {
-			infrastructure = 10
-
-			thermoelectric_plant = 4
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
-		}
+state = { 
+	id = 299 
+	name = "STATE_299" 
+	manpower = 826846 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = BRA 
+		
 		victory_points = { 5666 50 }
-
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 4 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
+		}
+		
+		add_core_of = BRA 
 	}
-
-	provinces={
-		5666 
-	}
-	manpower=826846
-	state_category = metropolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 5666 }
 }

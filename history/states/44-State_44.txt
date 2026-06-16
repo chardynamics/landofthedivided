@@ -1,21 +1,19 @@
-
-state={
-	id=44
-	name="STATE_44"
-	history = {
-		owner = AMA
-		add_core_of = AMA
-		buildings = {
-			infrastructure = 7
-		}
+state = { 
+	id = 44 
+	name = "STATE_44" 
+	manpower = 28375 
 	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = AMA 
+		
 		victory_points = { 1759 6 }
-}
-	provinces={
-		932 993 1759 2884 3303 3678 4384 
+		
+		buildings = { infrastructure = 7 }
+		
+		add_core_of = AMA 
 	}
-	manpower=28375
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 932 993 1759 2884 3303 3678 4384 }
 }

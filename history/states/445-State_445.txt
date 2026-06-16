@@ -1,32 +1,26 @@
-
-state={
-	id=445
-	name="STATE_445"
-
-	history={
-		add_core_of = NGI
-		owner = USM
-		add_core_of = USM
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 2
-			schools = 1
-			hospitals = 1
-			prisons = 1
-			dockyard = 1
-			1221 = {
-				naval_base = 6
-			}
+state = { 
+	id = 445 
+	name = "STATE_445" 
+	manpower = 133744 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = USM 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 2 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+			dockyard = 1 
+			1221 = { naval_base = 6 }
 		}
-
+		
+		add_core_of = NGI 
+		add_core_of = USM 
 	}
-
-	provinces={
-		122 1085 1221 1716 2355 5017 6011 
-	}
-	manpower=133744
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 122 1085 1221 1716 2355 5017 6011 }
 }

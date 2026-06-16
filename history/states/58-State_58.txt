@@ -1,23 +1,23 @@
-
-state={
-	id=58
-	name="STATE_58"
-	history = {
-		owner = TMA
-		add_core_of = TMA
-		buildings = {
-			infrastructure = 9
-			schools = 1
-			hospitals = 1
-		}
+state = { 
+	id = 58 
+	name = "STATE_58" 
+	manpower = 52044 
 	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = TMA 
+		
 		victory_points = { 3224 6 }
-}
-	provinces={
-		589 1917 2169 2493 3224 4692 5995 
+		
+		buildings = { 
+			infrastructure = 9 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = TMA 
 	}
-	manpower=52044
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 589 1917 2169 2493 3224 4692 5995 }
 }

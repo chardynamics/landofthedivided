@@ -1,40 +1,37 @@
-state={
-	id=549
-	name="STATE_549"
-
-	history = {
-		owner = MEX
-		add_core_of = MEX
-		buildings = {
-			infrastructure = 3
-			air_base = 10
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 2
-			dockyard = 3
-			radar_station = 2
-			anti_air_building = 2
-			3512 = {
-				naval_base = 10
-			}
-		}
+state = { 
+	id = 549 
+	name = "STATE_549" 
+	manpower = 2839000 
 	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { oil = 16 } 
+	history = { 
+		owner = MEX 
+		
+		victory_points = { 3512 25 }
 		victory_points = { 6235 50 }
 		victory_points = { 6241 33 }
-		victory_points = { 3512 25 }
-}
-	resources = {
-		oil = 16
+		
+		buildings = { 
+			infrastructure = 3 
+			air_base = 10 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 2 
+			dockyard = 3 
+			radar_station = 2 
+			anti_air_building = 2 
+			3512 = { naval_base = 10 }
+		}
+		
+		add_core_of = MEX 
 	}
-	provinces={
-		685 873 935 1289 1420 1516 1613 1742 1962 2227 2276 2644 2704 2911 2950 3411 3512 3635 3675 3794 3999 4543 4544 4575 4857 6235 6241 6251 6269 6274 6289 6312 6346 6367 6384 6748 6749 6750 6756 8733 
-	}
-	manpower=2839000
-	buildings_max_level_factor=1
-	state_category=megalopolis
-	local_supplies=0
+	provinces = { 685 873 935 1289 1420 1516 1613 1742 1962 2227 2276 2644 2704 2911 2950 3411 3512 3635 3675 3794 3999 4543 4544 4575 4857 6235 6241 6251 6269 6274 6289 6312 6346 6367 6384 6748 6749 6750 6756 8733 }
 }

@@ -1,34 +1,30 @@
-
-state={
-	id=204
-	name="STATE_204"
-
-	history={
-		owner = MMS
-		add_core_of = MMS
-		buildings = {
-			infrastructure = 4
-			air_base = 5
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
-
+state = { 
+	id = 204 
+	name = "STATE_204" 
+	manpower = 107816 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { chromium = 19 } 
+	history = { 
+		owner = MMS 
+		
 		victory_points = { 282 16 }
 		victory_points = { 1750 10 }
 		victory_points = { 2811 10 }
-}
-
-	resources = {
-		chromium = 19
+		
+		buildings = { 
+			infrastructure = 4 
+			air_base = 5 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = MMS 
 	}
-	provinces={
-		276 282 684 743 1059 1354 1416 1707 1750 2008 2250 2406 2673 2740 2811 2877 2938 3517 4199 4223 4258 4900 5080 5514 5538 5550 5579 
-	}
-	manpower=107816
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 276 282 684 743 1059 1354 1416 1707 1750 2008 2250 2406 2673 2740 2811 2877 2938 3517 4199 4223 4258 4900 5080 5514 5538 5550 5579 }
 }

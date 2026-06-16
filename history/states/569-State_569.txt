@@ -1,24 +1,25 @@
-state={
-	id=569
-	name="STATE_569"
-	history = {
-		owner = NOM
-		add_core_of = NOM
-		buildings = {
-			infrastructure = 6
-			air_base = 6
-			thermoelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
+state = { 
+	id = 569 
+	name = "STATE_569" 
+	manpower = 221107 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = NOM 
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 6 
+			thermoelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
 		}
+		
+		add_core_of = NOM 
 	}
-	provinces={
-		144 1251 6294 6295 6306 6321 
-	}
-	manpower=221107
-	state_category = city
-	buildings_max_level_factor=1.000
+	provinces = { 144 1251 6294 6295 6306 6321 }
 }

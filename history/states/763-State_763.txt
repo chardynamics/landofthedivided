@@ -1,22 +1,21 @@
-
-state={
-	id=763
-	name="STATE_763"
-	history = {
-		owner = MEX
-		add_core_of = MEX
-		buildings = {
-			infrastructure = 0
-			
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
+state = { 
+	id = 763 
+	name = "STATE_763" 
+	manpower = 120 
+	
+	state_category = tiny_island 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = MEX 
+		
+		buildings = { 
+			infrastructure = 0 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
 		}
+		
+		add_core_of = MEX 
 	}
-	provinces={
-		6826 6828 6829 
-	}
-	manpower=120
-	state_category = tiny_island
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 6826 6828 6829 }
 }

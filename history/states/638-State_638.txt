@@ -1,30 +1,27 @@
-
-state={
-	id=638
-	name="STATE_638"
-
-	history={
-		owner = MEX
-		add_core_of = MEX
-		buildings = {
-			infrastructure = 2
-			air_base = 8
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
+state = { 
+	id = 638 
+	name = "STATE_638" 
+	manpower = 307200 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = MEX 
+		
+		buildings = { 
+			infrastructure = 2 
+			air_base = 8 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
 		}
-
+		
+		add_core_of = MEX 
 	}
-
-	provinces={
-		338 418 544 1027 2255 3278 3560 3590 3716 3843 3850 4206 4705 4886 6450 6458 6465 6467 6471 6781 8803 8805 
-	}
-	manpower=307200
-	state_category = large_city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 338 418 544 1027 2255 3278 3560 3590 3716 3843 3850 4206 4705 4886 6450 6458 6465 6467 6471 6781 8803 8805 }
 }

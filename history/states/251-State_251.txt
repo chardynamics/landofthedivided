@@ -1,23 +1,17 @@
-
-state={
-	id=251
-	name="STATE_251"
-
-	history={
-		owner = SWI
-		add_core_of = SWI
-		buildings = {
-			infrastructure = 4
-
-		}
-
+state = { 
+	id = 251 
+	name = "STATE_251" 
+	manpower = 19200 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SWI 
+		
+		buildings = { infrastructure = 4 }
+		
+		add_core_of = SWI 
 	}
-
-	provinces={
-		445 854 983 2591 2876 3260 4101 4502 4701 5601 5611 8611 8616 
-	}
-	manpower=19200
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 445 854 983 2591 2876 3260 4101 4502 4701 5601 5611 8611 8616 }
 }

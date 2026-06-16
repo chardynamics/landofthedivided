@@ -1,25 +1,19 @@
-
-state={
-	id=433
-	name="STATE_433"
-
-	history={
-		owner = DMA
-		add_core_of = DMA
-		buildings = {
-			infrastructure = 3
-
-		}
-
+state = { 
+	id = 433 
+	name = "STATE_433" 
+	manpower = 759 
 	
+	state_category = enclave 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = DMA 
+		
 		victory_points = { 5977 10 }
-}
-
-	provinces={
-		180 1028 1932 2100 2560 3133 3288 4681 4973 5977 5989 
+		
+		buildings = { infrastructure = 3 }
+		
+		add_core_of = DMA 
 	}
-	manpower=759
-	state_category = enclave
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 180 1028 1932 2100 2560 3133 3288 4681 4973 5977 5989 }
 }

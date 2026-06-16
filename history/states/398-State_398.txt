@@ -1,20 +1,20 @@
-state={
-	id=398
-	name="STATE_398"
-	history = {
-		add_core_of = NGI
-		owner = EFG
-		add_core_of = EFG
-		buildings = {
-			infrastructure = 5
-			
-			thermoelectric_plant = 1
+state = { 
+	id = 398 
+	name = "STATE_398" 
+	manpower = 6600 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = EFG 
+		
+		buildings = { 
+			infrastructure = 5 
+			thermoelectric_plant = 1 
 		}
+		
+		add_core_of = NGI 
+		add_core_of = EFG 
 	}
-	provinces={
-		2362 
-	}
-	manpower=6600
-	state_category = rural
-	buildings_max_level_factor=1.000
+	provinces = { 2362 }
 }

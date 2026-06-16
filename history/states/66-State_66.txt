@@ -1,36 +1,34 @@
-
-state={
-	id=66
-	name="STATE_66"
-	history = {
-		owner = EFG
-		add_core_of = EFG
-		buildings = {
-			infrastructure = 9
-			air_base = 9
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			dockyard = 2
-			radar_station = 1
-			anti_air_building = 1
-			1318 = {
-				naval_base = 9
-			}
-		}
+state = { 
+	id = 66 
+	name = "STATE_66" 
+	manpower = 716368 
 	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = EFG 
+		
 		victory_points = { 1318 33 }
 		victory_points = { 3145 10 }
-}
-	provinces={
-		474 1318 2642 3145 5741 
+		
+		buildings = { 
+			infrastructure = 9 
+			air_base = 9 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			dockyard = 2 
+			radar_station = 1 
+			anti_air_building = 1 
+			1318 = { naval_base = 9 }
+		}
+		
+		add_core_of = EFG 
 	}
-	manpower=716368
-	state_category = metropolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 474 1318 2642 3145 5741 }
 }

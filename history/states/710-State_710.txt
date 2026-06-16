@@ -1,27 +1,22 @@
-
-state={
-	id=710
-	name="STATE_710"
-
-	history={
-		owner = ENG
-		add_core_of = ENG
-		buildings = {
-			infrastructure = 1
-
-			thermoelectric_plant = 1
+state = { 
+	id = 710 
+	name = "STATE_710" 
+	manpower = 20875 
+	
+	state_category = small_island 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = ENG 
+		
+		victory_points = { 6820 20 }
+		
+		buildings = { 
+			infrastructure = 1 
+			thermoelectric_plant = 1 
 		}
-		victory_points = {
-			6820 20 
-		}
-
+		
+		add_core_of = ENG 
 	}
-
-	provinces={
-		6819 6820 
-	}
-	manpower=20875
-	state_category = small_island
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 6819 6820 }
 }

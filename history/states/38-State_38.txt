@@ -1,21 +1,21 @@
-
-state={
-	id=38
-	name="STATE_38"
-	history = {
-		owner = CAN
-		add_core_of = CAN
-		buildings = {
-			infrastructure = 0
-			thermoelectric_plant = 3
-			hydroelectric_plant = 1
+state = { 
+	id = 38 
+	name = "STATE_38" 
+	manpower = 3000 
+	
+	state_category = small_island 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CAN 
+		
+		buildings = { 
+			infrastructure = 0 
+			thermoelectric_plant = 3 
+			hydroelectric_plant = 1 
 		}
+		
+		add_core_of = CAN 
 	}
-	provinces={
-		5182 6595 6598 6599 6601 6602 6604 6608 
-	}
-	manpower=3000
-	state_category = small_island
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 5182 6595 6598 6599 6601 6602 6604 6608 }
 }

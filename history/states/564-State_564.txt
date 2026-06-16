@@ -1,39 +1,33 @@
-
-state={
-	id=564
-	name="STATE_564"
-
-	history={
-		owner = STX
-		add_core_of = STX
-		buildings = {
-			infrastructure = 8
-
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			nuclear_reactor = 1
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 3
-			radar_station = 3
-			anti_air_building = 2
-		}
-
+state = { 
+	id = 564 
+	name = "STATE_564" 
+	manpower = 6299304 
 	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { aluminium = 35 } 
+	history = { 
+		owner = STX 
+		
 		victory_points = { 3400 25 }
-		victory_points = { 8749 25 }
-}
-
-	resources = {
-		aluminium = 35
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			nuclear_reactor = 1 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 3 
+			radar_station = 3 
+			anti_air_building = 2 
+		}
+		
+		add_core_of = STX 
 	}
-	provinces={
-		2608 2901 3400 3456 4584 6280 6308 8745 8748 8749 8750 8751 8757 
-	}
-	manpower=6299304
-	state_category = megalopolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 2608 2901 3400 3456 4584 6280 6308 8745 8748 8749 8750 8751 8757 }
 }

@@ -1,30 +1,28 @@
-
-state={
-	id=594
-	name="STATE_594"
-
-	history={
-		owner = TAL
-		add_core_of = TAL
-		buildings = {
-			infrastructure = 7
-			air_base = 6
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
-		}
+state = { 
+	id = 594 
+	name = "STATE_594" 
+	manpower = 287342 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = TAL 
+		
 		victory_points = { 1534 30 }
-
+		
+		buildings = { 
+			infrastructure = 7 
+			air_base = 6 
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = TAL 
 	}
-
-	provinces={
-		1378 1534 1801 2067 2812 3020 3758 4591 4930 6365 6755 
-	}
-	manpower=287342
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1378 1534 1801 2067 2812 3020 3758 4591 4930 6365 6755 }
 }

@@ -1,21 +1,20 @@
-
-state={
-	id=154
-	name="STATE_154"
-	history = {
-		owner = WOL
-		add_core_of = WOL
-		buildings = {
-			infrastructure = 6
-			
-			thermoelectric_plant = 1
+state = { 
+	id = 154 
+	name = "STATE_154" 
+	manpower = 30000 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = WOL 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 1 
 		}
+		
+		add_core_of = WOL 
 	}
-	provinces={
-		3021 5694 5713 
-	}
-	manpower=30000
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 3021 5694 5713 }
 }

@@ -1,30 +1,26 @@
-
-state={
-	id=128
-	name="STATE_128"
-
-	history={
-		owner = DMA
-		add_core_of = DMA
-		buildings = {
-			infrastructure = 5
-
-			thermoelectric_plant = 2
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
-
+state = { 
+	id = 128 
+	name = "STATE_128" 
+	manpower = 142382 
 	
-		victory_points = { 4905 16 }
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = DMA 
+		
 		victory_points = { 2536 10 }
-}
-
-	provinces={
-		1285 2536 4905 5051 5882 
+		victory_points = { 4905 16 }
+		
+		buildings = { 
+			infrastructure = 5 
+			thermoelectric_plant = 2 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = DMA 
 	}
-	manpower=142382
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1285 2536 4905 5051 5882 }
 }

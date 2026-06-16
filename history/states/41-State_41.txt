@@ -1,26 +1,26 @@
-
-state={
-	id=41
-	name="STATE_41"
-	history = {
-		owner = NGI
-		add_core_of = NGI
-		buildings = {
-			infrastructure = 8
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
+state = { 
+	id = 41 
+	name = "STATE_41" 
+	manpower = 135523 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = NGI 
+		
 		victory_points = { 1919 10 }
 		victory_points = { 5896 10 }
-}
-	provinces={
-		922 1315 1919 5896 
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = NGI 
 	}
-	manpower=135523
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 922 1315 1919 5896 }
 }

@@ -1,26 +1,27 @@
-
-state={
-	id=25
-	name="STATE_25"
-	history = {
-		owner = USM
-		add_core_of = USM
-		buildings = {
-			infrastructure = 10
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-		}
+state = { 
+	id = 25 
+	name = "STATE_25" 
+	manpower = 416626 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = USM 
+		
 		victory_points = { 3756 35 }
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = USM 
 	}
-	provinces={
-		3756 
-	}
-	manpower=416626
-	state_category = large_city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 3756 }
 }

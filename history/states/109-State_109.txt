@@ -1,26 +1,22 @@
-
-state={
-	id=109
-	name="STATE_109"
-
-	history={
-		owner = OMA
-		add_core_of = OMA
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 1
-		}
-
+state = { 
+	id = 109 
+	name = "STATE_109" 
+	manpower = 30208 
 	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = OMA 
+		
 		victory_points = { 5829 4 }
-}
-
-	provinces={
-		1044 1061 1316 1575 2471 2836 4357 4554 5829 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 1 
+		}
+		
+		add_core_of = OMA 
 	}
-	manpower=30208
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1044 1061 1316 1575 2471 2836 4357 4554 5829 }
 }

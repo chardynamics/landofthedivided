@@ -1,27 +1,23 @@
-
-state={
-	id=516
-	name="STATE_516"
-
-	history={
-		owner = TMA
-		add_core_of = TMA
-		buildings = {
-			infrastructure = 8
-
-			schools = 1
-			hospitals = 1
-		}
-
+state = { 
+	id = 516 
+	name = "STATE_516" 
+	manpower = 74349 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = TMA 
+		
 		victory_points = { 2426 10 }
-}
-
-	provinces={
-		351 420 772 2426 4196 6175 6185 6186 8720 
+		
+		buildings = { 
+			infrastructure = 8 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = TMA 
 	}
-	manpower=74349
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 351 420 772 2426 4196 6175 6185 6186 8720 }
 }

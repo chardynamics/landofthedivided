@@ -1,25 +1,26 @@
-state={
-	id=378
-	name="STATE_378"
-	history = {
-		owner = PHI
-		add_core_of = PHI
-		buildings = {
-			infrastructure = 9
-			air_base = 5
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-		}
+state = { 
+	id = 378 
+	name = "STATE_378" 
+	manpower = 66000 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = PHI 
+		
 		victory_points = { 1495 10 }
 		victory_points = { 1547 10 }
 		victory_points = { 4735 10 }
-}
-	provinces={
-		1495 1547 2436 3309 4735 5822 5836 
+		
+		buildings = { 
+			infrastructure = 9 
+			air_base = 5 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = PHI 
 	}
-	manpower=66000
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 1495 1547 2436 3309 4735 5822 5836 }
 }

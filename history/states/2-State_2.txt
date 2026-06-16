@@ -1,26 +1,22 @@
-
-state={
-	id=2
-	name="STATE_2"
-
-	history={
-		owner = AMA
-		add_core_of = AMA
-		buildings = {
-			infrastructure = 7
-			hospitals = 1
+state = { 
+	id = 2 
+	name = "STATE_2" 
+	manpower = 38954 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { aluminium = 19 } 
+	history = { 
+		owner = AMA 
+		
+		buildings = { 
+			infrastructure = 7 
+			hospitals = 1 
 		}
-
+		
+		add_core_of = AMA 
 	}
-
-	resources = {
-		aluminium = 19
-	}
-	provinces={
-		582 2365 3737 4054 8731 8736 
-	}
-	manpower=38954
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 582 2365 3737 4054 8731 8736 }
 }

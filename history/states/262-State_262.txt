@@ -1,23 +1,17 @@
-
-state={
-	id=262
-	name="STATE_262"
-
-	history={
-		owner = BAR
-		add_core_of = BAR
-		buildings = {
-			infrastructure = 3
-
-		}
-
+state = { 
+	id = 262 
+	name = "STATE_262" 
+	manpower = 12438 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = BAR 
+		
+		buildings = { infrastructure = 3 }
+		
+		add_core_of = BAR 
 	}
-
-	provinces={
-		245 503 1539 1710 2176 2254 2759 3011 3252 3432 4192 5608 5619 5621 5632 5667 5680 5696 8625 8631 
-	}
-	manpower=12438
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 245 503 1539 1710 2176 2254 2759 3011 3252 3432 4192 5608 5619 5621 5632 5667 5680 5696 8625 8631 }
 }

@@ -1,24 +1,24 @@
-state={
-	id=463
-	name="STATE_463"
-	history = {
-		owner = SVR
-		add_core_of = SVR
-		buildings = {
-			infrastructure = 8
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
+state = { 
+	id = 463 
+	name = "STATE_463" 
+	manpower = 115200 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SVR 
+		
 		victory_points = { 1662 6 }
-}
-	provinces={
-		143 1118 1615 1662 6037 6054 6061 6065 6071 
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = SVR 
 	}
-	manpower=115200
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 143 1118 1615 1662 6037 6054 6061 6065 6071 }
 }

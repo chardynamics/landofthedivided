@@ -1,27 +1,25 @@
-state={
-	id=506
-	name="STATE_506"
-	history = {
-		owner = CHA
-		add_core_of = CHA
-		buildings = {
-			infrastructure = 7
-			
-			thermoelectric_plant = 1
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			dockyard = 1
-			6177 = {
-				naval_base = 6
-			}
+state = { 
+	id = 506 
+	name = "STATE_506" 
+	manpower = 192368 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = CHA 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 1 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			dockyard = 1 
+			6177 = { naval_base = 6 }
 		}
+		
+		add_core_of = CHA 
 	}
-	provinces={
-		17 1155 1709 2153 3477 6177 
-	}
-	manpower=192368
-	state_category = city
-	buildings_max_level_factor=1.000
+	provinces = { 17 1155 1709 2153 3477 6177 }
 }

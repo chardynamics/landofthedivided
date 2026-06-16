@@ -1,27 +1,27 @@
-
-state={
-	id=15
-	name="STATE_15"
-	history = {
-		owner = USM
-		add_core_of = USM
-		buildings = {
-			infrastructure = 6
-			air_base = 6
-			thermoelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-		}
+state = { 
+	id = 15 
+	name = "STATE_15" 
+	manpower = 181896 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = USM 
+		
 		victory_points = { 6118 4 }
-}
-	provinces={
-		193 695 1521 1621 2230 2353 2453 3740 4023 5012 6074 6084 6118 8689 
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 6 
+			thermoelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = USM 
 	}
-	manpower=181896
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 193 695 1521 1621 2230 2353 2453 3740 4023 5012 6074 6084 6118 8689 }
 }

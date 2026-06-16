@@ -1,27 +1,26 @@
-state={
-	id=574
-	name="STATE_574"
-	history = {
-		owner = AMF
-		add_core_of = AMF
-		buildings = {
-			infrastructure = 3
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
+state = { 
+	id = 574 
+	name = "STATE_574" 
+	manpower = 109131 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	
+	resources = { oil = 93 } 
+	history = { 
+		owner = AMF 
+		
 		victory_points = { 2774 16 }
-}
-	resources = {
-		oil = 93
+		
+		buildings = { 
+			infrastructure = 3 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = AMF 
 	}
-	provinces={
-		421 686 1785 1873 2676 2774 3680 3700 4510 6342 
-	}
-	manpower=109131
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 421 686 1785 1873 2676 2774 3680 3700 4510 6342 }
 }

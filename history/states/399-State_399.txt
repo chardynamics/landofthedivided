@@ -1,18 +1,16 @@
-state={
-	id=399
-	name="STATE_399"
-	history = {
-		owner = DMA
-		add_core_of = DMA
-		buildings = {
-			infrastructure = 0
-			
-		}
+state = { 
+	id = 399 
+	name = "STATE_399" 
+	manpower = 750 
+	
+	state_category = enclave 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = DMA 
+		
+		buildings = { infrastructure = 0 }
+		
+		add_core_of = DMA 
 	}
-	provinces={
-		81 3025 
-	}
-	manpower=750
-	state_category = enclave
-	buildings_max_level_factor=1.000
+	provinces = { 81 3025 }
 }

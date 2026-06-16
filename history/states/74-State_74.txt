@@ -1,26 +1,25 @@
-
-state={
-	id=74
-	name="STATE_74"
-	history = {
-		owner = EFG
-		add_core_of = EFG
-		buildings = {
-			infrastructure = 7
-			
-			thermoelectric_plant = 4
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
+state = { 
+	id = 74 
+	name = "STATE_74" 
+	manpower = 92574 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = EFG 
+		
 		victory_points = { 3436 10 }
-}
-	provinces={
-		3436 3914 4596 5808 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 4 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = EFG 
 	}
-	manpower=92574
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 3436 3914 4596 5808 }
 }

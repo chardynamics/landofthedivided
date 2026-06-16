@@ -1,18 +1,16 @@
-state={
-	id=298
-	name="STATE_298"
-	history = {
-		owner = SMN
-		add_core_of = SMN
-		buildings = {
-			infrastructure = 7
-			
-		}
+state = { 
+	id = 298 
+	name = "STATE_298" 
+	manpower = 16416 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SMN 
+		
+		buildings = { infrastructure = 7 }
+		
+		add_core_of = SMN 
 	}
-	provinces={
-		286 1520 4831 5086 
-	}
-	manpower=16416
-	state_category = rural
-	buildings_max_level_factor=1.000
+	provinces = { 286 1520 4831 5086 }
 }

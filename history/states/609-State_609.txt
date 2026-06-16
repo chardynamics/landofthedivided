@@ -1,36 +1,30 @@
-
-state={
-	id=609
-	name="STATE_609"
-
-	history={
-		owner = SOR
-		add_core_of = SOR
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			dockyard = 1
-			5503 = {
-				naval_base = 6
-			}
-		}
+state = { 
+	id = 609 
+	name = "STATE_609" 
+	manpower = 165471 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { chromium = 10 } 
+	history = { 
+		owner = SOR 
+		
 		victory_points = { 5503 40 }
-
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			dockyard = 1 
+			5503 = { naval_base = 6 }
+		}
+		
+		add_core_of = SOR 
 	}
-
-	resources = {
-		chromium = 10
-	}
-	provinces={
-		548 698 783 936 2510 2685 4691 4877 5503 5563 5574 8593 
-	}
-	manpower=165471
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 548 698 783 936 2510 2685 4691 4877 5503 5563 5574 8593 }
 }

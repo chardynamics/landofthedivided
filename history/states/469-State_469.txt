@@ -1,23 +1,17 @@
-
-state={
-	id=469
-	name="STATE_469"
-
-	history={
-		owner = LMA
-		add_core_of = LMA
-		buildings = {
-			infrastructure = 6
-
-		}
-
+state = { 
+	id = 469 
+	name = "STATE_469" 
+	manpower = 23599 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = LMA 
+		
+		buildings = { infrastructure = 6 }
+		
+		add_core_of = LMA 
 	}
-
-	provinces={
-		295 2440 2712 4481 4618 6053 6086 6091 
-	}
-	manpower=23599
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 295 2440 2712 4481 4618 6053 6086 6091 }
 }

@@ -1,22 +1,19 @@
-
-state={
-	id=175
-	name="STATE_175"
-	history = {
-		owner = SUT
-		add_core_of = SUT
-		buildings = {
-			infrastructure = 3
-			
-		}
+state = { 
+	id = 175 
+	name = "STATE_175" 
+	manpower = 24632 
 	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SUT 
+		
 		victory_points = { 1426 10 }
-}
-	provinces={
-		348 984 1426 1680 1751 2395 3015 3346 3489 4167 6007 6018 
+		
+		buildings = { infrastructure = 3 }
+		
+		add_core_of = SUT 
 	}
-	manpower=24632
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 348 984 1426 1680 1751 2395 3015 3346 3489 4167 6007 6018 }
 }

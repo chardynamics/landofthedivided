@@ -1,38 +1,39 @@
-state={
-	id=611
-	name="STATE_611"
-	history = {
-		owner = HMA
-		add_core_of = HMA
-		buildings = {
-			infrastructure = 8
-			air_base = 10
-			thermoelectric_plant = 3
-			hydroelectric_plant = 2
-			nuclear_reactor = 1
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			dockyard = 2
-			radar_station = 2
-			anti_air_building = 1
-			6393 = {
-				naval_base = 10
-			}
-		}
+state = { 
+	id = 611 
+	name = "STATE_611" 
+	manpower = 2344357 
+	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		oil = 115 
+		aluminium = 61 
+		uranium = 5 
+	} 
+	history = { 
+		owner = HMA 
+		
 		victory_points = { 4438 45 }
+		
+		buildings = { 
+			infrastructure = 8 
+			air_base = 10 
+			thermoelectric_plant = 3 
+			hydroelectric_plant = 2 
+			nuclear_reactor = 1 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			dockyard = 2 
+			radar_station = 2 
+			anti_air_building = 1 
+			6393 = { naval_base = 10 }
+		}
+		
+		add_core_of = HMA 
 	}
-	resources = {
-		oil = 115
-		aluminium = 61
-		uranium = 5
-	}
-	provinces={
-		1081 1642 2415 3065 3147 4438 6392 6393 
-	}
-	manpower=2344357
-	state_category = megalopolis
-	buildings_max_level_factor=1.000
+	provinces = { 1081 1642 2415 3065 3147 4438 6392 6393 }
 }

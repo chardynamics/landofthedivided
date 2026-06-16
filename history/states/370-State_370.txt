@@ -1,25 +1,25 @@
-state={
-	id=370
-	name="STATE_370"
-	history = {
-		owner = SCA
-		add_core_of = SCA
-		buildings = {
-			infrastructure = 7
-			
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 1
-			hospitals = 1
-		}
+state = { 
+	id = 370 
+	name = "STATE_370" 
+	manpower = 62948 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SCA 
+		
 		victory_points = { 3247 25 }
 		victory_points = { 4218 10 }
-}
-	provinces={
-		3247 3833 4218 4808 5813 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = SCA 
 	}
-	manpower=62948
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 3247 3833 4218 4808 5813 }
 }

@@ -1,28 +1,25 @@
-state={
-	id=717
-	name="STATE_717"
-
-	history = {
-		owner = PRC
-		add_core_of = PRC
-		buildings = {
-			infrastructure = 1
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
-			dockyard = 1
-			6821 = {
-				naval_base = 5
-			}
+state = { 
+	id = 717 
+	name = "STATE_717" 
+	manpower = 108612 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = PRC 
+		
+		buildings = { 
+			infrastructure = 1 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+			dockyard = 1 
+			6821 = { naval_base = 5 }
 		}
+		
+		add_core_of = PRC 
 	}
-	provinces={
-		6821 
-	}
-	manpower=108612
-	buildings_max_level_factor=1
-	state_category=large_town
-	local_supplies=0
+	provinces = { 6821 }
 }

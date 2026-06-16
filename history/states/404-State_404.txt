@@ -1,32 +1,31 @@
-state={
-	id=404
-	name="STATE_404"
-	history = {
-		owner = BAL
-		add_core_of = BAL
-		buildings = {
-			infrastructure = 10
-			
-			thermoelectric_plant = 3
-			nuclear_reactor = 1
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			dockyard = 2
-			radar_station = 1
-			anti_air_building = 1
-			1885 = {
-				naval_base = 9
-			}
-		}
+state = { 
+	id = 404 
+	name = "STATE_404" 
+	manpower = 781384 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = BAL 
+		
 		victory_points = { 1885 40 }
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 3 
+			nuclear_reactor = 1 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			dockyard = 2 
+			radar_station = 1 
+			anti_air_building = 1 
+			1885 = { naval_base = 9 }
+		}
+		
+		add_core_of = BAL 
 	}
-	provinces={
-		1885 4389 4970 5876 
-	}
-	manpower=781384
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 1885 4389 4970 5876 }
 }

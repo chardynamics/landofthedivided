@@ -1,25 +1,19 @@
-
-state={
-	id=486
-	name="STATE_486"
-
-	history={
-		owner = LMA
-		add_core_of = LMA
-		buildings = {
-			infrastructure = 3
-
-		}
-
+state = { 
+	id = 486 
+	name = "STATE_486" 
+	manpower = 8160 
 	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = LMA 
+		
 		victory_points = { 6208 6 }
-}
-
-	provinces={
-		107 1270 1406 1737 3116 3672 4264 4367 4814 6106 6143 6180 6208 
+		
+		buildings = { infrastructure = 3 }
+		
+		add_core_of = LMA 
 	}
-	manpower=8160
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 107 1270 1406 1737 3116 3672 4264 4367 4814 6106 6143 6180 6208 }
 }

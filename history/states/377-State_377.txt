@@ -1,33 +1,33 @@
-state={
-	id=377
-	name="STATE_377"
-	history = {
-		add_core_of = NGI
-		owner = EFG
-		add_core_of = EFG
-		buildings = {
-			infrastructure = 10
-			air_base = 10
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 2
-			dockyard = 3
-			radar_station = 2
-			anti_air_building = 2
-			4497 = {
-				naval_base = 10
-			}
-		}
+state = { 
+	id = 377 
+	name = "STATE_377" 
+	manpower = 3475219 
+	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = EFG 
+		
 		victory_points = { 4073 50 }
+		
+		buildings = { 
+			infrastructure = 10 
+			air_base = 10 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 2 
+			dockyard = 3 
+			radar_station = 2 
+			anti_air_building = 2 
+			4497 = { naval_base = 10 }
+		}
+		
+		add_core_of = NGI 
+		add_core_of = EFG 
 	}
-	provinces={
-		4073 4497 
-	}
-	manpower=3475219
-	state_category = megalopolis
-	buildings_max_level_factor=1.000
+	provinces = { 4073 4497 }
 }

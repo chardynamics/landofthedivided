@@ -1,33 +1,30 @@
-state={
-	id=776
-	name="STATE_776"
-
-	history={
-		owner = NYC
-		add_core_of = NYC
-		buildings = {
-			infrastructure = 10
-
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			radar_station = 1
-			anti_air_building = 1
-		}
-
+state = { 
+	id = 776 
+	name = "STATE_776" 
+	manpower = 1599180 
 	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = NYC 
+		
 		victory_points = { 8869 42 }
-}
-	
-	provinces={
-		8869 
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			radar_station = 1 
+			anti_air_building = 1 
+		}
+		
+		add_core_of = NYC 
 	}
-	manpower=1599180
-	state_category = megalopolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 8869 }
 }

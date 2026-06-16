@@ -1,35 +1,28 @@
-
-state={
-	id=172
-	name="STATE_172"
-
-	history={
-		owner = SWA
-		add_core_of = SWA
-		buildings = {
-			infrastructure = 5
-
-			thermoelectric_plant = 2
-			schools = 1
-			hospitals = 1
-			prisons = 1
-			465 = {
-				dam = 1
-			}
-		}
-
+state = { 
+	id = 172 
+	name = "STATE_172" 
+	manpower = 132000 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { aluminium = 35 } 
+	history = { 
+		owner = SWA 
+		
 		victory_points = { 5452 25 }
-}
-
-	resources = {
-		aluminium = 35
+		
+		buildings = { 
+			infrastructure = 5 
+			thermoelectric_plant = 2 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+			465 = { dam = 1 }
+		}
+		
+		add_core_of = SWA 
 	}
-	provinces={
-		465 1333 1955 2054 2280 2847 2987 3371 3726 4319 4630 5448 5452 5488 8500 8537 
-	}
-	manpower=132000
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 465 1333 1955 2054 2280 2847 2987 3371 3726 4319 4630 5448 5452 5488 8500 8537 }
 }

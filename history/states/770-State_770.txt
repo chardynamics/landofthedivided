@@ -1,24 +1,24 @@
-state={
-	id=770
-	name="STATE_770"
-	history = {
-		owner = MEX
-		add_core_of = MEX
-		buildings = {
-			infrastructure = 0
-			
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
+state = { 
+	id = 770 
+	name = "STATE_770" 
+	manpower = 171600 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = MEX 
+		
+		buildings = { 
+			infrastructure = 0 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
 		}
+		
+		add_core_of = MEX 
 	}
-	provinces={
-		4088 6575 
-	}
-	manpower=171600
-	state_category = city
-	buildings_max_level_factor=1.000
+	provinces = { 4088 6575 }
 }

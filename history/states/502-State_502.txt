@@ -1,35 +1,29 @@
-
-state={
-	id=502
-	name="STATE_502"
-
-	history={
-		owner = TMA
-		add_core_of = TMA
-		buildings = {
-			infrastructure = 7
-
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			dockyard = 2
-			radar_station = 1
-			anti_air_building = 1
-			3935 = {
-				naval_base = 9
-			}
+state = { 
+	id = 502 
+	name = "STATE_502" 
+	manpower = 780120 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = TMA 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			dockyard = 2 
+			radar_station = 1 
+			anti_air_building = 1 
+			3935 = { naval_base = 9 }
 		}
-
+		
+		add_core_of = TMA 
 	}
-
-	provinces={
-		353 1001 1965 2093 3661 3935 4346 
-	}
-	manpower=780120
-	state_category = metropolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 353 1001 1965 2093 3661 3935 4346 }
 }

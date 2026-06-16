@@ -1,26 +1,22 @@
-
-state={
-	id=434
-	name="STATE_434"
-
-	history={
-		owner = DMA
-		add_core_of = DMA
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 1
-		}
-
+state = { 
+	id = 434 
+	name = "STATE_434" 
+	manpower = 33008 
 	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = DMA 
+		
 		victory_points = { 2563 4 }
-}
-
-	provinces={
-		100 528 760 1181 2563 4019 4399 5079 5961 8675 8679 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 1 
+		}
+		
+		add_core_of = DMA 
 	}
-	manpower=33008
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 100 528 760 1181 2563 4019 4399 5079 5961 8675 8679 }
 }

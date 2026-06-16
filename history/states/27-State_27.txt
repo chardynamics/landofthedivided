@@ -1,22 +1,17 @@
-
-state={
-	id=27
-	name="STATE_27"
-
-	history={
-		owner = CKC
-		add_core_of = CKC
-		buildings = {
-			infrastructure = 4
-		}
-
+state = { 
+	id = 27 
+	name = "STATE_27" 
+	manpower = 11662 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CKC 
+		
+		buildings = { infrastructure = 4 }
+		
+		add_core_of = CKC 
 	}
-
-	provinces={
-		2304 2443 3053 6034 
-	}
-	manpower=11662
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 2304 2443 3053 6034 }
 }

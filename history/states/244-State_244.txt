@@ -1,18 +1,16 @@
-state={
-	id=244
-	name="STATE_244"
-	history = {
-		owner = SNH
-		add_core_of = SNH
-		buildings = {
-			infrastructure = 7
-			
-		}
+state = { 
+	id = 244 
+	name = "STATE_244" 
+	manpower = 10000 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SNH 
+		
+		buildings = { infrastructure = 7 }
+		
+		add_core_of = SNH 
 	}
-	provinces={
-		951 4421 5584 5599 
-	}
-	manpower=10000
-	state_category = rural
-	buildings_max_level_factor=1.000
+	provinces = { 951 4421 5584 5599 }
 }

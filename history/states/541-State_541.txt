@@ -1,28 +1,28 @@
-state={
-	id=541
-	name="STATE_541"
-	history = {
-		owner = USG
-		add_core_of = USG
-		buildings = {
-			infrastructure = 8
-			
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
-		}
+state = { 
+	id = 541 
+	name = "STATE_541" 
+	manpower = 720000 
 	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = USG 
+		
 		victory_points = { 6234 33 }
-}
-	provinces={
-		475 785 1839 1915 2374 2458 3962 4489 6234 6250 
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
+		}
+		
+		add_core_of = USG 
 	}
-	manpower=720000
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 475 785 1839 1915 2374 2458 3962 4489 6234 6250 }
 }

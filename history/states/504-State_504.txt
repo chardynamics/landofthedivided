@@ -1,26 +1,26 @@
-state={
-	id=504
-	name="STATE_504"
-	history = {
-		owner = TMA
-		add_core_of = TMA
-		buildings = {
-			infrastructure = 8
-			
-			thermoelectric_plant = 1
-			nuclear_reactor = 1
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-		}
+state = { 
+	id = 504 
+	name = "STATE_504" 
+	manpower = 186664 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = TMA 
+		
 		victory_points = { 3236 16 }
-}
-	provinces={
-		31 2946 3236 3364 6137 
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 1 
+			nuclear_reactor = 1 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = TMA 
 	}
-	manpower=186664
-	state_category = city
-	buildings_max_level_factor=1.000
+	provinces = { 31 2946 3236 3364 6137 }
 }

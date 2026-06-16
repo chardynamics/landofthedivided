@@ -1,27 +1,26 @@
-state={
-	id=328
-	name="STATE_328"
-	history = {
-		owner = MCA
-		add_core_of = MCA
-		buildings = {
-			infrastructure = 10
-			
-			thermoelectric_plant = 2
-			schools = 1
-			hospitals = 1
-			prisons = 1
-			dockyard = 1
-			2772 = {
-				naval_base = 6
-			}
-		}
+state = { 
+	id = 328 
+	name = "STATE_328" 
+	manpower = 145893 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = MCA 
+		
 		victory_points = { 2772 35 }
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 2 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+			dockyard = 1 
+			2772 = { naval_base = 6 }
+		}
+		
+		add_core_of = MCA 
 	}
-	provinces={
-		2772 3427 4754 4865 
-	}
-	manpower=145893
-	state_category = city
-	buildings_max_level_factor=1.000
+	provinces = { 2772 3427 4754 4865 }
 }

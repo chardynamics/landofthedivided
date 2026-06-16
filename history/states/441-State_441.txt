@@ -1,22 +1,22 @@
-state={
-	id=441
-	name="STATE_441"
-	history = {
-		owner = DMA
-		add_core_of = DMA
-		buildings = {
-			infrastructure = 3
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
+state = { 
+	id = 441 
+	name = "STATE_441" 
+	manpower = 122545 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = DMA 
+		
+		buildings = { 
+			infrastructure = 3 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
 		}
+		
+		add_core_of = DMA 
 	}
-	provinces={
-		596 902 
-	}
-	manpower=122545
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 596 902 }
 }

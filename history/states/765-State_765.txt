@@ -1,21 +1,22 @@
-state={
-	id=765
-	name="STATE_765"
-	history = {
-		owner = HAI
-		add_core_of = HAI
-		buildings = {
-			infrastructure = 0
-			air_base = 5
-			thermoelectric_plant = 3
-			schools = 1
-			hospitals = 1
+state = { 
+	id = 765 
+	name = "STATE_765" 
+	manpower = 84000 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = HAI 
+		
+		buildings = { 
+			infrastructure = 0 
+			air_base = 5 
+			thermoelectric_plant = 3 
+			schools = 1 
+			hospitals = 1 
 		}
+		
+		add_core_of = HAI 
 	}
-	provinces={
-		6830 
-	}
-	manpower=84000
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 6830 }
 }

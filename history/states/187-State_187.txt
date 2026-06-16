@@ -1,32 +1,27 @@
-
-state={
-	id=187
-	name="STATE_187"
-
-	history={
-		owner = DMA
-		add_core_of = DMA
-		buildings = {
-			infrastructure = 7
-
-			thermoelectric_plant = 1
-			prisons = 1
-			barracks = 3
-			dockyard = 2
-			radar_station = 6
-			anti_air_building = 5
-			missile_silo = 1
-			8891 = {
-				naval_base = 10
-			}
+state = { 
+	id = 187 
+	name = "STATE_187" 
+	manpower = 1800 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = DMA 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 1 
+			prisons = 1 
+			barracks = 3 
+			dockyard = 2 
+			radar_station = 6 
+			anti_air_building = 5 
+			missile_silo = 1 
+			8891 = { naval_base = 10 }
 		}
-
+		
+		add_core_of = DMA 
 	}
-	provinces={
-		8891 
-	}
-	manpower=1800
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 8891 }
 }

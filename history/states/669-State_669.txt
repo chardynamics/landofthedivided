@@ -1,23 +1,17 @@
-
-state={
-	id=669
-	name="STATE_669"
-
-	history={
-		owner = SCA
-		add_core_of = SCA
-		buildings = {
-			infrastructure = 0
-
-		}
-
+state = { 
+	id = 669 
+	name = "STATE_669" 
+	manpower = 2400 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SCA 
+		
+		buildings = { infrastructure = 0 }
+		
+		add_core_of = SCA 
 	}
-
-	provinces={
-		330 447 2012 2429 3687 3916 4466 4947 6045 
-	}
-	manpower=2400
-	state_category = wasteland
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 330 447 2012 2429 3687 3916 4466 4947 6045 }
 }

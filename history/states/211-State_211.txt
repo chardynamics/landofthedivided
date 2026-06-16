@@ -1,25 +1,22 @@
-
-state={
-	id=211
-	name="STATE_211"
-
-	history={
-		owner = MMS
-		add_core_of = MMS
-		buildings = {
-			infrastructure = 6
-			air_base = 2
-		}
-
+state = { 
+	id = 211 
+	name = "STATE_211" 
+	manpower = 4560 
 	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = MMS 
+		
 		victory_points = { 3216 6 }
-}
-
-	provinces={
-		1385 2212 3216 3484 4328 4443 
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 2 
+		}
+		
+		add_core_of = MMS 
 	}
-	manpower=4560
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1385 2212 3216 3484 4328 4443 }
 }

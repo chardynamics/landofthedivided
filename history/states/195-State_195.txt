@@ -1,24 +1,20 @@
-
-state={
-	id=195
-	name="STATE_195"
-
-	history={
-		owner = CMM
-		add_core_of = CMM
-		buildings = {
-			infrastructure = 1
-
-			thermoelectric_plant = 1
+state = { 
+	id = 195 
+	name = "STATE_195" 
+	manpower = 24000 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CMM 
+		
+		buildings = { 
+			infrastructure = 1 
+			thermoelectric_plant = 1 
 		}
-
+		
+		add_core_of = CMM 
 	}
-
-	provinces={
-		310 1791 5496 5527 
-	}
-	manpower=24000
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 310 1791 5496 5527 }
 }

@@ -1,34 +1,31 @@
-
-state={
-	id=680
-	name="STATE_680"
-
-	history={
-		owner = OKC
-		add_core_of = OKC
-		buildings = {
-			infrastructure = 8
-			air_base = 9
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-		}
+state = { 
+	id = 680 
+	name = "STATE_680" 
+	manpower = 607358 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { oil = 56 } 
+	history = { 
+		owner = OKC 
+		
 		victory_points = { 2360 40 }
-
+		
+		buildings = { 
+			infrastructure = 8 
+			air_base = 9 
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+		}
+		
+		add_core_of = OKC 
 	}
-
-	resources = {
-		oil = 56
-	}
-	provinces={
-		2360 4653 
-	}
-	manpower=607358
-	state_category = metropolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 2360 4653 }
 }

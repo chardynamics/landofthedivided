@@ -1,21 +1,22 @@
-state={
-	id=343
-	name="STATE_343"
-	history = {
-		owner = HUD
-		add_core_of = HUD
-		buildings = {
-			infrastructure = 10
-			
-			schools = 1
-			hospitals = 1
-		}
+state = { 
+	id = 343 
+	name = "STATE_343" 
+	manpower = 68808 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = HUD 
+		
 		victory_points = { 1451 25 }
+		
+		buildings = { 
+			infrastructure = 10 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = HUD 
 	}
-	provinces={
-		1451 
-	}
-	manpower=68808
-	state_category = large_town
-	buildings_max_level_factor=1.000
+	provinces = { 1451 }
 }

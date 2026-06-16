@@ -1,27 +1,22 @@
-
-state={
-	id=17
-	name="STATE_17"
-
-	history={
-		owner = CAN
-		add_core_of = CAN
-		buildings = {
-			infrastructure = 1
-			thermoelectric_plant = 2
-			dockyard = 1
-			4318 = {
-				naval_base = 2
-			}
+state = { 
+	id = 17 
+	name = "STATE_17" 
+	manpower = 177 
+	
+	state_category = tiny_island 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CAN 
+		
+		buildings = { 
+			infrastructure = 1 
+			thermoelectric_plant = 2 
+			dockyard = 1 
+			4318 = { naval_base = 2 }
 		}
-
+		
+		add_core_of = CAN 
 	}
-
-	provinces={
-		1366 2427 4318 4799 6609 6619 
-	}
-	manpower=177
-	state_category = tiny_island
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1366 2427 4318 4799 6609 6619 }
 }

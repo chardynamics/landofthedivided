@@ -1,30 +1,26 @@
-
-state={
-	id=339
-	name="STATE_339"
-
-	history={
-		owner = DET
-		add_core_of = DET
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
+state = { 
+	id = 339 
+	name = "STATE_339" 
+	manpower = 204000 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = DET 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
 		}
-
+		
+		add_core_of = DET 
 	}
-
-	provinces={
-		1330 4893 5087 5729 5751 
-	}
-	manpower=204000
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1330 4893 5087 5729 5751 }
 }

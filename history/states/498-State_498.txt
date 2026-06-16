@@ -1,37 +1,36 @@
-
-state={
-	id=498
-	name="STATE_498"
-	history = {
-		owner = SAZ
-		add_core_of = SAZ
-		buildings = {
-			infrastructure = 8
-			
-			thermoelectric_plant = 3
-			hydroelectric_plant = 1
-			nuclear_reactor = 2
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			radar_station = 1
-			anti_air_building = 1
-		}
-		victory_points = { 6221 35 }
-		victory_points = { 4170 25 }
-		victory_points = { 1875 20 }
+state = { 
+	id = 498 
+	name = "STATE_498" 
+	manpower = 1585254 
+	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { uranium = 8 } 
+	history = { 
+		owner = SAZ 
+		
 		victory_points = { 1371 15 }
+		victory_points = { 1875 20 }
+		victory_points = { 4170 25 }
+		victory_points = { 6221 35 }
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 3 
+			hydroelectric_plant = 1 
+			nuclear_reactor = 2 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			radar_station = 1 
+			anti_air_building = 1 
+		}
+		
+		add_core_of = SAZ 
 	}
-	resources = {
-		uranium = 8
-	}
-	provinces={
-		1371 1875 4170 6221 
-	}
-	manpower=1585254
-	state_category = megalopolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1371 1875 4170 6221 }
 }

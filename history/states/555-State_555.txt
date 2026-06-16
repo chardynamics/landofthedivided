@@ -1,25 +1,26 @@
-state={
-	id=555
-	name="STATE_555"
-	history = {
-		owner = AMO
-		add_core_of = AMO
-		buildings = {
-			infrastructure = 3
-			
-			thermoelectric_plant = 1
-		}
+state = { 
+	id = 555 
+	name = "STATE_555" 
+	manpower = 30750 
 	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		oil = 42 
+		uranium = 16 
+	} 
+	history = { 
+		owner = AMO 
+		
 		victory_points = { 1178 16 }
-}
-	resources = {
-		oil = 42
-		uranium = 16
+		
+		buildings = { 
+			infrastructure = 3 
+			thermoelectric_plant = 1 
+		}
+		
+		add_core_of = AMO 
 	}
-	provinces={
-		876 1178 1208 2090 2239 3112 3228 3440 3531 3767 4552 6313 
-	}
-	manpower=30750
-	state_category = town
-	buildings_max_level_factor=1.000
+	provinces = { 876 1178 1208 2090 2239 3112 3228 3440 3531 3767 4552 6313 }
 }

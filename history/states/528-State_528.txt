@@ -1,29 +1,26 @@
-
-state={
-	id=528
-	name="STATE_528"
-
-	history={
-		owner = BIR
-		add_core_of = BIR
-		buildings = {
-			infrastructure = 6
-			air_base = 6
-			thermoelectric_plant = 2
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
-
+state = { 
+	id = 528 
+	name = "STATE_528" 
+	manpower = 133200 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = BIR 
+		
 		victory_points = { 2783 10 }
-}
-
-	provinces={
-		42 1071 2783 3097 3109 6225 6232 6243 8732 
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 6 
+			thermoelectric_plant = 2 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = BIR 
 	}
-	manpower=133200
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 42 1071 2783 3097 3109 6225 6232 6243 8732 }
 }

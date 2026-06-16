@@ -1,25 +1,24 @@
-
-state={
-	id=171
-	name="STATE_171"
-	history = {
-		owner = AMA
-		add_core_of = AMA
-		buildings = {
-			infrastructure = 5
-			
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-		}
+state = { 
+	id = 171 
+	name = "STATE_171" 
+	manpower = 69656 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = AMA 
+		
 		victory_points = { 3317 10 }
-}
-	provinces={
-		955 1419 3317 3747 4165 4375 6158 6187 
+		
+		buildings = { 
+			infrastructure = 5 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = AMA 
 	}
-	manpower=69656
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 955 1419 3317 3747 4165 4375 6158 6187 }
 }

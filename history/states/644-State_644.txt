@@ -1,23 +1,17 @@
-
-state={
-	id=644
-	name="STATE_644"
-
-	history={
-		owner = BAH
-		add_core_of = BAH
-		buildings = {
-			infrastructure = 0
-
-		}
-
+state = { 
+	id = 644 
+	name = "STATE_644" 
+	manpower = 12000 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = BAH 
+		
+		buildings = { infrastructure = 0 }
+		
+		add_core_of = BAH 
 	}
-
-	provinces={
-		6771 6772 
-	}
-	manpower=12000
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 6771 6772 }
 }

@@ -1,20 +1,18 @@
-state={
-	id=287
-	name="STATE_287"
-	history = {
-		owner = BAR
-		add_core_of = BAR
-		buildings = {
-			infrastructure = 4
-			
-		}
+state = { 
+	id = 287 
+	name = "STATE_287" 
+	manpower = 718 
 	
+	state_category = enclave 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = BAR 
+		
 		victory_points = { 2755 10 }
-}
-	provinces={
-		1040 2755 2976 3082 3412 3564 4585 4640 4699 5641 
+		
+		buildings = { infrastructure = 4 }
+		
+		add_core_of = BAR 
 	}
-	manpower=718
-	state_category = enclave
-	buildings_max_level_factor=1.000
+	provinces = { 1040 2755 2976 3082 3412 3564 4585 4640 4699 5641 }
 }

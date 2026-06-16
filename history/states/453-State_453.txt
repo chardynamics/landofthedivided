@@ -1,30 +1,25 @@
-
-state={
-	id=453
-	name="STATE_453"
-
-	history={
-		owner = OMA
-		add_core_of = OMA
-		buildings = {
-			infrastructure = 7
-
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
-
+state = { 
+	id = 453 
+	name = "STATE_453" 
+	manpower = 96117 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = OMA 
+		
 		victory_points = { 4792 16 }
-		victory_points = { 8682 10 }
-}
-
-	provinces={
-		4069 4792 6006 6013 8682 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = OMA 
 	}
-	manpower=96117
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 4069 4792 6006 6013 8682 }
 }

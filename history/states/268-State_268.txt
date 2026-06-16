@@ -1,18 +1,19 @@
-state={
-	id=268
-	name="STATE_268"
-	history = {
-		owner = SNH
-		add_core_of = SNH
-		buildings = {
-			infrastructure = 7
-			air_base = 3
+state = { 
+	id = 268 
+	name = "STATE_268" 
+	manpower = 15879 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SNH 
+		
+		buildings = { 
+			infrastructure = 7 
+			air_base = 3 
 		}
+		
+		add_core_of = SNH 
 	}
-	provinces={
-		4388 4941 
-	}
-	manpower=15879
-	state_category = rural
-	buildings_max_level_factor=1.000
+	provinces = { 4388 4941 }
 }

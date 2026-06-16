@@ -1,41 +1,37 @@
-
-state={
-	id=633
-	name="STATE_633"
-
-	history={
-		owner = AMF
-		add_core_of = AMF
-		buildings = {
-			infrastructure = 4
-			air_base = 8
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			dockyard = 1
-			3244 = {
-				naval_base = 8
-			}
-		}
-
+state = { 
+	id = 633 
+	name = "STATE_633" 
+	manpower = 332944 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { 
+		oil = 45 
+		aluminium = 13 
+		uranium = 8 
+	} 
+	history = { 
+		owner = AMF 
+		
 		victory_points = { 867 33 }
 		victory_points = { 6786 16 }
-}
-
-	resources = {
-		oil = 45
-		aluminium = 13
-		uranium = 8
+		
+		buildings = { 
+			infrastructure = 4 
+			air_base = 8 
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			dockyard = 1 
+			3244 = { naval_base = 8 }
+		}
+		
+		add_core_of = AMF 
 	}
-	provinces={
-		610 620 832 867 921 2213 2723 3032 3244 3525 3826 3955 4704 4861 4891 6770 6774 6775 6786 
-	}
-	manpower=332944
-	state_category = large_city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 610 620 832 867 921 2213 2723 3032 3244 3525 3826 3955 4704 4861 4891 6770 6774 6775 6786 }
 }

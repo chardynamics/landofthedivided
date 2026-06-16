@@ -1,25 +1,19 @@
-
-state={
-	id=626
-	name="STATE_626"
-
-	history={
-		owner = AMF
-		add_core_of = AMF
-		buildings = {
-			infrastructure = 6
-
-		}
-
+state = { 
+	id = 626 
+	name = "STATE_626" 
+	manpower = 14400 
 	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = AMF 
+		
 		victory_points = { 6769 25 }
-}
-
-	provinces={
-		461 4299 4425 6432 6439 6769 8797 8800 
+		
+		buildings = { infrastructure = 6 }
+		
+		add_core_of = AMF 
 	}
-	manpower=14400
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 461 4299 4425 6432 6439 6769 8797 8800 }
 }

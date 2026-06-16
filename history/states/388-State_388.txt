@@ -1,28 +1,28 @@
-state={
-	id=388
-	name="STATE_388"
-	history = {
-		owner = PHI
-		add_core_of = PHI
-		buildings = {
-			infrastructure = 8
-			
-			thermoelectric_plant = 3
-			nuclear_reactor = 1
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			radar_station = 1
-		}
+state = { 
+	id = 388 
+	name = "STATE_388" 
+	manpower = 458101 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = PHI 
+		
 		victory_points = { 1790 6 }
-}
-	provinces={
-		696 1790 2714 2760 4151 4558 4824 
+		
+		buildings = { 
+			infrastructure = 8 
+			thermoelectric_plant = 3 
+			nuclear_reactor = 1 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			radar_station = 1 
+		}
+		
+		add_core_of = PHI 
 	}
-	manpower=458101
-	state_category = large_city
-	buildings_max_level_factor=1.000
+	provinces = { 696 1790 2714 2760 4151 4558 4824 }
 }

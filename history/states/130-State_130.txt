@@ -1,24 +1,19 @@
-
-state={
-	id=130
-	name="STATE_130"
-
-	history={
-		owner = NOM
-		add_core_of = NOM
-		buildings = {
-			infrastructure = 7
-
-		}
-
+state = { 
+	id = 130 
+	name = "STATE_130" 
+	manpower = 17138 
 	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = NOM 
+		
 		victory_points = { 3069 6 }
-}
-	provinces={
-		255 3069 3592 6335 8762 
+		
+		buildings = { infrastructure = 7 }
+		
+		add_core_of = NOM 
 	}
-	manpower=17138
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 255 3069 3592 6335 8762 }
 }

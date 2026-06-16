@@ -1,28 +1,28 @@
-state={
-	id=571
-	name="STATE_571"
-	history = {
-		owner = STX
-		add_core_of = STX
-		buildings = {
-			infrastructure = 8
-			air_base = 6
-			thermoelectric_plant = 4
-			hydroelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
+state = { 
+	id = 571 
+	name = "STATE_571" 
+	manpower = 240174 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	
+	resources = { oil = 35 } 
+	history = { 
+		owner = STX 
+		
+		buildings = { 
+			infrastructure = 8 
+			air_base = 6 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
 		}
+		
+		add_core_of = STX 
 	}
-	resources = {
-		oil = 35
-	}
-	provinces={
-		138 3276 
-	}
-	manpower=240174
-	state_category = city
-	buildings_max_level_factor=1.000
+	provinces = { 138 3276 }
 }

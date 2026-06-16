@@ -1,31 +1,27 @@
-
-state={
-	id=451
-	name="STATE_451"
-
-	history={
-		owner = CKC
-		add_core_of = CKC
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
-		}
-
+state = { 
+	id = 451 
+	name = "STATE_451" 
+	manpower = 240000 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CKC 
+		
 		victory_points = { 766 16 }
-}
-
-	provinces={
-		257 766 930 2127 6009 6026 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = CKC 
 	}
-	manpower=240000
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 257 766 930 2127 6009 6026 }
 }

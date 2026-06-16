@@ -1,37 +1,30 @@
-state={
-	id=326
-	name="STATE_326"
-	history = {
-		owner = ROC
-		add_core_of = ROC
-		buildings = {
-			infrastructure = 10
-			
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			dockyard = 1
-			3729 = {
-				dam = 1
-			}
-			3729 = {
-				naval_base = 8
-				dam = 1
-			}
-		}
+state = { 
+	id = 326 
+	name = "STATE_326" 
+	manpower = 351177 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	
+	resources = { aluminium = 10 } 
+	history = { 
+		owner = ROC 
+		
 		victory_points = { 3729 6 }
-}
-	resources = {
-		aluminium = 10
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			dockyard = 1 
+			3729 = { naval_base = 8 dam = 1 }
+		}
+		
+		add_core_of = ROC 
 	}
-	provinces={
-		3729 
-	}
-	manpower=351177
-	state_category = large_city
-	buildings_max_level_factor=1.000
+	provinces = { 3729 }
 }

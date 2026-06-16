@@ -1,19 +1,17 @@
-
-state={
-	id=18
-	name="STATE_18"
-	history = {
-		owner = USM
-		add_core_of = USM
-		buildings = {
-			infrastructure = 5
-		}
+state = { 
+	id = 18 
+	name = "STATE_18" 
+	manpower = 9988 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = USM 
+		
+		buildings = { infrastructure = 5 }
+		
+		add_core_of = USM 
 	}
-	provinces={
-		90 2207 2325 4743 6068 6123 
-	}
-	manpower=9988
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 90 2207 2325 4743 6068 6123 }
 }

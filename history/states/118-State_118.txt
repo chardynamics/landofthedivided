@@ -1,19 +1,19 @@
-state={
-	id=118
-	name="STATE_118"
-	history = {
-		owner = FRA
-		add_core_of = FRA
-		buildings = {
-			infrastructure = 0
-			
-			thermoelectric_plant = 1
+state = { 
+	id = 118 
+	name = "STATE_118" 
+	manpower = 2040 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = FRA 
+		
+		buildings = { 
+			infrastructure = 0 
+			thermoelectric_plant = 1 
 		}
+		
+		add_core_of = FRA 
 	}
-	provinces={
-		6665 
-	}
-	manpower=2040
-	state_category = pastoral
-	buildings_max_level_factor=1.000
+	provinces = { 6665 }
 }

@@ -1,27 +1,25 @@
-state={
-	id=403
-	name="STATE_403"
-	history = {
-		owner = PHI
-		add_core_of = PHI
-		buildings = {
-			infrastructure = 7
-			
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
-			3334 = {
-				dam = 1
-			}
+state = { 
+	id = 403 
+	name = "STATE_403" 
+	manpower = 262308 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = PHI 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
+			3334 = { dam = 1 }
 		}
+		
+		add_core_of = PHI 
 	}
-	provinces={
-		3334 
-	}
-	manpower=262308
-	state_category = city
-	buildings_max_level_factor=1.000
+	provinces = { 3334 }
 }

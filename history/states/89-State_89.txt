@@ -1,29 +1,26 @@
-
-state={
-	id=89
-	name="STATE_89"
-
-	history={
-		owner = SSD
-		add_core_of = SSD
-		buildings = {
-			infrastructure = 6
-			air_base = 6
-			thermoelectric_plant = 2
-			schools = 1
-			hospitals = 1
-			prisons = 1
-		}
-
+state = { 
+	id = 89 
+	name = "STATE_89" 
+	manpower = 148770 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SSD 
+		
 		victory_points = { 5759 16 }
-}
-
-	provinces={
-		637 2980 3562 5759 
+		
+		buildings = { 
+			infrastructure = 6 
+			air_base = 6 
+			thermoelectric_plant = 2 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+		}
+		
+		add_core_of = SSD 
 	}
-	manpower=148770
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 637 2980 3562 5759 }
 }

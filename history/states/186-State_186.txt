@@ -1,27 +1,24 @@
-
-state={
-	id=186
-	name="STATE_186"
-
-	history={
-		owner = MMS
-		add_core_of = MMS
-		buildings = {
-			infrastructure = 3
-
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-		}
+state = { 
+	id = 186 
+	name = "STATE_186" 
+	manpower = 76669 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = MMS 
+		
 		victory_points = { 792 30 }
-
+		
+		buildings = { 
+			infrastructure = 3 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = MMS 
 	}
-
-	provinces={
-		55 386 792 4049 4475 5540 
-	}
-	manpower=76669
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 55 386 792 4049 4475 5540 }
 }

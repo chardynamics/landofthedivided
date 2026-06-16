@@ -1,28 +1,28 @@
-state={
-	id=382
-	name="STATE_382"
-	history = {
-		owner = EFG
-		add_core_of = EFG
-		buildings = {
-			infrastructure = 9
-			
-			thermoelectric_plant = 4
-			hydroelectric_plant = 1
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
-		}
+state = { 
+	id = 382 
+	name = "STATE_382" 
+	manpower = 246872 
 	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = EFG 
+		
 		victory_points = { 3024 25 }
 		victory_points = { 5826 10 }
-}
-	provinces={
-		228 2593 3024 3880 5826 5866 5871 
+		
+		buildings = { 
+			infrastructure = 9 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 1 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = EFG 
 	}
-	manpower=246872
-	state_category = city
-	buildings_max_level_factor=1.000
+	provinces = { 228 2593 3024 3880 5826 5866 5871 }
 }

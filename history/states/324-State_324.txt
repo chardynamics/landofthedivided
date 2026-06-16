@@ -1,24 +1,20 @@
-
-state={
-	id=324
-	name="STATE_324"
-
-	history={
-		owner = SCA
-		add_core_of = SCA
-		buildings = {
-			infrastructure = 4
-
-			thermoelectric_plant = 3
+state = { 
+	id = 324 
+	name = "STATE_324" 
+	manpower = 2588 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SCA 
+		
+		buildings = { 
+			infrastructure = 4 
+			thermoelectric_plant = 3 
 		}
-
+		
+		add_core_of = SCA 
 	}
-
-	provinces={
-		170 181 1292 1387 1618 1842 2530 3686 3873 4200 5794 8660 
-	}
-	manpower=2588
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 170 181 1292 1387 1618 1842 2530 3686 3873 4200 5794 8660 }
 }

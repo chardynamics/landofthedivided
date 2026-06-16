@@ -1,28 +1,25 @@
-
-state={
-	id=28
-	name="STATE_28"
-
-	history={
-		owner = CKC
-		add_core_of = CKC
-		buildings = {
-			infrastructure = 8
-			air_base = 5
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-		}
-
+state = { 
+	id = 28 
+	name = "STATE_28" 
+	manpower = 88788 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CKC 
+		
 		victory_points = { 3541 10 }
-}
-
-	provinces={
-		30 3541 5937 5984 
+		
+		buildings = { 
+			infrastructure = 8 
+			air_base = 5 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = CKC 
 	}
-	manpower=88788
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 30 3541 5937 5984 }
 }

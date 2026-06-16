@@ -1,28 +1,29 @@
-state={
-	id=424
-	name="STATE_424"
-	history = {
-		owner = SVR
-		add_core_of = SVR
-		buildings = {
-			infrastructure = 9
-			air_base = 9
-			thermoelectric_plant = 4
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 2
-			radar_station = 1
-			anti_air_building = 1
-		}
+state = { 
+	id = 424 
+	name = "STATE_424" 
+	manpower = 1163698 
 	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SVR 
+		
 		victory_points = { 3107 16 }
-}
-	provinces={
-		1517 3107 3384 4188 5916 5929 5938 5946 
+		
+		buildings = { 
+			infrastructure = 9 
+			air_base = 9 
+			thermoelectric_plant = 4 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 2 
+			radar_station = 1 
+			anti_air_building = 1 
+		}
+		
+		add_core_of = SVR 
 	}
-	manpower=1163698
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 1517 3107 3384 4188 5916 5929 5938 5946 }
 }

@@ -1,27 +1,20 @@
-
-state={
-	id=593
-	name="STATE_593"
-
-	history={
-		owner = CFC
-		add_core_of = CFC
-		buildings = {
-			infrastructure = 8
-
-		}
-
+state = { 
+	id = 593 
+	name = "STATE_593" 
+	manpower = 8462 
 	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CFC 
+		
 		victory_points = { 2010 25 }
 		victory_points = { 2754 16 }
-		victory_points = { 8777 10 }
-}
-
-	provinces={
-		1091 2010 2754 3302 6353 6360 6370 6378 6381 8771 8777 
+		
+		buildings = { infrastructure = 8 }
+		
+		add_core_of = CFC 
 	}
-	manpower=8462
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 1091 2010 2754 3302 6353 6360 6370 6378 6381 8771 8777 }
 }

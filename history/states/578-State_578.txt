@@ -1,27 +1,28 @@
-state={
-	id=578
-	name="STATE_578"
-	history = {
-		owner = AMF
-		add_core_of = AMF
-		buildings = {
-			infrastructure = 3
-			air_base = 9
-			thermoelectric_plant = 4
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-		}
+state = { 
+	id = 578 
+	name = "STATE_578" 
+	manpower = 676394 
 	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = AMF 
+		
 		victory_points = { 4771 33 }
-}
-	provinces={
-		89 324 432 990 1082 1372 1968 2249 2350 2468 2662 2717 3318 3643 3725 4274 4281 4771 6332 6344 6401 6405 
+		
+		buildings = { 
+			infrastructure = 3 
+			air_base = 9 
+			thermoelectric_plant = 4 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+		}
+		
+		add_core_of = AMF 
 	}
-	manpower=676394
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 89 324 432 990 1082 1372 1968 2249 2350 2468 2662 2717 3318 3643 3725 4274 4281 4771 6332 6344 6401 6405 }
 }

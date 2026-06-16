@@ -1,20 +1,16 @@
-state={
-	id=505
-	name="STATE_505"
+state = { 
+	id = 505 
+	name = "STATE_505" 
+	manpower = 6000 
 	
-	history={
-		owner = TMA
-		add_core_of = TMA
-		buildings = {
-			infrastructure = 10
-
-		}
-
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = TMA 
+		
+		buildings = { infrastructure = 10 }
+		
+		add_core_of = TMA 
 	}
-	provinces={
-		6743 
-	}
-	manpower=6000
-	state_category = rural
-	buildings_max_level_factor=1.000
+	provinces = { 6743 }
 }

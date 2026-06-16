@@ -1,34 +1,32 @@
-
-state={
-	id=284
-	name="STATE_284"
-	history = {
-		owner = PHI
-		add_core_of = PHI
-		buildings = {
-			infrastructure = 10
-			
-			thermoelectric_plant = 4
-			nuclear_reactor = 1
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			dockyard = 2
-			radar_station = 2
-			anti_air_building = 1
-			4650 = {
-				naval_base = 10
-			}
-		}
+state = { 
+	id = 284 
+	name = "STATE_284" 
+	manpower = 1821060 
+	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = PHI 
+		
 		victory_points = { 4650 45 }
+		
+		buildings = { 
+			infrastructure = 10 
+			thermoelectric_plant = 4 
+			nuclear_reactor = 1 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			dockyard = 2 
+			radar_station = 2 
+			anti_air_building = 1 
+			4650 = { naval_base = 10 }
+		}
+		
+		add_core_of = PHI 
 	}
-	provinces={
-		4650 
-	}
-	manpower=1821060
-	state_category = megalopolis
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 4650 }
 }

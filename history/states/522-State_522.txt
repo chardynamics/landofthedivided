@@ -1,21 +1,20 @@
-
-state={
-	id=522
-	name="STATE_522"
-	history = {
-		owner = SCA
-		add_core_of = SCA
-		buildings = {
-			infrastructure = 0
-			
-			thermoelectric_plant = 4
+state = { 
+	id = 522 
+	name = "STATE_522" 
+	manpower = 2400 
+	
+	state_category = small_island 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SCA 
+		
+		buildings = { 
+			infrastructure = 0 
+			thermoelectric_plant = 4 
 		}
+		
+		add_core_of = SCA 
 	}
-	provinces={
-		6744 6745 6746 
-	}
-	manpower=2400
-	state_category = small_island
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 6744 6745 6746 }
 }

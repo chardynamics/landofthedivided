@@ -1,25 +1,21 @@
-
-state={
-	id=667
-	name="STATE_667"
-
-	history={
-		owner = SCA
-		add_core_of = SCA
-		buildings = {
-			infrastructure = 4
-
-			thermoelectric_plant = 4
-			hydroelectric_plant = 1
+state = { 
+	id = 667 
+	name = "STATE_667" 
+	manpower = 12626 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SCA 
+		
+		buildings = { 
+			infrastructure = 4 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 1 
 		}
-
+		
+		add_core_of = SCA 
 	}
-
-	provinces={
-		560 745 1914 2214 2810 4379 4607 5665 5691 5727 5744 8640 8641 8642 8653 
-	}
-	manpower=12626
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 560 745 1914 2214 2810 4379 4607 5665 5691 5727 5744 8640 8641 8642 8653 }
 }

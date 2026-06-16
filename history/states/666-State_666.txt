@@ -1,20 +1,17 @@
-
-state={
-	id=666
-	name="STATE_666"
-	history = {
-		owner = GBR
-		add_core_of = GBR
-		buildings = {
-			infrastructure = 3
-			
-		}
+state = { 
+	id = 666 
+	name = "STATE_666" 
+	manpower = 4849 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = GBR 
+		
+		buildings = { infrastructure = 3 }
+		
+		add_core_of = GBR 
 	}
-	provinces={
-		36 918 3094 4724 5954 
-	}
-	manpower=4849
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 36 918 3094 4724 5954 }
 }

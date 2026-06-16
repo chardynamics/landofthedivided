@@ -1,23 +1,17 @@
-
-state={
-	id=170
-	name="STATE_170"
-
-	history={
-		owner = MMS
-		add_core_of = MMS
-		buildings = {
-			infrastructure = 2
-
-		}
-
+state = { 
+	id = 170 
+	name = "STATE_170" 
+	manpower = 1219 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = MMS 
+		
+		buildings = { infrastructure = 2 }
+		
+		add_core_of = MMS 
 	}
-
-	provinces={
-		48 782 888 2800 4317 4430 8514 
-	}
-	manpower=1219
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 48 782 888 2800 4317 4430 8514 }
 }

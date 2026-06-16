@@ -1,18 +1,16 @@
-state={
-	id=430
-	name="STATE_430"
-	history = {
-		owner = DMA
-		add_core_of = DMA
-		buildings = {
-			infrastructure = 6
-			
-		}
+state = { 
+	id = 430 
+	name = "STATE_430" 
+	manpower = 3994 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = DMA 
+		
+		buildings = { infrastructure = 6 }
+		
+		add_core_of = DMA 
 	}
-	provinces={
-		1216 
-	}
-	manpower=3994
-	state_category = pastoral
-	buildings_max_level_factor=1.000
+	provinces = { 1216 }
 }

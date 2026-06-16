@@ -1,27 +1,23 @@
-
-state={
-	id=155
-	name="STATE_155"
-
-	history={
-		owner = CAN
-		add_core_of = CAN
-		buildings = {
-			infrastructure = 6
-
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 1
-			hospitals = 1
+state = { 
+	id = 155 
+	name = "STATE_155" 
+	manpower = 47010 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = CAN 
+		
+		buildings = { 
+			infrastructure = 6 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 1 
+			hospitals = 1 
 		}
-
+		
+		add_core_of = CAN 
 	}
-
-	provinces={
-		365 667 1321 1697 1819 2627 2668 3824 4161 5002 5449 5460 5469 8506 
-	}
-	manpower=47010
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 365 667 1321 1697 1819 2627 2668 3824 4161 5002 5449 5460 5469 8506 }
 }

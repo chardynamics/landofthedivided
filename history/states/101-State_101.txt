@@ -1,33 +1,30 @@
-
-state={
-	id=101
-	name="STATE_101"
-
-	history={
-		owner = BIR
-		add_core_of = BIR
-		buildings = {
-			infrastructure = 9
-			air_base = 6
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
-		}
+state = { 
+	id = 101 
+	name = "STATE_101" 
+	manpower = 291384 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { steel = 51 } 
+	history = { 
+		owner = BIR 
+		
 		victory_points = { 4096 30 }
-
+		
+		buildings = { 
+			infrastructure = 9 
+			air_base = 6 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = BIR 
 	}
-
-	resources = {
-		steel = 51
-	}
-	provinces={
-		978 2051 4096 6253 6266 
-	}
-	manpower=291384
-	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 978 2051 4096 6253 6266 }
 }

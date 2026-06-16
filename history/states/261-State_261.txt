@@ -1,26 +1,26 @@
-state={
-	id=261
-	name="STATE_261"
-	history = {
-		owner = ALB
-		add_core_of = ALB
-		buildings = {
-			infrastructure = 7
-			
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-		}
+state = { 
+	id = 261 
+	name = "STATE_261" 
+	manpower = 391148 
 	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = ALB 
+		
 		victory_points = { 4077 10 }
-}
-	provinces={
-		4077 
+		
+		buildings = { 
+			infrastructure = 7 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+		}
+		
+		add_core_of = ALB 
 	}
-	manpower=391148
-	state_category = large_city
-	buildings_max_level_factor=1.000
+	provinces = { 4077 }
 }

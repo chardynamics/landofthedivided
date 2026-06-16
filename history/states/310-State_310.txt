@@ -1,28 +1,24 @@
-
-state={
-	id=310
-	name="STATE_310"
-
-	history={
-		owner = WAR
-		add_core_of = WAR
-		buildings = {
-			infrastructure = 5
-
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-		}
-
+state = { 
+	id = 310 
+	name = "STATE_310" 
+	manpower = 61759 
 	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = WAR 
+		
 		victory_points = { 751 10 }
-}
-
-	provinces={
-		751 1060 3576 4284 
+		
+		buildings = { 
+			infrastructure = 5 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+		}
+		
+		add_core_of = WAR 
 	}
-	manpower=61759
-	state_category = large_town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 751 1060 3576 4284 }
 }

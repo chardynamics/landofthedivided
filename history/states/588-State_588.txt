@@ -1,24 +1,25 @@
-
-state={
-	id=588
-	name="STATE_588"
-	history = {
-		owner = SAZ
-		add_core_of = SAZ
-		buildings = {
-			infrastructure = 4
-			air_base = 2
-		}
-		victory_points = { 1884 10 }
+state = { 
+	id = 588 
+	name = "STATE_588" 
+	manpower = 3262 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = SAZ 
+		
 		victory_points = { 1663 10 }
+		victory_points = { 1884 10 }
 		victory_points = { 3768 5 }
 		victory_points = { 6215 5 }
+		
+		buildings = { 
+			infrastructure = 4 
+			air_base = 2 
+		}
+		
+		add_core_of = SAZ 
 	}
-	provinces={
-		523 845 878 1097 1202 1596 1663 1665 1769 1884 2277 2321 2578 3389 3598 3719 3768 3943 4137 4203 6173 6195 6215 6237 8727 
-	}
-	manpower=3262
-	state_category = pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 523 845 878 1097 1202 1596 1663 1665 1769 1884 2277 2321 2578 3389 3598 3719 3768 3943 4137 4203 6173 6195 6215 6237 8727 }
 }

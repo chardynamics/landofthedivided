@@ -1,31 +1,32 @@
-state={
-	id=635
-	name="STATE_635"
-	history = {
-		owner = MEX
-		add_core_of = MEX
-		buildings = {
-			infrastructure = 4
-			air_base = 9
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			radar_station = 1
-			anti_air_building = 1
-		}
+state = { 
+	id = 635 
+	name = "STATE_635" 
+	manpower = 1306795 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	
+	resources = { oil = 35 } 
+	history = { 
+		owner = MEX 
+		
 		victory_points = { 2364 45 }
+		
+		buildings = { 
+			infrastructure = 4 
+			air_base = 9 
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			radar_station = 1 
+			anti_air_building = 1 
+		}
+		
+		add_core_of = MEX 
 	}
-	resources = {
-		oil = 35
-	}
-	provinces={
-		446 586 813 1636 1942 2364 2661 2879 3429 3692 4305 4609 4878 6461 6463 6468 6472 
-	}
-	manpower=1306795
-	state_category = metropolis
-	buildings_max_level_factor=1.000
+	provinces = { 446 586 813 1636 1942 2364 2661 2879 3429 3692 4305 4609 4878 6461 6463 6468 6472 }
 }

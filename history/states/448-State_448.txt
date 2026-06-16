@@ -1,18 +1,16 @@
-state={
-	id=448
-	name="STATE_448"
-	history = {
-		owner = SUT
-		add_core_of = SUT
-		buildings = {
-			infrastructure = 1
-			
-		}
+state = { 
+	id = 448 
+	name = "STATE_448" 
+	manpower = 2247 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SUT 
+		
+		buildings = { infrastructure = 1 }
+		
+		add_core_of = SUT 
 	}
-	provinces={
-		1111 3273 3425 
-	}
-	manpower=2247
-	state_category = pastoral
-	buildings_max_level_factor=1.000
+	provinces = { 1111 3273 3425 }
 }

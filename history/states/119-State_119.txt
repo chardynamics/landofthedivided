@@ -1,22 +1,19 @@
-
-state={
-	id=119
-	name="STATE_119"
-	history = {
-		owner = DMA
-		add_core_of = DMA
-		buildings = {
-			infrastructure = 4
-			
-		}
+state = { 
+	id = 119 
+	name = "STATE_119" 
+	manpower = 15210 
 	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = DMA 
+		
 		victory_points = { 6057 4 }
-}
-	provinces={
-		697 1399 2294 3028 3140 5067 6038 6039 6057 
+		
+		buildings = { infrastructure = 4 }
+		
+		add_core_of = DMA 
 	}
-	manpower=15210
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 697 1399 2294 3028 3140 5067 6038 6039 6057 }
 }

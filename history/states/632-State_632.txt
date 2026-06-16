@@ -1,23 +1,17 @@
-
-state={
-	id=632
-	name="STATE_632"
-
-	history={
-		owner = DMA
-		add_core_of = DMA
-		buildings = {
-			infrastructure = 1
-
-		}
-
+state = { 
+	id = 632 
+	name = "STATE_632" 
+	manpower = 16800 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = DMA 
+		
+		buildings = { infrastructure = 1 }
+		
+		add_core_of = DMA 
 	}
-
-	provinces={
-		5883 8893 
-	}
-	manpower=16800
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 5883 8893 }
 }

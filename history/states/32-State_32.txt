@@ -1,21 +1,21 @@
-
-state={
-	id=32
-	name="STATE_32"
-	history = {
-		owner = BIR
-		add_core_of = BIR
-		buildings = {
-			infrastructure = 6
-			schools = 1
-			hospitals = 1
+state = { 
+	id = 32 
+	name = "STATE_32" 
+	manpower = 41455 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	history = { 
+		owner = BIR 
+		
+		buildings = { 
+			infrastructure = 6 
+			schools = 1 
+			hospitals = 1 
 		}
+		
+		add_core_of = BIR 
 	}
-	provinces={
-		58 1311 1607 2472 3468 3645 4810 6220 6256 
-	}
-	manpower=41455
-	state_category = town
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 58 1311 1607 2472 3468 3645 4810 6220 6256 }
 }

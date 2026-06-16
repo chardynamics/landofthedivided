@@ -1,23 +1,23 @@
-state={
-	id=550
-	name="STATE_550"
-	history = {
-		owner = SSC
-		add_core_of = SSC
-		buildings = {
-			infrastructure = 9
-			air_base = 4
-			dockyard = 1
-			335 = {
-				naval_base = 4
-			}
-		}
+state = { 
+	id = 550 
+	name = "STATE_550" 
+	manpower = 28144 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SSC 
+		
 		victory_points = { 335 30 }
+		
+		buildings = { 
+			infrastructure = 9 
+			air_base = 4 
+			dockyard = 1 
+			335 = { naval_base = 4 }
+		}
+		
+		add_core_of = SSC 
 	}
-	provinces={
-		335 1415 2151 4386 6231 6244 6257 
-	}
-	manpower=28144
-	state_category = town
-	buildings_max_level_factor=1.000
+	provinces = { 335 1415 2151 4386 6231 6244 6257 }
 }

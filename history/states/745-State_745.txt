@@ -1,26 +1,19 @@
-
-state={
-	id=745
-	name="STATE_745"
-
-	history={
-		owner = SMN
-		add_core_of = SMN
-		buildings = {
-			infrastructure = 4
-
-		}
-
+state = { 
+	id = 745 
+	name = "STATE_745" 
+	manpower = 16324 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	local_supplies = 0 
+	
+	resources = { steel = 35 } 
+	history = { 
+		owner = SMN 
+		
+		buildings = { infrastructure = 4 }
+		
+		add_core_of = SMN 
 	}
-
-	resources = {
-		steel = 35
-	}
-	provinces={
-		204 1252 1660 2042 4770 8591 8599 8601 8603 
-	}
-	manpower=16324
-	state_category = rural
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	provinces = { 204 1252 1660 2042 4770 8591 8599 8601 8603 }
 }
