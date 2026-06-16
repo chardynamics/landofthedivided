@@ -31,7 +31,7 @@ ideas = {
 
 			cancel_if_invalid = yes
 			modifier = {
-				#conscription_factor = 0.15
+				#conscription_factor = 0.4
 				military_industry_cost_modifier = -0.5
 				naval_industry_cost_modifier = -0.5
 				free_production_units_modifier = 2
@@ -51,6 +51,7 @@ ideas = {
 
 			cancel_if_invalid = yes
 			modifier = {
+				conscription_factor = 5
 				free_production_units_modifier = 3
 				production_speed_buildings_factor = 0.20
 				production_units_to_GDP_ratio_modifier = 0.6
