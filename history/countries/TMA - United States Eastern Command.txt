@@ -9,9 +9,9 @@ add_ideas = {
 	Military_Authority_Deputy_Head
 	USA_warlord_econ
 	#political#
-	tno_political_parties_one_party_state
+	tno_political_parties_multi_party_state
 	tno_religious_rights_secularism
-	tno_trade_unions_illegal
+	tno_trade_unions_all_allowed
 	tno_immigration_quota_immigration
 	tno_slavery_penal_labor
 	tno_public_meetings_regulated
@@ -19,7 +19,7 @@ add_ideas = {
 	tno_vote_no_voting
 	#military#
 	tno_conscription_broadened_conscription
-	tno_military_supervision_no_supervision
+	tno_military_supervision_rules_of_engagement
 	tno_training_combat_schooling
 	tno_draft_exemptions_none
 	#economic#
@@ -48,11 +48,11 @@ add_ideas = {
 	#social development
 	tno_army_professionalism_professionalism
 	tno_industrial_expertise_nascent
-	tno_industrial_equipment_manufacturing_lines
-	tno_admin_efficiency_deficient_administrative_systems
-	tno_healthcare_nascent
-	tno_agriculture_basic_mechanized
-	tno_research_facilities_outdated
+	tno_industrial_equipment_factory_complexes
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_developed
+	tno_agriculture_mass_mechanized
+	tno_research_facilities_modern
 	tno_academic_base_secondary_schooling
 }
 
