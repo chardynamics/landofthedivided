@@ -5,7 +5,8 @@ capital = 299
 fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 
 add_ideas = {
-USA_warlord_manpower
+	USA_warlord_manpower
+
 	USA_warlord_econ
 #political#
 	tno_political_parties_multiparty_system
@@ -17,7 +18,7 @@ USA_warlord_manpower
 	tno_press_rights_free_press
 	tno_vote_franchise_universal
 	#military#
-	tno_conscription_service_by_requirement
+	tno_conscription_limited_conscription
 	tno_military_supervision_rules_of_engagement
 	tno_training_basic_training
 	tno_draft_exemptions_none
