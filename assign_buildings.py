@@ -45,65 +45,63 @@ POP_THRESHOLDS = {
 # Dockyards only on real port states; level scales with population.
 DOCKYARD_THRESHOLDS = [700_000, 2_800_000, 6_500_000]
 
-# Power generation by category (original high-energy levels). Every inhabited
-# category gets at least one thermoelectric plant, with larger categories
-# stacking thermo + hydro for a strong energy surplus.
-ENERGY_TEMPLATE = {
-    "megalopolis": {"thermoelectric_plant": 4, "hydroelectric_plant": 3},
-    "metropolis": {"thermoelectric_plant": 4, "hydroelectric_plant": 2},
-    "large_city": {"thermoelectric_plant": 3, "hydroelectric_plant": 2},
-    "city": {"thermoelectric_plant": 3, "hydroelectric_plant": 1},
-    "large_town": {"thermoelectric_plant": 2, "hydroelectric_plant": 1},
-    "town": {"thermoelectric_plant": 2, "hydroelectric_plant": 1},
-    "rural": {"thermoelectric_plant": 1},
-    "pastoral": {"thermoelectric_plant": 1},
-    "enclave": {"thermoelectric_plant": 1},
-    "small_island": {"thermoelectric_plant": 1},
-    "tiny_island": {"thermoelectric_plant": 1},
-    "wasteland": {},
+# --- Power production is anchored to each country's estimated CONSUMPTION ---
+#
+# The economy backend (TNO_calculate_power_consumption) computes a country's
+# power demand as roughly:
+#
+#     consumption ~= POWER_GDP_MULT * GDP(billions) + (building_power_demand / 2)
+#
+# Building power demand is a weighted count of the non-power buildings a state
+# has (schools, offices, hospitals, ...). Because demand scales with GDP, a
+# fixed city-size power template made the big economies (Canada, California)
+# starve while tiny warlords overflowed. Instead, each country's total power
+# output now targets `buffer * consumption`, where the buffer grows with GDP:
+# real nations and the largest warlords keep a surplus, mid warlords land "just
+# barely enough", and undeveloped warlords (Great Basin Republic) fall short.
+POWER_GDP_MULT = 3.0  # matches KD_consumption_multiplier in the economy backend
+
+# Weighted power demand per non-power building (matches the economy backend's
+# TNO_calculate_power_consumption before the global /2).
+DEMAND_WEIGHTS = {
+    "schools": 1,
+    "barracks": 1,
+    "prisons": 1,
+    "radar_station": 1,
+    "supply_node": 1,
+    "synthetic_refinery": 1,
+    "offices": 2,
+    "hospitals": 2,
+    "missile_silo": 2,
+    "enrichment_plant": 4,
+    "dockyard": 1,
 }
 
-# Energy is scaled per owner: better-off / developed countries keep 75% of the
-# original power buildings, while the least developed warlord states drop to 50%.
-# The development tier is keyed off the lore-based economy archetypes
-# (see generate_economy_definitions.py) so it stays consistent with the economy.
-DEV_FACTOR_BY_ARCHETYPE = {
-    "stable_developed": 0.75,        # Canada
-    "social_democratic": 0.75,       # California (CAS), NYC, etc.
-    "business_booming": 0.75,        # Gulf Coast
-    "tax_haven": 0.75,               # BVI
-    "island_micro_stable": 0.70,     # Bahamas, PR, Vermont
-    "canadian_backed": 0.70,         # Minnesota, Detroit, Maine mission
-    "stable_developing": 0.65,       # Mexico, Dominican Republic
-    "state_continuation": 0.60,      # surviving state governments
-    "libertarian": 0.60,             # Wyoming, Boise
-    "military_authority": 0.60,      # USMA charter states
-    "poor_stable": 0.55,             # Haiti
-    "neutral_contested": 0.55,       # Missouri, Nevada, etc.
-    "populist_uprising": 0.55,       # Baltimore, ALF, West Virginia
-    "tribal": 0.55,                  # Navajo
-    "communist": 0.55,               # Boston Red Army, Cuba
-    "socialist_authoritarian": 0.55, # Emergency Federal Government
-    "decentralized_weak": 0.50,      # National Guard Illinois
-    "movement_rump": 0.50,           # declining Movement branches
-    "movement_establishment": 0.50,  # Philadelphia
-    "foreign_occupation_failing": 0.50,  # Mexican border administrations
-    "failing_uprising": 0.50,        # Syracuse
-}
-# States with no owner / no archetype get a middle-of-the-road factor.
-DEFAULT_DEV_FACTOR = 0.60
+# Per-state power-plant economics (common/buildings/00_buildings.txt).
+THERMO_POWER, THERMO_MAX = 5, 4
+HYDRO_POWER, HYDRO_MAX = 10, 3
+NUCLEAR_POWER = 12
+STATE_ENERGY_POWER_CAP = THERMO_MAX * THERMO_POWER + HYDRO_MAX * HYDRO_POWER  # 50
 
-# Real-world sovereign nations (the "Vanilla" tags) keep the gentle 50-75%
-# development scaling from the archetype table above. Every other tag is a
-# collapsed US successor state whose power is instead scaled by its economic size
-# (GDP): the large industrial powers (California, the Emergency Federal
-# Government) keep a lot of power, while the small frontier warlords (Wyoming,
-# the Great Basin, etc.) bottom out at a 30% floor. Scaling is on a log curve
-# because warlord GDP spans ~$0.1B to ~$260B.
+# Real-world sovereign nations always keep a comfortable surplus.
 LEGITIMATE_COUNTRIES = {"CAN", "MEX", "CUB", "DOM", "HAI", "BAH", "FRA", "ENG"}
-WARLORD_FLOOR = 0.30      # smallest warlords keep 30% of original power
-WARLORD_CEILING = 0.72    # largest warlord (California) keeps 72%
-WARLORD_GDP_LO = 2.0      # GDP ($B) at/below which a warlord hits the floor
+LEGIT_POWER_BUFFER = 1.40       # legit nations produce ~40% over consumption
+
+# Collapsed US successor states scale their buffer with GDP on a log curve:
+# the largest (California, Emergency Federal Government) keep a real surplus,
+# while the smallest/undeveloped frontier warlords run a deficit.
+WARLORD_BUFFER_FLOOR = 0.60     # undeveloped warlords (Great Basin) run short
+WARLORD_BUFFER_CEIL = 1.30      # largest warlords keep a surplus + buffer
+WARLORD_GDP_FLOOR = 0.20        # GDP ($B) at/below which the floor buffer applies
+WARLORD_GDP_CEIL = 120.0        # GDP ($B) at/above which the ceiling buffer applies
+
+# Grid power directly caps usable production units (PUs) ~1:1 (the economy
+# backend clamps usable PUs to resource@power). On top of the multiplicative
+# buffer above, every country is guaranteed at least this much power *over* its
+# estimated consumption so even tiny economies can keep a few production units
+# powered. It is oversized a little to survive each country's in-game resource
+# extraction penalty (~0.8x). Big economies already clear this via their buffer.
+PU_HEADROOM_POWER = 8
 
 
 def load_state_owners(state_dir):
@@ -126,65 +124,113 @@ def country_base_gdp_billions(state_ids, states, pop_rows):
     return total / 1e9
 
 
-def energy_factor_for_owner(tag, gdp_billions=0.0, warlord_gdp_hi=1.0):
-    if tag in LEGITIMATE_COUNTRIES:
-        archetype = TAG_ARCHETYPE.get(tag)
-        return DEV_FACTOR_BY_ARCHETYPE.get(archetype, DEFAULT_DEV_FACTOR)
-    # Warlord: scale by economic size on a log curve, floored at WARLORD_FLOOR.
-    if gdp_billions <= WARLORD_GDP_LO or warlord_gdp_hi <= WARLORD_GDP_LO:
-        return WARLORD_FLOOR
-    span = math.log10(warlord_gdp_hi) - math.log10(WARLORD_GDP_LO)
-    frac = (math.log10(gdp_billions) - math.log10(WARLORD_GDP_LO)) / span
-    frac = max(0.0, min(1.0, frac))
-    return round(WARLORD_FLOOR + (WARLORD_CEILING - WARLORD_FLOOR) * frac, 2)
+def load_authored_gdp(path=None):
+    """Parse the per-country GDP authored in ZZZ_economy_definitions.txt.
 
-
-def scale_country_energy(states_energy, factor):
-    """Reduce a country's power buildings to ~factor of its original total.
-
-    states_energy maps state_id -> {"thermoelectric_plant": x, "hydroelectric_plant": y}.
-    Scaling is done at the country level (not per state) so the requested
-    percentage is honored despite tiny per-state integer counts. Reductions hit
-    the most-powered states first (hydro before thermo), keeping the spread of
-    plants roughly proportional to each state's original size.
+    This is the GDP the economy backend uses for power consumption, so anchoring
+    production to it keeps supply and demand on the same scale.
     """
-    scaled = {sid: dict(energy) for sid, energy in states_energy.items()}
-    original_total = sum(sum(energy.values()) for energy in states_energy.values())
-    if original_total == 0:
-        return scaled
-    target = int(math.floor(original_total * factor + 0.5))
-    current = original_total
-    while current > target:
+    path = path or (ROOT / "common" / "on_actions" / "ZZZ_economy_definitions.txt")
+    if not path.exists():
+        return {}
+    text = path.read_text(encoding="utf-8")
+    gdp = {}
+    for block in re.finditer(r"([A-Z]{3})\s*=\s*\{(.*?)initiate_display_vars", text, re.S):
+        tag = block.group(1)
+        match = re.search(r"GDP\s*=\s*([\d.]+)", block.group(2))
+        if match and tag not in gdp:
+            gdp[tag] = float(match.group(1))
+    return gdp
+
+
+def power_buffer(tag, gdp_billions):
+    """Target production-to-consumption ratio for a country.
+
+    Legit nations keep a flat surplus; warlords scale from a deficit (tiny,
+    undeveloped) up to a surplus (large) on a log-GDP curve.
+    """
+    if tag in LEGITIMATE_COUNTRIES:
+        return LEGIT_POWER_BUFFER
+    if gdp_billions <= WARLORD_GDP_FLOOR:
+        return WARLORD_BUFFER_FLOOR
+    if gdp_billions >= WARLORD_GDP_CEIL:
+        return WARLORD_BUFFER_CEIL
+    span = math.log10(WARLORD_GDP_CEIL) - math.log10(WARLORD_GDP_FLOOR)
+    frac = (math.log10(gdp_billions) - math.log10(WARLORD_GDP_FLOOR)) / span
+    return WARLORD_BUFFER_FLOOR + (WARLORD_BUFFER_CEIL - WARLORD_BUFFER_FLOOR) * frac
+
+
+def state_power_demand(buildings):
+    """Weighted power demand of a state's non-power buildings."""
+    return sum(DEMAND_WEIGHTS.get(key, 0) * value for key, value in buildings.items())
+
+
+def power_to_plants(power):
+    """Best integer thermo/hydro mix for a per-state power budget.
+
+    Caps at THERMO_MAX thermo (5 each) + HYDRO_MAX hydro (10 each). Ties prefer
+    fewer hydro so the cheaper, on-map thermoelectric plants dominate, matching
+    the original power-building style.
+    """
+    best = None
+    for hydro in range(HYDRO_MAX + 1):
+        for thermo in range(THERMO_MAX + 1):
+            value = thermo * THERMO_POWER + hydro * HYDRO_POWER
+            key = (abs(value - power), hydro, -value)
+            if best is None or key < best[0]:
+                best = (key, thermo, hydro)
+    _, thermo, hydro = best
+    return thermo, hydro
+
+
+def allocate_country_energy(target_power, state_weights):
+    """Distribute target_power (already net of fixed nuclear/base output) across
+    a country's states as thermo/hydro plant levels.
+
+    Power is handed out in 5-unit quanta (one thermoelectric level) using the
+    D'Hondt highest-averages method, so the allocation stays proportional to each
+    state's size weight, conserves the total exactly (no per-state rounding
+    drift), and respects the per-state power cap. Each state's quanta are then
+    snapped to the best thermo/hydro mix.
+    """
+    energy = {sid: {} for sid in state_weights}
+    if target_power <= 0 or not state_weights:
+        return energy
+
+    cap_q = STATE_ENERGY_POWER_CAP // THERMO_POWER  # 10 quanta per state
+    target_q = int(round(target_power / THERMO_POWER))
+    if target_q <= 0:
+        return energy
+
+    quanta = {sid: 0 for sid in state_weights}
+    placed = 0
+    while placed < target_q:
         best_sid = None
-        best_rank = None
-        for sid, energy in scaled.items():
-            power = energy.get("thermoelectric_plant", 0) + energy.get("hydroelectric_plant", 0)
-            if power <= 0:
+        best_key = None
+        for sid, weight in state_weights.items():
+            if quanta[sid] >= cap_q:
                 continue
-            rank = (power, sum(states_energy[sid].values()), sid)
-            if best_rank is None or rank > best_rank:
+            # D'Hondt: the state with the smallest (assigned+1)/weight is next.
+            key = ((quanta[sid] + 1) / weight, -weight)
+            if best_key is None or key < best_key:
+                best_key = key
                 best_sid = sid
-                best_rank = rank
         if best_sid is None:
-            break
-        energy = scaled[best_sid]
-        original = states_energy[best_sid]
-        # Remove the plant type that is currently "over-represented" relative to
-        # its original share, so each state keeps its thermo:hydro mix.
-        thermo, hydro = energy.get("thermoelectric_plant", 0), energy.get("hydroelectric_plant", 0)
-        orig_thermo = original.get("thermoelectric_plant", 0)
-        orig_hydro = original.get("hydroelectric_plant", 0)
-        thermo_share = thermo / orig_thermo if orig_thermo else -1.0
-        hydro_share = hydro / orig_hydro if orig_hydro else -1.0
-        if hydro > 0 and (hydro_share > thermo_share or thermo == 0):
-            remove_key = "hydroelectric_plant"
-        else:
-            remove_key = "thermoelectric_plant"
-        energy[remove_key] -= 1
-        if energy[remove_key] == 0:
-            energy.pop(remove_key)
-        current -= 1
-    return scaled
+            break  # every state is capped
+        quanta[best_sid] += 1
+        placed += 1
+
+    for sid, q in quanta.items():
+        if q <= 0:
+            continue
+        thermo, hydro = power_to_plants(q * THERMO_POWER)
+        plant = {}
+        if thermo:
+            plant["thermoelectric_plant"] = thermo
+        if hydro:
+            plant["hydroelectric_plant"] = hydro
+        energy[sid] = plant
+    return energy
 
 SHARED_SLOT_KEYS = ["schools", "offices", "hospitals", "prisons", "barracks", "dockyard", "missile_silo"]
 TRIM_ORDER = ["dockyard", "prisons", "offices", "schools", "hospitals", "barracks", "missile_silo"]
@@ -418,85 +464,112 @@ def compute_assignments(states, names, pop_rows, coastal_provinces, port_states)
     dams_by_state = merge_site_levels(dam_sites)
     reactors_by_state = merge_site_levels(reactor_sites)
     owners = load_state_owners(STATE_DIR)
+    authored_gdp = load_authored_gdp()
 
-    # Per-owner economic size (GDP) drives warlord power scaling.
     owner_states_map = defaultdict(list)
     for sid, tag in owners.items():
         owner_states_map[tag].append(sid)
-    owner_gdp = {
-        tag: country_base_gdp_billions(sids, states, pop_rows)
-        for tag, sids in owner_states_map.items()
-    }
-    warlord_gdp_hi = max(
-        (gdp for tag, gdp in owner_gdp.items() if tag not in LEGITIMATE_COUNTRIES),
-        default=1.0,
-    )
-    owner_factor = {
-        tag: energy_factor_for_owner(tag, owner_gdp.get(tag, 0.0), warlord_gdp_hi)
-        for tag in owner_states_map
-    }
 
-    # Pre-compute power buildings per state, scaled at the country (owner) level
-    # so each country's power lands at its development/GDP-based factor.
-    energy_by_owner = defaultdict(dict)
+    # --- Pass 1: resolve every state's non-power buildings & fixed power -------
+    # We need the final non-power buildings (after slot trimming) before we can
+    # estimate each country's power demand and how much fixed power it already
+    # has from nuclear reactors and military-base plants.
+    state_meta = {}
     for state_id in sorted(states):
         state = states[state_id]
         name = names.get(state_id) or pop_rows.get(state_id, {}).get("name", f"STATE_{state_id}")
-        if is_military_base(name):
-            continue
-        original_energy = {key: value for key, value in ENERGY_TEMPLATE.get(state["category"], {}).items() if value}
-        if original_energy:
-            energy_by_owner[owners.get(state_id, "")][state_id] = original_energy
-    scaled_energy = {}
-    for owner, states_energy in energy_by_owner.items():
-        factor = owner_factor.get(owner, WARLORD_FLOOR)
-        scaled_energy.update(scale_country_energy(states_energy, factor))
-
-    rows = []
-
-    for state_id in sorted(states):
-        state = states[state_id]
-        name = names.get(state_id) or pop_rows.get(state_id, {}).get("name", f"STATE_{state_id}")
-        coastal = state_has_coast(state, coastal_provinces)
-        has_port = state_id in port_states
         is_base = is_military_base(name)
         population = pop_rows.get(state_id, {}).get("population", state.get("manpower", 0))
-        has_dam = bool(dams_by_state.get(state_id))
+        has_port = state_id in port_states
         nuclear_level = min(2, sum(site.get("level", 1) for site in reactors_by_state.get(state_id, [])))
-        owner = owners.get(state_id, "")
-        energy_factor = owner_factor.get(owner, WARLORD_FLOOR)
-
-        dam_province = None
-        if has_dam:
-            dam_province = state["provinces"][0] if state["provinces"] else None
+        has_dam = bool(dams_by_state.get(state_id))
+        dam_province = (state["provinces"][0] if state["provinces"] else None) if has_dam else None
 
         if is_base:
             buildings = base_buildings(name, state, coastal_provinces)
-            if nuclear_level:
-                buildings["nuclear_reactor"] = nuclear_level
         else:
-            buildings = population_buildings(population, state["category"], has_port, scaled_energy.get(state_id))
-            if nuclear_level:
-                buildings["nuclear_reactor"] = nuclear_level
+            buildings = population_buildings(population, state["category"], has_port)
             buildings = trim_to_budget(buildings, state["category"], nuclear_level)
 
-        if state["category"] == "wasteland" and not is_base and not dam_province and not nuclear_level:
+        # Power the state already has that is *not* allocated by us below.
+        fixed_power = nuclear_level * NUCLEAR_POWER
+        if is_base:
+            fixed_power += buildings.get("thermoelectric_plant", 0) * THERMO_POWER
+
+        # States eligible to receive scaled thermo/hydro: inhabited, non-base.
+        eligible = (not is_base) and state["category"] not in ("wasteland",)
+        state_meta[state_id] = {
+            "state": state,
+            "name": name,
+            "is_base": is_base,
+            "population": population,
+            "has_port": has_port,
+            "nuclear_level": nuclear_level,
+            "dam_province": dam_province,
+            "buildings": buildings,
+            "demand": state_power_demand(buildings),
+            "fixed_power": fixed_power,
+            "eligible": eligible,
+            "coastal": state_has_coast(state, coastal_provinces),
+        }
+
+    # --- Pass 2: per-country power target anchored to estimated consumption ----
+    owner_gdp = {}
+    owner_buffer = {}
+    owner_energy = {}
+    for tag, sids in owner_states_map.items():
+        gdp = authored_gdp.get(tag)
+        if gdp is None:
+            gdp = country_base_gdp_billions(sids, states, pop_rows)
+        owner_gdp[tag] = gdp
+        demand_total = sum(state_meta[sid]["demand"] for sid in sids)
+        consumption = POWER_GDP_MULT * gdp + demand_total / 2.0
+        buffer = power_buffer(tag, gdp)
+        owner_buffer[tag] = buffer
+        # Guarantee a flat minimum surplus over consumption (for a few PUs) even
+        # where the multiplicative buffer alone would only break even.
+        target = max(buffer * consumption, consumption + PU_HEADROOM_POWER)
+        fixed_total = sum(state_meta[sid]["fixed_power"] for sid in sids)
+        remaining = max(0.0, target - fixed_total)
+        weights = {
+            sid: max(1, STATE_SLOTS.get(state_meta[sid]["state"]["category"], 1))
+            for sid in sids
+            if state_meta[sid]["eligible"]
+        }
+        owner_energy.update(allocate_country_energy(remaining, weights))
+
+    # --- Pass 3: assemble rows ------------------------------------------------
+    rows = []
+    for state_id in sorted(states):
+        meta = state_meta[state_id]
+        state = meta["state"]
+        owner = owners.get(state_id, "")
+        nuclear_level = meta["nuclear_level"]
+        buildings = dict(meta["buildings"])
+
+        if not meta["is_base"]:
+            for key, value in owner_energy.get(state_id, {}).items():
+                if value:
+                    buildings[key] = value
+        if nuclear_level:
+            buildings["nuclear_reactor"] = nuclear_level
+        if state["category"] == "wasteland" and not meta["is_base"] and not meta["dam_province"] and not nuclear_level:
             buildings = {}
 
         row = {
             "id": state_id,
             "file": str(state["path"].relative_to(ROOT)),
-            "name": name,
+            "name": meta["name"],
             "owner": owner,
-            "energy_factor": energy_factor,
+            "energy_factor": round(owner_buffer.get(owner, WARLORD_BUFFER_FLOOR), 2),
             "category": state["category"],
-            "population": pop_rows.get(state_id, {}).get("population", state.get("manpower", 0)),
-            "coastal": coastal,
-            "has_port": has_port,
-            "is_base": is_base,
-            "base_type": base_type(name) if is_base else "",
+            "population": meta["population"],
+            "coastal": meta["coastal"],
+            "has_port": meta["has_port"],
+            "is_base": meta["is_base"],
+            "base_type": base_type(meta["name"]) if meta["is_base"] else "",
             "dam_sites": "|".join(site["site"] for site in dams_by_state.get(state_id, [])),
-            "dam_province": dam_province or "",
+            "dam_province": meta["dam_province"] or "",
             "reactor_sites": "|".join(site["site"] for site in reactors_by_state.get(state_id, [])),
             "shared_slots": sum(buildings.get(key, 0) for key in SHARED_SLOT_KEYS),
             "slot_budget": STATE_SLOTS.get(state["category"], 0) + nuclear_level,

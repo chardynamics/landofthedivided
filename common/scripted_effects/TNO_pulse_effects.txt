@@ -31,19 +31,7 @@ first_every_month_script = {
 	}
 
 	every_country = {
-		set_variable = { total_pop_m = 0 }
-		set_variable = { total_core_pop_m = 0 }
-		every_owned_state = {
-			set_temp_variable = { spm = state_population_k }
-			divide_temp_variable = { spm = 1000 }
-			add_to_variable = { PREV.total_pop_m = spm }
-			if = {
-				limit = { is_core_of = THIS }
-				add_to_variable = { PREV.total_core_pop_m = spm }
-			}
-		}
-		set_variable = { total_ncore_pop_m = total_pop_m }
-		subtract_from_variable = { total_ncore_pop_m = total_core_pop_m }
+		recalculate_country_population_totals = yes
 	}
 
 	every_country = {
@@ -75,6 +63,11 @@ first_every_month_script = {
 			}
 			societal_development_monthly_check = yes # update policy effectiveness first!
 			econ_calculations_ON_MONTHLY = yes
+			if = {
+				limit = { tag = CAN }
+				set_variable = { debug_pu_phase = 2 }
+				debug_pu_dump_CAN = yes
+			}
 			calculate_consumer_goods_need = yes #Do this after consumption so the base value won't suddenly change on the player
 		}
 	}

@@ -1629,6 +1629,7 @@ on_actions = {
 
 			every_country = {
 				econ_reload_poverty_effects = yes
+				recalculate_country_population_totals = yes
 				set_variable = { gdpc = gdp }
 				divide_variable = { gdpc = total_pop_m }
 			}

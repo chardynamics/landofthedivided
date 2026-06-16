@@ -97,21 +97,13 @@ TNO_startup_nation = {
 					generate_state_gdps = yes
 					log = "[GetDateText]: [THIS.Owner.GetName]:  [THIS.GetName]: ran autogeneration script - state GDP is [?state_value] - state value factor is [?state_value_factor]"
 
-					set_temp_variable = { spm = state_population_k }
-					divide_temp_variable = { spm = 1000 }
-					add_to_variable = { PREV.total_pop_m = spm }
-					if = {
-						limit = { is_core_of = PREV }
-						add_to_variable = { PREV.total_core_pop_m = spm }
-					}
 					if = { # sets state value to a defined value if one is set
 						limit = { check_variable = { defined_state_value > 0 } }
 						set_variable = { state_value = defined_state_value }
 					}
 				}
 
-				set_variable = { total_ncore_pop_m = total_pop_m }
-				subtract_from_variable = { total_ncore_pop_m = total_core_pop_m }
+				recalculate_country_population_totals = yes
 
 				#set_variable = { economic_centralization = 0 }
 
@@ -232,6 +224,8 @@ TNO_startup_nation = {
 			initiate_display_vars = yes
 			misc_law_array_startup = yes
 			calculate_building_variables = yes
+			recalculate_country_population_totals = yes
+			reload_gdpc = yes
 			TNO_update_policy_effectiveness = yes 
 			TNO_calculate_actual_policy_effectiveness = yes 
 			
@@ -242,7 +236,12 @@ TNO_startup_nation = {
 				limit = { is_ai = no }
 				startup_social_arrays = yes
 			}
-			update_economy_tab = yes 
+			update_economy_tab = yes
+			if = {
+				limit = { tag = CAN }
+				set_variable = { debug_pu_phase = 1 }
+				debug_pu_dump_CAN = yes
+			}
 		}
 		add_to_variable = { TNO_laws_dirty = 1 }
 	}

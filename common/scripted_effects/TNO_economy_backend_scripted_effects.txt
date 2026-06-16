@@ -371,6 +371,7 @@ update_prod_units_amnt = {
 	round_variable = production_units_modifier
 	add_to_variable = { production_units = production_units_modifier }
 	round_variable = production_units
+	set_variable = { production_units_raw = production_units }
 
 	if = {
 		limit = { is_ai = yes }
@@ -858,20 +859,26 @@ calculate_agricultural_methods_fuel_cost_factor = {
 ###################################################################
 
 
-calculate_total_income = {
-	set_variable = { total_pop_m = 0 }
-	set_variable = { total_core_pop_m = 0 }
+recalculate_country_population_totals = {
+	set_temp_variable = { rcpt_pop_sum = 0 }
+	set_temp_variable = { rcpt_core_sum = 0 }
 	every_owned_state = {
-		set_temp_variable = { spm = state_population_k }
-		divide_temp_variable = { spm = 1000 }
-		add_to_variable = { PREV.total_pop_m = spm }
+		set_temp_variable = { rcpt_state_pop_m = state_population_k }
+		divide_temp_variable = { rcpt_state_pop_m = 1000 }
+		add_to_temp_variable = { PREV.rcpt_pop_sum = rcpt_state_pop_m }
 		if = {
 			limit = { is_core_of = OWNER }
-			add_to_variable = { PREV.total_core_pop_m = spm }
+			add_to_temp_variable = { PREV.rcpt_core_sum = rcpt_state_pop_m }
 		}
 	}
+	set_variable = { total_pop_m = rcpt_pop_sum }
+	set_variable = { total_core_pop_m = rcpt_core_sum }
 	set_variable = { total_ncore_pop_m = total_pop_m }
 	subtract_from_variable = { total_ncore_pop_m = total_core_pop_m }
+}
+
+calculate_total_income = {
+	recalculate_country_population_totals = yes
 
 	### Income Taxes
 	calculate_taxable_population = yes
@@ -4595,6 +4602,8 @@ update_economy_tab = {
 		economic_centralization_calculation = yes
 		calculate_funding_effects_display = yes
 		calculate_total_income = yes
+		reload_gdpc = yes
+		TNO_update_policy_effectiveness = yes
 		calculate_civilian_expenditures = yes
 		calculate_military_expenditures = yes
 		calculate_debt_expenditures = yes
@@ -8012,4 +8021,18 @@ KD_Upgrade_Coal_Production = {
 
 TNO_KD_Natural_Resource_Setup = {
 	
+}
+
+# TEMPORARY DEBUG - remove after CAN production units diagnosis
+debug_pu_dump_CAN = {
+	log = "CAN_PU_DEBUG phase=[?debug_pu_phase] tag=[THIS.GetTag]"
+	log = "CAN_PU_DEBUG GDP=[?GDP] totalstateGDP=[?totalstateGDP] totalstateGDP_display=[?totalstateGDP_display] total_pop_m=[?total_pop_m]"
+	log = "CAN_PU_DEBUG production_units=[?production_units] production_units_raw=[?production_units_raw] production_units_gdp_raw=[?production_units_gdp_raw]"
+	log = "CAN_PU_DEBUG production_units_multiplier=[?production_units_multiplier] production_units_modifier=[?production_units_modifier] free_production_units=[?free_production_units] pu_to_gdp_ratio=[?pu_to_gdp_ratio]"
+	set_temp_variable = { dbg_state_value_sum = 0 }
+	every_owned_state = {
+		add_to_temp_variable = { PREV.dbg_state_value_sum = state_value }
+		log = "CAN_PU_DEBUG state=[THIS.GetName] state_value=[?state_value] state_value_factor=[?state_value_factor] state_population_k=[?state_population_k]"
+	}
+	log = "CAN_PU_DEBUG sum_state_value(millions)=[?dbg_state_value_sum]"
 }

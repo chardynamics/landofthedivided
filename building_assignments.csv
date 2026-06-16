@@ -1,780 +1,780 @@
 id,file,name,owner,energy_factor,category,population,coastal,has_port,is_base,base_type,dam_sites,dam_province,reactor_sites,shared_slots,slot_budget,thermoelectric_plant,hydroelectric_plant,nuclear_reactor,schools,offices,hospitals,prisons,barracks,dockyard,radar_station,anti_air_building,missile_silo
-1,history/states/1-State_1.txt,British Columbia,CAN,0.75,megalopolis,3907738,True,True,False,,,,,18,22,2,1,0,3,3,3,3,3,3,2,2,0
-2,history/states/2-State_2.txt,"Hot Springs, AR",AMA,0.35,town,38954,False,False,False,,,,,1,6,1,0,0,0,0,1,0,0,0,0,0,0
-3,history/states/3-State_3.txt,"Joplin, MO",USM,0.4,town,54604,True,False,False,,Table Rock Dam,473,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-4,history/states/4-State_4.txt,"Ponce, PR",PRC,0.4,city,199560,True,True,False,,,,,5,12,1,0,0,1,1,1,1,0,1,0,0,0
-5,history/states/5-State_5.txt,"Mayaguez, PR",PRC,0.4,large_town,106716,True,True,False,,,,,4,8,1,1,0,1,0,1,1,0,1,0,0,0
-6,history/states/6-State_6.txt,Northern Alberta,CAN,0.75,large_city,400000,True,False,False,,,,,7,16,2,2,0,2,1,2,1,1,0,0,0,0
-7,history/states/7-State_7.txt,"Arecibo, PR",PRC,0.4,large_town,115200,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
-8,history/states/8-State_8.txt,North Manitoba,CAN,0.75,city,250000,True,False,False,,,,,6,12,3,1,0,2,1,1,1,1,0,0,0,0
-9,history/states/9-State_9.txt,Quebec,CAN,0.75,megalopolis,7237479,True,True,False,,,,,19,22,2,1,0,3,3,3,3,3,4,3,3,0
-10,history/states/10-State_10.txt,Labrador,CAN,0.75,town,26000,True,False,False,,,,,0,6,2,1,0,0,0,0,0,0,0,0,0,0
-11,history/states/11-State_11.txt,"Floyd County, KY",TMA,0.52,town,37687,True,False,False,,,,,1,6,1,1,0,0,0,1,0,0,0,0,0,0
-12,history/states/12-State_12.txt,"Newberry, MI",SPM,0.51,pastoral,1440,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-13,history/states/13-State_13.txt,"Saint Ignace, MI",SPM,0.51,pastoral,3000,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-14,history/states/14-State_14.txt,Central Northern Manitoba,CAN,0.75,large_city,300000,True,False,False,,,,,7,16,2,2,0,2,1,2,1,1,0,0,0,0
-15,history/states/15-State_15.txt,"Springfield, MO",USM,0.4,city,181896,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
-16,history/states/16-State_16.txt,"Houghton, MI",SPM,0.51,rural,9120,True,True,False,,,,,1,3,1,0,0,0,0,0,0,0,1,0,0,0
-17,history/states/17-State_17.txt,"Moresby Island, BC",CAN,0.75,tiny_island,177,True,True,False,,,,,1,1,1,0,0,0,0,0,0,0,1,0,0,0
-18,history/states/18-State_18.txt,"Shannon, MO",USM,0.4,rural,9988,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-19,history/states/19-State_19.txt,"Evansville, IN",TMA,0.52,city,145898,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
-20,history/states/20-State_20.txt,"Hopkins, KY",TMA,0.52,city,156000,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-21,history/states/21-State_21.txt,"Bloomington, IN",IMA,0.44,large_town,83149,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-22,history/states/22-State_22.txt,"Poplar Bluff, MO",USM,0.4,town,20427,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-23,history/states/23-State_23.txt,Northern British Columbia,CAN,0.75,large_city,300000,True,True,False,,,,,8,16,2,2,0,2,1,2,1,1,1,0,0,0
-24,history/states/24-State_24.txt,"Louisville, KY",TMA,0.52,large_city,307477,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,0,0,0
-25,history/states/25-State_25.txt,"St. Louis, MO",USM,0.4,large_city,416626,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,0,0,0
-26,history/states/26-State_26.txt,World Border,ZZZ,0.3,wasteland,0,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-27,history/states/27-State_27.txt,"Harrisonville, MO",USM,0.4,rural,11662,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-28,history/states/28-State_28.txt,"St. Joseph, MO",USM,0.4,large_town,88788,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-29,history/states/29-State_29.txt,"Adalair, MO",USM,0.4,pastoral,2160,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-30,history/states/30-State_30.txt,Saint-Pierre-et-Miquelon,CAN,0.75,rural,6109,False,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-31,history/states/31-State_31.txt,"Kidney Island, NU",CAN,0.75,tiny_island,120,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-32,history/states/32-State_32.txt,"Tupelo, MS",BIR,0.37,town,41455,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-33,history/states/33-State_33.txt,"Etowah, AL",BIR,0.37,large_town,124150,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-34,history/states/34-State_34.txt,"Knox, IL",NGI,0.31,large_town,67003,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-35,history/states/35-State_35.txt,"Howard, IN",IMA,0.44,large_town,101956,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-36,history/states/36-State_36.txt,"Coeur d'Alene, ID",SWA,0.38,town,41416,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-37,history/states/37-State_37.txt,"Kankakee, IL",NGI,0.31,town,32890,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-38,history/states/38-State_38.txt,"Belcher Islands, NU",CAN,0.75,small_island,3000,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-39,history/states/39-State_39.txt,"Christian, KY",TMA,0.52,large_town,86954,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-40,history/states/40-State_40.txt,Eastern Northern Manitoba,CAN,0.75,city,200000,True,False,False,,,,,5,12,3,1,0,1,1,1,1,1,0,0,0,0
-41,history/states/41-State_41.txt,"Peoria, IL",NGI,0.31,city,135523,True,False,False,,,,,3,12,0,0,0,1,0,1,1,0,0,0,0,0
-42,history/states/42-State_42.txt,Newfoundland,CAN,0.75,large_city,512930,True,True,False,,,,,8,16,2,2,0,2,1,2,1,1,1,1,0,0
-43,history/states/43-State_43.txt,"Oxford, MS",AMA,0.35,rural,17292,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-44,history/states/44-State_44.txt,"El Dorado, AR",AMA,0.35,town,28375,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-45,history/states/45-State_45.txt,Oklahoma,CAN,0.75,megalopolis,2037835,True,False,False,,,,,12,22,2,1,0,3,2,3,2,2,0,2,1,0
-46,history/states/46-State_46.txt,"Champaign, IL",NGI,0.31,large_town,81021,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-47,history/states/47-State_47.txt,"Little Rock, AR",AMA,0.35,city,219759,True,False,False,,,,,5,12,0,0,0,1,1,1,1,1,0,0,0,0
-48,history/states/48-State_48.txt,"Woodward, OK",LMA,0.31,rural,14461,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-49,history/states/49-State_49.txt,"Bowling Green, KY",TMA,0.52,town,59155,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-50,history/states/50-State_50.txt,"Guayama, PR",PRC,0.4,large_town,91800,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-51,history/states/51-State_51.txt,"Petersburg, IL",NGI,0.31,pastoral,2700,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-52,history/states/52-State_52.txt,"Platte, WI",EFG,0.67,rural,12000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-53,history/states/53-State_53.txt,"Buncombe, NC",CAN,0.75,city,247628,True,False,False,,,,,5,12,3,1,0,1,1,1,1,1,0,0,0,0
-54,history/states/54-State_54.txt,"Ottumwa, IA",SIA,0.36,town,34474,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-55,history/states/55-State_55.txt,"Iowa City, IA",SIA,0.36,large_town,74664,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-56,history/states/56-State_56.txt,"Dubuque, IA",SIA,0.36,large_town,69055,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-57,history/states/57-State_57.txt,"Waterloo, IA",SIA,0.36,large_town,82496,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-58,history/states/58-State_58.txt,"Covington, KY",TMA,0.52,town,52044,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-59,history/states/59-State_59.txt,"Indianapolis, IN",IMA,0.44,metropolis,938244,False,False,False,,,,,9,20,1,0,0,2,2,2,2,1,0,1,1,0
-60,history/states/60-State_60.txt,"Des Moines, IA",SIA,0.36,city,238418,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
-61,history/states/61-State_61.txt,Illinois,,0.3,megalopolis,12419293,True,False,False,,,,,15,22,1,0,0,3,3,3,3,3,0,4,3,0
-62,history/states/62-State_62.txt,"Vancouver, BC",CAN,0.75,metropolis,654805,True,False,False,,,,,8,20,3,1,0,2,1,2,2,1,0,1,0,0
-63,history/states/63-State_63.txt,Northern Saskatchwan,CAN,0.75,city,200000,True,False,False,,,,,5,12,3,1,0,1,1,1,1,1,0,0,0,0
-64,history/states/64-State_64.txt,"North Kansas City, MO",CKC,0.39,rural,5260,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-65,history/states/65-State_65.txt,"Rochester, MN",SMN,0.41,large_town,102967,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-66,history/states/66-State_66.txt,"Milwaukee, WI",EFG,0.67,metropolis,716368,True,True,False,,,,,11,20,1,1,0,2,2,2,2,1,2,1,1,0
-67,history/states/67-State_67.txt,"Sioux City, IA",SIA,0.36,large_town,102015,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-68,history/states/68-State_68.txt,"Green Bay, WI",EFG,0.67,large_town,122775,True,True,False,,,,,4,8,2,1,0,1,0,1,1,0,1,0,0,0
-69,history/states/69-State_69.txt,Ontario,CAN,0.75,megalopolis,11410046,True,True,False,,,,,19,22,2,1,0,3,3,3,3,3,4,4,3,0
-70,history/states/70-State_70.txt,"Jackson, TN",TMA,0.52,large_town,71571,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-71,history/states/71-State_71.txt,"Land Between The Lakes, TN",TMA,0.52,town,36000,True,False,False,,,,,1,6,1,1,0,0,0,1,0,0,0,0,0,0
-72,history/states/72-State_72.txt,"Madison, WI",EFG,0.67,city,249664,True,False,False,,,,,5,12,2,1,0,1,1,1,1,1,0,0,0,0
-73,history/states/73-State_73.txt,"Lexington, KY",TMA,0.52,large_city,312614,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,0,0,0
-74,history/states/74-State_74.txt,"Kalamazoo, MI",EFG,0.67,large_town,92574,False,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-75,history/states/75-State_75.txt,"Eau Claire, WI",SWI,0.3,large_town,74044,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-76,history/states/76-State_76.txt,"Appleton, WI",EFG,0.67,large_town,84104,True,False,False,,,,,2,8,2,1,0,1,0,1,0,0,0,0,0,0
-77,history/states/77-State_77.txt,"Kansas City, MO",CKC,0.39,large_city,529854,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,1,0,0
-78,history/states/78-State_78.txt,"Tippecanoe, IN",IMA,0.44,city,180000,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-79,history/states/79-State_79.txt,"Oshkosh, WI",EFG,0.67,large_town,75559,True,False,False,,,,,2,8,2,1,0,1,0,1,0,0,0,0,0,0
-80,history/states/80-State_80.txt,"Wausau, WI",SWI,0.3,town,46111,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-81,history/states/81-State_81.txt,"La Crosse, WI",SWI,0.3,large_town,61824,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-82,history/states/82-State_82.txt,"Minot, ND",SDA,0.3,town,43880,False,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-83,history/states/83-State_83.txt,"Delaware, IN",IMA,0.44,city,142522,True,False,False,,,,,3,12,1,0,0,1,0,1,1,0,0,0,0,0
-84,history/states/84-State_84.txt,"Willis, ND",SDA,0.3,pastoral,1440,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-85,history/states/85-State_85.txt,"Edmonton, AB",CAN,0.75,metropolis,799324,True,False,False,,,,,9,20,3,1,0,2,2,2,2,1,0,1,1,0
-86,history/states/86-State_86.txt,"De Witt, AR",AMA,0.35,pastoral,4376,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-87,history/states/87-State_87.txt,"Fargo, ND",SDA,0.3,large_town,88933,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-88,history/states/88-State_88.txt,"Vancouver Island, BC",CAN,0.75,metropolis,654805,True,True,False,,,,,9,20,3,1,0,2,1,2,2,1,1,1,0,0
-89,history/states/89-State_89.txt,"Sioux Falls, SD",SSD,0.3,city,148770,True,False,False,,,,,3,12,0,0,0,1,0,1,1,0,0,0,0,0
-90,history/states/90-State_90.txt,"Chico, CA",SCA,0.72,large_town,71944,False,False,False,,,,,2,8,2,1,0,1,0,1,0,0,0,0,0,0
-91,history/states/91-State_91.txt,"Mitchell, SD",SSD,0.3,rural,18304,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-92,history/states/92-State_92.txt,"Vaudreuil-Soulanges, QC",CAN,0.75,city,180000,True,False,False,,,,,4,12,3,1,0,1,1,1,1,0,0,0,0,0
-93,history/states/93-State_93.txt,"Twin Islands, NU",CAN,0.75,tiny_island,240,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-94,history/states/94-State_94.txt,"Kindersley, SK",CAN,0.75,rural,5400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-95,history/states/95-State_95.txt,"Saskatoon, SK",CAN,0.75,city,236173,True,False,False,,,,,5,12,3,1,0,1,1,1,1,1,0,0,0,0
-96,history/states/96-State_96.txt,Guantanamo Bay,CUB,0.55,rural,10000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-97,history/states/97-State_97.txt,"Ann Arbor, MI",EFG,0.67,city,136828,True,False,False,,,,,3,12,2,1,0,1,0,1,1,0,0,0,0,0
-98,history/states/98-State_98.txt,"Brookings, SD",SSD,0.3,town,22204,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-99,history/states/99-State_99.txt,"Rapid City, SD",WAR,0.3,large_town,65427,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
-100,history/states/100-State_100.txt,"Winnipeg, MB",CAN,0.75,metropolis,743452,True,False,False,,,,,9,20,3,1,0,2,2,2,2,1,0,1,1,0
-101,history/states/101-State_101.txt,"Birmingham, AL",BIR,0.37,city,291384,True,False,False,,,,,6,12,1,0,0,2,1,1,1,1,0,0,0,0
-102,history/states/102-State_102.txt,"Dickinson, ND",WAR,0.3,rural,19212,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-103,history/states/103-State_103.txt,"Pierre, SD",DMA,0.45,rural,16651,True,False,False,,Oahe Dam,1179,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-104,history/states/104-State_104.txt,"Akimiski Island, NU",CAN,0.75,tiny_island,60,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-105,history/states/105-State_105.txt,"Beatrice, NE",OMA,0.43,rural,15026,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-106,history/states/106-State_106.txt,"Pine Bluff, AR",AMA,0.35,large_town,66102,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-107,history/states/107-State_107.txt,"Anticosti Island, QC",CAN,0.75,small_island,7800,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-108,history/states/108-State_108.txt,"Scottsbluff, NE",DMA,0.45,rural,17659,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-109,history/states/109-State_109.txt,"Fremont, NE",OMA,0.43,town,30208,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-110,history/states/110-State_110.txt,"Grand Island, NE",DMA,0.45,town,51434,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-111,history/states/111-State_111.txt,"Meridian, MS",BIR,0.37,town,49233,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-112,history/states/112-State_112.txt,"Salina, KS",OMA,0.43,town,55159,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-113,history/states/113-State_113.txt,"Cowley, KS",OMA,0.43,town,43549,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-114,history/states/114-State_114.txt,"Saint Pierre, FR",FRA,0.7,rural,5280,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-115,history/states/115-State_115.txt,"Charlton Island, NU",CAN,0.75,tiny_island,24,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-116,history/states/116-State_116.txt,"East Lansing, MI",EFG,0.67,town,57486,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-117,history/states/117-State_117.txt,"Calgary, AB",CAN,0.75,metropolis,1054639,True,False,False,,,,,10,20,2,1,0,2,2,2,2,2,0,1,1,0
-118,history/states/118-State_118.txt,"Miquelon, FR",FRA,0.7,pastoral,2040,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
-119,history/states/119-State_119.txt,"Durango, CO",DMA,0.45,rural,15210,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-120,history/states/120-State_120.txt,"Eastern Townships, QC",CAN,0.75,city,264000,True,True,False,,,,,7,12,3,1,0,2,1,1,1,1,1,0,0,0
-121,history/states/121-State_121.txt,"Hardin, KY",TMA,0.52,large_town,115987,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-122,history/states/122-State_122.txt,"Dodge City, KS",DMA,0.45,town,30211,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-123,history/states/123-State_123.txt,"Alamosa, CO",MNM,0.35,rural,10536,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-124,history/states/124-State_124.txt,"Fort Smith, AR",AMA,0.35,large_town,96321,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-125,history/states/125-State_125.txt,"Twin Falls, ID",BAR,0.3,town,37028,True,False,False,,,,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
-126,history/states/126-State_126.txt,"Thornton, CO",DMA,0.45,large_town,98860,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-127,history/states/127-State_127.txt,"Tuscaloosa, AL",BIR,0.37,large_town,84723,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-128,history/states/128-State_128.txt,"Fort Collins, CO",DMA,0.45,city,142382,True,False,False,,,,,3,12,0,0,0,1,0,1,1,0,0,0,0,0
-129,history/states/129-State_129.txt,"Fort Morgan, CO",DMA,0.45,rural,9650,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-130,history/states/130-State_130.txt,"La Salle, LA",NOM,0.44,rural,17138,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-131,history/states/131-State_131.txt,"Colorado Springs, CO",DMA,0.45,large_city,433068,True,False,False,,,,,7,16,0,0,0,2,1,2,1,1,0,0,0,0
-132,history/states/132-State_132.txt,"Magladen Islands, QC",CAN,0.75,small_island,15360,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-133,history/states/133-State_133.txt,"Ionia, MI",EFG,0.67,rural,8400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-134,history/states/134-State_134.txt,"Lansing, MI",EFG,0.67,city,142953,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
-135,history/states/135-State_135.txt,"Miles City, MT",MMS,0.3,rural,10257,True,False,False,,Fort Peck Dam,789,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-136,history/states/136-State_136.txt,"Gillette, WY",WAR,0.3,town,23575,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-137,history/states/137-State_137.txt,"North Puget Sound, WA",SWA,0.38,city,144000,True,True,False,,,,,4,12,1,0,0,1,0,1,1,0,1,0,0,0
-138,history/states/138-State_138.txt,"Flint, MI",EFG,0.67,city,149931,False,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
-139,history/states/139-State_139.txt,"Great Falls, MT",MMS,0.3,large_town,67345,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
-140,history/states/140-State_140.txt,"Northern Cascades, WA",SWA,0.38,large_town,90000,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-141,history/states/141-State_141.txt,New Brunswick,CAN,0.75,metropolis,729498,True,True,False,,,,,11,20,2,1,0,2,2,2,2,1,2,1,1,0
-142,history/states/142-State_142.txt,"Olympic Peninsula, WA",SWA,0.38,large_town,84000,True,True,False,,,,,3,8,1,0,0,1,0,1,0,0,1,0,0,0
-143,history/states/143-State_143.txt,"Tucson, AZ",AMO,0.38,large_city,584038,False,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,1,0,0
-144,history/states/144-State_144.txt,"Idaho Falls, ID",WAR,0.3,large_town,60876,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
-145,history/states/145-State_145.txt,"Cape Breton Island, NS",CAN,0.75,city,176896,True,True,False,,,,,5,12,3,1,0,1,1,1,1,0,1,0,0,0
-146,history/states/146-State_146.txt,"Salt Lake City, UT",SUT,0.3,city,218277,False,False,False,,,,,5,12,0,0,0,1,1,1,1,1,0,0,0,0
-147,history/states/147-State_147.txt,"Ogden, UT",WAR,0.3,large_town,92671,False,False,False,,,,,3,8,0,0,0,1,0,1,1,0,0,0,0,0
-148,history/states/148-State_148.txt,"Lac-des-Eaux-Mortes, QC",CAN,0.75,rural,6000,False,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-149,history/states/149-State_149.txt,"Provo, UT",SUT,0.3,city,126199,True,False,False,,,,,3,12,0,0,0,1,0,1,1,0,0,0,0,0
-150,history/states/150-State_150.txt,"Western Okanogan Highlands, WA",SWA,0.38,town,42000,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-151,history/states/151-State_151.txt,"Edmundston, NB",CAN,0.75,rural,19200,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-152,history/states/152-State_152.txt,Prince Edward Island,CAN,0.75,city,135851,True,True,False,,,,,4,12,3,1,0,1,0,1,1,0,1,0,0,0
-153,history/states/153-State_153.txt,"Degelis, QC",CAN,0.75,town,24000,True,False,False,,,,,0,6,2,1,0,0,0,0,0,0,0,0,0,0
-154,history/states/154-State_154.txt,"Mount Pleasant, MI",WOL,0.3,town,30000,False,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-155,history/states/155-State_155.txt,"Brandon, MB",CAN,0.75,town,47010,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-156,history/states/156-State_156.txt,"Puget Islands, WA",SWA,0.38,town,30000,True,True,False,,,,,1,6,1,0,0,0,0,0,0,0,1,0,0,0
-157,history/states/157-State_157.txt,"Eastern Okanogan Highlands, WA",SWA,0.38,town,42000,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-158,history/states/158-State_158.txt,"Metaline Falls, WA",SWA,0.38,enclave,302,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-159,history/states/159-State_159.txt,"Hanover, MB",CAN,0.75,town,21600,True,False,False,,,,,0,6,2,1,0,0,0,0,0,0,0,0,0,0
-160,history/states/160-State_160.txt,"Sandpoint, ID",SWA,0.38,rural,7782,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-161,history/states/161-State_161.txt,"Kalispell, MT",MMS,0.3,rural,17067,True,False,False,,Hungry Horse Dam,954,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-162,history/states/162-State_162.txt,"Essex, MA",BRA,0.47,metropolis,891790,True,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-163,history/states/163-State_163.txt,Nova Scotia,CAN,0.75,metropolis,908007,True,True,False,,,,,11,20,2,1,0,2,2,2,2,1,2,1,1,0
-164,history/states/164-State_164.txt,"Vernal, UT",SUT,0.3,rural,9256,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-165,history/states/165-State_165.txt,"Shreveport, LA",NOM,0.44,city,240174,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
-166,history/states/166-State_166.txt,"Cypress, AB",CAN,0.75,rural,8400,False,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-167,history/states/167-State_167.txt,"Maple Creek, MB",CAN,0.75,pastoral,3000,False,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-168,history/states/168-State_168.txt,"Aroostook, ME",CMM,0.41,large_town,109597,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-169,history/states/169-State_169.txt,"South Puget Sound, WA",SWA,0.38,large_town,120000,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
-170,history/states/170-State_170.txt,"Browning, MT",MMS,0.3,pastoral,1219,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-171,history/states/171-State_171.txt,"Fayetteville, AR",AMA,0.35,large_town,69656,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-172,history/states/172-State_172.txt,"Columbia Basin, WA",SWA,0.38,city,132000,True,False,False,,Grand Coulee Dam|Chief Joseph Dam,465,,3,12,1,0,0,1,0,1,1,0,0,0,0,0
-173,history/states/173-State_173.txt,"Pantex Plant, TX",DMA,0.45,pastoral,2500,False,False,True,plant,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
-174,history/states/174-State_174.txt,"Saint Francis, ME",CAN,0.75,enclave,600,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-175,history/states/175-State_175.txt,"Cedar City, UT",SUT,0.3,town,24632,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-176,history/states/176-State_176.txt,"New Orleans, LA",NOM,0.44,large_city,581608,True,True,False,,,,,8,16,1,0,0,2,1,2,1,1,1,1,0,0
-177,history/states/177-State_177.txt,"Butte, MT",MMS,0.3,town,38668,True,False,False,,,,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
-178,history/states/178-State_178.txt,"Capitol Reef, UT",SUT,0.3,wasteland,0,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-179,history/states/179-State_179.txt,"Willapa Hills, WA",SWA,0.38,rural,14400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-180,history/states/180-State_180.txt,"Lafayette, LA",NOM,0.44,city,152569,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
-181,history/states/181-State_181.txt,"Moscow, ID",SWA,0.38,town,28069,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-182,history/states/182-State_182.txt,"Mecklenberg, NC",CMM,0.41,metropolis,834544,True,False,False,,,,,9,20,1,0,0,2,2,2,2,1,0,1,1,0
-183,history/states/183-State_183.txt,"Southern Cascades, WA",SWA,0.38,large_town,78000,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-184,history/states/184-State_184.txt,"St. John, NB",CAN,0.75,large_town,82022,True,True,False,,,,,3,8,2,1,0,1,0,1,0,0,1,0,0,0
-185,history/states/185-State_185.txt,"Yakima, WA",SWA,0.38,large_town,86214,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-186,history/states/186-State_186.txt,"Missoula, MT",MMS,0.3,large_town,76669,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
-187,history/states/187-State_187.txt,"Naval Submarine Base Bangor, WA",DMA,0.45,pastoral,1800,True,False,True,naval,,,,7,2,1,0,0,0,0,0,1,3,2,6,5,1
-188,history/states/188-State_188.txt,"Piscataquis, ME",CMM,0.41,town,20682,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-189,history/states/189-State_189.txt,"Middlesex, NJ",,0.3,metropolis,900194,True,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-190,history/states/190-State_190.txt,"Roseburg, OR",SOR,0.32,town,24020,True,True,False,,,,,1,6,1,0,0,0,0,0,0,0,1,0,0,0
-191,history/states/191-State_191.txt,"Muskegon, MI",EFG,0.67,town,47196,True,True,False,,,,,3,6,2,1,0,1,0,1,0,0,1,0,0,0
-192,history/states/192-State_192.txt,"Bismarck, ND",SDA,0.3,large_town,66638,True,False,False,,Garrison Dam,506,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
-193,history/states/193-State_193.txt,"Grand Forks, ND",SDA,0.3,town,59696,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
-194,history/states/194-State_194.txt,"Conway, AR",AMA,0.35,town,51800,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-195,history/states/195-State_195.txt,"Mahoosuc Range, ME",CMM,0.41,town,24000,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-196,history/states/196-State_196.txt,"Phillips, AR",AMA,0.35,town,31734,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-197,history/states/197-State_197.txt,"Natchitoches, LA",NOM,0.44,rural,5131,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-198,history/states/198-State_198.txt,"Lake Charles, LA",NOM,0.44,large_town,86108,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-199,history/states/199-State_199.txt,"Clay, MN",SMN,0.41,large_town,63600,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-200,history/states/200-State_200.txt,"Isanti, MN",SMN,0.41,rural,6000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-201,history/states/201-State_201.txt,"Vancouver, WA",SWA,0.38,city,172272,True,False,False,,Bonneville Dam,1389,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
-202,history/states/202-State_202.txt,"Autauga, AL",BIR,0.37,town,52405,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-203,history/states/203-State_203.txt,"Downeast, ME",SOM,0.3,town,42000,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
-204,history/states/204-State_204.txt,"Billings, MT",MMS,0.3,large_town,107816,True,False,False,,,,,3,8,0,0,0,1,0,1,1,0,0,0,0,0
-205,history/states/205-State_205.txt,"West Mahoosuc, ME",MAR,0.3,rural,18000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-206,history/states/206-State_206.txt,"Blue Mountains, WA",BAR,0.3,rural,10000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-207,history/states/207-State_207.txt,"Somerset, ME",CMM,0.41,large_town,61065,True,True,False,,,,,3,8,1,0,0,1,0,1,0,0,1,0,0,0
-208,history/states/208-State_208.txt,"Alexandra, LA",NOM,0.44,town,56400,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-209,history/states/209-State_209.txt,"Bend, OR",SOR,0.32,large_town,62434,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-210,history/states/210-State_210.txt,"Queens, NY",SPM,0.51,megalopolis,2675254,True,False,False,,,,,12,22,0,0,0,3,2,3,2,2,0,2,1,0
-211,history/states/211-State_211.txt,"Phillipsburg, MT",MMS,0.3,pastoral,4560,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-212,history/states/212-State_212.txt,"Mercer, ND",WAR,0.3,pastoral,3168,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-213,history/states/213-State_213.txt,"Orange, NY",,0.3,large_city,409640,True,True,False,,,,,8,16,1,1,0,2,1,2,1,1,1,0,0,0
-214,history/states/214-State_214.txt,"Dothan, AL",GCC,0.37,large_town,71209,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-215,history/states/215-State_215.txt,"Monroe, LA",NOM,0.44,large_town,65472,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-216,history/states/216-State_216.txt,"Western Mountains, ME",MAR,0.3,rural,10000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-217,history/states/217-State_217.txt,"Pendleton, OR",BAR,0.3,rural,19624,True,False,False,,The Dalles Dam|John Day Dam,727,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-218,history/states/218-State_218.txt,"Monteregie, QC",CAN,0.75,megalopolis,1680000,True,True,False,,,,,14,22,2,1,0,3,2,3,2,2,2,2,1,0
-219,history/states/219-State_219.txt,"ile Marie, QC",,0.3,small_island,12000,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-220,history/states/220-State_220.txt,"Baker, MT",WAR,0.3,pastoral,2126,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-221,history/states/221-State_221.txt,"Penobscot Bay, ME",SOM,0.3,town,54000,True,True,False,,,,,3,6,0,0,0,1,0,1,0,0,1,0,0,0
-222,history/states/222-State_222.txt,"Marquette, MI",SPM,0.51,town,25556,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-223,history/states/223-State_223.txt,"Great North Woods, NH",VER,0.3,town,48000,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-224,history/states/224-State_224.txt,"Cascade, ID",BAR,0.3,pastoral,1320,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-225,history/states/225-State_225.txt,"ile Jesus, QC",CAN,0.75,metropolis,720000,True,False,False,,,,,9,20,2,1,0,2,2,2,2,1,0,1,1,0
-226,history/states/226-State_226.txt,"ile de Montreal, QC",CAN,0.75,metropolis,1247440,True,False,False,,,,,12,20,2,1,0,3,2,3,2,2,0,1,1,0
-227,history/states/227-State_227.txt,"Montgomery, Al",ALF,0.3,city,241881,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
-228,history/states/228-State_228.txt,"Saint Cloud, MN",SMN,0.41,large_town,72495,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-229,history/states/229-State_229.txt,"ile Bizardl, QC",CAN,0.75,town,48000,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-230,history/states/230-State_230.txt,"ile Perrot, QC",CAN,0.75,town,40800,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-231,history/states/231-State_231.txt,"Northeast Kingdom, VT",VER,0.3,town,30000,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-232,history/states/232-State_232.txt,"Portland Casco Bay, ME",MAR,0.3,large_town,77098,True,True,False,,,,,3,8,0,0,0,1,0,1,0,0,1,0,0,0
-233,history/states/233-State_233.txt,"Cadillac, MI",WOL,0.3,rural,13197,False,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-234,history/states/234-State_234.txt,"Jamestown, ND",SDA,0.3,rural,18512,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-235,history/states/235-State_235.txt,"Clarke, AL",ALF,0.3,town,33513,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-236,history/states/236-State_236.txt,"Franklin, VT",VER,0.3,town,57295,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-237,history/states/237-State_237.txt,"Butler, AL",ALF,0.3,town,25136,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-238,history/states/238-State_238.txt,"Alger, MI",SPM,0.51,rural,12000,True,True,False,,,,,1,3,1,0,0,0,0,0,0,0,1,0,0,0
-239,history/states/239-State_239.txt,"Dillon, MT",BAR,0.3,pastoral,4555,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-240,history/states/240-State_240.txt,"Sugar Island, MI",SPM,0.51,tiny_island,600,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-241,history/states/241-State_241.txt,"Superior, WI",SWI,0.3,town,32712,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-242,history/states/242-State_242.txt,"St. Lawrence, NY",WTB,0.3,city,134317,True,False,False,,,,,3,12,1,0,0,1,0,1,1,0,0,0,0,0
-243,history/states/243-State_243.txt,"Salmon, ID",BAR,0.3,pastoral,3746,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-244,history/states/244-State_244.txt,"White Mountains, NH",SNH,0.3,rural,10000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-245,history/states/245-State_245.txt,"Manhattan, NYC",NYC,0.62,megalopolis,1537195,True,False,False,,,,,12,22,2,2,0,3,2,3,2,2,0,1,1,0
-246,history/states/246-State_246.txt,"St. Joseph Island, ON",CAN,0.75,small_island,4302,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-247,history/states/247-State_247.txt,"Athens, OH",SOH,0.46,town,25610,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-248,history/states/248-State_248.txt,"Grand Isle, VT",VER,0.3,rural,8400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-249,history/states/249-State_249.txt,"Powder River, MT",WAR,0.3,rural,6000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-250,history/states/250-State_250.txt,"Addison, VT",VER,0.3,town,21156,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-251,history/states/251-State_251.txt,"Hayward, WI",SWI,0.3,rural,19200,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-252,history/states/252-State_252.txt,"Manitoulin Island, ON",CAN,0.75,small_island,15343,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-253,history/states/253-State_253.txt,"Rutland, VT",VER,0.3,town,20750,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-254,history/states/254-State_254.txt,"Drummond Island, MI",SPM,0.51,small_island,1200,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-255,history/states/255-State_255.txt,"Cabell, WV",REO,0.39,large_town,116140,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-256,history/states/256-State_256.txt,"Hardin, MT",WAR,0.3,pastoral,1032,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-257,history/states/257-State_257.txt,"Cockburn Island, ON",CAN,0.75,wasteland,0,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-258,history/states/258-State_258.txt,"East Bozeman, MT",WAR,0.3,town,30000,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-259,history/states/259-State_259.txt,"Madison, MT",MMS,0.3,pastoral,2400,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-260,history/states/260-State_260.txt,"Merrimack, NH",SNH,0.3,city,138952,True,False,False,,,,Seabrook Station,3,13,0,0,1,1,0,1,1,0,0,0,0,0
-261,history/states/261-State_261.txt,"Sarasota, FL",ALB,0.36,large_city,391148,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,0,0,0
-262,history/states/262-State_262.txt,"Ontario, OR",BAR,0.3,rural,12438,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
-263,history/states/263-State_263.txt,"Mackinac Island, MI",SPM,0.51,tiny_island,600,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-264,history/states/264-State_264.txt,"Toledo, OH",SOH,0.46,large_city,376342,True,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,0,0,0
-265,history/states/265-State_265.txt,"Stevens Point, WI",EFG,0.67,town,29461,True,False,False,,,,,0,6,2,1,0,0,0,0,0,0,0,0,0,0
-266,history/states/266-State_266.txt,"Dayton, OH",SOH,0.46,city,199414,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-267,history/states/267-State_267.txt,"Mackinac City, MI",SPM,0.51,pastoral,1440,True,True,False,,,,,1,2,1,0,0,0,0,0,0,0,1,0,0,0
-268,history/states/268-State_268.txt,"Grafton, NH",SNH,0.3,rural,15879,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-269,history/states/269-State_269.txt,"Clearwater, MN",SMN,0.41,pastoral,3000,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-270,history/states/270-State_270.txt,"Beaver Island, MI",SPM,0.51,tiny_island,720,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-271,history/states/271-State_271.txt,"Harding, SD",WAR,0.3,pastoral,1623,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-272,history/states/272-State_272.txt,"Iosco, MI",WOL,0.3,rural,14400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-273,history/states/273-State_273.txt,"Hamilton, NY",ALB,0.36,rural,5126,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-274,history/states/274-State_274.txt,"Strafford, NH",BRA,0.47,city,137076,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
-275,history/states/275-State_275.txt,"Mobridge, SD",WAR,0.3,pastoral,4364,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-276,history/states/276-State_276.txt,"Aberdeen, SD",SSD,0.3,town,29589,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-277,history/states/277-State_277.txt,"Concord, NH",SNH,0.3,town,48824,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-278,history/states/278-State_278.txt,"Medford, OR",SOR,0.32,large_town,75958,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-279,history/states/279-State_279.txt,"Watertown, SD",SSD,0.3,town,25778,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-280,history/states/280-State_280.txt,"Lewis, NY",WTB,0.3,town,30000,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-281,history/states/281-State_281.txt,"Old Faithful, WY",WAR,0.3,pastoral,1200,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-282,history/states/282-State_282.txt,"Troy, NY",ALB,0.36,large_town,60000,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-283,history/states/283-State_283.txt,"Casper, WY",WAR,0.3,town,59572,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
-284,history/states/284-State_284.txt,"Philadelphia, PA",PHI,0.56,megalopolis,1821060,True,True,False,,,,Limerick Generating Station,14,23,1,1,1,3,2,3,2,2,2,2,1,0
-285,history/states/285-State_285.txt,"Schenectady, NY",ALB,0.36,large_town,78679,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-286,history/states/286-State_286.txt,"Richland, OH",SOH,0.46,city,154622,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-287,history/states/287-State_287.txt,"Roberts, ID",BAR,0.3,enclave,718,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
-288,history/states/288-State_288.txt,"Boise, ID",BAR,0.3,city,222944,True,False,False,,,,,5,12,0,0,0,1,1,1,1,1,0,0,0,0
-289,history/states/289-State_289.txt,"Baileys Harbor, WI",EFG,0.67,pastoral,1200,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-290,history/states/290-State_290.txt,"Grand Traverse, MI",WOL,0.3,large_town,96000,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-291,history/states/291-State_291.txt,"Oswego, NY",SYR,0.3,city,147092,True,False,False,,,,,3,12,1,0,0,1,0,1,1,0,0,0,0,0
-292,history/states/292-State_292.txt,"Hillsborough, NH",BRA,0.47,town,53584,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-293,history/states/293-State_293.txt,"Windham, VT",MCA,0.3,town,51787,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-294,history/states/294-State_294.txt,"Nampa, ID",BAR,0.3,large_town,62240,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
-295,history/states/295-State_295.txt,"Jackson, WY",WAR,0.3,rural,10376,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-296,history/states/296-State_296.txt,"Crescent City, CA",SCA,0.72,pastoral,4807,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-297,history/states/297-State_297.txt,"Jerome, ID",BAR,0.3,rural,9336,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
-298,history/states/298-State_298.txt,"Marshall, MN",SMN,0.41,rural,16416,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-299,history/states/299-State_299.txt,"Suffolk, MA",BRA,0.47,metropolis,826846,True,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-300,history/states/300-State_300.txt,"Worchester, MA",NGM,0.3,city,204000,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
-301,history/states/301-State_301.txt,"Wayne, NY",ROC,0.44,large_town,112526,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-302,history/states/302-State_302.txt,"Berkshire, MA",MCA,0.3,city,167222,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
-303,history/states/303-State_303.txt,"Mojave, CA",SCA,0.72,rural,7779,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-304,history/states/304-State_304.txt,"Saint Paul, MN",SMN,0.41,large_city,326682,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,0,0,0
-305,history/states/305-State_305.txt,"Chenango, NY",ITH,0.36,town,57994,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-306,history/states/306-State_306.txt,"Delaware, NY",ALB,0.36,town,51684,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-307,history/states/307-State_307.txt,"Plymouth, MA",NGM,0.3,large_town,62041,True,True,False,,,,,3,8,1,0,0,1,0,1,0,0,1,0,0,0
-308,history/states/308-State_308.txt,"Onondaga, NY",ITH,0.36,large_city,518400,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,1,0,0
-309,history/states/309-State_309.txt,"Trippe, SD",DMA,0.45,enclave,600,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-310,history/states/310-State_310.txt,"Pocatello, ID",WAR,0.3,large_town,61759,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
-311,history/states/311-State_311.txt,"Murray, MN",SMN,0.41,rural,9600,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-312,history/states/312-State_312.txt,"Huron, MI",WOL,0.3,town,24000,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-313,history/states/313-State_313.txt,"Monroe, NY",ROC,0.44,metropolis,882411,True,False,False,,,,,9,20,1,0,0,2,2,2,2,1,0,1,1,0
-314,history/states/314-State_314.txt,"Genesse, NY",ROC,0.44,large_town,72444,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-315,history/states/315-State_315.txt,"Barnstable, MA",NGM,0.3,town,57385,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-316,history/states/316-State_316.txt,"Columbia, NY",ALB,0.36,large_town,75715,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-317,history/states/317-State_317.txt,"Mason, MI",WOL,0.3,rural,16800,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-318,history/states/318-State_318.txt,"Saginaw, MI",WOL,0.3,large_town,74158,True,True,False,,,,,3,8,0,0,0,1,0,1,0,0,1,0,0,0
-319,history/states/319-State_319.txt,"Providence, RI",SRI,0.3,city,208341,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
-320,history/states/320-State_320.txt,"Albany, NY",ALB,0.36,large_town,114789,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-321,history/states/321-State_321.txt,"New London, CT",SRI,0.3,town,31034,True,False,False,,,,Millstone Nuclear Power Plant,0,7,1,0,1,0,0,0,0,0,0,0,0,0
-322,history/states/322-State_322.txt,"Mankato, MN",SMN,0.41,town,38912,True,False,False,,,,,1,6,1,0,0,0,0,1,0,0,0,0,0,0
-323,history/states/323-State_323.txt,"Ithaca, NY",ITH,0.36,town,35144,True,False,False,,,,,1,6,1,0,0,0,0,1,0,0,0,0,0,0
-324,history/states/324-State_324.txt,"Lovelock, NV",SCA,0.72,pastoral,2588,False,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-325,history/states/325-State_325.txt,"Cattaraugus, NY",ROC,0.44,large_town,96547,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-326,history/states/326-State_326.txt,"Buffalo, NY",ROC,0.44,large_city,351177,True,True,False,,Robert Moses Niagara Power Plant,3729,,8,16,1,1,0,2,1,2,1,1,1,0,0,0
-327,history/states/327-State_327.txt,"Windham, NY",ALB,0.36,pastoral,2640,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-328,history/states/328-State_328.txt,"Hartford, CT",MCA,0.3,city,145893,True,True,False,,,,,4,12,1,0,0,1,0,1,1,0,1,0,0,0
-329,history/states/329-State_329.txt,"Benton Harbor, MI",EFG,0.67,rural,15381,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-330,history/states/330-State_330.txt,Grand Island,CAN,0.75,town,41000,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-331,history/states/331-State_331.txt,"Mojave, NV",GBR,0.3,enclave,960,False,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-332,history/states/332-State_332.txt,"Detroit, MI",DET,0.6,metropolis,1141524,True,True,False,,,,,12,20,3,1,0,2,2,2,2,2,2,1,1,0
-333,history/states/333-State_333.txt,"Hamburg, NY",ERE,0.3,large_town,72000,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-334,history/states/334-State_334.txt,"Alpena, MI",WOL,0.3,town,37576,True,False,False,,,,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
-335,history/states/335-State_335.txt,"Steuben, NY",ITH,0.36,large_town,118471,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-336,history/states/336-State_336.txt,"Oakland, MI",DET,0.6,metropolis,1440000,False,False,False,,,,,12,20,2,1,0,3,2,3,2,2,0,1,1,0
-337,history/states/337-State_337.txt,"Dutchess, NY",HUD,0.38,large_city,336180,True,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,0,0,0
-338,history/states/338-State_338.txt,"Orange, NY",HUD,0.38,large_city,409640,True,False,False,,,,Indian Point Energy Center,7,17,1,0,1,2,1,2,1,1,0,0,0,0
-339,history/states/339-State_339.txt,"St. Clair, MI",DET,0.6,city,204000,True,False,False,,,,,5,12,3,1,0,1,1,1,1,1,0,0,0,0
-340,history/states/340-State_340.txt,"Douglas, WY",DMA,0.45,rural,6345,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-341,history/states/341-State_341.txt,"Chautauqua, NY",ERE,0.3,city,167700,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
-342,history/states/342-State_342.txt,"Lackawanna, PA",PHI,0.56,city,252861,True,False,False,,,,,6,12,2,1,0,2,1,1,1,1,0,0,0,0
-343,history/states/343-State_343.txt,"Fairfield, CT",HUD,0.38,large_town,68808,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-344,history/states/344-State_344.txt,"West Wendover, NV",GBR,0.3,pastoral,3128,False,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-345,history/states/345-State_345.txt,"Allegheny, PA",RWP,0.5,megalopolis,1537999,True,False,False,,,,,12,22,1,1,0,3,2,3,2,2,0,1,1,0
-346,history/states/346-State_346.txt,"Bradford, PA",CPN,0.3,large_town,75313,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-347,history/states/347-State_347.txt,"Davenport, IA",SIA,0.36,large_town,118030,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-348,history/states/348-State_348.txt,"Detroit Metro, MI",DET,0.6,megalopolis,5280000,True,False,False,,,,,15,22,2,1,0,3,3,3,3,3,0,3,2,0
-349,history/states/349-State_349.txt,"Mason City, IA",SIA,0.36,town,33783,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-350,history/states/350-State_350.txt,"Council Bluffs, IA",SIA,0.36,large_town,69921,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-351,history/states/351-State_351.txt,"Kent, MI",EFG,0.67,metropolis,690000,True,False,False,,,,,8,20,1,1,0,2,1,2,2,1,0,1,0,0
-352,history/states/352-State_352.txt,"Delta, UT",GBR,0.3,pastoral,4010,False,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-353,history/states/353-State_353.txt,"Erie, PA",ERE,0.3,large_town,124460,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
-354,history/states/354-State_354.txt,"Long Island, NY",LIS,0.62,megalopolis,9000000,True,False,False,,,,,15,22,2,2,0,3,3,3,3,3,0,4,3,0
-355,history/states/355-State_355.txt,"Cheyenne, WY",DMA,0.45,large_town,98241,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-356,history/states/356-State_356.txt,"McKean, PA",CPN,0.3,town,52800,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-357,history/states/357-State_357.txt,"Sussex, NJ",PHI,0.56,city,173820,True,False,False,,,,,4,12,2,1,0,1,1,1,1,0,0,0,0,0
-358,history/states/358-State_358.txt,"Cherry, NE",DMA,0.45,rural,6855,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-359,history/states/359-State_359.txt,"Lehigh, PA",PHI,0.56,large_city,374508,True,False,False,,,,,7,16,2,1,0,2,1,2,1,1,0,0,0,0
-360,history/states/360-State_360.txt,"South Bairoil, WY",DMA,0.45,enclave,240,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-361,history/states/361-State_361.txt,"Sandusky, OH",SOH,0.46,town,33412,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-362,history/states/362-State_362.txt,"Evanston, WY",WAR,0.3,rural,14830,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-363,history/states/363-State_363.txt,"Northumberland, PA",PHI,0.56,large_town,111600,True,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-364,history/states/364-State_364.txt,"Rock Springs, WY",WAR,0.3,town,22860,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-365,history/states/365-State_365.txt,"Lawrence, PA",RWP,0.5,large_town,115495,True,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-366,history/states/366-State_366.txt,"Chicago Metro, IL",EFG,0.67,megalopolis,11415598,True,True,False,,,,Braidwood Nuclear Generating Station,19,23,1,1,1,3,3,3,3,3,4,4,3,0
-367,history/states/367-State_367.txt,"Middlesex, NJ",PHI,0.56,metropolis,900194,True,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-368,history/states/368-State_368.txt,"Superior, WY",WAR,0.3,pastoral,1200,False,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-369,history/states/369-State_369.txt,"Rockford, IL",EFG,0.67,city,180138,True,False,False,,,,Byron Nuclear Generating Station,4,13,2,0,1,1,1,1,1,0,0,0,0,0
-370,history/states/370-State_370.txt,"Carson City, NV",SCA,0.72,large_town,62948,False,False,False,,,,,2,8,2,1,0,1,0,1,0,0,0,0,0,0
-371,history/states/371-State_371.txt,"Centre, PA",RWP,0.5,city,162909,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-372,history/states/372-State_372.txt,"East Superior, WY",DMA,0.45,pastoral,4200,False,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-373,history/states/373-State_373.txt,"Wamsutter, WY",DMA,0.45,enclave,240,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-374,history/states/374-State_374.txt,"Monmouth, NJ",NJM,0.39,metropolis,738361,True,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-375,history/states/375-State_375.txt,"Rawlins, WY",DMA,0.45,rural,10440,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-376,history/states/376-State_376.txt,"Bucks, PA",PHI,0.56,metropolis,717162,True,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-377,history/states/377-State_377.txt,"Chicago, IL",EFG,0.67,megalopolis,3475219,True,True,False,,,,,17,22,1,1,0,3,3,3,3,2,3,2,2,0
-378,history/states/378-State_378.txt,"Lancester, PA",PHI,0.56,large_town,66000,True,False,False,,,,,2,8,2,1,0,1,0,1,0,0,0,0,0,0
-379,history/states/379-State_379.txt,"Williams, OH",EFG,0.67,town,44347,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-380,history/states/380-State_380.txt,"Adobie Town Rim, WY",DMA,0.45,enclave,180,False,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-381,history/states/381-State_381.txt,"Greenville, MS",AMA,0.35,town,49959,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-382,history/states/382-State_382.txt,"Fort Wayne, IN",EFG,0.67,city,246872,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-383,history/states/383-State_383.txt,"Columbus, OH",SOH,0.46,metropolis,853764,True,False,False,,,,,9,20,1,0,0,2,2,2,2,1,0,1,1,0
-384,history/states/384-State_384.txt,"Ogallala, NE",DMA,0.45,rural,5671,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-385,history/states/385-State_385.txt,"Gary, IN",EFG,0.67,large_town,123295,True,True,False,,,,,4,8,2,1,0,1,0,1,1,0,1,0,0,0
-386,history/states/386-State_386.txt,"Wheeling, OH",REO,0.39,town,31200,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-387,history/states/387-State_387.txt,"Blair, PA",RWP,0.5,city,154972,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-388,history/states/388-State_388.txt,"York, PA",PHI,0.56,large_city,458101,True,False,False,,,,Peach Bottom Atomic Power Station,7,17,1,1,1,2,1,2,1,1,0,1,0,0
-389,history/states/389-State_389.txt,"Camden, NJ",NJM,0.39,large_town,95181,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-390,history/states/390-State_390.txt,"Adams, IL",NGI,0.31,large_town,81932,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-391,history/states/391-State_391.txt,"Westmoreland, PA",RWP,0.5,large_city,443991,True,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,0,0,0
-392,history/states/392-State_392.txt,"Jasper, IN",EFG,0.67,town,34322,True,False,False,,,,,0,6,2,1,0,0,0,0,0,0,0,0,0,0
-393,history/states/393-State_393.txt,"Washington, PA",RWP,0.5,large_town,66000,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-394,history/states/394-State_394.txt,"Grand Junction, CO",DMA,0.45,town,50383,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-395,history/states/395-State_395.txt,"Newcastle, DE",PHI,0.56,large_city,530335,True,True,False,,,,,8,16,1,1,0,2,1,2,1,1,1,1,0,0
-396,history/states/396-State_396.txt,"Mount Vernon, IL",NGI,0.31,rural,9120,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-397,history/states/397-State_397.txt,"Steamboat Springs, CO",DMA,0.45,rural,7560,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-398,history/states/398-State_398.txt,"Saint Anne, IL",EFG,0.67,rural,6600,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-399,history/states/399-State_399.txt,"Walden, CO",DMA,0.45,enclave,750,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-400,history/states/400-State_400.txt,"Lincoln, NE",OMA,0.43,city,270697,True,False,False,,,,,6,12,1,0,0,2,1,1,1,1,0,0,0,0
-401,history/states/401-State_401.txt,"Kit Carson, CO",DMA,0.45,rural,9613,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-402,history/states/402-State_402.txt,"Aberdeen, MD",PHI,0.56,rural,19200,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-403,history/states/403-State_403.txt,"Harford, MD",PHI,0.56,city,262308,True,False,False,,Conowingo Dam,3334,,6,12,2,1,0,2,1,1,1,1,0,0,0,0
-404,history/states/404-State_404.txt,"Baltimore, MD",BAL,0.44,metropolis,781384,True,True,False,,,,Calvert Cliffs Nuclear Power Plant,11,21,1,0,1,2,2,2,2,1,2,1,1,0
-405,history/states/405-State_405.txt,"Bartholomew, IN",IMA,0.44,large_town,86361,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-406,history/states/406-State_406.txt,"Carroll, MD",PHI,0.56,city,181076,True,False,False,,,,,4,12,2,1,0,1,1,1,1,0,0,0,0,0
-407,history/states/407-State_407.txt,"Clinton, OH",SOH,0.46,rural,5103,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-408,history/states/408-State_408.txt,"Randell, UT",DMA,0.45,wasteland,0,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-409,history/states/409-State_409.txt,"North Platte, NE",DMA,0.45,town,28053,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-410,history/states/410-State_410.txt,"Kent, DE",BAL,0.44,city,133191,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
-411,history/states/411-State_411.txt,"Queen Anne's, MD",BAL,0.44,town,57049,True,True,False,,,,,3,6,1,1,0,1,0,1,0,0,1,0,0,0
-412,history/states/412-State_412.txt,"Frederick, MD",BAL,0.44,city,234332,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-413,history/states/413-State_413.txt,"Adams, NE",DMA,0.45,town,37636,True,False,False,,,,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
-414,history/states/414-State_414.txt,"Alleghany, MD",RWV,0.33,town,28827,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-415,history/states/415-State_415.txt,"Berkeley, WV",SVR,0.53,large_town,91086,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-416,history/states/416-State_416.txt,"Morgantown, WV",RWV,0.33,town,34462,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-417,history/states/417-State_417.txt,"Mineral, WV",SVR,0.53,town,32493,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-418,history/states/418-State_418.txt,"Montgomery, MD",SVR,0.53,metropolis,1048009,True,False,False,,,,,10,20,1,1,0,2,2,2,2,2,0,1,1,0
-419,history/states/419-State_419.txt,"Bishop, CA",GBR,0.3,pastoral,4288,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
-420,history/states/420-State_420.txt,"Sussex, DE",BAL,0.44,city,236574,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-421,history/states/421-State_421.txt,"Monogalia, WV",RWV,0.33,large_town,98239,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-422,history/states/422-State_422.txt,"Breckenridge, CO",DMA,0.45,pastoral,1777,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-423,history/states/423-State_423.txt,"Frederick, VA",SVR,0.53,large_town,80472,False,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-424,history/states/424-State_424.txt,"Fairfax, VA",SVR,0.53,metropolis,1163698,True,False,False,,,,,10,20,1,1,0,2,2,2,2,2,0,1,1,0
-425,history/states/425-State_425.txt,"Prince George's, MD",SVR,0.53,metropolis,1036093,True,True,False,,,,,12,20,1,0,0,2,2,2,2,2,2,1,1,0
-426,history/states/426-State_426.txt,"Bowling Green, MO",USM,0.4,rural,7003,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-427,history/states/427-State_427.txt,"Bloomington, IL",NGI,0.31,large_town,77212,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-428,history/states/428-State_428.txt,"Aspen, CO",DMA,0.45,pastoral,4789,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-429,history/states/429-State_429.txt,"Wood, WV",RWV,0.33,large_town,105583,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-430,history/states/430-State_430.txt,"Furnass, NE",DMA,0.45,pastoral,3994,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-431,history/states/431-State_431.txt,"Wicomico, MD",BAL,0.44,large_town,101572,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-432,history/states/432-State_432.txt,"Cincinnati, OH",SOH,0.46,large_city,397542,True,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,0,0,0
-433,history/states/433-State_433.txt,"Dove Creek, CO",DMA,0.45,enclave,759,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-434,history/states/434-State_434.txt,"Ellis, KS",DMA,0.45,town,33008,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-435,history/states/435-State_435.txt,"Albemarle, VA",SVR,0.53,large_town,95083,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-436,history/states/436-State_436.txt,"Topeka, KS",OMA,0.43,city,143859,True,False,False,,,,,3,12,1,0,0,1,0,1,1,0,0,0,0,0
-437,history/states/437-State_437.txt,"King George's, VA",SVR,0.53,town,20163,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-438,history/states/438-State_438.txt,"Greenbrier, WV",RWV,0.33,town,41631,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-439,history/states/439-State_439.txt,"Accomack, VA",SVR,0.53,town,45966,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-440,history/states/440-State_440.txt,"Spotslyvania, VA",SVR,0.53,large_town,115200,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-441,history/states/441-State_441.txt,"Pueblo, CO",DMA,0.45,large_town,122545,True,False,False,,,,,3,8,0,0,0,1,0,1,1,0,0,0,0,0
-442,history/states/442-State_442.txt,"Moab, UT",DMA,0.45,rural,6399,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-443,history/states/443-State_443.txt,"Lynchburg, VA",SVR,0.53,large_town,78322,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-444,history/states/444-State_444.txt,"Emporia, KS",OMA,0.43,town,32112,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-445,history/states/445-State_445.txt,"Springfield, IL",USM,0.4,city,133744,True,True,False,,,,,4,12,1,0,0,1,0,1,1,0,1,0,0,0
-446,history/states/446-State_446.txt,"Madison, KY",TMA,0.52,large_town,85046,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-447,history/states/447-State_447.txt,"Cabell, WV",SWV,0.3,large_town,116140,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-448,history/states/448-State_448.txt,"Mesquite, NV",SUT,0.3,pastoral,2247,False,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-449,history/states/449-State_449.txt,"Kanawha, WV",RWV,0.33,city,240087,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
-450,history/states/450-State_450.txt,"Richmond, VA",SVR,0.53,city,237348,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-451,history/states/451-State_451.txt,"Jefferson, MO",USM,0.4,city,240000,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
-452,history/states/452-State_452.txt,"Raleight, WV",SWV,0.3,large_town,95064,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-453,history/states/453-State_453.txt,"Lawrence, KS",OMA,0.43,large_town,96117,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-454,history/states/454-State_454.txt,"Danville, VA",SVR,0.53,town,58093,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-455,history/states/455-State_455.txt,"Floyd, IN",TMA,0.52,large_town,89498,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-456,history/states/456-State_456.txt,"Prince George, VA",SVR,0.53,town,42152,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-457,history/states/457-State_457.txt,"Gasconade, MO",USM,0.4,rural,18410,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-458,history/states/458-State_458.txt,"Las Vegas, NV",MNV,0.35,large_city,574120,True,False,False,,Hoover Dam|Davis Dam,427,,7,16,1,1,0,2,1,2,1,1,0,1,0,0
-459,history/states/459-State_459.txt,"Hampton Roads, VA",NOR,0.49,megalopolis,1920000,True,True,False,,,,,14,22,1,1,0,3,2,3,2,2,2,2,1,0
-460,history/states/460-State_460.txt,"Trinidad, CO",LMA,0.31,rural,11400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-461,history/states/461-State_461.txt,"Belleville, IL",USM,0.4,town,50569,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-462,history/states/462-State_462.txt,"Kaibab, AZ",SUT,0.3,rural,13258,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-463,history/states/463-State_463.txt,"Roanoake, VA",SVR,0.53,large_town,115200,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-464,history/states/464-State_464.txt,"Washington, VA",TMA,0.52,large_town,66000,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-465,history/states/465-State_465.txt,"Wichita, KS",OKC,0.42,large_city,413140,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,0,0,0
-466,history/states/466-State_466.txt,"Wise, VA",TMA,0.52,town,50840,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-467,history/states/467-State_467.txt,"Elizabeth City, NC",NOR,0.49,town,20400,True,False,False,,,,,0,6,2,1,0,0,0,0,0,0,0,0,0,0
-468,history/states/468-State_468.txt,"Mexican Hat, UT",NAV,0.3,enclave,62,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-469,history/states/469-State_469.txt,"Liberal, KS",LMA,0.31,town,23599,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-470,history/states/470-State_470.txt,"Navajo Nation, AZ",NAV,0.3,city,208800,True,False,False,,,,,5,12,0,0,0,1,1,1,1,1,0,0,0,0
-471,history/states/471-State_471.txt,"Denver, CO",DMA,0.45,metropolis,665563,True,False,False,,,,,8,20,0,0,0,2,1,2,2,1,0,1,0,0
-472,history/states/472-State_472.txt,"Nash, NC",CHA,0.52,large_town,115134,True,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-473,history/states/473-State_473.txt,"Wake, NC",CHA,0.52,metropolis,752400,True,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-474,history/states/474-State_474.txt,"Beaufort, NC",CHA,0.52,town,53898,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-475,history/states/475-State_475.txt,"Wayne, KY",TMA,0.52,town,24000,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-476,history/states/476-State_476.txt,"Mount Airy, NC",CHA,0.52,rural,9924,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-477,history/states/477-State_477.txt,"Farmington, NM",DMA,0.45,town,45412,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
-478,history/states/478-State_478.txt,"Cibola, NM",MNM,0.35,town,32655,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-479,history/states/479-State_479.txt,"Pitt, NC",CHA,0.52,city,160557,False,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-480,history/states/480-State_480.txt,"Johnson City, TN",TMA,0.52,large_town,66562,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-481,history/states/481-State_481.txt,"Guilford, NC",CHA,0.52,large_city,505257,True,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,1,0,0
-482,history/states/482-State_482.txt,"McCracken, KY",TMA,0.52,town,39769,True,False,False,,Kentucky Dam,278,,1,6,1,1,0,0,0,1,0,0,0,0,0,0
-483,history/states/483-State_483.txt,"Owens Island, KY",TMA,0.52,tiny_island,120,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-484,history/states/484-State_484.txt,"Albuquerque, NM",MNM,0.35,large_city,538328,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,1,0,0
-485,history/states/485-State_485.txt,"Knoxville, TN",TMA,0.52,city,208668,True,False,False,,Norris Dam,1686,Watts Bar Nuclear Plant,5,13,2,0,1,1,1,1,1,1,0,0,0,0
-486,history/states/486-State_486.txt,"Tucumcari, NM",LMA,0.31,rural,8160,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-487,history/states/487-State_487.txt,"Mecklenberg, NC",CHA,0.52,metropolis,834544,True,False,False,,,,Catawba Nuclear Station|McGuire Nuclear Station,9,22,1,1,2,2,2,2,2,1,0,1,1,0
-488,history/states/488-State_488.txt,"Clayton, NM",LMA,0.31,pastoral,3810,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-489,history/states/489-State_489.txt,"Gaston, NC",CHA,0.52,city,228438,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-490,history/states/490-State_490.txt,"Oklahoma Panhandle, OK",LMA,0.31,large_town,64800,False,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
-491,history/states/491-State_491.txt,"Onslow, NC",CHA,0.52,city,180000,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-492,history/states/492-State_492.txt,"Clarksville, TN",TMA,0.52,large_town,124008,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-493,history/states/493-State_493.txt,"Enid, OK",OKC,0.42,town,55248,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-494,history/states/494-State_494.txt,"Buncombe, NC",CHA,0.52,city,247628,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-495,history/states/495-State_495.txt,"Tulsa, OK",OMA,0.43,large_city,471658,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,1,0,0
-496,history/states/496-State_496.txt,"Dickson, TN",TMA,0.52,town,51787,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-497,history/states/497-State_497.txt,"Cumberland, NC",CHA,0.52,large_city,363555,True,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,0,0,0
-498,history/states/498-State_498.txt,"Phoenix, AZ",SAZ,0.47,megalopolis,1585254,True,False,False,,,,Palo Verde Nuclear Generating Station,12,24,1,1,2,3,2,3,2,2,0,1,1,0
-499,history/states/499-State_499.txt,"Coffee, TN",TMA,0.52,town,57616,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-500,history/states/500-State_500.txt,"Flagstaff, AZ",SAZ,0.47,large_town,78134,False,False,False,,Glen Canyon Dam,969,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-501,history/states/501-State_501.txt,"Northern Channel Islands, CA",SCA,0.72,small_island,2400,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-502,history/states/502-State_502.txt,"Memphis, TN",TMA,0.52,metropolis,780120,True,True,False,,,,,11,20,1,0,0,2,2,2,2,1,2,1,1,0
-503,history/states/503-State_503.txt,"Nashville, TN",TMA,0.52,metropolis,683869,True,False,False,,,,,8,20,1,0,0,2,1,2,2,1,0,1,0,0
-504,history/states/504-State_504.txt,"Chattanooga, TN",TMA,0.52,city,186664,True,False,False,,,,Sequoyah Nuclear Plant,4,13,2,0,1,1,1,1,1,0,0,0,0,0
-505,history/states/505-State_505.txt,"Tiptonville, KY",TMA,0.52,rural,6000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-506,history/states/506-State_506.txt,"New Hanover, NC",CHA,0.52,city,192368,True,True,False,,,,,5,12,2,0,0,1,1,1,1,0,1,0,0,0
-507,history/states/507-State_507.txt,"Dumas, TX",LMA,0.31,rural,17074,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-508,history/states/508-State_508.txt,"Jonesboro, AR",AMA,0.35,large_town,66618,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-509,history/states/509-State_509.txt,"Randolph, AR",AMA,0.35,rural,9600,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-510,history/states/510-State_510.txt,"Santa Fe, NM",AMO,0.38,large_town,74643,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-511,history/states/511-State_511.txt,"Stillwater, OK",OKC,0.42,town,46878,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-512,history/states/512-State_512.txt,"Searcy, AR",AMA,0.35,town,21960,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-513,history/states/513-State_513.txt,"Haywood, NC",TMA,0.52,large_town,64839,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-514,history/states/514-State_514.txt,"Whiteville, NC",CHA,0.52,rural,6240,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-515,history/states/515-State_515.txt,"Saluda, NC",SSC,0.34,enclave,840,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-516,history/states/516-State_516.txt,"Maury, TN",TMA,0.52,large_town,74349,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-517,history/states/517-State_517.txt,"York, SC",CHA,0.52,city,197536,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-518,history/states/518-State_518.txt,"Greenville, SC",SSC,0.34,large_town,67202,True,False,False,,Hartwell Dam,1712,Oconee Nuclear Station,2,9,1,0,1,1,0,1,0,0,0,0,0,0
-519,history/states/519-State_519.txt,"Amarillo, TX",LMA,0.31,city,208352,True,False,False,,,,,5,12,0,0,0,1,1,1,1,1,0,0,0,0
-520,history/states/520-State_520.txt,"Lawton, OK",LMA,0.31,large_town,111308,True,False,False,,,,,3,8,0,0,0,1,0,1,1,0,0,0,0,0
-521,history/states/521-State_521.txt,"Myrtle Beach, SC",CHA,0.52,town,27310,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-522,history/states/522-State_522.txt,"Southern Channel Islands, CA",SCA,0.72,small_island,2400,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-523,history/states/523-State_523.txt,"Prescott, AZ",SAZ,0.47,town,40725,True,False,False,,Parker Dam,115,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-524,history/states/524-State_524.txt,"Hall, GA",USG,0.5,city,167132,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-525,history/states/525-State_525.txt,"Horry, SC",CHA,0.52,city,172863,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-526,history/states/526-State_526.txt,"Whitfield, GA",USG,0.5,large_town,100230,True,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-527,history/states/527-State_527.txt,"Little River, AR",AMA,0.35,rural,16353,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-528,history/states/528-State_528.txt,"Morgan, AL",BIR,0.37,city,133200,True,False,False,,,,,3,12,1,0,0,1,0,1,1,0,0,0,0,0
-529,history/states/529-State_529.txt,"Huntsville, AL",TMA,0.52,city,189859,True,False,False,,Wilson Dam,1156,Browns Ferry Nuclear Plant,4,14,1,0,2,1,1,1,1,0,0,0,0,0
-530,history/states/530-State_530.txt,"Sierra Vista, AZ",AMO,0.38,town,52665,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-531,history/states/531-State_531.txt,"McAlester, OK",OKC,0.42,town,21890,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-532,history/states/532-State_532.txt,"Ada, OK",OKC,0.42,rural,19209,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-533,history/states/533-State_533.txt,"Hattiesburg, MS",BIR,0.37,town,50258,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-534,history/states/534-State_534.txt,"Lowndes, MS",BIR,0.37,large_town,74065,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-535,history/states/535-State_535.txt,"Plainville, TX",STX,0.65,pastoral,2040,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-536,history/states/536-State_536.txt,"Weldona, CO",DMA,0.45,enclave,240,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-537,history/states/537-State_537.txt,"North Metro Atlanta, GA",USG,0.5,metropolis,720000,True,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-538,history/states/538-State_538.txt,"Richland, SC",SSC,0.34,large_city,322816,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,0,0,0
-539,history/states/539-State_539.txt,"Roswell, NM",AMO,0.38,town,54351,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-540,history/states/540-State_540.txt,"Clovis, NM",AMO,0.38,town,39200,True,False,False,,,,,1,6,1,0,0,0,0,1,0,0,0,0,0,0
-541,history/states/541-State_541.txt,"South Metro Atlanta, GA",USG,0.5,metropolis,720000,True,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-542,history/states/542-State_542.txt,"Yoakum, TX",AMF,0.5,rural,7800,False,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-543,history/states/543-State_543.txt,"Lubbock, TX",STX,0.65,city,239476,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-544,history/states/544-State_544.txt,"Vernon, TX",STX,0.65,rural,14400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-545,history/states/545-State_545.txt,"Auburn, AL",BIR,0.37,town,51584,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
-546,history/states/546-State_546.txt,"Atlanta, GA",USG,0.5,large_city,499768,True,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,1,0,0
-547,history/states/547-State_547.txt,"Charleston, SC",SSC,0.34,large_town,115980,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-548,history/states/548-State_548.txt,"Pima, AZ",AMO,0.38,pastoral,1496,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-549,history/states/549-State_549.txt,Baja California,MEX,0.65,megalopolis,2839000,True,True,False,,,,,17,22,2,1,0,3,3,3,3,2,3,2,2,0
-550,history/states/550-State_550.txt,"Beaufort, SC",SSC,0.34,town,28144,True,True,False,,,,,1,6,1,0,0,0,0,0,0,0,1,0,0,0
-551,history/states/551-State_551.txt,"Columbia, GA",USG,0.5,city,188056,True,False,False,,,,Vogtle Electric Generating Plant,4,14,2,0,2,1,1,1,1,0,0,0,0,0
-552,history/states/552-State_552.txt,"Las Cruces, NM",AMO,0.38,large_town,89120,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
-553,history/states/553-State_553.txt,Sonora,MEX,0.65,megalopolis,2168000,True,True,False,,,,,14,22,2,1,0,3,2,3,2,2,2,2,1,0
-554,history/states/554-State_554.txt,"Wichita Falls, TX",STX,0.65,large_town,122400,True,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-555,history/states/555-State_555.txt,"Carlsbad, NM",AMO,0.38,town,30750,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-556,history/states/556-State_556.txt,"Watson, AR",AMA,0.35,pastoral,1200,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-557,history/states/557-State_557.txt,"Houston, GA",USG,0.5,large_town,115506,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-558,history/states/558-State_558.txt,"Texarkana, TX",STX,0.65,town,36000,True,False,False,,,,,1,6,2,1,0,0,0,1,0,0,0,0,0,0
-559,history/states/559-State_559.txt,"Chatham, GA",USG,0.5,city,276918,True,True,False,,,,,7,12,2,0,0,2,1,1,1,1,1,0,0,0
-560,history/states/560-State_560.txt,"San Angelo, TX",STX,0.65,large_town,98400,False,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-561,history/states/561-State_561.txt,"Abilene, TX",STX,0.65,city,139116,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
-562,history/states/562-State_562.txt,"Duncan, AZ",AMO,0.38,rural,5139,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-563,history/states/563-State_563.txt,"Muscogee, GA",USG,0.5,city,223549,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-564,history/states/564-State_564.txt,"Greater Dallas-Fort Worth Area, TX",STX,0.65,megalopolis,6299304,True,False,False,,,,Comanche Peak Nuclear Power Plant,15,23,1,1,1,3,3,3,3,3,0,3,2,0
-565,history/states/565-State_565.txt,"ile Dondaine, QC",CAN,0.75,small_island,12000,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-566,history/states/566-State_566.txt,"Citronelle, AL",MEX,0.65,pastoral,4640,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-567,history/states/567-State_567.txt,"Stephenville, TX",STX,0.65,town,20400,True,False,False,,,,,0,6,2,1,0,0,0,0,0,0,0,0,0,0
-568,history/states/568-State_568.txt,"Longview, TX",STX,0.65,large_town,96546,True,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-569,history/states/569-State_569.txt,"Jackson, MS",NOM,0.44,city,221107,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
-570,history/states/570-State_570.txt,"Dallas-Fort Worth, TX",STX,0.65,megalopolis,6120000,False,False,False,,,,,15,22,1,1,0,3,3,3,3,3,0,3,2,0
-571,history/states/571-State_571.txt,"Shreveport, LA",STX,0.65,city,240174,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-572,history/states/572-State_572.txt,"Deming, NM",AMO,0.38,rural,16939,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-573,history/states/573-State_573.txt,"Lowndes, GA",USG,0.5,large_town,110538,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-574,history/states/574-State_574.txt,"Odessa, TX",AMF,0.5,large_town,109131,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-575,history/states/575-State_575.txt,"Navarro, TX",STX,0.65,town,56400,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-576,history/states/576-State_576.txt,"Thomas, GA",USG,0.5,town,51284,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-577,history/states/577-State_577.txt,"Duluth, MN",SMN,0.41,large_town,104301,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
-578,history/states/578-State_578.txt,"El Paso, TX",AMF,0.5,metropolis,676394,True,False,False,,,,,8,20,1,1,0,2,1,2,2,1,0,1,0,0
-579,history/states/579-State_579.txt,Chihuahua,MEX,0.65,megalopolis,3241000,True,False,False,,,,,14,22,2,1,0,3,3,3,3,2,0,2,2,0
-580,history/states/580-State_580.txt,"Tyler, TX",STX,0.65,large_town,100380,True,False,False,,,,,3,8,1,1,0,1,0,1,1,0,0,0,0,0
-581,history/states/581-State_581.txt,"Reeves, TX",AMF,0.5,rural,14400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-582,history/states/582-State_582.txt,"Adams, MS",NOM,0.44,town,41208,True,False,False,,,,,2,6,1,1,0,1,0,1,0,0,0,0,0,0
-583,history/states/583-State_583.txt,"Barksdale AFB, LA",DMA,0.45,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
-584,history/states/584-State_584.txt,"Houma, LA",NOM,0.44,town,38871,True,False,False,,,,,1,6,1,1,0,0,0,1,0,0,0,0,0,0
-585,history/states/585-State_585.txt,"Crockett, TX",AMF,0.5,rural,8569,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-586,history/states/586-State_586.txt,da,JMA,0.4,town,25000,True,True,False,,,,,1,6,1,1,0,0,0,0,0,0,1,0,0,0
-587,history/states/587-State_587.txt,"Waco, TX",STX,0.65,city,135608,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
-588,history/states/588-State_588.txt,"San Carlos, AZ",SAZ,0.47,pastoral,3262,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-589,history/states/589-State_589.txt,"Ciudad Obregon, SO",MEX,0.65,city,240000,True,False,False,,,,,5,12,3,1,0,1,1,1,1,1,0,0,0,0
-590,history/states/590-State_590.txt,"Nogales, SO",MEX,0.65,city,140400,True,False,False,,,,,3,12,3,1,0,1,0,1,1,0,0,0,0,0
-591,history/states/591-State_591.txt,"Escambia, FL",GCC,0.37,large_city,353292,True,True,False,,,,,8,16,1,0,0,2,1,2,1,1,1,0,0,0
-592,history/states/592-State_592.txt,"Fredericksburg, TX",AMF,0.5,rural,12636,False,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-593,history/states/593-State_593.txt,"Alachua, FL",CFC,0.46,rural,8462,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-594,history/states/594-State_594.txt,"Leon, FL",TAL,0.3,city,287342,True,False,False,,,,,6,12,1,0,0,2,1,1,1,1,0,0,0,0
-595,history/states/595-State_595.txt,"Duval, FL",JMA,0.4,metropolis,806781,True,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-596,history/states/596-State_596.txt,"Beaumont, TX",HMA,0.53,city,136639,True,True,False,,,,,4,12,2,0,0,1,0,1,1,0,1,0,0,0
-597,history/states/597-State_597.txt,"Gulf Shores, AL",GCC,0.37,rural,6140,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-598,history/states/598-State_598.txt,"Mobile, AL",GCC,0.37,city,237618,True,True,False,,,,,6,12,1,0,0,1,1,1,1,1,1,0,0,0
-599,history/states/599-State_599.txt,"Gulfport, MS",GCC,0.37,large_town,85352,True,True,False,,,,,3,8,1,0,0,1,0,1,0,0,1,0,0,0
-600,history/states/600-State_600.txt,"Baton Rouge, LA",NOM,0.44,city,273381,True,False,False,,,,,6,12,1,0,0,2,1,1,1,1,0,0,0,0
-601,history/states/601-State_601.txt,"Klamath Falls, OR",SOR,0.32,town,23354,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
-602,history/states/602-State_602.txt,"Bastrop, TX",HMA,0.53,rural,9834,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-603,history/states/603-State_603.txt,"Salem, OR",SOR,0.32,city,164308,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
-604,history/states/604-State_604.txt,"Marion, FL",CFC,0.46,large_city,310699,True,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,0,0,0
-605,history/states/605-State_605.txt,"Daytona Beach, FL",CFC,0.46,large_town,76934,True,False,False,,,,,2,8,1,1,0,1,0,1,0,0,0,0,0,0
-606,history/states/606-State_606.txt,"Hutchinson, MN",SMN,0.41,rural,17013,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-607,history/states/607-State_607.txt,"Lake, Ohio",REO,0.39,city,230000,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
-608,history/states/608-State_608.txt,"Minneapolis, MN",SMN,0.41,large_city,459141,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,1,0,0
-609,history/states/609-State_609.txt,"Eugene, OR",SOR,0.32,city,165471,True,True,False,,,,,5,12,1,0,0,1,1,1,1,0,1,0,0,0
-610,history/states/610-State_610.txt,"Orlando, FL",CFC,0.46,city,223141,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-611,history/states/611-State_611.txt,"Houston, TX",HMA,0.53,megalopolis,2344357,True,True,False,,,,South Texas Project,14,23,1,1,1,3,2,3,2,2,2,2,1,0
-612,history/states/612-State_612.txt,"LaFourche, LA",NOM,0.44,large_town,107968,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
-613,history/states/613-State_613.txt,"San Antonio, TX",AMF,0.5,metropolis,1373575,False,False,False,,,,,12,20,1,1,0,3,2,3,2,2,0,1,1,0
-614,history/states/614-State_614.txt,"Victoria, TX",HMA,0.53,large_town,68400,True,False,False,,,,,2,8,2,1,0,1,0,1,0,0,0,0,0,0
-615,history/states/615-State_615.txt,Coahuila,MEX,0.65,megalopolis,2298070,True,False,False,,,,,12,22,2,1,0,3,2,3,2,2,0,2,1,0
-616,history/states/616-State_616.txt,"Yellowstone, WY",MMS,0.3,wasteland,1800,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-617,history/states/617-State_617.txt,"Laredo, TX",AMF,0.5,city,211891,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-618,history/states/618-State_618.txt,"Omaha, NE",OMA,0.43,large_city,468008,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,1,0,0
-619,history/states/619-State_619.txt,Baja California Sur,MEX,0.65,large_city,423516,True,True,False,,,,,8,16,2,1,0,2,1,2,1,1,1,0,0,0
-620,history/states/620-State_620.txt,"Cleveland, OH",REO,0.39,large_city,574083,True,True,False,,,,,8,16,1,0,0,2,1,2,1,1,1,1,0,0
-621,history/states/621-State_621.txt,"Hillsborough, FL",CFC,0.46,metropolis,1198737,True,True,False,,,,,12,20,1,1,0,2,2,2,2,2,2,1,1,0
-622,history/states/622-State_622.txt,"Grand Manan Island, ME",SOM,0.3,small_island,3120,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-623,history/states/623-State_623.txt,"Bar Harbor, ME",SOM,0.3,rural,7200,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-624,history/states/624-State_624.txt,"Breton Sound Islands, LA",NOM,0.44,wasteland,0,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-625,history/states/625-State_625.txt,"Shiprock, NM",NAV,0.3,rural,9960,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-626,history/states/626-State_626.txt,"Portland, TX",AMF,0.5,rural,14400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-627,history/states/627-State_627.txt,"Miami-Dade, FL",SFM,0.53,megalopolis,2704034,True,True,False,,,,Turkey Point Nuclear Generating Station,14,23,2,1,1,3,2,3,2,2,2,2,1,0
-628,history/states/628-State_628.txt,"Sarasota, FL",SFM,0.53,large_city,391148,True,False,False,,,,,7,16,2,1,0,2,1,2,1,1,0,0,0,0
-629,history/states/629-State_629.txt,"Freeport, BS",BAH,0.7,town,23794,True,True,False,,,,,1,6,1,1,0,0,0,0,0,0,1,0,0,0
-630,history/states/630-State_630.txt,"Whiteman AFB, MO",DMA,0.45,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
-631,history/states/631-State_631.txt,"Aransas, TX",HMA,0.53,town,27600,True,False,False,,,,,0,6,1,1,0,0,0,0,0,0,0,0,0,0
-632,history/states/632-State_632.txt,"Sterling, CO",DMA,0.45,rural,16800,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-633,history/states/633-State_633.txt,"Corpus Christi, TX",AMF,0.5,large_city,332944,True,True,False,,,,,8,16,1,1,0,2,1,2,1,1,1,0,0,0
-634,history/states/634-State_634.txt,"Lee, FL",SFM,0.53,large_city,529065,True,False,False,,,,,7,16,2,1,0,2,1,2,1,1,0,1,0,0
-635,history/states/635-State_635.txt,"Monterrey, NL",MEX,0.65,metropolis,1306795,True,False,False,,,,,12,20,2,1,0,3,2,3,2,2,0,1,1,0
-636,history/states/636-State_636.txt,District of Columbia,DCO,0.37,metropolis,601723,True,True,False,,,,,9,20,1,1,0,2,1,2,2,1,1,1,0,0
-637,history/states/637-State_637.txt,"Laredos, TM",MEX,0.65,city,144000,True,False,False,,,,,3,12,3,1,0,1,0,1,1,0,0,0,0,0
-638,history/states/638-State_638.txt,"Los Mochis, SI",MEX,0.65,large_city,307200,True,False,False,,,,,7,16,2,1,0,2,1,2,1,1,0,0,0,0
-639,history/states/639-State_639.txt,"Guadalupe y Calvo, CH",MEX,0.65,town,48000,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-640,history/states/640-State_640.txt,"El Carrizo, SI",MEX,0.65,rural,12000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-641,history/states/641-State_641.txt,"Kansas City, KS",CKC,0.39,city,176239,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-642,history/states/642-State_642.txt,"Gomez Palacio, DG",MEX,0.65,city,228000,True,False,False,,,,,5,12,3,1,0,1,1,1,1,1,0,0,0,0
-643,history/states/643-State_643.txt,"Salinas, CA",SCA,0.72,city,181200,True,True,False,,,,,5,12,3,1,0,1,1,1,1,0,1,0,0,0
-644,history/states/644-State_644.txt,"Eleuthera, BS",BAH,0.7,rural,12000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-645,history/states/645-State_645.txt,"Fremont-Winema, OR",SOR,0.32,pastoral,3600,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-646,history/states/646-State_646.txt,"New Providence, BS",BAH,0.7,large_city,300000,True,False,False,,,,,7,16,1,0,0,2,1,2,1,1,0,0,0,0
-647,history/states/647-State_647.txt,"Andros, BS",BAH,0.7,rural,10200,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-648,history/states/648-State_648.txt,"Cat Island, BS",BAH,0.7,small_island,3279,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-649,history/states/649-State_649.txt,"Overland Park, KS",CKC,0.39,city,208046,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
-650,history/states/650-State_650.txt,"Minot AFB, ND",DMA,0.45,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
-651,history/states/651-State_651.txt,"Key West, FL",AMA,0.35,town,30573,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-652,history/states/652-State_652.txt,"Los Angeles, CA",SCA,0.72,megalopolis,4433784,True,True,False,,,,,18,22,2,1,0,3,3,3,3,3,3,2,2,0
-653,history/states/653-State_653.txt,"Matamoros, TA",MEX,0.65,large_city,477174,True,False,False,,,,,7,16,2,1,0,2,1,2,1,1,0,1,0,0
-654,history/states/654-State_654.txt,"Los Angeles Metro, CA",SCA,0.72,megalopolis,12480000,True,False,False,,,,,15,22,2,1,0,3,3,3,3,3,0,4,3,0
-655,history/states/655-State_655.txt,"San Diego Metro, CA",SCA,0.72,megalopolis,3600000,True,False,False,,,,,14,22,2,1,0,3,3,3,3,2,0,2,2,0
-656,history/states/656-State_656.txt,"Elko, NV",GBR,0.3,town,20722,False,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-657,history/states/657-State_657.txt,"Montemorelos, NL",MEX,0.65,town,50400,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-658,history/states/658-State_658.txt,"San Salvador, BS",BAH,0.7,rural,6663,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-659,history/states/659-State_659.txt,"King's Bay Naval Base, GA",DMA,0.45,pastoral,1500,True,False,True,naval,,,,7,2,1,0,0,0,0,0,1,3,2,6,5,1
-660,history/states/660-State_660.txt,"Santa Rosa, CA",SCA,0.72,city,165600,True,False,False,,,,,4,12,3,1,0,1,1,1,1,0,0,0,0,0
-661,history/states/661-State_661.txt,"Sacremento, CA",SCA,0.72,large_city,488421,False,False,False,,Oroville Dam,2788,,7,16,2,2,0,2,1,2,1,1,0,1,0,0
-662,history/states/662-State_662.txt,"San Diego, CA",SCA,0.72,metropolis,1468080,True,True,False,,,,,14,20,2,1,0,3,2,3,2,2,2,1,1,0
-663,history/states/663-State_663.txt,"Long Island, BS",BAH,0.7,small_island,3744,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-664,history/states/664-State_664.txt,"Great Exuma, BS",BAH,0.7,rural,6708,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-665,history/states/665-State_665.txt,"Yreka, CA",SCA,0.72,rural,9223,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-666,history/states/666-State_666.txt,"Ely, NV",GBR,0.3,pastoral,4849,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
-667,history/states/667-State_667.txt,"Alturas, CA",SCA,0.72,rural,12626,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-668,history/states/668-State_668.txt,"Mazatlan, SI",MEX,0.65,city,244800,True,True,False,,,,,6,12,3,1,0,1,1,1,1,1,1,0,0,0
-669,history/states/669-State_669.txt,"Sequoia, CA",SCA,0.72,wasteland,2400,False,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-670,history/states/670-State_670.txt,"Durango, DG",MEX,0.65,large_city,502092,True,False,False,,,,,7,16,2,1,0,2,1,2,1,1,0,1,0,0
-671,history/states/671-State_671.txt,"Fresnillo, ZA",MEX,0.65,city,148800,False,False,False,,,,,3,12,2,1,0,1,0,1,1,0,0,0,0,0
-672,history/states/672-State_672.txt,"Crooked Island, BS",BAH,0.7,tiny_island,438,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-673,history/states/673-State_673.txt,"Tonopah, NV",GBR,0.3,pastoral,2973,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
-674,history/states/674-State_674.txt,"Santa Barbara, CA",SCA,0.72,large_town,106098,True,True,False,,,,Diablo Canyon Power Plant,4,9,2,1,1,1,0,1,1,0,1,0,0,0
-675,history/states/675-State_675.txt,"Mayaguna, BS",BAH,0.7,enclave,600,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-676,history/states/676-State_676.txt,"Pine Bluffs, WY",DMA,0.45,pastoral,2311,False,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-677,history/states/677-State_677.txt,"Pinedale, WY",WAR,0.3,pastoral,1920,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
-678,history/states/678-State_678.txt,"Austin, TX",HMA,0.53,metropolis,787874,False,False,False,,,,,9,20,1,1,0,2,2,2,2,1,0,1,1,0
-679,history/states/679-State_679.txt,Turks and Caicos Islands,ENG,0.75,small_island,21240,True,True,False,,,,,1,2,1,0,0,0,0,0,0,0,1,0,0,0
-680,history/states/680-State_680.txt,"Oklahoma City, OK",OKC,0.42,metropolis,607358,True,False,False,,,,,8,20,1,0,0,2,1,2,2,1,0,1,0,0
-681,history/states/681-State_681.txt,"Huntsville, TX",HMA,0.53,rural,5280,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-682,history/states/682-State_682.txt,"Monctezuma, SL",MEX,0.65,rural,14400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-683,history/states/683-State_683.txt,"Sidney, NE",DMA,0.45,rural,7200,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-684,history/states/684-State_684.txt,"Cody, WY",WAR,0.3,rural,11424,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
-685,history/states/685-State_685.txt,"Matanzas, CU",CUB,0.55,metropolis,777600,True,True,False,,,,,11,20,2,1,0,2,2,2,2,1,2,1,1,0
-686,history/states/686-State_686.txt,"Villa Clara, CU",CUB,0.55,metropolis,978000,True,True,False,,,,,11,20,2,1,0,2,2,2,2,1,2,1,1,0
-687,history/states/687-State_687.txt,"Zacatecas, ZA",MEX,0.65,city,162351,True,False,False,,,,,4,12,2,1,0,1,1,1,1,0,0,0,0,0
-688,history/states/688-State_688.txt,"Ciudad Victoria, TM",MEX,0.65,large_city,326400,True,True,False,,,,,8,16,2,1,0,2,1,2,1,1,1,0,0,0
-689,history/states/689-State_689.txt,"El Centro, CA",SCA,0.72,town,37660,True,False,False,,,,,1,6,2,1,0,0,0,1,0,0,0,0,0,0
-690,history/states/690-State_690.txt,"Inagua, BS",BAH,0.7,rural,13200,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-691,history/states/691-State_691.txt,"Mayabeque, CU",CUB,0.55,large_city,504000,True,False,False,,,,,7,16,2,1,0,2,1,2,1,1,0,1,0,0
-692,history/states/692-State_692.txt,"Bakersfield, CA",SCA,0.72,city,296468,False,False,False,,,,,6,12,3,1,0,2,1,1,1,1,0,0,0,0
-693,history/states/693-State_693.txt,"Artemisa, CU",CUB,0.55,metropolis,600000,True,True,False,,,,,9,20,2,1,0,2,1,2,2,1,1,1,0,0
-694,history/states/694-State_694.txt,"Havana, CU",CUB,0.55,megalopolis,2522400,True,False,False,,,,,12,22,1,1,0,3,2,3,2,2,0,2,1,0
-695,history/states/695-State_695.txt,"Fresno, CA",SCA,0.72,large_city,513182,False,False,False,,,,,7,16,2,1,0,2,1,2,1,1,0,1,0,0
-696,history/states/696-State_696.txt,"Ciego de Avila, CU",CUB,0.55,large_city,360000,True,False,False,,,,,7,16,2,1,0,2,1,2,1,1,0,0,0,0
-697,history/states/697-State_697.txt,"Sancti Spiritus, CU",CUB,0.55,large_city,516000,True,False,False,,,,,7,16,2,1,0,2,1,2,1,1,0,1,0,0
-698,history/states/698-State_698.txt,"Pinar del Rio, CU",CUB,0.55,metropolis,639600,True,False,False,,,,,8,20,2,1,0,2,1,2,2,1,0,1,0,0
-699,history/states/699-State_699.txt,"Cienfuegos, CU",CUB,0.55,large_city,499107,True,True,False,,,,,8,16,2,1,0,2,1,2,1,1,1,1,0,0
-700,history/states/700-State_700.txt,"Jardines del Rey, CU",CUB,0.55,town,24000,True,False,False,,,,,0,6,2,1,0,0,0,0,0,0,0,0,0,0
-701,history/states/701-State_701.txt,"Yosemite, CA",SCA,0.72,wasteland,2400,False,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-702,history/states/702-State_702.txt,"Camaguey, CU",CUB,0.55,metropolis,936000,True,True,False,,,,,11,20,2,1,0,2,2,2,2,1,2,1,1,0
-703,history/states/703-State_703.txt,"Susanville, CA",SCA,0.72,rural,17748,False,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-704,history/states/704-State_704.txt,"Napa, CA",SCA,0.72,large_town,87102,True,True,False,,,,,3,8,2,1,0,1,0,1,0,0,1,0,0,0
-705,history/states/705-State_705.txt,"Redding, CA",SCA,0.72,large_town,97038,True,True,False,,Shasta Dam,168,,4,8,2,1,0,1,0,1,1,0,1,0,0,0
-706,history/states/706-State_706.txt,"Tecuala, NA",MEX,0.65,town,30000,True,False,False,,,,,0,6,2,1,0,0,0,0,0,0,0,0,0,0
-707,history/states/707-State_707.txt,"San Juan, PR",PRC,0.4,large_city,474000,True,True,False,,,,,8,16,1,0,0,2,1,2,1,1,1,1,0,0
-708,history/states/708-State_708.txt,"Las Tunas, CU",CUB,0.55,metropolis,623820,True,False,False,,,,,8,20,2,1,0,2,1,2,2,1,0,1,0,0
-709,history/states/709-State_709.txt,"Maria Trinidad Sanchez, DO",DOM,0.65,large_town,88800,True,False,False,,,,,2,8,2,1,0,1,0,1,0,0,0,0,0,0
-710,history/states/710-State_710.txt,British Virgin Islands,ENG,0.75,small_island,20875,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-711,history/states/711-State_711.txt,"Holguin, CU",CUB,0.55,metropolis,1260000,True,True,False,,,,,14,20,2,1,0,3,2,3,2,2,2,1,1,0
-712,history/states/712-State_712.txt,"Samana, DO",DOM,0.65,large_town,120000,True,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-713,history/states/713-State_713.txt,"Monte Cristi, DO",DOM,0.65,large_town,101400,True,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-714,history/states/714-State_714.txt,"Puerto Plata, DO",DOM,0.65,city,216000,True,True,False,,,,,6,12,2,1,0,1,1,1,1,1,1,0,0,0
-715,history/states/715-State_715.txt,"Duarte, DO",DOM,0.65,large_city,354000,False,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,0,0,0
-716,history/states/716-State_716.txt,Este de Nayarit,MEX,0.65,city,200000,True,False,False,,,,,5,12,2,1,0,1,1,1,1,1,0,0,0,0
-717,history/states/717-State_717.txt,US Virgin Islands,PRC,0.4,large_town,108612,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
-718,history/states/718-State_718.txt,"El Seybo, DO",DOM,0.65,city,219600,True,False,False,,,,,5,12,2,1,0,1,1,1,1,1,0,0,0,0
-719,history/states/719-State_719.txt,"La Altagracia, DO",DOM,0.65,large_city,327600,True,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,0,0,0
-720,history/states/720-State_720.txt,"Kirtland AFB, NM",DMA,0.45,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
-721,history/states/721-State_721.txt,"Vieques, PR",PRC,0.4,rural,10800,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-722,history/states/722-State_722.txt,"Guantanamo, CU",CUB,0.55,metropolis,611520,True,True,False,,,,,9,20,2,1,0,2,1,2,2,1,1,1,0,0
-723,history/states/723-State_723.txt,"Santiago, DO",DOM,0.65,large_city,570000,True,False,False,,,,,7,16,1,1,0,2,1,2,1,1,0,1,0,0
-724,history/states/724-State_724.txt,"Hato Mayor, DO",DOM,0.65,large_town,103200,True,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-725,history/states/725-State_725.txt,"Mezquitic, JA",MEX,0.65,rural,16920,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-726,history/states/726-State_726.txt,"Nord-Est, HT",HAI,0.55,large_city,472760,True,False,False,,,,,7,16,2,2,0,2,1,2,1,1,0,1,0,0
-727,history/states/727-State_727.txt,"La Vega, DO",DOM,0.65,city,271200,True,False,False,,,,,6,12,2,0,0,2,1,1,1,1,0,0,0,0
-728,history/states/728-State_728.txt,"Isla de Culebra, PR",PRC,0.4,small_island,2160,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-729,history/states/729-State_729.txt,"Nord-Oueste, HT",HAI,0.55,metropolis,744000,True,False,False,,,,,9,20,2,1,0,2,2,2,2,1,0,1,1,0
-730,history/states/730-State_730.txt,"Dajabon, DO",DOM,0.65,town,48000,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-731,history/states/731-State_731.txt,"Isla de Juventud, CU",CUB,0.55,large_town,103200,True,True,False,,,,,4,8,2,1,0,1,0,1,1,0,1,0,0,0
-732,history/states/732-State_732.txt,"Nord, HT",HAI,0.55,metropolis,874568,True,False,False,,,,,9,20,2,1,0,2,2,2,2,1,0,1,1,0
-733,history/states/733-State_733.txt,"Santo Domingo, DO",DOM,0.65,metropolis,1200000,True,False,False,,,,,12,20,1,1,0,3,2,3,2,2,0,1,1,0
-734,history/states/734-State_734.txt,"Santiago de Cuba, CU",CUB,0.55,large_city,516000,True,True,False,,,,,8,16,2,1,0,2,1,2,1,1,1,1,0,0
-735,history/states/735-State_735.txt,"Artibonite, HT",HAI,0.55,megalopolis,1512000,True,True,False,,,,,14,22,2,1,0,3,2,3,2,2,2,1,1,0
-736,history/states/736-State_736.txt,"Granma, CU",CUB,0.55,metropolis,960000,True,True,False,,,,,11,20,2,1,0,2,2,2,2,1,2,1,1,0
-737,history/states/737-State_737.txt,"La Romana, DO",DOM,0.65,city,175200,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
-738,history/states/738-State_738.txt,"San Pedro de Macoris, DO",DOM,0.65,city,240000,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
-739,history/states/739-State_739.txt,"Colotlan, JA",MEX,0.65,rural,19200,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-740,history/states/740-State_740.txt,"La Estrelleta, DO",DOM,0.65,town,24000,False,False,False,,,,,0,6,2,1,0,0,0,0,0,0,0,0,0,0
-741,history/states/741-State_741.txt,Aguascalientes,MEX,0.65,metropolis,944000,False,False,False,,,,,9,20,2,1,0,2,2,2,2,1,0,1,1,0
-742,history/states/742-State_742.txt,"San Juan, DO",DOM,0.65,large_town,121200,False,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-743,history/states/743-State_743.txt,"Guayalejo, VC",MEX,0.65,town,48000,True,False,False,,,,,2,6,2,1,0,1,0,1,0,0,0,0,0,0
-744,history/states/744-State_744.txt,"Centre, HT",HAI,0.55,metropolis,720000,False,False,False,,,,,9,20,2,1,0,2,2,2,2,1,0,1,1,0
-745,history/states/745-State_745.txt,"Brainerd, MN",SMN,0.41,rural,16324,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
-746,history/states/746-State_746.txt,"Pinos, Zacatecas",MEX,0.65,pastoral,2000,False,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-747,history/states/747-State_747.txt,"San Luis Potosi, SL",MEX,0.65,city,294000,True,False,False,,,,,6,12,2,1,0,2,1,1,1,1,0,0,0,0
-748,history/states/748-State_748.txt,"Azua, DO",DOM,0.65,city,145200,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
-749,history/states/749-State_749.txt,"Peravia, DO",DOM,0.65,city,175200,True,True,False,,,,,5,12,2,0,0,1,1,1,1,0,1,0,0,0
-750,history/states/750-State_750.txt,"Ciudad Valles, SL",MEX,0.65,city,134400,True,False,False,,,,,3,12,2,1,0,1,0,1,1,0,0,0,0,0
-751,history/states/751-State_751.txt,"San Francisco, CA",SCA,0.72,metropolis,932079,True,False,False,,,,,9,20,2,1,0,2,2,2,2,1,0,1,1,0
-752,history/states/752-State_752.txt,"Isla de Mona, PR",PRC,0.4,small_island,1200,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-753,history/states/753-State_753.txt,"Tepic, NA",MEX,0.65,city,264000,True,False,False,,,,,6,12,2,1,0,2,1,1,1,1,0,0,0,0
-754,history/states/754-State_754.txt,Veracruz,MEX,0.65,megalopolis,6241000,True,False,False,,,,,15,22,2,1,0,3,3,3,3,3,0,3,2,0
-755,history/states/755-State_755.txt,Jalisco,MEX,0.65,megalopolis,6221000,True,False,False,,,,,15,22,2,1,0,3,3,3,3,3,0,3,2,0
-756,history/states/756-State_756.txt,"San Francisco Metro, CA",SCA,0.72,megalopolis,5400000,True,True,False,,,,,18,22,2,1,0,3,3,3,3,3,3,3,2,0
-757,history/states/757-State_757.txt,Quintana Roo,MEX,0.65,metropolis,872000,True,False,False,,,,,9,20,2,1,0,2,2,2,2,1,0,1,1,0
-758,history/states/758-State_758.txt,"Axtla de Terrazas, SL",MEX,0.65,town,36000,True,False,False,,,,,1,6,2,1,0,0,0,1,0,0,0,0,0,0
-759,history/states/759-State_759.txt,Guanajuato,MEX,0.65,megalopolis,4121000,False,False,False,,,,,15,22,2,1,0,3,3,3,3,3,0,2,2,0
-760,history/states/760-State_760.txt,"Ouest, HT",HAI,0.55,megalopolis,3240000,True,True,False,,,,,17,22,2,1,0,3,3,3,3,2,3,2,2,0
-761,history/states/761-State_761.txt,Yucatan,MEX,0.65,megalopolis,1685228,True,True,False,,,,,14,22,2,1,0,3,2,3,2,2,2,2,1,0
-762,history/states/762-State_762.txt,"Barahona, DO",DOM,0.65,city,148800,True,True,False,,,,,4,12,2,0,0,1,0,1,1,0,1,0,0,0
-763,history/states/763-State_763.txt,"Isla Maria Madre, NA",MEX,0.65,tiny_island,120,True,False,False,,,,,0,1,1,0,0,0,0,0,0,0,0,0,0,0
-764,history/states/764-State_764.txt,"Nellis AFB, NV",DMA,0.45,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
-765,history/states/765-State_765.txt,"Isla de la Gonave, HT",HAI,0.55,large_town,84000,True,False,False,,,,,2,8,2,1,0,1,0,1,0,0,0,0,0,0
-766,history/states/766-State_766.txt,Queretaro,MEX,0.65,metropolis,1404306,True,False,False,,,,,12,20,2,1,0,3,2,3,2,2,0,1,1,0
-767,history/states/767-State_767.txt,"Huejutla de Reyes, VC",MEX,0.65,large_town,96000,True,False,False,,,,,3,8,2,1,0,1,0,1,1,0,0,0,0,0
-768,history/states/768-State_768.txt,"Pedernales, DO",DOM,0.65,large_town,64800,True,True,False,,,,,3,8,2,1,0,1,0,1,0,0,1,0,0,0
-769,history/states/769-State_769.txt,"Sud-Est, HT",HAI,0.55,metropolis,816000,False,False,False,,,,,9,20,2,1,0,2,2,2,2,1,0,1,1,0
-770,history/states/770-State_770.txt,"Puerto Vallarta, JA",MEX,0.65,city,171600,False,False,False,,,,,4,12,2,1,0,1,1,1,1,0,0,0,0,0
-771,history/states/771-State_771.txt,Hidalgo,MEX,0.65,megalopolis,2350000,True,False,False,,,,,12,22,2,1,0,3,2,3,2,2,0,2,1,0
-772,history/states/772-State_772.txt,"Malmstrom AFB, MT",DMA,0.45,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
-773,history/states/773-State_773.txt,"Nippes, HT",HAI,0.55,large_city,319200,True,True,False,,,,,8,16,2,1,0,2,1,2,1,1,1,0,0,0
-774,"history/states/774-Bronx, NY.txt","Queens, NY",NYC,0.62,megalopolis,2675254,True,False,False,,,,,12,22,2,2,0,3,2,3,2,2,0,2,1,0
-775,"history/states/775-Queens, NY.txt","Staten Island, NY",NYC,0.62,large_city,532473,True,True,False,,,,,8,16,2,2,0,2,1,2,1,1,1,1,0,0
-776,"history/states/776-Brooklyn, NY.txt","The Bronx, NY",NYC,0.62,megalopolis,1599180,True,False,False,,,,,12,22,2,2,0,3,2,3,2,2,0,1,1,0
-777,"history/states/777-Staten Island, NY.txt","Brooklyn, NY",NYC,0.62,megalopolis,2958391,True,False,False,,,,,14,22,2,2,0,3,3,3,3,2,0,2,2,0
-778,"history/states/778-Saint Francis, KS.txt","Saint Francis, KS",DMA,0.45,pastoral,1532,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
-779,"history/states/779-Ohio, WV.txt","Ohio, WV",RWV,0.33,town,56912,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+1,history/states/1-State_1.txt,British Columbia,CAN,1.4,megalopolis,3907738,True,True,False,,,,,18,22,4,3,0,3,3,3,3,3,3,2,2,0
+2,history/states/2-State_2.txt,"Hot Springs, AR",AMA,0.9,town,38954,False,False,False,,,,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
+3,history/states/3-State_3.txt,"Joplin, MO",USM,0.96,town,54604,True,False,False,,Table Rock Dam,473,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+4,history/states/4-State_4.txt,"Ponce, PR",PRC,0.97,city,199560,True,True,False,,,,,5,12,2,0,0,1,1,1,1,0,1,0,0,0
+5,history/states/5-State_5.txt,"Mayaguez, PR",PRC,0.97,large_town,106716,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
+6,history/states/6-State_6.txt,Northern Alberta,CAN,1.4,large_city,400000,True,False,False,,,,,7,16,4,3,0,2,1,2,1,1,0,0,0,0
+7,history/states/7-State_7.txt,"Arecibo, PR",PRC,0.97,large_town,115200,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
+8,history/states/8-State_8.txt,North Manitoba,CAN,1.4,city,250000,True,False,False,,,,,6,12,4,3,0,2,1,1,1,1,0,0,0,0
+9,history/states/9-State_9.txt,Quebec,CAN,1.4,megalopolis,7237479,True,True,False,,,,,19,22,4,3,0,3,3,3,3,3,4,3,3,0
+10,history/states/10-State_10.txt,Labrador,CAN,1.4,town,26000,True,False,False,,,,,0,6,4,3,0,0,0,0,0,0,0,0,0,0
+11,history/states/11-State_11.txt,"Floyd County, KY",TMA,1.11,town,37687,True,False,False,,,,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
+12,history/states/12-State_12.txt,"Newberry, MI",SPM,1.11,pastoral,1440,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
+13,history/states/13-State_13.txt,"Saint Ignace, MI",SPM,1.11,pastoral,3000,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+14,history/states/14-State_14.txt,Central Northern Manitoba,CAN,1.4,large_city,300000,True,False,False,,,,,7,16,4,3,0,2,1,2,1,1,0,0,0,0
+15,history/states/15-State_15.txt,"Springfield, MO",USM,0.96,city,181896,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+16,history/states/16-State_16.txt,"Houghton, MI",SPM,1.11,rural,9120,True,True,False,,,,,1,3,1,0,0,0,0,0,0,0,1,0,0,0
+17,history/states/17-State_17.txt,"Moresby Island, BC",CAN,1.4,tiny_island,177,True,True,False,,,,,1,1,2,0,0,0,0,0,0,0,1,0,0,0
+18,history/states/18-State_18.txt,"Shannon, MO",USM,0.96,rural,9988,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+19,history/states/19-State_19.txt,"Evansville, IN",TMA,1.11,city,145898,True,False,False,,,,,3,12,1,0,0,1,0,1,1,0,0,0,0,0
+20,history/states/20-State_20.txt,"Hopkins, KY",TMA,1.11,city,156000,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
+21,history/states/21-State_21.txt,"Bloomington, IN",IMA,1.01,large_town,83149,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+22,history/states/22-State_22.txt,"Poplar Bluff, MO",USM,0.96,town,20427,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+23,history/states/23-State_23.txt,Northern British Columbia,CAN,1.4,large_city,300000,True,True,False,,,,,8,16,4,3,0,2,1,2,1,1,1,0,0,0
+24,history/states/24-State_24.txt,"Louisville, KY",TMA,1.11,large_city,307477,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+25,history/states/25-State_25.txt,"St. Louis, MO",USM,0.96,large_city,416626,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+26,history/states/26-State_26.txt,World Border,ZZZ,0.6,wasteland,0,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+27,history/states/27-State_27.txt,"Harrisonville, MO",USM,0.96,rural,11662,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+28,history/states/28-State_28.txt,"St. Joseph, MO",USM,0.96,large_town,88788,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+29,history/states/29-State_29.txt,"Adalair, MO",USM,0.96,pastoral,2160,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+30,history/states/30-State_30.txt,Saint-Pierre-et-Miquelon,CAN,1.4,rural,6109,False,False,False,,,,,0,3,3,3,0,0,0,0,0,0,0,0,0,0
+31,history/states/31-State_31.txt,"Kidney Island, NU",CAN,1.4,tiny_island,120,True,False,False,,,,,0,1,2,0,0,0,0,0,0,0,0,0,0,0
+32,history/states/32-State_32.txt,"Tupelo, MS",BIR,0.89,town,41455,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+33,history/states/33-State_33.txt,"Etowah, AL",BIR,0.89,large_town,124150,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+34,history/states/34-State_34.txt,"Knox, IL",NGI,0.81,large_town,67003,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+35,history/states/35-State_35.txt,"Howard, IN",IMA,1.01,large_town,101956,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+36,history/states/36-State_36.txt,"Coeur d'Alene, ID",SWA,0.94,town,41416,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+37,history/states/37-State_37.txt,"Kankakee, IL",NGI,0.81,town,32890,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+38,history/states/38-State_38.txt,"Belcher Islands, NU",CAN,1.4,small_island,3000,True,False,False,,,,,0,2,3,1,0,0,0,0,0,0,0,0,0,0
+39,history/states/39-State_39.txt,"Christian, KY",TMA,1.11,large_town,86954,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
+40,history/states/40-State_40.txt,Eastern Northern Manitoba,CAN,1.4,city,200000,True,False,False,,,,,5,12,4,3,0,1,1,1,1,1,0,0,0,0
+41,history/states/41-State_41.txt,"Peoria, IL",NGI,0.81,city,135523,True,False,False,,,,,3,12,1,0,0,1,0,1,1,0,0,0,0,0
+42,history/states/42-State_42.txt,Newfoundland,CAN,1.4,large_city,512930,True,True,False,,,,,8,16,4,3,0,2,1,2,1,1,1,1,0,0
+43,history/states/43-State_43.txt,"Oxford, MS",AMA,0.9,rural,17292,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+44,history/states/44-State_44.txt,"El Dorado, AR",AMA,0.9,town,28375,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+45,history/states/45-State_45.txt,Oklahoma,CAN,1.4,megalopolis,2037835,True,False,False,,,,,12,22,4,3,0,3,2,3,2,2,0,2,1,0
+46,history/states/46-State_46.txt,"Champaign, IL",NGI,0.81,large_town,81021,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+47,history/states/47-State_47.txt,"Little Rock, AR",AMA,0.9,city,219759,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+48,history/states/48-State_48.txt,"Woodward, OK",LMA,0.84,rural,14461,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+49,history/states/49-State_49.txt,"Bowling Green, KY",TMA,1.11,town,59155,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+50,history/states/50-State_50.txt,"Guayama, PR",PRC,0.97,large_town,91800,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+51,history/states/51-State_51.txt,"Petersburg, IL",NGI,0.81,pastoral,2700,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+52,history/states/52-State_52.txt,"Platte, WI",EFG,1.3,rural,12000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
+53,history/states/53-State_53.txt,"Buncombe, NC",CAN,1.4,city,247628,True,False,False,,,,,5,12,4,3,0,1,1,1,1,1,0,0,0,0
+54,history/states/54-State_54.txt,"Ottumwa, IA",SIA,0.92,town,34474,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+55,history/states/55-State_55.txt,"Iowa City, IA",SIA,0.92,large_town,74664,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+56,history/states/56-State_56.txt,"Dubuque, IA",SIA,0.92,large_town,69055,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+57,history/states/57-State_57.txt,"Waterloo, IA",SIA,0.92,large_town,82496,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+58,history/states/58-State_58.txt,"Covington, KY",TMA,1.11,town,52044,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+59,history/states/59-State_59.txt,"Indianapolis, IN",IMA,1.01,metropolis,938244,False,False,False,,,,,9,20,3,0,0,2,2,2,2,1,0,1,1,0
+60,history/states/60-State_60.txt,"Des Moines, IA",SIA,0.92,city,238418,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
+61,history/states/61-State_61.txt,Illinois,,0.6,megalopolis,12419293,True,False,False,,,,,15,22,0,0,0,3,3,3,3,3,0,4,3,0
+62,history/states/62-State_62.txt,"Vancouver, BC",CAN,1.4,metropolis,654805,True,False,False,,,,,8,20,4,3,0,2,1,2,2,1,0,1,0,0
+63,history/states/63-State_63.txt,Northern Saskatchwan,CAN,1.4,city,200000,True,False,False,,,,,5,12,4,3,0,1,1,1,1,1,0,0,0,0
+64,history/states/64-State_64.txt,"North Kansas City, MO",CKC,0.92,rural,5260,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+65,history/states/65-State_65.txt,"Rochester, MN",SMN,0.98,large_town,102967,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+66,history/states/66-State_66.txt,"Milwaukee, WI",EFG,1.3,metropolis,716368,True,True,False,,,,,11,20,4,3,0,2,2,2,2,1,2,1,1,0
+67,history/states/67-State_67.txt,"Sioux City, IA",SIA,0.92,large_town,102015,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+68,history/states/68-State_68.txt,"Green Bay, WI",EFG,1.3,large_town,122775,True,True,False,,,,,4,8,4,0,0,1,0,1,1,0,1,0,0,0
+69,history/states/69-State_69.txt,Ontario,CAN,1.4,megalopolis,11410046,True,True,False,,,,,19,22,4,3,0,3,3,3,3,3,4,4,3,0
+70,history/states/70-State_70.txt,"Jackson, TN",TMA,1.11,large_town,71571,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+71,history/states/71-State_71.txt,"Land Between The Lakes, TN",TMA,1.11,town,36000,True,False,False,,,,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
+72,history/states/72-State_72.txt,"Madison, WI",EFG,1.3,city,249664,True,False,False,,,,,5,12,4,1,0,1,1,1,1,1,0,0,0,0
+73,history/states/73-State_73.txt,"Lexington, KY",TMA,1.11,large_city,312614,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+74,history/states/74-State_74.txt,"Kalamazoo, MI",EFG,1.3,large_town,92574,False,False,False,,,,,3,8,4,0,0,1,0,1,1,0,0,0,0,0
+75,history/states/75-State_75.txt,"Eau Claire, WI",SWI,0.75,large_town,74044,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+76,history/states/76-State_76.txt,"Appleton, WI",EFG,1.3,large_town,84104,True,False,False,,,,,2,8,4,0,0,1,0,1,0,0,0,0,0,0
+77,history/states/77-State_77.txt,"Kansas City, MO",CKC,0.92,large_city,529854,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,1,0,0
+78,history/states/78-State_78.txt,"Tippecanoe, IN",IMA,1.01,city,180000,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+79,history/states/79-State_79.txt,"Oshkosh, WI",EFG,1.3,large_town,75559,True,False,False,,,,,2,8,4,0,0,1,0,1,0,0,0,0,0,0
+80,history/states/80-State_80.txt,"Wausau, WI",SWI,0.75,town,46111,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+81,history/states/81-State_81.txt,"La Crosse, WI",SWI,0.75,large_town,61824,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+82,history/states/82-State_82.txt,"Minot, ND",SDA,0.77,town,43880,False,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+83,history/states/83-State_83.txt,"Delaware, IN",IMA,1.01,city,142522,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+84,history/states/84-State_84.txt,"Willis, ND",SDA,0.77,pastoral,1440,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+85,history/states/85-State_85.txt,"Edmonton, AB",CAN,1.4,metropolis,799324,True,False,False,,,,,9,20,4,3,0,2,2,2,2,1,0,1,1,0
+86,history/states/86-State_86.txt,"De Witt, AR",AMA,0.9,pastoral,4376,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+87,history/states/87-State_87.txt,"Fargo, ND",SDA,0.77,large_town,88933,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+88,history/states/88-State_88.txt,"Vancouver Island, BC",CAN,1.4,metropolis,654805,True,True,False,,,,,9,20,4,3,0,2,1,2,2,1,1,1,0,0
+89,history/states/89-State_89.txt,"Sioux Falls, SD",SSD,0.77,city,148770,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+90,history/states/90-State_90.txt,"Chico, CA",SCA,1.3,large_town,71944,False,False,False,,,,,2,8,4,3,0,1,0,1,0,0,0,0,0,0
+91,history/states/91-State_91.txt,"Mitchell, SD",SSD,0.77,rural,18304,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+92,history/states/92-State_92.txt,"Vaudreuil-Soulanges, QC",CAN,1.4,city,180000,True,False,False,,,,,4,12,4,3,0,1,1,1,1,0,0,0,0,0
+93,history/states/93-State_93.txt,"Twin Islands, NU",CAN,1.4,tiny_island,240,True,False,False,,,,,0,1,2,0,0,0,0,0,0,0,0,0,0,0
+94,history/states/94-State_94.txt,"Kindersley, SK",CAN,1.4,rural,5400,True,False,False,,,,,0,3,3,3,0,0,0,0,0,0,0,0,0,0
+95,history/states/95-State_95.txt,"Saskatoon, SK",CAN,1.4,city,236173,True,False,False,,,,,5,12,4,3,0,1,1,1,1,1,0,0,0,0
+96,history/states/96-State_96.txt,Guantanamo Bay,CUB,1.4,rural,10000,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
+97,history/states/97-State_97.txt,"Ann Arbor, MI",EFG,1.3,city,136828,True,False,False,,,,,3,12,4,1,0,1,0,1,1,0,0,0,0,0
+98,history/states/98-State_98.txt,"Brookings, SD",SSD,0.77,town,22204,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+99,history/states/99-State_99.txt,"Rapid City, SD",WAR,0.83,large_town,65427,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+100,history/states/100-State_100.txt,"Winnipeg, MB",CAN,1.4,metropolis,743452,True,False,False,,,,,9,20,4,3,0,2,2,2,2,1,0,1,1,0
+101,history/states/101-State_101.txt,"Birmingham, AL",BIR,0.89,city,291384,True,False,False,,,,,6,12,2,0,0,2,1,1,1,1,0,0,0,0
+102,history/states/102-State_102.txt,"Dickinson, ND",WAR,0.83,rural,19212,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+103,history/states/103-State_103.txt,"Pierre, SD",DMA,1.02,rural,16651,True,False,False,,Oahe Dam,1179,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+104,history/states/104-State_104.txt,"Akimiski Island, NU",CAN,1.4,tiny_island,60,True,False,False,,,,,0,1,2,0,0,0,0,0,0,0,0,0,0,0
+105,history/states/105-State_105.txt,"Beatrice, NE",OMA,1.0,rural,15026,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+106,history/states/106-State_106.txt,"Pine Bluff, AR",AMA,0.9,large_town,66102,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+107,history/states/107-State_107.txt,"Anticosti Island, QC",CAN,1.4,small_island,7800,True,False,False,,,,,0,2,4,1,0,0,0,0,0,0,0,0,0,0
+108,history/states/108-State_108.txt,"Scottsbluff, NE",DMA,1.02,rural,17659,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+109,history/states/109-State_109.txt,"Fremont, NE",OMA,1.0,town,30208,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+110,history/states/110-State_110.txt,"Grand Island, NE",DMA,1.02,town,51434,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+111,history/states/111-State_111.txt,"Meridian, MS",BIR,0.89,town,49233,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+112,history/states/112-State_112.txt,"Salina, KS",OMA,1.0,town,55159,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+113,history/states/113-State_113.txt,"Cowley, KS",OMA,1.0,town,43549,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+114,history/states/114-State_114.txt,"Saint Pierre, FR",FRA,1.4,rural,5280,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
+115,history/states/115-State_115.txt,"Charlton Island, NU",CAN,1.4,tiny_island,24,True,False,False,,,,,0,1,2,0,0,0,0,0,0,0,0,0,0,0
+116,history/states/116-State_116.txt,"East Lansing, MI",EFG,1.3,town,57486,True,False,False,,,,,2,6,2,0,0,1,0,1,0,0,0,0,0,0
+117,history/states/117-State_117.txt,"Calgary, AB",CAN,1.4,metropolis,1054639,True,False,False,,,,,10,20,4,3,0,2,2,2,2,2,0,1,1,0
+118,history/states/118-State_118.txt,"Miquelon, FR",FRA,1.4,pastoral,2040,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
+119,history/states/119-State_119.txt,"Durango, CO",DMA,1.02,rural,15210,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+120,history/states/120-State_120.txt,"Eastern Townships, QC",CAN,1.4,city,264000,True,True,False,,,,,7,12,4,3,0,2,1,1,1,1,1,0,0,0
+121,history/states/121-State_121.txt,"Hardin, KY",TMA,1.11,large_town,115987,True,False,False,,,,,3,8,0,0,0,1,0,1,1,0,0,0,0,0
+122,history/states/122-State_122.txt,"Dodge City, KS",DMA,1.02,town,30211,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+123,history/states/123-State_123.txt,"Alamosa, CO",MNM,0.89,rural,10536,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+124,history/states/124-State_124.txt,"Fort Smith, AR",AMA,0.9,large_town,96321,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+125,history/states/125-State_125.txt,"Twin Falls, ID",BAR,0.82,town,37028,True,False,False,,,,,1,6,1,0,0,0,0,1,0,0,0,0,0,0
+126,history/states/126-State_126.txt,"Thornton, CO",DMA,1.02,large_town,98860,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+127,history/states/127-State_127.txt,"Tuscaloosa, AL",BIR,0.89,large_town,84723,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+128,history/states/128-State_128.txt,"Fort Collins, CO",DMA,1.02,city,142382,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+129,history/states/129-State_129.txt,"Fort Morgan, CO",DMA,1.02,rural,9650,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+130,history/states/130-State_130.txt,"La Salle, LA",NOM,1.01,rural,17138,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+131,history/states/131-State_131.txt,"Colorado Springs, CO",DMA,1.02,large_city,433068,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+132,history/states/132-State_132.txt,"Magladen Islands, QC",CAN,1.4,small_island,15360,True,False,False,,,,,0,2,3,1,0,0,0,0,0,0,0,0,0,0
+133,history/states/133-State_133.txt,"Ionia, MI",EFG,1.3,rural,8400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
+134,history/states/134-State_134.txt,"Lansing, MI",EFG,1.3,city,142953,True,False,False,,,,,3,12,4,1,0,1,0,1,1,0,0,0,0,0
+135,history/states/135-State_135.txt,"Miles City, MT",MMS,0.8,rural,10257,True,False,False,,Fort Peck Dam,789,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+136,history/states/136-State_136.txt,"Gillette, WY",WAR,0.83,town,23575,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+137,history/states/137-State_137.txt,"North Puget Sound, WA",SWA,0.94,city,144000,True,True,False,,,,,4,12,1,0,0,1,0,1,1,0,1,0,0,0
+138,history/states/138-State_138.txt,"Flint, MI",EFG,1.3,city,149931,False,False,False,,,,,3,12,4,1,0,1,0,1,1,0,0,0,0,0
+139,history/states/139-State_139.txt,"Great Falls, MT",MMS,0.8,large_town,67345,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+140,history/states/140-State_140.txt,"Northern Cascades, WA",SWA,0.94,large_town,90000,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+141,history/states/141-State_141.txt,New Brunswick,CAN,1.4,metropolis,729498,True,True,False,,,,,11,20,4,3,0,2,2,2,2,1,2,1,1,0
+142,history/states/142-State_142.txt,"Olympic Peninsula, WA",SWA,0.94,large_town,84000,True,True,False,,,,,3,8,1,0,0,1,0,1,0,0,1,0,0,0
+143,history/states/143-State_143.txt,"Tucson, AZ",AMO,0.89,large_city,584038,False,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,1,0,0
+144,history/states/144-State_144.txt,"Idaho Falls, ID",WAR,0.83,large_town,60876,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+145,history/states/145-State_145.txt,"Cape Breton Island, NS",CAN,1.4,city,176896,True,True,False,,,,,5,12,4,3,0,1,1,1,1,0,1,0,0,0
+146,history/states/146-State_146.txt,"Salt Lake City, UT",SUT,0.84,city,218277,False,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+147,history/states/147-State_147.txt,"Ogden, UT",WAR,0.83,large_town,92671,False,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+148,history/states/148-State_148.txt,"Lac-des-Eaux-Mortes, QC",CAN,1.4,rural,6000,False,False,False,,,,,0,3,3,3,0,0,0,0,0,0,0,0,0,0
+149,history/states/149-State_149.txt,"Provo, UT",SUT,0.84,city,126199,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+150,history/states/150-State_150.txt,"Western Okanogan Highlands, WA",SWA,0.94,town,42000,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+151,history/states/151-State_151.txt,"Edmundston, NB",CAN,1.4,rural,19200,True,False,False,,,,,0,3,3,3,0,0,0,0,0,0,0,0,0,0
+152,history/states/152-State_152.txt,Prince Edward Island,CAN,1.4,city,135851,True,True,False,,,,,4,12,4,3,0,1,0,1,1,0,1,0,0,0
+153,history/states/153-State_153.txt,"Degelis, QC",CAN,1.4,town,24000,True,False,False,,,,,0,6,4,3,0,0,0,0,0,0,0,0,0,0
+154,history/states/154-State_154.txt,"Mount Pleasant, MI",WOL,0.75,town,30000,False,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+155,history/states/155-State_155.txt,"Brandon, MB",CAN,1.4,town,47010,True,False,False,,,,,2,6,4,3,0,1,0,1,0,0,0,0,0,0
+156,history/states/156-State_156.txt,"Puget Islands, WA",SWA,0.94,town,30000,True,True,False,,,,,1,6,0,0,0,0,0,0,0,0,1,0,0,0
+157,history/states/157-State_157.txt,"Eastern Okanogan Highlands, WA",SWA,0.94,town,42000,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+158,history/states/158-State_158.txt,"Metaline Falls, WA",SWA,0.94,enclave,302,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+159,history/states/159-State_159.txt,"Hanover, MB",CAN,1.4,town,21600,True,False,False,,,,,0,6,4,3,0,0,0,0,0,0,0,0,0,0
+160,history/states/160-State_160.txt,"Sandpoint, ID",SWA,0.94,rural,7782,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+161,history/states/161-State_161.txt,"Kalispell, MT",MMS,0.8,rural,17067,True,False,False,,Hungry Horse Dam,954,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+162,history/states/162-State_162.txt,"Essex, MA",BRA,1.04,metropolis,891790,True,False,False,,,,,9,20,3,1,0,2,2,2,2,1,0,1,1,0
+163,history/states/163-State_163.txt,Nova Scotia,CAN,1.4,metropolis,908007,True,True,False,,,,,11,20,4,3,0,2,2,2,2,1,2,1,1,0
+164,history/states/164-State_164.txt,"Vernal, UT",SUT,0.84,rural,9256,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+165,history/states/165-State_165.txt,"Shreveport, LA",NOM,1.01,city,240174,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+166,history/states/166-State_166.txt,"Cypress, AB",CAN,1.4,rural,8400,False,False,False,,,,,0,3,3,3,0,0,0,0,0,0,0,0,0,0
+167,history/states/167-State_167.txt,"Maple Creek, MB",CAN,1.4,pastoral,3000,False,False,False,,,,,0,2,3,1,0,0,0,0,0,0,0,0,0,0
+168,history/states/168-State_168.txt,"Aroostook, ME",CMM,0.99,large_town,109597,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+169,history/states/169-State_169.txt,"South Puget Sound, WA",SWA,0.94,large_town,120000,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
+170,history/states/170-State_170.txt,"Browning, MT",MMS,0.8,pastoral,1219,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+171,history/states/171-State_171.txt,"Fayetteville, AR",AMA,0.9,large_town,69656,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+172,history/states/172-State_172.txt,"Columbia Basin, WA",SWA,0.94,city,132000,True,False,False,,Grand Coulee Dam|Chief Joseph Dam,465,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+173,history/states/173-State_173.txt,"Pantex Plant, TX",DMA,1.02,pastoral,2500,False,False,True,plant,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
+174,history/states/174-State_174.txt,"Saint Francis, ME",CAN,1.4,enclave,600,True,False,False,,,,,0,1,2,0,0,0,0,0,0,0,0,0,0,0
+175,history/states/175-State_175.txt,"Cedar City, UT",SUT,0.84,town,24632,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+176,history/states/176-State_176.txt,"New Orleans, LA",NOM,1.01,large_city,581608,True,True,False,,,,,8,16,2,0,0,2,1,2,1,1,1,1,0,0
+177,history/states/177-State_177.txt,"Butte, MT",MMS,0.8,town,38668,True,False,False,,,,,1,6,1,0,0,0,0,1,0,0,0,0,0,0
+178,history/states/178-State_178.txt,"Capitol Reef, UT",SUT,0.84,wasteland,0,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+179,history/states/179-State_179.txt,"Willapa Hills, WA",SWA,0.94,rural,14400,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+180,history/states/180-State_180.txt,"Lafayette, LA",NOM,1.01,city,152569,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+181,history/states/181-State_181.txt,"Moscow, ID",SWA,0.94,town,28069,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+182,history/states/182-State_182.txt,"Mecklenberg, NC",CMM,0.99,metropolis,834544,True,False,False,,,,,9,20,4,0,0,2,2,2,2,1,0,1,1,0
+183,history/states/183-State_183.txt,"Southern Cascades, WA",SWA,0.94,large_town,78000,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+184,history/states/184-State_184.txt,"St. John, NB",CAN,1.4,large_town,82022,True,True,False,,,,,3,8,4,3,0,1,0,1,0,0,1,0,0,0
+185,history/states/185-State_185.txt,"Yakima, WA",SWA,0.94,large_town,86214,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+186,history/states/186-State_186.txt,"Missoula, MT",MMS,0.8,large_town,76669,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+187,history/states/187-State_187.txt,"Naval Submarine Base Bangor, WA",DMA,1.02,pastoral,1800,True,False,True,naval,,,,7,2,1,0,0,0,0,0,1,3,2,6,5,1
+188,history/states/188-State_188.txt,"Piscataquis, ME",CMM,0.99,town,20682,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+189,history/states/189-State_189.txt,"Middlesex, NJ",,0.6,metropolis,900194,True,False,False,,,,,9,20,0,0,0,2,2,2,2,1,0,1,1,0
+190,history/states/190-State_190.txt,"Roseburg, OR",SOR,0.86,town,24020,True,True,False,,,,,1,6,0,0,0,0,0,0,0,0,1,0,0,0
+191,history/states/191-State_191.txt,"Muskegon, MI",EFG,1.3,town,47196,True,True,False,,,,,3,6,2,0,0,1,0,1,0,0,1,0,0,0
+192,history/states/192-State_192.txt,"Bismarck, ND",SDA,0.77,large_town,66638,True,False,False,,Garrison Dam,506,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+193,history/states/193-State_193.txt,"Grand Forks, ND",SDA,0.77,town,59696,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+194,history/states/194-State_194.txt,"Conway, AR",AMA,0.9,town,51800,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+195,history/states/195-State_195.txt,"Mahoosuc Range, ME",CMM,0.99,town,24000,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+196,history/states/196-State_196.txt,"Phillips, AR",AMA,0.9,town,31734,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+197,history/states/197-State_197.txt,"Natchitoches, LA",NOM,1.01,rural,5131,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+198,history/states/198-State_198.txt,"Lake Charles, LA",NOM,1.01,large_town,86108,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+199,history/states/199-State_199.txt,"Clay, MN",SMN,0.98,large_town,63600,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+200,history/states/200-State_200.txt,"Isanti, MN",SMN,0.98,rural,6000,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+201,history/states/201-State_201.txt,"Vancouver, WA",SWA,0.94,city,172272,True,False,False,,Bonneville Dam,1389,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
+202,history/states/202-State_202.txt,"Autauga, AL",BIR,0.89,town,52405,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+203,history/states/203-State_203.txt,"Downeast, ME",SOM,0.66,town,42000,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+204,history/states/204-State_204.txt,"Billings, MT",MMS,0.8,large_town,107816,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+205,history/states/205-State_205.txt,"West Mahoosuc, ME",MAR,0.63,rural,18000,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+206,history/states/206-State_206.txt,"Blue Mountains, WA",BAR,0.82,rural,10000,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+207,history/states/207-State_207.txt,"Somerset, ME",CMM,0.99,large_town,61065,True,True,False,,,,,3,8,1,0,0,1,0,1,0,0,1,0,0,0
+208,history/states/208-State_208.txt,"Alexandra, LA",NOM,1.01,town,56400,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+209,history/states/209-State_209.txt,"Bend, OR",SOR,0.86,large_town,62434,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+210,history/states/210-State_210.txt,"Queens, NY",SPM,1.11,megalopolis,2675254,True,False,False,,,,,12,22,4,3,0,3,2,3,2,2,0,2,1,0
+211,history/states/211-State_211.txt,"Phillipsburg, MT",MMS,0.8,pastoral,4560,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+212,history/states/212-State_212.txt,"Mercer, ND",WAR,0.83,pastoral,3168,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+213,history/states/213-State_213.txt,"Orange, NY",,0.6,large_city,409640,True,True,False,,,,,8,16,0,0,0,2,1,2,1,1,1,0,0,0
+214,history/states/214-State_214.txt,"Dothan, AL",GCC,0.96,large_town,71209,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+215,history/states/215-State_215.txt,"Monroe, LA",NOM,1.01,large_town,65472,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+216,history/states/216-State_216.txt,"Western Mountains, ME",MAR,0.63,rural,10000,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+217,history/states/217-State_217.txt,"Pendleton, OR",BAR,0.82,rural,19624,True,False,False,,The Dalles Dam|John Day Dam,727,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+218,history/states/218-State_218.txt,"Monteregie, QC",CAN,1.4,megalopolis,1680000,True,True,False,,,,,14,22,4,3,0,3,2,3,2,2,2,2,1,0
+219,history/states/219-State_219.txt,"ile Marie, QC",,0.6,small_island,12000,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+220,history/states/220-State_220.txt,"Baker, MT",WAR,0.83,pastoral,2126,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+221,history/states/221-State_221.txt,"Penobscot Bay, ME",SOM,0.66,town,54000,True,True,False,,,,,3,6,2,0,0,1,0,1,0,0,1,0,0,0
+222,history/states/222-State_222.txt,"Marquette, MI",SPM,1.11,town,25556,True,False,False,,,,,0,6,3,0,0,0,0,0,0,0,0,0,0,0
+223,history/states/223-State_223.txt,"Great North Woods, NH",VER,0.72,town,48000,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+224,history/states/224-State_224.txt,"Cascade, ID",BAR,0.82,pastoral,1320,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+225,history/states/225-State_225.txt,"ile Jesus, QC",CAN,1.4,metropolis,720000,True,False,False,,,,,9,20,4,3,0,2,2,2,2,1,0,1,1,0
+226,history/states/226-State_226.txt,"ile de Montreal, QC",CAN,1.4,metropolis,1247440,True,False,False,,,,,12,20,4,3,0,3,2,3,2,2,0,1,1,0
+227,history/states/227-State_227.txt,"Montgomery, Al",ALF,0.78,city,241881,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+228,history/states/228-State_228.txt,"Saint Cloud, MN",SMN,0.98,large_town,72495,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+229,history/states/229-State_229.txt,"ile Bizardl, QC",CAN,1.4,town,48000,True,False,False,,,,,2,6,4,3,0,1,0,1,0,0,0,0,0,0
+230,history/states/230-State_230.txt,"ile Perrot, QC",CAN,1.4,town,40800,True,False,False,,,,,2,6,4,3,0,1,0,1,0,0,0,0,0,0
+231,history/states/231-State_231.txt,"Northeast Kingdom, VT",VER,0.72,town,30000,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+232,history/states/232-State_232.txt,"Portland Casco Bay, ME",MAR,0.63,large_town,77098,True,True,False,,,,,3,8,2,0,0,1,0,1,0,0,1,0,0,0
+233,history/states/233-State_233.txt,"Cadillac, MI",WOL,0.75,rural,13197,False,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+234,history/states/234-State_234.txt,"Jamestown, ND",SDA,0.77,rural,18512,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+235,history/states/235-State_235.txt,"Clarke, AL",ALF,0.78,town,33513,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+236,history/states/236-State_236.txt,"Franklin, VT",VER,0.72,town,57295,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+237,history/states/237-State_237.txt,"Butler, AL",ALF,0.78,town,25136,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+238,history/states/238-State_238.txt,"Alger, MI",SPM,1.11,rural,12000,True,True,False,,,,,1,3,1,0,0,0,0,0,0,0,1,0,0,0
+239,history/states/239-State_239.txt,"Dillon, MT",BAR,0.82,pastoral,4555,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+240,history/states/240-State_240.txt,"Sugar Island, MI",SPM,1.11,tiny_island,600,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+241,history/states/241-State_241.txt,"Superior, WI",SWI,0.75,town,32712,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+242,history/states/242-State_242.txt,"St. Lawrence, NY",WTB,0.75,city,134317,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+243,history/states/243-State_243.txt,"Salmon, ID",BAR,0.82,pastoral,3746,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+244,history/states/244-State_244.txt,"White Mountains, NH",SNH,0.76,rural,10000,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+245,history/states/245-State_245.txt,"Manhattan, NYC",NYC,1.25,megalopolis,1537195,True,False,False,,,,,12,22,4,3,0,3,2,3,2,2,0,1,1,0
+246,history/states/246-State_246.txt,"St. Joseph Island, ON",CAN,1.4,small_island,4302,True,False,False,,,,,0,2,4,1,0,0,0,0,0,0,0,0,0,0
+247,history/states/247-State_247.txt,"Athens, OH",SOH,1.04,town,25610,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+248,history/states/248-State_248.txt,"Grand Isle, VT",VER,0.72,rural,8400,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+249,history/states/249-State_249.txt,"Powder River, MT",WAR,0.83,rural,6000,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+250,history/states/250-State_250.txt,"Addison, VT",VER,0.72,town,21156,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+251,history/states/251-State_251.txt,"Hayward, WI",SWI,0.75,rural,19200,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+252,history/states/252-State_252.txt,"Manitoulin Island, ON",CAN,1.4,small_island,15343,True,False,False,,,,,0,2,4,1,0,0,0,0,0,0,0,0,0,0
+253,history/states/253-State_253.txt,"Rutland, VT",VER,0.72,town,20750,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+254,history/states/254-State_254.txt,"Drummond Island, MI",SPM,1.11,small_island,1200,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+255,history/states/255-State_255.txt,"Cabell, WV",REO,0.94,large_town,116140,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+256,history/states/256-State_256.txt,"Hardin, MT",WAR,0.83,pastoral,1032,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+257,history/states/257-State_257.txt,"Cockburn Island, ON",CAN,1.4,wasteland,0,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+258,history/states/258-State_258.txt,"East Bozeman, MT",WAR,0.83,town,30000,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+259,history/states/259-State_259.txt,"Madison, MT",MMS,0.8,pastoral,2400,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+260,history/states/260-State_260.txt,"Merrimack, NH",SNH,0.76,city,138952,True,False,False,,,,Seabrook Station,3,13,0,0,1,1,0,1,1,0,0,0,0,0
+261,history/states/261-State_261.txt,"Sarasota, FL",ALB,0.92,large_city,391148,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+262,history/states/262-State_262.txt,"Ontario, OR",BAR,0.82,rural,12438,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+263,history/states/263-State_263.txt,"Mackinac Island, MI",SPM,1.11,tiny_island,600,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+264,history/states/264-State_264.txt,"Toledo, OH",SOH,1.04,large_city,376342,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+265,history/states/265-State_265.txt,"Stevens Point, WI",EFG,1.3,town,29461,True,False,False,,,,,0,6,2,0,0,0,0,0,0,0,0,0,0,0
+266,history/states/266-State_266.txt,"Dayton, OH",SOH,1.04,city,199414,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+267,history/states/267-State_267.txt,"Mackinac City, MI",SPM,1.11,pastoral,1440,True,True,False,,,,,1,2,0,0,0,0,0,0,0,0,1,0,0,0
+268,history/states/268-State_268.txt,"Grafton, NH",SNH,0.76,rural,15879,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+269,history/states/269-State_269.txt,"Clearwater, MN",SMN,0.98,pastoral,3000,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+270,history/states/270-State_270.txt,"Beaver Island, MI",SPM,1.11,tiny_island,720,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+271,history/states/271-State_271.txt,"Harding, SD",WAR,0.83,pastoral,1623,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+272,history/states/272-State_272.txt,"Iosco, MI",WOL,0.75,rural,14400,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+273,history/states/273-State_273.txt,"Hamilton, NY",ALB,0.92,rural,5126,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+274,history/states/274-State_274.txt,"Strafford, NH",BRA,1.04,city,137076,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+275,history/states/275-State_275.txt,"Mobridge, SD",WAR,0.83,pastoral,4364,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+276,history/states/276-State_276.txt,"Aberdeen, SD",SSD,0.77,town,29589,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+277,history/states/277-State_277.txt,"Concord, NH",SNH,0.76,town,48824,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+278,history/states/278-State_278.txt,"Medford, OR",SOR,0.86,large_town,75958,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+279,history/states/279-State_279.txt,"Watertown, SD",SSD,0.77,town,25778,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+280,history/states/280-State_280.txt,"Lewis, NY",WTB,0.75,town,30000,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+281,history/states/281-State_281.txt,"Old Faithful, WY",BAR,0.82,pastoral,1200,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+282,history/states/282-State_282.txt,"Troy, NY",ALB,0.92,large_town,60000,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+283,history/states/283-State_283.txt,"Casper, WY",WAR,0.83,town,59572,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+284,history/states/284-State_284.txt,"Philadelphia, PA",PHI,1.15,megalopolis,1821060,True,True,False,,,,Limerick Generating Station,14,23,4,0,1,3,2,3,2,2,2,2,1,0
+285,history/states/285-State_285.txt,"Schenectady, NY",ALB,0.92,large_town,78679,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+286,history/states/286-State_286.txt,"Richland, OH",SOH,1.04,city,154622,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+287,history/states/287-State_287.txt,"Roberts, ID",BAR,0.82,enclave,718,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+288,history/states/288-State_288.txt,"Boise, ID",BAR,0.82,city,222944,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+289,history/states/289-State_289.txt,"Baileys Harbor, WI",EFG,1.3,pastoral,1200,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+290,history/states/290-State_290.txt,"Grand Traverse, MI",WOL,0.75,large_town,96000,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+291,history/states/291-State_291.txt,"Oswego, NY",SYR,0.68,city,147092,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+292,history/states/292-State_292.txt,"Hillsborough, NH",BRA,1.04,town,53584,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+293,history/states/293-State_293.txt,"Windham, VT",MCA,0.8,town,51787,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+294,history/states/294-State_294.txt,"Nampa, ID",BAR,0.82,large_town,62240,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+295,history/states/295-State_295.txt,"Jackson, WY",WAR,0.83,rural,10376,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+296,history/states/296-State_296.txt,"Crescent City, CA",SCA,1.3,pastoral,4807,True,False,False,,,,,0,2,4,0,0,0,0,0,0,0,0,0,0,0
+297,history/states/297-State_297.txt,"Jerome, ID",BAR,0.82,rural,9336,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+298,history/states/298-State_298.txt,"Marshall, MN",SMN,0.98,rural,16416,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+299,history/states/299-State_299.txt,"Suffolk, MA",BRA,1.04,metropolis,826846,True,False,False,,,,,9,20,4,0,0,2,2,2,2,1,0,1,1,0
+300,history/states/300-State_300.txt,"Worchester, MA",NGM,0.81,city,204000,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+301,history/states/301-State_301.txt,"Wayne, NY",ROC,1.02,large_town,112526,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+302,history/states/302-State_302.txt,"Berkshire, MA",MCA,0.8,city,167222,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+303,history/states/303-State_303.txt,"Mojave, CA",SCA,1.3,rural,7779,True,False,False,,,,,0,3,4,1,0,0,0,0,0,0,0,0,0,0
+304,history/states/304-State_304.txt,"Saint Paul, MN",SMN,0.98,large_city,326682,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+305,history/states/305-State_305.txt,"Chenango, NY",ITH,0.92,town,57994,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+306,history/states/306-State_306.txt,"Delaware, NY",ALB,0.92,town,51684,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+307,history/states/307-State_307.txt,"Plymouth, MA",NGM,0.81,large_town,62041,True,True,False,,,,,3,8,1,0,0,1,0,1,0,0,1,0,0,0
+308,history/states/308-State_308.txt,"Onondaga, NY",ITH,0.92,large_city,518400,True,False,False,,,,,7,16,3,0,0,2,1,2,1,1,0,1,0,0
+309,history/states/309-State_309.txt,"Trippe, SD",DMA,1.02,enclave,600,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+310,history/states/310-State_310.txt,"Pocatello, ID",WAR,0.83,large_town,61759,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+311,history/states/311-State_311.txt,"Murray, MN",SMN,0.98,rural,9600,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+312,history/states/312-State_312.txt,"Huron, MI",WOL,0.75,town,24000,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+313,history/states/313-State_313.txt,"Monroe, NY",ROC,1.02,metropolis,882411,True,False,False,,,,,9,20,3,1,0,2,2,2,2,1,0,1,1,0
+314,history/states/314-State_314.txt,"Genesse, NY",ROC,1.02,large_town,72444,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+315,history/states/315-State_315.txt,"Barnstable, MA",NGM,0.81,town,57385,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+316,history/states/316-State_316.txt,"Columbia, NY",ALB,0.92,large_town,75715,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+317,history/states/317-State_317.txt,"Mason, MI",WOL,0.75,rural,16800,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+318,history/states/318-State_318.txt,"Saginaw, MI",WOL,0.75,large_town,74158,True,True,False,,,,,3,8,1,0,0,1,0,1,0,0,1,0,0,0
+319,history/states/319-State_319.txt,"Providence, RI",SRI,0.78,city,208341,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
+320,history/states/320-State_320.txt,"Albany, NY",ALB,0.92,large_town,114789,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+321,history/states/321-State_321.txt,"New London, CT",SRI,0.78,town,31034,True,False,False,,,,Millstone Nuclear Power Plant,0,7,0,0,1,0,0,0,0,0,0,0,0,0
+322,history/states/322-State_322.txt,"Mankato, MN",SMN,0.98,town,38912,True,False,False,,,,,1,6,1,0,0,0,0,1,0,0,0,0,0,0
+323,history/states/323-State_323.txt,"Ithaca, NY",ITH,0.92,town,35144,True,False,False,,,,,1,6,1,0,0,0,0,1,0,0,0,0,0,0
+324,history/states/324-State_324.txt,"Lovelock, NV",SCA,1.3,pastoral,2588,False,False,False,,,,,0,2,3,0,0,0,0,0,0,0,0,0,0,0
+325,history/states/325-State_325.txt,"Cattaraugus, NY",ROC,1.02,large_town,96547,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+326,history/states/326-State_326.txt,"Buffalo, NY",ROC,1.02,large_city,351177,True,True,False,,Robert Moses Niagara Power Plant,3729,,8,16,3,0,0,2,1,2,1,1,1,0,0,0
+327,history/states/327-State_327.txt,"Windham, NY",ALB,0.92,pastoral,2640,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+328,history/states/328-State_328.txt,"Hartford, CT",MCA,0.8,city,145893,True,True,False,,,,,4,12,2,0,0,1,0,1,1,0,1,0,0,0
+329,history/states/329-State_329.txt,"Benton Harbor, MI",EFG,1.3,rural,15381,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
+330,history/states/330-State_330.txt,Grand Island,CAN,1.4,town,41000,True,False,False,,,,,2,6,4,3,0,1,0,1,0,0,0,0,0,0
+331,history/states/331-State_331.txt,"Mojave, NV",GBR,0.6,enclave,960,False,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+332,history/states/332-State_332.txt,"Detroit, MI",DET,1.23,metropolis,1141524,True,True,False,,,,,12,20,4,3,0,2,2,2,2,2,2,1,1,0
+333,history/states/333-State_333.txt,"Hamburg, NY",ERE,0.82,large_town,72000,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+334,history/states/334-State_334.txt,"Alpena, MI",WOL,0.75,town,37576,True,False,False,,,,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
+335,history/states/335-State_335.txt,"Steuben, NY",ITH,0.92,large_town,118471,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+336,history/states/336-State_336.txt,"Oakland, MI",DET,1.23,metropolis,1440000,False,False,False,,,,,12,20,4,3,0,3,2,3,2,2,0,1,1,0
+337,history/states/337-State_337.txt,"Dutchess, NY",HUD,0.94,large_city,336180,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+338,history/states/338-State_338.txt,"Orange, NY",HUD,0.94,large_city,409640,True,False,False,,,,Indian Point Energy Center,7,17,2,0,1,2,1,2,1,1,0,0,0,0
+339,history/states/339-State_339.txt,"St. Clair, MI",DET,1.23,city,204000,True,False,False,,,,,5,12,4,3,0,1,1,1,1,1,0,0,0,0
+340,history/states/340-State_340.txt,"Douglas, WY",DMA,1.02,rural,6345,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+341,history/states/341-State_341.txt,"Chautauqua, NY",ERE,0.82,city,167700,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+342,history/states/342-State_342.txt,"Lackawanna, PA",PHI,1.15,city,252861,True,False,False,,,,,6,12,2,0,0,2,1,1,1,1,0,0,0,0
+343,history/states/343-State_343.txt,"Fairfield, CT",HUD,0.94,large_town,68808,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
+344,history/states/344-State_344.txt,"West Wendover, NV",GBR,0.6,pastoral,3128,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+345,history/states/345-State_345.txt,"Allegheny, PA",RWP,1.09,megalopolis,1537999,True,False,False,,,,,12,22,3,1,0,3,2,3,2,2,0,1,1,0
+346,history/states/346-State_346.txt,"Bradford, PA",CPN,0.66,large_town,75313,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+347,history/states/347-State_347.txt,"Davenport, IA",SIA,0.92,large_town,118030,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+348,history/states/348-State_348.txt,"Detroit Metro, MI",DET,1.23,megalopolis,5280000,True,False,False,,,,,15,22,4,3,0,3,3,3,3,3,0,3,2,0
+349,history/states/349-State_349.txt,"Mason City, IA",SIA,0.92,town,33783,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+350,history/states/350-State_350.txt,"Council Bluffs, IA",SIA,0.92,large_town,69921,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+351,history/states/351-State_351.txt,"Kent, MI",EFG,1.3,metropolis,690000,True,False,False,,,,,8,20,4,3,0,2,1,2,2,1,0,1,0,0
+352,history/states/352-State_352.txt,"Delta, UT",GBR,0.6,pastoral,4010,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+353,history/states/353-State_353.txt,"Erie, PA",ERE,0.82,large_town,124460,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
+354,history/states/354-State_354.txt,"Long Island, NY",LIS,1.24,megalopolis,9000000,True,False,False,,,,,15,22,4,3,0,3,3,3,3,3,0,4,3,0
+355,history/states/355-State_355.txt,"Cheyenne, WY",DMA,1.02,large_town,98241,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+356,history/states/356-State_356.txt,"McKean, PA",CPN,0.66,town,52800,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+357,history/states/357-State_357.txt,"Sussex, NJ",PHI,1.15,city,173820,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+358,history/states/358-State_358.txt,"Cherry, NE",DMA,1.02,rural,6855,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+359,history/states/359-State_359.txt,"Lehigh, PA",PHI,1.15,large_city,374508,True,False,False,,,,,7,16,3,0,0,2,1,2,1,1,0,0,0,0
+360,history/states/360-State_360.txt,"South Bairoil, WY",DMA,1.02,enclave,240,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+361,history/states/361-State_361.txt,"Sandusky, OH",SOH,1.04,town,33412,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+362,history/states/362-State_362.txt,"Evanston, WY",WAR,0.83,rural,14830,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+363,history/states/363-State_363.txt,"Northumberland, PA",PHI,1.15,large_town,111600,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+364,history/states/364-State_364.txt,"Rock Springs, WY",WAR,0.83,town,22860,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+365,history/states/365-State_365.txt,"Lawrence, PA",RWP,1.09,large_town,115495,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+366,history/states/366-State_366.txt,"Chicago Metro, IL",EFG,1.3,megalopolis,11415598,True,True,False,,,,Braidwood Nuclear Generating Station,19,23,4,3,1,3,3,3,3,3,4,4,3,0
+367,history/states/367-State_367.txt,"Middlesex, NJ",PHI,1.15,metropolis,900194,True,False,False,,,,,9,20,3,0,0,2,2,2,2,1,0,1,1,0
+368,history/states/368-State_368.txt,"Superior, WY",WAR,0.83,pastoral,1200,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+369,history/states/369-State_369.txt,"Rockford, IL",EFG,1.3,city,180138,True,False,False,,,,Byron Nuclear Generating Station,4,13,4,1,1,1,1,1,1,0,0,0,0,0
+370,history/states/370-State_370.txt,"Carson City, NV",SCA,1.3,large_town,62948,False,False,False,,,,,2,8,4,3,0,1,0,1,0,0,0,0,0,0
+371,history/states/371-State_371.txt,"Centre, PA",RWP,1.09,city,162909,True,False,False,,,,,4,12,3,0,0,1,1,1,1,0,0,0,0,0
+372,history/states/372-State_372.txt,"East Superior, WY",DMA,1.02,pastoral,4200,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+373,history/states/373-State_373.txt,"Wamsutter, WY",DMA,1.02,enclave,240,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+374,history/states/374-State_374.txt,"Monmouth, NJ",NJM,0.95,metropolis,738361,True,False,False,,,,,9,20,3,1,0,2,2,2,2,1,0,1,1,0
+375,history/states/375-State_375.txt,"Rawlins, WY",DMA,1.02,rural,10440,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+376,history/states/376-State_376.txt,"Bucks, PA",PHI,1.15,metropolis,717162,True,False,False,,,,,9,20,3,0,0,2,2,2,2,1,0,1,1,0
+377,history/states/377-State_377.txt,"Chicago, IL",EFG,1.3,megalopolis,3475219,True,True,False,,,,,17,22,4,3,0,3,3,3,3,2,3,2,2,0
+378,history/states/378-State_378.txt,"Lancester, PA",PHI,1.15,large_town,66000,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+379,history/states/379-State_379.txt,"Williams, OH",EFG,1.3,town,44347,True,False,False,,,,,2,6,2,0,0,1,0,1,0,0,0,0,0,0
+380,history/states/380-State_380.txt,"Adobie Town Rim, WY",DMA,1.02,enclave,180,False,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+381,history/states/381-State_381.txt,"Greenville, MS",AMA,0.9,town,49959,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+382,history/states/382-State_382.txt,"Fort Wayne, IN",EFG,1.3,city,246872,True,False,False,,,,,5,12,4,1,0,1,1,1,1,1,0,0,0,0
+383,history/states/383-State_383.txt,"Columbus, OH",SOH,1.04,metropolis,853764,True,False,False,,,,,9,20,3,0,0,2,2,2,2,1,0,1,1,0
+384,history/states/384-State_384.txt,"Ogallala, NE",DMA,1.02,rural,5671,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+385,history/states/385-State_385.txt,"Gary, IN",EFG,1.3,large_town,123295,True,True,False,,,,,4,8,4,0,0,1,0,1,1,0,1,0,0,0
+386,history/states/386-State_386.txt,"Wheeling, OH",REO,0.94,town,31200,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+387,history/states/387-State_387.txt,"Blair, PA",RWP,1.09,city,154972,True,False,False,,,,,4,12,3,0,0,1,1,1,1,0,0,0,0,0
+388,history/states/388-State_388.txt,"York, PA",PHI,1.15,large_city,458101,True,False,False,,,,Peach Bottom Atomic Power Station,7,17,3,0,1,2,1,2,1,1,0,1,0,0
+389,history/states/389-State_389.txt,"Camden, NJ",NJM,0.95,large_town,95181,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+390,history/states/390-State_390.txt,"Adams, IL",NGI,0.81,large_town,81932,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
+391,history/states/391-State_391.txt,"Westmoreland, PA",RWP,1.09,large_city,443991,True,False,False,,,,,7,16,4,0,0,2,1,2,1,1,0,0,0,0
+392,history/states/392-State_392.txt,"Jasper, IN",EFG,1.3,town,34322,True,False,False,,,,,0,6,2,0,0,0,0,0,0,0,0,0,0,0
+393,history/states/393-State_393.txt,"Washington, PA",RWP,1.09,large_town,66000,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+394,history/states/394-State_394.txt,"Grand Junction, CO",DMA,1.02,town,50383,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+395,history/states/395-State_395.txt,"Newcastle, DE",PHI,1.15,large_city,530335,True,True,False,,,,,8,16,3,0,0,2,1,2,1,1,1,1,0,0
+396,history/states/396-State_396.txt,"Mount Vernon, IL",NGI,0.81,rural,9120,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+397,history/states/397-State_397.txt,"Steamboat Springs, CO",DMA,1.02,rural,7560,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+398,history/states/398-State_398.txt,"Saint Anne, IL",EFG,1.3,rural,6600,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
+399,history/states/399-State_399.txt,"Walden, CO",DMA,1.02,enclave,750,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+400,history/states/400-State_400.txt,"Lincoln, NE",OMA,1.0,city,270697,True,False,False,,,,,6,12,2,0,0,2,1,1,1,1,0,0,0,0
+401,history/states/401-State_401.txt,"Kit Carson, CO",DMA,1.02,rural,9613,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+402,history/states/402-State_402.txt,"Aberdeen, MD",PHI,1.15,rural,19200,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+403,history/states/403-State_403.txt,"Harford, MD",PHI,1.15,city,262308,True,False,False,,Conowingo Dam,3334,,6,12,2,0,0,2,1,1,1,1,0,0,0,0
+404,history/states/404-State_404.txt,"Baltimore, MD",BAL,0.98,metropolis,781384,True,True,False,,,,Calvert Cliffs Nuclear Power Plant,11,21,3,0,1,2,2,2,2,1,2,1,1,0
+405,history/states/405-State_405.txt,"Bartholomew, IN",IMA,1.01,large_town,86361,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+406,history/states/406-State_406.txt,"Carroll, MD",PHI,1.15,city,181076,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+407,history/states/407-State_407.txt,"Clinton, OH",SOH,1.04,rural,5103,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+408,history/states/408-State_408.txt,"Randell, UT",DMA,1.02,wasteland,0,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+409,history/states/409-State_409.txt,"North Platte, NE",DMA,1.02,town,28053,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+410,history/states/410-State_410.txt,"Kent, DE",BAL,0.98,city,133191,True,False,False,,,,,3,12,1,0,0,1,0,1,1,0,0,0,0,0
+411,history/states/411-State_411.txt,"Queen Anne's, MD",BAL,0.98,town,57049,True,True,False,,,,,3,6,0,0,0,1,0,1,0,0,1,0,0,0
+412,history/states/412-State_412.txt,"Frederick, MD",BAL,0.98,city,234332,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
+413,history/states/413-State_413.txt,"Adams, NE",DMA,1.02,town,37636,True,False,False,,,,,1,6,1,0,0,0,0,1,0,0,0,0,0,0
+414,history/states/414-State_414.txt,"Alleghany, MD",RWV,0.84,town,28827,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+415,history/states/415-State_415.txt,"Berkeley, WV",SVR,1.13,large_town,91086,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+416,history/states/416-State_416.txt,"Morgantown, WV",RWV,0.84,town,34462,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+417,history/states/417-State_417.txt,"Mineral, WV",SVR,1.13,town,32493,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+418,history/states/418-State_418.txt,"Montgomery, MD",SVR,1.13,metropolis,1048009,True,False,False,,,,,10,20,4,0,0,2,2,2,2,2,0,1,1,0
+419,history/states/419-State_419.txt,"Bishop, CA",GBR,0.6,pastoral,4288,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+420,history/states/420-State_420.txt,"Sussex, DE",BAL,0.98,city,236574,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
+421,history/states/421-State_421.txt,"Monogalia, WV",RWV,0.84,large_town,98239,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+422,history/states/422-State_422.txt,"Breckenridge, CO",DMA,1.02,pastoral,1777,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+423,history/states/423-State_423.txt,"Frederick, VA",SVR,1.13,large_town,80472,False,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+424,history/states/424-State_424.txt,"Fairfax, VA",SVR,1.13,metropolis,1163698,True,False,False,,,,,10,20,4,0,0,2,2,2,2,2,0,1,1,0
+425,history/states/425-State_425.txt,"Prince George's, MD",SVR,1.13,metropolis,1036093,True,True,False,,,,,12,20,3,1,0,2,2,2,2,2,2,1,1,0
+426,history/states/426-State_426.txt,"Bowling Green, MO",USM,0.96,rural,7003,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+427,history/states/427-State_427.txt,"Bloomington, IL",NGI,0.81,large_town,77212,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+428,history/states/428-State_428.txt,"Aspen, CO",DMA,1.02,pastoral,4789,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+429,history/states/429-State_429.txt,"Wood, WV",RWV,0.84,large_town,105583,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+430,history/states/430-State_430.txt,"Furnass, NE",DMA,1.02,pastoral,3994,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+431,history/states/431-State_431.txt,"Wicomico, MD",BAL,0.98,large_town,101572,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+432,history/states/432-State_432.txt,"Cincinnati, OH",SOH,1.04,large_city,397542,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+433,history/states/433-State_433.txt,"Dove Creek, CO",DMA,1.02,enclave,759,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+434,history/states/434-State_434.txt,"Ellis, KS",DMA,1.02,town,33008,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+435,history/states/435-State_435.txt,"Albemarle, VA",SVR,1.13,large_town,95083,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+436,history/states/436-State_436.txt,"Topeka, KS",OMA,1.0,city,143859,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+437,history/states/437-State_437.txt,"King George's, VA",SVR,1.13,town,20163,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+438,history/states/438-State_438.txt,"Greenbrier, WV",RWV,0.84,town,41631,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+439,history/states/439-State_439.txt,"Accomack, VA",SVR,1.13,town,45966,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+440,history/states/440-State_440.txt,"Spotslyvania, VA",SVR,1.13,large_town,115200,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+441,history/states/441-State_441.txt,"Pueblo, CO",DMA,1.02,large_town,122545,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+442,history/states/442-State_442.txt,"Moab, UT",DMA,1.02,rural,6399,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+443,history/states/443-State_443.txt,"Lynchburg, VA",SVR,1.13,large_town,78322,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+444,history/states/444-State_444.txt,"Emporia, KS",OMA,1.0,town,32112,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+445,history/states/445-State_445.txt,"Springfield, IL",USM,0.96,city,133744,True,True,False,,,,,4,12,2,0,0,1,0,1,1,0,1,0,0,0
+446,history/states/446-State_446.txt,"Madison, KY",TMA,1.11,large_town,85046,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+447,history/states/447-State_447.txt,"Cabell, WV",SWV,0.75,large_town,116140,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+448,history/states/448-State_448.txt,"Mesquite, NV",SUT,0.84,pastoral,2247,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+449,history/states/449-State_449.txt,"Kanawha, WV",RWV,0.84,city,240087,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+450,history/states/450-State_450.txt,"Richmond, VA",SVR,1.13,city,237348,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+451,history/states/451-State_451.txt,"Jefferson, MO",USM,0.96,city,240000,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+452,history/states/452-State_452.txt,"Raleight, WV",SWV,0.75,large_town,95064,True,False,False,,,,,3,8,2,0,0,1,0,1,1,0,0,0,0,0
+453,history/states/453-State_453.txt,"Lawrence, KS",OMA,1.0,large_town,96117,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+454,history/states/454-State_454.txt,"Danville, VA",SVR,1.13,town,58093,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+455,history/states/455-State_455.txt,"Floyd, IN",TMA,1.11,large_town,89498,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+456,history/states/456-State_456.txt,"Prince George, VA",SVR,1.13,town,42152,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+457,history/states/457-State_457.txt,"Gasconade, MO",USM,0.96,rural,18410,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+458,history/states/458-State_458.txt,"Las Vegas, NV",MNV,0.9,large_city,574120,True,False,False,,Hoover Dam|Davis Dam,427,,7,16,4,0,0,2,1,2,1,1,0,1,0,0
+459,history/states/459-State_459.txt,"Hampton Roads, VA",NOR,1.07,megalopolis,1920000,True,True,False,,,,,14,22,4,3,0,3,2,3,2,2,2,2,1,0
+460,history/states/460-State_460.txt,"Trinidad, CO",LMA,0.84,rural,11400,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+461,history/states/461-State_461.txt,"Belleville, IL",USM,0.96,town,50569,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+462,history/states/462-State_462.txt,"Kaibab, AZ",SUT,0.84,rural,13258,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+463,history/states/463-State_463.txt,"Roanoake, VA",SVR,1.13,large_town,115200,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+464,history/states/464-State_464.txt,"Washington, VA",TMA,1.11,large_town,66000,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+465,history/states/465-State_465.txt,"Wichita, KS",OKC,0.95,large_city,413140,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+466,history/states/466-State_466.txt,"Wise, VA",TMA,1.11,town,50840,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+467,history/states/467-State_467.txt,"Elizabeth City, NC",NOR,1.07,town,20400,True,False,False,,,,,0,6,3,0,0,0,0,0,0,0,0,0,0,0
+468,history/states/468-State_468.txt,"Mexican Hat, UT",NAV,0.75,enclave,62,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+469,history/states/469-State_469.txt,"Liberal, KS",LMA,0.84,town,23599,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+470,history/states/470-State_470.txt,"Navajo Nation, AZ",NAV,0.75,city,208800,True,False,False,,,,,5,12,3,0,0,1,1,1,1,1,0,0,0,0
+471,history/states/471-State_471.txt,"Denver, CO",DMA,1.02,metropolis,665563,True,False,False,,,,,8,20,3,0,0,2,1,2,2,1,0,1,0,0
+472,history/states/472-State_472.txt,"Nash, NC",CHA,1.09,large_town,115134,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+473,history/states/473-State_473.txt,"Wake, NC",CHA,1.09,metropolis,752400,True,False,False,,,,,9,20,3,0,0,2,2,2,2,1,0,1,1,0
+474,history/states/474-State_474.txt,"Beaufort, NC",CHA,1.09,town,53898,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+475,history/states/475-State_475.txt,"Wayne, KY",TMA,1.11,town,24000,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+476,history/states/476-State_476.txt,"Mount Airy, NC",CHA,1.09,rural,9924,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+477,history/states/477-State_477.txt,"Farmington, NM",DMA,1.02,town,45412,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+478,history/states/478-State_478.txt,"Cibola, NM",MNM,0.89,town,32655,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+479,history/states/479-State_479.txt,"Pitt, NC",CHA,1.09,city,160557,False,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
+480,history/states/480-State_480.txt,"Johnson City, TN",TMA,1.11,large_town,66562,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
+481,history/states/481-State_481.txt,"Guilford, NC",CHA,1.09,large_city,505257,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,1,0,0
+482,history/states/482-State_482.txt,"McCracken, KY",TMA,1.11,town,39769,True,False,False,,Kentucky Dam,278,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
+483,history/states/483-State_483.txt,"Owens Island, KY",TMA,1.11,tiny_island,120,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+484,history/states/484-State_484.txt,"Albuquerque, NM",MNM,0.89,large_city,538328,True,False,False,,,,,7,16,3,0,0,2,1,2,1,1,0,1,0,0
+485,history/states/485-State_485.txt,"Knoxville, TN",TMA,1.11,city,208668,True,False,False,,Norris Dam,1686,Watts Bar Nuclear Plant,5,13,1,0,1,1,1,1,1,1,0,0,0,0
+486,history/states/486-State_486.txt,"Tucumcari, NM",LMA,0.84,rural,8160,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+487,history/states/487-State_487.txt,"Mecklenberg, NC",CHA,1.09,metropolis,834544,True,False,False,,,,Catawba Nuclear Station|McGuire Nuclear Station,9,22,2,0,2,2,2,2,2,1,0,1,1,0
+488,history/states/488-State_488.txt,"Clayton, NM",LMA,0.84,pastoral,3810,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+489,history/states/489-State_489.txt,"Gaston, NC",CHA,1.09,city,228438,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
+490,history/states/490-State_490.txt,"Oklahoma Panhandle, OK",LMA,0.84,large_town,64800,False,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+491,history/states/491-State_491.txt,"Onslow, NC",CHA,1.09,city,180000,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
+492,history/states/492-State_492.txt,"Clarksville, TN",TMA,1.11,large_town,124008,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+493,history/states/493-State_493.txt,"Enid, OK",OKC,0.95,town,55248,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+494,history/states/494-State_494.txt,"Buncombe, NC",CHA,1.09,city,247628,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
+495,history/states/495-State_495.txt,"Tulsa, OK",OMA,1.0,large_city,471658,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,1,0,0
+496,history/states/496-State_496.txt,"Dickson, TN",TMA,1.11,town,51787,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+497,history/states/497-State_497.txt,"Cumberland, NC",CHA,1.09,large_city,363555,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+498,history/states/498-State_498.txt,"Phoenix, AZ",SAZ,1.05,megalopolis,1585254,True,False,False,,,,Palo Verde Nuclear Generating Station,12,24,3,1,2,3,2,3,2,2,0,1,1,0
+499,history/states/499-State_499.txt,"Coffee, TN",TMA,1.11,town,57616,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+500,history/states/500-State_500.txt,"Flagstaff, AZ",SAZ,1.05,large_town,78134,False,False,False,,Glen Canyon Dam,969,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+501,history/states/501-State_501.txt,"Northern Channel Islands, CA",SCA,1.3,small_island,2400,True,False,False,,,,,0,2,3,0,0,0,0,0,0,0,0,0,0,0
+502,history/states/502-State_502.txt,"Memphis, TN",TMA,1.11,metropolis,780120,True,True,False,,,,,11,20,2,0,0,2,2,2,2,1,2,1,1,0
+503,history/states/503-State_503.txt,"Nashville, TN",TMA,1.11,metropolis,683869,True,False,False,,,,,8,20,2,0,0,2,1,2,2,1,0,1,0,0
+504,history/states/504-State_504.txt,"Chattanooga, TN",TMA,1.11,city,186664,True,False,False,,,,Sequoyah Nuclear Plant,4,13,1,0,1,1,1,1,1,0,0,0,0,0
+505,history/states/505-State_505.txt,"Tiptonville, KY",TMA,1.11,rural,6000,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+506,history/states/506-State_506.txt,"New Hanover, NC",CHA,1.09,city,192368,True,True,False,,,,,5,12,1,0,0,1,1,1,1,0,1,0,0,0
+507,history/states/507-State_507.txt,"Dumas, TX",LMA,0.84,rural,17074,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+508,history/states/508-State_508.txt,"Jonesboro, AR",AMA,0.9,large_town,66618,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+509,history/states/509-State_509.txt,"Randolph, AR",AMA,0.9,rural,9600,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+510,history/states/510-State_510.txt,"Santa Fe, NM",AMO,0.89,large_town,74643,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+511,history/states/511-State_511.txt,"Stillwater, OK",OKC,0.95,town,46878,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+512,history/states/512-State_512.txt,"Searcy, AR",AMA,0.9,town,21960,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+513,history/states/513-State_513.txt,"Haywood, NC",TMA,1.11,large_town,64839,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+514,history/states/514-State_514.txt,"Whiteville, NC",CHA,1.09,rural,6240,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+515,history/states/515-State_515.txt,"Saluda, NC",SSC,0.88,enclave,840,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+516,history/states/516-State_516.txt,"Maury, TN",TMA,1.11,large_town,74349,True,False,False,,,,,2,8,0,0,0,1,0,1,0,0,0,0,0,0
+517,history/states/517-State_517.txt,"York, SC",CHA,1.09,city,197536,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
+518,history/states/518-State_518.txt,"Greenville, SC",SSC,0.88,large_town,67202,True,False,False,,Hartwell Dam,1712,Oconee Nuclear Station,2,9,1,0,1,1,0,1,0,0,0,0,0,0
+519,history/states/519-State_519.txt,"Amarillo, TX",LMA,0.84,city,208352,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+520,history/states/520-State_520.txt,"Lawton, OK",LMA,0.84,large_town,111308,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+521,history/states/521-State_521.txt,"Myrtle Beach, SC",CHA,1.09,town,27310,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+522,history/states/522-State_522.txt,"Southern Channel Islands, CA",SCA,1.3,small_island,2400,True,False,False,,,,,0,2,4,0,0,0,0,0,0,0,0,0,0,0
+523,history/states/523-State_523.txt,"Prescott, AZ",SAZ,1.05,town,40725,True,False,False,,Parker Dam,115,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+524,history/states/524-State_524.txt,"Hall, GA",USG,1.09,city,167132,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
+525,history/states/525-State_525.txt,"Horry, SC",CHA,1.09,city,172863,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
+526,history/states/526-State_526.txt,"Whitfield, GA",USG,1.09,large_town,100230,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+527,history/states/527-State_527.txt,"Little River, AR",AMA,0.9,rural,16353,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+528,history/states/528-State_528.txt,"Morgan, AL",BIR,0.89,city,133200,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+529,history/states/529-State_529.txt,"Huntsville, AL",TMA,1.11,city,189859,True,False,False,,Wilson Dam,1156,Browns Ferry Nuclear Plant,4,14,1,0,2,1,1,1,1,0,0,0,0,0
+530,history/states/530-State_530.txt,"Sierra Vista, AZ",AMO,0.89,town,52665,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+531,history/states/531-State_531.txt,"McAlester, OK",OKC,0.95,town,21890,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+532,history/states/532-State_532.txt,"Ada, OK",OKC,0.95,rural,19209,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+533,history/states/533-State_533.txt,"Hattiesburg, MS",BIR,0.89,town,50258,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+534,history/states/534-State_534.txt,"Lowndes, MS",BIR,0.89,large_town,74065,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+535,history/states/535-State_535.txt,"Plainville, TX",STX,1.28,pastoral,2040,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
+536,history/states/536-State_536.txt,"Weldona, CO",DMA,1.02,enclave,240,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+537,history/states/537-State_537.txt,"North Metro Atlanta, GA",USG,1.09,metropolis,720000,True,False,False,,,,,9,20,3,0,0,2,2,2,2,1,0,1,1,0
+538,history/states/538-State_538.txt,"Richland, SC",SSC,0.88,large_city,322816,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,0,0,0
+539,history/states/539-State_539.txt,"Roswell, NM",AMO,0.89,town,54351,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+540,history/states/540-State_540.txt,"Clovis, NM",AMO,0.89,town,39200,True,False,False,,,,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
+541,history/states/541-State_541.txt,"South Metro Atlanta, GA",USG,1.09,metropolis,720000,True,False,False,,,,,9,20,3,0,0,2,2,2,2,1,0,1,1,0
+542,history/states/542-State_542.txt,"Yoakum, TX",AMF,1.03,rural,7800,False,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+543,history/states/543-State_543.txt,"Lubbock, TX",STX,1.28,city,239476,True,False,False,,,,,5,12,4,2,0,1,1,1,1,1,0,0,0,0
+544,history/states/544-State_544.txt,"Vernon, TX",STX,1.28,rural,14400,True,False,False,,,,,0,3,1,0,0,0,0,0,0,0,0,0,0,0
+545,history/states/545-State_545.txt,"Auburn, AL",BIR,0.89,town,51584,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+546,history/states/546-State_546.txt,"Atlanta, GA",USG,1.09,large_city,499768,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,1,0,0
+547,history/states/547-State_547.txt,"Charleston, SC",SSC,0.88,large_town,115980,True,False,False,,,,,3,8,0,0,0,1,0,1,1,0,0,0,0,0
+548,history/states/548-State_548.txt,"Pima, AZ",AMO,0.89,pastoral,1496,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+549,history/states/549-State_549.txt,Baja California,MEX,1.4,megalopolis,2839000,True,True,False,,,,,17,22,4,3,0,3,3,3,3,2,3,2,2,0
+550,history/states/550-State_550.txt,"Beaufort, SC",SSC,0.88,town,28144,True,True,False,,,,,1,6,0,0,0,0,0,0,0,0,1,0,0,0
+551,history/states/551-State_551.txt,"Columbia, GA",USG,1.09,city,188056,True,False,False,,,,Vogtle Electric Generating Plant,4,14,1,0,2,1,1,1,1,0,0,0,0,0
+552,history/states/552-State_552.txt,"Las Cruces, NM",AMO,0.89,large_town,89120,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+553,history/states/553-State_553.txt,Sonora,MEX,1.4,megalopolis,2168000,True,True,False,,,,,14,22,4,3,0,3,2,3,2,2,2,2,1,0
+554,history/states/554-State_554.txt,"Wichita Falls, TX",STX,1.28,large_town,122400,True,False,False,,,,,3,8,3,1,0,1,0,1,1,0,0,0,0,0
+555,history/states/555-State_555.txt,"Carlsbad, NM",AMO,0.89,town,30750,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+556,history/states/556-State_556.txt,"Watson, AR",AMA,0.9,pastoral,1200,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+557,history/states/557-State_557.txt,"Houston, GA",USG,1.09,large_town,115506,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+558,history/states/558-State_558.txt,"Texarkana, TX",STX,1.28,town,36000,True,False,False,,,,,1,6,4,0,0,0,0,1,0,0,0,0,0,0
+559,history/states/559-State_559.txt,"Chatham, GA",USG,1.09,city,276918,True,True,False,,,,,7,12,1,0,0,2,1,1,1,1,1,0,0,0
+560,history/states/560-State_560.txt,"San Angelo, TX",STX,1.28,large_town,98400,False,False,False,,,,,3,8,3,1,0,1,0,1,1,0,0,0,0,0
+561,history/states/561-State_561.txt,"Abilene, TX",STX,1.28,city,139116,True,False,False,,,,,3,12,4,2,0,1,0,1,1,0,0,0,0,0
+562,history/states/562-State_562.txt,"Duncan, AZ",AMO,0.89,rural,5139,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+563,history/states/563-State_563.txt,"Muscogee, GA",USG,1.09,city,223549,True,False,False,,,,,5,12,1,0,0,1,1,1,1,1,0,0,0,0
+564,history/states/564-State_564.txt,"Greater Dallas-Fort Worth Area, TX",STX,1.28,megalopolis,6299304,True,False,False,,,,Comanche Peak Nuclear Power Plant,15,23,4,3,1,3,3,3,3,3,0,3,2,0
+565,history/states/565-State_565.txt,"ile Dondaine, QC",CAN,1.4,small_island,12000,True,False,False,,,,,0,2,3,1,0,0,0,0,0,0,0,0,0,0
+566,history/states/566-State_566.txt,"Citronelle, AL",MEX,1.4,pastoral,4640,True,False,False,,,,,0,2,4,3,0,0,0,0,0,0,0,0,0,0
+567,history/states/567-State_567.txt,"Stephenville, TX",STX,1.28,town,20400,True,False,False,,,,,0,6,4,0,0,0,0,0,0,0,0,0,0,0
+568,history/states/568-State_568.txt,"Longview, TX",STX,1.28,large_town,96546,True,False,False,,,,,3,8,3,1,0,1,0,1,1,0,0,0,0,0
+569,history/states/569-State_569.txt,"Jackson, MS",NOM,1.01,city,221107,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+570,history/states/570-State_570.txt,"Dallas-Fort Worth, TX",STX,1.28,megalopolis,6120000,False,False,False,,,,,15,22,4,3,0,3,3,3,3,3,0,3,2,0
+571,history/states/571-State_571.txt,"Shreveport, LA",STX,1.28,city,240174,True,False,False,,,,,5,12,4,2,0,1,1,1,1,1,0,0,0,0
+572,history/states/572-State_572.txt,"Deming, NM",AMO,0.89,rural,16939,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+573,history/states/573-State_573.txt,"Lowndes, GA",USG,1.09,large_town,110538,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+574,history/states/574-State_574.txt,"Odessa, TX",AMF,1.03,large_town,109131,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+575,history/states/575-State_575.txt,"Navarro, TX",STX,1.28,town,56400,True,False,False,,,,,2,6,4,0,0,1,0,1,0,0,0,0,0,0
+576,history/states/576-State_576.txt,"Thomas, GA",USG,1.09,town,51284,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+577,history/states/577-State_577.txt,"Duluth, MN",SMN,0.98,large_town,104301,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
+578,history/states/578-State_578.txt,"El Paso, TX",AMF,1.03,metropolis,676394,True,False,False,,,,,8,20,4,0,0,2,1,2,2,1,0,1,0,0
+579,history/states/579-State_579.txt,Chihuahua,MEX,1.4,megalopolis,3241000,True,False,False,,,,,14,22,4,3,0,3,3,3,3,2,0,2,2,0
+580,history/states/580-State_580.txt,"Tyler, TX",STX,1.28,large_town,100380,True,False,False,,,,,3,8,3,1,0,1,0,1,1,0,0,0,0,0
+581,history/states/581-State_581.txt,"Reeves, TX",AMF,1.03,rural,14400,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+582,history/states/582-State_582.txt,"Adams, MS",NOM,1.01,town,41208,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0
+583,history/states/583-State_583.txt,"Barksdale AFB, LA",DMA,1.02,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
+584,history/states/584-State_584.txt,"Houma, LA",NOM,1.01,town,38871,True,False,False,,,,,1,6,0,0,0,0,0,1,0,0,0,0,0,0
+585,history/states/585-State_585.txt,"Crockett, TX",AMF,1.03,rural,8569,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+586,history/states/586-State_586.txt,da,JMA,0.96,town,25000,True,True,False,,,,,1,6,1,0,0,0,0,0,0,0,1,0,0,0
+587,history/states/587-State_587.txt,"Waco, TX",STX,1.28,city,135608,True,False,False,,,,,3,12,4,2,0,1,0,1,1,0,0,0,0,0
+588,history/states/588-State_588.txt,"San Carlos, AZ",SAZ,1.05,pastoral,3262,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+589,history/states/589-State_589.txt,"Ciudad Obregon, SO",MEX,1.4,city,240000,True,False,False,,,,,5,12,4,3,0,1,1,1,1,1,0,0,0,0
+590,history/states/590-State_590.txt,"Nogales, SO",MEX,1.4,city,140400,True,False,False,,,,,3,12,4,3,0,1,0,1,1,0,0,0,0,0
+591,history/states/591-State_591.txt,"Escambia, FL",GCC,0.96,large_city,353292,True,True,False,,,,,8,16,3,0,0,2,1,2,1,1,1,0,0,0
+592,history/states/592-State_592.txt,"Fredericksburg, TX",AMF,1.03,rural,12636,False,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+593,history/states/593-State_593.txt,"Alachua, FL",CFC,1.04,rural,8462,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+594,history/states/594-State_594.txt,"Leon, FL",TAL,0.78,city,287342,True,False,False,,,,,6,12,3,0,0,2,1,1,1,1,0,0,0,0
+595,history/states/595-State_595.txt,"Duval, FL",JMA,0.96,metropolis,806781,True,False,False,,,,,9,20,3,1,0,2,2,2,2,1,0,1,1,0
+596,history/states/596-State_596.txt,"Beaumont, TX",HMA,1.12,city,136639,True,True,False,,,,,4,12,3,0,0,1,0,1,1,0,1,0,0,0
+597,history/states/597-State_597.txt,"Gulf Shores, AL",GCC,0.96,rural,6140,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+598,history/states/598-State_598.txt,"Mobile, AL",GCC,0.96,city,237618,True,True,False,,,,,6,12,2,0,0,1,1,1,1,1,1,0,0,0
+599,history/states/599-State_599.txt,"Gulfport, MS",GCC,0.96,large_town,85352,True,True,False,,,,,3,8,1,0,0,1,0,1,0,0,1,0,0,0
+600,history/states/600-State_600.txt,"Baton Rouge, LA",NOM,1.01,city,273381,True,False,False,,,,,6,12,2,0,0,2,1,1,1,1,0,0,0,0
+601,history/states/601-State_601.txt,"Klamath Falls, OR",SOR,0.86,town,23354,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+602,history/states/602-State_602.txt,"Bastrop, TX",HMA,1.12,rural,9834,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+603,history/states/603-State_603.txt,"Salem, OR",SOR,0.86,city,164308,True,False,False,,,,,4,12,1,0,0,1,1,1,1,0,0,0,0,0
+604,history/states/604-State_604.txt,"Marion, FL",CFC,1.04,large_city,310699,True,False,False,,,,,7,16,4,0,0,2,1,2,1,1,0,0,0,0
+605,history/states/605-State_605.txt,"Daytona Beach, FL",CFC,1.04,large_town,76934,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+606,history/states/606-State_606.txt,"Hutchinson, MN",SMN,0.98,rural,17013,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+607,history/states/607-State_607.txt,"Lake, Ohio",REO,0.94,city,230000,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+608,history/states/608-State_608.txt,"Minneapolis, MN",SMN,0.98,large_city,459141,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,1,0,0
+609,history/states/609-State_609.txt,"Eugene, OR",SOR,0.86,city,165471,True,True,False,,,,,5,12,2,0,0,1,1,1,1,0,1,0,0,0
+610,history/states/610-State_610.txt,"Orlando, FL",CFC,1.04,city,223141,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+611,history/states/611-State_611.txt,"Houston, TX",HMA,1.12,megalopolis,2344357,True,True,False,,,,South Texas Project,14,23,3,2,1,3,2,3,2,2,2,2,1,0
+612,history/states/612-State_612.txt,"LaFourche, LA",NOM,1.01,large_town,107968,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+613,history/states/613-State_613.txt,"San Antonio, TX",AMF,1.03,metropolis,1373575,False,False,False,,,,,12,20,3,0,0,3,2,3,2,2,0,1,1,0
+614,history/states/614-State_614.txt,"Victoria, TX",HMA,1.12,large_town,68400,True,False,False,,,,,2,8,2,0,0,1,0,1,0,0,0,0,0,0
+615,history/states/615-State_615.txt,Coahuila,MEX,1.4,megalopolis,2298070,True,False,False,,,,,12,22,4,3,0,3,2,3,2,2,0,2,1,0
+616,history/states/616-State_616.txt,"Yellowstone, WY",MMS,0.8,wasteland,1800,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+617,history/states/617-State_617.txt,"Laredo, TX",AMF,1.03,city,211891,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+618,history/states/618-State_618.txt,"Omaha, NE",OMA,1.0,large_city,468008,True,False,False,,,,,7,16,2,0,0,2,1,2,1,1,0,1,0,0
+619,history/states/619-State_619.txt,Baja California Sur,MEX,1.4,large_city,423516,True,True,False,,,,,8,16,4,3,0,2,1,2,1,1,1,0,0,0
+620,history/states/620-State_620.txt,"Cleveland, OH",REO,0.94,large_city,574083,True,True,False,,,,,8,16,3,0,0,2,1,2,1,1,1,1,0,0
+621,history/states/621-State_621.txt,"Hillsborough, FL",CFC,1.04,metropolis,1198737,True,True,False,,,,,12,20,3,1,0,2,2,2,2,2,2,1,1,0
+622,history/states/622-State_622.txt,"Grand Manan Island, ME",SOM,0.66,small_island,3120,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+623,history/states/623-State_623.txt,"Bar Harbor, ME",SOM,0.66,rural,7200,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+624,history/states/624-State_624.txt,"Breton Sound Islands, LA",NOM,1.01,wasteland,0,True,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+625,history/states/625-State_625.txt,"Shiprock, NM",NAV,0.75,rural,9960,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+626,history/states/626-State_626.txt,"Portland, TX",AMF,1.03,rural,14400,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+627,history/states/627-State_627.txt,"Miami-Dade, FL",SFM,1.13,megalopolis,2704034,True,True,False,,,,Turkey Point Nuclear Generating Station,14,23,4,2,1,3,2,3,2,2,2,2,1,0
+628,history/states/628-State_628.txt,"Sarasota, FL",SFM,1.13,large_city,391148,True,False,False,,,,,7,16,4,1,0,2,1,2,1,1,0,0,0,0
+629,history/states/629-State_629.txt,"Freeport, BS",BAH,1.4,town,23794,True,True,False,,,,,1,6,1,0,0,0,0,0,0,0,1,0,0,0
+630,history/states/630-State_630.txt,"Whiteman AFB, MO",DMA,1.02,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
+631,history/states/631-State_631.txt,"Aransas, TX",HMA,1.12,town,27600,True,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+632,history/states/632-State_632.txt,"Sterling, CO",DMA,1.02,rural,16800,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+633,history/states/633-State_633.txt,"Corpus Christi, TX",AMF,1.03,large_city,332944,True,True,False,,,,,8,16,3,0,0,2,1,2,1,1,1,0,0,0
+634,history/states/634-State_634.txt,"Lee, FL",SFM,1.13,large_city,529065,True,False,False,,,,,7,16,4,1,0,2,1,2,1,1,0,1,0,0
+635,history/states/635-State_635.txt,"Monterrey, NL",MEX,1.4,metropolis,1306795,True,False,False,,,,,12,20,4,3,0,3,2,3,2,2,0,1,1,0
+636,history/states/636-State_636.txt,District of Columbia,DCO,0.92,metropolis,601723,True,True,False,,,,,9,20,3,1,0,2,1,2,2,1,1,1,0,0
+637,history/states/637-State_637.txt,"Laredos, TM",MEX,1.4,city,144000,True,False,False,,,,,3,12,4,3,0,1,0,1,1,0,0,0,0,0
+638,history/states/638-State_638.txt,"Los Mochis, SI",MEX,1.4,large_city,307200,True,False,False,,,,,7,16,4,3,0,2,1,2,1,1,0,0,0,0
+639,history/states/639-State_639.txt,"Guadalupe y Calvo, CH",MEX,1.4,town,48000,True,False,False,,,,,2,6,4,3,0,1,0,1,0,0,0,0,0,0
+640,history/states/640-State_640.txt,"El Carrizo, SI",MEX,1.4,rural,12000,True,False,False,,,,,0,3,4,3,0,0,0,0,0,0,0,0,0,0
+641,history/states/641-State_641.txt,"Kansas City, KS",CKC,0.92,city,176239,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+642,history/states/642-State_642.txt,"Gomez Palacio, DG",MEX,1.4,city,228000,True,False,False,,,,,5,12,4,3,0,1,1,1,1,1,0,0,0,0
+643,history/states/643-State_643.txt,"Salinas, CA",SCA,1.3,city,181200,True,True,False,,,,,5,12,4,3,0,1,1,1,1,0,1,0,0,0
+644,history/states/644-State_644.txt,"Eleuthera, BS",BAH,1.4,rural,12000,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+645,history/states/645-State_645.txt,"Fremont-Winema, OR",SOR,0.86,pastoral,3600,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+646,history/states/646-State_646.txt,"New Providence, BS",BAH,1.4,large_city,300000,True,False,False,,,,,7,16,3,0,0,2,1,2,1,1,0,0,0,0
+647,history/states/647-State_647.txt,"Andros, BS",BAH,1.4,rural,10200,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+648,history/states/648-State_648.txt,"Cat Island, BS",BAH,1.4,small_island,3279,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+649,history/states/649-State_649.txt,"Overland Park, KS",CKC,0.92,city,208046,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+650,history/states/650-State_650.txt,"Minot AFB, ND",DMA,1.02,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
+651,history/states/651-State_651.txt,"Key West, FL",AMA,0.9,town,30573,True,False,False,,,,,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+652,history/states/652-State_652.txt,"Los Angeles, CA",SCA,1.3,megalopolis,4433784,True,True,False,,,,,18,22,4,3,0,3,3,3,3,3,3,2,2,0
+653,history/states/653-State_653.txt,"Matamoros, TA",MEX,1.4,large_city,477174,True,False,False,,,,,7,16,4,3,0,2,1,2,1,1,0,1,0,0
+654,history/states/654-State_654.txt,"Los Angeles Metro, CA",SCA,1.3,megalopolis,12480000,True,False,False,,,,,15,22,4,3,0,3,3,3,3,3,0,4,3,0
+655,history/states/655-State_655.txt,"San Diego Metro, CA",SCA,1.3,megalopolis,3600000,True,False,False,,,,,14,22,4,3,0,3,3,3,3,2,0,2,2,0
+656,history/states/656-State_656.txt,"Elko, NV",GBR,0.6,town,20722,False,False,False,,,,,0,6,2,0,0,0,0,0,0,0,0,0,0,0
+657,history/states/657-State_657.txt,"Montemorelos, NL",MEX,1.4,town,50400,True,False,False,,,,,2,6,4,3,0,1,0,1,0,0,0,0,0,0
+658,history/states/658-State_658.txt,"San Salvador, BS",BAH,1.4,rural,6663,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+659,history/states/659-State_659.txt,"King's Bay Naval Base, GA",DMA,1.02,pastoral,1500,True,False,True,naval,,,,7,2,1,0,0,0,0,0,1,3,2,6,5,1
+660,history/states/660-State_660.txt,"Santa Rosa, CA",SCA,1.3,city,165600,True,False,False,,,,,4,12,4,3,0,1,1,1,1,0,0,0,0,0
+661,history/states/661-State_661.txt,"Sacremento, CA",SCA,1.3,large_city,488421,False,False,False,,Oroville Dam,2788,,7,16,4,3,0,2,1,2,1,1,0,1,0,0
+662,history/states/662-State_662.txt,"San Diego, CA",SCA,1.3,metropolis,1468080,True,True,False,,,,,14,20,4,3,0,3,2,3,2,2,2,1,1,0
+663,history/states/663-State_663.txt,"Long Island, BS",BAH,1.4,small_island,3744,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+664,history/states/664-State_664.txt,"Great Exuma, BS",BAH,1.4,rural,6708,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+665,history/states/665-State_665.txt,"Yreka, CA",SCA,1.3,rural,9223,True,False,False,,,,,0,3,4,1,0,0,0,0,0,0,0,0,0,0
+666,history/states/666-State_666.txt,"Ely, NV",GBR,0.6,pastoral,4849,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+667,history/states/667-State_667.txt,"Alturas, CA",SCA,1.3,rural,12626,True,False,False,,,,,0,3,4,1,0,0,0,0,0,0,0,0,0,0
+668,history/states/668-State_668.txt,"Mazatlan, SI",MEX,1.4,city,244800,True,True,False,,,,,6,12,4,3,0,1,1,1,1,1,1,0,0,0
+669,history/states/669-State_669.txt,"Sequoia, CA",SCA,1.3,wasteland,2400,False,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+670,history/states/670-State_670.txt,"Durango, DG",MEX,1.4,large_city,502092,True,False,False,,,,,7,16,4,3,0,2,1,2,1,1,0,1,0,0
+671,history/states/671-State_671.txt,"Fresnillo, ZA",MEX,1.4,city,148800,False,False,False,,,,,3,12,4,3,0,1,0,1,1,0,0,0,0,0
+672,history/states/672-State_672.txt,"Crooked Island, BS",BAH,1.4,tiny_island,438,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+673,history/states/673-State_673.txt,"Tonopah, NV",GBR,0.6,pastoral,2973,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+674,history/states/674-State_674.txt,"Santa Barbara, CA",SCA,1.3,large_town,106098,True,True,False,,,,Diablo Canyon Power Plant,4,9,4,3,1,1,0,1,1,0,1,0,0,0
+675,history/states/675-State_675.txt,"Mayaguna, BS",BAH,1.4,enclave,600,True,False,False,,,,,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+676,history/states/676-State_676.txt,"Pine Bluffs, WY",DMA,1.02,pastoral,2311,False,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+677,history/states/677-State_677.txt,"Pinedale, WY",WAR,0.83,pastoral,1920,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+678,history/states/678-State_678.txt,"Austin, TX",HMA,1.12,metropolis,787874,False,False,False,,,,,9,20,4,1,0,2,2,2,2,1,0,1,1,0
+679,history/states/679-State_679.txt,Turks and Caicos Islands,ENG,1.4,small_island,21240,True,True,False,,,,,1,2,1,0,0,0,0,0,0,0,1,0,0,0
+680,history/states/680-State_680.txt,"Oklahoma City, OK",OKC,0.95,metropolis,607358,True,False,False,,,,,8,20,3,0,0,2,1,2,2,1,0,1,0,0
+681,history/states/681-State_681.txt,"Huntsville, TX",HMA,1.12,rural,5280,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+682,history/states/682-State_682.txt,"Monctezuma, SL",MEX,1.4,rural,14400,True,False,False,,,,,0,3,4,3,0,0,0,0,0,0,0,0,0,0
+683,history/states/683-State_683.txt,"Sidney, NE",DMA,1.02,rural,7200,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+684,history/states/684-State_684.txt,"Cody, WY",WAR,0.83,rural,11424,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+685,history/states/685-State_685.txt,"Matanzas, CU",CUB,1.4,metropolis,777600,True,True,False,,,,,11,20,4,1,0,2,2,2,2,1,2,1,1,0
+686,history/states/686-State_686.txt,"Villa Clara, CU",CUB,1.4,metropolis,978000,True,True,False,,,,,11,20,4,1,0,2,2,2,2,1,2,1,1,0
+687,history/states/687-State_687.txt,"Zacatecas, ZA",MEX,1.4,city,162351,True,False,False,,,,,4,12,4,3,0,1,1,1,1,0,0,0,0,0
+688,history/states/688-State_688.txt,"Ciudad Victoria, TM",MEX,1.4,large_city,326400,True,True,False,,,,,8,16,4,3,0,2,1,2,1,1,1,0,0,0
+689,history/states/689-State_689.txt,"El Centro, CA",SCA,1.3,town,37660,True,False,False,,,,,1,6,4,3,0,0,0,1,0,0,0,0,0,0
+690,history/states/690-State_690.txt,"Inagua, BS",BAH,1.4,rural,13200,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+691,history/states/691-State_691.txt,"Mayabeque, CU",CUB,1.4,large_city,504000,True,False,False,,,,,7,16,3,1,0,2,1,2,1,1,0,1,0,0
+692,history/states/692-State_692.txt,"Bakersfield, CA",SCA,1.3,city,296468,False,False,False,,,,,6,12,4,3,0,2,1,1,1,1,0,0,0,0
+693,history/states/693-State_693.txt,"Artemisa, CU",CUB,1.4,metropolis,600000,True,True,False,,,,,9,20,4,1,0,2,1,2,2,1,1,1,0,0
+694,history/states/694-State_694.txt,"Havana, CU",CUB,1.4,megalopolis,2522400,True,False,False,,,,,12,22,3,2,0,3,2,3,2,2,0,2,1,0
+695,history/states/695-State_695.txt,"Fresno, CA",SCA,1.3,large_city,513182,False,False,False,,,,,7,16,4,3,0,2,1,2,1,1,0,1,0,0
+696,history/states/696-State_696.txt,"Ciego de Avila, CU",CUB,1.4,large_city,360000,True,False,False,,,,,7,16,3,1,0,2,1,2,1,1,0,0,0,0
+697,history/states/697-State_697.txt,"Sancti Spiritus, CU",CUB,1.4,large_city,516000,True,False,False,,,,,7,16,3,1,0,2,1,2,1,1,0,1,0,0
+698,history/states/698-State_698.txt,"Pinar del Rio, CU",CUB,1.4,metropolis,639600,True,False,False,,,,,8,20,3,2,0,2,1,2,2,1,0,1,0,0
+699,history/states/699-State_699.txt,"Cienfuegos, CU",CUB,1.4,large_city,499107,True,True,False,,,,,8,16,3,1,0,2,1,2,1,1,1,1,0,0
+700,history/states/700-State_700.txt,"Jardines del Rey, CU",CUB,1.4,town,24000,True,False,False,,,,,0,6,2,0,0,0,0,0,0,0,0,0,0,0
+701,history/states/701-State_701.txt,"Yosemite, CA",SCA,1.3,wasteland,2400,False,False,False,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+702,history/states/702-State_702.txt,"Camaguey, CU",CUB,1.4,metropolis,936000,True,True,False,,,,,11,20,3,2,0,2,2,2,2,1,2,1,1,0
+703,history/states/703-State_703.txt,"Susanville, CA",SCA,1.3,rural,17748,False,False,False,,,,,0,3,4,1,0,0,0,0,0,0,0,0,0,0
+704,history/states/704-State_704.txt,"Napa, CA",SCA,1.3,large_town,87102,True,True,False,,,,,3,8,4,3,0,1,0,1,0,0,1,0,0,0
+705,history/states/705-State_705.txt,"Redding, CA",SCA,1.3,large_town,97038,True,True,False,,Shasta Dam,168,,4,8,4,3,0,1,0,1,1,0,1,0,0,0
+706,history/states/706-State_706.txt,"Tecuala, NA",MEX,1.4,town,30000,True,False,False,,,,,0,6,4,3,0,0,0,0,0,0,0,0,0,0
+707,history/states/707-State_707.txt,"San Juan, PR",PRC,0.97,large_city,474000,True,True,False,,,,,8,16,3,0,0,2,1,2,1,1,1,1,0,0
+708,history/states/708-State_708.txt,"Las Tunas, CU",CUB,1.4,metropolis,623820,True,False,False,,,,,8,20,4,1,0,2,1,2,2,1,0,1,0,0
+709,history/states/709-State_709.txt,"Maria Trinidad Sanchez, DO",DOM,1.4,large_town,88800,True,False,False,,,,,2,8,1,0,0,1,0,1,0,0,0,0,0,0
+710,history/states/710-State_710.txt,British Virgin Islands,ENG,1.4,small_island,20875,True,False,False,,,,,0,2,1,0,0,0,0,0,0,0,0,0,0,0
+711,history/states/711-State_711.txt,"Holguin, CU",CUB,1.4,metropolis,1260000,True,True,False,,,,,14,20,4,1,0,3,2,3,2,2,2,1,1,0
+712,history/states/712-State_712.txt,"Samana, DO",DOM,1.4,large_town,120000,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+713,history/states/713-State_713.txt,"Monte Cristi, DO",DOM,1.4,large_town,101400,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+714,history/states/714-State_714.txt,"Puerto Plata, DO",DOM,1.4,city,216000,True,True,False,,,,,6,12,2,0,0,1,1,1,1,1,1,0,0,0
+715,history/states/715-State_715.txt,"Duarte, DO",DOM,1.4,large_city,354000,False,False,False,,,,,7,16,4,0,0,2,1,2,1,1,0,0,0,0
+716,history/states/716-State_716.txt,Este de Nayarit,MEX,1.4,city,200000,True,False,False,,,,,5,12,4,3,0,1,1,1,1,1,0,0,0,0
+717,history/states/717-State_717.txt,US Virgin Islands,PRC,0.97,large_town,108612,True,True,False,,,,,4,8,1,0,0,1,0,1,1,0,1,0,0,0
+718,history/states/718-State_718.txt,"El Seybo, DO",DOM,1.4,city,219600,True,False,False,,,,,5,12,2,0,0,1,1,1,1,1,0,0,0,0
+719,history/states/719-State_719.txt,"La Altagracia, DO",DOM,1.4,large_city,327600,True,False,False,,,,,7,16,4,0,0,2,1,2,1,1,0,0,0,0
+720,history/states/720-State_720.txt,"Kirtland AFB, NM",DMA,1.02,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
+721,history/states/721-State_721.txt,"Vieques, PR",PRC,0.97,rural,10800,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+722,history/states/722-State_722.txt,"Guantanamo, CU",CUB,1.4,metropolis,611520,True,True,False,,,,,9,20,4,1,0,2,1,2,2,1,1,1,0,0
+723,history/states/723-State_723.txt,"Santiago, DO",DOM,1.4,large_city,570000,True,False,False,,,,,7,16,4,0,0,2,1,2,1,1,0,1,0,0
+724,history/states/724-State_724.txt,"Hato Mayor, DO",DOM,1.4,large_town,103200,True,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+725,history/states/725-State_725.txt,"Mezquitic, JA",MEX,1.4,rural,16920,True,False,False,,,,,0,3,4,3,0,0,0,0,0,0,0,0,0,0
+726,history/states/726-State_726.txt,"Nord-Est, HT",HAI,1.4,large_city,472760,True,False,False,,,,,7,16,4,1,0,2,1,2,1,1,0,1,0,0
+727,history/states/727-State_727.txt,"La Vega, DO",DOM,1.4,city,271200,True,False,False,,,,,6,12,2,0,0,2,1,1,1,1,0,0,0,0
+728,history/states/728-State_728.txt,"Isla de Culebra, PR",PRC,0.97,small_island,2160,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+729,history/states/729-State_729.txt,"Nord-Oueste, HT",HAI,1.4,metropolis,744000,True,False,False,,,,,9,20,3,2,0,2,2,2,2,1,0,1,1,0
+730,history/states/730-State_730.txt,"Dajabon, DO",DOM,1.4,town,48000,True,False,False,,,,,2,6,1,0,0,1,0,1,0,0,0,0,0,0
+731,history/states/731-State_731.txt,"Isla de Juventud, CU",CUB,1.4,large_town,103200,True,True,False,,,,,4,8,2,0,0,1,0,1,1,0,1,0,0,0
+732,history/states/732-State_732.txt,"Nord, HT",HAI,1.4,metropolis,874568,True,False,False,,,,,9,20,3,2,0,2,2,2,2,1,0,1,1,0
+733,history/states/733-State_733.txt,"Santo Domingo, DO",DOM,1.4,metropolis,1200000,True,False,False,,,,,12,20,3,1,0,3,2,3,2,2,0,1,1,0
+734,history/states/734-State_734.txt,"Santiago de Cuba, CU",CUB,1.4,large_city,516000,True,True,False,,,,,8,16,3,1,0,2,1,2,1,1,1,1,0,0
+735,history/states/735-State_735.txt,"Artibonite, HT",HAI,1.4,megalopolis,1512000,True,True,False,,,,,14,22,4,2,0,3,2,3,2,2,2,1,1,0
+736,history/states/736-State_736.txt,"Granma, CU",CUB,1.4,metropolis,960000,True,True,False,,,,,11,20,4,1,0,2,2,2,2,1,2,1,1,0
+737,history/states/737-State_737.txt,"La Romana, DO",DOM,1.4,city,175200,True,False,False,,,,,4,12,2,0,0,1,1,1,1,0,0,0,0,0
+738,history/states/738-State_738.txt,"San Pedro de Macoris, DO",DOM,1.4,city,240000,True,False,False,,,,,5,12,3,0,0,1,1,1,1,1,0,0,0,0
+739,history/states/739-State_739.txt,"Colotlan, JA",MEX,1.4,rural,19200,True,False,False,,,,,0,3,4,3,0,0,0,0,0,0,0,0,0,0
+740,history/states/740-State_740.txt,"La Estrelleta, DO",DOM,1.4,town,24000,False,False,False,,,,,0,6,1,0,0,0,0,0,0,0,0,0,0,0
+741,history/states/741-State_741.txt,Aguascalientes,MEX,1.4,metropolis,944000,False,False,False,,,,,9,20,4,3,0,2,2,2,2,1,0,1,1,0
+742,history/states/742-State_742.txt,"San Juan, DO",DOM,1.4,large_town,121200,False,False,False,,,,,3,8,1,0,0,1,0,1,1,0,0,0,0,0
+743,history/states/743-State_743.txt,"Guayalejo, VC",MEX,1.4,town,48000,True,False,False,,,,,2,6,4,3,0,1,0,1,0,0,0,0,0,0
+744,history/states/744-State_744.txt,"Centre, HT",HAI,1.4,metropolis,720000,False,False,False,,,,,9,20,3,2,0,2,2,2,2,1,0,1,1,0
+745,history/states/745-State_745.txt,"Brainerd, MN",SMN,0.98,rural,16324,True,False,False,,,,,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+746,history/states/746-State_746.txt,"Pinos, Zacatecas",MEX,1.4,pastoral,2000,False,False,False,,,,,0,2,4,3,0,0,0,0,0,0,0,0,0,0
+747,history/states/747-State_747.txt,"San Luis Potosi, SL",MEX,1.4,city,294000,True,False,False,,,,,6,12,4,3,0,2,1,1,1,1,0,0,0,0
+748,history/states/748-State_748.txt,"Azua, DO",DOM,1.4,city,145200,True,False,False,,,,,3,12,2,0,0,1,0,1,1,0,0,0,0,0
+749,history/states/749-State_749.txt,"Peravia, DO",DOM,1.4,city,175200,True,True,False,,,,,5,12,2,0,0,1,1,1,1,0,1,0,0,0
+750,history/states/750-State_750.txt,"Ciudad Valles, SL",MEX,1.4,city,134400,True,False,False,,,,,3,12,4,3,0,1,0,1,1,0,0,0,0,0
+751,history/states/751-State_751.txt,"San Francisco, CA",SCA,1.3,metropolis,932079,True,False,False,,,,,9,20,4,3,0,2,2,2,2,1,0,1,1,0
+752,history/states/752-State_752.txt,"Isla de Mona, PR",PRC,0.97,small_island,1200,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+753,history/states/753-State_753.txt,"Tepic, NA",MEX,1.4,city,264000,True,False,False,,,,,6,12,4,3,0,2,1,1,1,1,0,0,0,0
+754,history/states/754-State_754.txt,Veracruz,MEX,1.4,megalopolis,6241000,True,False,False,,,,,15,22,4,3,0,3,3,3,3,3,0,3,2,0
+755,history/states/755-State_755.txt,Jalisco,MEX,1.4,megalopolis,6221000,True,False,False,,,,,15,22,4,3,0,3,3,3,3,3,0,3,2,0
+756,history/states/756-State_756.txt,"San Francisco Metro, CA",SCA,1.3,megalopolis,5400000,True,True,False,,,,,18,22,4,3,0,3,3,3,3,3,3,3,2,0
+757,history/states/757-State_757.txt,Quintana Roo,MEX,1.4,metropolis,872000,True,False,False,,,,,9,20,4,3,0,2,2,2,2,1,0,1,1,0
+758,history/states/758-State_758.txt,"Axtla de Terrazas, SL",MEX,1.4,town,36000,True,False,False,,,,,1,6,4,3,0,0,0,1,0,0,0,0,0,0
+759,history/states/759-State_759.txt,Guanajuato,MEX,1.4,megalopolis,4121000,False,False,False,,,,,15,22,4,3,0,3,3,3,3,3,0,2,2,0
+760,history/states/760-State_760.txt,"Ouest, HT",HAI,1.4,megalopolis,3240000,True,True,False,,,,,17,22,4,2,0,3,3,3,3,2,3,2,2,0
+761,history/states/761-State_761.txt,Yucatan,MEX,1.4,megalopolis,1685228,True,True,False,,,,,14,22,4,3,0,3,2,3,2,2,2,2,1,0
+762,history/states/762-State_762.txt,"Barahona, DO",DOM,1.4,city,148800,True,True,False,,,,,4,12,2,0,0,1,0,1,1,0,1,0,0,0
+763,history/states/763-State_763.txt,"Isla Maria Madre, NA",MEX,1.4,tiny_island,120,True,False,False,,,,,0,1,4,3,0,0,0,0,0,0,0,0,0,0
+764,history/states/764-State_764.txt,"Nellis AFB, NV",DMA,1.02,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
+765,history/states/765-State_765.txt,"Isla de la Gonave, HT",HAI,1.4,large_town,84000,True,False,False,,,,,2,8,3,0,0,1,0,1,0,0,0,0,0,0
+766,history/states/766-State_766.txt,Queretaro,MEX,1.4,metropolis,1404306,True,False,False,,,,,12,20,4,3,0,3,2,3,2,2,0,1,1,0
+767,history/states/767-State_767.txt,"Huejutla de Reyes, VC",MEX,1.4,large_town,96000,True,False,False,,,,,3,8,4,3,0,1,0,1,1,0,0,0,0,0
+768,history/states/768-State_768.txt,"Pedernales, DO",DOM,1.4,large_town,64800,True,True,False,,,,,3,8,1,0,0,1,0,1,0,0,1,0,0,0
+769,history/states/769-State_769.txt,"Sud-Est, HT",HAI,1.4,metropolis,816000,False,False,False,,,,,9,20,4,2,0,2,2,2,2,1,0,1,1,0
+770,history/states/770-State_770.txt,"Puerto Vallarta, JA",MEX,1.4,city,171600,False,False,False,,,,,4,12,4,3,0,1,1,1,1,0,0,0,0,0
+771,history/states/771-State_771.txt,Hidalgo,MEX,1.4,megalopolis,2350000,True,False,False,,,,,12,22,4,3,0,3,2,3,2,2,0,2,1,0
+772,history/states/772-State_772.txt,"Malmstrom AFB, MT",DMA,1.02,pastoral,1500,False,False,True,air,,,,5,2,1,0,0,0,0,0,1,3,0,6,5,1
+773,history/states/773-State_773.txt,"Nippes, HT",HAI,1.4,large_city,319200,True,True,False,,,,,8,16,4,1,0,2,1,2,1,1,1,0,0,0
+774,"history/states/774-Bronx, NY.txt","Queens, NY",NYC,1.25,megalopolis,2675254,True,False,False,,,,,12,22,4,3,0,3,2,3,2,2,0,2,1,0
+775,"history/states/775-Queens, NY.txt","Staten Island, NY",NYC,1.25,large_city,532473,True,True,False,,,,,8,16,4,3,0,2,1,2,1,1,1,1,0,0
+776,"history/states/776-Brooklyn, NY.txt","The Bronx, NY",NYC,1.25,megalopolis,1599180,True,False,False,,,,,12,22,4,3,0,3,2,3,2,2,0,1,1,0
+777,"history/states/777-Staten Island, NY.txt","Brooklyn, NY",NYC,1.25,megalopolis,2958391,True,False,False,,,,,14,22,4,3,0,3,3,3,3,2,0,2,2,0
+778,"history/states/778-Saint Francis, KS.txt","Saint Francis, KS",DMA,1.02,pastoral,1532,True,False,False,,,,,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+779,"history/states/779-Ohio, WV.txt","Ohio, WV",RWV,0.84,town,56912,True,False,False,,,,,2,6,0,0,0,1,0,1,0,0,0,0,0,0

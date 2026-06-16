@@ -1,7 +1,7 @@
 ideas = {
 	country = {
-		RUS_Army_Defeatism = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_Army_Defeatism" }
+		USA_Army_Defeatism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_Army_Defeatism" }
 			allowed = {
 				always = no
 			}
@@ -19,10 +19,10 @@ ideas = {
 	}
 	hidden_ideas = {
 		#boost shit early-game russian econ
-		RUS_stupid_ai_econ = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_stupid_ai_econ" }
+		USA_stupid_ai_econ = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_stupid_ai_econ" }
 			allowed = { always = no }
-			cancel = { has_country_flag = RUS_cancel_all_ideas }
+			cancel = { has_country_flag = USA_cancel_all_ideas }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -39,10 +39,10 @@ ideas = {
 				ai_focus_aggressive_factor = 0.5
 			}
 		}
-		RUS_warlord_econ = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_warlord_econ" }
+		USA_warlord_econ = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_warlord_econ" }
 			allowed = { always = no }
-			cancel = { has_country_flag = RUS_cancel_all_ideas }
+			cancel = { has_country_flag = USA_cancel_all_ideas }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -84,10 +84,10 @@ ideas = {
 				}
 			}
 		}
-		RUS_regional_econ = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_regional_econ" }
+		USA_regional_econ = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_regional_econ" }
 			allowed = { always = no }
-			cancel = { has_country_flag = RUS_cancel_all_ideas }
+			cancel = { has_country_flag = USA_cancel_all_ideas }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -127,10 +127,10 @@ ideas = {
 				}
 			}
 		}
-		RUS_superregional_econ = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_superregional_econ" }
+		USA_superregional_econ = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_superregional_econ" }
 			allowed = { always = no }
-			cancel = { has_country_flag = RUS_cancel_all_ideas }
+			cancel = { has_country_flag = USA_cancel_all_ideas }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -143,12 +143,12 @@ ideas = {
 			}
 		}
 		#boost shit russian manpower
-		RUS_warlord_manpower = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_warlord_manpower" }
+		USA_warlord_manpower = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_warlord_manpower" }
 			allowed = {
 				always = no
 			}
-			cancel = { has_country_flag = RUS_cancel_all_ideas }
+			cancel = { has_country_flag = USA_cancel_all_ideas }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -163,12 +163,12 @@ ideas = {
 				naval_industry_cost_modifier = -0.5
 			}
 		}
-		RUS_regional_manpower = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_regional_manpower" }
+		USA_regional_manpower = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_regional_manpower" }
 			allowed = {
 				always = no
 			}
-			cancel = { has_country_flag = RUS_cancel_all_ideas }
+			cancel = { has_country_flag = USA_cancel_all_ideas }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -181,12 +181,12 @@ ideas = {
 				naval_industry_cost_modifier = -0.5
 			}
 		}
-		RUS_superregional_manpower = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_superregional_manpower" }
+		USA_superregional_manpower = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_superregional_manpower" }
 			allowed = {
 				always = no
 			}
-			cancel = { has_country_flag = RUS_cancel_all_ideas }
+			cancel = { has_country_flag = USA_cancel_all_ideas }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -200,8 +200,8 @@ ideas = {
 			}
 		}
 		#I'm trying to make the war quicker, atm neither AI wins before East Siberia intervenes.
-		RUS_WSR_WSB_war = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_WSR_WSB_war" }
+		USA_WSR_WSB_war = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_WSR_WSB_war" }
 			allowed = {
 				always = no
 			}
