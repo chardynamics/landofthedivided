@@ -3262,48 +3262,7 @@ defined_text = {
 defined_text = {
 	name = GetCreditLadderDesc
 	text = {
-		trigger = {
-			OR = {
-				tag = GER
-				check_variable = { ECON_SPHERE_LEADER = GER }
-			}
-		}
-		localization_key = TNO_GER_sphere_credit_loc
-	}
-	text = {
-		trigger = {
-			OR = {
-				tag = JAP
-				check_variable = { ECON_SPHERE_LEADER = JAP }
-			}
-		}
-		localization_key = TNO_JAP_sphere_credit_loc
-	}
-	#text = {
-	#	trigger = {
-	#		OR = {
-	#			tag = ITA
-	#			check_variable = { ECON_SPHERE_LEADER = ITA }
-	#		}
-	#	}
-	#	localization_key = TNO_ITA_sphere_credit_loc
-	#}
-	text = {
 		localization_key = TNO_USA_sphere_credit_loc
-	}
-}
-
-defined_text = {
-	name = GetGERCreditRatingLoc
-	text = {
-		localization_key = "TNO_GER_ladder_[?ladder_credit_rating]"
-	}
-}
-
-defined_text = {
-	name = GetJAPCreditRatingLoc
-	text = {
-		localization_key = "TNO_JAP_ladder_[?ladder_credit_rating]"
 	}
 }
 

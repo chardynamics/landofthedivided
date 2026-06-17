@@ -662,12 +662,6 @@ is_exempt_from_division_limit = {
 			limit = {
 				NOT = {
 					#tag = USA
-					#tag = GER
-					#tag = JAP
-					#tag = ITA
-					tag = ENG
-					tag = ARG #to make the SACW work
-					tag = BRA #to make the SACW work
 				}
 			}
 			any_neighbor_country = { #any neighboring country is over the limit, and not at war with

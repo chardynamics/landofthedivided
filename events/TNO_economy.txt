@@ -148,10 +148,8 @@ country_event = {
 						}
 						OR = {
 							AND = {
-								NOT = { tag = JAP }
-								NOT = { tag = GER }
-								NOT = { tag = USA }
-								NOT = { tag = ITA }
+								NOT = { tag = CAN }
+								NOT = { tag = MEX }
 								NOT = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_War_Communism } }
 								NOT = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Military_Directed } }
 							}

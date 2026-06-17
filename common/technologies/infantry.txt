@@ -35,16 +35,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 75
-
-			modifier = {
-				factor = 30
-				tag = CHI
-
-				OR = {
-					date > "1937.1.1"
-					JAP = { is_ai = no }
-				}
-			}
 		}
 	}
 

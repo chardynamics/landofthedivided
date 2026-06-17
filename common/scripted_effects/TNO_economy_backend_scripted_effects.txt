@@ -1010,13 +1010,6 @@ calculate_debt_to_GDP_ratio = {
 	else = {
 		set_variable = { debt_to_GDP_ratio = 0 }
 	}
-	#For Guangdong
-	if = {
-		limit = {
-			tag = GNG
-		}
-		GNG_calculate_fiscal_health = yes
-	}
 	# this returns debt as a % of GDP if debt exists. If debt does not exist, returns 0.
 	if = { #Unfucking Crazy AI Debts
 		limit = {
@@ -7694,17 +7687,10 @@ TNO_KD_Consequences_of_Capitulation = {
 					modifier = {
 						factor = 50
 						AND = {
-							NOT = { var:temp_KD_capitulating_tag = { tag = CHI } }
-							NOT = { var:temp_KD_capitulating_tag = { tag = YUN } }
-							NOT = { var:temp_KD_capitulating_tag = { tag = GUX } }
-							NOT = { var:temp_KD_capitulating_tag = { tag = SHX } }
-							NOT = { var:temp_KD_capitulating_tag = { tag = XIK } }
-							NOT = { var:temp_KD_capitulating_tag = { tag = XIN } }
-							NOT = { var:temp_KD_capitulating_tag = { tag = MAN } }
 							NOT = {
 								AND = {
-									var:temp_KD_capitulating_tag = { is_russian_nation = yes }
-									var:temp_KD_capitulated_tag = { is_russian_nation = yes }
+									var:temp_KD_capitulating_tag = { is_warlord = yes }
+									var:temp_KD_capitulated_tag = { is_warlord = yes }
 								}
 							}
 							OR = {
