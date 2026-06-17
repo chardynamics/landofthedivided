@@ -18,9 +18,9 @@ state = {
 			prisons = 1 
 			barracks = 1 
 			dockyard = 1 
-			#1171 = { naval_base = 8 }
 		}
 		
+		#1171 = { naval_base = 8 }
 		add_core_of = HAI 
 	}
 	provinces = { 1171 5050 }
