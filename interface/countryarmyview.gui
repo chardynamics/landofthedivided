@@ -132,6 +132,13 @@ guiTypes = {
 			spriteType = "GFX_navy_overview_ship_entry"
 		}
 
+		iconType = {
+			name = "highlight"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_overview_filter_entry_highlight"
+			alwaystransparent = yes
+		}
+
 		instantTextboxType = {
 			name = "sub_units_count"
 			position = {x=-10 y=9}
