@@ -1264,11 +1264,6 @@ AI_War_Tax_Check = {
 	add_to_variable = { TNO_economy_GUI_dirty = 1 }
 }
 
-
-apply_deficit_effects_monthly = {
-	set_variable = { TNO_deficit_PP_cost = deficit_PP_cost_display }
-}
-
 calculate_taxable_population = {
 
 	set_temp_variable = { poverty_rate_percent = poverty_rate }

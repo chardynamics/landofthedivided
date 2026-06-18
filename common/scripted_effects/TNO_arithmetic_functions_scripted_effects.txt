@@ -521,11 +521,6 @@ TNO_arith_arccsc_x = {
 	divide_temp_variable = { arccsc_holder = input }
 	TNO_arith_arcsin_x = yes
 }
-TNO_arith_arccsc_x = {
-	set_temp_variable = { arccsc_holder = 1 }
-	divide_temp_variable = { arccsc_holder = input }
-	TNO_arith_arccos_x = yes
-}
 TNO_arith_arccot_x = {
 	set_temp_variable = { arccot_pi_2 = 1.571 }
 	TNO_arith_arctan_x = yes
