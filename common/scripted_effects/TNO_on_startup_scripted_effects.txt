@@ -209,15 +209,12 @@ TNO_startup_nation = {
 
 			log = "[GetDateText]: [This.GetName]: TNO_startup_nation; Completed execution."
 
-			if = {
-				limit = { 
-					AND = {
-						is_warlord = yes
-						is_ai = yes
-					}
-				}
+			#if = {
+			#	limit = { 
+			#		is_warlord = yes
+			#	}
 				add_ideas = USA_stupid_ai_econ
-			}
+			#}
 		
 			#test due to weird shit
 			set_country_flag = TNO_has_started_up
