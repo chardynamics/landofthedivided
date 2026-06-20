@@ -1,9 +1,0 @@
-LOTD_is_russian_nation_initialize = {
-	if = {
-		limit = {
-			OR = {
-			}
-		}
-		set_country_flag = is_warlord
-	}
-}
