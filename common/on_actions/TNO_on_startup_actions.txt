@@ -96,48 +96,10 @@ on_actions = {
 
 			## Cold War GUI Stuff
 			# Starting superpowers
-			set_global_flag = skip_super_sorting
 			ZZZ = { econ_recompile_all_spheres = yes }
-			USA = {
-				set_superpower = yes
-				add_dynamic_modifier = { modifier = superpower_jap_usa_tension_modifier }
-				add_dynamic_modifier = { modifier = superpower_ger_usa_tension_modifier }
-			}
-			ZZZ = { Cold_War_GUI_Sort_Superpowers = yes }
-			clr_global_flag = skip_super_sorting
-
-			var:global.TNO_Superpowers^0 = {
-				add_to_variable = { TNO_Cold_War_GUI_Rankings_Tab_Superpower_Entries_Array_Frame = 1 }
-				save_global_event_target_as = Cold_War_GUI_Selected_Superpower
-			}
 
 			# Sea Zone setup
 			
-			every_country = {
-				set_variable = { Cold_War_GUI_SeaZone_SelectedSuperpower = var:global.TNO_Superpowers^0 }
-				set_rule = {
-					desc = rule_blank
-					can_create_collaboration_government = no
-				}
-				set_rule = {
-					desc = rule_blank
-					can_force_government = no
-				}
-				set_rule = {
-					desc = rule_blank
-					can_puppet = no
-				}
-				set_rule = {
-					desc = rule_blank
-					can_join_factions = no
-				}
-				set_rule = {
-					desc = rule_blank
-					can_send_volunteers = yes
-				}
-				set_country_flag = TNO_Cold_War_Display
-			}
-
 
 			# Starting nuclear stockpiles for each of the three superpowers
 			

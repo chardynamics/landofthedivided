@@ -41,43 +41,7 @@ TNO_BoP_RemoveTab = {
 }
 
 Global_Conflicts_Initalize = {
-	USA = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
-	JAP = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
-	GER = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
-	ARG = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
-	BRA = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
 	IBR = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
-	MEX = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
-	ITA = { #After 6 years
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
-	TUR = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
-	FRS = {
 		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
 		TNO_BoP_AddTab = yes
 	}

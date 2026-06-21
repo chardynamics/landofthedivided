@@ -395,7 +395,6 @@ infantry_generic = {
 			modifier = {
 				factor = 100
 				AND = {
-					is_far_eastern_nation = yes
 					has_country_flag = is_warlord
 				}
 			}

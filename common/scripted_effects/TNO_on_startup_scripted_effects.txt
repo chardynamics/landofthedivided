@@ -115,7 +115,7 @@ TNO_startup_nation = {
 					limit = {
 						has_country_flag = GDP_regions
 					}
-					GDP_distribute_regionally = yes
+					#GDP_distribute_regionally = yes
 				}
 				calculate_total_state_gdp = yes
 				
@@ -185,7 +185,7 @@ TNO_startup_nation = {
 			### COLD WAR GUI ###
 			set_variable = { Cold_War_GUI_SeaZone_SelectedSuperpower = var:global.TNO_Superpowers^0 }
 			set_variable = { Cold_War_GUI_SeaZone_SelectedSuperpower_Frame = 1 }
-			set_variable = { TNO_Cold_War_GUI_Tab = 1 }
+			set_variable = { TNO_Cold_War_GUI_Tab = 5 }
 			set_rule = {
 				desc = rule_blank
 				can_create_collaboration_government = no
@@ -208,13 +208,6 @@ TNO_startup_nation = {
 			}
 
 			log = "[GetDateText]: [This.GetName]: TNO_startup_nation; Completed execution."
-
-			#if = {
-			#	limit = { 
-			#		is_warlord = yes
-			#	}
-				add_ideas = USA_stupid_ai_econ
-			#}
 		
 			#test due to weird shit
 			set_country_flag = TNO_has_started_up

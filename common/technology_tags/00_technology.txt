@@ -213,13 +213,6 @@ technology_folders = {
 	electronics_folder = {
 		ledger = civilian
 	}
-	horse_folder = {
-		ledger = army
-		available = {
-			original_tag = OMO
-			OMO_2022_aprilfools_gamerule_active = yes
-		}
-	}
 	hidden_folder = { # For holding custom techs
 		available = {
 			always = no

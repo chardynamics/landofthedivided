@@ -3,7 +3,51 @@ capital = 611
 
 # Vacant
 
-fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+fill_empty_minister_nochecks = yes
+set_technology = {
+	basic_train = 1
+
+	##INFANTRY##
+	infantry_weapons_1 = 1
+	night_vision_1 = 1
+	
+	infantry_kit_1 = 1
+	infantry_weapons_2 = 1
+	night_vision_2 = 1
+	infantry_kit_2 = 1
+	infantry_weapons_improvements_mine_1 = 1
+	infantry_kit_3 = 1
+	infantry_weapons_improvements_ammo_1 = 1
+	infantry_weapons_improvements_grenade_1 = 1
+	basic_infantry_equipment = 1
+	infantry_at = 1
+	infantry_at_upgrade_1 = 1
+	motorized_infantry = 1
+	support_weapons = 1
+	support_weapons_hmg_1 = 1
+	combat_support_equipment_1 = 1
+	
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_field_hospital = 1
+	##ARTY##
+	artillery_1945 = 1
+	artillery_1950 = 1
+	##ENGINEERING##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	##INDUSTRY##
+	ww2_line_production = 1
+	building_construction_1 = 1
+	batch_production_1 = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	military_construction_1 = 1
+} # Please remove if you're adding ministers.
 
 add_ideas = {
 	Military_Authority_Regional
