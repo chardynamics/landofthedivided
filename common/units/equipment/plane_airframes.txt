@@ -3,11 +3,7 @@ equipments = {
 	small_plane_airframe = {
 		year = 1933
 
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
+		
 
 		is_archetype = yes
 		is_convertable = yes
@@ -609,11 +605,7 @@ equipments = {
 	cv_small_plane_airframe = {
 		year = 1933
 
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
+		
 
 		is_archetype = yes
 		is_convertable = yes
@@ -1213,11 +1205,7 @@ equipments = {
 	medium_plane_airframe = {
 		year = 1933
 
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
+		
 
 		is_archetype = yes
 		is_convertable = yes
@@ -2041,11 +2029,7 @@ equipments = {
 	large_plane_airframe = {
 		year = 1933
 
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
+		
 
 		is_archetype = yes
 		is_convertable = yes

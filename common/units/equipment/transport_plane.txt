@@ -1,11 +1,7 @@
 equipments = {
 	transport_plane_equipment = {
 
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
+		
 
 		year = 1933
 

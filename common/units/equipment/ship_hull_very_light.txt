@@ -2,11 +2,7 @@ equipments = {
 	# Archetype
 	ship_hull_very_light = {
 
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
+		
 
 		year = 1945
 

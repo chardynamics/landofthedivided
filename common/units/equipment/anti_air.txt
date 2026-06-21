@@ -2,11 +2,7 @@ equipments = {
 
 	anti_air_equipment = {
 
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
+		
 
 		is_archetype = yes
 		picture = archetype_anti_air_equipment
@@ -101,11 +97,7 @@ equipments = {
 	}
 
 	anti_air_shoulder_equipment = {
-		can_be_produced = {
-			NOT = {
-				has_idea = ENG_Across_The_Channel
-			}
-		}
+		
 
 		is_archetype = yes
 		picture = archetype_anti_air_shoulder_equipment

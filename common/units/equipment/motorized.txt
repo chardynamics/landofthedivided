@@ -5,7 +5,6 @@ equipments = {
 		can_be_produced = {
 			OR = {
 				has_country_flag = demand_more_motorized_prod
-				NOT = { has_idea = ENG_Across_The_Channel }
 			}
 		}
 
