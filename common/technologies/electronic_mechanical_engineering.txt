@@ -1543,7 +1543,7 @@ technologies = {
 		}
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = -1 y = 0 }
+			position = { x = -1 y = 3 }
 		}
 		folder = {
 			name = support_folder
@@ -1557,7 +1557,19 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = very_early_helicopter
+			leads_to_tech = asw_helicopter_1960
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = transport_helicopter_1960
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = attack_helicopter_1960
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = scout_helicopter_1960
 			research_cost_coeff = 1
 		}
 

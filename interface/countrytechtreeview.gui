@@ -2359,7 +2359,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "airtech_subtitle_interceptors"
-				position = { x = -16 y = 141 }
+				position = { x = -25 y = 141 }
 				font = "aldrich_32_outline"
 				borderSize = {x = 0 y = 4}
 				text = "AIR_TITLE_INTERCEPTOR"
@@ -2371,7 +2371,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "airtech_subtitle_fighters"
-				position = { x = -16 y = 281 }
+				position = { x = -20 y = 281 }
 				font = "aldrich_32_outline"
 				borderSize = {x = 0 y = 4}
 				text = "AIR_TITLE_FIGHTER"
@@ -2401,7 +2401,21 @@ guiTypes = {
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "early_fighter_tree"
+				name = "fighter_1950_tree"
+				position = { x = 150 y = 600 }
+				size = { width = 70 height = 70 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "interceptor_1950_tree"
+				position = { x = 90 y = 453 }
+				size = { width = 70 height = 70 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "CAS_1950_tree"
 				position = { x = 90 y = 453 }
 				size = { width = 70 height = 70 }
 				slotsize = { width = 70 height = 70 }
@@ -2577,21 +2591,21 @@ guiTypes = {
 				}
 			}
 			gridboxtype = {
-				name = "tac_bomber1_tree"
+				name = "tac_air_1950_tree"
 				position = { x = 25 y = 172 }
 				size = { width = 200 height = 200 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "strategic_bomber1_tree"
+				name = "heavy_air_1950_tree"
 				position = { x = 25 y = 322 }
 				size = { width = 200 height = 200 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "transport_air1_tree"
+				name = "transport_air_1950_tree"
 				position = { x = 25 y = 472 }
 				size = { width = 200 height = 100 }
 				slotsize = { width = 70 height = 70 }
@@ -2605,7 +2619,7 @@ guiTypes = {
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "scout_plane_1945_tree"
+				name = "scout_plane_1950_tree"
 				position = { x = 25 y = 772 }
 				size = { width = 200 height = 100 }
 				slotsize = { width = 70 height = 70 }
