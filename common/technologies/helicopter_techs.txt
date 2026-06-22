@@ -21,7 +21,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 7 y = 4 }
+			position = { x = 3 y = 4 }
 		}
 
 		categories = {
@@ -60,7 +60,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 11 y = 4 }
+			position = { x = 7 y = 4 }
 		}
 
 		categories = {
@@ -95,7 +95,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 15 y = 4 }
+			position = { x = 11 y = 4 }
 		}
 
 		categories = {
@@ -124,7 +124,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 19 y = 4 }
+			position = { x = 15 y = 4 }
 		}
 
 		categories = {
@@ -159,7 +159,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 7 y = 6 }
+			position = { x = 3 y = 6 }
 		}
 
 		categories = {
@@ -193,7 +193,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 11 y = 6 }
+			position = { x = 7 y = 6 }
 		}
 
 		categories = {
@@ -227,7 +227,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 15 y = 6 }
+			position = { x = 11 y = 6 }
 		}
 
 		categories = {
@@ -256,7 +256,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 19 y = 6 }
+			position = { x = 15 y = 6 }
 		}
 
 		categories = {
@@ -289,7 +289,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 7 y = 2 }
+			position = { x = 3 y = 2 }
 		}
 
 		air_assault = {
@@ -344,7 +344,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 11 y = 2 }
+			position = { x = 7 y = 2 }
 		}
 
 		categories = {
@@ -390,7 +390,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 15 y = 2 }
+			position = { x = 11 y = 2 }
 		}
 
 		categories = {
@@ -431,7 +431,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 19 y = 2 }
+			position = { x = 15 y = 2 }
 		}
 
 		categories = {
@@ -478,7 +478,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 7 y = 0 }
+			position = { x = 3 y = 0 }
 		}
 
 		categories = {
@@ -525,7 +525,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 11 y = 0 }
+			position = { x = 7 y = 0 }
 		}
 
 		categories = {
@@ -573,7 +573,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 15 y = 0 }
+			position = { x = 11 y = 0 }
 		}
 
 		categories = {
@@ -616,7 +616,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = helicopter_techs_folder
-			position = { x = 19 y = 0 }
+			position = { x = 15 y = 0 }
 		}
 
 		categories = {
@@ -637,190 +637,6 @@ technologies = {
 				factor = 35
 				num_of_military_factories > 70
 			}
-		}
-	}
-	#Experimental Helicopters
-	experimental_helicopter_equipment_fujitsu_0 = {
-		
-		enable_equipments = {
-			experimental_helicopter_equipment_fujitsu_0
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 0 y = 38 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			helicopter
-		}
-	}
-
-	experimental_helicopter_equipment_fujitsu_1 = {
-		
-		enable_equipments = {
-			experimental_helicopter_equipment_fujitsu_1
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 0 y = 38 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			helicopter
-		}
-	}
-
-	experimental_helicopter_equipment_sony_0 = {
-		
-		enable_equipments = {
-			experimental_helicopter_equipment_sony_0
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 5 y = 38 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			helicopter
-		}
-	}
-
-	experimental_helicopter_equipment_sony_1 = {
-		
-		enable_equipments = {
-			experimental_helicopter_equipment_sony_1
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 5 y = 38 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			helicopter
-		}
-	}
-
-	experimental_helicopter_equipment_matsushita_0 = {
-		
-		enable_equipments = {
-			experimental_helicopter_equipment_matsushita_0
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 10 y = 38 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			helicopter
-		}
-	}
-
-	experimental_helicopter_equipment_matsushita_1 = {
-		
-		enable_equipments = {
-			experimental_helicopter_equipment_matsushita_1
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 10 y = 38 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			helicopter
-		}
-	}
-
-	experimental_helicopter_equipment_hitachi_0 = {
-		
-		enable_equipments = {
-			experimental_helicopter_equipment_hitachi_0
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 15 y = 38 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			helicopter
-		}
-	}
-
-	experimental_helicopter_equipment_hitachi_1 = {
-		
-		enable_equipments = {
-			experimental_helicopter_equipment_hitachi_1
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 15 y = 38 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			helicopter
 		}
 	}
 }

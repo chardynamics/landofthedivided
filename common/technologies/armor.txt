@@ -5,84 +5,6 @@ technologies = {
 ## AC ##
 ########
 
-	AC_1945 = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Basic_Manufactoring = yes
-				TNO_KD_Can_Research_Basic_Tech = yes
-			}
-		}
-		enable_equipments = {
-			armored_car_equipment_0
-		}
-
-
-		path = {
-			leads_to_tech = AC_1950
-			research_cost_coeff = 1
-		}
-
-		research_cost = 3.25
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1945
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 0 }
-		}
-
-		categories = {
-			motorized_equipment
-			armor
-		}
-
-		enable_subunits = {
-			armored_car
-		}
-
-		ai_will_do = {
-			factor = 50
-		}
-	}
-
-	AC_1950 = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Outdated_Tech = yes
-				TNO_KD_Can_Research_Basic_Manufactoring = yes
-			}
-		}
-		enable_equipments = {
-			armored_car_equipment_1
-		}
-		path = {
-			leads_to_tech = AC_1960
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1950
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 4 }
-		}
-
-		categories = {
-			motorized_equipment
-			armor
-		}
-
-		ai_will_do = {
-			factor = 50
-		}
-	}
-
 	AC_1960 = {
 		allow = {
 			AND = {
@@ -106,7 +28,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 12 }
+			position = { x = 0 y = 0 }
 		}
 
 		categories = {
@@ -142,7 +64,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 20 }
+			position = { x = 0 y = 8 }
 		}
 
 		categories = {
@@ -178,7 +100,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 28 }
+			position = { x = 0 y = 16 }
 		}
 
 		categories = {
@@ -210,7 +132,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 36 }
+			position = { x = 0 y = 24 }
 		}
 
 		categories = {
@@ -226,333 +148,6 @@ technologies = {
 #########
 ## APC ##
 #########
-
-	APC_1945 = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Basic_Tech = yes
-				TNO_KD_Can_Research_Basic_Manufactoring = yes
-			}
-		}
-		enable_equipments = {
-			APC_equipment_0
-		}
-		path = {
-			leads_to_tech = APC_1950
-			research_cost_coeff = 1
-		}
-				
-		research_cost = 3.25
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1945
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 0 }
-		}
-
-		categories = {
-			motorized_equipment
-			armor
-			APC
-		}
-
-		ai_will_do = {
-			factor = 50
-		}
-	}
-
-	APC_1950 = { #Panzer I
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Outdated_Tech = yes
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-			}
-		}
-		enable_equipments = {
-			APC_equipment_1
-		}
-
-		path = {
-			leads_to_tech = APC_1960
-			research_cost_coeff = 1
-		}
-
-		path = { #1950 armor
-			leads_to_tech = APC_1950_basic_armor
-			research_cost_coeff = 1
-		}
-
-		path = { #1950 turret
-			leads_to_tech = APC_1950_basic_turret
-			research_cost_coeff = 1
-		}
-
-		#path = { #1950 armor engine
-		#	leads_to_tech = APC_1950_basic_engine
-		#	research_cost_coeff = 1
-		#}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1950
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 4 }
-		}
-
-		ai_will_do = {
-			factor = 50
-
-		}
-
-		categories = {
-			armor
-			APC
-		}
-	}
-
-	APC_1950_basic_armor = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Outdated_Tech = yes
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-			}
-		}
-		APC = {
-			armor_value = 0.05
-			breakthrough = 0.1
-		}
-
-		path = {
-			leads_to_tech = APC_1950_improved_armor
-			research_cost_coeff = 1
-		}
-	
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1953
-
-		folder = {
-			name = armour_folder
-			position = { x = 1 y = 6 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-
-		categories = {
-			armor
-			APC
-			armor_improvements
-		}
-	}
-
-	APC_1950_improved_armor = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Outdated_Tech = yes
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-			}
-		}
-		APC = {
-			armor_value = 0.1
-			breakthrough = 0.15
-		}
-
-		path = {
-			leads_to_tech = APC_1950_advanced_armor
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1956
-
-		folder = {
-			name = armour_folder
-			position = { x = 1 y = 8 }
-		}
-
-		categories = {
-			armor
-			APC
-			armor_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	APC_1950_advanced_armor = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Outdated_Tech = yes
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-			}
-		}
-		APC = {
-			armor_value = 0.15
-			breakthrough = 0.2
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1959
-
-		folder = {
-			name = armour_folder
-			position = { x = 1 y = 10 }
-		}
-
-		categories = {
-			armor
-			APC
-			armor_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	APC_1950_basic_turret = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Outdated_Tech = yes
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-			}
-		}
-		APC = {
-			soft_attack = 0.05
-			hard_attack = 0.05
-			ap_attack = 0.1
-		}
-
-		path = {
-			leads_to_tech = APC_1950_improved_turret
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1953
-
-		folder = {
-			name = armour_folder
-			position = { x = -1 y = 6 }
-		}
-
-		categories = {
-			armor
-			APC
-			turret_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	APC_1950_improved_turret = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Outdated_Tech = yes
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-			}
-		}
-		APC = {
-			soft_attack = 0.1
-			hard_attack = 0.1
-			ap_attack = 0.15
-		}
-
-		path = {
-			leads_to_tech = APC_1950_advanced_turret
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1956
-
-		folder = {
-			name = armour_folder
-			position = { x = -1 y = 8 }
-		}
-
-		categories = {
-			armor
-			APC
-			turret_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
-
-	APC_1950_advanced_turret = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		APC = {
-			soft_attack = 0.15
-			hard_attack = 0.15
-			ap_attack = 0.2
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1959
-
-		folder = {
-			name = armour_folder
-			position = { x = -1 y = 10 }
-		}
-
-		categories = {
-			armor
-			APC
-			turret_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
 
 	APC_1960 = { #Panzer II / APC 1960
 		allow = {
@@ -593,7 +188,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 12 }
+			position = { x = 0 y = 0 }
 		}
 
 
@@ -634,7 +229,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 14 }
+			position = { x = 1 y = 2 }
 		}
 
 		ai_will_do = {
@@ -675,7 +270,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 16 }
+			position = { x = 1 y = 4 }
 		}
 
 		categories = {
@@ -711,7 +306,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 18 }
+			position = { x = 1 y = 6 }
 		}
 
 		categories = {
@@ -753,7 +348,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 14 }
+			position = { x = -1 y = 2 }
 		}
 
 		categories = {
@@ -795,7 +390,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 16 }
+			position = { x = -1 y = 4 }
 		}
 
 		categories = {
@@ -832,7 +427,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 18 }
+			position = { x = -1 y = 6 }
 		}
 
 		categories = {
@@ -884,7 +479,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 20 }
+			position = { x = 0 y = 8 }
 		}
 
 
@@ -924,7 +519,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 22 }
+			position = { x = 1 y = 10 }
 		}
 
 		ai_will_do = {
@@ -965,7 +560,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 24 }
+			position = { x = 1 y = 12 }
 		}
 
 		categories = {
@@ -1001,7 +596,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 26 }
+			position = { x = 1 y = 14 }
 		}
 
 		categories = {
@@ -1043,7 +638,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 22 }
+			position = { x = -1 y = 10 }
 		}
 
 		categories = {
@@ -1085,7 +680,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 24 }
+			position = { x = -1 y = 12 }
 		}
 
 		categories = {
@@ -1122,7 +717,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 26 }
+			position = { x = -1 y = 14 }
 		}
 
 		categories = {
@@ -1170,7 +765,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 28 }
+			position = { x = 0 y = 16 }
 		}
 
 
@@ -1210,7 +805,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 30 }
+			position = { x = 1 y = 18 }
 		}
 
 		ai_will_do = {
@@ -1251,7 +846,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 32 }
+			position = { x = 1 y = 20 }
 		}
 
 		categories = {
@@ -1287,7 +882,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 34 }
+			position = { x = 1 y = 22 }
 		}
 
 		categories = {
@@ -1329,7 +924,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 30 }
+			position = { x = -1 y = 18 }
 		}
 
 		categories = {
@@ -1371,7 +966,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 32 }
+			position = { x = -1 y = 20 }
 		}
 
 		categories = {
@@ -1408,7 +1003,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 34 }
+			position = { x = -1 y = 22 }
 		}
 
 		categories = {
@@ -1443,7 +1038,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 36 }
+			position = { x = 0 y = 24 }
 		}
 
 
@@ -1461,338 +1056,6 @@ technologies = {
 #########
 ## IFV ##
 #########
-
-	IFV_1945 = { #Panther
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Basic_Tech = yes
-			}
-		}
-		enable_equipments = {
-			IFV_equipment_0
-		}
-		path = {
-			leads_to_tech = IFV_1950
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1945
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 0 }
-		}
-
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		categories = {
-			armor
-			IFV
-		}
-	}
-
-	IFV_1950 = { #Panzer III
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		enable_equipments = {
-			IFV_equipment_1
-		}
-
-		path = {
-			leads_to_tech = IFV_1960
-			research_cost_coeff = 1
-		}
-
-		path = { #1950 armor
-			leads_to_tech = IFV_1950_basic_armor
-			research_cost_coeff = 1
-		}
-
-		path = { #1950 turret
-			leads_to_tech = IFV_1950_basic_turret
-			research_cost_coeff = 1
-		}
-
-		#path = { #1950 armor engine
-		#	leads_to_tech = IFV_1950_basic_engine
-		#	research_cost_coeff = 1
-		#}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1950
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 4 }
-		}
-
-
-		ai_will_do = {
-			factor = 60
-
-		}
-
-		categories = {
-			armor
-			IFV
-		}
-	}
-
-	IFV_1950_basic_armor = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		IFV = {
-			armor_value = 0.05
-			breakthrough = 0.1
-		}
-
-		path = {
-			leads_to_tech = IFV_1950_improved_armor
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1953
-
-		folder = {
-			name = armour_folder
-			position = { x = 1 y = 6 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-
-		categories = {
-			armor
-			IFV
-			armor_improvements
-		}
-	}
-
-	IFV_1950_improved_armor = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		IFV = {
-			armor_value = 0.1
-			breakthrough = 0.15
-		}
-
-		path = {
-			leads_to_tech = IFV_1950_advanced_armor
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1956
-
-		folder = {
-			name = armour_folder
-			position = { x = 1 y = 8 }
-		}
-
-		categories = {
-			armor
-			IFV
-			armor_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
-
-	IFV_1950_advanced_armor = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		IFV = {
-			armor_value = 0.15
-			breakthrough = 0.2
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1959
-
-		folder = {
-			name = armour_folder
-			position = { x = 1 y = 10 }
-		}
-
-		categories = {
-			armor
-			IFV
-			armor_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
-
-	IFV_1950_basic_turret = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		IFV = {
-			soft_attack = 0.05
-			hard_attack = 0.05
-			ap_attack = 0.1
-		}
-
-		path = {
-			leads_to_tech = IFV_1950_improved_turret
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1953
-
-		folder = {
-			name = armour_folder
-			position = { x = -1 y = 6 }
-		}
-
-		categories = {
-			armor
-			IFV
-			turret_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
-
-	IFV_1950_improved_turret = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		IFV = {
-			soft_attack = 0.1
-			hard_attack = 0.1
-			ap_attack = 0.15
-		}
-
-		path = {
-			leads_to_tech = IFV_1950_advanced_turret
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1956
-
-		folder = {
-			name = armour_folder
-			position = { x = -1 y = 8 }
-		}
-
-		categories = {
-			armor
-			IFV
-			turret_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
-
-	IFV_1950_advanced_turret = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		IFV = {
-			soft_attack = 0.15
-			hard_attack = 0.15
-			ap_attack = 0.2
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1959
-
-		folder = {
-			name = armour_folder
-			position = { x = -1 y = 10 }
-		}
-
-		categories = {
-			armor
-			IFV
-			turret_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
 
 	IFV_1960 = { #Panzer IV
 		allow = {
@@ -1833,7 +1096,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 12 }
+			position = { x = 0 y = 0 }
 		}
 
 
@@ -1874,7 +1137,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 14 }
+			position = { x = 1 y = 2 }
 		}
 
 		ai_will_do = {
@@ -1915,7 +1178,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 16 }
+			position = { x = 1 y = 4 }
 		}
 
 		categories = {
@@ -1951,7 +1214,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 18 }
+			position = { x = 1 y = 6 }
 		}
 
 		categories = {
@@ -1993,7 +1256,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 14 }
+			position = { x = -1 y = 2 }
 		}
 
 		categories = {
@@ -2035,7 +1298,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 16 }
+			position = { x = -1 y = 4 }
 		}
 
 		categories = {
@@ -2072,7 +1335,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 18 }
+			position = { x = -1 y = 6 }
 		}
 
 		categories = {
@@ -2126,7 +1389,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 20 }
+			position = { x = 0 y = 8 }
 		}
 
 
@@ -2167,7 +1430,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 22 }
+			position = { x = 1 y = 10 }
 		}
 
 		ai_will_do = {
@@ -2208,7 +1471,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 24 }
+			position = { x = 1 y = 12 }
 		}
 
 		categories = {
@@ -2244,7 +1507,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 26 }
+			position = { x = 1 y = 14 }
 		}
 
 		categories = {
@@ -2286,7 +1549,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 22 }
+			position = { x = -1 y = 10 }
 		}
 
 		categories = {
@@ -2328,7 +1591,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 24 }
+			position = { x = -1 y = 12 }
 		}
 
 		categories = {
@@ -2365,7 +1628,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 26 }
+			position = { x = -1 y = 14 }
 		}
 
 		categories = {
@@ -2416,7 +1679,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 28 }
+			position = { x = 0 y = 16 }
 		}
 
 
@@ -2457,7 +1720,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 30 }
+			position = { x = 1 y = 18 }
 		}
 
 		ai_will_do = {
@@ -2498,7 +1761,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 32 }
+			position = { x = 1 y = 20 }
 		}
 
 		categories = {
@@ -2534,7 +1797,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 34 }
+			position = { x = 1 y = 22 }
 		}
 
 		categories = {
@@ -2576,7 +1839,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 30 }
+			position = { x = -1 y = 18 }
 		}
 
 		categories = {
@@ -2618,7 +1881,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 32 }
+			position = { x = -1 y = 20 }
 		}
 
 		categories = {
@@ -2655,7 +1918,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 34 }
+			position = { x = -1 y = 22 }
 		}
 
 		categories = {
@@ -2690,7 +1953,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 36 }
+			position = { x = 0 y = 24 }
 		}
 
 
@@ -2709,337 +1972,6 @@ technologies = {
 #########
 ## MBT ##
 #########
-
-	MBT_1945 = { #Panther
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Basic_Tech = yes
-			}
-		}
-		enable_equipments = {
-			MBT_equipment_0
-		}
-		path = {
-			leads_to_tech = MBT_1950
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1945
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 0 }
-		}
-
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	MBT_1950 = { # T-55
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		enable_equipments = {
-			MBT_equipment_1
-		}
-
-		path = {
-			leads_to_tech = MBT_1960
-			research_cost_coeff = 1
-		}
-
-		path = { #1950 armor
-			leads_to_tech = MBT_1950_basic_armor
-			research_cost_coeff = 1
-		}
-
-		path = { #1950 turret
-			leads_to_tech = MBT_1950_basic_turret
-			research_cost_coeff = 1
-		}
-
-		#path = { #1950 armor engine
-		#	leads_to_tech = MBT_1950_basic_engine
-		#	research_cost_coeff = 1
-		#}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1950
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 4 }
-		}
-
-		ai_will_do = {
-			factor = 50
-
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	MBT_1950_basic_armor = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		MBT = {
-			armor_value = 0.05
-			breakthrough = 0.05
-		}
-
-		path = {
-			leads_to_tech = MBT_1950_improved_armor
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1953
-
-		folder = {
-			name = armour_folder
-			position = { x = 1 y = 6 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-
-		categories = {
-			armor
-			MBT
-			armor_improvements
-		}
-	}
-
-	MBT_1950_improved_armor = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		MBT = {
-			armor_value = 0.1
-			breakthrough = 0.1
-		}
-
-		path = {
-			leads_to_tech = MBT_1950_advanced_armor
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1956
-
-		folder = {
-			name = armour_folder
-			position = { x = 1 y = 8 }
-		}
-
-		categories = {
-			armor
-			MBT
-			armor_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
-
-	MBT_1950_advanced_armor = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Modern_Tech = yes
-			}
-		}
-		MBT = {
-			armor_value = 0.15
-			breakthrough = 0.15
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1959
-
-		folder = {
-			name = armour_folder
-			position = { x = 1 y = 10 }
-		}
-
-		categories = {
-			armor
-			MBT
-			armor_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
-
-	MBT_1950_basic_turret = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		MBT = {
-			soft_attack = 0.05
-			hard_attack = 0.05
-			ap_attack = 0.1
-		}
-
-		path = {
-			leads_to_tech = MBT_1950_improved_turret
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1953
-
-		folder = {
-			name = armour_folder
-			position = { x = -1 y = 6 }
-		}
-
-		categories = {
-			armor
-			MBT
-			turret_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
-
-	MBT_1950_improved_turret = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		MBT = {
-			soft_attack = 0.1
-			hard_attack = 0.1
-			ap_attack = 0.15
-		}
-
-		path = {
-			leads_to_tech = MBT_1950_advanced_turret
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1956
-
-		folder = {
-			name = armour_folder
-			position = { x = -1 y = 8 }
-		}
-
-		categories = {
-			armor
-			MBT
-			turret_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
-
-	MBT_1950_advanced_turret = {
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Modern_Tech = yes
-			}
-		}
-		MBT = {
-			soft_attack = 0.15
-			hard_attack = 0.15
-			ap_attack = 0.2
-		}
-
-		research_cost = 1.3
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1959
-
-		folder = {
-			name = armour_folder
-			position = { x = -1 y = 10 }
-		}
-
-		categories = {
-			armor
-			MBT
-			turret_improvements
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-	}
 
 	MBT_1960 = { # T-64
 		allow = {
@@ -3080,7 +2012,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 12 }
+			position = { x = 0 y = 0 }
 		}
 
 
@@ -3120,7 +2052,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 14 }
+			position = { x = 1 y = 2 }
 		}
 
 		ai_will_do = {
@@ -3161,7 +2093,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 16 }
+			position = { x = 1 y = 4 }
 		}
 
 		categories = {
@@ -3197,7 +2129,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 18 }
+			position = { x = 1 y = 6 }
 		}
 
 		categories = {
@@ -3239,7 +2171,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 14 }
+			position = { x = -1 y = 2 }
 		}
 
 		categories = {
@@ -3281,7 +2213,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 16 }
+			position = { x = -1 y = 4 }
 		}
 
 		categories = {
@@ -3318,7 +2250,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 18 }
+			position = { x = -1 y = 6 }
 		}
 
 		categories = {
@@ -3372,7 +2304,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 20 }
+			position = { x = 0 y = 8 }
 		}
 
 
@@ -3413,7 +2345,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 22 }
+			position = { x = 1 y = 10 }
 		}
 
 		ai_will_do = {
@@ -3454,7 +2386,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 24 }
+			position = { x = 1 y = 12 }
 		}
 
 		categories = {
@@ -3490,7 +2422,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 26 }
+			position = { x = 1 y = 14 }
 		}
 
 		categories = {
@@ -3532,7 +2464,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 22 }
+			position = { x = -1 y = 10 }
 		}
 
 		categories = {
@@ -3574,7 +2506,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 24 }
+			position = { x = -1 y = 12 }
 		}
 
 		categories = {
@@ -3611,7 +2543,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 26 }
+			position = { x = -1 y = 14 }
 		}
 
 		categories = {
@@ -3662,7 +2594,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 28 }
+			position = { x = 0 y = 16 }
 		}
 
 
@@ -3702,7 +2634,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 30 }
+			position = { x = 1 y = 18 }
 		}
 
 		ai_will_do = {
@@ -3743,7 +2675,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 32 }
+			position = { x = 1 y = 20 }
 		}
 
 		categories = {
@@ -3779,7 +2711,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = 1 y = 34 }
+			position = { x = 1 y = 22 }
 		}
 
 		categories = {
@@ -3821,7 +2753,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 30 }
+			position = { x = -1 y = 18 }
 		}
 
 		categories = {
@@ -3863,7 +2795,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 32 }
+			position = { x = -1 y = 20 }
 		}
 
 		categories = {
@@ -3900,7 +2832,7 @@ technologies = {
 
 		folder = {
 			name = armour_folder
-			position = { x = -1 y = 34 }
+			position = { x = -1 y = 22 }
 		}
 
 		categories = {
@@ -3934,7 +2866,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = armour_folder
-			position = { x = 0 y = 36 }
+			position = { x = 0 y = 24 }
 		}
 
 
@@ -3942,475 +2874,6 @@ technologies = {
 			factor = 50
 		}
 
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-#########
-# HEAVY #
-#########
-
-	Heavy_1945 = { #Panther
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		enable_equipments = {
-			heavy_tank_equipment_0
-		}
-		path = {
-			leads_to_tech = Heavy_1950
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1945
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 0 }
-		}
-
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	Heavy_1950 = { #Panther
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		enable_equipments = {
-			heavy_tank_equipment_1
-		}
-		path = {
-			leads_to_tech = Heavy_1960
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1950
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 4 }
-		}
-
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	Heavy_1960 = { #Panther
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Modern_Tech = yes
-			}
-		}
-		enable_equipments = {
-			heavy_tank_equipment_2
-		}
-		path = {
-			leads_to_tech = Heavy_1970
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1960
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 12 }
-		}
-
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	Heavy_1970 = { #Panther
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Modern_Manufactoring = yes
-				TNO_KD_Can_Research_Modern_Tech = yes
-			}
-		}
-		enable_equipments = {
-			heavy_tank_equipment_3
-		}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1970
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 20 }
-		}
-
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-##############
-# SUPERHEAVY #
-##############
-
-	Superheavy_1945 = { #Panther
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		enable_equipments = {
-			superheavy_tank_equipment_0
-		}
-		path = {
-			leads_to_tech = Superheavy_1950
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1945
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 0 }
-		}
-
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	Superheavy_1950 = { #Panther
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Developed_Manufactoring = yes
-				TNO_KD_Can_Research_Outdated_Tech = yes
-			}
-		}
-		enable_equipments = {
-			superheavy_tank_equipment_1
-		}
-		path = {
-			leads_to_tech = Superheavy_1960
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-
-		start_year = 1950
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 4 }
-		}
-
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	Superheavy_1960 = { #Panther
-		allow = {
-			AND = {
-				TNO_KD_Can_Research_Modern_Manufactoring = yes
-				TNO_KD_Can_Research_Modern_Tech = yes
-			}
-		}
-		enable_equipments = {
-			superheavy_tank_equipment_2
-		}
-
-		research_cost = 2.6
-		xp_research_type = army
-		xp_boost_cost = 50
-		xp_research_bonus = 0.35
-		
-		start_year = 1960
-
-		folder = {
-			name = armour_folder
-			position = { x = 0 y = 12 }
-		}
-
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-#########
-# OTHER #
-#########
-	laser_AA_tech = { #Szhatie
-
-		enable_equipments = {
-			laser_aa_equipment_1
-		}
-
-		enable_subunits = {
-			laser_anti_air
-		}
-
-		research_cost = 2.5
-		start_year = 1990
-		folder = {
-			name = hidden_folder
-			position = { x = 0 y = 10 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		categories = {
-			anti_air_tech
-			MBT
-		}
-	}
-
-	kugelpanzer = {
-
-		enable_equipments = {
-			kugelpanzer_equipment_1
-		}
-
-		research_cost = 2.5
-		start_year = 1950
-
-		folder = {
-			name = hidden_folder
-			position = { x = 0 y = 0 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		categories = {
-			armor
-			IFV
-		}
-	}
-
-	Maus = {
-
-		enable_equipments = {
-			Maus_equipment_1
-		}
-
-		research_cost = 2.5
-		start_year = 1948
-
-		folder = {
-			name = hidden_folder
-			position = { x = 0 y = 8 }
-		}
-
-		path = {
-			leads_to_tech = Flakmaus
-			research_cost_coeff = 1
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	Flakmaus = {
-
-		enable_equipments = {
-			Maus_aa_equipment_1
-		}
-
-		research_cost = 2.5
-		start_year = 1950
-
-		folder = {
-			name = hidden_folder
-			position = { x = 8 y = 8 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		categories = {
-			armor
-			MBT
-		}
-	}
-	##Guangdong Experimental Equipment
-	experimental_MBT_equipment_0 = {
-		
-		enable_equipments = {
-			experimental_MBT_equipment_0
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 0 y = 22 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	experimental_MBT_equipment_1 = {
-		
-		enable_equipments = {
-			experimental_MBT_equipment_1
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 4 y = 22 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	experimental_SPART_equipment_0 = {
-		
-		enable_equipments = {
-			experimental_SPART_equipment_0
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 0 y = 30 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
-		categories = {
-			armor
-			MBT
-		}
-	}
-
-	experimental_SPART_equipment_1 = {
-		
-		enable_equipments = {
-			experimental_SPART_equipment_1
-		}
-		
-		research_cost = 2.5
-		start_year = 1950
-		
-		folder = {
-			name = hidden_folder
-			position = { x = 4 y = 30 }
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-		
 		categories = {
 			armor
 			MBT

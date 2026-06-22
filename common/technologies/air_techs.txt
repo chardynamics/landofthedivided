@@ -14,10 +14,10 @@ technologies = {
 			leads_to_tech = fighter_1960
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = interceptor_1950
-			research_cost_coeff = 0.75
-		}
+		#path = {
+		#	leads_to_tech = interceptor_1950
+		#	research_cost_coeff = 0.75
+		#}
 
 		dependencies = {
 			jet_engines = 1
@@ -31,7 +31,7 @@ technologies = {
 		start_year = 1950
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 8 y = -2 }
+			position = { x = 4 y = -2 }
 		}
 
 		categories = {
@@ -135,7 +135,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 12 y = -2 }
+			position = { x = 8 y = -2 }
 		}
 
 		categories = {
@@ -234,7 +234,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 16 y = -2 }
+			position = { x = 12 y = -2 }
 		}
 
 		categories = {
@@ -310,10 +310,10 @@ technologies = {
 			leads_to_tech = interceptor_1960
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = fighter_1950
-			research_cost_coeff = 0.75
-		}
+		#path = {
+		#	leads_to_tech = fighter_1950
+		#	research_cost_coeff = 0.75
+		#}
 
 		dependencies = {
 			jet_engines = 1
@@ -327,7 +327,7 @@ technologies = {
 		start_year = 1950
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 8 y = -4 }
+			position = { x = 4 y = -4 }
 		}
 
 		categories = {
@@ -382,7 +382,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 12 y = -4 }
+			position = { x = 8 y = -4 }
 		}
 
 		categories = {
@@ -437,7 +437,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 16 y = -4 }
+			position = { x = 12 y = -4 }
 		}
 
 		categories = {
@@ -488,7 +488,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 20 y = -4 }
+			position = { x = 16 y = -4 }
 		}
 
 		categories = {
@@ -534,7 +534,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 24 y = -4 }
+			position = { x = 20 y = -4 }
 		}
 
 		categories = {
@@ -582,7 +582,7 @@ technologies = {
 		start_year = 1950
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 8 y = 2 }
+			position = { x = 4 y = 2 }
 		}
 
 		categories = {
@@ -682,7 +682,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 12 y = 2 }
+			position = { x = 8 y = 2 }
 		}
 
 		categories = {
@@ -781,7 +781,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 16 y = 2 }
+			position = { x = 12 y = 2 }
 		}
 
 		categories = {
@@ -865,7 +865,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 20 y = 0 }
+			position = { x = 16 y = 0 }
 		}
 
 		categories = {
@@ -942,7 +942,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = light_air_techs_folder
-			position = { x = 24 y = 0 }
+			position = { x = 20 y = 0 }
 		}
 
 		categories = {
@@ -1028,7 +1028,7 @@ technologies = {
 		start_year = 1950
 		folder = {
 			name = air_techs_folder
-			position = { x = 8 y = 0 }
+			position = { x = 5 y = 0 }
 		}
 
 		categories = {
@@ -1074,7 +1074,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = air_techs_folder
-			position = { x = 12 y = 0 }
+			position = { x = 9 y = 0 }
 		}
 
 		categories = {
@@ -1120,7 +1120,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = air_techs_folder
-			position = { x = 16 y = 0 }
+			position = { x = 13 y = 0 }
 		}
 
 		categories = {
@@ -1166,7 +1166,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = air_techs_folder
-			position = { x = 20 y = 0 }
+			position = { x = 17 y = 0 }
 		}
 
 		categories = {
@@ -1207,7 +1207,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = air_techs_folder
-			position = { x = 24 y = 0 }
+			position = { x = 21 y = 0 }
 		}
 
 		categories = {
@@ -1259,7 +1259,7 @@ technologies = {
 		start_year = 1950
 		folder = {
 			name = air_techs_folder
-			position = { x = 8 y = 0 }
+			position = { x = 5 y = 0 }
 		}
 
 		categories = {
@@ -1305,7 +1305,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = air_techs_folder
-			position = { x = 12 y = 0 }
+			position = { x = 9 y = 0 }
 		}
 
 		categories = {
@@ -1351,7 +1351,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = air_techs_folder
-			position = { x = 16 y = 0 }
+			position = { x = 13 y = 0 }
 		}
 
 		categories = {
@@ -1397,7 +1397,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = air_techs_folder
-			position = { x = 20 y = 0 }
+			position = { x = 17 y = 0 }
 		}
 
 		categories = {
@@ -1438,7 +1438,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = air_techs_folder
-			position = { x = 24 y = 0 }
+			position = { x = 21 y = 0 }
 		}
 
 		categories = {
@@ -1491,7 +1491,7 @@ technologies = {
 		start_year = 1950
 		folder = {
 			name = air_techs_folder
-			position = { x = 8 y = 0 }
+			position = { x = 5 y = 0 }
 		}
 
 		categories = {
@@ -1536,7 +1536,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = air_techs_folder
-			position = { x = 12 y = 0 }
+			position = { x = 9 y = 0 }
 		}
 
 		categories = {
@@ -1581,7 +1581,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = air_techs_folder
-			position = { x = 16 y = 0 }
+			position = { x = 13 y = 0 }
 		}
 
 		categories = {
@@ -1626,7 +1626,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = air_techs_folder
-			position = { x = 20 y = 0 }
+			position = { x = 17 y = 0 }
 		}
 
 		categories = {
@@ -1662,7 +1662,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = air_techs_folder
-			position = { x = 24 y = 0 }
+			position = { x = 21 y = 0 }
 		}
 
 		categories = {
@@ -1706,7 +1706,7 @@ technologies = {
 		start_year = 1950
 		folder = {
 			name = air_techs_folder
-			position = { x = 8 y = 0 }
+			position = { x = 5 y = 0 }
 		}
 
 		categories = {
@@ -1744,7 +1744,7 @@ technologies = {
 		start_year = 1960
 		folder = {
 			name = air_techs_folder
-			position = { x = 12 y = 0 }
+			position = { x = 9 y = 0 }
 		}
 
 		categories = {
@@ -1777,7 +1777,7 @@ technologies = {
 		start_year = 1970
 		folder = {
 			name = air_techs_folder
-			position = { x = 16 y = 0 }
+			position = { x = 13 y = 0 }
 		}
 
 		categories = {
@@ -1788,104 +1788,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-		}
-	}
-
-###GUNSHIP###
-	gunship_1964 = {
-
-		enable_equipments = {
-			gunship_equipment_1
-		}
-
-		path = {
-			leads_to_tech = gunship_1966
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 1964
-		folder = {
-			name = hidden_folder
-			position = { x = 16 y = 0 }
-		}
-
-		categories = {
-			heavy_air
-			air_equipment
-			gunship
-		}
-
-		ai_will_do = {
-			factor = 0
-
-			modifier = {
-				add = 10
-				tag = USA
-			}
-		}
-	}
-
-	gunship_1966 = {
-
-		enable_equipments = {
-			gunship_equipment_2
-		}
-
-		path = {
-			leads_to_tech = gunship_1968
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 1966
-		folder = {
-			name = hidden_folder
-			position = { x = 16 y = 4 }
-		}
-
-		categories = {
-			heavy_air
-			air_equipment
-			gunship
-		}
-
-		ai_will_do = {
-			factor = 0
-
-			modifier = {
-				add = 10
-				tag = USA
-			}
-		}
-	}
-
-	gunship_1968 = {
-
-		enable_equipments = {
-			gunship_equipment_3
-		}
-
-		research_cost = 2
-		start_year = 1968
-		folder = {
-			name = hidden_folder
-			position = { x = 16 y = 8 }
-		}
-
-		categories = {
-			heavy_air
-			air_equipment
-			gunship
-		}
-
-		ai_will_do = {
-			factor = 0
-
-			modifier = {
-				add = 10
-				tag = USA
-			}
 		}
 	}
 }
