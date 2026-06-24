@@ -68,6 +68,7 @@ ideas = {
 				remove_ideas = Admin_Title_Department
 				set_temp_variable = { i = token:Admin_Title_Department }
 				add_to_array = { global.has_spanish_endonym = i }
+				add_to_array = { global.has_french_endonym = i }
 				add_to_array = { global.has_title_interaction = i }
 			}
 		}

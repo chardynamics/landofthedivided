@@ -13,7 +13,7 @@ TNO_admin_title_LOTD = {
 		}
 		set_variable = { AssocRegion = token:Assoc_Region_Michigan }
 	}
-
+	#Cuba
 	CUB = {
 		every_owned_state = {
 			limit = {
@@ -34,6 +34,7 @@ TNO_admin_title_LOTD = {
 					state = 711
 					state = 96
 					state = 722
+					state = 734
 				}
 			}
 			set_variable = { AdminTitle = token:Admin_Title_Province }
@@ -90,8 +91,54 @@ TNO_admin_title_LOTD = {
 				state = 711
 				state = 96
 				state = 722
+				state = 734
 			}
 		}
 		set_variable = { AssocRegion = token:Assoc_Region_Greater_Antilles }
+	}
+	#Haiti
+	HAI = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 729
+					state = 732
+					state = 726
+					state = 736
+					state = 735
+					state = 744
+					state = 760
+					state = 765
+					state = 769
+					state = 773
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Department }
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 729
+				state = 732
+				state = 726
+				state = 736
+				state = 735
+				state = 744
+				state = 760
+				state = 765
+				state = 769
+				state = 773
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Greater_Antilles }
+	}
+	HAI = {
+		every_owned_state = {
+			limit = {
+				check_variable = { AdminTitle = token:Admin_Title_Department }
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
 	}
 }
