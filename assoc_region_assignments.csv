@@ -1,0 +1,780 @@
+state_id,name,lat,lon,region_token,assoc_region_2,rule_used
+1,British Columbia,43.5114,-80.6562,Assoc_Region_British_Columbia,,canada_name
+2,"Hot Springs, AR",34.2164,-92.7249,Assoc_Region_Arkansas,,us_state_abbr
+3,"Joplin, MO",37.0591,-93.5939,Assoc_Region_Missouri,,us_state_abbr
+4,"Ponce, PR",18.1764,-66.7556,Assoc_Region_Puerto_Rico,,puerto_rico_abbr
+5,"Mayaguez, PR",18.2162,-67.1874,Assoc_Region_Puerto_Rico,,puerto_rico_abbr
+6,Northern Alberta,36.6162,-88.3171,Assoc_Region_Alberta,,canada_name
+7,"Arecibo, PR",18.4190,-66.7009,Assoc_Region_Puerto_Rico,,puerto_rico_abbr
+8,North Manitoba,42.6885,-77.6435,Assoc_Region_Manitoba,,canada_name
+9,Quebec,49.5021,-67.9494,Assoc_Region_Quebec,,canada_name
+10,Labrador,49.3840,-54.5519,Assoc_Region_Newfoundland_and_Labrador,,canada_name
+11,"Floyd County, KY",38.0541,-83.1067,Assoc_Region_Kentucky,,us_state_abbr
+12,"Newberry, MI",46.2708,-85.5848,Assoc_Region_Michigan,,us_state_abbr
+13,"Saint Ignace, MI",46.1405,-84.4314,Assoc_Region_Michigan,,us_state_abbr
+14,Central Northern Manitoba,44.8498,-82.3830,Assoc_Region_Manitoba,,canada_name
+15,"Springfield, MO",37.2857,-92.4992,Assoc_Region_Missouri,,us_state_abbr
+16,"Houghton, MI",46.4302,-88.6798,Assoc_Region_Michigan,,us_state_abbr
+17,"Moresby Island, BC",31.9918,-100.9543,Assoc_Region_British_Columbia,,canada_name
+18,"Shannon, MO",37.0654,-90.9359,Assoc_Region_Missouri,,us_state_abbr
+19,"Evansville, IN",38.2466,-87.1116,Assoc_Region_Indiana,,us_state_abbr
+20,"Hopkins, KY",37.5386,-87.3611,Assoc_Region_Kentucky,,us_state_abbr
+21,"Bloomington, IN",39.0286,-86.7678,Assoc_Region_Indiana,,us_state_abbr
+22,"Poplar Bluff, MO",37.1122,-89.7954,Assoc_Region_Missouri,,us_state_abbr
+23,Northern British Columbia,34.8230,-99.4133,Assoc_Region_British_Columbia,,canada_name
+24,"Louisville, KY",38.1074,-85.6908,Assoc_Region_Kentucky,,us_state_abbr
+25,"St. Louis, MO",38.6270,-90.1994,Assoc_Region_Missouri,,us_state_abbr
+26,World Border,33.7637,-132.9263,,,skipped_existing
+27,"Harrisonville, MO",38.3461,-93.5643,Assoc_Region_Missouri,,us_state_abbr
+28,"St. Joseph, MO",39.8433,-94.4128,Assoc_Region_Missouri,,us_state_abbr
+29,"Adalair, MO",39.8262,-92.6405,Assoc_Region_Missouri,,us_state_abbr
+30,Saint-Pierre-et-Miquelon,49.6980,-59.6992,Assoc_Region_Saint_Pierre_et_Miquelon,,canada_name
+31,"Kidney Island, NU",48.1723,-66.3802,Assoc_Region_Nunavut,,canada_name
+32,"Tupelo, MS",34.1107,-88.7856,Assoc_Region_Mississippi,,us_state_abbr
+33,"Etowah, AL",34.1799,-86.1134,Assoc_Region_Alabama,,us_state_abbr
+34,"Knox, IL",40.7748,-90.1637,Assoc_Region_Illinois,,us_state_abbr
+35,"Howard, IN",40.4693,-85.9133,Assoc_Region_Indiana,,us_state_abbr
+36,"Coeur d'Alene, ID",47.4231,-115.7239,Assoc_Region_Idaho,,us_state_abbr
+37,"Kankakee, IL",40.8286,-88.2485,Assoc_Region_Illinois,,us_state_abbr
+38,"Belcher Islands, NU",48.6298,-67.9911,Assoc_Region_Nunavut,,canada_name
+39,"Christian, KY",36.9641,-87.2856,Assoc_Region_Kentucky,,us_state_abbr
+40,Eastern Northern Manitoba,46.7395,-83.0363,Assoc_Region_Manitoba,,canada_name
+41,"Peoria, IL",40.2349,-89.1415,Assoc_Region_Illinois,,us_state_abbr
+42,Newfoundland,47.1570,-52.5278,Assoc_Region_Newfoundland_and_Labrador,,canada_name
+43,"Oxford, MS",34.5172,-89.7305,Assoc_Region_Mississippi,,us_state_abbr
+44,"El Dorado, AR",33.3540,-92.3134,Assoc_Region_Arkansas,,us_state_abbr
+45,Oklahoma,48.7539,-55.0262,Assoc_Region_Oklahoma,,us_full_state_name
+46,"Champaign, IL",39.3280,-87.9160,Assoc_Region_Illinois,,us_state_abbr
+47,"Little Rock, AR",34.6953,-92.3260,Assoc_Region_Arkansas,,us_state_abbr
+48,"Woodward, OK",36.3269,-99.6182,Assoc_Region_Oklahoma,,us_state_abbr
+49,"Bowling Green, KY",37.0725,-86.1907,Assoc_Region_Kentucky,,us_state_abbr
+50,"Guayama, PR",18.2130,-66.0964,Assoc_Region_Puerto_Rico,,puerto_rico_abbr
+51,"Petersburg, IL",39.6681,-89.8964,Assoc_Region_Illinois,,us_state_abbr
+52,"Platte, WI",42.6090,-90.4230,Assoc_Region_Wisconsin,,us_state_abbr
+53,"Buncombe, NC",47.4410,-79.8199,Assoc_Region_North_Carolina,,us_state_abbr
+54,"Ottumwa, IA",40.6888,-92.6434,Assoc_Region_Iowa,,us_state_abbr
+55,"Iowa City, IA",41.2081,-91.7435,Assoc_Region_Iowa,,us_state_abbr
+56,"Dubuque, IA",42.6343,-91.6875,Assoc_Region_Iowa,,us_state_abbr
+57,"Waterloo, IA",41.9622,-92.9726,Assoc_Region_Iowa,,us_state_abbr
+58,"Covington, KY",38.6367,-84.3772,Assoc_Region_Kentucky,,us_state_abbr
+59,"Indianapolis, IN",39.7902,-86.0341,Assoc_Region_Indiana,,us_state_abbr
+60,"Des Moines, IA",41.2201,-94.0145,Assoc_Region_Iowa,,us_state_abbr
+61,Illinois,47.9656,-51.1654,Assoc_Region_Illinois,,us_full_state_name
+62,"Vancouver, BC",43.5845,-109.0409,Assoc_Region_British_Columbia,,canada_name
+63,Northern Saskatchwan,41.4282,-85.5065,Assoc_Region_Saskatchewan,,canada_name
+64,"North Kansas City, MO",39.1951,-94.1169,Assoc_Region_Missouri,,us_state_abbr
+65,"Rochester, MN",43.6199,-92.1759,Assoc_Region_Minnesota,,us_state_abbr
+66,"Milwaukee, WI",43.0908,-88.3207,Assoc_Region_Wisconsin,,us_state_abbr
+67,"Sioux City, IA",42.7343,-95.3454,Assoc_Region_Iowa,,us_state_abbr
+68,"Green Bay, WI",44.1505,-88.2292,Assoc_Region_Wisconsin,,us_state_abbr
+69,Ontario,48.4477,-82.5364,Assoc_Region_Ontario,,canada_name
+70,"Jackson, TN",35.9322,-88.4628,Assoc_Region_Tennessee,,us_state_abbr
+71,"Land Between The Lakes, TN",36.8446,-87.9611,Assoc_Region_Tennessee,,us_state_abbr
+72,"Madison, WI",42.9966,-89.3307,Assoc_Region_Wisconsin,,us_state_abbr
+73,"Lexington, KY",38.1046,-84.5782,Assoc_Region_Kentucky,,us_state_abbr
+74,"Kalamazoo, MI",42.1601,-85.5408,Assoc_Region_Michigan,,us_state_abbr
+75,"Eau Claire, WI",44.3841,-91.6524,Assoc_Region_Wisconsin,,us_state_abbr
+76,"Appleton, WI",44.3123,-88.8530,Assoc_Region_Wisconsin,,us_state_abbr
+77,"Kansas City, MO",38.7591,-94.0556,Assoc_Region_Missouri,,us_state_abbr
+78,"Tippecanoe, IN",40.1425,-86.7673,Assoc_Region_Indiana,,us_state_abbr
+79,"Oshkosh, WI",43.7402,-89.3540,Assoc_Region_Wisconsin,,us_state_abbr
+80,"Wausau, WI",44.4098,-90.3168,Assoc_Region_Wisconsin,,us_state_abbr
+81,"La Crosse, WI",43.4854,-90.5670,Assoc_Region_Wisconsin,,us_state_abbr
+82,"Minot, ND",47.1009,-98.7971,Assoc_Region_North_Dakota,,us_state_abbr
+83,"Delaware, IN",40.1004,-85.1248,Assoc_Region_Indiana,,us_state_abbr
+84,"Willis, ND",46.8139,-100.1633,Assoc_Region_North_Dakota,,us_state_abbr
+85,"Edmonton, AB",43.4717,-100.3706,Assoc_Region_Alberta,,canada_name
+86,"De Witt, AR",34.3566,-91.2578,Assoc_Region_Arkansas,,us_state_abbr
+87,"Fargo, ND",46.9956,-97.2218,Assoc_Region_North_Dakota,,us_state_abbr
+88,"Vancouver Island, BC",42.8752,-116.6468,Assoc_Region_British_Columbia,,canada_name
+89,"Sioux Falls, SD",43.5942,-96.9537,Assoc_Region_South_Dakota,,us_state_abbr
+90,"Chico, CA",40.1130,-121.5731,Assoc_Region_California,,us_state_abbr
+91,"Mitchell, SD",43.6184,-98.6362,Assoc_Region_South_Dakota,,us_state_abbr
+92,"Vaudreuil-Soulanges, QC",45.3412,-74.2416,Assoc_Region_Quebec,,canada_name
+93,"Twin Islands, NU",49.1983,-73.2329,Assoc_Region_Nunavut,,canada_name
+94,"Kindersley, SK",44.8442,-98.0570,Assoc_Region_Saskatchewan,,canada_name
+95,"Saskatoon, SK",46.1498,-97.3624,Assoc_Region_Saskatchewan,,canada_name
+96,Guantanamo Bay,20.1833,-75.3555,,,skipped_existing
+97,"Ann Arbor, MI",41.9099,-83.9051,Assoc_Region_Michigan,,us_state_abbr
+98,"Brookings, SD",44.5012,-97.5212,Assoc_Region_South_Dakota,,us_state_abbr
+99,"Rapid City, SD",43.9875,-103.6073,Assoc_Region_South_Dakota,,us_state_abbr
+100,"Winnipeg, MB",47.0954,-92.4255,Assoc_Region_Manitoba,,canada_name
+101,"Birmingham, AL",33.5503,-86.7961,Assoc_Region_Alabama,,us_state_abbr
+102,"Dickinson, ND",46.3097,-101.9095,Assoc_Region_North_Dakota,,us_state_abbr
+103,"Pierre, SD",43.9633,-101.2335,Assoc_Region_South_Dakota,,us_state_abbr
+104,"Akimiski Island, NU",49.0893,-74.8195,Assoc_Region_Nunavut,,canada_name
+105,"Beatrice, NE",40.1638,-96.4133,Assoc_Region_Nebraska,,us_state_abbr
+106,"Pine Bluff, AR",33.8037,-91.4802,Assoc_Region_Arkansas,,us_state_abbr
+107,"Anticosti Island, QC",48.3706,-59.8189,Assoc_Region_Quebec,,canada_name
+108,"Scottsbluff, NE",42.2805,-103.5341,Assoc_Region_Nebraska,,us_state_abbr
+109,"Fremont, NE",42.1115,-97.1073,Assoc_Region_Nebraska,,us_state_abbr
+110,"Grand Island, NE",41.4056,-99.8378,Assoc_Region_Nebraska,,us_state_abbr
+111,"Meridian, MS",32.3847,-89.2593,Assoc_Region_Mississippi,,us_state_abbr
+112,"Salina, KS",38.6284,-97.1687,Assoc_Region_Kansas,,us_state_abbr
+113,"Cowley, KS",37.6061,-96.5576,Assoc_Region_Kansas,,us_state_abbr
+114,"Saint Pierre, FR",46.1196,-53.8830,Assoc_Region_Saint_Pierre_et_Miquelon,,canada_name
+115,"Charlton Island, NU",49.1466,-74.3144,Assoc_Region_Nunavut,,canada_name
+116,"East Lansing, MI",42.5598,-84.4732,Assoc_Region_Michigan,,us_state_abbr
+117,"Calgary, AB",45.9983,-107.1912,Assoc_Region_Alberta,,canada_name
+118,"Miquelon, FR",45.9932,-53.7989,Assoc_Region_Saint_Pierre_et_Miquelon,,canada_name
+119,"Durango, CO",36.9777,-107.5798,Assoc_Region_Durango,,mexico_name
+120,"Eastern Townships, QC",47.1669,-68.6532,Assoc_Region_Quebec,,canada_name
+121,"Hardin, KY",37.4347,-85.1813,Assoc_Region_Kentucky,,us_state_abbr
+122,"Dodge City, KS",38.9395,-100.9598,Assoc_Region_Kansas,,us_state_abbr
+123,"Alamosa, CO",36.9732,-106.3936,Assoc_Region_Coahuila,,mexico_abbr
+124,"Fort Smith, AR",34.8101,-93.4914,Assoc_Region_Arkansas,,us_state_abbr
+125,"Twin Falls, ID",42.0763,-114.0154,Assoc_Region_Idaho,,us_state_abbr
+126,"Thornton, CO",39.5978,-105.5886,Assoc_Region_Colorado,,us_state_abbr
+127,"Tuscaloosa, AL",33.1756,-87.6489,Assoc_Region_Alabama,,us_state_abbr
+128,"Fort Collins, CO",40.7213,-105.5919,Assoc_Region_Colorado,,us_state_abbr
+129,"Fort Morgan, CO",39.9600,-104.4322,Assoc_Region_Colorado,,us_state_abbr
+130,"La Salle, LA",31.4768,-91.9478,Assoc_Region_Louisiana,,us_state_abbr
+131,"Colorado Springs, CO",38.8885,-105.3323,Assoc_Region_Colorado,,us_state_abbr
+132,"Magladen Islands, QC",46.9691,-59.8344,Assoc_Region_Quebec,,canada_name
+133,"Ionia, MI",43.2339,-85.2178,Assoc_Region_Michigan,,us_state_abbr
+134,"Lansing, MI",42.4335,-84.8868,Assoc_Region_Michigan,,us_state_abbr
+135,"Miles City, MT",46.2305,-104.6143,Assoc_Region_Montana,,us_state_abbr
+136,"Gillette, WY",44.1444,-105.9209,Assoc_Region_Wyoming,,us_state_abbr
+137,"North Puget Sound, WA",47.3217,-121.5532,Assoc_Region_Washington,,us_state_abbr
+138,"Flint, MI",42.8670,-84.0335,Assoc_Region_Michigan,,us_state_abbr
+139,"Great Falls, MT",46.8098,-109.3405,Assoc_Region_Montana,,us_state_abbr
+140,"Northern Cascades, WA",47.7513,-120.7511,Assoc_Region_Washington,,us_state_abbr
+141,New Brunswick,47.0617,-64.8383,Assoc_Region_New_Brunswick,,canada_name
+142,"Olympic Peninsula, WA",46.6816,-122.6029,Assoc_Region_Washington,,us_state_abbr
+143,"Tucson, AZ",32.1107,-111.0126,Assoc_Region_Arizona,,us_state_abbr
+144,"Idaho Falls, ID",42.6625,-111.5977,Assoc_Region_Idaho,,us_state_abbr
+145,"Cape Breton Island, NS",45.7633,-59.5746,Assoc_Region_Nova_Scotia,,canada_name
+146,"Salt Lake City, UT",40.4735,-111.8060,Assoc_Region_Utah,,us_state_abbr
+147,"Ogden, UT",41.2774,-111.7681,Assoc_Region_Utah,,us_state_abbr
+148,"Lac-des-Eaux-Mortes, QC",48.0704,-65.9489,Assoc_Region_Quebec,,canada_name
+149,"Provo, UT",39.5505,-111.1123,Assoc_Region_Utah,,us_state_abbr
+150,"Western Okanogan Highlands, WA",47.4570,-117.4022,Assoc_Region_Washington,,us_state_abbr
+151,"Edmundston, NB",47.6916,-66.4195,Assoc_Region_New_Brunswick,,canada_name
+152,Prince Edward Island,46.2516,-61.9920,Assoc_Region_Prince_Edward_Island,,canada_name
+153,"Degelis, QC",47.6095,-67.5867,Assoc_Region_Quebec,,canada_name
+154,"Mount Pleasant, MI",43.7651,-85.2138,Assoc_Region_Michigan,,us_state_abbr
+155,"Brandon, MB",47.5367,-96.0442,Assoc_Region_Manitoba,,canada_name
+156,"Puget Islands, WA",46.9712,-121.6879,Assoc_Region_Washington,,us_state_abbr
+157,"Eastern Okanogan Highlands, WA",47.3963,-116.1008,Assoc_Region_Washington,,us_state_abbr
+158,"Metaline Falls, WA",47.2195,-114.9782,Assoc_Region_Washington,,us_state_abbr
+159,"Hanover, MB",47.9772,-93.0427,Assoc_Region_Manitoba,,canada_name
+160,"Sandpoint, ID",47.2038,-114.4205,Assoc_Region_Idaho,,us_state_abbr
+161,"Kalispell, MT",47.1717,-112.8521,Assoc_Region_Montana,,us_state_abbr
+162,"Essex, MA",42.4655,-71.2325,Assoc_Region_Massachusetts,,us_state_abbr
+163,Nova Scotia,44.8975,-63.6030,Assoc_Region_Nova_Scotia,,canada_name
+164,"Vernal, UT",40.1066,-109.8282,Assoc_Region_Utah,,us_state_abbr
+165,"Shreveport, LA",32.4085,-92.8596,Assoc_Region_Louisiana,,us_state_abbr
+166,"Cypress, AB",46.4705,-106.5852,Assoc_Region_Alberta,,canada_name
+167,"Maple Creek, MB",46.4847,-102.6091,Assoc_Region_Manitoba,,canada_name
+168,"Aroostook, ME",47.1781,-67.1967,Assoc_Region_Maine,,us_state_abbr
+169,"South Puget Sound, WA",47.2835,-122.9296,Assoc_Region_Washington,,us_state_abbr
+170,"Browning, MT",47.0975,-111.8991,Assoc_Region_Montana,,us_state_abbr
+171,"Fayetteville, AR",35.8728,-93.5754,Assoc_Region_Arkansas,,us_state_abbr
+172,"Columbia Basin, WA",47.6254,-118.7903,Assoc_Region_Washington,,us_state_abbr
+173,"Pantex Plant, TX",35.2983,-101.7554,Assoc_Region_Texas,,us_state_abbr
+174,"Saint Francis, ME",47.3367,-68.1126,Assoc_Region_Maine,,us_state_abbr
+175,"Cedar City, UT",37.7931,-112.1679,Assoc_Region_Utah,,us_state_abbr
+176,"New Orleans, LA",30.0495,-89.7325,Assoc_Region_Louisiana,,us_state_abbr
+177,"Butte, MT",46.5064,-104.2182,Assoc_Region_Montana,,us_state_abbr
+178,"Capitol Reef, UT",38.9893,-111.6585,Assoc_Region_Utah,,us_state_abbr
+179,"Willapa Hills, WA",46.2035,-123.2126,Assoc_Region_Washington,,us_state_abbr
+180,"Lafayette, LA",29.8163,-92.1633,Assoc_Region_Louisiana,,us_state_abbr
+181,"Moscow, ID",46.7388,-115.5817,Assoc_Region_Idaho,,us_state_abbr
+182,"Mecklenberg, NC",45.9026,-68.0367,Assoc_Region_North_Carolina,,us_state_abbr
+183,"Southern Cascades, WA",46.9385,-122.5669,Assoc_Region_Washington,,us_state_abbr
+184,"St. John, NB",45.7051,-66.7012,Assoc_Region_New_Brunswick,,canada_name
+185,"Yakima, WA",47.0711,-121.0552,Assoc_Region_Washington,,us_state_abbr
+186,"Missoula, MT",46.7484,-113.5169,Assoc_Region_Montana,,us_state_abbr
+187,"Naval Submarine Base Bangor, WA",47.2957,-122.6537,Assoc_Region_Washington,,us_state_abbr
+188,"Piscataquis, ME",46.4680,-68.7254,Assoc_Region_Maine,,us_state_abbr
+189,"Middlesex, NJ",47.0669,-69.9127,Assoc_Region_New_Jersey,,us_state_abbr
+190,"Roseburg, OR",43.2289,-123.5779,Assoc_Region_Oregon,,us_state_abbr
+191,"Muskegon, MI",43.5162,-86.1924,Assoc_Region_Michigan,,us_state_abbr
+192,"Bismarck, ND",46.6369,-99.0268,Assoc_Region_North_Dakota,,us_state_abbr
+193,"Grand Forks, ND",47.5048,-96.9333,Assoc_Region_North_Dakota,,us_state_abbr
+194,"Conway, AR",35.3066,-91.7969,Assoc_Region_Arkansas,,us_state_abbr
+195,"Mahoosuc Range, ME",45.6592,-69.2790,Assoc_Region_Maine,,us_state_abbr
+196,"Phillips, AR",34.8761,-90.6679,Assoc_Region_Arkansas,,us_state_abbr
+197,"Natchitoches, LA",31.1099,-92.9259,Assoc_Region_Louisiana,,us_state_abbr
+198,"Lake Charles, LA",30.1142,-93.1133,Assoc_Region_Louisiana,,us_state_abbr
+199,"Clay, MN",46.7681,-95.9911,Assoc_Region_Minnesota,,us_state_abbr
+200,"Isanti, MN",45.9696,-92.8887,Assoc_Region_Minnesota,,us_state_abbr
+201,"Vancouver, WA",45.9064,-122.5744,Assoc_Region_Washington,,us_state_abbr
+202,"Autauga, AL",32.7958,-86.8056,Assoc_Region_Alabama,,us_state_abbr
+203,"Downeast, ME",44.6424,-68.4605,Assoc_Region_Maine,,us_state_abbr
+204,"Billings, MT",46.2272,-108.6795,Assoc_Region_Montana,,us_state_abbr
+205,"West Mahoosuc, ME",45.6438,-69.9529,Assoc_Region_Maine,,us_state_abbr
+206,"Blue Mountains, WA",46.8969,-118.0344,Assoc_Region_Washington,,us_state_abbr
+207,"Somerset, ME",45.0457,-69.3204,Assoc_Region_Maine,,us_state_abbr
+208,"Alexandra, LA",30.6576,-91.9744,Assoc_Region_Louisiana,,us_state_abbr
+209,"Bend, OR",45.3938,-120.9791,Assoc_Region_Oregon,,us_state_abbr
+210,"Queens, NY",47.4114,-87.5819,Assoc_Region_New_York,,us_state_abbr
+211,"Phillipsburg, MT",46.5336,-111.8147,Assoc_Region_Montana,,us_state_abbr
+212,"Mercer, ND",46.1405,-101.0167,Assoc_Region_North_Dakota,,us_state_abbr
+213,"Orange, NY",46.1116,-72.6722,Assoc_Region_New_York,,us_state_abbr
+214,"Dothan, AL",31.4178,-85.7721,Assoc_Region_Alabama,,us_state_abbr
+215,"Monroe, LA",32.4502,-91.7871,Assoc_Region_Louisiana,,us_state_abbr
+216,"Western Mountains, ME",44.7817,-70.4867,Assoc_Region_Maine,,us_state_abbr
+217,"Pendleton, OR",45.7565,-118.7361,Assoc_Region_Oregon,,us_state_abbr
+218,"Monteregie, QC",45.2031,-73.7328,Assoc_Region_Quebec,,canada_name
+219,"ile Marie, QC",45.8154,-73.0549,Assoc_Region_Quebec,,canada_name
+220,"Baker, MT",45.4933,-104.3942,Assoc_Region_Montana,,us_state_abbr
+221,"Penobscot Bay, ME",44.2018,-69.5623,Assoc_Region_Maine,,us_state_abbr
+222,"Marquette, MI",46.3075,-87.8792,Assoc_Region_Michigan,,us_state_abbr
+223,"Great North Woods, NH",44.7250,-71.2297,Assoc_Region_New_Hampshire,,us_state_abbr
+224,"Cascade, ID",44.9016,-115.5045,Assoc_Region_Idaho,,us_state_abbr
+225,"ile Jesus, QC",45.5989,-73.5521,Assoc_Region_Quebec,,canada_name
+226,"ile de Montreal, QC",45.5017,-73.5673,Assoc_Region_Quebec,,canada_name
+227,"Montgomery, Al",32.1797,-85.7387,Assoc_Region_Alabama,,us_state_abbr
+228,"Saint Cloud, MN",46.1418,-95.1842,Assoc_Region_Minnesota,,us_state_abbr
+229,"ile Bizardl, QC",45.4977,-73.7558,Assoc_Region_Quebec,,canada_name
+230,"ile Perrot, QC",45.3616,-73.8953,Assoc_Region_Quebec,,canada_name
+231,"Northeast Kingdom, VT",44.5185,-71.9581,Assoc_Region_Vermont,,us_state_abbr
+232,"Portland Casco Bay, ME",43.8004,-70.3297,Assoc_Region_Maine,,us_state_abbr
+233,"Cadillac, MI",44.3276,-85.0935,Assoc_Region_Michigan,,us_state_abbr
+234,"Jamestown, ND",46.6185,-98.0438,Assoc_Region_North_Dakota,,us_state_abbr
+235,"Clarke, AL",32.0092,-87.7464,Assoc_Region_Alabama,,us_state_abbr
+236,"Franklin, VT",44.6051,-72.7820,Assoc_Region_Vermont,,us_state_abbr
+237,"Butler, AL",31.7113,-86.8649,Assoc_Region_Alabama,,us_state_abbr
+238,"Alger, MI",45.9993,-87.1079,Assoc_Region_Michigan,,us_state_abbr
+239,"Dillon, MT",45.3962,-112.5233,Assoc_Region_Montana,,us_state_abbr
+240,"Sugar Island, MI",46.4025,-83.8631,Assoc_Region_Michigan,,us_state_abbr
+241,"Superior, WI",46.1526,-91.1382,Assoc_Region_Wisconsin,,us_state_abbr
+242,"St. Lawrence, NY",44.5758,-74.3310,Assoc_Region_New_York,,us_state_abbr
+243,"Salmon, ID",44.6682,-113.6664,Assoc_Region_Idaho,,us_state_abbr
+244,"White Mountains, NH",44.0283,-71.3968,Assoc_Region_New_Hampshire,,us_state_abbr
+245,"Manhattan, NYC",40.7831,-73.9712,Assoc_Region_New_York,,nyc_name
+246,"St. Joseph Island, ON",46.1804,-83.7445,Assoc_Region_Ontario,,canada_name
+247,"Athens, OH",39.2298,-82.5616,Assoc_Region_Ohio,,us_state_abbr
+248,"Grand Isle, VT",44.6448,-73.4534,Assoc_Region_Vermont,,us_state_abbr
+249,"Powder River, MT",45.2835,-106.4210,Assoc_Region_Montana,,us_state_abbr
+250,"Addison, VT",44.0556,-73.2821,Assoc_Region_Vermont,,us_state_abbr
+251,"Hayward, WI",45.4461,-90.8751,Assoc_Region_Wisconsin,,us_state_abbr
+252,"Manitoulin Island, ON",45.7710,-81.9027,Assoc_Region_Ontario,,canada_name
+253,"Rutland, VT",43.7313,-72.6989,Assoc_Region_Vermont,,us_state_abbr
+254,"Drummond Island, MI",45.9776,-83.4863,Assoc_Region_Michigan,,us_state_abbr
+255,"Cabell, WV",40.7382,-81.0929,Assoc_Region_West_Virginia,,us_state_abbr
+256,"Hardin, MT",45.3508,-107.5852,Assoc_Region_Montana,,us_state_abbr
+257,"Cockburn Island, ON",45.9003,-83.2107,Assoc_Region_Ontario,,canada_name
+258,"East Bozeman, MT",45.2527,-109.4508,Assoc_Region_Montana,,us_state_abbr
+259,"Madison, MT",45.3008,-111.0142,Assoc_Region_Montana,,us_state_abbr
+260,"Merrimack, NH",43.5650,-71.0156,Assoc_Region_New_Hampshire,,us_state_abbr
+261,"Sarasota, FL",44.0273,-73.9928,Assoc_Region_Florida,,us_state_abbr
+262,"Ontario, OR",43.3256,-117.4734,Assoc_Region_Oregon,,us_state_abbr
+263,"Mackinac Island, MI",45.7986,-84.4504,Assoc_Region_Michigan,,us_state_abbr
+264,"Toledo, OH",41.1612,-83.9384,Assoc_Region_Ohio,,us_state_abbr
+265,"Stevens Point, WI",45.0120,-89.1205,Assoc_Region_Wisconsin,,us_state_abbr
+266,"Dayton, OH",40.2079,-84.0928,Assoc_Region_Ohio,,us_state_abbr
+267,"Mackinac City, MI",45.5427,-84.7509,Assoc_Region_Michigan,,us_state_abbr
+268,"Grafton, NH",43.2464,-72.0406,Assoc_Region_New_Hampshire,,us_state_abbr
+269,"Clearwater, MN",47.6612,-94.6287,Assoc_Region_Minnesota,,us_state_abbr
+270,"Beaver Island, MI",45.7271,-85.6188,Assoc_Region_Michigan,,us_state_abbr
+271,"Harding, SD",45.0636,-102.7937,Assoc_Region_South_Dakota,,us_state_abbr
+272,"Iosco, MI",44.3334,-84.1026,Assoc_Region_Michigan,,us_state_abbr
+273,"Hamilton, NY",43.6341,-75.2153,Assoc_Region_New_York,,us_state_abbr
+274,"Strafford, NH",42.9720,-70.8951,Assoc_Region_New_Hampshire,,us_state_abbr
+275,"Mobridge, SD",45.1142,-101.2825,Assoc_Region_South_Dakota,,us_state_abbr
+276,"Aberdeen, SD",45.0286,-99.6143,Assoc_Region_South_Dakota,,us_state_abbr
+277,"Concord, NH",43.0149,-71.7231,Assoc_Region_New_Hampshire,,us_state_abbr
+278,"Medford, OR",42.4038,-123.7399,Assoc_Region_Oregon,,us_state_abbr
+279,"Watertown, SD",45.6749,-97.5886,Assoc_Region_South_Dakota,,us_state_abbr
+280,"Lewis, NY",44.3523,-75.4738,Assoc_Region_New_York,,us_state_abbr
+281,"Old Faithful, WY",44.3782,-110.6428,Assoc_Region_Wyoming,,us_state_abbr
+282,"Troy, NY",42.9633,-73.8387,Assoc_Region_New_York,,us_state_abbr
+283,"Casper, WY",43.0072,-107.5791,Assoc_Region_Wyoming,,us_state_abbr
+284,"Philadelphia, PA",39.8470,-75.1687,Assoc_Region_Pennsylvania,,us_state_abbr
+285,"Schenectady, NY",43.0222,-74.3443,Assoc_Region_New_York,,us_state_abbr
+286,"Richland, OH",40.8169,-82.3723,Assoc_Region_Ohio,,us_state_abbr
+287,"Roberts, ID",43.9401,-112.1844,Assoc_Region_Idaho,,us_state_abbr
+288,"Boise, ID",43.3657,-115.3713,Assoc_Region_Idaho,,us_state_abbr
+289,"Baileys Harbor, WI",45.2515,-87.2583,Assoc_Region_Wisconsin,,us_state_abbr
+290,"Grand Traverse, MI",45.0825,-85.4184,Assoc_Region_Michigan,,us_state_abbr
+291,"Oswego, NY",43.2315,-75.9977,Assoc_Region_New_York,,us_state_abbr
+292,"Hillsborough, NH",42.6906,-71.7626,Assoc_Region_New_Hampshire,,us_state_abbr
+293,"Windham, VT",42.7644,-73.1052,Assoc_Region_Vermont,,us_state_abbr
+294,"Nampa, ID",42.5052,-115.9093,Assoc_Region_Idaho,,us_state_abbr
+295,"Jackson, WY",42.8220,-110.5130,Assoc_Region_Wyoming,,us_state_abbr
+296,"Crescent City, CA",41.7558,-124.2010,Assoc_Region_California,,us_state_abbr
+297,"Jerome, ID",42.8916,-113.8873,Assoc_Region_Idaho,,us_state_abbr
+298,"Marshall, MN",44.9436,-95.6720,Assoc_Region_Minnesota,,us_state_abbr
+299,"Suffolk, MA",42.3601,-71.0589,Assoc_Region_Massachusetts,,us_state_abbr
+300,"Worchester, MA",42.1811,-72.5752,Assoc_Region_Massachusetts,,us_state_abbr
+301,"Wayne, NY",42.9560,-77.0924,Assoc_Region_New_York,,us_state_abbr
+302,"Berkshire, MA",42.1645,-73.4387,Assoc_Region_Massachusetts,,us_state_abbr
+303,"Mojave, CA",34.7476,-116.0518,Assoc_Region_California,,us_state_abbr
+304,"Saint Paul, MN",44.4360,-92.8226,Assoc_Region_Minnesota,,us_state_abbr
+305,"Chenango, NY",42.6134,-75.5698,Assoc_Region_New_York,,us_state_abbr
+306,"Delaware, NY",42.3048,-74.9701,Assoc_Region_New_York,,us_state_abbr
+307,"Plymouth, MA",41.9642,-70.7340,Assoc_Region_Massachusetts,,us_state_abbr
+308,"Onondaga, NY",42.7468,-76.3194,Assoc_Region_New_York,,us_state_abbr
+309,"Trippe, SD",43.2356,-101.8492,Assoc_Region_South_Dakota,,us_state_abbr
+310,"Pocatello, ID",42.2902,-112.4833,Assoc_Region_Idaho,,us_state_abbr
+311,"Murray, MN",44.1122,-95.7841,Assoc_Region_Minnesota,,us_state_abbr
+312,"Huron, MI",43.5327,-83.2223,Assoc_Region_Michigan,,us_state_abbr
+313,"Monroe, NY",43.1566,-77.6109,Assoc_Region_New_York,,us_state_abbr
+314,"Genesse, NY",43.1570,-78.1912,Assoc_Region_New_York,,us_state_abbr
+315,"Barnstable, MA",41.7971,-69.9146,Assoc_Region_Massachusetts,,us_state_abbr
+316,"Columbia, NY",41.9661,-73.8723,Assoc_Region_New_York,,us_state_abbr
+317,"Mason, MI",44.2021,-86.3439,Assoc_Region_Michigan,,us_state_abbr
+318,"Saginaw, MI",43.5362,-84.2076,Assoc_Region_Michigan,,us_state_abbr
+319,"Providence, RI",41.6914,-71.3483,Assoc_Region_Rhode_Island,,us_state_abbr
+320,"Albany, NY",42.6513,-74.5480,Assoc_Region_New_York,,us_state_abbr
+321,"New London, CT",41.6685,-72.4139,Assoc_Region_Connecticut,,us_state_abbr
+322,"Mankato, MN",44.0428,-93.8924,Assoc_Region_Minnesota,,us_state_abbr
+323,"Ithaca, NY",42.3083,-76.6852,Assoc_Region_New_York,,us_state_abbr
+324,"Lovelock, NV",41.4424,-118.9819,Assoc_Region_Nevada,,us_state_abbr
+325,"Cattaraugus, NY",42.5559,-77.9089,Assoc_Region_New_York,,us_state_abbr
+326,"Buffalo, NY",43.0397,-78.4992,Assoc_Region_New_York,,us_state_abbr
+327,"Windham, NY",42.0204,-74.5284,Assoc_Region_New_York,,us_state_abbr
+328,"Hartford, CT",41.5260,-73.2236,Assoc_Region_Connecticut,,us_state_abbr
+329,"Benton Harbor, MI",42.2358,-86.3052,Assoc_Region_Michigan,,us_state_abbr
+330,Grand Island,43.1489,-78.8068,Assoc_Region_New_York,,grand_island_ny
+331,"Mojave, NV",39.3241,-116.5965,Assoc_Region_Nevada,,us_state_abbr
+332,"Detroit, MI",42.3314,-83.0458,Assoc_Region_Michigan,,us_state_abbr
+333,"Hamburg, NY",42.7489,-78.6535,Assoc_Region_New_York,,us_state_abbr
+334,"Alpena, MI",45.1275,-84.0013,Assoc_Region_Michigan,,us_state_abbr
+335,"Steuben, NY",42.3327,-77.4297,Assoc_Region_New_York,,us_state_abbr
+336,"Oakland, MI",42.8501,-83.3164,Assoc_Region_Michigan,,us_state_abbr
+337,"Dutchess, NY",41.4036,-73.6607,Assoc_Region_New_York,,us_state_abbr
+338,"Orange, NY",41.4424,-74.3656,Assoc_Region_New_York,,us_state_abbr
+339,"St. Clair, MI",42.9711,-82.7881,Assoc_Region_Michigan,,us_state_abbr
+340,"Douglas, WY",42.8694,-104.9283,Assoc_Region_Wyoming,,us_state_abbr
+341,"Chautauqua, NY",42.4213,-78.7180,Assoc_Region_New_York,,us_state_abbr
+342,"Lackawanna, PA",41.5349,-75.6538,Assoc_Region_Pennsylvania,,us_state_abbr
+343,"Fairfield, CT",41.1412,-73.2638,Assoc_Region_Connecticut,,us_state_abbr
+344,"West Wendover, NV",41.1549,-115.0107,Assoc_Region_Nevada,,us_state_abbr
+345,"Allegheny, PA",40.4406,-79.9959,Assoc_Region_Pennsylvania,,us_state_abbr
+346,"Bradford, PA",41.4975,-76.8900,Assoc_Region_Pennsylvania,,us_state_abbr
+347,"Davenport, IA",41.7018,-90.7586,Assoc_Region_Iowa,,us_state_abbr
+348,"Detroit Metro, MI",42.3045,-83.2175,Assoc_Region_Michigan,,us_state_abbr
+349,"Mason City, IA",42.9566,-93.4076,Assoc_Region_Iowa,,us_state_abbr
+350,"Council Bluffs, IA",41.2098,-95.1823,Assoc_Region_Iowa,,us_state_abbr
+351,"Kent, MI",42.8429,-85.8138,Assoc_Region_Michigan,,us_state_abbr
+352,"Delta, UT",39.9266,-113.2300,Assoc_Region_Utah,,us_state_abbr
+353,"Erie, PA",42.0241,-79.7768,Assoc_Region_Pennsylvania,,us_state_abbr
+354,"Long Island, NY",40.7325,-73.2904,Assoc_Region_New_York,,us_state_abbr
+355,"Cheyenne, WY",41.7949,-105.6930,Assoc_Region_Wyoming,,us_state_abbr
+356,"McKean, PA",41.6765,-78.5226,Assoc_Region_Pennsylvania,,us_state_abbr
+357,"Sussex, NJ",40.9883,-74.5161,Assoc_Region_New_Jersey,,us_state_abbr
+358,"Cherry, NE",42.2803,-100.9340,Assoc_Region_Nebraska,,us_state_abbr
+359,"Lehigh, PA",40.8064,-75.8081,Assoc_Region_Pennsylvania,,us_state_abbr
+360,"South Bairoil, WY",42.0907,-107.5050,Assoc_Region_Wyoming,,us_state_abbr
+361,"Sandusky, OH",41.2655,-83.0204,Assoc_Region_Ohio,,us_state_abbr
+362,"Evanston, WY",41.2022,-110.3270,Assoc_Region_Wyoming,,us_state_abbr
+363,"Northumberland, PA",40.7998,-77.8361,Assoc_Region_Pennsylvania,,us_state_abbr
+364,"Rock Springs, WY",41.2103,-109.1260,Assoc_Region_Wyoming,,us_state_abbr
+365,"Lawrence, PA",41.2103,-80.1490,Assoc_Region_Pennsylvania,,us_state_abbr
+366,"Chicago Metro, IL",42.0506,-88.2979,Assoc_Region_Illinois,,us_state_abbr
+367,"Middlesex, NJ",40.4920,-74.5543,Assoc_Region_New_Jersey,,us_state_abbr
+368,"Superior, WY",41.6964,-108.6623,Assoc_Region_Wyoming,,us_state_abbr
+369,"Rockford, IL",41.9685,-89.4565,Assoc_Region_Illinois,,us_state_abbr
+370,"Carson City, NV",39.6670,-119.5996,Assoc_Region_Nevada,,us_state_abbr
+371,"Centre, PA",40.9064,-79.3160,Assoc_Region_Pennsylvania,,us_state_abbr
+372,"East Superior, WY",41.6228,-107.9263,Assoc_Region_Wyoming,,us_state_abbr
+373,"Wamsutter, WY",41.2930,-106.9923,Assoc_Region_Wyoming,,us_state_abbr
+374,"Monmouth, NJ",39.8776,-74.2651,Assoc_Region_New_Jersey,,us_state_abbr
+375,"Rawlins, WY",41.6279,-106.7355,Assoc_Region_Wyoming,,us_state_abbr
+376,"Bucks, PA",40.0924,-75.1419,Assoc_Region_Pennsylvania,,us_state_abbr
+377,"Chicago, IL",42.0742,-87.7195,Assoc_Region_Illinois,,us_state_abbr
+378,"Lancester, PA",40.2074,-76.1263,Assoc_Region_Pennsylvania,,us_state_abbr
+379,"Williams, OH",41.4472,-84.3616,Assoc_Region_Ohio,,us_state_abbr
+380,"Adobie Town Rim, WY",41.0825,-108.0251,Assoc_Region_Wyoming,,us_state_abbr
+381,"Greenville, MS",33.5143,-89.9487,Assoc_Region_Mississippi,,us_state_abbr
+382,"Fort Wayne, IN",41.2843,-85.3671,Assoc_Region_Indiana,,us_state_abbr
+383,"Columbus, OH",40.0934,-82.6847,Assoc_Region_Ohio,,us_state_abbr
+384,"Ogallala, NE",41.5151,-103.1560,Assoc_Region_Nebraska,,us_state_abbr
+385,"Gary, IN",41.6956,-86.6601,Assoc_Region_Indiana,,us_state_abbr
+386,"Wheeling, OH",40.0403,-81.6111,Assoc_Region_Ohio,,us_state_abbr
+387,"Blair, PA",39.9677,-78.9995,Assoc_Region_Pennsylvania,,us_state_abbr
+388,"York, PA",39.9769,-77.3343,Assoc_Region_Pennsylvania,,us_state_abbr
+389,"Camden, NJ",39.3859,-74.7760,Assoc_Region_New_Jersey,,us_state_abbr
+390,"Adams, IL",39.8456,-90.6687,Assoc_Region_Illinois,,us_state_abbr
+391,"Westmoreland, PA",40.0178,-79.8331,Assoc_Region_Pennsylvania,,us_state_abbr
+392,"Jasper, IN",40.9866,-86.6374,Assoc_Region_Indiana,,us_state_abbr
+393,"Washington, PA",40.2373,-80.5198,Assoc_Region_Pennsylvania,,us_state_abbr
+394,"Grand Junction, CO",39.7863,-108.1925,Assoc_Region_Colorado,,us_state_abbr
+395,"Newcastle, DE",39.5237,-75.4650,Assoc_Region_Delaware,,us_state_abbr
+396,"Mount Vernon, IL",38.0511,-88.6775,Assoc_Region_Illinois,,us_state_abbr
+397,"Steamboat Springs, CO",40.2594,-106.8993,Assoc_Region_Colorado,,us_state_abbr
+398,"Saint Anne, IL",41.1793,-87.4796,Assoc_Region_Illinois,,us_state_abbr
+399,"Walden, CO",40.5935,-106.3580,Assoc_Region_Colorado,,us_state_abbr
+400,"Lincoln, NE",40.8101,-96.8634,Assoc_Region_Nebraska,,us_state_abbr
+401,"Kit Carson, CO",39.2867,-103.3819,Assoc_Region_Colorado,,us_state_abbr
+402,"Aberdeen, MD",39.5842,-76.1951,Assoc_Region_Maryland,,us_state_abbr
+403,"Harford, MD",39.4413,-75.6736,Assoc_Region_Maryland,,us_state_abbr
+404,"Baltimore, MD",39.4314,-76.6389,Assoc_Region_Maryland,,us_state_abbr
+405,"Bartholomew, IN",39.0989,-85.5543,Assoc_Region_Indiana,,us_state_abbr
+406,"Carroll, MD",39.6329,-77.3566,Assoc_Region_Maryland,,us_state_abbr
+407,"Clinton, OH",39.3681,-83.5900,Assoc_Region_Ohio,,us_state_abbr
+408,"Randell, UT",39.2016,-109.1932,Assoc_Region_Utah,,us_state_abbr
+409,"North Platte, NE",40.6725,-101.2195,Assoc_Region_Nebraska,,us_state_abbr
+410,"Kent, DE",39.0128,-75.3619,Assoc_Region_Delaware,,us_state_abbr
+411,"Queen Anne's, MD",38.7991,-75.8801,Assoc_Region_Maryland,,us_state_abbr
+412,"Frederick, MD",39.4331,-77.5012,Assoc_Region_Maryland,,us_state_abbr
+413,"Adams, NE",40.4247,-98.9087,Assoc_Region_Nebraska,,us_state_abbr
+414,"Alleghany, MD",39.4562,-79.3111,Assoc_Region_Maryland,,us_state_abbr
+415,"Berkeley, WV",39.3862,-78.2118,Assoc_Region_West_Virginia,,us_state_abbr
+416,"Morgantown, WV",39.0783,-79.8163,Assoc_Region_West_Virginia,,us_state_abbr
+417,"Mineral, WV",38.9796,-79.0374,Assoc_Region_West_Virginia,,us_state_abbr
+418,"Montgomery, MD",39.1509,-77.2559,Assoc_Region_Maryland,,us_state_abbr
+419,"Bishop, CA",37.9896,-118.0322,Assoc_Region_California,,us_state_abbr
+420,"Sussex, DE",38.5876,-75.2640,Assoc_Region_Delaware,,us_state_abbr
+421,"Monogalia, WV",39.1354,-80.6863,Assoc_Region_West_Virginia,,us_state_abbr
+422,"Breckenridge, CO",39.8254,-105.9856,Assoc_Region_Colorado,,us_state_abbr
+423,"Frederick, VA",38.6699,-78.4735,Assoc_Region_Virginia,,us_state_abbr
+424,"Fairfax, VA",38.8091,-77.6454,Assoc_Region_Virginia,,us_state_abbr
+425,"Prince George's, MD",38.5735,-76.8162,Assoc_Region_Maryland,,us_state_abbr
+426,"Bowling Green, MO",39.0085,-91.4438,Assoc_Region_Missouri,,us_state_abbr
+427,"Bloomington, IL",39.5066,-88.8272,Assoc_Region_Illinois,,us_state_abbr
+428,"Aspen, CO",38.4027,-106.5700,Assoc_Region_Colorado,,us_state_abbr
+429,"Wood, WV",38.9228,-81.6004,Assoc_Region_West_Virginia,,us_state_abbr
+430,"Furnass, NE",40.2222,-100.4521,Assoc_Region_Nebraska,,us_state_abbr
+431,"Wicomico, MD",38.2132,-75.5097,Assoc_Region_Maryland,,us_state_abbr
+432,"Cincinnati, OH",39.3633,-84.3605,Assoc_Region_Ohio,,us_state_abbr
+433,"Dove Creek, CO",38.2480,-107.9315,Assoc_Region_Colorado,,us_state_abbr
+434,"Ellis, KS",39.3129,-98.8713,Assoc_Region_Kansas,,us_state_abbr
+435,"Albemarle, VA",38.0152,-79.2198,Assoc_Region_Virginia,,us_state_abbr
+436,"Topeka, KS",39.5171,-95.9246,Assoc_Region_Kansas,,us_state_abbr
+437,"King George's, VA",37.8947,-76.9722,Assoc_Region_Virginia,,us_state_abbr
+438,"Greenbrier, WV",38.1495,-80.7531,Assoc_Region_West_Virginia,,us_state_abbr
+439,"Accomack, VA",37.7167,-75.7371,Assoc_Region_Virginia,,us_state_abbr
+440,"Spotslyvania, VA",37.9574,-78.0473,Assoc_Region_Virginia,,us_state_abbr
+441,"Pueblo, CO",38.2017,-105.6032,Assoc_Region_Colorado,,us_state_abbr
+442,"Moab, UT",37.6707,-109.1155,Assoc_Region_Utah,,us_state_abbr
+443,"Lynchburg, VA",37.3369,-79.6310,Assoc_Region_Virginia,,us_state_abbr
+444,"Emporia, KS",37.7419,-95.0299,Assoc_Region_Kansas,,us_state_abbr
+445,"Springfield, IL",38.9234,-89.6556,Assoc_Region_Illinois,,us_state_abbr
+446,"Madison, KY",37.4884,-84.0606,Assoc_Region_Kentucky,,us_state_abbr
+447,"Cabell, WV",38.1511,-82.3039,Assoc_Region_West_Virginia,,us_state_abbr
+448,"Mesquite, NV",37.5451,-113.8663,Assoc_Region_Nevada,,us_state_abbr
+449,"Kanawha, WV",38.3498,-81.6326,Assoc_Region_West_Virginia,,us_state_abbr
+450,"Richmond, VA",37.3457,-76.9608,Assoc_Region_Virginia,,us_state_abbr
+451,"Jefferson, MO",38.5966,-92.5694,Assoc_Region_Missouri,,us_state_abbr
+452,"Raleight, WV",37.8131,-81.6161,Assoc_Region_West_Virginia,,us_state_abbr
+453,"Lawrence, KS",38.8158,-95.5160,Assoc_Region_Kansas,,us_state_abbr
+454,"Danville, VA",37.1532,-78.3463,Assoc_Region_Virginia,,us_state_abbr
+455,"Floyd, IN",38.3967,-85.9561,Assoc_Region_Indiana,,us_state_abbr
+456,"Prince George, VA",37.1227,-77.5160,Assoc_Region_Virginia,,us_state_abbr
+457,"Gasconade, MO",38.2136,-91.0998,Assoc_Region_Missouri,,us_state_abbr
+458,"Las Vegas, NV",36.2542,-115.4853,Assoc_Region_Nevada,,us_state_abbr
+459,"Hampton Roads, VA",36.8266,-76.7561,Assoc_Region_Virginia,,us_state_abbr
+460,"Trinidad, CO",37.4696,-104.0354,Assoc_Region_Colorado,,us_state_abbr
+461,"Belleville, IL",38.0855,-89.5175,Assoc_Region_Illinois,,us_state_abbr
+462,"Kaibab, AZ",36.7190,-112.6202,Assoc_Region_Arizona,,us_state_abbr
+463,"Roanoake, VA",36.8191,-79.8933,Assoc_Region_Virginia,,us_state_abbr
+464,"Washington, VA",36.8825,-81.5697,Assoc_Region_Virginia,,us_state_abbr
+465,"Wichita, KS",37.4596,-98.2117,Assoc_Region_Kansas,,us_state_abbr
+466,"Wise, VA",37.0519,-82.4226,Assoc_Region_Virginia,,us_state_abbr
+467,"Elizabeth City, NC",36.4083,-76.9371,Assoc_Region_North_Carolina,,us_state_abbr
+468,"Mexican Hat, UT",37.1142,-109.4779,Assoc_Region_Utah,,us_state_abbr
+469,"Liberal, KS",37.4582,-100.9159,Assoc_Region_Kansas,,us_state_abbr
+470,"Navajo Nation, AZ",36.3329,-110.1537,Assoc_Region_Arizona,,us_state_abbr
+471,"Denver, CO",39.7392,-104.9903,Assoc_Region_Colorado,,us_state_abbr
+472,"Nash, NC",36.2160,-78.6942,Assoc_Region_North_Carolina,,us_state_abbr
+473,"Wake, NC",35.6843,-78.3499,Assoc_Region_North_Carolina,,us_state_abbr
+474,"Beaufort, NC",35.8175,-76.4366,Assoc_Region_North_Carolina,,us_state_abbr
+475,"Wayne, KY",36.8622,-84.1354,Assoc_Region_Kentucky,,us_state_abbr
+476,"Mount Airy, NC",36.3592,-80.6528,Assoc_Region_North_Carolina,,us_state_abbr
+477,"Farmington, NM",36.3476,-107.8615,Assoc_Region_New_Mexico,,us_state_abbr
+478,"Cibola, NM",34.8475,-107.6150,Assoc_Region_New_Mexico,,us_state_abbr
+479,"Pitt, NC",35.6627,-77.6272,Assoc_Region_North_Carolina,,us_state_abbr
+480,"Johnson City, TN",36.2880,-82.4960,Assoc_Region_Tennessee,,us_state_abbr
+481,"Guilford, NC",35.8515,-79.6266,Assoc_Region_North_Carolina,,us_state_abbr
+482,"McCracken, KY",36.7759,-88.5307,Assoc_Region_Kentucky,,us_state_abbr
+483,"Owens Island, KY",37.1066,-88.1834,Assoc_Region_Kentucky,,us_state_abbr
+484,"Albuquerque, NM",35.0844,-106.6504,Assoc_Region_New_Mexico,,us_state_abbr
+485,"Knoxville, TN",36.3750,-84.1466,Assoc_Region_Tennessee,,us_state_abbr
+486,"Tucumcari, NM",35.4858,-104.5732,Assoc_Region_New_Mexico,,us_state_abbr
+487,"Mecklenberg, NC",35.4029,-80.4457,Assoc_Region_North_Carolina,,us_state_abbr
+488,"Clayton, NM",36.1663,-103.8880,Assoc_Region_New_Mexico,,us_state_abbr
+489,"Gaston, NC",35.6302,-81.2953,Assoc_Region_North_Carolina,,us_state_abbr
+490,"Oklahoma Panhandle, OK",36.6755,-101.5901,Assoc_Region_Oklahoma,,us_state_abbr
+491,"Onslow, NC",35.1374,-77.0193,Assoc_Region_North_Carolina,,us_state_abbr
+492,"Clarksville, TN",36.4847,-86.6552,Assoc_Region_Tennessee,,us_state_abbr
+493,"Enid, OK",36.3678,-97.9129,Assoc_Region_Oklahoma,,us_state_abbr
+494,"Buncombe, NC",35.5374,-82.4703,Assoc_Region_North_Carolina,,us_state_abbr
+495,"Tulsa, OK",36.1874,-95.1195,Assoc_Region_Oklahoma,,us_state_abbr
+496,"Dickson, TN",35.8871,-87.4724,Assoc_Region_Tennessee,,us_state_abbr
+497,"Cumberland, NC",35.1525,-79.1694,Assoc_Region_North_Carolina,,us_state_abbr
+498,"Phoenix, AZ",33.4017,-111.9613,Assoc_Region_Arizona,,us_state_abbr
+499,"Coffee, TN",35.6067,-85.3748,Assoc_Region_Tennessee,,us_state_abbr
+500,"Flagstaff, AZ",35.1224,-111.3743,Assoc_Region_Arizona,,us_state_abbr
+501,"Northern Channel Islands, CA",33.8353,-119.9042,Assoc_Region_California,,us_state_abbr
+502,"Memphis, TN",35.3386,-89.2117,Assoc_Region_Tennessee,,us_state_abbr
+503,"Nashville, TN",35.9641,-86.4261,Assoc_Region_Tennessee,,us_state_abbr
+504,"Chattanooga, TN",35.3287,-84.1364,Assoc_Region_Tennessee,,us_state_abbr
+505,"Tiptonville, KY",36.5251,-89.3323,Assoc_Region_Kentucky,,us_state_abbr
+506,"New Hanover, NC",34.8138,-77.9931,Assoc_Region_North_Carolina,,us_state_abbr
+507,"Dumas, TX",35.9882,-101.9001,Assoc_Region_Texas,,us_state_abbr
+508,"Jonesboro, AR",35.7999,-90.3120,Assoc_Region_Arkansas,,us_state_abbr
+509,"Randolph, AR",36.2409,-91.4646,Assoc_Region_Arkansas,,us_state_abbr
+510,"Santa Fe, NM",34.8121,-105.8542,Assoc_Region_New_Mexico,,us_state_abbr
+511,"Stillwater, OK",35.4621,-96.7735,Assoc_Region_Oklahoma,,us_state_abbr
+512,"Searcy, AR",35.9723,-92.4805,Assoc_Region_Arkansas,,us_state_abbr
+513,"Haywood, NC",35.1012,-83.5248,Assoc_Region_North_Carolina,,us_state_abbr
+514,"Whiteville, NC",34.2940,-78.5325,Assoc_Region_North_Carolina,,us_state_abbr
+515,"Saluda, NC",35.1967,-81.9424,Assoc_Region_North_Carolina,,us_state_abbr
+516,"Maury, TN",35.2150,-86.8300,Assoc_Region_Tennessee,,us_state_abbr
+517,"York, SC",34.4261,-80.6296,Assoc_Region_South_Carolina,,us_state_abbr
+518,"Greenville, SC",34.3784,-81.9642,Assoc_Region_South_Carolina,,us_state_abbr
+519,"Amarillo, TX",35.2221,-101.5358,Assoc_Region_Texas,,us_state_abbr
+520,"Lawton, OK",34.9290,-99.4651,Assoc_Region_Oklahoma,,us_state_abbr
+521,"Myrtle Beach, SC",34.1873,-79.1882,Assoc_Region_South_Carolina,,us_state_abbr
+522,"Southern Channel Islands, CA",33.2603,-118.7455,Assoc_Region_California,,us_state_abbr
+523,"Prescott, AZ",34.5245,-113.2982,Assoc_Region_Arizona,,us_state_abbr
+524,"Hall, GA",34.0128,-83.0166,Assoc_Region_Georgia,,us_state_abbr
+525,"Horry, SC",33.7502,-79.7375,Assoc_Region_South_Carolina,,us_state_abbr
+526,"Whitfield, GA",34.5652,-84.6999,Assoc_Region_Georgia,,us_state_abbr
+527,"Little River, AR",33.8455,-93.6492,Assoc_Region_Arkansas,,us_state_abbr
+528,"Morgan, AL",34.1810,-87.4611,Assoc_Region_Alabama,,us_state_abbr
+529,"Huntsville, AL",34.7329,-86.7830,Assoc_Region_Alabama,,us_state_abbr
+530,"Sierra Vista, AZ",31.5536,-109.9378,Assoc_Region_Arizona,,us_state_abbr
+531,"McAlester, OK",34.3406,-95.0834,Assoc_Region_Oklahoma,,us_state_abbr
+532,"Ada, OK",34.3829,-97.7505,Assoc_Region_Oklahoma,,us_state_abbr
+533,"Hattiesburg, MS",31.4805,-89.3710,Assoc_Region_Mississippi,,us_state_abbr
+534,"Lowndes, MS",34.2713,-88.2073,Assoc_Region_Mississippi,,us_state_abbr
+535,"Plainville, TX",34.2079,-101.9813,Assoc_Region_Texas,,us_state_abbr
+536,"Weldona, CO",40.6004,-104.4115,Assoc_Region_Colorado,,us_state_abbr
+537,"North Metro Atlanta, GA",33.7430,-84.8414,Assoc_Region_Georgia,,us_state_abbr
+538,"Richland, SC",33.4748,-81.0548,Assoc_Region_South_Carolina,,us_state_abbr
+539,"Roswell, NM",33.5331,-105.4847,Assoc_Region_New_Mexico,,us_state_abbr
+540,"Clovis, NM",33.2255,-103.8645,Assoc_Region_New_Mexico,,us_state_abbr
+541,"South Metro Atlanta, GA",33.2788,-84.0330,Assoc_Region_Georgia,,us_state_abbr
+542,"Yoakum, TX",32.9551,-103.0391,Assoc_Region_Texas,,us_state_abbr
+543,"Lubbock, TX",32.8768,-102.0399,Assoc_Region_Texas,,us_state_abbr
+544,"Vernon, TX",33.7901,-100.5038,Assoc_Region_Texas,,us_state_abbr
+545,"Auburn, AL",33.0453,-85.7205,Assoc_Region_Alabama,,us_state_abbr
+546,"Atlanta, GA",33.7490,-84.3880,Assoc_Region_Georgia,,us_state_abbr
+547,"Charleston, SC",33.0430,-79.5892,Assoc_Region_South_Carolina,,us_state_abbr
+548,"Pima, AZ",32.4780,-112.5516,Assoc_Region_Arizona,,us_state_abbr
+549,Baja California,30.9629,-115.6229,Assoc_Region_Baja_California_Sur,,mexico_name
+550,"Beaufort, SC",32.6700,-80.4307,Assoc_Region_South_Carolina,,us_state_abbr
+551,"Columbia, GA",33.0279,-82.2237,Assoc_Region_Georgia,,us_state_abbr
+552,"Las Cruces, NM",32.4816,-107.7506,Assoc_Region_New_Mexico,,us_state_abbr
+553,Sonora,30.2002,-111.6634,Assoc_Region_Sonora,,mexico_name
+554,"Wichita Falls, TX",33.4260,-98.3489,Assoc_Region_Texas,,us_state_abbr
+555,"Carlsbad, NM",32.3719,-105.8156,Assoc_Region_New_Mexico,,us_state_abbr
+556,"Watson, AR",33.8848,-90.8760,Assoc_Region_Arkansas,,us_state_abbr
+557,"Houston, GA",32.3196,-83.3015,Assoc_Region_Georgia,,us_state_abbr
+558,"Texarkana, TX",33.2430,-94.8291,Assoc_Region_Texas,,us_state_abbr
+559,"Chatham, GA",32.0978,-81.6604,Assoc_Region_Georgia,,us_state_abbr
+560,"San Angelo, TX",31.9358,-101.0067,Assoc_Region_Texas,,us_state_abbr
+561,"Abilene, TX",32.5868,-100.1085,Assoc_Region_Texas,,us_state_abbr
+562,"Duncan, AZ",32.1413,-109.2921,Assoc_Region_Arizona,,us_state_abbr
+563,"Muscogee, GA",32.2141,-84.4468,Assoc_Region_Georgia,,us_state_abbr
+564,"Greater Dallas-Fort Worth Area, TX",32.8723,-97.1996,Assoc_Region_Texas,,us_state_abbr
+565,"ile Dondaine, QC",45.2478,-74.0820,Assoc_Region_Quebec,,canada_name
+566,"Citronelle, AL",32.0141,-88.2386,Assoc_Region_Alabama,,us_state_abbr
+567,"Stephenville, TX",32.1895,-98.7585,Assoc_Region_Texas,,us_state_abbr
+568,"Longview, TX",32.6229,-94.6184,Assoc_Region_Texas,,us_state_abbr
+569,"Jackson, MS",32.5111,-90.3798,Assoc_Region_Mississippi,,us_state_abbr
+570,"Dallas-Fort Worth, TX",32.6914,-97.1013,Assoc_Region_Texas,,us_state_abbr
+571,"Shreveport, LA",32.0740,-93.5188,Assoc_Region_Louisiana,,us_state_abbr
+572,"Deming, NM",31.5062,-107.9657,Assoc_Region_New_Mexico,,us_state_abbr
+573,"Lowndes, GA",31.0967,-81.9314,Assoc_Region_Georgia,,us_state_abbr
+574,"Odessa, TX",31.6272,-102.6843,Assoc_Region_Texas,,us_state_abbr
+575,"Navarro, TX",32.0769,-96.3118,Assoc_Region_Texas,,us_state_abbr
+576,"Thomas, GA",31.1583,-83.7326,Assoc_Region_Georgia,,us_state_abbr
+577,"Duluth, MN",47.3652,-91.2908,Assoc_Region_Minnesota,,us_state_abbr
+578,"El Paso, TX",30.4158,-104.5558,Assoc_Region_Texas,,us_state_abbr
+579,Chihuahua,28.6267,-106.6289,Assoc_Region_Chihuahua,,mexico_name
+580,"Tyler, TX",31.7848,-94.4396,Assoc_Region_Texas,,us_state_abbr
+581,"Reeves, TX",30.4741,-103.0300,Assoc_Region_Texas,,us_state_abbr
+582,"Adams, MS",31.4429,-90.5936,Assoc_Region_Mississippi,,us_state_abbr
+583,"Barksdale AFB, LA",32.3963,-93.3848,Assoc_Region_Louisiana,,us_state_abbr
+584,"Houma, LA",29.7058,-91.1978,Assoc_Region_Louisiana,,us_state_abbr
+585,"Crockett, TX",30.5029,-101.3128,Assoc_Region_Texas,,us_state_abbr
+586,da,29.9270,-81.7511,Assoc_Region_Florida,,florida_da_name
+587,"Waco, TX",31.1785,-98.0319,Assoc_Region_Texas,,us_state_abbr
+588,"San Carlos, AZ",33.8364,-110.2881,Assoc_Region_Arizona,,us_state_abbr
+589,"Ciudad Obregon, SO",28.0263,-109.6203,Assoc_Region_Sonora,,mexico_abbr
+590,"Nogales, SO",30.4413,-108.8523,Assoc_Region_Sonora,,mexico_abbr
+591,"Escambia, FL",30.5960,-86.1937,Assoc_Region_Florida,,us_state_abbr
+592,"Fredericksburg, TX",30.5760,-99.8909,Assoc_Region_Texas,,us_state_abbr
+593,"Alachua, FL",29.6521,-82.4340,Assoc_Region_Florida,,us_state_abbr
+594,"Leon, FL",30.1303,-84.0506,Assoc_Region_Florida,,us_state_abbr
+595,"Duval, FL",29.5991,-81.4286,Assoc_Region_Florida,,us_state_abbr
+596,"Beaumont, TX",29.9154,-94.3703,Assoc_Region_Texas,,us_state_abbr
+597,"Gulf Shores, AL",30.7841,-87.7929,Assoc_Region_Alabama,,us_state_abbr
+598,"Mobile, AL",30.5940,-88.2614,Assoc_Region_Alabama,,us_state_abbr
+599,"Gulfport, MS",30.7031,-89.3243,Assoc_Region_Mississippi,,us_state_abbr
+600,"Baton Rouge, LA",30.5281,-90.6890,Assoc_Region_Louisiana,,us_state_abbr
+601,"Klamath Falls, OR",42.7318,-120.3362,Assoc_Region_Oregon,,us_state_abbr
+602,"Bastrop, TX",30.3120,-97.4706,Assoc_Region_Texas,,us_state_abbr
+603,"Salem, OR",44.8569,-122.4019,Assoc_Region_Oregon,,us_state_abbr
+604,"Marion, FL",28.8432,-82.2757,Assoc_Region_Florida,,us_state_abbr
+605,"Daytona Beach, FL",28.4338,-81.0157,Assoc_Region_Florida,,us_state_abbr
+606,"Hutchinson, MN",45.1869,-94.1673,Assoc_Region_Minnesota,,us_state_abbr
+607,"Lake, Ohio",41.6498,-80.9702,Assoc_Region_Ohio,,us_state_abbr
+608,"Minneapolis, MN",44.9778,-93.2650,Assoc_Region_Minnesota,,us_state_abbr
+609,"Eugene, OR",44.7123,-123.0785,Assoc_Region_Oregon,,us_state_abbr
+610,"Orlando, FL",28.2676,-81.5200,Assoc_Region_Florida,,us_state_abbr
+611,"Houston, TX",29.5912,-95.4724,Assoc_Region_Texas,,us_state_abbr
+612,"LaFourche, LA",29.7541,-90.4178,Assoc_Region_Louisiana,,us_state_abbr
+613,"San Antonio, TX",29.5404,-98.9932,Assoc_Region_Texas,,us_state_abbr
+614,"Victoria, TX",29.2367,-96.8218,Assoc_Region_Texas,,us_state_abbr
+615,Coahuila,26.5977,-102.5937,Assoc_Region_Coahuila,,mexico_name
+616,"Yellowstone, WY",44.8495,-110.6054,Assoc_Region_Wyoming,,us_state_abbr
+617,"Laredo, TX",28.3902,-100.1400,Assoc_Region_Texas,,us_state_abbr
+618,"Omaha, NE",41.2565,-95.9345,Assoc_Region_Nebraska,,us_state_abbr
+619,Baja California Sur,26.1640,-113.2040,Assoc_Region_Baja_California_Sur,,mexico_name
+620,"Cleveland, OH",41.4728,-81.9127,Assoc_Region_Ohio,,us_state_abbr
+621,"Hillsborough, FL",27.8798,-82.2864,Assoc_Region_Florida,,us_state_abbr
+622,"Grand Manan Island, ME",44.5645,-67.1014,Assoc_Region_Maine,,us_state_abbr
+623,"Bar Harbor, ME",43.9860,-68.9586,Assoc_Region_Maine,,us_state_abbr
+624,"Breton Sound Islands, LA",29.2470,-89.4038,Assoc_Region_Louisiana,,us_state_abbr
+625,"Shiprock, NM",35.5992,-108.5435,Assoc_Region_New_Mexico,,us_state_abbr
+626,"Portland, TX",28.1880,-98.3198,Assoc_Region_Texas,,us_state_abbr
+627,"Miami-Dade, FL",25.9526,-80.5365,Assoc_Region_Florida,,us_state_abbr
+628,"Sarasota, FL",27.0763,-81.7310,Assoc_Region_Florida,,us_state_abbr
+629,"Freeport, BS",26.4770,-77.7738,Assoc_Region_British_West_Indies,,bahamas_name
+630,"Whiteman AFB, MO",38.6100,-93.3219,Assoc_Region_Missouri,,us_state_abbr
+631,"Aransas, TX",28.3201,-96.5751,Assoc_Region_Texas,,us_state_abbr
+632,"Sterling, CO",40.8979,-103.9978,Assoc_Region_Colorado,,us_state_abbr
+633,"Corpus Christi, TX",26.5515,-98.4610,Assoc_Region_Texas,,us_state_abbr
+634,"Lee, FL",26.2696,-81.5454,Assoc_Region_Florida,,us_state_abbr
+635,"Monterrey, NL",25.3285,-100.7135,Assoc_Region_Nuevo_Leon,,mexico_name
+636,District of Columbia,38.9072,-77.0369,Assoc_Region_District_of_Columbia,,dc_name
+637,"Laredos, TM",25.8101,-99.7607,Assoc_Region_Nuevo_Leon,,mexico_name
+638,"Los Mochis, SI",25.5619,-108.9804,Assoc_Region_Sinaloa,,mexico_name
+639,"Guadalupe y Calvo, CH",25.9873,-107.8310,Assoc_Region_Chihuahua,,mexico_abbr
+640,"El Carrizo, SI",26.2263,-109.8503,Assoc_Region_Sinaloa,,mexico_name
+641,"Kansas City, KS",39.0331,-94.6795,Assoc_Region_Kansas,,us_state_abbr
+642,"Gomez Palacio, DG",24.9283,-105.8246,Assoc_Region_Durango,,mexico_name
+643,"Salinas, CA",35.9687,-120.9487,Assoc_Region_California,,us_state_abbr
+644,"Eleuthera, BS",25.2137,-76.3583,Assoc_Region_British_West_Indies,,bahamas_name
+645,"Fremont-Winema, OR",43.7704,-120.4397,Assoc_Region_Oregon,,us_state_abbr
+646,"New Providence, BS",25.0479,-77.3554,Assoc_Region_British_West_Indies,,bahamas_name
+647,"Andros, BS",24.4011,-77.8470,Assoc_Region_British_West_Indies,,bahamas_name
+648,"Cat Island, BS",24.3492,-75.4138,Assoc_Region_British_West_Indies,,bahamas_name
+649,"Overland Park, KS",38.6292,-94.5368,Assoc_Region_Kansas,,us_state_abbr
+650,"Minot AFB, ND",47.0677,-98.9721,Assoc_Region_North_Dakota,,us_state_abbr
+651,"Key West, FL",24.7097,-81.1025,Assoc_Region_Florida,,us_state_abbr
+652,"Los Angeles, CA",33.9730,-118.2497,Assoc_Region_California,,us_state_abbr
+653,"Matamoros, TA",24.2776,-98.8901,Assoc_Region_Nuevo_Leon,,mexico_name
+654,"Los Angeles Metro, CA",34.0635,-117.7732,Assoc_Region_California,,us_state_abbr
+655,"San Diego Metro, CA",32.9006,-116.8464,Assoc_Region_California,,us_state_abbr
+656,"Elko, NV",41.2775,-116.8405,Assoc_Region_Nevada,,us_state_abbr
+657,"Montemorelos, NL",23.7335,-100.5753,Assoc_Region_Morelos,,mexico_name
+658,"San Salvador, BS",23.8144,-74.5764,Assoc_Region_British_West_Indies,,bahamas_name
+659,"King's Bay Naval Base, GA",30.6975,-81.4083,Assoc_Region_Georgia,,us_state_abbr
+660,"Santa Rosa, CA",39.4417,-123.6071,Assoc_Region_California,,us_state_abbr
+661,"Sacremento, CA",38.7708,-121.2682,Assoc_Region_California,,us_state_abbr
+662,"San Diego, CA",32.7126,-117.1464,Assoc_Region_California,,us_state_abbr
+663,"Long Island, BS",23.2285,-75.0585,Assoc_Region_British_West_Indies,,bahamas_name
+664,"Great Exuma, BS",23.4986,-75.6683,Assoc_Region_British_West_Indies,,bahamas_name
+665,"Yreka, CA",41.7264,-122.4807,Assoc_Region_California,,us_state_abbr
+666,"Ely, NV",39.1370,-114.2694,Assoc_Region_Nevada,,us_state_abbr
+667,"Alturas, CA",41.9768,-120.5641,Assoc_Region_California,,us_state_abbr
+668,"Mazatlan, SI",23.4806,-107.9845,Assoc_Region_Sinaloa,,mexico_name
+669,"Sequoia, CA",36.0190,-117.7288,Assoc_Region_California,,us_state_abbr
+670,"Durango, DG",23.2957,-106.3114,Assoc_Region_Durango,,mexico_name
+671,"Fresnillo, ZA",22.9516,-103.4825,Assoc_Region_Durango,,mexico_name
+672,"Crooked Island, BS",22.5327,-74.0947,Assoc_Region_British_West_Indies,,bahamas_name
+673,"Tonopah, NV",38.0252,-116.8122,Assoc_Region_Nevada,,us_state_abbr
+674,"Santa Barbara, CA",35.2694,-120.1957,Assoc_Region_California,,us_state_abbr
+675,"Mayaguna, BS",22.2202,-72.8809,Assoc_Region_British_West_Indies,,bahamas_name
+676,"Pine Bluffs, WY",41.4408,-104.5966,Assoc_Region_Wyoming,,us_state_abbr
+677,"Pinedale, WY",42.3456,-109.6010,Assoc_Region_Wyoming,,us_state_abbr
+678,"Austin, TX",30.6085,-98.2061,Assoc_Region_Texas,,us_state_abbr
+679,Turks and Caicos Islands,21.5647,-71.7914,Assoc_Region_British_West_Indies,,caribbean_bs
+680,"Oklahoma City, OK",35.2825,-97.3624,Assoc_Region_Oklahoma,,us_state_abbr
+681,"Huntsville, TX",30.8102,-95.0058,Assoc_Region_Texas,,us_state_abbr
+682,"Monctezuma, SL",22.1934,-102.1642,Assoc_Region_San_Luis_Potosi,,mexico_name
+683,"Sidney, NE",36.9002,-101.8660,Assoc_Region_Nebraska,,us_state_abbr
+684,"Cody, WY",43.9977,-108.9089,Assoc_Region_Wyoming,,us_state_abbr
+685,"Matanzas, CU",22.5583,-81.3977,,,skipped_existing
+686,"Villa Clara, CU",22.4918,-80.0132,,,skipped_existing
+687,"Zacatecas, ZA",21.8724,-104.8565,Assoc_Region_Durango,,mexico_name
+688,"Ciudad Victoria, TM",22.2493,-99.8798,Assoc_Region_Nuevo_Leon,,mexico_name
+689,"El Centro, CA",33.1594,-115.9086,Assoc_Region_California,,us_state_abbr
+690,"Inagua, BS",21.1659,-73.0982,Assoc_Region_British_West_Indies,,bahamas_name
+691,"Mayabeque, CU",22.8752,-82.1445,,,skipped_existing
+692,"Bakersfield, CA",35.4187,-119.0096,Assoc_Region_California,,us_state_abbr
+693,"Artemisa, CU",22.7884,-82.8773,,,skipped_existing
+694,"Havana, CU",22.8100,-82.5304,,,skipped_existing
+695,"Fresno, CA",36.7538,-120.1323,Assoc_Region_California,,us_state_abbr
+696,"Ciego de Avila, CU",22.0116,-78.7739,,,skipped_existing
+697,"Sancti Spiritus, CU",21.9726,-79.5449,Assoc_Region_Greater_Antilles,,cuba_name
+698,"Pinar del Rio, CU",22.4231,-84.0330,,,skipped_existing
+699,"Cienfuegos, CU",22.2495,-80.7190,,,skipped_existing
+700,"Jardines del Rey, CU",22.3119,-78.0664,,,skipped_existing
+701,"Yosemite, CA",38.3637,-120.1835,Assoc_Region_California,,us_state_abbr
+702,"Camaguey, CU",21.4821,-77.9889,,,skipped_existing
+703,"Susanville, CA",40.1141,-120.3542,Assoc_Region_California,,us_state_abbr
+704,"Napa, CA",38.4508,-122.0498,Assoc_Region_California,,us_state_abbr
+705,"Redding, CA",40.2761,-123.1939,Assoc_Region_California,,us_state_abbr
+706,"Tecuala, NA",22.0019,-107.2284,Assoc_Region_Nayarit,,mexico_abbr
+707,"San Juan, PR",18.4336,-65.9610,Assoc_Region_Puerto_Rico,,puerto_rico_abbr
+708,"Las Tunas, CU",21.0986,-77.0348,,,skipped_existing
+709,"Maria Trinidad Sanchez, DO",19.0731,-70.1621,Assoc_Region_East,Assoc_Region_Greater_Antilles,dr_region
+710,British Virgin Islands,18.4592,-64.5827,Assoc_Region_Lesser_Antilles,,virgin_islands
+711,"Holguin, CU",20.7396,-75.7165,,,skipped_existing
+712,"Samana, DO",18.8346,-69.6373,Assoc_Region_East,Assoc_Region_Greater_Antilles,dr_region
+713,"Monte Cristi, DO",19.5071,-71.2654,Assoc_Region_Cibao,Assoc_Region_Greater_Antilles,dr_region
+714,"Puerto Plata, DO",19.2804,-70.7519,Assoc_Region_Cibao,Assoc_Region_Greater_Antilles,dr_region
+715,"Duarte, DO",18.8462,-70.3104,Assoc_Region_Cibao,Assoc_Region_Greater_Antilles,dr_region
+716,Este de Nayarit,21.5891,-106.5584,Assoc_Region_Jalisco,,mexico_name
+717,US Virgin Islands,18.4361,-64.8382,Assoc_Region_Lesser_Antilles,,virgin_islands
+718,"El Seybo, DO",18.4645,-69.2136,Assoc_Region_East,Assoc_Region_Greater_Antilles,dr_region
+719,"La Altagracia, DO",18.1389,-68.8630,Assoc_Region_East,Assoc_Region_Greater_Antilles,dr_region
+720,"Kirtland AFB, NM",34.8668,-106.5741,Assoc_Region_New_Mexico,,us_state_abbr
+721,"Vieques, PR",18.2504,-65.4061,Assoc_Region_Puerto_Rico,,puerto_rico_abbr
+722,"Guantanamo, CU",20.2670,-74.6936,,,skipped_existing
+723,"Santiago, DO",19.0390,-71.1054,Assoc_Region_Cibao,Assoc_Region_Greater_Antilles,dr_region
+724,"Hato Mayor, DO",18.4913,-69.5532,Assoc_Region_East,Assoc_Region_Greater_Antilles,dr_region
+725,"Mezquitic, JA",21.4898,-105.9179,Assoc_Region_Jalisco,,mexico_name
+726,"Nord-Est, HT",19.2919,-71.9004,,,skipped_existing
+727,"La Vega, DO",18.6642,-70.6985,Assoc_Region_Cibao,Assoc_Region_Greater_Antilles,dr_region
+728,"Isla de Culebra, PR",18.4162,-65.2320,Assoc_Region_Puerto_Rico,,puerto_rico_abbr
+729,"Nord-Oueste, HT",19.8301,-72.9141,,,skipped_existing
+730,"Dajabon, DO",19.3129,-71.5745,Assoc_Region_Cibao,Assoc_Region_Greater_Antilles,dr_region
+731,"Isla de Juventud, CU",21.6538,-83.2684,,,skipped_existing
+732,"Nord, HT",19.4612,-72.3001,,,skipped_existing
+733,"Santo Domingo, DO",18.4125,-69.9715,Assoc_Region_South,Assoc_Region_Greater_Antilles,dr_region
+734,"Santiago de Cuba, CU",20.2399,-76.0269,,,skipped_existing
+735,"Artibonite, HT",19.2078,-72.5836,,,skipped_existing
+736,"Granma, CU",20.3639,-77.0241,,,skipped_existing
+737,"La Romana, DO",18.2006,-69.1560,Assoc_Region_South,Assoc_Region_Greater_Antilles,dr_region
+738,"San Pedro de Macoris, DO",18.1919,-69.5970,Assoc_Region_South,Assoc_Region_Greater_Antilles,dr_region
+739,"Colotlan, JA",21.1899,-105.5756,Assoc_Region_Jalisco,,mexico_name
+740,"La Estrelleta, DO",18.8133,-71.6637,Assoc_Region_South,Assoc_Region_Greater_Antilles,dr_region
+741,Aguascalientes,21.2894,-104.0293,Assoc_Region_Durango,,mexico_name
+742,"San Juan, DO",18.6401,-71.3716,Assoc_Region_South,Assoc_Region_Greater_Antilles,dr_region
+743,"Guayalejo, VC",21.4603,-99.4468,Assoc_Region_Veracruz,,mexico_abbr
+744,"Centre, HT",18.8722,-72.0298,,,skipped_existing
+745,"Brainerd, MN",46.8492,-93.7768,Assoc_Region_Minnesota,,us_state_abbr
+746,"Pinos, Zacatecas",21.3696,-103.1766,Assoc_Region_Durango,,mexico_name
+747,"San Luis Potosi, SL",21.0955,-102.1719,Assoc_Region_San_Luis_Potosi,,mexico_name
+748,"Azua, DO",18.2691,-70.9521,Assoc_Region_South,Assoc_Region_Greater_Antilles,dr_region
+749,"Peravia, DO",18.1770,-70.4023,Assoc_Region_South,Assoc_Region_Greater_Antilles,dr_region
+750,"Ciudad Valles, SL",21.2709,-100.7004,Assoc_Region_San_Luis_Potosi,,mexico_name
+751,"San Francisco, CA",37.7747,-122.4193,Assoc_Region_California,,us_state_abbr
+752,"Isla de Mona, PR",17.9833,-68.0615,Assoc_Region_Puerto_Rico,,puerto_rico_abbr
+753,"Tepic, NA",21.0009,-107.1170,Assoc_Region_Nayarit,,mexico_abbr
+754,Veracruz,20.7437,-99.5075,Assoc_Region_Veracruz,,mexico_name
+755,Jalisco,20.7417,-104.4979,Assoc_Region_Jalisco,,mexico_name
+756,"San Francisco Metro, CA",37.8210,-121.8410,Assoc_Region_California,,us_state_abbr
+757,Quintana Roo,20.9341,-88.1243,Assoc_Region_Yucatan,,mexico_name
+758,"Axtla de Terrazas, SL",20.8366,-100.4691,Assoc_Region_San_Luis_Potosi,,mexico_name
+759,Guanajuato,20.5842,-102.7697,Assoc_Region_Michoacan,,mexico_name
+760,"Ouest, HT",18.5222,-72.4147,,,skipped_existing
+761,Yucatan,20.9376,-89.7038,Assoc_Region_Yucatan,,mexico_name
+762,"Barahona, DO",18.3340,-71.7191,Assoc_Region_South,Assoc_Region_Greater_Antilles,dr_region
+763,"Isla Maria Madre, NA",21.3965,-108.8082,Assoc_Region_Nayarit,,mexico_abbr
+764,"Nellis AFB, NV",36.3785,-115.1930,Assoc_Region_Nevada,,us_state_abbr
+765,"Isla de la Gonave, HT",18.8545,-73.1220,,,skipped_existing
+766,Queretaro,20.5406,-101.1570,Assoc_Region_Michoacan,,mexico_name
+767,"Huejutla de Reyes, VC",20.6203,-100.2780,Assoc_Region_Veracruz,,mexico_abbr
+768,"Pedernales, DO",17.9431,-71.6883,Assoc_Region_South,Assoc_Region_Greater_Antilles,dr_region
+769,"Sud-Est, HT",18.2341,-72.3970,,,skipped_existing
+770,"Puerto Vallarta, JA",20.5948,-107.2245,Assoc_Region_Jalisco,,mexico_name
+771,Hidalgo,20.4664,-100.3407,Assoc_Region_Hidalgo,,mexico_hidalgo_state
+772,"Malmstrom AFB, MT",46.6651,-109.3757,Assoc_Region_Montana,,us_state_abbr
+773,"Nippes, HT",18.5238,-73.6125,,,skipped_existing
+774,"Queens, NY",40.7053,-73.8248,Assoc_Region_New_York,,nyc_borough
+775,"Staten Island, NY",40.7597,-74.0662,Assoc_Region_New_York,,nyc_borough
+776,"The Bronx, NY",40.8492,-73.8587,Assoc_Region_New_York,,nyc_borough
+777,"Brooklyn, NY",40.6576,-73.9561,Assoc_Region_New_York,,nyc_borough
+778,"Saint Francis, KS",40.0367,-102.0947,Assoc_Region_Kansas,,us_state_abbr
+779,"Ohio, WV",40.0703,-80.8658,Assoc_Region_West_Virginia,,us_state_abbr
