@@ -1,0 +1,780 @@
+lotd_state_id,name,lat,lon,nationality_id,culture_name,rule_used
+1,British Columbia,43.5114,-80.6562,366,British Columbian,canada_name
+2,"Hot Springs, AR",34.2164,-92.7249,83,Dixie,us_state_default
+3,"Joplin, MO",37.0591,-93.5939,564,Missourian,us_state_default
+4,"Ponce, PR",18.1764,-66.7556,90,Boricua,caribbean_name
+5,"Mayaguez, PR",18.2162,-67.1874,90,Boricua,caribbean_name
+6,Northern Alberta,36.6162,-88.3171,365,Western Canadian,canada_name
+7,"Arecibo, PR",18.4190,-66.7009,90,Boricua,caribbean_name
+8,North Manitoba,42.6885,-77.6435,365,Western Canadian,canada_name
+9,Quebec,49.5021,-67.9494,93,Quebecois,canada_name
+10,Labrador,49.3840,-54.5519,367,Newfoundlander,canada_name
+11,"Floyd County, KY",38.0541,-83.1067,565,Appalachian,appalachian_ky
+12,"Newberry, MI",46.2708,-85.5848,563,Steel Belt (IL/MI),us_state_default
+13,"Saint Ignace, MI",46.1405,-84.4314,563,Steel Belt (IL/MI),us_state_default
+14,Central Northern Manitoba,44.8498,-82.3830,365,Western Canadian,canada_name
+15,"Springfield, MO",37.2857,-92.4992,564,Missourian,us_state_default
+16,"Houghton, MI",46.4302,-88.6798,563,Steel Belt (IL/MI),us_state_default
+17,"Moresby Island, BC",31.9918,-100.9543,366,British Columbian,canada_name
+18,"Shannon, MO",37.0654,-90.9359,564,Missourian,us_state_default
+19,"Evansville, IN",38.2466,-87.1116,85,Steel Belt,us_state_default
+20,"Hopkins, KY",37.5386,-87.3611,565,Appalachian,us_state_default
+21,"Bloomington, IN",39.0286,-86.7678,85,Steel Belt,us_state_default
+22,"Poplar Bluff, MO",37.1122,-89.7954,564,Missourian,us_state_default
+23,Northern British Columbia,34.8230,-99.4133,366,British Columbian,canada_name
+24,"Louisville, KY",38.1074,-85.6908,565,Appalachian,appalachian_ky
+25,"St. Louis, MO",38.6270,-90.1994,564,Missourian,us_state_default
+26,World Border,33.7637,-132.9263,0,No Culture,world_border
+27,"Harrisonville, MO",38.3461,-93.5643,564,Missourian,us_state_default
+28,"St. Joseph, MO",39.8433,-94.4128,564,Missourian,us_state_default
+29,"Adalair, MO",39.8262,-92.6405,564,Missourian,us_state_default
+30,Saint-Pierre-et-Miquelon,49.6980,-59.6992,95,Maritimer,caribbean_name
+31,"Kidney Island, NU",48.1723,-66.3802,94,Inuit,canada_name
+32,"Tupelo, MS",34.1107,-88.7856,84,Dixie-African American,us_state_default
+33,"Etowah, AL",34.1799,-86.1134,83,Dixie,us_state_default
+34,"Knox, IL",40.7748,-90.1637,563,Steel Belt (IL/MI),us_state_default
+35,"Howard, IN",40.4693,-85.9133,85,Steel Belt,us_state_default
+36,"Coeur d'Alene, ID",47.4231,-115.7239,87,Frontier,us_state_default
+37,"Kankakee, IL",40.8286,-88.2485,563,Steel Belt (IL/MI),us_state_default
+38,"Belcher Islands, NU",48.6298,-67.9911,94,Inuit,canada_name
+39,"Christian, KY",36.9641,-87.2856,565,Appalachian,us_state_default
+40,Eastern Northern Manitoba,46.7395,-83.0363,365,Western Canadian,canada_name
+41,"Peoria, IL",40.2349,-89.1415,563,Steel Belt (IL/MI),us_state_default
+42,Newfoundland,47.1570,-52.5278,367,Newfoundlander,canada_name
+43,"Oxford, MS",34.5172,-89.7305,84,Dixie-African American,us_state_default
+44,"El Dorado, AR",33.3540,-92.3134,83,Dixie,us_state_default
+45,Oklahoma,48.7539,-55.0262,570,Oklahoman,us_full_state_name
+46,"Champaign, IL",39.3280,-87.9160,563,Steel Belt (IL/MI),us_state_default
+47,"Little Rock, AR",34.6953,-92.3260,83,Dixie,us_state_default
+48,"Woodward, OK",36.3269,-99.6182,570,Oklahoman,us_state_default
+49,"Bowling Green, KY",37.0725,-86.1907,565,Appalachian,us_state_default
+50,"Guayama, PR",18.2130,-66.0964,90,Boricua,caribbean_name
+51,"Petersburg, IL",39.6681,-89.8964,563,Steel Belt (IL/MI),us_state_default
+52,"Platte, WI",42.6090,-90.4230,85,Steel Belt,us_state_default
+53,"Buncombe, NC",47.4410,-79.8199,567,Tidewater,us_state_default
+54,"Ottumwa, IA",40.6888,-92.6434,337,Midwestern,us_state_default
+55,"Iowa City, IA",41.2081,-91.7435,337,Midwestern,us_state_default
+56,"Dubuque, IA",42.6343,-91.6875,337,Midwestern,us_state_default
+57,"Waterloo, IA",41.9622,-92.9726,337,Midwestern,us_state_default
+58,"Covington, KY",38.6367,-84.3772,565,Appalachian,appalachian_ky
+59,"Indianapolis, IN",39.7902,-86.0341,85,Steel Belt,us_state_default
+60,"Des Moines, IA",41.2201,-94.0145,337,Midwestern,us_state_default
+61,Illinois,47.9656,-51.1654,563,Steel Belt (IL/MI),us_full_state_name
+62,"Vancouver, BC",43.5845,-109.0409,366,British Columbian,canada_name
+63,Northern Saskatchwan,41.4282,-85.5065,365,Western Canadian,canada_name
+64,"North Kansas City, MO",39.1951,-94.1169,564,Missourian,us_state_default
+65,"Rochester, MN",43.6199,-92.1759,337,Midwestern,us_state_default
+66,"Milwaukee, WI",43.0908,-88.3207,85,Steel Belt,us_state_default
+67,"Sioux City, IA",42.7343,-95.3454,337,Midwestern,us_state_default
+68,"Green Bay, WI",44.1505,-88.2292,85,Steel Belt,us_state_default
+69,Ontario,48.4477,-82.5364,92,Ontarian,canada_name
+70,"Jackson, TN",35.9322,-88.4628,566,Appalachian-African American,us_state_default
+71,"Land Between The Lakes, TN",36.8446,-87.9611,566,Appalachian-African American,us_state_default
+72,"Madison, WI",42.9966,-89.3307,85,Steel Belt,us_state_default
+73,"Lexington, KY",38.1046,-84.5782,565,Appalachian,appalachian_ky
+74,"Kalamazoo, MI",42.1601,-85.5408,563,Steel Belt (IL/MI),us_state_default
+75,"Eau Claire, WI",44.3841,-91.6524,85,Steel Belt,us_state_default
+76,"Appleton, WI",44.3123,-88.8530,85,Steel Belt,us_state_default
+77,"Kansas City, MO",38.7591,-94.0556,564,Missourian,us_state_default
+78,"Tippecanoe, IN",40.1425,-86.7673,85,Steel Belt,us_state_default
+79,"Oshkosh, WI",43.7402,-89.3540,85,Steel Belt,us_state_default
+80,"Wausau, WI",44.4098,-90.3168,85,Steel Belt,us_state_default
+81,"La Crosse, WI",43.4854,-90.5670,85,Steel Belt,us_state_default
+82,"Minot, ND",47.1009,-98.7971,337,Midwestern,us_state_default
+83,"Delaware, IN",40.1004,-85.1248,85,Steel Belt,us_state_default
+84,"Willis, ND",46.8139,-100.1633,337,Midwestern,us_state_default
+85,"Edmonton, AB",43.4717,-100.3706,365,Western Canadian,canada_name
+86,"De Witt, AR",34.3566,-91.2578,83,Dixie,us_state_default
+87,"Fargo, ND",46.9956,-97.2218,337,Midwestern,us_state_default
+88,"Vancouver Island, BC",42.8752,-116.6468,366,British Columbian,canada_name
+89,"Sioux Falls, SD",43.5942,-96.9537,337,Midwestern,us_state_default
+90,"Chico, CA",40.1130,-121.5731,88,Californian,california
+91,"Mitchell, SD",43.6184,-98.6362,337,Midwestern,us_state_default
+92,"Vaudreuil-Soulanges, QC",45.3412,-74.2416,93,Quebecois,canada_name
+93,"Twin Islands, NU",49.1983,-73.2329,94,Inuit,canada_name
+94,"Kindersley, SK",44.8442,-98.0570,365,Western Canadian,canada_name
+95,"Saskatoon, SK",46.1498,-97.3624,365,Western Canadian,canada_name
+96,Guantanamo Bay,20.1833,-75.3555,100,Cuban,caribbean_name
+97,"Ann Arbor, MI",41.9099,-83.9051,563,Steel Belt (IL/MI),us_state_default
+98,"Brookings, SD",44.5012,-97.5212,337,Midwestern,us_state_default
+99,"Rapid City, SD",43.9875,-103.6073,337,Midwestern,us_state_default
+100,"Winnipeg, MB",47.0954,-92.4255,365,Western Canadian,canada_name
+101,"Birmingham, AL",33.5503,-86.7961,83,Dixie,us_state_default
+102,"Dickinson, ND",46.3097,-101.9095,337,Midwestern,us_state_default
+103,"Pierre, SD",43.9633,-101.2335,337,Midwestern,us_state_default
+104,"Akimiski Island, NU",49.0893,-74.8195,94,Inuit,canada_name
+105,"Beatrice, NE",40.1638,-96.4133,337,Midwestern,us_state_default
+106,"Pine Bluff, AR",33.8037,-91.4802,83,Dixie,us_state_default
+107,"Anticosti Island, QC",48.3706,-59.8189,93,Quebecois,canada_name
+108,"Scottsbluff, NE",42.2805,-103.5341,337,Midwestern,us_state_default
+109,"Fremont, NE",42.1115,-97.1073,337,Midwestern,us_state_default
+110,"Grand Island, NE",41.4056,-99.8378,337,Midwestern,us_state_default
+111,"Meridian, MS",32.3847,-89.2593,84,Dixie-African American,black_belt_core
+112,"Salina, KS",38.6284,-97.1687,337,Midwestern,us_state_default
+113,"Cowley, KS",37.6061,-96.5576,337,Midwestern,us_state_default
+114,"Saint Pierre, FR",46.1196,-53.8830,95,Maritimer,caribbean_name
+115,"Charlton Island, NU",49.1466,-74.3144,94,Inuit,canada_name
+116,"East Lansing, MI",42.5598,-84.4732,563,Steel Belt (IL/MI),us_state_default
+117,"Calgary, AB",45.9983,-107.1912,365,Western Canadian,canada_name
+118,"Miquelon, FR",45.9932,-53.7989,95,Maritimer,caribbean_name
+119,"Durango, CO",36.9777,-107.5798,702,Norteno Mexican (Durango/Zacatecas/Aguascalientes),mexico_name
+120,"Eastern Townships, QC",47.1669,-68.6532,93,Quebecois,canada_name
+121,"Hardin, KY",37.4347,-85.1813,565,Appalachian,appalachian_ky
+122,"Dodge City, KS",38.9395,-100.9598,337,Midwestern,us_state_default
+123,"Alamosa, CO",36.9732,-106.3936,699,Norteno Mexican (Coahuila),mexico_abbr
+124,"Fort Smith, AR",34.8101,-93.4914,83,Dixie,us_state_default
+125,"Twin Falls, ID",42.0763,-114.0154,573,Mormon,mormon_corridor
+126,"Thornton, CO",39.5978,-105.5886,571,Southern Frontier,us_state_default
+127,"Tuscaloosa, AL",33.1756,-87.6489,84,Dixie-African American,black_belt_al
+128,"Fort Collins, CO",40.7213,-105.5919,571,Southern Frontier,us_state_default
+129,"Fort Morgan, CO",39.9600,-104.4322,571,Southern Frontier,us_state_default
+130,"La Salle, LA",31.4768,-91.9478,569,Louisianan,us_state_default
+131,"Colorado Springs, CO",38.8885,-105.3323,571,Southern Frontier,us_state_default
+132,"Magladen Islands, QC",46.9691,-59.8344,93,Quebecois,canada_name
+133,"Ionia, MI",43.2339,-85.2178,563,Steel Belt (IL/MI),us_state_default
+134,"Lansing, MI",42.4335,-84.8868,563,Steel Belt (IL/MI),us_state_default
+135,"Miles City, MT",46.2305,-104.6143,87,Frontier,us_state_default
+136,"Gillette, WY",44.1444,-105.9209,87,Frontier,us_state_default
+137,"North Puget Sound, WA",47.3217,-121.5532,574,Pacific Northwestern,pacific_nw
+138,"Flint, MI",42.8670,-84.0335,563,Steel Belt (IL/MI),us_state_default
+139,"Great Falls, MT",46.8098,-109.3405,87,Frontier,us_state_default
+140,"Northern Cascades, WA",47.7513,-120.7511,574,Pacific Northwestern,pacific_nw
+141,New Brunswick,47.0617,-64.8383,95,Maritimer,canada_name
+142,"Olympic Peninsula, WA",46.6816,-122.6029,574,Pacific Northwestern,pacific_nw
+143,"Tucson, AZ",32.1107,-111.0126,571,Southern Frontier,us_state_default
+144,"Idaho Falls, ID",42.6625,-111.5977,87,Frontier,us_state_default
+145,"Cape Breton Island, NS",45.7633,-59.5746,95,Maritimer,canada_name
+146,"Salt Lake City, UT",40.4735,-111.8060,573,Mormon,mormon_corridor
+147,"Ogden, UT",41.2774,-111.7681,573,Mormon,mormon_corridor
+148,"Lac-des-Eaux-Mortes, QC",48.0704,-65.9489,93,Quebecois,canada_name
+149,"Provo, UT",39.5505,-111.1123,573,Mormon,mormon_corridor
+150,"Western Okanogan Highlands, WA",47.4570,-117.4022,574,Pacific Northwestern,pacific_nw
+151,"Edmundston, NB",47.6916,-66.4195,95,Maritimer,canada_name
+152,Prince Edward Island,46.2516,-61.9920,95,Maritimer,canada_name
+153,"Degelis, QC",47.6095,-67.5867,93,Quebecois,canada_name
+154,"Mount Pleasant, MI",43.7651,-85.2138,563,Steel Belt (IL/MI),us_state_default
+155,"Brandon, MB",47.5367,-96.0442,365,Western Canadian,canada_name
+156,"Puget Islands, WA",46.9712,-121.6879,574,Pacific Northwestern,pacific_nw
+157,"Eastern Okanogan Highlands, WA",47.3963,-116.1008,574,Pacific Northwestern,us_state_default
+158,"Metaline Falls, WA",47.2195,-114.9782,574,Pacific Northwestern,us_state_default
+159,"Hanover, MB",47.9772,-93.0427,365,Western Canadian,canada_name
+160,"Sandpoint, ID",47.2038,-114.4205,87,Frontier,us_state_default
+161,"Kalispell, MT",47.1717,-112.8521,87,Frontier,us_state_default
+162,"Essex, MA",42.4655,-71.2325,82,New Englander,new_england_lat
+163,Nova Scotia,44.8975,-63.6030,95,Maritimer,canada_name
+164,"Vernal, UT",40.1066,-109.8282,573,Mormon,mormon_corridor
+165,"Shreveport, LA",32.4085,-92.8596,569,Louisianan,us_state_default
+166,"Cypress, AB",46.4705,-106.5852,365,Western Canadian,canada_name
+167,"Maple Creek, MB",46.4847,-102.6091,365,Western Canadian,canada_name
+168,"Aroostook, ME",47.1781,-67.1967,82,New Englander,new_england_lat
+169,"South Puget Sound, WA",47.2835,-122.9296,574,Pacific Northwestern,pacific_nw
+170,"Browning, MT",47.0975,-111.8991,87,Frontier,us_state_default
+171,"Fayetteville, AR",35.8728,-93.5754,83,Dixie,us_state_default
+172,"Columbia Basin, WA",47.6254,-118.7903,574,Pacific Northwestern,pacific_nw
+173,"Pantex Plant, TX",35.2983,-101.7554,86,Texan,us_state_default
+174,"Saint Francis, ME",47.3367,-68.1126,82,New Englander,new_england_lat
+175,"Cedar City, UT",37.7931,-112.1679,573,Mormon,mormon_corridor
+176,"New Orleans, LA",30.0495,-89.7325,84,Dixie-African American,black_belt_la
+177,"Butte, MT",46.5064,-104.2182,87,Frontier,us_state_default
+178,"Capitol Reef, UT",38.9893,-111.6585,573,Mormon,mormon_corridor
+179,"Willapa Hills, WA",46.2035,-123.2126,574,Pacific Northwestern,pacific_nw
+180,"Lafayette, LA",29.8163,-92.1633,569,Louisianan,us_state_default
+181,"Moscow, ID",46.7388,-115.5817,87,Frontier,us_state_default
+182,"Mecklenberg, NC",45.9026,-68.0367,82,New Englander,new_england_lat
+183,"Southern Cascades, WA",46.9385,-122.5669,574,Pacific Northwestern,pacific_nw
+184,"St. John, NB",45.7051,-66.7012,95,Maritimer,canada_name
+185,"Yakima, WA",47.0711,-121.0552,574,Pacific Northwestern,pacific_nw
+186,"Missoula, MT",46.7484,-113.5169,87,Frontier,us_state_default
+187,"Naval Submarine Base Bangor, WA",47.2957,-122.6537,574,Pacific Northwestern,pacific_nw
+188,"Piscataquis, ME",46.4680,-68.7254,82,New Englander,new_england_lat
+189,"Middlesex, NJ",47.0669,-69.9127,82,New Englander,new_england_lat
+190,"Roseburg, OR",43.2289,-123.5779,574,Pacific Northwestern,pacific_nw
+191,"Muskegon, MI",43.5162,-86.1924,563,Steel Belt (IL/MI),us_state_default
+192,"Bismarck, ND",46.6369,-99.0268,337,Midwestern,us_state_default
+193,"Grand Forks, ND",47.5048,-96.9333,337,Midwestern,us_state_default
+194,"Conway, AR",35.3066,-91.7969,83,Dixie,us_state_default
+195,"Mahoosuc Range, ME",45.6592,-69.2790,82,New Englander,new_england_lat
+196,"Phillips, AR",34.8761,-90.6679,83,Dixie,us_state_default
+197,"Natchitoches, LA",31.1099,-92.9259,569,Louisianan,us_state_default
+198,"Lake Charles, LA",30.1142,-93.1133,569,Louisianan,us_state_default
+199,"Clay, MN",46.7681,-95.9911,337,Midwestern,us_state_default
+200,"Isanti, MN",45.9696,-92.8887,337,Midwestern,us_state_default
+201,"Vancouver, WA",45.9064,-122.5744,574,Pacific Northwestern,pacific_nw
+202,"Autauga, AL",32.7958,-86.8056,84,Dixie-African American,black_belt_al
+203,"Downeast, ME",44.6424,-68.4605,82,New Englander,new_england_lat
+204,"Billings, MT",46.2272,-108.6795,87,Frontier,us_state_default
+205,"West Mahoosuc, ME",45.6438,-69.9529,82,New Englander,new_england_lat
+206,"Blue Mountains, WA",46.8969,-118.0344,574,Pacific Northwestern,pacific_nw
+207,"Somerset, ME",45.0457,-69.3204,82,New Englander,new_england_lat
+208,"Alexandra, LA",30.6576,-91.9744,569,Louisianan,us_state_default
+209,"Bend, OR",45.3938,-120.9791,574,Pacific Northwestern,pacific_nw
+210,"Queens, NY",47.4114,-87.5819,82,New Englander,us_state_default
+211,"Phillipsburg, MT",46.5336,-111.8147,87,Frontier,us_state_default
+212,"Mercer, ND",46.1405,-101.0167,337,Midwestern,us_state_default
+213,"Orange, NY",46.1116,-72.6722,82,New Englander,new_england_lat
+214,"Dothan, AL",31.4178,-85.7721,83,Dixie,us_state_default
+215,"Monroe, LA",32.4502,-91.7871,84,Dixie-African American,black_belt_la
+216,"Western Mountains, ME",44.7817,-70.4867,82,New Englander,new_england_lat
+217,"Pendleton, OR",45.7565,-118.7361,574,Pacific Northwestern,pacific_nw
+218,"Monteregie, QC",45.2031,-73.7328,93,Quebecois,canada_name
+219,"ile Marie, QC",45.8154,-73.0549,93,Quebecois,canada_name
+220,"Baker, MT",45.4933,-104.3942,87,Frontier,us_state_default
+221,"Penobscot Bay, ME",44.2018,-69.5623,82,New Englander,new_england_lat
+222,"Marquette, MI",46.3075,-87.8792,563,Steel Belt (IL/MI),us_state_default
+223,"Great North Woods, NH",44.7250,-71.2297,82,New Englander,new_england_lat
+224,"Cascade, ID",44.9016,-115.5045,87,Frontier,us_state_default
+225,"ile Jesus, QC",45.5989,-73.5521,93,Quebecois,canada_name
+226,"ile de Montreal, QC",45.5017,-73.5673,93,Quebecois,canada_name
+227,"Montgomery, Al",32.1797,-85.7387,84,Dixie-African American,black_belt_al
+228,"Saint Cloud, MN",46.1418,-95.1842,337,Midwestern,us_state_default
+229,"ile Bizardl, QC",45.4977,-73.7558,93,Quebecois,canada_name
+230,"ile Perrot, QC",45.3616,-73.8953,93,Quebecois,canada_name
+231,"Northeast Kingdom, VT",44.5185,-71.9581,82,New Englander,new_england_lat
+232,"Portland Casco Bay, ME",43.8004,-70.3297,82,New Englander,new_england_lat
+233,"Cadillac, MI",44.3276,-85.0935,563,Steel Belt (IL/MI),us_state_default
+234,"Jamestown, ND",46.6185,-98.0438,337,Midwestern,us_state_default
+235,"Clarke, AL",32.0092,-87.7464,84,Dixie-African American,black_belt_al
+236,"Franklin, VT",44.6051,-72.7820,82,New Englander,new_england_lat
+237,"Butler, AL",31.7113,-86.8649,84,Dixie-African American,black_belt_al
+238,"Alger, MI",45.9993,-87.1079,563,Steel Belt (IL/MI),us_state_default
+239,"Dillon, MT",45.3962,-112.5233,87,Frontier,us_state_default
+240,"Sugar Island, MI",46.4025,-83.8631,563,Steel Belt (IL/MI),us_state_default
+241,"Superior, WI",46.1526,-91.1382,85,Steel Belt,us_state_default
+242,"St. Lawrence, NY",44.5758,-74.3310,82,New Englander,us_state_default
+243,"Salmon, ID",44.6682,-113.6664,87,Frontier,us_state_default
+244,"White Mountains, NH",44.0283,-71.3968,82,New Englander,new_england_lat
+245,"Manhattan, NYC",40.7831,-73.9712,558,New York,nyc_name
+246,"St. Joseph Island, ON",46.1804,-83.7445,92,Ontarian,canada_name
+247,"Athens, OH",39.2298,-82.5616,85,Steel Belt,us_state_default
+248,"Grand Isle, VT",44.6448,-73.4534,82,New Englander,new_england_lat
+249,"Powder River, MT",45.2835,-106.4210,87,Frontier,us_state_default
+250,"Addison, VT",44.0556,-73.2821,82,New Englander,new_england_lat
+251,"Hayward, WI",45.4461,-90.8751,85,Steel Belt,us_state_default
+252,"Manitoulin Island, ON",45.7710,-81.9027,92,Ontarian,canada_name
+253,"Rutland, VT",43.7313,-72.6989,82,New Englander,new_england_lat
+254,"Drummond Island, MI",45.9776,-83.4863,563,Steel Belt (IL/MI),us_state_default
+255,"Cabell, WV",40.7382,-81.0929,565,Appalachian,appalachian_core
+256,"Hardin, MT",45.3508,-107.5852,87,Frontier,us_state_default
+257,"Cockburn Island, ON",45.9003,-83.2107,92,Ontarian,canada_name
+258,"East Bozeman, MT",45.2527,-109.4508,87,Frontier,us_state_default
+259,"Madison, MT",45.3008,-111.0142,87,Frontier,us_state_default
+260,"Merrimack, NH",43.5650,-71.0156,82,New Englander,new_england_lat
+261,"Sarasota, FL",44.0273,-73.9928,568,Floridian,us_state_default
+262,"Ontario, OR",43.3256,-117.4734,92,Ontarian,canada_name
+263,"Mackinac Island, MI",45.7986,-84.4504,563,Steel Belt (IL/MI),us_state_default
+264,"Toledo, OH",41.1612,-83.9384,85,Steel Belt,us_state_default
+265,"Stevens Point, WI",45.0120,-89.1205,85,Steel Belt,us_state_default
+266,"Dayton, OH",40.2079,-84.0928,85,Steel Belt,us_state_default
+267,"Mackinac City, MI",45.5427,-84.7509,563,Steel Belt (IL/MI),us_state_default
+268,"Grafton, NH",43.2464,-72.0406,82,New Englander,new_england_lat
+269,"Clearwater, MN",47.6612,-94.6287,337,Midwestern,us_state_default
+270,"Beaver Island, MI",45.7271,-85.6188,563,Steel Belt (IL/MI),us_state_default
+271,"Harding, SD",45.0636,-102.7937,337,Midwestern,us_state_default
+272,"Iosco, MI",44.3334,-84.1026,563,Steel Belt (IL/MI),us_state_default
+273,"Hamilton, NY",43.6341,-75.2153,82,New Englander,us_state_default
+274,"Strafford, NH",42.9720,-70.8951,82,New Englander,new_england_lat
+275,"Mobridge, SD",45.1142,-101.2825,337,Midwestern,us_state_default
+276,"Aberdeen, SD",45.0286,-99.6143,337,Midwestern,us_state_default
+277,"Concord, NH",43.0149,-71.7231,82,New Englander,new_england_lat
+278,"Medford, OR",42.4038,-123.7399,574,Pacific Northwestern,pacific_nw
+279,"Watertown, SD",45.6749,-97.5886,337,Midwestern,us_state_default
+280,"Lewis, NY",44.3523,-75.4738,82,New Englander,us_state_default
+281,"Old Faithful, WY",44.3782,-110.6428,87,Frontier,us_state_default
+282,"Troy, NY",42.9633,-73.8387,82,New Englander,us_state_default
+283,"Casper, WY",43.0072,-107.5791,87,Frontier,us_state_default
+284,"Philadelphia, PA",39.8470,-75.1687,109,Panamanian,caribbean_name
+285,"Schenectady, NY",43.0222,-74.3443,82,New Englander,us_state_default
+286,"Richland, OH",40.8169,-82.3723,85,Steel Belt,us_state_default
+287,"Roberts, ID",43.9401,-112.1844,87,Frontier,us_state_default
+288,"Boise, ID",43.3657,-115.3713,87,Frontier,us_state_default
+289,"Baileys Harbor, WI",45.2515,-87.2583,85,Steel Belt,us_state_default
+290,"Grand Traverse, MI",45.0825,-85.4184,563,Steel Belt (IL/MI),us_state_default
+291,"Oswego, NY",43.2315,-75.9977,82,New Englander,us_state_default
+292,"Hillsborough, NH",42.6906,-71.7626,82,New Englander,new_england_lat
+293,"Windham, VT",42.7644,-73.1052,82,New Englander,new_england_lat
+294,"Nampa, ID",42.5052,-115.9093,87,Frontier,us_state_default
+295,"Jackson, WY",42.8220,-110.5130,87,Frontier,us_state_default
+296,"Crescent City, CA",41.7558,-124.2010,88,Californian,california
+297,"Jerome, ID",42.8916,-113.8873,87,Frontier,us_state_default
+298,"Marshall, MN",44.9436,-95.6720,337,Midwestern,us_state_default
+299,"Suffolk, MA",42.3601,-71.0589,82,New Englander,new_england_lat
+300,"Worchester, MA",42.1811,-72.5752,82,New Englander,new_england_lat
+301,"Wayne, NY",42.9560,-77.0924,82,New Englander,us_state_default
+302,"Berkshire, MA",42.1645,-73.4387,82,New Englander,new_england_lat
+303,"Mojave, CA",34.7476,-116.0518,88,Californian,california
+304,"Saint Paul, MN",44.4360,-92.8226,337,Midwestern,us_state_default
+305,"Chenango, NY",42.6134,-75.5698,82,New Englander,us_state_default
+306,"Delaware, NY",42.3048,-74.9701,82,New Englander,us_state_default
+307,"Plymouth, MA",41.9642,-70.7340,82,New Englander,new_england_lat
+308,"Onondaga, NY",42.7468,-76.3194,82,New Englander,us_state_default
+309,"Trippe, SD",43.2356,-101.8492,337,Midwestern,us_state_default
+310,"Pocatello, ID",42.2902,-112.4833,87,Frontier,us_state_default
+311,"Murray, MN",44.1122,-95.7841,337,Midwestern,us_state_default
+312,"Huron, MI",43.5327,-83.2223,563,Steel Belt (IL/MI),us_state_default
+313,"Monroe, NY",43.1566,-77.6109,82,New Englander,us_state_default
+314,"Genesse, NY",43.1570,-78.1912,82,New Englander,us_state_default
+315,"Barnstable, MA",41.7971,-69.9146,82,New Englander,new_england_lat
+316,"Columbia, NY",41.9661,-73.8723,82,New Englander,us_state_default
+317,"Mason, MI",44.2021,-86.3439,563,Steel Belt (IL/MI),us_state_default
+318,"Saginaw, MI",43.5362,-84.2076,563,Steel Belt (IL/MI),us_state_default
+319,"Providence, RI",41.6914,-71.3483,82,New Englander,new_england_lat
+320,"Albany, NY",42.6513,-74.5480,82,New Englander,us_state_default
+321,"New London, CT",41.6685,-72.4139,82,New Englander,new_england_lat
+322,"Mankato, MN",44.0428,-93.8924,337,Midwestern,us_state_default
+323,"Ithaca, NY",42.3083,-76.6852,82,New Englander,us_state_default
+324,"Lovelock, NV",41.4424,-118.9819,87,Frontier,us_state_default
+325,"Cattaraugus, NY",42.5559,-77.9089,82,New Englander,us_state_default
+326,"Buffalo, NY",43.0397,-78.4992,82,New Englander,us_state_default
+327,"Windham, NY",42.0204,-74.5284,82,New Englander,us_state_default
+328,"Hartford, CT",41.5260,-73.2236,82,New Englander,new_england_lat
+329,"Benton Harbor, MI",42.2358,-86.3052,563,Steel Belt (IL/MI),us_state_default
+330,Grand Island,43.1489,-78.8068,82,New Englander,western_ny_lat
+331,"Mojave, NV",39.3241,-116.5965,87,Frontier,us_state_default
+332,"Detroit, MI",42.3314,-83.0458,563,Steel Belt (IL/MI),us_state_default
+333,"Hamburg, NY",42.7489,-78.6535,82,New Englander,us_state_default
+334,"Alpena, MI",45.1275,-84.0013,563,Steel Belt (IL/MI),us_state_default
+335,"Steuben, NY",42.3327,-77.4297,82,New Englander,us_state_default
+336,"Oakland, MI",42.8501,-83.3164,563,Steel Belt (IL/MI),us_state_default
+337,"Dutchess, NY",41.4036,-73.6607,82,New Englander,new_england_lat
+338,"Orange, NY",41.4424,-74.3656,82,New Englander,us_state_default
+339,"St. Clair, MI",42.9711,-82.7881,563,Steel Belt (IL/MI),us_state_default
+340,"Douglas, WY",42.8694,-104.9283,87,Frontier,us_state_default
+341,"Chautauqua, NY",42.4213,-78.7180,82,New Englander,us_state_default
+342,"Lackawanna, PA",41.5349,-75.6538,109,Panamanian,caribbean_name
+343,"Fairfield, CT",41.1412,-73.2638,82,New Englander,new_england_lat
+344,"West Wendover, NV",41.1549,-115.0107,87,Frontier,us_state_default
+345,"Allegheny, PA",40.4406,-79.9959,109,Panamanian,caribbean_name
+346,"Bradford, PA",41.4975,-76.8900,109,Panamanian,caribbean_name
+347,"Davenport, IA",41.7018,-90.7586,337,Midwestern,us_state_default
+348,"Detroit Metro, MI",42.3045,-83.2175,563,Steel Belt (IL/MI),us_state_default
+349,"Mason City, IA",42.9566,-93.4076,337,Midwestern,us_state_default
+350,"Council Bluffs, IA",41.2098,-95.1823,337,Midwestern,us_state_default
+351,"Kent, MI",42.8429,-85.8138,563,Steel Belt (IL/MI),us_state_default
+352,"Delta, UT",39.9266,-113.2300,573,Mormon,mormon_corridor
+353,"Erie, PA",42.0241,-79.7768,109,Panamanian,caribbean_name
+354,"Long Island, NY",40.7325,-73.2904,82,New Englander,us_state_default
+355,"Cheyenne, WY",41.7949,-105.6930,87,Frontier,us_state_default
+356,"McKean, PA",41.6765,-78.5226,109,Panamanian,caribbean_name
+357,"Sussex, NJ",40.9883,-74.5161,559,Mid-Atlantic,us_state_default
+358,"Cherry, NE",42.2803,-100.9340,337,Midwestern,us_state_default
+359,"Lehigh, PA",40.8064,-75.8081,109,Panamanian,caribbean_name
+360,"South Bairoil, WY",42.0907,-107.5050,87,Frontier,us_state_default
+361,"Sandusky, OH",41.2655,-83.0204,85,Steel Belt,us_state_default
+362,"Evanston, WY",41.2022,-110.3270,573,Mormon,mormon_corridor
+363,"Northumberland, PA",40.7998,-77.8361,109,Panamanian,caribbean_name
+364,"Rock Springs, WY",41.2103,-109.1260,573,Mormon,mormon_corridor
+365,"Lawrence, PA",41.2103,-80.1490,109,Panamanian,caribbean_name
+366,"Chicago Metro, IL",42.0506,-88.2979,563,Steel Belt (IL/MI),us_state_default
+367,"Middlesex, NJ",40.4920,-74.5543,559,Mid-Atlantic,us_state_default
+368,"Superior, WY",41.6964,-108.6623,87,Frontier,us_state_default
+369,"Rockford, IL",41.9685,-89.4565,563,Steel Belt (IL/MI),us_state_default
+370,"Carson City, NV",39.6670,-119.5996,87,Frontier,us_state_default
+371,"Centre, PA",40.9064,-79.3160,109,Panamanian,caribbean_name
+372,"East Superior, WY",41.6228,-107.9263,87,Frontier,us_state_default
+373,"Wamsutter, WY",41.2930,-106.9923,87,Frontier,us_state_default
+374,"Monmouth, NJ",39.8776,-74.2651,559,Mid-Atlantic,mid_atlantic_south
+375,"Rawlins, WY",41.6279,-106.7355,87,Frontier,us_state_default
+376,"Bucks, PA",40.0924,-75.1419,109,Panamanian,caribbean_name
+377,"Chicago, IL",42.0742,-87.7195,563,Steel Belt (IL/MI),us_state_default
+378,"Lancester, PA",40.2074,-76.1263,109,Panamanian,caribbean_name
+379,"Williams, OH",41.4472,-84.3616,85,Steel Belt,us_state_default
+380,"Adobie Town Rim, WY",41.0825,-108.0251,87,Frontier,us_state_default
+381,"Greenville, MS",33.5143,-89.9487,84,Dixie-African American,us_state_default
+382,"Fort Wayne, IN",41.2843,-85.3671,85,Steel Belt,us_state_default
+383,"Columbus, OH",40.0934,-82.6847,85,Steel Belt,us_state_default
+384,"Ogallala, NE",41.5151,-103.1560,337,Midwestern,us_state_default
+385,"Gary, IN",41.6956,-86.6601,85,Steel Belt,us_state_default
+386,"Wheeling, OH",40.0403,-81.6111,85,Steel Belt,us_state_default
+387,"Blair, PA",39.9677,-78.9995,109,Panamanian,caribbean_name
+388,"York, PA",39.9769,-77.3343,109,Panamanian,caribbean_name
+389,"Camden, NJ",39.3859,-74.7760,559,Mid-Atlantic,us_state_default
+390,"Adams, IL",39.8456,-90.6687,563,Steel Belt (IL/MI),us_state_default
+391,"Westmoreland, PA",40.0178,-79.8331,109,Panamanian,caribbean_name
+392,"Jasper, IN",40.9866,-86.6374,85,Steel Belt,us_state_default
+393,"Washington, PA",40.2373,-80.5198,109,Panamanian,caribbean_name
+394,"Grand Junction, CO",39.7863,-108.1925,571,Southern Frontier,us_state_default
+395,"Newcastle, DE",39.5237,-75.4650,559,Mid-Atlantic,us_state_default
+396,"Mount Vernon, IL",38.0511,-88.6775,563,Steel Belt (IL/MI),us_state_default
+397,"Steamboat Springs, CO",40.2594,-106.8993,571,Southern Frontier,us_state_default
+398,"Saint Anne, IL",41.1793,-87.4796,563,Steel Belt (IL/MI),us_state_default
+399,"Walden, CO",40.5935,-106.3580,571,Southern Frontier,us_state_default
+400,"Lincoln, NE",40.8101,-96.8634,337,Midwestern,us_state_default
+401,"Kit Carson, CO",39.2867,-103.3819,571,Southern Frontier,us_state_default
+402,"Aberdeen, MD",39.5842,-76.1951,560,Mid-Atlantic (Maryland),us_state_default
+403,"Harford, MD",39.4413,-75.6736,560,Mid-Atlantic (Maryland),us_state_default
+404,"Baltimore, MD",39.4314,-76.6389,560,Mid-Atlantic (Maryland),us_state_default
+405,"Bartholomew, IN",39.0989,-85.5543,85,Steel Belt,us_state_default
+406,"Carroll, MD",39.6329,-77.3566,560,Mid-Atlantic (Maryland),us_state_default
+407,"Clinton, OH",39.3681,-83.5900,85,Steel Belt,us_state_default
+408,"Randell, UT",39.2016,-109.1932,573,Mormon,mormon_corridor
+409,"North Platte, NE",40.6725,-101.2195,337,Midwestern,us_state_default
+410,"Kent, DE",39.0128,-75.3619,559,Mid-Atlantic,us_state_default
+411,"Queen Anne's, MD",38.7991,-75.8801,560,Mid-Atlantic (Maryland),us_state_default
+412,"Frederick, MD",39.4331,-77.5012,560,Mid-Atlantic (Maryland),us_state_default
+413,"Adams, NE",40.4247,-98.9087,337,Midwestern,us_state_default
+414,"Alleghany, MD",39.4562,-79.3111,560,Mid-Atlantic (Maryland),us_state_default
+415,"Berkeley, WV",39.3862,-78.2118,565,Appalachian,appalachian_core
+416,"Morgantown, WV",39.0783,-79.8163,565,Appalachian,appalachian_core
+417,"Mineral, WV",38.9796,-79.0374,565,Appalachian,appalachian_core
+418,"Montgomery, MD",39.1509,-77.2559,560,Mid-Atlantic (Maryland),us_state_default
+419,"Bishop, CA",37.9896,-118.0322,88,Californian,california
+420,"Sussex, DE",38.5876,-75.2640,559,Mid-Atlantic,us_state_default
+421,"Monogalia, WV",39.1354,-80.6863,565,Appalachian,appalachian_core
+422,"Breckenridge, CO",39.8254,-105.9856,571,Southern Frontier,us_state_default
+423,"Frederick, VA",38.6699,-78.4735,567,Tidewater,us_state_default
+424,"Fairfax, VA",38.8091,-77.6454,567,Tidewater,us_state_default
+425,"Prince George's, MD",38.5735,-76.8162,560,Mid-Atlantic (Maryland),us_state_default
+426,"Bowling Green, MO",39.0085,-91.4438,564,Missourian,us_state_default
+427,"Bloomington, IL",39.5066,-88.8272,563,Steel Belt (IL/MI),us_state_default
+428,"Aspen, CO",38.4027,-106.5700,571,Southern Frontier,us_state_default
+429,"Wood, WV",38.9228,-81.6004,565,Appalachian,appalachian_core
+430,"Furnass, NE",40.2222,-100.4521,337,Midwestern,us_state_default
+431,"Wicomico, MD",38.2132,-75.5097,560,Mid-Atlantic (Maryland),us_state_default
+432,"Cincinnati, OH",39.3633,-84.3605,85,Steel Belt,us_state_default
+433,"Dove Creek, CO",38.2480,-107.9315,571,Southern Frontier,us_state_default
+434,"Ellis, KS",39.3129,-98.8713,337,Midwestern,us_state_default
+435,"Albemarle, VA",38.0152,-79.2198,567,Tidewater,us_state_default
+436,"Topeka, KS",39.5171,-95.9246,337,Midwestern,us_state_default
+437,"King George's, VA",37.8947,-76.9722,567,Tidewater,us_state_default
+438,"Greenbrier, WV",38.1495,-80.7531,565,Appalachian,appalachian_core
+439,"Accomack, VA",37.7167,-75.7371,567,Tidewater,tidewater
+440,"Spotslyvania, VA",37.9574,-78.0473,567,Tidewater,us_state_default
+441,"Pueblo, CO",38.2017,-105.6032,571,Southern Frontier,us_state_default
+442,"Moab, UT",37.6707,-109.1155,573,Mormon,mormon_corridor
+443,"Lynchburg, VA",37.3369,-79.6310,565,Appalachian,appalachian_mtn
+444,"Emporia, KS",37.7419,-95.0299,337,Midwestern,us_state_default
+445,"Springfield, IL",38.9234,-89.6556,563,Steel Belt (IL/MI),us_state_default
+446,"Madison, KY",37.4884,-84.0606,565,Appalachian,appalachian_ky
+447,"Cabell, WV",38.1511,-82.3039,565,Appalachian,appalachian_core
+448,"Mesquite, NV",37.5451,-113.8663,87,Frontier,us_state_default
+449,"Kanawha, WV",38.3498,-81.6326,565,Appalachian,appalachian_core
+450,"Richmond, VA",37.3457,-76.9608,567,Tidewater,tidewater
+451,"Jefferson, MO",38.5966,-92.5694,564,Missourian,us_state_default
+452,"Raleight, WV",37.8131,-81.6161,565,Appalachian,appalachian_core
+453,"Lawrence, KS",38.8158,-95.5160,337,Midwestern,us_state_default
+454,"Danville, VA",37.1532,-78.3463,565,Appalachian,appalachian_mtn
+455,"Floyd, IN",38.3967,-85.9561,85,Steel Belt,us_state_default
+456,"Prince George, VA",37.1227,-77.5160,567,Tidewater,tidewater
+457,"Gasconade, MO",38.2136,-91.0998,564,Missourian,us_state_default
+458,"Las Vegas, NV",36.2542,-115.4853,87,Frontier,us_state_default
+459,"Hampton Roads, VA",36.8266,-76.7561,567,Tidewater,tidewater
+460,"Trinidad, CO",37.4696,-104.0354,571,Southern Frontier,us_state_default
+461,"Belleville, IL",38.0855,-89.5175,563,Steel Belt (IL/MI),us_state_default
+462,"Kaibab, AZ",36.7190,-112.6202,571,Southern Frontier,us_state_default
+463,"Roanoake, VA",36.8191,-79.8933,565,Appalachian,appalachian_mtn
+464,"Washington, VA",36.8825,-81.5697,565,Appalachian,appalachian_mtn
+465,"Wichita, KS",37.4596,-98.2117,337,Midwestern,us_state_default
+466,"Wise, VA",37.0519,-82.4226,565,Appalachian,appalachian_mtn
+467,"Elizabeth City, NC",36.4083,-76.9371,567,Tidewater,tidewater
+468,"Mexican Hat, UT",37.1142,-109.4779,573,Mormon,mormon_corridor
+469,"Liberal, KS",37.4582,-100.9159,337,Midwestern,us_state_default
+470,"Navajo Nation, AZ",36.3329,-110.1537,571,Southern Frontier,us_state_default
+471,"Denver, CO",39.7392,-104.9903,571,Southern Frontier,us_state_default
+472,"Nash, NC",36.2160,-78.6942,565,Appalachian,appalachian_mtn
+473,"Wake, NC",35.6843,-78.3499,565,Appalachian,appalachian_mtn
+474,"Beaufort, NC",35.8175,-76.4366,567,Tidewater,tidewater
+475,"Wayne, KY",36.8622,-84.1354,565,Appalachian,appalachian_ky
+476,"Mount Airy, NC",36.3592,-80.6528,565,Appalachian,appalachian_mtn
+477,"Farmington, NM",36.3476,-107.8615,571,Southern Frontier,southern_frontier
+478,"Cibola, NM",34.8475,-107.6150,571,Southern Frontier,southern_frontier
+479,"Pitt, NC",35.6627,-77.6272,567,Tidewater,tidewater
+480,"Johnson City, TN",36.2880,-82.4960,565,Appalachian,appalachian_mtn
+481,"Guilford, NC",35.8515,-79.6266,565,Appalachian,appalachian_mtn
+482,"McCracken, KY",36.7759,-88.5307,565,Appalachian,us_state_default
+483,"Owens Island, KY",37.1066,-88.1834,565,Appalachian,us_state_default
+484,"Albuquerque, NM",35.0844,-106.6504,571,Southern Frontier,southern_frontier
+485,"Knoxville, TN",36.3750,-84.1466,565,Appalachian,appalachian_mtn
+486,"Tucumcari, NM",35.4858,-104.5732,571,Southern Frontier,southern_frontier
+487,"Mecklenberg, NC",35.4029,-80.4457,565,Appalachian,appalachian_mtn
+488,"Clayton, NM",36.1663,-103.8880,571,Southern Frontier,southern_frontier
+489,"Gaston, NC",35.6302,-81.2953,565,Appalachian,appalachian_mtn
+490,"Oklahoma Panhandle, OK",36.6755,-101.5901,570,Oklahoman,us_state_default
+491,"Onslow, NC",35.1374,-77.0193,567,Tidewater,us_state_default
+492,"Clarksville, TN",36.4847,-86.6552,566,Appalachian-African American,us_state_default
+493,"Enid, OK",36.3678,-97.9129,570,Oklahoman,us_state_default
+494,"Buncombe, NC",35.5374,-82.4703,565,Appalachian,appalachian_mtn
+495,"Tulsa, OK",36.1874,-95.1195,570,Oklahoman,us_state_default
+496,"Dickson, TN",35.8871,-87.4724,566,Appalachian-African American,us_state_default
+497,"Cumberland, NC",35.1525,-79.1694,565,Appalachian,appalachian_mtn
+498,"Phoenix, AZ",33.4017,-111.9613,571,Southern Frontier,us_state_default
+499,"Coffee, TN",35.6067,-85.3748,566,Appalachian-African American,us_state_default
+500,"Flagstaff, AZ",35.1224,-111.3743,571,Southern Frontier,us_state_default
+501,"Northern Channel Islands, CA",33.8353,-119.9042,88,Californian,california
+502,"Memphis, TN",35.3386,-89.2117,566,Appalachian-African American,us_state_default
+503,"Nashville, TN",35.9641,-86.4261,566,Appalachian-African American,us_state_default
+504,"Chattanooga, TN",35.3287,-84.1364,565,Appalachian,appalachian_mtn
+505,"Tiptonville, KY",36.5251,-89.3323,565,Appalachian,us_state_default
+506,"New Hanover, NC",34.8138,-77.9931,567,Tidewater,us_state_default
+507,"Dumas, TX",35.9882,-101.9001,86,Texan,us_state_default
+508,"Jonesboro, AR",35.7999,-90.3120,83,Dixie,us_state_default
+509,"Randolph, AR",36.2409,-91.4646,83,Dixie,us_state_default
+510,"Santa Fe, NM",34.8121,-105.8542,571,Southern Frontier,southern_frontier
+511,"Stillwater, OK",35.4621,-96.7735,570,Oklahoman,us_state_default
+512,"Searcy, AR",35.9723,-92.4805,83,Dixie,us_state_default
+513,"Haywood, NC",35.1012,-83.5248,565,Appalachian,appalachian_mtn
+514,"Whiteville, NC",34.2940,-78.5325,567,Tidewater,us_state_default
+515,"Saluda, NC",35.1967,-81.9424,565,Appalachian,appalachian_mtn
+516,"Maury, TN",35.2150,-86.8300,566,Appalachian-African American,us_state_default
+517,"York, SC",34.4261,-80.6296,84,Dixie-African American,us_state_default
+518,"Greenville, SC",34.3784,-81.9642,84,Dixie-African American,us_state_default
+519,"Amarillo, TX",35.2221,-101.5358,86,Texan,us_state_default
+520,"Lawton, OK",34.9290,-99.4651,570,Oklahoman,us_state_default
+521,"Myrtle Beach, SC",34.1873,-79.1882,84,Dixie-African American,us_state_default
+522,"Southern Channel Islands, CA",33.2603,-118.7455,88,Californian,california
+523,"Prescott, AZ",34.5245,-113.2982,571,Southern Frontier,us_state_default
+524,"Hall, GA",34.0128,-83.0166,83,Dixie,us_state_default
+525,"Horry, SC",33.7502,-79.7375,84,Dixie-African American,us_state_default
+526,"Whitfield, GA",34.5652,-84.6999,83,Dixie,us_state_default
+527,"Little River, AR",33.8455,-93.6492,83,Dixie,us_state_default
+528,"Morgan, AL",34.1810,-87.4611,83,Dixie,us_state_default
+529,"Huntsville, AL",34.7329,-86.7830,83,Dixie,us_state_default
+530,"Sierra Vista, AZ",31.5536,-109.9378,571,Southern Frontier,us_state_default
+531,"McAlester, OK",34.3406,-95.0834,570,Oklahoman,us_state_default
+532,"Ada, OK",34.3829,-97.7505,570,Oklahoman,us_state_default
+533,"Hattiesburg, MS",31.4805,-89.3710,84,Dixie-African American,black_belt_core
+534,"Lowndes, MS",34.2713,-88.2073,84,Dixie-African American,us_state_default
+535,"Plainville, TX",34.2079,-101.9813,86,Texan,us_state_default
+536,"Weldona, CO",40.6004,-104.4115,571,Southern Frontier,us_state_default
+537,"North Metro Atlanta, GA",33.7430,-84.8414,83,Dixie,us_state_default
+538,"Richland, SC",33.4748,-81.0548,84,Dixie-African American,black_belt_core
+539,"Roswell, NM",33.5331,-105.4847,571,Southern Frontier,southern_frontier
+540,"Clovis, NM",33.2255,-103.8645,571,Southern Frontier,southern_frontier
+541,"South Metro Atlanta, GA",33.2788,-84.0330,83,Dixie,us_state_default
+542,"Yoakum, TX",32.9551,-103.0391,86,Texan,us_state_default
+543,"Lubbock, TX",32.8768,-102.0399,86,Texan,us_state_default
+544,"Vernon, TX",33.7901,-100.5038,86,Texan,us_state_default
+545,"Auburn, AL",33.0453,-85.7205,84,Dixie-African American,black_belt_al
+546,"Atlanta, GA",33.7490,-84.3880,83,Dixie,us_state_default
+547,"Charleston, SC",33.0430,-79.5892,84,Dixie-African American,black_belt_core
+548,"Pima, AZ",32.4780,-112.5516,571,Southern Frontier,us_state_default
+549,Baja California,30.9629,-115.6229,695,Bajan Mexican,mexico_name
+550,"Beaufort, SC",32.6700,-80.4307,84,Dixie-African American,black_belt_core
+551,"Columbia, GA",33.0279,-82.2237,83,Dixie,us_state_default
+552,"Las Cruces, NM",32.4816,-107.7506,571,Southern Frontier,southern_frontier
+553,Sonora,30.2002,-111.6634,697,Norteno Mexican (Sonora),mexico_name
+554,"Wichita Falls, TX",33.4260,-98.3489,86,Texan,us_state_default
+555,"Carlsbad, NM",32.3719,-105.8156,571,Southern Frontier,southern_frontier
+556,"Watson, AR",33.8848,-90.8760,83,Dixie,us_state_default
+557,"Houston, GA",32.3196,-83.3015,84,Dixie-African American,black_belt_ga
+558,"Texarkana, TX",33.2430,-94.8291,86,Texan,us_state_default
+559,"Chatham, GA",32.0978,-81.6604,84,Dixie-African American,black_belt_ga
+560,"San Angelo, TX",31.9358,-101.0067,86,Texan,us_state_default
+561,"Abilene, TX",32.5868,-100.1085,86,Texan,us_state_default
+562,"Duncan, AZ",32.1413,-109.2921,571,Southern Frontier,us_state_default
+563,"Muscogee, GA",32.2141,-84.4468,84,Dixie-African American,black_belt_ga
+564,"Greater Dallas-Fort Worth Area, TX",32.8723,-97.1996,86,Texan,us_state_default
+565,"ile Dondaine, QC",45.2478,-74.0820,93,Quebecois,canada_name
+566,"Citronelle, AL",32.0141,-88.2386,84,Dixie-African American,black_belt_al
+567,"Stephenville, TX",32.1895,-98.7585,86,Texan,us_state_default
+568,"Longview, TX",32.6229,-94.6184,86,Texan,us_state_default
+569,"Jackson, MS",32.5111,-90.3798,84,Dixie-African American,black_belt_core
+570,"Dallas-Fort Worth, TX",32.6914,-97.1013,86,Texan,us_state_default
+571,"Shreveport, LA",32.0740,-93.5188,569,Louisianan,us_state_default
+572,"Deming, NM",31.5062,-107.9657,571,Southern Frontier,southern_frontier
+573,"Lowndes, GA",31.0967,-81.9314,84,Dixie-African American,black_belt_ga
+574,"Odessa, TX",31.6272,-102.6843,86,Texan,us_state_default
+575,"Navarro, TX",32.0769,-96.3118,86,Texan,us_state_default
+576,"Thomas, GA",31.1583,-83.7326,84,Dixie-African American,black_belt_ga
+577,"Duluth, MN",47.3652,-91.2908,337,Midwestern,us_state_default
+578,"El Paso, TX",30.4158,-104.5558,86,Texan,texas
+579,Chihuahua,28.6267,-106.6289,698,Norteno Mexican (Chihuahua),mexico_name
+580,"Tyler, TX",31.7848,-94.4396,86,Texan,us_state_default
+581,"Reeves, TX",30.4741,-103.0300,86,Texan,us_state_default
+582,"Adams, MS",31.4429,-90.5936,84,Dixie-African American,black_belt_core
+583,"Barksdale AFB, LA",32.3963,-93.3848,569,Louisianan,us_state_default
+584,"Houma, LA",29.7058,-91.1978,569,Louisianan,us_state_default
+585,"Crockett, TX",30.5029,-101.3128,86,Texan,us_state_default
+586,da,29.9270,-81.7511,568,Floridian,florida_lat
+587,"Waco, TX",31.1785,-98.0319,86,Texan,us_state_default
+588,"San Carlos, AZ",33.8364,-110.2881,571,Southern Frontier,us_state_default
+589,"Ciudad Obregon, SO",28.0263,-109.6203,697,Norteno Mexican (Sonora),mexico_abbr
+590,"Nogales, SO",30.4413,-108.8523,697,Norteno Mexican (Sonora),mexico_abbr
+591,"Escambia, FL",30.5960,-86.1937,568,Floridian,us_state_default
+592,"Fredericksburg, TX",30.5760,-99.8909,86,Texan,us_state_default
+593,"Alachua, FL",29.6521,-82.4340,568,Floridian,us_state_default
+594,"Leon, FL",30.1303,-84.0506,568,Floridian,us_state_default
+595,"Duval, FL",29.5991,-81.4286,568,Floridian,us_state_default
+596,"Beaumont, TX",29.9154,-94.3703,86,Texan,us_state_default
+597,"Gulf Shores, AL",30.7841,-87.7929,83,Dixie,us_state_default
+598,"Mobile, AL",30.5940,-88.2614,83,Dixie,us_state_default
+599,"Gulfport, MS",30.7031,-89.3243,84,Dixie-African American,black_belt_core
+600,"Baton Rouge, LA",30.5281,-90.6890,84,Dixie-African American,black_belt_la
+601,"Klamath Falls, OR",42.7318,-120.3362,574,Pacific Northwestern,pacific_nw
+602,"Bastrop, TX",30.3120,-97.4706,86,Texan,us_state_default
+603,"Salem, OR",44.8569,-122.4019,574,Pacific Northwestern,pacific_nw
+604,"Marion, FL",28.8432,-82.2757,568,Floridian,us_state_default
+605,"Daytona Beach, FL",28.4338,-81.0157,568,Floridian,us_state_default
+606,"Hutchinson, MN",45.1869,-94.1673,337,Midwestern,us_state_default
+607,"Lake, Ohio",41.6498,-80.9702,85,Steel Belt,us_state_default
+608,"Minneapolis, MN",44.9778,-93.2650,337,Midwestern,us_state_default
+609,"Eugene, OR",44.7123,-123.0785,574,Pacific Northwestern,pacific_nw
+610,"Orlando, FL",28.2676,-81.5200,568,Floridian,us_state_default
+611,"Houston, TX",29.5912,-95.4724,86,Texan,us_state_default
+612,"LaFourche, LA",29.7541,-90.4178,569,Louisianan,us_state_default
+613,"San Antonio, TX",29.5404,-98.9932,86,Texan,us_state_default
+614,"Victoria, TX",29.2367,-96.8218,86,Texan,us_state_default
+615,Coahuila,26.5977,-102.5937,699,Norteno Mexican (Coahuila),mexico_name
+616,"Yellowstone, WY",44.8495,-110.6054,87,Frontier,us_state_default
+617,"Laredo, TX",28.3902,-100.1400,86,Texan,us_state_default
+618,"Omaha, NE",41.2565,-95.9345,337,Midwestern,us_state_default
+619,Baja California Sur,26.1640,-113.2040,696,Bajan Mexican,mexico_name
+620,"Cleveland, OH",41.4728,-81.9127,85,Steel Belt,us_state_default
+621,"Hillsborough, FL",27.8798,-82.2864,568,Floridian,us_state_default
+622,"Grand Manan Island, ME",44.5645,-67.1014,82,New Englander,new_england_lat
+623,"Bar Harbor, ME",43.9860,-68.9586,82,New Englander,new_england_lat
+624,"Breton Sound Islands, LA",29.2470,-89.4038,569,Louisianan,us_state_default
+625,"Shiprock, NM",35.5992,-108.5435,571,Southern Frontier,southern_frontier
+626,"Portland, TX",28.1880,-98.3198,86,Texan,us_state_default
+627,"Miami-Dade, FL",25.9526,-80.5365,568,Floridian,us_state_default
+628,"Sarasota, FL",27.0763,-81.7310,568,Floridian,us_state_default
+629,"Freeport, BS",26.4770,-77.7738,96,Antillean,caribbean_name
+630,"Whiteman AFB, MO",38.6100,-93.3219,564,Missourian,us_state_default
+631,"Aransas, TX",28.3201,-96.5751,86,Texan,us_state_default
+632,"Sterling, CO",40.8979,-103.9978,571,Southern Frontier,us_state_default
+633,"Corpus Christi, TX",26.5515,-98.4610,86,Texan,us_state_default
+634,"Lee, FL",26.2696,-81.5454,568,Floridian,us_state_default
+635,"Monterrey, NL",25.3285,-100.7135,700,Norteno Mexican (Nuevo Leon/Tamaulipas),mexico_name
+636,District of Columbia,38.9072,-77.0369,561,African-American Mid-Atlantic (DC),us_full_state_name
+637,"Laredos, TM",25.8101,-99.7607,700,Norteno Mexican (Nuevo Leon/Tamaulipas),mexico_name
+638,"Los Mochis, SI",25.5619,-108.9804,701,Norteno Mexican (Sinaloa),mexico_name
+639,"Guadalupe y Calvo, CH",25.9873,-107.8310,698,Norteno Mexican (Chihuahua),mexico_abbr
+640,"El Carrizo, SI",26.2263,-109.8503,701,Norteno Mexican (Sinaloa),mexico_name
+641,"Kansas City, KS",39.0331,-94.6795,337,Midwestern,us_state_default
+642,"Gomez Palacio, DG",24.9283,-105.8246,702,Norteno Mexican (Durango/Zacatecas/Aguascalientes),mexico_name
+643,"Salinas, CA",35.9687,-120.9487,88,Californian,california
+644,"Eleuthera, BS",25.2137,-76.3583,96,Antillean,caribbean_name
+645,"Fremont-Winema, OR",43.7704,-120.4397,574,Pacific Northwestern,pacific_nw
+646,"New Providence, BS",25.0479,-77.3554,96,Antillean,caribbean_name
+647,"Andros, BS",24.4011,-77.8470,96,Antillean,caribbean_name
+648,"Cat Island, BS",24.3492,-75.4138,96,Antillean,caribbean_name
+649,"Overland Park, KS",38.6292,-94.5368,337,Midwestern,us_state_default
+650,"Minot AFB, ND",47.0677,-98.9721,337,Midwestern,us_state_default
+651,"Key West, FL",24.7097,-81.1025,568,Floridian,us_state_default
+652,"Los Angeles, CA",33.9730,-118.2497,88,Californian,california
+653,"Matamoros, TA",24.2776,-98.8901,700,Norteno Mexican (Nuevo Leon/Tamaulipas),mexico_name
+654,"Los Angeles Metro, CA",34.0635,-117.7732,88,Californian,california
+655,"San Diego Metro, CA",32.9006,-116.8464,88,Californian,california
+656,"Elko, NV",41.2775,-116.8405,87,Frontier,us_state_default
+657,"Montemorelos, NL",23.7335,-100.5753,715,Altiplano Mexican (Morelos),mexico_name
+658,"San Salvador, BS",23.8144,-74.5764,96,Antillean,caribbean_name
+659,"King's Bay Naval Base, GA",30.6975,-81.4083,84,Dixie-African American,black_belt_ga
+660,"Santa Rosa, CA",39.4417,-123.6071,88,Californian,california
+661,"Sacremento, CA",38.7708,-121.2682,88,Californian,california
+662,"San Diego, CA",32.7126,-117.1464,88,Californian,california
+663,"Long Island, BS",23.2285,-75.0585,96,Antillean,caribbean_name
+664,"Great Exuma, BS",23.4986,-75.6683,96,Antillean,caribbean_name
+665,"Yreka, CA",41.7264,-122.4807,88,Californian,california
+666,"Ely, NV",39.1370,-114.2694,87,Frontier,us_state_default
+667,"Alturas, CA",41.9768,-120.5641,88,Californian,california
+668,"Mazatlan, SI",23.4806,-107.9845,701,Norteno Mexican (Sinaloa),mexico_name
+669,"Sequoia, CA",36.0190,-117.7288,88,Californian,california
+670,"Durango, DG",23.2957,-106.3114,702,Norteno Mexican (Durango/Zacatecas/Aguascalientes),mexico_name
+671,"Fresnillo, ZA",22.9516,-103.4825,702,Norteno Mexican (Durango/Zacatecas/Aguascalientes),mexico_name
+672,"Crooked Island, BS",22.5327,-74.0947,96,Antillean,caribbean_name
+673,"Tonopah, NV",38.0252,-116.8122,87,Frontier,us_state_default
+674,"Santa Barbara, CA",35.2694,-120.1957,88,Californian,california
+675,"Mayaguna, BS",22.2202,-72.8809,96,Antillean,caribbean_name
+676,"Pine Bluffs, WY",41.4408,-104.5966,87,Frontier,us_state_default
+677,"Pinedale, WY",42.3456,-109.6010,87,Frontier,us_state_default
+678,"Austin, TX",30.6085,-98.2061,86,Texan,us_state_default
+679,Turks and Caicos Islands,21.5647,-71.7914,96,Antillean,caribbean_name
+680,"Oklahoma City, OK",35.2825,-97.3624,570,Oklahoman,us_state_default
+681,"Huntsville, TX",30.8102,-95.0058,86,Texan,us_state_default
+682,"Monctezuma, SL",22.1934,-102.1642,705,Norteno Mexican (San Luis Potosi),mexico_name
+683,"Sidney, NE",36.9002,-101.8660,337,Midwestern,us_state_default
+684,"Cody, WY",43.9977,-108.9089,87,Frontier,us_state_default
+685,"Matanzas, CU",22.5583,-81.3977,100,Cuban,caribbean_name
+686,"Villa Clara, CU",22.4918,-80.0132,100,Cuban,caribbean_name
+687,"Zacatecas, ZA",21.8724,-104.8565,702,Norteno Mexican (Durango/Zacatecas/Aguascalientes),mexico_name
+688,"Ciudad Victoria, TM",22.2493,-99.8798,700,Norteno Mexican (Nuevo Leon/Tamaulipas),mexico_name
+689,"El Centro, CA",33.1594,-115.9086,88,Californian,california
+690,"Inagua, BS",21.1659,-73.0982,96,Antillean,caribbean_name
+691,"Mayabeque, CU",22.8752,-82.1445,100,Cuban,caribbean_name
+692,"Bakersfield, CA",35.4187,-119.0096,88,Californian,california
+693,"Artemisa, CU",22.7884,-82.8773,100,Cuban,caribbean_name
+694,"Havana, CU",22.8100,-82.5304,100,Cuban,caribbean_name
+695,"Fresno, CA",36.7538,-120.1323,88,Californian,california
+696,"Ciego de Avila, CU",22.0116,-78.7739,100,Cuban,caribbean_name
+697,"Sancti Spiritus, CU",21.9726,-79.5449,100,Cuban,caribbean_name
+698,"Pinar del Rio, CU",22.4231,-84.0330,100,Cuban,caribbean_name
+699,"Cienfuegos, CU",22.2495,-80.7190,100,Cuban,caribbean_name
+700,"Jardines del Rey, CU",22.3119,-78.0664,100,Cuban,caribbean_name
+701,"Yosemite, CA",38.3637,-120.1835,88,Californian,california
+702,"Camaguey, CU",21.4821,-77.9889,100,Cuban,caribbean_name
+703,"Susanville, CA",40.1141,-120.3542,88,Californian,california
+704,"Napa, CA",38.4508,-122.0498,88,Californian,california
+705,"Redding, CA",40.2761,-123.1939,88,Californian,california
+706,"Tecuala, NA",22.0019,-107.2284,707,Occidental Mexican (Nayarit/Jalisco/Colima),mexico_abbr
+707,"San Juan, PR",18.4336,-65.9610,90,Boricua,caribbean_name
+708,"Las Tunas, CU",21.0986,-77.0348,100,Cuban,caribbean_name
+709,"Maria Trinidad Sanchez, DO",19.0731,-70.1621,102,Quisqueyano,caribbean_name
+710,British Virgin Islands,18.4592,-64.5827,98,Dutch-Antillean,caribbean_name
+711,"Holguin, CU",20.7396,-75.7165,100,Cuban,caribbean_name
+712,"Samana, DO",18.8346,-69.6373,102,Quisqueyano,caribbean_name
+713,"Monte Cristi, DO",19.5071,-71.2654,102,Quisqueyano,caribbean_name
+714,"Puerto Plata, DO",19.2804,-70.7519,102,Quisqueyano,caribbean_name
+715,"Duarte, DO",18.8462,-70.3104,102,Quisqueyano,caribbean_name
+716,Este de Nayarit,21.5891,-106.5584,707,Occidental Mexican (Nayarit/Jalisco/Colima),mexico_name
+717,US Virgin Islands,18.4361,-64.8382,98,Dutch-Antillean,caribbean_name
+718,"El Seybo, DO",18.4645,-69.2136,102,Quisqueyano,caribbean_name
+719,"La Altagracia, DO",18.1389,-68.8630,102,Quisqueyano,caribbean_name
+720,"Kirtland AFB, NM",34.8668,-106.5741,571,Southern Frontier,southern_frontier
+721,"Vieques, PR",18.2504,-65.4061,90,Boricua,caribbean_name
+722,"Guantanamo, CU",20.2670,-74.6936,100,Cuban,caribbean_name
+723,"Santiago, DO",19.0390,-71.1054,102,Quisqueyano,caribbean_name
+724,"Hato Mayor, DO",18.4913,-69.5532,102,Quisqueyano,caribbean_name
+725,"Mezquitic, JA",21.4898,-105.9179,707,Occidental Mexican (Nayarit/Jalisco/Colima),mexico_name
+726,"Nord-Est, HT",19.2919,-71.9004,101,Haitian,caribbean_name
+727,"La Vega, DO",18.6642,-70.6985,102,Quisqueyano,caribbean_name
+728,"Isla de Culebra, PR",18.4162,-65.2320,90,Boricua,caribbean_name
+729,"Nord-Oueste, HT",19.8301,-72.9141,101,Haitian,caribbean_name
+730,"Dajabon, DO",19.3129,-71.5745,102,Quisqueyano,caribbean_name
+731,"Isla de Juventud, CU",21.6538,-83.2684,100,Cuban,caribbean_name
+732,"Nord, HT",19.4612,-72.3001,101,Haitian,caribbean_name
+733,"Santo Domingo, DO",18.4125,-69.9715,102,Quisqueyano,caribbean_name
+734,"Santiago de Cuba, CU",20.2399,-76.0269,100,Cuban,caribbean_name
+735,"Artibonite, HT",19.2078,-72.5836,101,Haitian,caribbean_name
+736,"Granma, CU",20.3639,-77.0241,100,Cuban,caribbean_name
+737,"La Romana, DO",18.2006,-69.1560,102,Quisqueyano,caribbean_name
+738,"San Pedro de Macoris, DO",18.1919,-69.5970,102,Quisqueyano,caribbean_name
+739,"Colotlan, JA",21.1899,-105.5756,707,Occidental Mexican (Nayarit/Jalisco/Colima),mexico_name
+740,"La Estrelleta, DO",18.8133,-71.6637,102,Quisqueyano,caribbean_name
+741,Aguascalientes,21.2894,-104.0293,702,Norteno Mexican (Durango/Zacatecas/Aguascalientes),mexico_name
+742,"San Juan, DO",18.6401,-71.3716,90,Boricua,caribbean_name
+743,"Guayalejo, VC",21.4603,-99.4468,706,Altiplano Mexican (Veracruz),mexico_abbr
+744,"Centre, HT",18.8722,-72.0298,101,Haitian,caribbean_name
+745,"Brainerd, MN",46.8492,-93.7768,337,Midwestern,us_state_default
+746,"Pinos, Zacatecas",21.3696,-103.1766,702,Norteno Mexican (Durango/Zacatecas/Aguascalientes),mexico_name
+747,"San Luis Potosi, SL",21.0955,-102.1719,705,Norteno Mexican (San Luis Potosi),mexico_name
+748,"Azua, DO",18.2691,-70.9521,102,Quisqueyano,caribbean_name
+749,"Peravia, DO",18.1770,-70.4023,102,Quisqueyano,caribbean_name
+750,"Ciudad Valles, SL",21.2709,-100.7004,705,Norteno Mexican (San Luis Potosi),mexico_name
+751,"San Francisco, CA",37.7747,-122.4193,88,Californian,california
+752,"Isla de Mona, PR",17.9833,-68.0615,90,Boricua,caribbean_name
+753,"Tepic, NA",21.0009,-107.1170,707,Occidental Mexican (Nayarit/Jalisco/Colima),mexico_abbr
+754,Veracruz,20.7437,-99.5075,706,Altiplano Mexican (Veracruz),mexico_name
+755,Jalisco,20.7417,-104.4979,707,Occidental Mexican (Nayarit/Jalisco/Colima),mexico_name
+756,"San Francisco Metro, CA",37.8210,-121.8410,88,Californian,california
+757,Quintana Roo,20.9341,-88.1243,722,Mayan Mexican (Yucatan),mexico_name
+758,"Axtla de Terrazas, SL",20.8366,-100.4691,705,Norteno Mexican (San Luis Potosi),mexico_name
+759,Guanajuato,20.5842,-102.7697,709,Occidental Mexican (Michoacan/Guanajuato/Queretaro),mexico_name
+760,"Ouest, HT",18.5222,-72.4147,101,Haitian,caribbean_name
+761,Yucatan,20.9376,-89.7038,722,Mayan Mexican (Yucatan),mexico_name
+762,"Barahona, DO",18.3340,-71.7191,102,Quisqueyano,caribbean_name
+763,"Isla Maria Madre, NA",21.3965,-108.8082,707,Occidental Mexican (Nayarit/Jalisco/Colima),mexico_abbr
+764,"Nellis AFB, NV",36.3785,-115.1930,87,Frontier,us_state_default
+765,"Isla de la Gonave, HT",18.8545,-73.1220,101,Haitian,caribbean_name
+766,Queretaro,20.5406,-101.1570,709,Occidental Mexican (Michoacan/Guanajuato/Queretaro),mexico_name
+767,"Huejutla de Reyes, VC",20.6203,-100.2780,706,Altiplano Mexican (Veracruz),mexico_abbr
+768,"Pedernales, DO",17.9431,-71.6883,102,Quisqueyano,caribbean_name
+769,"Sud-Est, HT",18.2341,-72.3970,101,Haitian,caribbean_name
+770,"Puerto Vallarta, JA",20.5948,-107.2245,707,Occidental Mexican (Nayarit/Jalisco/Colima),mexico_name
+771,Hidalgo,20.4664,-100.3407,716,Altiplano Mexican (Federal District),mexico_hidalgo_state
+772,"Malmstrom AFB, MT",46.6651,-109.3757,87,Frontier,us_state_default
+773,"Nippes, HT",18.5238,-73.6125,101,Haitian,caribbean_name
+774,"Queens, NY",40.7053,-73.8248,558,New York,nyc_borough_file
+775,"Staten Island, NY",40.7597,-74.0662,558,New York,nyc_borough_file
+776,"The Bronx, NY",40.8492,-73.8587,558,New York,nyc_borough_file
+777,"Brooklyn, NY",40.6576,-73.9561,558,New York,nyc_borough_file
+778,"Saint Francis, KS",40.0367,-102.0947,337,Midwestern,us_state_default
+779,"Ohio, WV",40.0703,-80.8658,565,Appalachian,appalachian_core

@@ -25,6 +25,8 @@ set_country_flag = TNO_eliminate_military_spending
 set_country_flag = TNO_exclude_from_econ_ranking
 country_lock_all_division_template = yes
 
+LOTD_setup_cultures = yes
+
 create_country_leader = {
 	name = ZZZ_anarchy
 	desc = "POLITICS_ANARCHY_DESC"
