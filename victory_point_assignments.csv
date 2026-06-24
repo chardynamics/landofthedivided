@@ -1,9 +1,169 @@
 city,abbr,label,population,province_id,state_id,state_name,value,included,reason
+Havana,CU,"Havana, CU",2132183,2452,694,"Havana, CU",50,1,dense_floor
+Prince George's,MD,"Prince George's, MD",1036093,1752,425,"Prince George's, MD",42,1,dense_floor
+Monmouth,NJ,"Monmouth, NJ",738361,4592,374,"Monmouth, NJ",33,1,dense_floor
+Bucks,PA,"Bucks, PA",717162,4737,376,"Bucks, PA",33,1,dense_floor
+Westmoreland,PA,"Westmoreland, PA",443991,5860,391,"Westmoreland, PA",33,1,dense_floor
+Austin,TX,"Austin, TX",787874,3821,678,"Austin, TX",33,1,dense_floor
+Madison,WI,"Madison, WI (2)",269840,8654,72,"Madison, WI",25,1,dense_floor+suffix
+St. Clair,MI,"St. Clair, MI",204000,4893,339,"St. Clair, MI",25,1,dense_floor
+Harford,MD,"Harford, MD",262308,3203,402,"Aberdeen, MD",25,1,dense_floor
+Los Mochis,SI,"Los Mochis, SI",307200,6450,638,"Los Mochis, SI",25,1,dense_floor
+Howard,IN,"Howard, IN",101956,5894,35,"Howard, IN",16,1,dense_floor
+Hardin,KY,Hardin,115987,493,121,"Hardin, KY",16,1,dense_floor
+Wayne,NY,"Wayne, NY",112526,4265,301,"Wayne, NY",16,1,dense_floor
+Steuben,NY,"Steuben, NY",118471,4520,335,"Steuben, NY",16,1,dense_floor
+Chautauqua,NY,"Chautauqua, NY",167700,4282,341,"Chautauqua, NY",16,1,dense_floor
+Centre,PA,"Centre, PA",162909,3491,363,"Northumberland, PA",16,1,dense_floor
+Lawrence,PA,"Lawrence, PA",115495,5840,365,"Lawrence, PA",16,1,dense_floor
+Whitfield,GA,"Whitfield, GA",100230,1776,537,"North Metro Atlanta, GA",16,1,dense_floor
+Lakeland,FL,"Lakeland, FL (2)",112641,8790,604,"Marion, FL",16,1,dense_floor+suffix
+Fresnillo,ZA,"Fresnillo, ZA",148800,3530,671,"Fresnillo, ZA",16,1,dense_floor
+Coeur d'Alene,ID,"Coeur d'Alene, ID (2)",55731,8527,36,"Coeur d'Alene, ID",10,1,dense_floor+suffix
+Christian,KY,Christian,86954,2657,39,"Christian, KY",10,1,dense_floor
+Conway,AR,"Conway, AR",51800,4994,194,"Conway, AR",10,1,dense_floor
+Somerset,ME,"Somerset, ME",61065,1267,207,"Somerset, ME",10,1,dense_floor
+Chenango,NY,"Chenango, NY",57994,3416,305,"Chenango, NY",10,1,dense_floor
+Delaware,NY,"Delaware, NY",51684,4679,306,"Delaware, NY",10,1,dense_floor
+Barnstable,MA,"Barnstable, MA",57385,4229,315,"Barnstable, MA",10,1,dense_floor
+Columbia,NY,"Columbia, NY",75715,5695,316,"Columbia, NY",10,1,dense_floor
+Genesse,NY,"Genesse, NY",72444,925,325,"Cattaraugus, NY",10,1,dense_floor
+Cattaraugus,NY,"Cattaraugus, NY",96547,5754,341,"Chautauqua, NY",10,1,dense_floor
+McKean,PA,"McKean, PA",52800,3605,356,"McKean, PA",10,1,dense_floor
+Washington,PA,"Washington, PA",66000,5863,393,"Washington, PA",10,1,dense_floor
+Bartholomew,IN,"Bartholomew, IN",86361,485,405,"Bartholomew, IN",10,1,dense_floor
+Queen Anne's,MD,"Queen Anne's, MD",57049,5895,411,"Queen Anne's, MD",10,1,dense_floor
+Belleville,IL,"Belleville, IL",50569,1085,445,"Springfield, IL",10,1,dense_floor
+Madison,KY,Madison,85046,6040,446,"Madison, KY",10,1,dense_floor
+Floyd,IN,"Floyd, IN",89498,4441,455,"Floyd, IN",10,1,dense_floor
+Wise,VA,"Wise, VA",50840,3019,466,"Wise, VA",10,1,dense_floor
+Oklahoma Panhandle,OK,"Oklahoma Panhandle, OK",64800,8706,490,"Oklahoma Panhandle, OK",10,1,dense_floor
+Beaufort,NC,"Beaufort, NC",53898,2757,491,"Onslow, NC",10,1,dense_floor
+Napa,CA,"Napa, CA",87102,8665,704,"Napa, CA",10,1,dense_floor
+Hot Springs,AR,"Hot Springs, AR",38954,8736,2,"Hot Springs, AR",6,1,state_coverage_guarantee
+Land Between The Lakes,TN,"Land Between The Lakes, TN",36000,8864,71,"Land Between The Lakes, TN",6,1,state_coverage_guarantee
+Eastern Okanogan Highlands,WA,"Eastern Okanogan Highlands, WA",42000,5411,150,"Western Okanogan Highlands, WA",6,1,state_coverage_guarantee
+Mount Pleasant,MI,"Mount Pleasant, MI",30000,5694,154,"Mount Pleasant, MI",6,1,state_coverage_guarantee
+Muskegon,MI,"Muskegon, MI",47196,5757,191,"Muskegon, MI",6,1,state_coverage_guarantee
+Great North Woods,NH,"Great North Woods, NH",48000,3759,223,"Great North Woods, NH",6,1,sparse_floor
+Alpena,MI,"Alpena, MI",37576,4659,334,"Alpena, MI",6,1,state_coverage_guarantee
+Sandusky,OH,"Sandusky, OH",33412,1918,361,"Sandusky, OH",6,1,state_coverage_guarantee
+Altoona,PA,"Altoona, PA",43963,8663,363,"Northumberland, PA",6,0,below_threshold
+Williams,OH,"Williams, OH",44347,1381,379,"Williams, OH",6,1,state_coverage_guarantee
+Jasper,IN,"Jasper, IN",34322,2040,392,"Jasper, IN",6,1,state_coverage_guarantee
+Adams,NE,"Adams, NE",37636,140,413,"Adams, NE",6,1,state_coverage_guarantee
+Furnass,NE,"Furnass, NE",25000,634,413,"Adams, NE",6,0,below_threshold
+Mineral,WV,"Mineral, WV",32493,5897,417,"Mineral, WV",6,1,sparse_floor
+Spotslyvania,VA,"Spotslyvania, VA",25000,5964,437,"King George's, VA",6,1,state_coverage_guarantee
+Greenbrier,WV,"Greenbrier, WV",41631,304,438,"Greenbrier, WV",6,1,sparse_floor
+Accomack,VA,"Accomack, VA",45966,5980,439,"Accomack, VA",6,1,state_coverage_guarantee
+Prince George,VA,"Prince George, VA",42152,1758,456,"Prince George, VA",6,1,state_coverage_guarantee
+Cibola,NM,"Cibola, NM",32655,3535,478,"Cibola, NM",6,1,state_coverage_guarantee
+Texarkana,TX,"Texarkana, TX (2)",36193,8756,568,"Longview, TX",6,1,state_coverage_guarantee+suffix
+Adams,MS,"Adams, MS",41208,4960,582,"Adams, MS",6,1,sparse_floor
+Aransas,TX,"Aransas, TX",27600,6768,631,"Aransas, TX",6,1,state_coverage_guarantee
+Woodward,OK,"Woodward, OK",14461,2336,48,"Woodward, OK",4,1,state_coverage_guarantee
+Platte,WI,"Platte, WI",12000,1339,52,"Platte, WI",4,1,state_coverage_guarantee
+Beatrice,NE,"Beatrice, NE",15026,1657,105,"Beatrice, NE",4,1,state_coverage_guarantee
+Willapa Hills,WA,"Willapa Hills, WA",14400,3867,179,"Willapa Hills, WA",4,1,state_coverage_guarantee
+Piscataquis,ME,"Piscataquis, ME",20682,4159,207,"Somerset, ME",4,1,sparse_floor
+Mahoosuc Range,ME,"Mahoosuc Range, ME",24000,1016,216,"Western Mountains, ME",4,1,sparse_floor
+Western Mountains,ME,"Western Mountains, ME",10000,3690,216,"Western Mountains, ME",4,0,below_threshold
+Cadillac,MI,"Cadillac, MI",13197,5678,233,"Cadillac, MI",4,1,state_coverage_guarantee
+Grafton,NH,"Grafton, NH",15879,4421,244,"White Mountains, NH",4,1,sparse_floor
+White Mountains,NH,"White Mountains, NH",10000,5584,244,"White Mountains, NH",4,0,below_threshold
+Addison,VT,"Addison, VT",21156,909,250,"Addison, VT",4,1,state_coverage_guarantee
+Ontario,OR,"Ontario, OR",12438,503,262,"Ontario, OR",4,1,state_coverage_guarantee
+Iosco,MI,"Iosco, MI",14400,5657,272,"Iosco, MI",4,1,state_coverage_guarantee
+Huron,MI,"Huron, MI",24000,3666,312,"Huron, MI",4,1,state_coverage_guarantee
+Mason,MI,"Mason, MI",16800,5702,317,"Mason, MI",4,1,state_coverage_guarantee
+Benton Harbor,MI,"Benton Harbor, MI",15381,2272,329,"Benton Harbor, MI",4,1,state_coverage_guarantee
+Rawlins,WY,"Rawlins, WY",10440,3191,360,"South Bairoil, WY",4,1,state_coverage_guarantee
+Aberdeen,MD,"Aberdeen, MD",19200,2625,402,"Aberdeen, MD",4,0,below_threshold
+Alamosa,CO,"Alamosa, CO",10536,3291,428,"Aspen, CO",4,1,state_coverage_guarantee
+Gasconade,MO,"Gasconade, MO",18410,4368,457,"Gasconade, MO",4,1,state_coverage_guarantee
+Trinidad,CO,"Trinidad, CO",11400,1199,460,"Trinidad, CO",4,1,state_coverage_guarantee
+Elizabeth City,NC,"Elizabeth City, NC",20400,6044,467,"Elizabeth City, NC",4,1,state_coverage_guarantee
+Liberal,KS,"Liberal, KS",23599,295,469,"Liberal, KS",4,1,state_coverage_guarantee
+Wayne,KY,Wayne,24000,6088,475,"Wayne, KY",4,1,state_coverage_guarantee
+Dumas,TX,"Dumas, TX",17074,4969,507,"Dumas, TX",4,1,state_coverage_guarantee
+Searcy,AR,"Searcy, AR",21960,1878,512,"Searcy, AR",4,1,state_coverage_guarantee
+McAlester,OK,"McAlester, OK",21890,6223,531,"McAlester, OK",4,1,state_coverage_guarantee
+Vernon,TX,"Vernon, TX",14400,3352,544,"Vernon, TX",4,1,state_coverage_guarantee
+Deming,NM,"Deming, NM",16939,4985,552,"Las Cruces, NM",4,1,state_coverage_guarantee
+Stephenville,TX,"Stephenville, TX",20400,767,567,"Stephenville, TX",4,1,state_coverage_guarantee
+Reeves,TX,"Reeves, TX",14400,4945,581,"Reeves, TX",4,1,state_coverage_guarantee
+Fredericksburg,TX,"Fredericksburg, TX",12636,3168,592,"Fredericksburg, TX",4,1,state_coverage_guarantee
+Hutchinson,MN,"Hutchinson, MN",17013,5682,606,"Hutchinson, MN",4,1,state_coverage_guarantee
+Eleuthera,BS,Eleuthera,11000,6772,644,"Eleuthera, BS",4,1,state_coverage_guarantee
+Alturas,CA,"Alturas, CA",12626,5744,667,"Alturas, CA",4,1,state_coverage_guarantee
+Riverton,WY,"Riverton, WY (2)",11129,8650,684,"Cody, WY",4,1,state_coverage_guarantee+suffix
+Susanville,CA,"Susanville, CA",17748,8657,703,"Susanville, CA",4,1,state_coverage_guarantee
+Vieques,PR,"Vieques, PR",10800,6823,721,"Vieques, PR",4,1,state_coverage_guarantee
+Newberry,MI,"Newberry, MI",1440,3178,12,"Newberry, MI",3,0,below_threshold
+Whiteman AFB,MO,"Whiteman AFB, MO",1500,2304,27,"Harrisonville, MO",3,0,below_threshold
+Adalair,MO,"Adalair, MO",2160,6,29,"Adalair, MO",3,0,below_threshold
+Sandpoint,ID,"Sandpoint, ID",7782,3239,36,"Coeur d'Alene, ID",3,0,below_threshold
+Belcher Islands,NU,"Belcher Islands, NU",3000,6608,38,"Belcher Islands, NU",3,0,below_threshold
+Fort Morgan,CO,"Fort Morgan, CO",9650,4832,129,"Fort Morgan, CO",3,1,state_coverage_guarantee
+Browning,MT,"Browning, MT",1219,5456,139,"Great Falls, MT",3,0,below_threshold
+Metaline Falls,WA,"Metaline Falls, WA",5000,5418,157,"Eastern Okanogan Highlands, WA",3,1,state_coverage_guarantee
+Isanti,MN,"Isanti, MN",6000,5634,200,"Isanti, MN",3,1,state_coverage_guarantee
+Barksdale AFB,LA,"Barksdale AFB, LA",1500,973,208,"Alexandra, LA",3,0,below_threshold
+Baker,MT,"Baker, MT",2126,3430,220,"Baker, MT",3,0,below_threshold
+Powder River,MT,"Powder River, MT",6000,4710,220,"Baker, MT",3,1,state_coverage_guarantee
+Cascade,ID,"Cascade, ID",1320,765,224,"Cascade, ID",3,0,below_threshold
 Newport,VT,"Newport, VT",4500,4055,236,"Franklin, VT",3,0,below_threshold
 Sun Valley,ID,"Sun Valley, ID",1400,5633,243,"Salmon, ID",3,0,below_threshold
+Drummond Island,MI,"Drummond Island, MI",1200,6726,254,"Drummond Island, MI",3,0,below_threshold
+Hardin,MT,"Hardin, MT",1032,341,256,"Hardin, MT",3,0,below_threshold
+Saint Ignace,MI,"Saint Ignace, MI",3000,6729,263,"Mackinac Island, MI",3,0,below_threshold
+Beaver Island,MI,"Beaver Island, MI",720,6732,270,"Beaver Island, MI",3,0,below_threshold
+Baileys Harbor,WI,"Baileys Harbor, WI",1200,6735,289,"Baileys Harbor, WI",3,0,below_threshold
+Trippe,SD,"Trippe, SD",600,1394,309,"Trippe, SD",3,0,below_threshold
+Murray,MN,"Murray, MN",9600,4227,311,"Murray, MN",3,1,state_coverage_guarantee
+Windham,NY,"Windham, NY",2640,3171,327,"Windham, NY",3,0,below_threshold
 Ely,NV,"Ely, NV",4255,3727,331,"Mojave, NV",3,0,below_threshold
+Lovelock,NV,"Lovelock, NV",2588,4956,331,"Mojave, NV",3,0,below_threshold
+Douglas,WY,"Douglas, WY",6345,2379,340,"Douglas, WY",3,1,state_coverage_guarantee
+West Wendover,NV,"West Wendover, NV",3128,3654,344,"West Wendover, NV",3,0,below_threshold
+Delta,UT,"Delta, UT",4010,3298,352,"Delta, UT",3,0,below_threshold
+Cherry,NE,"Cherry, NE",6855,2225,358,"Cherry, NE",3,1,state_coverage_guarantee
+Wamsutter,WY,"Wamsutter, WY",5000,4331,372,"East Superior, WY",3,1,state_coverage_guarantee
+Adobie Town Rim,WY,"Adobie Town Rim, WY",5000,1145,380,"Adobie Town Rim, WY",3,1,state_coverage_guarantee
+South Bairoil,WY,"South Bairoil, WY",5000,5851,380,"Adobie Town Rim, WY",3,0,below_threshold
+Steamboat Springs,CO,"Steamboat Springs, CO",7560,458,397,"Steamboat Springs, CO",3,1,state_coverage_guarantee
+Walden,CO,"Walden, CO",750,3025,399,"Walden, CO",3,0,below_threshold
+Clinton,OH,"Clinton, OH",5103,3516,407,"Clinton, OH",3,1,state_coverage_guarantee
 Rehoboth Beach,DE,"Rehoboth Beach, DE",1500,4901,420,"Sussex, DE",3,0,below_threshold
+Bowling Green,MO,"Bowling Green, MO",7003,2605,426,"Bowling Green, MO",3,1,state_coverage_guarantee
+Aspen,CO,"Aspen, CO",4789,787,428,"Aspen, CO",3,0,below_threshold
+Mesquite,NV,"Mesquite, NV",2247,3273,448,"Mesquite, NV",3,0,below_threshold
+Mexican Hat,UT,"Mexican Hat, UT",5000,137,468,"Mexican Hat, UT",3,1,state_coverage_guarantee
+Clayton,NM,"Clayton, NM",3810,3076,488,"Clayton, NM",3,0,below_threshold
+Northern Channel Islands,CA,"Northern Channel Islands, CA",2400,6741,501,"Northern Channel Islands, CA",3,0,below_threshold
+Southern Channel Islands,CA,"Southern Channel Islands, CA",2400,6744,522,"Southern Channel Islands, CA",3,0,below_threshold
+Yoakum,TX,"Yoakum, TX",7800,6283,542,"Yoakum, TX",3,1,state_coverage_guarantee
 San Simon,AZ,"San Simon, AZ",200,806,562,"Duncan, AZ",3,0,below_threshold
+Crockett,TX,"Crockett, TX",8569,2359,585,"Crockett, TX",3,1,state_coverage_guarantee
+Bastrop,TX,"Bastrop, TX",9834,4454,602,"Bastrop, TX",3,1,state_coverage_guarantee
+Grand Manan Island,ME,"Grand Manan Island, ME",3120,6709,622,"Grand Manan Island, ME",3,0,below_threshold
+Andros,BS,Andros,8000,3297,647,"Andros, BS",3,1,state_coverage_guarantee
+Cat Island,BS,Cat Island,1500,6777,648,"Cat Island, BS",3,0,below_threshold
+Minot AFB,ND,"Minot AFB, ND",1500,8885,650,"Minot AFB, ND",3,0,below_threshold
+Crooked Island,BS,Crooked Island,500,6799,663,"Long Island, BS",3,0,below_threshold
+Long Island,BS,Long Island,3000,6800,663,"Long Island, BS",3,0,below_threshold
+Great Exuma,BS,Great Exuma,7000,6796,664,"Great Exuma, BS",3,1,state_coverage_guarantee
+Isla Maria Madre,NA,"Isla Maria Madre, NA",5000,3470,668,"Mazatlan, SI",3,1,state_coverage_guarantee
+Tonopah,NV,"Tonopah, NV",2973,1377,673,"Tonopah, NV",3,0,below_threshold
+Pine Bluffs,WY,"Pine Bluffs, WY",2311,8894,676,"Pine Bluffs, WY",3,0,below_threshold
+Pinedale,WY,"Pinedale, WY",1920,1209,677,"Pinedale, WY",3,0,below_threshold
+Sidney,NE,"Sidney, NE",7200,3106,683,"Sidney, NE",3,1,state_coverage_guarantee
+Cody,WY,"Cody, WY",9828,1722,684,"Cody, WY",3,0,below_threshold
+Inagua,BS,Inagua,1200,6814,690,"Inagua, BS",3,0,below_threshold
+Sequoia,CA,"Sequoia, CA",2400,4349,701,"Yosemite, CA",3,0,below_threshold
+Bishop,CA,"Bishop, CA",4288,4455,701,"Yosemite, CA",3,0,below_threshold
+Isla de Mona,PR,"Isla de Mona, PR",1200,6825,752,"Isla de Mona, PR",3,0,below_threshold
 Acapulco,GR,"Acapulco, GR",673479,,,,,0,ocean_or_offmap
 Bridgetown,BB,Bridgetown,110000,,,,,0,ocean_or_offmap
 Campeche,CM,"Campeche, CM",249623,,,,,0,ocean_or_offmap
@@ -13,11 +173,13 @@ Cuernavaca,MO,"Cuernavaca, MO",366321,,,,,0,ocean_or_offmap
 George Town,GC,"George Town, GC",40000,,,,,0,ocean_or_offmap
 Kingston,JM,"Kingston, JM",937700,,,,,0,ocean_or_offmap
 Matamoros,TM,"Matamoros, TM",489193,,,,,0,ocean_or_offmap
+Mayaguna,BS,Mayaguna,300,,,,,0,ocean_or_offmap
 Mexico City,MX,"Mexico City, MX",9209944,,,,,0,ocean_or_offmap
 Montego Bay,JM,"Montego Bay, JM",122000,,,,,0,ocean_or_offmap
 Oaxaca,OA,"Oaxaca, OA",593698,,,,,0,ocean_or_offmap
 Pachuca,HG,"Pachuca, HG",277375,,,,,0,ocean_or_offmap
 Puebla,PU,"Puebla, PU",1546259,,,,,0,ocean_or_offmap
+San Salvador,BS,San Salvador,6663,,,,,0,ocean_or_offmap
 Tampico,TM,"Tampico, TM",297284,,,,,0,ocean_or_offmap
 Tapachula,CS,"Tapachula, CS",217450,,,,,0,ocean_or_offmap
 Tlaxcala,TL,"Tlaxcala, TL",95000,,,,,0,ocean_or_offmap
@@ -31,20 +193,22 @@ Aberdeen,SD,"Aberdeen, SD",28325,,,,,0,state_has_existing_vp
 Abilene,TX,"Abilene, TX",125182,,,,,0,state_has_existing_vp
 Aguascalientes,AG,"Aguascalientes, AG",722250,,,,,0,state_has_existing_vp
 Aiken,SC,"Aiken, SC",30296,,,,,0,state_has_existing_vp
+Akimiski Island,NU,"Akimiski Island, NU",5000,,,,,0,state_has_existing_vp
 Akron,OH,"Akron, OH",190469,,,,,0,state_has_existing_vp
 Alamogordo,NM,"Alamogordo, NM",31384,,,,,0,state_has_existing_vp
 Albany,GA,"Albany, GA",69647,,,,,0,state_has_existing_vp
 Albany,NY,"Albany, NY",99224,,,,,0,state_has_existing_vp
 Albuquerque,NM,"Albuquerque, NM",564559,,,,,0,state_has_existing_vp
+Alexandra,LA,"Alexandra, LA",56400,,,,,0,state_has_existing_vp
 Alexandria,LA,"Alexandria, LA",45275,,,,,0,state_has_existing_vp
 Alexandria,VA,"Alexandria, VA",159467,,,,,0,state_has_existing_vp
 Allentown,PA,"Allentown, PA",125845,,,,,0,state_has_existing_vp
-Altoona,PA,"Altoona, PA",43963,,,,,0,state_has_existing_vp
 Amarillo,TX,"Amarillo, TX",200393,,,,,0,state_has_existing_vp
 Ames,IA,"Ames, IA",66427,,,,,0,state_has_existing_vp
 Anaheim,CA,"Anaheim, CA",346824,,,,,0,state_has_existing_vp
 Anchorage,AK,"Anchorage, AK",291247,,,,,0,state_has_existing_vp
 Ann Arbor,MI,"Ann Arbor, MI",123851,,,,,0,state_has_existing_vp
+Anticosti Island,QC,"Anticosti Island, QC",7800,,,,,0,state_has_existing_vp
 Appleton,WI,"Appleton, WI",75644,,,,,0,state_has_existing_vp
 Ardmore,OK,"Ardmore, OK",24788,,,,,0,state_has_existing_vp
 Arecibo,PR,"Arecibo, PR",87554,,,,,0,state_has_existing_vp
@@ -61,6 +225,8 @@ Augusta,GA,"Augusta, GA",202081,,,,,0,state_has_existing_vp
 Augusta,ME,"Augusta, ME",18899,,,,,0,state_has_existing_vp
 Aurora,CO,"Aurora, CO",386261,,,,,0,state_has_existing_vp
 Aurora,IL,"Aurora, IL",180542,,,,,0,state_has_existing_vp
+Autauga,AL,"Autauga, AL",52405,,,,,0,state_has_existing_vp
+Axtla de Terrazas,SL,"Axtla de Terrazas, SL",36000,,,,,0,state_has_existing_vp
 Baker,CA,"Baker, CA",700,,,,,0,state_has_existing_vp
 Bakersfield,CA,"Bakersfield, CA",403455,,,,,0,state_has_existing_vp
 Baltimore,MD,"Baltimore, MD",585708,,,,,0,state_has_existing_vp
@@ -95,10 +261,12 @@ Boston,MA,"Boston, MA",675647,,,,,0,state_has_existing_vp
 Boulder,CO,"Boulder, CO",108250,,,,,0,state_has_existing_vp
 Bowling Green,KY,Bowling Green,72894,,,,,0,state_has_existing_vp
 Bozeman,MT,"Bozeman, MT",53293,,,,,0,state_has_existing_vp
+Brainerd,MN,"Brainerd, MN",16324,,,,,0,state_has_existing_vp
 Brampton,ON,"Brampton, ON",656480,,,,,0,state_has_existing_vp
 Brandon,MB,"Brandon, MB",51313,,,,,0,state_has_existing_vp
 Branson,MO,"Branson, MO",12638,,,,,0,state_has_existing_vp
 Brattleboro,VT,"Brattleboro, VT",12046,,,,,0,state_has_existing_vp
+Breckenridge,CO,"Breckenridge, CO",1777,,,,,0,state_has_existing_vp
 Bridgeport,CT,"Bridgeport, CT",148654,,,,,0,state_has_existing_vp
 Bristol,VA,"Bristol, VA",16762,,,,,0,state_has_existing_vp
 Brockton,MA,"Brockton, MA",105643,,,,,0,state_has_existing_vp
@@ -109,17 +277,21 @@ Brownsville,TX,"Brownsville, TX",186738,,,,,0,state_has_existing_vp
 Brunswick,GA,"Brunswick, GA",16384,,,,,0,state_has_existing_vp
 Buffalo,NY,"Buffalo, NY",278349,,,,,0,state_has_existing_vp
 Bullhead City,AZ,"Bullhead City, AZ",41000,,,,,0,state_has_existing_vp
+Buncombe,NC,"Buncombe, NC",247628,,,,,0,state_has_existing_vp
 Burbank,CA,"Burbank, CA",107337,,,,,0,state_has_existing_vp
 Burlington,IA,"Burlington, IA",24868,,,,,0,state_has_existing_vp
 Burlington,VT,"Burlington, VT",44843,,,,,0,state_has_existing_vp
 Burnaby,BC,"Burnaby, BC",249125,,,,,0,state_has_existing_vp
+Butler,AL,"Butler, AL",25136,,,,,0,state_has_existing_vp
 Butte,MT,"Butte, MT",34494,,,,,0,state_has_existing_vp
+Cabell,WV,"Cabell, WV",116140,,,,,0,state_has_existing_vp
 Caguas,PR,"Caguas, PR",127244,,,,,0,state_has_existing_vp
 Calgary,AB,"Calgary, AB",1306784,,,,,0,state_has_existing_vp
 Cambridge,MA,"Cambridge, MA",118403,,,,,0,state_has_existing_vp
 Camden,NJ,"Camden, NJ",71791,,,,,0,state_has_existing_vp
 Canton,OH,"Canton, OH",70447,,,,,0,state_has_existing_vp
 Cap-Haitien,HT,"Cap-Haitien, HT",274404,,,,,0,state_has_existing_vp
+Cape Breton Island,NS,"Cape Breton Island, NS",176896,,,,,0,state_has_existing_vp
 Cape Coral,FL,"Cape Coral, FL",194016,,,,,0,state_has_existing_vp
 Cape Girardeau,MO,"Cape Girardeau, MO",39540,,,,,0,state_has_existing_vp
 Cape May,NJ,"Cape May, NJ",2768,,,,,0,state_has_existing_vp
@@ -141,6 +313,7 @@ Charleston,WV,"Charleston, WV",48864,,,,,0,state_has_existing_vp
 Charlotte,NC,"Charlotte, NC",874579,,,,,0,state_has_existing_vp
 Charlottesville,VA,"Charlottesville, VA",46553,,,,,0,state_has_existing_vp
 Charlottetown,PE,"Charlottetown, PE",38909,,,,,0,state_has_existing_vp
+Charlton Island,NU,"Charlton Island, NU",5000,,,,,0,state_has_existing_vp
 Chattanooga,TN,"Chattanooga, TN",181099,,,,,0,state_has_existing_vp
 Chesapeake,VA,"Chesapeake, VA",249422,,,,,0,state_has_existing_vp
 Cheyenne,WY,"Cheyenne, WY",65132,,,,,0,state_has_existing_vp
@@ -149,17 +322,21 @@ Chihuahua,CH,"Chihuahua, CH",878062,,,,,0,state_has_existing_vp
 Chinle,AZ,"Chinle, AZ",4500,,,,,0,state_has_existing_vp
 Chula Vista,CA,"Chula Vista, CA",275487,,,,,0,state_has_existing_vp
 Cincinnati,OH,"Cincinnati, OH",309317,,,,,0,state_has_existing_vp
+Citronelle,AL,"Citronelle, AL",4640,,,,,0,state_has_existing_vp
+Ciudad Obregon,SO,"Ciudad Obregon, SO",240000,,,,,0,state_has_existing_vp
+Ciudad Valles,SL,"Ciudad Valles, SL",134400,,,,,0,state_has_existing_vp
 Ciudad Victoria,TM,"Ciudad Victoria, TM",305155,,,,,0,state_has_existing_vp
+Clarke,AL,"Clarke, AL",33513,,,,,0,state_has_existing_vp
 Clarksburg,WV,"Clarksburg, WV",16061,,,,,0,state_has_existing_vp
 Clarksville,TN,"Clarksville, TN",166722,,,,,0,state_has_existing_vp
 Cleveland,OH,"Cleveland, OH",372624,,,,,0,state_has_existing_vp
 Clovis,NM,"Clovis, NM",38656,,,,,0,state_has_existing_vp
-Cody,WY,"Cody, WY",9828,,,,,0,state_has_existing_vp
-Coeur d'Alene,ID,"Coeur d'Alene, ID",55731,,,,,0,state_has_existing_vp
+Cockburn Island,ON,"Cockburn Island, ON",5000,,,,,0,state_has_existing_vp
 Colima,CL,"Colima, CL",137383,,,,,0,state_has_existing_vp
 College Station,TX,"College Station, TX",120511,,,,,0,state_has_existing_vp
 Colorado City,AZ,"Colorado City, AZ",5000,,,,,0,state_has_existing_vp
 Colorado Springs,CO,"Colorado Springs, CO",478961,,,,,0,state_has_existing_vp
+Colotlan,JA,"Colotlan, JA",19200,,,,,0,state_has_existing_vp
 Columbia,MO,"Columbia, MO",126254,,,,,0,state_has_existing_vp
 Columbia,SC,"Columbia, SC",136632,,,,,0,state_has_existing_vp
 Columbus,GA,"Columbus, GA",206922,,,,,0,state_has_existing_vp
@@ -177,14 +354,17 @@ Cranston,RI,"Cranston, RI",82934,,,,,0,state_has_existing_vp
 Crescent City,CA,"Crescent City, CA",6783,,,,,0,state_has_existing_vp
 Culiacan,SI,"Culiacan, SI",808416,,,,,0,state_has_existing_vp
 Cumberland,MD,"Cumberland, MD",19075,,,,,0,state_has_existing_vp
+Cypress,AB,"Cypress, AB",8400,,,,,0,state_has_existing_vp
 Dallas,TX,"Dallas, TX",1304379,,,,,0,state_has_existing_vp
 Danbury,CT,"Danbury, CT",86518,,,,,0,state_has_existing_vp
+Danville,VA,"Danville, VA",58093,,,,,0,state_has_existing_vp
 Davenport,IA,"Davenport, IA",101724,,,,,0,state_has_existing_vp
 Dayton,OH,"Dayton, OH",137644,,,,,0,state_has_existing_vp
 Daytona Beach,FL,"Daytona Beach, FL",72647,,,,,0,state_has_existing_vp
 Dearborn,MI,"Dearborn, MI",109976,,,,,0,state_has_existing_vp
 Decatur,AL,"Decatur, AL",57938,,,,,0,state_has_existing_vp
 Decatur,IL,"Decatur, IL",70522,,,,,0,state_has_existing_vp
+Degelis,QC,"Degelis, QC",24000,,,,,0,state_has_existing_vp
 Del Rio,TX,"Del Rio, TX",34673,,,,,0,state_has_existing_vp
 Denver,CO,"Denver, CO",715522,,,,,0,state_has_existing_vp
 Des Moines,IA,"Des Moines, IA",214133,,,,,0,state_has_existing_vp
@@ -196,12 +376,18 @@ Dover,DE,"Dover, DE",38079,,,,,0,state_has_existing_vp
 Dover,NH,"Dover, NH",32741,,,,,0,state_has_existing_vp
 Dubuque,IA,"Dubuque, IA",59246,,,,,0,state_has_existing_vp
 Duluth,MN,"Duluth, MN",90884,,,,,0,state_has_existing_vp
+Duncan,AZ,"Duncan, AZ",5139,,,,,0,state_has_existing_vp
 Durango,CO,"Durango, CO",19071,,,,,0,state_has_existing_vp
 Durango,DG,"Durango, DG",654876,,,,,0,state_has_existing_vp
 Durham,NC,"Durham, NC",278993,,,,,0,state_has_existing_vp
+East Bozeman,MT,"East Bozeman, MT",30000,,,,,0,state_has_existing_vp
+East Superior,WY,"East Superior, WY",4200,,,,,0,state_has_existing_vp
+Eastern Townships,QC,"Eastern Townships, QC",264000,,,,,0,state_has_existing_vp
 Eau Claire,WI,"Eau Claire, WI",69421,,,,,0,state_has_existing_vp
 Edison,NJ,"Edison, NJ",107588,,,,,0,state_has_existing_vp
 Edmonton,AB,"Edmonton, AB",1010899,,,,,0,state_has_existing_vp
+Edmundston,NB,"Edmundston, NB",19200,,,,,0,state_has_existing_vp
+El Carrizo,SI,"El Carrizo, SI",12000,,,,,0,state_has_existing_vp
 El Centro,CA,"El Centro, CA",44378,,,,,0,state_has_existing_vp
 El Dorado,AR,"El Dorado, AR",17756,,,,,0,state_has_existing_vp
 El Paso,TX,"El Paso, TX",678815,,,,,0,state_has_existing_vp
@@ -209,6 +395,7 @@ Elizabeth,NJ,"Elizabeth, NJ",137298,,,,,0,state_has_existing_vp
 Elkhart,IN,"Elkhart, IN",53923,,,,,0,state_has_existing_vp
 Elko,NV,"Elko, NV",20564,,,,,0,state_has_existing_vp
 Elmira,NY,"Elmira, NY",26523,,,,,0,state_has_existing_vp
+Emporia,KS,"Emporia, KS",32112,,,,,0,state_has_existing_vp
 Enid,OK,"Enid, OK",51308,,,,,0,state_has_existing_vp
 Ensenada,BC,"Ensenada, BC",357000,,,,,0,state_has_existing_vp
 Erie,PA,"Erie, PA",94831,,,,,0,state_has_existing_vp
@@ -259,6 +446,7 @@ Glendale,AZ,"Glendale, AZ",248325,,,,,0,state_has_existing_vp
 Glendive,MT,"Glendive, MT",4873,,,,,0,state_has_existing_vp
 Globe,AZ,"Globe, AZ",7500,,,,,0,state_has_existing_vp
 Goleta,CA,"Goleta, CA",32000,,,,,0,state_has_existing_vp
+Gomez Palacio,DG,"Gomez Palacio, DG",228000,,,,,0,state_has_existing_vp
 Grand Forks,ND,"Grand Forks, ND",59166,,,,,0,state_has_existing_vp
 Grand Island,NE,"Grand Island, NE",53131,,,,,0,state_has_existing_vp
 Grand Junction,CO,"Grand Junction, CO",65860,,,,,0,state_has_existing_vp
@@ -273,20 +461,25 @@ Greenville,NC,"Greenville, NC",92156,,,,,0,state_has_existing_vp
 Greenville,SC,"Greenville, SC",72095,,,,,0,state_has_existing_vp
 Gresham,OR,"Gresham, OR",114247,,,,,0,state_has_existing_vp
 Guadalajara,JA,"Guadalajara, JA",1385629,,,,,0,state_has_existing_vp
+Gulf Shores,AL,"Gulf Shores, AL",6140,,,,,0,state_has_existing_vp
 Gulfport,MS,"Gulfport, MS",72926,,,,,0,state_has_existing_vp
 Hagerstown,MD,"Hagerstown, MD",43527,,,,,0,state_has_existing_vp
 Halifax,NS,"Halifax, NS",439819,,,,,0,state_has_existing_vp
 Hamilton,ON,"Hamilton, ON",569353,,,,,0,state_has_existing_vp
 Hammond,IN,"Hammond, IN",75795,,,,,0,state_has_existing_vp
 Hampton,VA,"Hampton, VA",137148,,,,,0,state_has_existing_vp
+Hanover,MB,"Hanover, MB",21600,,,,,0,state_has_existing_vp
+Harding,SD,"Harding, SD",1623,,,,,0,state_has_existing_vp
 Harlingen,TX,"Harlingen, TX",71829,,,,,0,state_has_existing_vp
 Harrisburg,PA,"Harrisburg, PA",50099,,,,,0,state_has_existing_vp
 Harrisonburg,VA,"Harrisonburg, VA",51814,,,,,0,state_has_existing_vp
+Harrisonville,MO,"Harrisonville, MO",11662,,,,,0,state_has_existing_vp
 Hartford,CT,"Hartford, CT",121054,,,,,0,state_has_existing_vp
 Hattiesburg,MS,"Hattiesburg, MS",48730,,,,,0,state_has_existing_vp
-Havana,CU,"Havana, CU",2132183,,,,,0,state_has_existing_vp
 Havre,MT,"Havre, MT",9362,,,,,0,state_has_existing_vp
 Hays,KS,"Hays, KS",21116,,,,,0,state_has_existing_vp
+Hayward,WI,"Hayward, WI",19200,,,,,0,state_has_existing_vp
+Haywood,NC,"Haywood, NC",64839,,,,,0,state_has_existing_vp
 Helena,MT,"Helena, MT",32315,,,,,0,state_has_existing_vp
 Hempstead,NY,"Hempstead, NY",793409,,,,,0,state_has_existing_vp
 Henderson,NV,"Henderson, NV",320189,,,,,0,state_has_existing_vp
@@ -309,6 +502,7 @@ Independence,MO,"Independence, MO",123011,,,,,0,state_has_existing_vp
 Indianapolis,IN,"Indianapolis, IN",887642,,,,,0,state_has_existing_vp
 Inglewood,CA,"Inglewood, CA",107762,,,,,0,state_has_existing_vp
 International Falls,MN,"International Falls, MN",5802,,,,,0,state_has_existing_vp
+Ionia,MI,"Ionia, MI",8400,,,,,0,state_has_existing_vp
 Iowa City,IA,"Iowa City, IA",74828,,,,,0,state_has_existing_vp
 Iqaluit,NU,"Iqaluit, NU",7740,,,,,0,state_has_existing_vp
 Irving,TX,"Irving, TX",256684,,,,,0,state_has_existing_vp
@@ -336,24 +530,28 @@ Kelowna,BC,"Kelowna, BC",144576,,,,,0,state_has_existing_vp
 Kennewick,WA,"Kennewick, WA",84347,,,,,0,state_has_existing_vp
 Kenosha,WI,"Kenosha, WI",99986,,,,,0,state_has_existing_vp
 Key West,FL,"Key West, FL",26444,,,,,0,state_has_existing_vp
+Kidney Island,NU,"Kidney Island, NU",5000,,,,,0,state_has_existing_vp
 Killeen,TX,"Killeen, TX",153095,,,,,0,state_has_existing_vp
 King City,CA,"King City, CA",14000,,,,,0,state_has_existing_vp
 Kingsport,TN,"Kingsport, TN",55442,,,,,0,state_has_existing_vp
 Kingston,ON,"Kingston, ON",132485,,,,,0,state_has_existing_vp
+Kirtland AFB,NM,"Kirtland AFB, NM",1500,,,,,0,state_has_existing_vp
 Kitchener,ON,"Kitchener, ON",256885,,,,,0,state_has_existing_vp
 Klamath Falls,OR,"Klamath Falls, OR",21813,,,,,0,state_has_existing_vp
 Knoxville,TN,"Knoxville, TN",190740,,,,,0,state_has_existing_vp
 La Crosse,WI,"La Crosse, WI",52680,,,,,0,state_has_existing_vp
+LaFourche,LA,"LaFourche, LA",107968,,,,,0,state_has_existing_vp
+Lac-des-Eaux-Mortes,QC,"Lac-des-Eaux-Mortes, QC",6000,,,,,0,state_has_existing_vp
 Lafayette,IN,"Lafayette, IN",70783,,,,,0,state_has_existing_vp
 Lafayette,LA,"Lafayette, LA",121374,,,,,0,state_has_existing_vp
 Lake Charles,LA,"Lake Charles, LA",84872,,,,,0,state_has_existing_vp
 Lake Havasu City,AZ,"Lake Havasu City, AZ",57144,,,,,0,state_has_existing_vp
-Lakeland,FL,"Lakeland, FL",112641,,,,,0,state_has_existing_vp
 Lakewood,CO,"Lakewood, CO",155984,,,,,0,state_has_existing_vp
 Lancaster,PA,"Lancaster, PA",58039,,,,,0,state_has_existing_vp
 Lansing,MI,"Lansing, MI",112644,,,,,0,state_has_existing_vp
 Laramie,WY,"Laramie, WY",32158,,,,,0,state_has_existing_vp
 Laredo,TX,"Laredo, TX",255205,,,,,0,state_has_existing_vp
+Laredos,TM,"Laredos, TM",144000,,,,,0,state_has_existing_vp
 Las Cruces,NM,"Las Cruces, NM",111385,,,,,0,state_has_existing_vp
 Las Vegas,NM,"Las Vegas, NM",13166,,,,,0,state_has_existing_vp
 Las Vegas,NV,"Las Vegas, NV",641903,,,,,0,state_has_existing_vp
@@ -367,6 +565,7 @@ Lewiston,ME,"Lewiston, ME",37121,,,,,0,state_has_existing_vp
 Lexington,KY,Lexington,322570,,,,,0,state_has_existing_vp
 Lima,OH,"Lima, OH",35579,,,,,0,state_has_existing_vp
 Lincoln,NE,"Lincoln, NE",291082,,,,,0,state_has_existing_vp
+Little River,AR,"Little River, AR",16353,,,,,0,state_has_existing_vp
 Little Rock,AR,"Little Rock, AR",202591,,,,,0,state_has_existing_vp
 Livonia,MI,"Livonia, MI",95535,,,,,0,state_has_existing_vp
 Logan,UT,"Logan, UT",52778,,,,,0,state_has_existing_vp
@@ -378,18 +577,24 @@ Los Angeles,CA,"Los Angeles, CA",3898747,,,,,0,state_has_existing_vp
 Louisville,KY,Louisville,633045,,,,,0,state_has_existing_vp
 Loveland,CO,"Loveland, CO",76378,,,,,0,state_has_existing_vp
 Lowell,MA,"Lowell, MA",115554,,,,,0,state_has_existing_vp
+Lowndes,MS,"Lowndes, MS",74065,,,,,0,state_has_existing_vp
 Lubbock,TX,"Lubbock, TX",263930,,,,,0,state_has_existing_vp
 Lynchburg,VA,"Lynchburg, VA",79009,,,,,0,state_has_existing_vp
 Lynn,MA,"Lynn, MA",101253,,,,,0,state_has_existing_vp
 Macon,GA,"Macon, GA",157346,,,,,0,state_has_existing_vp
-Madison,WI,"Madison, WI",269840,,,,,0,state_has_existing_vp
+Madison,MT,"Madison, MT",2400,,,,,0,state_has_existing_vp
+Magladen Islands,QC,"Magladen Islands, QC",15360,,,,,0,state_has_existing_vp
+Malmstrom AFB,MT,"Malmstrom AFB, MT",1500,,,,,0,state_has_existing_vp
 Manchester,NH,"Manchester, NH",115644,,,,,0,state_has_existing_vp
 Manhattan,KS,"Manhattan, KS",54100,,,,,0,state_has_existing_vp
 Manhattan,NY,"Manhattan, NY",1694251,,,,,0,state_has_existing_vp
+Manitoulin Island,ON,"Manitoulin Island, ON",15343,,,,,0,state_has_existing_vp
 Mankato,MN,"Mankato, MN",44488,,,,,0,state_has_existing_vp
+Maple Creek,MB,"Maple Creek, MB",3000,,,,,0,state_has_existing_vp
 Marana,AZ,"Marana, AZ",51000,,,,,0,state_has_existing_vp
 Markham,ON,"Markham, ON",338503,,,,,0,state_has_existing_vp
 Marquette,MI,"Marquette, MI",21295,,,,,0,state_has_existing_vp
+Marshall,MN,"Marshall, MN",16416,,,,,0,state_has_existing_vp
 Martinsburg,WV,"Martinsburg, WV",18773,,,,,0,state_has_existing_vp
 Mason City,IA,"Mason City, IA",27338,,,,,0,state_has_existing_vp
 Mayaguez,PR,"Mayaguez, PR",78941,,,,,0,state_has_existing_vp
@@ -403,7 +608,9 @@ Meridian,ID,"Meridian, ID",117635,,,,,0,state_has_existing_vp
 Meridian,MS,"Meridian, MS",35052,,,,,0,state_has_existing_vp
 Mesa,AZ,"Mesa, AZ",504258,,,,,0,state_has_existing_vp
 Mexicali,BC,"Mexicali, BC",689775,,,,,0,state_has_existing_vp
+Mezquitic,JA,"Mezquitic, JA",16920,,,,,0,state_has_existing_vp
 Miami,FL,"Miami, FL",442241,,,,,0,state_has_existing_vp
+Middlesex,NJ,"Middlesex, NJ",900194,,,,,0,state_has_existing_vp
 Midland,TX,"Midland, TX",132524,,,,,0,state_has_existing_vp
 Miles City,MT,"Miles City, MT",8354,,,,,0,state_has_existing_vp
 Milwaukee,WI,"Milwaukee, WI",577222,,,,,0,state_has_existing_vp
@@ -415,10 +622,14 @@ Missoula,MT,"Missoula, MT",75516,,,,,0,state_has_existing_vp
 Mitchell,SD,"Mitchell, SD",15660,,,,,0,state_has_existing_vp
 Moab,UT,"Moab, UT",5366,,,,,0,state_has_existing_vp
 Mobile,AL,"Mobile, AL",187041,,,,,0,state_has_existing_vp
+Mobridge,SD,"Mobridge, SD",4364,,,,,0,state_has_existing_vp
 Modesto,CA,"Modesto, CA",218464,,,,,0,state_has_existing_vp
 Moline,IL,"Moline, IL",42985,,,,,0,state_has_existing_vp
+Monctezuma,SL,"Monctezuma, SL",15000,,,,,0,state_has_existing_vp
 Moncton,NB,"Moncton, NB",79470,,,,,0,state_has_existing_vp
 Monroe,LA,"Monroe, LA",47702,,,,,0,state_has_existing_vp
+Montemorelos,NL,"Montemorelos, NL",67000,,,,,0,state_has_existing_vp
+Monteregie,QC,"Monteregie, QC",1680000,,,,,0,state_has_existing_vp
 Monterey,CA,"Monterey, CA",30152,,,,,0,state_has_existing_vp
 Monterrey,NL,"Monterrey, NL",1135512,,,,,0,state_has_existing_vp
 Montgomery,AL,"Montgomery, AL",200603,,,,,0,state_has_existing_vp
@@ -429,9 +640,11 @@ Moorhead,MN,"Moorhead, MN",44505,,,,,0,state_has_existing_vp
 Moose Jaw,SK,"Moose Jaw, SK",33890,,,,,0,state_has_existing_vp
 Morelia,MI,"Morelia, MI",849053,,,,,0,state_has_existing_vp
 Morenci,AZ,"Morenci, AZ",1500,,,,,0,state_has_existing_vp
+Moresby Island,BC,"Moresby Island, BC",5000,,,,,0,state_has_existing_vp
 Morgantown,WV,"Morgantown, WV",30347,,,,,0,state_has_existing_vp
 Muncie,IN,"Muncie, IN",65194,,,,,0,state_has_existing_vp
 Murfreesboro,TN,"Murfreesboro, TN",152769,,,,,0,state_has_existing_vp
+Muscogee,GA,"Muscogee, GA",223549,,,,,0,state_has_existing_vp
 Muskogee,OK,"Muskogee, OK",36878,,,,,0,state_has_existing_vp
 Myrtle Beach,SC,"Myrtle Beach, SC",35682,,,,,0,state_has_existing_vp
 Nampa,ID,"Nampa, ID",100200,,,,,0,state_has_existing_vp
@@ -441,8 +654,11 @@ Naples,FL,"Naples, FL",19115,,,,,0,state_has_existing_vp
 Nashua,NH,"Nashua, NH",91322,,,,,0,state_has_existing_vp
 Nashville,TN,"Nashville, TN",689447,,,,,0,state_has_existing_vp
 Nassau,BS,Nassau,274400,,,,,0,state_has_existing_vp
+Naval Submarine Base Bangor,WA,"Naval Submarine Base Bangor, WA",1800,,,,,0,state_has_existing_vp
 Needles,CA,"Needles, CA",4900,,,,,0,state_has_existing_vp
+Nellis AFB,NV,"Nellis AFB, NV",1500,,,,,0,state_has_existing_vp
 New Bedford,MA,"New Bedford, MA",101079,,,,,0,state_has_existing_vp
+New Hanover,NC,"New Hanover, NC",192368,,,,,0,state_has_existing_vp
 New Haven,CT,"New Haven, CT",134023,,,,,0,state_has_existing_vp
 New London,CT,"New London, CT",27367,,,,,0,state_has_existing_vp
 New Orleans,LA,"New Orleans, LA",383997,,,,,0,state_has_existing_vp
@@ -452,11 +668,13 @@ Newark,NJ,"Newark, NJ",311549,,,,,0,state_has_existing_vp
 Newport News,VA,"Newport News, VA",186247,,,,,0,state_has_existing_vp
 Newport,RI,"Newport, RI",25163,,,,,0,state_has_existing_vp
 Niagara Falls,NY,"Niagara Falls, NY",48671,,,,,0,state_has_existing_vp
+Nogales,SO,"Nogales, SO",140400,,,,,0,state_has_existing_vp
 Norfolk,NE,"Norfolk, NE",24893,,,,,0,state_has_existing_vp
 Norfolk,VA,"Norfolk, VA",244703,,,,,0,state_has_existing_vp
 Norman,OK,"Norman, OK",128026,,,,,0,state_has_existing_vp
 North Charleston,SC,"North Charleston, SC",114852,,,,,0,state_has_existing_vp
 North Las Vegas,NV,"North Las Vegas, NV",262527,,,,,0,state_has_existing_vp
+North Metro Atlanta,GA,"North Metro Atlanta, GA",720000,,,,,0,state_has_existing_vp
 North Platte,NE,"North Platte, NE",22905,,,,,0,state_has_existing_vp
 Norwalk,CT,"Norwalk, CT",91184,,,,,0,state_has_existing_vp
 Nuevo Laredo,TM,"Nuevo Laredo, TM",425058,,,,,0,state_has_existing_vp
@@ -464,18 +682,24 @@ Oakland,CA,"Oakland, CA",440646,,,,,0,state_has_existing_vp
 Ocala,FL,"Ocala, FL",63591,,,,,0,state_has_existing_vp
 Ocean City,MD,"Ocean City, MD",6844,,,,,0,state_has_existing_vp
 Odessa,TX,"Odessa, TX",114428,,,,,0,state_has_existing_vp
+Ogallala,NE,"Ogallala, NE",5671,,,,,0,state_has_existing_vp
 Ogden,UT,"Ogden, UT",87321,,,,,0,state_has_existing_vp
 Oildale,CA,"Oildale, CA",35000,,,,,0,state_has_existing_vp
 Oklahoma City,OK,"Oklahoma City, OK",681054,,,,,0,state_has_existing_vp
 Olathe,KS,"Olathe, KS",141290,,,,,0,state_has_existing_vp
 Olympia,WA,"Olympia, WA",55605,,,,,0,state_has_existing_vp
 Omaha,NE,"Omaha, NE",486051,,,,,0,state_has_existing_vp
+Onondaga,NY,"Onondaga, NY",518400,,,,,0,state_has_existing_vp
+Onslow,NC,"Onslow, NC",180000,,,,,0,state_has_existing_vp
 Ontario,CA,"Ontario, CA",175265,,,,,0,state_has_existing_vp
+Orange,NY,"Orange, NY",409640,,,,,0,state_has_existing_vp
 Orem,UT,"Orem, UT",98129,,,,,0,state_has_existing_vp
 Orlando,FL,"Orlando, FL",307573,,,,,0,state_has_existing_vp
 Oshkosh,WI,"Oshkosh, WI",66816,,,,,0,state_has_existing_vp
 Ottawa,ON,"Ottawa, ON",1017449,,,,,0,state_has_existing_vp
+Ottumwa,IA,"Ottumwa, IA",34474,,,,,0,state_has_existing_vp
 Overland Park,KS,"Overland Park, KS",197238,,,,,0,state_has_existing_vp
+Owens Island,KY,Owens Island,5000,,,,,0,state_has_existing_vp
 Owensboro,KY,Owensboro,60183,,,,,0,state_has_existing_vp
 Oxnard,CA,"Oxnard, CA",202079,,,,,0,state_has_existing_vp
 Paducah,KY,Paducah,27137,,,,,0,state_has_existing_vp
@@ -495,6 +719,7 @@ Pensacola,FL,"Pensacola, FL",54312,,,,,0,state_has_existing_vp
 Peoria,IL,"Peoria, IL",113150,,,,,0,state_has_existing_vp
 Petaluma,CA,"Petaluma, CA",59776,,,,,0,state_has_existing_vp
 Philadelphia,PA,"Philadelphia, PA",1567258,,,,,0,state_has_existing_vp
+Phillips,AR,"Phillips, AR",31734,,,,,0,state_has_existing_vp
 Phoenix,AZ,"Phoenix, AZ",1608139,,,,,0,state_has_existing_vp
 Pierre,SD,"Pierre, SD",14091,,,,,0,state_has_existing_vp
 Pikeville,KY,Pikeville,7754,,,,,0,state_has_existing_vp
@@ -522,6 +747,7 @@ Prince George,BC,"Prince George, BC",76708,,,,,0,state_has_existing_vp
 Providence,RI,"Providence, RI",190934,,,,,0,state_has_existing_vp
 Provo,UT,"Provo, UT",115162,,,,,0,state_has_existing_vp
 Pueblo,CO,"Pueblo, CO",111876,,,,,0,state_has_existing_vp
+Puerto Vallarta,JA,"Puerto Vallarta, JA",171600,,,,,0,state_has_existing_vp
 Quebec City,QC,"Quebec City, QC",549459,,,,,0,state_has_existing_vp
 Queens,NY,"Queens, NY",2405464,,,,,0,state_has_existing_vp
 Queretaro,QT,"Queretaro, QT",1035362,,,,,0,state_has_existing_vp
@@ -529,6 +755,7 @@ Quincy,IL,"Quincy, IL",39463,,,,,0,state_has_existing_vp
 Quincy,MA,"Quincy, MA",101636,,,,,0,state_has_existing_vp
 Racine,WI,"Racine, WI",77816,,,,,0,state_has_existing_vp
 Raleigh,NC,"Raleigh, NC",467665,,,,,0,state_has_existing_vp
+Randell,UT,"Randell, UT",8000,,,,,0,state_has_existing_vp
 Rapid City,SD,"Rapid City, SD",74703,,,,,0,state_has_existing_vp
 Reading,PA,"Reading, PA",95043,,,,,0,state_has_existing_vp
 Red Deer,AB,"Red Deer, AB",100418,,,,,0,state_has_existing_vp
@@ -539,7 +766,6 @@ Reynosa,TM,"Reynosa, TM",704767,,,,,0,state_has_existing_vp
 Richmond,VA,"Richmond, VA",226610,,,,,0,state_has_existing_vp
 Rio Rancho,NM,"Rio Rancho, NM",104046,,,,,0,state_has_existing_vp
 Riverside,CA,"Riverside, CA",314998,,,,,0,state_has_existing_vp
-Riverton,WY,"Riverton, WY",11129,,,,,0,state_has_existing_vp
 Road Town,VG,Road Town,9400,,,,,0,state_has_existing_vp
 Roanoke,VA,"Roanoke, VA",100011,,,,,0,state_has_existing_vp
 Rochester,MN,"Rochester, MN",121395,,,,,0,state_has_existing_vp
@@ -557,6 +783,9 @@ Sacramento,CA,"Sacramento, CA",524943,,,,,0,state_has_existing_vp
 Saddlebrooke,AZ,"Saddlebrooke, AZ",9000,,,,,0,state_has_existing_vp
 Saginaw,MI,"Saginaw, MI",44202,,,,,0,state_has_existing_vp
 Saguenay,QC,"Saguenay, QC",144723,,,,,0,state_has_existing_vp
+Saint Anne,IL,"Saint Anne, IL",6600,,,,,0,state_has_existing_vp
+Saint Francis,KS,"Saint Francis, KS",1532,,,,,0,state_has_existing_vp
+Saint Francis,ME,"Saint Francis, ME",600,,,,,0,state_has_existing_vp
 Salem,OR,"Salem, OR",175535,,,,,0,state_has_existing_vp
 Salina,KS,"Salina, KS",46550,,,,,0,state_has_existing_vp
 Salinas,CA,"Salinas, CA",163542,,,,,0,state_has_existing_vp
@@ -564,6 +793,7 @@ Salisbury,MD,"Salisbury, MD",33050,,,,,0,state_has_existing_vp
 Salome,AZ,"Salome, AZ",1500,,,,,0,state_has_existing_vp
 Salt Lake City,UT,"Salt Lake City, UT",199723,,,,,0,state_has_existing_vp
 Saltillo,CO,"Saltillo, CO",823128,,,,,0,state_has_existing_vp
+Saluda,NC,"Saluda, NC",840,,,,,0,state_has_existing_vp
 San Angelo,TX,"San Angelo, TX",99893,,,,,0,state_has_existing_vp
 San Antonio,TX,"San Antonio, TX",1434625,,,,,0,state_has_existing_vp
 San Bernardino,CA,"San Bernardino, CA",222101,,,,,0,state_has_existing_vp
@@ -593,6 +823,7 @@ Schenectady,NY,"Schenectady, NY",67047,,,,,0,state_has_existing_vp
 Scottsbluff,NE,"Scottsbluff, NE",14745,,,,,0,state_has_existing_vp
 Scranton,PA,"Scranton, PA",76328,,,,,0,state_has_existing_vp
 Seattle,WA,"Seattle, WA",737015,,,,,0,state_has_existing_vp
+Shannon,MO,"Shannon, MO",9988,,,,,0,state_has_existing_vp
 Sherbrooke,QC,"Sherbrooke, QC",172950,,,,,0,state_has_existing_vp
 Sheridan,WY,"Sheridan, WY",18737,,,,,0,state_has_existing_vp
 Sherman,TX,"Sherman, TX",43645,,,,,0,state_has_existing_vp
@@ -605,6 +836,7 @@ Sioux City,IA,"Sioux City, IA",85797,,,,,0,state_has_existing_vp
 Sioux Falls,SD,"Sioux Falls, SD",192517,,,,,0,state_has_existing_vp
 Soledad,CA,"Soledad, CA",26000,,,,,0,state_has_existing_vp
 South Bend,IN,"South Bend, IN",103453,,,,,0,state_has_existing_vp
+South Puget Sound,WA,"South Puget Sound, WA",120000,,,,,0,state_has_existing_vp
 Sparks,NV,"Sparks, NV",108445,,,,,0,state_has_existing_vp
 Spartanburg,SC,"Spartanburg, SC",38732,,,,,0,state_has_existing_vp
 Spearfish,SD,"Spearfish, SD",12193,,,,,0,state_has_existing_vp
@@ -617,13 +849,14 @@ Springfield,OH,"Springfield, OH",58662,,,,,0,state_has_existing_vp
 St. Cloud,MN,"St. Cloud, MN",68881,,,,,0,state_has_existing_vp
 St. George,UT,"St. George, UT",95342,,,,,0,state_has_existing_vp
 St. John's,NL,"St. John's, NL",110525,,,,,0,state_has_existing_vp
+St. John,NB,"St. John, NB",82022,,,,,0,state_has_existing_vp
 St. Johnsbury,VT,"St. Johnsbury, VT",7300,,,,,0,state_has_existing_vp
+St. Joseph Island,ON,"St. Joseph Island, ON",4302,,,,,0,state_has_existing_vp
 St. Joseph,MO,"St. Joseph, MO",72473,,,,,0,state_has_existing_vp
 St. Louis,MO,"St. Louis, MO",301578,,,,,0,state_has_existing_vp
 St. Paul,MN,"St. Paul, MN",311527,,,,,0,state_has_existing_vp
 St. Petersburg,FL,"St. Petersburg, FL",258308,,,,,0,state_has_existing_vp
 Stamford,CT,"Stamford, CT",135470,,,,,0,state_has_existing_vp
-State College,PA,"State College, PA",40501,,,,,0,state_has_existing_vp
 Staten Island,NY,"Staten Island, NY",495747,,,,,0,state_has_existing_vp
 Sterling Heights,MI,"Sterling Heights, MI",134346,,,,,0,state_has_existing_vp
 Sterling,CO,"Sterling, CO",14777,,,,,0,state_has_existing_vp
@@ -631,20 +864,22 @@ Stillwater,OK,"Stillwater, OK",50299,,,,,0,state_has_existing_vp
 Stockton,CA,"Stockton, CA",320804,,,,,0,state_has_existing_vp
 Sudbury,ON,"Sudbury, ON",166004,,,,,0,state_has_existing_vp
 Superior,WI,"Superior, WI",26751,,,,,0,state_has_existing_vp
+Superior,WY,"Superior, WY",1200,,,,,0,state_has_existing_vp
 Surrey,BC,"Surrey, BC",568322,,,,,0,state_has_existing_vp
 Sydney,NS,"Sydney, NS",29904,,,,,0,state_has_existing_vp
 Syracuse,NY,"Syracuse, NY",148620,,,,,0,state_has_existing_vp
 Tacoma,WA,"Tacoma, WA",219346,,,,,0,state_has_existing_vp
 Tallahassee,FL,"Tallahassee, FL",196169,,,,,0,state_has_existing_vp
 Tampa,FL,"Tampa, FL",384959,,,,,0,state_has_existing_vp
+Tecuala,NA,"Tecuala, NA",30000,,,,,0,state_has_existing_vp
 Temple,TX,"Temple, TX",82073,,,,,0,state_has_existing_vp
 Tepic,NA,"Tepic, NA",332863,,,,,0,state_has_existing_vp
 Terre Haute,IN,"Terre Haute, IN",58389,,,,,0,state_has_existing_vp
 Texarkana,AR,"Texarkana, AR",29387,,,,,0,state_has_existing_vp
-Texarkana,TX,"Texarkana, TX",36193,,,,,0,state_has_existing_vp
 Thornton,CO,"Thornton, CO",141867,,,,,0,state_has_existing_vp
 Thunder Bay,ON,"Thunder Bay, ON",108843,,,,,0,state_has_existing_vp
 Tijuana,BC,"Tijuana, BC",1810645,,,,,0,state_has_existing_vp
+Tiptonville,KY,Tiptonville,15000,,,,,0,state_has_existing_vp
 Toledo,OH,"Toledo, OH",270871,,,,,0,state_has_existing_vp
 Topeka,KS,"Topeka, KS",126587,,,,,0,state_has_existing_vp
 Toronto,ON,"Toronto, ON",2794356,,,,,0,state_has_existing_vp
@@ -660,12 +895,14 @@ Tusayan,AZ,"Tusayan, AZ",600,,,,,0,state_has_existing_vp
 Tuscaloosa,AL,"Tuscaloosa, AL",100618,,,,,0,state_has_existing_vp
 Twentynine Palms,CA,"Twentynine Palms, CA",28000,,,,,0,state_has_existing_vp
 Twin Falls,ID,"Twin Falls, ID",51807,,,,,0,state_has_existing_vp
+Twin Islands,NU,"Twin Islands, NU",5000,,,,,0,state_has_existing_vp
 Tyler,TX,"Tyler, TX",105995,,,,,0,state_has_existing_vp
 Ukiah,CA,"Ukiah, CA",16007,,,,,0,state_has_existing_vp
 Utica,NY,"Utica, NY",65283,,,,,0,state_has_existing_vp
 Valdosta,GA,"Valdosta, GA",56457,,,,,0,state_has_existing_vp
 Vancouver,BC,"Vancouver, BC",662248,,,,,0,state_has_existing_vp
 Vancouver,WA,"Vancouver, WA",190915,,,,,0,state_has_existing_vp
+Vaudreuil-Soulanges,QC,"Vaudreuil-Soulanges, QC",180000,,,,,0,state_has_existing_vp
 Veracruz,VE,"Veracruz, VE",607209,,,,,0,state_has_existing_vp
 Vernal,UT,"Vernal, UT",10370,,,,,0,state_has_existing_vp
 Vicksburg,MS,"Vicksburg, MS",21573,,,,,0,state_has_existing_vp
@@ -689,6 +926,7 @@ Wellton,AZ,"Wellton, AZ",3000,,,,,0,state_has_existing_vp
 Wenatchee,WA,"Wenatchee, WA",35508,,,,,0,state_has_existing_vp
 West Palm Beach,FL,"West Palm Beach, FL",117415,,,,,0,state_has_existing_vp
 West Valley City,UT,"West Valley City, UT",140230,,,,,0,state_has_existing_vp
+Western Okanogan Highlands,WA,"Western Okanogan Highlands, WA",42000,,,,,0,state_has_existing_vp
 Wheeling,WV,"Wheeling, WV",27062,,,,,0,state_has_existing_vp
 Why,AZ,"Why, AZ",100,,,,,0,state_has_existing_vp
 Wichita Falls,TX,"Wichita Falls, TX",102316,,,,,0,state_has_existing_vp
@@ -709,9 +947,15 @@ Winston-Salem,NC,"Winston-Salem, NC",249545,,,,,0,state_has_existing_vp
 Worcester,MA,"Worcester, MA",206518,,,,,0,state_has_existing_vp
 Yakima,WA,"Yakima, WA",96968,,,,,0,state_has_existing_vp
 Yellowknife,NT,"Yellowknife, NT",20340,,,,,0,state_has_existing_vp
+Yellowstone,WY,"Yellowstone, WY",1800,,,,,0,state_has_existing_vp
 Yonkers,NY,"Yonkers, NY",211569,,,,,0,state_has_existing_vp
 York,PA,"York, PA",44800,,,,,0,state_has_existing_vp
 Youngstown,OH,"Youngstown, OH",60068,,,,,0,state_has_existing_vp
 Yreka,CA,"Yreka, CA",7700,,,,,0,state_has_existing_vp
 Yuma,AZ,"Yuma, AZ",95548,,,,,0,state_has_existing_vp
 Zapopan,JA,"Zapopan, JA",1476491,,,,,0,state_has_existing_vp
+ile Bizardl,QC,"ile Bizardl, QC",48000,,,,,0,state_has_existing_vp
+ile Dondaine,QC,"ile Dondaine, QC",12000,,,,,0,state_has_existing_vp
+ile Jesus,QC,"ile Jesus, QC",720000,,,,,0,state_has_existing_vp
+ile Marie,QC,"ile Marie, QC",12000,,,,,0,state_has_existing_vp
+ile Perrot,QC,"ile Perrot, QC",40800,,,,,0,state_has_existing_vp
