@@ -24,6 +24,7 @@ LOTD_setup_cultures = {
 	set_variable = { 232.nationality = 82 }
 	set_variable = { 236.nationality = 82 }
 	set_variable = { 242.nationality = 82 }
+	set_variable = { 261.nationality = 82 }
 	set_variable = { 244.nationality = 82 }
 	set_variable = { 248.nationality = 82 }
 	set_variable = { 250.nationality = 82 }
@@ -170,6 +171,7 @@ LOTD_setup_cultures = {
 	set_variable = { 455.nationality = 85 }
 	set_variable = { 607.nationality = 85 }
 	set_variable = { 620.nationality = 85 }
+	set_variable = { 255.nationality = 85 }
 
 	# Texan (86)
 	set_variable = { 173.nationality = 86 }
@@ -208,6 +210,10 @@ LOTD_setup_cultures = {
 	set_variable = { 681.nationality = 86 }
 
 	# Frontier (87)
+	set_variable = { 364.nationality = 87 }
+	set_variable = { 125.nationality = 87 }
+	set_variable = { 119.nationality = 87 }
+	set_variable = { 123.nationality = 87 }
 	set_variable = { 36.nationality = 87 }
 	set_variable = { 135.nationality = 87 }
 	set_variable = { 136.nationality = 87 }
@@ -249,7 +255,6 @@ LOTD_setup_cultures = {
 	set_variable = { 373.nationality = 87 }
 	set_variable = { 375.nationality = 87 }
 	set_variable = { 380.nationality = 87 }
-	set_variable = { 448.nationality = 87 }
 	set_variable = { 458.nationality = 87 }
 	set_variable = { 616.nationality = 87 }
 	set_variable = { 656.nationality = 87 }
@@ -297,17 +302,17 @@ LOTD_setup_cultures = {
 	set_variable = { 707.nationality = 90 }
 	set_variable = { 721.nationality = 90 }
 	set_variable = { 728.nationality = 90 }
-	set_variable = { 742.nationality = 90 }
 	set_variable = { 752.nationality = 90 }
 
 	# Ontarian (92)
 	set_variable = { 69.nationality = 92 }
+	set_variable = { 53.nationality = 92 }
 	set_variable = { 246.nationality = 92 }
 	set_variable = { 252.nationality = 92 }
 	set_variable = { 257.nationality = 92 }
-	set_variable = { 262.nationality = 92 }
 
 	# Quebecois (93)
+	set_variable = { 45.nationality = 93 }
 	set_variable = { 9.nationality = 93 }
 	set_variable = { 92.nationality = 93 }
 	set_variable = { 107.nationality = 93 }
@@ -401,6 +406,7 @@ LOTD_setup_cultures = {
 	set_variable = { 723.nationality = 102 }
 	set_variable = { 724.nationality = 102 }
 	set_variable = { 727.nationality = 102 }
+	set_variable = { 742.nationality = 102 }
 	set_variable = { 730.nationality = 102 }
 	set_variable = { 733.nationality = 102 }
 	set_variable = { 737.nationality = 102 }
@@ -521,6 +527,7 @@ LOTD_setup_cultures = {
 
 	# Newfoundlander (367)
 	set_variable = { 10.nationality = 367 }
+	set_variable = { 30.nationality = 367 }
 	set_variable = { 42.nationality = 367 }
 
 	# New York (558)
@@ -627,7 +634,6 @@ LOTD_setup_cultures = {
 	set_variable = { 58.nationality = 565 }
 	set_variable = { 73.nationality = 565 }
 	set_variable = { 121.nationality = 565 }
-	set_variable = { 255.nationality = 565 }
 	set_variable = { 415.nationality = 565 }
 	set_variable = { 416.nationality = 565 }
 	set_variable = { 417.nationality = 565 }
@@ -673,7 +679,6 @@ LOTD_setup_cultures = {
 	set_variable = { 516.nationality = 566 }
 
 	# Tidewater (567)
-	set_variable = { 53.nationality = 567 }
 	set_variable = { 423.nationality = 567 }
 	set_variable = { 424.nationality = 567 }
 	set_variable = { 435.nationality = 567 }
@@ -691,7 +696,6 @@ LOTD_setup_cultures = {
 	set_variable = { 514.nationality = 567 }
 
 	# Floridian (568)
-	set_variable = { 261.nationality = 568 }
 	set_variable = { 586.nationality = 568 }
 	set_variable = { 591.nationality = 568 }
 	set_variable = { 593.nationality = 568 }
@@ -720,7 +724,6 @@ LOTD_setup_cultures = {
 	set_variable = { 624.nationality = 569 }
 
 	# Oklahoman (570)
-	set_variable = { 45.nationality = 570 }
 	set_variable = { 48.nationality = 570 }
 	set_variable = { 490.nationality = 570 }
 	set_variable = { 493.nationality = 570 }
@@ -773,7 +776,7 @@ LOTD_setup_cultures = {
 	set_variable = { 720.nationality = 571 }
 
 	# Mormon (573)
-	set_variable = { 125.nationality = 573 }
+	set_variable = { 448.nationality = 573 }
 	set_variable = { 146.nationality = 573 }
 	set_variable = { 147.nationality = 573 }
 	set_variable = { 149.nationality = 573 }
@@ -782,12 +785,12 @@ LOTD_setup_cultures = {
 	set_variable = { 178.nationality = 573 }
 	set_variable = { 352.nationality = 573 }
 	set_variable = { 362.nationality = 573 }
-	set_variable = { 364.nationality = 573 }
 	set_variable = { 408.nationality = 573 }
 	set_variable = { 442.nationality = 573 }
 	set_variable = { 468.nationality = 573 }
 
 	# Pacific Northwestern (574)
+	set_variable = { 262.nationality = 574 }
 	set_variable = { 137.nationality = 574 }
 	set_variable = { 140.nationality = 574 }
 	set_variable = { 142.nationality = 574 }
@@ -828,10 +831,10 @@ LOTD_setup_cultures = {
 	set_variable = { 639.nationality = 698 }
 
 	# Norteno Mexican (Coahuila) (699)
-	set_variable = { 123.nationality = 699 }
 	set_variable = { 615.nationality = 699 }
 
 	# Norteno Mexican (Nuevo Leon/Tamaulipas) (700)
+	set_variable = { 657.nationality = 700 }
 	set_variable = { 635.nationality = 700 }
 	set_variable = { 637.nationality = 700 }
 	set_variable = { 653.nationality = 700 }
@@ -843,7 +846,6 @@ LOTD_setup_cultures = {
 	set_variable = { 668.nationality = 701 }
 
 	# Norteno Mexican (Durango/Zacatecas/Aguascalientes) (702)
-	set_variable = { 119.nationality = 702 }
 	set_variable = { 642.nationality = 702 }
 	set_variable = { 670.nationality = 702 }
 	set_variable = { 671.nationality = 702 }
@@ -875,9 +877,6 @@ LOTD_setup_cultures = {
 	# Occidental Mexican (Michoacan/Guanajuato/Queretaro) (709)
 	set_variable = { 759.nationality = 709 }
 	set_variable = { 766.nationality = 709 }
-
-	# Altiplano Mexican (Morelos) (715)
-	set_variable = { 657.nationality = 715 }
 
 	# Altiplano Mexican (Federal District) (716)
 	set_variable = { 771.nationality = 716 }

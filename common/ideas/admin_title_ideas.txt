@@ -663,5 +663,11 @@ ideas = {
 				set_temp_variable = { i = token:Assoc_Region_Yucatan }
 			}
 		}
+		Assoc_Region_Tamaulipas = {
+			on_add = {
+				remove_ideas = Assoc_Region_Tamaulipas
+				set_temp_variable = { i = token:Assoc_Region_Tamaulipas }
+			}
+		}
 	}
 }

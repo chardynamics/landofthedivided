@@ -194,7 +194,6 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
-				state = 123
 				state = 615
 			}
 		}
@@ -221,6 +220,8 @@ TNO_admin_title_LOTD = {
 				state = 471
 				state = 536
 				state = 632
+				state = 119
+				state = 123
 			}
 		}
 		set_variable = { AssocRegion = token:Assoc_Region_Colorado }
@@ -264,7 +265,6 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
-				state = 119
 				state = 642
 				state = 670
 				state = 671
@@ -294,7 +294,6 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
-				state = 261
 				state = 586
 				state = 591
 				state = 593
@@ -441,7 +440,6 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
-				state = 716
 				state = 725
 				state = 739
 				state = 755
@@ -532,6 +530,7 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
+				state = 182
 				state = 168
 				state = 174
 				state = 188
@@ -559,7 +558,6 @@ TNO_admin_title_LOTD = {
 				state = 100
 				state = 155
 				state = 159
-				state = 167
 			}
 		}
 		set_variable = { AssocRegion = token:Assoc_Region_Manitoba }
@@ -737,20 +735,11 @@ TNO_admin_title_LOTD = {
 		set_variable = { AssocRegion = token:Assoc_Region_Montana }
 	}
 
-	# Morelos
-	every_state = {
-		limit = {
-			OR = {
-				state = 657
-			}
-		}
-		set_variable = { AssocRegion = token:Assoc_Region_Morelos }
-	}
-
 	# Nayarit
 	every_state = {
 		limit = {
 			OR = {
+				state = 716
 				state = 706
 				state = 753
 				state = 763
@@ -774,7 +763,6 @@ TNO_admin_title_LOTD = {
 				state = 413
 				state = 430
 				state = 618
-				state = 683
 			}
 		}
 		set_variable = { AssocRegion = token:Assoc_Region_Nebraska }
@@ -867,6 +855,7 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
+				state = 261
 				state = 210
 				state = 213
 				state = 242
@@ -909,6 +898,7 @@ TNO_admin_title_LOTD = {
 		limit = {
 			OR = {
 				state = 10
+				state = 30
 				state = 42
 			}
 		}
@@ -919,8 +909,6 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
-				state = 53
-				state = 182
 				state = 467
 				state = 472
 				state = 473
@@ -979,9 +967,23 @@ TNO_admin_title_LOTD = {
 				state = 637
 				state = 653
 				state = 688
+				state = 657
 			}
 		}
 		set_variable = { AssocRegion = token:Assoc_Region_Nuevo_Leon }
+	}
+
+	# Tamaulipas
+	every_state = {
+		limit = {
+			OR = {
+				state = 637
+				state = 653
+				state = 688
+				state = 683
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Tamaulipas }
 	}
 
 	# Nunavut
@@ -1002,6 +1004,7 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
+				state = 255
 				state = 247
 				state = 264
 				state = 266
@@ -1023,7 +1026,6 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
-				state = 45
 				state = 48
 				state = 490
 				state = 493
@@ -1042,6 +1044,7 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
+				state = 53
 				state = 69
 				state = 246
 				state = 252
@@ -1125,6 +1128,7 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
+				state = 45
 				state = 9
 				state = 92
 				state = 107
@@ -1158,7 +1162,6 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
-				state = 30
 				state = 114
 				state = 118
 			}
@@ -1186,6 +1189,7 @@ TNO_admin_title_LOTD = {
 				state = 63
 				state = 94
 				state = 95
+				state = 167
 			}
 		}
 		set_variable = { AssocRegion = token:Assoc_Region_Saskatchewan }
@@ -1428,7 +1432,6 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
-				state = 255
 				state = 415
 				state = 416
 				state = 417

@@ -211,6 +211,22 @@ defined_text = {
 	name = AdminTitle_Get_AdminTitle_EndoExo
 	## Categorized into Default, Endonym, and Exonym interactions
 
+	text = {
+		trigger = {
+			is_in_array = { global.has_spanish_default = AdminTitle }
+			controller = { is_in_array = { global.spanish_names = THIS } }
+			NOT = { has_global_flag = TNO_exonym_mode }
+		}
+		localization_key = "_spa"
+	}
+	text = {
+		trigger = {
+			is_in_array = { global.has_french_default = AdminTitle }
+			controller = { is_in_array = { global.french_names = THIS } }
+			NOT = { has_global_flag = TNO_exonym_mode }
+		}
+		localization_key = "_fra"
+	}
 	### Default ###
 	text = {
 		localization_key = ""

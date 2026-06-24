@@ -3,18 +3,18 @@ TNO_active_exonyms = { #to pure english
 	every_state = { #non-static exo states go here
 		reset_state_name = yes
 	}
-	for_loop_effect = {
-		start = 1
-		end = 1001
-		value = prv_idx
-
-		meta_effect = {
-			text = {
-				reset_province_name = [endo_prov_id]
-			}
-			endo_prov_id = "[?prv_idx]"
-		}
-	}
+	#for_loop_effect = {
+	#	start = 1
+	#	end = 1001
+	#	value = prv_idx
+	#
+	#		meta_effect = {
+	#			text = {
+	#				reset_province_name = [endo_prov_id]
+	#			}
+	#			endo_prov_id = "[?prv_idx]"
+	#	}
+	#	}
 }
 TNO_misc_endonyms = {
 	if = {
@@ -36,31 +36,8 @@ TNO_universal_renamings = { #any non endo-exo renamings that can occur ex. Saigo
 }
 
 TNO_active_endonyms = {
-	########  ######## ####  ######  ##     ##
-	##     ## ##        ##  ##    ## ##     ##
-	##     ## ##        ##  ##       ##     ##
-	########  ######    ##  ##       #########
-	##   ##   ##        ##  ##       ##     ##
-	##    ##  ##        ##  ##    ## ##     ##
-	##     ## ######## ####  ######  ##     ##
-	   ###    ##    ## ########     ########  ########  #### ########    ###    #### ##    ##
-	  ## ##   ###   ## ##     ##    ##     ## ##     ##  ##     ##      ## ##    ##  ###   ##
-	 ##   ##  ####  ## ##     ##    ##     ## ##     ##  ##     ##     ##   ##   ##  ####  ##
-	##     ## ## ## ## ##     ##    ########  ########   ##     ##    ##     ##  ##  ## ## ##
-	######### ##  #### ##     ##    ##     ## ##   ##    ##     ##    #########  ##  ##  ####
-	##     ## ##   ### ##     ##    ##     ## ##    ##   ##     ##    ##     ##  ##  ##   ###
-	##     ## ##    ## ########     ########  ##     ## ####    ##    ##     ## #### ##    ##
-
-	#tags are listed alphabetically after being first sorted under region for easy reference. states go under tags based on controller at tno1 gamestart
-
-	#BUL
-	48 = {
-		if = {
-			limit = { has_global_flag = TNO_endonym_mode }
-			set_state_name = STATE_48_bul
-			set_province_name = { id = 949 name = VICTORY_POINTS_949_bul }
-		}
-	}
+	#MEX
+	
 }
 
 # Runs the state control effect on all valid states owned by a tag
@@ -95,10 +72,14 @@ TNO_force_update_renamings_single_state = {
 }
 
 TNO_endo_exo_language_arrays = {
-	#Based on gamestart
+	#Spanish Endo/Exo
+	add_to_array = { global.spanish_names = CUB }	
+	add_to_array = { global.spanish_names = DOM }
+	add_to_array = { global.spanish_names = MEX }
 
-	#Italian Endo/Exo
-	#add_to_array = { global.italian_names = AAI }
+	#French Endo/Exo
+	add_to_array = { global.french_names = FRA }
+	add_to_array = { global.french_names = HAI }
 }
 
 TNO_endo_exo_add_french_names = {
@@ -108,35 +89,5 @@ TNO_endo_exo_add_french_names = {
 
 TNO_endo_exo_remove_french_names = {
 	remove_from_array = { global.french_names = THIS }
-	TNO_force_update_renamings = yes
-}
-
-TNO_endo_exo_add_german_names = {
-	add_to_array = { global.german_names = THIS }
-	TNO_force_update_renamings = yes
-}
-
-TNO_endo_exo_remove_german_names = {
-	remove_from_array = { global.german_names = THIS }
-	TNO_force_update_renamings = yes
-}
-
-TNO_endo_exo_add_italian_names = {
-	add_to_array = { global.italian_names = THIS }
-	TNO_force_update_renamings = yes
-}
-
-TNO_endo_exo_remove_italian_names = {
-	remove_from_array = { global.italian_names = THIS }
-	TNO_force_update_renamings = yes
-}
-
-TNO_endo_exo_add_portuguese_names = {
-	add_to_array = { global.portuguese_names = THIS }
-	TNO_force_update_renamings = yes
-}
-
-TNO_endo_exo_remove_portuguese_names = {
-	remove_from_array = { global.portuguese_names = THIS }
 	TNO_force_update_renamings = yes
 }
