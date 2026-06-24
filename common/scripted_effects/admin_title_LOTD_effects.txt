@@ -1,0 +1,97 @@
+TNO_admin_title_LOTD = { 
+	#Sorted by country alphabetically and Admin Titles are set in this order:
+	##Admin Titles
+	##Assoc Regions
+	##Sub-Admin Titles
+	##Subdivisions
+
+	every_state = {
+		limit = {
+			OR = {
+				state = 154
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Michigan }
+	}
+
+	CUB = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 698
+					state = 731
+					state = 693
+					state = 694
+					state = 691
+					state = 685
+					state = 699
+					state = 686
+					state = 696
+					state = 700
+					state = 702
+					state = 708
+					state = 736
+					state = 711
+					state = 96
+					state = 722
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Province }
+		}
+	}
+	CUB = {
+		every_owned_state = {
+			limit = {
+				check_variable = { SubAdminTitle = token:Admin_Title_Province }	
+			}
+			if = {
+				limit = {
+					OR = {
+						state = 700
+						state = 702
+					}
+				}
+				set_variable = { SubDivisions = 2 }
+			}
+		}
+	}
+	#CUB = {
+	#	every_owned_state = {
+	#		limit = {
+	#			NOT = {
+	#				check_variable = { AdminTitle = token:Admin_Title_Province }
+	#			}
+	#		}
+	#		set_variable = { SubAdminTitle = token:Admin_Title_Province }
+	#	}
+	#	every_owned_state = {
+	#		limit = {
+	#			check_variable = { AdminTitle = token:Admin_Title_Province }
+	#		}
+	#		set_variable = { SubAdminTitle = token:Admin_Title_Region }
+	#	}
+	#}
+	every_state = {
+		limit = {
+			OR = {
+				state = 698
+				state = 731
+				state = 693
+				state = 694
+				state = 691
+				state = 685
+				state = 699
+				state = 686
+				state = 696
+				state = 700
+				state = 702
+				state = 708
+				state = 736
+				state = 711
+				state = 96
+				state = 722
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Greater_Antilles }
+	}
+}

@@ -1,0 +1,231 @@
+TNO_admin_titles = {
+	TNO_admin_title_initialization = yes
+	TNO_admin_title_LOTD = yes
+	TNO_admin_title_descs = yes
+
+	set_variable = { global.TNO_admin_title_map_mode_config = 1 }
+	
+	every_country = {
+		capital_scope = {
+			if = {
+				limit = {
+					OR = {
+						has_variable = AdminTitle
+						has_variable = AssocRegion
+						has_variable = SubAdminTitle 
+					}
+				}
+				PREV = { set_variable = { TNO_admin_title_map_mode_selected_state = capital } }
+			}
+			else = {
+				set_variable = { PREV.TNO_admin_title_map_mode_selected_state = 1 }
+			}
+		}
+		force_update_map_mode = { mapmode = tno_admin_title_map_mode }
+	}
+}
+
+TNO_admin_title_initialization = {
+	#Admin Titles
+	add_ideas = Admin_Title_State
+	add_ideas = Admin_Title_Province
+	add_ideas = Admin_Title_Federal_District
+	add_ideas = Admin_Title_Municipality
+	add_ideas = Admin_Title_City
+	add_ideas = Admin_Title_Division
+	add_ideas = Admin_Title_Department
+	add_ideas = Admin_Title_Territory
+	add_ideas = Admin_Title_Metropolis
+	add_ideas = Admin_Title_Governorate
+	add_ideas = Admin_Title_Overseas_Territory
+	add_ideas = Admin_Title_Region
+	add_ideas = Admin_Title_Special_District
+	add_ideas = Admin_Title_Military_Territory
+	add_ideas = Admin_Title_Civil_Administration
+	add_ideas = Admin_Title_Port
+	add_ideas = Admin_Title_District
+
+	#Assoc Regions
+	add_ideas = Assoc_Region_British_West_Indies
+	add_ideas = Assoc_Region_Cibao
+	add_ideas = Assoc_Region_East
+	add_ideas = Assoc_Region_South
+	add_ideas = Assoc_Region_Lesser_Antilles
+	add_ideas = Assoc_Region_Greater_Antilles
+	add_ideas = Assoc_Region_Michigan
+}
+
+TNO_admin_title_descs = {
+	# Admin Titles
+	#1993 = { set_variable = { description@var:AdminTitle = token:Admin_Title_Special_Zone_Desc } }
+
+	# Assoc Regions
+	#every_state = {
+	#	limit = { check_variable = { AssocRegion = token:Assoc_Region_Santa_Cruz_Dept } }
+	#	set_variable = { description@var:AssocRegion = token:Assoc_Region_Santa_Cruz_Dept_Desc }
+	#}
+
+	# State
+	#1706 = { set_variable = { description = token:STATE_1706_Desc } }
+}
+
+## Changes the admin title of the currently scoped state to the admin title specified in `AdminTitle`
+# Ex:
+# set_temp_variable = { AdminTitle = <admin title token> }
+# TNO_adjust_admin_title = yes
+TNO_adjust_admin_title = {
+	log = "[GetDateText]: [Root.GetName]: TNO_adjust_admin_title; Old Title: [?AdminTitle.GetTokenKey], New Title: [?admin_title_temp.GetTokenKey], State [THIS.GetID]"
+	set_variable = { AdminTitle = admin_title_temp }
+	custom_effect_tooltip = adjust_admin_title_tt
+}
+
+TNO_adjust_assoc_region = {
+	log = "[GetDateText]: [Root.GetName]: TNO_adjust_assoc_region; Old Title: [?AssocRegion.GetTokenKey], New Title: [?assoc_region_temp.GetTokenKey], State [THIS.GetID]"
+	set_variable = { AssocRegion = assoc_region_temp }
+	custom_effect_tooltip = adjust_assoc_region_tt
+}
+
+TNO_adjust_assoc_region_2 = {
+	log = "[GetDateText]: [Root.GetName]: TNO_adjust_assoc_region_2; Old Title: [?AssocRegion2.GetTokenKey], New Title: [?assoc_region_2_temp.GetTokenKey], State [THIS.GetID]"
+	set_variable = { AssocRegion2 = assoc_region_2_temp }
+	custom_effect_tooltip = adjust_assoc_region_2_tt
+}
+
+TNO_adjust_sub_admin_title = {
+	log = "[GetDateText]: [Root.GetName]: TNO_adjust_sub_admin_title; Old Title: [?SubAdminTitle.GetTokenKey], New Title: [?sub_admin_title_temp.GetTokenKey], State [THIS.GetID]"
+	set_variable = { SubAdminTitle = sub_admin_title_temp }
+	custom_effect_tooltip = adjust_sub_admin_title_tt
+}
+
+TNO_clear_admin_title = {
+	log = "[GetDateText]: [Root.GetName]: TNO_clear_admin_title; Removed Title: [?AdminTitle.GetTokenKey], State [THIS.GetID]"
+	custom_effect_tooltip = clear_admin_title_tt
+	clear_variable = AdminTitle
+}
+
+TNO_clear_assoc_region = {
+	log = "[GetDateText]: [Root.GetName]: TNO_clear_assoc_region; Removed Title: [?AssocRegion.GetTokenKey], State [THIS.GetID]"
+	custom_effect_tooltip = clear_assoc_region_tt
+	clear_variable = AssocRegion
+}
+
+TNO_clear_assoc_region_2 = {
+	log = "[GetDateText]: [Root.GetName]: TNO_clear_assoc_region_2; Removed Title: [?AssocRegion2.GetTokenKey], State [THIS.GetID]"
+	custom_effect_tooltip = clear_assoc_region_2_tt
+	clear_variable = AssocRegion2
+}
+
+TNO_clear_sub_admin_title = {
+	log = "[GetDateText]: [Root.GetName]: TNO_clear_sub_admin_title; Removed Title: [?SubAdminTitle.GetTokenKey], State [THIS.GetID]"
+	custom_effect_tooltip = clear_sub_admin_title_tt
+	clear_variable = SubAdminTitle
+}
+
+TNO_admin_title_state_control_effect = {
+	#if = {
+	#	limit = {
+	#		FROM.FROM = {
+	#			OR = {
+	#				state = 706
+	#				state = 707 
+	#			}
+	#		}
+	#	}
+	#	FROM.FROM = {
+	#		set_temp_variable = { admin_title_temp = token:Admin_Title_Military_Territory }
+	#		#TNO_adjust_admin_title = yes
+	#	}
+	#}
+	#if = { #Failsafe for WW3
+	#	limit = {
+	#		FROM = {
+	#			tag = JAP
+	#		}
+	#		ROOT = {
+	#			tag = USA 
+	#		}
+	#		JAP = {
+	#			has_war_with = USA
+	#		}
+	#		USA = {
+	#			has_war_with = JAP
+	#		}
+	#	}
+	#	if = {
+	#		limit = {
+	#			FROM.FROM = {
+	#				state = 629
+	#				NOT = { is_controlled_by = USA }
+	#			}
+	#		}
+	#		FROM.FROM = {
+	#			clear_variable = TNO_assoc_region 
+	#			set_temp_variable = { admin_title_temp = token:Admin_Title_State }
+	#			TNO_adjust_admin_title = yes
+	#			set_temp_variable = { sub_admin_title_temp = token:Admin_Title_County }
+	#			TNO_adjust_sub_admin_title = yes
+	#		}
+	#	}
+	#	if = {
+	#		limit = {
+	#			FROM.FROM = {
+	#				OR = {
+	#					state = 768
+	#					state = 769
+	#				}
+	#				NOT = { is_controlled_by = USA }
+	#			}
+	#		}
+	#		FROM.FROM = {
+	#			set_temp_variable = { admin_title_temp = token:Admin_Title_Port }
+	#			TNO_adjust_admin_title = yes
+	#		}
+	#	}
+	#	if = {
+	#		limit = {
+	#			FROM.FROM = {
+	#				OR = {
+	#					state = 2518
+	#					state = 2523
+	#				}
+	#				NOT = { is_controlled_by = USA }
+	#			}
+	#		}
+	#		clear_variable = TNO_assoc_region 
+	#		FROM.FROM = {
+	#			set_temp_variable = { admin_title_temp = token:Admin_Title_Unc_Territory }
+	#			TNO_adjust_admin_title = yes
+	#		}
+	#	}
+	#}
+}
+
+### Endo-Exo Button Effects
+
+TNO_admin_title_exo_button_effects = {
+	#every_state = {
+	#	limit = {
+	#		check_variable = { AdminTitle = token:Admin_Title_Prefecture_Shu }
+	#	}
+	#	set_state_flag = admin_title_shu
+	#	set_temp_variable = { admin_title_temp = token:Admin_Title_Prefecture }
+	#	TNO_adjust_admin_title = yes
+	#}
+}
+
+TNO_admin_title_default_button_effects = {
+	#every_state = {
+	#	limit = {
+	#		has_state_flag = admin_title_shu
+	#	}
+	#	set_temp_variable = { admin_title_temp = token:Admin_Title_Prefecture_Shu }
+	#	TNO_adjust_admin_title = yes
+	#}
+	#every_state = {
+	#	limit = {
+	#		has_state_flag = admin_title_cho
+	#	}
+	#	set_temp_variable = { admin_title_temp = token:Admin_Title_Prefecture_Cho }
+	#	TNO_adjust_admin_title = yes
+	#}
+}
