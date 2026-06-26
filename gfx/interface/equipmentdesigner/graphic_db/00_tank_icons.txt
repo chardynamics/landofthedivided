@@ -1,16 +1,5 @@
 default = {
 
-	kugelpanzer_chassis_1 = {
-		pool = {
-			icons = {
-				GFX_GER_kugelpanzer_medium
-			}
-			models = {
-				kugelpanzer_entity
-			}
-		}
-	}
-
 	##Generic IFV##
 
 	IFV_chassis_0 = {
@@ -356,51 +345,6 @@ default = {
 			}
 		}
 	}
-	# Guangdong PTRG Equipment
-	experimental_MBT_chassis_0 = {
-		pool = {
-			icons = {
-				GFX_GNG_experimental_MBT_equipment_0_medium
-				GFX_GNG_MBT_experimental_sony_medium
-				GFX_GNG_MBT_experimental_matsushita_medium
-				GFX_GNG_MBT_experimental_fujitsu_medium
-				GFX_GNG_MBT_experimental_hitachi_medium
-			}
-		}
-	}
-	experimental_MBT_chassis_1 = {
-		pool = {
-			icons = {
-				GFX_GNG_experimental_MBT_equipment_1_medium
-				GFX_GNG_MBT_experimental_sony_medium
-				GFX_GNG_MBT_experimental_matsushita_medium
-				GFX_GNG_MBT_experimental_fujitsu_medium
-				GFX_GNG_MBT_experimental_hitachi_medium
-			}
-		}
-	}
-	experimental_SPART_chassis_0 = {
-		pool = {
-			icons = {
-				GFX_GNG_experimental_SPART_equipment_0_medium
-				GFX_GNG_SPART_experimental_sony_medium
-				GFX_GNG_SPART_experimental_matsushita_medium
-				GFX_GNG_SPART_experimental_fujitsu_medium
-				GFX_GNG_SPART_experimental_hitachi_medium
-			}
-		}
-	}
-	experimental_SPART_chassis_1 = {
-		pool = {
-			icons = {
-				GFX_GNG_experimental_SPART_equipment_1_medium
-				GFX_GNG_SPART_experimental_sony_medium
-				GFX_GNG_SPART_experimental_matsushita_medium
-				GFX_GNG_SPART_experimental_fujitsu_medium
-				GFX_GNG_SPART_experimental_hitachi_medium
-			}
-		}
-	}
 }
 
 USA = {
@@ -540,7 +484,6 @@ USA = {
 				GFX_USA_SPART_1950_medium
 				GFX_USA_SPAA_1950_medium
 				GFX_USA_MBT_1950_medium
-				GFX_MAG_MBT_1950_medium
 			}
 		}
 	}

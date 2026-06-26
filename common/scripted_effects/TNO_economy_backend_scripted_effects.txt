@@ -6497,16 +6497,6 @@ monthly_GDP_growth_state = {
 				var = state_value
 				min = 0.001
 			}
-
-			#KD's attempt at fixing Russian states
-			if = {
-				limit = {
-					check_variable = { state_GDPPC > 3000 }
-					is_russian_state = yes
-				}
-				subtract_from_variable = { state_value = temp_state_value_added }
-				set_temp_variable = { temp_state_value_added = 0 }
-			}
 		}
 	}
 	# Used for showing the previous months growth

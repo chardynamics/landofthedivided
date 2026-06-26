@@ -186,6 +186,16 @@ TNO_startup_nation = {
 			set_variable = { Cold_War_GUI_SeaZone_SelectedSuperpower = var:global.TNO_Superpowers^0 }
 			set_variable = { Cold_War_GUI_SeaZone_SelectedSuperpower_Frame = 1 }
 			set_variable = { TNO_Cold_War_GUI_Tab = 5 }
+			econ_recompile_all_spheres = yes
+			clear_array = sphere_list_array
+			every_country = {
+				limit = { has_country_flag = HAS_ECON_SPHERE }
+				add_to_array = { PREV.sphere_list_array = THIS }
+			}
+			get_sorted_scored_countries = {
+				scorer = sphere_list_scorer
+				array = sphere_list_array
+			}
 			set_rule = {
 				desc = rule_blank
 				can_create_collaboration_government = no

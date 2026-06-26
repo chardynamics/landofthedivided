@@ -134,9 +134,9 @@ scripted_gui = {
 		parent_window_token = diplomacy_tab
 		window_name = "TNO_Cold_War_GUI_Spheres_Tab"
 
-		visible = {
-			check_variable = { TNO_Cold_War_GUI_Tab = 5 }
-		}
+		#visible = {
+		#	check_variable = { TNO_Cold_War_GUI_Tab = 5 }
+		#}
 
 		properties = {
 			Cold_War_GUI_Spheres_Tab_Spheres_Entry_Flag = { image = "[This.GetFlag]" }

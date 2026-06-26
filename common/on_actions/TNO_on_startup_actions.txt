@@ -99,7 +99,29 @@ on_actions = {
 			ZZZ = { econ_recompile_all_spheres = yes }
 
 			# Sea Zone setup
-			
+			every_country = {
+				set_rule = {
+					desc = rule_blank
+					can_create_collaboration_government = no
+				}
+				set_rule = {
+					desc = rule_blank
+					can_force_government = no
+				}
+				set_rule = {
+					desc = rule_blank
+					can_puppet = no
+				}
+				set_rule = {
+					desc = rule_blank
+					can_join_factions = no
+				}
+				set_rule = {
+					desc = rule_blank
+					can_send_volunteers = yes
+				}
+				set_country_flag = TNO_Cold_War_Display
+			}
 
 			# Starting nuclear stockpiles for each of the three superpowers
 			
