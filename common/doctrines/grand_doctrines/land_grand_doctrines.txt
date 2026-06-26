@@ -12,21 +12,7 @@ maneuver_warfare = {
 	xp_type = army
 
 	ai_will_do = {
-		base = 10
-
-		modifier = {
-			factor = 0
-			NOT = {
-				OR = {
-					tag = OMS
-					tag = WRS
-					tag = GER
-					tag = CLC
-					tag = SPH
-					tag = GOR
-				}
-			}
-		}
+		base = 5
 	}
 
 	tracks = {
@@ -251,57 +237,6 @@ defensive_warfare = {
 		base = 2
 	}
 
-	ai_will_do = {
-		base = 10
-
-		modifier = {
-			factor = 0
-			NOT = {
-				OR = {
-					tag = TAR
-					tag = YAK
-					tag = URL
-					tag = MGN
-					tag = BKR
-					tag = FAR
-					tag = GRN
-					tag = DEN
-					tag = ULS
-					tag = NOR
-					tag = CRI
-					tag = TAJ
-					tag = KYR
-					tag = CAM
-					tag = PHI
-					tag = ONG
-					tag = FIN
-					tag = SWE
-					tag = GAL
-					tag = ADL
-					tag = BSQ
-					tag = CTL
-					tag = MAC
-					tag = MNT
-					tag = ALB
-					tag = IRE
-					tag = GNB
-					tag = URG
-					tag = MEN
-					tag = TAN
-					tag = ZLT
-					tag = FAN
-					tag = VOL
-					tag = JOR
-					tag = PAL
-					tag = ISR
-					tag = LEB
-					tag = GUL
-					tag = BOL
-				}
-			}
-		}
-	}
-
 	tracks = {
 		infantry
 		combat_support
@@ -415,31 +350,6 @@ unconventional_warfare = {
 
 	ai_will_do = {
 		base = 10
-		modifier = {
-			factor = 0
-			NOT = {
-				OR = {
-					tag = VIC
-					tag = GAY
-					tag = YGR
-					tag = YKT
-					tag = OMO
-					tag = VIC
-					tag = MLY
-					tag = CLL
-					tag = VNC
-					tag = FEN
-					tag = MAU
-					AND = {
-						has_country_flag = is_west_african_nation
-						NOT = { tag = WOL }
-						NOT = { tag = FFR }
-						NOT = { tag = MLI }
-						NOT = { tag = GUI }
-					}
-				}
-			}
-		}
 	}
 
 	tracks = {

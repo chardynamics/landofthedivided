@@ -34,7 +34,7 @@ autonomy_state = {
 	}
 
 	allowed = {
-		is_subject_of = WRS
+		always = no
 	}
 
 	can_take_level = {

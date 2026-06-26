@@ -453,11 +453,11 @@ mechanized_infantry_primacy = { #Buffing Mechanized Infantry
 		modifier = { #Please update me for DV
 			factor = 0
 			NOT = { #KD's Notes - Yeah, sorry but I doubt any of the other AI tags can produce it
-				tag = USA
-				tag = GER
 				tag = CAN
-				tag = AST
-				tag = ENG
+				tag = MEX
+				tag = SCA
+				tag = EFG
+				tag = STX
 			}
 		}
 	}

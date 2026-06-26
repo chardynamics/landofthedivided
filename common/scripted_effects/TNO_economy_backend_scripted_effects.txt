@@ -3326,8 +3326,6 @@ calculate_nominal_GDP_growth = {
 	add_to_variable = { GDP_growth_nominal_precursor = deficit_GDP_growth_effect }
 	calculate_reserves_effect_on_GDP_growth = yes
 	add_to_variable = { GDP_growth_nominal_precursor = reserves_effect_on_GDP_growth }
-	#Guangdong Exclusive
-	add_to_variable = { GDP_growth_nominal_precursor = GNG_rGDP_debuff }
 
 	set_variable = { GDP_growth_multiplier = modifier@annual_gdp_growth_factor }
 
@@ -3436,31 +3434,13 @@ calculate_infrastructure_nominal_gdp_effect = {
 			}
 			OR = {
 				NOT = { has_state_category = enclave }
-				owner = { tag = MOC }
-				owner = { tag = SNM }
-				owner = { tag = VAC }
-				owner = { tag = PAD }
 			}
 			NOT = {
 				AND = {
 					has_state_category = tiny_island
 					OR = {
-						owner = { tag = USA }
-						owner = { tag = JAP }
-						owner = { tag = AST }
-						owner = { tag = NZL }
 						owner = { tag = CAN }
-						owner = { tag = ENG }
-						owner = { tag = CHL }
-						owner = { tag = IND }
-						owner = { tag = AZH }
-						owner = { tag = ITA }
-						owner = { tag = GER }
-						owner = { tag = ECU }
-						owner = { tag = COL }
-						owner = { tag = CLC }
-						owner = { tag = CLL }
-						owner = { tag = CLD }
+						owner = { tag = MEX }
 					}
 				}
 			}
@@ -3504,13 +3484,11 @@ calculate_power_plant_nominal_gdp_effect = {
 				AND = {
 					has_state_category = tiny_island
 					OR = {
-						owner = { tag = USA }
-						owner = { tag = JAP }
-						owner = { tag = AST }
-						owner = { tag = NZL }
 						owner = { tag = CAN }
-						owner = { tag = ENG }
-						owner = { tag = CHL }
+						owner = { tag = MEX }
+						owner = { tag = SCA }
+						owner = { tag = STX }
+						owner = { tag = EFG }
 					}
 				}
 				AND = {
@@ -3520,10 +3498,9 @@ calculate_power_plant_nominal_gdp_effect = {
 				AND = {
 					has_state_category = enclave
 					AND = {
-						NOT = { owner = { tag = MOC } }
-						NOT = { owner = { tag = SNM } }
-						NOT = { owner = { tag = VAC } }
-						NOT = { owner = { tag = PAD } }
+						NOT = { owner = { tag = FRA } }
+						NOT = { owner = { tag = ENG } }
+						NOT = { owner = { tag = BAH } }
 					}
 				}
 			}
@@ -3545,13 +3522,11 @@ calculate_power_plant_nominal_gdp_effect = {
 					AND = {
 						has_state_category = tiny_island
 						OR = {
-							owner = { tag = USA }
-							owner = { tag = JAP }
-							owner = { tag = AST }
-							owner = { tag = NZL }
 							owner = { tag = CAN }
-							owner = { tag = ENG }
-							owner = { tag = CHL }
+							owner = { tag = MEX }
+							owner = { tag = SCA }
+							owner = { tag = STX }
+							owner = { tag = EFG }
 						}
 					}
 					AND = {
@@ -3561,10 +3536,9 @@ calculate_power_plant_nominal_gdp_effect = {
 					AND = {
 						has_state_category = enclave
 						AND = {
-							NOT = { owner = { tag = MOC } }
-							NOT = { owner = { tag = SNM } }
-							NOT = { owner = { tag = VAC } }
-							NOT = { owner = { tag = PAD } }
+							NOT = { owner = { tag = FRA } }
+							NOT = { owner = { tag = ENG } }
+							NOT = { owner = { tag = BAH } }
 						}
 					}
 				}
@@ -3919,133 +3893,6 @@ calculate_minimum_army_size = {
 
 calculate_navy_size_effect = {
 	if = {
-		limit = {
-			OR = { #Only affects superpowers cause it doesn't make sense for regional econ spheres to worry about protecting trade globally
-				tag = USA
-				tag = GER
-				tag = JAP
-				tag = ITA
-			}
-		}
-
-		calculate_naval_power = yes
-
-		set_temp_variable = { CorvetteRatio = 1 }
-		divide_temp_variable = { CorvetteRatio = 7 }
-		set_variable = { CorvetteScoreNeeded = total_trade_gross_value }
-		multiply_variable = { CorvetteScoreNeeded = CorvetteRatio }
-
-		set_variable = { CorvetteScoreFulfilledPercent = CorvetteScore }
-		divide_variable = { CorvetteScoreFulfilledPercent = CorvetteScoreNeeded }
-		clamp_variable = { var = CorvetteScoreFulfilledPercent min = 0 max = 1 }
-
-		set_temp_variable = { FrigateRatio = 1 }
-		divide_temp_variable = { FrigateRatio = 5 }
-		set_variable = { FrigateScoreNeeded = total_trade_gross_value }
-		multiply_variable = { FrigateScoreNeeded = FrigateRatio }
-
-		set_variable = { FrigateScoreFulfilledPercent = FrigateScore }
-		divide_variable = { FrigateScoreFulfilledPercent = FrigateScoreNeeded }
-		clamp_variable = { var = FrigateScoreFulfilledPercent min = 0 max = 1 }
-
-		set_temp_variable = { DestroyerRatio = 1 }
-		divide_temp_variable = { DestroyerRatio = 6 }
-		set_variable = { DestroyerScoreNeeded = total_trade_gross_value }
-		multiply_variable = { DestroyerScoreNeeded = DestroyerRatio }
-
-		set_variable = { DestroyerScoreFulfilledPercent = DestroyerScore }
-		divide_variable = { DestroyerScoreFulfilledPercent = DestroyerScoreNeeded }
-		clamp_variable = { var = DestroyerScoreFulfilledPercent min = 0 max = 1 }
-
-		set_temp_variable = { CruiserRatio = 1 }
-		divide_temp_variable = { CruiserRatio = 5 }
-		set_variable = { CruiserScoreNeeded = total_trade_gross_value }
-		multiply_variable = { CruiserScoreNeeded = CruiserRatio }
-
-		set_variable = { CruiserScoreFulfilledPercent = CruiserScore }
-		divide_variable = { CruiserScoreFulfilledPercent = CruiserScoreNeeded }
-		clamp_variable = { var = CruiserScoreFulfilledPercent min = 0 max = 1 }
-
-		set_temp_variable = { CarrierRatio = 1 }
-		divide_temp_variable = { CarrierRatio = 8 }
-		set_variable = { CarrierScoreNeeded = total_trade_gross_value }
-		multiply_variable = { CarrierScoreNeeded = CarrierRatio }
-
-		set_variable = { CarrierScoreFulfilledPercent = CarrierScore }
-		divide_variable = { CarrierScoreFulfilledPercent = CarrierScoreNeeded }
-		clamp_variable = { var = CarrierScoreFulfilledPercent min = 0 max = 1 }
-
-		set_temp_variable = { BattleshipRatio = 1 }
-		divide_temp_variable = { BattleshipRatio = 10 }
-		set_variable = { BattleshipScoreNeeded = total_trade_gross_value }
-		multiply_variable = { BattleshipScoreNeeded = BattleshipRatio }
-
-		set_variable = { BattleshipScoreFulfilledPercent = BattleshipScore }
-		divide_variable = { BattleshipScoreFulfilledPercent = BattleshipScoreNeeded }
-		clamp_variable = { var = BattleshipScoreFulfilledPercent min = 0 max = 1 }
-
-		set_variable = { TotalNavyScoreNeeded = 0 }
-		add_to_variable = { TotalNavyScoreNeeded = CorvetteScoreNeeded }
-		add_to_variable = { TotalNavyScoreNeeded = FrigateScoreNeeded }
-		add_to_variable = { TotalNavyScoreNeeded = DestroyerScoreNeeded }
-		add_to_variable = { TotalNavyScoreNeeded = CruiserScoreNeeded }
-		add_to_variable = { TotalNavyScoreNeeded = CarrierScoreNeeded }
-		add_to_variable = { TotalNavyScoreNeeded = BattleshipScoreNeeded }
-
-		set_variable = { TotalNavyScoreFulfilledPercent = 0 }
-		add_to_variable = { TotalNavyScoreFulfilledPercent = CorvetteScore }
-		add_to_variable = { TotalNavyScoreFulfilledPercent = FrigateScore }
-		add_to_variable = { TotalNavyScoreFulfilledPercent = DestroyerScore }
-		add_to_variable = { TotalNavyScoreFulfilledPercent = CruiserScore }
-		add_to_variable = { TotalNavyScoreFulfilledPercent = CarrierScore }
-		add_to_variable = { TotalNavyScoreFulfilledPercent = BattleshipScore }
-		divide_variable = { TotalNavyScoreFulfilledPercent = TotalNavyScoreNeeded }
-		clamp_variable = { var = TotalNavyScoreFulfilledPercent min = 0 max = 1 }
-
-		# Effects from satisfaction of navy size
-		set_temp_variable = { a = 0.30 }
-		set_variable = { navy_size_trade_laws_effectiveness_effect = -0.15 }
-		multiply_temp_variable = { a = CorvetteScoreFulfilledPercent }
-
-		add_to_variable = { navy_size_trade_laws_effectiveness_effect = a }
-		add_to_variable = { navy_size_trade_laws_effectiveness_effect = 1 }
-
-		set_temp_variable = { a = 0.30 }
-		set_variable = { navy_size_immigration_effectiveness_effect = -0.15 }
-		multiply_temp_variable = { a = CorvetteScoreFulfilledPercent }
-		add_to_variable = { navy_size_immigration_effectiveness_effect = a }
-		add_to_variable = { navy_size_immigration_effectiveness_effect = 1 }
-
-		set_temp_variable = { a = 0.30 }
-		set_variable = { navy_size_resources_gain = -0.1 }
-		multiply_temp_variable = { a = FrigateScoreFulfilledPercent }
-		add_to_variable = { navy_size_resources_gain = a }
-
-		set_temp_variable = { a = 0.20 }
-		set_variable = { navy_size_trade_opinion_factor_gain = -0.1 }
-		multiply_temp_variable = { a = DestroyerScoreFulfilledPercent }
-		add_to_variable = { navy_size_trade_opinion_factor_gain = a }
-
-		set_temp_variable = { a = 0.20 }
-		set_variable = { navy_size_pp_gain = -0.1 }
-		multiply_temp_variable = { a = CruiserScoreFulfilledPercent }
-		add_to_variable = { navy_size_pp_gain = a }
-
-		set_temp_variable = { a = 0.15 }
-		set_variable = { navy_size_air_mission_efficiency_gain = -0.05 }
-		multiply_temp_variable = { a = CarrierScoreFulfilledPercent }
-		add_to_variable = { navy_size_air_mission_efficiency_gain = a }
-
-		set_temp_variable = { a = 0.10 }
-		set_variable = { navy_size_party_popularity_stability_factor_gain = 0 }
-		set_variable = { navy_size_war_support_factor_gain = 0 }
-		multiply_temp_variable = { a = BattleshipScoreFulfilledPercent }
-		add_to_variable = { navy_size_party_popularity_stability_factor_gain = a }
-		add_to_variable = { navy_size_war_support_factor_gain = a }
-
-		add_dynamic_modifier = { modifier = navy_size_dynmod }
-	}
-	else_if = {
 		limit = { has_dynamic_modifier = { modifier = navy_size_dynmod } }
 		clear_variable = navy_size_trade_laws_effectiveness_effect
 		clear_variable = navy_size_immigration_effectiveness_effect
@@ -6098,7 +5945,8 @@ econ_calculations_ON_MONTHLY_AI = {
 					AND = {
 						NOT = { tag = CAN }
 						NOT = { tag = MEX }
-						NOT = { has_country_flag = is_warlord }
+						NOT = { tag = SCA }
+						NOT = { tag = EFG }
 						NOT = { has_government = progressivism }
 					}
 					check_variable = { deficit_to_GDP_ratio > 15 }
@@ -6123,11 +5971,10 @@ econ_calculations_ON_MONTHLY_AI = {
 				}
 				OR = {
 					AND = {
-						NOT = { tag = JAP }
-						NOT = { tag = GER }
-						NOT = { tag = USA }
-						NOT = { tag = ITA }
-						NOT = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_War_Communism } }
+						NOT = { tag = CAN }
+						NOT = { tag = MEX }
+						NOT = { tag = SCA }
+						NOT = { tag = EFG }
 						NOT = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Military_Directed } }
 					}
 					check_variable = { deficit_to_GDP_ratio > 15 }
@@ -7304,7 +7151,6 @@ update_ai_slider_logic = {
 						check_variable = { deficit_to_GDP_ratio < GDP_growth_real }
 					}
 				}
-				NOT = { has_country_leader = { character = GER_martin_bormann ruling_only = yes  } }
 			}
 			NOT = { has_country_flag = TNO_AI_Defined_Slider } #KD's Notes - For anyone who would like to be do their own thing
 		}
@@ -7337,7 +7183,6 @@ update_ai_slider_logic = {
 				has_country_leader_ideology = despotism_absolute_monarchy_subtype
 				AND = {
 					has_government = ultranationalism
-					NOT = { tag = OMS }
 				}
 			}
 			NOT = { has_country_flag = TNO_AI_Defined_Slider }
@@ -7359,7 +7204,6 @@ update_ai_slider_logic = {
 			}
 			NOT = { has_country_flag = TNO_AI_Defined_Slider }
 			OR = {
-				has_war_with = YUN
 				AND = {
 					OR = {
 						check_variable = { deficit_to_GDP_ratio < 15 }
@@ -7371,21 +7215,16 @@ update_ai_slider_logic = {
 		}
 		set_variable = { econ_army_expenditures_slider_pct = econ_army_expenditures_maximal_pct }
 	}
-	else_if ={
+	else_if = {
 		limit = { #Because these tags need their armies
 			OR = {
-				tag = GER
-				tag = ITA
-				tag = USA
-				tag = JAP
-				tag = IBR
-				tag = ENG
-				tag = YUN
-				tag = ENG
-				tag = FRS
-				tag = TUR
-				tag = AZH
-				tag = IND
+				tag = SCA
+				tag = CAN
+				tag = MEX
+				tag = EFG
+				tag = STX
+				tag = DMA
+				tag = TMA
 			}
 			NOT = { has_country_flag = TNO_AI_Defined_Slider }
 			AND = {
@@ -7400,25 +7239,16 @@ update_ai_slider_logic = {
 		set_variable = { econ_army_procurement_slider_pct = econ_army_expenditures_maximal_pct }
 		set_variable = { econ_army_r_d_slider_pct = econ_army_expenditures_maximal_pct }
 	}
-	else_if ={
+	else_if = {
 		limit = { #Because these tags need their armies
 			OR = {
-				tag = GER
-				tag = ITA
-				tag = USA
-				tag = JAP
-				tag = IBR
-				tag = ENG
-				tag = YUN
-				tag = ENG
-				tag = FRS
-				tag = TUR
-				tag = AZH
-				tag = IND
-				tag = CHI
-				tag = COL
-				tag = VIN
-				tag = CLC
+				tag = SCA
+				tag = CAN
+				tag = MEX
+				tag = EFG
+				tag = STX
+				tag = DMA
+				tag = TMA
 			}
 			NOT = { has_country_flag = TNO_AI_Defined_Slider }
 		}
@@ -7453,11 +7283,10 @@ update_ai_slider_logic = {
 	if = { #KD's Notes - Smart Move? No. But it is what they would realistically do
 		limit = {
 			OR = {
-				tag = ENG
-				tag = USA
-				tag = FRS
-				tag = AST
-				tag = JAP
+				tag = SCA
+				tag = CAN
+				tag = MEX
+				tag = EFG
 			}
 			NOT = { has_country_flag = TNO_AI_Defined_Slider }
 		}

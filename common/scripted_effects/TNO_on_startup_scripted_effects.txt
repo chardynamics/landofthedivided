@@ -237,11 +237,6 @@ TNO_startup_nation = {
 				startup_social_arrays = yes
 			}
 			update_economy_tab = yes
-			if = {
-				limit = { tag = CAN }
-				set_variable = { debug_pu_phase = 1 }
-				debug_pu_dump_CAN = yes
-			}
 		}
 		add_to_variable = { TNO_laws_dirty = 1 }
 	}

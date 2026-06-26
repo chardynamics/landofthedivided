@@ -364,93 +364,93 @@ leader_traits = {
 	hog_guangdongs_lago = { #Matsushita Masaharu
 		random = no
 		political_power_gain = -0.1
-		GNG_product_profitability_modifier = 0.05
+
 	}
 
 	hog_guangdongs_superman = { #LKS
 		random = no
 		political_power_gain = 0.1
-		GNG_zhujin_support_cap = 10
-		GNG_chinese_support_cap = 5
-		GNG_rnd_data_storage_modifier = 0.05
+
+
+
 	}
 
 	hog_the_co_custodian = { #LKS Success
 		random = no
 		political_power_gain = 0.2
-		GNG_zhujin_support_cap = 15
-		GNG_chinese_support_cap = 10
-		GNG_rnd_data_storage_modifier = 0.05
+
+
+
 	}
 
 	hog_president_of_cheung_kong = { #LKS Failure
 		random = no
-		GNG_zhujin_support_cap = 5
-		GNG_rnd_data_storage_modifier = 0.05
+
+
 	}
 
 	hog_second_among_equals = { #Ibuka Masaru
 		random = no
 		political_power_gain = 0.15
-		GNG_rnd_computational_power_modifier = 0.05
-		GNG_product_cycle_initial_quality_min_modifier = 5
-		GNG_product_cycle_initial_quality_max_modifier = 5
+
+
+
 	}
 
 	hog_always_someone_better = { #Ibuka Masaru Matsushita Success
 		random = no
 		political_power_gain = 0.25
-		GNG_rnd_computational_power_modifier = 0.05
-		GNG_product_cycle_initial_quality_min_modifier = 5
-		GNG_product_cycle_initial_quality_max_modifier = 5
+
+
+
 	}
 
 	hog_the_first_among_equals = { #Ibuka Masaru Matsushita Ibuka
 		random = no
 		political_power_gain = 0.1
-		GNG_rnd_computational_power_modifier = 0.075
-		GNG_product_cycle_initial_quality_min_modifier = 7.5
-		GNG_product_cycle_initial_quality_max_modifier = 7.5
+
+
+
 	}
 
 	hog_victim_of_sentimentality = { #Ibuka Masaru Matsushita Morita
 		random = no
 		political_power_gain = 0.1
-		GNG_rnd_computational_power_modifier = 0.025
-		GNG_product_cycle_initial_quality_min_modifier = 5
-		GNG_product_cycle_initial_quality_max_modifier = 5
+
+
+
 	}
 
 	hog_the_eternal_prince = { #Matsushita Masaharu
 		random = no
 		political_power_gain = 0.1
-		GNG_rnd_household_electronics_modifier = 0.05
-		GNG_product_cycle_initial_interest_min_modifier = 5
-		GNG_product_cycle_initial_interest_max_modifier = 5
+
+
+
 	}
 
 	hog_the_eternal_shadow = { #Matsushita Masaharu Persistence
 		random = no
 		political_power_gain = 0.2
-		GNG_rnd_household_electronics_modifier = 0.05
-		GNG_product_cycle_initial_interest_min_modifier = 5
-		GNG_product_cycle_initial_interest_max_modifier = 5
+
+
+
 	}
 
 	hog_the_dispersing_clouds = { #Matsushita Masaharu Reconciliation
 		random = no
 		political_power_gain = 0.1
-		GNG_rnd_household_electronics_modifier = 0.05
-		GNG_product_cycle_initial_interest_min_modifier = 5
-		GNG_product_cycle_initial_interest_max_modifier = 5
+
+
+
 	}
 
 	hog_hitachis_enforcer = { #Miyazaki Kiyotaka
 		random = no
-		GNG_kenpeitai_growth_modifier = 0.25
+
 		political_power_gain = 0.2
-		GNG_zhujin_support_cap = -15
-		GNG_chinese_support_cap = -15
+
+
 	}
 
 	hog_chief_of_staff = { #Takeda Goro
@@ -844,40 +844,40 @@ leader_traits = {
 
 	eco_the_adopted_scion = { #Matsushita Masaharu
 		random = no
-		GNG_rnd_household_electronics_modifier = 0.1
+
 	}
 
 	eco_the_apostle_of_progress = { #Ibuka Masaru
 		random = no
 		business_tax_rate_modifier = -0.02
-		GNG_product_cycle_initial_quality_min_modifier = 2.5
-		GNG_product_cycle_initial_quality_max_modifier = 2.5
+
+
 	}
 
 	eco_man_of_many_talents = { #Stanley Ho
 		random = no
 		sales_tax_rate_modifier = 0.03
-		GNG_triads_growth_modifier = 0.25
-		GNG_monthly_corruption = 0.2
+
+
 	}
 
 	eco_man_of_many_talents_modified = { #Stanley Ho
 		random = no
 		sales_tax_rate_modifier = 0.03
-		GNG_triads_growth_modifier = 0.25
+
 	}
 
 	eco_guangdongs_fixer = { #Yokoi Hideki
 		random = no
 		income_tax_rate_modifier_factor = 0.015
-		GNG_yakuza_growth_modifier = 0.15
-		GNG_monthly_corruption = 0.2
+
+
 	}
 
 	eco_guangdongs_fixer_modified = { #Yokoi Hideki
 		random = no
 		income_tax_rate_modifier_factor = 0.015
-		GNG_yakuza_growth_modifier = 0.15
+
 	}
 
 	eco_chief_of_operations = { #Murai Sumio
@@ -1150,110 +1150,110 @@ leader_traits = {
 
 	for_visionary_engineer = { #Ibuka Masaru
 		random = no
-		GNG_product_profitability_modifier = 0.05
+
 	}
 
 	for_the_voice_of_the_people = { #Morita Akio
 		random = no
 		income_tax_rate_modifier_factor = -0.02
-		GNG_product_cycle_initial_interest_min_modifier = 2.5
-		GNG_product_cycle_initial_interest_max_modifier = 2.5
+
+
 	}
 
 	for_the_olive_branch = { #Matsushita Masaharu
 		random = no
-		GNG_japanese_empire_opinion_cap = 5
-		GNG_republic_of_china_opinion_cap = 5
-		GNG_rnd_household_electronics_modifier = 0.05
+
+
+
 	}
 
 	for_to_endeavors_ahead = { #Matsushita Masaharu Morita Success
 		random = no
-		GNG_japanese_empire_opinion_cap = 5
-		GNG_republic_of_china_opinion_cap = 5
-		GNG_rnd_household_electronics_modifier = 0.05
+
+
+
 	}
 
 	for_another_poisoned_chalice = { #Matsushita Masaharu Morita Failure
 		random = no
 		political_power_gain = 0.1
-		GNG_japanese_empire_opinion_cap = 5
-		GNG_republic_of_china_opinion_cap = 5
-		GNG_rnd_household_electronics_modifier = 0.075
+
+
+
 	}
 
 	for_the_counterweight = { #Morita Akio
 		random = no
-		GNG_republic_of_china_opinion_cap = 10
-		GNG_rnd_audio_video_modifier = 0.05
+
+
 		stability_factor = 0.05
 	}
 
 	for_reduced_to_a_token = { #Morita Akio Matsushita Success
 		random = no
 		political_power_gain = 0.1
-		GNG_republic_of_china_opinion_cap = 10
-		GNG_rnd_audio_video_modifier = 0.05
+
+
 		stability_factor = 0.075
 	}
 
 	for_the_anvil_overhead = { #Morita Akio Matsushita Morita Ending
 		random = no
-		GNG_republic_of_china_opinion_cap = 15
-		GNG_rnd_audio_video_modifier = 0.075
+
+
 		stability_factor = 0.025
 	}
 
 	for_victim_of_hypocrisy = { #Morita Akio Matsushita Ibuka Ending
 		random = no
-		GNG_republic_of_china_opinion_cap = 10
-		GNG_rnd_audio_video_modifier = 0.025
+
+
 		stability_factor = 0.05
 	}
 
 	for_our_honoured_guest = { #Komai Kenichirō
 		random = no
-		GNG_japanese_empire_opinion_cap = 10
-		GNG_republic_of_china_opinion_cap = -10
-		GNG_rnd_power_efficiency_modifier = 0.05
+
+
+
 		political_power_gain = 0.1
 	}
 
 	for_welcome_no_longer = { #Komai Kenichirō Persistence
 		random = no
-		GNG_japanese_empire_opinion_cap = 5
-		GNG_republic_of_china_opinion_cap = -15
-		GNG_rnd_power_efficiency_modifier = 0.05
+
+
+
 		political_power_gain = 0.2
 	}
 
 	for_here_to_stay = { #Komai Kenichirō Reconciliation
 		random = no
-		GNG_japanese_empire_opinion_cap = 5
-		GNG_republic_of_china_opinion_cap = -10
-		GNG_rnd_power_efficiency_modifier = 0.05
+
+
+
 		political_power_gain = -0.1
 	}
 
 	for_hitachis_marionette = { #Matsushita Masaharu
 		random = no
-		GNG_japanese_empire_opinion_cap = 5
-		GNG_republic_of_china_opinion_cap = -10
-		GNG_rnd_household_electronics_modifier = 0.05
+
+
+
 	}
 
 	for_hitachis_chewtoy = { #Matsushita Masaharu Personalist
 		random = no
 		misc_income_modifier = -0.1
-		GNG_republic_of_china_opinion_cap = -15
-		GNG_rnd_household_electronics_modifier = 0.05
+
+
 	}
 
 	for_a_string_of_strings = { #A String of Strings
 		random = no
-		GNG_japanese_empire_opinion_cap = 5
-		GNG_republic_of_china_opinion_cap = -15
-		GNG_rnd_household_electronics_modifier = 0.05
+
+
+
 	}
 
 	for_a_voiceless_diplomat = { #Takashima Masuo
@@ -1512,22 +1512,22 @@ leader_traits = {
 
 	sec_kenpeitai_warden = { #Miyazaki Kiyotaka
 		political_power_gain = 0.15
-		GNG_republic_of_china_opinion_cap = -5
+
 		random = no
 	}
 
 	sec_a_wind_of_change = { #Omori Kan
 		random = no
 		political_power_gain = 0.1
-		GNG_monthly_corruption = -0.2
-		GNG_police_growth_modifier = 0.15
+
+
 	}
 
 	sec_the_immovable_mountain = { #Tsuchida Kuniyasu
 		random = no
 		political_power_gain = 0.15
-		GNG_monthly_corruption = -0.15
-		GNG_police_growth_modifier = 0.1
+
+
 	}
 
 	sec_chief_of_intelligence = { #Watanabe Keitaro
@@ -1552,7 +1552,7 @@ leader_traits = {
 	}
 
 	sec_self_righteous_prussian = { #Ohlendorf
-		partisan_power_addition = -0.6
+
 		stability_factor = 0.1
 		command_power_gain = 0.3
 		monthly_population = -0.05

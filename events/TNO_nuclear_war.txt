@@ -505,20 +505,7 @@ country_event = { #anarchy annexation events
 		every_state = {
 			limit = {
 				OR = {
-					is_owned_by = JAP
-					is_owned_by = TUR
-					is_owned_by = USA
-					is_owned_by = GER
-					is_owned_by = IND
-					is_owned_by = ITA
-					is_owned_by = SAF
-					is_owned_by = CHI
-					is_owned_by = ENG
-					is_owned_by = FEN
-					is_owned_by = BRA
-					is_owned_by = IBR
-					is_owned_by = RUS
-					is_owned_by = BRG
+					is_owned_by = CAN
 
 				}
 				OR = {
@@ -532,42 +519,6 @@ country_event = { #anarchy annexation events
 			}
 			ZZZ = {
 				transfer_state = PREV
-			}
-			ZZZ = {
-				transfer_state = 784
-				transfer_state = 458
-				transfer_state = 448
-				transfer_state = 114
-				transfer_state = 450
-				transfer_state = 461
-				transfer_state = 118
-				transfer_state = 290
-				transfer_state = 341
-				transfer_state = 658
-				transfer_state = 12
-				transfer_state = 202
-				transfer_state = 897
-				transfer_state = 388
-				transfer_state = 381
-				transfer_state = 389
-				transfer_state = 390
-				transfer_state = 384
-				transfer_state = 307
-				transfer_state = 544
-				transfer_state = 295
-				transfer_state = 778
-				transfer_state = 275
-				transfer_state = 934
-				transfer_state = 729
-				transfer_state = 326
-				transfer_state = 289
-				transfer_state = 137
-				transfer_state = 1532
-				transfer_state = 685
-				transfer_state = 965
-				transfer_state = 1160
-				transfer_state = 774
-				transfer_state = 779
 			}
 		}
 	}

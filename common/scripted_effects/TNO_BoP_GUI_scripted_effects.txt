@@ -41,23 +41,8 @@ TNO_BoP_RemoveTab = {
 }
 
 Global_Conflicts_Initalize = {
-	IBR = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
-}
-
-SACW_GUI_proxy_link = {
-	set_variable = { TNO_BoP_Tabs_Frames^2 = 0 }
-	set_variable = { TNO_BoP_Tabs_Frames^1 = 2 }
-	meta_effect = {
-		text = {
-			remove_power_balance = { id = [OLD_TAB]_[TAG] }
-			set_power_balance = { id = [TAB_TYPE]_[TAG] }
-		}
-		TAG = "[THIS.GetTag]"
-		OLD_TAB = "[?TNO_BoP_SelectedTab.GetTokenKey]"
-		TAB_TYPE = "[?token:BoP_Tab_GlobalConflicts.GetTokenKey]"
-	}
-	set_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+	#IBR = {
+	#	set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
+	#	TNO_BoP_AddTab = yes
+	#}
 }

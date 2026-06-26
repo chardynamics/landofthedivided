@@ -32,10 +32,7 @@ autonomy_state = {
 	}
 
 	allowed = {
-		OR = {
-			is_subject_of = GER
-			is_subject_of = PAR
-		}
+		always = no
 	}
 
 	can_take_level = {

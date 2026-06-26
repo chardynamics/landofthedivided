@@ -247,43 +247,6 @@ defined_text = {
 		}
 		localization_key = tno_minorities_not_applicable
 	}
-	## USA stuff
-	text = {
-		trigger = { has_idea = USA_jim_crow }
-		localization_key = USA_jim_crow
-	}
-	#text = {
-	#	trigger = { has_idea = USA_civil_rights_0 }
-	#	localization_key = USA_civil_rights_0
-	#}
-	text = {
-		trigger = { has_idea = USA_civil_rights_1 }
-		localization_key = USA_civil_rights_1
-	}
-	text = {
-		trigger = { has_idea = USA_civil_rights_2 }
-		localization_key = USA_civil_rights_2
-	}
-	text = {
-		trigger = { has_idea = USA_civil_rights_3 }
-		localization_key = USA_civil_rights_3
-	}
-	text = {
-		trigger = { has_idea = USA_civil_rights_4 }
-		localization_key = USA_civil_rights_4
-	}
-	text = {
-		trigger = { has_idea = USA_civil_rights_5 }
-		localization_key = USA_civil_rights_5
-	}
-	text = {
-		trigger = { has_idea = USA_civil_rights_6 }
-		localization_key = USA_civil_rights_6
-	}
-	#text = {
-	#	trigger = { has_idea = USA_civil_rights_7 }
-	#	localization_key = USA_civil_rights_7
-	#}
 	## Generic
 	text = {
 		trigger = { has_idea = tno_minorities_oppression }
@@ -309,43 +272,6 @@ defined_text = {
 
 defined_text = {
 	name = get_law_tno_minorities_desc
-	## USA stuff
-	text = {
-		trigger = { has_idea = USA_jim_crow }
-		localization_key = USA_jim_crow_desc
-	}
-	#text = {
-	#	trigger = { has_idea = USA_civil_rights_0 }
-	#	localization_key = USA_civil_rights_0_desc
-	#}
-	text = {
-		trigger = { has_idea = USA_civil_rights_1 }
-		localization_key = USA_civil_rights_1_desc
-	}
-	text = {
-		trigger = { has_idea = USA_civil_rights_2 }
-		localization_key = USA_civil_rights_2_desc
-	}
-	text = {
-		trigger = { has_idea = USA_civil_rights_3 }
-		localization_key = USA_civil_rights_3_desc
-	}
-	text = {
-		trigger = { has_idea = USA_civil_rights_4 }
-		localization_key = USA_civil_rights_4_desc
-	}
-	text = {
-		trigger = { has_idea = USA_civil_rights_5 }
-		localization_key = USA_civil_rights_5_desc
-	}
-	text = {
-		trigger = { has_idea = USA_civil_rights_6 }
-		localization_key = USA_civil_rights_6_desc
-	}
-	#text = {
-	#	trigger = { has_idea = USA_civil_rights_7 }
-	#	localization_key = USA_civil_rights_7_desc
-	#}
 }
 
 defined_text = {

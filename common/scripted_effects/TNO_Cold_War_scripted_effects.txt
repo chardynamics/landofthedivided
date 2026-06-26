@@ -10,73 +10,7 @@
 # Specific seazone access for power projection will need to be setup separately!!!
 # Will need to defien access to each seazone separately, then add tag to the global.PowerProjection_Tags array
 # Icon definitions will also need to be done
-set_superpower = {
-	log = "[GetDateText]: [THIS.GetName]: set_superpower; Executing"
 
-	add_to_array = { global.TNO_Superpowers = THIS }
-
-	# Clearing non-super scoring vars
-	clear_variable = Score_Military
-	clear_variable = Score_Economy
-	
-	# Set up scoring modifier and effects
-	add_to_array = { score_effects_array = 0 }
-	resize_array = { score_effects_array = 6 }
-	set_variable = { power_projection_pp_effect = 0 }
-	add_dynamic_modifier = { modifier = superpower_scoring_effects_modifier	}
-	add_dynamic_modifier = { modifier = superpower_power_projection_modifier }
-
-	# Score calc + ranking definition
-	Cold_War_GUI_PowerProjection_CalculateBonuses = yes
-	Cold_War_GUI_Score_Calculation = yes
-	if = {
-		limit = { NOT = { has_global_flag = skip_super_sorting } } # Flag used to skip individually sorting each super on game startup
-		Cold_War_GUI_Sort_Superpowers = yes
-	}
-
-	set_variable = { TNO_Cold_War_GUI_Rankings_Tab_Superpower_Entries_Array_Frame = 1 }
-
-	log = "[GetDateText]: [THIS.GetName]: set_superpower; Completed execution."
-}
-
-# Use this effect once Germany gets what's coming for them
-remove_superpower = {
-	log = "[GetDateText]: [THIS.GetName]: remove_superpower; Executing"
-
-	# Clear from array and re-sort
-	remove_from_array = { global.TNO_Superpowers = THIS }
-	Cold_War_GUI_Sort_Superpowers = yes
-
-	# Remove super scoring vars
-	clear_array = Score_Military
-	clear_array = Score_Economy
-	clear_array = Score_Diplomacy
-	clear_variable = Score_Victories
-	clear_variable = TotalScore
-	if = {
-		limit = { has_country_flag = remove_seazones } # Flag used to optionally remove the seazone array if wished
-		clear_array = CW_SeaZone_Status
-		clear_variable = power_projection_pp_effect
-		remove_dynamic_modifier = { modifier = superpower_scoring_effects_modifier }
-
-		# Remove from the global arrays
-		for_each_scope_loop = {
-			array = global.PowerProjection_Tags
-			if = {
-				limit = { check_variable = { global.PowerProjection_Tags^i = THIS.id } }
-				remove_from_array = { array = global.PowerProjection_Tags   index = i }
-				remove_from_array = { array = global.PowerProjection_Tags_X index = i }
-				remove_from_array = { array = global.PowerProjection_Tags_Y index = i }
-			}
-		}
-	}
-	
-	# Remove scoring effects
-	clear_array = score_effects_array
-	remove_dynamic_modifier = { modifier = superpower_scoring_effects_modifier }
-
-	log = "[GetDateText]: [THIS.GetName]: remove_superpower; Completed execution."
-}
 
 # Used to fully recalculate scores for all supers every month
 Cold_War_GUI_Fully_Calculate_Scores = {
@@ -880,7 +814,6 @@ TNO_tension_calc = {
 			}
 		}
 	}
-	TNO_calc_alerts_and_ww3 = yes
 	divide_variable = { TNO_average_threat = global.TNO_superpower_tension_areas }
 	round_variable = TNO_average_threat
 	set_variable = { global.TNO_World_Tension = TNO_average_threat }
@@ -897,7 +830,6 @@ TNO_tension_calc = {
 	multiply_temp_variable = { new_threat = 100 }
 	
 	TNO_clamping_tension_vars = yes
-	TNO_calc_tension_dynmod_effects = yes
 	TNO_tension_animation_check = yes
 }
 

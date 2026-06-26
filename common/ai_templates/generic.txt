@@ -7,10 +7,10 @@ Equalizers = { #Because some people actually do want some challenging gameplay
 		modifier = {
 			factor = 0
 			NOT = {
-				tag = JAP
-				tag = USA
-				tag = GER
-				tag = ITA
+				tag = CAN
+				tag = MEX
+				tag = SCA
+				tag = EFG
 			}
 		}
 	}
@@ -46,47 +46,13 @@ Equalizers = { #Because some people actually do want some challenging gameplay
 		}
 	}
 
-	equalizer_japan = {
-		upgrade_prio = {
-			factor = 5
-			modifier = {
-				factor = 10
-				tag = JAP
-			}
-
-		}
-
-		can_upgrade_in_field = {
-			AND = {
-				has_equipment = { MBT_chassis < 200 }
-				has_equipment = { attack_helicopter_equipment < 200 }
-			}
-		}
-
-		target_template = {
-			support = {
-				mbt_engineer = 1
-				recon = 1
-				signal_company = 1
-				air_assault = 1
-				logistics_company = 1
-			}
-
-			regiments = {
-				MBT = 2
-				elite_infantry = 6
-				mountaineers = 1
-				marine = 1
-			}
-		}
-	}
 	equalizer_lategame = {
 		upgrade_prio = {
 			factor = 20
 			modifier = {
 				factor = 0
 				NOT = {
-					date > 1970.01.01 #All in for an Epic Finale
+					date > 2010.01.01 #All in for an Epic Finale
 				}
 			}
 		}
@@ -162,10 +128,10 @@ armor_AI = {
 		modifier = {
 			factor = 0
 			NOT = {
-				tag = JAP
-				tag = USA
-				tag = GER
-				tag = ITA
+				tag = CAN
+				tag = MEX
+				tag = SCA
+				tag = EFG
 			}
 		}
 	}
@@ -177,18 +143,7 @@ armor_AI = {
 			modifier = {
 				factor = 35
 				OR = {
-					AND = {
-						tag = KOM
-						NOT = { has_government = communist }
-						NOT = { has_government = national_socialism }
-						NOT = { has_government = ultranationalism }
-					}
-					tag = IRK
-					tag = BRY
-					tag = CHI
-					tag = IBR
-					tag = MEX
-					tag = FIN
+					#tag = FIN #repalce this
 				} 
 			}
 			modifier = {
@@ -504,9 +459,11 @@ mountaineers_generic = {
 			OR = {
 				NOT = { has_tech = tech_mountaineers }
 				OR = {
-					tag = JAP
-					tag = USA
-					tag = GER
+					
+					tag = CAN
+					tag = MEX
+					tag = SCA
+					tag = EFG
 				}
 			}
 		}
@@ -552,9 +509,11 @@ marines_generic = {
 					has_tech = marines
 				}
 				OR = {
-					tag = JAP
-					tag = USA
-					tag = GER
+					
+					tag = CAN
+					tag = MEX
+					tag = SCA
+					tag = EFG
 				}
 			}
 		}

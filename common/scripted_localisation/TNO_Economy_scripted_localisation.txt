@@ -3702,10 +3702,8 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = { 
-				tag = USA
-				tag = GER
-				tag = JAP
-				tag = ITA
+				tag = CAN
+				tag = MEX
 			}
 		}
 		localization_key = econ_sphere_navy_satisfaction_sphere_leader_text
