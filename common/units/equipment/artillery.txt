@@ -2,12 +2,6 @@ equipments = {
 
 	artillery_equipment = {
 
-		can_be_produced = {
-			OR = {
-				has_country_flag = demand_more_artillery_prod
-			}
-		}
-
 		is_archetype = yes
 		picture = archetype_artillery_equipment
 		type = {

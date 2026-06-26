@@ -2,12 +2,6 @@ equipments = {
 
 	motorized_equipment = {
 
-		can_be_produced = {
-			OR = {
-				has_country_flag = demand_more_motorized_prod
-			}
-		}
-
 		is_archetype = yes
 		picture = archetype_motorized_equipment
 		is_buildable = no

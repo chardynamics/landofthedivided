@@ -7165,16 +7165,14 @@ tno_laws_clear = { #Wipes all laws, good for major changes, ex. Serbian Civil Wa
 
 misc_law_array_startup = {
 	# Global Generic
-	else = {
-		add_to_array = { TNO_assorted_laws = token:pollution_law }
-		add_to_array = { TNO_assorted_laws = token:safety_law }
-		add_to_array = { TNO_assorted_laws = token:child_labor_law }
-		add_to_array = { TNO_assorted_laws = token:refugees_law }
-		add_to_array = { TNO_assorted_laws = token:minorities_law }
-		add_to_array = { TNO_assorted_laws = token:racial_integration_law }
-		add_to_array = { TNO_assorted_laws = token:women_law }
-		add_to_array = { TNO_assorted_laws = token:lgbt_rights_law }
-	}
+	add_to_array = { TNO_assorted_laws = token:pollution_law }
+	add_to_array = { TNO_assorted_laws = token:safety_law }
+	add_to_array = { TNO_assorted_laws = token:child_labor_law }
+	add_to_array = { TNO_assorted_laws = token:refugees_law }
+	add_to_array = { TNO_assorted_laws = token:minorities_law }
+	add_to_array = { TNO_assorted_laws = token:racial_integration_law }
+	add_to_array = { TNO_assorted_laws = token:women_law }
+	add_to_array = { TNO_assorted_laws = token:lgbt_rights_law }
 }
 
 TNO_add_assorted_law = {

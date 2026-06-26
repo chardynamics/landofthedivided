@@ -445,25 +445,9 @@ script_enum_equipment_bonus_type = {
 	attack_helicopter_equipment_2
 	attack_helicopter_equipment_3
 	attack_helicopter_equipment_4
-	experimental_helicopter_equipment
-	experimental_helicopter_equipment_fujitsu_0
-	experimental_helicopter_equipment_sony_0
-	experimental_helicopter_equipment_matsushita_0
-	experimental_helicopter_equipment_hitachi_0
-	experimental_helicopter_equipment_fujitsu_1
-	experimental_helicopter_equipment_sony_1
-	experimental_helicopter_equipment_matsushita_1
-	experimental_helicopter_equipment_hitachi_1
 	ICBM_equipment
 	MRBM_equipment
 	SRBM_equipment
-	horse_equipment
-	horse_equipment_0
-	horse_equipment_1
-	horse_equipment_2
-	horse_tank_equipment
-	horse_tank_equipment_0
-	pegasi_equipment
 	infantry_equipment_4
 	infantry_equipment_5
 	support_equipment_dummy
@@ -476,14 +460,6 @@ script_enum_equipment_bonus_type = {
 	infantry_kit_eq_76
 	infantry_kit_eq_82
 	infantry_kit_eq_88
-	experimental_infantry_equipment
-	experimental_infantry_equipment_fujitsu_0
-	experimental_infantry_equipment_sony_0
-	experimental_infantry_equipment_matsushita_0
-	experimental_infantry_equipment_fujitsu_1
-	experimental_infantry_equipment_sony_1
-	experimental_infantry_equipment_matsushita_1
-	experimental_infantry_equipment_chimera
 	motorized_equipment_2
 	motorized_equipment_3
 	motorized_equipment_4
@@ -560,12 +536,6 @@ script_enum_equipment_bonus_type = {
 	APC_chassis_3
 	APC_chassis_4
 	APC_chassis_5
-	experimental_MBT_chassis
-	experimental_MBT_chassis_0
-	experimental_MBT_chassis_1
-	experimental_SPART_chassis
-	experimental_SPART_chassis_0
-	experimental_SPART_chassis_1
 	train_equipment_diesel_electric_1
 	train_equipment_diesel_electric_2
 	train_equipment_diesel_electric_3
@@ -677,32 +647,24 @@ script_enum_equipment_bonus_type = {
 	IFV_flame_chassis_4
 	IFV_flame_chassis_5
 	MBT_aa_chassis_0
-	MBT_aa_chassisexperimental_MBT_chassis_1
-	MBT_aa_chassisexperimental_SPART_chassis_1
 	MBT_aa_chassis_1
 	MBT_aa_chassis_2
 	MBT_aa_chassis_3
 	MBT_aa_chassis_4
 	MBT_aa_chassis_5
 	MBT_artillery_chassis_0
-	MBT_artillery_chassisexperimental_MBT_chassis_1
-	MBT_artillery_chassisexperimental_SPART_chassis_1
 	MBT_artillery_chassis_1
 	MBT_artillery_chassis_2
 	MBT_artillery_chassis_3
 	MBT_artillery_chassis_4
 	MBT_artillery_chassis_5
 	MBT_amphibious_chassis_0
-	MBT_amphibious_chassisexperimental_MBT_chassis_1
-	MBT_amphibious_chassisexperimental_SPART_chassis_1
 	MBT_amphibious_chassis_1
 	MBT_amphibious_chassis_2
 	MBT_amphibious_chassis_3
 	MBT_amphibious_chassis_4
 	MBT_amphibious_chassis_5
 	MBT_flame_chassis_0
-	MBT_flame_chassisexperimental_MBT_chassis_1
-	MBT_flame_chassisexperimental_SPART_chassis_1
 	MBT_flame_chassis_1
 	MBT_flame_chassis_2
 	MBT_flame_chassis_3
@@ -767,15 +729,5 @@ script_enum_equipment_bonus_type = {
 	IFV_aa_equipment_3
 	IFV_aa_equipment_4
 	IFV_aa_equipment_5
-	MBT_Maus_equipment
-	MBT_Maus_aa_equipment
-	Maus_equipment_1
-	Maus_aa_equipment_1
-	experimental_MBT_equipment
-	experimental_MBT_equipment_0
-	experimental_MBT_equipment_1
-	experimental_SPART_equipment
-	experimental_SPART_equipment_0
-	experimental_SPART_equipment_1
 	land_cruiser
 }

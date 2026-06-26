@@ -2749,8 +2749,6 @@ calculate_army_maintenance_expenditures = {
 	set_variable = { kugelpanzer_equipment_costs = num_equipment_in_armies@kugelpanzer_equipment }
 	set_variable = { MBT_artillery_equipment_costs = num_equipment_in_armies@MBT_artillery_equipment }
 	set_variable = { MBT_aa_equipment_costs = num_equipment_in_armies@MBT_aa_equipment }
-	set_variable = { MBT_Maus_equipment_costs = num_equipment_in_armies@MBT_Maus_equipment }
-	set_variable = { MBT_Maus_aa_equipment_costs = num_equipment_in_armies@MBT_Maus_aa_equipment }
 	set_variable = { motorized_equipment_costs = num_equipment_in_armies@motorized_equipment }
 	set_variable = { scout_helicopter_equipment_costs = num_equipment_in_armies@scout_helicopter_equipment }
 	set_variable = { transport_helicopter_equipment_costs = num_equipment_in_armies@transport_helicopter_equipment }
@@ -2768,8 +2766,6 @@ calculate_army_maintenance_expenditures = {
 	divide_variable = { kugelpanzer_equipment_costs = 1000 }
 	divide_variable = { MBT_artillery_equipment_costs = 1000 }
 	divide_variable = { MBT_aa_equipment_costs = 1000 }
-	divide_variable = { MBT_Maus_equipment_costs = 1000 }
-	divide_variable = { MBT_Maus_aa_equipment_costs = 1000 }
 	divide_variable = { motorized_equipment_costs = 1000 }
 	divide_variable = { scout_helicopter_equipment_costs = 1000 }
 	divide_variable = { transport_helicopter_equipment_costs = 1000 }
@@ -2788,8 +2784,6 @@ calculate_army_maintenance_expenditures = {
 	multiply_variable = { kugelpanzer_equipment_costs = 0.020 } # i dont remember what kugelpanzer is supposed to be but this is probably it
 	multiply_variable = { MBT_artillery_equipment_costs = 0.035 } # a bit more expensive than a simple tank for reasons
 	multiply_variable = { MBT_aa_equipment_costs = 0.045 } # radar ain't cheap
-	multiply_variable = { MBT_Maus_equipment_costs = 0.210 } #Maus was a useless boondoggle cmv
-	multiply_variable = { MBT_Maus_aa_equipment_costs = 0.340 } #the funni big tank but with radar
 	multiply_variable = { motorized_equipment_costs = 0.004 } #mmm yess cheap
 	multiply_variable = { scout_helicopter_equipment_costs = 0.085 } #Scout helicopters do be an oof
 	multiply_variable = { transport_helicopter_equipment_costs = 0.250 } #helis ooof ouch owie
@@ -2806,8 +2800,6 @@ calculate_army_maintenance_expenditures = {
 	add_to_variable = { army_equipment_costs = kugelpanzer_equipment_costs }
 	add_to_variable = { army_equipment_costs = MBT_artillery_equipment_costs }
 	add_to_variable = { army_equipment_costs = MBT_aa_equipment_costs }
-	add_to_variable = { army_equipment_costs = MBT_Maus_equipment_costs }
-	add_to_variable = { army_equipment_costs = MBT_Maus_aa_equipment_costs }
 	add_to_variable = { army_equipment_costs = motorized_equipment_costs }
 	add_to_variable = { army_equipment_costs = scout_helicopter_equipment_costs }
 	add_to_variable = { army_equipment_costs = transport_helicopter_equipment_costs }
@@ -4138,14 +4130,6 @@ calculate_fielded_manpower = {
 	set_variable = { maintenance_company_manpower_k = 0.5 }
 	multiply_variable = { maintenance_company_manpower_k = num_battalions_with_type@maintenance_company }
 	add_to_variable = { army_fielded_manpower_k = maintenance_company_manpower_k }
-
-	set_variable = { maus_manpower_k = 0.6 }
-	multiply_variable = { maus_manpower_k = num_battalions_with_type@maus }
-	add_to_variable = { army_fielded_manpower_k = maus_manpower_k }
-
-	set_variable = { flakmaus_manpower_k = 0.6 }
-	multiply_variable = { flakmaus_manpower_k = num_battalions_with_type@flakmaus }
-	add_to_variable = { army_fielded_manpower_k = flakmaus_manpower_k }
 
 	set_variable = { MBT_manpower_k = 0.5 }
 	multiply_variable = { MBT_manpower_k = num_battalions_with_type@MBT }

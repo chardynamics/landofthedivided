@@ -20,15 +20,15 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = { social_year_str = social_year_end }
-			set_temp_variable = { temp_social_year = 1960 }
+			set_temp_variable = { temp_social_year = 2003 }
 			add_to_temp_variable = { temp_social_year = social_year_str }
 		}
 		localization_key = social_get_one_year_txt
 	}
 	text = {
 		trigger = {
-			set_temp_variable = { temp_social_year_str = 1960 }
-			set_temp_variable = { temp_social_year_end = 1960 }
+			set_temp_variable = { temp_social_year_str = 2003 }
+			set_temp_variable = { temp_social_year_end = 2003 }
 			add_to_temp_variable = { temp_social_year_str = social_year_str }
 			add_to_temp_variable = { temp_social_year_end = social_year_end }
 		}
@@ -183,7 +183,7 @@ defined_text = {
 			divide_temp_variable = { year = 12 }
 			subtract_from_temp_variable = { year = 0.49 }
 			round_temp_variable = year
-			add_to_temp_variable = { year = 60 }
+			add_to_temp_variable = { year = 03 }
 		}
 		localization_key = "'[?year]"
 	}
@@ -196,7 +196,7 @@ defined_text = {
 			divide_temp_variable = { year = 12 }
 			subtract_from_temp_variable = { year = 0.49 }
 			round_temp_variable = year
-			add_to_temp_variable = { year = 1960 }
+			add_to_temp_variable = { year = 2003 }
 		}
 		localization_key = "[?year]"
 	}
