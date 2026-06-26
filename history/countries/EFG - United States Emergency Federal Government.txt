@@ -8,45 +8,144 @@ set_technology = {
 
 	##INFANTRY##
 	infantry_weapons_1 = 1
-	night_vision_1 = 1
-	
-	infantry_kit_1 = 1
 	infantry_weapons_2 = 1
-	night_vision_2 = 1
-	infantry_kit_2 = 1
 	infantry_weapons_improvements_mine_1 = 1
-	infantry_kit_3 = 1
 	infantry_weapons_improvements_ammo_1 = 1
 	infantry_weapons_improvements_grenade_1 = 1
+	infantry_weapons_3 = 1
+	infantry_weapons_improvements_mine_2 = 1
+	infantry_weapons_improvements_ammo_2 = 1
+	infantry_weapons_improvements_grenade_2 = 1
+	infantry_weapons_4 = 1
+	infantry_kit_1 = 1
+	infantry_kit_2 = 1
+	infantry_kit_3 = 1
+	infantry_kit_4 = 1
+	infantry_kit_5 = 1
 	basic_infantry_equipment = 1
-	infantry_at = 1
-	infantry_at_upgrade_1 = 1
-	motorized_infantry = 1
 	support_weapons = 1
 	support_weapons_hmg_1 = 1
 	combat_support_equipment_1 = 1
+	support_weapons_arty_1 = 1
+	combat_support_equipment_2 = 1
+	support_weapons_hmg_2 = 1
+	infantry_at = 1
+	infantry_at_upgrade_1 = 1
+	infantry_at2 = 1
+	infantry_at_upgrade_2 = 1
+	infantry_aa1 = 1
+	infantry_aa2 = 1
+	night_vision_1 = 1
+	night_vision_2 = 1
+	night_vision_3 = 1
+	motorized_infantry = 1
+	motorized_infantry_1 = 1
+	motorized_infantry_2 = 1
+	paratroopers = 1
+	paratroopers2 = 1
+	marines = 1
+	marines2 = 1
+	tech_mountaineers = 1
+	tech_mountaineers2 = 1
+	tech_mountaineers3 = 1
+	tech_special_forces = 1
+	
 	
 	##SUPPORT##
 	tech_support = 1
 	tech_engineers = 1
+	tech_engineers2 = 1
+	tech_engineers3 = 1
 	tech_recon = 1
+	tech_recon2 = 1
+	tech_recon3 = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_maintenance_company2 = 1
 	tech_field_hospital = 1
+	tech_field_hospital2 = 1
+	tech_logistics_company = 1
+	tech_logistics_company2 = 1
+	tech_signal_company = 1
+	tech_signal_company2 = 1
+
+	command_and_control1 = 1
+	command_and_control2 = 1
+	military_infrastructure1 = 1
+	military_infrastructure2 = 1
 	##ARTY##
+	antiair_1970 = 1
 	artillery_1970 = 1
+
+	##Armor
+	MBT_1960 = 1
+	APC_1960 = 1
+
+	##Navy##
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	mtg_transport = 1
+	mtg_landing_craft = 1
+	early_ship_hull_very_light = 1
+	basic_ship_hull_very_light = 1
+	improved_ship_hull_very_light = 1
+	smoke_generator = 1
+	basic_depth_charges = 1
+	sonar = 1
+	early_ship_hull_more_light = 1
+	basic_ship_hull_more_light = 1
+	improved_depth_charges = 1
+	improved_sonar = 1
+	missile_corvette_1960 = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_medium_battery = 1
+	basic_heavy_battery = 1
+	basic_secondary_battery = 1
+	improved_secondary_battery = 1
+	dp_secondary_battery = 1
+	damage_control_1 = 1
+	fire_control_methods_1 = 1
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	improved_submarine_mine_laying = 1
+	improved_naval_mines = 1
+	degaussing = 1
+	improved_ship_torpedo_launcher = 1
+	magnetic_detonator = 1
+	basic_torpedo = 1
+	nuclear_sub_1960 = 1
+	basic_fire_control_system = 1
+	improved_fire_control_system = 1
+
+	##Air
+	helicopter_engines = 1
+	scout_helicopter_1960 = 1
+	transport_helicopter_1960 = 1
 	
 	##ENGINEERING##
-	electronic_mechanical_engineering = 1
-	radio = 1
-	basic_encryption = 1
-	basic_decryption = 1
-	##INDUSTRY##
 	ww2_line_production = 1
+	mass_production_1 = 1
+	mass_production_2 = 1
 	building_construction_1 = 1
-	batch_production_1 = 1
+	resource_extraction_methods = 1
+	excavation0 = 1
+	excavation1 = 1
+	rubber_processing = 1
 	energy_technology_1 = 1
+	nuclear_technology_1 = 1
 	social_construction_1 = 1
+	administration_construction_1 = 1
 	military_construction_1 = 1
-} # Please remove if you're adding ministers.
+	production_unit_gain_1 = 1
+	production_unit_gain_2 = 1
+	consumer_goods_reduction_1 = 1
+	consumer_goods_reduction_2 = 1
+}
 
 add_ideas = {
 	USA_warlord_manpower
