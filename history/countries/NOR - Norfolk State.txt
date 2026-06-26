@@ -43,10 +43,12 @@ set_technology = {
 	ww2_line_production = 1
 	building_construction_1 = 1
 	batch_production_1 = 1
+	resource_extraction_methods = 1
+	excavation0 = 1
 	energy_technology_1 = 1
 	social_construction_1 = 1
 	military_construction_1 = 1
-} # Please remove if you're adding ministers.
+}
 
 add_ideas = {
 	NOR_Military_Civilian_Administration
