@@ -661,7 +661,7 @@ TNO_KD_Can_Research_Outdated_Tech = {
 			has_idea = tno_research_facilities_advanced
 			has_idea = tno_research_facilities_cutting_edge
 			AND = {
-				date > 1969.12.30
+				date > 2012.12.30
 				has_idea = tno_research_facilities_basic
 			}
 		}
@@ -676,7 +676,7 @@ TNO_KD_Can_Research_Modern_Tech = {
 			has_idea = tno_research_facilities_advanced
 			has_idea = tno_research_facilities_cutting_edge
 			AND = {
-				date > 1969.12.30
+				date > 2012.12.30
 				has_idea = tno_research_facilities_outdated
 			}
 		}
