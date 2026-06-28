@@ -8,6 +8,8 @@ state = {
 	history = { 
 		owner = SWA 
 		
+		victory_points = { 5411 6 }
+		
 		buildings = { 
 			infrastructure = 1 
 			schools = 1 
@@ -15,8 +17,6 @@ state = {
 		}
 		
 		add_core_of = SWA 
-	
-		victory_points = { 5411 6 }
-}
+	}
 	provinces = { 616 836 3752 3800 5022 5411 }
 }

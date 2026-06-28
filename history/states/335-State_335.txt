@@ -8,6 +8,8 @@ state = {
 	history = { 
 		owner = ITH 
 		
+		victory_points = { 4520 16 }
+		
 		buildings = { 
 			infrastructure = 7 
 			thermoelectric_plant = 1 
@@ -17,10 +19,8 @@ state = {
 		}
 		
 		add_core_of = ITH 
-		add_claim_by = ROC
-		add_claim_by = ALB
-	
-		victory_points = { 4520 16 }
-}
+		add_claim_by = ROC 
+		add_claim_by = ALB 
+	}
 	provinces = { 1452 4520 5734 5750 }
 }

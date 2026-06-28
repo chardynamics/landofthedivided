@@ -9,6 +9,8 @@ state = {
 	history = { 
 		owner = DET 
 		
+		victory_points = { 4893 25 }
+		
 		buildings = { 
 			infrastructure = 6 
 			thermoelectric_plant = 4 
@@ -20,10 +22,8 @@ state = {
 			barracks = 1 
 		}
 		
-		add_claim_by = WOL
+		add_claim_by = WOL 
 		add_core_of = DET 
-	
-		victory_points = { 4893 25 }
-}
+	}
 	provinces = { 1330 4893 5087 5729 5751 }
 }

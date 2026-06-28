@@ -9,6 +9,8 @@ state = {
 	history = { 
 		owner = PHI 
 		
+		victory_points = { 4737 33 }
+		
 		buildings = { 
 			infrastructure = 10 
 			thermoelectric_plant = 3 
@@ -22,8 +24,6 @@ state = {
 		}
 		
 		add_core_of = PHI 
-	
-		victory_points = { 4737 33 }
-}
+	}
 	provinces = { 1045 4737 }
 }

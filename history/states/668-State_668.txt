@@ -9,6 +9,8 @@ state = {
 	history = { 
 		owner = MEX 
 		
+		victory_points = { 3470 3 }
+		
 		buildings = { 
 			infrastructure = 4 
 			air_base = 6 
@@ -24,8 +26,6 @@ state = {
 		}
 		
 		add_core_of = MEX 
-	
-		victory_points = { 3470 3 }
-}
+	}
 	provinces = { 1392 1700 1762 2748 2767 2903 3143 3470 3539 4013 6478 6485 6507 8809 8810 }
 }

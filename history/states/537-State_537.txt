@@ -9,6 +9,8 @@ state = {
 	history = { 
 		owner = USG 
 		
+		victory_points = { 1776 16 }
+		
 		buildings = { 
 			infrastructure = 9 
 			air_base = 9 
@@ -23,8 +25,6 @@ state = {
 		}
 		
 		add_core_of = USG 
-	
-		victory_points = { 1776 16 }
-}
+	}
 	provinces = { 788 1776 4324 6226 6247 8728 }
 }

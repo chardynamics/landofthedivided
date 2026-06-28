@@ -6,8 +6,8 @@ state = {
 	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	history = { 
+		owner = CAN 
 		
-		owner = CAN
 		buildings = { 
 			infrastructure = 9 
 			schools = 2 
@@ -18,8 +18,8 @@ state = {
 			radar_station = 1 
 			anti_air_building = 1 
 		}
-
-		add_core_of = CAN
+		
+		add_core_of = CAN 
 	}
 	provinces = { 6701 }
 }

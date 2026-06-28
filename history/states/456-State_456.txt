@@ -8,6 +8,8 @@ state = {
 	history = { 
 		owner = SVR 
 		
+		victory_points = { 1758 6 }
+		
 		buildings = { 
 			infrastructure = 7 
 			air_base = 4 
@@ -17,8 +19,6 @@ state = {
 		}
 		
 		add_core_of = SVR 
-	
-		victory_points = { 1758 6 }
-}
+	}
 	provinces = { 1347 1758 4496 6016 6027 }
 }

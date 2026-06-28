@@ -9,15 +9,15 @@ state = {
 	history = { 
 		owner = CKC 
 		
+		victory_points = { 2605 3 }
+		
 		buildings = { 
 			infrastructure = 6 
 			air_base = 3 
 		}
 		
 		add_core_of = CKC 
-		add_claim_by = USM
-	
-		victory_points = { 2605 3 }
-}
+		add_claim_by = USM 
+	}
 	provinces = { 178 299 395 972 2605 4352 6002 8677 }
 }

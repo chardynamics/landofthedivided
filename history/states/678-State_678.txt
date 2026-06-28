@@ -9,6 +9,8 @@ state = {
 	history = { 
 		owner = HMA 
 		
+		victory_points = { 3821 33 }
+		
 		buildings = { 
 			infrastructure = 7 
 			air_base = 9 
@@ -24,9 +26,7 @@ state = {
 		}
 		
 		add_core_of = HMA 
-		add_claim_by = STX
-	
-		victory_points = { 3821 33 }
-}
+		add_claim_by = STX 
+	}
 	provinces = { 2131 3821 4993 8772 }
 }

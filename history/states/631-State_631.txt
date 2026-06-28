@@ -8,14 +8,14 @@ state = {
 	history = { 
 		owner = HMA 
 		
+		victory_points = { 6768 6 }
+		
 		buildings = { 
 			infrastructure = 0 
 			thermoelectric_plant = 1 
 		}
 		
 		add_core_of = HMA 
-	
-		victory_points = { 6768 6 }
-}
+	}
 	provinces = { 6765 6766 6768 }
 }

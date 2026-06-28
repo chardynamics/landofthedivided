@@ -8,15 +8,15 @@ state = {
 	history = { 
 		owner = NOR 
 		
+		victory_points = { 6044 4 }
+		
 		buildings = { 
 			infrastructure = 7 
 			thermoelectric_plant = 3 
 		}
 		
 		add_core_of = NOR 
-		add_claim_by = CHA
-	
-		victory_points = { 6044 4 }
-}
+		add_claim_by = CHA 
+	}
 	provinces = { 2056 2599 4571 4791 6044 6075 }
 }

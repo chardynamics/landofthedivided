@@ -8,6 +8,8 @@ state = {
 	history = { 
 		owner = ROC 
 		
+		victory_points = { 925 10 }
+		
 		buildings = { 
 			infrastructure = 7 
 			thermoelectric_plant = 1 
@@ -17,8 +19,6 @@ state = {
 		}
 		
 		add_core_of = ROC 
-	
-		victory_points = { 925 10 }
-}
+	}
 	provinces = { 925 4222 4295 4923 5709 5723 5731 5743 5747 }
 }

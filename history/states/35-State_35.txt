@@ -9,6 +9,8 @@ state = {
 	history = { 
 		owner = IMA 
 		
+		victory_points = { 5894 16 }
+		
 		buildings = { 
 			infrastructure = 8 
 			thermoelectric_plant = 1 
@@ -18,8 +20,6 @@ state = {
 		}
 		
 		add_core_of = IMA 
-	
-		victory_points = { 5894 16 }
-}
+	}
 	provinces = { 563 4562 5894 5910 }
 }

@@ -8,6 +8,8 @@ state = {
 	history = { 
 		owner = VER 
 		
+		victory_points = { 3759 6 }
+		
 		buildings = { 
 			infrastructure = 8 
 			schools = 1 
@@ -15,9 +17,7 @@ state = {
 		}
 		
 		add_core_of = VER 
-		add_claim_by = SNH
-	
-		victory_points = { 3759 6 }
-}
+		add_claim_by = SNH 
+	}
 	provinces = { 3759 5566 5577 }
 }
