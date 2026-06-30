@@ -173,3 +173,34 @@ set_popularities = {
 	national_socialism = 0
 	ultranationalism = 0
 }
+
+#Starting Equipment
+add_equipment_to_stockpile = {
+	type = infantry_equipment_3
+	amount = 1000
+	producer = EFG
+}
+
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_2
+	amount = 250
+	producer = EFG
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment_2
+	amount = 250
+	producer = EFG
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_2
+	amount = 250
+	producer = EFG
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_3
+	amount = 250
+	producer = EFG
+}

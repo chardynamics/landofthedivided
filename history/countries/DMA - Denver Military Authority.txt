@@ -169,3 +169,82 @@ set_popularities = {
 	national_socialism = 0
 	ultranationalism = 0
 }
+
+
+
+#Starting Equipment
+add_equipment_to_stockpile = {
+	type = infantry_equipment_3
+	amount = 2500
+	producer = DMA
+}
+
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_2
+	amount = 1000
+	producer = DMA
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment_2
+	amount = 1000
+	producer = DMA
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_2
+	amount = 1000
+	producer = DMA
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_3
+	amount = 1000
+	producer = DMA
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	add_equipment_to_stockpile = {
+		type = MBT_equipment_2
+		amount = 200
+		producer = DMA
+	}
+	add_equipment_to_stockpile = {
+		type = APC_equipment_2
+		amount = 500
+		producer = DMA
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	add_equipment_to_stockpile = {
+		type = MBT_chassis_2
+		amount = 200
+		producer = DMA
+	}
+	add_equipment_to_stockpile = {
+		type = APC_chassis_2
+		amount = 500
+		producer = DMA
+	}
+}
+
+
+add_equipment_to_stockpile = {
+	type = jet_fighter_equipment_2
+	amount = 250
+	producer = DMA
+}
+
+add_equipment_to_stockpile = {
+	type = transport_helicopter_equipment_1
+	amount = 50
+	producer = DMA
+}

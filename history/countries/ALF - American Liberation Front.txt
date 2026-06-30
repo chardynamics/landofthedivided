@@ -129,3 +129,22 @@ declare_war_on = {
 	target = BIR
 	type = annex_everything
 }
+
+#Starting Equipment
+add_equipment_to_stockpile = {
+	type = infantry_equipment_3
+	amount = 1000
+	producer = ALF
+}
+
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_2
+	amount = 100
+	producer = ALF
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_2
+	amount = 250
+	producer = ALF
+}
