@@ -13,7 +13,7 @@ ideas = {
 
 			cancel_if_invalid = yes
 			modifier = {
-				#conscription_factor = 0.4
+				conscription_factor = 0.2
 				military_industry_cost_modifier = -0.85
 				army_cost_modifier = -0.85
 				#naval_industry_cost_modifier = -0.5
@@ -62,7 +62,7 @@ ideas = {
 
 			cancel_if_invalid = yes
 			modifier = {
-				#conscription_factor = 0.4
+				conscription_factor = 0.2
 				military_industry_cost_modifier = -0.5
 				army_cost_modifier = -0.5
 				#naval_industry_cost_modifier = -0.5

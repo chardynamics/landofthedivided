@@ -1,6 +1,8 @@
 d_create_army = {
+    ##Most countries
     division_template = {
-        name = "Infantry Liberation Unit"
+        name = "Infantry Unit"
+
         regiments = {
             infantry = { x = 0 y = 0 }
             infantry = { x = 0 y = 1 }
@@ -8,9 +10,10 @@ d_create_army = {
             infantry = { x = 1 y = 0 }
             infantry = { x = 1 y = 1 }
             infantry = { x = 1 y = 2 }
-            infantry = { x = 2 y = 0 }
-            infantry = { x = 2 y = 1 }
-            infantry = { x = 2 y = 2 }
+        }
+        support = {
+            artillery = { x = 0 y = 0 }
+            engineer = { x = 0 y = 1 }
         }
     }
 
@@ -22,13 +25,201 @@ d_create_army = {
     set_temp_variable = { i = 0 }
     while_loop_effect = {
         limit = { check_variable = { i < num_of_divs } }
-        capital_scope = {
+        random_controlled_state = {
             create_unit = {
-                division = "name = \"Infantry Liberation Unit\" division_template = \"Infantry Liberation Unit\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+                division = "division_template = \"Infantry Unit\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                owner = PREV
+            }
+        }
+        add_to_temp_variable = { i = 1 }
+        #multiply_temp_variable = { i = 1.02 }
+        multiply_temp_variable = { i = 1 }
+    }
+}
+
+d_create_army2 = {
+    ##Most countries
+    division_template = {
+        name = "Infantry Unit"
+
+        regiments = {
+            infantry = { x = 0 y = 0 }
+            infantry = { x = 0 y = 1 }
+            infantry = { x = 0 y = 2 }
+            infantry = { x = 1 y = 0 }
+            infantry = { x = 1 y = 1 }
+            infantry = { x = 1 y = 2 }
+        }
+        support = {
+            artillery = { x = 0 y = 0 }
+            engineer = { x = 0 y = 1 }
+        }
+    }
+
+    ##Most other countries
+    division_template = {
+        name = "Infantry Division"
+        division_names_group = USA_INF_01
+        regiments = {
+            infantry = { x = 0 y = 0 }
+            infantry = { x = 0 y = 1 }
+            infantry = { x = 0 y = 2 }
+            infantry = { x = 1 y = 0 }
+            infantry = { x = 1 y = 1 }
+            infantry = { x = 1 y = 2 }
+            infantry = { x = 2 y = 0 }
+            infantry = { x = 2 y = 1 }
+            infantry = { x = 2 y = 2 }
+        }
+        support = {
+            engineer = { x = 0 y = 0 }
+            artillery = { x = 0 y = 1 }
+            anti_tank = { x = 0 y = 2 }
+        }
+    }
+
+    set_temp_variable = { num_of_divs = max_available_manpower_k }
+    log = "Population (1000s): [?num_of_divs]"
+    divide_temp_variable = { num_of_divs = 10 }
+    log = "Divisions: [?num_of_divs]"
+
+    set_temp_variable = { i = 0 }
+    set_temp_variable = { division_barrier = num_of_divs }
+    multiply_temp_variable = { division_barrier = 0.25 }
+    while_loop_effect = {
+        limit = { check_variable = { i < num_of_divs } }
+        if = {
+            limit = { check_variable = { i < division_barrier } }
+            random_controlled_state = {
+                create_unit = {
+                    division = " division_template = \"Infantry Unit\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                    owner = PREV
+                }
+            }
+            add_to_temp_variable = { i = 1 }
+            multiply_temp_variable = { i = 1.02 }
+        }
+        else =  {
+            random_controlled_state = {
+                create_unit = {
+                    division = " division_template = \"Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                    owner = PREV
+                }
+            }
+            add_to_temp_variable = { i = 1 }
+            multiply_temp_variable = { i = 1.02 }
+        }
+    }
+}
+
+
+d_create_army3 = {
+    ##Most countries
+    division_template = {
+        name = "Infantry Unit"
+
+        regiments = {
+            infantry = { x = 0 y = 0 }
+            infantry = { x = 0 y = 1 }
+            infantry = { x = 0 y = 2 }
+            infantry = { x = 1 y = 0 }
+            infantry = { x = 1 y = 1 }
+            infantry = { x = 1 y = 2 }
+        }
+        support = {
+            artillery = { x = 0 y = 0 }
+            engineer = { x = 0 y = 1 }
+        }
+    }
+
+    ##Most other countries
+    division_template = {
+        name = "Infantry Division"
+        division_names_group = USA_INF_01
+        regiments = {
+            infantry = { x = 0 y = 0 }
+            infantry = { x = 0 y = 1 }
+            infantry = { x = 0 y = 2 }
+            infantry = { x = 1 y = 0 }
+            infantry = { x = 1 y = 1 }
+            infantry = { x = 1 y = 2 }
+            infantry = { x = 2 y = 0 }
+            infantry = { x = 2 y = 1 }
+            infantry = { x = 2 y = 2 }
+        }
+        support = {
+            engineer = { x = 0 y = 0 }
+            artillery = { x = 0 y = 1 }
+            anti_tank = { x = 0 y = 2 }
+        }
+    }
+
+    division_template = {
+        name = "Motorized Division"
+        division_names_group = CAN_MOT_01
+        regiments = {
+            motorized = { x = 0 y = 0 }
+            motorized = { x = 0 y = 1 }
+            motorized = { x = 0 y = 2 }
+            motorized = { x = 1 y = 0 }
+            motorized = { x = 1 y = 1 }
+            motorized = { x = 1 y = 2 }
+            MBT = { x = 2 y = 0 }
+            MBT = { x = 2 y = 1 }
+            MBT = { x = 2 y = 2 }
+        }
+        support = {
+            artillery = { x = 0 y = 0 }
+            engineer = { x = 0 y = 1 }
+            signal_company = { x = 0 y = 2 }
+        }
+    }
+
+    set_temp_variable = { num_of_divs = max_available_manpower_k }
+    log = "Population (1000s): [?num_of_divs]"
+    divide_temp_variable = { num_of_divs = 10 }
+    log = "Divisions: [?num_of_divs]"
+
+    set_temp_variable = { i = 0 }
+    set_temp_variable = { division_barrier = num_of_divs }
+    divide_temp_variable_temp_variable = { division_barrier = 10 }
+    while_loop_effect = {
+        limit = { check_variable = { i < division_barrier } }
+        random_controlled_state = {
+            create_unit = {
+                division = " division_template = \"Infantry Unit\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
                 owner = PREV
             }
         }
         add_to_temp_variable = { i = 1 }
         multiply_temp_variable = { i = 1.02 }
+    }
+    set_temp_variable = { j = num_of_divs }
+    subtract_from_temp_variable { j = division_barrier }
+    divide_temp_variable = { j = 2 }
+    add_to_temp_variable = { j = i }
+    while_loop_effect = {
+        limit = { check_variable = { i < num_of_divs } }
+        if = { 
+            limit = { check_variable = { i < j } }
+            random_controlled_state = {
+                create_unit = {
+                    division = " division_template = \"Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                    owner = PREV
+                }
+            }
+            add_to_temp_variable = { i = 1 }
+            multiply_temp_variable = { i = 1.02 }
+        }
+        else =  {
+            capital_scope = {
+                create_unit = {
+                    division = " division_template = \"Motorized Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                    owner = PREV
+                }
+            }
+            add_to_temp_variable = { i = 1 }
+            multiply_temp_variable = { i = 1.02 }
+        }
     }
 }
