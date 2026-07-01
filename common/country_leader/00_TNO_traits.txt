@@ -385,26 +385,6 @@ leader_traits = {
 		industrial_capacity_dockyard = 0.2
 		ai_will_do = { factor = 1 }
 	}
-
-	vicky3_wiz = {
-		random = no
-		stability_factor = 18.36
-		# war_support_factor = 18.36
-		political_power_gain = 3
-		# recruitable_population = 1
-		# training_time_factor = -1
-		research_speed_factor = 0.5
-		gdp_growth_modifier = 8
-		production_units_to_GDP_ratio_modifier = 0.1
-		free_production_units_modifier = 4
-		social_program_cost_factor = -0.25
-		consumer_goods_use_modifier = -0.25
-		consumer_goods_production_factor = 0.5
-		inflation_rate_modifier = -0.03
-		GDP_to_sphere_leader_modifier = -0.65
-		custom_modifier_tooltip = vicky3_wiz_tt
-		ai_will_do = { factor = 1 }
-	}
 	presidente_peru_latin = { # Peru generic
 		random = no
 

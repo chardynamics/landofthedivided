@@ -1,9 +1,15 @@
-"""Curated North American cities: (name, abbr, lon, lat, population)."""
+"""North American cities: GeoNames CSV bulk data + curated anchor overrides."""
 from __future__ import annotations
 
+import csv
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+CITIES_CSV = ROOT / "data" / "north_america_cities.csv"
+
+# Curated anchor / calibration overrides (win over CSV on same name+abbr key).
 # fmt: off
-CITY_ENTRIES = [
-    # --- anchor / calibration cities (also in existing localisation) ---
+ANCHOR_ENTRIES = [
     ("Washington", "DC", -77.0369, 38.9072, 670050),
     ("Philadelphia", "PA", -75.1652, 39.9526, 1567258),
     ("Montpelier", "VT", -72.5754, 44.2601, 8075),
@@ -458,7 +464,7 @@ CITY_ENTRIES = [
 ]
 
 # Supplemental cities for nationwide coverage (down to ~20-40k in under-covered states).
-CITY_ENTRIES += [
+ANCHOR_ENTRIES += [
     # --- Massachusetts ---
     ("Worcester", "MA", -71.8023, 42.2626, 206518),
     ("Lowell", "MA", -71.3162, 42.6334, 115554),
@@ -805,7 +811,7 @@ CITY_ENTRIES += [
 ]
 
 # VP-less state coverage: cities named in LOTD state files but missing from the DB above.
-CITY_ENTRIES += [
+ANCHOR_ENTRIES += [
     # --- Alberta ---
     ("Cypress", "AB", -110.6790, 50.0430, 8400),
     # --- Alabama ---
@@ -1128,15 +1134,52 @@ CITY_ENTRIES += [
 def city_label(name: str, abbr: str) -> str:
     if abbr == "DC":
         return "Washington D.C."
-    if abbr in {"BS", "VG", "KY", "BB", "TT"}:
+    if abbr in {"BS", "VG", "KY", "BB", "TT", "CU", "HT", "DO", "JM", "GL", "AG", "GD", "LC", "VC", "DM", "KN", "AW", "CW", "SX", "GP", "MQ", "TC", "BM", "GUA"}:
         return name
     return f"{name}, {abbr}"
 
 
+def load_csv_entries(path: Path = CITIES_CSV) -> list[tuple[str, str, float, float, int]]:
+    if not path.exists():
+        return []
+    entries: list[tuple[str, str, float, float, int]] = []
+    with path.open(encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            try:
+                entries.append(
+                    (
+                        row["name"],
+                        row["abbr"],
+                        float(row["lon"]),
+                        float(row["lat"]),
+                        int(row["population"]),
+                    )
+                )
+            except (KeyError, ValueError):
+                continue
+    return entries
+
+
+def merged_city_entries() -> list[tuple[str, str, float, float, int]]:
+    """CSV bulk data with curated ANCHOR_ENTRIES overriding on (name.lower, abbr)."""
+    by_key: dict[tuple[str, str], tuple[str, str, float, float, int]] = {}
+    for entry in load_csv_entries():
+        name, abbr, lon, lat, pop = entry
+        by_key[(name.lower(), abbr)] = entry
+    for entry in ANCHOR_ENTRIES:
+        name, abbr, lon, lat, pop = entry
+        by_key[(name.lower(), abbr)] = entry
+    return list(by_key.values())
+
+
+# Backward-compatible alias used by import script and assign_victory_points summary.
+CITY_ENTRIES = merged_city_entries()
+
+
 def build_city_index():
-    by_label = {}
-    by_key = {}
-    for name, abbr, lon, lat, pop in CITY_ENTRIES:
+    by_label: dict[str, dict] = {}
+    by_key: dict[tuple[str, str], dict] = {}
+    for name, abbr, lon, lat, pop in load_csv_entries():
         label = city_label(name, abbr)
         entry = {
             "name": name,
@@ -1147,6 +1190,18 @@ def build_city_index():
             "label": label,
         }
         by_label.setdefault(label, entry)
+        by_key[(name.lower(), abbr)] = entry
+    for name, abbr, lon, lat, pop in ANCHOR_ENTRIES:
+        label = city_label(name, abbr)
+        entry = {
+            "name": name,
+            "abbr": abbr,
+            "lon": lon,
+            "lat": lat,
+            "population": pop,
+            "label": label,
+        }
+        by_label[label] = entry
         by_key[(name.lower(), abbr)] = entry
     return by_label, by_key
 

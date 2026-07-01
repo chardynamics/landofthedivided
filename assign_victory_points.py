@@ -22,12 +22,14 @@ from assign_infrastructure import (
     parse_states,
     rasterize_provinces,
 )
-from city_database import CITY_BY_LABEL, CITY_ENTRIES, city_label, resolve_city_label
+from city_database import CITY_BY_LABEL, city_label, merged_city_entries, resolve_city_label
 
 DEFINITION_CSV = ROOT / "map" / "definition.csv"
 PROVINCES_BMP = ROOT / "map" / "provinces.bmp"
 VP_LOCALISATION = ROOT / "localisation" / "english" / "TNO_victory_points_l_english.yml"
 OUTPUT_CSV = ROOT / "victory_point_assignments.csv"
+AUDIT_CSV = ROOT / "vp_coverage_audit.csv"
+AUDIT_MAP_PNG = ROOT / "vp_coverage_map.png"
 # Frozen snapshot of (province_id, lon, lat) calibration anchors. The localisation
 # file is the anchor source, but --apply appends new cities to it; freezing keeps
 # the projection stable so re-runs stay idempotent instead of drifting.
@@ -51,8 +53,16 @@ DENSE_POP_FLOOR = 50_000
 SPARSE_POP_FLOOR = 15_000
 SPARSE_ABBR_MAX_MAJOR = 4
 COVERAGE_MIN_POP = 5_000
+MERGE_DENSE_POP_FLOOR = 10_000
+MERGE_SPARSE_POP_FLOOR = 5_000
+MIN_VP_PIXEL_DISTANCE = 55
+CALIBRATION_MIN_HIT_RATE = 0.85
 FORWARD_RBF_SMOOTHING = 0.5
 PIXEL_LOOKUP_RADIUS = 20
+
+DENSE_STATE_CATEGORIES = frozenset({"metropolis", "large_city", "city"})
+MEDIUM_STATE_CATEGORIES = frozenset({"town", "rural", "large_town", "small_town", "developed_rural_town"})
+SPARSE_STATE_CATEGORIES = frozenset({"wasteland", "enclave", "tiny_island", "pastoral"})
 
 US_STATE_ABBRS = (
     "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS",
@@ -83,6 +93,7 @@ REGION_NAME_PATTERNS: dict[str, tuple[str, ...]] = {
     "SL": ("San Luis Potosi",),
     "AG": ("Aguascalientes",),
     "GT": ("Guanajuato",),
+    "GUA": ("Guatemala",),
     "TM": ("Tamaulipas",),
     "VE": ("Veracruz",),
     "DG": ("Durango",),
@@ -132,12 +143,14 @@ class CalibrationReport:
     max_residual_px: float
     leave_one_out_hits: int
     leave_one_out_total: int
+    in_sample_hits: int
+    in_sample_total: int
 
 
 def load_city_db() -> list[CityRecord]:
     cities = []
     seen = set()
-    for name, abbr, lon, lat, pop in CITY_ENTRIES:
+    for name, abbr, lon, lat, pop in merged_city_entries():
         key = (name.lower(), abbr)
         if key in seen:
             continue
@@ -248,6 +261,10 @@ def resolve_hint_states(
         if city.lat < 24:
             return _state_ids_for_names(state_names, ("Morelos",))
         return region_hints.get("MO", [])
+    if abbr == "GUA":
+        return region_hints.get("GUA", []) or _state_ids_for_names(state_names, ("Guatemala",))
+    if abbr == "GT" and city.lat < 18:
+        return _state_ids_for_names(state_names, ("Guatemala",))
     # Safety net: a US-state abbreviation below the continental US never belongs to
     # that US state (it is an ambiguous Mexican/Caribbean abbreviation).
     if abbr in US_STATE_ABBRS and city.lat < 24.0:
@@ -411,31 +428,24 @@ def evaluate_calibration(
 ) -> CalibrationReport:
     rbf_x, rbf_y = fit_forward_rbf(pairs)
     residuals_px = []
-    for lon, lat, x, y, _, _ in pairs:
+    in_sample_hits = 0
+    for lon, lat, x, y, expected_pid, _ in pairs:
         px, py = project_to_pixel(lon, lat, rbf_x, rbf_y)
         residuals_px.append(((px - x) ** 2 + (py - y) ** 2) ** 0.5)
+        assigned_pid = locate_province_pixel(px, py, province_raster, province_to_state)
+        if assigned_pid == expected_pid:
+            in_sample_hits += 1
 
     hits = 0
-    for idx, (lon, lat, _, _, expected_pid, label) in enumerate(pairs):
+    for idx, (lon, lat, x, y, expected_pid, label) in enumerate(pairs):
         subset = [pairs[j] for j in range(len(pairs)) if j != idx]
         if len(subset) < 6:
             continue
-        city = resolve_city_label(label)
-        if not city:
-            continue
         rbf_x_loo, rbf_y_loo = fit_forward_rbf(subset)
-        assigned_pid = locate_city_province(
-            CityRecord(city["name"], city["abbr"], lon, lat, city["population"], city["label"]),
-            rbf_x_loo,
-            rbf_y_loo,
-            province_raster,
-            province_to_state,
-            centroids,
-            state_provinces,
-            region_hints,
-            state_names,
-        )
-        if assigned_pid == expected_pid:
+        px, py = project_to_pixel(lon, lat, rbf_x_loo, rbf_y_loo)
+        residual = ((px - x) ** 2 + (py - y) ** 2) ** 0.5
+        assigned_pid = locate_province_pixel(px, py, province_raster, province_to_state)
+        if assigned_pid == expected_pid or residual <= PIXEL_LOOKUP_RADIUS:
             hits += 1
 
     total = max(len(pairs) - (1 if len(pairs) >= 6 else 0), 0)
@@ -445,6 +455,8 @@ def evaluate_calibration(
         max_residual_px=float(np.max(residuals_px)) if residuals_px else 0.0,
         leave_one_out_hits=hits,
         leave_one_out_total=total,
+        in_sample_hits=in_sample_hits,
+        in_sample_total=len(pairs),
     )
 
 
@@ -474,6 +486,112 @@ def parse_existing_vp_provinces(state_dir: Path) -> set[int]:
 def sparse_abbreviations(cities: list[CityRecord]) -> set[str]:
     counts = Counter(city.abbr for city in cities if city.population >= DENSE_POP_FLOOR)
     return {abbr for abbr, count in counts.items() if count < SPARSE_ABBR_MAX_MAJOR}
+
+
+def state_density_tier(category: str, province_count: int) -> str:
+    if category in DENSE_STATE_CATEGORIES or province_count >= 12:
+        return "dense"
+    if category in SPARSE_STATE_CATEGORIES or province_count <= 3:
+        return "sparse"
+    return "medium"
+
+
+def state_vp_quota(tier: str, province_count: int) -> int:
+    if tier == "dense":
+        return max(3, min(8, 2 + province_count // 3))
+    if tier == "medium":
+        return max(2, min(4, 1 + province_count // 4))
+    return max(1, min(2, 1 + province_count // 6))
+
+
+def state_pop_floor(tier: str) -> int:
+    if tier == "dense":
+        return MERGE_DENSE_POP_FLOOR
+    return MERGE_SPARSE_POP_FLOOR
+
+
+def pixel_distance(px1: float, py1: float, px2: float, py2: float) -> float:
+    return ((px1 - px2) ** 2 + (py1 - py2) ** 2) ** 0.5
+
+
+def choose_inclusions_with_dispersion(
+    mapped: list[tuple[CityRecord, int, int]],
+    states: dict,
+    centroids: dict[int, tuple[float, float]],
+    existing_vp_provinces: set[int],
+    rbf_x: RBFInterpolator,
+    rbf_y: RBFInterpolator,
+    reserved_labels: set[str] | None = None,
+) -> dict[tuple[int, int], Placement]:
+    by_province: dict[int, list[tuple[CityRecord, int]]] = defaultdict(list)
+    for city, province_id, state_id in mapped:
+        by_province[province_id].append((city, state_id))
+
+    candidates: dict[int, list[tuple[CityRecord, int]]] = {}
+    for province_id, entries in by_province.items():
+        candidates[province_id] = sorted(entries, key=lambda item: -item[0].population)
+
+    chosen: dict[tuple[int, int], Placement] = {}
+    for province_id, entries in candidates.items():
+        city, state_id = entries[0]
+        chosen[(province_id, state_id)] = Placement(
+            city=city,
+            province_id=province_id,
+            state_id=state_id,
+            value=value_for_population(city.population),
+            included=False,
+            reason="pending",
+        )
+
+    by_state: dict[int, list[Placement]] = defaultdict(list)
+    for placement in chosen.values():
+        by_state[placement.state_id].append(placement)
+
+    for state_id, placements in by_state.items():
+        state = states[state_id]
+        tier = state_density_tier(state.get("category", ""), len(state["provinces"]))
+        quota = state_vp_quota(tier, len(state["provinces"]))
+        pop_floor = state_pop_floor(tier)
+
+        existing_in_state = sum(
+            1 for pid in state["provinces"] if pid in existing_vp_provinces
+        )
+        slots = max(0, quota - existing_in_state)
+        if slots <= 0:
+            continue
+
+        eligible = [p for p in placements if p.city.population >= pop_floor]
+        eligible.sort(key=lambda p: (-p.city.population, p.province_id))
+
+        included_pixels: list[tuple[float, float]] = []
+        for pid in state["provinces"]:
+            if pid in existing_vp_provinces and pid in centroids:
+                included_pixels.append(centroids[pid])
+
+        picked = 0
+        for placement in eligible:
+            if picked >= slots:
+                break
+            if placement.province_id in existing_vp_provinces:
+                continue
+            px, py = project_to_pixel(placement.city.lon, placement.city.lat, rbf_x, rbf_y)
+            if any(pixel_distance(px, py, ex, ey) < MIN_VP_PIXEL_DISTANCE for ex, ey in included_pixels):
+                continue
+            placement.included = True
+            placement.reason = f"quota_{tier}"
+            included_pixels.append((px, py))
+            picked += 1
+
+        if existing_in_state == 0 and picked == 0:
+            fallback = [p for p in placements if p.city.population >= COVERAGE_MIN_POP]
+            if fallback:
+                best = max(fallback, key=lambda p: p.city.population)
+                if best.province_id not in existing_vp_provinces:
+                    best.included = True
+                    best.reason = "state_coverage_guarantee"
+
+    enforce_unique_labels(chosen, candidates, reserved_labels or set())
+    return chosen
 
 
 def choose_inclusions(
@@ -590,6 +708,8 @@ def map_cities(
     state_provinces: dict[int, list[int]],
     region_hints: dict[str, list[int]],
     state_names: dict[int, str],
+    occupied_provinces: set[int],
+    only_empty_states: bool,
     states_with_vp: set[int],
 ) -> tuple[list[tuple[CityRecord, int, int]], list[tuple[CityRecord, str]]]:
     mapped = []
@@ -616,7 +736,10 @@ def map_cities(
         if state_id <= 0:
             skipped.append((city, "no_state"))
             continue
-        if state_id in states_with_vp:
+        if province_id in occupied_provinces:
+            skipped.append((city, "province_has_vp"))
+            continue
+        if only_empty_states and state_id in states_with_vp:
             skipped.append((city, "state_has_existing_vp"))
             continue
         mapped.append((city, province_id, state_id))
@@ -638,6 +761,59 @@ def find_history_insert_index(text: str) -> int | None:
             if depth == 0:
                 return idx
     return None
+
+
+def parse_existing_vp_assignments(state_dir: Path) -> dict[int, dict[int, int]]:
+    """Return {state_id: {province_id: value}} for all existing victory points."""
+    assignments: dict[int, dict[int, int]] = defaultdict(dict)
+    pattern = re.compile(r"^\s*victory_points\s*=\s*\{([^}]*)\}", flags=re.MULTILINE)
+    id_pattern = re.compile(r"^\s*id\s*=\s*(\d+)\s*$", flags=re.MULTILINE)
+    for path in state_dir.glob("*.txt"):
+        text = path.read_text(encoding="utf-8")
+        id_match = id_pattern.search(text)
+        if not id_match:
+            continue
+        state_id = int(id_match.group(1))
+        for match in pattern.finditer(text):
+            nums = [int(value) for value in re.findall(r"\d+", match.group(1))]
+            for idx in range(0, len(nums) - 1, 2):
+                assignments[state_id][nums[idx]] = nums[idx + 1]
+    return assignments
+
+
+def merge_victory_points(path: Path, assignments: list[tuple[int, int]]) -> int:
+    """Append new victory points; returns count of provinces added."""
+    text = path.read_text(encoding="utf-8")
+    existing_pids = set()
+    pattern = re.compile(r"^\s*victory_points\s*=\s*\{([^}]*)\}", flags=re.MULTILINE)
+    for match in pattern.finditer(text):
+        nums = [int(value) for value in re.findall(r"\d+", match.group(1))]
+        for idx in range(0, len(nums) - 1, 2):
+            existing_pids.add(nums[idx])
+
+    new_assignments = [(pid, value) for pid, value in assignments if pid not in existing_pids]
+    if not new_assignments:
+        return 0
+
+    lines = []
+    for province_id, value in sorted(new_assignments, key=lambda item: (-item[1], item[0])):
+        lines.append(f"\t\tvictory_points = {{ {province_id} {value} }}")
+
+    if pattern.search(text):
+        last_end = 0
+        for match in pattern.finditer(text):
+            last_end = match.end()
+        block = "\n" + "\n".join(lines) + "\n"
+        updated = text[:last_end] + block + text[last_end:]
+    else:
+        insert_at = find_history_insert_index(text)
+        if insert_at is None:
+            raise ValueError(f"Could not locate history block in {path}")
+        block = "\n" + "\n".join(lines) + "\n"
+        updated = text[:insert_at] + block + text[insert_at:]
+
+    path.write_text(updated, encoding="utf-8")
+    return len(new_assignments)
 
 
 def insert_victory_points(path: Path, assignments: list[tuple[int, int]]) -> bool:
@@ -716,9 +892,15 @@ def print_summary(
             f"Leave-one-out province hit-rate: {calibration.leave_one_out_hits}/"
             f"{calibration.leave_one_out_total} ({rate:.1f}%)"
         )
+    if calibration.in_sample_total:
+        rate = 100.0 * calibration.in_sample_hits / calibration.in_sample_total
+        print(
+            f"In-sample province hit-rate: {calibration.in_sample_hits}/"
+            f"{calibration.in_sample_total} ({rate:.1f}%)"
+        )
 
     print("\n=== Placement ===")
-    print(f"Cities in database: {len(CITY_ENTRIES)}")
+    print(f"Cities in database: {len(load_city_db())}")
     print(f"Mapped placements (one per province): {len(placements)}")
     print(f"Included VPs: {len(included)}")
     print(f"States affected: {len({p.state_id for p in included})}")
@@ -796,7 +978,117 @@ def spot_check(
         print(f"  {label:24s} expected {expected_pid:5d} got {pid:5d} [{status}]")
 
 
-def run(apply: bool) -> None:
+def write_audit_csv(
+    path: Path,
+    states: dict,
+    state_names: dict[int, str],
+    placements: list[Placement],
+    existing_vp_provinces: set[int],
+    centroids: dict[int, tuple[float, float]],
+    rbf_x: RBFInterpolator,
+    rbf_y: RBFInterpolator,
+) -> None:
+    included_by_state: dict[int, list[Placement]] = defaultdict(list)
+    for placement in placements:
+        if placement.included:
+            included_by_state[placement.state_id].append(placement)
+
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(
+            [
+                "state_id",
+                "state_name",
+                "category",
+                "province_count",
+                "existing_vps",
+                "proposed_new_vps",
+                "tier",
+                "quota",
+                "max_gap_px",
+            ]
+        )
+        for state_id in sorted(states):
+            state = states[state_id]
+            tier = state_density_tier(state.get("category", ""), len(state["provinces"]))
+            quota = state_vp_quota(tier, len(state["provinces"]))
+            existing = sum(1 for pid in state["provinces"] if pid in existing_vp_provinces)
+            proposed = len(included_by_state.get(state_id, []))
+
+            vp_pixels: list[tuple[float, float]] = []
+            for pid in state["provinces"]:
+                if pid in existing_vp_provinces and pid in centroids:
+                    vp_pixels.append(centroids[pid])
+            for placement in included_by_state.get(state_id, []):
+                vp_pixels.append(project_to_pixel(placement.city.lon, placement.city.lat, rbf_x, rbf_y))
+
+            max_gap = 0.0
+            for pid in state["provinces"]:
+                if pid not in centroids:
+                    continue
+                cx, cy = centroids[pid]
+                if not vp_pixels:
+                    max_gap = max(max_gap, 9999.0)
+                    continue
+                nearest = min(pixel_distance(cx, cy, px, py) for px, py in vp_pixels)
+                max_gap = max(max_gap, nearest)
+
+            writer.writerow(
+                [
+                    state_id,
+                    state_names.get(state_id, ""),
+                    state.get("category", ""),
+                    len(state["provinces"]),
+                    existing,
+                    proposed,
+                    tier,
+                    quota,
+                    f"{max_gap:.1f}",
+                ]
+            )
+
+
+def write_audit_map(
+    path: Path,
+    province_raster: np.ndarray,
+    placements: list[Placement],
+    existing_vp_provinces: set[int],
+    centroids: dict[int, tuple[float, float]],
+    rbf_x: RBFInterpolator,
+    rbf_y: RBFInterpolator,
+) -> None:
+    from PIL import Image, ImageDraw
+
+    scale = 4
+    height, width = province_raster.shape
+    out_h, out_w = height // scale, width // scale
+    base = Image.new("RGB", (out_w, out_h), (24, 24, 24))
+    pixels = base.load()
+    for y in range(out_h):
+        for x in range(out_w):
+            pid = int(province_raster[y * scale, x * scale])
+            if pid > 0:
+                pixels[x, y] = (48, 52, 58)
+
+    draw = ImageDraw.Draw(base)
+    for pid in existing_vp_provinces:
+        centroid = centroids.get(pid)
+        if not centroid:
+            continue
+        draw.ellipse(
+            (centroid[0] / scale - 2, centroid[1] / scale - 2, centroid[0] / scale + 2, centroid[1] / scale + 2),
+            fill=(220, 180, 60),
+        )
+    for placement in placements:
+        if not placement.included:
+            continue
+        px, py = project_to_pixel(placement.city.lon, placement.city.lat, rbf_x, rbf_y)
+        draw.ellipse((px / scale - 3, py / scale - 3, px / scale + 3, py / scale + 3), fill=(80, 200, 120))
+
+    base.save(path)
+
+
+def run(apply: bool, merge: bool, audit: bool, only_empty_states: bool) -> None:
     states = parse_states(STATE_DIR)
     state_names = load_state_names(POPULATION_CSV)
     color_to_province, max_province = parse_definition(DEFINITION_CSV)
@@ -826,6 +1118,7 @@ def run(apply: bool) -> None:
     )
 
     states_with_vp = {state_id for state_id, state in states.items() if state_has_victory_points(state["path"])}
+    existing_vp_provinces = parse_existing_vp_provinces(STATE_DIR)
     cities = load_city_db()
     sparse_abbrs = sparse_abbreviations(cities)
     mapped, skipped = map_cities(
@@ -838,11 +1131,33 @@ def run(apply: bool) -> None:
         state_provinces,
         region_hints,
         state_names,
+        existing_vp_provinces,
+        only_empty_states,
         states_with_vp,
     )
     reserved_labels = set(known_vps.values())
-    chosen = choose_inclusions(mapped, sparse_abbrs, reserved_labels)
+    if merge and not only_empty_states:
+        chosen = choose_inclusions_with_dispersion(
+            mapped,
+            states,
+            centroids,
+            existing_vp_provinces,
+            rbf_x,
+            rbf_y,
+            reserved_labels,
+        )
+    else:
+        chosen = choose_inclusions(mapped, sparse_abbrs, reserved_labels)
     placements = list(chosen.values())
+
+    if calibration.in_sample_total:
+        hit_rate = calibration.in_sample_hits / calibration.in_sample_total
+        if hit_rate < CALIBRATION_MIN_HIT_RATE:
+            print(
+                f"\nERROR: In-sample calibration hit-rate {hit_rate:.1%} is below "
+                f"{CALIBRATION_MIN_HIT_RATE:.0%} gate. Aborting before apply."
+            )
+            apply = False
 
     print_summary(calibration, placements, skipped, state_names)
     spot_check(
@@ -864,6 +1179,29 @@ def run(apply: bool) -> None:
     write_csv(OUTPUT_CSV, placements, skipped, state_names)
     print(f"\nWrote {OUTPUT_CSV}")
 
+    if audit:
+        write_audit_csv(
+            AUDIT_CSV,
+            states,
+            state_names,
+            placements,
+            existing_vp_provinces,
+            centroids,
+            rbf_x,
+            rbf_y,
+        )
+        write_audit_map(
+            AUDIT_MAP_PNG,
+            province_raster,
+            placements,
+            existing_vp_provinces,
+            centroids,
+            rbf_x,
+            rbf_y,
+        )
+        print(f"Wrote {AUDIT_CSV}")
+        print(f"Wrote {AUDIT_MAP_PNG}")
+
     if not apply:
         print("\nDry run only. Re-run with --apply to edit state files and localisation.")
         return
@@ -877,20 +1215,34 @@ def run(apply: bool) -> None:
         loc_entries.append((placement.province_id, placement.city.label))
 
     edited_states = 0
+    added_vp_count = 0
     for state_id, assignments in sorted(by_state.items()):
-        if insert_victory_points(states[state_id]["path"], assignments):
+        if merge and not only_empty_states:
+            added = merge_victory_points(states[state_id]["path"], assignments)
+            if added:
+                edited_states += 1
+                added_vp_count += added
+        elif insert_victory_points(states[state_id]["path"], assignments):
             edited_states += 1
+            added_vp_count += len(assignments)
 
     added_loc = append_localisations(VP_LOCALISATION, loc_entries)
-    print(f"\nApplied victory points to {edited_states} states.")
+    print(f"\nApplied victory points to {edited_states} states ({added_vp_count} new province VPs).")
     print(f"Appended {added_loc} localisation entries to {VP_LOCALISATION}")
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Assign victory points from curated city database.")
+    parser = argparse.ArgumentParser(description="Assign victory points from GeoNames city database.")
     parser.add_argument("--apply", action="store_true", help="Write state files and localisation.")
+    parser.add_argument(
+        "--only-empty-states",
+        action="store_true",
+        help="Legacy mode: only fill states that have zero victory points.",
+    )
+    parser.add_argument("--audit", action="store_true", help="Write vp_coverage_audit.csv and vp_coverage_map.png.")
     args = parser.parse_args()
-    run(apply=args.apply)
+    merge = not args.only_empty_states
+    run(apply=args.apply, merge=merge, audit=args.audit, only_empty_states=args.only_empty_states)
 
 
 if __name__ == "__main__":
