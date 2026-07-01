@@ -293,7 +293,7 @@ add_to_array = { global.world_countries = BAH }
 
 ##Manpower boost
 add_to_array = { global.american_warlords_mp = LMA } #
-add_to_array = { global.american_warlords_mp = BAR } #
+add_to_array = { global.american_warlords_mp = BAR } #	
 add_to_array = { global.american_warlords_mp = SUT } #
 add_to_array = { global.american_warlords_mp = WAR } #
 add_to_array = { global.american_warlords_mp = SSD } #
@@ -308,17 +308,20 @@ add_to_array = { global.american_warlords_mp = VER } #
 add_to_array = { global.american_warlords_mp = MAR } #
 add_to_array = { global.american_warlords_mp = SOM } #
 add_to_array = { global.american_warlords_mp = ALB } #
-add_to_array = { global.american_warlords_mp = SWA } #
-add_to_array = { global.american_warlords_mp = SOR } #
+add_to_array = { global.american_warlords_mp2 = SWA } ##
+add_to_array = { global.american_warlords_mp2 = SOR } ##
 add_to_array = { global.american_warlords_mp = CKC } #
-add_to_array = { global.american_warlords_mp = SSC } #
-add_to_array = { global.american_warlords_mp = RWV } #
-add_to_array = { global.american_warlords_mp = REO } #
+add_to_array = { global.american_warlords_mp2 = SSC } ##
 
 
 for_each_scope_loop = {
 	array = global.american_warlords_mp
 	add_ideas = USA_warlord_manpower
+}
+
+for_each_scope_loop = {
+	array = global.american_warlords_mp2
+	add_ideas = USA_warlord_manpower2
 }
 for_each_scope_loop = {
 	array = global.american_warlords_1
