@@ -11,26 +11,26 @@ on_actions = {
 			ZZZ = {
 				for_each_scope_loop = {
 					array = global.american_warlords_1
-					add_ideas = USA_warlord_econ_1
 					set_country_flag = is_warlord
+					add_ideas = USA_warlord_econ_1
 					d_create_army = yes
 				}
 				for_each_scope_loop = {
 					array = global.american_warlords_2
-					add_ideas = USA_warlord_econ_2
 					set_country_flag = is_warlord
+					add_ideas = USA_warlord_econ_2
 					d_create_army = yes
 				}
 				for_each_scope_loop = {
 					array = global.american_warlords_3
-					add_ideas = USA_warlord_econ_3
 					set_country_flag = is_warlord
+					add_ideas = USA_warlord_econ_3
 					d_create_army2 = yes
 				}
 				for_each_scope_loop = {
 					array = global.american_warlords_4
-					add_ideas = USA_warlord_econ_4
 					set_country_flag = is_warlord
+					add_ideas = USA_warlord_econ_4
 					d_create_army3 = yes
 				}
 				for_each_scope_loop = {
