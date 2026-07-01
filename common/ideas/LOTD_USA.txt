@@ -1,6 +1,5 @@
 ideas = {
-	hidden_ideas = {
-		#boost shit early-game russian econ
+	country = {
 		USA_warlord_econ_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_warlord_econ_1" }
 			allowed = { always = no }
@@ -13,7 +12,7 @@ ideas = {
 
 			cancel_if_invalid = yes
 			modifier = {
-				conscription_factor = 0.2
+				#conscription_factor = 5
 				military_industry_cost_modifier = -0.85
 				army_cost_modifier = -0.85
 				#naval_industry_cost_modifier = -0.5
@@ -62,7 +61,7 @@ ideas = {
 
 			cancel_if_invalid = yes
 			modifier = {
-				conscription_factor = 0.2
+				conscription_factor = 10000000
 				military_industry_cost_modifier = -0.5
 				army_cost_modifier = -0.5
 				#naval_industry_cost_modifier = -0.5
@@ -111,7 +110,7 @@ ideas = {
 
 			cancel_if_invalid = yes
 			modifier = {
-				#conscription_factor = 0.4
+				#conscription = 0.05
 				military_industry_cost_modifier = -0.25
 				army_cost_modifier = -0.25
 				#naval_industry_cost_modifier = -0.5
@@ -133,7 +132,7 @@ ideas = {
 
 			cancel_if_invalid = yes
 			modifier = {
-				#conscription_factor = 0.4
+				#conscription_factor = 0.15
 				military_industry_cost_modifier = -0.15
 				army_cost_modifier = -0.15
 				#naval_industry_cost_modifier = -0.5
@@ -143,6 +142,9 @@ ideas = {
 				#ai_focus_aggressive_factor = 0.5
 			}
 		}
+	}
+	hidden_ideas = {
+		#boost shit early-game russian econ
 		USA_regional_econ = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_regional_econ" }
 			allowed = { always = no }
