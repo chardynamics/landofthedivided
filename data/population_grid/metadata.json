@@ -1,0 +1,17 @@
+{
+  "source": "gpw_v4_density_2000_30sec",
+  "bbox": [
+    -170.0,
+    7.0,
+    -50.0,
+    84.0
+  ],
+  "cell_count": 983542,
+  "gpw_url": "https://sedac.ciesin.columbia.edu/downloads/data/gpw-v4/gpw-v4-population-count-rev11/gpw-v4-population-count-rev11_2020_2pt5_min_tif.zip",
+  "notes": "Sparse lon/lat/population cells for estimate_state_populations_grid.py",
+  "value_type": "density",
+  "aggregate_step_deg": 0.041666666666666664,
+  "raw_cells": 21670729,
+  "aggregated_cells": 983542,
+  "raster_path": "/Users/charlesduong/Documents/Paradox Interactive/Hearts of Iron IV/mod/landofthedivided/gpw_v4_population_density_rev11_2000_30_sec_2000.tif"
+}

@@ -1,780 +1,780 @@
-id,file,name,current_manpower,estimated_population,estimate_source
-1,history/states/1-State_1.txt,British Columbia,3907738,3907738,province_exact
-2,history/states/2-State_2.txt,"Hot Springs, AR",38954,38954,exact_city_adj
-3,history/states/3-State_3.txt,"Joplin, MO",54604,54604,exact_city_adj
-4,history/states/4-State_4.txt,"Ponce, PR",199560,199560,exact_city_adj
-5,history/states/5-State_5.txt,"Mayaguez, PR",106716,106716,exact_city_adj
-6,history/states/6-State_6.txt,Northern Alberta,400000,400000,exact
-7,history/states/7-State_7.txt,"Arecibo, PR",115200,115200,exact_city_adj
-8,history/states/8-State_8.txt,North Manitoba,250000,250000,exact
-9,history/states/9-State_9.txt,Quebec,7237479,7237479,province_exact
-10,history/states/10-State_10.txt,Labrador,26000,26000,exact
-11,history/states/11-State_11.txt,"Floyd County, KY",37687,37687,exact_city_adj
-12,history/states/12-State_12.txt,"Newberry, MI",1440,1440,exact_city_adj
-13,history/states/13-State_13.txt,"Saint Ignace, MI",3000,3000,exact_city_adj
-14,history/states/14-State_14.txt,Central Northern Manitoba,300000,300000,exact
-15,history/states/15-State_15.txt,"Springfield, MO",181896,181896,exact_city_adj
-16,history/states/16-State_16.txt,"Houghton, MI",9120,9120,exact_city_adj
-17,history/states/17-State_17.txt,"Moresby Island, BC",177,177,exact_city_adj
-18,history/states/18-State_18.txt,"Shannon, MO",9988,9988,exact_city_adj
-19,history/states/19-State_19.txt,"Evansville, IN",145898,145898,exact_city_adj
-20,history/states/20-State_20.txt,"Hopkins, KY",156000,156000,exact_city_adj
-21,history/states/21-State_21.txt,"Bloomington, IN",83149,83149,exact_city_adj
-22,history/states/22-State_22.txt,"Poplar Bluff, MO",20427,20427,exact_city_adj
-23,history/states/23-State_23.txt,Northern British Columbia,300000,300000,exact
-24,history/states/24-State_24.txt,"Louisville, KY",307477,307477,exact_city_adj
-25,history/states/25-State_25.txt,"St. Louis, MO",416626,416626,exact_city_adj
-26,history/states/26-State_26.txt,World Border,0,0,special
-27,history/states/27-State_27.txt,"Harrisonville, MO",11662,11662,exact_city_adj
-28,history/states/28-State_28.txt,"St. Joseph, MO",88788,88788,exact_city_adj
-29,history/states/29-State_29.txt,"Adalair, MO",2160,2160,exact_city_adj
-30,history/states/30-State_30.txt,Saint-Pierre-et-Miquelon,6109,6109,exact
-31,history/states/31-State_31.txt,"Kidney Island, NU",120,120,exact_city_adj
-32,history/states/32-State_32.txt,"Tupelo, MS",41455,41455,exact_city_adj
-33,history/states/33-State_33.txt,"Etowah, AL",124150,124150,exact_city_adj
-34,history/states/34-State_34.txt,"Knox, IL",67003,67003,exact_city_adj
-35,history/states/35-State_35.txt,"Howard, IN",101956,101956,exact_city_adj
-36,history/states/36-State_36.txt,"Coeur d'Alene, ID",41416,41416,exact_city_adj
-37,history/states/37-State_37.txt,"Kankakee, IL",32890,32890,exact_city_adj
-38,history/states/38-State_38.txt,"Belcher Islands, NU",3000,3000,exact_city_adj
-39,history/states/39-State_39.txt,"Christian, KY",86954,86954,exact_city_adj
-40,history/states/40-State_40.txt,Eastern Northern Manitoba,200000,200000,exact
-41,history/states/41-State_41.txt,"Peoria, IL",135523,135523,exact_city_adj
-42,history/states/42-State_42.txt,Newfoundland,512930,512930,province_exact
-43,history/states/43-State_43.txt,"Oxford, MS",17292,17292,exact_city_adj
-44,history/states/44-State_44.txt,"El Dorado, AR",28375,28375,exact_city_adj
-45,history/states/45-State_45.txt,Oklahoma,2037835,2037835,residual_subtraction
-46,history/states/46-State_46.txt,"Champaign, IL",81021,81021,exact_city_adj
-47,history/states/47-State_47.txt,"Little Rock, AR",219759,219759,exact_city_adj
-48,history/states/48-State_48.txt,"Woodward, OK",14461,14461,exact_city_adj
-49,history/states/49-State_49.txt,"Bowling Green, KY",59155,59155,exact_city_adj
-50,history/states/50-State_50.txt,"Guayama, PR",91800,91800,exact_city_adj
-51,history/states/51-State_51.txt,"Petersburg, IL",2700,2700,exact_city_adj
-52,history/states/52-State_52.txt,"Platte, WI",12000,12000,exact_city_adj
-53,history/states/53-State_53.txt,"Buncombe, NC",247628,247628,exact_city_adj
-54,history/states/54-State_54.txt,"Ottumwa, IA",34474,34474,exact_city_adj
-55,history/states/55-State_55.txt,"Iowa City, IA",74664,74664,exact_city_adj
-56,history/states/56-State_56.txt,"Dubuque, IA",69055,69055,exact_city_adj
-57,history/states/57-State_57.txt,"Waterloo, IA",82496,82496,exact_city_adj
-58,history/states/58-State_58.txt,"Covington, KY",52044,52044,exact_city_adj
-59,history/states/59-State_59.txt,"Indianapolis, IN",938244,938244,exact_city_adj
-60,history/states/60-State_60.txt,"Des Moines, IA",238418,238418,exact_city_adj
-61,history/states/61-State_61.txt,Illinois,12419293,12419293,exact
-62,history/states/62-State_62.txt,"Vancouver, BC",654805,654805,exact_city_adj
-63,history/states/63-State_63.txt,Northern Saskatchwan,200000,200000,exact
-64,history/states/64-State_64.txt,"North Kansas City, MO",5260,5260,exact_city_adj
-65,history/states/65-State_65.txt,"Rochester, MN",102967,102967,exact_city_adj
-66,history/states/66-State_66.txt,"Milwaukee, WI",716368,716368,exact_city_adj
-67,history/states/67-State_67.txt,"Sioux City, IA",102015,102015,exact_city_adj
-68,history/states/68-State_68.txt,"Green Bay, WI",122775,122775,exact_city_adj
-69,history/states/69-State_69.txt,Ontario,11410046,11410046,province_exact
-70,history/states/70-State_70.txt,"Jackson, TN",71571,71571,exact_city_adj
-71,history/states/71-State_71.txt,"Land Between The Lakes, TN",36000,36000,exact_city_adj
-72,history/states/72-State_72.txt,"Madison, WI",249664,249664,exact_city_adj
-73,history/states/73-State_73.txt,"Lexington, KY",312614,312614,exact_city_adj
-74,history/states/74-State_74.txt,"Kalamazoo, MI",92574,92574,exact_city_adj
-75,history/states/75-State_75.txt,"Eau Claire, WI",74044,74044,exact_city_adj
-76,history/states/76-State_76.txt,"Appleton, WI",84104,84104,exact_city_adj
-77,history/states/77-State_77.txt,"Kansas City, MO",529854,529854,exact_city_adj
-78,history/states/78-State_78.txt,"Tippecanoe, IN",180000,180000,exact_city_adj
-79,history/states/79-State_79.txt,"Oshkosh, WI",75559,75559,exact_city_adj
-80,history/states/80-State_80.txt,"Wausau, WI",46111,46111,exact_city_adj
-81,history/states/81-State_81.txt,"La Crosse, WI",61824,61824,exact_city_adj
-82,history/states/82-State_82.txt,"Minot, ND",43880,43880,exact_city_adj
-83,history/states/83-State_83.txt,"Delaware, IN",142522,142522,exact_city_adj
-84,history/states/84-State_84.txt,"Willis, ND",1440,1440,exact_city_adj
-85,history/states/85-State_85.txt,"Edmonton, AB",799324,799324,exact_city_adj
-86,history/states/86-State_86.txt,"De Witt, AR",4376,4376,exact_city_adj
-87,history/states/87-State_87.txt,"Fargo, ND",88933,88933,exact_city_adj
-88,history/states/88-State_88.txt,"Vancouver Island, BC",654805,654805,exact_city_adj
-89,history/states/89-State_89.txt,"Sioux Falls, SD",148770,148770,exact_city_adj
-90,history/states/90-State_90.txt,"Chico, CA",71944,71944,exact_city_adj
-91,history/states/91-State_91.txt,"Mitchell, SD",18304,18304,exact_city_adj
-92,history/states/92-State_92.txt,"Vaudreuil-Soulanges, QC",180000,180000,exact_city_adj
-93,history/states/93-State_93.txt,"Twin Islands, NU",240,240,exact_city_adj
-94,history/states/94-State_94.txt,"Kindersley, SK",5400,5400,exact_city_adj
-95,history/states/95-State_95.txt,"Saskatoon, SK",236173,236173,exact_city_adj
-96,history/states/96-State_96.txt,Guantanamo Bay,10000,10000,plain_geography_fallback
-97,history/states/97-State_97.txt,"Ann Arbor, MI",136828,136828,exact_city_adj
-98,history/states/98-State_98.txt,"Brookings, SD",22204,22204,exact_city_adj
-99,history/states/99-State_99.txt,"Rapid City, SD",65427,65427,exact_city_adj
-100,history/states/100-State_100.txt,"Winnipeg, MB",743452,743452,exact_city_adj
-101,history/states/101-State_101.txt,"Birmingham, AL",291384,291384,exact_city_adj
-102,history/states/102-State_102.txt,"Dickinson, ND",19212,19212,exact_city_adj
-103,history/states/103-State_103.txt,"Pierre, SD",16651,16651,exact_city_adj
-104,history/states/104-State_104.txt,"Akimiski Island, NU",60,60,exact_city_adj
-105,history/states/105-State_105.txt,"Beatrice, NE",15026,15026,exact_city_adj
-106,history/states/106-State_106.txt,"Pine Bluff, AR",66102,66102,exact_city_adj
-107,history/states/107-State_107.txt,"Anticosti Island, QC",7800,7800,exact_city_adj
-108,history/states/108-State_108.txt,"Scottsbluff, NE",17659,17659,exact_city_adj
-109,history/states/109-State_109.txt,"Fremont, NE",30208,30208,exact_city_adj
-110,history/states/110-State_110.txt,"Grand Island, NE",51434,51434,exact_city_adj
-111,history/states/111-State_111.txt,"Meridian, MS",49233,49233,exact_city_adj
-112,history/states/112-State_112.txt,"Salina, KS",55159,55159,exact_city_adj
-113,history/states/113-State_113.txt,"Cowley, KS",43549,43549,exact_city_adj
-114,history/states/114-State_114.txt,"Saint Pierre, FR",5280,5280,exact_city_adj
-115,history/states/115-State_115.txt,"Charlton Island, NU",24,24,exact_city_adj
-116,history/states/116-State_116.txt,"East Lansing, MI",57486,57486,exact_city_adj
-117,history/states/117-State_117.txt,"Calgary, AB",1054639,1054639,exact_city_adj
-118,history/states/118-State_118.txt,"Miquelon, FR",2040,2040,exact_city_adj
-119,history/states/119-State_119.txt,"Durango, CO",15210,15210,exact_city_adj
-120,history/states/120-State_120.txt,"Eastern Townships, QC",264000,264000,exact_city_adj
-121,history/states/121-State_121.txt,"Hardin, KY",115987,115987,exact_city_adj
-122,history/states/122-State_122.txt,"Dodge City, KS",30211,30211,exact_city_adj
-123,history/states/123-State_123.txt,"Alamosa, CO",10536,10536,exact_city_adj
-124,history/states/124-State_124.txt,"Fort Smith, AR",96321,96321,exact_city_adj
-125,history/states/125-State_125.txt,"Twin Falls, ID",37028,37028,exact_city_adj
-126,history/states/126-State_126.txt,"Thornton, CO",98860,98860,exact_city_adj
-127,history/states/127-State_127.txt,"Tuscaloosa, AL",84723,84723,exact_city_adj
-128,history/states/128-State_128.txt,"Fort Collins, CO",142382,142382,exact_city_adj
-129,history/states/129-State_129.txt,"Fort Morgan, CO",9650,9650,exact_city_adj
-130,history/states/130-State_130.txt,"La Salle, LA",17138,17138,exact_city_adj
-131,history/states/131-State_131.txt,"Colorado Springs, CO",433068,433068,exact_city_adj
-132,history/states/132-State_132.txt,"Magladen Islands, QC",15360,15360,exact_city_adj
-133,history/states/133-State_133.txt,"Ionia, MI",8400,8400,exact_city_adj
-134,history/states/134-State_134.txt,"Lansing, MI",142953,142953,exact_city_adj
-135,history/states/135-State_135.txt,"Miles City, MT",10257,10257,exact_city_adj
-136,history/states/136-State_136.txt,"Gillette, WY",23575,23575,exact_city_adj
-137,history/states/137-State_137.txt,"North Puget Sound, WA",144000,144000,exact_city_adj
-138,history/states/138-State_138.txt,"Flint, MI",149931,149931,exact_city_adj
-139,history/states/139-State_139.txt,"Great Falls, MT",67345,67345,exact_city_adj
-140,history/states/140-State_140.txt,"Northern Cascades, WA",90000,90000,exact_city_adj
-141,history/states/141-State_141.txt,New Brunswick,729498,729498,province_exact
-142,history/states/142-State_142.txt,"Olympic Peninsula, WA",84000,84000,exact_city_adj
-143,history/states/143-State_143.txt,"Tucson, AZ",584038,584038,exact_city_adj
-144,history/states/144-State_144.txt,"Idaho Falls, ID",60876,60876,exact_city_adj
-145,history/states/145-State_145.txt,"Cape Breton Island, NS",176896,176896,exact_city_adj
-146,history/states/146-State_146.txt,"Salt Lake City, UT",218277,218277,exact_city_adj
-147,history/states/147-State_147.txt,"Ogden, UT",92671,92671,exact_city_adj
-148,history/states/148-State_148.txt,"Lac-des-Eaux-Mortes, QC",6000,6000,exact_city_adj
-149,history/states/149-State_149.txt,"Provo, UT",126199,126199,exact_city_adj
-150,history/states/150-State_150.txt,"Western Okanogan Highlands, WA",42000,42000,exact_city_adj
-151,history/states/151-State_151.txt,"Edmundston, NB",19200,19200,exact_city_adj
-152,history/states/152-State_152.txt,Prince Edward Island,135851,135851,province_exact
-153,history/states/153-State_153.txt,"Degelis, QC",24000,24000,exact_city_adj
-154,history/states/154-State_154.txt,"Mount Pleasant, MI",30000,30000,exact_city_adj
-155,history/states/155-State_155.txt,"Brandon, MB",47010,47010,exact_city_adj
-156,history/states/156-State_156.txt,"Puget Islands, WA",30000,30000,exact_city_adj
-157,history/states/157-State_157.txt,"Eastern Okanogan Highlands, WA",42000,42000,exact_city_adj
-158,history/states/158-State_158.txt,"Metaline Falls, WA",302,302,exact_city_adj
-159,history/states/159-State_159.txt,"Hanover, MB",21600,21600,exact_city_adj
-160,history/states/160-State_160.txt,"Sandpoint, ID",7782,7782,exact_city_adj
-161,history/states/161-State_161.txt,"Kalispell, MT",17067,17067,exact_city_adj
-162,history/states/162-State_162.txt,"Essex, MA",891790,891790,exact_city_adj
-163,history/states/163-State_163.txt,Nova Scotia,908007,908007,province_exact
-164,history/states/164-State_164.txt,"Vernal, UT",9256,9256,exact_city_adj
-165,history/states/165-State_165.txt,"Shreveport, LA",240174,240174,exact_city_adj
-166,history/states/166-State_166.txt,"Cypress, AB",8400,8400,exact_city_adj
-167,history/states/167-State_167.txt,"Maple Creek, MB",3000,3000,exact_city_adj
-168,history/states/168-State_168.txt,"Aroostook, ME",109597,109597,exact_city_adj
-169,history/states/169-State_169.txt,"South Puget Sound, WA",120000,120000,exact_city_adj
-170,history/states/170-State_170.txt,"Browning, MT",1219,1219,exact_city_adj
-171,history/states/171-State_171.txt,"Fayetteville, AR",69656,69656,exact_city_adj
-172,history/states/172-State_172.txt,"Columbia Basin, WA",132000,132000,exact_city_adj
-173,history/states/173-State_173.txt,"Pantex Plant, TX",2500,2500,special
-174,history/states/174-State_174.txt,"Saint Francis, ME",600,600,exact_city_adj
-175,history/states/175-State_175.txt,"Cedar City, UT",24632,24632,exact_city_adj
-176,history/states/176-State_176.txt,"New Orleans, LA",581608,581608,exact_city_adj
-177,history/states/177-State_177.txt,"Butte, MT",38668,38668,exact_city_adj
-178,history/states/178-State_178.txt,"Capitol Reef, UT",0,0,exact_city_adj
-179,history/states/179-State_179.txt,"Willapa Hills, WA",14400,14400,exact_city_adj
-180,history/states/180-State_180.txt,"Lafayette, LA",152569,152569,exact_city_adj
-181,history/states/181-State_181.txt,"Moscow, ID",28069,28069,exact_city_adj
-182,history/states/182-State_182.txt,"Mecklenberg, NC",834544,834544,exact_city_adj
-183,history/states/183-State_183.txt,"Southern Cascades, WA",78000,78000,exact_city_adj
-184,history/states/184-State_184.txt,"St. John, NB",82022,82022,exact_city_adj
-185,history/states/185-State_185.txt,"Yakima, WA",86214,86214,exact_city_adj
-186,history/states/186-State_186.txt,"Missoula, MT",76669,76669,exact_city_adj
-187,history/states/187-State_187.txt,"Naval Submarine Base Bangor, WA",1800,1800,exact_city_adj
-188,history/states/188-State_188.txt,"Piscataquis, ME",20682,20682,exact_city_adj
-189,history/states/189-State_189.txt,"Middlesex, NJ",900194,900194,exact_city_adj
-190,history/states/190-State_190.txt,"Roseburg, OR",24020,24020,exact_city_adj
-191,history/states/191-State_191.txt,"Muskegon, MI",47196,47196,exact_city_adj
-192,history/states/192-State_192.txt,"Bismarck, ND",66638,66638,exact_city_adj
-193,history/states/193-State_193.txt,"Grand Forks, ND",59696,59696,exact_city_adj
-194,history/states/194-State_194.txt,"Conway, AR",51800,51800,exact_city_adj
-195,history/states/195-State_195.txt,"Mahoosuc Range, ME",24000,24000,exact_city_adj
-196,history/states/196-State_196.txt,"Phillips, AR",31734,31734,exact_city_adj
-197,history/states/197-State_197.txt,"Natchitoches, LA",5131,5131,exact_city_adj
-198,history/states/198-State_198.txt,"Lake Charles, LA",86108,86108,exact_city_adj
-199,history/states/199-State_199.txt,"Clay, MN",63600,63600,exact_city_adj
-200,history/states/200-State_200.txt,"Isanti, MN",6000,6000,exact_city_adj
-201,history/states/201-State_201.txt,"Vancouver, WA",172272,172272,exact_city_adj
-202,history/states/202-State_202.txt,"Autauga, AL",52405,52405,exact_city_adj
-203,history/states/203-State_203.txt,"Downeast, ME",42000,42000,exact_city_adj
-204,history/states/204-State_204.txt,"Billings, MT",107816,107816,exact_city_adj
-205,history/states/205-State_205.txt,"West Mahoosuc, ME",18000,18000,exact_city_adj
-206,history/states/206-State_206.txt,"Blue Mountains, WA",10000,10000,special
-207,history/states/207-State_207.txt,"Somerset, ME",61065,61065,exact_city_adj
-208,history/states/208-State_208.txt,"Alexandra, LA",56400,56400,exact_city_adj
-209,history/states/209-State_209.txt,"Bend, OR",62434,62434,exact_city_adj
-210,history/states/210-State_210.txt,"Queens, NY",2675254,2675254,exact_city_adj
-211,history/states/211-State_211.txt,"Phillipsburg, MT",4560,4560,exact_city_adj
-212,history/states/212-State_212.txt,"Mercer, ND",3168,3168,exact_city_adj
-213,history/states/213-State_213.txt,"Orange, NY",409640,409640,exact_city_adj
-214,history/states/214-State_214.txt,"Dothan, AL",71209,71209,exact_city_adj
-215,history/states/215-State_215.txt,"Monroe, LA",65472,65472,exact_city_adj
-216,history/states/216-State_216.txt,"Western Mountains, ME",10000,10000,special
-217,history/states/217-State_217.txt,"Pendleton, OR",19624,19624,exact_city_adj
-218,history/states/218-State_218.txt,"Monteregie, QC",1680000,1680000,exact_city_adj
-219,history/states/219-State_219.txt,"ile Marie, QC",12000,12000,exact_city_adj
-220,history/states/220-State_220.txt,"Baker, MT",2126,2126,exact_city_adj
-221,history/states/221-State_221.txt,"Penobscot Bay, ME",54000,54000,exact_city_adj
-222,history/states/222-State_222.txt,"Marquette, MI",25556,25556,exact_city_adj
-223,history/states/223-State_223.txt,"Great North Woods, NH",48000,48000,exact_city_adj
-224,history/states/224-State_224.txt,"Cascade, ID",1320,1320,exact_city_adj
-225,history/states/225-State_225.txt,"ile Jesus, QC",720000,720000,exact_city_adj
-226,history/states/226-State_226.txt,"ile de Montreal, QC",1247440,1247440,exact_city_adj
-227,history/states/227-State_227.txt,"Montgomery, Al",241881,241881,exact_city_adj
-228,history/states/228-State_228.txt,"Saint Cloud, MN",72495,72495,exact_city_adj
-229,history/states/229-State_229.txt,"ile Bizardl, QC",48000,48000,exact_city_adj
-230,history/states/230-State_230.txt,"ile Perrot, QC",40800,40800,exact_city_adj
-231,history/states/231-State_231.txt,"Northeast Kingdom, VT",30000,30000,exact_city_adj
-232,history/states/232-State_232.txt,"Portland Casco Bay, ME",77098,77098,exact_city_adj
-233,history/states/233-State_233.txt,"Cadillac, MI",13197,13197,exact_city_adj
-234,history/states/234-State_234.txt,"Jamestown, ND",18512,18512,exact_city_adj
-235,history/states/235-State_235.txt,"Clarke, AL",33513,33513,exact_city_adj
-236,history/states/236-State_236.txt,"Franklin, VT",57295,57295,exact_city_adj
-237,history/states/237-State_237.txt,"Butler, AL",25136,25136,exact_city_adj
-238,history/states/238-State_238.txt,"Alger, MI",12000,12000,exact_city_adj
-239,history/states/239-State_239.txt,"Dillon, MT",4555,4555,exact_city_adj
-240,history/states/240-State_240.txt,"Sugar Island, MI",600,600,exact_city_adj
-241,history/states/241-State_241.txt,"Superior, WI",32712,32712,exact_city_adj
-242,history/states/242-State_242.txt,"St. Lawrence, NY",134317,134317,exact_city_adj
-243,history/states/243-State_243.txt,"Salmon, ID",3746,3746,exact_city_adj
-244,history/states/244-State_244.txt,"White Mountains, NH",10000,10000,special
-245,history/states/245-State_245.txt,"Manhattan, NYC",1537195,1537195,exact
-246,history/states/246-State_246.txt,"St. Joseph Island, ON",4302,4302,exact_city_adj
-247,history/states/247-State_247.txt,"Athens, OH",25610,25610,exact_city_adj
-248,history/states/248-State_248.txt,"Grand Isle, VT",8400,8400,exact_city_adj
-249,history/states/249-State_249.txt,"Powder River, MT",6000,6000,exact_city_adj
-250,history/states/250-State_250.txt,"Addison, VT",21156,21156,exact_city_adj
-251,history/states/251-State_251.txt,"Hayward, WI",19200,19200,exact_city_adj
-252,history/states/252-State_252.txt,"Manitoulin Island, ON",15343,15343,exact_city_adj
-253,history/states/253-State_253.txt,"Rutland, VT",20750,20750,exact_city_adj
-254,history/states/254-State_254.txt,"Drummond Island, MI",1200,1200,exact_city_adj
-255,history/states/255-State_255.txt,"Cabell, WV",116140,116140,exact_city_adj
-256,history/states/256-State_256.txt,"Hardin, MT",1032,1032,exact_city_adj
-257,history/states/257-State_257.txt,"Cockburn Island, ON",0,0,exact_city_adj
-258,history/states/258-State_258.txt,"East Bozeman, MT",30000,30000,exact_city_adj
-259,history/states/259-State_259.txt,"Madison, MT",2400,2400,exact_city_adj
-260,history/states/260-State_260.txt,"Merrimack, NH",138952,138952,exact_city_adj
-261,history/states/261-State_261.txt,"Sarasota, FL",391148,391148,exact_city_adj
-262,history/states/262-State_262.txt,"Ontario, OR",12438,12438,exact_city_adj
-263,history/states/263-State_263.txt,"Mackinac Island, MI",600,600,exact_city_adj
-264,history/states/264-State_264.txt,"Toledo, OH",376342,376342,exact_city_adj
-265,history/states/265-State_265.txt,"Stevens Point, WI",29461,29461,exact_city_adj
-266,history/states/266-State_266.txt,"Dayton, OH",199414,199414,exact_city_adj
-267,history/states/267-State_267.txt,"Mackinac City, MI",1440,1440,exact_city_adj
-268,history/states/268-State_268.txt,"Grafton, NH",15879,15879,exact_city_adj
-269,history/states/269-State_269.txt,"Clearwater, MN",3000,3000,exact_city_adj
-270,history/states/270-State_270.txt,"Beaver Island, MI",720,720,exact_city_adj
-271,history/states/271-State_271.txt,"Harding, SD",1623,1623,exact_city_adj
-272,history/states/272-State_272.txt,"Iosco, MI",14400,14400,exact_city_adj
-273,history/states/273-State_273.txt,"Hamilton, NY",5126,5126,exact_city_adj
-274,history/states/274-State_274.txt,"Strafford, NH",137076,137076,exact_city_adj
-275,history/states/275-State_275.txt,"Mobridge, SD",4364,4364,exact_city_adj
-276,history/states/276-State_276.txt,"Aberdeen, SD",29589,29589,exact_city_adj
-277,history/states/277-State_277.txt,"Concord, NH",48824,48824,exact_city_adj
-278,history/states/278-State_278.txt,"Medford, OR",75958,75958,exact_city_adj
-279,history/states/279-State_279.txt,"Watertown, SD",25778,25778,exact_city_adj
-280,history/states/280-State_280.txt,"Lewis, NY",30000,30000,exact_city_adj
-281,history/states/281-State_281.txt,"Old Faithful, WY",1200,1200,exact_city_adj
-282,history/states/282-State_282.txt,"Troy, NY",60000,60000,exact_city_adj
-283,history/states/283-State_283.txt,"Casper, WY",59572,59572,exact_city_adj
-284,history/states/284-State_284.txt,"Philadelphia, PA",1821060,1821060,exact_city_adj
-285,history/states/285-State_285.txt,"Schenectady, NY",78679,78679,exact_city_adj
-286,history/states/286-State_286.txt,"Richland, OH",154622,154622,exact_city_adj
-287,history/states/287-State_287.txt,"Roberts, ID",718,718,exact_city_adj
-288,history/states/288-State_288.txt,"Boise, ID",222944,222944,exact_city_adj
-289,history/states/289-State_289.txt,"Baileys Harbor, WI",1200,1200,exact_city_adj
-290,history/states/290-State_290.txt,"Grand Traverse, MI",96000,96000,exact_city_adj
-291,history/states/291-State_291.txt,"Oswego, NY",147092,147092,exact_city_adj
-292,history/states/292-State_292.txt,"Hillsborough, NH",53584,53584,exact_city_adj
-293,history/states/293-State_293.txt,"Windham, VT",51787,51787,exact_city_adj
-294,history/states/294-State_294.txt,"Nampa, ID",62240,62240,exact_city_adj
-295,history/states/295-State_295.txt,"Jackson, WY",10376,10376,exact_city_adj
-296,history/states/296-State_296.txt,"Crescent City, CA",4807,4807,exact_city_adj
-297,history/states/297-State_297.txt,"Jerome, ID",9336,9336,exact_city_adj
-298,history/states/298-State_298.txt,"Marshall, MN",16416,16416,exact_city_adj
-299,history/states/299-State_299.txt,"Suffolk, MA",826846,826846,exact_city_adj
-300,history/states/300-State_300.txt,"Worchester, MA",204000,204000,exact_city_adj
-301,history/states/301-State_301.txt,"Wayne, NY",112526,112526,exact_city_adj
-302,history/states/302-State_302.txt,"Berkshire, MA",167222,167222,exact_city_adj
-303,history/states/303-State_303.txt,"Mojave, CA",7779,7779,exact_city_adj
-304,history/states/304-State_304.txt,"Saint Paul, MN",326682,326682,exact_city_adj
-305,history/states/305-State_305.txt,"Chenango, NY",57994,57994,exact_city_adj
-306,history/states/306-State_306.txt,"Delaware, NY",51684,51684,exact_city_adj
-307,history/states/307-State_307.txt,"Plymouth, MA",62041,62041,exact_city_adj
-308,history/states/308-State_308.txt,"Onondaga, NY",518400,518400,exact_city_adj
-309,history/states/309-State_309.txt,"Trippe, SD",600,600,exact_city_adj
-310,history/states/310-State_310.txt,"Pocatello, ID",61759,61759,exact_city_adj
-311,history/states/311-State_311.txt,"Murray, MN",9600,9600,exact_city_adj
-312,history/states/312-State_312.txt,"Huron, MI",24000,24000,exact_city_adj
-313,history/states/313-State_313.txt,"Monroe, NY",882411,882411,exact_city_adj
-314,history/states/314-State_314.txt,"Genesse, NY",72444,72444,exact_city_adj
-315,history/states/315-State_315.txt,"Barnstable, MA",57385,57385,exact_city_adj
-316,history/states/316-State_316.txt,"Columbia, NY",75715,75715,exact_city_adj
-317,history/states/317-State_317.txt,"Mason, MI",16800,16800,exact_city_adj
-318,history/states/318-State_318.txt,"Saginaw, MI",74158,74158,exact_city_adj
-319,history/states/319-State_319.txt,"Providence, RI",208341,208341,exact_city_adj
-320,history/states/320-State_320.txt,"Albany, NY",114789,114789,exact_city_adj
-321,history/states/321-State_321.txt,"New London, CT",31034,31034,exact_city_adj
-322,history/states/322-State_322.txt,"Mankato, MN",38912,38912,exact_city_adj
-323,history/states/323-State_323.txt,"Ithaca, NY",35144,35144,exact_city_adj
-324,history/states/324-State_324.txt,"Lovelock, NV",2588,2588,exact_city_adj
-325,history/states/325-State_325.txt,"Cattaraugus, NY",96547,96547,exact_city_adj
-326,history/states/326-State_326.txt,"Buffalo, NY",351177,351177,exact_city_adj
-327,history/states/327-State_327.txt,"Windham, NY",2640,2640,exact_city_adj
-328,history/states/328-State_328.txt,"Hartford, CT",145893,145893,exact_city_adj
-329,history/states/329-State_329.txt,"Benton Harbor, MI",15381,15381,exact_city_adj
-330,history/states/330-State_330.txt,Grand Island,41000,41000,exact
-331,history/states/331-State_331.txt,"Mojave, NV",960,960,exact_city_adj
-332,history/states/332-State_332.txt,"Detroit, MI",1141524,1141524,exact_city_adj
-333,history/states/333-State_333.txt,"Hamburg, NY",72000,72000,exact_city_adj
-334,history/states/334-State_334.txt,"Alpena, MI",37576,37576,exact_city_adj
-335,history/states/335-State_335.txt,"Steuben, NY",118471,118471,exact_city_adj
-336,history/states/336-State_336.txt,"Oakland, MI",1440000,1440000,exact_city_adj
-337,history/states/337-State_337.txt,"Dutchess, NY",336180,336180,exact_city_adj
-338,history/states/338-State_338.txt,"Orange, NY",409640,409640,exact_city_adj
-339,history/states/339-State_339.txt,"St. Clair, MI",204000,204000,exact_city_adj
-340,history/states/340-State_340.txt,"Douglas, WY",6345,6345,exact_city_adj
-341,history/states/341-State_341.txt,"Chautauqua, NY",167700,167700,exact_city_adj
-342,history/states/342-State_342.txt,"Lackawanna, PA",252861,252861,exact_city_adj
-343,history/states/343-State_343.txt,"Fairfield, CT",68808,68808,exact_city_adj
-344,history/states/344-State_344.txt,"West Wendover, NV",3128,3128,exact_city_adj
-345,history/states/345-State_345.txt,"Allegheny, PA",1537999,1537999,exact_city_adj
-346,history/states/346-State_346.txt,"Bradford, PA",75313,75313,exact_city_adj
-347,history/states/347-State_347.txt,"Davenport, IA",118030,118030,exact_city_adj
-348,history/states/348-State_348.txt,"Detroit Metro, MI",5280000,5280000,exact_city_adj
-349,history/states/349-State_349.txt,"Mason City, IA",33783,33783,exact_city_adj
-350,history/states/350-State_350.txt,"Council Bluffs, IA",69921,69921,exact_city_adj
-351,history/states/351-State_351.txt,"Kent, MI",690000,690000,exact_city_adj
-352,history/states/352-State_352.txt,"Delta, UT",4010,4010,exact_city_adj
-353,history/states/353-State_353.txt,"Erie, PA",124460,124460,exact_city_adj
-354,history/states/354-State_354.txt,"Long Island, NY",9000000,9000000,exact_city_adj
-355,history/states/355-State_355.txt,"Cheyenne, WY",98241,98241,exact_city_adj
-356,history/states/356-State_356.txt,"McKean, PA",52800,52800,exact_city_adj
-357,history/states/357-State_357.txt,"Sussex, NJ",173820,173820,exact_city_adj
-358,history/states/358-State_358.txt,"Cherry, NE",6855,6855,exact_city_adj
-359,history/states/359-State_359.txt,"Lehigh, PA",374508,374508,exact_city_adj
-360,history/states/360-State_360.txt,"South Bairoil, WY",240,240,exact_city_adj
-361,history/states/361-State_361.txt,"Sandusky, OH",33412,33412,exact_city_adj
-362,history/states/362-State_362.txt,"Evanston, WY",14830,14830,exact_city_adj
-363,history/states/363-State_363.txt,"Northumberland, PA",111600,111600,exact_city_adj
-364,history/states/364-State_364.txt,"Rock Springs, WY",22860,22860,exact_city_adj
-365,history/states/365-State_365.txt,"Lawrence, PA",115495,115495,exact_city_adj
-366,history/states/366-State_366.txt,"Chicago Metro, IL",11415598,11415598,exact_city_adj
-367,history/states/367-State_367.txt,"Middlesex, NJ",900194,900194,exact_city_adj
-368,history/states/368-State_368.txt,"Superior, WY",1200,1200,exact_city_adj
-369,history/states/369-State_369.txt,"Rockford, IL",180138,180138,exact_city_adj
-370,history/states/370-State_370.txt,"Carson City, NV",62948,62948,exact_city_adj
-371,history/states/371-State_371.txt,"Centre, PA",162909,162909,exact_city_adj
-372,history/states/372-State_372.txt,"East Superior, WY",4200,4200,exact_city_adj
-373,history/states/373-State_373.txt,"Wamsutter, WY",240,240,exact_city_adj
-374,history/states/374-State_374.txt,"Monmouth, NJ",738361,738361,exact_city_adj
-375,history/states/375-State_375.txt,"Rawlins, WY",10440,10440,exact_city_adj
-376,history/states/376-State_376.txt,"Bucks, PA",717162,717162,exact_city_adj
-377,history/states/377-State_377.txt,"Chicago, IL",3475219,3475219,exact_city_adj
-378,history/states/378-State_378.txt,"Lancester, PA",66000,66000,exact_city_adj
-379,history/states/379-State_379.txt,"Williams, OH",44347,44347,exact_city_adj
-380,history/states/380-State_380.txt,"Adobie Town Rim, WY",180,180,exact_city_adj
-381,history/states/381-State_381.txt,"Greenville, MS",49959,49959,exact_city_adj
-382,history/states/382-State_382.txt,"Fort Wayne, IN",246872,246872,exact_city_adj
-383,history/states/383-State_383.txt,"Columbus, OH",853764,853764,exact_city_adj
-384,history/states/384-State_384.txt,"Ogallala, NE",5671,5671,exact_city_adj
-385,history/states/385-State_385.txt,"Gary, IN",123295,123295,exact_city_adj
-386,history/states/386-State_386.txt,"Wheeling, OH",31200,31200,exact_city_adj
-387,history/states/387-State_387.txt,"Blair, PA",154972,154972,exact_city_adj
-388,history/states/388-State_388.txt,"York, PA",458101,458101,exact_city_adj
-389,history/states/389-State_389.txt,"Camden, NJ",95181,95181,exact_city_adj
-390,history/states/390-State_390.txt,"Adams, IL",81932,81932,exact_city_adj
-391,history/states/391-State_391.txt,"Westmoreland, PA",443991,443991,exact_city_adj
-392,history/states/392-State_392.txt,"Jasper, IN",34322,34322,exact_city_adj
-393,history/states/393-State_393.txt,"Washington, PA",66000,66000,exact_city_adj
-394,history/states/394-State_394.txt,"Grand Junction, CO",50383,50383,exact_city_adj
-395,history/states/395-State_395.txt,"Newcastle, DE",530335,530335,exact_city_adj
-396,history/states/396-State_396.txt,"Mount Vernon, IL",9120,9120,exact_city_adj
-397,history/states/397-State_397.txt,"Steamboat Springs, CO",7560,7560,exact_city_adj
-398,history/states/398-State_398.txt,"Saint Anne, IL",6600,6600,exact_city_adj
-399,history/states/399-State_399.txt,"Walden, CO",750,750,exact_city_adj
-400,history/states/400-State_400.txt,"Lincoln, NE",270697,270697,exact_city_adj
-401,history/states/401-State_401.txt,"Kit Carson, CO",9613,9613,exact_city_adj
-402,history/states/402-State_402.txt,"Aberdeen, MD",19200,19200,exact_city_adj
-403,history/states/403-State_403.txt,"Harford, MD",262308,262308,exact_city_adj
-404,history/states/404-State_404.txt,"Baltimore, MD",781384,781384,exact_city_adj
-405,history/states/405-State_405.txt,"Bartholomew, IN",86361,86361,exact_city_adj
-406,history/states/406-State_406.txt,"Carroll, MD",181076,181076,exact_city_adj
-407,history/states/407-State_407.txt,"Clinton, OH",5103,5103,exact_city_adj
-408,history/states/408-State_408.txt,"Randell, UT",0,0,exact_city_adj
-409,history/states/409-State_409.txt,"North Platte, NE",28053,28053,exact_city_adj
-410,history/states/410-State_410.txt,"Kent, DE",133191,133191,exact_city_adj
-411,history/states/411-State_411.txt,"Queen Anne's, MD",57049,57049,exact_city_adj
-412,history/states/412-State_412.txt,"Frederick, MD",234332,234332,exact_city_adj
-413,history/states/413-State_413.txt,"Adams, NE",37636,37636,exact_city_adj
-414,history/states/414-State_414.txt,"Alleghany, MD",28827,28827,exact_city_adj
-415,history/states/415-State_415.txt,"Berkeley, WV",91086,91086,exact_city_adj
-416,history/states/416-State_416.txt,"Morgantown, WV",34462,34462,exact_city_adj
-417,history/states/417-State_417.txt,"Mineral, WV",32493,32493,exact_city_adj
-418,history/states/418-State_418.txt,"Montgomery, MD",1048009,1048009,exact_city_adj
-419,history/states/419-State_419.txt,"Bishop, CA",4288,4288,exact_city_adj
-420,history/states/420-State_420.txt,"Sussex, DE",236574,236574,exact_city_adj
-421,history/states/421-State_421.txt,"Monogalia, WV",98239,98239,exact_city_adj
-422,history/states/422-State_422.txt,"Breckenridge, CO",1777,1777,exact_city_adj
-423,history/states/423-State_423.txt,"Frederick, VA",80472,80472,exact_city_adj
-424,history/states/424-State_424.txt,"Fairfax, VA",1163698,1163698,exact_city_adj
-425,history/states/425-State_425.txt,"Prince George's, MD",1036093,1036093,exact_city_adj
-426,history/states/426-State_426.txt,"Bowling Green, MO",7003,7003,exact_city_adj
-427,history/states/427-State_427.txt,"Bloomington, IL",77212,77212,exact_city_adj
-428,history/states/428-State_428.txt,"Aspen, CO",4789,4789,exact_city_adj
-429,history/states/429-State_429.txt,"Wood, WV",105583,105583,exact_city_adj
-430,history/states/430-State_430.txt,"Furnass, NE",3994,3994,exact_city_adj
-431,history/states/431-State_431.txt,"Wicomico, MD",101572,101572,exact_city_adj
-432,history/states/432-State_432.txt,"Cincinnati, OH",397542,397542,exact_city_adj
-433,history/states/433-State_433.txt,"Dove Creek, CO",759,759,exact_city_adj
-434,history/states/434-State_434.txt,"Ellis, KS",33008,33008,exact_city_adj
-435,history/states/435-State_435.txt,"Albemarle, VA",95083,95083,exact_city_adj
-436,history/states/436-State_436.txt,"Topeka, KS",143859,143859,exact_city_adj
-437,history/states/437-State_437.txt,"King George's, VA",20163,20163,exact_city_adj
-438,history/states/438-State_438.txt,"Greenbrier, WV",41631,41631,exact_city_adj
-439,history/states/439-State_439.txt,"Accomack, VA",45966,45966,exact_city_adj
-440,history/states/440-State_440.txt,"Spotslyvania, VA",115200,115200,exact_city_adj
-441,history/states/441-State_441.txt,"Pueblo, CO",122545,122545,exact_city_adj
-442,history/states/442-State_442.txt,"Moab, UT",6399,6399,exact_city_adj
-443,history/states/443-State_443.txt,"Lynchburg, VA",78322,78322,exact_city_adj
-444,history/states/444-State_444.txt,"Emporia, KS",32112,32112,exact_city_adj
-445,history/states/445-State_445.txt,"Springfield, IL",133744,133744,exact_city_adj
-446,history/states/446-State_446.txt,"Madison, KY",85046,85046,exact_city_adj
-447,history/states/447-State_447.txt,"Cabell, WV",116140,116140,exact_city_adj
-448,history/states/448-State_448.txt,"Mesquite, NV",2247,2247,exact_city_adj
-449,history/states/449-State_449.txt,"Kanawha, WV",240087,240087,exact_city_adj
-450,history/states/450-State_450.txt,"Richmond, VA",237348,237348,exact_city_adj
-451,history/states/451-State_451.txt,"Jefferson, MO",240000,240000,exact_city_adj
-452,history/states/452-State_452.txt,"Raleight, WV",95064,95064,exact_city_adj
-453,history/states/453-State_453.txt,"Lawrence, KS",96117,96117,exact_city_adj
-454,history/states/454-State_454.txt,"Danville, VA",58093,58093,exact_city_adj
-455,history/states/455-State_455.txt,"Floyd, IN",89498,89498,exact_city_adj
-456,history/states/456-State_456.txt,"Prince George, VA",42152,42152,exact_city_adj
-457,history/states/457-State_457.txt,"Gasconade, MO",18410,18410,exact_city_adj
-458,history/states/458-State_458.txt,"Las Vegas, NV",574120,574120,exact_city_adj
-459,history/states/459-State_459.txt,"Hampton Roads, VA",1920000,1920000,exact_city_adj
-460,history/states/460-State_460.txt,"Trinidad, CO",11400,11400,exact_city_adj
-461,history/states/461-State_461.txt,"Belleville, IL",50569,50569,exact_city_adj
-462,history/states/462-State_462.txt,"Kaibab, AZ",13258,13258,exact_city_adj
-463,history/states/463-State_463.txt,"Roanoake, VA",115200,115200,exact_city_adj
-464,history/states/464-State_464.txt,"Washington, VA",66000,66000,exact_city_adj
-465,history/states/465-State_465.txt,"Wichita, KS",413140,413140,exact_city_adj
-466,history/states/466-State_466.txt,"Wise, VA",50840,50840,exact_city_adj
-467,history/states/467-State_467.txt,"Elizabeth City, NC",20400,20400,exact_city_adj
-468,history/states/468-State_468.txt,"Mexican Hat, UT",62,62,exact_city_adj
-469,history/states/469-State_469.txt,"Liberal, KS",23599,23599,exact_city_adj
-470,history/states/470-State_470.txt,"Navajo Nation, AZ",208800,208800,exact_city_adj
-471,history/states/471-State_471.txt,"Denver, CO",665563,665563,exact_city_adj
-472,history/states/472-State_472.txt,"Nash, NC",115134,115134,exact_city_adj
-473,history/states/473-State_473.txt,"Wake, NC",752400,752400,exact_city_adj
-474,history/states/474-State_474.txt,"Beaufort, NC",53898,53898,exact_city_adj
-475,history/states/475-State_475.txt,"Wayne, KY",24000,24000,exact_city_adj
-476,history/states/476-State_476.txt,"Mount Airy, NC",9924,9924,exact_city_adj
-477,history/states/477-State_477.txt,"Farmington, NM",45412,45412,exact_city_adj
-478,history/states/478-State_478.txt,"Cibola, NM",32655,32655,exact_city_adj
-479,history/states/479-State_479.txt,"Pitt, NC",160557,160557,exact_city_adj
-480,history/states/480-State_480.txt,"Johnson City, TN",66562,66562,exact_city_adj
-481,history/states/481-State_481.txt,"Guilford, NC",505257,505257,exact_city_adj
-482,history/states/482-State_482.txt,"McCracken, KY",39769,39769,exact_city_adj
-483,history/states/483-State_483.txt,"Owens Island, KY",120,120,exact_city_adj
-484,history/states/484-State_484.txt,"Albuquerque, NM",538328,538328,exact_city_adj
-485,history/states/485-State_485.txt,"Knoxville, TN",208668,208668,exact_city_adj
-486,history/states/486-State_486.txt,"Tucumcari, NM",8160,8160,exact_city_adj
-487,history/states/487-State_487.txt,"Mecklenberg, NC",834544,834544,exact_city_adj
-488,history/states/488-State_488.txt,"Clayton, NM",3810,3810,exact_city_adj
-489,history/states/489-State_489.txt,"Gaston, NC",228438,228438,exact_city_adj
-490,history/states/490-State_490.txt,"Oklahoma Panhandle, OK",64800,64800,exact_city_adj
-491,history/states/491-State_491.txt,"Onslow, NC",180000,180000,exact_city_adj
-492,history/states/492-State_492.txt,"Clarksville, TN",124008,124008,exact_city_adj
-493,history/states/493-State_493.txt,"Enid, OK",55248,55248,exact_city_adj
-494,history/states/494-State_494.txt,"Buncombe, NC",247628,247628,exact_city_adj
-495,history/states/495-State_495.txt,"Tulsa, OK",471658,471658,exact_city_adj
-496,history/states/496-State_496.txt,"Dickson, TN",51787,51787,exact_city_adj
-497,history/states/497-State_497.txt,"Cumberland, NC",363555,363555,exact_city_adj
-498,history/states/498-State_498.txt,"Phoenix, AZ",1585254,1585254,exact_city_adj
-499,history/states/499-State_499.txt,"Coffee, TN",57616,57616,exact_city_adj
-500,history/states/500-State_500.txt,"Flagstaff, AZ",78134,78134,exact_city_adj
-501,history/states/501-State_501.txt,"Northern Channel Islands, CA",2400,2400,exact_city_adj
-502,history/states/502-State_502.txt,"Memphis, TN",780120,780120,exact_city_adj
-503,history/states/503-State_503.txt,"Nashville, TN",683869,683869,exact_city_adj
-504,history/states/504-State_504.txt,"Chattanooga, TN",186664,186664,exact_city_adj
-505,history/states/505-State_505.txt,"Tiptonville, KY",6000,6000,exact_city_adj
-506,history/states/506-State_506.txt,"New Hanover, NC",192368,192368,exact_city_adj
-507,history/states/507-State_507.txt,"Dumas, TX",17074,17074,exact_city_adj
-508,history/states/508-State_508.txt,"Jonesboro, AR",66618,66618,exact_city_adj
-509,history/states/509-State_509.txt,"Randolph, AR",9600,9600,exact_city_adj
-510,history/states/510-State_510.txt,"Santa Fe, NM",74643,74643,exact_city_adj
-511,history/states/511-State_511.txt,"Stillwater, OK",46878,46878,exact_city_adj
-512,history/states/512-State_512.txt,"Searcy, AR",21960,21960,exact_city_adj
-513,history/states/513-State_513.txt,"Haywood, NC",64839,64839,exact_city_adj
-514,history/states/514-State_514.txt,"Whiteville, NC",6240,6240,exact_city_adj
-515,history/states/515-State_515.txt,"Saluda, NC",840,840,exact_city_adj
-516,history/states/516-State_516.txt,"Maury, TN",74349,74349,exact_city_adj
-517,history/states/517-State_517.txt,"York, SC",197536,197536,exact_city_adj
-518,history/states/518-State_518.txt,"Greenville, SC",67202,67202,exact_city_adj
-519,history/states/519-State_519.txt,"Amarillo, TX",208352,208352,exact_city_adj
-520,history/states/520-State_520.txt,"Lawton, OK",111308,111308,exact_city_adj
-521,history/states/521-State_521.txt,"Myrtle Beach, SC",27310,27310,exact_city_adj
-522,history/states/522-State_522.txt,"Southern Channel Islands, CA",2400,2400,exact_city_adj
-523,history/states/523-State_523.txt,"Prescott, AZ",40725,40725,exact_city_adj
-524,history/states/524-State_524.txt,"Hall, GA",167132,167132,exact_city_adj
-525,history/states/525-State_525.txt,"Horry, SC",172863,172863,exact_city_adj
-526,history/states/526-State_526.txt,"Whitfield, GA",100230,100230,exact_city_adj
-527,history/states/527-State_527.txt,"Little River, AR",16353,16353,exact_city_adj
-528,history/states/528-State_528.txt,"Morgan, AL",133200,133200,exact_city_adj
-529,history/states/529-State_529.txt,"Huntsville, AL",189859,189859,exact_city_adj
-530,history/states/530-State_530.txt,"Sierra Vista, AZ",52665,52665,exact_city_adj
-531,history/states/531-State_531.txt,"McAlester, OK",21890,21890,exact_city_adj
-532,history/states/532-State_532.txt,"Ada, OK",19209,19209,exact_city_adj
-533,history/states/533-State_533.txt,"Hattiesburg, MS",50258,50258,exact_city_adj
-534,history/states/534-State_534.txt,"Lowndes, MS",74065,74065,exact_city_adj
-535,history/states/535-State_535.txt,"Plainville, TX",2040,2040,exact_city_adj
-536,history/states/536-State_536.txt,"Weldona, CO",240,240,exact_city_adj
-537,history/states/537-State_537.txt,"North Metro Atlanta, GA",720000,720000,exact_city_adj
-538,history/states/538-State_538.txt,"Richland, SC",322816,322816,exact_city_adj
-539,history/states/539-State_539.txt,"Roswell, NM",54351,54351,exact_city_adj
-540,history/states/540-State_540.txt,"Clovis, NM",39200,39200,exact_city_adj
-541,history/states/541-State_541.txt,"South Metro Atlanta, GA",720000,720000,exact_city_adj
-542,history/states/542-State_542.txt,"Yoakum, TX",7800,7800,exact_city_adj
-543,history/states/543-State_543.txt,"Lubbock, TX",239476,239476,exact_city_adj
-544,history/states/544-State_544.txt,"Vernon, TX",14400,14400,exact_city_adj
-545,history/states/545-State_545.txt,"Auburn, AL",51584,51584,exact_city_adj
-546,history/states/546-State_546.txt,"Atlanta, GA",499768,499768,exact_city_adj
-547,history/states/547-State_547.txt,"Charleston, SC",115980,115980,exact_city_adj
-548,history/states/548-State_548.txt,"Pima, AZ",1496,1496,exact_city_adj
-549,history/states/549-State_549.txt,Baja California,2839000,2839000,province_exact
-550,history/states/550-State_550.txt,"Beaufort, SC",28144,28144,exact_city_adj
-551,history/states/551-State_551.txt,"Columbia, GA",188056,188056,exact_city_adj
-552,history/states/552-State_552.txt,"Las Cruces, NM",89120,89120,exact_city_adj
-553,history/states/553-State_553.txt,Sonora,2168000,2168000,province_exact
-554,history/states/554-State_554.txt,"Wichita Falls, TX",122400,122400,exact_city_adj
-555,history/states/555-State_555.txt,"Carlsbad, NM",30750,30750,exact_city_adj
-556,history/states/556-State_556.txt,"Watson, AR",1200,1200,exact_city_adj
-557,history/states/557-State_557.txt,"Houston, GA",115506,115506,exact_city_adj
-558,history/states/558-State_558.txt,"Texarkana, TX",36000,36000,exact_city_adj
-559,history/states/559-State_559.txt,"Chatham, GA",276918,276918,exact_city_adj
-560,history/states/560-State_560.txt,"San Angelo, TX",98400,98400,exact_city_adj
-561,history/states/561-State_561.txt,"Abilene, TX",139116,139116,exact_city_adj
-562,history/states/562-State_562.txt,"Duncan, AZ",5139,5139,exact_city_adj
-563,history/states/563-State_563.txt,"Muscogee, GA",223549,223549,exact_city_adj
-564,history/states/564-State_564.txt,"Greater Dallas-Fort Worth Area, TX",6299304,6299304,exact_city_adj
-565,history/states/565-State_565.txt,"ile Dondaine, QC",12000,12000,exact_city_adj
-566,history/states/566-State_566.txt,"Citronelle, AL",4640,4640,exact_city_adj
-567,history/states/567-State_567.txt,"Stephenville, TX",20400,20400,exact_city_adj
-568,history/states/568-State_568.txt,"Longview, TX",96546,96546,exact_city_adj
-569,history/states/569-State_569.txt,"Jackson, MS",221107,221107,exact_city_adj
-570,history/states/570-State_570.txt,"Dallas-Fort Worth, TX",6120000,6120000,exact_city_adj
-571,history/states/571-State_571.txt,"Shreveport, LA",240174,240174,exact_city_adj
-572,history/states/572-State_572.txt,"Deming, NM",16939,16939,exact_city_adj
-573,history/states/573-State_573.txt,"Lowndes, GA",110538,110538,exact_city_adj
-574,history/states/574-State_574.txt,"Odessa, TX",109131,109131,exact_city_adj
-575,history/states/575-State_575.txt,"Navarro, TX",56400,56400,exact_city_adj
-576,history/states/576-State_576.txt,"Thomas, GA",51284,51284,exact_city_adj
-577,history/states/577-State_577.txt,"Duluth, MN",104301,104301,exact_city_adj
-578,history/states/578-State_578.txt,"El Paso, TX",676394,676394,exact_city_adj
-579,history/states/579-State_579.txt,Chihuahua,3241000,3241000,province_exact
-580,history/states/580-State_580.txt,"Tyler, TX",100380,100380,exact_city_adj
-581,history/states/581-State_581.txt,"Reeves, TX",14400,14400,exact_city_adj
-582,history/states/582-State_582.txt,"Adams, MS",41208,41208,exact_city_adj
-583,history/states/583-State_583.txt,"Barksdale AFB, LA",1500,1500,special
-584,history/states/584-State_584.txt,"Houma, LA",38871,38871,exact_city_adj
-585,history/states/585-State_585.txt,"Crockett, TX",8569,8569,exact_city_adj
-586,history/states/586-State_586.txt,da,25000,25000,exact
-587,history/states/587-State_587.txt,"Waco, TX",135608,135608,exact_city_adj
-588,history/states/588-State_588.txt,"San Carlos, AZ",3262,3262,exact_city_adj
-589,history/states/589-State_589.txt,"Ciudad Obregon, SO",240000,240000,exact_city_adj
-590,history/states/590-State_590.txt,"Nogales, SO",140400,140400,exact_city_adj
-591,history/states/591-State_591.txt,"Escambia, FL",353292,353292,exact_city_adj
-592,history/states/592-State_592.txt,"Fredericksburg, TX",12636,12636,exact_city_adj
-593,history/states/593-State_593.txt,"Alachua, FL",8462,8462,exact_city_adj
-594,history/states/594-State_594.txt,"Leon, FL",287342,287342,exact_city_adj
-595,history/states/595-State_595.txt,"Duval, FL",806781,806781,exact_city_adj
-596,history/states/596-State_596.txt,"Beaumont, TX",136639,136639,exact_city_adj
-597,history/states/597-State_597.txt,"Gulf Shores, AL",6140,6140,exact_city_adj
-598,history/states/598-State_598.txt,"Mobile, AL",237618,237618,exact_city_adj
-599,history/states/599-State_599.txt,"Gulfport, MS",85352,85352,exact_city_adj
-600,history/states/600-State_600.txt,"Baton Rouge, LA",273381,273381,exact_city_adj
-601,history/states/601-State_601.txt,"Klamath Falls, OR",23354,23354,exact_city_adj
-602,history/states/602-State_602.txt,"Bastrop, TX",9834,9834,exact_city_adj
-603,history/states/603-State_603.txt,"Salem, OR",164308,164308,exact_city_adj
-604,history/states/604-State_604.txt,"Marion, FL",310699,310699,exact_city_adj
-605,history/states/605-State_605.txt,"Daytona Beach, FL",76934,76934,exact_city_adj
-606,history/states/606-State_606.txt,"Hutchinson, MN",17013,17013,exact_city_adj
-607,history/states/607-State_607.txt,"Lake, Ohio",230000,230000,exact
-608,history/states/608-State_608.txt,"Minneapolis, MN",459141,459141,exact_city_adj
-609,history/states/609-State_609.txt,"Eugene, OR",165471,165471,exact_city_adj
-610,history/states/610-State_610.txt,"Orlando, FL",223141,223141,exact_city_adj
-611,history/states/611-State_611.txt,"Houston, TX",2344357,2344357,exact_city_adj
-612,history/states/612-State_612.txt,"LaFourche, LA",107968,107968,exact_city_adj
-613,history/states/613-State_613.txt,"San Antonio, TX",1373575,1373575,exact_city_adj
-614,history/states/614-State_614.txt,"Victoria, TX",68400,68400,exact_city_adj
-615,history/states/615-State_615.txt,Coahuila,2298070,2298070,province_exact
-616,history/states/616-State_616.txt,"Yellowstone, WY",1800,1800,exact_city_adj
-617,history/states/617-State_617.txt,"Laredo, TX",211891,211891,exact_city_adj
-618,history/states/618-State_618.txt,"Omaha, NE",468008,468008,exact_city_adj
-619,history/states/619-State_619.txt,Baja California Sur,423516,423516,exact
-620,history/states/620-State_620.txt,"Cleveland, OH",574083,574083,exact_city_adj
-621,history/states/621-State_621.txt,"Hillsborough, FL",1198737,1198737,exact_city_adj
-622,history/states/622-State_622.txt,"Grand Manan Island, ME",3120,3120,exact_city_adj
-623,history/states/623-State_623.txt,"Bar Harbor, ME",7200,7200,exact_city_adj
-624,history/states/624-State_624.txt,"Breton Sound Islands, LA",0,0,exact_city_adj
-625,history/states/625-State_625.txt,"Shiprock, NM",9960,9960,exact_city_adj
-626,history/states/626-State_626.txt,"Portland, TX",14400,14400,exact_city_adj
-627,history/states/627-State_627.txt,"Miami-Dade, FL",2704034,2704034,exact_city_adj
-628,history/states/628-State_628.txt,"Sarasota, FL",391148,391148,exact_city_adj
-629,history/states/629-State_629.txt,"Freeport, BS",23794,23794,exact_city_adj
-630,history/states/630-State_630.txt,"Whiteman AFB, MO",1500,1500,special
-631,history/states/631-State_631.txt,"Aransas, TX",27600,27600,exact_city_adj
-632,history/states/632-State_632.txt,"Sterling, CO",16800,16800,exact_city_adj
-633,history/states/633-State_633.txt,"Corpus Christi, TX",332944,332944,exact_city_adj
-634,history/states/634-State_634.txt,"Lee, FL",529065,529065,exact_city_adj
-635,history/states/635-State_635.txt,"Monterrey, NL",1306795,1306795,exact_city_adj
-636,history/states/636-State_636.txt,District of Columbia,601723,601723,exact
-637,history/states/637-State_637.txt,"Laredos, TM",144000,144000,exact_city_adj
-638,history/states/638-State_638.txt,"Los Mochis, SI",307200,307200,exact_city_adj
-639,history/states/639-State_639.txt,"Guadalupe y Calvo, CH",48000,48000,exact_city_adj
-640,history/states/640-State_640.txt,"El Carrizo, SI",12000,12000,exact_city_adj
-641,history/states/641-State_641.txt,"Kansas City, KS",176239,176239,exact_city_adj
-642,history/states/642-State_642.txt,"Gomez Palacio, DG",228000,228000,exact_city_adj
-643,history/states/643-State_643.txt,"Salinas, CA",181200,181200,exact_city_adj
-644,history/states/644-State_644.txt,"Eleuthera, BS",12000,12000,exact_city_adj
-645,history/states/645-State_645.txt,"Fremont-Winema, OR",3600,3600,exact_city_adj
-646,history/states/646-State_646.txt,"New Providence, BS",300000,300000,exact_city_adj
-647,history/states/647-State_647.txt,"Andros, BS",10200,10200,exact_city_adj
-648,history/states/648-State_648.txt,"Cat Island, BS",3279,3279,exact_city_adj
-649,history/states/649-State_649.txt,"Overland Park, KS",208046,208046,exact_city_adj
-650,history/states/650-State_650.txt,"Minot AFB, ND",1500,1500,special
-651,history/states/651-State_651.txt,"Key West, FL",30573,30573,exact_city_adj
-652,history/states/652-State_652.txt,"Los Angeles, CA",4433784,4433784,exact_city_adj
-653,history/states/653-State_653.txt,"Matamoros, TA",477174,477174,exact_city_adj
-654,history/states/654-State_654.txt,"Los Angeles Metro, CA",12480000,12480000,exact_city_adj
-655,history/states/655-State_655.txt,"San Diego Metro, CA",3600000,3600000,exact_city_adj
-656,history/states/656-State_656.txt,"Elko, NV",20722,20722,exact_city_adj
-657,history/states/657-State_657.txt,"Montemorelos, NL",50400,50400,exact_city_adj
-658,history/states/658-State_658.txt,"San Salvador, BS",6663,6663,exact_city_adj
-659,history/states/659-State_659.txt,"King's Bay Naval Base, GA",1500,1500,special
-660,history/states/660-State_660.txt,"Santa Rosa, CA",165600,165600,exact_city_adj
-661,history/states/661-State_661.txt,"Sacremento, CA",488421,488421,exact_city_adj
-662,history/states/662-State_662.txt,"San Diego, CA",1468080,1468080,exact_city_adj
-663,history/states/663-State_663.txt,"Long Island, BS",3744,3744,exact_city_adj
-664,history/states/664-State_664.txt,"Great Exuma, BS",6708,6708,exact_city_adj
-665,history/states/665-State_665.txt,"Yreka, CA",9223,9223,exact_city_adj
-666,history/states/666-State_666.txt,"Ely, NV",4849,4849,exact_city_adj
-667,history/states/667-State_667.txt,"Alturas, CA",12626,12626,exact_city_adj
-668,history/states/668-State_668.txt,"Mazatlan, SI",244800,244800,exact_city_adj
-669,history/states/669-State_669.txt,"Sequoia, CA",2400,2400,exact_city_adj
-670,history/states/670-State_670.txt,"Durango, DG",502092,502092,exact_city_adj
-671,history/states/671-State_671.txt,"Fresnillo, ZA",148800,148800,exact_city_adj
-672,history/states/672-State_672.txt,"Crooked Island, BS",438,438,exact_city_adj
-673,history/states/673-State_673.txt,"Tonopah, NV",2973,2973,exact_city_adj
-674,history/states/674-State_674.txt,"Santa Barbara, CA",106098,106098,exact_city_adj
-675,history/states/675-State_675.txt,"Mayaguna, BS",600,600,exact_city_adj
-676,history/states/676-State_676.txt,"Pine Bluffs, WY",2311,2311,exact_city_adj
-677,history/states/677-State_677.txt,"Pinedale, WY",1920,1920,exact_city_adj
-678,history/states/678-State_678.txt,"Austin, TX",787874,787874,exact_city_adj
-679,history/states/679-State_679.txt,Turks and Caicos Islands,21240,21240,exact
-680,history/states/680-State_680.txt,"Oklahoma City, OK",607358,607358,exact_city_adj
-681,history/states/681-State_681.txt,"Huntsville, TX",5280,5280,exact_city_adj
-682,history/states/682-State_682.txt,"Monctezuma, SL",14400,14400,exact_city_adj
-683,history/states/683-State_683.txt,"Sidney, NE",7200,7200,exact_city_adj
-684,history/states/684-State_684.txt,"Cody, WY",11424,11424,exact_city_adj
-685,history/states/685-State_685.txt,"Matanzas, CU",777600,777600,exact_city_adj
-686,history/states/686-State_686.txt,"Villa Clara, CU",978000,978000,exact_city_adj
-687,history/states/687-State_687.txt,"Zacatecas, ZA",162351,162351,exact_city_adj
-688,history/states/688-State_688.txt,"Ciudad Victoria, TM",326400,326400,exact_city_adj
-689,history/states/689-State_689.txt,"El Centro, CA",37660,37660,exact_city_adj
-690,history/states/690-State_690.txt,"Inagua, BS",13200,13200,exact_city_adj
-691,history/states/691-State_691.txt,"Mayabeque, CU",504000,504000,exact_city_adj
-692,history/states/692-State_692.txt,"Bakersfield, CA",296468,296468,exact_city_adj
-693,history/states/693-State_693.txt,"Artemisa, CU",600000,600000,exact_city_adj
-694,history/states/694-State_694.txt,"Havana, CU",2522400,2522400,exact_city_adj
-695,history/states/695-State_695.txt,"Fresno, CA",513182,513182,exact_city_adj
-696,history/states/696-State_696.txt,"Ciego de Avila, CU",360000,360000,exact_city_adj
-697,history/states/697-State_697.txt,"Sancti Spiritus, CU",516000,516000,exact_city_adj
-698,history/states/698-State_698.txt,"Pinar del Rio, CU",639600,639600,exact_city_adj
-699,history/states/699-State_699.txt,"Cienfuegos, CU",499107,499107,exact_city_adj
-700,history/states/700-State_700.txt,"Jardines del Rey, CU",24000,24000,exact_city_adj
-701,history/states/701-State_701.txt,"Yosemite, CA",2400,2400,exact_city_adj
-702,history/states/702-State_702.txt,"Camaguey, CU",936000,936000,exact_city_adj
-703,history/states/703-State_703.txt,"Susanville, CA",17748,17748,exact_city_adj
-704,history/states/704-State_704.txt,"Napa, CA",87102,87102,exact_city_adj
-705,history/states/705-State_705.txt,"Redding, CA",97038,97038,exact_city_adj
-706,history/states/706-State_706.txt,"Tecuala, NA",30000,30000,exact_city_adj
-707,history/states/707-State_707.txt,"San Juan, PR",474000,474000,exact_city_adj
-708,history/states/708-State_708.txt,"Las Tunas, CU",623820,623820,exact_city_adj
-709,history/states/709-State_709.txt,"Maria Trinidad Sanchez, DO",88800,88800,exact_city_adj
-710,history/states/710-State_710.txt,British Virgin Islands,20875,20875,exact
-711,history/states/711-State_711.txt,"Holguin, CU",1260000,1260000,exact_city_adj
-712,history/states/712-State_712.txt,"Samana, DO",120000,120000,exact_city_adj
-713,history/states/713-State_713.txt,"Monte Cristi, DO",101400,101400,exact_city_adj
-714,history/states/714-State_714.txt,"Puerto Plata, DO",216000,216000,exact_city_adj
-715,history/states/715-State_715.txt,"Duarte, DO",354000,354000,exact_city_adj
-716,history/states/716-State_716.txt,Este de Nayarit,200000,200000,exact
-717,history/states/717-State_717.txt,US Virgin Islands,108612,108612,exact
-718,history/states/718-State_718.txt,"El Seybo, DO",219600,219600,exact_city_adj
-719,history/states/719-State_719.txt,"La Altagracia, DO",327600,327600,exact_city_adj
-720,history/states/720-State_720.txt,"Kirtland AFB, NM",1500,1500,special
-721,history/states/721-State_721.txt,"Vieques, PR",10800,10800,exact_city_adj
-722,history/states/722-State_722.txt,"Guantanamo, CU",611520,611520,exact_city_adj
-723,history/states/723-State_723.txt,"Santiago, DO",570000,570000,exact_city_adj
-724,history/states/724-State_724.txt,"Hato Mayor, DO",103200,103200,exact_city_adj
-725,history/states/725-State_725.txt,"Mezquitic, JA",16920,16920,exact_city_adj
-726,history/states/726-State_726.txt,"Nord-Est, HT",472760,472760,exact_city_adj
-727,history/states/727-State_727.txt,"La Vega, DO",271200,271200,exact_city_adj
-728,history/states/728-State_728.txt,"Isla de Culebra, PR",2160,2160,exact_city_adj
-729,history/states/729-State_729.txt,"Nord-Oueste, HT",744000,744000,exact_city_adj
-730,history/states/730-State_730.txt,"Dajabon, DO",48000,48000,exact_city_adj
-731,history/states/731-State_731.txt,"Isla de Juventud, CU",103200,103200,exact_city_adj
-732,history/states/732-State_732.txt,"Nord, HT",874568,874568,exact_city_adj
-733,history/states/733-State_733.txt,"Santo Domingo, DO",1200000,1200000,exact_city_adj
-734,history/states/734-State_734.txt,"Santiago de Cuba, CU",516000,516000,exact_city_adj
-735,history/states/735-State_735.txt,"Artibonite, HT",1512000,1512000,exact_city_adj
-736,history/states/736-State_736.txt,"Granma, CU",960000,960000,exact_city_adj
-737,history/states/737-State_737.txt,"La Romana, DO",175200,175200,exact_city_adj
-738,history/states/738-State_738.txt,"San Pedro de Macoris, DO",240000,240000,exact_city_adj
-739,history/states/739-State_739.txt,"Colotlan, JA",19200,19200,exact_city_adj
-740,history/states/740-State_740.txt,"La Estrelleta, DO",24000,24000,exact_city_adj
-741,history/states/741-State_741.txt,Aguascalientes,944000,944000,province_exact
-742,history/states/742-State_742.txt,"San Juan, DO",121200,121200,exact_city_adj
-743,history/states/743-State_743.txt,"Guayalejo, VC",48000,48000,exact_city_adj
-744,history/states/744-State_744.txt,"Centre, HT",720000,720000,exact_city_adj
-745,history/states/745-State_745.txt,"Brainerd, MN",16324,16324,exact_city_adj
-746,history/states/746-State_746.txt,"Pinos, Zacatecas",2000,2000,exact
-747,history/states/747-State_747.txt,"San Luis Potosi, SL",294000,294000,exact_city_adj
-748,history/states/748-State_748.txt,"Azua, DO",145200,145200,exact_city_adj
-749,history/states/749-State_749.txt,"Peravia, DO",175200,175200,exact_city_adj
-750,history/states/750-State_750.txt,"Ciudad Valles, SL",134400,134400,exact_city_adj
-751,history/states/751-State_751.txt,"San Francisco, CA",932079,932079,exact_city_adj
-752,history/states/752-State_752.txt,"Isla de Mona, PR",1200,1200,exact_city_adj
-753,history/states/753-State_753.txt,"Tepic, NA",264000,264000,exact_city_adj
-754,history/states/754-State_754.txt,Veracruz,6241000,6241000,province_exact
-755,history/states/755-State_755.txt,Jalisco,6221000,6221000,province_exact
-756,history/states/756-State_756.txt,"San Francisco Metro, CA",5400000,5400000,exact_city_adj
-757,history/states/757-State_757.txt,Quintana Roo,872000,872000,province_exact
-758,history/states/758-State_758.txt,"Axtla de Terrazas, SL",36000,36000,exact_city_adj
-759,history/states/759-State_759.txt,Guanajuato,4121000,4121000,province_exact
-760,history/states/760-State_760.txt,"Ouest, HT",3240000,3240000,exact_city_adj
-761,history/states/761-State_761.txt,Yucatan,1685228,1685228,exact
-762,history/states/762-State_762.txt,"Barahona, DO",148800,148800,exact_city_adj
-763,history/states/763-State_763.txt,"Isla Maria Madre, NA",120,120,exact_city_adj
-764,history/states/764-State_764.txt,"Nellis AFB, NV",1500,1500,special
-765,history/states/765-State_765.txt,"Isla de la Gonave, HT",84000,84000,exact_city_adj
-766,history/states/766-State_766.txt,Queretaro,1404306,1404306,exact
-767,history/states/767-State_767.txt,"Huejutla de Reyes, VC",96000,96000,exact_city_adj
-768,history/states/768-State_768.txt,"Pedernales, DO",64800,64800,exact_city_adj
-769,history/states/769-State_769.txt,"Sud-Est, HT",816000,816000,exact_city_adj
-770,history/states/770-State_770.txt,"Puerto Vallarta, JA",171600,171600,exact_city_adj
-771,history/states/771-State_771.txt,Hidalgo,2350000,2350000,province_exact
-772,history/states/772-State_772.txt,"Malmstrom AFB, MT",1500,1500,special
-773,history/states/773-State_773.txt,"Nippes, HT",319200,319200,exact_city_adj
-774,"history/states/774-Bronx, NY.txt","Queens, NY",2675254,2675254,exact_city_adj
-775,"history/states/775-Queens, NY.txt","Staten Island, NY",532473,532473,exact_city_adj
-776,"history/states/776-Brooklyn, NY.txt","The Bronx, NY",1599180,1599180,exact_city_adj
-777,"history/states/777-Staten Island, NY.txt","Brooklyn, NY",2958391,2958391,exact_city_adj
-778,"history/states/778-Saint Francis, KS.txt","Saint Francis, KS",1532,1532,exact_city_adj
-779,"history/states/779-Ohio, WV.txt","Ohio, WV",56912,56912,exact_city_adj
+id,file,name,current_manpower,estimated_population,estimate_source,grid_raw,scaled_population,city_sum,city_validation_note
+1,history/states/1-State_1.txt,British Columbia,6772272,6904281,grid_2000_scaled,6564207,6904281,0,
+2,history/states/2-State_2.txt,"Hot Springs, AR",192231,348291,grid_2000_scaled,333138,348291,123850,
+3,history/states/3-State_3.txt,"Joplin, MO",337525,616759,grid_2000_scaled,589926,616759,350239,
+4,history/states/4-State_4.txt,"Ponce, PR",114346,552590,grid_2000_scaled,528548,552590,137491,
+5,history/states/5-State_5.txt,"Mayaguez, PR",62616,383599,grid_2000_scaled,366909,383599,78941,
+6,history/states/6-State_6.txt,Northern Alberta,509901,900441,grid_2000_scaled,856089,900441,212061,
+7,history/states/7-State_7.txt,"Arecibo, PR",159840,769052,grid_2000_scaled,735593,769052,87554,
+8,history/states/8-State_8.txt,North Manitoba,168,1826,grid_2000_scaled,1736,1826,0,
+9,history/states/9-State_9.txt,Quebec,3255362,2791961,grid_2000_scaled,2654441,2791961,4264939,
+10,history/states/10-State_10.txt,Labrador,500,113,grid_2000_scaled,3843,113,0,
+11,history/states/11-State_11.txt,"Floyd County, KY",228945,474954,grid_2000_scaled,454291,474954,330187,
+12,history/states/12-State_12.txt,"Newberry, MI",1776,25300,grid_2000_scaled,24199,25300,1440,
+13,history/states/13-State_13.txt,"Saint Ignace, MI",50244,107810,grid_2000_scaled,103120,107810,0,
+14,history/states/14-State_14.txt,Central Northern Manitoba,20236,28199,grid_2000_scaled,26810,28199,25296,
+15,history/states/15-State_15.txt,"Springfield, MO",317431,665834,grid_2000_scaled,636866,665834,96292,
+16,history/states/16-State_16.txt,"Houghton, MI",10241,41763,grid_2000_scaled,39946,41763,12802,
+17,history/states/17-State_17.txt,"Moresby Island, BC",10000,10000,special_override,18561,10000,0,
+18,history/states/18-State_18.txt,"Shannon, MO",1677949,2043348,grid_2000_scaled,1954448,2043348,27928,
+19,history/states/19-State_19.txt,"Evansville, IN",116315,180789,grid_2000_scaled,172924,180789,145394,
+20,history/states/20-State_20.txt,"Hopkins, KY",221182,405494,grid_2000_scaled,387852,405494,95343,
+21,history/states/21-State_21.txt,"Bloomington, IN",202596,392791,grid_2000_scaled,375701,392791,205312,
+22,history/states/22-State_22.txt,"Poplar Bluff, MO",328684,740912,grid_2000_scaled,708677,740912,131010,
+23,history/states/23-State_23.txt,Northern British Columbia,2850643,2841675,grid_2000_scaled,2701707,2841675,3516554,
+24,history/states/24-State_24.txt,"Louisville, KY",953140,1100122,grid_2000_scaled,1052259,1100122,977561,
+25,history/states/25-State_25.txt,"St. Louis, MO",806255,1031296,grid_2000_scaled,986427,1031296,889329,
+26,history/states/26-State_26.txt,World Border,0,0,special_override,0,0,0,
+27,history/states/27-State_27.txt,"Harrisonville, MO",47749,116726,grid_2000_scaled,111647,116726,30326,
+28,history/states/28-State_28.txt,"St. Joseph, MO",211117,226187,grid_2000_scaled,216346,226187,176076,
+29,history/states/29-State_29.txt,"Adalair, MO",164357,383674,grid_2000_scaled,366982,383674,72257,
+30,history/states/30-State_30.txt,Saint-Pierre-et-Miquelon,500,23,grid_2000_scaled,799,23,0,
+31,history/states/31-State_31.txt,"Kidney Island, NU",10000,10000,special_override,0,10000,0,
+32,history/states/32-State_32.txt,"Tupelo, MS",51302,58428,grid_2000_scaled,55886,58428,0,
+33,history/states/33-State_33.txt,"Etowah, AL",269109,341861,grid_2000_scaled,326987,341861,149640,
+34,history/states/34-State_34.txt,"Knox, IL",423836,514479,grid_2000_scaled,492095,514479,552321,
+35,history/states/35-State_35.txt,"Howard, IN",424466,335148,grid_2000_scaled,320567,335148,259063,
+36,history/states/36-State_36.txt,"Coeur d'Alene, ID",92509,92509,grid_2000_scaled+city_validation,49529,92509,115637,city_floor:92509
+37,history/states/37-State_37.txt,"Kankakee, IL",312207,367177,grid_2000_scaled,351202,367177,287673,
+38,history/states/38-State_38.txt,"Belcher Islands, NU",10000,10000,special_override,9,10000,0,
+39,history/states/39-State_39.txt,"Christian, KY",110293,156095,grid_2000_scaled,149304,156095,172071,
+40,history/states/40-State_40.txt,Eastern Northern Manitoba,190,20518,grid_2000_scaled,19508,20518,0,
+41,history/states/41-State_41.txt,"Peoria, IL",335675,350659,grid_2000_scaled,335403,350659,238022,
+42,history/states/42-State_42.txt,Newfoundland,240499,224479,grid_2000_scaled+city_validation,36231,224479,280599,city_floor:224479
+43,history/states/43-State_43.txt,"Oxford, MS",1070985,1070985,grid_2000_scaled+city_validation,0,1070985,1338732,city_floor:1070985
+44,history/states/44-State_44.txt,"El Dorado, AR",134193,273076,grid_2000_scaled,261195,273076,118172,
+45,history/states/45-State_45.txt,Oklahoma,249,325,grid_2000_scaled,11060,325,0,
+46,history/states/46-State_46.txt,"Champaign, IL",226140,417346,grid_2000_scaled,399189,417346,109089,
+47,history/states/47-State_47.txt,"Little Rock, AR",486576,618534,grid_2000_scaled,591624,618534,428523,
+48,history/states/48-State_48.txt,"Woodward, OK",17472,29443,grid_2000_scaled,28162,29443,14461,
+49,history/states/49-State_49.txt,"Bowling Green, KY",70838,199079,grid_2000_scaled,190418,199079,118069,
+50,history/states/50-State_50.txt,"Guayama, PR",217711,743101,grid_2000_scaled,710771,743101,127244,
+51,history/states/51-State_51.txt,"Petersburg, IL",152739,251276,grid_2000_scaled,240344,251276,145848,
+52,history/states/52-State_52.txt,"Platte, WI",96253,161453,grid_2000_scaled,154429,161453,24572,
+53,history/states/53-State_53.txt,"Buncombe, NC",23,586,grid_2000_scaled,561,586,0,
+54,history/states/54-State_54.txt,"Ottumwa, IA",22711,66333,grid_2000_scaled,63447,66333,7248,
+55,history/states/55-State_55.txt,"Iowa City, IA",245569,397662,grid_2000_scaled,380361,397662,253343,
+56,history/states/56-State_56.txt,"Dubuque, IA",225613,343310,grid_2000_scaled,328373,343310,290009,
+57,history/states/57-State_57.txt,"Waterloo, IA",226791,261474,grid_2000_scaled,250098,261474,143321,
+58,history/states/58-State_58.txt,"Covington, KY",814264,880495,grid_2000_scaled,842187,880495,339178,
+59,history/states/59-State_59.txt,"Indianapolis, IN",1800395,1629442,grid_2000_scaled,1558550,1629442,1601376,
+60,history/states/60-State_60.txt,"Des Moines, IA",559980,579968,grid_2000_scaled,554735,579968,536512,
+61,history/states/61-State_61.txt,Illinois,500,500,grid_2000_scaled,0,500,0,
+62,history/states/62-State_62.txt,"Vancouver, BC",517147,855029,grid_2000_scaled,812914,855029,509129,
+63,history/states/63-State_63.txt,Northern Saskatchwan,8749,8749,grid_2000_scaled+city_validation,76059,8749,10937,city_floor:8749
+64,history/states/64-State_64.txt,"North Kansas City, MO",485947,485947,grid_2000_scaled+city_validation,214892,485947,607434,city_floor:485947
+65,history/states/65-State_65.txt,"Rochester, MN",104853,137425,grid_2000_scaled,131446,137425,57694,
+66,history/states/66-State_66.txt,"Milwaukee, WI",1382805,1821802,grid_2000_scaled,1742541,1821802,1681244,
+67,history/states/67-State_67.txt,"Sioux City, IA",159832,369556,grid_2000_scaled,353477,369556,194956,
+68,history/states/68-State_68.txt,"Green Bay, WI",188384,188041,grid_2000_scaled,179860,188041,172912,
+69,history/states/69-State_69.txt,Ontario,11361093,11361093,grid_2000_scaled+city_validation,2515104,11361093,14201367,city_floor:11361093
+70,history/states/70-State_70.txt,"Jackson, TN",899187,899187,grid_2000_scaled+city_validation,403975,899187,1123984,city_floor:899187
+71,history/states/71-State_71.txt,"Land Between The Lakes, TN",28800,28800,grid_2000_scaled+city_validation,3674,28800,36000,city_floor:28800
+72,history/states/72-State_72.txt,"Madison, WI",789034,856310,grid_2000_scaled,819054,856310,638953,
+73,history/states/73-State_73.txt,"Lexington, KY",490620,516963,grid_2000_scaled+city_validation,292387,516963,646204,city_floor:516963
+74,history/states/74-State_74.txt,"Kalamazoo, MI",251730,573137,grid_2000_scaled,548202,573137,176591,
+75,history/states/75-State_75.txt,"Eau Claire, WI",339513,500632,grid_2000_scaled,478851,500632,297247,
+76,history/states/76-State_76.txt,"Appleton, WI",322708,572852,grid_2000_scaled,547929,572852,401875,
+77,history/states/77-State_77.txt,"Kansas City, MO",319438,271753,grid_2000_scaled,259930,271753,399298,
+78,history/states/78-State_78.txt,"Tippecanoe, IN",203830,351778,grid_2000_scaled,336474,351778,184720,
+79,history/states/79-State_79.txt,"Oshkosh, WI",102956,209689,grid_2000_scaled,200566,209689,86226,
+80,history/states/80-State_80.txt,"Wausau, WI",68500,147158,grid_2000_scaled,140756,147158,45874,
+81,history/states/81-State_81.txt,"La Crosse, WI",45155,163553,grid_2000_scaled,156438,163553,32473,
+82,history/states/82-State_82.txt,"Minot, ND",75911,96702,grid_2000_scaled,92495,96702,19907,
+83,history/states/83-State_83.txt,"Delaware, IN",186236,412773,grid_2000_scaled,394814,412773,177034,
+84,history/states/84-State_84.txt,"Willis, ND",33587,44148,grid_2000_scaled+city_validation,22659,44148,55185,city_floor:44148
+85,history/states/85-State_85.txt,"Edmonton, AB",1527159,1840193,grid_2000_scaled,1749553,1840193,1516061,
+86,history/states/86-State_86.txt,"De Witt, AR",500,500,grid_2000_scaled,0,500,0,
+87,history/states/87-State_87.txt,"Fargo, ND",321833,292233,grid_2000_scaled,279519,292233,247313,
+88,history/states/88-State_88.txt,"Vancouver Island, BC",10000,10000,special_override,176105,10000,478683,city_floor:382946
+89,history/states/89-State_89.txt,"Sioux Falls, SD",307816,234265,grid_2000_scaled,224073,234265,268238,
+90,history/states/90-State_90.txt,"Chico, CA",831713,428056,grid_2000_scaled,409432,428056,689941,
+91,history/states/91-State_91.txt,"Mitchell, SD",44005,71383,grid_2000_scaled,68277,71383,7345,
+92,history/states/92-State_92.txt,"Vaudreuil-Soulanges, QC",117069,73937,grid_2000_scaled,70295,73937,0,
+93,history/states/93-State_93.txt,"Twin Islands, NU",10000,10000,special_override,13,10000,0,
+94,history/states/94-State_94.txt,"Kindersley, SK",349152,341736,grid_2000_scaled,324904,341736,405333,
+95,history/states/95-State_95.txt,"Saskatoon, SK",324471,603496,grid_2000_scaled,573771,603496,309489,
+96,history/states/96-State_96.txt,Guantanamo Bay,5311,5964,grid_2000_scaled,202891,5964,0,
+97,history/states/97-State_97.txt,"Ann Arbor, MI",387627,788652,grid_2000_scaled,754340,788652,241100,
+98,history/states/98-State_98.txt,"Brookings, SD",75118,111407,grid_2000_scaled,106560,111407,86753,
+99,history/states/99-State_99.txt,"Rapid City, SD",228749,250246,grid_2000_scaled,239359,250246,144479,
+100,history/states/100-State_100.txt,"Winnipeg, MB",725528,725528,grid_2000_scaled+city_validation,93383,725528,906911,city_floor:725528
+101,history/states/101-State_101.txt,"Birmingham, AL",441094,514394,grid_2000_scaled,492014,514394,486499,
+102,history/states/102-State_102.txt,"Dickinson, ND",98179,79502,grid_2000_scaled,76044,79502,69236,
+103,history/states/103-State_103.txt,"Pierre, SD",25220,82586,grid_2000_scaled,78993,82586,0,
+104,history/states/104-State_104.txt,"Akimiski Island, NU",10000,10000,special_override,0,10000,0,
+105,history/states/105-State_105.txt,"Beatrice, NE",14624,89407,grid_2000_scaled,85517,89407,15026,
+106,history/states/106-State_106.txt,"Pine Bluff, AR",16330,28444,grid_2000_scaled,27206,28444,9820,
+107,history/states/107-State_107.txt,"Anticosti Island, QC",10000,10000,special_override,0,10000,0,
+108,history/states/108-State_108.txt,"Scottsbluff, NE",33516,60682,grid_2000_scaled,58042,60682,37376,
+109,history/states/109-State_109.txt,"Fremont, NE",268874,549992,grid_2000_scaled,526064,549992,101027,
+110,history/states/110-State_110.txt,"Grand Island, NE",10000,10000,special_override,299330,10000,125572,
+111,history/states/111-State_111.txt,"Meridian, MS",500,500,grid_2000_scaled,0,500,0,
+112,history/states/112-State_112.txt,"Salina, KS",198592,299924,grid_2000_scaled,286875,299924,98364,
+113,history/states/113-State_113.txt,"Cowley, KS",410714,476840,grid_2000_scaled,456094,476840,526759,
+114,history/states/114-State_114.txt,"Saint Pierre, FR",500,1,grid_2000_scaled,28,1,0,
+115,history/states/115-State_115.txt,"Charlton Island, NU",10000,10000,special_override,0,10000,0,
+116,history/states/116-State_116.txt,"East Lansing, MI",306423,550225,grid_2000_scaled,526286,550225,298926,
+117,history/states/117-State_117.txt,"Calgary, AB",1596704,1387665,grid_2000_scaled,1319315,1387665,1756548,
+118,history/states/118-State_118.txt,"Miquelon, FR",500,500,grid_2000_scaled,1,500,0,
+119,history/states/119-State_119.txt,"Durango, CO",33432,81885,grid_2000_scaled,78323,81885,27786,
+120,history/states/120-State_120.txt,"Eastern Townships, QC",1169293,1236635,grid_2000_scaled,1175724,1236635,0,
+121,history/states/121-State_121.txt,"Hardin, KY",205701,252250,grid_2000_scaled,241275,252250,187112,
+122,history/states/122-State_122.txt,"Dodge City, KS",67008,158495,grid_2000_scaled,151599,158495,62888,
+123,history/states/123-State_123.txt,"Alamosa, CO",969,22504,grid_2000_scaled,21525,22504,0,
+124,history/states/124-State_124.txt,"Fort Smith, AR",185429,368980,grid_2000_scaled,352926,368980,136553,
+125,history/states/125-State_125.txt,"Twin Falls, ID",14175,6674,grid_2000_scaled,6384,6674,0,
+126,history/states/126-State_126.txt,"Thornton, CO",706226,446347,grid_2000_scaled,426928,446347,310983,
+127,history/states/127-State_127.txt,"Tuscaloosa, AL",172733,112508,grid_2000_scaled,107613,112508,215917,
+128,history/states/128-State_128.txt,"Fort Collins, CO",283422,260312,grid_2000_scaled,248986,260312,266283,
+129,history/states/129-State_129.txt,"Fort Morgan, CO",776746,591862,grid_2000_scaled,566112,591862,229792,
+130,history/states/130-State_130.txt,"La Salle, LA",81376,172464,grid_2000_scaled,164961,172464,131354,
+131,history/states/131-State_131.txt,"Colorado Springs, CO",670713,467199,grid_2000_scaled,446873,467199,682421,
+132,history/states/132-State_132.txt,"Magladen Islands, QC",10000,10000,special_override,0,10000,0,
+133,history/states/133-State_133.txt,"Ionia, MI",115860,235923,grid_2000_scaled,225659,235923,54220,
+134,history/states/134-State_134.txt,"Lansing, MI",61936,152220,grid_2000_scaled,145598,152220,86334,
+135,history/states/135-State_135.txt,"Miles City, MT",119566,152631,grid_2000_scaled,145991,152631,23895,
+136,history/states/136-State_136.txt,"Gillette, WY",106390,112934,grid_2000_scaled,108021,112934,68581,
+137,history/states/137-State_137.txt,"North Puget Sound, WA",1955515,1681731,grid_2000_scaled,1608564,1681731,2251772,
+138,history/states/138-State_138.txt,"Flint, MI",313673,795216,grid_2000_scaled,760618,795216,237961,
+139,history/states/139-State_139.txt,"Great Falls, MT",55776,48381,grid_2000_scaled,46276,48381,17601,
+140,history/states/140-State_140.txt,"Northern Cascades, WA",875614,688986,grid_2000_scaled,659010,688986,314323,
+141,history/states/141-State_141.txt,New Brunswick,598193,598193,grid_2000_scaled+city_validation,333989,598193,747742,city_floor:598193
+142,history/states/142-State_142.txt,"Olympic Peninsula, WA",490516,490516,grid_2000_scaled+city_validation,142705,490516,613146,city_floor:490516
+143,history/states/143-State_143.txt,"Tucson, AZ",811896,727034,grid_2000_scaled,695403,727034,758486,
+144,history/states/144-State_144.txt,"Idaho Falls, ID",110397,131368,grid_2000_scaled,125653,131368,21260,
+145,history/states/145-State_145.txt,"Cape Breton Island, NS",10000,10000,special_override,0,10000,0,
+146,history/states/146-State_146.txt,"Salt Lake City, UT",1719693,1029276,grid_2000_scaled,984495,1029276,1733258,
+147,history/states/147-State_147.txt,"Ogden, UT",547380,412606,grid_2000_scaled,394654,412606,584509,
+148,history/states/148-State_148.txt,"Lac-des-Eaux-Mortes, QC",844,1028,grid_2000_scaled,978,1028,0,
+149,history/states/149-State_149.txt,"Provo, UT",267678,264274,grid_2000_scaled,252776,264274,137843,
+150,history/states/150-State_150.txt,"Western Okanogan Highlands, WA",57620,34979,grid_2000_scaled,33457,34979,42000,
+151,history/states/151-State_151.txt,"Edmundston, NB",3457,17814,grid_2000_scaled,16936,17814,0,
+152,history/states/152-State_152.txt,Prince Edward Island,10000,10000,special_override,0,10000,79122,city_floor:63297
+153,history/states/153-State_153.txt,"Degelis, QC",9764,14565,grid_2000_scaled,13848,14565,0,
+154,history/states/154-State_154.txt,"Mount Pleasant, MI",43323,150461,grid_2000_scaled,143915,150461,40397,
+155,history/states/155-State_155.txt,"Brandon, MB",742285,861080,grid_2000_scaled,818667,861080,0,
+156,history/states/156-State_156.txt,"Puget Islands, WA",10000,10000,special_override,268753,10000,97256,
+157,history/states/157-State_157.txt,"Eastern Okanogan Highlands, WA",7956,28269,grid_2000_scaled,27039,28269,5000,
+158,history/states/158-State_158.txt,"Metaline Falls, WA",1522,528,grid_2000_scaled,505,528,0,
+159,history/states/159-State_159.txt,"Hanover, MB",32108,83668,grid_2000_scaled,79547,83668,0,
+160,history/states/160-State_160.txt,"Sandpoint, ID",6126,25195,grid_2000_scaled,24098,25195,0,
+161,history/states/161-State_161.txt,"Kalispell, MT",69415,110087,grid_2000_scaled,105297,110087,55837,
+162,history/states/162-State_162.txt,"Essex, MA",2319814,1503250,grid_2000_scaled,1437848,1503250,1386975,
+163,history/states/163-State_163.txt,Nova Scotia,831647,831647,grid_2000_scaled+city_validation,316615,831647,1039559,city_floor:831647
+164,history/states/164-State_164.txt,"Vernal, UT",25859,40272,grid_2000_scaled,38520,40272,25350,
+165,history/states/165-State_165.txt,"Shreveport, LA",113065,184476,grid_2000_scaled,176450,184476,60692,
+166,history/states/166-State_166.txt,"Cypress, AB",1283,5435,grid_2000_scaled,5167,5435,0,
+167,history/states/167-State_167.txt,"Maple Creek, MB",19341,41655,grid_2000_scaled,39604,41655,0,
+168,history/states/168-State_168.txt,"Aroostook, ME",52091,126772,grid_2000_scaled,121256,126772,23989,
+169,history/states/169-State_169.txt,"South Puget Sound, WA",1374581,1131576,grid_2000_scaled,1082344,1131576,1134668,
+170,history/states/170-State_170.txt,"Browning, MT",11434,30176,grid_2000_scaled,28863,30176,8942,
+171,history/states/171-State_171.txt,"Fayetteville, AR",453650,508098,grid_2000_scaled,485992,508098,372920,
+172,history/states/172-State_172.txt,"Columbia Basin, WA",653297,714684,grid_2000_scaled,683590,714684,453888,
+173,history/states/173-State_173.txt,"Pantex Plant, TX",160314,160314,grid_2000_scaled+city_validation,1158,160314,200393,city_floor:160314
+174,history/states/174-State_174.txt,"Saint Francis, ME",21941,8898,grid_2000_scaled,8511,8898,0,
+175,history/states/175-State_175.txt,"Cedar City, UT",211404,211404,grid_2000_scaled+city_validation,77575,211404,264256,city_floor:211404
+176,history/states/176-State_176.txt,"New Orleans, LA",67121,109196,grid_2000_scaled,104445,109196,99950,
+177,history/states/177-State_177.txt,"Butte, MT",115336,159120,grid_2000_scaled,152197,159120,23066,
+178,history/states/178-State_178.txt,"Capitol Reef, UT",1000,1000,special_override,2757,1000,5366,
+179,history/states/179-State_179.txt,"Willapa Hills, WA",53667,124129,grid_2000_scaled,118728,124129,68666,
+180,history/states/180-State_180.txt,"Lafayette, LA",1549,35005,grid_2000_scaled,33482,35005,0,
+181,history/states/181-State_181.txt,"Moscow, ID",72548,123832,grid_2000_scaled,118444,123832,90685,
+182,history/states/182-State_182.txt,"Mecklenberg, NC",23838,77294,grid_2000_scaled,73931,77294,0,
+183,history/states/183-State_183.txt,"Southern Cascades, WA",94171,110718,grid_2000_scaled,105901,110718,117305,
+184,history/states/184-State_184.txt,"St. John, NB",92532,132219,grid_2000_scaled,125707,132219,0,
+185,history/states/185-State_185.txt,"Yakima, WA",743908,417445,grid_2000_scaled,399283,417445,532247,
+186,history/states/186-State_186.txt,"Missoula, MT",92091,93800,grid_2000_scaled+city_validation,55974,93800,117250,city_floor:93800
+187,history/states/187-State_187.txt,"Naval Submarine Base Bangor, WA",42501,42501,grid_2000_scaled+city_validation,3466,42501,53127,city_floor:42501
+188,history/states/188-State_188.txt,"Piscataquis, ME",500,2310,grid_2000_scaled,2209,2310,0,
+189,history/states/189-State_189.txt,"Middlesex, NJ",1655,538,grid_2000_scaled,515,538,0,
+190,history/states/190-State_190.txt,"Roseburg, OR",180637,225123,grid_2000_scaled,215328,225123,93837,
+191,history/states/191-State_191.txt,"Muskegon, MI",74686,240478,grid_2000_scaled,230016,240478,57992,
+192,history/states/192-State_192.txt,"Bismarck, ND",116337,154105,grid_2000_scaled,147400,154105,26477,
+193,history/states/193-State_193.txt,"Grand Forks, ND",91963,143794,grid_2000_scaled,137538,143794,27706,
+194,history/states/194-State_194.txt,"Conway, AR",123352,302413,grid_2000_scaled,289256,302413,112577,
+195,history/states/195-State_195.txt,"Mahoosuc Range, ME",1153,4617,grid_2000_scaled,4416,4617,0,
+196,history/states/196-State_196.txt,"Phillips, AR",500,500,grid_2000_scaled,0,500,0,
+197,history/states/197-State_197.txt,"Natchitoches, LA",216008,278389,grid_2000_scaled,266277,278389,250294,
+198,history/states/198-State_198.txt,"Lake Charles, LA",20400,51404,grid_2000_scaled,49168,51404,0,
+199,history/states/199-State_199.txt,"Clay, MN",53430,103241,grid_2000_scaled,98750,103241,66788,
+200,history/states/200-State_200.txt,"Isanti, MN",368911,476050,grid_2000_scaled,455338,476050,279348,
+201,history/states/201-State_201.txt,"Vancouver, WA",313192,313192,grid_2000_scaled+city_validation,132865,313192,391491,city_floor:313192
+202,history/states/202-State_202.txt,"Autauga, AL",99932,139458,grid_2000_scaled,133391,139458,8274,
+203,history/states/203-State_203.txt,"Downeast, ME",80716,229034,grid_2000_scaled,219069,229034,65940,
+204,history/states/204-State_204.txt,"Billings, MT",287206,295174,grid_2000_scaled,282332,295174,304646,
+205,history/states/205-State_205.txt,"West Mahoosuc, ME",500,2574,grid_2000_scaled,2462,2574,0,
+206,history/states/206-State_206.txt,"Blue Mountains, WA",159369,163458,grid_2000_scaled,156346,163458,62026,
+207,history/states/207-State_207.txt,"Somerset, ME",118816,134453,grid_2000_scaled,128603,134453,112099,
+208,history/states/208-State_208.txt,"Alexandra, LA",94499,208358,grid_2000_scaled,199293,208358,1500,
+209,history/states/209-State_209.txt,"Bend, OR",26037,71334,grid_2000_scaled,68231,71334,29626,
+210,history/states/210-State_210.txt,"Queens, NY",500,500,grid_2000_scaled,0,500,0,
+211,history/states/211-State_211.txt,"Phillipsburg, MT",86941,74806,grid_2000_scaled,71551,74806,70708,
+212,history/states/212-State_212.txt,"Mercer, ND",82944,56798,grid_2000_scaled,54327,56798,103680,
+213,history/states/213-State_213.txt,"Orange, NY",633,1110,grid_2000_scaled,1062,1110,0,
+214,history/states/214-State_214.txt,"Dothan, AL",236657,236657,grid_2000_scaled+city_validation,49657,236657,295822,city_floor:236657
+215,history/states/215-State_215.txt,"Monroe, LA",317206,519566,grid_2000_scaled,496961,519566,62548,
+216,history/states/216-State_216.txt,"Western Mountains, ME",65824,84343,grid_2000_scaled,80674,84343,57073,
+217,history/states/217-State_217.txt,"Pendleton, OR",100239,144699,grid_2000_scaled,138403,144699,71060,
+218,history/states/218-State_218.txt,"Monteregie, QC",1430665,373636,grid_2000_scaled,355233,373636,0,
+219,history/states/219-State_219.txt,"ile Marie, QC",10000,10000,special_override,1498,10000,0,
+220,history/states/220-State_220.txt,"Baker, MT",109973,144903,grid_2000_scaled,138598,144903,8126,
+221,history/states/221-State_221.txt,"Penobscot Bay, ME",38593,134049,grid_2000_scaled,128217,134049,31178,
+222,history/states/222-State_222.txt,"Marquette, MI",40693,97467,grid_2000_scaled,93227,97467,40351,
+223,history/states/223-State_223.txt,"Great North Woods, NH",45893,45893,grid_2000_scaled+city_validation,18004,45893,57367,city_floor:45893
+224,history/states/224-State_224.txt,"Cascade, ID",11213,31868,grid_2000_scaled,30481,31868,14017,
+225,history/states/225-State_225.txt,"ile Jesus, QC",10000,10000,special_override,543143,10000,0,
+226,history/states/226-State_226.txt,"ile de Montreal, QC",10000,10000,special_override,842818,10000,7546972,city_floor:6037577
+227,history/states/227-State_227.txt,"Montgomery, Al",93824,167982,grid_2000_scaled,160674,167982,0,
+228,history/states/228-State_228.txt,"Saint Cloud, MN",166606,397583,grid_2000_scaled,380285,397583,242192,
+229,history/states/229-State_229.txt,"ile Bizardl, QC",10000,10000,special_override,39565,10000,0,
+230,history/states/230-State_230.txt,"ile Perrot, QC",10000,10000,special_override,6622,10000,0,
+231,history/states/231-State_231.txt,"Northeast Kingdom, VT",53939,60224,grid_2000_scaled,57604,60224,26560,
+232,history/states/232-State_232.txt,"Portland Casco Bay, ME",469301,627134,grid_2000_scaled,599849,627134,439133,
+233,history/states/233-State_233.txt,"Cadillac, MI",16404,137947,grid_2000_scaled,131945,137947,13197,
+234,history/states/234-State_234.txt,"Jamestown, ND",8203,14329,grid_2000_scaled,13705,14329,1797,
+235,history/states/235-State_235.txt,"Clarke, AL",500,500,grid_2000_scaled,0,500,0,
+236,history/states/236-State_236.txt,"Franklin, VT",81807,174548,grid_2000_scaled,166954,174548,28578,
+237,history/states/237-State_237.txt,"Butler, AL",500,500,grid_2000_scaled,0,500,0,
+238,history/states/238-State_238.txt,"Alger, MI",18776,91955,grid_2000_scaled,87954,91955,20546,
+239,history/states/239-State_239.txt,"Dillon, MT",53639,61568,grid_2000_scaled,58890,61568,42198,
+240,history/states/240-State_240.txt,"Sugar Island, MI",10000,10000,special_override,882,10000,13355,city_floor:10684
+241,history/states/241-State_241.txt,"Superior, WI",43192,50767,grid_2000_scaled,48558,50767,53991,
+242,history/states/242-State_242.txt,"St. Lawrence, NY",39437,98938,grid_2000_scaled,94634,98938,39345,
+243,history/states/243-State_243.txt,"Salmon, ID",1007,8557,grid_2000_scaled,8185,8557,1400,
+244,history/states/244-State_244.txt,"White Mountains, NH",37435,65476,grid_2000_scaled,62627,65476,25879,
+245,history/states/245-State_245.txt,"Manhattan, NYC",1355400,1355400,grid_2000_scaled+city_validation,674628,1355400,1694251,city_floor:1355400
+246,history/states/246-State_246.txt,"St. Joseph Island, ON",10000,10000,special_override,2695,10000,0,
+247,history/states/247-State_247.txt,"Athens, OH",130407,296809,grid_2000_scaled,283896,296809,121447,
+248,history/states/248-State_248.txt,"Grand Isle, VT",75784,75784,grid_2000_scaled+city_validation,636,75784,94731,city_floor:75784
+249,history/states/249-State_249.txt,"Powder River, MT",29085,15496,grid_2000_scaled,14822,15496,4388,
+250,history/states/250-State_250.txt,"Addison, VT",78128,143878,grid_2000_scaled,137618,143878,27744,
+251,history/states/251-State_251.txt,"Hayward, WI",41266,315144,grid_2000_scaled,301433,315144,15917,
+252,history/states/252-State_252.txt,"Manitoulin Island, ON",10000,10000,special_override,10080,10000,0,
+253,history/states/253-State_253.txt,"Rutland, VT",90143,241221,grid_2000_scaled,230726,241221,47605,
+254,history/states/254-State_254.txt,"Drummond Island, MI",10000,10000,special_override,990,10000,1200,
+255,history/states/255-State_255.txt,"Cabell, WV",527747,954879,grid_2000_scaled,913335,954879,19175,
+256,history/states/256-State_256.txt,"Hardin, MT",14925,7720,grid_2000_scaled,7384,7720,2648,
+257,history/states/257-State_257.txt,"Cockburn Island, ON",10000,10000,special_override,4,10000,0,
+258,history/states/258-State_258.txt,"East Bozeman, MT",9101,17175,grid_2000_scaled,16428,17175,5020,
+259,history/states/259-State_259.txt,"Madison, MT",42991,25578,grid_2000_scaled,24466,25578,6793,
+260,history/states/260-State_260.txt,"Merrimack, NH",108096,170130,grid_2000_scaled,162728,170130,112065,
+261,history/states/261-State_261.txt,"Sarasota, FL",290134,290134,grid_2000_scaled+city_validation,28272,290134,362668,city_floor:290134
+262,history/states/262-State_262.txt,"Ontario, OR",193425,198557,grid_2000_scaled,189919,198557,12438,
+263,history/states/263-State_263.txt,"Mackinac Island, MI",10000,10000,special_override,941,10000,5040,city_floor:4032
+264,history/states/264-State_264.txt,"Toledo, OH",404567,367340,grid_2000_scaled,351358,367340,505709,
+265,history/states/265-State_265.txt,"Stevens Point, WI",137551,344882,grid_2000_scaled,329877,344882,144840,
+266,history/states/266-State_266.txt,"Dayton, OH",1033229,1428241,grid_2000_scaled,1366103,1428241,737922,
+267,history/states/267-State_267.txt,"Mackinac City, MI",9585,55424,grid_2000_scaled,53013,55424,5719,
+268,history/states/268-State_268.txt,"Grafton, NH",92801,189663,grid_2000_scaled,181411,189663,66914,
+269,history/states/269-State_269.txt,"Clearwater, MN",40964,106461,grid_2000_scaled,101829,106461,56892,
+270,history/states/270-State_270.txt,"Beaver Island, MI",10000,10000,special_override,0,10000,720,city_floor:576
+271,history/states/271-State_271.txt,"Harding, SD",48377,107854,grid_2000_scaled,103161,107854,1232,
+272,history/states/272-State_272.txt,"Iosco, MI",11520,54685,grid_2000_scaled,52306,54685,14400,
+273,history/states/273-State_273.txt,"Hamilton, NY",84989,227764,grid_2000_scaled,217855,227764,97856,
+274,history/states/274-State_274.txt,"Strafford, NH",621379,683156,grid_2000_scaled,653434,683156,147555,
+275,history/states/275-State_275.txt,"Mobridge, SD",44515,85232,grid_2000_scaled,81524,85232,3272,
+276,history/states/276-State_276.txt,"Aberdeen, SD",69138,85198,grid_2000_scaled,81491,85198,28464,
+277,history/states/277-State_277.txt,"Concord, NH",384452,464616,grid_2000_scaled,444402,464616,287722,
+278,history/states/278-State_278.txt,"Medford, OR",169591,249341,grid_2000_scaled,238493,249341,191532,
+279,history/states/279-State_279.txt,"Watertown, SD",50664,103804,grid_2000_scaled,99288,103804,41948,
+280,history/states/280-State_280.txt,"Lewis, NY",122886,328618,grid_2000_scaled,314321,328618,75410,
+281,history/states/281-State_281.txt,"Old Faithful, WY",18404,21545,grid_2000_scaled,20608,21545,19845,
+282,history/states/282-State_282.txt,"Troy, NY",587758,856053,grid_2000_scaled,818809,856053,579655,
+283,history/states/283-State_283.txt,"Casper, WY",77946,84876,grid_2000_scaled,81184,84876,80853,
+284,history/states/284-State_284.txt,"Philadelphia, PA",970738,1435937,grid_2000_scaled+city_validation,851935,1435937,1794922,city_floor:1435937
+285,history/states/285-State_285.txt,"Schenectady, NY",138176,187264,grid_2000_scaled,179116,187264,99081,
+286,history/states/286-State_286.txt,"Richland, OH",735196,711358,grid_2000_scaled,680409,711358,918995,
+287,history/states/287-State_287.txt,"Roberts, ID",137367,162184,grid_2000_scaled,155128,162184,133609,
+288,history/states/288-State_288.txt,"Boise, ID",384574,484618,grid_2000_scaled+city_validation,262931,484618,605773,city_floor:484618
+289,history/states/289-State_289.txt,"Baileys Harbor, WI",16764,14490,grid_2000_scaled,13859,14490,20955,
+290,history/states/290-State_290.txt,"Grand Traverse, MI",23370,243343,grid_2000_scaled,232756,243343,21427,
+291,history/states/291-State_291.txt,"Oswego, NY",635715,527578,grid_2000_scaled,504624,527578,811371,
+292,history/states/292-State_292.txt,"Hillsborough, NH",332761,344028,grid_2000_scaled,329060,344028,248878,
+293,history/states/293-State_293.txt,"Windham, VT",81354,124090,grid_2000_scaled,118691,124090,21120,
+294,history/states/294-State_294.txt,"Nampa, ID",138750,61849,grid_2000_scaled,59158,61849,0,
+295,history/states/295-State_295.txt,"Jackson, WY",8733,12677,grid_2000_scaled,12126,12677,7349,
+296,history/states/296-State_296.txt,"Crescent City, CA",37460,55929,grid_2000_scaled,53496,55929,6783,
+297,history/states/297-State_297.txt,"Jerome, ID",80385,142630,grid_2000_scaled,136424,142630,79132,
+298,history/states/298-State_298.txt,"Marshall, MN",16844,70251,grid_2000_scaled,67194,70251,10278,
+299,history/states/299-State_299.txt,"Suffolk, MA",1212105,1326855,grid_2000_scaled,1269128,1326855,2315377,
+300,history/states/300-State_300.txt,"Worchester, MA",1933394,1774419,grid_2000_scaled,1697220,1774419,1720552,
+301,history/states/301-State_301.txt,"Wayne, NY",252053,291541,grid_2000_scaled,278857,291541,190052,
+302,history/states/302-State_302.txt,"Berkshire, MA",177509,190256,grid_2000_scaled,181978,190256,76889,
+303,history/states/303-State_303.txt,"Mojave, CA",445555,251875,grid_2000_scaled,240916,251875,312996,
+304,history/states/304-State_304.txt,"Saint Paul, MN",701374,538131,grid_2000_scaled,514719,538131,548303,
+305,history/states/305-State_305.txt,"Chenango, NY",211657,212934,grid_2000_scaled,203670,212934,86032,
+306,history/states/306-State_306.txt,"Delaware, NY",46600,80522,grid_2000_scaled,77019,80522,65546,
+307,history/states/307-State_307.txt,"Plymouth, MA",1792599,1400706,grid_2000_scaled,1339765,1400706,1263138,
+308,history/states/308-State_308.txt,"Onondaga, NY",305067,188540,grid_2000_scaled,180337,188540,52573,
+309,history/states/309-State_309.txt,"Trippe, SD",82019,131738,grid_2000_scaled,126006,131738,14202,
+310,history/states/310-State_310.txt,"Pocatello, ID",99197,102533,grid_2000_scaled,98073,102533,61355,
+311,history/states/311-State_311.txt,"Murray, MN",19400,96221,grid_2000_scaled,92035,96221,22690,
+312,history/states/312-State_312.txt,"Huron, MI",53912,155271,grid_2000_scaled,148515,155271,24000,
+313,history/states/313-State_313.txt,"Monroe, NY",355421,705196,grid_2000_scaled,674515,705196,416542,
+314,history/states/314-State_314.txt,"Genesse, NY",92492,213417,grid_2000_scaled,204132,213417,40713,
+315,history/states/315-State_315.txt,"Barnstable, MA",129945,122337,grid_2000_scaled,117014,122337,162432,
+316,history/states/316-State_316.txt,"Columbia, NY",84493,210799,grid_2000_scaled,201628,210799,119238,
+317,history/states/317-State_317.txt,"Mason, MI",25238,67432,grid_2000_scaled,64498,67432,30942,
+318,history/states/318-State_318.txt,"Saginaw, MI",191591,373229,grid_2000_scaled,356991,373229,184243,
+319,history/states/319-State_319.txt,"Providence, RI",1128009,1151593,grid_2000_scaled,1101491,1151593,1085095,
+320,history/states/320-State_320.txt,"Albany, NY",7273,44671,grid_2000_scaled,42727,44671,0,
+321,history/states/321-State_321.txt,"New London, CT",1227851,1487174,grid_2000_scaled,1422472,1487174,1201733,
+322,history/states/322-State_322.txt,"Mankato, MN",186588,314441,grid_2000_scaled,300761,314441,176633,
+323,history/states/323-State_323.txt,"Ithaca, NY",199252,483428,grid_2000_scaled,462396,483428,223180,
+324,history/states/324-State_324.txt,"Lovelock, NV",858,1512,grid_2000_scaled,1446,1512,0,
+325,history/states/325-State_325.txt,"Cattaraugus, NY",118316,179025,grid_2000_scaled,171237,179025,88953,
+326,history/states/326-State_326.txt,"Buffalo, NY",253748,253748,grid_2000_scaled+city_validation,73789,253748,317185,city_floor:253748
+327,history/states/327-State_327.txt,"Windham, NY",48148,78082,grid_2000_scaled,74685,78082,2640,
+328,history/states/328-State_328.txt,"Hartford, CT",1325404,1403917,grid_2000_scaled,1342837,1403917,1194659,
+329,history/states/329-State_329.txt,"Benton Harbor, MI",53029,184915,grid_2000_scaled,176870,184915,48561,
+330,history/states/330-State_330.txt,Grand Island,10000,10000,special_override,3322,10000,0,
+331,history/states/331-State_331.txt,"Mojave, NV",23096,62697,grid_2000_scaled,59969,62697,15301,
+332,history/states/332-State_332.txt,"Detroit, MI",895864,1114080,grid_2000_scaled,1065610,1114080,1136692,
+333,history/states/333-State_333.txt,"Hamburg, NY",322220,407495,grid_2000_scaled,389767,407495,480628,
+334,history/states/334-State_334.txt,"Alpena, MI",40918,64804,grid_2000_scaled,61984,64804,37576,
+335,history/states/335-State_335.txt,"Steuben, NY",148332,99284,grid_2000_scaled+city_validation,53659,99284,124106,city_floor:99284
+336,history/states/336-State_336.txt,"Oakland, MI",635279,895030,grid_2000_scaled,856090,895030,417685,
+337,history/states/337-State_337.txt,"Dutchess, NY",3548898,1773339,grid_2000_scaled,1696186,1773339,1016834,
+338,history/states/338-State_338.txt,"Orange, NY",1268210,816591,grid_2000_scaled,781064,816591,327545,
+339,history/states/339-State_339.txt,"St. Clair, MI",368346,302127,grid_2000_scaled,288983,302127,266790,
+340,history/states/340-State_340.txt,"Douglas, WY",11114,20062,grid_2000_scaled,19189,20062,9168,
+341,history/states/341-State_341.txt,"Chautauqua, NY",271952,179252,grid_2000_scaled,171453,179252,336564,
+342,history/states/342-State_342.txt,"Lackawanna, PA",277716,632112,grid_2000_scaled,604610,632112,182967,
+343,history/states/343-State_343.txt,"Fairfield, CT",918517,707166,grid_2000_scaled,676399,707166,865402,
+344,history/states/344-State_344.txt,"West Wendover, NV",2502,2502,grid_2000_scaled+city_validation,451,2502,3128,city_floor:2502
+345,history/states/345-State_345.txt,"Allegheny, PA",450786,920901,grid_2000_scaled,880835,920901,765874,
+346,history/states/346-State_346.txt,"Bradford, PA",147008,351136,grid_2000_scaled,335859,351136,105685,
+347,history/states/347-State_347.txt,"Davenport, IA",426154,482830,grid_2000_scaled,461823,482830,180756,
+348,history/states/348-State_348.txt,"Detroit Metro, MI",2032225,2614080,grid_2000_scaled,2500350,2614080,1545828,
+349,history/states/349-State_349.txt,"Mason City, IA",146623,302722,grid_2000_scaled,289551,302722,164228,
+350,history/states/350-State_350.txt,"Council Bluffs, IA",73169,142246,grid_2000_scaled,136057,142246,95798,
+351,history/states/351-State_351.txt,"Kent, MI",604038,890258,grid_2000_scaled,851526,890258,546882,
+352,history/states/352-State_352.txt,"Delta, UT",397632,292641,grid_2000_scaled,279909,292641,59931,
+353,history/states/353-State_353.txt,"Erie, PA",198004,423100,grid_2000_scaled,404692,423100,116535,
+354,history/states/354-State_354.txt,"Long Island, NY",10000,10000,special_override,2079847,10000,3008236,
+355,history/states/355-State_355.txt,"Cheyenne, WY",99169,97024,grid_2000_scaled+city_validation,49877,97024,121280,city_floor:97024
+356,history/states/356-State_356.txt,"McKean, PA",177139,179206,grid_2000_scaled,171410,179206,83711,
+357,history/states/357-State_357.txt,"Sussex, NJ",7669735,2855518,grid_2000_scaled,2731284,2855518,3917885,
+358,history/states/358-State_358.txt,"Cherry, NE",57767,127967,grid_2000_scaled,122400,127967,6855,
+359,history/states/359-State_359.txt,"Lehigh, PA",582786,1128480,grid_2000_scaled,1079383,1128480,520857,
+360,history/states/360-State_360.txt,"South Bairoil, WY",8352,8352,grid_2000_scaled+city_validation,90,8352,10440,city_floor:8352
+361,history/states/361-State_361.txt,"Sandusky, OH",204482,369939,grid_2000_scaled,353844,369939,130697,
+362,history/states/362-State_362.txt,"Evanston, WY",15761,21977,grid_2000_scaled,21021,21977,15115,
+363,history/states/363-State_363.txt,"Northumberland, PA",379732,592227,grid_2000_scaled,566461,592227,316918,
+364,history/states/364-State_364.txt,"Rock Springs, WY",46357,37794,grid_2000_scaled,36150,37794,43598,
+365,history/states/365-State_365.txt,"Lawrence, PA",508092,779943,grid_2000_scaled,746011,779943,350344,
+366,history/states/366-State_366.txt,"Chicago Metro, IL",5353808,5315967,grid_2000_scaled,5084686,5315967,4326203,
+367,history/states/367-State_367.txt,"Middlesex, NJ",5486832,2549954,grid_2000_scaled,2439014,2549954,2208499,
+368,history/states/368-State_368.txt,"Superior, WY",1110,142,grid_2000_scaled,136,142,0,
+369,history/states/369-State_369.txt,"Rockford, IL",406066,627997,grid_2000_scaled,600675,627997,341505,
+370,history/states/370-State_370.txt,"Carson City, NV",440588,440588,grid_2000_scaled+city_validation,32673,440588,550736,city_floor:440588
+371,history/states/371-State_371.txt,"Centre, PA",268267,432946,grid_2000_scaled,414110,432946,59743,
+372,history/states/372-State_372.txt,"East Superior, WY",6641,4000,grid_2000_scaled+city_validation,426,4000,5000,city_floor:4000
+373,history/states/373-State_373.txt,"Wamsutter, WY",8723,12941,grid_2000_scaled,12378,12941,0,
+374,history/states/374-State_374.txt,"Monmouth, NJ",1312966,1137380,grid_2000_scaled,1087897,1137380,1553417,
+375,history/states/375-State_375.txt,"Rawlins, WY",1341,1326,grid_2000_scaled,1268,1326,1677,
+376,history/states/376-State_376.txt,"Bucks, PA",3267112,4044941,grid_2000_scaled,3868958,4044941,1402922,
+377,history/states/377-State_377.txt,"Chicago, IL",4041812,3846059,grid_2000_scaled,3678729,3846059,3690826,
+378,history/states/378-State_378.txt,"Lancester, PA",502668,1376848,grid_2000_scaled,1316946,1376848,469979,
+379,history/states/379-State_379.txt,"Williams, OH",231515,429684,grid_2000_scaled,410990,429684,68694,
+380,history/states/380-State_380.txt,"Adobie Town Rim, WY",10936,8000,grid_2000_scaled+city_validation,1079,8000,10000,city_floor:8000
+381,history/states/381-State_381.txt,"Greenville, MS",59798,59798,grid_2000_scaled+city_validation,0,59798,74748,city_floor:59798
+382,history/states/382-State_382.txt,"Fort Wayne, IN",573818,905222,grid_2000_scaled,865838,905222,461569,
+383,history/states/383-State_383.txt,"Columbus, OH",1478217,1474338,grid_2000_scaled,1410194,1474338,1506204,
+384,history/states/384-State_384.txt,"Ogallala, NE",7118,6023,grid_2000_scaled,5761,6023,0,
+385,history/states/385-State_385.txt,"Gary, IN",627485,827108,grid_2000_scaled,791123,827108,788288,
+386,history/states/386-State_386.txt,"Wheeling, OH",284240,271254,grid_2000_scaled,259452,271254,355300,
+387,history/states/387-State_387.txt,"Blair, PA",83935,349886,grid_2000_scaled,334663,349886,24443,
+388,history/states/388-State_388.txt,"York, PA",348561,922911,grid_2000_scaled,882758,922911,232853,
+389,history/states/389-State_389.txt,"Camden, NJ",794384,845157,grid_2000_scaled,808387,845157,1074276,
+390,history/states/390-State_390.txt,"Adams, IL",49388,77910,grid_2000_scaled,74520,77910,45201,
+391,history/states/391-State_391.txt,"Westmoreland, PA",767125,855558,grid_2000_scaled,818335,855558,543042,
+392,history/states/392-State_392.txt,"Jasper, IN",175930,237293,grid_2000_scaled,226969,237293,51636,
+393,history/states/393-State_393.txt,"Washington, PA",202298,397133,grid_2000_scaled,379855,397133,86294,
+394,history/states/394-State_394.txt,"Grand Junction, CO",50132,36306,grid_2000_scaled,34726,36306,8844,
+395,history/states/395-State_395.txt,"Newcastle, DE",145398,229516,grid_2000_scaled,219531,229516,256039,
+396,history/states/396-State_396.txt,"Mount Vernon, IL",173638,438468,grid_2000_scaled,419392,438468,149613,
+397,history/states/397-State_397.txt,"Steamboat Springs, CO",14543,21368,grid_2000_scaled,20438,21368,7560,
+398,history/states/398-State_398.txt,"Saint Anne, IL",31819,23445,grid_2000_scaled,22425,23445,0,
+399,history/states/399-State_399.txt,"Walden, CO",380,1194,grid_2000_scaled,1142,1194,750,
+400,history/states/400-State_400.txt,"Lincoln, NE",460550,492651,grid_2000_scaled,471217,492651,333118,
+401,history/states/401-State_401.txt,"Kit Carson, CO",313351,288696,grid_2000_scaled,276136,288696,169406,
+402,history/states/402-State_402.txt,"Aberdeen, MD",320638,201374,grid_2000_scaled,192613,201374,335770,
+403,history/states/403-State_403.txt,"Harford, MD",26577,50111,grid_2000_scaled,47931,50111,15782,
+404,history/states/404-State_404.txt,"Baltimore, MD",2471793,2042645,grid_2000_scaled,1953775,2042645,1977038,
+405,history/states/405-State_405.txt,"Bartholomew, IN",292717,402891,grid_2000_scaled,385363,402891,219350,
+406,history/states/406-State_406.txt,"Carroll, MD",111177,230466,grid_2000_scaled,220439,230466,103995,
+407,history/states/407-State_407.txt,"Clinton, OH",151224,211082,grid_2000_scaled,201898,211082,38128,
+408,history/states/408-State_408.txt,"Randell, UT",7512,11301,grid_2000_scaled,10809,11301,0,
+409,history/states/409-State_409.txt,"North Platte, NE",14097,37326,grid_2000_scaled,35702,37326,0,
+410,history/states/410-State_410.txt,"Kent, DE",42023,110725,grid_2000_scaled,105908,110725,48331,
+411,history/states/411-State_411.txt,"Queen Anne's, MD",101617,189671,grid_2000_scaled,181419,189671,91266,
+412,history/states/412-State_412.txt,"Frederick, MD",203256,233547,grid_2000_scaled,223386,233547,160163,
+413,history/states/413-State_413.txt,"Adams, NE",105179,107356,grid_2000_scaled,102685,107356,93121,
+414,history/states/414-State_414.txt,"Alleghany, MD",27454,70602,grid_2000_scaled,67530,70602,27742,
+415,history/states/415-State_415.txt,"Berkeley, WV",31095,109864,grid_2000_scaled,105084,109864,24672,
+416,history/states/416-State_416.txt,"Morgantown, WV",88738,237352,grid_2000_scaled,227025,237352,88629,
+417,history/states/417-State_417.txt,"Mineral, WV",34780,37828,grid_2000_scaled,36183,37828,43475,
+418,history/states/418-State_418.txt,"Montgomery, MD",1487211,1016487,grid_2000_scaled,972263,1016487,986175,
+419,history/states/419-State_419.txt,"Bishop, CA",100,1976,grid_2000_scaled,1890,1976,0,
+420,history/states/420-State_420.txt,"Sussex, DE",31436,161263,grid_2000_scaled,154247,161263,16137,
+421,history/states/421-State_421.txt,"Monogalia, WV",18745,129788,grid_2000_scaled,124142,129788,21279,
+422,history/states/422-State_422.txt,"Breckenridge, CO",2198,34168,grid_2000_scaled,32681,34168,0,
+423,history/states/423-State_423.txt,"Frederick, VA",88991,231756,grid_2000_scaled,221673,231756,116179,
+424,history/states/424-State_424.txt,"Fairfax, VA",1664527,1661637,grid_2000_scaled,1589344,1661637,1920142,
+425,history/states/425-State_425.txt,"Prince George's, MD",3790693,1654173,grid_2000_scaled,1582205,1654173,2615915,
+426,history/states/426-State_426.txt,"Bowling Green, MO",897129,1041774,grid_2000_scaled,996449,1041774,514902,
+427,history/states/427-State_427.txt,"Bloomington, IL",152416,258022,grid_2000_scaled,246797,258022,35984,
+428,history/states/428-State_428.txt,"Aspen, CO",76206,111254,grid_2000_scaled,106414,111254,73809,
+429,history/states/429-State_429.txt,"Wood, WV",85397,279933,grid_2000_scaled,267754,279933,40311,
+430,history/states/430-State_430.txt,"Furnass, NE",13934,6064,grid_2000_scaled+city_validation,1349,6064,7580,city_floor:6064
+431,history/states/431-State_431.txt,"Wicomico, MD",48894,141854,grid_2000_scaled,135682,141854,61884,
+432,history/states/432-State_432.txt,"Cincinnati, OH",845867,1199807,grid_2000_scaled,1147607,1199807,1045672,
+433,history/states/433-State_433.txt,"Dove Creek, CO",144103,189417,grid_2000_scaled,181176,189417,160385,
+434,history/states/434-State_434.txt,"Ellis, KS",59115,136994,grid_2000_scaled,131034,136994,36833,
+435,history/states/435-State_435.txt,"Albemarle, VA",247241,412801,grid_2000_scaled,394842,412801,134491,
+436,history/states/436-State_436.txt,"Topeka, KS",332560,411901,grid_2000_scaled,393980,411901,155407,
+437,history/states/437-State_437.txt,"King George's, VA",120251,203131,grid_2000_scaled,194293,203131,73281,
+438,history/states/438-State_438.txt,"Greenbrier, WV",68927,224024,grid_2000_scaled,214277,224024,49771,
+439,history/states/439-State_439.txt,"Accomack, VA",28990,46237,grid_2000_scaled,44225,46237,45966,
+440,history/states/440-State_440.txt,"Spotslyvania, VA",58137,135148,grid_2000_scaled,129268,135148,9920,
+441,history/states/441-State_441.txt,"Pueblo, CO",12211,41858,grid_2000_scaled,40037,41858,5467,
+442,history/states/442-State_442.txt,"Moab, UT",2791,10579,grid_2000_scaled,10118,10579,0,
+443,history/states/443-State_443.txt,"Lynchburg, VA",305179,397063,grid_2000_scaled,379788,397063,362588,
+444,history/states/444-State_444.txt,"Emporia, KS",393299,576366,grid_2000_scaled,551290,576366,53059,
+445,history/states/445-State_445.txt,"Springfield, IL",256257,373133,grid_2000_scaled,356899,373133,468313,
+446,history/states/446-State_446.txt,"Madison, KY",380224,368906,grid_2000_scaled,352856,368906,228507,
+447,history/states/447-State_447.txt,"Cabell, WV",390917,323545,grid_2000_scaled,309468,323545,169632,
+448,history/states/448-State_448.txt,"Mesquite, NV",28741,5771,grid_2000_scaled,5520,5771,2247,
+449,history/states/449-State_449.txt,"Kanawha, WV",57388,164275,grid_2000_scaled,157128,164275,97370,
+450,history/states/450-State_450.txt,"Richmond, VA",613665,935066,grid_2000_scaled,894385,935066,743303,
+451,history/states/451-State_451.txt,"Jefferson, MO",279967,445301,grid_2000_scaled,425927,445301,190775,
+452,history/states/452-State_452.txt,"Raleight, WV",85309,343877,grid_2000_scaled,328916,343877,52266,
+453,history/states/453-State_453.txt,"Lawrence, KS",216753,297783,grid_2000_scaled,284827,297783,267228,
+454,history/states/454-State_454.txt,"Danville, VA",14102,139712,grid_2000_scaled,133634,139712,8169,
+455,history/states/455-State_455.txt,"Floyd, IN",414210,137770,grid_2000_scaled,131776,137770,223686,
+456,history/states/456-State_456.txt,"Prince George, VA",191520,294673,grid_2000_scaled,281853,294673,175691,
+457,history/states/457-State_457.txt,"Gasconade, MO",402188,534347,grid_2000_scaled,511099,534347,136116,
+458,history/states/458-State_458.txt,"Las Vegas, NV",2259883,1408187,grid_2000_scaled,1346921,1408187,2082421,
+459,history/states/459-State_459.txt,"Hampton Roads, VA",1217793,1224261,grid_2000_scaled,1170997,1224261,1619691,
+460,history/states/460-State_460.txt,"Trinidad, CO",112050,137984,grid_2000_scaled,131981,137984,25906,
+461,history/states/461-State_461.txt,"Belleville, IL",7986,18784,grid_2000_scaled,17967,18784,13973,
+462,history/states/462-State_462.txt,"Kaibab, AZ",195494,110620,grid_2000_scaled,105807,110620,5000,
+463,history/states/463-State_463.txt,"Roanoake, VA",220023,518707,grid_2000_scaled,496140,518707,178135,
+464,history/states/464-State_464.txt,"Washington, VA",76062,195328,grid_2000_scaled,186830,195328,45003,
+465,history/states/465-State_465.txt,"Wichita, KS",249264,299701,grid_2000_scaled,286661,299701,80211,
+466,history/states/466-State_466.txt,"Wise, VA",168542,387836,grid_2000_scaled,370963,387836,70077,
+467,history/states/467-State_467.txt,"Elizabeth City, NC",182994,153003,grid_2000_scaled,146346,153003,35745,
+468,history/states/468-State_468.txt,"Mexican Hat, UT",4000,3129,grid_2000_scaled,2993,3129,5000,
+469,history/states/469-State_469.txt,"Liberal, KS",64064,67837,grid_2000_scaled,64886,67837,29696,
+470,history/states/470-State_470.txt,"Navajo Nation, AZ",44508,125316,grid_2000_scaled,119863,125316,37990,
+471,history/states/471-State_471.txt,"Denver, CO",1741972,1513507,grid_2000_scaled,1447659,1513507,2353875,
+472,history/states/472-State_472.txt,"Nash, NC",632530,682430,grid_2000_scaled,652740,682430,458127,
+473,history/states/473-State_473.txt,"Wake, NC",901103,792542,grid_2000_scaled,758061,792542,835684,
+474,history/states/474-State_474.txt,"Beaufort, NC",23479,66081,grid_2000_scaled,63206,66081,12566,
+475,history/states/475-State_475.txt,"Wayne, KY",44841,165747,grid_2000_scaled,158536,165747,46113,
+476,history/states/476-State_476.txt,"Mount Airy, NC",479486,628348,grid_2000_scaled,601010,628348,385303,
+477,history/states/477-State_477.txt,"Farmington, NM",55372,86622,grid_2000_scaled,82854,86622,67960,
+478,history/states/478-State_478.txt,"Cibola, NM",316577,145040,grid_2000_scaled,138730,145040,162183,
+479,history/states/479-State_479.txt,"Pitt, NC",254377,443952,grid_2000_scaled,424637,443952,264572,
+480,history/states/480-State_480.txt,"Johnson City, TN",266218,398238,grid_2000_scaled,380912,398238,238650,
+481,history/states/481-State_481.txt,"Guilford, NC",601255,693575,grid_2000_scaled,663400,693575,601237,
+482,history/states/482-State_482.txt,"McCracken, KY",116954,217209,grid_2000_scaled,207759,217209,76171,
+483,history/states/483-State_483.txt,"Owens Island, KY",10000,10000,special_override,2081,10000,0,
+484,history/states/484-State_484.txt,"Albuquerque, NM",520929,451683,grid_2000_scaled,432032,451683,751680,
+485,history/states/485-State_485.txt,"Knoxville, TN",401893,932814,grid_2000_scaled,892231,932814,367689,
+486,history/states/486-State_486.txt,"Tucumcari, NM",65071,135378,grid_2000_scaled,129488,135378,69557,
+487,history/states/487-State_487.txt,"Mecklenberg, NC",687734,765447,grid_2000_scaled,732145,765447,431757,
+488,history/states/488-State_488.txt,"Clayton, NM",8921,16603,grid_2000_scaled,15881,16603,15022,
+489,history/states/489-State_489.txt,"Gaston, NC",1533530,1759681,grid_2000_scaled,1683122,1759681,1308187,
+490,history/states/490-State_490.txt,"Oklahoma Panhandle, OK",78168,61376,grid_2000_scaled+city_validation,35363,61376,76721,city_floor:61376
+491,history/states/491-State_491.txt,"Onslow, NC",214563,289375,grid_2000_scaled,276785,289375,239705,
+492,history/states/492-State_492.txt,"Clarksville, TN",186558,144446,grid_2000_scaled,138161,144446,0,
+493,history/states/493-State_493.txt,"Enid, OK",145004,210187,grid_2000_scaled,201043,210187,93218,
+494,history/states/494-State_494.txt,"Buncombe, NC",684071,949750,grid_2000_scaled,908429,949750,490712,
+495,history/states/495-State_495.txt,"Tulsa, OK",695012,951858,grid_2000_scaled,910446,951858,782490,
+496,history/states/496-State_496.txt,"Dickson, TN",106705,158654,grid_2000_scaled,151751,158654,182081,
+497,history/states/497-State_497.txt,"Cumberland, NC",418416,636076,grid_2000_scaled,608402,636076,405350,
+498,history/states/498-State_498.txt,"Phoenix, AZ",4887647,2977160,grid_2000_scaled,2847633,2977160,4228322,
+499,history/states/499-State_499.txt,"Coffee, TN",189169,302795,grid_2000_scaled,289621,302795,339755,
+500,history/states/500-State_500.txt,"Flagstaff, AZ",128093,91590,grid_2000_scaled,87605,91590,111360,
+501,history/states/501-State_501.txt,"Northern Channel Islands, CA",10000,10000,special_override,0,10000,2400,city_floor:1920
+502,history/states/502-State_502.txt,"Memphis, TN",76398,77331,grid_2000_scaled,73967,77331,0,
+503,history/states/503-State_503.txt,"Nashville, TN",666524,503025,grid_2000_scaled,481139,503025,892233,
+504,history/states/504-State_504.txt,"Chattanooga, TN",470600,489384,grid_2000_scaled,468093,489384,588250,
+505,history/states/505-State_505.txt,"Tiptonville, KY",560,1631,grid_2000_scaled,1560,1631,0,
+506,history/states/506-State_506.txt,"New Hanover, NC",226849,243652,grid_2000_scaled,233052,243652,29748,
+507,history/states/507-State_507.txt,"Dumas, TX",48844,62993,grid_2000_scaled,60252,62993,34696,
+508,history/states/508-State_508.txt,"Jonesboro, AR",17541,17541,grid_2000_scaled+city_validation,6234,17541,21927,city_floor:17541
+509,history/states/509-State_509.txt,"Randolph, AR",195284,200123,grid_2000_scaled,191416,200123,244105,
+510,history/states/510-State_510.txt,"Santa Fe, NM",352844,347144,grid_2000_scaled,332040,347144,111011,
+511,history/states/511-State_511.txt,"Stillwater, OK",618751,632212,grid_2000_scaled,604706,632212,256521,
+512,history/states/512-State_512.txt,"Searcy, AR",127091,278739,grid_2000_scaled,266612,278739,58096,
+513,history/states/513-State_513.txt,"Haywood, NC",27742,193216,grid_2000_scaled,184809,193216,6228,
+514,history/states/514-State_514.txt,"Whiteville, NC",509193,397477,grid_2000_scaled,380184,397477,595627,
+515,history/states/515-State_515.txt,"Saluda, NC",19001,77877,grid_2000_scaled,74488,77877,0,
+516,history/states/516-State_516.txt,"Maury, TN",973130,897050,grid_2000_scaled,858022,897050,336569,
+517,history/states/517-State_517.txt,"York, SC",245832,478462,grid_2000_scaled,457646,478462,223179,
+518,history/states/518-State_518.txt,"Greenville, SC",635237,856054,grid_2000_scaled,818810,856054,794047,
+519,history/states/519-State_519.txt,"Amarillo, TX",294736,331260,grid_2000_scaled,316848,331260,61049,
+520,history/states/520-State_520.txt,"Lawton, OK",86913,143167,grid_2000_scaled,136938,143167,41496,
+521,history/states/521-State_521.txt,"Myrtle Beach, SC",109965,219334,grid_2000_scaled,209791,219334,121126,
+522,history/states/522-State_522.txt,"Southern Channel Islands, CA",10000,10000,special_override,1,10000,2400,city_floor:1920
+523,history/states/523-State_523.txt,"Prescott, AZ",754508,610069,grid_2000_scaled,583527,610069,480089,
+524,history/states/524-State_524.txt,"Hall, GA",157642,326741,grid_2000_scaled,312526,326741,168764,
+525,history/states/525-State_525.txt,"Horry, SC",116582,353558,grid_2000_scaled,338176,353558,77797,
+526,history/states/526-State_526.txt,"Whitfield, GA",437369,794284,grid_2000_scaled,759727,794284,68027,
+527,history/states/527-State_527.txt,"Little River, AR",19475,50992,grid_2000_scaled,48773,50992,12360,
+528,history/states/528-State_528.txt,"Morgan, AL",357057,432694,grid_2000_scaled,413868,432694,323806,
+529,history/states/529-State_529.txt,"Huntsville, AL",655971,655971,grid_2000_scaled+city_validation,86375,655971,819964,city_floor:655971
+530,history/states/530-State_530.txt,"Sierra Vista, AZ",387420,332196,grid_2000_scaled,317743,332196,173826,
+531,history/states/531-State_531.txt,"McAlester, OK",97743,246985,grid_2000_scaled,236239,246985,68735,
+532,history/states/532-State_532.txt,"Ada, OK",296644,441949,grid_2000_scaled,422721,441949,186347,
+533,history/states/533-State_533.txt,"Hattiesburg, MS",500,500,grid_2000_scaled,0,500,0,
+534,history/states/534-State_534.txt,"Lowndes, MS",48844,50380,grid_2000_scaled,48188,50380,0,
+535,history/states/535-State_535.txt,"Plainville, TX",397133,373646,grid_2000_scaled,357390,373646,307545,
+536,history/states/536-State_536.txt,"Weldona, CO",131096,113208,grid_2000_scaled+city_validation,41450,113208,141511,city_floor:113208
+537,history/states/537-State_537.txt,"North Metro Atlanta, GA",760880,897677,grid_2000_scaled,858622,897677,248109,
+538,history/states/538-State_538.txt,"Richland, SC",230037,366543,grid_2000_scaled,350596,366543,72070,
+539,history/states/539-State_539.txt,"Roswell, NM",49904,79322,grid_2000_scaled,75871,79322,51159,
+540,history/states/540-State_540.txt,"Clovis, NM",89565,73316,grid_2000_scaled,70126,73316,132608,
+541,history/states/541-State_541.txt,"South Metro Atlanta, GA",2575704,2819700,grid_2000_scaled,2697023,2819700,2212372,
+542,history/states/542-State_542.txt,"Yoakum, TX",66679,66518,grid_2000_scaled,63624,66518,29064,
+543,history/states/543-State_543.txt,"Lubbock, TX",120744,100778,grid_2000_scaled,96393,100778,165601,
+544,history/states/544-State_544.txt,"Vernon, TX",16400,15539,grid_2000_scaled,14863,15539,20501,
+545,history/states/545-State_545.txt,"Auburn, AL",428742,529982,grid_2000_scaled,506924,529982,525090,
+546,history/states/546-State_546.txt,"Atlanta, GA",491552,473476,grid_2000_scaled,452877,473476,574715,
+547,history/states/547-State_547.txt,"Charleston, SC",22425,12940,grid_2000_scaled,12377,12940,0,
+548,history/states/548-State_548.txt,"Pima, AZ",712573,535145,grid_2000_scaled,511863,535145,407176,
+549,history/states/549-State_549.txt,Baja California,2734556,2729034,grid_2000_scaled+city_validation,842529,2729034,3411293,city_floor:2729034
+550,history/states/550-State_550.txt,"Beaufort, SC",647734,763750,grid_2000_scaled,730522,763750,634970,
+551,history/states/551-State_551.txt,"Columbia, GA",259808,415576,grid_2000_scaled,397496,415576,286669,
+552,history/states/552-State_552.txt,"Las Cruces, NM",36370,66140,grid_2000_scaled,63262,66140,33022,
+553,history/states/553-State_553.txt,Sonora,1795497,1795497,grid_2000_scaled+city_validation,1287654,1795497,2244372,city_floor:1795497
+554,history/states/554-State_554.txt,"Wichita Falls, TX",130011,195964,grid_2000_scaled,187438,195964,146596,
+555,history/states/555-State_555.txt,"Carlsbad, NM",3634435,1867238,grid_2000_scaled,1786000,1867238,151249,
+556,history/states/556-State_556.txt,"Watson, AR",500,500,grid_2000_scaled,0,500,0,
+557,history/states/557-State_557.txt,"Houston, GA",558047,838814,grid_2000_scaled,802320,838814,507791,
+558,history/states/558-State_558.txt,"Texarkana, TX",140651,269063,grid_2000_scaled,257357,269063,66903,
+559,history/states/559-State_559.txt,"Chatham, GA",265127,481273,grid_2000_scaled,460334,481273,353398,
+560,history/states/560-State_560.txt,"San Angelo, TX",160460,173503,grid_2000_scaled,165954,173503,140523,
+561,history/states/561-State_561.txt,"Abilene, TX",165917,212791,grid_2000_scaled,203533,212791,135991,
+562,history/states/562-State_562.txt,"Duncan, AZ",501,1280,grid_2000_scaled,1225,1280,200,
+563,history/states/563-State_563.txt,"Muscogee, GA",250862,469290,grid_2000_scaled,448872,469290,32558,
+564,history/states/564-State_564.txt,"Greater Dallas-Fort Worth Area, TX",3047362,2005733,grid_2000_scaled,1918470,2005733,2775760,
+565,history/states/565-State_565.txt,"ile Dondaine, QC",10000,10000,special_override,687,10000,0,
+566,history/states/566-State_566.txt,"Citronelle, AL",500,500,grid_2000_scaled,0,500,0,
+567,history/states/567-State_567.txt,"Stephenville, TX",78980,188448,grid_2000_scaled,180250,188448,65809,
+568,history/states/568-State_568.txt,"Longview, TX",88896,168266,grid_2000_scaled,160946,168266,111120,
+569,history/states/569-State_569.txt,"Jackson, MS",500,500,grid_2000_scaled,0,500,0,
+570,history/states/570-State_570.txt,"Dallas-Fort Worth, TX",4346950,3091009,grid_2000_scaled,2956529,3091009,3679112,
+571,history/states/571-State_571.txt,"Shreveport, LA",6313,39504,grid_2000_scaled,37785,39504,0,
+572,history/states/572-State_572.txt,"Deming, NM",5067,8650,grid_2000_scaled,8273,8650,0,
+573,history/states/573-State_573.txt,"Lowndes, GA",150951,237706,grid_2000_scaled,227364,237706,188689,
+574,history/states/574-State_574.txt,"Odessa, TX",295519,265027,grid_2000_scaled,253496,265027,160776,
+575,history/states/575-State_575.txt,"Navarro, TX",798487,861813,grid_2000_scaled,824318,861813,433968,
+576,history/states/576-State_576.txt,"Thomas, GA",1144002,1198381,grid_2000_scaled,1146244,1198381,722347,
+577,history/states/577-State_577.txt,"Duluth, MN",145855,283137,grid_2000_scaled,270818,283137,131183,
+578,history/states/578-State_578.txt,"El Paso, TX",1256241,505874,grid_2000_scaled,483865,505874,810018,
+579,history/states/579-State_579.txt,Chihuahua,3782464,3782464,grid_2000_scaled+city_validation,1856510,3782464,4728081,city_floor:3782464
+580,history/states/580-State_580.txt,"Tyler, TX",292364,484098,grid_2000_scaled,463037,484098,267942,
+581,history/states/581-State_581.txt,"Reeves, TX",19846,26788,grid_2000_scaled,25622,26788,29001,
+582,history/states/582-State_582.txt,"Adams, MS",245673,380031,grid_2000_scaled,363497,380031,56336,
+583,history/states/583-State_583.txt,"Barksdale AFB, LA",1500,1500,special_override,77,1500,0,
+584,history/states/584-State_584.txt,"Houma, LA",144714,144714,grid_2000_scaled+city_validation,45718,144714,180893,city_floor:144714
+585,history/states/585-State_585.txt,"Crockett, TX",25770,16791,grid_2000_scaled,16060,16791,8569,
+586,history/states/586-State_586.txt,da,26854,25839,grid_2000_scaled,879039,25839,0,
+587,history/states/587-State_587.txt,"Waco, TX",629141,506387,grid_2000_scaled,484355,506387,516205,
+588,history/states/588-State_588.txt,"San Carlos, AZ",265395,286118,grid_2000_scaled,273670,286118,117050,
+589,history/states/589-State_589.txt,"Ciudad Obregon, SO",3036854,4950477,grid_2000_scaled,725071,4950477,9555,
+590,history/states/590-State_590.txt,"Nogales, SO",500,15848,grid_2000_scaled,2321,15848,0,
+591,history/states/591-State_591.txt,"Escambia, FL",231864,231864,grid_2000_scaled+city_validation,0,231864,289831,city_floor:231864
+592,history/states/592-State_592.txt,"Fredericksburg, TX",55083,54779,grid_2000_scaled,52396,54779,18185,
+593,history/states/593-State_593.txt,"Alachua, FL",1004198,1451284,grid_2000_scaled,1388143,1451284,1565244,
+594,history/states/594-State_594.txt,"Leon, FL",1418825,1418825,grid_2000_scaled+city_validation,643936,1418825,1773532,city_floor:1418825
+595,history/states/595-State_595.txt,"Duval, FL",1085033,1085033,grid_2000_scaled+city_validation,505702,1085033,1356292,city_floor:1085033
+596,history/states/596-State_596.txt,"Beaumont, TX",928157,928157,grid_2000_scaled+city_validation,352851,928157,1160197,city_floor:928157
+597,history/states/597-State_597.txt,"Gulf Shores, AL",500,500,grid_2000_scaled,0,500,0,
+598,history/states/598-State_598.txt,"Mobile, AL",500,500,grid_2000_scaled,0,500,0,
+599,history/states/599-State_599.txt,"Gulfport, MS",500,500,grid_2000_scaled,0,500,0,
+600,history/states/600-State_600.txt,"Baton Rouge, LA",568684,512041,grid_2000_scaled,489764,512041,710855,
+601,history/states/601-State_601.txt,"Klamath Falls, OR",32856,32856,grid_2000_scaled+city_validation,2164,32856,41070,city_floor:32856
+602,history/states/602-State_602.txt,"Bastrop, TX",414113,347841,grid_2000_scaled,332708,347841,217375,
+603,history/states/603-State_603.txt,"Salem, OR",301170,276842,grid_2000_scaled,264797,276842,54963,
+604,history/states/604-State_604.txt,"Marion, FL",654746,756748,grid_2000_scaled,723824,756748,474758,
+605,history/states/605-State_605.txt,"Daytona Beach, FL",562031,839691,grid_2000_scaled+city_validation,425177,839691,1049614,city_floor:839691
+606,history/states/606-State_606.txt,"Hutchinson, MN",1080268,824175,grid_2000_scaled,788317,824175,524358,
+607,history/states/607-State_607.txt,"Lake, Ohio",22403,31788,grid_2000_scaled,1081417,31788,0,
+608,history/states/608-State_608.txt,"Minneapolis, MN",2104227,1830292,grid_2000_scaled,1750662,1830292,2297683,
+609,history/states/609-State_609.txt,"Eugene, OR",2561951,2357158,grid_2000_scaled,2254605,2357158,2332924,
+610,history/states/610-State_610.txt,"Orlando, FL",1519141,1651209,grid_2000_scaled,1579370,1651209,1484593,
+611,history/states/611-State_611.txt,"Houston, TX",3221316,3079228,grid_2000_scaled,2945260,3079228,3110917,
+612,history/states/612-State_612.txt,"LaFourche, LA",98656,83503,grid_2000_scaled,79870,83503,8122,
+613,history/states/613-State_613.txt,"San Antonio, TX",2121862,1830448,grid_2000_scaled,1750810,1830448,1768214,
+614,history/states/614-State_614.txt,"Victoria, TX",210198,347704,grid_2000_scaled,332576,347704,165054,
+615,history/states/615-State_615.txt,Coahuila,2198620,2198620,grid_2000_scaled+city_validation,1914954,2198620,2748276,city_floor:2198620
+616,history/states/616-State_616.txt,"Yellowstone, WY",1000,1000,special_override,20,1000,0,
+617,history/states/617-State_617.txt,"Laredo, TX",1515564,1018651,grid_2000_scaled,974333,1018651,917006,
+618,history/states/618-State_618.txt,"Omaha, NE",667229,497819,grid_2000_scaled,476161,497819,624233,
+619,history/states/619-State_619.txt,Baja California Sur,44171,4430,grid_2000_scaled+city_validation,8193,4430,5538,city_floor:4430
+620,history/states/620-State_620.txt,"Cleveland, OH",1634969,1777652,grid_2000_scaled,1700311,1777652,1875727,
+621,history/states/621-State_621.txt,"Hillsborough, FL",407100,470119,grid_2000_scaled,449665,470119,525801,
+622,history/states/622-State_622.txt,"Grand Manan Island, ME",10000,10000,special_override,52,10000,3120,city_floor:2496
+623,history/states/623-State_623.txt,"Bar Harbor, ME",5760,4246,grid_2000_scaled,4061,4246,7200,
+624,history/states/624-State_624.txt,"Breton Sound Islands, LA",10000,10000,special_override,0,10000,1188544,city_floor:950835
+625,history/states/625-State_625.txt,"Shiprock, NM",35576,63399,grid_2000_scaled,60640,63399,30194,
+626,history/states/626-State_626.txt,"Portland, TX",298244,298244,grid_2000_scaled+city_validation,63411,298244,372806,city_floor:298244
+627,history/states/627-State_627.txt,"Miami-Dade, FL",5506587,5280093,grid_2000_scaled,5050372,5280093,6187785,
+628,history/states/628-State_628.txt,"Sarasota, FL",286347,435866,grid_2000_scaled,416903,435866,369906,
+629,history/states/629-State_629.txt,"Freeport, BS",95136,41984,grid_2000_scaled,6149,41984,5314,
+630,history/states/630-State_630.txt,"Whiteman AFB, MO",1500,1500,special_override,255,1500,21516,city_floor:17212
+631,history/states/631-State_631.txt,"Aransas, TX",40404,40404,grid_2000_scaled+city_validation,51,40404,50506,city_floor:40404
+632,history/states/632-State_632.txt,"Sterling, CO",8886,1459,grid_2000_scaled,1395,1459,0,
+633,history/states/633-State_633.txt,"Corpus Christi, TX",1365076,1086594,grid_2000_scaled,1039320,1086594,1783458,
+634,history/states/634-State_634.txt,"Lee, FL",23408,21155,grid_2000_scaled+city_validation,1441,21155,26444,city_floor:21155
+635,history/states/635-State_635.txt,"Monterrey, NL",4732494,4563715,grid_2000_scaled,4338927,4563715,4667137,
+636,history/states/636-State_636.txt,District of Columbia,988381,988381,grid_2000_scaled+city_validation,514067,988381,1235477,city_floor:988381
+637,history/states/637-State_637.txt,"Laredos, TM",221129,70504,grid_2000_scaled,10326,70504,0,
+638,history/states/638-State_638.txt,"Los Mochis, SI",2581641,4869146,grid_2000_scaled,713159,4869146,515958,
+639,history/states/639-State_639.txt,"Guadalupe y Calvo, CH",5315253,6014981,grid_2000_scaled,880983,6014981,961491,
+640,history/states/640-State_640.txt,"El Carrizo, SI",375788,247761,grid_2000_scaled,36288,247761,17379,
+641,history/states/641-State_641.txt,"Kansas City, KS",634377,384912,grid_2000_scaled,368165,384912,568451,
+642,history/states/642-State_642.txt,"Gomez Palacio, DG",8764402,7301894,grid_2000_scaled,1069471,7301894,66098,
+643,history/states/643-State_643.txt,"Salinas, CA",1257130,1182600,grid_2000_scaled,1131149,1182600,805329,
+644,history/states/644-State_644.txt,"Eleuthera, BS",9210,15310,grid_2000_scaled,2242,15310,0,
+645,history/states/645-State_645.txt,"Fremont-Winema, OR",172732,154961,grid_2000_scaled,148219,154961,142439,
+646,history/states/646-State_646.txt,"New Providence, BS",295686,909985,grid_2000_scaled,133281,909985,292079,
+647,history/states/647-State_647.txt,"Andros, BS",72643,47408,grid_2000_scaled,6944,47408,15800,
+648,history/states/648-State_648.txt,"Cat Island, BS",10000,10000,special_override,435,10000,0,
+649,history/states/649-State_649.txt,"Overland Park, KS",799653,729504,grid_2000_scaled,697766,729504,152798,
+650,history/states/650-State_650.txt,"Minot AFB, ND",1500,1500,special_override,16,1500,7021,city_floor:5616
+651,history/states/651-State_651.txt,"Key West, FL",500,500,grid_2000_scaled,0,500,0,
+652,history/states/652-State_652.txt,"Los Angeles, CA",12605788,11545815,grid_2000_scaled,11043492,11545815,11553695,
+653,history/states/653-State_653.txt,"Matamoros, TA",268300,263897,grid_2000_scaled+city_validation,428352,263897,329872,city_floor:263897
+654,history/states/654-State_654.txt,"Los Angeles Metro, CA",7054002,5154026,grid_2000_scaled,4929790,5154026,5671798,
+655,history/states/655-State_655.txt,"San Diego Metro, CA",2031299,2074317,grid_2000_scaled,1984070,2074317,841707,
+656,history/states/656-State_656.txt,"Elko, NV",48799,56487,grid_2000_scaled,54029,56487,41356,
+657,history/states/657-State_657.txt,"Montemorelos, NL",276028,376812,grid_2000_scaled,358252,376812,0,
+658,history/states/658-State_658.txt,"San Salvador, BS",500,3757,grid_2000_scaled,550,3757,0,
+659,history/states/659-State_659.txt,"King's Bay Naval Base, GA",1500,1500,special_override,868,1500,113320,city_floor:90656
+660,history/states/660-State_660.txt,"Santa Rosa, CA",703987,860491,grid_2000_scaled,823054,860491,639886,
+661,history/states/661-State_661.txt,"Sacremento, CA",1739869,1660259,grid_2000_scaled,1588026,1660259,1610278,
+662,history/states/662-State_662.txt,"San Diego, CA",3748439,2345239,grid_2000_scaled,2243205,2345239,2181018,
+663,history/states/663-State_663.txt,"Long Island, BS",10000,10000,special_override,702,10000,0,
+664,history/states/664-State_664.txt,"Great Exuma, BS",9092,4518,grid_2000_scaled,662,4518,7000,
+665,history/states/665-State_665.txt,"Yreka, CA",48690,73344,grid_2000_scaled,70153,73344,10500,
+666,history/states/666-State_666.txt,"Ely, NV",321,1719,grid_2000_scaled,1644,1719,0,
+667,history/states/667-State_667.txt,"Alturas, CA",45137,70112,grid_2000_scaled,67062,70112,12626,
+668,history/states/668-State_668.txt,"Mazatlan, SI",18947,14424,grid_2000_scaled,2113,14424,5000,
+669,history/states/669-State_669.txt,"Sequoia, CA",1000,1000,special_override,65509,1000,60207,
+670,history/states/670-State_670.txt,"Durango, DG",4086864,4873343,grid_2000_scaled,713774,4873343,2339802,
+671,history/states/671-State_671.txt,"Fresnillo, ZA",4290989,6109664,grid_2000_scaled,894851,6109664,660563,
+672,history/states/672-State_672.txt,"Crooked Island, BS",10000,10000,special_override,345,10000,0,
+673,history/states/673-State_673.txt,"Tonopah, NV",3587,2456,grid_2000_scaled,2349,2456,2973,
+674,history/states/674-State_674.txt,"Santa Barbara, CA",725474,766089,grid_2000_scaled,732759,766089,524355,
+675,history/states/675-State_675.txt,"Mayaguna, BS",500,596,grid_2000_scaled,87,596,0,
+676,history/states/676-State_676.txt,"Pine Bluffs, WY",53242,75426,grid_2000_scaled,72145,75426,2311,
+677,history/states/677-State_677.txt,"Pinedale, WY",9166,4370,grid_2000_scaled,4180,4370,1920,
+678,history/states/678-State_678.txt,"Austin, TX",1305002,1078199,grid_2000_scaled,1031290,1078199,1177817,
+679,history/states/679-State_679.txt,Turks and Caicos Islands,10000,10000,special_override,3618,10000,0,
+680,history/states/680-State_680.txt,"Oklahoma City, OK",1247065,972683,grid_2000_scaled,930364,972683,1179638,
+681,history/states/681-State_681.txt,"Huntsville, TX",608178,970580,grid_2000_scaled,928353,970580,509518,
+682,history/states/682-State_682.txt,"Monctezuma, SL",18261805,16588618,grid_2000_scaled,2429650,16588618,101332,
+683,history/states/683-State_683.txt,"Sidney, NE",9577,16065,grid_2000_scaled,15366,16065,7200,
+684,history/states/684-State_684.txt,"Cody, WY",43211,72557,grid_2000_scaled,69401,72557,44580,
+685,history/states/685-State_685.txt,"Matanzas, CU",471269,406014,grid_2000_scaled,196960,406014,0,
+686,history/states/686-State_686.txt,"Villa Clara, CU",1410462,1348501,grid_2000_scaled,654168,1348501,0,
+687,history/states/687-State_687.txt,"Zacatecas, ZA",3884793,5179791,grid_2000_scaled,758658,5179791,504779,
+688,history/states/688-State_688.txt,"Ciudad Victoria, TM",7702197,9781949,grid_2000_scaled,1432712,9781949,15138,
+689,history/states/689-State_689.txt,"El Centro, CA",965101,706657,grid_2000_scaled,675913,706657,554196,
+690,history/states/690-State_690.txt,"Inagua, BS",2917,4553,grid_2000_scaled,667,4553,1200,
+691,history/states/691-State_691.txt,"Mayabeque, CU",500,9021,grid_2000_scaled,4376,9021,0,
+692,history/states/692-State_692.txt,"Bakersfield, CA",782838,600598,grid_2000_scaled,574468,600598,632257,
+693,history/states/693-State_693.txt,"Artemisa, CU",500,4423,grid_2000_scaled,2145,4423,0,
+694,history/states/694-State_694.txt,"Havana, CU",4971933,4971933,grid_2000_scaled+city_validation,254,4971933,6214917,city_floor:4971933
+695,history/states/695-State_695.txt,"Fresno, CA",2597935,2275668,grid_2000_scaled,2176660,2275668,2084373,
+696,history/states/696-State_696.txt,"Ciego de Avila, CU",713651,644813,grid_2000_scaled,312804,644813,0,
+697,history/states/697-State_697.txt,"Sancti Spiritus, CU",197960,234334,grid_2000_scaled,113677,234334,0,
+698,history/states/698-State_698.txt,"Pinar del Rio, CU",114,500,grid_2000_scaled,0,500,0,
+699,history/states/699-State_699.txt,"Cienfuegos, CU",117106,51329,grid_2000_scaled,24900,51329,0,
+700,history/states/700-State_700.txt,"Jardines del Rey, CU",6022,36007,grid_2000_scaled,17467,36007,0,
+701,history/states/701-State_701.txt,"Yosemite, CA",1000,1000,special_override,335293,1000,74298,
+702,history/states/702-State_702.txt,"Camaguey, CU",1889918,1579026,grid_2000_scaled,765997,1579026,0,
+703,history/states/703-State_703.txt,"Susanville, CA",546257,510642,grid_2000_scaled,488426,510642,34047,
+704,history/states/704-State_704.txt,"Napa, CA",1151958,799550,grid_2000_scaled,764764,799550,688548,
+705,history/states/705-State_705.txt,"Redding, CA",244024,330903,grid_2000_scaled,316506,330903,201065,
+706,history/states/706-State_706.txt,"Tecuala, NA",5775,500,grid_2000_scaled,0,500,0,
+707,history/states/707-State_707.txt,"San Juan, PR",554980,1499663,grid_2000_scaled,1434417,1499663,682261,
+708,history/states/708-State_708.txt,"Las Tunas, CU",965935,923748,grid_2000_scaled,448117,923748,0,
+709,history/states/709-State_709.txt,"Maria Trinidad Sanchez, DO",459736,501951,grid_2000_scaled,435006,501951,849700,
+710,history/states/710-State_710.txt,British Virgin Islands,10000,10000,special_override,15785,10000,9400,city_floor:7520
+711,history/states/711-State_711.txt,"Holguin, CU",1613728,2193311,grid_2000_scaled,1063991,2193311,0,
+712,history/states/712-State_712.txt,"Samana, DO",24507,51000,grid_2000_scaled,44198,51000,0,
+713,history/states/713-State_713.txt,"Monte Cristi, DO",63293,139533,grid_2000_scaled,120924,139533,0,
+714,history/states/714-State_714.txt,"Puerto Plata, DO",2151874,1132824,grid_2000_scaled,981740,1132824,0,
+715,history/states/715-State_715.txt,"Duarte, DO",261799,474513,grid_2000_scaled,411227,474513,0,
+716,history/states/716-State_716.txt,Este de Nayarit,500,34,grid_2000_scaled,1164,34,0,
+717,history/states/717-State_717.txt,US Virgin Islands,10000,10000,special_override,255,10000,0,
+718,history/states/718-State_718.txt,"El Seybo, DO",275450,363293,grid_2000_scaled,314840,363293,0,
+719,history/states/719-State_719.txt,"La Altagracia, DO",199710,184399,grid_2000_scaled,159805,184399,0,
+720,history/states/720-State_720.txt,"Kirtland AFB, NM",1500,1500,special_override,3235,1500,20782,city_floor:16625
+721,history/states/721-State_721.txt,"Vieques, PR",10368,500,grid_2000_scaled,0,500,0,
+722,history/states/722-State_722.txt,"Guantanamo, CU",469593,723182,grid_2000_scaled,350821,723182,0,
+723,history/states/723-State_723.txt,"Santiago, DO",59596,153160,grid_2000_scaled,132733,153160,0,
+724,history/states/724-State_724.txt,"Hato Mayor, DO",262356,110082,grid_2000_scaled,95401,110082,0,
+725,history/states/725-State_725.txt,"Mezquitic, JA",1588846,1847882,grid_2000_scaled,270650,1847882,103534,
+726,history/states/726-State_726.txt,"Nord-Est, HT",170403,360092,grid_2000_scaled,265455,360092,10569,
+727,history/states/727-State_727.txt,"La Vega, DO",137487,296891,grid_2000_scaled,257295,296891,0,
+728,history/states/728-State_728.txt,"Isla de Culebra, PR",10000,10000,special_override,0,10000,0,
+729,history/states/729-State_729.txt,"Nord-Oueste, HT",387327,588112,grid_2000_scaled,433547,588112,346293,
+730,history/states/730-State_730.txt,"Dajabon, DO",44001,274524,grid_2000_scaled,237911,274524,10118,
+731,history/states/731-State_731.txt,"Isla de Juventud, CU",10000,10000,special_override,0,10000,0,
+732,history/states/732-State_732.txt,"Nord, HT",404885,720590,grid_2000_scaled,531209,720590,63869,
+733,history/states/733-State_733.txt,"Santo Domingo, DO",7220462,7220462,grid_2000_scaled+city_validation,3269302,7220462,9025578,city_floor:7220462
+734,history/states/734-State_734.txt,"Santiago de Cuba, CU",1985983,3007465,grid_2000_scaled+city_validation,829279,3007465,3759332,city_floor:3007465
+735,history/states/735-State_735.txt,"Artibonite, HT",1393426,1514620,grid_2000_scaled,1116555,1514620,700334,
+736,history/states/736-State_736.txt,"Granma, CU",1351731,1329760,grid_2000_scaled,645076,1329760,0,
+737,history/states/737-State_737.txt,"La Romana, DO",13460,500,grid_2000_scaled,0,500,0,
+738,history/states/738-State_738.txt,"San Pedro de Macoris, DO",14086,500,grid_2000_scaled,0,500,0,
+739,history/states/739-State_739.txt,"Colotlan, JA",239739,284301,grid_2000_scaled,41640,284301,0,
+740,history/states/740-State_740.txt,"La Estrelleta, DO",21418,150616,grid_2000_scaled,130528,150616,0,
+741,history/states/741-State_741.txt,Aguascalientes,784788,784788,grid_2000_scaled+city_validation,4015206,784788,980985,city_floor:784788
+742,history/states/742-State_742.txt,"San Juan, DO",157755,316999,grid_2000_scaled,274721,316999,0,
+743,history/states/743-State_743.txt,"Guayalejo, VC",1148,19548,grid_2000_scaled,20009,19548,0,
+744,history/states/744-State_744.txt,"Centre, HT",1084669,738080,grid_2000_scaled,544102,738080,100039,
+745,history/states/745-State_745.txt,"Brainerd, MN",33878,138840,grid_2000_scaled,132800,138840,11127,
+746,history/states/746-State_746.txt,"Pinos, Zacatecas",17338,4980,grid_2000_scaled,169410,4980,0,
+747,history/states/747-State_747.txt,"San Luis Potosi, SL",9632059,12183971,grid_2000_scaled,1784524,12183971,1863695,
+748,history/states/748-State_748.txt,"Azua, DO",124905,234006,grid_2000_scaled,202797,234006,0,
+749,history/states/749-State_749.txt,"Peravia, DO",77514,127791,grid_2000_scaled,110747,127791,0,
+750,history/states/750-State_750.txt,"Ciudad Valles, SL",12081863,9918343,grid_2000_scaled,1452689,9918343,0,
+751,history/states/751-State_751.txt,"San Francisco, CA",1169296,955139,grid_2000_scaled,913584,955139,664734,
+752,history/states/752-State_752.txt,"Isla de Mona, PR",10000,10000,special_override,0,10000,0,
+753,history/states/753-State_753.txt,"Tepic, NA",500,2575,grid_2000_scaled,377,2575,0,
+754,history/states/754-State_754.txt,Veracruz,3622693,3441027,grid_2000_scaled+city_validation,599845,3441027,4301284,city_floor:3441027
+755,history/states/755-State_755.txt,Jalisco,5239523,5003526,grid_2000_scaled+city_validation,645345,5003526,6254408,city_floor:5003526
+756,history/states/756-State_756.txt,"San Francisco Metro, CA",4829519,4183721,grid_2000_scaled,4001700,4183721,5940245,
+757,history/states/757-State_757.txt,Quintana Roo,500,500,grid_2000_scaled,1,500,0,
+758,history/states/758-State_758.txt,"Axtla de Terrazas, SL",14969934,6190051,grid_2000_scaled,906625,6190051,0,
+759,history/states/759-State_759.txt,Guanajuato,5102052,4987456,grid_2000_scaled+city_validation,1170349,4987456,6234321,city_floor:4987456
+760,history/states/760-State_760.txt,"Ouest, HT",4785055,3862860,grid_2000_scaled,2847642,3862860,2707672,
+761,history/states/761-State_761.txt,Yucatan,1434070,1397042,grid_2000_scaled+city_validation,111540,1397042,1746303,city_floor:1397042
+762,history/states/762-State_762.txt,"Barahona, DO",42300,197536,grid_2000_scaled,171191,197536,0,
+763,history/states/763-State_763.txt,"Isla Maria Madre, NA",10000,10000,special_override,0,10000,0,
+764,history/states/764-State_764.txt,"Nellis AFB, NV",1500,1500,special_override,0,1500,0,
+765,history/states/765-State_765.txt,"Isla de la Gonave, HT",10000,10000,special_override,47187,10000,0,
+766,history/states/766-State_766.txt,Queretaro,3277248,2512405,grid_2000_scaled+city_validation,386890,2512405,3140507,city_floor:2512405
+767,history/states/767-State_767.txt,"Huejutla de Reyes, VC",118852,100452,grid_2000_scaled,102823,100452,0,
+768,history/states/768-State_768.txt,"Pedernales, DO",6418,8455,grid_2000_scaled,7327,8455,0,
+769,history/states/769-State_769.txt,"Sud-Est, HT",163783,206331,grid_2000_scaled,152104,206331,137966,
+770,history/states/770-State_770.txt,"Puerto Vallarta, JA",500,500,grid_2000_scaled,0,500,0,
+771,history/states/771-State_771.txt,Hidalgo,50363,2730,grid_2000_scaled,92877,2730,0,
+772,history/states/772-State_772.txt,"Malmstrom AFB, MT",1500,1500,special_override,10,1500,1460,city_floor:1168
+773,history/states/773-State_773.txt,"Nippes, HT",206700,445305,grid_2000_scaled,328273,445305,6036,
+774,"history/states/774-Bronx, NY.txt","Queens, NY",4230707,1704311,grid_2000_scaled,1630162,1704311,2633729,
+775,"history/states/775-Queens, NY.txt","Staten Island, NY",10000,10000,special_override,568769,10000,17636754,city_floor:14109403
+776,"history/states/776-Brooklyn, NY.txt","The Bronx, NY",1947037,2739648,grid_2000_scaled+city_validation,882256,2739648,3424560,city_floor:2739648
+777,"history/states/777-Staten Island, NY.txt","Brooklyn, NY",4073867,1950216,grid_2000_scaled,1865368,1950216,2736074,
+778,"history/states/778-Saint Francis, KS.txt","Saint Francis, KS",167,718,grid_2000_scaled,687,718,0,
+779,"history/states/779-Ohio, WV.txt","Ohio, WV",35052,65013,grid_2000_scaled,62184,65013,55222,
