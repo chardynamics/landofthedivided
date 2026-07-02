@@ -46,16 +46,24 @@ VALUE_TIERS = (
     (50_000, 10),
     (25_000, 6),
     (10_000, 4),
-    (0, 3),
+    (5_000, 3),
+    (2_500, 2),
+    (1_000, 2),
+    (500, 1),
+    (0, 1),
 )
 
 DENSE_POP_FLOOR = 50_000
 SPARSE_POP_FLOOR = 15_000
 SPARSE_ABBR_MAX_MAJOR = 4
 COVERAGE_MIN_POP = 5_000
+SPARSE_US_COVERAGE_MIN_POP = 1_000
 MERGE_DENSE_POP_FLOOR = 10_000
 MERGE_SPARSE_POP_FLOOR = 5_000
+MERGE_SPARSE_US_POP_FLOOR = 1_000
 MIN_VP_PIXEL_DISTANCE = 55
+SPARSE_US_MIN_VP_PIXEL_DISTANCE = 38
+SPARSE_US_STATE_ABBRS = frozenset({"WY", "MT", "ND", "SD", "AK"})
 CALIBRATION_MIN_HIT_RATE = 0.85
 FORWARD_RBF_SMOOTHING = 0.5
 PIXEL_LOOKUP_RADIUS = 20
@@ -488,6 +496,11 @@ def sparse_abbreviations(cities: list[CityRecord]) -> set[str]:
     return {abbr for abbr, count in counts.items() if count < SPARSE_ABBR_MAX_MAJOR}
 
 
+def state_in_sparse_us_region(state_name: str) -> bool:
+    parts = [part.strip() for part in state_name.split(",")]
+    return len(parts) == 2 and parts[1] in SPARSE_US_STATE_ABBRS
+
+
 def state_density_tier(category: str, province_count: int) -> str:
     if category in DENSE_STATE_CATEGORIES or province_count >= 12:
         return "dense"
@@ -496,18 +509,36 @@ def state_density_tier(category: str, province_count: int) -> str:
     return "medium"
 
 
-def state_vp_quota(tier: str, province_count: int) -> int:
+def state_vp_quota(tier: str, province_count: int, state_name: str = "") -> int:
     if tier == "dense":
-        return max(3, min(8, 2 + province_count // 3))
-    if tier == "medium":
-        return max(2, min(4, 1 + province_count // 4))
-    return max(1, min(2, 1 + province_count // 6))
+        quota = max(3, min(8, 2 + province_count // 3))
+    elif tier == "medium":
+        quota = max(2, min(4, 1 + province_count // 4))
+    else:
+        quota = max(1, min(2, 1 + province_count // 6))
+    if state_in_sparse_us_region(state_name) and tier in {"sparse", "medium"} and province_count >= 4:
+        quota += 1
+    return quota
 
 
-def state_pop_floor(tier: str) -> int:
+def state_pop_floor(tier: str, state_name: str = "") -> int:
     if tier == "dense":
         return MERGE_DENSE_POP_FLOOR
+    if state_in_sparse_us_region(state_name):
+        return MERGE_SPARSE_US_POP_FLOOR
     return MERGE_SPARSE_POP_FLOOR
+
+
+def coverage_min_pop(state_name: str) -> int:
+    if state_in_sparse_us_region(state_name):
+        return SPARSE_US_COVERAGE_MIN_POP
+    return COVERAGE_MIN_POP
+
+
+def min_vp_pixel_distance(tier: str, state_name: str) -> float:
+    if state_in_sparse_us_region(state_name) and tier in {"sparse", "medium"}:
+        return SPARSE_US_MIN_VP_PIXEL_DISTANCE
+    return MIN_VP_PIXEL_DISTANCE
 
 
 def pixel_distance(px1: float, py1: float, px2: float, py2: float) -> float:
@@ -517,6 +548,7 @@ def pixel_distance(px1: float, py1: float, px2: float, py2: float) -> float:
 def choose_inclusions_with_dispersion(
     mapped: list[tuple[CityRecord, int, int]],
     states: dict,
+    state_names: dict[int, str],
     centroids: dict[int, tuple[float, float]],
     existing_vp_provinces: set[int],
     rbf_x: RBFInterpolator,
@@ -549,9 +581,11 @@ def choose_inclusions_with_dispersion(
 
     for state_id, placements in by_state.items():
         state = states[state_id]
+        state_name = state_names.get(state_id, "")
         tier = state_density_tier(state.get("category", ""), len(state["provinces"]))
-        quota = state_vp_quota(tier, len(state["provinces"]))
-        pop_floor = state_pop_floor(tier)
+        quota = state_vp_quota(tier, len(state["provinces"]), state_name)
+        pop_floor = state_pop_floor(tier, state_name)
+        min_distance = min_vp_pixel_distance(tier, state_name)
 
         existing_in_state = sum(
             1 for pid in state["provinces"] if pid in existing_vp_provinces
@@ -575,7 +609,7 @@ def choose_inclusions_with_dispersion(
             if placement.province_id in existing_vp_provinces:
                 continue
             px, py = project_to_pixel(placement.city.lon, placement.city.lat, rbf_x, rbf_y)
-            if any(pixel_distance(px, py, ex, ey) < MIN_VP_PIXEL_DISTANCE for ex, ey in included_pixels):
+            if any(pixel_distance(px, py, ex, ey) < min_distance for ex, ey in included_pixels):
                 continue
             placement.included = True
             placement.reason = f"quota_{tier}"
@@ -583,7 +617,8 @@ def choose_inclusions_with_dispersion(
             picked += 1
 
         if existing_in_state == 0 and picked == 0:
-            fallback = [p for p in placements if p.city.population >= COVERAGE_MIN_POP]
+            min_cov = coverage_min_pop(state_name)
+            fallback = [p for p in placements if p.city.population >= min_cov]
             if fallback:
                 best = max(fallback, key=lambda p: p.city.population)
                 if best.province_id not in existing_vp_provinces:
@@ -816,6 +851,69 @@ def merge_victory_points(path: Path, assignments: list[tuple[int, int]]) -> int:
     return len(new_assignments)
 
 
+def build_province_population_map(
+    known_vps: dict[int, str],
+    mapped: list[tuple[CityRecord, int, int]],
+    existing_vp_provinces: set[int],
+) -> dict[int, int]:
+    """Map existing VP provinces to best-known population for value rescaling."""
+    province_pop: dict[int, int] = {}
+    for province_id, label in known_vps.items():
+        if province_id not in existing_vp_provinces:
+            continue
+        city = resolve_city_label(label)
+        if city:
+            province_pop[province_id] = int(city["population"])
+
+    by_province: dict[int, list[CityRecord]] = defaultdict(list)
+    for city, province_id, _state_id in mapped:
+        by_province[province_id].append(city)
+
+    for province_id in existing_vp_provinces:
+        candidates = by_province.get(province_id, [])
+        if not candidates:
+            continue
+        best_pop = max(city.population for city in candidates)
+        if province_id not in province_pop or best_pop > province_pop[province_id]:
+            province_pop[province_id] = best_pop
+    return province_pop
+
+
+def rescale_victory_points_in_file(path: Path, province_population: dict[int, int]) -> int:
+    """Rewrite VP values in one state file from population tiers. Returns count changed."""
+    text = path.read_text(encoding="utf-8")
+    block_pattern = re.compile(r"^(\s*victory_points\s*=\s*\{\s*)(\d+)(\s+)(\d+)(\s*\})", flags=re.MULTILINE)
+    changed = 0
+
+    def replace_block(match: re.Match[str]) -> str:
+        nonlocal changed
+        province_id = int(match.group(2))
+        old_value = int(match.group(4))
+        population = province_population.get(province_id)
+        if population is None:
+            return match.group(0)
+        new_value = value_for_population(population)
+        if new_value == old_value:
+            return match.group(0)
+        changed += 1
+        return f"{match.group(1)}{province_id}{match.group(3)}{new_value}{match.group(5)}"
+
+    updated = block_pattern.sub(replace_block, text)
+    if changed:
+        path.write_text(updated, encoding="utf-8")
+    return changed
+
+
+def rescale_all_victory_point_values(
+    states: dict,
+    province_population: dict[int, int],
+) -> int:
+    total = 0
+    for state in states.values():
+        total += rescale_victory_points_in_file(state["path"], province_population)
+    return total
+
+
 def insert_victory_points(path: Path, assignments: list[tuple[int, int]]) -> bool:
     text = path.read_text(encoding="utf-8")
     if re.search(r"^\s*victory_points\s*=", text, flags=re.MULTILINE):
@@ -1011,7 +1109,7 @@ def write_audit_csv(
         for state_id in sorted(states):
             state = states[state_id]
             tier = state_density_tier(state.get("category", ""), len(state["provinces"]))
-            quota = state_vp_quota(tier, len(state["provinces"]))
+            quota = state_vp_quota(tier, len(state["provinces"]), state_names.get(state_id, ""))
             existing = sum(1 for pid in state["provinces"] if pid in existing_vp_provinces)
             proposed = len(included_by_state.get(state_id, []))
 
@@ -1140,6 +1238,7 @@ def run(apply: bool, merge: bool, audit: bool, only_empty_states: bool) -> None:
         chosen = choose_inclusions_with_dispersion(
             mapped,
             states,
+            state_names,
             centroids,
             existing_vp_provinces,
             rbf_x,
@@ -1205,6 +1304,18 @@ def run(apply: bool, merge: bool, audit: bool, only_empty_states: bool) -> None:
     if not apply:
         print("\nDry run only. Re-run with --apply to edit state files and localisation.")
         return
+
+    province_population = build_province_population_map(
+        known_vps,
+        mapped,
+        existing_vp_provinces,
+    )
+    for placement in placements:
+        if placement.included:
+            province_population[placement.province_id] = placement.city.population
+
+    rescaled = rescale_all_victory_point_values(states, province_population)
+    print(f"Rescaled VP values for {rescaled} existing province entries using population tiers (min value 1).")
 
     by_state: dict[int, list[tuple[int, int]]] = defaultdict(list)
     loc_entries: list[tuple[int, str]] = []

@@ -4,10 +4,10 @@ from __future__ import annotations
 
 import argparse
 import csv
-import io
 import math
 import urllib.request
 import zipfile
+from collections import defaultdict
 from pathlib import Path
 
 from assign_infrastructure import ROOT
@@ -37,7 +37,15 @@ POPULATED_FEATURE_CODES = frozenset(
 MAP_BBOX = (-170.0, 7.0, -50.0, 84.0)  # min_lon, min_lat, max_lon, max_lat
 
 MIN_POPULATION = 5000
+SPARSE_US_ADMIN1 = frozenset({"WY", "MT", "ND", "SD", "AK"})
+SPARSE_US_MIN_POPULATION = 1000
 DEDUP_KM = 0.5
+
+
+def min_pop_for_place(country: str, admin1: str) -> int:
+    if country == "US" and admin1 in SPARSE_US_ADMIN1:
+        return SPARSE_US_MIN_POPULATION
+    return MIN_POPULATION
 
 
 def load_admin_map(path: Path) -> dict[tuple[str, str], str]:
@@ -115,6 +123,8 @@ def import_country(
 ) -> list[dict[str, object]]:
     txt_path = download_country(country, geonames_dir)
     rows: list[dict[str, object]] = []
+    threshold_counts: dict[int, int] = defaultdict(int)
+
     with txt_path.open(encoding="utf-8") as handle:
         for line in handle:
             parsed = parse_geonames_row(line)
@@ -130,7 +140,8 @@ def import_country(
                 lat = float(parsed["lat"])
             except ValueError:
                 continue
-            if population < min_pop:
+            place_min_pop = min_pop_for_place(parsed["country"], parsed["admin1"]) if country == "US" else min_pop
+            if population < place_min_pop:
                 continue
             if not in_bbox(lon, lat):
                 continue
@@ -140,6 +151,7 @@ def import_country(
             name = parsed["asciiname"] or parsed["name"]
             if not name:
                 continue
+            threshold_counts[place_min_pop] += 1
             rows.append(
                 {
                     "name": name,
@@ -152,7 +164,8 @@ def import_country(
                     "geoname_id": parsed["geoname_id"],
                 }
             )
-    print(f"  {country}: {len(rows)} places (pop >= {min_pop})")
+    detail = ", ".join(f">={k}:{v}" for k, v in sorted(threshold_counts.items()))
+    print(f"  {country}: {len(rows)} places ({detail or f'pop >= {min_pop}'})")
     return rows
 
 

@@ -1,50 +1,50 @@
 state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,quota,max_gap_px
 1,British Columbia,megalopolis,40,1,0,dense,8,190.5
-2,"Hot Springs, AR",town,6,0,1,medium,2,28.3
-3,"Joplin, MO",town,8,1,2,medium,3,39.7
+2,"Hot Springs, AR",town,6,1,0,medium,2,29.4
+3,"Joplin, MO",town,8,3,0,medium,3,39.7
 4,"Ponce, PR",city,2,1,0,dense,3,21.6
 5,"Mayaguez, PR",large_town,2,1,0,sparse,1,22.5
-6,Northern Alberta,large_city,151,1,3,dense,8,249.3
+6,Northern Alberta,large_city,151,4,0,dense,8,242.5
 7,"Arecibo, PR",large_town,2,1,0,sparse,1,29.5
 8,North Manitoba,city,63,0,0,dense,8,9999.0
 9,Quebec,megalopolis,546,8,0,dense,8,528.5
 10,Labrador,town,111,0,0,dense,8,9999.0
-11,"Floyd County, KY",town,15,1,1,dense,7,81.2
+11,"Floyd County, KY",town,15,2,0,dense,7,70.8
 12,"Newberry, MI",pastoral,5,0,0,sparse,1,9999.0
 13,"Saint Ignace, MI",pastoral,2,0,0,sparse,1,9999.0
-14,Central Northern Manitoba,large_city,92,0,1,dense,8,354.2
-15,"Springfield, MO",city,14,1,2,dense,6,64.8
-16,"Houghton, MI",rural,4,1,1,medium,2,50.8
+14,Central Northern Manitoba,large_city,92,1,0,dense,8,364.8
+15,"Springfield, MO",city,14,3,0,dense,6,56.6
+16,"Houghton, MI",rural,4,2,0,medium,2,31.6
 17,"Moresby Island, BC",tiny_island,6,0,0,sparse,2,9999.0
-18,"Shannon, MO",rural,6,0,1,medium,2,65.8
+18,"Shannon, MO",rural,6,1,0,medium,2,54.1
 19,"Evansville, IN",city,6,1,0,dense,4,60.3
 20,"Hopkins, KY",city,5,2,0,dense,3,35.9
 21,"Bloomington, IN",large_town,8,2,0,medium,3,36.2
-22,"Poplar Bluff, MO",town,12,1,1,dense,6,83.6
-23,Northern British Columbia,large_city,207,4,4,dense,8,202.9
-24,"Louisville, KY",large_city,7,1,1,dense,4,40.5
+22,"Poplar Bluff, MO",town,12,2,0,dense,6,83.6
+23,Northern British Columbia,large_city,207,8,0,dense,8,202.9
+24,"Louisville, KY",large_city,7,2,0,dense,4,38.6
 25,"St. Louis, MO",large_city,1,1,0,dense,3,0.0
 26,World Border,wasteland,9,2,0,sparse,2,938.5
-27,"Harrisonville, MO",rural,4,0,1,medium,2,44.7
+27,"Harrisonville, MO",rural,4,1,0,medium,2,47.4
 28,"St. Joseph, MO",large_town,4,2,0,medium,2,36.9
-29,"Adalair, MO",pastoral,12,1,2,dense,6,81.3
+29,"Adalair, MO",pastoral,12,3,0,dense,6,81.3
 30,Saint-Pierre-et-Miquelon,rural,24,0,0,dense,8,9999.0
 31,"Kidney Island, NU",tiny_island,1,0,0,sparse,1,9999.0
 32,"Tupelo, MS",town,9,0,0,medium,3,9999.0
 33,"Etowah, AL",large_town,6,1,0,medium,2,63.7
-34,"Knox, IL",large_town,9,1,2,medium,3,41.2
+34,"Knox, IL",large_town,9,3,0,medium,3,31.5
 35,"Howard, IN",large_town,4,1,0,medium,2,30.5
-36,"Coeur d'Alene, ID",town,7,0,1,medium,2,88.4
-37,"Kankakee, IL",town,9,1,1,medium,3,42.4
+36,"Coeur d'Alene, ID",town,7,1,0,medium,2,58.1
+37,"Kankakee, IL",town,9,2,0,medium,3,34.2
 38,"Belcher Islands, NU",small_island,8,0,0,medium,3,9999.0
 39,"Christian, KY",large_town,5,1,0,medium,2,29.7
 40,Eastern Northern Manitoba,city,94,0,0,dense,8,9999.0
 41,"Peoria, IL",city,4,2,0,dense,3,34.8
-42,Newfoundland,large_city,62,1,4,dense,8,387.8
+42,Newfoundland,large_city,62,5,0,dense,8,278.8
 43,"Oxford, MS",rural,10,2,0,medium,3,55.3
-44,"El Dorado, AR",town,7,1,1,medium,2,86.0
+44,"El Dorado, AR",town,7,2,0,medium,2,57.7
 45,Oklahoma,megalopolis,23,0,0,dense,8,9999.0
-46,"Champaign, IL",large_town,8,0,2,medium,3,52.0
+46,"Champaign, IL",large_town,8,2,0,medium,3,54.7
 47,"Little Rock, AR",city,3,1,0,dense,3,28.9
 48,"Woodward, OK",rural,3,1,0,sparse,1,39.6
 49,"Bowling Green, KY",town,10,1,0,medium,3,48.1
@@ -52,97 +52,97 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 51,"Petersburg, IL",pastoral,4,1,0,sparse,1,42.8
 52,"Platte, WI",rural,4,1,0,medium,2,33.2
 53,"Buncombe, NC",city,30,0,0,dense,8,9999.0
-54,"Ottumwa, IA",town,7,0,1,medium,2,94.7
-55,"Iowa City, IA",large_town,8,1,2,medium,3,38.9
-56,"Dubuque, IA",large_town,9,2,1,medium,3,50.4
+54,"Ottumwa, IA",town,7,1,0,medium,2,83.2
+55,"Iowa City, IA",large_town,8,3,0,medium,3,36.5
+56,"Dubuque, IA",large_town,9,3,0,medium,3,40.9
 57,"Waterloo, IA",large_town,8,1,0,medium,3,72.5
-58,"Covington, KY",town,7,1,1,medium,2,43.2
+58,"Covington, KY",town,7,2,0,medium,2,33.9
 59,"Indianapolis, IN",metropolis,6,1,0,dense,4,31.9
 60,"Des Moines, IA",city,8,1,0,dense,4,85.9
 61,Illinois,megalopolis,2,0,0,sparse,1,9999.0
-62,"Vancouver, BC",metropolis,99,1,4,dense,8,221.4
-63,Northern Saskatchwan,city,173,0,1,dense,8,342.2
+62,"Vancouver, BC",metropolis,99,5,0,dense,8,221.4
+63,Northern Saskatchwan,city,173,1,0,dense,8,345.5
 64,"North Kansas City, MO",rural,2,1,0,sparse,1,22.7
-65,"Rochester, MN",large_town,6,0,2,medium,2,52.5
+65,"Rochester, MN",large_town,6,2,0,medium,2,31.4
 66,"Milwaukee, WI",metropolis,5,2,0,dense,3,41.6
-67,"Sioux City, IA",large_town,12,1,1,dense,6,68.6
-68,"Green Bay, WI",large_town,4,0,2,medium,2,32.7
-69,Ontario,megalopolis,462,4,4,dense,8,588.6
+67,"Sioux City, IA",large_town,12,2,0,dense,6,67.7
+68,"Green Bay, WI",large_town,4,2,0,medium,2,34.1
+69,Ontario,megalopolis,462,8,0,dense,8,588.6
 70,"Jackson, TN",large_town,11,1,0,medium,3,94.6
 71,"Land Between The Lakes, TN",town,1,1,0,sparse,1,0.0
-72,"Madison, WI",city,11,0,1,dense,5,45.4
+72,"Madison, WI",city,11,1,0,dense,5,41.7
 73,"Lexington, KY",large_city,1,1,0,dense,3,0.0
 74,"Kalamazoo, MI",large_town,4,1,0,medium,2,29.7
-75,"Eau Claire, WI",large_town,10,1,2,medium,3,42.5
+75,"Eau Claire, WI",large_town,10,3,0,medium,3,40.0
 76,"Appleton, WI",large_town,7,2,0,medium,2,26.8
 77,"Kansas City, MO",large_city,3,1,0,dense,3,26.0
-78,"Tippecanoe, IN",city,6,1,1,dense,4,23.9
+78,"Tippecanoe, IN",city,6,2,0,dense,4,23.9
 79,"Oshkosh, WI",large_town,5,1,0,medium,2,58.2
-80,"Wausau, WI",town,4,0,1,medium,2,49.7
-81,"La Crosse, WI",large_town,7,0,2,medium,2,53.4
-82,"Minot, ND",town,9,0,1,medium,3,146.1
-83,"Delaware, IN",city,8,1,1,dense,4,44.1
-84,"Willis, ND",pastoral,7,1,0,sparse,2,121.2
-85,"Edmonton, AB",metropolis,55,2,1,dense,8,202.7
+80,"Wausau, WI",town,4,1,0,medium,2,38.5
+81,"La Crosse, WI",large_town,7,2,0,medium,2,48.0
+82,"Minot, ND",town,9,1,3,medium,4,41.3
+83,"Delaware, IN",city,8,2,0,dense,4,44.1
+84,"Willis, ND",pastoral,7,1,1,sparse,3,65.2
+85,"Edmonton, AB",metropolis,55,3,0,dense,8,184.3
 86,"De Witt, AR",pastoral,3,0,0,sparse,1,9999.0
-87,"Fargo, ND",large_town,13,1,1,dense,6,63.6
-88,"Vancouver Island, BC",metropolis,32,1,1,dense,8,183.3
-89,"Sioux Falls, SD",city,4,1,1,dense,3,31.0
+87,"Fargo, ND",large_town,13,2,0,dense,6,75.5
+88,"Vancouver Island, BC",metropolis,32,2,0,dense,8,186.4
+89,"Sioux Falls, SD",city,4,2,0,dense,3,31.0
 90,"Chico, CA",large_town,7,2,0,medium,2,99.3
-91,"Mitchell, SD",rural,6,0,0,medium,2,9999.0
+91,"Mitchell, SD",rural,6,0,3,medium,3,67.2
 92,"Vaudreuil-Soulanges, QC",city,1,0,0,dense,3,9999.0
 93,"Twin Islands, NU",tiny_island,2,0,0,sparse,1,9999.0
-94,"Kindersley, SK",rural,20,2,1,dense,8,92.7
-95,"Saskatoon, SK",city,87,1,2,dense,8,213.7
+94,"Kindersley, SK",rural,20,3,0,dense,8,81.4
+95,"Saskatoon, SK",city,87,3,0,dense,8,218.6
 96,Guantanamo Bay,rural,1,0,0,sparse,1,9999.0
 97,"Ann Arbor, MI",city,6,1,0,dense,4,43.6
-98,"Brookings, SD",town,5,2,0,medium,2,35.8
-99,"Rapid City, SD",large_town,8,1,0,medium,3,60.4
-100,"Winnipeg, MB",metropolis,52,2,1,dense,8,275.0
+98,"Brookings, SD",town,5,2,0,medium,3,35.8
+99,"Rapid City, SD",large_town,8,1,2,medium,4,40.3
+100,"Winnipeg, MB",metropolis,52,3,0,dense,8,275.0
 101,"Birmingham, AL",city,5,1,0,dense,3,31.4
-102,"Dickinson, ND",rural,11,2,0,medium,3,56.6
-103,"Pierre, SD",rural,4,0,0,medium,2,9999.0
+102,"Dickinson, ND",rural,11,2,2,medium,4,44.5
+103,"Pierre, SD",rural,4,0,0,medium,3,9999.0
 104,"Akimiski Island, NU",tiny_island,2,0,0,sparse,1,9999.0
 105,"Beatrice, NE",rural,4,1,0,medium,2,62.0
-106,"Pine Bluff, AR",large_town,4,0,1,medium,2,79.0
+106,"Pine Bluff, AR",large_town,4,1,0,medium,2,77.1
 107,"Anticosti Island, QC",small_island,4,0,0,medium,2,9999.0
-108,"Scottsbluff, NE",rural,7,1,1,medium,2,46.6
-109,"Fremont, NE",town,9,1,1,medium,3,49.3
-110,"Grand Island, NE",town,12,1,1,dense,6,67.0
+108,"Scottsbluff, NE",rural,7,2,0,medium,2,39.0
+109,"Fremont, NE",town,9,2,0,medium,3,44.3
+110,"Grand Island, NE",town,12,2,0,dense,6,67.4
 111,"Meridian, MS",town,10,0,0,medium,3,9999.0
-112,"Salina, KS",town,8,1,1,medium,3,46.5
+112,"Salina, KS",town,8,2,0,medium,3,47.6
 113,"Cowley, KS",town,9,2,0,medium,3,42.9
 114,"Saint Pierre, FR",rural,2,0,0,sparse,1,9999.0
 115,"Charlton Island, NU",tiny_island,1,0,0,sparse,1,9999.0
 116,"East Lansing, MI",town,4,1,0,medium,2,32.6
-117,"Calgary, AB",metropolis,25,2,2,dense,8,56.2
+117,"Calgary, AB",metropolis,25,4,0,dense,8,58.4
 118,"Miquelon, FR",pastoral,1,0,0,sparse,1,9999.0
 119,"Durango, CO",rural,9,1,0,medium,3,64.3
 120,"Eastern Townships, QC",city,44,0,0,dense,8,9999.0
-121,"Hardin, KY",large_town,6,1,1,medium,2,39.3
-122,"Dodge City, KS",town,19,1,1,dense,8,119.9
+121,"Hardin, KY",large_town,6,2,0,medium,2,33.7
+122,"Dodge City, KS",town,19,2,0,dense,8,119.9
 123,"Alamosa, CO",rural,4,1,0,medium,2,40.3
 124,"Fort Smith, AR",large_town,6,1,0,medium,2,69.3
 125,"Twin Falls, ID",town,6,1,0,medium,2,61.4
 126,"Thornton, CO",large_town,6,1,0,medium,2,69.7
 127,"Tuscaloosa, AL",large_town,7,1,0,medium,2,61.5
 128,"Fort Collins, CO",city,5,2,0,dense,3,43.3
-129,"Fort Morgan, CO",rural,5,1,1,medium,2,43.9
-130,"La Salle, LA",rural,5,1,1,medium,2,34.1
+129,"Fort Morgan, CO",rural,5,2,0,medium,2,43.9
+130,"La Salle, LA",rural,5,2,0,medium,2,31.5
 131,"Colorado Springs, CO",large_city,7,1,0,dense,4,84.5
 132,"Magladen Islands, QC",small_island,1,0,0,sparse,1,9999.0
-133,"Ionia, MI",rural,5,0,1,medium,2,46.6
-134,"Lansing, MI",city,4,0,1,dense,3,30.6
+133,"Ionia, MI",rural,5,1,0,medium,2,37.4
+134,"Lansing, MI",city,4,1,0,dense,3,25.5
 135,"Miles City, MT",rural,20,1,0,dense,8,126.5
-136,"Gillette, WY",town,18,1,1,dense,8,88.3
-137,"North Puget Sound, WA",city,3,1,1,dense,3,28.2
+136,"Gillette, WY",town,18,2,0,dense,8,88.3
+137,"North Puget Sound, WA",city,3,2,0,dense,3,28.2
 138,"Flint, MI",city,7,1,0,dense,4,44.5
-139,"Great Falls, MT",large_town,16,0,0,dense,7,9999.0
-140,"Northern Cascades, WA",large_town,13,1,2,dense,6,57.9
-141,New Brunswick,metropolis,27,2,3,dense,8,147.3
-142,"Olympic Peninsula, WA",large_town,7,1,1,medium,2,79.1
+139,"Great Falls, MT",large_town,16,0,1,dense,7,89.9
+140,"Northern Cascades, WA",large_town,13,3,0,dense,6,60.0
+141,New Brunswick,metropolis,27,5,1,dense,8,121.6
+142,"Olympic Peninsula, WA",large_town,7,2,0,medium,2,77.2
 143,"Tucson, AZ",large_city,3,1,0,dense,3,34.2
-144,"Idaho Falls, ID",large_town,6,0,1,medium,2,57.6
+144,"Idaho Falls, ID",large_town,6,1,0,medium,2,60.0
 145,"Cape Breton Island, NS",city,7,0,0,dense,4,9999.0
 146,"Salt Lake City, UT",city,3,1,0,dense,3,46.3
 147,"Ogden, UT",large_town,8,2,0,medium,3,46.8
@@ -150,27 +150,27 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 149,"Provo, UT",city,12,1,0,dense,6,99.3
 150,"Western Okanogan Highlands, WA",town,6,1,0,medium,2,42.9
 151,"Edmundston, NB",rural,3,0,0,sparse,1,9999.0
-152,Prince Edward Island,city,2,1,1,dense,3,57.7
+152,Prince Edward Island,city,2,2,0,dense,3,0.0
 153,"Degelis, QC",town,6,0,0,medium,2,9999.0
 154,"Mount Pleasant, MI",town,3,1,0,sparse,1,32.2
 155,"Brandon, MB",town,14,0,0,dense,6,9999.0
-156,"Puget Islands, WA",town,8,1,1,medium,3,39.4
+156,"Puget Islands, WA",town,8,2,0,medium,3,38.3
 157,"Eastern Okanogan Highlands, WA",town,2,1,0,sparse,1,21.9
 158,"Metaline Falls, WA",enclave,1,0,0,sparse,1,9999.0
 159,"Hanover, MB",town,9,0,0,medium,3,9999.0
 160,"Sandpoint, ID",rural,3,0,0,sparse,1,9999.0
-161,"Kalispell, MT",rural,9,1,0,medium,3,78.9
+161,"Kalispell, MT",rural,9,1,2,medium,4,56.8
 162,"Essex, MA",metropolis,1,1,0,dense,3,0.0
-163,Nova Scotia,metropolis,18,2,1,dense,8,95.8
+163,Nova Scotia,metropolis,18,3,0,dense,8,86.3
 164,"Vernal, UT",rural,7,1,0,medium,2,61.8
-165,"Shreveport, LA",city,8,0,1,dense,4,310.3
+165,"Shreveport, LA",city,8,1,0,dense,4,88.7
 166,"Cypress, AB",rural,2,0,0,sparse,1,9999.0
 167,"Maple Creek, MB",pastoral,10,0,0,sparse,2,9999.0
 168,"Aroostook, ME",large_town,13,2,0,dense,6,57.7
-169,"South Puget Sound, WA",large_town,5,0,2,medium,2,26.4
-170,"Browning, MT",pastoral,7,0,0,sparse,2,9999.0
+169,"South Puget Sound, WA",large_town,5,2,0,medium,2,36.8
+170,"Browning, MT",pastoral,7,0,1,sparse,3,114.8
 171,"Fayetteville, AR",large_town,8,1,0,medium,3,60.9
-172,"Columbia Basin, WA",city,16,1,2,dense,7,57.9
+172,"Columbia Basin, WA",city,16,3,0,dense,7,65.1
 173,"Pantex Plant, TX",pastoral,1,1,0,sparse,1,0.0
 174,"Saint Francis, ME",enclave,2,0,0,sparse,1,9999.0
 175,"Cedar City, UT",town,12,1,0,dense,6,136.2
@@ -184,23 +184,23 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 183,"Southern Cascades, WA",large_town,8,1,0,medium,3,75.7
 184,"St. John, NB",large_town,6,0,0,medium,2,9999.0
 185,"Yakima, WA",large_town,7,1,0,medium,2,92.3
-186,"Missoula, MT",large_town,6,1,1,medium,2,76.2
-187,"Naval Submarine Base Bangor, WA",pastoral,1,0,1,sparse,1,14.7
+186,"Missoula, MT",large_town,6,2,1,medium,3,76.2
+187,"Naval Submarine Base Bangor, WA",pastoral,1,1,0,sparse,1,0.0
 188,"Piscataquis, ME",town,6,0,0,medium,2,9999.0
 189,"Middlesex, NJ",metropolis,1,0,0,dense,3,9999.0
 190,"Roseburg, OR",town,8,1,0,medium,3,70.6
 191,"Muskegon, MI",town,5,1,0,medium,2,43.1
 192,"Bismarck, ND",large_town,17,1,0,dense,7,99.0
-193,"Grand Forks, ND",town,18,0,1,dense,8,100.6
+193,"Grand Forks, ND",town,18,1,0,dense,8,88.1
 194,"Conway, AR",town,9,1,0,medium,3,72.2
 195,"Mahoosuc Range, ME",town,4,0,0,medium,2,9999.0
 196,"Phillips, AR",town,5,0,0,medium,2,9999.0
 197,"Natchitoches, LA",rural,4,1,0,medium,2,60.5
 198,"Lake Charles, LA",large_town,6,0,0,medium,2,9999.0
-199,"Clay, MN",large_town,4,1,1,medium,2,35.5
-200,"Isanti, MN",rural,15,1,1,dense,7,57.0
+199,"Clay, MN",large_town,4,2,0,medium,2,35.5
+200,"Isanti, MN",rural,15,2,0,dense,7,57.4
 201,"Vancouver, WA",city,1,1,0,dense,3,0.0
-202,"Autauga, AL",town,4,0,1,medium,2,28.3
+202,"Autauga, AL",town,4,1,0,medium,2,34.9
 203,"Downeast, ME",town,4,1,0,medium,2,45.8
 204,"Billings, MT",large_town,27,3,0,dense,8,116.1
 205,"West Mahoosuc, ME",rural,5,0,0,medium,2,9999.0
@@ -209,11 +209,11 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 208,"Alexandra, LA",town,5,0,0,medium,2,9999.0
 209,"Bend, OR",large_town,12,1,0,dense,6,130.8
 210,"Queens, NY",megalopolis,1,0,0,sparse,1,9999.0
-211,"Phillipsburg, MT",pastoral,6,1,0,sparse,2,78.5
-212,"Mercer, ND",pastoral,11,1,0,sparse,2,86.0
+211,"Phillipsburg, MT",pastoral,6,1,1,sparse,3,31.8
+212,"Mercer, ND",pastoral,11,1,2,sparse,3,46.6
 213,"Orange, NY",large_city,1,0,0,dense,3,9999.0
 214,"Dothan, AL",large_town,4,1,0,medium,2,64.4
-215,"Monroe, LA",large_town,10,0,2,medium,3,43.2
+215,"Monroe, LA",large_town,10,2,0,medium,3,48.1
 216,"Western Mountains, ME",rural,9,1,0,medium,3,46.6
 217,"Pendleton, OR",rural,19,1,0,dense,8,135.2
 218,"Monteregie, QC",megalopolis,2,0,0,sparse,1,9999.0
@@ -222,22 +222,22 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 221,"Penobscot Bay, ME",town,4,1,0,medium,2,31.2
 222,"Marquette, MI",town,3,1,0,sparse,1,48.1
 223,"Great North Woods, NH",town,3,1,0,sparse,1,40.0
-224,"Cascade, ID",pastoral,19,0,1,dense,8,185.5
+224,"Cascade, ID",pastoral,19,1,0,dense,8,136.4
 225,"ile Jesus, QC",metropolis,1,0,0,dense,3,9999.0
 226,"ile de Montreal, QC",metropolis,1,1,0,dense,3,0.0
 227,"Montgomery, Al",city,5,1,0,dense,3,68.2
-228,"Saint Cloud, MN",large_town,11,1,1,medium,3,85.1
+228,"Saint Cloud, MN",large_town,11,2,0,medium,3,85.1
 229,"ile Bizardl, QC",town,1,0,0,sparse,1,9999.0
 230,"ile Perrot, QC",town,1,0,0,sparse,1,9999.0
 231,"Northeast Kingdom, VT",town,2,1,0,sparse,1,25.9
 232,"Portland Casco Bay, ME",large_town,9,1,0,medium,3,56.4
 233,"Cadillac, MI",rural,7,1,0,medium,2,41.0
-234,"Jamestown, ND",rural,2,0,0,sparse,1,9999.0
+234,"Jamestown, ND",rural,2,0,1,sparse,1,64.4
 235,"Clarke, AL",town,2,0,0,sparse,1,9999.0
-236,"Franklin, VT",town,2,0,1,sparse,1,24.9
+236,"Franklin, VT",town,2,1,0,sparse,1,20.3
 237,"Butler, AL",town,6,0,0,medium,2,9999.0
 238,"Alger, MI",rural,6,1,0,medium,2,72.3
-239,"Dillon, MT",pastoral,9,2,0,sparse,2,58.7
+239,"Dillon, MT",pastoral,9,2,1,sparse,3,58.7
 240,"Sugar Island, MI",tiny_island,1,1,0,sparse,1,0.0
 241,"Superior, WI",town,3,1,0,sparse,1,53.3
 242,"St. Lawrence, NY",city,3,1,0,dense,3,41.2
@@ -245,74 +245,74 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 244,"White Mountains, NH",rural,4,1,0,medium,2,43.7
 245,"Manhattan, NYC",megalopolis,1,1,0,sparse,1,0.0
 246,"St. Joseph Island, ON",small_island,1,0,0,sparse,1,9999.0
-247,"Athens, OH",town,7,1,1,medium,2,48.4
+247,"Athens, OH",town,7,2,0,medium,2,46.6
 248,"Grand Isle, VT",rural,1,1,0,sparse,1,0.0
-249,"Powder River, MT",rural,7,0,0,medium,2,9999.0
+249,"Powder River, MT",rural,7,0,1,medium,3,81.0
 250,"Addison, VT",town,1,1,0,sparse,1,0.0
-251,"Hayward, WI",rural,13,0,1,dense,6,112.3
+251,"Hayward, WI",rural,13,1,0,dense,6,129.3
 252,"Manitoulin Island, ON",small_island,5,0,0,medium,2,9999.0
-253,"Rutland, VT",town,7,1,1,medium,2,49.6
+253,"Rutland, VT",town,7,2,0,medium,2,33.9
 254,"Drummond Island, MI",small_island,1,0,0,sparse,1,9999.0
-255,"Cabell, WV",large_town,6,0,1,medium,2,61.8
-256,"Hardin, MT",pastoral,2,0,0,sparse,1,9999.0
+255,"Cabell, WV",large_town,6,1,0,medium,2,52.2
+256,"Hardin, MT",pastoral,2,0,1,sparse,1,43.3
 257,"Cockburn Island, ON",wasteland,1,0,0,sparse,1,9999.0
-258,"East Bozeman, MT",town,4,0,0,medium,2,9999.0
-259,"Madison, MT",pastoral,2,0,0,sparse,1,9999.0
+258,"East Bozeman, MT",town,4,0,2,medium,3,44.0
+259,"Madison, MT",pastoral,2,0,1,sparse,1,43.6
 260,"Merrimack, NH",city,4,1,0,dense,3,34.9
 261,"Sarasota, FL",large_city,1,1,0,dense,3,0.0
 262,"Ontario, OR",rural,20,1,0,dense,8,140.8
 263,"Mackinac Island, MI",tiny_island,1,0,0,sparse,1,9999.0
-264,"Toledo, OH",large_city,7,1,1,dense,4,35.9
-265,"Stevens Point, WI",town,9,1,1,medium,3,73.3
-266,"Dayton, OH",city,12,2,1,dense,6,49.4
-267,"Mackinac City, MI",pastoral,2,0,1,sparse,1,15.5
-268,"Grafton, NH",rural,2,0,1,sparse,1,42.7
-269,"Clearwater, MN",pastoral,17,2,1,dense,7,67.2
+264,"Toledo, OH",large_city,7,2,0,dense,4,30.2
+265,"Stevens Point, WI",town,9,2,0,medium,3,73.3
+266,"Dayton, OH",city,12,3,0,dense,6,49.4
+267,"Mackinac City, MI",pastoral,2,1,0,sparse,1,8.5
+268,"Grafton, NH",rural,2,1,0,sparse,1,39.9
+269,"Clearwater, MN",pastoral,17,3,0,dense,7,67.2
 270,"Beaver Island, MI",tiny_island,1,0,0,sparse,1,9999.0
-271,"Harding, SD",pastoral,9,0,0,sparse,2,9999.0
+271,"Harding, SD",pastoral,9,0,1,sparse,3,113.1
 272,"Iosco, MI",rural,3,1,0,sparse,1,24.0
 273,"Hamilton, NY",rural,4,1,0,medium,2,55.4
 274,"Strafford, NH",city,1,1,0,dense,3,0.0
-275,"Mobridge, SD",pastoral,8,0,0,sparse,2,9999.0
-276,"Aberdeen, SD",town,11,1,0,medium,3,119.8
+275,"Mobridge, SD",pastoral,8,0,1,sparse,3,60.5
+276,"Aberdeen, SD",town,11,1,3,medium,4,85.5
 277,"Concord, NH",town,2,1,0,sparse,1,27.1
-278,"Medford, OR",large_town,6,1,1,medium,2,35.4
-279,"Watertown, SD",town,10,1,0,medium,3,83.2
-280,"Lewis, NY",town,4,1,1,medium,2,36.7
+278,"Medford, OR",large_town,6,2,0,medium,2,34.5
+279,"Watertown, SD",town,10,1,2,medium,4,42.7
+280,"Lewis, NY",town,4,2,0,medium,2,40.3
 281,"Old Faithful, WY",pastoral,3,1,0,sparse,1,70.6
 282,"Troy, NY",large_town,6,2,0,medium,2,53.8
 283,"Casper, WY",town,15,1,0,dense,7,165.5
 284,"Philadelphia, PA",megalopolis,1,1,0,sparse,1,0.0
-285,"Schenectady, NY",large_town,4,0,1,medium,2,43.0
-286,"Richland, OH",city,8,2,1,dense,4,35.5
+285,"Schenectady, NY",large_town,4,1,0,medium,2,43.5
+286,"Richland, OH",city,8,3,0,dense,4,27.9
 287,"Roberts, ID",enclave,10,1,0,sparse,2,72.2
 288,"Boise, ID",city,8,1,0,dense,4,108.9
-289,"Baileys Harbor, WI",pastoral,2,0,1,sparse,1,43.0
+289,"Baileys Harbor, WI",pastoral,2,1,0,sparse,1,29.1
 290,"Grand Traverse, MI",large_town,10,1,0,medium,3,58.1
 291,"Oswego, NY",city,4,1,0,dense,3,31.3
 292,"Hillsborough, NH",town,1,1,0,sparse,1,0.0
 293,"Windham, VT",town,2,1,0,sparse,1,19.9
 294,"Nampa, ID",large_town,8,0,0,medium,3,9999.0
-295,"Jackson, WY",rural,8,0,0,medium,3,9999.0
+295,"Jackson, WY",rural,8,0,3,medium,4,88.4
 296,"Crescent City, CA",pastoral,1,1,0,sparse,1,0.0
 297,"Jerome, ID",rural,6,1,0,medium,2,69.5
-298,"Marshall, MN",rural,4,0,1,medium,2,48.0
+298,"Marshall, MN",rural,4,1,0,medium,2,52.6
 299,"Suffolk, MA",metropolis,1,1,0,dense,3,0.0
 300,"Worchester, MA",city,6,1,0,dense,4,26.1
 301,"Wayne, NY",large_town,6,1,0,medium,2,32.9
 302,"Berkshire, MA",city,2,1,0,dense,3,20.8
 303,"Mojave, CA",rural,34,6,0,dense,8,58.6
-304,"Saint Paul, MN",large_city,5,1,1,dense,3,29.8
-305,"Chenango, NY",town,5,1,1,medium,2,31.6
+304,"Saint Paul, MN",large_city,5,2,0,dense,3,30.0
+305,"Chenango, NY",town,5,2,0,medium,2,29.0
 306,"Delaware, NY",town,2,1,0,sparse,1,43.9
 307,"Plymouth, MA",large_town,4,2,0,medium,2,22.5
-308,"Onondaga, NY",large_city,7,0,1,dense,4,43.7
-309,"Trippe, SD",enclave,13,0,0,dense,6,9999.0
+308,"Onondaga, NY",large_city,7,1,0,dense,4,36.3
+309,"Trippe, SD",enclave,13,0,1,dense,6,175.3
 310,"Pocatello, ID",large_town,4,1,0,medium,2,58.2
 311,"Murray, MN",rural,2,1,0,sparse,1,45.2
 312,"Huron, MI",town,7,1,0,medium,2,51.0
 313,"Monroe, NY",metropolis,1,1,0,dense,3,0.0
-314,"Genesse, NY",large_town,5,0,1,medium,2,26.7
+314,"Genesse, NY",large_town,5,1,0,medium,2,25.7
 315,"Barnstable, MA",town,1,1,0,sparse,1,0.0
 316,"Columbia, NY",large_town,2,1,0,sparse,1,23.6
 317,"Mason, MI",rural,5,1,0,medium,2,39.0
@@ -329,16 +329,16 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 328,"Hartford, CT",city,4,1,0,dense,3,42.9
 329,"Benton Harbor, MI",rural,2,1,0,sparse,1,25.3
 330,Grand Island,town,1,0,0,sparse,1,9999.0
-331,"Mojave, NV",enclave,45,0,1,dense,8,286.6
+331,"Mojave, NV",enclave,45,1,0,dense,8,287.2
 332,"Detroit, MI",metropolis,1,1,0,dense,3,0.0
 333,"Hamburg, NY",large_town,2,1,0,sparse,1,15.4
 334,"Alpena, MI",town,4,1,0,medium,2,37.8
 335,"Steuben, NY",large_town,4,1,0,medium,2,18.7
 336,"Oakland, MI",metropolis,5,1,0,dense,3,39.7
 337,"Dutchess, NY",large_city,3,1,0,dense,3,35.0
-338,"Orange, NY",large_city,4,0,1,dense,3,44.0
+338,"Orange, NY",large_city,4,1,0,dense,3,48.5
 339,"St. Clair, MI",city,5,1,0,dense,3,35.3
-340,"Douglas, WY",rural,5,1,0,medium,2,74.5
+340,"Douglas, WY",rural,5,1,2,medium,3,38.2
 341,"Chautauqua, NY",city,8,2,0,dense,4,23.0
 342,"Lackawanna, PA",city,7,1,0,dense,4,59.7
 343,"Fairfield, CT",large_town,1,1,0,sparse,1,0.0
@@ -347,10 +347,10 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 346,"Bradford, PA",large_town,7,1,0,medium,2,51.5
 347,"Davenport, IA",large_town,6,1,0,medium,2,45.1
 348,"Detroit Metro, MI",megalopolis,3,2,0,sparse,1,20.6
-349,"Mason City, IA",town,7,1,1,medium,2,53.2
-350,"Council Bluffs, IA",large_town,5,1,1,medium,2,29.7
+349,"Mason City, IA",town,7,2,0,medium,2,53.2
+350,"Council Bluffs, IA",large_town,5,2,0,medium,2,31.2
 351,"Kent, MI",metropolis,5,1,0,dense,3,32.6
-352,"Delta, UT",pastoral,24,0,1,dense,8,202.2
+352,"Delta, UT",pastoral,24,1,0,dense,8,187.8
 353,"Erie, PA",large_town,5,1,0,medium,2,56.0
 354,"Long Island, NY",megalopolis,2,1,0,sparse,1,34.6
 355,"Cheyenne, WY",large_town,15,2,0,dense,7,89.3
@@ -360,20 +360,20 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 359,"Lehigh, PA",large_city,6,2,0,dense,4,52.8
 360,"South Bairoil, WY",enclave,3,1,0,sparse,1,35.1
 361,"Sandusky, OH",town,4,1,0,medium,2,38.7
-362,"Evanston, WY",rural,5,1,0,medium,2,61.0
+362,"Evanston, WY",rural,5,1,0,medium,3,61.0
 363,"Northumberland, PA",large_town,7,1,0,medium,2,41.3
 364,"Rock Springs, WY",town,3,1,0,sparse,1,45.5
-365,"Lawrence, PA",large_town,7,1,1,medium,2,34.2
+365,"Lawrence, PA",large_town,7,2,0,medium,2,31.7
 366,"Chicago Metro, IL",megalopolis,11,3,0,medium,3,61.2
 367,"Middlesex, NJ",metropolis,1,1,0,dense,3,0.0
 368,"Superior, WY",pastoral,1,0,0,sparse,1,9999.0
-369,"Rockford, IL",city,9,1,1,dense,5,51.4
+369,"Rockford, IL",city,9,2,0,dense,5,51.4
 370,"Carson City, NV",large_town,5,2,0,medium,2,30.9
-371,"Centre, PA",city,5,0,2,dense,3,37.8
+371,"Centre, PA",city,5,2,0,dense,3,36.7
 372,"East Superior, WY",pastoral,3,1,0,sparse,1,29.6
 373,"Wamsutter, WY",enclave,3,0,0,sparse,1,9999.0
 374,"Monmouth, NJ",metropolis,5,1,0,dense,3,51.3
-375,"Rawlins, WY",rural,1,0,0,sparse,1,9999.0
+375,"Rawlins, WY",rural,1,0,1,sparse,1,16.0
 376,"Bucks, PA",metropolis,2,1,0,dense,3,33.0
 377,"Chicago, IL",megalopolis,2,1,0,sparse,1,30.5
 378,"Lancester, PA",large_town,7,3,0,medium,2,21.1
@@ -384,7 +384,7 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 383,"Columbus, OH",metropolis,7,1,0,dense,4,50.5
 384,"Ogallala, NE",rural,3,0,0,sparse,1,9999.0
 385,"Gary, IN",large_town,4,2,0,medium,2,22.0
-386,"Wheeling, OH",town,6,1,1,medium,2,40.8
+386,"Wheeling, OH",town,6,2,0,medium,2,30.7
 387,"Blair, PA",city,5,1,0,dense,3,52.1
 388,"York, PA",large_city,7,1,0,dense,4,71.4
 389,"Camden, NJ",large_town,5,1,0,medium,2,41.0
@@ -392,18 +392,18 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 391,"Westmoreland, PA",large_city,3,1,0,dense,3,36.1
 392,"Jasper, IN",town,5,1,0,medium,2,56.2
 393,"Washington, PA",large_town,5,1,0,medium,2,35.2
-394,"Grand Junction, CO",town,11,0,1,medium,3,110.2
+394,"Grand Junction, CO",town,11,1,0,medium,3,113.0
 395,"Newcastle, DE",large_city,1,1,0,dense,3,0.0
 396,"Mount Vernon, IL",rural,16,1,0,dense,7,82.4
 397,"Steamboat Springs, CO",rural,6,1,0,medium,2,41.0
 398,"Saint Anne, IL",rural,1,0,0,sparse,1,9999.0
 399,"Walden, CO",enclave,2,0,0,sparse,1,9999.0
 400,"Lincoln, NE",city,7,1,0,dense,4,50.1
-401,"Kit Carson, CO",rural,22,1,1,dense,8,131.0
+401,"Kit Carson, CO",rural,22,2,0,dense,8,131.0
 402,"Aberdeen, MD",rural,2,1,0,sparse,1,12.5
-403,"Harford, MD",city,1,0,1,dense,3,12.8
+403,"Harford, MD",city,1,1,0,dense,3,0.0
 404,"Baltimore, MD",metropolis,4,1,0,dense,3,24.0
-405,"Bartholomew, IN",large_town,7,1,1,medium,2,44.9
+405,"Bartholomew, IN",large_town,7,2,0,medium,2,44.9
 406,"Carroll, MD",city,2,1,0,dense,3,34.4
 407,"Clinton, OH",rural,6,1,0,medium,2,50.9
 408,"Randell, UT",wasteland,5,0,0,sparse,1,9999.0
@@ -411,72 +411,72 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 410,"Kent, DE",city,1,1,0,dense,3,0.0
 411,"Queen Anne's, MD",town,8,1,0,medium,3,46.6
 412,"Frederick, MD",city,3,1,0,dense,3,17.2
-413,"Adams, NE",town,4,1,1,medium,2,34.4
+413,"Adams, NE",town,4,2,0,medium,2,28.4
 414,"Alleghany, MD",town,1,1,0,sparse,1,0.0
 415,"Berkeley, WV",large_town,3,1,0,sparse,1,25.6
 416,"Morgantown, WV",town,4,1,0,medium,2,49.5
 417,"Mineral, WV",town,4,1,0,medium,2,73.1
 418,"Montgomery, MD",metropolis,2,1,0,dense,3,14.2
 419,"Bishop, CA",pastoral,6,0,0,sparse,2,9999.0
-420,"Sussex, DE",city,5,0,1,dense,3,29.3
+420,"Sussex, DE",city,5,1,0,dense,3,25.7
 421,"Monogalia, WV",large_town,4,1,0,medium,2,44.3
 422,"Breckenridge, CO",pastoral,1,0,0,sparse,1,9999.0
 423,"Frederick, VA",large_town,7,1,0,medium,2,46.6
 424,"Fairfax, VA",metropolis,8,1,0,dense,4,41.5
 425,"Prince George's, MD",metropolis,9,1,0,dense,5,48.3
-426,"Bowling Green, MO",rural,8,1,1,medium,3,49.4
-427,"Bloomington, IL",large_town,3,0,1,sparse,1,43.9
-428,"Aspen, CO",pastoral,18,1,1,dense,8,96.7
+426,"Bowling Green, MO",rural,8,2,0,medium,3,49.4
+427,"Bloomington, IL",large_town,3,1,0,sparse,1,36.3
+428,"Aspen, CO",pastoral,18,2,0,dense,8,96.7
 429,"Wood, WV",large_town,3,1,0,sparse,1,43.6
-430,"Furnass, NE",pastoral,1,0,1,sparse,1,14.4
+430,"Furnass, NE",pastoral,1,1,0,sparse,1,0.0
 431,"Wicomico, MD",large_town,4,1,0,medium,2,25.7
 432,"Cincinnati, OH",large_city,5,1,0,dense,3,42.3
-433,"Dove Creek, CO",enclave,11,1,1,sparse,2,64.9
-434,"Ellis, KS",town,11,1,1,medium,3,66.0
+433,"Dove Creek, CO",enclave,11,2,0,sparse,2,62.3
+434,"Ellis, KS",town,11,2,0,medium,3,66.0
 435,"Albemarle, VA",large_town,5,1,0,medium,2,57.5
-436,"Topeka, KS",city,10,1,1,dense,5,50.6
+436,"Topeka, KS",city,10,2,0,dense,5,50.6
 437,"King George's, VA",town,9,1,0,medium,3,64.7
-438,"Greenbrier, WV",town,4,1,1,medium,2,45.2
+438,"Greenbrier, WV",town,4,2,0,medium,2,42.9
 439,"Accomack, VA",town,3,1,0,sparse,1,24.7
-440,"Spotslyvania, VA",large_town,4,0,1,medium,2,29.5
-441,"Pueblo, CO",large_town,2,0,1,sparse,1,46.2
+440,"Spotslyvania, VA",large_town,4,1,0,medium,2,26.5
+441,"Pueblo, CO",large_town,2,1,0,sparse,1,45.6
 442,"Moab, UT",rural,5,0,0,medium,2,9999.0
 443,"Lynchburg, VA",large_town,5,2,0,medium,2,23.3
-444,"Emporia, KS",town,11,0,1,medium,3,101.9
+444,"Emporia, KS",town,11,1,0,medium,3,100.6
 445,"Springfield, IL",city,7,1,0,dense,4,75.8
 446,"Madison, KY",large_town,8,1,0,medium,3,61.6
 447,"Cabell, WV",large_town,2,1,0,sparse,1,38.9
 448,"Mesquite, NV",pastoral,3,0,0,sparse,1,9999.0
 449,"Kanawha, WV",city,1,1,0,dense,3,0.0
-450,"Richmond, VA",city,3,1,1,dense,3,27.9
+450,"Richmond, VA",city,3,2,0,dense,3,18.9
 451,"Jefferson, MO",city,6,1,0,dense,4,47.1
-452,"Raleight, WV",large_town,5,1,1,medium,2,34.5
-453,"Lawrence, KS",large_town,5,1,1,medium,2,25.0
-454,"Danville, VA",town,7,0,1,medium,2,46.6
+452,"Raleight, WV",large_town,5,2,0,medium,2,32.9
+453,"Lawrence, KS",large_town,5,2,0,medium,2,21.7
+454,"Danville, VA",town,7,1,0,medium,2,48.4
 455,"Floyd, IN",large_town,2,1,0,sparse,1,28.1
 456,"Prince George, VA",town,5,1,0,medium,2,33.6
-457,"Gasconade, MO",rural,6,1,1,medium,2,33.3
-458,"Las Vegas, NV",large_city,6,1,1,dense,4,38.5
+457,"Gasconade, MO",rural,6,2,0,medium,2,33.3
+458,"Las Vegas, NV",large_city,6,2,0,dense,4,38.5
 459,"Hampton Roads, VA",megalopolis,3,1,0,sparse,1,54.5
 460,"Trinidad, CO",rural,20,1,0,dense,8,133.0
-461,"Belleville, IL",town,1,0,1,sparse,1,22.9
+461,"Belleville, IL",town,1,1,0,sparse,1,0.0
 462,"Kaibab, AZ",rural,6,1,0,medium,2,93.5
-463,"Roanoake, VA",large_town,9,1,1,medium,3,47.4
-464,"Washington, VA",large_town,4,1,1,medium,2,45.7
-465,"Wichita, KS",large_city,11,0,1,dense,5,102.8
+463,"Roanoake, VA",large_town,9,2,0,medium,3,46.2
+464,"Washington, VA",large_town,4,2,0,medium,2,40.8
+465,"Wichita, KS",large_city,11,1,0,dense,5,86.2
 466,"Wise, VA",town,5,2,0,medium,2,31.4
-467,"Elizabeth City, NC",town,6,1,1,medium,2,45.1
+467,"Elizabeth City, NC",town,6,2,0,medium,2,38.7
 468,"Mexican Hat, UT",enclave,3,1,0,sparse,1,36.1
 469,"Liberal, KS",town,8,1,0,medium,3,69.6
 470,"Navajo Nation, AZ",city,20,4,0,dense,8,80.9
 471,"Denver, CO",metropolis,1,1,0,dense,3,0.0
 472,"Nash, NC",large_town,6,1,0,medium,2,71.5
 473,"Wake, NC",metropolis,4,1,0,dense,3,36.0
-474,"Beaufort, NC",town,5,0,2,medium,2,44.6
+474,"Beaufort, NC",town,5,2,0,medium,2,28.2
 475,"Wayne, KY",town,3,1,0,sparse,1,86.8
-476,"Mount Airy, NC",rural,5,1,1,medium,2,42.2
+476,"Mount Airy, NC",rural,5,2,0,medium,2,31.2
 477,"Farmington, NM",town,1,1,0,sparse,1,0.0
-478,"Cibola, NM",town,38,1,1,dense,8,191.8
+478,"Cibola, NM",town,38,2,0,dense,8,191.8
 479,"Pitt, NC",city,4,1,0,dense,3,28.5
 480,"Johnson City, TN",large_town,7,1,0,medium,2,48.6
 481,"Guilford, NC",large_city,6,1,0,dense,4,51.2
@@ -484,102 +484,102 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 483,"Owens Island, KY",tiny_island,1,0,0,sparse,1,9999.0
 484,"Albuquerque, NM",large_city,1,1,0,dense,3,0.0
 485,"Knoxville, TN",city,10,1,0,dense,5,82.6
-486,"Tucumcari, NM",rural,13,1,1,dense,6,78.6
+486,"Tucumcari, NM",rural,13,2,0,dense,6,69.5
 487,"Mecklenberg, NC",metropolis,9,1,0,dense,5,62.4
-488,"Clayton, NM",pastoral,7,0,2,sparse,2,60.7
-489,"Gaston, NC",city,8,1,1,dense,4,42.6
-490,"Oklahoma Panhandle, OK",large_town,8,0,1,medium,3,84.4
-491,"Onslow, NC",city,6,1,1,dense,4,46.0
+488,"Clayton, NM",pastoral,7,2,0,sparse,2,50.9
+489,"Gaston, NC",city,8,2,0,dense,4,46.0
+490,"Oklahoma Panhandle, OK",large_town,8,1,0,medium,3,96.6
+491,"Onslow, NC",city,6,2,0,dense,4,46.0
 492,"Clarksville, TN",large_town,4,0,0,medium,2,9999.0
-493,"Enid, OK",town,7,1,1,medium,2,53.1
+493,"Enid, OK",town,7,2,0,medium,2,53.1
 494,"Buncombe, NC",city,7,1,0,dense,4,58.6
-495,"Tulsa, OK",large_city,20,1,2,dense,8,67.9
+495,"Tulsa, OK",large_city,20,3,0,dense,8,67.9
 496,"Dickson, TN",town,6,1,0,medium,2,60.6
 497,"Cumberland, NC",large_city,9,1,0,dense,5,52.0
 498,"Phoenix, AZ",megalopolis,4,4,0,medium,2,0.0
-499,"Coffee, TN",town,8,1,1,medium,3,56.9
+499,"Coffee, TN",town,8,2,0,medium,3,56.9
 500,"Flagstaff, AZ",large_town,3,1,0,sparse,1,34.7
 501,"Northern Channel Islands, CA",small_island,3,0,0,sparse,1,9999.0
 502,"Memphis, TN",metropolis,7,0,0,dense,4,9999.0
 503,"Nashville, TN",metropolis,6,1,0,dense,4,41.0
 504,"Chattanooga, TN",city,5,1,0,dense,3,70.6
 505,"Tiptonville, KY",rural,1,0,0,sparse,1,9999.0
-506,"New Hanover, NC",city,6,0,1,dense,4,63.2
-507,"Dumas, TX",rural,9,1,1,medium,3,69.8
-508,"Jonesboro, AR",large_town,8,0,1,medium,3,100.6
+506,"New Hanover, NC",city,6,1,0,dense,4,52.5
+507,"Dumas, TX",rural,9,2,0,medium,3,69.8
+508,"Jonesboro, AR",large_town,8,1,0,medium,3,75.4
 509,"Randolph, AR",rural,3,1,0,sparse,1,35.5
 510,"Santa Fe, NM",large_town,13,1,0,dense,6,113.1
-511,"Stillwater, OK",town,9,1,2,medium,3,77.5
+511,"Stillwater, OK",town,9,3,0,medium,3,77.5
 512,"Searcy, AR",town,4,1,0,medium,2,51.0
-513,"Haywood, NC",large_town,6,0,1,medium,2,48.5
-514,"Whiteville, NC",rural,6,1,1,medium,2,34.0
+513,"Haywood, NC",large_town,6,1,0,medium,2,36.7
+514,"Whiteville, NC",rural,6,2,0,medium,2,34.0
 515,"Saluda, NC",enclave,1,0,0,sparse,1,9999.0
-516,"Maury, TN",large_town,9,1,1,medium,3,47.7
-517,"York, SC",city,9,1,1,dense,5,48.7
+516,"Maury, TN",large_town,9,2,0,medium,3,49.6
+517,"York, SC",city,9,2,0,dense,5,51.6
 518,"Greenville, SC",large_town,14,2,0,dense,6,55.5
-519,"Amarillo, TX",city,11,1,1,dense,5,71.7
-520,"Lawton, OK",large_town,9,0,2,medium,3,41.6
+519,"Amarillo, TX",city,11,2,0,dense,5,71.7
+520,"Lawton, OK",large_town,9,2,0,medium,3,51.1
 521,"Myrtle Beach, SC",town,2,1,0,sparse,1,47.5
 522,"Southern Channel Islands, CA",small_island,3,0,0,sparse,1,9999.0
-523,"Prescott, AZ",town,33,7,1,dense,8,77.1
+523,"Prescott, AZ",town,33,8,0,dense,8,77.1
 524,"Hall, GA",city,7,1,0,dense,4,72.7
 525,"Horry, SC",city,7,1,0,dense,4,55.7
-526,"Whitfield, GA",large_town,6,0,1,medium,2,83.9
-527,"Little River, AR",rural,8,0,1,medium,3,68.6
+526,"Whitfield, GA",large_town,6,1,0,medium,2,94.6
+527,"Little River, AR",rural,8,1,0,medium,3,60.9
 528,"Morgan, AL",city,9,2,0,dense,5,56.9
 529,"Huntsville, AL",city,5,1,0,dense,3,102.9
 530,"Sierra Vista, AZ",town,8,3,0,medium,3,74.0
-531,"McAlester, OK",town,18,1,1,dense,8,80.9
-532,"Ada, OK",rural,14,1,1,dense,6,48.6
+531,"McAlester, OK",town,18,2,0,dense,8,80.9
+532,"Ada, OK",rural,14,2,0,dense,6,46.8
 533,"Hattiesburg, MS",town,7,0,0,medium,2,9999.0
 534,"Lowndes, MS",large_town,3,0,0,sparse,1,9999.0
 535,"Plainville, TX",pastoral,8,1,0,sparse,2,66.2
 536,"Weldona, CO",enclave,2,1,0,sparse,1,35.2
 537,"North Metro Atlanta, GA",metropolis,6,1,0,dense,4,71.6
 538,"Richland, SC",large_city,6,1,0,dense,4,73.9
-539,"Roswell, NM",town,12,1,1,dense,6,100.7
-540,"Clovis, NM",town,10,1,2,medium,3,59.1
+539,"Roswell, NM",town,12,2,0,dense,6,95.0
+540,"Clovis, NM",town,10,3,0,medium,3,59.1
 541,"South Metro Atlanta, GA",metropolis,10,1,0,dense,5,54.6
 542,"Yoakum, TX",rural,4,1,0,medium,2,49.4
-543,"Lubbock, TX",city,6,1,1,dense,4,59.2
+543,"Lubbock, TX",city,6,2,0,dense,4,50.2
 544,"Vernon, TX",rural,9,1,0,medium,3,99.4
-545,"Auburn, AL",town,12,1,3,dense,6,34.3
+545,"Auburn, AL",town,12,4,0,dense,6,36.9
 546,"Atlanta, GA",large_city,1,1,0,dense,3,0.0
 547,"Charleston, SC",large_town,1,0,0,sparse,1,9999.0
 548,"Pima, AZ",pastoral,23,7,0,dense,8,81.9
-549,Baja California,megalopolis,40,3,3,dense,8,224.0
-550,"Beaufort, SC",town,7,1,1,medium,2,57.9
+549,Baja California,megalopolis,40,6,0,dense,8,207.4
+550,"Beaufort, SC",town,7,2,0,medium,2,38.9
 551,"Columbia, GA",city,6,1,0,dense,4,53.5
-552,"Las Cruces, NM",large_town,11,1,1,medium,3,67.7
-553,Sonora,megalopolis,64,1,7,dense,8,112.9
+552,"Las Cruces, NM",large_town,11,2,0,medium,3,67.7
+553,Sonora,megalopolis,64,8,0,dense,8,109.5
 554,"Wichita Falls, TX",large_town,5,1,0,medium,2,55.9
 555,"Carlsbad, NM",town,12,1,0,dense,6,160.1
 556,"Watson, AR",pastoral,1,0,0,sparse,1,9999.0
-557,"Houston, GA",large_town,11,1,2,medium,3,51.3
-558,"Texarkana, TX",town,9,0,2,medium,3,71.5
-559,"Chatham, GA",city,12,1,1,dense,6,66.3
-560,"San Angelo, TX",large_town,10,1,1,medium,3,52.7
+557,"Houston, GA",large_town,11,3,0,medium,3,46.2
+558,"Texarkana, TX",town,9,2,0,medium,3,55.6
+559,"Chatham, GA",city,12,2,0,dense,6,51.6
+560,"San Angelo, TX",large_town,10,2,0,medium,3,52.7
 561,"Abilene, TX",city,7,1,0,dense,4,56.7
 562,"Duncan, AZ",rural,2,0,0,sparse,1,9999.0
-563,"Muscogee, GA",city,6,0,1,dense,4,72.5
-564,"Greater Dallas-Fort Worth Area, TX",megalopolis,13,1,1,dense,6,42.7
+563,"Muscogee, GA",city,6,1,0,dense,4,80.5
+564,"Greater Dallas-Fort Worth Area, TX",megalopolis,13,2,0,dense,6,53.2
 565,"ile Dondaine, QC",small_island,1,0,0,sparse,1,9999.0
 566,"Citronelle, AL",pastoral,4,0,0,sparse,1,9999.0
-567,"Stephenville, TX",town,11,1,2,medium,3,72.1
-568,"Longview, TX",large_town,11,0,3,medium,3,47.3
+567,"Stephenville, TX",town,11,3,0,medium,3,72.1
+568,"Longview, TX",large_town,11,3,0,medium,3,37.2
 569,"Jackson, MS",city,6,0,0,dense,4,9999.0
 570,"Dallas-Fort Worth, TX",megalopolis,3,2,0,sparse,1,18.3
 571,"Shreveport, LA",city,2,0,0,dense,3,9999.0
 572,"Deming, NM",rural,5,0,0,medium,2,9999.0
-573,"Lowndes, GA",large_town,8,1,1,medium,3,52.6
-574,"Odessa, TX",large_town,10,1,1,medium,3,83.7
-575,"Navarro, TX",town,17,1,2,dense,7,45.0
-576,"Thomas, GA",town,15,2,1,dense,7,64.4
+573,"Lowndes, GA",large_town,8,2,0,medium,3,52.6
+574,"Odessa, TX",large_town,10,2,0,medium,3,83.7
+575,"Navarro, TX",town,17,3,0,dense,7,49.7
+576,"Thomas, GA",town,15,3,0,dense,7,63.5
 577,"Duluth, MN",large_town,29,1,0,dense,8,157.8
 578,"El Paso, TX",metropolis,22,1,0,dense,8,268.4
-579,Chihuahua,megalopolis,101,2,6,dense,8,124.3
+579,Chihuahua,megalopolis,101,8,0,dense,8,123.5
 580,"Tyler, TX",large_town,7,2,0,medium,2,37.7
-581,"Reeves, TX",rural,9,1,1,medium,3,94.9
+581,"Reeves, TX",rural,9,2,0,medium,3,105.3
 582,"Adams, MS",town,7,1,0,medium,2,60.8
 583,"Barksdale AFB, LA",pastoral,1,0,0,sparse,1,9999.0
 584,"Houma, LA",town,6,1,0,medium,2,69.2
@@ -587,60 +587,60 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 586,da,town,5,1,0,medium,2,71.5
 587,"Waco, TX",city,11,2,0,dense,5,56.0
 588,"San Carlos, AZ",pastoral,25,4,0,dense,8,104.7
-589,"Ciudad Obregon, SO",city,22,0,1,dense,8,284.9
+589,"Ciudad Obregon, SO",city,22,1,0,dense,8,272.4
 590,"Nogales, SO",city,2,0,0,dense,3,9999.0
 591,"Escambia, FL",large_city,12,1,0,dense,6,171.9
 592,"Fredericksburg, TX",rural,14,1,0,dense,6,135.5
 593,"Alachua, FL",rural,11,2,0,medium,3,55.7
-594,"Leon, FL",city,11,1,1,dense,5,87.0
+594,"Leon, FL",city,11,2,0,dense,5,77.8
 595,"Duval, FL",metropolis,3,1,0,dense,3,50.8
-596,"Beaumont, TX",city,11,2,1,dense,5,52.7
+596,"Beaumont, TX",city,11,3,0,dense,5,50.0
 597,"Gulf Shores, AL",rural,2,0,0,sparse,1,9999.0
 598,"Mobile, AL",city,4,1,0,dense,3,30.9
 599,"Gulfport, MS",large_town,5,0,0,medium,2,9999.0
 600,"Baton Rouge, LA",city,6,1,0,dense,4,71.2
 601,"Klamath Falls, OR",town,5,1,0,medium,2,129.4
-602,"Bastrop, TX",rural,8,1,1,medium,3,54.8
-603,"Salem, OR",city,6,0,2,dense,4,41.7
-604,"Marion, FL",large_city,6,0,2,dense,4,44.3
+602,"Bastrop, TX",rural,8,2,0,medium,3,54.8
+603,"Salem, OR",city,6,2,0,dense,4,37.2
+604,"Marion, FL",large_city,6,2,0,dense,4,36.4
 605,"Daytona Beach, FL",large_town,4,2,0,medium,2,47.5
-606,"Hutchinson, MN",rural,7,1,1,medium,2,51.4
+606,"Hutchinson, MN",rural,7,2,0,medium,2,48.6
 607,"Lake, Ohio",city,8,0,0,dense,4,9999.0
 608,"Minneapolis, MN",large_city,1,1,0,dense,3,0.0
-609,"Eugene, OR",city,12,1,3,dense,6,39.1
+609,"Eugene, OR",city,12,4,0,dense,6,35.1
 610,"Orlando, FL",city,14,1,0,dense,6,63.8
-611,"Houston, TX",megalopolis,8,1,1,medium,3,41.6
-612,"LaFourche, LA",large_town,6,0,1,medium,2,108.3
-613,"San Antonio, TX",metropolis,11,1,2,dense,5,50.4
-614,"Victoria, TX",large_town,14,1,2,dense,6,74.7
-615,Coahuila,megalopolis,74,2,5,dense,8,164.5
+611,"Houston, TX",megalopolis,8,2,0,medium,3,34.5
+612,"LaFourche, LA",large_town,6,1,0,medium,2,103.4
+613,"San Antonio, TX",metropolis,11,3,0,dense,5,50.4
+614,"Victoria, TX",large_town,14,3,0,dense,6,69.0
+615,Coahuila,megalopolis,74,7,0,dense,8,150.6
 616,"Yellowstone, WY",wasteland,1,0,0,sparse,1,9999.0
-617,"Laredo, TX",city,12,1,2,dense,6,64.7
+617,"Laredo, TX",city,12,3,0,dense,6,66.5
 618,"Omaha, NE",large_city,1,1,0,dense,3,0.0
-619,Baja California Sur,large_city,44,0,1,dense,8,288.0
+619,Baja California Sur,large_city,44,1,0,dense,8,263.2
 620,"Cleveland, OH",large_city,2,1,0,dense,3,24.1
-621,"Hillsborough, FL",metropolis,8,1,1,dense,4,45.5
+621,"Hillsborough, FL",metropolis,8,2,0,dense,4,45.2
 622,"Grand Manan Island, ME",small_island,1,0,0,sparse,1,9999.0
 623,"Bar Harbor, ME",rural,3,1,0,sparse,1,20.7
 624,"Breton Sound Islands, LA",wasteland,3,1,0,sparse,1,17.1
 625,"Shiprock, NM",rural,2,1,0,sparse,1,47.8
-626,"Portland, TX",rural,8,1,1,medium,3,59.9
-627,"Miami-Dade, FL",megalopolis,19,1,1,dense,8,70.1
-628,"Sarasota, FL",large_city,10,1,1,dense,5,63.7
+626,"Portland, TX",rural,8,2,0,medium,3,51.3
+627,"Miami-Dade, FL",megalopolis,19,2,0,dense,8,70.1
+628,"Sarasota, FL",large_city,10,2,0,dense,5,59.0
 629,"Freeport, BS",town,2,1,0,sparse,1,81.2
-630,"Whiteman AFB, MO",pastoral,1,0,1,sparse,1,12.0
+630,"Whiteman AFB, MO",pastoral,1,1,0,sparse,1,0.0
 631,"Aransas, TX",town,3,1,0,sparse,1,43.3
 632,"Sterling, CO",rural,2,0,0,sparse,1,9999.0
-633,"Corpus Christi, TX",large_city,19,2,2,dense,8,89.2
+633,"Corpus Christi, TX",large_city,19,4,0,dense,8,88.3
 634,"Lee, FL",large_city,6,1,0,dense,4,74.4
-635,"Monterrey, NL",metropolis,17,1,2,dense,7,84.3
+635,"Monterrey, NL",metropolis,17,3,0,dense,7,79.6
 636,District of Columbia,metropolis,1,1,0,dense,3,0.0
 637,"Laredos, TM",city,2,0,0,dense,3,9999.0
-638,"Los Mochis, SI",large_city,22,1,1,dense,8,86.0
-639,"Guadalupe y Calvo, CH",town,5,1,1,medium,2,35.9
-640,"El Carrizo, SI",rural,1,0,1,sparse,1,36.7
+638,"Los Mochis, SI",large_city,22,2,0,dense,8,86.0
+639,"Guadalupe y Calvo, CH",town,5,2,0,medium,2,35.9
+640,"El Carrizo, SI",rural,1,1,0,sparse,1,0.0
 641,"Kansas City, KS",city,1,1,0,dense,3,0.0
-642,"Gomez Palacio, DG",city,36,0,2,dense,8,200.2
+642,"Gomez Palacio, DG",city,36,2,0,dense,8,198.0
 643,"Salinas, CA",city,7,4,0,dense,4,35.6
 644,"Eleuthera, BS",rural,2,1,0,sparse,1,49.0
 645,"Fremont-Winema, OR",pastoral,26,2,0,dense,8,172.2
@@ -648,7 +648,7 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 647,"Andros, BS",rural,6,1,0,medium,2,50.3
 648,"Cat Island, BS",small_island,1,0,0,sparse,1,9999.0
 649,"Overland Park, KS",city,1,1,0,dense,3,0.0
-650,"Minot AFB, ND",pastoral,1,0,1,sparse,1,12.9
+650,"Minot AFB, ND",pastoral,1,1,0,sparse,1,0.0
 651,"Key West, FL",town,5,0,0,medium,2,9999.0
 652,"Los Angeles, CA",megalopolis,5,5,0,medium,2,0.0
 653,"Matamoros, TA",large_city,22,1,0,dense,8,126.5
@@ -667,26 +667,26 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 666,"Ely, NV",pastoral,5,0,0,sparse,1,9999.0
 667,"Alturas, CA",rural,15,1,0,dense,7,86.5
 668,"Mazatlan, SI",city,15,1,0,dense,7,206.7
-669,"Sequoia, CA",wasteland,9,0,2,sparse,2,84.1
-670,"Durango, DG",large_city,22,2,2,dense,8,84.1
-671,"Fresnillo, ZA",city,22,1,3,dense,8,72.0
+669,"Sequoia, CA",wasteland,9,2,0,sparse,2,79.8
+670,"Durango, DG",large_city,22,4,0,dense,8,83.9
+671,"Fresnillo, ZA",city,22,4,0,dense,8,83.1
 672,"Crooked Island, BS",tiny_island,3,0,0,sparse,1,9999.0
 673,"Tonopah, NV",pastoral,8,0,0,sparse,2,9999.0
 674,"Santa Barbara, CA",large_town,8,5,0,medium,3,34.2
 675,"Mayaguna, BS",enclave,1,0,0,sparse,1,9999.0
-676,"Pine Bluffs, WY",pastoral,2,0,0,sparse,1,9999.0
-677,"Pinedale, WY",pastoral,6,0,0,sparse,2,9999.0
+676,"Pine Bluffs, WY",pastoral,2,0,1,sparse,1,35.5
+677,"Pinedale, WY",pastoral,6,0,1,sparse,3,80.0
 678,"Austin, TX",metropolis,4,1,0,dense,3,26.4
-679,Turks and Caicos Islands,small_island,4,0,1,medium,2,48.0
+679,Turks and Caicos Islands,small_island,4,1,0,medium,2,53.9
 680,"Oklahoma City, OK",metropolis,2,1,0,dense,3,32.3
-681,"Huntsville, TX",rural,21,1,4,dense,8,55.4
-682,"Monctezuma, SL",rural,21,0,2,dense,8,116.9
+681,"Huntsville, TX",rural,21,5,0,dense,8,54.1
+682,"Monctezuma, SL",rural,21,2,0,dense,8,127.5
 683,"Sidney, NE",rural,4,1,0,medium,2,1300.1
-684,"Cody, WY",rural,12,0,1,dense,6,136.8
+684,"Cody, WY",rural,12,1,0,dense,6,133.0
 685,"Matanzas, CU",metropolis,9,0,0,dense,5,9999.0
 686,"Villa Clara, CU",metropolis,5,0,0,dense,3,9999.0
 687,"Zacatecas, ZA",city,19,1,0,dense,8,130.0
-688,"Ciudad Victoria, TM",large_city,21,0,2,dense,8,101.4
+688,"Ciudad Victoria, TM",large_city,21,2,0,dense,8,99.3
 689,"El Centro, CA",town,8,2,0,medium,3,49.5
 690,"Inagua, BS",rural,3,0,0,sparse,1,9999.0
 691,"Mayabeque, CU",large_city,1,0,0,dense,3,9999.0
@@ -699,10 +699,10 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 698,"Pinar del Rio, CU",metropolis,5,0,0,dense,3,9999.0
 699,"Cienfuegos, CU",large_city,3,0,0,dense,3,9999.0
 700,"Jardines del Rey, CU",town,5,0,0,medium,2,9999.0
-701,"Yosemite, CA",wasteland,19,0,1,dense,8,260.0
+701,"Yosemite, CA",wasteland,19,1,0,dense,8,262.2
 702,"Camaguey, CU",metropolis,12,0,0,dense,6,9999.0
-703,"Susanville, CA",rural,10,0,2,medium,3,49.9
-704,"Napa, CA",large_town,7,0,2,medium,2,56.4
+703,"Susanville, CA",rural,10,2,0,medium,3,52.1
+704,"Napa, CA",large_town,7,2,0,medium,2,49.6
 705,"Redding, CA",large_town,9,2,0,medium,3,86.8
 706,"Tecuala, NA",town,3,0,0,sparse,1,9999.0
 707,"San Juan, PR",large_city,2,2,0,dense,3,0.0
@@ -718,60 +718,60 @@ state_id,state_name,category,province_count,existing_vps,proposed_new_vps,tier,q
 717,US Virgin Islands,large_town,1,0,0,sparse,1,9999.0
 718,"El Seybo, DO",city,1,0,0,dense,3,9999.0
 719,"La Altagracia, DO",large_city,3,0,0,dense,3,9999.0
-720,"Kirtland AFB, NM",pastoral,1,0,1,sparse,1,10.7
+720,"Kirtland AFB, NM",pastoral,1,1,0,sparse,1,0.0
 721,"Vieques, PR",rural,1,1,0,sparse,1,0.0
 722,"Guantanamo, CU",metropolis,3,0,0,dense,3,9999.0
 723,"Santiago, DO",large_city,5,0,0,dense,3,9999.0
 724,"Hato Mayor, DO",large_town,1,0,0,sparse,1,9999.0
-725,"Mezquitic, JA",rural,4,0,1,medium,2,49.7
-726,"Nord-Est, HT",large_city,2,0,1,dense,3,25.5
+725,"Mezquitic, JA",rural,4,1,0,medium,2,55.0
+726,"Nord-Est, HT",large_city,2,1,0,dense,3,16.1
 727,"La Vega, DO",city,1,0,0,dense,3,9999.0
 728,"Isla de Culebra, PR",small_island,1,0,0,sparse,1,9999.0
-729,"Nord-Oueste, HT",metropolis,2,0,1,dense,3,23.9
-730,"Dajabon, DO",town,2,0,1,sparse,1,26.0
+729,"Nord-Oueste, HT",metropolis,2,1,0,dense,3,27.4
+730,"Dajabon, DO",town,2,1,0,sparse,1,19.5
 731,"Isla de Juventud, CU",large_town,1,0,0,sparse,1,9999.0
 732,"Nord, HT",metropolis,1,1,0,dense,3,0.0
-733,"Santo Domingo, DO",metropolis,3,1,1,dense,3,21.5
-734,"Santiago de Cuba, CU",large_city,5,1,2,dense,3,29.8
-735,"Artibonite, HT",megalopolis,5,0,1,medium,2,39.5
+733,"Santo Domingo, DO",metropolis,3,2,0,dense,3,17.3
+734,"Santiago de Cuba, CU",large_city,5,3,0,dense,3,25.9
+735,"Artibonite, HT",megalopolis,5,1,0,medium,2,43.6
 736,"Granma, CU",metropolis,6,0,0,dense,4,9999.0
 737,"La Romana, DO",city,1,0,0,dense,3,9999.0
 738,"San Pedro de Macoris, DO",city,1,0,0,dense,3,9999.0
 739,"Colotlan, JA",rural,1,0,0,sparse,1,9999.0
 740,"La Estrelleta, DO",town,1,0,0,sparse,1,9999.0
-741,Aguascalientes,metropolis,6,1,1,dense,4,44.7
+741,Aguascalientes,metropolis,6,2,0,dense,4,44.7
 742,"San Juan, DO",large_town,3,0,0,sparse,1,9999.0
 743,"Guayalejo, VC",town,2,0,0,sparse,1,9999.0
-744,"Centre, HT",metropolis,4,0,1,dense,3,35.3
-745,"Brainerd, MN",rural,9,0,1,medium,3,56.2
+744,"Centre, HT",metropolis,4,1,0,dense,3,27.1
+745,"Brainerd, MN",rural,9,1,0,medium,3,41.8
 746,"Pinos, Zacatecas",pastoral,2,0,0,sparse,1,9999.0
-747,"San Luis Potosi, SL",city,7,1,3,dense,4,71.0
+747,"San Luis Potosi, SL",city,7,4,0,dense,4,27.0
 748,"Azua, DO",city,1,0,0,dense,3,9999.0
 749,"Peravia, DO",city,2,0,0,dense,3,9999.0
 750,"Ciudad Valles, SL",city,10,0,0,dense,5,9999.0
 751,"San Francisco, CA",metropolis,1,1,0,dense,3,0.0
 752,"Isla de Mona, PR",small_island,1,0,0,sparse,1,9999.0
 753,"Tepic, NA",city,6,0,0,dense,4,9999.0
-754,Veracruz,megalopolis,8,1,1,medium,3,66.8
-755,Jalisco,megalopolis,10,2,1,medium,3,75.9
+754,Veracruz,megalopolis,8,2,0,medium,3,66.8
+755,Jalisco,megalopolis,10,3,0,medium,3,52.7
 756,"San Francisco Metro, CA",megalopolis,6,4,0,medium,2,26.5
 757,Quintana Roo,metropolis,3,0,0,dense,3,9999.0
 758,"Axtla de Terrazas, SL",town,3,0,0,sparse,1,9999.0
-759,Guanajuato,megalopolis,13,1,2,dense,6,78.3
+759,Guanajuato,megalopolis,13,3,1,dense,6,78.3
 760,"Ouest, HT",megalopolis,7,1,0,medium,2,52.0
-761,Yucatan,megalopolis,11,1,2,medium,3,54.0
+761,Yucatan,megalopolis,11,3,0,medium,3,39.3
 762,"Barahona, DO",city,3,0,0,dense,3,9999.0
 763,"Isla Maria Madre, NA",tiny_island,3,0,0,sparse,1,9999.0
 764,"Nellis AFB, NV",pastoral,1,0,0,sparse,1,9999.0
-765,"Isla de la Gonave, HT",large_town,1,0,1,sparse,1,19.1
+765,"Isla de la Gonave, HT",large_town,1,1,0,sparse,1,0.0
 766,Queretaro,metropolis,2,2,0,dense,3,0.0
 767,"Huejutla de Reyes, VC",large_town,1,0,0,sparse,1,9999.0
 768,"Pedernales, DO",large_town,2,0,0,sparse,1,9999.0
-769,"Sud-Est, HT",metropolis,1,0,1,dense,3,14.6
+769,"Sud-Est, HT",metropolis,1,1,0,dense,3,0.0
 770,"Puerto Vallarta, JA",city,2,0,0,dense,3,9999.0
-771,Hidalgo,megalopolis,1,0,1,sparse,1,22.3
-772,"Malmstrom AFB, MT",pastoral,1,0,0,sparse,1,9999.0
-773,"Nippes, HT",large_city,2,0,1,dense,3,39.1
+771,Hidalgo,megalopolis,1,1,0,sparse,1,0.0
+772,"Malmstrom AFB, MT",pastoral,1,0,1,sparse,1,11.3
+773,"Nippes, HT",large_city,2,1,0,dense,3,47.4
 774,"Queens, NY",megalopolis,1,1,0,sparse,1,0.0
 775,"Staten Island, NY",large_city,1,1,0,dense,3,0.0
 776,"The Bronx, NY",megalopolis,1,1,0,sparse,1,0.0

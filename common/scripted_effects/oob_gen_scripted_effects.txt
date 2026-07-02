@@ -182,7 +182,7 @@ d_create_army3 = {
 
     set_temp_variable = { i = 0 }
     set_temp_variable = { division_barrier = num_of_divs }
-    divide_temp_variable_temp_variable = { division_barrier = 10 }
+    divide_temp_variable = { division_barrier = 10 }
     while_loop_effect = {
         limit = { check_variable = { i < division_barrier } }
         random_controlled_state = {
@@ -195,7 +195,7 @@ d_create_army3 = {
         multiply_temp_variable = { i = 1.02 }
     }
     set_temp_variable = { j = num_of_divs }
-    subtract_from_temp_variable { j = division_barrier }
+    subtract_from_temp_variable = { j = division_barrier }
     divide_temp_variable = { j = 2 }
     add_to_temp_variable = { j = i }
     while_loop_effect = {
