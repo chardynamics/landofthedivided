@@ -1,7 +1,7 @@
 state = { 
 	id = 376 
 	name = "STATE_376" 
-	manpower = 4044941
+	manpower = 4029809
 	state_category = megalopolis
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -12,14 +12,14 @@ state = {
 		
 		buildings = { 
 			infrastructure = 10 
-			thermoelectric_plant = 3 
-			schools = 2 
-			offices = 2 
-			hospitals = 2 
-			prisons = 2 
-			barracks = 1 
-			radar_station = 1 
-			anti_air_building = 1 
+			thermoelectric_plant = 4
+			schools = 3
+			offices = 3
+			hospitals = 3
+			prisons = 3
+			barracks = 3
+			radar_station = 2
+			anti_air_building = 2
 		}
 		
 		add_core_of = PHI 

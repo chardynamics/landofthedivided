@@ -1,7 +1,7 @@
 state = { 
 	id = 206 
 	name = "STATE_206" 
-	manpower = 163458
+	manpower = 162846
 	state_category = city
 	buildings_max_level_factor = 1 
 	history = { 
@@ -9,7 +9,13 @@ state = {
 		
 		victory_points = { 1173 6 }
 		
-		buildings = { infrastructure = 4 }
+		buildings = {
+			thermoelectric_plant = 1
+			schools = 1
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			prisons = 1 infrastructure = 4 }
 		
 		add_core_of = BAR 
 		add_claim_by = SWA 

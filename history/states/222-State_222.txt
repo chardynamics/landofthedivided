@@ -1,7 +1,7 @@
 state = { 
 	id = 222 
 	name = "STATE_222" 
-	manpower = 97467
+	manpower = 97103
 	state_category = large_town
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -14,7 +14,10 @@ state = {
 		
 		buildings = { 
 			infrastructure = 5 
-			thermoelectric_plant = 3 
+			thermoelectric_plant = 4
+			schools = 1
+			hospitals = 1
+			prisons = 1
 		}
 		
 		add_core_of = SPM 

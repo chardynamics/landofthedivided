@@ -1,7 +1,7 @@
 state = { 
 	id = 204 
 	name = "STATE_204" 
-	manpower = 295174
+	manpower = 294070
 	state_category = city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -17,10 +17,12 @@ state = {
 		buildings = { 
 			infrastructure = 4 
 			air_base = 5 
-			thermoelectric_plant = 1 
-			schools = 1 
-			hospitals = 1 
-			prisons = 1 
+			thermoelectric_plant = 2
+			schools = 2
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			barracks = 1
 		}
 		
 		add_core_of = MMS 

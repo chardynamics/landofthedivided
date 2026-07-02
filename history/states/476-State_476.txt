@@ -1,7 +1,7 @@
 state = { 
 	id = 476 
 	name = "STATE_476" 
-	manpower = 628348
+	manpower = 625997
 	state_category = metropolis
 	buildings_max_level_factor = 1 
 	history = { 
@@ -11,7 +11,15 @@ state = {
 		victory_points = { 2194 4 }
 
 		
-		buildings = { infrastructure = 8 }
+		buildings = {
+			thermoelectric_plant = 2
+			schools = 2
+			offices = 1
+			hospitals = 2
+			prisons = 2
+			barracks = 1
+			radar_station = 1
+			radar_station = 1 infrastructure = 8 }
 		
 		add_core_of = CHA 
 	}

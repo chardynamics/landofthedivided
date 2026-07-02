@@ -1,7 +1,7 @@
 state = { 
 	id = 411 
 	name = "STATE_411" 
-	manpower = 189671
+	manpower = 188962
 	state_category = city
 	buildings_max_level_factor = 1 
 	history = { 
@@ -11,9 +11,12 @@ state = {
 		
 		buildings = { 
 			infrastructure = 6 
-			schools = 1 
-			hospitals = 1 
-			dockyard = 1 
+			thermoelectric_plant = 1
+			schools = 1
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			dockyard = 1
 			4423 = { naval_base = 4 }
 		}
 		

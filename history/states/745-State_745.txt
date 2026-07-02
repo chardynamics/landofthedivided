@@ -1,7 +1,7 @@
 state = { 
 	id = 745 
 	name = "STATE_745" 
-	manpower = 138840
+	manpower = 138321
 	state_category = city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -10,7 +10,12 @@ state = {
 	history = { 
 		owner = SMN 
 		
-		buildings = { infrastructure = 4 }
+		buildings = {
+			thermoelectric_plant = 1
+			schools = 1
+			hospitals = 1
+			prisons = 1
+			prisons = 1 infrastructure = 4 }
 		
 		add_core_of = SMN 
 	

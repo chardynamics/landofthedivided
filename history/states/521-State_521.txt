@@ -1,7 +1,7 @@
 state = { 
 	id = 521 
 	name = "STATE_521" 
-	manpower = 219334
+	manpower = 218513
 	state_category = city
 	buildings_max_level_factor = 1 
 	history = { 
@@ -9,7 +9,14 @@ state = {
 		
 		victory_points = { 3510 6 }
 		
-		buildings = { infrastructure = 9 }
+		buildings = {
+			thermoelectric_plant = 1
+			schools = 1
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			barracks = 1
+			barracks = 1 infrastructure = 9 }
 		
 		add_core_of = CHA 
 		add_core_of = SSC 

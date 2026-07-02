@@ -1,7 +1,7 @@
 state = { 
 	id = 461 
 	name = "STATE_461" 
-	manpower = 18784
+	manpower = 18714
 	state_category = rural
 	buildings_max_level_factor = 1 
 	history = { 
@@ -9,8 +9,6 @@ state = {
 		
 		buildings = { 
 			infrastructure = 4 
-			schools = 1 
-			hospitals = 1 
 		}
 		
 		add_core_of = NGI 

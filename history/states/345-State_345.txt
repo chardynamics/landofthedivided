@@ -1,7 +1,7 @@
 state = { 
 	id = 345 
 	name = "STATE_345" 
-	manpower = 920901
+	manpower = 917456
 	state_category = metropolis
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -14,15 +14,14 @@ state = {
 		
 		buildings = { 
 			infrastructure = 9 
-			thermoelectric_plant = 3 
-			hydroelectric_plant = 1 
-			schools = 3 
-			offices = 2 
-			hospitals = 3 
-			prisons = 2 
-			barracks = 2 
-			radar_station = 1 
-			anti_air_building = 1 
+			thermoelectric_plant = 3
+			schools = 2
+			offices = 2
+			hospitals = 2
+			prisons = 2
+			barracks = 1
+			radar_station = 1
+			anti_air_building = 1
 		}
 		
 		add_core_of = RWP 

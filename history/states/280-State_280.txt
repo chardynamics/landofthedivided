@@ -1,7 +1,7 @@
 state = { 
 	id = 280 
 	name = "STATE_280" 
-	manpower = 328618
+	manpower = 327389
 	state_category = large_city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -12,7 +12,14 @@ state = {
 		victory_points = { 298 4 }
 
 		
-		buildings = { infrastructure = 7 }
+		buildings = {
+			thermoelectric_plant = 2
+			schools = 2
+			offices = 1
+			hospitals = 2
+			prisons = 1
+			barracks = 1
+			barracks = 1 infrastructure = 7 }
 		
 		add_core_of = WTB 
 		add_claim_by = ROC 

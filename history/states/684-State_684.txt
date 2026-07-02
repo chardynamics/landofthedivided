@@ -1,14 +1,18 @@
 state = { 
 	id = 684 
 	name = "STATE_684" 
-	manpower = 72557
+	manpower = 72286
 	state_category = large_town
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = WAR 
 		
-		buildings = { infrastructure = 4 }
+		buildings = {
+			thermoelectric_plant = 1
+			schools = 1
+			hospitals = 1
+			hospitals = 1 infrastructure = 4 }
 		
 		add_core_of = WAR 
 	

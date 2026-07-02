@@ -1,7 +1,7 @@
 state = { 
 	id = 10 
 	name = "STATE_10" 
-	manpower = 113
+	manpower = 472
 	state_category = enclave
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -12,8 +12,6 @@ state = {
 		
 		buildings = { 
 			infrastructure = 1 
-			thermoelectric_plant = 4 
-			hydroelectric_plant = 3 
 		}
 		
 		add_core_of = CAN 

@@ -1,7 +1,7 @@
 state = { 
 	id = 457 
 	name = "STATE_457" 
-	manpower = 534347
+	manpower = 532348
 	state_category = large_city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -12,7 +12,15 @@ state = {
 		victory_points = { 6035 4 }
 
 		
-		buildings = { infrastructure = 6 }
+		buildings = {
+			thermoelectric_plant = 1
+			schools = 2
+			offices = 1
+			hospitals = 2
+			prisons = 1
+			barracks = 1
+			radar_station = 1
+			radar_station = 1 infrastructure = 6 }
 		
 		add_core_of = USM 
 		add_claim_by = CKC 

@@ -2,7 +2,7 @@ state = {
 	id = 650 
 	name = "STATE_650" 
 	manpower = 1500
-	state_category = pastoral 
+	state_category = town
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -10,12 +10,9 @@ state = {
 		
 		buildings = { 
 			infrastructure = 10 
-			air_base = 10 
-			thermoelectric_plant = 1 
-			barracks = 1 
-			radar_station = 6 
-			anti_air_building = 5 
-			missile_silo = 1 
+			air_base = 10
+			thermoelectric_plant = 1
+			barracks = 1
 		}
 		
 		add_core_of = DMA 

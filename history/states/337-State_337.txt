@@ -1,7 +1,7 @@
 state = { 
 	id = 337 
 	name = "STATE_337" 
-	manpower = 1773339
+	manpower = 1766705
 	state_category = megalopolis
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -12,12 +12,14 @@ state = {
 		
 		buildings = { 
 			infrastructure = 9 
-			thermoelectric_plant = 2 
-			schools = 2 
-			offices = 1 
-			hospitals = 2 
-			prisons = 1 
-			barracks = 1 
+			thermoelectric_plant = 3
+			schools = 3
+			offices = 2
+			hospitals = 3
+			prisons = 2
+			barracks = 2
+			radar_station = 2
+			anti_air_building = 1
 		}
 		
 		add_core_of = HUD 

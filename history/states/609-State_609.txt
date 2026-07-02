@@ -1,7 +1,7 @@
 state = { 
 	id = 609 
 	name = "STATE_609" 
-	manpower = 2357158
+	manpower = 2348340
 	state_category = megalopolis
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -18,12 +18,15 @@ state = {
 		
 		buildings = { 
 			infrastructure = 6 
-			thermoelectric_plant = 2 
-			schools = 1 
-			offices = 1 
-			hospitals = 1 
-			prisons = 1 
-			dockyard = 1 
+			thermoelectric_plant = 3
+			schools = 3
+			offices = 2
+			hospitals = 3
+			prisons = 2
+			barracks = 2
+			dockyard = 2
+			radar_station = 2
+			anti_air_building = 1
 			5503 = { naval_base = 6 }
 		}
 		

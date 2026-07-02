@@ -1,7 +1,7 @@
 state = { 
 	id = 645 
 	name = "STATE_645" 
-	manpower = 154961
+	manpower = 154381
 	state_category = city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -10,7 +10,13 @@ state = {
 		
 		victory_points = { 5586 10 }
 		
-		buildings = { infrastructure = 4 }
+		buildings = {
+			thermoelectric_plant = 1
+			schools = 1
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			prisons = 1 infrastructure = 4 }
 		
 		add_core_of = SOR 
 	}

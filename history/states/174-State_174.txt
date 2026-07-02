@@ -1,15 +1,16 @@
 state = { 
 	id = 174 
 	name = "STATE_174" 
-	manpower = 8898
-	state_category = rural
+	manpower = 8865
+	state_category = town
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = CAN 
 		
 		buildings = { 
 			infrastructure = 0 
-			thermoelectric_plant = 2 
+			thermoelectric_plant = 4
+			hydroelectric_plant = 1
 		}
 		
 		add_core_of = CAN 

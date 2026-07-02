@@ -1,14 +1,19 @@
 state = { 
 	id = 309 
 	name = "STATE_309" 
-	manpower = 131738
+	manpower = 131245
 	state_category = city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = DMA 
 		
-		buildings = { infrastructure = 2 }
+		buildings = {
+			thermoelectric_plant = 1
+			schools = 1
+			hospitals = 1
+			prisons = 1
+			prisons = 1 infrastructure = 2 }
 		
 		add_core_of = DMA 
 		add_claim_by = SSD 

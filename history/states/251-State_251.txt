@@ -1,14 +1,21 @@
 state = { 
 	id = 251 
 	name = "STATE_251" 
-	manpower = 315144
+	manpower = 313965
 	state_category = large_city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = SWI 
 		
-		buildings = { infrastructure = 4 }
+		buildings = {
+			thermoelectric_plant = 2
+			schools = 2
+			offices = 1
+			hospitals = 2
+			prisons = 1
+			barracks = 1
+			barracks = 1 infrastructure = 4 }
 		
 		add_core_of = SWI 
 	

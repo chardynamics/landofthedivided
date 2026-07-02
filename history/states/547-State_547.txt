@@ -1,7 +1,7 @@
 state = { 
 	id = 547 
 	name = "STATE_547" 
-	manpower = 12940
+	manpower = 12891
 	state_category = rural
 	buildings_max_level_factor = 1 
 	history = { 
@@ -9,9 +9,6 @@ state = {
 		
 		buildings = { 
 			infrastructure = 7 
-			schools = 1 
-			hospitals = 1 
-			prisons = 1 
 		}
 		
 		add_core_of = SSC 

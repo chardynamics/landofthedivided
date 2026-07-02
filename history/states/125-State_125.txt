@@ -1,7 +1,7 @@
 state = { 
 	id = 125 
 	name = "STATE_125" 
-	manpower = 6674
+	manpower = 6649
 	state_category = rural
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -10,8 +10,6 @@ state = {
 		
 		buildings = { 
 			infrastructure = 3 
-			thermoelectric_plant = 1 
-			hospitals = 1 
 		}
 		
 		add_core_of = BAR 

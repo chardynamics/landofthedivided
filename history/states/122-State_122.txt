@@ -1,7 +1,7 @@
 state = { 
 	id = 122 
 	name = "STATE_122" 
-	manpower = 158495
+	manpower = 157902
 	state_category = city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -12,7 +12,13 @@ state = {
 		victory_points = { 4263 6 }
 
 		
-		buildings = { infrastructure = 5 }
+		buildings = {
+			thermoelectric_plant = 1
+			schools = 1
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			prisons = 1 infrastructure = 5 }
 		
 		add_core_of = DMA 
 	}

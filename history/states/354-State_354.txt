@@ -1,8 +1,8 @@
 state = { 
 	id = 354 
 	name = "STATE_354" 
-	manpower = 10000
-	state_category = small_island
+	manpower = 2166316
+	state_category = megalopolis
 	buildings_max_level_factor = 1 
 	
 	resources = { aluminium = 13 } 
@@ -13,15 +13,15 @@ state = {
 		
 		buildings = { 
 			infrastructure = 10 
-			thermoelectric_plant = 4 
-			hydroelectric_plant = 3 
-			schools = 3 
-			offices = 3 
-			hospitals = 3 
-			prisons = 3 
-			barracks = 3 
-			radar_station = 4 
-			anti_air_building = 3 
+			thermoelectric_plant = 4
+			hydroelectric_plant = 3
+			schools = 3
+			offices = 2
+			hospitals = 3
+			prisons = 2
+			barracks = 2
+			radar_station = 2
+			anti_air_building = 1
 		}
 		
 		add_core_of = LIS 

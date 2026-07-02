@@ -1,7 +1,7 @@
 state = { 
 	id = 691 
 	name = "STATE_691" 
-	manpower = 9021
+	manpower = 8819
 	state_category = rural
 	buildings_max_level_factor = 1 
 	history = { 
@@ -10,14 +10,7 @@ state = {
 		buildings = { 
 			infrastructure = 7 
 			air_base = 8 
-			thermoelectric_plant = 3 
-			hydroelectric_plant = 1 
-			schools = 2 
-			offices = 1 
-			hospitals = 2 
-			prisons = 1 
-			barracks = 1 
-			radar_station = 1 
+			thermoelectric_plant = 1
 		}
 		
 		add_core_of = CUB 

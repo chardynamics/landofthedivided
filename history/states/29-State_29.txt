@@ -1,14 +1,21 @@
 state = { 
 	id = 29 
 	name = "STATE_29" 
-	manpower = 383674
+	manpower = 382239
 	state_category = large_city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = CKC 
 		
-		buildings = { infrastructure = 6 }
+		buildings = {
+			thermoelectric_plant = 2
+			schools = 2
+			offices = 1
+			hospitals = 2
+			prisons = 1
+			barracks = 1
+			barracks = 1 infrastructure = 6 }
 		
 		add_core_of = CKC 
 		add_claim_by = USM 

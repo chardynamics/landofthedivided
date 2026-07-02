@@ -1,7 +1,7 @@
 state = { 
 	id = 404 
 	name = "STATE_404" 
-	manpower = 2042645
+	manpower = 2035003
 	state_category = megalopolis
 	buildings_max_level_factor = 1 
 	history = { 
@@ -11,16 +11,16 @@ state = {
 		
 		buildings = { 
 			infrastructure = 10 
-			thermoelectric_plant = 3 
-			nuclear_reactor = 1 
-			schools = 2 
-			offices = 2 
-			hospitals = 2 
-			prisons = 2 
-			barracks = 1 
-			dockyard = 2 
-			radar_station = 1 
-			anti_air_building = 1 
+			thermoelectric_plant = 3
+			nuclear_reactor = 1
+			schools = 3
+			offices = 2
+			hospitals = 3
+			prisons = 2
+			barracks = 2
+			dockyard = 2
+			radar_station = 2
+			anti_air_building = 1
 			1885 = { naval_base = 9 }
 		}
 		

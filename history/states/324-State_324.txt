@@ -1,7 +1,7 @@
 state = { 
 	id = 324 
 	name = "STATE_324" 
-	manpower = 1512
+	manpower = 1506
 	state_category = pastoral
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -10,7 +10,7 @@ state = {
 		
 		buildings = { 
 			infrastructure = 4 
-			thermoelectric_plant = 3 
+			thermoelectric_plant = 2
 		}
 		
 		add_core_of = SCA 

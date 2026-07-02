@@ -10,6 +10,7 @@ from pathlib import Path
 
 import numpy as np
 from scipy.interpolate import RBFInterpolator
+from scipy.spatial import cKDTree
 
 from assign_infrastructure import (
     DEFINITION_CSV,
@@ -23,6 +24,7 @@ from assign_infrastructure import (
     rasterize_provinces,
     state_geometry,
 )
+from assign_state_cultures import build_inverse_rbf
 from assign_victory_points import (
     ANCHOR_SNAPSHOT,
     VP_LOCALISATION,
@@ -37,6 +39,12 @@ from assign_victory_points import (
 )
 from city_database import merged_city_entries
 from import_population_grid import CELLS_CSV, GRID_DIR, METADATA_PATH, POP_NPY
+from island_rules import (
+    ISLAND_GRID_TRUST_THRESHOLD,
+    ISLAND_POPULATION_OVERRIDE,
+    island_population_override,
+)
+from state_population_overrides import MANUAL_STATE_POPULATIONS
 
 LOCALISATION_FILE = ROOT / "localisation" / "english" / "state_names_l_english.yml"
 OUTPUT_CSV = ROOT / "state_population_estimates.csv"
@@ -44,6 +52,8 @@ AUDIT_CSV = ROOT / "state_population_audit.csv"
 CENSUS_CSV = ROOT / "data" / "census_2000_country_totals.csv"
 
 MIN_LAND_POPULATION = 500
+# Max lon/lat distance (degrees) from a GPW cell center to a province centroid for assignment.
+GEO_ASSIGN_MAX_DEG = 0.12
 
 US_STATE_ABBRS = {
     "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS",
@@ -63,7 +73,41 @@ CARIBBEAN_COUNTRY = {
 }
 CENTRAL_AMERICA = {"GT": "GT", "BZ": "BZ", "HN": "HN", "SV": "SV", "NI": "NI", "CR": "CR", "PA": "PA", "GUA": "GT"}
 
-ISLAND_PATTERN = re.compile(r"\b(island|islands|isla|islas|ile|iles)\b", re.IGNORECASE)
+MEXICO_STATE_NAMES = {
+    "aguascalientes",
+    "baja california",
+    "baja california sur",
+    "campeche",
+    "chiapas",
+    "chihuahua",
+    "coahuila",
+    "colima",
+    "distrito federal",
+    "durango",
+    "guanajuato",
+    "guerrero",
+    "hidalgo",
+    "jalisco",
+    "mexico",
+    "michoacan",
+    "morelos",
+    "nayarit",
+    "nuevo leon",
+    "oaxaca",
+    "puebla",
+    "queretaro",
+    "quintana roo",
+    "san luis potosi",
+    "sinaloa",
+    "sonora",
+    "tabasco",
+    "tamaulipas",
+    "tlaxcala",
+    "veracruz",
+    "yucatan",
+    "zacatecas",
+}
+
 NATIONAL_PARK_PATTERN = re.compile(
     r"\b(national park|yellowstone|yosemite|sequoia|capitol reef)\b",
     re.IGNORECASE,
@@ -145,7 +189,16 @@ def state_country_code(state_name: str) -> str:
         return "MX"
     if any(token in key for token in ("ontario", "quebec", "british columbia", "alberta", "manitoba")):
         return "CA"
+    if key in MEXICO_STATE_NAMES:
+        return "MX"
     return "OTHER"
+
+
+def state_name_abbr(state_name: str) -> str | None:
+    parts = [part.strip() for part in state_name.split(",")]
+    if len(parts) == 2 and parts[1]:
+        return parts[1].upper()
+    return None
 
 
 def special_override_population(state_name: str) -> int | None:
@@ -156,12 +209,32 @@ def special_override_population(state_name: str) -> int | None:
         return 1500
     if NATIONAL_PARK_PATTERN.search(key):
         return 1000
-    if ISLAND_PATTERN.search(key) and "county" not in key:
-        return 10000
-    return None
+    return island_population_override(state_name)
 
 
-def assign_cells_to_states(
+def build_province_geo_tree(
+    calibration_pairs: list[tuple[float, float, float, float, int, str]],
+    province_centroids: dict[int, tuple[float, float]],
+    province_to_state: np.ndarray,
+) -> tuple[cKDTree, np.ndarray]:
+    rbf_lon, rbf_lat = build_inverse_rbf(calibration_pairs)
+    province_ids: list[int] = []
+    coords: list[list[float]] = []
+    for province_id, (px, py) in province_centroids.items():
+        if province_id <= 0 or province_id >= len(province_to_state):
+            continue
+        if province_to_state[province_id] <= 0:
+            continue
+        lon = float(rbf_lon([[px, py]])[0])
+        lat = float(rbf_lat([[px, py]])[0])
+        province_ids.append(province_id)
+        coords.append([lon, lat])
+    if not coords:
+        raise SystemExit("No land province centroids for geo population assignment")
+    return cKDTree(np.array(coords, dtype=np.float64)), np.array(province_ids, dtype=np.int64)
+
+
+def assign_cells_forward_rbf(
     cells: np.ndarray,
     rbf_x: RBFInterpolator,
     rbf_y: RBFInterpolator,
@@ -196,6 +269,63 @@ def assign_cells_to_states(
     max_state = int(state_ids[assigned].max())
     totals = np.bincount(state_ids[assigned], weights=pops[assigned], minlength=max_state + 1)
     return {sid: float(totals[sid]) for sid in range(1, len(totals)) if totals[sid] > 0}
+
+
+def assign_cells_geo_nearest(
+    cells: np.ndarray,
+    geo_tree: cKDTree,
+    geo_province_ids: np.ndarray,
+    province_to_state: np.ndarray,
+) -> dict[int, float]:
+    if cells.size == 0:
+        return {}
+    coords = cells[:, :2].astype(np.float64)
+    pops = cells[:, 2].astype(np.float64)
+    dists, indices = geo_tree.query(coords, k=1, distance_upper_bound=GEO_ASSIGN_MAX_DEG)
+
+    valid = (
+        (pops > 0)
+        & np.isfinite(dists)
+        & (indices < len(geo_province_ids))
+    )
+    if not np.any(valid):
+        return {}
+
+    province_ids = geo_province_ids[indices[valid]]
+    state_ids = province_to_state[province_ids]
+    assigned = state_ids > 0
+    if not np.any(assigned):
+        return {}
+
+    pops_valid = pops[valid][assigned]
+    state_ids = state_ids[assigned]
+    max_state = int(state_ids.max())
+    totals = np.bincount(state_ids, weights=pops_valid, minlength=max_state + 1)
+    return {sid: float(totals[sid]) for sid in range(1, len(totals)) if totals[sid] > 0}
+
+
+def assign_cells_to_states(
+    cells: np.ndarray,
+    rbf_x: RBFInterpolator,
+    rbf_y: RBFInterpolator,
+    province_raster: np.ndarray,
+    province_to_state: np.ndarray,
+    geo_tree: cKDTree,
+    geo_province_ids: np.ndarray,
+    land_state_ids: set[int],
+) -> dict[int, float]:
+    """Forward RBF assignment, with geo-nearest fallback for land states that get zero."""
+    raw = assign_cells_forward_rbf(cells, rbf_x, rbf_y, province_raster, province_to_state)
+    zero_land = [sid for sid in land_state_ids if raw.get(sid, 0) <= 0]
+    if not zero_land:
+        return raw
+
+    geo_raw = assign_cells_geo_nearest(cells, geo_tree, geo_province_ids, province_to_state)
+    for sid in zero_land:
+        geo_pop = geo_raw.get(sid, 0)
+        if geo_pop > 0:
+            raw[sid] = geo_pop
+    return raw
 
 
 def map_cities_to_states(
@@ -245,8 +375,12 @@ def map_cities_to_states(
         if pid <= 0:
             continue
         sid = int(province_to_state[pid])
-        if sid > 0:
-            by_state[sid] += pop
+        if sid <= 0:
+            continue
+        state_abbr = state_name_abbr(state_names.get(sid, ""))
+        if state_abbr and city.abbr.upper() != state_abbr:
+            continue
+        by_state[sid] += pop
     return dict(by_state)
 
 
@@ -284,15 +418,32 @@ def apply_city_validation(
 ) -> tuple[dict[int, int], dict[int, str]]:
     notes: dict[int, str] = {}
     updated = dict(scaled)
+    grid_trust_threshold = 50_000
     for state_id, city_sum in city_sums.items():
         if city_sum <= 0:
             continue
         current = updated.get(state_id, 0)
+        if current >= grid_trust_threshold:
+            continue
+        if city_sum > max(250_000, current * 5):
+            notes[state_id] = "city_validation_skipped:outlier_city_sum"
+            continue
         if current < city_sum * 0.5:
             floor = max(current, int(city_sum * 0.8))
             updated[state_id] = floor
             notes[state_id] = f"city_floor:{floor}"
     return updated, notes
+
+
+def apply_manual_populations(
+    populations: dict[int, int],
+    states: dict[int, dict],
+) -> dict[int, int]:
+    result = dict(populations)
+    for state_id, population in MANUAL_STATE_POPULATIONS.items():
+        if state_id in states:
+            result[state_id] = population
+    return result
 
 
 def apply_special_overrides(
@@ -304,6 +455,9 @@ def apply_special_overrides(
     for state_id, name in state_names.items():
         override = special_override_population(name)
         if override is not None:
+            current = result.get(state_id, 0)
+            if override == ISLAND_POPULATION_OVERRIDE and current >= ISLAND_GRID_TRUST_THRESHOLD:
+                continue
             result[state_id] = override
             continue
         if result.get(state_id, 0) <= 0 and land_pixels.get(state_id, 0) > 0:
@@ -326,7 +480,7 @@ def update_manpower(path: Path, manpower: int) -> bool:
 
 def run(apply: bool, verbose: bool) -> None:
     states = parse_states(STATE_DIR)
-    state_names = {**parse_localisation(LOCALISATION_FILE), **load_state_names(POPULATION_CSV)}
+    state_names = {**load_state_names(POPULATION_CSV), **parse_localisation(LOCALISATION_FILE)}
     census_totals = load_census_totals(CENSUS_CSV)
 
     color_to_province, max_province = parse_definition(DEFINITION_CSV)
@@ -374,8 +528,19 @@ def run(apply: bool, verbose: bool) -> None:
         raise SystemExit("Need at least 6 calibration anchors in vp_calibration_anchors.csv")
 
     rbf_x, rbf_y = fit_forward_rbf(calibration_pairs)
+    geo_tree, geo_province_ids = build_province_geo_tree(calibration_pairs, centroids, province_to_state)
     cells = load_population_cells()
-    raw_pop = assign_cells_to_states(cells, rbf_x, rbf_y, province_raster, province_to_state)
+    land_state_ids = {sid for sid, px_count in land_pixels.items() if px_count > 0}
+    raw_pop = assign_cells_to_states(
+        cells,
+        rbf_x,
+        rbf_y,
+        province_raster,
+        province_to_state,
+        geo_tree,
+        geo_province_ids,
+        land_state_ids,
+    )
 
     region_hints = build_region_hints(state_names)
     cities = load_city_db()
@@ -394,6 +559,7 @@ def run(apply: bool, verbose: bool) -> None:
     scaled = scale_to_census_2000(raw_pop, state_names, census_totals)
     scaled, validation_notes = apply_city_validation(scaled, city_sums)
     final_pop = apply_special_overrides(scaled, state_names, land_pixels)
+    final_pop = apply_manual_populations(final_pop, states)
 
     rows = []
     audit_rows = []
@@ -405,7 +571,9 @@ def run(apply: bool, verbose: bool) -> None:
         raw = int(round(raw_pop.get(state_id, 0)))
         note = validation_notes.get(state_id, "")
         source = "grid_2000_scaled"
-        if special_override_population(name) is not None:
+        if state_id in MANUAL_STATE_POPULATIONS:
+            source = "manual_override"
+        elif special_override_population(name) is not None:
             source = "special_override"
         elif note:
             source = "grid_2000_scaled+city_validation"

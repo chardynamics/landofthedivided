@@ -1,7 +1,7 @@
 state = { 
 	id = 777 
 	name = "STATE_777" 
-	manpower = 1950216
+	manpower = 1942920
 	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -12,15 +12,15 @@ state = {
 		
 		buildings = { 
 			infrastructure = 10 
-			thermoelectric_plant = 4 
-			hydroelectric_plant = 3 
-			schools = 3 
-			offices = 3 
-			hospitals = 3 
-			prisons = 3 
-			barracks = 2 
-			radar_station = 2 
-			anti_air_building = 2 
+			thermoelectric_plant = 4
+			hydroelectric_plant = 3
+			schools = 3
+			offices = 2
+			hospitals = 3
+			prisons = 2
+			barracks = 2
+			radar_station = 2
+			anti_air_building = 1
 		}
 		
 		add_core_of = NYC 

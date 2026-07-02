@@ -9,7 +9,11 @@ state = {
 		
 		victory_points = { 6725 6 }
 		
-		buildings = { infrastructure = 10 }
+		buildings = {
+			thermoelectric_plant = 1
+			schools = 1
+			hospitals = 1
+			hospitals = 1 infrastructure = 10 }
 		
 		add_core_of = VER 
 	}

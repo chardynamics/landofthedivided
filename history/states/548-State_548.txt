@@ -1,7 +1,7 @@
 state = { 
 	id = 548 
 	name = "STATE_548" 
-	manpower = 535145
+	manpower = 533143
 	state_category = large_city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -17,7 +17,15 @@ state = {
 		victory_points = { 6238 10 }
 		victory_points = { 6267 2 }
 		
-		buildings = { infrastructure = 3 }
+		buildings = {
+			thermoelectric_plant = 2
+			schools = 2
+			offices = 1
+			hospitals = 2
+			prisons = 1
+			barracks = 1
+			radar_station = 1
+			radar_station = 1 infrastructure = 3 }
 		
 		add_core_of = AMO 
 		add_core_of = SAZ 

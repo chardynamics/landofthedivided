@@ -1,7 +1,7 @@
 state = { 
 	id = 531 
 	name = "STATE_531" 
-	manpower = 246985
+	manpower = 246061
 	state_category = city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -14,7 +14,12 @@ state = {
 		
 		buildings = { 
 			infrastructure = 6 
-			thermoelectric_plant = 1 
+			thermoelectric_plant = 1
+			schools = 1
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			barracks = 1
 		}
 		
 		add_core_of = OKC 

@@ -1,7 +1,7 @@
 state = { 
 	id = 454 
 	name = "STATE_454" 
-	manpower = 139712
+	manpower = 139189
 	state_category = city
 	buildings_max_level_factor = 1 
 	history = { 
@@ -9,9 +9,10 @@ state = {
 		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 1 
-			schools = 1 
-			hospitals = 1 
+			thermoelectric_plant = 2
+			schools = 1
+			hospitals = 1
+			prisons = 1
 		}
 		
 		add_core_of = SVR 

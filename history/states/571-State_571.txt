@@ -1,7 +1,7 @@
 state = { 
 	id = 571 
 	name = "STATE_571" 
-	manpower = 39504
+	manpower = 39356
 	state_category = town
 	buildings_max_level_factor = 1 
 	
@@ -12,13 +12,8 @@ state = {
 		buildings = { 
 			infrastructure = 8 
 			air_base = 6 
-			thermoelectric_plant = 4 
-			hydroelectric_plant = 2 
-			schools = 1 
-			offices = 1 
-			hospitals = 1 
-			prisons = 1 
-			barracks = 1 
+			thermoelectric_plant = 2
+			hospitals = 1
 		}
 		
 		add_core_of = STX 

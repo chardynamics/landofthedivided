@@ -232,8 +232,30 @@ def allocate_country_energy(target_power, state_weights):
         energy[sid] = plant
     return energy
 
-SHARED_SLOT_KEYS = ["schools", "offices", "hospitals", "prisons", "barracks", "dockyard", "missile_silo"]
-TRIM_ORDER = ["dockyard", "prisons", "offices", "schools", "hospitals", "barracks", "missile_silo"]
+SHARED_SLOT_KEYS = [
+    "thermoelectric_plant",
+    "hydroelectric_plant",
+    "nuclear_reactor",
+    "schools",
+    "offices",
+    "hospitals",
+    "prisons",
+    "barracks",
+    "dockyard",
+    "missile_silo",
+]
+TRIM_ORDER = [
+    "dockyard",
+    "missile_silo",
+    "prisons",
+    "barracks",
+    "offices",
+    "schools",
+    "hospitals",
+    "hydroelectric_plant",
+    "thermoelectric_plant",
+    "nuclear_reactor",
+]
 STATE_LEVEL_KEYS = [
     "thermoelectric_plant",
     "hydroelectric_plant",
@@ -398,15 +420,11 @@ def merge_site_levels(mapped_sites):
 def base_buildings(name, state, coastal_provinces):
     buildings = {
         "thermoelectric_plant": 1,
-        "prisons": 1,
-        "barracks": 3,
-        "radar_station": 6,
-        "anti_air_building": 5,
-        "missile_silo": 1,
+        "barracks": 1,
     }
     kind = base_type(name)
     if kind == "naval":
-        buildings["dockyard"] = 2
+        buildings["dockyard"] = 1
     return buildings
 
 
@@ -487,6 +505,7 @@ def compute_assignments(states, names, pop_rows, coastal_provinces, port_states)
 
         if is_base:
             buildings = base_buildings(name, state, coastal_provinces)
+            buildings = trim_to_budget(buildings, state["category"], nuclear_level)
         else:
             buildings = population_buildings(population, state["category"], has_port)
             buildings = trim_to_budget(buildings, state["category"], nuclear_level)
@@ -555,6 +574,8 @@ def compute_assignments(states, names, pop_rows, coastal_provinces, port_states)
             buildings["nuclear_reactor"] = nuclear_level
         if state["category"] == "wasteland" and not meta["is_base"] and not meta["dam_province"] and not nuclear_level:
             buildings = {}
+        else:
+            buildings = trim_to_budget(buildings, state["category"], nuclear_level)
 
         row = {
             "id": state_id,
@@ -738,9 +759,16 @@ def main():
     print_summary(rows, dam_sites, reactor_sites)
     print(f"\nWrote {args.output}")
     if args.apply:
+        applied = 0
+        skipped = 0
         for row in rows:
+            path = ROOT / row["file"]
+            if not re.search(r"^\s*buildings\s*=\s*\{", path.read_text(encoding="utf-8"), flags=re.MULTILINE):
+                skipped += 1
+                continue
             update_buildings_file(row, states, coastal_provinces)
-        print(f"Applied managed buildings to {len(rows)} state files.")
+            applied += 1
+        print(f"Applied managed buildings to {applied} state files ({skipped} skipped, no buildings block).")
     else:
         print("Dry run only. Re-run with --apply to write state files.")
 

@@ -1,21 +1,16 @@
 state = { 
 	id = 753 
 	name = "STATE_753" 
-	manpower = 2575
-	state_category = pastoral
+	manpower = 1351
+	state_category = large_town
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = MEX 
 		
 		buildings = { 
 			infrastructure = 5 
-			thermoelectric_plant = 4 
-			hydroelectric_plant = 3 
-			schools = 2 
-			offices = 1 
-			hospitals = 1 
-			prisons = 1 
-			barracks = 1 
+			thermoelectric_plant = 4
+			hydroelectric_plant = 3
 		}
 		
 		add_core_of = MEX 

@@ -1,7 +1,7 @@
 state = { 
 	id = 409 
 	name = "STATE_409" 
-	manpower = 37326
+	manpower = 37186
 	state_category = town
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -10,7 +10,7 @@ state = {
 		
 		buildings = { 
 			infrastructure = 4 
-			thermoelectric_plant = 1 
+			hospitals = 1
 		}
 		
 		add_core_of = DMA 

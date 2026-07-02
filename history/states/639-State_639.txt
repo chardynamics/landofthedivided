@@ -1,7 +1,7 @@
 state = { 
 	id = 639 
 	name = "STATE_639" 
-	manpower = 6014981
+	manpower = 3156269
 	state_category = megalopolis
 	buildings_max_level_factor = 1 
 	history = { 
@@ -13,10 +13,15 @@ state = {
 		
 		buildings = { 
 			infrastructure = 1 
-			thermoelectric_plant = 4 
-			hydroelectric_plant = 3 
-			schools = 1 
-			hospitals = 1 
+			thermoelectric_plant = 4
+			hydroelectric_plant = 3
+			schools = 3
+			offices = 3
+			hospitals = 3
+			prisons = 3
+			barracks = 2
+			radar_station = 2
+			anti_air_building = 2
 		}
 		
 		add_core_of = MEX 

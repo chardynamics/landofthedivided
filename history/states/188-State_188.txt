@@ -1,7 +1,7 @@
 state = { 
 	id = 188 
 	name = "STATE_188" 
-	manpower = 2310
+	manpower = 2301
 	state_category = pastoral
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -10,7 +10,6 @@ state = {
 		
 		buildings = { 
 			infrastructure = 0 
-			thermoelectric_plant = 1 
 		}
 		
 		add_core_of = CMM 

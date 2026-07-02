@@ -1,7 +1,7 @@
 state = { 
 	id = 534 
 	name = "STATE_534" 
-	manpower = 50380
+	manpower = 50192
 	state_category = town
 	buildings_max_level_factor = 1 
 	history = { 
@@ -9,9 +9,8 @@ state = {
 		
 		buildings = { 
 			infrastructure = 6 
-			thermoelectric_plant = 1 
-			schools = 1 
-			hospitals = 1 
+			schools = 1
+			hospitals = 1
 		}
 		
 		add_core_of = BIR 

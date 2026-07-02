@@ -1,14 +1,21 @@
 state = { 
 	id = 352 
 	name = "STATE_352" 
-	manpower = 292641
+	manpower = 291546
 	state_category = city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = GBR 
 		
-		buildings = { infrastructure = 1 }
+		buildings = {
+			thermoelectric_plant = 2
+			schools = 2
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			barracks = 1
+			barracks = 1 infrastructure = 1 }
 		
 		add_core_of = GBR 
 		add_core_of = SUT 

@@ -12,7 +12,10 @@ state = {
 		victory_points = { 3138 2 }
 
 		
-		buildings = { infrastructure = 2 }
+		buildings = {
+			schools = 1
+			hospitals = 1
+			hospitals = 1 infrastructure = 2 }
 		
 		add_core_of = SDA 
 	}

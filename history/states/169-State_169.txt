@@ -1,7 +1,7 @@
 state = { 
 	id = 169 
 	name = "STATE_169" 
-	manpower = 1131576
+	manpower = 1127342
 	state_category = metropolis
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -10,11 +10,15 @@ state = {
 		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 1 
-			schools = 1 
-			hospitals = 1 
-			prisons = 1 
-			dockyard = 1 
+			thermoelectric_plant = 2
+			schools = 2
+			offices = 2
+			hospitals = 2
+			prisons = 2
+			barracks = 2
+			dockyard = 2
+			radar_station = 1
+			anti_air_building = 1
 			4872 = { naval_base = 5 }
 		}
 		

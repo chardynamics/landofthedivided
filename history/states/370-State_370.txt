@@ -1,8 +1,8 @@
 state = { 
 	id = 370 
 	name = "STATE_370" 
-	manpower = 440588
-	state_category = large_city
+	manpower = 34031
+	state_category = town
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = SCA 
@@ -12,10 +12,8 @@ state = {
 		
 		buildings = { 
 			infrastructure = 7 
-			thermoelectric_plant = 4 
-			hydroelectric_plant = 3 
-			schools = 1 
-			hospitals = 1 
+			thermoelectric_plant = 3
+			hydroelectric_plant = 2
 		}
 		
 		add_core_of = SCA 

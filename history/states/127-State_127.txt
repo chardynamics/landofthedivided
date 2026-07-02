@@ -1,7 +1,7 @@
 state = { 
 	id = 127 
 	name = "STATE_127" 
-	manpower = 112508
+	manpower = 112087
 	state_category = large_town
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -12,9 +12,10 @@ state = {
 		
 		buildings = { 
 			infrastructure = 5 
-			thermoelectric_plant = 1 
-			schools = 1 
-			hospitals = 1 
+			thermoelectric_plant = 1
+			schools = 1
+			hospitals = 1
+			prisons = 1
 		}
 		
 		add_core_of = BIR 

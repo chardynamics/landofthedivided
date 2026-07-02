@@ -1,8 +1,8 @@
 state = { 
 	id = 605 
 	name = "STATE_605" 
-	manpower = 839691
-	state_category = metropolis
+	manpower = 442854
+	state_category = large_city
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = CFC 
@@ -12,9 +12,12 @@ state = {
 		
 		buildings = { 
 			infrastructure = 9 
-			thermoelectric_plant = 1 
-			schools = 1 
-			hospitals = 1 
+			thermoelectric_plant = 3
+			schools = 2
+			offices = 1
+			hospitals = 2
+			prisons = 1
+			barracks = 1
 		}
 		
 		add_core_of = CFC 

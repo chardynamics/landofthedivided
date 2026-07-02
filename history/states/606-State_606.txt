@@ -1,7 +1,7 @@
 state = { 
 	id = 606 
 	name = "STATE_606" 
-	manpower = 824175
+	manpower = 821091
 	state_category = metropolis
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -12,7 +12,16 @@ state = {
 		victory_points = { 480 4 }
 
 		
-		buildings = { infrastructure = 5 }
+		buildings = {
+			thermoelectric_plant = 2
+			schools = 2
+			offices = 2
+			hospitals = 2
+			prisons = 2
+			barracks = 1
+			radar_station = 1
+			anti_air_building = 1
+			anti_air_building = 1 infrastructure = 5 }
 		
 		add_core_of = SMN 
 	}

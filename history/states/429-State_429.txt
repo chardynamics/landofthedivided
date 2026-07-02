@@ -1,7 +1,7 @@
 state = { 
 	id = 429 
 	name = "STATE_429" 
-	manpower = 279933
+	manpower = 278886
 	state_category = city
 	buildings_max_level_factor = 1 
 	history = { 
@@ -11,10 +11,12 @@ state = {
 		
 		buildings = { 
 			infrastructure = 7 
-			thermoelectric_plant = 1 
-			schools = 1 
-			hospitals = 1 
-			prisons = 1 
+			thermoelectric_plant = 1
+			schools = 2
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			barracks = 1
 		}
 		
 		add_core_of = RWV 

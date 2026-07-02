@@ -1,7 +1,7 @@
 state = { 
 	id = 350 
 	name = "STATE_350" 
-	manpower = 142246
+	manpower = 141714
 	state_category = city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -14,9 +14,10 @@ state = {
 		
 		buildings = { 
 			infrastructure = 7 
-			thermoelectric_plant = 1 
-			schools = 1 
-			hospitals = 1 
+			thermoelectric_plant = 1
+			schools = 1
+			hospitals = 1
+			prisons = 1
 		}
 		
 		add_core_of = SIA 

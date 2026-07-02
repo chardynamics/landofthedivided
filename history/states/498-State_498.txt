@@ -1,7 +1,7 @@
 state = { 
 	id = 498 
 	name = "STATE_498" 
-	manpower = 2977160
+	manpower = 2966022
 	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -17,16 +17,15 @@ state = {
 		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 3 
-			hydroelectric_plant = 1 
-			nuclear_reactor = 2 
-			schools = 3 
-			offices = 2 
-			hospitals = 3 
-			prisons = 2 
-			barracks = 2 
-			radar_station = 1 
-			anti_air_building = 1 
+			thermoelectric_plant = 3
+			nuclear_reactor = 2
+			schools = 3
+			offices = 3
+			hospitals = 3
+			prisons = 3
+			barracks = 2
+			radar_station = 2
+			anti_air_building = 2
 		}
 		
 		add_core_of = SAZ 

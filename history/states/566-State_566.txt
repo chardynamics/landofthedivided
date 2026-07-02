@@ -1,16 +1,14 @@
 state = { 
 	id = 566 
 	name = "STATE_566" 
-	manpower = 500
-	state_category = enclave
+	manpower = 15699
+	state_category = rural
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = BIR 
 		
 		buildings = { 
 			infrastructure = 5 
-			thermoelectric_plant = 4 
-			hydroelectric_plant = 3 
 		}
 		
 		add_core_of = MEX 

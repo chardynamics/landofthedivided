@@ -1,7 +1,7 @@
 state = { 
 	id = 458 
 	name = "STATE_458" 
-	manpower = 1408187
+	manpower = 1402919
 	state_category = metropolis
 	buildings_max_level_factor = 1 
 	history = { 
@@ -13,14 +13,18 @@ state = {
 		
 		buildings = { 
 			infrastructure = 5 
-			thermoelectric_plant = 4 
-			schools = 2 
-			offices = 1 
-			hospitals = 2 
-			prisons = 1 
-			barracks = 1 
-			radar_station = 1 
-			427 = { dam = 1 }
+			thermoelectric_plant = 3
+			hydroelectric_plant = 1
+			schools = 3
+			offices = 2
+			hospitals = 3
+			prisons = 2
+			barracks = 2
+			radar_station = 1
+			anti_air_building = 1
+			427 = {
+				dam = 1
+			}
 		}
 		
 		add_core_of = MNV 

@@ -1,7 +1,7 @@
 state = { 
 	id = 51 
 	name = "STATE_51" 
-	manpower = 251276
+	manpower = 250336
 	state_category = city
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
@@ -10,7 +10,14 @@ state = {
 		
 		victory_points = { 3498 16 }
 		
-		buildings = { infrastructure = 8 }
+		buildings = {
+			thermoelectric_plant = 1
+			schools = 2
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			barracks = 1
+			barracks = 1 infrastructure = 8 }
 		
 		add_core_of = NGI 
 	}

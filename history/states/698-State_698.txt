@@ -1,22 +1,20 @@
 state = { 
 	id = 698 
 	name = "STATE_698" 
-	manpower = 500
-	state_category = enclave
+	manpower = 248899
+	state_category = city
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = CUB 
 		
 		buildings = { 
 			infrastructure = 1 
-			thermoelectric_plant = 3 
-			hydroelectric_plant = 2 
-			schools = 2 
-			offices = 1 
-			hospitals = 2 
-			prisons = 2 
-			barracks = 1 
-			radar_station = 1 
+			thermoelectric_plant = 4
+			schools = 1
+			offices = 1
+			hospitals = 1
+			prisons = 1
+			barracks = 1
 		}
 		
 		add_core_of = CUB 

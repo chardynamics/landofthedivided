@@ -6,6 +6,10 @@ import re
 from collections import Counter
 from pathlib import Path
 
+from assign_buildings import SHARED_SLOT_KEYS, STATE_SLOTS
+from island_rules import is_true_small_island
+from state_population_overrides import MANUAL_STATE_CATEGORIES
+
 ROOT = Path(__file__).resolve().parent
 INPUT_CSV = ROOT / "state_population_estimates.csv"
 STATE_CATEGORY_DIR = ROOT / "common" / "state_category"
@@ -25,11 +29,6 @@ VALID_CATEGORIES = {
     "megalopolis",
 }
 
-ISLAND_PATTERN = re.compile(
-    r"\b(island|islands|isla|islas|ile|iles)\b",
-    re.IGNORECASE,
-)
-
 NATIONAL_PARK_PATTERN = re.compile(
     r"\b(national park|yellowstone|yosemite|sequoia|capitol reef)\b",
     re.IGNORECASE,
@@ -47,6 +46,21 @@ POPULATION_THRESHOLDS = [
     (1_500_000, 10**12, "megalopolis"),
 ]
 
+CATEGORY_RANK = {
+    "wasteland": 0,
+    "enclave": 1,
+    "tiny_island": 2,
+    "pastoral": 3,
+    "rural": 4,
+    "small_island": 5,
+    "town": 6,
+    "large_town": 7,
+    "city": 8,
+    "large_city": 9,
+    "metropolis": 10,
+    "megalopolis": 11,
+}
+
 
 def parse_population(value):
     if value is None or value == "":
@@ -55,10 +69,6 @@ def parse_population(value):
         return int(value)
     except (TypeError, ValueError):
         return 0
-
-
-def is_island_name(name):
-    return bool(ISLAND_PATTERN.search(name or ""))
 
 
 def is_wasteland_name(name):
@@ -75,17 +85,49 @@ def category_from_population(population):
     return "wasteland"
 
 
-def assign_category(name, population):
+def population_category(name, population):
     if population == 0 or is_wasteland_name(name):
         return "wasteland"
 
-    if is_island_name(name):
+    if is_true_small_island(name, population):
         if population < 1_000:
             return "tiny_island"
-        if population <= 24_999:
-            return "small_island"
+        return "small_island"
 
     return category_from_population(population)
+
+
+def min_category_for_slots(shared_slots: int) -> str:
+    if shared_slots <= 0:
+        return "wasteland"
+    for category in sorted(STATE_SLOTS, key=lambda name: CATEGORY_RANK[name]):
+        if STATE_SLOTS[category] >= shared_slots:
+            return category
+    return "megalopolis"
+
+
+def count_shared_slot_buildings(state_file: Path) -> int:
+    text = state_file.read_text(encoding="utf-8")
+    match = re.search(r"buildings\s*=\s*\{([^}]*)\}", text, flags=re.DOTALL)
+    if not match:
+        return 0
+    levels = {
+        key: int(value)
+        for key, value in re.findall(r"(\w+)\s*=\s*(\d+)", match.group(1))
+    }
+    return sum(levels.get(key, 0) for key in SHARED_SLOT_KEYS)
+
+
+def max_category(a: str, b: str) -> str:
+    return a if CATEGORY_RANK[a] >= CATEGORY_RANK[b] else b
+
+
+def assign_category(name, population, shared_slots=0, state_id: int | None = None):
+    if state_id is not None and state_id in MANUAL_STATE_CATEGORIES:
+        return MANUAL_STATE_CATEGORIES[state_id]
+    pop_category = population_category(name, population)
+    slot_category = min_category_for_slots(shared_slots)
+    return max_category(pop_category, slot_category)
 
 
 def read_csv_rows(csv_path):
@@ -150,11 +192,14 @@ def main():
     category_counts = Counter()
     island_samples = []
     wasteland_samples = []
+    slot_overflow = []
 
     for row in rows:
         name = row.get("name", "")
         population = parse_population(row.get("estimated_population"))
-        category = assign_category(name, population)
+        state_path = ROOT / row["file"]
+        shared_slots = count_shared_slot_buildings(state_path)
+        category = assign_category(name, population, shared_slots, state_id=int(row.get("id", 0) or 0))
 
         if category not in VALID_CATEGORIES:
             raise ValueError(f"Invalid category '{category}' for state {row.get('id')}: {name}")
@@ -164,12 +209,25 @@ def main():
                 f"(state {row.get('id')}: {name})"
             )
 
+        slot_budget = STATE_SLOTS.get(category, 0)
+        if shared_slots > slot_budget:
+            slot_overflow.append(
+                {
+                    "id": row.get("id"),
+                    "name": name,
+                    "category": category,
+                    "shared_slots": shared_slots,
+                    "slot_budget": slot_budget,
+                }
+            )
+
         assignments.append(
             {
                 "id": row.get("id"),
                 "file": row.get("file"),
                 "name": name,
                 "population": population,
+                "shared_slots": shared_slots,
                 "category": category,
             }
         )
@@ -197,13 +255,22 @@ def main():
             f"  {row['id']:>4} {row['name']:<40} pop={row['population']:<10} -> {row['category']}"
         )
 
+    print(f"\nShared-slot overflow (before assign_buildings trim): {len(slot_overflow)} states")
+    for row in sorted(slot_overflow, key=lambda item: item["shared_slots"] - item["slot_budget"], reverse=True)[:15]:
+        over = row["shared_slots"] - row["slot_budget"]
+        print(
+            f"  {row['id']:>4} {row['name']:<36} {row['category']:<14} "
+            f"shared={row['shared_slots']}/{row['slot_budget']} (+{over})"
+        )
+
     if args.verbose:
         print("\nSpot checks:")
-        spot_ids = {"4", "775", "17", "26"}
+        spot_ids = {"4", "88", "226", "775", "17", "26", "107"}
         for row in assignments:
             if row["id"] in spot_ids:
                 print(
-                    f"  {row['id']:>4} {row['name']:<40} pop={row['population']:<10} -> {row['category']}"
+                    f"  {row['id']:>4} {row['name']:<40} pop={row['population']:<10} "
+                    f"shared={row['shared_slots']:<3} -> {row['category']}"
                 )
 
     if args.apply:
