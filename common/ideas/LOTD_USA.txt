@@ -204,8 +204,25 @@ ideas = {
 				conscription_factor = 2
 			}
 		}
-		USA_warlord_manpower = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_warlord_manpower" }
+		USA_warlord_manpower2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_warlord_manpower2" }
+			allowed = {
+				always = no
+			}
+			cancel = { has_country_flag = USA_cancel_all_ideas }
+			allowed_civil_war = {
+				always = yes
+			}
+			available = { has_country_flag = is_warlord }
+			removal_cost = -1
+
+			cancel_if_invalid = yes
+			modifier = {
+				conscription_factor = 1
+			}
+		}
+		USA_warlord_manpower3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_warlord_manpower3" }
 			allowed = {
 				always = no
 			}
