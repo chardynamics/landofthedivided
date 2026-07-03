@@ -18,21 +18,6 @@ guiTypes = { ## Admin Title + Misc features
 			pdx_tooltip_delayed = admin_title_textbox_mapmode_tt
 			position = { x = 9 y = 8 }
 		}
-
-		iconType = {
-			name = "breadbasket_icon"
-			position = { x = 243 y = 7 }
-			spriteType = "GFX_UKR_BB_icon_opener_UKR"
-			scale = 0.414
-			pdx_tooltip = UKR_BB_stateview_modifiers_tt
-		}
-
-		iconType = {
-			name = "china_provinces_short"
-			position = { x = 242 y = 5 }
-			quadTextureSprite = "GFX_greater_china_provinces_short_metal_2"
-			scale = 0.61
-		}
 	}
 
 	containerwindowtype = {

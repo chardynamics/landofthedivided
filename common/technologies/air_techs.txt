@@ -14,10 +14,6 @@ technologies = {
 			leads_to_tech = fighter_1960
 			research_cost_coeff = 1
 		}
-		#path = {
-		#	leads_to_tech = interceptor_1950
-		#	research_cost_coeff = 0.75
-		#}
 
 		dependencies = {
 			jet_engines = 1
@@ -122,10 +118,6 @@ technologies = {
 			leads_to_tech = fighter_1970
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = interceptor_1960
-			research_cost_coeff = 0.75
-		}
 
 		research_cost = 2.6
 		xp_research_type = air
@@ -221,10 +213,6 @@ technologies = {
 			leads_to_tech = MCA_1980
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = interceptor_1970
-			research_cost_coeff = 0.75
-		}
 
 		research_cost = 2.6
 		xp_research_type = air
@@ -310,10 +298,6 @@ technologies = {
 			leads_to_tech = interceptor_1960
 			research_cost_coeff = 1
 		}
-		#path = {
-		#	leads_to_tech = fighter_1950
-		#	research_cost_coeff = 0.75
-		#}
 
 		dependencies = {
 			jet_engines = 1
@@ -369,10 +353,6 @@ technologies = {
 			leads_to_tech = interceptor_1970
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = fighter_1960
-			research_cost_coeff = 0.75
-		}
 
 		research_cost = 2.6
 		xp_research_type = air
@@ -423,10 +403,6 @@ technologies = {
 		path = {
 			leads_to_tech = interceptor_1980
 			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = fighter_1970
-			research_cost_coeff = 0.75
 		}
 
 		research_cost = 2.6

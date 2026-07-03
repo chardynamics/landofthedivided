@@ -2,8 +2,10 @@ capital = 332
 set_research_slots = 3
 # Vacant
 
+recruit_character = DET_Generic_Vacant
 fill_empty_minister_nochecks = yes
-set_technology = {basic_train = 1
+set_technology = {
+	basic_train = 1
 
 	##INFANTRY##
 	infantry_weapons_1 = 1

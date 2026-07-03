@@ -33,6 +33,39 @@ default = {
 		}
 	}
 }
+
+
+continent = {
+	name = asia
+	army = {
+		male = {
+			"GFX_Portrait_Asia_generic_1"
+			"GFX_Portrait_Asia_generic_2"
+			"GFX_Portrait_Asia_generic_3"
+			"GFX_Portrait_Asia_generic_4"
+			"GFX_Portrait_Asia_generic_5"
+		}
+	}
+}
+
+continent = {
+	name = africa
+	army = {
+		male = {
+			"GFX_Portrait_AfricaMiddleEast_generic_1"
+		}
+	}
+}
+
+continent = {
+	name = middle_east
+	army = {
+		male = {
+			"GFX_Portrait_AfricaMiddleEast_generic_1"
+		}
+	}
+}
+
 continent = {
 	name = europe
 	army = {
@@ -42,6 +75,42 @@ continent = {
 			"GFX_Portrait_AmericaEurope_generic_3"
 			"GFX_Portrait_AmericaEurope_generic_4"
 			"GFX_Portrait_AmericaEurope_generic_5"
+		}
+	}
+}
+
+continent = {
+	name = north_america
+	army = {
+		male = {
+			"GFX_Portrait_AmericaEurope_generic_1"
+			"GFX_Portrait_AmericaEurope_generic_2"
+			"GFX_Portrait_AmericaEurope_generic_3"
+			"GFX_Portrait_AmericaEurope_generic_4"
+			"GFX_Portrait_AmericaEurope_generic_5"
+		}
+	}
+}
+
+continent = {
+	name = australia
+	army = {
+		male = {
+			"GFX_Portrait_AmericaEurope_generic_1"
+			"GFX_Portrait_AmericaEurope_generic_2"
+			"GFX_Portrait_AmericaEurope_generic_3"
+			"GFX_Portrait_AmericaEurope_generic_4"
+			"GFX_Portrait_AmericaEurope_generic_5"
+		}
+	}
+}
+
+continent = {
+	name = south_america
+	army = {
+		male = {
+			"GFX_Portrait_LatAm_generic_1"
+			"GFX_Portrait_LatAm_generic_2"
 		}
 	}
 }
