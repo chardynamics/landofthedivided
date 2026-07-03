@@ -307,3 +307,19 @@ country_event = { #KD's Consequences of Development
 		name = economy.5.a
 	}
 }
+
+# Player production-unit factory sync (offsite buildings fail to stick during on_startup).
+country_event = {
+	id = economy.6
+	title = economy.6.t
+	desc = economy.6.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event economy.6 player PU sync"
+		sync_player_production_units = yes
+	}
+	option = {
+		name = economy.6.a
+	}
+}

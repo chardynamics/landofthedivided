@@ -273,9 +273,7 @@ scripted_gui = {
 				clr_country_flag = Econ_Sphere_Info_Tab_Open
 				clr_country_flag = Credit_Ladder_Tab_Open
 				set_country_flag = has_opened_pu_menu
-				update_production_unit_allocation = yes
-				TNO_calculate_power_consumption = yes
-				TNO_calculate_power_consumption = yes #Needs to be fired twice to properly compute, no idea why
+				sync_player_production_units = yes
 				add_to_variable = { TNO_economy_GUI_dirty = 1 }
 			}
 		}

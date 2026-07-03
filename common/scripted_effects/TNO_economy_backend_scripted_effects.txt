@@ -247,6 +247,8 @@ setup_production_units = {
 	set_variable = { PU_consumer_goods = 0 }
 	set_variable = { PU_military_factories = 0 }
 	set_variable = { PU_civilian_factories = 0 }
+	set_variable = { PU_civilian_offsite_applied = 0 }
+	set_variable = { PU_military_offsite_applied = 0 }
 	if = {
 		limit = {
 			OR = {
@@ -281,11 +283,12 @@ setup_production_units = {
 	set_variable = { PU_military_factories_desired = 0 }
 	set_variable = { PU_civilian_factories_desired = 0 }
 
-	update_prod_units_amnt = yes
+	update_production_units_count = yes
 	update_prod_units_display = yes
 	TNO_calculate_power_consumption = yes
 
 	auto_set_ai_pus = yes
+	update_production_unit_allocation = yes
 }
 
 
@@ -349,6 +352,28 @@ auto_set_ai_pus = {
 	}
 }
 
+
+# GDP -> production_units count only (no trade refresh / factory allocation).
+update_production_units_count = {
+	set_variable = { production_units = totalstateGDP }
+
+	set_variable = { production_units_multiplier = modifier@production_units_to_GDP_ratio_modifier }
+
+	multiply_variable = { production_units = production_units_multiplier }
+	add_to_variable = { production_units = 0.499 }
+	round_variable = production_units
+	set_variable = { production_units_gdp_raw = production_units }
+	set_variable = { production_units_modifier = 0 }
+	add_to_variable = { production_units_modifier = modifier@free_production_units_modifier }
+	add_to_variable = { production_units_modifier = free_production_units }
+	round_variable = production_units_modifier
+	add_to_variable = { production_units = production_units_modifier }
+	round_variable = production_units
+	set_variable = { production_units_raw = production_units }
+
+	set_variable = { pu_to_gdp_ratio = production_units }
+	divide_variable = { pu_to_gdp_ratio = totalstateGDP }
+}
 
 # Refreshes the GDP-based production unit base
 update_prod_units_amnt = {
@@ -425,15 +450,22 @@ update_prod_units_trade = {
 
 
 # Reallocates production units, taking away factories or granting new factories if need be
+sync_player_production_units = {
+	auto_set_ai_pus = yes
+	update_production_unit_allocation = yes
+	TNO_calculate_power_consumption = yes
+	TNO_calculate_power_consumption = yes
+}
+
 update_production_unit_allocation = {
 
 	set_temp_variable = { consumer_goods_min = 0 }
 
-	set_temp_variable = { civs_temp = PU_civilian_factories }
-	set_temp_variable = { mils_temp = PU_military_factories }
+	# Strip only offsite levels we previously granted (not PU vars — those can desync).
+	set_temp_variable = { civs_temp = PU_civilian_offsite_applied }
+	set_temp_variable = { mils_temp = PU_military_offsite_applied }
 	multiply_temp_variable = { civs_temp = -1 }
 	multiply_temp_variable = { mils_temp = -1 }
-	multiply_temp_variable = { mils_temp = mils_mult_old }
 
 	add_offsite_building = { type = industrial_complex level = civs_temp }
 	add_offsite_building = { type = arms_factory level = mils_temp }
@@ -690,11 +722,19 @@ update_production_unit_allocation = {
 	set_variable = { production_units_free = production_units }
 	subtract_from_variable = { production_units_free = production_units_used }
 
-	set_temp_variable = { mils_temp = PU_military_factories }
-	multiply_temp_variable = { mils_temp = mils_mult }
+	set_temp_variable = { civs_add = PU_civilian_factories }
+	round_temp_variable = civs_add
+	set_temp_variable = { mils_add = PU_military_factories }
+	multiply_temp_variable = { mils_add = mils_mult }
+	round_temp_variable = mils_add
 
-	add_offsite_building = { type = industrial_complex level = PU_civilian_factories }
-	add_offsite_building = { type = arms_factory level = mils_temp }
+	add_offsite_building = { type = industrial_complex level = civs_add }
+	add_offsite_building = { type = arms_factory level = mils_add }
+
+	set_variable = { PU_civilian_offsite_applied = civs_add }
+	set_variable = { PU_military_offsite_applied = mils_add }
+
+	set_temp_variable = { mils_temp = mils_add }
 
 	set_temp_variable = { temp_fo = modifier@industrial_capacity_factory }
 	subtract_from_temp_variable = { temp_fo = TNO_econ_mult_factory_output_penalty }
