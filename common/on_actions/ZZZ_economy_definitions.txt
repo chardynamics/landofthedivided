@@ -1635,20 +1635,6 @@ on_actions = {
 				divide_variable = { gdpc = total_pop_m }
 			}
 
-			every_country = {
-				limit = {
-					exists = yes 
-					econ_can_use_economy_system = yes
-				}
-
-				### This needs to be here instead of TNO_startup_nation because it uses vars set here, maybe they should be moved?
-				calculate_total_inflation = yes
-				calculate_inflation_effect = yes
-				apply_inflation_effect_month = yes
-				calculate_deficit_effects_display = yes
-				apply_deficit_effects_monthly = yes
-				store_old_values = yes
-			}
 			ZZZ = {
 				resize_array = { array = TNO_export_size value = 10 size = 9 }
 				set_variable = { world_cg_ratio = 0 }
@@ -1683,6 +1669,19 @@ on_actions = {
 			every_country = {
 				set_country_flag = starting_tag
 				TNO_startup_nation = yes
+			}
+			every_country = {
+				limit = {
+					exists = yes 
+					econ_can_use_economy_system = yes
+				}
+
+				calculate_total_inflation = yes
+				calculate_inflation_effect = yes
+				apply_inflation_effect_month = yes
+				calculate_deficit_effects_display = yes
+				apply_deficit_effects_monthly = yes
+				store_old_values = yes
 			}
 			# Values that need to be evaluated after econ is setup to prevent week 1 and month 1 numbers being too wrong
 			ZZZ = {

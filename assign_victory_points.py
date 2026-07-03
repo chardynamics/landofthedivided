@@ -67,6 +67,7 @@ SPARSE_US_STATE_ABBRS = frozenset({"WY", "MT", "ND", "SD", "AK"})
 CALIBRATION_MIN_HIT_RATE = 0.85
 FORWARD_RBF_SMOOTHING = 0.5
 PIXEL_LOOKUP_RADIUS = 20
+WATER_PROVINCE_TYPES = frozenset({"lake", "sea"})
 
 DENSE_STATE_CATEGORIES = frozenset({"metropolis", "large_city", "city"})
 MEDIUM_STATE_CATEGORIES = frozenset({"town", "rural", "large_town", "small_town", "developed_rural_town"})
@@ -203,6 +204,29 @@ def compute_province_centroids(province_raster: np.ndarray) -> dict[int, tuple[f
     return centroids
 
 
+def load_province_types(path: Path) -> dict[int, str]:
+    province_types: dict[int, str] = {}
+    with open(path, encoding="utf-8-sig") as handle:
+        for raw_line in handle:
+            line = raw_line.strip()
+            if not line or line.startswith("#"):
+                continue
+            parts = line.split(";")
+            if len(parts) < 5:
+                continue
+            try:
+                province_types[int(parts[0])] = parts[4]
+            except ValueError:
+                continue
+    return province_types
+
+
+def is_land_province(province_id: int, province_types: dict[int, str] | None) -> bool:
+    if not province_types:
+        return True
+    return province_types.get(province_id, "land") not in WATER_PROVINCE_TYPES
+
+
 def haversine_km(lon1: float, lat1: float, lon2: float, lat2: float) -> float:
     radius_km = 6371.0
     phi1, phi2 = math.radians(lat1), math.radians(lat2)
@@ -309,13 +333,19 @@ def locate_province_pixel(
     py: float,
     province_raster: np.ndarray,
     province_to_state: np.ndarray,
+    province_types: dict[int, str] | None = None,
 ) -> int:
     height, width = province_raster.shape
     ix = int(round(px))
     iy = int(round(py))
     if 0 <= ix < width and 0 <= iy < height:
         province_id = int(province_raster[iy, ix])
-        if province_id > 0 and province_id < len(province_to_state) and province_to_state[province_id] > 0:
+        if (
+            province_id > 0
+            and province_id < len(province_to_state)
+            and province_to_state[province_id] > 0
+            and is_land_province(province_id, province_types)
+        ):
             return province_id
 
     best_pid = 0
@@ -333,6 +363,8 @@ def locate_province_pixel(
             province_id = int(window[y_idx, x_idx])
             if province_id >= len(province_to_state) or province_to_state[province_id] <= 0:
                 continue
+            if not is_land_province(province_id, province_types):
+                continue
             dist = (x0 + x_idx - px) ** 2 + (y0 + y_idx - py) ** 2
             if dist < best_dist:
                 best_dist = dist
@@ -348,11 +380,14 @@ def nearest_province_in_states(
     state_ids: list[int],
     state_provinces: dict[int, list[int]],
     centroids: dict[int, tuple[float, float]],
+    province_types: dict[int, str] | None = None,
 ) -> int:
     best_pid = 0
     best_dist = float("inf")
     for state_id in state_ids:
         for province_id in state_provinces.get(state_id, []):
+            if not is_land_province(province_id, province_types):
+                continue
             centroid = centroids.get(province_id)
             if not centroid:
                 continue
@@ -373,12 +408,15 @@ def locate_city_province(
     state_provinces: dict[int, list[int]],
     region_hints: dict[str, list[int]],
     state_names: dict[int, str],
+    province_types: dict[int, str] | None = None,
 ) -> int:
     px, py = project_to_pixel(city.lon, city.lat, rbf_x, rbf_y)
     hinted_states = resolve_hint_states(city, region_hints, state_names)
     if hinted_states:
-        return nearest_province_in_states(px, py, hinted_states, state_provinces, centroids)
-    return locate_province_pixel(px, py, province_raster, province_to_state)
+        return nearest_province_in_states(
+            px, py, hinted_states, state_provinces, centroids, province_types
+        )
+    return locate_province_pixel(px, py, province_raster, province_to_state, province_types)
 
 
 def build_calibration_pairs(
@@ -433,6 +471,7 @@ def evaluate_calibration(
     state_provinces: dict[int, list[int]],
     region_hints: dict[str, list[int]],
     state_names: dict[int, str],
+    province_types: dict[int, str] | None = None,
 ) -> CalibrationReport:
     rbf_x, rbf_y = fit_forward_rbf(pairs)
     residuals_px = []
@@ -440,7 +479,7 @@ def evaluate_calibration(
     for lon, lat, x, y, expected_pid, _ in pairs:
         px, py = project_to_pixel(lon, lat, rbf_x, rbf_y)
         residuals_px.append(((px - x) ** 2 + (py - y) ** 2) ** 0.5)
-        assigned_pid = locate_province_pixel(px, py, province_raster, province_to_state)
+        assigned_pid = locate_province_pixel(px, py, province_raster, province_to_state, province_types)
         if assigned_pid == expected_pid:
             in_sample_hits += 1
 
@@ -452,7 +491,7 @@ def evaluate_calibration(
         rbf_x_loo, rbf_y_loo = fit_forward_rbf(subset)
         px, py = project_to_pixel(lon, lat, rbf_x_loo, rbf_y_loo)
         residual = ((px - x) ** 2 + (py - y) ** 2) ** 0.5
-        assigned_pid = locate_province_pixel(px, py, province_raster, province_to_state)
+        assigned_pid = locate_province_pixel(px, py, province_raster, province_to_state, province_types)
         if assigned_pid == expected_pid or residual <= PIXEL_LOOKUP_RADIUS:
             hits += 1
 
@@ -746,6 +785,7 @@ def map_cities(
     occupied_provinces: set[int],
     only_empty_states: bool,
     states_with_vp: set[int],
+    province_types: dict[int, str] | None = None,
 ) -> tuple[list[tuple[CityRecord, int, int]], list[tuple[CityRecord, str]]]:
     mapped = []
     skipped = []
@@ -760,6 +800,7 @@ def map_cities(
             state_provinces,
             region_hints,
             state_names,
+            province_types,
         )
         if province_id <= 0:
             skipped.append((city, "ocean_or_offmap"))
@@ -948,6 +989,191 @@ def append_localisations(path: Path, entries: list[tuple[int, str]]) -> int:
     return added
 
 
+@dataclass
+class LakeRelocation:
+    state_id: int
+    old_pid: int
+    new_pid: int
+    value: int
+    label: str
+    state_path: Path
+
+
+def find_nearest_land_vp_target(
+    lake_pid: int,
+    state_provinces: list[int],
+    existing_vps: dict[int, int],
+    centroids: dict[int, tuple[float, float]],
+    province_types: dict[int, str],
+) -> int:
+    lake_centroid = centroids.get(lake_pid)
+    if not lake_centroid:
+        return 0
+    cx, cy = lake_centroid
+    best_pid = 0
+    best_dist = float("inf")
+    for candidate in state_provinces:
+        if candidate == lake_pid:
+            continue
+        if not is_land_province(candidate, province_types):
+            continue
+        if candidate in existing_vps:
+            continue
+        centroid = centroids.get(candidate)
+        if not centroid:
+            continue
+        dist = (centroid[0] - cx) ** 2 + (centroid[1] - cy) ** 2
+        if dist < best_dist:
+            best_dist = dist
+            best_pid = candidate
+    return best_pid
+
+
+def plan_lake_vp_relocations(
+    states: dict,
+    province_types: dict[int, str],
+    centroids: dict[int, tuple[float, float]],
+    known_vps: dict[int, str],
+) -> tuple[list[LakeRelocation], list[tuple[int, int, int, str]]]:
+    assignments = parse_existing_vp_assignments(STATE_DIR)
+    relocations: list[LakeRelocation] = []
+    failures: list[tuple[int, int, int, str]] = []
+    for state_id, vps in sorted(assignments.items()):
+        state = states.get(state_id)
+        if not state:
+            continue
+        for old_pid, value in sorted(vps.items()):
+            if province_types.get(old_pid) != "lake":
+                continue
+            new_pid = find_nearest_land_vp_target(
+                old_pid,
+                state["provinces"],
+                vps,
+                centroids,
+                province_types,
+            )
+            label = known_vps.get(old_pid, f"province_{old_pid}")
+            if not new_pid:
+                failures.append((state_id, old_pid, value, label))
+                continue
+            relocations.append(
+                LakeRelocation(
+                    state_id=state_id,
+                    old_pid=old_pid,
+                    new_pid=new_pid,
+                    value=value,
+                    label=label,
+                    state_path=state["path"],
+                )
+            )
+    return relocations, failures
+
+
+def relocate_vp_in_state_file(path: Path, old_pid: int, new_pid: int) -> bool:
+    text = path.read_text(encoding="utf-8")
+    pattern = re.compile(
+        rf"^(\s*victory_points\s*=\s*\{{\s*){old_pid}(\s+)(\d+)(\s*\}})",
+        flags=re.MULTILINE,
+    )
+    if not pattern.search(text):
+        return False
+
+    def replace_block(match: re.Match[str]) -> str:
+        return f"{match.group(1)}{new_pid}{match.group(2)}{match.group(3)}{match.group(4)}"
+
+    updated = pattern.sub(replace_block, text, count=1)
+    path.write_text(updated, encoding="utf-8")
+    return True
+
+
+def relocate_vp_localisation(path: Path, old_pid: int, new_pid: int) -> bool:
+    text = path.read_text(encoding="utf-8-sig")
+    old_pattern = re.compile(
+        rf'^(\s*)VICTORY_POINTS_{old_pid}:0\s*"([^"]+)"\s*$',
+        flags=re.MULTILINE,
+    )
+    match = old_pattern.search(text)
+    if not match:
+        return False
+    indent, label = match.group(1), match.group(2)
+    if re.search(rf"VICTORY_POINTS_{new_pid}:0", text):
+        text = old_pattern.sub("", text)
+    else:
+        text = old_pattern.sub(rf'{indent}VICTORY_POINTS_{new_pid}:0 "{label}"', text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    path.write_text(text, encoding="utf-8")
+    return True
+
+
+def update_anchor_snapshot_for_relocation(old_pid: int, new_pid: int) -> bool:
+    if not ANCHOR_SNAPSHOT.exists():
+        return False
+    rows = list(csv.reader(ANCHOR_SNAPSHOT.open(encoding="utf-8")))
+    if not rows:
+        return False
+    header, *data = rows
+    changed = False
+    updated_rows = [header]
+    for row in data:
+        if len(row) >= 4 and int(row[0]) == old_pid:
+            row[0] = str(new_pid)
+            changed = True
+        updated_rows.append(row)
+    if changed:
+        with ANCHOR_SNAPSHOT.open("w", newline="", encoding="utf-8") as handle:
+            csv.writer(handle).writerows(updated_rows)
+    return changed
+
+
+def fix_lake_victory_points(apply: bool) -> None:
+    states = parse_states(STATE_DIR)
+    province_types = load_province_types(DEFINITION_CSV)
+    color_to_province, _max_province = parse_definition(DEFINITION_CSV)
+    province_raster = rasterize_provinces(PROVINCES_BMP, color_to_province)
+    centroids = compute_province_centroids(province_raster)
+    known_vps = parse_known_vp_localisations(VP_LOCALISATION)
+    relocations, failures = plan_lake_vp_relocations(states, province_types, centroids, known_vps)
+
+    print(f"\n=== Lake province VP relocation ===")
+    print(f"Found {len(relocations)} victory points on lake provinces.")
+    for move in relocations:
+        print(
+            f"  state {move.state_id:3d}: {move.old_pid} -> {move.new_pid} "
+            f"(value {move.value}) {move.label}"
+        )
+    if failures:
+        print(f"\nCould not relocate {len(failures)} lake VPs:")
+        for state_id, old_pid, value, label in failures:
+            print(f"  state {state_id}: {old_pid} (value {value}) {label}")
+
+    if not apply:
+        print("\nDry run only. Re-run with --fix-lakes --apply to edit state files and localisation.")
+        return
+
+    moved_states = 0
+    moved_loc = 0
+    moved_anchors = 0
+    for move in relocations:
+        if relocate_vp_in_state_file(move.state_path, move.old_pid, move.new_pid):
+            moved_states += 1
+        if relocate_vp_localisation(VP_LOCALISATION, move.old_pid, move.new_pid):
+            moved_loc += 1
+        if update_anchor_snapshot_for_relocation(move.old_pid, move.new_pid):
+            moved_anchors += 1
+
+    remaining = sum(
+        1
+        for _state_id, vps in parse_existing_vp_assignments(STATE_DIR).items()
+        for pid in vps
+        if province_types.get(pid) == "lake"
+    )
+    print(
+        f"\nRelocated {len(relocations)} lake VPs "
+        f"({moved_states} state edits, {moved_loc} localisation keys, {moved_anchors} anchor rows)."
+    )
+    print(f"Remaining lake VPs: {remaining}")
+
+
 def write_csv(path: Path, placements: list[Placement], skipped: list[tuple[CityRecord, str]], state_names: dict[int, str]) -> None:
     with open(path, "w", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle)
@@ -1046,6 +1272,7 @@ def spot_check(
     region_hints: dict[str, list[int]],
     state_names: dict[int, str],
     checks: list[tuple[str, int]],
+    province_types: dict[int, str] | None = None,
 ) -> None:
     print("\n=== Spot checks ===")
     for label, expected_pid in checks:
@@ -1071,6 +1298,7 @@ def spot_check(
             state_provinces,
             region_hints,
             state_names,
+            province_types,
         )
         status = "OK" if pid == expected_pid else "MISS"
         print(f"  {label:24s} expected {expected_pid:5d} got {pid:5d} [{status}]")
@@ -1189,6 +1417,7 @@ def write_audit_map(
 def run(apply: bool, merge: bool, audit: bool, only_empty_states: bool) -> None:
     states = parse_states(STATE_DIR)
     state_names = load_state_names(POPULATION_CSV)
+    province_types = load_province_types(DEFINITION_CSV)
     color_to_province, max_province = parse_definition(DEFINITION_CSV)
     province_raster = rasterize_provinces(PROVINCES_BMP, color_to_province)
     centroids = compute_province_centroids(province_raster)
@@ -1213,6 +1442,7 @@ def run(apply: bool, merge: bool, audit: bool, only_empty_states: bool) -> None:
         state_provinces,
         region_hints,
         state_names,
+        province_types,
     )
 
     states_with_vp = {state_id for state_id, state in states.items() if state_has_victory_points(state["path"])}
@@ -1232,6 +1462,7 @@ def run(apply: bool, merge: bool, audit: bool, only_empty_states: bool) -> None:
         existing_vp_provinces,
         only_empty_states,
         states_with_vp,
+        province_types,
     )
     reserved_labels = set(known_vps.values())
     if merge and not only_empty_states:
@@ -1273,6 +1504,7 @@ def run(apply: bool, merge: bool, audit: bool, only_empty_states: bool) -> None:
             ("Houston, TX", 4438),
             ("Seattle, WA", 4005),
         ],
+        province_types,
     )
 
     write_csv(OUTPUT_CSV, placements, skipped, state_names)
@@ -1346,12 +1578,20 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Assign victory points from GeoNames city database.")
     parser.add_argument("--apply", action="store_true", help="Write state files and localisation.")
     parser.add_argument(
+        "--fix-lakes",
+        action="store_true",
+        help="Move victory points off lake provinces onto nearby land provinces in the same state.",
+    )
+    parser.add_argument(
         "--only-empty-states",
         action="store_true",
         help="Legacy mode: only fill states that have zero victory points.",
     )
     parser.add_argument("--audit", action="store_true", help="Write vp_coverage_audit.csv and vp_coverage_map.png.")
     args = parser.parse_args()
+    if args.fix_lakes:
+        fix_lake_victory_points(apply=args.apply)
+        return
     merge = not args.only_empty_states
     run(apply=args.apply, merge=merge, audit=args.audit, only_empty_states=args.only_empty_states)
 

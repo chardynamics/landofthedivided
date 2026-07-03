@@ -214,7 +214,7 @@ add_to_array = { global.american_warlords_1 = ALF }
 add_to_array = { global.american_warlords_1 = NGI }
 add_to_array = { global.american_warlords_2 = SWI }
 add_to_array = { global.american_warlords_1 = CPN } ##needs super buff #
-add_to_array = { global.american_warlords_2 = ERE }
+add_to_array = { global.american_warlords_1 = ERE }
 add_to_array = { global.american_warlords_1 = SYR }
 add_to_array = { global.american_warlords_1 = NGI }
 add_to_array = { global.american_warlords_1 = NGM }
@@ -231,6 +231,7 @@ add_to_array = { global.american_warlords_1 = CMM }
 #Bahamas
 #British and French islands need a super boost eliminating military costs
 add_to_array = { global.american_warlords_2 = ALB }
+add_to_array = { global.american_warlords_2 = NJM }
 add_to_array = { global.american_warlords_2 = SRI }
 add_to_array = { global.american_warlords_2 = SOR }## add idea buff #
 add_to_array = { global.american_warlords_2 = MNV }
@@ -245,7 +246,7 @@ add_to_array = { global.american_warlords_2 = SPM }
 add_to_array = { global.american_warlords_2 = IMA }
 add_to_array = { global.american_warlords_2 = SOH }
 add_to_array = { global.american_warlords_2 = BIR }
-add_to_array = { global.american_warlords_1 = GCC } ##boost
+add_to_array = { global.american_warlords_2 = GCC } ##boost
 add_to_array = { global.american_warlords_2 = CFC }
 add_to_array = { global.american_warlords_2 = SSC } #
 add_to_array = { global.american_warlords_2 = CHA }
@@ -284,9 +285,9 @@ add_to_array = { global.american_warlords_6 = OMA }
 
 add_to_array = { global.world_countries = CAN }
 add_to_array = { global.world_countries = MEX }
-add_to_array = { global.world_countries = HAI }
-add_to_array = { global.world_countries = DOM }
-add_to_array = { global.world_countries = CUB }
+add_to_array = { global.world_countries2 = HAI }
+add_to_array = { global.world_countries2 = DOM }
+add_to_array = { global.world_countries2 = CUB }
 add_to_array = { global.world_countries2 = BAH }
 
 ##Manpower boost
@@ -321,41 +322,27 @@ for_each_scope_loop = {
 	array = global.american_warlords_1
 	set_country_flag = is_warlord
 	add_ideas = USA_warlord_econ_1
-	d_create_army = yes
 }
 for_each_scope_loop = {
 	array = global.american_warlords_2
 	set_country_flag = is_warlord
 	add_ideas = USA_warlord_econ_2
-	d_create_army = yes
 }
 for_each_scope_loop = {
 	array = global.american_warlords_3
 	set_country_flag = is_warlord
 	add_ideas = USA_warlord_econ_3
-	d_create_army2 = yes
 }
 for_each_scope_loop = {
 	array = global.american_warlords_4
 	set_country_flag = is_warlord
 	add_ideas = USA_warlord_econ_4
-	d_create_army3 = yes
 }
 for_each_scope_loop = {
 	array = global.american_warlords_5
 	set_country_flag = is_warlord
-	d_create_army3 = yes
 }
 for_each_scope_loop = {
 	array = global.american_warlords_6
 	set_country_flag = is_warlord
-	d_create_army2 = yes
-}
-for_each_scope_loop = {
-	array = global.world_countries
-	d_create_army3 = yes
-}
-for_each_scope_loop = {
-	array = global.world_countries
-	d_create_army = yes
 }

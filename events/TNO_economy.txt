@@ -317,7 +317,13 @@ country_event = {
 	hidden = yes
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event economy.6 player PU sync"
-		sync_player_production_units = yes
+		if = {
+			limit = {
+				econ_can_use_economy_system = yes
+				has_variable = PU_civilian_factories
+			}
+			sync_player_production_units = yes
+		}
 	}
 	option = {
 		name = economy.6.a

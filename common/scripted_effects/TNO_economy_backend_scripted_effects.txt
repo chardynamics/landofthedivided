@@ -282,6 +282,7 @@ setup_production_units = {
 	set_variable = { PU_consumer_goods_desired = 0 }
 	set_variable = { PU_military_factories_desired = 0 }
 	set_variable = { PU_civilian_factories_desired = 0 }
+	set_variable = { PU_extra = 0 }
 
 	update_production_units_count = yes
 	update_prod_units_display = yes
@@ -289,6 +290,12 @@ setup_production_units = {
 
 	auto_set_ai_pus = yes
 	update_production_unit_allocation = yes
+
+	# Offsite factories fail to stick during on_startup; re-sync after init completes.
+	if = {
+		limit = { is_ai = no }
+		country_event = { id = economy.6 hours = 1 }
+	}
 }
 
 
@@ -451,13 +458,42 @@ update_prod_units_trade = {
 
 # Reallocates production units, taking away factories or granting new factories if need be
 sync_player_production_units = {
-	auto_set_ai_pus = yes
-	update_production_unit_allocation = yes
-	TNO_calculate_power_consumption = yes
-	TNO_calculate_power_consumption = yes
+	if = {
+		limit = {
+			econ_can_use_economy_system = yes
+			has_variable = PU_civilian_factories
+		}
+		auto_set_ai_pus = yes
+		update_production_unit_allocation = yes
+		TNO_calculate_power_consumption = yes
+	}
 }
 
 update_production_unit_allocation = {
+	if = {
+		limit = { NOT = { has_variable = PU_civilian_factories } }
+		if = {
+			limit = { econ_can_use_economy_system = yes }
+			set_variable = { PU_civilian_factories = 0 }
+			set_variable = { PU_military_factories = 0 }
+			set_variable = { PU_consumer_goods = 0 }
+			set_variable = { PU_civilian_factories_desired = 0 }
+			set_variable = { PU_military_factories_desired = 0 }
+			set_variable = { PU_consumer_goods_desired = 0 }
+			set_variable = { PU_civilian_offsite_applied = 0 }
+			set_variable = { PU_military_offsite_applied = 0 }
+			set_variable = { PU_extra = 0 }
+		}
+		else = {
+			# Non-econ tags should never allocate production units.
+		}
+	}
+
+	if = {
+		limit = { NOT = { has_variable = PU_civilian_factories } }
+		# Still uninitialized (non-econ tag) — skip allocation.
+	}
+	else = {
 
 	set_temp_variable = { consumer_goods_min = 0 }
 
@@ -784,6 +820,7 @@ update_production_unit_allocation = {
 		limit = { is_ai = no }
 		update_economy_tab = yes
 		add_to_variable = { TNO_production_gui_dirty = 1 }
+	}
 	}
 }
 
@@ -1839,6 +1876,10 @@ reset_econ_sliders = {
 }
 
 update_econ_sliders = {
+	if = {
+		limit = { NOT = { has_variable = econ_army_expenditures_minimal_pct } }
+		TNO_sliders_initialize = yes
+	}
 
 	# Deficit Monetization
 	clamp_variable = { var = econ_deficit_monetization_minimal_pct min = 0 max = 100 }

@@ -202,11 +202,6 @@ on_actions = {
 			ZZZ = {
 				TNO_Initialize_Tips_and_Tricks = yes
 			}
-
-			every_country = {
-				limit = { is_ai = no }
-				country_event = { id = economy.6 days = 0 }
-			}
 			
 		}
 	}
