@@ -211,6 +211,7 @@ defined_text = {
 	name = AdminTitle_Get_AdminTitle_EndoExo
 	## Categorized into Default, Endonym, and Exonym interactions
 
+	### Default ###
 	text = {
 		trigger = {
 			is_in_array = { global.has_spanish_default = AdminTitle }
@@ -227,6 +228,24 @@ defined_text = {
 		}
 		localization_key = "_fra"
 	}
+
+	### Endonym ###
+	text = {
+		trigger = {
+			is_in_array = { global.has_french_endonym = AdminTitle }
+			controller = { is_in_array = { global.french_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_fra"
+	}
+	text = {
+		trigger = {
+			is_in_array = { global.has_spanish_endonym = AdminTitle }
+			controller = { is_in_array = { global.spanish_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_spa"
+	}
 	### Default ###
 	text = {
 		localization_key = ""
@@ -236,6 +255,33 @@ defined_text = {
 defined_text = {
 	name = AdminTitle_Get_AssocRegion_EndoExo
 	## Categorized into Default, Endonym, and Exonym interactions
+	### Default ###
+	text = {
+		trigger = {
+			is_in_array = { global.has_spanish_default = AssocRegion }
+			controller = { is_in_array = { global.spanish_names = THIS } }
+			NOT = { has_global_flag = TNO_exonym_mode }
+		}
+		localization_key = "_spa"
+	}
+
+	### Endonym ###
+	text = {
+		trigger = {
+			is_in_array = { global.has_spanish_endonym = AssocRegion }
+			controller = { is_in_array = { global.spanish_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_spa"
+	}
+	text = {
+		trigger = {
+			is_in_array = { global.has_french_endonym = AssocRegion }
+			controller = { is_in_array = { global.french_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_fra"
+	}
 
 	### Default ###
 	text = {
@@ -246,8 +292,23 @@ defined_text = {
 defined_text = {
 	name = AdminTitle_Get_AssocRegion_2_EndoExo
 	## Categorized into Default, Endonym, and Exonym interactions
-
 	### Endonym ###
+	text = {
+		trigger = {
+			is_in_array = { global.has_spanish_endonym = AssocRegion2 }
+			controller = { is_in_array = { global.spanish_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_spa"
+	}
+	text = {
+		trigger = {
+			is_in_array = { global.has_french_endonym = AssocRegion2 }
+			controller = { is_in_array = { global.french_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_fra"
+	}
 	text = {
 		localization_key = ""
 	}
@@ -260,6 +321,25 @@ defined_text = {
 
 	### Default ###
 	text = {
+		trigger = {
+			is_in_array = { global.has_french_default = SubAdminTitle }
+			controller = { is_in_array = { global.french_names = THIS } }
+			NOT = { has_global_flag = TNO_exonym_mode }
+		}
+		localization_key = "_fra"
+	}
+	text = {
+		trigger = {
+			is_in_array = { global.has_spanish_endonym = SubAdminTitle }
+			controller = { is_in_array = { global.spanish_names = THIS } }
+			NOT = { check_variable = { SubAdminTitle = token:Admin_Title_Province } }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_spa"
+	}
+
+	### Default ###
+	text = {
 		localization_key = ""
 	}
 }
@@ -267,6 +347,13 @@ defined_text = {
 # Conditions
 defined_text = {
 	name = AdminTitle_Get_AdminTitle_Condition
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = AdminTitle_Get_AssocRegion_Condition
 	text = {
 		localization_key = ""
 	}
@@ -298,6 +385,17 @@ defined_text = {
 
 defined_text = {
 	name = AdminTitle_Get_AssocRegion_Desc_EndoExo
+	text = {
+		trigger = {
+			OR = {
+				is_in_array = { global.has_french_endonym = AssocRegion }
+				is_in_array = { global.has_french_endonym = description@var:AssocRegion }
+			}
+			controller = { is_in_array = { global.french_names = THIS } }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_fra"
+	}
 	text = {
 		localization_key = ""
 	}
@@ -333,6 +431,13 @@ defined_text = {
 			has_global_flag = TNO_endonym_mode
 		}
 		localization_key = "_spa"
+	}
+}
+
+defined_text = {
+	name = AdminTitle_Get_State_Desc_Condition
+	text = {
+		localization_key = ""
 	}
 }
 
@@ -1029,42 +1134,5 @@ defined_text = {
 	}
 	text = {
 		localization_key = "admin_title_textbox_region_tt"
-	}
-}
-
-defined_text = {
-	name = GetGovernorUSA
-	text = {
-		trigger = {
-			check_variable = { senator_1 > 2 }
-			check_variable = { senator_2 > 2 }
-		}
-		localization_key = "NPP"
-	}
-	text = {
-		trigger = {
-			OR = {
-				AND = {
-					check_variable = { senator_1 = 1 }
-					check_variable = { senator_2 = 1 }
-				}
-				AND = {
-					check_variable = { senator_1 = 2 }
-					check_variable = { senator_2 = 1 }
-				}
-				AND = {
-					check_variable = { senator_1 = 1 }
-					check_variable = { senator_2 = 2 }
-				}
-				AND = {
-					check_variable = { senator_1 = 2 }
-					check_variable = { senator_2 = 2 }
-				}
-			}
-		}
-		localization_key = "RDC"
-	}
-	text = {
-		localization_key = "None"
 	}
 }

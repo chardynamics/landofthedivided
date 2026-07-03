@@ -166,6 +166,7 @@ ideas = {
 			on_add = {
 				remove_ideas = Assoc_Region_Cibao
 				set_temp_variable = { i = token:Assoc_Region_Cibao }
+
 			}
 		}
 
@@ -173,6 +174,7 @@ ideas = {
 			on_add = {
 				remove_ideas = Assoc_Region_East
 				set_temp_variable = { i = token:Assoc_Region_East }
+
 				add_to_array = { global.has_spanish_default = i }
 			}
 		}
@@ -181,6 +183,7 @@ ideas = {
 			on_add = {
 				remove_ideas = Assoc_Region_South
 				set_temp_variable = { i = token:Assoc_Region_South }
+
 				add_to_array = { global.has_spanish_default = i }
 			}
 		}
@@ -189,6 +192,7 @@ ideas = {
 			on_add = {
 				remove_ideas = Assoc_Region_Lesser_Antilles
 				set_temp_variable = { i = token:Assoc_Region_Lesser_Antilles }
+
 			}
 		}
 
@@ -196,6 +200,7 @@ ideas = {
 			on_add = {
 				remove_ideas = Assoc_Region_Greater_Antilles
 				set_temp_variable = { i = token:Assoc_Region_Greater_Antilles }
+
 				add_to_array = { global.has_french_endonym = i }
 				add_to_array = { global.has_spanish_endonym = i }
 			}
@@ -205,468 +210,624 @@ ideas = {
 			on_add = {
 				remove_ideas = Assoc_Region_Michigan
 				set_temp_variable = { i = token:Assoc_Region_Michigan }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Alabama = {
 			on_add = {
 				remove_ideas = Assoc_Region_Alabama
 				set_temp_variable = { i = token:Assoc_Region_Alabama }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Alberta = {
 			on_add = {
 				remove_ideas = Assoc_Region_Alberta
 				set_temp_variable = { i = token:Assoc_Region_Alberta }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Arizona = {
 			on_add = {
 				remove_ideas = Assoc_Region_Arizona
 				set_temp_variable = { i = token:Assoc_Region_Arizona }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Arkansas = {
 			on_add = {
 				remove_ideas = Assoc_Region_Arkansas
 				set_temp_variable = { i = token:Assoc_Region_Arkansas }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Baja_California_Sur = {
 			on_add = {
 				remove_ideas = Assoc_Region_Baja_California_Sur
 				set_temp_variable = { i = token:Assoc_Region_Baja_California_Sur }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_British_Columbia = {
 			on_add = {
 				remove_ideas = Assoc_Region_British_Columbia
 				set_temp_variable = { i = token:Assoc_Region_British_Columbia }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_California = {
 			on_add = {
 				remove_ideas = Assoc_Region_California
 				set_temp_variable = { i = token:Assoc_Region_California }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Chihuahua = {
 			on_add = {
 				remove_ideas = Assoc_Region_Chihuahua
 				set_temp_variable = { i = token:Assoc_Region_Chihuahua }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Coahuila = {
 			on_add = {
 				remove_ideas = Assoc_Region_Coahuila
 				set_temp_variable = { i = token:Assoc_Region_Coahuila }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Colorado = {
 			on_add = {
 				remove_ideas = Assoc_Region_Colorado
 				set_temp_variable = { i = token:Assoc_Region_Colorado }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Connecticut = {
 			on_add = {
 				remove_ideas = Assoc_Region_Connecticut
 				set_temp_variable = { i = token:Assoc_Region_Connecticut }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Delaware = {
 			on_add = {
 				remove_ideas = Assoc_Region_Delaware
 				set_temp_variable = { i = token:Assoc_Region_Delaware }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_District_of_Columbia = {
 			on_add = {
 				remove_ideas = Assoc_Region_District_of_Columbia
 				set_temp_variable = { i = token:Assoc_Region_District_of_Columbia }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Durango = {
 			on_add = {
 				remove_ideas = Assoc_Region_Durango
 				set_temp_variable = { i = token:Assoc_Region_Durango }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Florida = {
 			on_add = {
 				remove_ideas = Assoc_Region_Florida
 				set_temp_variable = { i = token:Assoc_Region_Florida }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Georgia = {
 			on_add = {
 				remove_ideas = Assoc_Region_Georgia
 				set_temp_variable = { i = token:Assoc_Region_Georgia }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Hidalgo = {
 			on_add = {
 				remove_ideas = Assoc_Region_Hidalgo
 				set_temp_variable = { i = token:Assoc_Region_Hidalgo }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Idaho = {
 			on_add = {
 				remove_ideas = Assoc_Region_Idaho
 				set_temp_variable = { i = token:Assoc_Region_Idaho }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Illinois = {
 			on_add = {
 				remove_ideas = Assoc_Region_Illinois
 				set_temp_variable = { i = token:Assoc_Region_Illinois }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Indiana = {
 			on_add = {
 				remove_ideas = Assoc_Region_Indiana
 				set_temp_variable = { i = token:Assoc_Region_Indiana }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Iowa = {
 			on_add = {
 				remove_ideas = Assoc_Region_Iowa
 				set_temp_variable = { i = token:Assoc_Region_Iowa }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Jalisco = {
 			on_add = {
 				remove_ideas = Assoc_Region_Jalisco
 				set_temp_variable = { i = token:Assoc_Region_Jalisco }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Kansas = {
 			on_add = {
 				remove_ideas = Assoc_Region_Kansas
 				set_temp_variable = { i = token:Assoc_Region_Kansas }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Kentucky = {
 			on_add = {
 				remove_ideas = Assoc_Region_Kentucky
 				set_temp_variable = { i = token:Assoc_Region_Kentucky }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Louisiana = {
 			on_add = {
 				remove_ideas = Assoc_Region_Louisiana
 				set_temp_variable = { i = token:Assoc_Region_Louisiana }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Maine = {
 			on_add = {
 				remove_ideas = Assoc_Region_Maine
 				set_temp_variable = { i = token:Assoc_Region_Maine }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Manitoba = {
 			on_add = {
 				remove_ideas = Assoc_Region_Manitoba
 				set_temp_variable = { i = token:Assoc_Region_Manitoba }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Maryland = {
 			on_add = {
 				remove_ideas = Assoc_Region_Maryland
 				set_temp_variable = { i = token:Assoc_Region_Maryland }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Massachusetts = {
 			on_add = {
 				remove_ideas = Assoc_Region_Massachusetts
 				set_temp_variable = { i = token:Assoc_Region_Massachusetts }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Michoacan = {
 			on_add = {
 				remove_ideas = Assoc_Region_Michoacan
 				set_temp_variable = { i = token:Assoc_Region_Michoacan }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Minnesota = {
 			on_add = {
 				remove_ideas = Assoc_Region_Minnesota
 				set_temp_variable = { i = token:Assoc_Region_Minnesota }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Mississippi = {
 			on_add = {
 				remove_ideas = Assoc_Region_Mississippi
 				set_temp_variable = { i = token:Assoc_Region_Mississippi }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Missouri = {
 			on_add = {
 				remove_ideas = Assoc_Region_Missouri
 				set_temp_variable = { i = token:Assoc_Region_Missouri }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Montana = {
 			on_add = {
 				remove_ideas = Assoc_Region_Montana
 				set_temp_variable = { i = token:Assoc_Region_Montana }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Morelos = {
 			on_add = {
 				remove_ideas = Assoc_Region_Morelos
 				set_temp_variable = { i = token:Assoc_Region_Morelos }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Nayarit = {
 			on_add = {
 				remove_ideas = Assoc_Region_Nayarit
 				set_temp_variable = { i = token:Assoc_Region_Nayarit }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Nebraska = {
 			on_add = {
 				remove_ideas = Assoc_Region_Nebraska
 				set_temp_variable = { i = token:Assoc_Region_Nebraska }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Nevada = {
 			on_add = {
 				remove_ideas = Assoc_Region_Nevada
 				set_temp_variable = { i = token:Assoc_Region_Nevada }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_New_Brunswick = {
 			on_add = {
 				remove_ideas = Assoc_Region_New_Brunswick
 				set_temp_variable = { i = token:Assoc_Region_New_Brunswick }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_New_Hampshire = {
 			on_add = {
 				remove_ideas = Assoc_Region_New_Hampshire
 				set_temp_variable = { i = token:Assoc_Region_New_Hampshire }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_New_Jersey = {
 			on_add = {
 				remove_ideas = Assoc_Region_New_Jersey
 				set_temp_variable = { i = token:Assoc_Region_New_Jersey }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_New_Mexico = {
 			on_add = {
 				remove_ideas = Assoc_Region_New_Mexico
 				set_temp_variable = { i = token:Assoc_Region_New_Mexico }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_New_York = {
 			on_add = {
 				remove_ideas = Assoc_Region_New_York
 				set_temp_variable = { i = token:Assoc_Region_New_York }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Newfoundland_and_Labrador = {
 			on_add = {
 				remove_ideas = Assoc_Region_Newfoundland_and_Labrador
 				set_temp_variable = { i = token:Assoc_Region_Newfoundland_and_Labrador }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_North_Carolina = {
 			on_add = {
 				remove_ideas = Assoc_Region_North_Carolina
 				set_temp_variable = { i = token:Assoc_Region_North_Carolina }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_North_Dakota = {
 			on_add = {
 				remove_ideas = Assoc_Region_North_Dakota
 				set_temp_variable = { i = token:Assoc_Region_North_Dakota }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Nova_Scotia = {
 			on_add = {
 				remove_ideas = Assoc_Region_Nova_Scotia
 				set_temp_variable = { i = token:Assoc_Region_Nova_Scotia }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Nuevo_Leon = {
 			on_add = {
 				remove_ideas = Assoc_Region_Nuevo_Leon
 				set_temp_variable = { i = token:Assoc_Region_Nuevo_Leon }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Nunavut = {
 			on_add = {
 				remove_ideas = Assoc_Region_Nunavut
 				set_temp_variable = { i = token:Assoc_Region_Nunavut }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Ohio = {
 			on_add = {
 				remove_ideas = Assoc_Region_Ohio
 				set_temp_variable = { i = token:Assoc_Region_Ohio }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Oklahoma = {
 			on_add = {
 				remove_ideas = Assoc_Region_Oklahoma
 				set_temp_variable = { i = token:Assoc_Region_Oklahoma }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Ontario = {
 			on_add = {
 				remove_ideas = Assoc_Region_Ontario
 				set_temp_variable = { i = token:Assoc_Region_Ontario }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Oregon = {
 			on_add = {
 				remove_ideas = Assoc_Region_Oregon
 				set_temp_variable = { i = token:Assoc_Region_Oregon }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Pennsylvania = {
 			on_add = {
 				remove_ideas = Assoc_Region_Pennsylvania
 				set_temp_variable = { i = token:Assoc_Region_Pennsylvania }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Prince_Edward_Island = {
 			on_add = {
 				remove_ideas = Assoc_Region_Prince_Edward_Island
 				set_temp_variable = { i = token:Assoc_Region_Prince_Edward_Island }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Puerto_Rico = {
 			on_add = {
 				remove_ideas = Assoc_Region_Puerto_Rico
 				set_temp_variable = { i = token:Assoc_Region_Puerto_Rico }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Quebec = {
 			on_add = {
 				remove_ideas = Assoc_Region_Quebec
 				set_temp_variable = { i = token:Assoc_Region_Quebec }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Rhode_Island = {
 			on_add = {
 				remove_ideas = Assoc_Region_Rhode_Island
 				set_temp_variable = { i = token:Assoc_Region_Rhode_Island }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Saint_Pierre_et_Miquelon = {
 			on_add = {
 				remove_ideas = Assoc_Region_Saint_Pierre_et_Miquelon
 				set_temp_variable = { i = token:Assoc_Region_Saint_Pierre_et_Miquelon }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_San_Luis_Potosi = {
 			on_add = {
 				remove_ideas = Assoc_Region_San_Luis_Potosi
 				set_temp_variable = { i = token:Assoc_Region_San_Luis_Potosi }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Saskatchewan = {
 			on_add = {
 				remove_ideas = Assoc_Region_Saskatchewan
 				set_temp_variable = { i = token:Assoc_Region_Saskatchewan }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Sinaloa = {
 			on_add = {
 				remove_ideas = Assoc_Region_Sinaloa
 				set_temp_variable = { i = token:Assoc_Region_Sinaloa }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Sonora = {
 			on_add = {
 				remove_ideas = Assoc_Region_Sonora
 				set_temp_variable = { i = token:Assoc_Region_Sonora }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_South_Carolina = {
 			on_add = {
 				remove_ideas = Assoc_Region_South_Carolina
 				set_temp_variable = { i = token:Assoc_Region_South_Carolina }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_South_Dakota = {
 			on_add = {
 				remove_ideas = Assoc_Region_South_Dakota
 				set_temp_variable = { i = token:Assoc_Region_South_Dakota }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Tennessee = {
 			on_add = {
 				remove_ideas = Assoc_Region_Tennessee
 				set_temp_variable = { i = token:Assoc_Region_Tennessee }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Texas = {
 			on_add = {
 				remove_ideas = Assoc_Region_Texas
 				set_temp_variable = { i = token:Assoc_Region_Texas }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Utah = {
 			on_add = {
 				remove_ideas = Assoc_Region_Utah
 				set_temp_variable = { i = token:Assoc_Region_Utah }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Veracruz = {
 			on_add = {
 				remove_ideas = Assoc_Region_Veracruz
 				set_temp_variable = { i = token:Assoc_Region_Veracruz }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Vermont = {
 			on_add = {
 				remove_ideas = Assoc_Region_Vermont
 				set_temp_variable = { i = token:Assoc_Region_Vermont }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Virginia = {
 			on_add = {
 				remove_ideas = Assoc_Region_Virginia
 				set_temp_variable = { i = token:Assoc_Region_Virginia }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Washington = {
 			on_add = {
 				remove_ideas = Assoc_Region_Washington
 				set_temp_variable = { i = token:Assoc_Region_Washington }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_West_Virginia = {
 			on_add = {
 				remove_ideas = Assoc_Region_West_Virginia
 				set_temp_variable = { i = token:Assoc_Region_West_Virginia }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Wisconsin = {
 			on_add = {
 				remove_ideas = Assoc_Region_Wisconsin
 				set_temp_variable = { i = token:Assoc_Region_Wisconsin }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Wyoming = {
 			on_add = {
 				remove_ideas = Assoc_Region_Wyoming
 				set_temp_variable = { i = token:Assoc_Region_Wyoming }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Yucatan = {
 			on_add = {
 				remove_ideas = Assoc_Region_Yucatan
 				set_temp_variable = { i = token:Assoc_Region_Yucatan }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 		Assoc_Region_Tamaulipas = {
 			on_add = {
 				remove_ideas = Assoc_Region_Tamaulipas
 				set_temp_variable = { i = token:Assoc_Region_Tamaulipas }
+
+				add_to_array = { global.is_admin_region = i }
 			}
 		}
 	}
