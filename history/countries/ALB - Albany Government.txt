@@ -212,9 +212,9 @@ add_to_array = { global.american_warlords_1 = TAL }
 add_to_array = { global.american_warlords_1 = JMA }
 add_to_array = { global.american_warlords_1 = ALF }
 add_to_array = { global.american_warlords_1 = NGI }
-add_to_array = { global.american_warlords_1 = SWI }
+add_to_array = { global.american_warlords_2 = SWI }
 add_to_array = { global.american_warlords_1 = CPN } ##needs super buff #
-add_to_array = { global.american_warlords_1 = ERE }
+add_to_array = { global.american_warlords_2 = ERE }
 add_to_array = { global.american_warlords_1 = SYR }
 add_to_array = { global.american_warlords_1 = NGI }
 add_to_array = { global.american_warlords_1 = NGM }
@@ -227,6 +227,7 @@ add_to_array = { global.american_warlords_1 = SDA }
 add_to_array = { global.american_warlords_1 = SWV }
 add_to_array = { global.american_warlords_1 = WTB }
 add_to_array = { global.american_warlords_1 = MCA }
+add_to_array = { global.american_warlords_1 = CMM }
 #Bahamas
 #British and French islands need a super boost eliminating military costs
 add_to_array = { global.american_warlords_2 = ALB }
@@ -244,7 +245,7 @@ add_to_array = { global.american_warlords_2 = SPM }
 add_to_array = { global.american_warlords_2 = IMA }
 add_to_array = { global.american_warlords_2 = SOH }
 add_to_array = { global.american_warlords_2 = BIR }
-add_to_array = { global.american_warlords_2 = GCC } ##boost
+add_to_array = { global.american_warlords_1 = GCC } ##boost
 add_to_array = { global.american_warlords_2 = CFC }
 add_to_array = { global.american_warlords_2 = SSC } #
 add_to_array = { global.american_warlords_2 = CHA }
@@ -260,7 +261,7 @@ add_to_array = { global.american_warlords_2 = PRC }
 
 add_to_array = { global.american_warlords_3 = CKC } #
 add_to_array = { global.american_warlords_3 = SWA } #
-add_to_array = { global.american_warlords_3 = SAZ }
+add_to_array = { global.american_warlords_2 = SAZ }
 add_to_array = { global.american_warlords_3 = HMA }
 add_to_array = { global.american_warlords_3 = NOM }
 add_to_array = { global.american_warlords_3 = TMA }
@@ -286,9 +287,7 @@ add_to_array = { global.world_countries = MEX }
 add_to_array = { global.world_countries = HAI }
 add_to_array = { global.world_countries = DOM }
 add_to_array = { global.world_countries = CUB }
-add_to_array = { global.world_countries = FRA }
-add_to_array = { global.world_countries = ENG }
-add_to_array = { global.world_countries = BAH }
+add_to_array = { global.world_countries2 = BAH }
 
 ##Manpower boost
 add_to_array = { global.american_warlords_mp = LMA } #
@@ -297,6 +296,7 @@ add_to_array = { global.american_warlords_mp = SPM } #
 add_to_array = { global.american_warlords_mp = MMS } #
 add_to_array = { global.american_warlords_mp = ALF } #
 add_to_array = { global.american_warlords_mp = GCC } #
+add_to_array = { global.american_warlords_mp2 = SUT } #
 
 #add_to_array = { global.american_warlords_mp = CAN } #
 
@@ -354,4 +354,8 @@ for_each_scope_loop = {
 for_each_scope_loop = {
 	array = global.world_countries
 	d_create_army3 = yes
+}
+for_each_scope_loop = {
+	array = global.world_countries
+	d_create_army = yes
 }
