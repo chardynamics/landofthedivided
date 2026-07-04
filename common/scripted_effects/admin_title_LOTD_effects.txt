@@ -752,6 +752,7 @@ TNO_admin_title_LOTD = {
 	every_state = {
 		limit = {
 			OR = {
+				state = 683
 				state = 105
 				state = 108
 				state = 109
@@ -979,7 +980,6 @@ TNO_admin_title_LOTD = {
 				state = 637
 				state = 653
 				state = 688
-				state = 683
 			}
 		}
 		set_variable = { AssocRegion = token:Assoc_Region_Tamaulipas }

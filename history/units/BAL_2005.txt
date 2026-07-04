@@ -21,7 +21,19 @@ division_template = {
 
 units = {
 	division = {
-		location = 1885 #Baltimore, MD
+		location = 4389 #Baltimore, MD
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 4389 #Baltimore, MD
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 4389 #Baltimore, MD
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
@@ -45,25 +57,13 @@ units = {
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 1885 #Baltimore, MD
+		location = 5885 #Frederick, MD
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 1885 #Baltimore, MD
-		division_template = "Infantry Unit"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.75
-	}
-	division = {
-		location = 4108 #Frederick, MD
-		division_template = "Infantry Unit"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.75
-	}
-	division = {
-		location = 4108 #Frederick, MD
+		location = 5885 #Frederick, MD
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
@@ -129,67 +129,67 @@ units = {
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 5895 #Queen Anne's, MD
+		location = 2622 #Queen Anne's, MD
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 5895 #Queen Anne's, MD
+		location = 2622 #Queen Anne's, MD
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 5037 #Sussex, DE
+		location = 4970 #Sussex, DE
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 5037 #Sussex, DE
+		location = 4970 #Sussex, DE
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 5037 #Sussex, DE
+		location = 4970 #Sussex, DE
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 5037 #Sussex, DE
+		location = 4970 #Sussex, DE
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 4534 #Wicomico, MD
+		location = 5876 #Wicomico, MD
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 4534 #Wicomico, MD
+		location = 5876 #Wicomico, MD
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 4534 #Wicomico, MD
+		location = 5876 #Wicomico, MD
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 4534 #Wicomico, MD
+		location = 5876 #Wicomico, MD
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 4534 #Wicomico, MD
+		location = 5876 #Wicomico, MD
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75

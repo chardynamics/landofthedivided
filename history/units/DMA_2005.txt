@@ -129,7 +129,13 @@ units = {
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 8888 #King's Bay Naval Base, GA
+		location = 8891 #King's Bay Naval Base, GA
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 8887 #King's Bay Naval Base, GA
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75

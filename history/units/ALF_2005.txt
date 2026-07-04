@@ -21,31 +21,25 @@ division_template = {
 
 units = {
 	division = {
-		location = 203 #Butler, AL
+		location = 1912 #Butler, AL
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 203 #Butler, AL
+		location = 874 #Butler, AL
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 203 #Butler, AL
+		location = 2461 #Butler, AL
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 203 #Butler, AL
-		division_template = "Infantry Unit"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.75
-	}
-	division = {
-		location = 277 #Clarke, AL
+		location = 1912 #Butler, AL
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
@@ -63,7 +57,13 @@ units = {
 		start_equipment_factor = 0.75
 	}
 	division = {
-		location = 277 #Clarke, AL
+		location = 770 #Clarke, AL
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 237 #Clarke, AL
 		division_template = "Infantry Unit"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
