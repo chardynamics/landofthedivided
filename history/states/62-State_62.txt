@@ -1,32 +1,32 @@
 state = { 
 	id = 62 
 	name = "STATE_62" 
-	manpower = 854441
-	state_category = metropolis
+	manpower = 854441 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = CAN 
 		
-		victory_points = { 3995 10 }
-		victory_points = { 611 16 }
 		victory_points = { 269 4 }
+		victory_points = { 611 16 }
 		victory_points = { 2339 4 }
 		victory_points = { 3653 4 }
-
+		victory_points = { 3995 10 }
 		
 		buildings = { 
 			infrastructure = 3 
 			air_base = 9 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
 		}
 		
 		add_core_of = CAN 

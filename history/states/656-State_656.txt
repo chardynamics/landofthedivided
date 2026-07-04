@@ -1,8 +1,9 @@
 state = { 
 	id = 656 
 	name = "STATE_656" 
-	manpower = 56275
-	state_category = town
+	manpower = 56275 
+	
+	state_category = town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	
@@ -18,8 +19,8 @@ state = {
 		buildings = { 
 			infrastructure = 2 
 			air_base = 4 
-			schools = 1
-			hospitals = 1
+			schools = 1 
+			hospitals = 1 
 		}
 		
 		add_core_of = GBR 

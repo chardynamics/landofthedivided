@@ -1,28 +1,29 @@
 state = { 
 	id = 725 
 	name = "STATE_725" 
-	manpower = 969648
-	state_category = metropolis
+	manpower = 969648 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = MEX 
 		
+		victory_points = { 4358 4 }
+		
 		buildings = { 
 			infrastructure = 0 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
 		}
 		
 		add_core_of = MEX 
-	
-		victory_points = { 4358 4 }
-}
+	}
 	provinces = { 1203 2985 4358 5068 }
 }

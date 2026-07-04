@@ -1,26 +1,26 @@
 state = { 
 	id = 621 
 	name = "STATE_621" 
-	manpower = 468360
-	state_category = large_city
+	manpower = 468360 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = CFC 
 		
-		victory_points = { 6429 16 }
 		victory_points = { 4002 4 }
-
+		victory_points = { 6429 16 }
 		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			dockyard = 1
-			radar_station = 1
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			dockyard = 1 
+			radar_station = 1 
 			6423 = { naval_base = 9 }
 		}
 		

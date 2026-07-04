@@ -1,15 +1,16 @@
 state = { 
 	id = 118 
 	name = "STATE_118" 
-	manpower = 500
-	state_category = enclave
+	manpower = 500 
+	
+	state_category = enclave 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = FRA 
 		
 		buildings = { 
 			infrastructure = 0 
-			thermoelectric_plant = 1
+			thermoelectric_plant = 1 
 		}
 		
 		add_core_of = FRA 

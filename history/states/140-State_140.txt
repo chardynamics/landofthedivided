@@ -1,28 +1,28 @@
 state = { 
 	id = 140 
 	name = "STATE_140" 
-	manpower = 686408
-	state_category = metropolis
+	manpower = 686408 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = SWA 
 		
-		victory_points = { 3807 10 }
 		victory_points = { 1238 6 }
+		victory_points = { 3807 10 }
 		victory_points = { 5412 6 }
-
 		
 		buildings = { 
 			infrastructure = 3 
 			air_base = 5 
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
 		}
 		
 		add_core_of = SWA 

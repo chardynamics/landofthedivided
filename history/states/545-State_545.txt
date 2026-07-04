@@ -1,28 +1,28 @@
 state = { 
 	id = 545 
 	name = "STATE_545" 
-	manpower = 527999
-	state_category = large_city
+	manpower = 527999 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = BIR 
 		
-		victory_points = { 4841 25 }
-		victory_points = { 2596 6 }
 		victory_points = { 2580 4 }
+		victory_points = { 2596 6 }
+		victory_points = { 4841 25 }
 		victory_points = { 5056 4 }
-
 		
 		buildings = { 
 			infrastructure = 6 
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			radar_station = 1
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			radar_station = 1 
 		}
 		
 		add_core_of = BIR 

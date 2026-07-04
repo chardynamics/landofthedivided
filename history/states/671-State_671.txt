@@ -1,8 +1,9 @@
 state = { 
 	id = 671 
 	name = "STATE_671" 
-	manpower = 3205953
-	state_category = megalopolis
+	manpower = 3205953 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = MEX 
@@ -11,19 +12,18 @@ state = {
 		victory_points = { 3723 4 }
 		victory_points = { 3975 4 }
 		victory_points = { 5081 4 }
-
 		
 		buildings = { 
 			infrastructure = 2 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 2
-			radar_station = 2
-			anti_air_building = 2
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 2 
+			radar_station = 2 
+			anti_air_building = 2 
 		}
 		
 		add_core_of = MEX 

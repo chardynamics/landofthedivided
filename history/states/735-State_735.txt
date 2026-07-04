@@ -1,30 +1,31 @@
 state = { 
 	id = 735 
 	name = "STATE_735" 
-	manpower = 1514620
-	state_category = megalopolis
+	manpower = 1514620 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = HAI 
 		
+		victory_points = { 6551 25 }
+		
 		buildings = { 
 			infrastructure = 3 
-			thermoelectric_plant = 3
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			dockyard = 2
-			radar_station = 1
-			anti_air_building = 1
+			thermoelectric_plant = 3 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			dockyard = 2 
+			radar_station = 1 
+			anti_air_building = 1 
 		}
 		
 		#4963 = { naval_base = 10 }
 		add_core_of = HAI 
-	
-		victory_points = { 6551 25 }
-}
+	}
 	provinces = { 1005 1237 4468 4963 6551 }
 }

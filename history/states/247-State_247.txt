@@ -1,8 +1,9 @@
 state = { 
 	id = 247 
 	name = "STATE_247" 
-	manpower = 295699
-	state_category = city
+	manpower = 295699 
+	
+	state_category = city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -10,16 +11,15 @@ state = {
 		
 		victory_points = { 1383 6 }
 		victory_points = { 4587 4 }
-
 		
 		buildings = { 
 			infrastructure = 7 
-			thermoelectric_plant = 1
-			schools = 2
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
+			thermoelectric_plant = 1 
+			schools = 2 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
 		}
 		
 		add_claim_by = REO 

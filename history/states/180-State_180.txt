@@ -1,16 +1,15 @@
 state = { 
 	id = 180 
 	name = "STATE_180" 
-	manpower = 34874
-	state_category = town
+	manpower = 34874 
+	
+	state_category = town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = NOM 
 		
-		buildings = { 
-			infrastructure = 4 
-		}
+		buildings = { infrastructure = 4 }
 		
 		add_core_of = NOM 
 	}

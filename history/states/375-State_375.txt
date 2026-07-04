@@ -1,17 +1,18 @@
 state = { 
 	id = 375 
 	name = "STATE_375" 
-	manpower = 1321
-	state_category = pastoral
+	manpower = 1321 
+	
+	state_category = pastoral 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = DMA 
 		
+		victory_points = { 587 2 }
+		
 		buildings = { infrastructure = 4 }
 		
 		add_core_of = DMA 
-	
-		victory_points = { 587 2 }
-}
+	}
 	provinces = { 587 }
 }

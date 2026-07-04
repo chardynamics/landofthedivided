@@ -1,8 +1,9 @@
 state = { 
 	id = 242 
 	name = "STATE_242" 
-	manpower = 98568
-	state_category = large_town
+	manpower = 98568 
+	
+	state_category = large_town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -13,10 +14,10 @@ state = {
 		buildings = { 
 			infrastructure = 7 
 			air_base = 6 
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
 		}
 		
 		add_core_of = WTB 

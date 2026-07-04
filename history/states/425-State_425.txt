@@ -1,8 +1,9 @@
 state = { 
 	id = 425 
 	name = "STATE_425" 
-	manpower = 1647985
-	state_category = megalopolis
+	manpower = 1647985 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = SVR 
@@ -11,15 +12,15 @@ state = {
 		
 		buildings = { 
 			infrastructure = 9 
-			thermoelectric_plant = 4
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			dockyard = 2
-			radar_station = 2
-			anti_air_building = 1
+			thermoelectric_plant = 4 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			dockyard = 2 
+			radar_station = 2 
+			anti_air_building = 1 
 			4329 = { naval_base = 9 }
 		}
 		

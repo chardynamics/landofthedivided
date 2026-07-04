@@ -1,26 +1,27 @@
 state = { 
 	id = 371 
 	name = "STATE_371" 
-	manpower = 431327
-	state_category = large_city
+	manpower = 431327 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = RWP 
 		
+		victory_points = { 5809 4 }
+		victory_points = { 5843 4 }
+		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
 		}
 		
 		add_core_of = RWP 
-	
-		victory_points = { 5809 4 }
-		victory_points = { 5843 4 }
-}
+	}
 	provinces = { 3262 3327 3780 5809 5843 }
 }

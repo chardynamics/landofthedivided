@@ -1,28 +1,28 @@
 state = { 
 	id = 369 
 	name = "STATE_369" 
-	manpower = 625648
-	state_category = metropolis
+	manpower = 625648 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = EFG 
 		
-		victory_points = { 5803 16 }
 		victory_points = { 3802 4 }
-
+		victory_points = { 5803 16 }
 		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 2
-			nuclear_reactor = 1
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 2 
+			nuclear_reactor = 1 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
 		}
 		
 		add_core_of = NGI 

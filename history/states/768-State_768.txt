@@ -1,15 +1,16 @@
 state = { 
 	id = 768 
 	name = "STATE_768" 
-	manpower = 8455
-	state_category = rural
+	manpower = 8455 
+	
+	state_category = rural 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = DOM 
 		
 		buildings = { 
 			infrastructure = 0 
-			dockyard = 1
+			dockyard = 1 
 			187 = { naval_base = 5 }
 		}
 		

@@ -1,12 +1,15 @@
 state = { 
 	id = 701 
 	name = "STATE_701" 
-	manpower = 1000
+	manpower = 1000 
+	
 	state_category = wasteland 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = SCA 
+		
+		victory_points = { 2211 4 }
 		
 		buildings = { 
 			infrastructure = 0 
@@ -14,8 +17,6 @@ state = {
 		}
 		
 		add_core_of = SCA 
-	
-		victory_points = { 2211 4 }
-}
+	}
 	provinces = { 443 717 977 1148 1445 1704 2211 2937 4240 4349 4447 4455 4589 4731 5857 5888 5901 5920 8688 }
 }

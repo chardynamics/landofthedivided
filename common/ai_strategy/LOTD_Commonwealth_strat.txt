@@ -1,0 +1,44 @@
+SCA_station_troops_in_cascadia = {
+	allowed = {
+		tag = SCA
+	}
+	enable = {
+		OR = {
+			is_in_faction_with = SOR
+			is_in_faction_with = SWA
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		order_id = 1
+		area = frontera_occidente
+		subtract_invasions_from_need = yes
+	}
+}
+
+SCA_station_troops_in_southeast = {
+	allowed = {
+		tag = SCA
+	}
+	enable = {
+		OR = {
+			is_in_faction_with = SAZ
+			is_in_faction_with = MNV
+			is_in_faction_with = MNM
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = put_unit_buffers
+		ratio = 0.2
+		order_id = 1
+		area = frontera_tejas
+		subtract_invasions_from_need = yes
+	}
+}

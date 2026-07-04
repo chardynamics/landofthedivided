@@ -1,29 +1,28 @@
 state = { 
 	id = 141 
 	name = "STATE_141" 
-	manpower = 41026
-	state_category = large_town
+	manpower = 41026 
+	
+	state_category = large_town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = CAN 
 		
-		victory_points = { 3554 10 }
-		victory_points = { 4815 10 }
-		victory_points = { 5451 10 }
 		victory_points = { 76 4 }
-		victory_points = { 5425 4 }
+		victory_points = { 3554 10 }
 		victory_points = { 4156 4 }
-
-
+		victory_points = { 4815 10 }
+		victory_points = { 5425 4 }
+		victory_points = { 5451 10 }
 		
 		buildings = { 
 			infrastructure = 4 
 			air_base = 9 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 2
-			schools = 1
-			hospitals = 1
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 2 
+			schools = 1 
+			hospitals = 1 
 			3435 = { naval_base = 9 }
 		}
 		

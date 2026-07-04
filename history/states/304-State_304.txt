@@ -1,8 +1,9 @@
 state = { 
 	id = 304 
 	name = "STATE_304" 
-	manpower = 536118
-	state_category = large_city
+	manpower = 536118 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -10,17 +11,16 @@ state = {
 		
 		victory_points = { 3287 16 }
 		victory_points = { 5676 10 }
-
 		
 		buildings = { 
 			infrastructure = 7 
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			radar_station = 1
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			radar_station = 1 
 		}
 		
 		add_core_of = SMN 

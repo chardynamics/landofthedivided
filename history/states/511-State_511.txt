@@ -1,27 +1,27 @@
 state = { 
 	id = 511 
 	name = "STATE_511" 
-	manpower = 629846
-	state_category = metropolis
+	manpower = 629846 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = OKC 
 		
 		victory_points = { 805 10 }
-		victory_points = { 4479 6 }
 		victory_points = { 3379 4 }
-
+		victory_points = { 4479 6 }
 		
 		buildings = { 
 			infrastructure = 7 
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
 		}
 		
 		add_core_of = OKC 

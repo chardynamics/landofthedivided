@@ -1,25 +1,26 @@
 state = { 
 	id = 65 
 	name = "STATE_65" 
-	manpower = 136911
-	state_category = city
+	manpower = 136911 
+	
+	state_category = city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = SMN 
 		
+		victory_points = { 1930 4 }
+		victory_points = { 3504 6 }
+		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
 		}
 		
 		add_core_of = SMN 
-	
-		victory_points = { 3504 6 }
-		victory_points = { 1930 4 }
-}
+	}
 	provinces = { 1930 2146 2576 3504 5738 5742 }
 }

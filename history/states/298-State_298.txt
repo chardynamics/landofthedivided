@@ -1,20 +1,22 @@
 state = { 
 	id = 298 
 	name = "STATE_298" 
-	manpower = 69988
-	state_category = large_town
+	manpower = 69988 
+	
+	state_category = large_town 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = SMN 
 		
-		buildings = {
-			schools = 1
-			hospitals = 1
-			hospitals = 1 infrastructure = 7 }
+		victory_points = { 286 3 }
+		
+		buildings = { 
+			schools = 1 
+			hospitals = 1 
+			infrastructure = 7 
+		}
 		
 		add_core_of = SMN 
-	
-		victory_points = { 286 3 }
-}
+	}
 	provinces = { 286 1520 4831 5086 }
 }

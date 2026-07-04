@@ -1,8 +1,9 @@
 state = { 
 	id = 504 
 	name = "STATE_504" 
-	manpower = 487553
-	state_category = large_city
+	manpower = 487553 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = TMA 
@@ -11,14 +12,14 @@ state = {
 		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 1
-			nuclear_reactor = 1
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			radar_station = 1
+			thermoelectric_plant = 1 
+			nuclear_reactor = 1 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			radar_station = 1 
 		}
 		
 		add_core_of = TMA 

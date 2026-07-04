@@ -1,22 +1,22 @@
 state = { 
 	id = 540 
 	name = "STATE_540" 
-	manpower = 73041
-	state_category = large_town
+	manpower = 73041 
+	
+	state_category = large_town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = AMO 
 		
-		victory_points = { 900 6 }
 		victory_points = { 543 6 }
+		victory_points = { 900 6 }
 		victory_points = { 2792 6 }
-
 		
 		buildings = { 
 			infrastructure = 4 
-			schools = 1
-			hospitals = 1
+			schools = 1 
+			hospitals = 1 
 		}
 		
 		add_core_of = AMO 

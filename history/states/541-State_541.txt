@@ -1,8 +1,9 @@
 state = { 
 	id = 541 
 	name = "STATE_541" 
-	manpower = 2809151
-	state_category = megalopolis
+	manpower = 2809151 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = USG 
@@ -11,14 +12,14 @@ state = {
 		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 3
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 2
-			radar_station = 2
-			anti_air_building = 2
+			thermoelectric_plant = 3 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 2 
+			radar_station = 2 
+			anti_air_building = 2 
 		}
 		
 		add_core_of = USG 

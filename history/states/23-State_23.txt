@@ -1,8 +1,9 @@
 state = { 
 	id = 23 
 	name = "STATE_23" 
-	manpower = 2839720
-	state_category = megalopolis
+	manpower = 2839720 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	
@@ -16,26 +17,25 @@ state = {
 		victory_points = { 2224 16 }
 		victory_points = { 3776 33 }
 		victory_points = { 4741 10 }
-		victory_points = { 5358 10 }
-		victory_points = { 6657 6 }
 		victory_points = { 5114 4 }
+		victory_points = { 5358 10 }
 		victory_points = { 6590 4 }
 		victory_points = { 6592 4 }
-
+		victory_points = { 6657 6 }
 		
 		buildings = { 
 			infrastructure = 1 
 			air_base = 8 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 2
-			dockyard = 1
-			radar_station = 2
-			anti_air_building = 2
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 2 
+			dockyard = 1 
+			radar_station = 2 
+			anti_air_building = 2 
 			2487 = { naval_base = 8 }
 		}
 		

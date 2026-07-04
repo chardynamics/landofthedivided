@@ -1,8 +1,9 @@
 state = { 
 	id = 764 
 	name = "STATE_764" 
-	manpower = 1500
-	state_category = town
+	manpower = 1500 
+	
+	state_category = town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -10,9 +11,9 @@ state = {
 		
 		buildings = { 
 			infrastructure = 10 
-			air_base = 10
-			thermoelectric_plant = 1
-			barracks = 1
+			air_base = 10 
+			thermoelectric_plant = 1 
+			barracks = 1 
 		}
 		
 		add_core_of = DMA 

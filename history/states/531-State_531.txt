@@ -1,25 +1,25 @@
 state = { 
 	id = 531 
 	name = "STATE_531" 
-	manpower = 246061
-	state_category = city
+	manpower = 246061 
+	
+	state_category = city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = OKC 
 		
-		victory_points = { 6223 4 }
 		victory_points = { 1605 4 }
-
+		victory_points = { 6223 4 }
 		
 		buildings = { 
 			infrastructure = 6 
-			thermoelectric_plant = 1
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
+			thermoelectric_plant = 1 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
 		}
 		
 		add_core_of = OKC 

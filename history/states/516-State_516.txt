@@ -1,8 +1,9 @@
 state = { 
 	id = 516 
 	name = "STATE_516" 
-	manpower = 893694
-	state_category = metropolis
+	manpower = 893694 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -10,18 +11,17 @@ state = {
 		
 		victory_points = { 2426 10 }
 		victory_points = { 6186 4 }
-
 		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
 		}
 		
 		add_core_of = TMA 

@@ -1,19 +1,20 @@
 state = { 
 	id = 740 
 	name = "STATE_740" 
-	manpower = 150616
-	state_category = city
+	manpower = 150616 
+	
+	state_category = city 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = DOM 
 		
 		buildings = { 
 			infrastructure = 2 
-			thermoelectric_plant = 2
-			schools = 1
-			offices = 1
-			hospitals = 1
-			prisons = 1
+			thermoelectric_plant = 2 
+			schools = 1 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
 		}
 		
 		add_core_of = DOM 

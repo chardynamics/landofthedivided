@@ -1,8 +1,9 @@
 state = { 
 	id = 92 
 	name = "STATE_92" 
-	manpower = 73886
-	state_category = city
+	manpower = 73886 
+	
+	state_category = city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -10,10 +11,10 @@ state = {
 		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 1
-			hospitals = 1
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 1 
+			hospitals = 1 
 		}
 		
 		add_core_of = CAN 

@@ -1,25 +1,26 @@
 state = { 
 	id = 37 
 	name = "STATE_37" 
-	manpower = 365803
-	state_category = large_city
+	manpower = 365803 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = NGI 
 		
-		victory_points = { 5909 10 }
 		victory_points = { 3209 4 }
-
+		victory_points = { 5909 10 }
 		
-		buildings = {
-			thermoelectric_plant = 1
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			barracks = 1 infrastructure = 6 }
+		buildings = { 
+			thermoelectric_plant = 1 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			infrastructure = 6 
+		}
 		
 		add_core_of = NGI 
 	}

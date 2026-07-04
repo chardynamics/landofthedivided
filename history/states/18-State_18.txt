@@ -1,28 +1,30 @@
 state = { 
 	id = 18 
 	name = "STATE_18" 
-	manpower = 2035704
-	state_category = megalopolis
+	manpower = 2035704 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = USM 
 		
-		buildings = {
-			thermoelectric_plant = 2
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			radar_station = 2
-			anti_air_building = 1
-			anti_air_building = 1 infrastructure = 5 }
+		victory_points = { 4743 4 }
+		
+		buildings = { 
+			thermoelectric_plant = 2 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			radar_station = 2 
+			anti_air_building = 1 
+			infrastructure = 5 
+		}
 		
 		add_core_of = USM 
 		add_claim_by = CKC 
-	
-		victory_points = { 4743 4 }
-}
+	}
 	provinces = { 90 2207 2325 4743 6068 6123 }
 }

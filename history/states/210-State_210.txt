@@ -1,15 +1,14 @@
 state = { 
 	id = 210 
 	name = "STATE_210" 
-	manpower = 4
-	state_category = wasteland
+	manpower = 4 
+	
+	state_category = wasteland 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = SPM 
 		
-		buildings = { 
-			infrastructure = 6 
-		}
+		buildings = { infrastructure = 6 }
 		
 		add_core_of = SPM 
 	}

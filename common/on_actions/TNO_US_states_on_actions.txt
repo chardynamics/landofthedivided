@@ -46,6 +46,11 @@ on_actions = {
 					d_create_army3 = yes
 					TNO_div_limiter_calculate_unit_cap = yes
 				}
+				for_each_scope_loop = {
+					array = global.world_countries2
+					d_create_army2 = yes
+					TNO_div_limiter_calculate_unit_cap = yes
+				}
 			}
 			every_country = {
 				TNO_div_limiter_calculate_unit_cap = yes

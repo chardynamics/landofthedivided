@@ -58,11 +58,7 @@ on_actions = {
 			#Loser's States controlled by the enemy get -15% GDP, which given how warfare in the 60s and 70s would play out on a large scale, could very well be a generous estimate
 			#It's a simple yet effective solution
 			ROOT = {
-				if = {
-					limit = {
-					}
-					TNO_KD_Consequences_of_Capitulation = yes
-				}
+				TNO_KD_Consequences_of_Capitulation = yes
 			}
 
 			#Annexation block
@@ -89,7 +85,99 @@ on_actions = {
 				log = "war_won"
 				set_global_flag = war_won
 
+				if = { # Syracuse Revolt dealt with
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = ALB
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = SYR
+							}
+						}
+					}
+					
+					FROM = {
+						white_peace = PREV
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+					set_global_flag = skip_default_capitulation
+				}
 
+				else_if = { # Birmingham Administration capitulation
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = ALF
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = BIR
+							}
+						}
+					}
+					every_country = {
+						limit = { has_war_with = ALF }
+						white_peace = ALF
+					}
+					
+					FROM = {
+						every_enemy_country = {
+							limit = {
+								OR = {
+									original_tag = ROOT
+									is_in_faction_with = ROOT
+									is_subject_of = ROOT
+								}
+							}
+							FROM = {
+								white_peace = PREV
+								annex_country = {
+									target = PREV
+									transfer_troops = no
+								}
+							}
+						}
+					}
+					clr_global_flag = ALF_insurrection_ongoing
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = { # ALF capitulation
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = BIR
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = ALF
+							}
+						}
+					}
+
+					every_country = {
+						limit = { has_war_with = ALF }
+						white_peace = ALF
+					}
+					
+					BIR = {
+						annex_country = {
+							target = ALF
+							transfer_troops = no
+						}
+					}
+					clr_global_flag = ALF_insurrection_ongoing
+					set_global_flag = skip_default_capitulation
+				}
+				
 				if = { # Fixing all wars vs puppets
 					limit = {
 						ROOT = {

@@ -1,8 +1,9 @@
 state = { 
 	id = 555 
 	name = "STATE_555" 
-	manpower = 1860253
-	state_category = megalopolis
+	manpower = 1860253 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	
 	resources = { 
@@ -16,14 +17,14 @@ state = {
 		
 		buildings = { 
 			infrastructure = 3 
-			thermoelectric_plant = 2
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			radar_station = 2
-			anti_air_building = 1
+			thermoelectric_plant = 2 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			radar_station = 2 
+			anti_air_building = 1 
 		}
 		
 		add_core_of = AMO 

@@ -1,16 +1,15 @@
 state = { 
 	id = 195 
 	name = "STATE_195" 
-	manpower = 4600
-	state_category = pastoral
+	manpower = 4600 
+	
+	state_category = pastoral 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = CMM 
 		
-		buildings = { 
-			infrastructure = 1 
-		}
+		buildings = { infrastructure = 1 }
 		
 		add_core_of = CMM 
 		add_claim_by = SOM 

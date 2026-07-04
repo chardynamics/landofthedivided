@@ -1,8 +1,9 @@
 state = { 
 	id = 186 
 	name = "STATE_186" 
-	manpower = 58301
-	state_category = town
+	manpower = 58301 
+	
+	state_category = town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -11,13 +12,11 @@ state = {
 		victory_points = { 792 10 }
 		victory_points = { 4049 3 }
 		victory_points = { 4475 2 }
-
-
 		
 		buildings = { 
 			infrastructure = 3 
-			schools = 1
-			hospitals = 1
+			schools = 1 
+			hospitals = 1 
 		}
 		
 		add_core_of = MMS 

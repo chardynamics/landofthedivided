@@ -1,27 +1,28 @@
 state = { 
 	id = 526 
 	name = "STATE_526" 
-	manpower = 791312
-	state_category = metropolis
+	manpower = 791312 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = USG 
 		
+		victory_points = { 5066 6 }
+		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
 		}
 		
 		add_core_of = USG 
-	
-		victory_points = { 5066 6 }
-}
+	}
 	provinces = { 662 1990 4392 5066 6188 6204 }
 }

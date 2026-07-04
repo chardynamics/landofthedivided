@@ -1,8 +1,9 @@
 state = { 
 	id = 615 
 	name = "STATE_615" 
-	manpower = 6860639
-	state_category = megalopolis
+	manpower = 6860639 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	
@@ -10,27 +11,26 @@ state = {
 	history = { 
 		owner = MEX 
 		
+		victory_points = { 149 4 }
+		victory_points = { 199 6 }
+		victory_points = { 2628 25 }
 		victory_points = { 3404 42 }
 		victory_points = { 3588 33 }
-		victory_points = { 2628 25 }
-		victory_points = { 6420 25 }
 		victory_points = { 5041 10 }
-		victory_points = { 199 6 }
-		victory_points = { 149 4 }
-
+		victory_points = { 6420 25 }
 		
 		buildings = { 
 			infrastructure = 2 
 			air_base = 10 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 3
-			radar_station = 3
-			anti_air_building = 3
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 3 
+			radar_station = 3 
+			anti_air_building = 3 
 		}
 		
 		add_core_of = MEX 

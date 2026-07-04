@@ -1,11 +1,14 @@
 state = { 
 	id = 256 
 	name = "STATE_256" 
-	manpower = 7691
-	state_category = rural
+	manpower = 7691 
+	
+	state_category = rural 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = WAR 
+		
+		victory_points = { 341 2 }
 		
 		buildings = { 
 			infrastructure = 3 
@@ -14,8 +17,6 @@ state = {
 		
 		add_core_of = WAR 
 		add_claim_by = MMS 
-	
-		victory_points = { 341 2 }
-}
+	}
 	provinces = { 341 1609 }
 }

@@ -1,28 +1,28 @@
 state = { 
 	id = 15 
 	name = "STATE_15" 
-	manpower = 663343
-	state_category = metropolis
+	manpower = 663343 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = USM 
 		
-		victory_points = { 6118 4 }
 		victory_points = { 1521 4 }
 		victory_points = { 3740 4 }
-
+		victory_points = { 6118 4 }
 		
 		buildings = { 
 			infrastructure = 6 
 			air_base = 6 
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
 		}
 		
 		add_core_of = USM 

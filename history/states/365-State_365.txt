@@ -1,26 +1,26 @@
 state = { 
 	id = 365 
 	name = "STATE_365" 
-	manpower = 777026
-	state_category = metropolis
+	manpower = 777026 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = RWP 
 		
-		victory_points = { 5840 16 }
 		victory_points = { 4291 3 }
-
+		victory_points = { 5840 16 }
 		
 		buildings = { 
 			infrastructure = 9 
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
 		}
 		
 		add_core_of = RWP 

@@ -1,7 +1,8 @@
 state = { 
 	id = 611 
 	name = "STATE_611" 
-	manpower = 3067709
+	manpower = 3067709 
+	
 	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	
@@ -13,24 +14,23 @@ state = {
 	history = { 
 		owner = HMA 
 		
-		victory_points = { 4438 50 }
 		victory_points = { 1642 6 }
-
+		victory_points = { 4438 50 }
 		
 		buildings = { 
 			infrastructure = 8 
 			air_base = 10 
-			thermoelectric_plant = 3
-			hydroelectric_plant = 1
-			nuclear_reactor = 1
-			schools = 3
-			offices = 3
-			hospitals = 3
-			prisons = 3
-			barracks = 2
-			dockyard = 3
-			radar_station = 2
-			anti_air_building = 2
+			thermoelectric_plant = 3 
+			hydroelectric_plant = 1 
+			nuclear_reactor = 1 
+			schools = 3 
+			offices = 3 
+			hospitals = 3 
+			prisons = 3 
+			barracks = 2 
+			dockyard = 3 
+			radar_station = 2 
+			anti_air_building = 2 
 			6393 = { naval_base = 10 }
 		}
 		

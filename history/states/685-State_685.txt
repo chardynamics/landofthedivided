@@ -1,22 +1,23 @@
 state = { 
 	id = 685 
 	name = "STATE_685" 
-	manpower = 396965
-	state_category = large_city
+	manpower = 396965 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = CUB 
 		
 		buildings = { 
 			infrastructure = 3 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 1
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			dockyard = 1
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 1 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			dockyard = 1 
 			3862 = { naval_base = 9 }
 		}
 		

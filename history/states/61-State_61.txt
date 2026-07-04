@@ -1,13 +1,14 @@
 state = { 
 	id = 61 
 	name = "STATE_61" 
-	manpower = 500
-	state_category = enclave
+	manpower = 500 
+	
+	state_category = enclave 
 	buildings_max_level_factor = 1 
 	history = { 
-
-		owner = CAN
-		add_core_of = CAN
+		owner = CAN 
+		
+		add_core_of = CAN 
 	}
 	provinces = { 6618 6629 }
 }

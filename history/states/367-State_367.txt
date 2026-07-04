@@ -1,8 +1,9 @@
 state = { 
 	id = 367 
 	name = "STATE_367" 
-	manpower = 2540415
-	state_category = megalopolis
+	manpower = 2540415 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = PHI 
@@ -11,14 +12,14 @@ state = {
 		
 		buildings = { 
 			infrastructure = 10 
-			thermoelectric_plant = 4
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			radar_station = 2
-			anti_air_building = 1
+			thermoelectric_plant = 4 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			radar_station = 2 
+			anti_air_building = 1 
 		}
 		
 		add_core_of = PHI 

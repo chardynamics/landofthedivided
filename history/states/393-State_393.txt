@@ -1,8 +1,9 @@
 state = { 
 	id = 393 
 	name = "STATE_393" 
-	manpower = 395648
-	state_category = large_city
+	manpower = 395648 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = RWP 
@@ -11,12 +12,12 @@ state = {
 		
 		buildings = { 
 			infrastructure = 9 
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
 		}
 		
 		add_core_of = RWP 

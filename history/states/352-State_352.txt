@@ -1,26 +1,28 @@
 state = { 
 	id = 352 
 	name = "STATE_352" 
-	manpower = 291546
-	state_category = city
+	manpower = 291546 
+	
+	state_category = city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = GBR 
 		
-		buildings = {
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
-			barracks = 1 infrastructure = 1 }
+		victory_points = { 3322 6 }
+		
+		buildings = { 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
+			infrastructure = 1 
+		}
 		
 		add_core_of = GBR 
 		add_core_of = SUT 
-	
-		victory_points = { 3322 6 }
-}
+	}
 	provinces = { 102 263 388 495 1064 1338 1664 1812 2378 2475 2695 3298 3322 3555 4191 4535 4669 4789 5775 5835 5853 5889 5965 8045 }
 }

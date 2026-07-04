@@ -1,8 +1,9 @@
 state = { 
 	id = 22 
 	name = "STATE_22" 
-	manpower = 738140
-	state_category = metropolis
+	manpower = 738140 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -10,18 +11,18 @@ state = {
 		
 		victory_points = { 238 6 }
 		victory_points = { 6060 4 }
-
 		
-		buildings = {
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 2
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			anti_air_building = 1
-			anti_air_building = 1 infrastructure = 6 }
+		buildings = { 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 2 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			anti_air_building = 1 
+			infrastructure = 6 
+		}
 		
 		add_core_of = USM 
 		add_claim_by = CKC 

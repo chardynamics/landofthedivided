@@ -1,0 +1,30 @@
+MEX_station_troops_in_america = {
+	allowed = {
+		tag = MEX
+	}
+	enable = {
+        tag = MEX
+		OR = {
+			is_in_faction_with = AMO
+			is_in_faction_with = AMF
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 1
+		order_id = 1
+		area = frontera_occidente
+		subtract_invasions_from_need = yes
+	}
+
+	ai_strategy = { 
+		type = put_unit_buffers
+		ratio = 1
+		order_id = 1
+		area = frontera_tejas
+		subtract_invasions_from_need = yes
+	}
+}

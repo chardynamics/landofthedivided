@@ -1,18 +1,19 @@
 state = { 
 	id = 229 
 	name = "STATE_229" 
-	manpower = 41586
-	state_category = city
+	manpower = 41586 
+	
+	state_category = city 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = CAN 
 		
 		buildings = { 
 			infrastructure = 8 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 1
-			hospitals = 1
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 1 
+			hospitals = 1 
 		}
 		
 		add_core_of = CAN 

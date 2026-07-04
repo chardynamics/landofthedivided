@@ -1,8 +1,9 @@
 state = { 
 	id = 307 
 	name = "STATE_307" 
-	manpower = 1395466
-	state_category = metropolis
+	manpower = 1395466 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = NGM 
@@ -12,15 +13,15 @@ state = {
 		
 		buildings = { 
 			infrastructure = 10 
-			thermoelectric_plant = 3
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			dockyard = 2
-			radar_station = 1
-			anti_air_building = 1
+			thermoelectric_plant = 3 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			dockyard = 2 
+			radar_station = 1 
+			anti_air_building = 1 
 			4572 = { naval_base = 5 }
 		}
 		

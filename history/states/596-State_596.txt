@@ -1,8 +1,9 @@
 state = { 
 	id = 596 
 	name = "STATE_596" 
-	manpower = 367520
-	state_category = large_city
+	manpower = 367520 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	
@@ -13,20 +14,19 @@ state = {
 	history = { 
 		owner = HMA 
 		
+		victory_points = { 1250 10 }
 		victory_points = { 4911 16 }
 		victory_points = { 6763 10 }
-		victory_points = { 1250 10 }
-
 		
 		buildings = { 
 			infrastructure = 6 
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			dockyard = 1
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			dockyard = 1 
 			4911 = { naval_base = 6 }
 		}
 		

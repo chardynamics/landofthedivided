@@ -1,24 +1,25 @@
 state = { 
 	id = 331 
 	name = "STATE_331" 
-	manpower = 62462
-	state_category = large_town
+	manpower = 62462 
+	
+	state_category = large_town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = GBR 
 		
+		victory_points = { 2187 3 }
+		
 		buildings = { 
 			infrastructure = 2 
 			air_base = 1 
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
 		}
 		
 		add_core_of = GBR 
-	
-		victory_points = { 2187 3 }
-}
+	}
 	provinces = { 64 125 201 399 709 847 885 1273 1281 1314 1584 1602 1691 1761 1868 1966 2114 2187 2691 2765 2820 2868 2880 3091 3098 3237 3242 3277 3393 3423 3441 3656 3727 3868 4000 4100 4594 4794 4954 4956 5060 5864 5927 5941 8668 }
 }

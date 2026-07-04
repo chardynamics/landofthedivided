@@ -1,8 +1,9 @@
 state = { 
 	id = 321 
 	name = "STATE_321" 
-	manpower = 1481610
-	state_category = metropolis
+	manpower = 1481610 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = SRI 
@@ -12,15 +13,15 @@ state = {
 		buildings = { 
 			infrastructure = 10 
 			air_base = 4 
-			thermoelectric_plant = 2
-			nuclear_reactor = 1
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			radar_station = 1
-			anti_air_building = 1
+			thermoelectric_plant = 2 
+			nuclear_reactor = 1 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			radar_station = 1 
+			anti_air_building = 1 
 		}
 		
 		add_core_of = SRI 

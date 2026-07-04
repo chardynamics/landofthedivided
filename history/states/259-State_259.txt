@@ -1,18 +1,19 @@
 state = { 
 	id = 259 
 	name = "STATE_259" 
-	manpower = 25483
-	state_category = town
+	manpower = 25483 
+	
+	state_category = town 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = BAR 
+		
+		victory_points = { 5598 2 }
 		
 		buildings = { infrastructure = 6 }
 		
 		add_core_of = BAR 
 		add_claim_by = MMS 
-	
-		victory_points = { 5598 2 }
-}
+	}
 	provinces = { 1153 5598 }
 }

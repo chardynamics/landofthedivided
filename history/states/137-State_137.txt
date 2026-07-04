@@ -1,29 +1,29 @@
 state = { 
 	id = 137 
 	name = "STATE_137" 
-	manpower = 1675440
-	state_category = megalopolis
+	manpower = 1675440 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = SWA 
 		
-		victory_points = { 4005 33 }
 		victory_points = { 1685 4 }
-
+		victory_points = { 4005 33 }
 		
 		buildings = { 
 			infrastructure = 8 
 			air_base = 6 
-			thermoelectric_plant = 2
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			dockyard = 2
-			radar_station = 2
-			anti_air_building = 1
+			thermoelectric_plant = 2 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			dockyard = 2 
+			radar_station = 2 
+			anti_air_building = 1 
 			1685 = { naval_base = 6 }
 		}
 		

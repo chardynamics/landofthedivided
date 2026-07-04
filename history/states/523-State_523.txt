@@ -1,8 +1,9 @@
 state = { 
 	id = 523 
 	name = "STATE_523" 
-	manpower = 607787
-	state_category = metropolis
+	manpower = 607787 
+	
+	state_category = metropolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -11,26 +12,23 @@ state = {
 		victory_points = { 435 6 }
 		victory_points = { 1130 2 }
 		victory_points = { 1275 10 }
+		victory_points = { 1509 16 }
 		victory_points = { 1690 1 }
 		victory_points = { 3058 2 }
 		victory_points = { 4527 3 }
 		victory_points = { 4539 6 }
-		victory_points = { 1509 16 }
-
 		
 		buildings = { 
 			infrastructure = 3 
 			air_base = 4 
-			thermoelectric_plant = 3
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 2
-			barracks = 1
-			radar_station = 1
-			115 = {
-				dam = 1
-			}
+			thermoelectric_plant = 3 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 2 
+			barracks = 1 
+			radar_station = 1 
+			115 = { dam = 1 }
 		}
 		
 		add_core_of = SAZ 

@@ -1,22 +1,23 @@
 state = { 
 	id = 626 
 	name = "STATE_626" 
-	manpower = 66047
-	state_category = large_town
+	manpower = 66047 
+	
+	state_category = large_town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = AMF 
 		
-		victory_points = { 6769 25 }
 		victory_points = { 4299 3 }
-
+		victory_points = { 6769 25 }
 		
-		buildings = {
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			hospitals = 1 infrastructure = 6 }
+		buildings = { 
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			infrastructure = 6 
+		}
 		
 		add_core_of = AMF 
 		add_claim_by = STX 

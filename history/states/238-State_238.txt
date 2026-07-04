@@ -1,8 +1,9 @@
 state = { 
 	id = 238 
 	name = "STATE_238" 
-	manpower = 91611
-	state_category = large_town
+	manpower = 91611 
+	
+	state_category = large_town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -12,11 +13,11 @@ state = {
 		
 		buildings = { 
 			infrastructure = 5 
-			thermoelectric_plant = 3
-			schools = 1
-			hospitals = 1
-			prisons = 1
-			dockyard = 1
+			thermoelectric_plant = 3 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+			dockyard = 1 
 			5045 = { naval_base = 3 }
 		}
 		

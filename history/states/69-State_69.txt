@@ -1,8 +1,9 @@
 state = { 
 	id = 69 
 	name = "STATE_69" 
-	manpower = 2643584
-	state_category = megalopolis
+	manpower = 2643584 
+	
+	state_category = megalopolis 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	
@@ -13,29 +14,28 @@ state = {
 	history = { 
 		owner = CAN 
 		
+		victory_points = { 651 10 }
 		victory_points = { 2388 16 }
+		victory_points = { 2525 10 }
 		victory_points = { 2727 16 }
+		victory_points = { 3493 10 }
 		victory_points = { 3988 16 }
 		victory_points = { 4579 42 }
 		victory_points = { 4795 50 }
-		victory_points = { 651 10 }
-		victory_points = { 2525 10 }
-		victory_points = { 3493 10 }
-
 		
 		buildings = { 
 			infrastructure = 1 
 			air_base = 10 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 3
-			offices = 2
-			hospitals = 3
-			prisons = 2
-			barracks = 2
-			dockyard = 2
-			radar_station = 2
-			anti_air_building = 1
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 3 
+			offices = 2 
+			hospitals = 3 
+			prisons = 2 
+			barracks = 2 
+			dockyard = 2 
+			radar_station = 2 
+			anti_air_building = 1 
 			5536 = { naval_base = 10 }
 		}
 		

@@ -1,8 +1,9 @@
 state = { 
 	id = 184 
 	name = "STATE_184" 
-	manpower = 132128
-	state_category = city
+	manpower = 132128 
+	
+	state_category = city 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = CAN 
@@ -10,12 +11,12 @@ state = {
 		buildings = { 
 			infrastructure = 6 
 			air_base = 5 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
-			schools = 1
-			hospitals = 1
-			prisons = 1
-			dockyard = 1
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
+			dockyard = 1 
 			2425 = { naval_base = 5 }
 		}
 		

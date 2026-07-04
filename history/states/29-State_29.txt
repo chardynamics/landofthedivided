@@ -1,27 +1,29 @@
 state = { 
 	id = 29 
 	name = "STATE_29" 
-	manpower = 382239
-	state_category = large_city
+	manpower = 382239 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = CKC 
 		
-		buildings = {
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			barracks = 1 infrastructure = 6 }
+		victory_points = { 2405 4 }
+		victory_points = { 3281 4 }
+		
+		buildings = { 
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			infrastructure = 6 
+		}
 		
 		add_core_of = CKC 
 		add_claim_by = USM 
-	
-		victory_points = { 2405 4 }
-		victory_points = { 3281 4 }
-}
+	}
 	provinces = { 6 602 1355 1537 2405 3139 3281 4906 5922 5955 5966 8674 }
 }

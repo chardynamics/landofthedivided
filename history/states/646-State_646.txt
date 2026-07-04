@@ -1,8 +1,9 @@
 state = { 
 	id = 646 
 	name = "STATE_646" 
-	manpower = 477501
-	state_category = large_city
+	manpower = 477501 
+	
+	state_category = large_city 
 	buildings_max_level_factor = 1 
 	history = { 
 		owner = BAH 
@@ -11,13 +12,13 @@ state = {
 		
 		buildings = { 
 			infrastructure = 0 
-			thermoelectric_plant = 2
-			schools = 2
-			offices = 1
-			hospitals = 2
-			prisons = 1
-			barracks = 1
-			radar_station = 1
+			thermoelectric_plant = 2 
+			schools = 2 
+			offices = 1 
+			hospitals = 2 
+			prisons = 1 
+			barracks = 1 
+			radar_station = 1 
 		}
 		
 		add_core_of = BAH 

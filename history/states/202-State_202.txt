@@ -1,24 +1,25 @@
 state = { 
 	id = 202 
 	name = "STATE_202" 
-	manpower = 138936
-	state_category = city
+	manpower = 138936 
+	
+	state_category = city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = BIR 
 		
+		victory_points = { 2284 3 }
+		
 		buildings = { 
 			infrastructure = 6 
-			thermoelectric_plant = 1
-			schools = 1
-			hospitals = 1
-			prisons = 1
+			thermoelectric_plant = 1 
+			schools = 1 
+			hospitals = 1 
+			prisons = 1 
 		}
 		
 		add_core_of = BIR 
-	
-		victory_points = { 2284 3 }
-}
+	}
 	provinces = { 2284 3665 4766 6284 }
 }

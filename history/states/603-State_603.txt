@@ -1,28 +1,29 @@
 state = { 
 	id = 603 
 	name = "STATE_603" 
-	manpower = 275806
-	state_category = city
+	manpower = 275806 
+	
+	state_category = city 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
 		owner = SOR 
 		
+		victory_points = { 3115 4 }
+		victory_points = { 4642 4 }
+		
 		buildings = { 
 			infrastructure = 6 
 			air_base = 6 
-			thermoelectric_plant = 1
-			schools = 2
-			offices = 1
-			hospitals = 1
-			prisons = 1
-			barracks = 1
+			thermoelectric_plant = 1 
+			schools = 2 
+			offices = 1 
+			hospitals = 1 
+			prisons = 1 
+			barracks = 1 
 		}
 		
 		add_core_of = SOR 
-	
-		victory_points = { 3115 4 }
-		victory_points = { 4642 4 }
-}
+	}
 	provinces = { 2485 2501 3115 4487 4642 5569 }
 }

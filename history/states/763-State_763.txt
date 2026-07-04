@@ -1,8 +1,9 @@
 state = { 
 	id = 763 
 	name = "STATE_763" 
-	manpower = 10000
-	state_category = large_town
+	manpower = 10000 
+	
+	state_category = large_town 
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
@@ -10,8 +11,8 @@ state = {
 		
 		buildings = { 
 			infrastructure = 0 
-			thermoelectric_plant = 4
-			hydroelectric_plant = 3
+			thermoelectric_plant = 4 
+			hydroelectric_plant = 3 
 		}
 		
 		add_core_of = MEX 
