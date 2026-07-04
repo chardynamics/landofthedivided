@@ -1,225 +1,284 @@
 d_create_army = {
-    ##Most countries
-    division_template = {
-        name = "Infantry Unit"
+	##Most countries
+	division_template = {
+		name = "Infantry Unit"
 
-        regiments = {
-            infantry = { x = 0 y = 0 }
-            infantry = { x = 0 y = 1 }
-            infantry = { x = 0 y = 2 }
-            infantry = { x = 1 y = 0 }
-            infantry = { x = 1 y = 1 }
-            infantry = { x = 1 y = 2 }
-        }
-        support = {
-            artillery = { x = 0 y = 0 }
-            engineer = { x = 0 y = 1 }
-        }
-    }
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 0 }
+			engineer = { x = 0 y = 1 }
+		}
+	}
 
-    set_temp_variable = { num_of_divs = max_available_manpower_k }
-    log = "Population (1000s): [?num_of_divs]"
-    divide_temp_variable = { num_of_divs = 10 }
-    log = "Divisions: [?num_of_divs]"
+	set_variable = { oob_gen_script_id = 1 }
+	oob_gen_reset_spawn_counters = yes
 
-    set_temp_variable = { i = 0 }
-    while_loop_effect = {
-        limit = { check_variable = { i < num_of_divs } }
-        random_controlled_state = {
-            create_unit = {
-                division = "division_template = \"Infantry Unit\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
-                owner = PREV
-            }
-        }
-        add_to_temp_variable = { i = 1 }
-        #multiply_temp_variable = { i = 1.02 }
-        multiply_temp_variable = { i = 1 }
-    }
+	set_temp_variable = { num_of_divs = max_available_manpower_k }
+	divide_temp_variable = { num_of_divs = 10 }
+	set_variable = { oob_gen_planned_divs = num_of_divs }
+	set_variable = { oob_gen_barrier = 0 }
+	set_variable = { oob_gen_j_cutoff = 0 }
+
+	set_temp_variable = { i = 0 }
+	while_loop_effect = {
+		limit = { check_variable = { i < num_of_divs } }
+		random_controlled_state = {
+			oob_gen_count_infantry_unit_spawn = yes
+			if = {
+				limit = { PREV = { has_country_flag = oob_gen_verbose_log } }
+				log = "PYTHON_OOB_SPAWN;[PREV.GetTag];1;[?i];Infantry Unit;state=[THIS.GetName];exp=0.5;equip=0.75"
+			}
+			create_unit = {
+				division = "division_template = \"Infantry Unit\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+				owner = PREV
+			}
+		}
+		add_to_temp_variable = { i = 1 }
+		multiply_temp_variable = { i = 1 }
+	}
+
+	oob_gen_log_summary = yes
 }
 
 d_create_army2 = {
-    ##Most countries
-    division_template = {
-        name = "Infantry Unit"
+	##Most countries
+	division_template = {
+		name = "Infantry Unit"
 
-        regiments = {
-            infantry = { x = 0 y = 0 }
-            infantry = { x = 0 y = 1 }
-            infantry = { x = 0 y = 2 }
-            infantry = { x = 1 y = 0 }
-            infantry = { x = 1 y = 1 }
-            infantry = { x = 1 y = 2 }
-        }
-        support = {
-            artillery = { x = 0 y = 0 }
-            engineer = { x = 0 y = 1 }
-        }
-    }
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 0 }
+			engineer = { x = 0 y = 1 }
+		}
+	}
 
-    ##Most other countries
-    division_template = {
-        name = "Infantry Division"
-        division_names_group = USA_INF_01
-        regiments = {
-            infantry = { x = 0 y = 0 }
-            infantry = { x = 0 y = 1 }
-            infantry = { x = 0 y = 2 }
-            infantry = { x = 1 y = 0 }
-            infantry = { x = 1 y = 1 }
-            infantry = { x = 1 y = 2 }
-            infantry = { x = 2 y = 0 }
-            infantry = { x = 2 y = 1 }
-            infantry = { x = 2 y = 2 }
-        }
-        support = {
-            engineer = { x = 0 y = 0 }
-            artillery = { x = 0 y = 1 }
-            anti_tank = { x = 0 y = 2 }
-        }
-    }
+	##Most other countries
+	division_template = {
+		name = "Infantry Division"
+		division_names_group = USA_INF_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+		}
+		support = {
+			engineer = { x = 0 y = 0 }
+			artillery = { x = 0 y = 1 }
+			anti_tank = { x = 0 y = 2 }
+		}
+	}
 
-    set_temp_variable = { num_of_divs = max_available_manpower_k }
-    log = "Population (1000s): [?num_of_divs]"
-    divide_temp_variable = { num_of_divs = 10 }
-    log = "Divisions: [?num_of_divs]"
+	set_variable = { oob_gen_script_id = 2 }
+	oob_gen_reset_spawn_counters = yes
 
-    set_temp_variable = { i = 0 }
-    set_temp_variable = { division_barrier = num_of_divs }
-    multiply_temp_variable = { division_barrier = 0.25 }
-    while_loop_effect = {
-        limit = { check_variable = { i < num_of_divs } }
-        if = {
-            limit = { check_variable = { i < division_barrier } }
-            random_controlled_state = {
-                create_unit = {
-                    division = " division_template = \"Infantry Unit\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
-                    owner = PREV
-                }
-            }
-            add_to_temp_variable = { i = 1 }
-            multiply_temp_variable = { i = 1.02 }
-        }
-        else =  {
-            random_controlled_state = {
-                create_unit = {
-                    division = " division_template = \"Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
-                    owner = PREV
-                }
-            }
-            add_to_temp_variable = { i = 1 }
-            multiply_temp_variable = { i = 1.02 }
-        }
-    }
+	set_temp_variable = { num_of_divs = max_available_manpower_k }
+	divide_temp_variable = { num_of_divs = 10 }
+	set_variable = { oob_gen_planned_divs = num_of_divs }
+
+	set_temp_variable = { i = 0 }
+	set_temp_variable = { division_barrier = num_of_divs }
+	multiply_temp_variable = { division_barrier = 0.25 }
+	set_variable = { oob_gen_barrier = division_barrier }
+	set_variable = { oob_gen_j_cutoff = 0 }
+
+	while_loop_effect = {
+		limit = { check_variable = { i < num_of_divs } }
+		if = {
+			limit = { check_variable = { i < division_barrier } }
+			random_controlled_state = {
+				oob_gen_count_infantry_unit_spawn = yes
+				if = {
+					limit = { PREV = { has_country_flag = oob_gen_verbose_log } }
+					log = "PYTHON_OOB_SPAWN;[PREV.GetTag];2;[?i];Infantry Unit;state=[THIS.GetName];exp=0.5;equip=0.75"
+				}
+				create_unit = {
+					division = " division_template = \"Infantry Unit\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+					owner = PREV
+				}
+			}
+			add_to_temp_variable = { i = 1 }
+			multiply_temp_variable = { i = 1.02 }
+		}
+		else = {
+			random_controlled_state = {
+				oob_gen_count_infantry_division_spawn = yes
+				if = {
+					limit = { PREV = { has_country_flag = oob_gen_verbose_log } }
+					log = "PYTHON_OOB_SPAWN;[PREV.GetTag];2;[?i];Infantry Division;state=[THIS.GetName];exp=0.5;equip=0.75"
+				}
+				create_unit = {
+					division = " division_template = \"Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+					owner = PREV
+				}
+			}
+			add_to_temp_variable = { i = 1 }
+			multiply_temp_variable = { i = 1.02 }
+		}
+	}
+
+	oob_gen_log_summary = yes
 }
 
 
 d_create_army3 = {
-    ##Most countries
-    division_template = {
-        name = "Infantry Unit"
+	##Most countries
+	division_template = {
+		name = "Infantry Unit"
 
-        regiments = {
-            infantry = { x = 0 y = 0 }
-            infantry = { x = 0 y = 1 }
-            infantry = { x = 0 y = 2 }
-            infantry = { x = 1 y = 0 }
-            infantry = { x = 1 y = 1 }
-            infantry = { x = 1 y = 2 }
-        }
-        support = {
-            artillery = { x = 0 y = 0 }
-            engineer = { x = 0 y = 1 }
-        }
-    }
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 0 }
+			engineer = { x = 0 y = 1 }
+		}
+	}
 
-    ##Most other countries
-    division_template = {
-        name = "Infantry Division"
-        division_names_group = USA_INF_01
-        regiments = {
-            infantry = { x = 0 y = 0 }
-            infantry = { x = 0 y = 1 }
-            infantry = { x = 0 y = 2 }
-            infantry = { x = 1 y = 0 }
-            infantry = { x = 1 y = 1 }
-            infantry = { x = 1 y = 2 }
-            infantry = { x = 2 y = 0 }
-            infantry = { x = 2 y = 1 }
-            infantry = { x = 2 y = 2 }
-        }
-        support = {
-            engineer = { x = 0 y = 0 }
-            artillery = { x = 0 y = 1 }
-            anti_tank = { x = 0 y = 2 }
-        }
-    }
+	##Most other countries
+	division_template = {
+		name = "Infantry Division"
+		division_names_group = USA_INF_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+		}
+		support = {
+			engineer = { x = 0 y = 0 }
+			artillery = { x = 0 y = 1 }
+			anti_tank = { x = 0 y = 2 }
+		}
+	}
 
-    division_template = {
-        name = "Motorized Division"
-        division_names_group = USA_MOT_01
-        regiments = {
-            motorized = { x = 0 y = 0 }
-            motorized = { x = 0 y = 1 }
-            motorized = { x = 0 y = 2 }
-            motorized = { x = 1 y = 0 }
-            motorized = { x = 1 y = 1 }
-            motorized = { x = 1 y = 2 }
-            MBT = { x = 2 y = 0 }
-            MBT = { x = 2 y = 1 }
-            MBT = { x = 2 y = 2 }
-        }
-        support = {
-            artillery = { x = 0 y = 0 }
-            engineer = { x = 0 y = 1 }
-            signal_company = { x = 0 y = 2 }
-        }
-    }
+	division_template = {
+		name = "Motorized Division"
+		division_names_group = USA_MOT_01
+		regiments = {
+			motorized = { x = 0 y = 0 }
+			motorized = { x = 0 y = 1 }
+			motorized = { x = 0 y = 2 }
+			motorized = { x = 1 y = 0 }
+			motorized = { x = 1 y = 1 }
+			motorized = { x = 1 y = 2 }
+			MBT = { x = 2 y = 0 }
+			MBT = { x = 2 y = 1 }
+			MBT = { x = 2 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 0 }
+			engineer = { x = 0 y = 1 }
+			signal_company = { x = 0 y = 2 }
+		}
+	}
 
-    set_temp_variable = { num_of_divs = max_available_manpower_k }
-    log = "Population (1000s): [?num_of_divs]"
-    divide_temp_variable = { num_of_divs = 10 }
-    log = "Divisions: [?num_of_divs]"
+	set_variable = { oob_gen_script_id = 3 }
+	oob_gen_reset_spawn_counters = yes
 
-    set_temp_variable = { i = 0 }
-    set_temp_variable = { division_barrier = num_of_divs }
-    divide_temp_variable = { division_barrier = 10 }
-    while_loop_effect = {
-        limit = { check_variable = { i < division_barrier } }
-        random_controlled_state = {
-            create_unit = {
-                division = " division_template = \"Infantry Unit\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
-                owner = PREV
-            }
-        }
-        add_to_temp_variable = { i = 1 }
-        multiply_temp_variable = { i = 1.02 }
-    }
-    set_temp_variable = { j = num_of_divs }
-    subtract_from_temp_variable = { j = division_barrier }
-    divide_temp_variable = { j = 2 }
-    add_to_temp_variable = { j = i }
-    while_loop_effect = {
-        limit = { check_variable = { i < num_of_divs } }
-        if = { 
-            limit = { check_variable = { i < j } }
-            random_controlled_state = {
-                create_unit = {
-                    division = " division_template = \"Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
-                    owner = PREV
-                }
-            }
-            add_to_temp_variable = { i = 1 }
-            multiply_temp_variable = { i = 1.02 }
-        }
-        else =  {
-            capital_scope = {
-                create_unit = {
-                    division = " division_template = \"Motorized Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
-                    owner = PREV
-                }
-            }
-            add_to_temp_variable = { i = 1 }
-            multiply_temp_variable = { i = 1.02 }
-        }
-    }
+	set_temp_variable = { num_of_divs = max_available_manpower_k }
+	divide_temp_variable = { num_of_divs = 10 }
+	set_variable = { oob_gen_planned_divs = num_of_divs }
+
+	set_temp_variable = { i = 0 }
+	set_temp_variable = { division_barrier = num_of_divs }
+	divide_temp_variable = { division_barrier = 10 }
+	set_variable = { oob_gen_barrier = division_barrier }
+	while_loop_effect = {
+		limit = { check_variable = { i < division_barrier } }
+		random_controlled_state = {
+			oob_gen_count_infantry_unit_spawn = yes
+			if = {
+				limit = { PREV = { has_country_flag = oob_gen_verbose_log } }
+				log = "PYTHON_OOB_SPAWN;[PREV.GetTag];3;[?i];Infantry Unit;state=[THIS.GetName];exp=0.5;equip=0.75"
+			}
+			create_unit = {
+				division = " division_template = \"Infantry Unit\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+				owner = PREV
+			}
+		}
+		add_to_temp_variable = { i = 1 }
+		multiply_temp_variable = { i = 1.02 }
+	}
+	set_temp_variable = { j = num_of_divs }
+	subtract_from_temp_variable = { j = division_barrier }
+	divide_temp_variable = { j = 2 }
+	add_to_temp_variable = { j = i }
+	set_variable = { oob_gen_j_cutoff = j }
+	while_loop_effect = {
+		limit = { check_variable = { i < num_of_divs } }
+		if = {
+			limit = { check_variable = { i < j } }
+			random_controlled_state = {
+				oob_gen_count_infantry_division_spawn = yes
+				if = {
+					limit = { PREV = { has_country_flag = oob_gen_verbose_log } }
+					log = "PYTHON_OOB_SPAWN;[PREV.GetTag];3;[?i];Infantry Division;state=[THIS.GetName];exp=0.5;equip=0.75"
+				}
+				create_unit = {
+					division = " division_template = \"Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+					owner = PREV
+				}
+			}
+			add_to_temp_variable = { i = 1 }
+			multiply_temp_variable = { i = 1.02 }
+		}
+		else = {
+			capital_scope = {
+				oob_gen_count_motorized_division_spawn = yes
+				if = {
+					limit = { PREV = { has_country_flag = oob_gen_verbose_log } }
+					log = "PYTHON_OOB_SPAWN;[PREV.GetTag];3;[?PREV.i];Motorized Division;state=[THIS.GetName];exp=0.5;equip=0.75"
+				}
+				create_unit = {
+					division = " division_template = \"Motorized Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+					owner = PREV
+				}
+			}
+			add_to_temp_variable = { i = 1 }
+			multiply_temp_variable = { i = 1.02 }
+		}
+	}
+
+	oob_gen_log_summary = yes
+}
+
+# Enable per-division PYTHON_OOB_SPAWN lines for one country (console: execute oob_gen_enable_verbose_log)
+oob_gen_enable_verbose_log = {
+	set_country_flag = oob_gen_verbose_log
+	log = "PYTHON_OOB_VERBOSE_ENABLED;[GetTag];[GetName]"
+}
+
+oob_gen_disable_verbose_log = {
+	clr_country_flag = oob_gen_verbose_log
+	log = "PYTHON_OOB_VERBOSE_DISABLED;[GetTag];[GetName]"
 }

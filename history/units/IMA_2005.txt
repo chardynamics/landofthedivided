@@ -1,0 +1,131 @@
+# Generated from game.log by parse_oob_gen_log.py
+# Country: IMA ()
+# Source: d_create_army
+# Planned divisions: 17, logged spawns: 18
+
+division_template = {
+	name = "Infantry Unit"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		location = 485 #Bartholomew, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 485 #Bartholomew, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 485 #Bartholomew, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 485 #Bartholomew, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 243 #Bloomington, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 243 #Bloomington, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 243 #Bloomington, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 243 #Bloomington, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 243 #Bloomington, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 243 #Bloomington, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 4460 #Delaware, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 5894 #Howard, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 5894 #Howard, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 5894 #Howard, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 5894 #Howard, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 4840 #Indianapolis, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 4840 #Indianapolis, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		location = 4840 #Indianapolis, IN
+		division_template = "Infantry Unit"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+}

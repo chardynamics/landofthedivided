@@ -11,44 +11,44 @@ on_actions = {
 			ZZZ = {
 				for_each_scope_loop = {
 					array = global.american_warlords_1
-					d_create_army = yes
+					#d_create_army = yes
 					TNO_div_limiter_calculate_unit_cap = yes
 				}
 				for_each_scope_loop = {
 					array = global.american_warlords_2
-					d_create_army = yes
+					#d_create_army = yes
 					TNO_div_limiter_calculate_unit_cap = yes
 				}
 				for_each_scope_loop = {
 					array = global.american_warlords_3
 					set_country_flag = is_warlord
-					d_create_army2 = yes
+					#d_create_army2 = yes
 					TNO_div_limiter_calculate_unit_cap = yes
 				}
 				for_each_scope_loop = {
 					array = global.american_warlords_4
 					set_country_flag = is_warlord
-					d_create_army3 = yes
+					#d_create_army3 = yes
 					TNO_div_limiter_calculate_unit_cap = yes
 				}
 				for_each_scope_loop = {
 					array = global.american_warlords_5
-					d_create_army3 = yes
+					#d_create_army3 = yes
 					TNO_div_limiter_calculate_unit_cap = yes
 				}
 				for_each_scope_loop = {
 					array = global.american_warlords_6
-					d_create_army2 = yes
+					#d_create_army2 = yes
 					TNO_div_limiter_calculate_unit_cap = yes
 				}
 				for_each_scope_loop = {
 					array = global.world_countries
-					d_create_army3 = yes
+					#d_create_army3 = yes
 					TNO_div_limiter_calculate_unit_cap = yes
 				}
 				for_each_scope_loop = {
 					array = global.world_countries2
-					d_create_army2 = yes
+					#d_create_army2 = yes
 					TNO_div_limiter_calculate_unit_cap = yes
 				}
 			}

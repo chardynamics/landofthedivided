@@ -1,0 +1,41 @@
+# Logging helpers for oob_gen_scripted_effects.txt
+# Filter game.log for lines starting with PYTHON_OOB_
+# Then run: python3 parse_oob_gen_log.py --log path/to/game.log
+
+oob_gen_reset_spawn_counters = {
+	every_controlled_state = {
+		set_variable = { oob_gen_spawn_count = 0 }
+		set_variable = { oob_gen_spawn_infantry_unit = 0 }
+		set_variable = { oob_gen_spawn_infantry_division = 0 }
+		set_variable = { oob_gen_spawn_motorized_division = 0 }
+	}
+}
+
+oob_gen_count_infantry_unit_spawn = {
+	add_to_variable = { oob_gen_spawn_count = 1 }
+	add_to_variable = { oob_gen_spawn_infantry_unit = 1 }
+}
+
+oob_gen_count_infantry_division_spawn = {
+	add_to_variable = { oob_gen_spawn_count = 1 }
+	add_to_variable = { oob_gen_spawn_infantry_division = 1 }
+}
+
+oob_gen_count_motorized_division_spawn = {
+	add_to_variable = { oob_gen_spawn_count = 1 }
+	add_to_variable = { oob_gen_spawn_motorized_division = 1 }
+}
+
+oob_gen_log_summary = {
+	log = "PYTHON_OOB_BEGIN;[ROOT.GetTag];[ROOT.GetName];script=[?oob_gen_script_id];manpower_k=[?max_available_manpower_k];planned_divs=[?oob_gen_planned_divs];barrier=[?oob_gen_barrier];j_cutoff=[?oob_gen_j_cutoff]"
+	every_controlled_state = {
+		limit = { check_variable = { oob_gen_spawn_count > 0 } }
+		log = "PYTHON_OOB_STATE;[PREV.GetTag];script=[?PREV.oob_gen_script_id];state=[THIS.GetName];total=[?oob_gen_spawn_count];infantry_unit=[?oob_gen_spawn_infantry_unit];infantry_division=[?oob_gen_spawn_infantry_division];motorized_division=[?oob_gen_spawn_motorized_division]"
+	}
+	set_temp_variable = { oob_gen_total_spawned = 0 }
+	every_controlled_state = {
+		add_to_temp_variable = { oob_gen_total_spawned = oob_gen_spawn_count }
+	}
+	log = "PYTHON_OOB_END;[ROOT.GetTag];[ROOT.GetName];script=[?oob_gen_script_id];spawned=[?oob_gen_total_spawned];planned=[?oob_gen_planned_divs];country_divisions=[?num_divisions]"
+	oob_gen_reset_spawn_counters = yes
+}
