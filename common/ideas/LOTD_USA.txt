@@ -1,5 +1,6 @@
 ideas = {
-	country = {
+	hidden_ideas = {
+		#boost shit early-game russian econ
 		USA_warlord_econ_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_warlord_econ_1" }
 			allowed = { always = no }
@@ -124,9 +125,6 @@ ideas = {
 				military_R_D_expenditures_factor = -0.15
 			}
 		}
-	}
-	hidden_ideas = {
-		#boost shit early-game russian econ
 		USA_regional_econ = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_regional_econ" }
 			allowed = { always = no }
