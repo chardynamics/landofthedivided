@@ -10,8 +10,7 @@ ideas = {
 			picture = PHI_The_Diverging_Movement
 
 			modifier = {
-				political_power_gain = -0.2
-				war_support_factor = -0.1
+				political_power_gain = -0.1
 			}
 		}
 		PHI_Aftermath_Of_The_Wolverine = { 
@@ -21,31 +20,29 @@ ideas = {
 			}
 			removal_cost = -1
 
-			picture = PHI_Aftermath_Of_The_Wolverine
+			picture = generic_underfunded_army
 
 			modifier = {
 				army_attack_factor = -0.1
-				army_core_defence_factor = 0.1
 				army_org_factor = -0.1
-				land_reinforce_rate = -0.1
-				military_expenditures_factor = -0.2
+				war_support_factor = -0.1
 			}
 		}
 		PHI_The_American_Malaise = { 
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_Aftermath_Of_The_Wolverine" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PHI_The_American_Malaise" }
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 
-			picture = PHI_The_American_Malaise
+			picture = generic_government_collapse
  
 			modifier = {
-				production_speed_buildings_factor = -0.3
-				production_factory_max_efficiency_factor = -0.25
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = -0.1
 				gdp_growth_modifier = -1
-				research_speed_factor = -0.2
+				research_speed_factor = -0.1
 				poverty_monthly_rate = -0.05
 			}
 		}
@@ -59,8 +56,8 @@ ideas = {
 			picture = PHI_The_Southern_Problem
 
 			modifier = {
-				stability_factor = -0.1
-				war_support_factor = -0.1
+				war_support_factor = 0.05
+				land_reinforce_rate = 0.1
 			}
 		}
 	}

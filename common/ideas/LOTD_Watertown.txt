@@ -7,7 +7,7 @@ ideas = {
 			}
 			removal_cost = -1
 
-			picture = WTB_Canadian_Assistance
+			picture = CMM_Symbol_Of_Canadian_Intervention
 
 			modifier = {
 				stability_factor = 0.1
@@ -22,15 +22,14 @@ ideas = {
 			}
 			removal_cost = -1
 
-			picture = WTB_Island_Of_Stability
+			picture = FML_A_Peaceful_Island_In_A_Sea_Of_War
 
 			modifier = {
-				political_power_gain = -0.2
-				production_speed_buildings_factor = -0.3
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.1
 				gdp_growth_modifier = 1
-				research_speed_factor = 0.1
 				poverty_monthly_rate = 0.02
 			}
 		}
