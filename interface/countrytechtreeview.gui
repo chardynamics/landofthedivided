@@ -2238,7 +2238,8 @@ guiTypes = {
 			gridboxtype = {
 				name = "jet_engines_tree"
 				#position = { x = 434 y = 451 }
-				position = { x = 180 y = 451 }
+				#position = { x = 180 y = 451 }
+				position = { x = 25 y = 451 }
 				size = { width = 200 height = 200 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"

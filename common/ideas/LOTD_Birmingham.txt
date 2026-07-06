@@ -7,14 +7,13 @@ ideas = {
 			}
 			removal_cost = -1
 
-			picture = BIR_Crumbling_Institution
+			picture = generic_government_collapse
 
 			modifier = {
-				defense = -0.2
-				offence = -0.2
+				offence = -0.1
 				political_power_gain = -0.2
 				war_support_factor = -0.25
-				army_org = -0.25
+				army_org_factor = -0.25
 			}
 		}
 	}

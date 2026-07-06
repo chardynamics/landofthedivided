@@ -4,7 +4,7 @@
 # Planned divisions: 25, logged spawns: 26
 
 division_template = {
-	name = "Infantry Unit"
+	name = "División del Ejército"
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -12,167 +12,171 @@ division_template = {
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
 	}
 	support = {
-		artillery = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		anti_tank = { x = 0 y = 2 }
 	}
 }
 
 units = {
 	division = {
 		location = 867 #Corpus Christi, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 867 #Corpus Christi, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 867 #Corpus Christi, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 867 #Corpus Christi, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 867 #Corpus Christi, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 867 #Corpus Christi, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2359 #Crockett, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4771 #El Paso, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4771 #El Paso, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4771 #El Paso, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4771 #El Paso, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4771 #El Paso, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3168 #Fredericksburg, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3168 #Fredericksburg, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3168 #Fredericksburg, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6769 #Portland, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4945 #Reeves, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4945 #Reeves, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4945 #Reeves, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6410 #San Antonio, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6410 #San Antonio, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6410 #San Antonio, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6410 #San Antonio, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6410 #San Antonio, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6410 #San Antonio, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6410 #San Antonio, TX
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}

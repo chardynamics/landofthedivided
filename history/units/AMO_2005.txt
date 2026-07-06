@@ -3,8 +3,9 @@
 # Source: d_create_army
 # Planned divisions: 21, logged spawns: 22
 
+
 division_template = {
-	name = "Infantry Unit"
+	name = "División del Ejército"
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -12,143 +13,147 @@ division_template = {
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
 	}
 	support = {
-		artillery = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		anti_tank = { x = 0 y = 2 }
 	}
 }
 
 units = {
 	division = {
 		location = 1178 #Carlsbad, NM
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1178 #Carlsbad, NM
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1178 #Carlsbad, NM
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 543 #Clovis, NM
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 72 #Deming, NM
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 72 #Deming, NM
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 806 #Duncan, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 806 #Duncan, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 806 #Duncan, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 806 #Duncan, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3894 #Pima, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3894 #Pima, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3894 #Pima, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6255 #Roswell, NM
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6255 #Roswell, NM
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1725 #Santa Fe, NM
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2428 #Sierra Vista, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2428 #Sierra Vista, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2428 #Sierra Vista, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6272 #Tucson, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6272 #Tucson, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6272 #Tucson, AZ
-		division_template = "Infantry Unit"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}

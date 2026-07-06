@@ -1606,6 +1606,14 @@ technologies = {
 			leads_to_tech = improved_jet_engines_bombers_1
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = CAS_1950
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = fighter_1950
+			research_cost_coeff = 1
+		}
 		airforce_cost_modifier = 0.75
 		air_training_xp_gain_factor = -0.2
 		air_wing_xp_loss_when_killed_factor = 0.15

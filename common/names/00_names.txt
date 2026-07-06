@@ -7,17 +7,38 @@
 
 default = {
 	male = {
-		names = { "John" "Bob" "Lucas" "Marcus" "Alexander" "Alex" "Peter" "Jonas" "Jim" "Johannes" }
-		surnames = { }
-		callsigns = { }
+		names = {
+			Adam Alexander William Henry Michael Samuel Joshua George John Matt Mark Luke Lucas Jeffrey Ulysses
+			Joseph Charles Russell Benjamin Robert Christopher Richard Chester Eric Nathaniel Francis James Donald Cyrus Ambrose
+			Edward Eugene Augustus Norton Abner Isaac Amos Thomas Randolph Joe Bill Mike
+			Robert Jesse James Nathan George Joseph John Patrick Albert Braxton William Ambrose Jubal Richard
+			Lewis Edmund Leonida Benjamin Wade Daniel Thomas Jonathan Lemual Joe Raphael Kirby Pierre Derek
+			Jonas Frank Charles Peter Rand Leslie Howard Melvin Oscar Henry Simon Edward Gideon Isaac Evan Jerome Alfred Ryan
+			Carnot Ezra Wilton Hamilton Matthew Richard Hiram Thomas John James Albert Wilburn Walter Hinchie Samuel Benjamin
+			Henry Joel Horace Felix Jerome Lawrence Alexander Louis Steven Zach
+		}
 	}
 	female = {
-		names = { "Juliette" "Anna" }
-		surnames = { }
-	#	callsigns = { "Queen Of The Sky" "The Red Princess" }
+		names = { Mary Jane Jennifer Jessica Kate Eleanor Charlotte Lisa Isabel Jay Carol Nancy Margaret Judy Alison }
 	}
-	surnames = { "Smith" "Jones" "Taylor" "Brown" "Williams" "Wilson" "Evans" "Walker" "White" "Roberts" }
-	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon }
+	surnames = {
+		Smith Washington Grant Sherman Powell Clemens Abbott Abercrombie Allen Ames Anderson Barkhauer Andrews Appleton
+		Armstrong Arthur Atkins Asboth Babcock Baker Pope Banks Barnard Barnes Barnum Barry Barstow Bartlett Bates
+		Baxter Beatty Belknap Benton Blair Blunt Bradley Brown Buell Buford Burnside Butler Caldwell Campbell Carr
+		Chapman Chipman Clayton Coburn Connor Conrad Cook Cooper Crittenden Custer Davies Davis Doubleday Ewing Farnsworth
+		Ford Forsyth Foster Franklin Fry Gilbert Gregg Griffin Halleck Hamlin Hancock Harrison Hatch Hayes Heintzelman
+		Hooker Howard Hunter Jackson Johnson Jones Keyes Kimball Lyon McArthur McClellan McCook McDowell Meade Mitchell
+		Morgan Paine Phelps Porter Potter Reynolds Rice Rhodes Robinson Rosencrans Saloman Schenck Schofield Scott Sedgwick
+		Seward Sheridan Sickles Sprague Stevens Stevenson Stone Sullivan Taylor Tyler Wade Wadsworth Wallace Ward Warner
+		Wilson Wright Young Lee Jackson Johnson Beauregard Stuart Longstreet Forrest Pickett Mosby Cleburne Hood Breckenridge Bragg
+		Barksdale Early Hill Ewell Morgan Armistead Semmes Smith Hampton Polk Cheatham Wheeler Pemberton Gordon Hardee Floyd Price
+		Wise Kennedy Loring Buckner Taylor Williams French Gibbs Hindman Anderson Sibley Garnett Magruder Pillow McLaws Rodes Heth
+		Pender Trimble Kershaw Wofford Kemper Law Robertson Benning Hays Walker Iverson Wilcox Mahone Wright Pettigrew Archer
+		Davis Lane Posey Scales Warner Imboden Jenkins Bee Ector Gano Granbury Green Greer Gregg Hardeman Harrison Hood Johnston King Lane Mabry Maxey McCulloch Moore
+		Nelson Randal Robertson Ross Rosser Scurry Steele Terrell Waterhouse Waul Wharton Whitfield Wigfall Young Bowie Travis Houston
+		Wells Holmgren
+	}
+	callsigns = { "Goose" "Iceman" "Maverick" "Apollo" "Animal" "Boom-Boom" "Badger" "Brick" "Cajun" "Challenger" "Chip" "Eagle" "Ghost" "Hawk" "Jaws" "Moses" "Mad Dog" }
 }
 
 CAN = {
@@ -36,6 +57,7 @@ CAN = {
 	}
 	callsigns = { }
 }
+
 CUB = {
 	male = {
 		names = {
@@ -113,8 +135,28 @@ HAI = {
 	callsigns = { }
 }
 
-
-
+FRA = {
+	male = {
+		names = {
+			Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin
+			Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand
+			François Frédéric Georges Guillaume Gustave Henri Hubert Hugo Jacques Jean
+			Joseph Jules Julien Lazare Léopold Leroy Louis Lucien Matthieu Michel
+			Napoléon Nicolas Patrice Paul Philippe Pierre Robert Thibaut Thierry Thomas
+		}
+	}
+	female = {
+		names = { Anne Marie Françoise Gisèle Marguerite Marianne Simone Anaïs Irène Nathalie Elsa }
+	}
+	surnames = {
+		Anthoine "Baraguey d'Hilliers" Bazaine Billot Bosquet "Boué de Lapeyrère" Bouët-Willaumez Boulanger Bourbaki
+		Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Castellane" "de Castelnau"
+		"de Langle de Cary" "de MacMahon" "de Montaignac" "de Saint Arnaud" d'Orleans Dubail Dubois Duchêne Dupetit-Thouars Exelmans
+		Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert
+		Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Pétain Vaillant
+	}
+	callsigns = { "Draco" "Fast" "Tiger" "Sparrow" "Ripper" "Sundance" "Toad" "Twitch" "Farmer" "Weasel" "Target Practice" "Invisible" "Beach Boy" "Princess" "The Mute" "Carpenter" }
+}
 
 ENG = {
 	male = {
@@ -165,3 +207,58 @@ MEX = {
 	}
 	callsigns = { }
 }
+
+AMF = {
+	male = {
+		names = {
+			David Adrián Agustín Álvaro Anastasio Andrés Ángel Antonio Bernardo Emiliano Emilio
+			Enrique Ernesto Felipe Félix Francisco "Francisco Javier" Gabriel Gaspar Gregorio Ignacio
+			Jerónimo Joaquín José "José Manuel" "José María" Juan "Juan Bautista" Justo Lázaro Manuel
+			Mariano Martín Melchor Miguel Nicolás Pablo Pascual Pedro Porfirio Ramón Anselmo Cecilio
+			Ricardo Rómulo Salvador Sebastián Tomás Valentín Valeriano Venustiano Vicente Victoriano
+		}
+	}
+	female = {
+		names = {
+			Adelita Araceli Belén Camila Candelaria Chavela Consuelo Cristina Delfina Esperanza
+			Fidelia Graciela Isadora Isabella Jimena Ximena Luciana Lucrecia María Marisol
+			Noemí Nohemi Valentina Valeria Rocío Socorro Sofía Teófila Amaranta Úrsula Rebeca Remedios
+		}
+	}
+	surnames = {
+		Martínez Almonte Álvarez Arista Barragán Bocanegra Bravo Bustamante Canalizo Carranza Caserta
+		Cervantes Corona Corra "de Ampudia" "de Cos" "de Itúrbide" Díaz Echeverría Escandón Escobedo
+		Fagoaga "Fernández del Valle" Flores Gómez González Guerrero Huerta Kosterlitzky "López de Santa Ana" Lozada
+		"Martínez del Río" Mejía Miramón Múzquiz Obregón Pedraza Pimentel Reyes "Rincón Gallardo" Robles
+		Ruiz Salas Sánchez "Sarmaniego del Castillo" "Vázquez de la Cadena" Villa Woll Zapata Zaragoza Zuloaga
+	}
+	callsigns = { }
+}
+
+AMO = {
+	male = {
+		names = {
+			David Adrián Agustín Álvaro Anastasio Andrés Ángel Antonio Bernardo Emiliano Emilio
+			Enrique Ernesto Felipe Félix Francisco "Francisco Javier" Gabriel Gaspar Gregorio Ignacio
+			Jerónimo Joaquín José "José Manuel" "José María" Juan "Juan Bautista" Justo Lázaro Manuel
+			Mariano Martín Melchor Miguel Nicolás Pablo Pascual Pedro Porfirio Ramón Anselmo Cecilio
+			Ricardo Rómulo Salvador Sebastián Tomás Valentín Valeriano Venustiano Vicente Victoriano
+		}
+	}
+	female = {
+		names = {
+			Adelita Araceli Belén Camila Candelaria Chavela Consuelo Cristina Delfina Esperanza
+			Fidelia Graciela Isadora Isabella Jimena Ximena Luciana Lucrecia María Marisol
+			Noemí Nohemi Valentina Valeria Rocío Socorro Sofía Teófila Amaranta Úrsula Rebeca Remedios
+		}
+	}
+	surnames = {
+		Martínez Almonte Álvarez Arista Barragán Bocanegra Bravo Bustamante Canalizo Carranza Caserta
+		Cervantes Corona Corra "de Ampudia" "de Cos" "de Itúrbide" Díaz Echeverría Escandón Escobedo
+		Fagoaga "Fernández del Valle" Flores Gómez González Guerrero Huerta Kosterlitzky "López de Santa Ana" Lozada
+		"Martínez del Río" Mejía Miramón Múzquiz Obregón Pedraza Pimentel Reyes "Rincón Gallardo" Robles
+		Ruiz Salas Sánchez "Sarmaniego del Castillo" "Vázquez de la Cadena" Villa Woll Zapata Zaragoza Zuloaga
+	}
+	callsigns = { }
+}
+

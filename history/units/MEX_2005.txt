@@ -4,7 +4,7 @@
 # Planned divisions: 134, logged spawns: 66
 
 division_template = {
-	name = "Infantry Unit"
+	name = "Brigada del Ejército"
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -19,8 +19,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Infantry Division"
-	division_names_group = USA_INF_01
+	name = "División del Ejército"
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -39,8 +38,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Motorized Division"
-	division_names_group = USA_MOT_01
+	name = "Brigada Acorazada"
 	regiments = {
 		motorized = { x = 0 y = 0 }
 		motorized = { x = 0 y = 1 }
@@ -62,397 +60,397 @@ division_template = {
 units = {
 	division = {
 		location = 4381 #Aguascalientes
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6773 #Baja California Sur
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6773 #Baja California Sur
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2617 #Chihuahua
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2617 #Chihuahua
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1092 #Ciudad Obregon, SO
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1092 #Ciudad Obregon, SO
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1092 #Ciudad Obregon, SO
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 63 #Ciudad Valles, SL
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1925 #Ciudad Victoria, TM
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1925 #Ciudad Victoria, TM
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2701 #Durango, DG
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2701 #Durango, DG
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2701 #Durango, DG
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 666 #Este de Nayarit
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3530 #Fresnillo, ZA
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3530 #Fresnillo, ZA
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3809 #Guayalejo, VC
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4287 #Hidalgo
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1226 #Huejutla de Reyes, VC
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1226 #Huejutla de Reyes, VC
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6826 #Isla Maria Madre, NA
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6826 #Isla Maria Madre, NA
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 944 #Jalisco
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1943 #Laredos, TM
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1943 #Laredos, TM
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4935 #Matamoros, TA
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3470 #Mazatlan, SI
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3470 #Mazatlan, SI
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 3470 #Mazatlan, SI
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4358 #Mezquitic, JA
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4358 #Mezquitic, JA
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4358 #Mezquitic, JA
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2234 #Monctezuma, SL
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2234 #Monctezuma, SL
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 126 #Montemorelos, NL
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 2364 #Monterrey, NL
-		division_template = "Motorized Division"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 1937 #Nogales, SO
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4088 #Puerto Vallarta, JA
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4088 #Puerto Vallarta, JA
-		division_template = "Infantry Unit"
+		division_template = "Brigada del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 872 #Tepic, NA
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 872 #Tepic, NA
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 6568 #Veracruz
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4046 #Yucatan
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		location = 4046 #Yucatan
-		division_template = "Infantry Division"
+		division_template = "División del Ejército"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}

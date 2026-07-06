@@ -7,7 +7,7 @@ ideas = {
 			}
 			removal_cost = -1
 
-			picture = AMF_Overextended_Administration
+			picture = generic_government_burning_down
 
 			modifier = {
 				political_power_gain = -0.2
@@ -23,7 +23,7 @@ ideas = {
 			}
 			removal_cost = -1
 
-			picture = AMF_Money_Black_Hole
+			picture = generic_burning_money
 
 			modifier = {
 				army_attack_factor = -0.1
@@ -39,7 +39,7 @@ ideas = {
 			}
 			removal_cost = -1
 
-			picture = AMF_Teetering
+			picture = generic_time_bomb
 
 			modifier = {
 				stability_factor = -0.2
