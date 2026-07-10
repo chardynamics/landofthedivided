@@ -1,0 +1,28 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = norfolk
+
+country_event = {
+	id = norfolk.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event norfolk.1" }
+	title = norfolk.1.t
+	desc = norfolk.1.desc
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = norfolk.1.a
+		remove_from_faction = CHA
+		NOR = {
+			declare_war_on = {
+				target = CHA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SVR
+				type = annex_everything
+			}
+		}
+	}
+}

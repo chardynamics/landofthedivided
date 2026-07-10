@@ -1,0 +1,25 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = texas
+
+country_event = {
+	id = texas.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event texas.1" }
+	title = texas.1.t
+	desc = texas.1.desc
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = texas.1.a
+		remove_from_faction = STX
+		remove_from_faction = DMA
+		STX = {
+			declare_war_on = {
+				target = HMA
+				type = annex_everything
+			}
+		}
+	}
+}

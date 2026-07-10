@@ -148,3 +148,6 @@ add_equipment_to_stockpile = {
 	amount = 250
 	producer = BAL
 }
+
+set_global_flag = baltimore_revolt_active
+activate_mission = baltimore_revolt_timer

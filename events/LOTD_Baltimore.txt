@@ -1,0 +1,17 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = baltimore
+
+news_event = {
+	id = baltimore.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event baltimore.1" }
+	title = baltimore.1.t
+	desc = baltimore.1.desc
+	picture = GFX_news_event_USA_aleutians_crisis
+
+	is_triggered_only = yes
+
+	option = {
+		name = baltimore.1.a
+	}
+}

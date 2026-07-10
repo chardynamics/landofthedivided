@@ -1,0 +1,112 @@
+debug_wars_category = {
+	cfc_military_florida_war = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cfc_military_florida_war"
+			country_event = florida.1
+		}
+	}
+	carolinas_war = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision carolinas_war"
+			country_event = south_carolina.1
+		}
+	}
+	rockies_war = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision rockies_war"
+			country_event = california.1
+		}
+	}
+	norfolk_war = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision norfolk_war"
+			country_event = norfolk.1
+		}
+	}
+	missouri_war = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision missouri_war"
+			country_event = missouri.1
+		}
+	}
+	arizona_war = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision arizona_war"
+			country_event = arizona.1
+		}
+	}
+	texas_war = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision texas_war"
+			country_event = texas.1
+		}
+	}
+	michigan_war = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision michigan_war"
+			country_event = emergency_federal.1
+		}
+	}
+	northern_war = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision northern_war"
+			country_event = emergency_federal.2
+		}
+	}
+	plains_war = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision plains_war"
+			country_event = northern_command.1
+		}
+	}
+}

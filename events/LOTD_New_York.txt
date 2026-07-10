@@ -1,0 +1,35 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = new_york
+
+country_event = {
+	id = new_york.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event new_york.1" }
+	title = new_york.1.t
+	desc = new_york.1.desc
+	picture = GFX_news_event_USA_aleutians_crisis
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = new_york.1.a
+		random_list = {
+			25 = {
+				ITH = {
+
+				}
+			}
+			25 = {
+				ITH = {
+					
+				}
+			}
+			50 = {
+				ITH = {
+					join_facti
+				}
+			}
+		}
+	}
+}

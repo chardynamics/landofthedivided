@@ -1,0 +1,76 @@
+baltimore_revolt_category = {
+	baltimore_revolt_timer = {
+		icon = {
+			##Change this icon
+			key = GFX_decision_generic_visibility
+		}
+		#allowed = {
+		#	OR = {
+		#		original_tag = BAL
+		#		original_tag = PHI
+		#	}
+		#}
+		activation = {
+			AND = {
+				PHI = {
+					has_war_with = BAL
+				}
+				has_global_flag = baltimore_revolt_active
+			}
+		}
+		fire_only_once = yes
+		days_mission_timeout = 45
+		cancel_trigger = {
+			BAL = {
+				controls_state = 284
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					PHI = {
+						has_war_with = BAL
+					}
+				}
+				PHI = {
+					white_peace = {
+						tag = BAL
+						message = my_peace_tt
+					}
+				}
+				add_to_variable = { global.peace_popup_dirty = 1 }
+				##Change states to Baltimore
+				every_country = {
+					news_event = {
+						id = baltimore.1
+					}
+				}
+			}
+		}
+		clr_global_flag = baltimore_revolt_active
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision baltimore_revolt_timer"
+			if = {
+				limit = {
+					PHI = {
+						has_war_with = BAL
+					}
+				}
+				PHI = {
+					white_peace = {
+						tag = BAL
+						message = my_peace_tt
+					}
+				}
+				add_to_variable = { global.peace_popup_dirty = 1 }
+				##Change states to Baltimore
+				every_country = {
+					news_event = {
+						id = baltimore.1
+					}
+				}
+			}
+			clr_global_flag = baltimore_revolt_active
+		}
+	}
+}

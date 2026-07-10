@@ -1,0 +1,37 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = arizona
+
+country_event = {
+	id = arizona.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event arizona.1" }
+	title = arizona.1.t
+	desc = arizona.1.desc
+	picture = GFX_news_event_USA_aleutians_crisis
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = arizona.1.a
+		MEX = {
+			end_puppet = AMO
+		}
+		SCA = {
+			end_puppet = MNV
+		}
+		remove_from_faction = SAZ
+		remove_from_faction = MNM
+		remove_from_faction = AMO
+		SAZ = {
+			create_faction = southern_commonwealth
+			add_to_faction = MNM
+		}
+		SAZ = {
+			declare_war_on = {
+				target = AMO
+				type = annex_everything
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = emergency_federal
+
+country_event = {
+	id = emergency_federal.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event emergency_federal.1" }
+	title = emergency_federal.1.t
+	desc = emergency_federal.1.desc
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = emergency_federal.1.a
+		remove_from_faction = STX
+		remove_from_faction = DMA
+		EFG = {
+			declare_war_on = {
+				target = WOL
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = emergency_federal.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event emergency_federal.2" }
+	title = emergency_federal.2.t
+	desc = emergency_federal.2.desc
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = emergency_federal.2.a
+		EFG = {
+			declare_war_on = {
+				target = SWI
+				type = annex_everything
+			}
+		}
+	}
+}

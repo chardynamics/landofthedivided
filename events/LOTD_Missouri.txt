@@ -1,0 +1,23 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = missouri
+
+country_event = {
+	id = missouri.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event missouri.1" }
+	title = missouri.1.t
+	desc = missouri.1.desc
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = missouri.1.a
+		CKC = {
+			declare_war_on = {
+				target = USM
+				type = annex_everything
+			}
+		}
+	}
+}

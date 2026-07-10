@@ -1,0 +1,24 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = south_carolina
+
+country_event = {
+	id = south_carolina.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event south_carolina.1" }
+	title = south_carolina.1.t
+	desc = south_carolina.1.desc
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = south_carolina.1.a
+		SSC = {
+			declare_war_on = {
+				target = CHA
+				type = annex_everything
+			}
+			load_oob = "SSC_insurgents"
+		}
+	}
+}

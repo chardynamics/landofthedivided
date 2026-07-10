@@ -1,0 +1,33 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = florida
+
+country_event = {
+	id = florida.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event florida.1" }
+	title = florida.1.t
+	desc = florida.1.desc
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = florida.1.a
+		remove_from_faction = SFM
+		remove_from_faction = JMA
+		SFM = {
+			create_faction = florida_military_authority
+			add_to_faction = JMA
+		}
+		CFC = {
+			declare_war_on = {
+				target = SFM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = JMA
+				type = annex_everything
+			}
+		}
+	}
+}

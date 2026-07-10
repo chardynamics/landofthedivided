@@ -1,0 +1,35 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = northern_command
+
+country_event = {
+	id = northern_command.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event tenorthern_commandxas.1" }
+	title = northern_command.1.t
+	desc = northern_command.1.desc
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = northern_command.1.a
+		remove_from_faction = OMA
+		remove_from_faction = DMA
+		remove_from_faction = OKC
+		remove_from_faction = LMA
+		OKC = {
+			create_faction = central_july_fourth
+			add_to_faction = OMA
+		}
+		DMA = {
+			create_faction = plains_military_accord
+			add_to_faction = LMA
+		}
+		OMA = {
+			declare_war_on = {
+				target = DMA
+				type = annex_everything
+			}
+		}
+	}
+}

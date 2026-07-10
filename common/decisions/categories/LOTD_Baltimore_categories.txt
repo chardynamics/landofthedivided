@@ -1,0 +1,14 @@
+baltimore_revolt_category = {
+	icon = GFX_decision_generic_propaganda
+
+	allowed = {
+		OR = {
+			original_tag = BAL
+			original_tag = PHI
+		}
+	}
+
+	visible = {
+		has_global_flag = baltimore_revolt_active
+	}
+}

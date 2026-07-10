@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a>
-    <img src="mod_map.png" alt="Logo" width="50%" height="50%">
+    <img src="mod_map.png" alt="Logo">
   </a>
 
 <h3 align="center">Land of the Divided: A Hearts of Iron IV Total Conversion Mod</h3>

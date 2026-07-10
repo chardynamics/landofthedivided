@@ -1,0 +1,24 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = california
+
+country_event = {
+	id = california.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event california.1" }
+	title = california.1.t
+	desc = california.1.desc
+	picture = GFX_news_event_USA_aleutians_crisis
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = california.1.a
+		SCA = {
+			declare_war_on = {
+				target = GBR
+				type = annex_everything
+			}
+		}
+	}
+}
