@@ -13,8 +13,9 @@ country_event = {
 
 	option = {
 		name = emergency_federal.1.a
-		remove_from_faction = STX
-		remove_from_faction = DMA
+		WOL = {
+			remove_from_faction = WOL
+		}
 		EFG = {
 			declare_war_on = {
 				target = WOL

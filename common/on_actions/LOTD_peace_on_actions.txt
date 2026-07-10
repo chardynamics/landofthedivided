@@ -98,7 +98,6 @@ on_actions = {
 							}
 						}
 					}
-					
 					FROM = {
 						white_peace = PREV
 						annex_country = {
@@ -122,29 +121,15 @@ on_actions = {
 							}
 						}
 					}
-					every_country = {
-						limit = { has_war_with = ALF }
-						white_peace = ALF
-					}
 					
 					FROM = {
-						every_enemy_country = {
-							limit = {
-								OR = {
-									original_tag = ROOT
-									is_in_faction_with = ROOT
-									is_subject_of = ROOT
-								}
-							}
-							FROM = {
-								white_peace = PREV
-								annex_country = {
-									target = PREV
-									transfer_troops = no
-								}
-							}
+						white_peace = PREV
+						annex_country = {
+							target = PREV
+							transfer_troops = no
 						}
 					}
+
 					clr_global_flag = ALF_insurrection_ongoing
 					set_global_flag = skip_default_capitulation
 				}
@@ -163,18 +148,284 @@ on_actions = {
 						}
 					}
 
-					every_country = {
-						limit = { has_war_with = ALF }
-						white_peace = ALF
-					}
-					
-					BIR = {
+					FROM = {
+						white_peace = PREV
 						annex_country = {
-							target = ALF
+							target = PREV
 							transfer_troops = no
 						}
 					}
+
 					clr_global_flag = ALF_insurrection_ongoing
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = { # Wolverine state capitulation
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = EFG
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = WOL
+							}
+						}
+					}
+
+					FROM = {
+						white_peace = PREV
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = { # South Carolina capitulation
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = CHA
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = SSC
+							}
+						}
+					}
+
+					FROM = {
+						white_peace = PREV
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = { # STX capitulation
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = HMA
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = STD
+							}
+						}
+					}
+
+					FROM = {
+						white_peace = PREV
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = { # HMA capitulation
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = STX
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = HMA
+							}
+						}
+					}
+
+					FROM = {
+						white_peace = PREV
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = { # CFC capitulation
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = JMA
+								original_tag = SFM
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = CFC
+							}
+						}
+					}
+
+					SFM = {
+						white_peace = PREV
+						annex_country = {
+							target = ROOT
+							transfer_troops = no
+						}
+					}
+
+					JMA = {
+						set_state_owner = 593
+						set_state_owner = 603
+					}
+					##add talahassee
+
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = { # CKC capitulation
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = USM
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = CKC
+							}
+						}
+					}
+
+					FROM = {
+						white_peace = PREV
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+
+					set_global_flag = skip_default_capitulation
+				}
+
+				else_if = { # Missouri capitulation
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = CKC
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = USM
+							}
+						}
+					}
+
+					FROM = {
+						white_peace = PREV
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+
+					set_global_flag = skip_default_capitulation
+				}
+
+
+				else_if = { # Rochester win
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = ROC
+								is_in_faction_with = ROC
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = ALB
+								original_tag = HUD
+								original_tag = ITH
+								original_tag = ERE
+							}
+						}
+					}
+
+					ROC = {
+						white_peace = PREV
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+
+					set_global_flag = skip_default_capitulation
+				}
+
+
+				else_if = { # Albany win
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = ALB
+								is_in_faction_with = ALB
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = ROC
+								original_tag = HUD
+								original_tag = ITH
+								original_tag = ERE
+							}
+						}
+					}
+
+					ALB = {
+						white_peace = PREV
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+
+					set_global_flag = skip_default_capitulation
+				}
+
+
+				else_if = { # DMA win
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = OMA
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = DMA
+								original_tag = LMA
+							}
+						}
+					}
+
+					DMA = {
+						white_peace = OMA
+						annex_country = {
+							target = OMA
+							transfer_troops = no
+						}
+					}
+
 					set_global_flag = skip_default_capitulation
 				}
 				

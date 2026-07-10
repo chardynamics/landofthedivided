@@ -10,17 +10,15 @@ baltimore_revolt_category = {
 		#		original_tag = PHI
 		#	}
 		#}
-		activation = {
-			AND = {
-				PHI = {
-					has_war_with = BAL
-				}
-				has_global_flag = baltimore_revolt_active
+		available = {
+			BAL = {
+				controls_state = 284
 			}
 		}
+		is_good = yes
 		fire_only_once = yes
 		days_mission_timeout = 45
-		cancel_trigger = {
+		remove_trigger = {
 			BAL = {
 				controls_state = 284
 			}
@@ -39,7 +37,13 @@ baltimore_revolt_category = {
 					}
 				}
 				add_to_variable = { global.peace_popup_dirty = 1 }
-				##Change states to Baltimore
+				clr_global_flag = baltimore_revolt_active
+				BAL = {
+					set_state_owner = 406
+					set_state_owner = 402
+					set_state_owner = 403
+					set_state_owner = 395
+				}
 				every_country = {
 					news_event = {
 						id = baltimore.1
@@ -47,9 +51,7 @@ baltimore_revolt_category = {
 				}
 			}
 		}
-		clr_global_flag = baltimore_revolt_active
 		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision baltimore_revolt_timer"
 			if = {
 				limit = {
 					PHI = {
@@ -63,14 +65,19 @@ baltimore_revolt_category = {
 					}
 				}
 				add_to_variable = { global.peace_popup_dirty = 1 }
-				##Change states to Baltimore
+				clr_global_flag = baltimore_revolt_active
+				BAL = {
+					set_state_owner = 406
+					set_state_owner = 402
+					set_state_owner = 403
+					set_state_owner = 395
+				}
 				every_country = {
 					news_event = {
 						id = baltimore.1
 					}
 				}
 			}
-			clr_global_flag = baltimore_revolt_active
 		}
 	}
 }

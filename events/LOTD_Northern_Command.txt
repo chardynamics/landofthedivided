@@ -4,7 +4,7 @@ add_namespace = northern_command
 
 country_event = {
 	id = northern_command.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event tenorthern_commandxas.1" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event northern_command.1" }
 	title = northern_command.1.t
 	desc = northern_command.1.desc
 
@@ -20,6 +20,14 @@ country_event = {
 		OKC = {
 			create_faction = central_july_fourth
 			add_to_faction = OMA
+			declare_war_on = {
+				target = LMA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = DMA
+				type = annex_everything
+			}
 		}
 		DMA = {
 			create_faction = plains_military_accord
@@ -28,6 +36,10 @@ country_event = {
 		OMA = {
 			declare_war_on = {
 				target = DMA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LMA
 				type = annex_everything
 			}
 		}

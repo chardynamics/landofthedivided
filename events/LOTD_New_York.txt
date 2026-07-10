@@ -14,20 +14,123 @@ country_event = {
 
 	option = {
 		name = new_york.1.a
+		ROC = {
+			declare_war_on = {
+				target = ALB
+				type = annex_everything
+			}
+		}
 		random_list = {
 			25 = {
-				ITH = {
-
+				ALB = {
+					declare_war_on = {
+						target = ITH
+						type = annex_everything
+					}
+				}
+				ROC = {
+					declare_war_on = {
+						target = ITH
+						type = annex_everything
+					}
 				}
 			}
 			25 = {
+				ALB = {
+					add_to_faction = ITH
+				}
 				ITH = {
-					
+					declare_war_on = {
+						target = ROC
+						type = annex_everything
+					}
 				}
 			}
 			50 = {
+				ROC = {
+					add_to_faction = ITH
+				}
 				ITH = {
-					join_facti
+					declare_war_on = {
+						target = ALB
+						type = annex_everything
+					}
+				}
+			}
+		}
+		random_list = {
+			25 = {
+				ALB = {
+					declare_war_on = {
+						target = HUD
+						type = annex_everything
+					}
+				}
+				ROC = {
+					declare_war_on = {
+						target = HUD
+						type = annex_everything
+					}
+				}
+			}
+			25 = {
+				ALB = {
+					add_to_faction = HUD
+				}
+				HUD = {
+					declare_war_on = {
+						target = ROC
+						type = annex_everything
+					}
+				}
+			}
+			50 = {
+				ROC = {
+					add_to_faction = HUD
+				}
+				HUD = {
+					declare_war_on = {
+						target = ALB
+						type = annex_everything
+					}
+				}
+			}
+		}
+		random_list = {
+			25 = {
+				ALB = {
+					declare_war_on = {
+						target = ERE
+						type = annex_everything
+					}
+				}
+				ROC = {
+					declare_war_on = {
+						target = ERE
+						type = annex_everything
+					}
+				}
+			}
+			50 = {
+				ALB = {
+					add_to_faction = ERE
+				}
+				ERE = {
+					declare_war_on = {
+						target = ROC
+						type = annex_everything
+					}
+				}
+			}
+			25 = {
+				ROC = {
+					add_to_faction = ERE
+				}
+				ERE = {
+					declare_war_on = {
+						target = ALB
+						type = annex_everything
+					}
 				}
 			}
 		}
