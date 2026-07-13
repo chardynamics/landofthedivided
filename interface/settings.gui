@@ -379,7 +379,15 @@ guiTypes = { #Settings Menu#
 					position = { x=0 y =120}
 				}
 			}
-		}
+		
+			checkboxType = {
+				name = "event_sounds_checkbox"
+				position = { x = 21 y = 225 }
+				quadTextureSprite ="GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+}
 
 		#Subwindow Controls Settings#
 
@@ -1446,7 +1454,15 @@ guiTypes = { #Settings Menu#
 				buttonFont = "aldrich_18_outline"
 				clicksound = click_default
 			}
-		}
+		
+			checkboxType = {
+				name = "event_sounds_checkbox"
+				position = { x = 21 y = 225 }
+				quadTextureSprite ="GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+}
 
 		#Subwindow Controls settings#
 
