@@ -17,6 +17,12 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 
+	
+	SpriteType = {
+		name = "GFX_portrait_GER_oswald_lutz"
+		texturefile = "gfx/leaders/Generics/AmericaEurope_generic_1.png"
+	}
+
 	spriteType = {
 		name = "GFX_onmap_action_icon"
 		texturefile = "gfx/interface/onmap_action_icon.dds"
