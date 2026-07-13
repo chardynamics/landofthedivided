@@ -238,8 +238,8 @@ scripted_gui = {
 				set_variable = { TNO_Espionage_CurrentResearch = Tech_i }
 				hidden_effect = { country_event = { id = TNO_Espionage.1 days = 7 } }
 
-				Espionage_Tech_ApplyCost = yes
-				effect_tooltip = { Espionage_Tech_ApplyEffect = yes }
+				# Espionage_Tech_ApplyCost = yes
+				# effect_tooltip = { Espionage_Tech_ApplyEffect = yes }
 			}
 		}
 

@@ -258,4 +258,9 @@ spriteTypes = {
 		effectFile = "gfx/FX/progress.lua"
 		horizontal = yes
 	}
+
+	spriteType = {
+		name = "GFX_hq_badge_bg"
+		texturefile = "gfx/interface/army_badge_division_summary_item_selected.dds"
+	}
 }

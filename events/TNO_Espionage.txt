@@ -26,8 +26,8 @@ country_event = { # Bi-weekly pulse
 	trigger = { has_country_flag = TNO_Espionage_Mech_Active }
 
 	immediate = {
-		Espionage_Training_Update = yes
-		Espionage_Success_Update = yes
+		# Espionage_Training_Update = yes
+		# Espionage_Success_Update = yes
 		country_event = { id = TNO_Espionage.0 days = 14 }
 	}
 
@@ -46,7 +46,7 @@ country_event = { # Research Pulse
 		check_variable = { TNO_Espionage_CurrentResearch > -1 }
 	}
 
-	immediate = { Espionage_Research_Update = yes }
+	immediate = { } # Espionage_Research_Update removed
 
 	option = { name = ":)" }
 }
@@ -80,7 +80,7 @@ country_event = { # Recruitment finished
 		custom_effect_tooltip = TNO_Espionage_AddAgent_tt
 		add_to_variable = { TNO_Espionage_Agents = 1 }
 		add_to_variable = { TNO_Espionage_AgentsTotal = 1 }
-		set_temp_variable = { ExpertiseChange = 25 } Espionage_AddExpertise = yes
+		set_temp_variable = { ExpertiseChange = 25 } # Espionage_AddExpertise = yes
 		set_variable = { TNO_Espionage_Training = 0 }
 	}
 }

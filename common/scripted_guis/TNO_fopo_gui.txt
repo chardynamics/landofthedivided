@@ -90,17 +90,17 @@ scripted_gui = {
 			}
 
 			frontlines_btn_visible = {
-				TNO_fopo_should_display_homefront = yes
+				always = no
 			}
 			homefront_btn_visible = {
-				TNO_fopo_should_display_homefront = yes
+				always = no
 			}
 			conflict_status_visible = {
-				TNO_fopo_should_display_homefront = no
+				always = yes
 			}
 			conflict_title_visible = {
 				OR = {
-					TNO_fopo_should_display_homefront = no
+					always = yes
 					NOT = {
 						check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
 						check_variable = { selected_conflict_id = token:GC_BoliviaTreatyNegotiation }
@@ -109,7 +109,7 @@ scripted_gui = {
 			}
 			conflict_title_visible = {
 				OR = {
-					TNO_fopo_should_display_homefront = no
+					always = yes
 					NOT = {
 						check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
 						check_variable = { selected_conflict_id = token:GC_CayenneReferendum }
@@ -117,7 +117,7 @@ scripted_gui = {
 				}
 			}
 			info_tab_visible = {
-				TNO_fopo_show_info_tab = yes
+				always = no
 			}
 
 			frontlines_btn_click_enabled = {
@@ -240,7 +240,7 @@ scripted_gui = {
 
 		triggers = {
 			info_tab_visible = {
-				TNO_fopo_show_info_tab = yes
+				always = no
 			}
 		}
 
