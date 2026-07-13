@@ -858,3 +858,39 @@ End_Tension_Alert = {
 	set_temp_variable = { alert_id = token:Alert_HighTension }
 	remove_TNO_alert = yes
 }
+
+TNO_change_tension = { ##Modify World Tension Script
+	if = {
+		limit = { has_variable = tension_ID }
+		add_to_array = { array = global.TNO_Cold_War_GUI_Tension_Incidents_WT value = tension_WT index = 0 }
+		add_to_array = { array = global.TNO_Cold_War_GUI_Tension_Incidents_Involved_Superpower_1 value = tension_superpower_1 index = 0 }
+		add_to_array = { array = global.TNO_Cold_War_GUI_Tension_Incidents_Involved_Superpower_2 value = tension_superpower_2 index = 0 }
+		add_to_array = { array = global.TNO_Cold_War_GUI_Tension_Tab_Incidents_List value = tension_ID index = 0 }
+		add_to_array = { array = global.TNO_Cold_War_GUI_Tension_Incidents_Date value = global.date index = 0 }
+	}
+
+	# LOTD: GER/JAP tags not defined — only ALL-superpower routing kept
+	if = {
+		limit = {
+			check_variable = { tension_superpower_1 = ALL }
+			check_variable = { tension_superpower_2 = ALL }
+		}
+		add_to_variable = { global.TNO_superpower_tension^0 = tension_WT }
+		add_to_variable = { global.TNO_superpower_tension^1 = tension_WT }
+		add_to_variable = { global.TNO_superpower_tension^2 = tension_WT }
+	}
+	set_temp_variable = { total_temp = global.TNO_superpower_tension^index }
+	add_to_temp_variable = { total_temp = tension_WT }
+	set_temp_variable = { tension_WT_display = tension_WT }
+	if = {
+		limit = {
+			check_variable = { tension_WT_display < 0 }
+			multiply_temp_variable = { tension_WT_display = -1 }
+		}
+	}
+	custom_effect_tooltip = TNO_change_tension_tt
+	hidden_effect = {
+		TNO_tension_calc = yes
+	}
+}
+

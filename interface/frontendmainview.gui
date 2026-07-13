@@ -580,7 +580,17 @@ guiTypes = {
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
-	}
+	
+		positionType = {
+			name = "subscription_size"
+			position = { x = 320 y = 575 }
+		}
+
+		positionType = {
+			name = "version_label_subscription_position"
+			position = { x = 35 y = 539 }
+		}
+}
 	
 	containerWindowType = {
 		name = "mainmenu_social_buttons"
@@ -677,7 +687,12 @@ guiTypes = {
 			#clicksound = click_default
 			pdx_tooltip = "MENU_PRIVACY_POLICY"
 		}
-	}
+	
+		positionType = {
+			name = "subscription_position_without_social_gui"
+			position = { x = 0 y = 239 }
+		}
+}
 	
 	## This position needs updated
 	containerWindowType = {

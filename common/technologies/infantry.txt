@@ -4398,12 +4398,13 @@ technologies = {
 	}
 	motorized_rocket_unit = {
 		allow = { TNO_KD_Can_Research_Basic_Manufactoring = yes }
-		enable_subunits = {
-			motorized_rocket_brigade
-		}
-		enable_equipments = {
-			motorized_rocket_equipment_1
-		}
+		# LOTD: motorized_rocket_brigade / equipment not defined in this mod
+		# enable_subunits = {
+		#	motorized_rocket_brigade
+		# }
+		# enable_equipments = {
+		#	motorized_rocket_equipment_1
+		# }
 		
 		research_cost = 1.95
 		xp_research_type = army
