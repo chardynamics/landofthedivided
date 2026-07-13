@@ -1222,7 +1222,7 @@ default_never_build_silos = {
 
 default_recruit_materiel_scientist = {
 	enable = {
-		land_facility > 0
+		materiel_facility > 0
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -1234,7 +1234,7 @@ default_recruit_materiel_scientist = {
 
 default_recruit_theory_scientist = {
 	enable = {
-		nuclear_facility > 0
+		theory_facility > 0
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -1246,7 +1246,7 @@ default_recruit_theory_scientist = {
 
 default_recruit_electronics_scientist = {
 	enable = {
-		naval_facility > 0
+		electronics_facility > 0
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -1258,7 +1258,7 @@ default_recruit_electronics_scientist = {
 
 default_recruit_aerospace_scientist = {
 	enable = {
-		air_facility > 0
+		aerospace_facility > 0
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {

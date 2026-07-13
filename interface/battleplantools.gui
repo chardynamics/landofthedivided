@@ -44,6 +44,7 @@ guiTypes = {
 				position = {x=-21 y=33}
 				spriteType ="GFX_exercise_icon"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 				shortcut = "k"
 			}
 			buttonType = {
@@ -61,21 +62,8 @@ guiTypes = {
 				quadTextureSprite = "GFX_BPT_execute_mid"
 				frame = 2
 				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "btn_exercise_anim"
-				position = {x=-16 y=37}
-				spriteType ="GFX_exercise_icon_anim_strip_big"
-				clicksound = click_battleplan
-				shortcut = "k"
-			}
-
-			iconType = {
-				name = "icn_exercise_stop_at_max"
-				spriteType = "GFX_exercise_stop_at_max"
-				position = {x=-28 y=35}
-				alwaystransparent = yes
+				oversound = ui_menu_over
+				shortcut = "shift+s"
 			}
 
 			buttonType = {
@@ -86,6 +74,37 @@ guiTypes = {
 				frame = 2
 				clicksound = click_default
 				oversound = ui_menu_over
+				shortcut = "shift+d"
+			}
+
+			containerWindowType = {
+				name = "leader_proximity_button_group"
+				position = {x=77 y=3003}
+
+				buttonType = {
+					name = "btn_leader_proximity"
+					quadTextureSprite = "GFX_BPT_proximity_close"
+					frame = 2
+					clicksound = click_default
+					oversound = ui_menu_over
+				}
+			}
+
+			buttonType = {
+				name = "btn_exercise_anim"
+				position = {x=-16 y=37}
+				spriteType ="GFX_exercise_icon_anim_strip_big"
+				clicksound = click_battleplan
+				oversound = ui_menu_over
+				shortcut = "k"
+				shortcut = "shift+k"
+			}
+
+			iconType = {
+				name = "icn_exercise_stop_at_max"
+				spriteType = "GFX_exercise_stop_at_max"
+				position = {x=-28 y=35}
+				alwaystransparent = yes
 			}
 
 			buttonType = {
@@ -93,6 +112,7 @@ guiTypes = {
 				position = {x=96 y=33}
 				spriteType = "GFX_BPT_order_draw_naval_inv_btn"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 			}
 
 			buttonType = {
@@ -109,6 +129,7 @@ guiTypes = {
 				position = {x=96 y=-3300}
 				spriteType = "GFX_BPT_order_draw_paradrop_btn"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 			}
 
 			iconType = { #the paradrop button is already disabled if you don't have paradropable units, making this unnecssary, keeping it in code for now in case it messes with anything # now twice as redundant
@@ -125,6 +146,7 @@ guiTypes = {
 				spriteType = "GFX_BPT_order_draw_defence_btn"
 				shortcut = "z"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 			}
 
 			iconType = {
@@ -141,6 +163,7 @@ guiTypes = {
 				spriteType = "GFX_BPT_order_draw_offence_btn"
 				shortcut = "x"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 			}
 
 			iconType = {
@@ -164,6 +187,7 @@ guiTypes = {
 				spriteType = "GFX_BPT_order_draw_blitz_btn"
 				shortcut = "shift+x"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 			}
 
 			buttonType = {
@@ -172,6 +196,7 @@ guiTypes = {
 				spriteType = "GFX_BPT_order_draw_fallback_btn"
 				shortcut = "c"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 			}
 
 			buttonType = {
@@ -179,6 +204,7 @@ guiTypes = {
 				position = {x=330 y=33}
 				spriteType = "GFX_BPT_order_area_defense_btn"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 				shortcut = "v"
 			}
 
@@ -187,6 +213,7 @@ guiTypes = {
 				position = {x=373 y=33}
 				spriteType = "GFX_BPT_order_assign_units_btn"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 			}
 
 			buttonType = {
@@ -194,6 +221,7 @@ guiTypes = {
 				position = {x=410 y=33}
 				spriteType = "GFX_BPT_order_unassign_units_btn"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 				shortcut = "ctrl+h"
 			}
 
@@ -203,6 +231,7 @@ guiTypes = {
 				spriteType = "GFX_BPT_order_reshape_btn"
 				#shortcut = "d"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 			}
 
 			buttonType = {
@@ -211,6 +240,7 @@ guiTypes = {
 				spriteType = "GFX_BPT_order_delete_btn"
 				shortcut = "DEL"
 				clicksound = click_battleplan
+				oversound = ui_menu_over
 			}
 
 			instantTextboxType = {
@@ -265,6 +295,7 @@ guiTypes = {
 					position = {x=15 y=29}
 					spriteType = "GFX_garr_vp"
 					clicksound = click_battleplan
+					oversound = ui_menu_over
 					pdx_tooltip = "GARRISON_CONF_VP"
 				}
 
@@ -273,6 +304,7 @@ guiTypes = {
 					position = {x=55 y=29}
 					spriteType = "GFX_garr_port"
 					clicksound = click_battleplan
+					oversound = ui_menu_over
 					pdx_tooltip = "GARRISON_CONF_PORT"
 				}
 
@@ -281,6 +313,7 @@ guiTypes = {
 					position = {x=95 y=29}
 					spriteType = "GFX_garr_coastline"
 					clicksound = click_battleplan
+					oversound = ui_menu_over
 					pdx_tooltip = "GARRISON_CONF_COAST"
 				}
 
@@ -289,6 +322,7 @@ guiTypes = {
 					position = {x=135 y=29}
 					spriteType = "GFX_garr_airbase"
 					clicksound = click_battleplan
+					oversound = ui_menu_over
 					pdx_tooltip = "GARRISON_CONF_AIRBASE"
 				}
 
@@ -306,6 +340,7 @@ guiTypes = {
 					position = {x=215 y=29}
 					spriteType = "GFX_garr_fort"
 					clicksound = click_battleplan
+					oversound = ui_menu_over
 					pdx_tooltip = "GARRISON_CONF_FORT"
 				}
 
@@ -364,6 +399,7 @@ guiTypes = {
 					pdx_tooltip_delayed = "PLAN_EXECUTE_CAREFUL_DESC"
 					frame = 1
 					clicksound = click_default
+					oversound = ui_menu_over
 				}
 
 				buttonType = {
@@ -375,6 +411,7 @@ guiTypes = {
 					pdx_tooltip_delayed = "PLAN_EXECUTE_BALANCED_DESC"
 					frame = 2
 					clicksound = click_default
+					oversound = ui_menu_over
 				}
 
 				buttonType = {
@@ -386,6 +423,7 @@ guiTypes = {
 					pdx_tooltip_delayed = "PLAN_EXECUTE_RUSH_DESC"
 					frame = 1
 					clicksound = click_default
+					oversound = ui_menu_over
 				}
 
 				instantTextboxType = {
@@ -399,6 +437,7 @@ guiTypes = {
 					alwaystransparent = yes
 				}
 			}
+
 			containerWindowType = {
 				name = "cohesion_window"
 				position = {x=-33 y=-40}
@@ -471,6 +510,96 @@ guiTypes = {
 					position = {x=13 y=8}
 					font = "hoi_18mbs"
 					text = "COHESION"
+					maxWidth = 346
+					maxHeight = 23
+					format = left
+					alwaystransparent = yes
+				}
+			}
+			
+			containerWindowType = {
+				name = "leader_proximity_window"
+				position = {x=-9 y=-39}
+				show_position = {x=-9 y=-49}
+				size = { width=214 height=125 }
+				show_animation_type = decelerated
+				hide_animation_type = accelerated
+				animation_time = 200
+				clipping = no
+				fade_time = 300
+				fade_type = linear
+
+				background = {
+					name = "Background"
+					quadTextureSprite = "GFX_hq_proximity_settings_bg"
+					alwaystransparent = yes
+				}
+
+				buttonType = {
+					name = "btn_proximity_0"
+					position = {x=5 y=30}
+					buttonFont = "aldrich_18_outline"
+					quadTextureSprite = "GFX_BPT_proximity_frontline"
+					pdx_tooltip = "LEADER_PROXIMITY_FRONTLINE_TITLE"
+					pdx_tooltip_delayed = "LEADER_PROXIMITY_FRONTLINE_DESC"
+					frame = 1
+					clicksound = click_default
+					oversound = ui_menu_over
+				}
+
+				buttonType = {
+					name = "btn_proximity_1"
+					position = {x=46 y=30}
+					buttonFont = "aldrich_18_outline"
+					quadTextureSprite = "GFX_BPT_proximity_close"
+					pdx_tooltip = "LEADER_PROXIMITY_CLOSE_TITLE"
+					pdx_tooltip_delayed = "LEADER_PROXIMITY_CLOSE_DESC"
+					frame = 2
+					clicksound = click_default
+					oversound = ui_menu_over
+				}
+
+				buttonType = {
+					name = "btn_proximity_2"
+					position = {x=87 y=30}
+					buttonFont = "aldrich_18_outline"
+					quadTextureSprite = "GFX_BPT_proximity_medium"
+					pdx_tooltip = "LEADER_PROXIMITY_MEDIUM_TITLE"
+					pdx_tooltip_delayed = "LEADER_PROXIMITY_MEDIUM_DESC"
+					frame = 1
+					clicksound = click_default
+					oversound = ui_menu_over
+				}
+
+				buttonType = {
+					name = "btn_proximity_3"
+					position = {x=128 y=30}
+					buttonFont = "aldrich_18_outline"
+					quadTextureSprite = "GFX_BPT_proximity_far"
+					pdx_tooltip = "LEADER_PROXIMITY_FAR_TITLE"
+					pdx_tooltip_delayed = "LEADER_PROXIMITY_FAR_DESC"
+					frame = 1
+					clicksound = click_default
+					oversound = ui_menu_over
+				}
+
+				buttonType = {
+					name = "btn_proximity_4"
+					position = {x=169 y=30}
+					buttonFont = "aldrich_18_outline"
+					quadTextureSprite = "GFX_BPT_proximity_free_control"
+					pdx_tooltip = "LEADER_PROXIMITY_FREE_CONTROL_TITLE"
+					pdx_tooltip_delayed = "LEADER_PROXIMITY_FREE_CONTROL_DESC"
+					frame = 1
+					clicksound = click_default
+					oversound = ui_menu_over
+				}
+
+				instantTextboxType = {
+					name = "title"
+					position = {x=13 y=8}
+					font = "aldrich_18_outline"
+					text = "LEADER_PROXIMITY"
 					maxWidth = 346
 					maxHeight = 23
 					format = left

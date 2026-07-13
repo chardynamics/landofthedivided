@@ -2975,7 +2975,7 @@ technologies = {
 		}
 
 		research_cost = 8
-		start_year = 2020
+		start_year = 1990
 
 		enable_building = {
 			building = arms_factory
@@ -2998,22 +2998,22 @@ technologies = {
 		}
 
 		enable_building = {
-			building = naval_facility
+			building = electronics_facility
 			level = 1
 		}
 
 		enable_building = {
-			building = nuclear_facility
+			building = theory_facility
 			level = 1
 		}
 
 		enable_building = {
-			building = air_facility
+			building = aerospace_facility
 			level = 1
 		}
 
 		enable_building = {
-			building = land_facility
+			building = materiel_facility
 			level = 1
 		}
 	}

@@ -153,28 +153,6 @@ buildings = {
 		}
 	}
 
-	naval_facility = {
-		show_on_map = 1
-		base_cost = 12000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 6
-		value = 1
-		spawn_point = naval_base_spawn
-		specialization = { specialization_electronics }
-		tags = { facility }
-		disabled_in_dmz = yes
-		need_supply = yes
-		need_detection = yes
-		only_display_if_exists = yes
-		special_icon = GFX_facility_icon
-		level_cap = {
-			province_max = 1
-			state_max = 1
-			group_by = special_project_facility
-		}
-		only_costal = yes
-	}
-
 	naval_base = {
 		show_on_map = 1
 		show_on_map_meshes = 3
@@ -339,7 +317,8 @@ buildings = {
 	}
 
 	mega_gun_emplacement = {
-			hide_if_missing_tech = yes
+		dlc_allowed = { has_dlc = Gotterdammerung }
+		hide_if_missing_tech = yes
 		is_buildable = no
 		show_on_map = 1
 		base_cost = 20000
@@ -608,31 +587,20 @@ buildings = {
 		}
 	}
 
-	nuclear_facility = {
+	theory_facility = {
 		show_on_map = 1
-		base_cost = 15000
+		base_cost = 12000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 13
+		icon_frame = 25
 		value = 1
 		spawn_point = special_project_facility_spawn
 		specialization = { specialization_theory }
+		tags = { facility }
 		need_supply = yes
 		need_detection = yes
-		tags = { facility }
 		disabled_in_dmz = yes
 		only_display_if_exists = yes
 		special_icon = GFX_facility_icon
-		#state_damage_modifier = { conscription_exemptions_granted }
-		#construction_speed_factor = {
-		#	trigger = {
-		#		OR = {
-		#			state = 56
-		#			state = 59
-		#			state = 64
-		#		}
-		#	}
-		#	factor = 10
-		#}
 		level_cap = {
 			province_max = 1
 			state_max = 1
@@ -640,13 +608,55 @@ buildings = {
 		}
 	}
 
-	air_facility = {
+	electronics_facility = {
 		show_on_map = 1
 		base_cost = 12000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 5
+		icon_frame = 26
 		value = 1
-		spawn_point = special_project_facility_spawn
+		spawn_point = special_project_facility_spawn 
+		specialization = { specialization_electronics }
+		tags = { facility }
+		need_supply = yes
+		need_detection = yes
+		disabled_in_dmz = yes
+		only_display_if_exists = yes
+		special_icon = GFX_facility_icon
+		level_cap = {
+			province_max = 1
+			state_max = 1
+			group_by = special_project_facility
+		}
+	}
+
+	materiel_facility = {
+		show_on_map = 1
+		base_cost = 12000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 27
+		value = 1
+		spawn_point = special_project_facility_spawn 
+		specialization = { specialization_materiel }
+		tags = { facility }
+		need_supply = yes
+		need_detection = yes
+		disabled_in_dmz = yes
+		only_display_if_exists = yes
+		special_icon = GFX_facility_icon
+		level_cap = {
+			province_max = 1
+			state_max = 1
+			group_by = special_project_facility
+		}
+	}
+
+	aerospace_facility = {
+		show_on_map = 1
+		base_cost = 12000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 28
+		value = 1
+		spawn_point = special_project_facility_spawn 
 		specialization = { specialization_aerospace }
 		tags = { facility }
 		need_supply = yes
@@ -661,32 +671,11 @@ buildings = {
 		}
 	}
 
-	land_facility = {
-		show_on_map = 1
-		base_cost = 12000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 1
-		value = 1
-		spawn_point = special_project_facility_spawn
-		specialization = { specialization_materiel }
-		tags = { facility }
-		disabled_in_dmz = yes
-		need_supply = yes
-		need_detection = yes
-		only_display_if_exists = yes
-		special_icon = GFX_facility_icon
-		level_cap = {
-			province_max = 1
-			state_max = 1
-			group_by = special_project_facility
-		}
-	}
-
 	dam = {
 		show_on_map = 1
 		base_cost = 20000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 1
+		icon_frame = 24
 		value = 5
 		tags = { dam_building }
 		spawn_point = dam_spawn
@@ -710,7 +699,7 @@ buildings = {
 		show_on_map = 1
 		base_cost = 20000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 1
+		icon_frame = 24
 		value = 5
 		tags = { dam_building }
 		spawn_point = dam_spawn
@@ -757,11 +746,13 @@ spawn_points = {
 	dam_spawn = {
 		type = province
 		max = 1
+		disable_auto_nudging = yes
 	}
 
 	locks_spawn = {
 		type = province
 		max = 1
+		disable_auto_nudging = yes
 	}
 }
 

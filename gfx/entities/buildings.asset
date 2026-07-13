@@ -375,8 +375,8 @@ entity = {
 }
 
 entity = {
-	name = "building_nuclear_facility"
-	pdxmesh = "building_nuclear_facility"
+	name = "building_theory_facility"
+	pdxmesh = "building_theory_facility"
 	
 	default_state = "idle"
 	state = { name = "idle" 
@@ -386,80 +386,12 @@ entity = {
 }
 
 entity = {
-	name = "building_nuclear_facility_destroyed"
-	pdxmesh = "building_nuclear_facility_destroyed"
-	
-	default_state = "destroyed"
-	state = { name = "destroyed"
-		event = { time = 0.1 node="factorysmoke" particle = "bunker_smoke_effect" }
-		event = { time = 0.1 node="fire1" particle = "ship_damaged_smoke_particle" }
-		event = { time = 0.1 node="fire2" particle = "ship_damaged_smoke_particle" }
-	}
-}
-
-entity = {
-	name = "building_air_facility"
-	pdxmesh = "building_air_facility"
+	name = "building_aerospace_facility"
+	pdxmesh = "building_aerospace_facility"
 	
 	default_state = "idle"
 	state = { name = "idle" 
 		event = { time = 0.1 node="lamp" particle = "lamp_red_particle" }
-	}
-}
-
-entity = {
-	name = "building_air_facility_destroyed"
-	pdxmesh = "building_air_facility_destroyed"
-	
-	default_state = "destroyed"
-	state = { name = "destroyed" 
-		event = { time = 0.1 node="hangar_hole_back" particle = "bunker_smoke_effect" }
-		event = { time = 0.1 node="hangar_hole_big" particle = "bunker_smoke_effect" }
-		event = { time = 0.1 node="fire1" particle = "ship_damaged_smoke_particle" }
-		event = { time = 0.1 node="fire2" particle = "ship_damaged_smoke_particle" }
-	}
-}
-
-entity = {
-	name = "building_naval_facility"
-	pdxmesh = "building_naval_facility"
-
-	default_state = "idle"
-	state = { name = "idle" 
-		event = { time = 0.1 node="lamp" particle = "lamp_blue_particle" }
-	}
-}
-
-entity = {
-	name = "building_naval_facility_destroyed"
-	pdxmesh = "building_naval_facility_destroyed"
-
-	default_state = "destroyed"
-	state = { name = "destroyed"
-		event = { time = 0.1 node="fire1" particle = "ship_damaged_smoke_particle" }
-		event = { time = 0.1 node="fire2" particle = "ship_damaged_smoke_particle" }
-	}
-}
-
-entity = {
-	name = "building_land_facility"
-	pdxmesh = "building_land_facility"
-
-	default_state = "idle"
-	state = { name = "idle" 
-		event = { time = 0.1 node="lamp" particle = "lamp_green_particle" }
-	}
-}
-
-entity = {
-	name = "building_land_facility_destroyed"
-	pdxmesh = "building_land_facility_destroyed"
-
-	default_state = "destroyed"
-	state = { name = "destroyed"
-		event = { time = 0.1 node="smoke" particle = "bunker_smoke_effect" }
-		event = { time = 0.1 node="fire1" particle = "ship_damaged_smoke_particle" }
-		event = { time = 0.1 node="fire2" particle = "ship_damaged_smoke_particle" }
 	}
 }
 
@@ -469,6 +401,17 @@ entity = {
 
 	default_state = "idle"
 	state = { name = "idle" 
+		event = { time = 0.1 node="lamp" particle = "lamp_blue_particle" }
+	}
+}
+
+entity = {
+	name = "building_materiel_facility"
+	pdxmesh = "building_materiel_facility"
+
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.1 node="lamp" particle = "lamp_green_particle" }
 	}
 }
 

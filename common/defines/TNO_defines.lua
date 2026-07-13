@@ -1,5 +1,5 @@
 NDefines.NGame.START_DATE = "2005.1.1.1"
-NDefines.NGame.END_DATE = "2010.12.31.1"
+NDefines.NGame.END_DATE = "2012.12.31.1"
 NDefines.NGame.SAVE_VERSION = 7
 NDefines.NGame.MAX_SCRIPTED_LOC_RECURSION = 60
 NDefines.NGame.MAX_EFFECT_ITERATION = 15000
@@ -177,8 +177,8 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 
 NDefines.NGame.ENERGY_RESOURCE = "power"
 NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 10000.0		-- How much energy per coal produces
-NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.001 -- Scales energy cost based on the total number of factories
-NDefines.NProduction.BASE_ENERGY_COST = 0.001						-- How much energy per factory consumes
+NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.00 -- Scales energy cost based on the total number of factories
+NDefines.NProduction.BASE_ENERGY_COST = 0.00						-- How much energy per factory consumes
 
 NDefines.NResistance.INITIAL_HISTORY_RESISTANCE = 0.0
 NDefines.NResistance.INITIAL_HISTORY_COMPLIANCE = 85.0
@@ -190,13 +190,6 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0
 NDefines.NOperatives.AGENCY_OPERATIVE_RECRUITMENT_TIME = 30
 
 NDefines.NGraphics.MAX_NUMBER_OF_TEXTURES = 40000 -- Going where no mod has gone before
-NDefines.NGraphics.RAID_UNIT_ZOOM_HEIGHT = 150.0
-NDefines.NGraphics.SHOW_DEPLOYED_GENERAL_COMMUNICATION_LINES = true
-NDefines.NGraphics.SHOW_DEPLOYED_GENERAL_NO_COMMUNICATION_LINES = true
-NDefines.NGraphics.SHOW_DEPLOYED_GENERAL_FRONT_LINES = true
-NDefines.NGraphics.DEPLOYED_GENERAL_FRONT_LINE_MAX_CAMERA_HEIGHT = 350.0
-NDefines.NGraphics.SHOW_DEPLOYED_GENERAL_BASE_PLATES = true
-NDefines.NGraphics.DEPLOYED_GENERAL_BASE_PLATE_RADIUS = 2.5
 
 NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.1
 

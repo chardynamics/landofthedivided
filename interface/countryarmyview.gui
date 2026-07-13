@@ -61,7 +61,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "ships_count"
-			position = {x=4 y=3}
+			position = {x=8 y=3}
 			font = "aldrich_18_outline"
 			maxWidth = 30
 			maxHeight = 23
@@ -132,24 +132,9 @@ guiTypes = {
 			spriteType = "GFX_navy_overview_ship_entry"
 		}
 
-		buttonType = {
-			name = "filter_button"
-			position = {x=-14 y=6}
-			size = {x=80 y=29}
-			quadTextureSprite = "GFX_tiled_window_transparent"
-			clicksound = click_default
-		}
-		
-		iconType = {
-			name = "highlight"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_overview_filter_entry_highlight"
-			alwaystransparent = yes
-		}
-
 		instantTextboxType = {
 			name = "sub_units_count"
-			position = {x=-10 y=9}
+			position = {x=-5 y=13}
 			font = "aldrich_18_outline"
 			maxWidth = 30
 			maxHeight = 23
@@ -161,6 +146,20 @@ guiTypes = {
 			spriteType = "GFX_navalcombat_ship_icon_unknown"
 			centerposition = yes
 			scale = 0.7
+		}
+		buttonType = {
+			name = "filter_button"
+			position = {x=-14 y=6}
+			size = {x=80 y=29}
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			clicksound = click_default
+		}
+
+		iconType = {
+			name = "highlight"
+			position = {x=-14 y=6}
+			spriteType = "GFX_overview_filter_entry_highlight"
+			alwaystransparent = yes
 		}
 	}
 
@@ -242,6 +241,15 @@ guiTypes = {
 		}
 
 		buttonType = {
+			name = "naval_hq_open"
+			position = {x=-171 y=8}
+			spriteType = "GFX_naval_hq_button"
+			orientation = "UPPER_RIGHT"
+			clicksound = click_default
+			pdx_tooltip = "naval_headquarters"
+		}
+
+		buttonType = {
 			name = "destroyed_ships_open"
 			position = {x=-131 y=8}
 			spriteType = "GFX_sunk_ships_button"
@@ -300,7 +308,7 @@ guiTypes = {
 			editBoxType = {
 				name = "filter"
 				position = { x = 330 y = 29 }
-				size = {x=177 y=20}
+				size = {x=102 y=20}
 				font = "aldrich_18_outline"
 				borderSize = {x = 0 y = 0}
 				text = ""
@@ -416,10 +424,10 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "army_units"
-			position = { x = 0 y = 164 }
+			position = { x = 0 y = 278 }
 			size = { width = 100% height = 100%% }
 			verticalScrollbar = "right_vertical_slider_overviews"
-			margin = { top = 114 left = 13 bottom = 42 right = 25}
+			margin = { top = 0 left = 13 bottom = 42 right = 25}
 
 			background = {
 				name = "Background"
@@ -506,10 +514,10 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "navy_units"
-			position = { x = 0 y = 164 }
+			position = { x = 0 y = 230 }
 			size = { width = 100% height = 100%% }
 			verticalScrollbar = "right_vertical_slider_overviews"
-			margin = { top = 66 left = 13 bottom = 42 right = 25}
+			margin = { top = 0 left = 13 bottom = 42 right = 25}
 
 			background = {
 				name = "Background"

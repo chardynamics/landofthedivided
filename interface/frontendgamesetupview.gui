@@ -123,7 +123,6 @@ guiTypes = {
 		}
 	}
 
-	### country entry
 	containerWindowType = {
 		name = "country_entry"
 
@@ -155,13 +154,6 @@ guiTypes = {
 			position = { x = 22 y = 20 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
-		}
-
-		buttonType = {
-			name = "country_shine"
-			quadTextureSprite = "GFX_country_selection_entry_shine"
-			position = { x=0 y =0 }
-			clicksound = click_checkbox
 		}
 
 		iconType = {
@@ -202,13 +194,6 @@ guiTypes = {
 			clicksound = click_checkbox
 		}
 
-		buttonType = {
-			name = "country_shine"
-			quadTextureSprite = "GFX_minor_country_selector_shine"
-			position = { x=0 y =0 }
-			clicksound = click_checkbox
-		}
-
 		iconType = {
 			name = "new_content"
 			position = { x = 42 y = 0 }
@@ -236,13 +221,6 @@ guiTypes = {
 			clicksound = click_checkbox
 		}
 
-		buttonType = {
-			name = "country_shine"
-			quadTextureSprite = "GFX_mini_country_selector_shine"
-			position = { x=0 y =0 }
-			clicksound = click_checkbox
-		}
-
 		iconType = {
 			name = "new_content"
 			position = { x = 42 y = 0 }
@@ -250,7 +228,6 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 	}
-
 
 	containerWindowType = {
 		name = "country_filter"

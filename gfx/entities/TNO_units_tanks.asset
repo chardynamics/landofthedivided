@@ -600,14 +600,14 @@ entity = {
 	pdxmesh = "T70_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_light_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -642,14 +642,14 @@ entity = {
 	pdxmesh = "IS7_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -685,14 +685,14 @@ entity = {
 	pdxmesh = "PT76_ifv_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -731,12 +731,12 @@ entity = {
 	pdxmesh = "BMP1_ifv_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
@@ -775,13 +775,13 @@ entity = {
 	pdxmesh = "ZSU572_WRUS_SPAA_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -820,13 +820,13 @@ entity = {
 	pdxmesh = "ZSU572_WSIB_SPAA_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -870,12 +870,12 @@ entity = {
 	pdxmesh = "SU152G_arty_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
@@ -911,13 +911,13 @@ entity = {
 	pdxmesh = "ASU57_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_light_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -951,12 +951,12 @@ entity = {
 	pdxmesh = "Shzatie_SPAA_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
@@ -993,14 +993,14 @@ entity = {
 	pdxmesh = "KV4KTT_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.0 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.0
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.0
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1048,14 +1048,14 @@ entity = {
 	pdxmesh = "M3955_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1097,13 +1097,13 @@ entity = {
 	pdxmesh = "Pz4_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1166,14 +1166,14 @@ entity = {
 	pdxmesh = "M4061_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1210,14 +1210,14 @@ entity = {
 	pdxmesh = "Type14_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1262,13 +1262,13 @@ entity = {
 	pdxmesh = "Type34_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1307,13 +1307,13 @@ entity = {
 	pdxmesh = "Type60_IFV_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.0 animation_speed = 1.0 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.0
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.0
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1361,14 +1361,14 @@ entity = {
 	pdxmesh = "OI_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1404,14 +1404,14 @@ entity = {
 	pdxmesh = "M4A3E8_MBT_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1446,14 +1446,14 @@ entity = {
 	pdxmesh = "M60_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1490,14 +1490,14 @@ entity = {
 	pdxmesh = "M60A1_EARLY_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1534,14 +1534,14 @@ entity = {
 	pdxmesh = "M60A2_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1578,13 +1578,13 @@ entity = {
 	pdxmesh = "M1_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1623,13 +1623,13 @@ entity = {
 	pdxmesh = "M41_IFV_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1662,13 +1662,13 @@ entity = {
 	pdxmesh = "Ontos_IFV_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1761,13 +1761,13 @@ entity = {
 	pdxmesh = "M8_IFV_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -1976,14 +1976,14 @@ entity = {
 	pdxmesh = "PzX_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2018,14 +2018,14 @@ entity = {
 	pdxmesh = "Leopard1_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2078,14 +2078,14 @@ entity = {
 	pdxmesh = "E50_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.0 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.0
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.0
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2129,14 +2129,14 @@ entity = {
 	pdxmesh = "Gepard_SPAA_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.0 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.0
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.0
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2194,14 +2194,14 @@ entity = {
 	pdxmesh = "FlakE50_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.0 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.0
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.0
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2259,14 +2259,14 @@ entity = {
 	pdxmesh = "E25_IFV_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.0 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.0
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.0
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.0
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2367,13 +2367,13 @@ entity = {
 	pdxmesh = "KugelPanzer_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2410,12 +2410,12 @@ entity = {
 	pdxmesh = "maus_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
@@ -2487,14 +2487,14 @@ entity = {
 	pdxmesh = "GER_tank_heavy_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2530,14 +2530,14 @@ entity = {
 	pdxmesh = "Tiger3_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2578,14 +2578,14 @@ entity = {
 	pdxmesh = "flakmaus_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2631,13 +2631,13 @@ entity = {
 	pdxmesh = "ENG_tank_heavy_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2670,14 +2670,14 @@ entity = {
 	pdxmesh = "Leopard1_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2729,14 +2729,14 @@ entity = {
 	pdxmesh = "Centurion2_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2775,14 +2775,14 @@ entity = {
 	pdxmesh = "Chieftain_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2848,14 +2848,14 @@ entity = {
 	pdxmesh = "Saladin_IFV_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2901,13 +2901,13 @@ entity = {
 	pdxmesh = "GENERIC_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2944,14 +2944,14 @@ entity = {
 	pdxmesh = "A13_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_light_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -2997,14 +2997,14 @@ entity = {
 	pdxmesh = "S35_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -3078,14 +3078,14 @@ entity = {
 	pdxmesh = "Liberte_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		#event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		#event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		#event = { time = 0 node = "left_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		#event = { time = 0 node = "right_exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
@@ -3122,13 +3122,13 @@ entity = {
 	pdxmesh = "Monastrell_tank_mesh"
 
 	state = { name = "idle"				animation = "idle"					animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "idle"					animation_blend_time = 0.3
+	state = { name = "move"				animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
 	}
-	state = { name = "retreat"			animation = "idle"					animation_blend_time = 0.3
+	state = { name = "retreat"			animation = "move"					animation_blend_time = 0.3
 		event = { time = 0 node = "exhaust" particle = "tank_exhaust_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "left_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
 		event = { time = 0 node = "right_tracks" particle = "tank_moving_tracks_particle" keep_particle = no trigger_once = yes }
