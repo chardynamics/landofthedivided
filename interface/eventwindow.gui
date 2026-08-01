@@ -28,7 +28,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "Title"
-				position = { x = 30 y = 140 }
+				position = { x = 27 y = 140 }
 				font = "hoi4_typewriter22"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"
@@ -62,7 +62,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "Description"
-				position = { x = 62 y = 0 }
+				position = { x = 20 y = -20 }
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"
