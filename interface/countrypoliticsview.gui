@@ -145,7 +145,7 @@ guiTypes = {
 		iconType ={
 			name ="pol_faction_icon"
 			spriteType = "GFX_pol_factions_strip"
-			position = { x = 359 y = 272 }
+			position = { x = 359 y = 285 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
 			scale = 0.64
@@ -198,7 +198,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "political_pie_chart"
-			position = { x= 357 y = 305 }
+			position = { x= 357 y = 325 }
 			size = { width=400 height=400 }
 			clipping = no
 
@@ -523,15 +523,15 @@ guiTypes = {
 			size = { width = 360 height = 104 }
 			clipping = no
 
-			instantTextboxType = {
-				name = "title"
-				position = { x = 0 y = 2 }
-				font = "Bomb_16"
-				text = "POLITICS_NATIONAL_SPIRIT"
-				maxWidth = 200
-				maxHeight = 20
-				alwaystransparent = yes
-			}
+			#instantTextboxType = {
+			#	name = "title"
+			#	position = { x = 0 y = 2 }
+			#	font = "Bomb_16"
+			#	text = "POLITICS_NATIONAL_SPIRIT"
+			#	maxWidth = 200
+			#	maxHeight = 20
+			#	alwaystransparent = yes
+			#}
 			
 			containerWindowType = {
 				name = "national_spirit_container"
@@ -589,7 +589,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "active_goal"
-			position = { x = 176 y = 54 }
+			position = { x = 179 y = 50 }
 			size = { width = 330 height = 50 }
 			clipping = no
 
@@ -600,27 +600,27 @@ guiTypes = {
 
 			buttonType = {
 				name = "add_national_goal_button"
-				position = { x = 100 y = 7 }
+				position = { x = 95 y = 7 }
 				spriteType = "GFX_add_national_goal_button"
 				clicksound = click_default
 			}
 
 			iconType = {
 				name = "nat_spirit_glow_overlay"
-				position = { x = 105 y = 10 }
+				position = { x = 100 y = 10 }
 				spriteType = "GFX_nat_spirit_glow_overlay"
 				alwaystransparent = yes
 			}
 
 			iconType = {
 				name = "pol_power_icon"
-				position = { x = 105 y = 55 }
+				position = { x = 100 y = 55 }
 				quadTextureSprite = "GFX_pol_power_icon"
 			}
 
 			instantTextboxType = {
 				name = "focus_cost"
-				position = { x = 132 y = 60 }
+				position = { x = 127 y = 60 }
 				font = "hoi_18mbs"
 				text = "3"
 				maxWidth = 35
@@ -631,7 +631,7 @@ guiTypes = {
 
 			iconType = {
 				name = "continuous_glow"
-				position = { x = -16 y = -6 }
+				position = { x = -11 y = -6 }
 				quadTextureSprite = "GFX_ongoing_focus_goal_polview"
 				scale = 0.9
 			}
@@ -680,12 +680,12 @@ guiTypes = {
 			iconType = {
 				name = "progress"
 				spriteType = "GFX_activegoal_progress"
-				position = { x=112 y = 72 }
+				position = { x=107 y = 72 }
 			}
 
 			iconType = {
 				name = "progress_frame"
-				position = { x = 110 y = 72 }
+				position = { x = 105 y = 72 }
 				spriteType = "GFX_pol_goal_progress_frame"
 				alwaystransparent = yes
 			}
@@ -849,30 +849,6 @@ guiTypes = {
 		position = { x = 0 y = 0 }
 		size = { width=550 height= 100 }
 		clipping = no
-
-		iconType ={
-			name ="category_header"
-			spriteType = "GFX_category_header_longer"
-			position = { x=-40 y=12 }
-			Orientation = "UPPER_LEFT"
-			scale = 0.5
-		}
-		iconType ={
-			name ="category_icon"
-			spriteType = "GFX_idea_categories_metal"
-			position = { x=-29 y=15 }
-			Orientation = "UPPER_LEFT"
-			scale = 0.5
-		}
-
-		instantTextboxType = {
-			name = "name"
-			position = { x = 0 y = 13 }
-			font = "Bomb_16"
-			text = "Government"
-			maxWidth = 300
-			maxHeight = 20
-		}
 
 		gridboxtype = {
 			name = "ideas_grid"

@@ -123,7 +123,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "party_name"
-			position = {x = 153 y = -17}
+			position = {x = 153 y = -2}
 			font = "aldrich_20_outline"
 			text = "[This.GetRulingParty]"
 			fixedsize = yes
@@ -195,7 +195,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "TNO_subideology"
-			position = { x = 153 y = 0 }
+			position = { x = 153 y = 15 }
 			font = "aldrich_18_outline"
 			text = [GetSubIdeologyLoc]
 			maxWidth = 160
