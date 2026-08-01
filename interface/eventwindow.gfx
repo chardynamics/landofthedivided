@@ -30,6 +30,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/event_option_entry.dds"
 	}
 
+	spriteType = {
+		name = "GFX_closebutton_smallsmall"
+		texturefile = "gfx/interface/closebutton_smallsmall.dds"
+	}
+
 	corneredTileSpriteType = {
 		name = "GFX_event_report_tileable_midsection"
 		size = { x = 563 y = 111 }

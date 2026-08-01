@@ -28,7 +28,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "Title"
-				position = { x = 45 y = 130 }
+				position = { x = 30 y = 140 }
 				font = "hoi4_typewriter22"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"
@@ -36,11 +36,12 @@ guiTypes = {
 				maxHeight = 32
 				format = centre
 			}
-
+			
 			buttonType = {
 				name = "btn_minimize"
-				position = {x=50 y=75}
-				spriteType = "GFX_event_button_minimize"
+				position = {x=-23 y=6}
+				Orientation = UPPER_RIGHT
+				spriteType = "GFX_closebutton_smallsmall"
 				clicksound = click_default
 				pdx_tooltip = "MINIMIZE_EVENT"
 			}
@@ -90,13 +91,6 @@ guiTypes = {
 				position = { x = 5 y = 0 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
-			}
-
-			iconType = {
-				name ="event_pic_clip"
-				spriteType = "GFX_event_pic_clip"
-				position = { x = -3 y = 35 }
-				Orientation = "UPPER_LEFT"
 			}
 
 			gridBoxType = {
@@ -462,17 +456,9 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 
-			iconType = {
-				name ="event_picture_overlay"
-				spriteType = "GFX_event_news_pic_overlay"
-				position = { x = 27 y = 140 }
-				Orientation = "UPPER_LEFT"
-				alwaystransparent = yes
-			}
-
 			instantTextBoxType = {
 				name = "Title"
-				position = { x = 31 y = -12 }
+				position = { x = 28 y = 205 }
 				font = "hoi4_typewriter22"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"
@@ -483,8 +469,9 @@ guiTypes = {
 
 			buttonType = {
 				name = "btn_minimize"
-				position = {x=5 y=40}
-				spriteType = "GFX_event_button_minimize"
+				position = {x=-75 y=6}
+				Orientation = UPPER_RIGHT
+				spriteType = "GFX_closebutton_smallsmall"
 				clicksound = click_default
 				pdx_tooltip = "MINIMIZE_EVENT"
 			}
@@ -498,7 +485,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "Description"
-				position = { x = 195 y = 27 }
+				position = { x = 165 y = 120 }
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"
@@ -623,7 +610,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "event_option_entry"
 		size = { width = 300 height = 52 }
-		position = { x = -10 y = 0 }
+		position = { x = -10 y = 20 }
 		clipping = no
 
 		background = {
