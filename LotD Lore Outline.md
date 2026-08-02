@@ -33,39 +33,45 @@ After US-Cuban relations sour with Fidel Castro's anti-American postering, the C
 
 Over the next few years, the fledging government fails to instill civil order. With CIA reports of an imminent uprising, Lyndon B. Johnson agrees to increasing US troop prescence in Cuba. Aerial bombardment increases, and US forces began engaging in search-and-destroy operations. However, all of it ultimately led to diminishing returns, and US soldiers are repeated targetted by Cuban insurgents. Systemic corruption and insufficently funded civil servants allows insurgents to operate freely and even receive weapons and resources from China and the Soviet Union. Weekly, American televisions are broadcast with incidents maiming American and Cuban soldiers. Violence gets so bad that a Green Zone is established in Habana. When insurgency forces launched their major offensive in 1969, Cuban and American forces are overrun from major cities within a matter of days, forcing a route back to Habana. Through grueling and brutal fighting, control over major cities is reestablished, but American public opinion decisively flips on American military prescence in Cuba. Despite this, Richard Nixon raises troop counts before pursuing a policy of "Latinization" as an Inter-American Peace Force slowly replaces American soldiers.
 
-The unpopular campaign 
+Ultimately, Latinization was deemed a failure as it was viewed as a sign of weakness and only embolded revolutionary forces. With decreasing guarantee of American forces to safeguard the new republic, the tide began to decisievly turn to the insurgents, which followed defection or surrender of Cuban military units. By 1969, Habana had fallen, with the last American prescence picturesquely leaving by boat. The return of the M-26-7 group under Fidel Castro became uniquely revanchist towards the United States, hardened by years of brutal combat.
 
-Algerian War 1954-1972 The French military fought  the Algerian nationalist insurgency supported by Soviet advisors and special forces , KGB agents and weaponry and military vehicles.   
-Eventually the French withdrew leaving Algeria to be a staunch Soviet ally in North Africa.
+### **National:**
 
+The 1960s is strife with riots as the American populace grows disillusioned with American policymakers in Cuba. With successive drafts, recruitment centers began to be explicitly targetted, reflecting greater political extremism.
 
 ## **1970s**
 
 ### **International:**
 
-\[The Soviet Union “takes the lead” in the Cold War as the United States increasingly fumbles in foreign policy and military action.\]
+Algerian War 1954-1972 Algeria becomes a staunch Soviet ally in North Africa.
 
 ### **National:**
 
 American politics grew more polarized, with conservatives advocating for a more interventionist foreign policy and liberals pushing for a more isolationist stance. The Democratic Party saw a shift towards progressive and leftist ideologies, while the Republican Party grappled with internal divisions between moderates and staunch conservatives.
 
-The United States remained heavily reliant on imported oil, making it vulnerable to fluctuations in global energy markets. The 1970s oil crisis hit the U.S. economy hard, leading to fuel shortages, long lines at gas stations, and further economic challenges.
+The United States remained heavily reliant on imported oil, making it vulnerable to fluctuations in global energy markets. The 1970s Oil Crisis hit the U.S. economy hard, leading to fuel shortages, long lines at gas stations, and further economic challenges.
+
+The fall of Habana and the Watergate Scandal results in the downfall of Nixon's presidency. As a dark horse candidate, Jimmy Carter wins the presidency in 1976 as a "normalcy" candidate, to fix the economy and get things back to normal. However, the oil crisis and stagflation, while not something he started, continued through the 70s and remained a hallmark of his "weak" presidency. The final nail in the coffin would be the Iran Hostage Crisis, where he looked weak in his attempts to free the hostages, including the failed Operation Eagle Claw. 
+
+The failure of US foreign policy in containing communism around the world leads the isolationist wing of the GOP to falter to a more hawkish, stringent wing.
 
 ## **1980s**
 
-The 1980s in the United States was an era of profound upheaval and transformation, often referred to as the "Worst Decade" by historians and political commentators. This term encapsulated the prevailing sense of disillusionment and uncertainty that marked the period.
+The 1980s in the United States was an era of profound upheaval and transformation, often referred to as the "Worst Decade" by historians and political commentators. This term encapsulated the prevailing sense of disillusionment and uncertainty that marked the period. The decade began with economic challenges that echoed the turbulent 1970s. The continuing rising inflation, coupled with stagnant wage growth and high unemployment, created economic hardships for many Americans, and the "stagflation" phenomenon continued to confounded policymakers, leading to a sense of economic malaise.
 
-The decade began with economic challenges that echoed the turbulent 1970s. The continuing rising inflation, coupled with stagnant wage growth and high unemployment, created economic hardships for many Americans, and the "stagflation" phenomenon continued to confounded policymakers, leading to a sense of economic malaise.
+The sum of 20 years of foreign policy blunders, high energy prices, and a stagnant economy could only lead to Ronald Reagan's presidency. As apart of the new ascendant hawkish wing of the GOP, Ronald Reagan was everything and more the average American wanted for the country, leading to his landslide victory. Under Reagan, the US defense budget ballooned to surpass the Soviet Union militarily. "Reaganonics", Ronald Reagan's policy to combat stagflation with government deregulation and cuts to taxes and goevrnment spending, while successfully in stemming the tide against inflation and unemployment, ballooned the national debt and failed to deliver the levels of economic growth promised. Added with the Iran-Contra scandal, Reagan only narrowly wins his 1984 reelection, reflecting a shakey mandate to power. 
 
-The political landscape became increasingly polarized, with deep divisions between conservatives and progressives. While still dominant in American politics, the growing failure of American foreign policy results in GOP leadership deciding, once staunchly conservative, to shift its stance more moderately and to the left, beginning to alienate some of its traditional supporters. This grew a divide in the Republican Party. Conversely, while continuing to be the lesser party, the Democratic Party saw a surge in leftist ideals, with a growing faction advocating for more socialist policies.
+Under Reagan, Latin America witnessed a notable shift in its relationship with the United States as several nations began asserting their regional aspirations, challenging American influence. Examples such as the protracted Nicaraguan Resistance, where the U.S.-backed Contras faced resilient opposition from Sandinistas with Soviet and Cuban support, and the Salvadoran Civil War, characterized by increased communist influence and prolonged insurgency, demonstrate how American interventions faced greater resistance. Even operations like the Grenada Intervention and Panama Invasion encountered stiff opposition, both internationally and regionally, leading to more protracted conflicts and undermining U.S. objectives. 
 
-Latin America witnessed a notable shift in its relationship with the United States as several nations began asserting their regional aspirations, challenging American influence. Examples such as the protracted Nicaraguan Resistance, where the U.S.-backed Contras faced resilient opposition from Sandinistas with Soviet and Cuban support, and the Salvadoran Civil War, characterized by increased communist influence and prolonged insurgency, demonstrate how American interventions faced greater resistance. Even operations like the Grenada Intervention and Panama Invasion encountered stiff opposition, both internationally and regionally, leading to more protracted conflicts and undermining U.S. objectives. 
+The political landscape became increasingly polarized, with deep divisions between conservatives and progressives. While still dominant in American politics, the growing failure of American foreign policy results in GOP leadership splitting. Through Pat Buchanan, the moderate establishment sought againt further failed interventionism, while the emerging hawkish wing only blamed moderation for the failed interventions. Conversely, while continuing to be the lesser party, the Democratic Party saw a surge in leftist ideals, with a growing faction advocating for more socialist policies.
+
+George H. W. Bush wins the 1998 presidency, mainly contiuning domestic policies while campaigning on a stronger foreign policy. 
 
 ## **1990-1995**
 
 ### **International:**
 
-Come 1990, and the US has essentially lost the Cold War. The EU has broken ties with NATO (albeit, the UK remains in the Alliance with members of the Commonwealth) and discussions on a possible reunification of the Germanies is occurring between the newly elected German government and the DDR. With Cuba being a vehicle for Communist propaganda, the American people are increasingly resentful of the status quo, and see the Soviets victory on the international stage as an indicator that the current system isn't working (not that the Soviets are doing that well domestically either, but the average American doesn't know this.)
+Under the Bush Administration, successive foreign policy blunders have crippled American influence abroad. The EU has broken ties with NATO (albeit, the UK remains in the Alliance with members of the Commonwealth) and discussions on a possible reunification of the Germanies is occurring between the newly elected German government and the DDR. With Cuba being a vehicle for Communist propaganda, the American people are increasingly resentful of the status quo, and see the Soviets victory on the international stage as an indicator that the current system isn't working (not that the Soviets are doing that well domestically either, but the average American doesn't know this.)
 
 The steady erosion of American prestige is also causing some of its Latin American allies (Brazil in particular) to grow their own aspirations of regional hegemony, and below Panama the United States is less influential than ever. 
 
@@ -73,13 +79,15 @@ France is the sole remaining power of note on the European continent, with the U
 
 ### **National:**
 
-With rapid changes in foreign politics, come rapid changes in domestic politics. The new youth, now disillusioned with the status quo and seeking to replicate “the success of the Soviet system”, increasingly joins a new front of Democrats which become increasingly more “left”. These ideals have become increasingly popular in the Democratic Party, which has not seen a major victory since the 70s.
+George H. W. Bush narrowly wins releection in 1992 not by being a strong candidate, but as a "continuation" candidate as Mario Cuomo rose as a national competitor with liberal values that rose to the mainstream for the first time in a while. Bush is unsuccessfully challenged by Pat Buchanan, reflecting public opinions on hawkism. 
+
+With rapid changes in foreign politics, come rapid changes in domestic politics. The new youth, now disillusioned with the status quo, increasingly joins a new front of Democrats which become increasingly more “left”. These ideals have become increasingly popular in the Democratic Party, which has not seen a major victory since the 70s.
 
 This is much to spite of hawkish conservatives, which have adopted an idea of “ideological paranoia”, only compounded by the lack of demonstrated NATO success and the rise of the “Soft Left”. Growing within the Republican Party, their ideals have become increasingly more palatable to several groups (more moderate conservatives, business leaders, military leaders, etc.)
 
-By the 1994 midterms the democrats keep hold of congress, the Republicans are still losing Southern states due to disgruntled farmers and black voters. Republicans are growing increasingly scared of a period of full democrat control and are thus secretly militarizing and plotting against the democrats on a large scale. Imagine the Christian alt right nationalist groups of today but much larger and with a lot more resources.  
-The recession would make Mario Cuomo lose support, but the Republicans most likely would still lose congress in the midterms. This recession would further boost Clinton’s popularity of hardline quasi-socialist policies which would further scare and anger Republicans. Around this time I could definitely see a lot of anti-black sentiment especially in the South with a split party from the Republicans being a Second Dixiecrat Party. (Further increases tensions and anger especially within the South.)  
-\[In 1993, there’s a recession that caused the leading Republicans to drop in popularity. This results in the Democrats evening the playing field with Republicans in the 1994 primaries. Everything is leading up to the 1996 election now, with tensions rising.\]
+By the 1994 midterms the Democrats keep hold of Congress, blocking Bush from attempting comprehensive reform. The Republicans are still losing Southern states due to disgruntled farmers and black voters. Republicans are growing increasingly scared of a period of full democrat control and are thus secretly militarizing and plotting against the democrats on a large scale. Imagine the Christian alt right nationalist groups of today but much larger and with a lot more resources.  
+
+Couple the ineffectiveness of Bush's adminstration with his signing of the Civil Rights Act of 1991, Southern Republicans would break away to form the Second Dixiecrat Party.
 
 # **The Second American Civil War**
 
@@ -89,28 +97,31 @@ The recession would make Mario Cuomo lose support, but the Republicans most like
 
 ### **Leadup**
 
-The beginning of the 1996 election would see two major events. The Second Dixiecrat Party made a large split from the Republican party, gaining support of numerous Southern states. The group that would have the most fear at this time would be the black voter population. Lynchings and voter suppression would be widespread across the South as a whole. This would increasingly radicalize African Americans and create a very violent climate within the Southern States. This would become a large part of Clinton’s campaign as he would attack Cuomo for his inability to protect African Americans. This would lead Clinton to winning the DNC candidacy with a very quasi-socialist economic view and very leftist social view. Along with this his campaigning of rapprochement with the Soviets would further anger republican politicians. Along with the rise of the Second Dixiecrat Party in the South, within Texas another group was growing. Ross Perot, a pragmatic famous Texan politician and business magnate. He would campaign on budget balancing, gun control, and gay rights. He claimed that the Republicans had thrown away American economic dominance, and the Democrats were attempting to install a communist regime in America. Along with this he would note the fracturing and collapse of the Republican Party, and would campaign that he was the only way for normal Americans to gain a second chance and to rebuild America.   
-The Republican primaries would be a fierce battle ground. Bob Dole and Pat Buchanan would be fighting over large parts of the remaining Republican states. Buchanan running off of Fiscal Conservatism as well as preservation of the American Dream would have support in non-dixiecrat Republican states, but Bob Dole would win in a large majority of states. Bob Dole would be running off a ticket of American exceptionalism, tax increases, and rebuilding the farmers of America. This would gain him large amounts of support amongst farmers across the nation, and would win him a large number of states within the great plains. It was still not enough, the Republicans with a split vote, and Ross Perot taking votes from them in Texas, the election of Bob Dole was unachievable. 
+The beginning of the 1996 election would see two major events. The Second Dixiecrat Party made a large split from the Republican party, gaining support of numerous Southern states. The group that would have the most fear at this time would be the black voter population. Lynchings and voter suppression would be widespread across the South as a whole. This would increasingly radicalize African Americans and create a very violent climate within the Southern States.
+
+Amidst racial tensions, Jesse Jackson would rise within the Democratic Party on account of Cuomo's ineffective race policies. This would lead Jesse Jackson to winning the DNC candidacy with a very quasi-socialist economic view and very leftist social view. Along with this his campaigning of rapprochement with the Soviets would further anger republican politicians. Along with the rise of the Second Dixiecrat Party in the South, within Texas another group was growing. Ross Perot, a pragmatic famous Texan politician and business magnate. He would campaign on budget balancing, gun control, and gay rights. He claimed that the Republicans had thrown away American economic dominance, and the Democrats were attempting to install a communist regime in America. Along with this he would note the fracturing and collapse of the Republican Party, and would campaign that he was the only way for normal Americans to gain a second chance and to rebuild America.   
+
+The Republican primaries would be a fierce battle ground. Bob Dole and Pat Buchanan would be fighting over large parts of the remaining Republican states. Buchanan running off of Fiscal Conservatism as well as preservation of the American Dream would have support in non-dixiecrat Republican states, but Bob Dole would win in a large majority of states. Bob Dole would be running off a ticket of American exceptionalism, tax increases, and rebuilding the farmers of America. This would gain him large amounts of support amongst farmers across the nation, and would win him a large number of states within the great plains. Despite being the most popular Republican candidate, Bob Dole's campaign was unwinnable with the amount of split voting among the candidates, leading to Jesse Jackson's plurality victory.
 
 ### **The July 4th Coup**
 
-With Clinton becoming somewhat of a quasi-socialist, and a communist in the eyes of many radicals, his victory would be seen as untenable. Thousands would begin protesting and whilst Bob Dole had officially conceded, numerous republican politicians would begin calling for a series of recounts.
+With Jesse Jackson's race and his quasi-socialist policies, even being a communist in the eyes of many radicals, his victory would be seen as untenable. Thousands would begin protesting and whilst Bob Dole had officially conceded, among Republican circles ideas of "voter fraud" began to run rampant. Before long, on one side of the political spectrum, this agenda would be circulated rapidly, compounded by Republican fears of Jesse Jackson.
 
-Pat Robertson organized a secret meeting with nationwide leaders aligned with his vision. The one objective? Eliminate the hostile government in Washington, and revert the effects of the 1996 election. By the end of the meeting, one thing was established. Operation Tea Party.
+Before long, Republican officials nationwide would publically refuse to certify election results on account of "fraud", even when mandated by the judicial system. This escalated to massive protests outside of the Capitol when Congress verified the results of the election, resulting in a historic failure to protect the Congressional system by Capitol Police. Regardless, Jesse Jackson was confirmed.
 
-With the operation discovered by secret agents, Clinton would flee to his retreat in Camp David. Many would assume he would be safe there, including himself, however this would not be. At Camp David he would be ambushed by numerous attackers and would be captured. Following his capture the organizers of the coup would reveal the Third Continental “Congress”, a temporary provisional government with far more authoritarian power than anyone would have expected. Despite this, the provisional government had large amounts of support and would call for revolutionaries everywhere to rise up.
+Viewing Jackson's presidency as inevitable, Pat Robertson organized a secret meeting with nationwide leaders aligned with his vision. The one objective? Eliminate the incoming hostile government in Washington, and revert the effects of the 1996 election. By the end of the meeting, one thing was established. Operation Tea Party.
+
+The operation would leak to the Secret Service, and Jackson and his family would be rushed to safety. Many would assume he would be safe there, including himself, however this would not be. He would be ambushed by numerous attackers and would be captured. Following his capture the organizers of the coup would reveal the Third Continental “Congress”, a emergency provisional council. The group would call for general insurrection everywhere.
 
 ## **The War and Collapse**
 
 ### **The War**
 
-The July 4th Coup led to a huge battle within Camp David as federal forces were deployed there to recapture the president. A huge battle would take place here, the likes of which has not been seen since the Civil War.
-
 Fighting began immediately in Camp David to recover the President, but that was overshadowed by combat across the entire country. It seemed like anyone and everyone was fighting for a short period while borders formed and broke and doublecrossed everyone as combat broke out.
 
 \[Potentially foreseeing this, socialists had already established contact with the Soviets and through Cuba which promised to help at any request. At the start of the War, slowly equipment is sent to Boston where a planned revolt is to occur. Unable to do any major military operations, however.\]
 
-Government possessions suffered the most out of it, with non-NJ4M forces in the Collapse roughly comprising a third of status quo ante bellum. The New Democrats, representing the national government, retreated West towards military forces. State governments splintered and suffered the most as they became the most obvious representation of the government, despite if their actual policy was one of the New Democrats.
+Government possessions suffered the most out of it, with non-NJ4M forces in the Collapse roughly comprising a third of status quo ante bellum. The New Democrats, representing the national government, retreated Westward and towarsd the Midwest towards military forces. State governments splintered and suffered the most as political divisions led to gridlock and fracture.
 
 The National July 4th Movement seized over half of the country at the peak of the conflict, seeing the most success. Major parts of the Mid-Atlantic, Midwest went into the fold, however it would be short lived. 
 
@@ -118,7 +129,7 @@ Third parties also took the opportunity to take advantage. Although small now, s
 
 ### **The Collapse**
 
-It would take years before the War would finally stop into the Collapse as we know it today. It would be characterized by the fracturing of seemingly successful forces. First, the Federal Government. Robertson’s “Wolvoherine Charge'' successfully routed Federal forces, resulting in a decisive victory at Detroit, even if it was eventually repelled. While a tactical victory in the end, the symbolic failure of the Federal forces to defend against the inferior opponent was also a big morale loss. Over time, the edges of the Federal Government shrinked, and eventually cracked. Secondly, fell the Movement. Ideological inter-fighting and the lack thereof a central government certainly didn’t contribute to the demise. Several factions, all declaring themselves to be still a part of the main movement, currently litter across the United States. 
+It would take years before the War would finally stop into the Collapse as we know it today. It would be characterized by the fracturing of seemingly successful forces. First, the Federal Government. Robertson’s Wolverine Charge successfully routed Federal forces, resulting in a decisive victory at Detroit, even if it was eventually repelled. While a tactical victory in the end, the symbolic failure of the Federal forces to defend against the inferior opponent was also a big morale loss. Over time, the edges of the Federal Government shrinked, and eventually cracked. Secondly, fell the Movement. Ideological inter-fighting and the lack thereof a central government certainly didn’t contribute to the demise. Several factions, all declaring themselves to be still a part of the main movement, currently litter across the United States. 
 
 ## **The Timeline of the War**
 
@@ -142,7 +153,7 @@ The American Spring in the spring of 2005 is a collection of uprising and armed 
 
 ### National July 4th Movement \- Establishment (NJFM-E) \[Philadelphia/Harrisburg, Mid-Atlantic\]
 
-Donald Rumsfeld's (he's dead we can use him better now) attempt at consolidating the July Fourth Movement against the "religious crazies" and implementing the anti-communist, all american democracy he sees as being ruined by the weakness of socialism and the welfare state. At one point, Rumsfeld's branch of the Movement (back when it was a united movement) controlled most of the east coast and a significant part of the midwest, but those days are long behind him. From Philadelphia Rumsfeld barely controls the majority of two states (Pennsylvania and NJ) and whilst New York and New England remain divided there is nothing to say that will stay the case for long, especially with the mutineers in Norfolk looking North. 
+Donald Rumsfeld's attempt at consolidating the July Fourth Movement against the "religious crazies" and implementing the anti-communist, all american democracy he sees as being ruined by the weakness of socialism and the welfare state. At one point, Rumsfeld's branch of the Movement (back when it was a united movement) controlled most of the east coast and a significant part of the midwest, but those days are long behind him. From Philadelphia Rumsfeld barely controls the majority of two states (Pennsylvania and NJ) and whilst New York and New England remain divided there is nothing to say that will stay the case for long, especially with the mutineers in Norfolk looking North. 
 
 ### Rocky Mountains Autonomous Territory \[Northern Rocky Mountains\]
 
@@ -151,7 +162,6 @@ Ron Paul, used to be a part of the Movement but split with Pat Buchanan, current
 
 ### Second Regulator Movement \[Nationwide\]
 
-   
 They’ll serve as a new nationwide force, rising up as a populist spring, serving as the reason the borders change after The Collapse.
 
 ### I (NJFM-W) \[Midwest\]
@@ -165,6 +175,8 @@ The official name of an nationwide association of military forces and it’s occ
 They represent perhaps the parts of the US military which are regretful for their inaction (or actions) that caused what happened to their once mighty nation, so they want to forge an America that they can recognize. Coming from all sides of the 2nd American Civil War right as the Collapse was imminent, they united together under the brotherhood of the Armed Forces to form the Military Authority.
 
 ### United States Emergency Federal Government \[Chicago, Great Lakes\]
+
+Led by Jesse Jackson
 
 The Darkest Hour.
 
@@ -181,10 +193,6 @@ If they should accept the legitimacy of a foreign backed movement, of course.
 ### Commonwealth of American States \[Sacramento, Pacific States\]
 
 Features democrats, establishment left, is all over the coast and is based on the highway which helps with supply and everything. If cut, do bad stuff to everything (collapse). Everything is basically gridlocked due to the administration/congress doing nothing, and the military being the only good part.
-
-### Republic of Cascadia \[Seattle, Pacific States\]
-
-Idea: Green socialist state, intent on expanding and destroying non renewable sources
 
 # **Map of America**
 
