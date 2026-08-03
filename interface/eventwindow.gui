@@ -570,7 +570,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "midsection"
 			position = { x=0 y=121 }
-			size = { width = 580 height = 385 }
+			size = { width = 700 height = 385 }
 			Orientation = UPPER_LEFT
 
 			instantTextBoxType = {
@@ -579,7 +579,7 @@ guiTypes = {
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"
-				maxWidth = 460
+				maxWidth = 700
 				maxHeight = 230
 				format = left
 			}
