@@ -157,18 +157,19 @@ Donald Rumsfeld's attempt at consolidating the July Fourth Movement against the 
 
 ### Rocky Mountains Autonomous Territory \[Northern Rocky Mountains\]
 
-   
 Ron Paul, used to be a part of the Movement but split with Pat Buchanan, currently trying to strengthen itself before trying to take over America again. A coalition of libertarianism and conservatives, there will be a power struggle etc. Friendly with NJFM-E
 
 ### Second Regulator Movement \[Nationwide\]
 
 They’ll serve as a new nationwide force, rising up as a populist spring, serving as the reason the borders change after The Collapse.
 
-### I (NJFM-W) \[Midwest\]
+### National July 4th Movement \- I (NJFM-W) \[Midwest\]
 
 Pat Buchanan and his policies, the Midwest, religious paleoconservatism, yada yada yada. Leaving this here for someone else more knowledgeable to do. 
 
 ### United States Military Authority \[Nashville, Nationwide\]
+
+Colin Powell
 
 The official name of an nationwide association of military forces and it’s occupied territories, their official purpose is to restore order to the United States. Life is as normal as it can be under the Authority. Although the Northeastern charter is in a frozen conflict with the Boston Red Army, the Authority as a (currently) neutral force faces few threats except sparse raids on Authority bases.
 
@@ -192,20 +193,21 @@ If they should accept the legitimacy of a foreign backed movement, of course.
 
 ### Commonwealth of American States \[Sacramento, Pacific States\]
 
+Dianne Feinstein
 Features democrats, establishment left, is all over the coast and is based on the highway which helps with supply and everything. If cut, do bad stuff to everything (collapse). Everything is basically gridlocked due to the administration/congress doing nothing, and the military being the only good part.
 
 # **Map of America**
 
-**Last Updated 1.1.2008**
+**Last Updated 1.1.2005**
 
 ## **New England**
 
 ### Vermont Republic
-
+Jim Jeffords
 Independent Vermont Republic with Canadian recognition and support, against everything, including the Movement.
 
 ### State of New Hampshire
-
+Judd Gregg
 State government remnants of New Hampshire, undergoing a low scale war with the Boston Red Army, also in a precarious spot.
 
 ### National Guard Government of Massachusetts
@@ -328,17 +330,22 @@ Leftist government in Pittsburgh and Western Pennsylvania, they serve as the mai
 
 ### Commonwealth of Virginia
 
+John Warner
 \[The legal continuation of the state government of Virginia, used to be a part of the Movement but split after the instability and failures of the Movement. With most of the political and state apparatus of the federal government remaining in the state, is a third way to the claim of the national government\]
 
 ### Norfolk Revolt
 
+William Fallon
 \[The remains of the federally aligned forces in Virginia and those aligned, its main goal is to make an organized concerted effort against the Movement. One of the last major opposition groups on the East Coast against the Movement, it has seen success with the Movement rump state of North Carolina. Could be broken up into separate armies that could unify, or unified at start but break up at end\]
 
-Charlotte Administration
+### Charlotte Administration
 
+Jesse Helms
 \[A Movement-aligned rump state in North Carolina and parts of South Carolina and Tennessee.\]
 
 ### Tennessee Military Authority
+
+Dennis Reimer
 
 The most significant United States Military Authority force east of the Mississippi River, the capture of the Authority started with the Collapse phenomena for the Movement which physically splintered the east and the west sides of the Movement, caused by the success of the Federal forces from Georgia northward. 
 
@@ -362,16 +369,19 @@ Using the resources of tourism, fishing, and oil production, the leading compani
 
 ### Birmingham Administration
 
+Jeff Sessions
 The remains of the Movement Belt, the connection between the East Coast and Great Plains Movement forces that is now a rump state, with a similar fate to the Tallahassee Administration. Although weak in projection and authority, it maintains some legitimacy as a once thriving state, and a somewhat-large military for its size.
 
 ### New Orleans Military Authority
+
+Russel L. Honoré
 
 Following the collapse of the United States, the government of Louisiana would ineffectively address the crisis at hand leading to the collapse of Baton Rouge as a main governing body. With this, New Orleans would assume leadership of the state of Louisiana, much to the chagrin of the largely republican North and West of the state. Mayor of New Orleans Marc Morial, an African American, would assume temporary leadership, governing in partnership with the Barksdale Air Force Base, and the US Army Engineers. This early period of transition under Marc Morial and the military in New Orleans would be met with a lot of fighting. The Government in New Orleans and the army within the state operate to establish control over the predominantly republican areas of Louisiana. In joint cooperation with numerous Black Liberation Armies along the Mississippi river, the New Orleans Military Authority would solidify itself by 2000\. In the 2002 election Ray Nagin would take charge, and whilst still unpopular amongst conservative whites, the military authority and his popularity amongst blacks and liberals would allow for him to retain power. During the initial parts of the 2007 Spring, numerous African American paramilitary groups had risen up, but were put down by the military authority. Despite this, prominent politician Mitch Landrieu is gaining ground, with a very progressive policy, and firm plan to redevelop Louisiana as a whole, his victory seems assured.
 
 ## **Florida**
 
 ### South Florida Military Authority
-
+James G. Stavridis
 Riding on the large anti-communist and capitalist sentiment in South Florida on the perceived “communist” federal government, the Movement saw incredible success in Florida at the onset of war, led by the large military presence in Florida that propped up and backed the Movement. However, the slowing down of the frontlines, general decay of the way of life, the shifting of the tides of progress against the Movement and in general, the Collapse, military leaders in Florida decided to flip to the USMA.
 
 While under martial law, life in South Florida has improved since the switch. With the quality of life rebounding since the start of the war, calls for a civilian government have started. Time will tell if true change will happen.
@@ -393,11 +403,11 @@ The sudden opening up of freedom has allowed a wide array of ideas into the gove
 [https://en.m.wikipedia.org/wiki/Russell\_Means](https://en.m.wikipedia.org/wiki/Russell_Means)
 
 ### State of Minnesota
-
+Rudy Perpich
 Relatively untouched by the 2nd American Civil War, life is like antebellum backed by the Canadian government as a legitimate American state for stability in the north of the Midwest. It has the ability to power project “to maintain stability”, all backed by the Canadian government.
 
 ### State of Iowa
-
+Chuck Grassley
 Federal-Canadian friendly
 
 ### State of Wisconsin
@@ -413,11 +423,12 @@ If the State of Wisconsin collapses, the Cheesehead Republic rises using Green B
 Occupied territory by Mexican forces to secure a humanitarian crisis at the border in Texas, with overextension of funding and forces soon to collapse
 
 ### Administración Militar Occidente
+Guillermo Galván Galván
 
 Occupied territory by Mexican forces to secure a humanitarian crisis at the border in Arizona/New Mexico, with overextension of funding and forces soon to collapse
 
 ### Houston Military Authority
-
+Tommy Franks
 Remains of Federal forces in Texas.
 
 ### State of Texas (Dallas)
@@ -428,22 +439,23 @@ Movement-allied state government, akin to Virginia that’s broken off from the 
 
 Between the emergency government, canadian-allied minnesota, and military authority, it serves as a “Great Game” between the three. It’s officially neutral, thus the US banner name.
 
-Kansas City Administration
+### Kansas City Administration
 
 Movement administration.
 
-Minot Republic
-
+### Minot Republic
+John Hoeven
 Minnesota/Canada allied buffer state.
 
-Denver Military Authority
+### Denver Military Authority
+Tommy Franks
 
 Military authority, controls Colorado, Nebraska, Wyoming
 
 ## **West Coast**
 
 ### State of Arizona
-
+John McCain
 Arizona
 
 ### Commonwealth of American States (California)
@@ -455,15 +467,17 @@ California
 Movement insurrection in Great Basin Nevada
 
 ### State of Washington
+Gary Locke
 
 Washington CAS allied
 
 ### State of Oregon
+John Kitzhaber
 
 Oregon CAS allied
 
 ### State of New Mexico
-
+Gary Johnson
 Neutral, mexican influenced
 
 ### State of Utah
@@ -471,7 +485,7 @@ Neutral, mexican influenced
 CAS allied
 
 ### Missoula Montana State
-
+Marc Racicot
 Canadian backed state
 
 ### Boise Autonomous Region
@@ -490,7 +504,7 @@ Libertarian movement allied
 
 ### City of Detroit
 
-## 
+Dennis Archer
 
 \[After the Battle of Detroit between Federal and Movement forces spilled over the Canadian border, the Canadian government decided to silently intervene. Elite Canadian paramilitary forces of the CSIS’s Special Operations Group (SOG) disguised as Federal forces were able to aid Federal forces to repel the Movement out of Detroit. Strong-arming the Federalists for continual aid, the City of Detroit would be established as a neutral city under local rule to maintain normalcy. Of course, Canadian forces would coincidentally be invited to guard the city.\]
 
@@ -502,6 +516,7 @@ Libertarian movement allied
 
 ### State of Ohio
 
+George Voinovich
 \[The legal continuation of the state of Ohio, initially on the Federal side before turning after pressure from the Movement for the Wolverine Charge, it then flipped neutral with its failure.  An open government between anti and pro Movement discourse, it can easily switch to either side and its society and politics remain divisive with its inability to choose a side in the War.\]
 
 ### Indianapolis Military Authority
@@ -515,3 +530,77 @@ Serving as a state with the most power south of Chicago and north of Kentucky (e
 ### Wolverine State
 
 Michigan movement pocket in Northern michigan
+
+Collapse:
+Raleigh -> American Liberation Front cells
+California
+
+Wars:
+- Oklahoma City-Omaha war vs North-Texan, Arkansas, New Orleans military authorities
+    - If State of Texas intervenes, than Houston Military Authority intervenes
+    - Northern Command can intervene if it’s bad, but if it looses it it gets partitioned
+- post war borders teasers
+
+new york unifier teaser
+
+california collapse teaser
+midwest states great game teaser
+
+american liberation front teaser
+ mexican retreat/collapse teaser
+auonomous region partition teaser
+
+American Commonwealth skeleton
+    - Attacks Great Basin first after Regulator pressure to attack them, which escalates with the rest of authonomous regions
+    - The authonomous regions are partitioned with the northern accord
+    - Plains war happening simultaneously, authoity ggets free land
+    - If Military Authority wins the Plains war
+        - Negotations between commonwealth and military authority to unify
+        - War
+        - Whoever wins will attack Northern Accord
+    - If Military Authority lost the plains war
+        - Mexico, Northern Accord, Commonwealth will step in to invade N4JM in as power balancer, taking up more land
+        - Commonwealth war with mexico, then Northern Accord
+            - If mexico win, collapse + mexican victory
+            - If northern Accord wins, american-puppet alllied alliance established
+
+New York skeleton
+- Syracuse fails
+- ##@@!!Regulator movement in various NY warlords leads to Albany and Rochester backing opposition/establishment, whichever movement wins in each faction “wins” over that warlord
+- Reunification war
+-  
+EFG
+- Political direction conslidation
+- Regulator
+- Elimination of wolverine state
+- Great game of Illinois, Indiana, Missouri, Ohio with military authority
+    - Northern Accord can snatch Missouri and Indiana
+    - Tripartie in ohio
+- After that’s done, will attack accord or authority whoever’s not at war
+
+
+“Great Impetus”
+- In Canadian mission in maine, there’s a massacre or something
+- Causes regulator movement all across the country, accelerating political changes
+- Either causes Canada to retreat, causing maine republic to grow
+    - Impetus for Boston Red Army to grow
+- Canada attacks Maine Republic
+    - Boston Red Army grows to “defend US from canadian imperialism”
+
+ALF
+- Wreck havoc in surrounding military authority countries
+- Collaborate with tripartite for war with military authority
+
+CFC vs military authority civil war for reunification after Georgia doesn’t want to deal with it due to ALF/Tripartite - Authority war
+
+NC vs SC war after regulator sentiments create south carolina revolting cells
+- SC victory
+    - Interim NC state government, carolinas faction
+
+Norfolk State
+- Once that NC-SC war begins, they will attack both virginia and NC
+
+
+Philadelphia
+- If lose or tie baltimore, will slowly collapse/decay
+- If win, go to war with tripartite, virginia, carolinas, just grow
