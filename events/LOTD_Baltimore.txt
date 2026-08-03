@@ -7,11 +7,25 @@ news_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event baltimore.1" }
 	title = baltimore.1.t
 	desc = baltimore.1.desc
-	picture = GFX_news_event_USA_aleutians_crisis
+	picture = GFX_news_event_BAL_philadelphia_retreat
 
 	is_triggered_only = yes
 
 	option = {
 		name = baltimore.1.a
+	}
+}
+
+news_event = {
+	id = baltimore.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event baltimore.2" }
+	title = baltimore.2.t
+	desc = baltimore.2.desc
+	picture = GFX_news_event_BAL_baltimore_capitulation
+
+	is_triggered_only = yes
+
+	option = {
+		name = baltimore.2.a
 	}
 }
