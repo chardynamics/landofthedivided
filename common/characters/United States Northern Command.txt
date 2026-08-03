@@ -1,0 +1,21 @@
+characters = {
+	### Northern Command ###
+	# Country leaders #
+	DMA_Colin_Powell = {
+		name = DMA_Colin_Powell
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_DMA_Colin_Powell"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_COLIN_POWELL_DESC"
+			expire = "2024.1.1"
+			ideology = despotism_military_junta_subtype
+			traits = {
+				the_general
+            }
+			id = -1
+		}
+	}
+}

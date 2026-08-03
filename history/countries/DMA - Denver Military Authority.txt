@@ -6,8 +6,10 @@ set_research_slots = 4
 
 oob = "DMA_2005"
 recruit_character = DMA_Generic_Vacant
+recruit_character = DMA_Colin_Powell
 fill_empty_minister_nochecks = yes
-set_technology = {basic_train = 1
+set_technology = {
+	basic_train = 1
 
 	##INFANTRY##
 	infantry_weapons_1 = 1
@@ -152,24 +154,24 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = progressivism
+	ruling_party = despotism
 	last_election = "1920.1.1"
 	election_frequency = 60
 	elections_allowed = no
 }
 
 set_popularities = {
-	communist = 5
-	socialist = 8
-	progressivism = 62
-	liberalism = 15
-	liberal_conservatism = 0
-	conservatism = 3
-	paternalism = 7
-	despotism = 0
-	fascism = 0
+	communist = 1
+	socialist = 2
+	progressivism = 5
+	liberalism = 12
+	liberal_conservatism = 9
+	conservatism = 11
+	paternalism = 0
+	despotism = 55
+	fascism = 3
 	national_socialism = 0
-	ultranationalism = 0
+	ultranationalism = 2
 }
 
 

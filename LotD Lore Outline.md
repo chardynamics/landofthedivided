@@ -568,7 +568,7 @@ New York skeleton
 - Syracuse fails
 - ##@@!!Regulator movement in various NY warlords leads to Albany and Rochester backing opposition/establishment, whichever movement wins in each faction “wins” over that warlord
 - Reunification war
--  
+- 
 EFG
 - Political direction conslidation
 - Regulator

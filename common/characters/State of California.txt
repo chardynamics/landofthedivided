@@ -1,0 +1,21 @@
+characters = {
+	### California ###
+	# Country leaders #
+	SCA_Dianne_Feinstein = {
+		name = SCA_Dianne_Feinstein
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SCA_Dianne_Feinstein"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DIANNE_FEINSTEIN_DESC"
+			expire = "2024.1.1"
+			ideology = liberalism_social_liberalism_subtype
+			traits = {
+				the_general
+            }
+			id = -1
+		}
+	}
+}

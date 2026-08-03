@@ -4,6 +4,7 @@ capital = 404
 
 oob = "BAL_2005"
 recruit_character = BAL_Generic_Vacant
+recruit_character = BAL_Kurt_Schmoke
 fill_empty_minister_nochecks = yes
 set_technology = {
 	basic_train = 1
@@ -105,9 +106,9 @@ add_ideas = {
 
 set_politics = {
 	ruling_party = progressivism
-	last_election = "1920.1.1"
-	election_frequency = 60
-	elections_allowed = no
+	last_election = "2004.1.1"
+	election_frequency = 48
+	elections_allowed = yes
 }
 
 declare_war_on = {
@@ -118,11 +119,11 @@ declare_war_on = {
 set_popularities = {
 	communist = 5
 	socialist = 8
-	progressivism = 62
+	progressivism = 42
 	liberalism = 15
-	liberal_conservatism = 0
-	conservatism = 3
-	paternalism = 7
+	liberal_conservatism = 20
+	conservatism = 10
+	paternalism = 0
 	despotism = 0
 	fascism = 0
 	national_socialism = 0

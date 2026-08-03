@@ -1,0 +1,21 @@
+characters = {
+	### Baltimore ###
+	# Country leaders #
+	BAL_Kurt_Schmoke = {
+		name = BAL_Kurt_Schmoke
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_BAL_Kurt_Schmoke"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KURT_SCHMOKE_DESC"
+			expire = "2024.1.1"
+			ideology = progressivism_popular_front_subtype
+			traits = {
+				
+            }
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,21 @@
+characters = {
+	### Emergency Federal Government ###
+	# Country leaders #
+	EFG_Jesse_Jackson = {
+		name = EFG_Jesse_Jackson
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_EFG_Jesse_Jackson"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JESSE_JACKSON_DESC"
+			expire = "2024.1.1"
+			ideology = progressivism_left_wing_populism_subtype
+			traits = {
+				the_general
+            }
+			id = -1
+		}
+	}
+}
