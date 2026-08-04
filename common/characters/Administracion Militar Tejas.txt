@@ -1,0 +1,21 @@
+characters = {
+	### Administracion Militar Tejas ###
+	# Country leaders #
+	AMF_Enrique_Cervantes_Aguierre = {
+		name = AMF_Enrique_Cervantes_Aguierre
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_AMF_Enrique_Cervantes_Aguierre"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ENRIQUE_CERVANTES_AGUIERRE_DESC"
+			expire = "2024.1.1"
+			ideology = despotism_military_junta_subtype
+			traits = {
+				the_general
+            }
+			id = -1
+		}
+	}
+}

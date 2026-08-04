@@ -1,0 +1,21 @@
+characters = {
+	### State of Washington ###
+	# Country leaders #
+	SWA_Gary_Locke = {
+		name = SWA_Gary_Locke
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SWA_Gary_Locke"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GARY_LOCKE_DESC"
+			expire = "2024.1.1"
+			ideology = liberal_conservatism_christian_democracy_subtype
+			traits = {
+				
+            }
+			id = -1
+		}
+	}
+}

@@ -6,6 +6,7 @@ set_research_slots = 3
 
 oob = "AMF_2005"
 recruit_character = AMF_Generic_Vacant
+recruit_character = AMF_Enrique_Cervantes_Aguierre
 fill_empty_minister_nochecks = yes
 set_technology = {
 	basic_train = 1
@@ -155,26 +156,25 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = progressivism
+	ruling_party = paternalism
 	last_election = "1920.1.1"
 	election_frequency = 60
 	elections_allowed = no
 }
 
 set_popularities = {
-	communist = 5
-	socialist = 8
-	progressivism = 62
-	liberalism = 15
+	communist = 0
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
 	liberal_conservatism = 0
-	conservatism = 3
-	paternalism = 7
-	despotism = 0
+	conservatism = 20
+	paternalism = 68
+	despotism = 12
 	fascism = 0
 	national_socialism = 0
 	ultranationalism = 0
 }
-
 
 #Starting Equipment
 add_equipment_to_stockpile = {

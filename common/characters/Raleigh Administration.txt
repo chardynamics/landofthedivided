@@ -1,19 +1,19 @@
 characters = {
-	### Philadelphia ###
+	### Raleigh Administration ###
 	# Country leaders #
-	PHI_Donald_Rumsfeld = {
-		name = PHI_Donald_Rumsfeld
+	CHA_Jesse_Helms = {
+		name = CHA_Jesse_Helms
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_PHI_Donald_Rumsfeld"
+				large = "GFX_portrait_CHA_Jesse_Helms"
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_DONALD_RUMSFELD_DESC"
+			desc = "POLITICS_JESSE_HELMS_DESC"
 			expire = "2024.1.1"
 			ideology = paternalism_national_conservatism_subtype
 			traits = {
-				career_bureaucrat
+				
             }
 			id = -1
 		}

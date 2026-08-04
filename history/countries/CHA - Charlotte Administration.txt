@@ -5,6 +5,7 @@ set_research_slots = 3
 
 oob = "CHA_2005"
 recruit_character = CHA_Generic_Vacant
+recruit_character = CHA_Jesse_Helms
 fill_empty_minister_nochecks = yes
 set_technology = {
 	basic_train = 1
@@ -105,22 +106,22 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = progressivism
+	ruling_party = paternalism
 	last_election = "1920.1.1"
 	election_frequency = 60
 	elections_allowed = no
 }
 
 set_popularities = {
-	communist = 5
-	socialist = 8
-	progressivism = 62
-	liberalism = 15
-	liberal_conservatism = 0
-	conservatism = 3
-	paternalism = 7
-	despotism = 0
-	fascism = 0
+	communist = 0
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
+	liberal_conservatism = 5
+	conservatism = 17
+	paternalism = 62
+	despotism = 13
+	fascism = 3
 	national_socialism = 0
 	ultranationalism = 0
 }

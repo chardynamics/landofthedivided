@@ -1,0 +1,21 @@
+characters = {
+	### Norfolk State ###
+	# Country leaders #
+	NOR_William_Fallon = {
+		name = NOR_William_Fallon
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_NOR_William_Fallon"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_WILLIAM_FALLON_DESC"
+			expire = "2024.1.1"
+			ideology = despotism_military_junta_subtype
+			traits = {
+				the_admiral
+            }
+			id = -1
+		}
+	}
+}

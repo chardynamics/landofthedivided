@@ -1,0 +1,21 @@
+characters = {
+	### South Carolina ###
+	# Country leaders #
+	SSC_David_Beasley = {
+		name = SSC_David_Beasley
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SSC_David_Beasley"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DAVID_BEASLEY_DESC"
+			expire = "2024.1.1"
+			ideology = liberal_conservatism_christian_democracy_subtype
+			traits = {
+				
+            }
+			id = -1
+		}
+	}
+}
