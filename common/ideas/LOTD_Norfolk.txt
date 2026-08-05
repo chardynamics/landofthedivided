@@ -23,7 +23,7 @@ ideas = {
 			}
 			removal_cost = -1
 
-			picture = NOR_A_Powderkeg
+			picture = NOR_A_State_On_Edge
 
 			modifier = {
 				stability_factor = 0.1
@@ -40,7 +40,7 @@ ideas = {
 			}
 			removal_cost = -1
 
-			picture = generic_solid_naval_force
+			picture = ARG_navy_controlled_army
 
 			modifier = {
 				political_power_gain = 0.1
