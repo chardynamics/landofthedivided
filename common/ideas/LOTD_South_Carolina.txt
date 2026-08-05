@@ -13,5 +13,22 @@ ideas = {
 				war_support_factor = 0.2
 			}
 		}
+		SSC_Productive_Administration = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SSC_Productive_Administration" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SSC_Productive_Administration
+
+			modifier = {
+				political_power_gain = 0.1
+				stability = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.05
+			}
+		}
 	}
 }

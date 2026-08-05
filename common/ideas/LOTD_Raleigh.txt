@@ -1,0 +1,33 @@
+ideas = {
+	country = {
+		CHA_Leadership_Questions = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CHA_Leadership_Questions" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = CHA_Leadership_Questions
+
+			modifier = {
+				war_support_factor = 0.1
+				admin_efficiency_monthly_rate = -0.01
+				political_power_gain = -0.05
+			}
+		}
+		CHA_Unbalanced_Duopoly = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CHA_Unbalanced_Duopoly" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = CHA_Unbalanced_Duopoly
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.1
+			}
+		}
+	}
+}
