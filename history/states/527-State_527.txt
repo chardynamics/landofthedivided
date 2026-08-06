@@ -7,7 +7,7 @@ state = {
 	buildings_max_level_factor = 1 
 	local_supplies = 0 
 	history = { 
-		owner = AMA 
+		owner = OKC 
 		
 		victory_points = { 6263 3 }
 		
@@ -16,8 +16,6 @@ state = {
 			hospitals = 1 
 			infrastructure = 7 
 		}
-		
-		
 		
 		add_core_of = OKC 
 		add_claim_by = AMA
