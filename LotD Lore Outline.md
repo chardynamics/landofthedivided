@@ -135,17 +135,43 @@ It would take years before the War would finally stop into the Collapse as we kn
 
 \[This shouldn’t be a comprehensive list until much later- this is meant to compile together events, might need to move around some of the information from the passages above\]
 
-### **1998-2000**
+### **1997**
 
-### **2001-2003**
+In July 1997, Western Movement forces would succesfully overrun Oregon and Washington forces. Adding the worsening American refugee crisis, and the Mexican and Canadian governments agree on stabilization - both countries would secure the immediate territory surrounding their borders, with an agreement never to engage with each other. Mexico establishes las Administraciónes Militares and Canada would establish the Northern Accord. While Mexico established military occupied zones, Canada used a collaborator approach, stabilizing friendly state governments from combat before entering the Accord.
 
-2001 leads with the “Wolverine Charge”, Pat Robertson’s offensive in Michigan. Although a tactical failure, it strategically routed major components of the Armed Forces in the Battle of Detroit, resulting in the beginning of the Collapse phenomenon.
+### **1998**
 
-The Establishment’s Rebellion in 2003 is Donald Rumsfeld’s coup d’etat against Pat Robertson. It is a failure with Virginia’s National Guard breaking allegiance and allowing Robertson fleeing westward, however Donald Rumsfeld did eventually assume control.
+As NJ4M-West would move towards securing the Californian/Western front, Federal forces around Denver would successfully cut off NJ4M - West from NJ4M - Plains, over time increasing territory held while establishing the North Texas Military Authority.
 
-### **2005**
+Federal forces in Louisiana and Houston would break years of stalemate and advance up to Austin and College Station.
 
-The American Spring in the spring of 2005 is a collection of uprising and armed rebellions that primarily targeted the Movement. Movement failures in the past few years and a general worsening of the American way of life led to an ingrained perceived incompetence, which precipitated the Spring. From Boston, to Rochester, to Pittsburgh laid a series of uprisings with varying levels of success.
+### **1999**
+
+After 2 years of hard fighting, Californian forces would have the momentum to retake Oregon and Washington, however gains would rapidly diminish.
+
+### **2000**
+
+The Georgia Offensive starts from Federal forces in Tennnessee and Jacksonville, separating the Birmingham Administration from Raleigh.
+
+### **2001**
+
+2001 leads with the “Wolverine Charge”, Pat Robertson’s offensive in Michigan. Although a tactical failure, it strategically routed major components of the Armed Forces in the Battle of Detroit, resulting in the beginning of the Collapse phenomenon. The retreating Movement forces leave a power vaccuum that allows the Ohio state government declare its neutrality and independence, freeing up west of Cleveland. Detroit is occupied by Canadian forces, separating the Wolverine State from the rest of the Movement.
+
+### **2002**
+
+Amid Federal victories in Georgia, Jesse Helms moves to integrate white nationalist and extremist groups into the Raleigh Administration in reinforce his political standing and supply more troops to the frontlines. David Beasley under the subordinate South Carolina state government subsequently secedes, leading to the brief Carolina War that only ends with a stalemate.
+
+### **2003**
+
+The Establishment’s Rebellion in 2003 is Donald Rumsfeld’s coup d’etat against Pat Robertson. It is a failure with Virginia’s National Guard breaking allegiance and allowing Robertson fleeing westward, however Donald Rumsfeld did eventually assume control. The Commonwealth of Virginia becomes nominally independent in the process. In the chaos, movements expressing discontent in Pittsburgh lead to a revolution, taking over western Pennslyvania, West Virginia, and eastern Ohio.
+
+Revolutionary fever also spreads in New York, leading to the rival Rochester Government, the Republic of Ithaca, New York City, and the Hudson Valley Association breaking away. Indirectly, the Albany Government breaks away from the Movement.
+
+### **2004**
+
+Without a lifelife, the New Haven Administration is driven to a small strip of land, with Rhode Island, Massachusetts, and New Hampshire being reestablished. Simultaneously during New Haven's retreat, the Boston Red Army rises.
+
+The American Spring in the spring of 2004 is a collection of uprising and armed rebellions that primarily targeted the Movement. Movement failures in the past few years and a general worsening of the American way of life led to an ingrained perceived incompetence, which precipitated the Spring. From Boston, to Rochester, to Baltimore laid a series of uprisings with varying levels of success.
 
 # **The Many Divided Factions of America**
 
