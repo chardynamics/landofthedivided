@@ -15,7 +15,8 @@ state = {
 			hospitals = 1 
 		}
 		
-		add_core_of = BIR 
+		add_core_of = AMA 
+		add_claim_by = BIR
 	}
 	provinces = { 58 1311 1607 2472 3468 3645 4810 6220 6256 }
 }
