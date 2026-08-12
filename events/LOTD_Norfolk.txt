@@ -26,3 +26,17 @@ country_event = {
 		}
 	}
 }
+
+news_event = {
+	id = norfolk.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event norfolk.2" }
+	title = norfolk.2.t
+	desc = norfolk.2.desc
+	picture = GFX_news_event_CHA_anti_norfolk_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = norfolk.2.a
+	}
+}

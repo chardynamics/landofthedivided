@@ -1,0 +1,17 @@
+﻿### Misc/Non-Nation Specific Events ###
+
+add_namespace = raleigh
+
+news_event = {
+	id = raleigh.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event raleigh.1" }
+	title = raleigh.1.t
+	desc = raleigh.1.desc
+	picture = GFX_news_event_CHA_jesse_helms_death
+
+	is_triggered_only = yes
+
+	option = {
+		name = raleigh.1.a
+	}
+}
